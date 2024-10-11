@@ -29,5 +29,6 @@ sort -n slumpfil | uniq -c # -c visar antal dubletter
 cut -f 1 -d : /etc/passwd # -d delimiter, -f vilka fält vi ska ha kvar
 
 # tr
-tr 'acd' 'XYZ' <minifil # byter a->X , c->Y , d->Z
-tr -d 'acd' <minifil    # tar bort
+tr 'acd' 'XYZ' <minifil              # byter a->X , c->Y , d->Z
+tr -d 'acd' <minifil                 # tar bort
+tr -d 'acd' <minifil >minifilchanged # tar bort
