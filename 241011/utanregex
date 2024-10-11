@@ -21,7 +21,10 @@ sort -n slumpfil # numeriskt korrekt ordning
 sort -n          # väntar på stdins slut, som anges med Ctrl D
 
 # uniq
-sort -n slumpfil | uniq # uniq vill ha sorterat indata
+sort -n slumpfil | uniq    # uniq vill ha sorterat indata
+uniq filnamn               # så måste filnamn vara sorterat redan
+sort -n slumpfil | uniq -c # -c visar antal dubletter
 
 # cut
+
 # tr
