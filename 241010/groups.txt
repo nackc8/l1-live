@@ -1,0 +1,45 @@
+# Skapa en tom grupp
+groupadd grupp1
+
+# Skapa grupp2 med ett konto i sig
+groupadd grupp2 -U user5
+
+# Skapa grupp3 med två användare på en gång
+groupadd grupp3 -U user5,user6
+
+# groupadd -a -U user1 skulle lägga in den direkt, men detta
+# kommando lägger in användaren till en befintligt grupp
+groupmod -a -U user1 grupp1
+
+# Uber-komplext exempel med en brace expansion i en pipeline
+# i en command substitution.
+# groupmod -a -U $(echo user{10..14} | tr ' ' ',') grup
+p1
+
+# Sätter user13 och user14 på
+groupmod -U user13,user14 grupp1
+
+# Ta bort grupp
+groupdel grupp3
+
+# Sätt eller byt lösenord
+passwd user10
+# Disable
+passwd -l user10
+# Enable
+passwd -u user10
+
+# Kräv byte av lösenord vid nästa inloggning
+chage -d 0 user10
+
+# TODO: -d 1 ????
+
+# Skriv ut info om ditt konto, som grupp och uid gid
+id
+# Se info om annat konto
+id user10
+
+# Se info om inloggade med dessa två kommandon
+w
+who
+

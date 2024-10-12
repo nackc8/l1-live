@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# cat
+
+cat langfil                                                                                       # argument med filnamn
+cat langfil bokstaver                                                                             # det kan vara flera också, allt slås ihop
+echo Hej | cat                                                                                    # många kommandon lyssnar på stdin om de inte får filnamn
+echo Hej | cat | cat | cat | cat                                                                  # mer meningslöst
+echo -e 'Hej!\n\nDu har vunnit en miljon, sätt endast in överföringspengar\n\nMvh, Kent' | cat -n # få radnummer
+
+# head
+head langfil      # tio första (standardvärde) raderna
+head -n 7 langfil # sju första
+
+# tail
+tail langfil      # tio sista (standardvärde) raderna
+tail -n 7 langfil # sju sista
+
+# sort (sortera)
+sort -n slumpfil # numeriskt korrekt ordning
+sort -n          # väntar på stdins slut, som anges med Ctrl D
+
+# uniq
+sort -n slumpfil | uniq    # uniq vill ha sorterat indata
+uniq filnamn               # så måste filnamn vara sorterat redan
+sort -n slumpfil | uniq -c # -c visar antal dubletter
+
+# cut
+cut -f 1 -d : /etc/passwd # -d delimiter, -f vilka fält vi ska ha kvar
+
+# tr
+tr 'acd' 'XYZ' <minifil                   # byter a->X , c->Y , d->Z
+tr -d 'acd' <minifil                      # tar bort
+tr -d 'acd' <minifil >minifilchanged      # tar bort och skriver resultatet till annan fil
+cat minifil | tr -d 'acd' >minifilchanged # Alternativt sätt att dirigera om stdin
+
+# tee
+echo 'Add magman' | tee -a loggfil # skriv till fil och stdout (det är inte rätt plats för loggfilen)

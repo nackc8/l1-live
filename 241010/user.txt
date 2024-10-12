@@ -1,0 +1,31 @@
+useradd user1 # ingen hemkatalog skapas
+
+useradd -m user3 # hemkatalog skapas
+
+useradd -m -s /bin/bash user4 # med bash som kommandoskal
+
+# Skapa user7 .. user14
+for ((n=7; n < 15 ; n++)); do useradd -m -s /bin/bash
+ user$n; done
+
+adduser user5 # standard var att skapa hemkatalog används bash
+
+adduser --shell /usr/bin/fish user6
+
+# Se alla grupper med t.ex.
+cat /etc/group | cut -d : -f 1
+
+# lägg till user1 till gruppen staff
+usermod --append -G staff user1
+
+# skriv över kommentarsqfältet (GECOS)
+usermod -c "Carnivore" user5
+
+# Ta bort en användare från en grupp
+usermod --remove -G staff user1
+
+# Tar INTE bort hemkatalogen
+userdel user3
+
+# Tar bort hemkatalogen också
+userdel -r user4

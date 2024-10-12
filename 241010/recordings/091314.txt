@@ -1,0 +1,757 @@
+Script started on 2024-10-10 09:13:21+02:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="55" LINES="9"]
+[?2004h
+[34ml1-live/241010[0m [90m241010[38;5;218m*​[36m [0m
+[35m❯[0m [H[2J
+[34ml1-live/241010[0m [90m241010[38;5;218m*​[36m [0m
+[35m❯[0m ls
+[?2004lrecordings
+[?2004h
+[34ml1-live/241010[0m [90m241010[38;5;218m*​[36m [0m
+[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m cd
+[?2004l[?2004h
+[34m~[0m 
+[35m❯[0m [H[2J
+[34m~[0m 
+[35m❯[0m ssh ubse
+[?2004lWelcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-45-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Thu Oct 10 07:17:08 AM UTC 2024
+
+  System load:  0.0                Processes:               122
+  Usage of /:   15.1% of 29.36GB   Users logged in:         0
+  Memory usage: 10%                IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+115 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Wed Oct  9 20:12:50 2024 from 10.0.2.2
+[?2004h]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ [H[2J]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ sudo +[K-iöå[K[K
+[?2004l[sudo] password for kent: 
+[?2004h]0;root@ubse: ~root@ubse:~# exit[K[K[K[Kpwd
+[?2004l/root
+[?2004h]0;root@ubse: ~root@ubse:~# nano[K[K[K[Knano[K[K[K[Kvim[K[K[Kexit
+[?2004llogout
+[?2004h]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ sudoedit [K[K[K[K[K nano[K[K[K[K[K[K[K[K[Ksudo -i
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# sudo echo Hejs
+[?2004lHejs
+[?2004h]0;root@ubse: ~root@ubse:~# [?2004l
+logout
+[?2004h]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ [H[2J]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ man nano
+[?2004l[?1049h[22;0;0t[?1h=[4mNANO[24m(1)         General Commands Manual         [4mNANO[24m(1)[m
+[m
+[1mNAME[0m[m
+       nano - Nano's ANOther editor, inspired by Pico[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mnano [22m[[4moptions[24m] [[[1m+[4m[22mline[24m[[1m,[4m[22mcolumn[24m]] [4mfile[24m]...[m
+[m
+       [1mnano [22m[[4moptions[24m] [[[1m+[22m[[1mcrCR[22m]([1m/[22m|[1m?[22m)[4mstring[24m] [4mfile[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mnano  [22mis a small and friendly editor.  It copies[m
+       the look and feel of Pico, but is free software,[m
+       and implements several features that Pico lacks,[m
+       such as: opening multiple files,  scrolling  per[m
+       line,  undo/redo,  syntax coloring, line number‐[m
+       ing, and soft-wrapping overlong lines.[m
+[7mual page nano(1) line 1 (press h for help or q to quit)[27m[K[K[m
+       When giving a filename on the command line,  the[m
+       cursor  can  be put on a specific line by adding[m
+       the line number with a plus sign ([1m+[22m) before  the[m
+       filename,  and  even  in  a  specific  column by[m
+       adding it with a comma.  (Negative numbers count[m
+       from the end of the file or line.)   The  cursor[m
+       can  be put on the first or last occurrence of a[m
+       specific string by specifying that string  after[m
+       [1m+/ [22mor [1m+? [22mbefore the filename.  The string can be[m
+       made  case  sensitive and/or caused to be inter‐[m
+       preted as a regular expression  by  inserting  [1mc[0m[m
+       and/or  [1mr  [22mafter the [1m+ [22msign.  These search modes[m
+       can be explicitly disabled by using  the  upper‐[m
+       case variant of those letters: [1mC [22mand/or [1mR[22m.  When[m
+       the  string  contains spaces, it needs to be en‐[m
+       closed in quotes.  To give an example: to open a[m
+[7mal page nano(1) line 18 (press h for help or q to quit)[27m[K[K       file at the first occurrence of the word  "Foo",[m
+       you would do:[m
+[m
+           [1mnano +c/Foo [4m[22mfile[0m[m
+[m
+       As  a  special  case: if instead of a filename a[m
+       dash ([1m-[22m) is given,  [1mnano  [22mwill  read  data  from[m
+       standard input.[m
+[m
+[1mEDITING[0m[m
+       Entering  text  and  moving  around in a file is[m
+       straightforward: typing the  letters  and  using[m
+       the  normal  cursor movement keys.  Commands are[m
+       entered by using the Control (^) and the Alt  or[m
+       Meta  (M-)  keys.  Typing [1m^K [22mdeletes the current[m
+       line and puts it in the cutbuffer.   Consecutive[m
+       [1m^K[22ms  will  put all deleted lines together in the[m
+[7mal page nano(1) line 35 (press h for help or q to quit)[27m[K[K       cutbuffer.  Any cursor movement or executing any[m
+       other command will cause the next  [1m^K  [22mto  over‐[m
+       write  the  cutbuffer.  A [1m^U [22mwill paste the cur‐[m
+       rent contents of the cutbuffer  at  the  current[m
+       cursor position.[m
+[m
+       When  a  more  precise piece of text needs to be[m
+       cut or copied, you can mark its start  with  [1m^6[22m,[m
+       move the cursor to its end (the marked text will[m
+       be  highlighted),  and then use [1m^K [22mto cut it, or[m
+       [1mM-6 [22mto copy it to the cutbuffer.  You  can  also[m
+       save the marked text to a file with [1m^O[22m, or spell[m
+       check it with [1m^T^T[22m.[m
+[m
+       On  some terminals, text can be selected also by[m
+       holding down Shift while using the  arrow  keys.[m
+       Holding  down  the  Ctrl or Alt key too will in‐[m
+[7mal page nano(1) line 52 (press h for help or q to quit)[27m[K[K       crease the stride.  Any cursor movement  without[m
+       Shift being held will cancel such a selection.[m
+[m
+       Any  valid  Unicode  code  point can be inserted[m
+       into the buffer by typing [1mM-V  [22mfollowed  by  the[m
+       hexadecimal  digits of the code point (concluded[m
+       with [1m<Space> [22mor [1m<Enter> [22mwhen it are  fewer  than[m
+       six digits).  A literal control code (except [1m^J[22m)[m
+       can  be  inserted  by typing [1mM-V [22mfollowed by the[m
+       pertinent keystroke.[m
+[m
+       The two lines at the bottom of the  screen  show[m
+       some  important commands; the built-in help ([1m^G[22m)[m
+       lists all the available ones.  The  default  key[m
+       bindings can be changed via a [4mnanorc[24m file -- see[m
+       [1mnanorc[22m(5).[m
+[m
+[7mal page nano(1) line 69 (press h for help or q to quit)[27m[K[K[1mOPTIONS[0m[m
+       [1m-A[22m, [1m--smarthome[0m[m
+              Make  the Home key smarter.  When Home is[m
+              pressed anywhere but at the  very  begin‐[m
+              ning  of  non-whitespace  characters on a[m
+              line, the cursor will jump to that begin‐[m
+              ning (either forwards or backwards).   If[m
+              the  cursor  is already at that position,[m
+              it will jump to the true beginning of the[m
+              line.[m
+[m
+       [1m-B[22m, [1m--backup[0m[m
+              When saving a file, back up the  previous[m
+              version of it, using the current filename[m
+              suffixed with a tilde ([1m~[22m).[m
+[m
+       [1m-C [4m[22mdirectory[24m, [1m--backupdir=[4m[22mdirectory[0m[m
+[7mal page nano(1) line 86 (press h for help or q to quit)[27m[K[K              Make  and  keep not just one backup file,[m
+              but make and keep a uniquely numbered one[m
+              every time a file is saved -- when  back‐[m
+              ups  are enabled ([1m-B[22m).  The uniquely num‐[m
+              bered files are stored in  the  specified[m
+              [4mdirectory[24m.[m
+[m
+       [1m-D[22m, [1m--boldtext[0m[m
+              For  the  interface,  use bold instead of[m
+              reverse video.  This will  be  overridden[m
+              by  setting  the options [1mtitlecolor[22m, [1msta‐[0m[m
+              [1mtuscolor[22m, [1mkeycolor[22m,  [1mfunctioncolor[22m,  [1mnum‐[0m[m
+              [1mbercolor[22m,  and/or  [1mselectedcolor  [22min your[m
+              nanorc file.  See [1mnanorc[22m(5).[m
+[m
+       [1m-E[22m, [1m--tabstospaces[0m[m
+              Convert each typed tab to  spaces  --  to[m
+[7ml page nano(1) line 103 (press h for help or q to quit)[27m[K[K              the  number  of spaces that a tab at that[m
+              position would take up.[m
+[m
+       [1m-F[22m, [1m--multibuffer[0m[m
+              Read a file into a new buffer by default.[m
+[m
+       [1m-G[22m, [1m--locking[0m[m
+              Use vim-style file locking  when  editing[m
+              files.[m
+[m
+       [1m-H[22m, [1m--historylog[0m[m
+              Save  the last hundred search strings and[m
+              replacement  strings  and  executed  com‐[m
+              mands,  so  they  can be easily reused in[m
+              later sessions.[m
+[m
+       [1m-I[22m, [1m--ignorercfiles[0m[m
+[7ml page nano(1) line 120 (press h for help or q to quit)[27m[K[K              Don't look at the system's [4mnanorc[24m nor  at[m
+              the user's [4mnanorc[24m.[m
+[m
+       [1m-J [4m[22mnumber[24m, [1m--guidestripe=[4m[22mnumber[0m[m
+              Draw  a vertical stripe at the given col‐[m
+              umn, to help judge the width of the text.[m
+              (The color of the stripe can  be  changed[m
+              with   [1mset  stripecolor  [22min  your  [4mnanorc[0m[m
+              file.)[m
+[m
+       [1m-K[22m, [1m--rawsequences[0m[m
+              Interpret escape sequences directly,  in‐[m
+              stead  of  asking  [1mncurses  [22mto  translate[m
+              them.  (If you need this  option  to  get[m
+              some keys to work properly, it means that[m
+              the terminfo terminal description that is[m
+              used  does not fully match the actual be‐[m
+[7ml page nano(1) line 137 (press h for help or q to quit)[27m[K[K              havior of your terminal.  This can happen[m
+              when you ssh into a BSD machine, for  ex‐[m
+              ample.)    Using   this  option  disables[m
+              [1mnano[22m's mouse support.[m
+[m
+       [1m-L[22m, [1m--nonewlines[0m[m
+              Don't automatically add a newline when  a[m
+              text  does  not  end with one.  (This can[m
+              cause you to save non-POSIX text files.)[m
+[m
+       [1m-M[22m, [1m--trimblanks[0m[m
+              Snip trailing whitespace from the wrapped[m
+              line when automatic hard-wrapping  occurs[m
+              or when text is justified.[m
+[m
+       [1m-N[22m, [1m--noconvert[0m[m
+              Disable  automatic  conversion  of  files[m
+[7ml page nano(1) line 154 (press h for help or q to quit)[27m[K[K              from DOS/Mac format.[m
+[m
+       [1m-O[22m, [1m--bookstyle[0m[m
+              When  justifying,  treat  any  line  that[m
+              starts  with  whitespace as the beginning[m
+              of a paragraph (unless auto-indenting  is[m
+              on).[m
+[m
+       [1m-P[22m, [1m--positionlog[0m[m
+              For  the  200  most recent files, log the[m
+              last position of the cursor, and place it[m
+              at that  position  again  upon  reopening[m
+              such a file.[m
+[m
+       [1m-Q "[4m[22mregex[24m[1m"[22m, [1m--quotestr="[4m[22mregex[24m[1m"[0m[m
+              Set  the  regular expression for matching[m
+              the quoting part of a line.  The  default[m
+[7ml page nano(1) line 171 (press h for help or q to quit)[27m[K[K              value   is   "[1m^([ \t]*([!#%:;>|}]|//))+[22m".[m
+              (Note that [1m\t [22mstands for an actual  Tab.)[m
+              This   makes  it  possible  to  rejustify[m
+              blocks  of  quoted  text  when  composing[m
+              email,  and to rewrap blocks of line com‐[m
+              ments when writing source code.[m
+[m
+       [1m-R[22m, [1m--restricted[0m[m
+              Restricted mode: don't read or  write  to[m
+              any  file  not  specified  on the command[m
+              line.  This means: don't  read  or  write[m
+              history  files;  don't  allow suspending;[m
+              don't allow spell checking; don't allow a[m
+              file to be appended to, prepended to,  or[m
+              saved  under  a  different name if it al‐[m
+              ready has  one;  and  don't  make  backup[m
+              files.  Restricted mode can also be acti‐[m
+[7ml page nano(1) line 188 (press h for help or q to quit)[27m[K[K              vated  by invoking [1mnano [22mwith any name be‐[m
+              ginning with 'r' (e.g. "rnano").[m
+[m
+       [1m-S[22m, [1m--softwrap[0m[m
+              Display over multiple screen  rows  lines[m
+              that exceed the screen's width.  (You can[m
+              make  this  soft-wrapping occur at white‐[m
+              space instead of rudely at  the  screen's[m
+              edge,  by  using  also [1m--atblanks[22m.)  (The[m
+              old short option, [1m-$[22m, is deprecated.)[m
+[m
+       [1m-T [4m[22mnumber[24m, [1m--tabsize=[4m[22mnumber[0m[m
+              Set the size (width) of a tab  to  [4mnumber[0m[m
+              columns.   The  value  of  [4mnumber[24m must be[m
+              greater than 0.  The default value is [1m8[22m.[m
+[m
+       [1m-U[22m, [1m--quickblank[0m[m
+[7ml page nano(1) line 205 (press h for help or q to quit)[27m[K[K              Make status-bar messages disappear  after[m
+              1  keystroke  instead  of after 20.  Note[m
+              that option [1m-c [22m([1m--constantshow[22m) overrides[m
+              this.  When option [1m--minibar [22mor [1m--zero [22mis[m
+              in effect, [1m--quickblank [22mmakes  a  message[m
+              disappear  after  0.8  seconds instead of[m
+              after the default 1.5 seconds.[m
+[m
+       [1m-V[22m, [1m--version[0m[m
+              Show the current version number and exit.[m
+[m
+       [1m-W[22m, [1m--wordbounds[0m[m
+              Detect  word  boundaries  differently  by[m
+              treating  punctuation  characters as part[m
+              of a word.[m
+[m
+       [1m-X "[4m[22mcharacters[24m[1m"[22m, [1m--wordchars="[4m[22mcharacters[24m[1m"[0m[m
+[7ml page nano(1) line 222 (press h for help or q to quit)[27m[K[K              Specify which other  characters  (besides[m
+              the  normal  alphanumeric ones) should be[m
+              considered as part of a word.  When using[m
+              this option, you probably want to omit [1m-W[0m[m
+              ([1m--wordbounds[22m).[m
+[m
+       [1m-Y [4m[22mname[24m, [1m--syntax=[4m[22mname[0m[m
+              Specify the name of the syntax highlight‐[m
+              ing to use from among the ones defined in[m
+              the [4mnanorc[24m files.[m
+[m
+       [1m-Z[22m, [1m--zap[0m[m
+              Let an  unmodified  Backspace  or  Delete[m
+              erase  the  marked  region  (instead of a[m
+              single character, and  without  affecting[m
+              the cutbuffer).[m
+[m
+[7ml page nano(1) line 239 (press h for help or q to quit)[27m[K[K       [1m-a[22m, [1m--atblanks[0m[m
+              When doing soft line wrapping, wrap lines[m
+              at  whitespace  instead  of always at the[m
+              edge of the screen.[m
+[m
+       [1m-b[22m, [1m--breaklonglines[0m[m
+              Automatically hard-wrap the current  line[m
+              when  it  becomes overlong.  (This option[m
+              is the opposite of [1m-w [22m([1m--nowrap[22m)  --  the[m
+              last one given takes effect.)[m
+[m
+       [1m-c[22m, [1m--constantshow[0m[m
+              Constantly  show  the  cursor position on[m
+              the status bar.  Note that this overrides[m
+              option [1m-U [22m([1m--quickblank[22m).[m
+[m
+       [1m-d[22m, [1m--rebinddelete[0m[m
+[7ml page nano(1) line 256 (press h for help or q to quit)[27m[K[K              Interpret the Delete and  Backspace  keys[m
+              differently  so  that  both Backspace and[m
+              Delete work properly.   You  should  only[m
+              use  this  option when on your system ei‐[m
+              ther Backspace acts like Delete or Delete[m
+              acts like Backspace.[m
+[m
+       [1m-e[22m, [1m--emptyline[0m[m
+              Do not use the line below the title  bar,[m
+              leaving it entirely blank.[m
+[m
+       [1m-f [4m[22mfile[24m, [1m--rcfile=[4m[22mfile[0m[m
+              Read  only  this  [4mfile[24m for setting nano's[m
+              options, instead of reading both the sys‐[m
+              tem-wide and the user's nanorc files.[m
+[m
+       [1m-g[22m, [1m--showcursor[0m[m
+[7ml page nano(1) line 273 (press h for help or q to quit)[27m[K[K              Make  the  cursor  visible  in  the  file[m
+              browser  (putting  it  on the highlighted[m
+              item) and in the help viewer.  Useful for[m
+              braille users and people  with  poor  vi‐[m
+              sion.[m
+[m
+       [1m-h[22m, [1m--help[0m[m
+              Show  a summary of the available command-[m
+              line options and exit.[m
+[m
+       [1m-i[22m, [1m--autoindent[0m[m
+              Automatically indent a newly created line[m
+              to the same number of tabs and/or  spaces[m
+              as the previous line (or as the next line[m
+              if  the previous line is the beginning of[m
+              a paragraph).[m
+[m
+[7ml page nano(1) line 290 (press h for help or q to quit)[27m[K[K       [1m-j[22m, [1m--jumpyscrolling[0m[m
+              Scroll  the  buffer  contents  per  half-[m
+              screen instead of per line.[m
+[m
+       [1m-k[22m, [1m--cutfromcursor[0m[m
+              Make the 'Cut Text' command (normally [1m^K[22m)[m
+              cut  from  the current cursor position to[m
+              the end of the line, instead  of  cutting[m
+              the entire line.[m
+[m
+       [1m-l[22m, [1m--linenumbers[0m[m
+              Display  line  numbers to the left of the[m
+              text area.  (Any line with an anchor  ad‐[m
+              ditionally gets a mark in the margin.)[m
+[m
+       [1m-m[22m, [1m--mouse[0m[m
+              Enable  mouse  support,  if available for[m
+[7ml page nano(1) line 307 (press h for help or q to quit)[27m[K[K              your system.  When enabled, mouse  clicks[m
+              can  be used to place the cursor, set the[m
+              mark (with a double click),  and  execute[m
+              shortcuts.   The mouse will work in the X[m
+              Window System, and on  the  console  when[m
+              gpm  is  running.   Text can still be se‐[m
+              lected through dragging by  holding  down[m
+              the Shift key.[m
+[m
+       [1m-n[22m, [1m--noread[0m[m
+              Treat  any name given on the command line[m
+              as a new file.  This allows [1mnano [22mto write[m
+              to named pipes:  it  will  start  with  a[m
+              blank  buffer, and will write to the pipe[m
+              when the user saves the "file".  This way[m
+              [1mnano [22mcan be used as an editor in combina‐[m
+              tion with for instance [1mgpg [22mwithout having[m
+[7ml page nano(1) line 324 (press h for help or q to quit)[27m[K[K              to write sensitive data to disk first.[m
+[m
+       [1m-o [4m[22mdirectory[24m, [1m--operatingdir=[4m[22mdirectory[0m[m
+              Set the operating directory.  This  makes[m
+              [1mnano  [22mset  up  something similar to a ch‐[m
+              root.[m
+[m
+       [1m-p[22m, [1m--preserve[0m[m
+              Preserve the XON and XOFF  sequences  ([1m^Q[0m[m
+              and  [1m^S[22m)  so  they  will be caught by the[m
+              terminal.[m
+[m
+       [1m-q[22m, [1m--indicator[0m[m
+              Display a "scrollbar"  on  the  righthand[m
+              side  of  the  edit window.  It shows the[m
+              position of the viewport  in  the  buffer[m
+              and  how much of the buffer is covered by[m
+[7ml page nano(1) line 341 (press h for help or q to quit)[27m[K[K              the viewport.[m
+[m
+       [1m-r [4m[22mnumber[24m, [1m--fill=[4m[22mnumber[0m[m
+              Set the target width for  justifying  and[m
+              automatic hard-wrapping at this [4mnumber[24m of[m
+              columns.   If  the  value  is  0 or less,[m
+              wrapping will occur at the width  of  the[m
+              screen minus [4mnumber[24m columns, allowing the[m
+              wrap  point  to vary along with the width[m
+              of the screen if the screen  is  resized.[m
+              The default value is [1m-8[22m.[m
+[m
+       [1m-s "[4m[22mprogram[24m [[4margument[24m ...][1m"[22m, [1m--speller="[4m[22mprogram[0m[m
+       [[4margument[24m ...][1m"[0m[m
+              Use  this command to perform spell check‐[m
+              ing and correcting, instead of using  the[m
+              built-in corrector that calls [1mhunspell[22m(1)[m
+[7ml page nano(1) line 358 (press h for help or q to quit)[27m[K[K              or [1mspell[22m(1).[m
+[m
+       [1m-t[22m, [1m--saveonexit[0m[m
+              Save  a  changed buffer without prompting[m
+              (when exiting with [1m^X[22m).[m
+[m
+       [1m-u[22m, [1m--unix[0m[m
+              Save a file by default  in  Unix  format.[m
+              This overrides nano's default behavior of[m
+              saving  a file in the format that it had.[m
+              (This option has no effect when you  also[m
+              use [1m--noconvert[22m.)[m
+[m
+       [1m-v[22m, [1m--view[0m[m
+              Just  view the file and disallow editing:[m
+              read-only mode.   This  mode  allows  the[m
+              user  to  open also other files for view‐[m
+[7ml page nano(1) line 375 (press h for help or q to quit)[27m[K[K              ing, unless [1m--restricted [22mis given too.[m
+[m
+       [1m-w[22m, [1m--nowrap[0m[m
+              Do not automatically hard-wrap  the  cur‐[m
+              rent line when it becomes overlong.  This[m
+              is  the default.  (This option is the op‐[m
+              posite of [1m-b  [22m([1m--breaklonglines[22m)  --  the[m
+              last one given takes effect.)[m
+[m
+       [1m-x[22m, [1m--nohelp[0m[m
+              Don't show the two help lines at the bot‐[m
+              tom of the screen.[m
+[m
+       [1m-y[22m, [1m--afterends[0m[m
+              Make  Ctrl+Right  and Ctrl+Delete stop at[m
+              word ends instead of beginnings.[m
+[m
+[7ml page nano(1) line 392 (press h for help or q to quit)[27m[K[K       [1m-![22m, [1m--magic[0m[m
+              When neither  the  file's  name  nor  its[m
+              first  line  give  a clue, try using lib‐[m
+              magic to determine the applicable syntax.[m
+[m
+       [1m-%[22m, [1m--stateflags[0m[m
+              Use the top-right corner  of  the  screen[m
+              for  showing  some  state  flags:  [1mI [22mwhen[m
+              auto-indenting, [1mM [22mwhen the mark is on,  [1mL[0m[m
+              when hard-wrapping (breaking long lines),[m
+              [1mR  [22mwhen  recording  a  macro,  and [1mS [22mwhen[m
+              soft-wrapping.  When the buffer is  modi‐[m
+              fied, a star ([1m*[22m) is shown after the file‐[m
+              name in the center of the title bar.[m
+[m
+       [1m-_[22m, [1m--minibar[0m[m
+              Suppress  the  title bar and instead show[m
+[7ml page nano(1) line 409 (press h for help or q to quit)[27m[K[K              information about the current  buffer  at[m
+              the  bottom  of  the screen, in the space[m
+              for the status bar.   In  this  "minibar"[m
+              the  filename  is shown on the left, fol‐[m
+              lowed by an asterisk if  the  buffer  has[m
+              been  modified.   On  the  right are dis‐[m
+              played the current line and  column  num‐[m
+              ber,  the code of the character under the[m
+              cursor (in Unicode format:  U+xxxx),  the[m
+              same  flags as are shown by [1m--stateflags[22m,[m
+              and a percentage that expresses  how  far[m
+              the  cursor  is into the file (linewise).[m
+              When a file is loaded or saved, and  also[m
+              when  switching between buffers, the num‐[m
+              ber of lines in the buffer  is  displayed[m
+              after   the  filename.   This  number  is[m
+              cleared upon the next keystroke,  or  re‐[m
+[7ml page nano(1) line 426 (press h for help or q to quit)[27m[K[K              placed  with an [i/n] counter when multi‐[m
+              ple buffers are open.  The line plus col‐[m
+              umn numbers and the  character  code  are[m
+              displayed  only  when  [1m--constantshow  [22mis[m
+              used, and can be toggled on and off  with[m
+              [1mM-C[22m.   The state flags are displayed only[m
+              when [1m--stateflags [22mis used.[m
+[m
+       [1m-0[22m, [1m--zero[0m[m
+              Hide all elements of the interface (title[m
+              bar, status bar, and help lines) and  use[m
+              all  rows of the terminal for showing the[m
+              contents of the buffer.  The  status  bar[m
+              appears  only when there is a significant[m
+              message, and disappears after 1.5 seconds[m
+              or upon the next keystroke.  With [1mM-Z [22mthe[m
+              title bar plus status bar can be toggled.[m
+[7ml page nano(1) line 443 (press h for help or q to quit)[27m[K[K              With [1mM-X [22mthe help lines.[m
+[m
+[1mTOGGLES[0m[m
+       Several of the above options can be switched  on[m
+       and  off  also while [1mnano [22mis running.  For exam‐[m
+       ple,  [1mM-L  [22mtoggles  the  hard-wrapping  of  long[m
+       lines,  [1mM-S  [22mtoggles  soft-wrapping, [1mM-N [22mtoggles[m
+       line numbers, [1mM-M [22mtoggles the mouse,  [1mM-I  [22mauto-[m
+       indentation, and [1mM-X [22mthe help lines.  See at the[m
+       end of the [1m^G [22mhelp text for a complete list.[m
+[m
+       The [1mM-X [22mtoggle is special: it works in all menus[m
+       except  the  help  viewer  and  the linter.  All[m
+       other toggles work in the main menu only.[m
+[m
+[1mFILES[0m[m
+       When [1m--rcfile [22mis given, [1mnano [22mwill read just  the[m
+[7ml page nano(1) line 460 (press h for help or q to quit)[27m[K[K       specified  file for setting its options and syn‐[m
+       taxes and key bindings.   Without  that  option,[m
+       [1mnano  [22mwill  read  two configuration files: first[m
+       the system's [4mnanorc[24m (if it exists), and then the[m
+       user's [4mnanorc[24m (if it exists),  either  [4m~/.nanorc[0m[m
+       or   [4m$XDG_CONFIG_HOME/nano/nanorc[24m   or   [4m~/.con‐[0m[m
+       [4mfig/nano/nanorc[24m, whichever is encountered first.[m
+       See [1mnanorc[22m(5) for more information on the possi‐[m
+       ble contents of those files.[m
+[m
+       See [4m/usr/share/nano/[24m and  [4m/usr/share/nano/extra/[0m[m
+       for available syntax-coloring definitions.[m
+[m
+[1mNOTES[0m[m
+       Option  [1m-z  [22m([1m--suspendable[22m)  has  been  removed.[m
+       Suspension is enabled by default, reachable  via[m
+       [1m^T^Z[22m.   (If you want a plain [1m^Z [22mto suspend nano,[m
+[7ml page nano(1) line 477 (press h for help or q to quit)[27m[K[K       add [1mbind ^Z suspend main [22mto your nanorc.)[m
+[m
+       If no alternative spell checker command is spec‐[m
+       ified on the command line  nor  in  one  of  the[m
+       [4mnanorc[24m files, [1mnano [22mwill check the [1mSPELL [22menviron‐[m
+       ment variable for one.[m
+[m
+       In  some  cases [1mnano [22mwill try to dump the buffer[m
+       into an emergency file.  This will happen mainly[m
+       if [1mnano [22mreceives a SIGHUP or SIGTERM or runs out[m
+       of memory.  It will write the buffer into a file[m
+       named [4mnano.save[24m if the buffer didn't have a name[m
+       already, or will add a  ".save"  suffix  to  the[m
+       current  filename.   If  an  emergency file with[m
+       that name already exists in the  current  direc‐[m
+       tory,  it  will  add ".save" plus a number (e.g.[m
+       ".save.1") to the current filename in  order  to[m
+[7ml page nano(1) line 494 (press h for help or q to quit)[27m[K[K       make  it unique.  In multibuffer mode, [1mnano [22mwill[m
+       write all the open buffers to  their  respective[m
+       emergency files.[m
+[m
+[1mBUGS[0m[m
+       The  recording  and  playback of keyboard macros[m
+       works correctly only on a terminal emulator, not[m
+       on a Linux console (VT), because the latter does[m
+       not by default distinguish modified from unmodi‐[m
+       fied arrow keys.[m
+[m
+       Please report any other bugs that you  encounter[m
+       via:[m
+       [4mhttps://savannah.gnu.org/bugs/?group=nano[24m.[m
+[m
+       When  nano  crashes,  it  will save any modified[m
+       buffers to emergency .save files.   If  you  are[m
+[7ml page nano(1) line 511 (press h for help or q to quit)[27m[K[K       able  to reproduce the crash and you want to get[m
+       a backtrace,  define  the  environment  variable[m
+       [1mNANO_NOCATCH[22m.[m
+[m
+[1mHOMEPAGE[0m[m
+       [4mhttps://nano-editor.org/[0m[m
+[m
+[1mSEE ALSO[0m[m
+       [1mnanorc[22m(5)[m
+[m
+       [4m/usr/share/doc/nano/[24m (or equivalent on your sys‐[m
+       tem)[m
+[m
+January 2023          version 7.2               [4mNANO[24m(1)[m
+[7mo(1) line 525/541 (END) (press h for help or q to quit)[27m[K[K[K[7mo(1) line 525/541 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [4mhttps://savannah.gnu.org/bugs/?group=nano[24m.[m
+[18;1H[K[7mno(1) line 524/541 100% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       via:[m
+[18;1H[K[7mno(1) line 523/541 100% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       Please report any other bugs that you  encounter[m
+[18;1H[K[7mno(1) line 522/541 100% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[18;1H[K[7mano(1) line 521/541 99% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       fied arrow keys.[m
+[18;1H[K[7mano(1) line 520/541 99% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       not by default distinguish modified from unmodi‐[m
+[18;1H[K[7mano(1) line 519/541 99% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       on a Linux console (VT), because the latter does[m
+[18;1H[K[7mano(1) line 518/541 99% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       works correctly only on a terminal emulator, not[m
+[18;1H[K[7mano(1) line 517/541 99% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       The  recording  and  playback of keyboard macros[m
+[18;1H[K[7mano(1) line 516/541 99% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mBUGS[0m[m
+[18;1H[K[7mano(1) line 515/541 99% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[18;1H[K[7mano(1) line 514/541 99% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       emergency files.[m
+[18;1H[K[7mano(1) line 513/541 99% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       write all the open buffers to  their  respective[m
+[18;1H[K[7mano(1) line 512/541 99% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       make  it unique.  In multibuffer mode, [1mnano [22mwill[m
+[18;1H[K[7mano(1) line 511/541 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       ".save.1") to the current filename in  order  to[m
+[18;1H[K[7mano(1) line 510/541 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       tory,  it  will  add ".save" plus a number (e.g.[m
+[18;1H[K[7mano(1) line 509/541 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       that name already exists in the  current  direc‐[m
+[18;1H[K[7mano(1) line 508/541 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       current  filename.   If  an  emergency file with[m
+[18;1H[K[7mano(1) line 507/541 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       already, or will add a  ".save"  suffix  to  the[m
+[18;1H[K[7mano(1) line 506/541 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       named [4mnano.save[24m if the buffer didn't have a name[m
+[18;1H[K[7mano(1) line 505/541 97% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       of memory.  It will write the buffer into a file[m
+[18;1H[K[7mano(1) line 504/541 97% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       if [1mnano [22mreceives a SIGHUP or SIGTERM or runs out[m
+[18;1H[K[7mano(1) line 503/541 97% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       into an emergency file.  This will happen mainly[m
+[18;1H[K[7mano(1) line 502/541 97% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       In  some  cases [1mnano [22mwill try to dump the buffer[m
+[18;1H[K[7mano(1) line 501/541 97% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[18;1H[K[7mano(1) line 500/541 97% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       ment variable for one.[m
+[18;1H[K[7mano(1) line 499/541 96% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [4mnanorc[24m files, [1mnano [22mwill check the [1mSPELL [22menviron‐[m
+[18;1H[K[7mano(1) line 498/541 96% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       ified on the command line  nor  in  one  of  the[m
+[18;1H[K[7mano(1) line 497/541 96% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       If no alternative spell checker command is spec‐[m
+[18;1H[K[7mano(1) line 496/541 96% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[18;1H[K[7mano(1) line 495/541 96% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       add [1mbind ^Z suspend main [22mto your nanorc.)[m
+[18;1H[K[7mano(1) line 494/541 96% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m^T^Z[22m.   (If you want a plain [1m^Z [22mto suspend nano,[m
+[18;1H[K[7mano(1) line 493/541 96% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       Suspension is enabled by default, reachable  via[m
+[18;1H[K[7mano(1) line 492/541 95% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       Option  [1m-z  [22m([1m--suspendable[22m)  has  been  removed.[m
+[18;1H[K[7mano(1) line 491/541 95% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mNOTES[0m[m
+[18;1H[K[7mano(1) line 490/541 95% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[18;1H[K[7mano(1) line 489/541 95% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       for available syntax-coloring definitions.[m
+[18;1H[K[7mano(1) line 488/541 94% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       See [4m/usr/share/nano/[24m and  [4m/usr/share/nano/extra/[0m[m
+[18;1H[K[7mano(1) line 487/541 94% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[18;1H[K[7mano(1) line 486/541 94% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       ble contents of those files.[m
+[18;1H[K[7mano(1) line 485/541 94% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       See [1mnanorc[22m(5) for more information on the possi‐[m
+[18;1H[K[7mano(1) line 484/541 93% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [4mfig/nano/nanorc[24m, whichever is encountered first.[m
+[18;1H[K[7mano(1) line 483/541 93% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       or   [4m$XDG_CONFIG_HOME/nano/nanorc[24m   or   [4m~/.con‐[0m[m
+[18;1H[K[7mano(1) line 482/541 93% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       user's [4mnanorc[24m (if it exists),  either  [4m~/.nanorc[0m[m
+[18;1H[K[7mano(1) line 481/541 93% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       the system's [4mnanorc[24m (if it exists), and then the[m
+[18;1H[K[7mano(1) line 480/541 93% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mnano  [22mwill  read  two configuration files: first[m
+[18;1H[K[7mano(1) line 479/541 93% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       taxes and key bindings.   Without  that  option,[m
+[18;1H[K[7mano(1) line 478/541 92% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       specified  file for setting its options and syn‐[m
+[18;1H[K[7mano(1) line 477/541 92% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       When [1m--rcfile [22mis given, [1mnano [22mwill read just  the[m
+[18;1H[K[7mano(1) line 476/541 92% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mFILES[0m[m
+[18;1H[K[7mano(1) line 475/541 92% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[18;1H[K[7mano(1) line 474/541 91% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       other toggles work in the main menu only.[m
+[18;1H[K[7mano(1) line 473/541 91% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       except  the  help  viewer  and  the linter.  All[m
+[18;1H[K[7mano(1) line 472/541 91% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       The [1mM-X [22mtoggle is special: it works in all menus[m
+[18;1H[K[7mano(1) line 471/541 91% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[18;1H[K[7mano(1) line 470/541 91% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       end of the [1m^G [22mhelp text for a complete list.[m
+[18;1H[K[7mano(1) line 469/541 91% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       indentation, and [1mM-X [22mthe help lines.  See at the[m
+[18;1H[K[7mano(1) line 468/541 91% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       line numbers, [1mM-M [22mtoggles the mouse,  [1mM-I  [22mauto-[m
+[18;1H[K[7mano(1) line 467/541 90% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       lines,  [1mM-S  [22mtoggles  soft-wrapping, [1mM-N [22mtoggles[m
+[18;1H[K[7mano(1) line 466/541 90% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       ple,  [1mM-L  [22mtoggles  the  hard-wrapping  of  long[m
+[18;1H[K[7mano(1) line 465/541 90% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       and  off  also while [1mnano [22mis running.  For exam‐[m
+[18;1H[K[7mano(1) line 464/541 90% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       Several of the above options can be switched  on[m
+[18;1H[K[7mano(1) line 463/541 89% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mTOGGLES[0m[m
+[18;1H[K[7mano(1) line 462/541 89% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[18;1H[K[7mano(1) line 461/541 89% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              With [1mM-X [22mthe help lines.[m
+[18;1H[K[7mano(1) line 460/541 89% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              title bar plus status bar can be toggled.[m
+[18;1H[K[7mano(1) line 459/541 88% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              or upon the next keystroke.  With [1mM-Z [22mthe[m
+[18;1H[K[7mano(1) line 458/541 88% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              message, and disappears after 1.5 seconds[m
+[18;1H[K[7mano(1) line 457/541 88% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              appears  only when there is a significant[m
+[18;1H[K[7mano(1) line 456/541 88% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              contents of the buffer.  The  status  bar[m
+[18;1H[K[7mano(1) line 455/541 88% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              all  rows of the terminal for showing the[m
+[18;1H[K[7mano(1) line 454/541 88% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              bar, status bar, and help lines) and  use[m
+[18;1H[K[7mano(1) line 453/541 88% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              Hide all elements of the interface (title[m
+[18;1H[K[7mano(1) line 452/541 87% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-0[22m, [1m--zero[0m[m
+[18;1H[K[7mano(1) line 451/541 87% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[18;1H[K[7mano(1) line 450/541 87% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              when [1m--stateflags [22mis used.[m
+[18;1H[K[7mano(1) line 449/541 86% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              [1mM-C[22m.   The state flags are displayed only[m
+[18;1H[K[7mano(1) line 448/541 86% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              used, and can be toggled on and off  with[m
+[18;1H[K[7mano(1) line 447/541 86% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              displayed  only  when  [1m--constantshow  [22mis[m
+[18;1H[K[7mano(1) line 446/541 86% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              umn numbers and the  character  code  are[m
+[18;1H[K[7mano(1) line 445/541 86% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              ple buffers are open.  The line plus col‐[m
+[18;1H[K[7mano(1) line 444/541 86% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              placed  with an [i/n] counter when multi‐[m
+[18;1H[K[7mano(1) line 443/541 85% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              cleared upon the next keystroke,  or  re‐[m
+[18;1H[K[7mano(1) line 442/541 85% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              after   the  filename.   This  number  is[m
+[18;1H[K[7mano(1) line 441/541 85% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              ber of lines in the buffer  is  displayed[m
+[18;1H[K[7mano(1) line 440/541 85% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              when  switching between buffers, the num‐[m
+[18;1H[K[7mano(1) line 439/541 85% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              When a file is loaded or saved, and  also[m
+[18;1H[K[7mano(1) line 438/541 84% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              the  cursor  is into the file (linewise).[m
+[18;1H[K[7mano(1) line 437/541 84% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              and a percentage that expresses  how  far[m
+[18;1H[K[7mano(1) line 436/541 84% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              same  flags as are shown by [1m--stateflags[22m,[m
+[18;1H[K[7mano(1) line 435/541 84% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              cursor (in Unicode format:  U+xxxx),  the[m
+[18;1H[K[7mano(1) line 434/541 83% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              ber,  the code of the character under the[m
+[18;1H[K[7mano(1) line 433/541 83% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              played the current line and  column  num‐[m
+[18;1H[K[7mano(1) line 432/541 83% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              been  modified.   On  the  right are dis‐[m
+[18;1H[K[7mano(1) line 431/541 83% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              lowed by an asterisk if  the  buffer  has[m
+[18;1H[K[7mano(1) line 430/541 83% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              the  filename  is shown on the left, fol‐[m
+[18;1H[K[7mano(1) line 429/541 83% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              for the status bar.   In  this  "minibar"[m
+[18;1H[K[7mano(1) line 428/541 82% (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ nano[K[K[K[Ksew[Kq 1 1000 >lg[Kamng[K[K[Kngfl[Kil
+[?2004l[?2004h]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ nano langfil 
+[?2004l[?2004h[?1049h[22;0;0t[1;18r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[16;22H(B[0;7m[ Reading... ](B[m[16;20H(B[0;7m[ Read 1000 lines ](B[m[H(B[0;7m  GNU nano 7.2             langfil                       [1;56H(B[m[17d(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[18d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[2d1[3d2[4d3[5d4[6d5[7d6[8d7[9d8[10d9[11d10[12d11[13d12[14d13[15d14[2d[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[15d[?25l[?12l[?25h7[2;15r8
+[1;18r[15;1H15[?25l[?12l[?25h7[2;15r8
+[1;18r[15;1H16[?25l[?12l[?25h7[2;15r8
+[1;18r[15;1H17[?25l[?12l[?25h7[2;15r8
+[1;18r[15;1H18[?25l[?12l[?25h7[2;15r8
+[1;18r[15;1H19[?25l[?12l[?25h7[2;15r8
+[1;18r[15;1H20[?25l[16d[K[?12l[?25h7[2;16r8
+[1;18r[15;1H21[?25l[?12l[?25h7[2;16r8[16d
+[1;18r[15;1H22[?25l[?12l[?25h7[2;16r8[16d
+[1;18r[15;1H23[?25l[?12l[?25h7[2;16r8[16d
+[1;18r[15;1H24[?25l[?12l[?25h7[2;16r8[16d
+[1;18r[15;1H25[?25l[?12l[?25h[?25l[17d[J[18d[?12l[?25h[18;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ rm langfil 
+[?2004l[?2004h]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ s[Kecho hej >fil.txt[C>fil.txt
+[?2004l[?2004h]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ echo hej >>fil.txt
+[?2004l[?2004h]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ echo hej >>fil.txt
+[?2004l[?2004h]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ echo hej >>fil.txt
+[?2004l[?2004h]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ echo hej >>fil.txt
+[?2004l[?2004h]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ echo hej >>fil.txt
+[?2004l[?2004h]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ [H[2J]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ nano d[Kfil.txt 
+[?2004l[?2004h[?1049h[22;0;0t[1;18r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[16;22H(B[0;7m[ Reading... ](B[m[16;21H(B[0;7m[ Read 6 lines ](B[m[H(B[0;7m  GNU nano 7.2             fil.txt                       [1;56H(B[m[17d(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[18d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[2dhej[3dhej[4dhej[5dhej[6dhej[7dhej[2d[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[?25l[?12l[?25h[?25l[16d[J[18d[?12l[?25h[18;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ nano .nanorc
+[?2004l[?2004h[?1049h[22;0;0t[1;18r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[16;23H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 7.2             .nanorc                       [1;56H(B[m[17d(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[18d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[2d[?12l[?25h[?25l[1;36H(B[0;7m*[56G(B[m[2d(B[0;1m[31m~/.nanorc[16d[39m(B[m[K[2;10H[?12l[?25h[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[16d[?12l[?25h[2d[K[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[32mset(B[0;1m[32m linenumbers[39m(B[m[?12l[?25h[?25l[3d[?12l[?25h[?25l[16d(B[0;7mSave modified buffer?                                    [17;1H Y(B[m Yes[K[18d(B[0;7m N(B[m No  [15G  (B[0;7m^C(B[m Cancel[K[16;23H[?12l[?25h[?25l[17d(B[0;7m^G(B[m Help[15G(B[0;7mM-D(B[m DOS Format(B[0;7mM-A(B[m Append    (B[0;7mM-B(B[m Backup File[18;1H(B[0;7m^C(B[m Cancel     (B[0;7mM-M(B[m Mac Format(B[0;7mM-P(B[m Prepend   (B[0;7m^T(B[m Browse[16d(B[0;7mFile Name to Write: .nanorc(B[m[?12l[?25h[?25l[21G[1K (B[0;7m[ Writing... ](B[m[K[1;36H(B[0;7m [56G(B[m[16;21H(B[0;7m[ Wrote 2 lines ](B[m[J[18d[?12l[?25h[18;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ nano .nanorcfil.txt 
+[?2004l[?2004h[?1049h[22;0;0t[1;18r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[16;22H(B[0;7m[ Reading... ](B[m[16;21H(B[0;7m[ Read 6 lines ](B[m[H(B[0;7m  GNU nano 7.2             fil.txt                       [1;56H(B[m[17d(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[18d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[2d(B[0;7m 1(B[m hej[3d(B[0;7m 2(B[m hej[4d(B[0;7m 3(B[m hej[5d(B[0;7m 4(B[m hej[6d(B[0;7m 5(B[m hej[7d(B[0;7m 6(B[m hej[8d(B[0;7m 7[2;4H(B[m[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[16d[J[18d[?12l[?25h[18;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ cat .nanorc 
+[?2004lset linenumbers
+
+[?2004h]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ sudo nano /etc/ssh.[K/sshd_config
+[?2004l[?2004h[?1049h[22;0;0t[1;18r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[16;22H(B[0;7m[ Reading... ](B[m[16;20H(B[0;7m[ Read 123 lines ](B[m[H(B[0;7m  GNU nano 7.2       /etc/ssh/sshd_config                [1;56H(B[m[17d(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[18d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[3d[36m# This is the sshd server system-wide configuration file[39m(B[0;7m>[4;1H(B[0m[36m# sshd_config(5) for more information.[6d# This sshd was compiled with PATH=/usr/local/sbin:/usr/[39m(B[0;7m>[8;1H(B[0m[36m# The strategy used for options in the default sshd_conf[39m(B[0;7m>[9;1H(B[0m[36m# OpenSSH is to specify options with their default value[39m(B[0;7m>[10;1H(B[0m[36m# possible, but leave them commented.  Uncommented optio[39m(B[0;7m>[11;1H(B[0m[36m# default value.[13d[39m(B[mInclude /etc/ssh/sshd_config.d/*.conf[15dPort 2024[2d[?12l[?25h[?25l[16d[J[18d[?12l[?25h[18;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ sudo nano /etc/ssh/sshd_config[C[C[C[C[C[C[C[C[C[C[C[C[C[Kls -/l[K[Kla .nanorc 
+[?2004l-rw-rw-r-- 1 kent kent 17 Oct 10 07:25 .nanorc
+[?2004h]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ pwd
+[?2004l/home/kent
+[?2004h]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ sudoedit /etc/sshsshd[K[K[K[K/sshd_config
+[?2004l[?2004h[?1049h[22;0;0t[1;18r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[16;22H(B[0;7m[ Reading... ](B[m[16;20H(B[0;7m[ Read 123 lines ](B[m[H(B[0;7m  GNU nano 7.2  /var/tmp/sshd_config.1z6fSu2b            [1;56H(B[m[17d(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[18d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[2d(B[0;7m  1[3d  2(B[m [36m# This is the sshd server system-wide configuration [39m(B[0;7m>[4;1H  3(B[m [36m# sshd_config(5) for more information.[5d[39m(B[0;7m  4[6d  5(B[m [36m# This sshd was compiled with PATH=/usr/local/sbin:/[39m(B[0;7m>[7;1H  6[8d  7(B[m [36m# The strategy used for options in the default sshd_[39m(B[0;7m>[9;1H  8(B[m [36m# OpenSSH is to specify options with their default v[39m(B[0;7m>[10;1H  9(B[m [36m# possible, but leave them commented.  Uncommented o[39m(B[0;7m>[11;1H 10(B[m [36m# default value.[12d[39m(B[0;7m 11[13d 12(B[m Include /etc/ssh/sshd_config.d/*.conf[14d(B[0;7m 13[15d 14(B[m Port 2024[2;5H[?12l[?25h[?25l[16d[J[18d[?12l[?25h[18;1H[?1049l[23;0;0t[?1l>[?2004lsudoedit: /etc/ssh/sshd_config unchanged
+[?2004h]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ sudo -i
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# ls -a
+[?2004l[0m[01;34m.[0m   .bash_history  .lesshst  .profile
+[01;34m..[0m  .bashrc        [01;34m.local[0m    [01;34m.ssh[0m
+[?2004h]0;root@ubse: ~root@ubse:~# ln /[K-s /home/kent/.nanorc iuhiuhiuhiuhiuhiu[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# ln -s /home/kent/.nanorc [C[C[C[C[C[C[C[C[C[C[C[C[C[Cs -a[K
+[?2004l[0m[01;34m.[0m   .bash_history  .lesshst  [01;36m.nanorc[0m   [01;34m.ssh[0m
+[01;34m..[0m  .bashrc        [01;34m.local[0m    .profile
+[?2004h]0;root@ubse: ~root@ubse:~# ls /[K-la
+[?2004ltotal 32
+drwx------  4 root root 4096 Oct 10 07:29 [0m[01;34m.[0m
+drwxr-xr-x 23 root root 4096 Oct  7 09:42 [01;34m..[0m
+-rw-------  1 root root  227 Oct 10 07:22 .bash_history
+-rw-r--r--  1 root root 3106 Apr 22 13:04 .bashrc
+-rw-------  1 root root   20 Oct  9 08:54 .lesshst
+drwxr-xr-x  3 root root 4096 Oct 10 07:27 [01;34m.local[0m
+lrwxrwxrwx  1 root root   18 Oct 10 07:29 [01;36m.nanorc[0m -> /home/kent/.nanorc
+-rw-r--r--  1 root root  161 Apr 22 13:04 .profile
+drwx------  2 root root 4096 Oct  7 10:08 [01;34m.ssh[0m
+[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# nano /etc/ssh/sshd_)c[K[Kconfig
+[?2004l[?2004h[?1049h[22;0;0t[1;18r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[16;22H(B[0;7m[ Reading... ](B[m[16;20H(B[0;7m[ Read 123 lines ](B[m[H(B[0;7m  GNU nano 7.2       /etc/ssh/sshd_config                [1;56H(B[m[17d(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[18d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[2d(B[0;7m  1[3d  2(B[m [36m# This is the sshd server system-wide configuration [39m(B[0;7m>[4;1H  3(B[m [36m# sshd_config(5) for more information.[5d[39m(B[0;7m  4[6d  5(B[m [36m# This sshd was compiled with PATH=/usr/local/sbin:/[39m(B[0;7m>[7;1H  6[8d  7(B[m [36m# The strategy used for options in the default sshd_[39m(B[0;7m>[9;1H  8(B[m [36m# OpenSSH is to specify options with their default v[39m(B[0;7m>[10;1H  9(B[m [36m# possible, but leave them commented.  Uncommented o[39m(B[0;7m>[11;1H 10(B[m [36m# default value.[12d[39m(B[0;7m 11[13d 12(B[m Include /etc/ssh/sshd_config.d/*.conf[14d(B[0;7m 13[15d 14(B[m Port 2024[2;5H[?12l[?25h[?25l[16d[J[18d[?12l[?25h[18;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;root@ubse: ~root@ubse:~# exit
+[?2004llogout
+[?2004h]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ [H[2J]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ sudo -i[K[K[K[K[K[K[Ksudo -i[K[K[K[K[K[K[K[?2004l
+logout
+Connection to localhost closed.
+[?2004h
+[34m~[0m [33m14m4s[0m 
+[35m❯[0m [?2004l
+exit
+
+Script done on 2024-10-10 09:31:14+02:00 [COMMAND_EXIT_CODE="0"]
