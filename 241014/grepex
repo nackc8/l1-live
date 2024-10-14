@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# \( \) utan -E. Vi kör med -E då det är mer lättläst.
+# ( ) med -E.
+
+# grep -E 'stork' wikipedia.txt
+# grep -E 'stork|animal' wikipedia.txt
+# grep --color -E '[0-9]+' wikipedia.txt
+# grep --color -E '[0-9]+|stork' wikipedia.txt
+# grep --color -E '... | ... ' wikipedia.txt  # Klurig! Hur matcha ord på tre tecken?
+# grep -o -E '[0-9]+' wikipedia.txt
+
+# denna kan matcha kommentarsrader genom att tolkas stjärnan i ' *'  som inget och "äta upp"
+# mellanslaget i [^#] istället.
+# grep --color -E '^ *[^#]' /etc/ssh/sshd_config
+
+# Fixen blir att inte tillåta mellanslag i teckengruppen efter stjärnan.
+# grep --color -E '^ *[^# ]' /etc/ssh/sshd_config
+
+# Matcha de som ÄR kommentarer
+
+# grep --color -E '^ *#' /etc/ssh/sshd_config
+
+# -v betyder visa alla rader som INTE matchar.
+
+# grep --color -Ev '^ *#' /etc/ssh/sshd_config
+
+# ^$ matchar tomma rader, som med -v exkluderar dem
+grep --color -Ev '^ *#|^[ 	]*$' /etc/ssh/sshd_config

@@ -1,0 +1,1795 @@
+Script started on 2024-10-14 09:35:08+02:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="100" LINES="11"]
+[?2004h
+[34ml1-live/241014[0m [90m241014[38;5;218m*​​[36m [0m
+[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [H[2J
+[34ml1-live/241014[0m [90m241014[38;5;218m*​​[36m [0m
+[35m❯[0m man grep
+[?2004l[?1049h[22;0;0t[?1h=GREP(1)                                     User Commands                                    GREP(1)[m
+[m
+[1mNAME[0m[m
+       grep, egrep, fgrep, rgrep - print lines that match patterns[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mgrep[0m [[4mOPTION[24m...] [4mPATTERNS[24m [[4mFILE[24m...][m
+       [1mgrep[0m [[4mOPTION[24m...] [1m-e[0m [4mPATTERNS[24m ... [[4mFILE[24m...][m
+       [1mgrep[0m [[4mOPTION[24m...] [1m-f[0m [4mPATTERN_FILE[24m ... [[4mFILE[24m...][m
+[m
+[1mDESCRIPTION[0m[m
+       [1mgrep[0m  searches  for  [4mPATTERNS[24m  in  each  [4mFILE[24m.  [4mPATTERNS[24m is one or more patterns separated by[m
+       newline characters, and [1mgrep[0m prints each line that matches  a  pattern.   Typically  [4mPATTERNS[24m[m
+       should be quoted when [1mgrep[0m is used in a shell command.[m
+[m
+       A [4mFILE[24m of “[1m-[0m” stands for standard input.  If no [4mFILE[24m is given, recursive searches examine the[m
+       working directory, and nonrecursive searches read standard input.[m
+[m
+[7m Manual page grep(1) line 1 (press h for help or q to quit)[27m[K[K       Debian also includes the variant programs [1megrep[0m, [1mfgrep[0m and [1mrgrep[0m.   These  programs  are  the[m
+       same as [1mgrep[0m [1m-E[0m, [1mgrep[0m [1m-F[0m, and [1mgrep[0m [1m-r[0m, respectively.  These variants are deprecated upstream,[m
+       but Debian provides for backward compatibility. For portability reasons, it is recommended to[m
+       avoid the variant programs, and use [1mgrep[0m with the related option instead.[m
+[m
+[1mOPTIONS[0m[m
+   [1mGeneric[0m [1mProgram[0m [1mInformation[0m[m
+       [1m--help[0m Output a usage message and exit.[m
+[m
+       [1m-V[0m, [1m--version[0m[m
+              Output the version number of [1mgrep[0m and exit.[m
+[m
+   [1mPattern[0m [1mSyntax[0m[m
+       [1m-E[0m, [1m--extended-regexp[0m[m
+              Interpret [4mPATTERNS[24m as extended regular expressions (EREs, see below).[m
+[m
+       [1m-F[0m, [1m--fixed-strings[0m[m
+              Interpret [4mPATTERNS[24m as fixed strings, not regular expressions.[m
+[7m Manual page grep(1) line 19 (press h for help or q to quit)[27m[K[K[m
+       [1m-G[0m, [1m--basic-regexp[0m[m
+              Interpret  [4mPATTERNS[24m  as  basic  regular  expressions  (BREs,  see below).  This is the[m
+              default.[m
+[m
+       [1m-P[0m, [1m--perl-regexp[0m[m
+              Interpret [4mPATTERNS[24m as Perl-compatible regular expressions  (PCREs).   This  option  is[m
+              experimental  when  combined with the [1m-z[0m ([1m--null-data[0m) option, and [1mgrep[0m [1m-P[0m may warn of[m
+              unimplemented features.[m
+[m
+   [1mMatching[0m [1mControl[0m[m
+       [1m-e[0m [4mPATTERNS[24m, [1m--regexp=[0m[4mPATTERNS[24m[m
+              Use [4mPATTERNS[24m as the patterns.  If this option is used multiple times  or  is  combined[m
+              with  the  [1m-f[0m ([1m--file[0m) option, search for all patterns given.  This option can be used[m
+              to protect a pattern beginning with “-”.[m
+[m
+       [1m-f[0m [4mFILE[24m, [1m--file=[0m[4mFILE[24m[m
+              Obtain patterns from [4mFILE[24m, one per line.  If this option is used multiple times or  is[m
+[7m Manual page grep(1) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              combined with the [1m-e[0m ([1m--regexp[0m) option, search for all patterns given.  The empty file[m
+[7m Manual page grep(1) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              contains zero patterns, and therefore matches nothing.[m
+[7m Manual page grep(1) line 39 (press h for help or q to quit)[27m[K[K[m
+       [1m-i[0m, [1m--ignore-case[0m[m
+              Ignore case distinctions in patterns and input data, so that  characters  that  differ[m
+              only in case match each other.[m
+[m
+       [1m--no-ignore-case[0m[m
+              Do  not  ignore  case  distinctions  in patterns and input data.  This is the default.[m
+              This option is useful for passing to shell scripts that already use [1m-i[0m, to cancel  its[m
+              effects because the two options override each other.[m
+[m
+       [1m-v[0m, [1m--invert-match[0m[m
+              Invert the sense of matching, to select non-matching lines.[m
+[m
+       [1m-w[0m, [1m--word-regexp[0m[m
+              Select  only  those  lines containing matches that form whole words.  The test is that[m
+              the matching substring must either be at the beginning of the line, or preceded  by  a[m
+              non-word  constituent  character.  Similarly, it must be either at the end of the line[m
+              or followed by a non-word  constituent  character.   Word-constituent  characters  are[m
+[7m Manual page grep(1) line 57 (press h for help or q to quit)[27m[K[K              letters,  digits,  and  the  underscore.   This  option  has  no  effect if [1m-x[0m is also[m
+              specified.[m
+[m
+       [1m-x[0m, [1m--line-regexp[0m[m
+              Select only those matches that exactly match the whole line.  For a regular expression[m
+              pattern, this is like parenthesizing the pattern and then surrounding it with [1m^[0m and [1m$[0m.[m
+[m
+   [1mGeneral[0m [1mOutput[0m [1mControl[0m[m
+       [1m-c[0m, [1m--count[0m[m
+              Suppress  normal  output; instead print a count of matching lines for each input file.[m
+              With the [1m-v[0m, [1m--invert-match[0m option (see above), count non-matching lines.[m
+[m
+       [1m--color[0m[[1m=[0m[4mWHEN[24m], [1m--colour[0m[[1m=[0m[4mWHEN[24m][m
+              Surround the matched (non-empty) strings, matching lines, context lines,  file  names,[m
+              line  numbers,  byte  offsets, and separators (for fields and groups of context lines)[m
+              with escape sequences to display them in  color  on  the  terminal.   The  colors  are[m
+              defined by the environment variable [1mGREP_COLORS[0m.  [4mWHEN[24m is [1mnever[0m, [1malways[0m, or [1mauto[0m.[m
+[m
+[7m Manual page grep(1) line 75 (press h for help or q to quit)[27m[K[K       [1m-L[0m, [1m--files-without-match[0m[m
+              Suppress normal output; instead print the name of each input file from which no output[m
+              would normally have been printed.[m
+[m
+       [1m-l[0m, [1m--files-with-matches[0m[m
+              Suppress normal output; instead print the name of each input file  from  which  output[m
+              would normally have been printed.  Scanning each input file stops upon first match.[m
+[m
+       [1m-m[0m [4mNUM[24m, [1m--max-count=[0m[4mNUM[24m[m
+              Stop  reading  a file after [4mNUM[24m matching lines.  If [4mNUM[24m is zero, [1mgrep[0m stops right away[m
+              without reading input.  A [4mNUM[24m of -1 is treated as infinity and  [1mgrep[0m  does  not  stop;[m
+              this  is  the  default.   If  the input is standard input from a regular file, and [4mNUM[24m[m
+              matching lines are output, [1mgrep[0m ensures that the standard input is positioned to  just[m
+              after  the  last  matching line before exiting, regardless of the presence of trailing[m
+              context lines.  This enables a calling process to resume a search.   When  [1mgrep[0m  stops[m
+              after  [4mNUM[24m  matching  lines,  it  outputs  any trailing context lines.  When the [1m-c[0m or[m
+              [1m--count[0m option is also used, [1mgrep[0m does not output a count greater than [4mNUM[24m.  When  the[m
+              [1m-v[0m or [1m--invert-match[0m option is also used, [1mgrep[0m stops after outputting [4mNUM[24m non-matching[m
+[7m Manual page grep(1) line 93 (press h for help or q to quit)[27m[K[K              lines.[m
+[m
+       [1m-o[0m, [1m--only-matching[0m[m
+              Print only the matched (non-empty) parts of a matching line, with each such part on  a[m
+              separate output line.[m
+[m
+       [1m-q[0m, [1m--quiet[0m, [1m--silent[0m[m
+              Quiet; do not write anything to standard output.  Exit immediately with zero status if[m
+              any match is found, even if an error was detected.  Also see the [1m-s[0m  or  [1m--no-messages[0m[m
+              option.[m
+[m
+       [1m-s[0m, [1m--no-messages[0m[m
+              Suppress error messages about nonexistent or unreadable files.[m
+[m
+   [1mOutput[0m [1mLine[0m [1mPrefix[0m [1mControl[0m[m
+       [1m-b[0m, [1m--byte-offset[0m[m
+              Print the 0-based byte offset within the input file before each line of output.  If [1m-o[0m[m
+              ([1m--only-matching[0m) is specified, print the offset of the matching part itself.[m
+[7m Manual page grep(1) line 111 (press h for help or q to quit)[27m[K[K/[K--[KEE[K[1;1H              lines.[m
+[2;1H[m
+[3;1H       [1m-o[0m, [1m--only-matching[0m[m
+[4;1H              Print only the matched (non-empty) parts of a matching line, with each such part on  a[m
+[5;1H              separate output line.[m
+[6;1H[m
+[7;1H       [1m-q[0m, [1m--quiet[0m, [1m--silent[0m[m
+[8;1H              Quiet; do not write anything to standard output.  Exit immediately with zero status if[m
+[9;1H              any match is found, even if an error was detected.  Also see the [1m-s[0m  or  [1m--no-messages[0m[m
+[10;1H              option.[m
+[11;1H[m
+[12;1H       [1m-s[0m, [1m--no-messages[0m[m
+[13;1H              Suppress error messages about nonexistent or unreadable files.[m
+[14;1H[m
+[15;1H   [1mOutput[0m [1mLine[0m [1mPrefix[0m [1mControl[0m[m
+[16;1H       [1m-b[0m, [1m--byte-offset[0m[m
+[17;1H              Print the 0-based byte offset within the input file before each line of output.  If [1m-o[0m[m
+[18;1H              ([1m--only-matching[0m) is specified, print the offset of the matching part itself.[m
+[19;1H[1;1H              lines.[m
+[2;1H[m
+[3;1H       [1m-o[0m, [1m--only-matching[0m[m
+[4;1H              Print only the matched (non-empty) parts of a matching line, with each such part on  a[m
+[5;1H              separate output line.[m
+[6;1H[m
+[7;1H       [1m-q[0m, [1m--quiet[0m, [1m--silent[0m[m
+[8;1H              Quiet; do not write anything to standard output.  Exit immediately with zero status if[m
+[9;1H              any match is found, even if an error was detected.  Also see the [1m-s[0m  or  [1m--no-messages[0m[m
+[10;1H              option.[m
+[11;1H[m
+[12;1H       [1m-s[0m, [1m--no-messages[0m[m
+[13;1H              Suppress error messages about nonexistent or unreadable files.[m
+[14;1H[m
+[15;1H   [1mOutput[0m [1mLine[0m [1mPrefix[0m [1mControl[0m[m
+[16;1H       [1m-b[0m, [1m--byte-offset[0m[m
+[17;1H              Print the 0-based byte offset within the input file before each line of output.  If [1m-o[0m[m
+[18;1H              ([1m--only-matching[0m) is specified, print the offset of the matching part itself.[m
+[19;1H[K[7mPattern not found  (press RETURN)[27m[19;1H[K[K[H[2J[HM[m
+[HM       working directory, and nonrecursive searches read standard input.[m
+[HM       A [4mFILE[24m of “[1m-[0m” stands for standard input.  If no [4mFILE[24m is given, recursive searches examine the[m
+[HM[m
+[HM       should be quoted when [1mgrep[0m is used in a shell command.[m
+[HM       newline characters, and [1mgrep[0m prints each line that matches  a  pattern.   Typically  [4mPATTERNS[24m[m
+[HM       [1mgrep[0m  searches  for  [4mPATTERNS[24m  in  each  [4mFILE[24m.  [4mPATTERNS[24m is one or more patterns separated by[m
+[HM[1mDESCRIPTION[0m[m
+[HM[m
+[HM       [1mgrep[0m [[4mOPTION[24m...] [1m-f[0m [4mPATTERN_FILE[24m ... [[4mFILE[24m...][m
+[HM       [1mgrep[0m [[4mOPTION[24m...] [1m-e[0m [4mPATTERNS[24m ... [[4mFILE[24m...][m
+[HM       [1mgrep[0m [[4mOPTION[24m...] [4mPATTERNS[24m [[4mFILE[24m...][m
+[HM[1mSYNOPSIS[0m[m
+[HM[m
+[HM       grep, egrep, fgrep, rgrep - print lines that match patterns[m
+[HM[1mNAME[0m[m
+[HM[m
+[HMGREP(1)                                     User Commands                                    GREP(1)[m
+[19;1H[K[7m Manual page grep(1) line 1/546 3% (press h for help or q to quit)[27m[K[K/[K--[KEE[K[1;1HGREP(1)                                     User Commands                                    GREP(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       grep, egrep, fgrep, rgrep - print lines that match patterns[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mgrep[0m [[4mOPTION[24m...] [4mPATTERNS[24m [[4mFILE[24m...][m
+[8;1H       [1mgrep[0m [[4mOPTION[24m...] [1m-e[0m [4mPATTERNS[24m ... [[4mFILE[24m...][m
+[9;1H       [1mgrep[0m [[4mOPTION[24m...] [1m-f[0m [4mPATTERN_FILE[24m ... [[4mFILE[24m...][m
+[10;1H[m
+[11;1H[1mDESCRIPTION[0m[m
+[12;1H       [1mgrep[0m  searches  for  [4mPATTERNS[24m  in  each  [4mFILE[24m.  [4mPATTERNS[24m is one or more patterns separated by[m
+[13;1H       newline characters, and [1mgrep[0m prints each line that matches  a  pattern.   Typically  [4mPATTERNS[24m[m
+[14;1H       should be quoted when [1mgrep[0m is used in a shell command.[m
+[15;1H[m
+[16;1H       A [4mFILE[24m of “[1m-[0m” stands for standard input.  If no [4mFILE[24m is given, recursive searches examine the[m
+[17;1H       working directory, and nonrecursive searches read standard input.[m
+[18;1H[m
+[19;1H[1;1HGREP(1)                                     User Commands                                    GREP(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       grep, egrep, fgrep, rgrep - print lines that match patterns[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mgrep[0m [[4mOPTION[24m...] [4mPATTERNS[24m [[4mFILE[24m...][m
+[8;1H       [1mgrep[0m [[4mOPTION[24m...] [1m-e[0m [4mPATTERNS[24m ... [[4mFILE[24m...][m
+[9;1H       [1mgrep[0m [[4mOPTION[24m...] [1m-f[0m [4mPATTERN_FILE[24m ... [[4mFILE[24m...][m
+[10;1H[m
+[11;1H[1mDESCRIPTION[0m[m
+[12;1H       [1mgrep[0m  searches  for  [4mPATTERNS[24m  in  each  [4mFILE[24m.  [4mPATTERNS[24m is one or more patterns separated by[m
+[13;1H       newline characters, and [1mgrep[0m prints each line that matches  a  pattern.   Typically  [4mPATTERNS[24m[m
+[14;1H       should be quoted when [1mgrep[0m is used in a shell command.[m
+[15;1H[m
+[16;1H       A [4mFILE[24m of “[1m-[0m” stands for standard input.  If no [4mFILE[24m is given, recursive searches examine the[m
+[17;1H       working directory, and nonrecursive searches read standard input.[m
+[18;1H[m
+[19;1H...skipping...
+       same as [1mgrep[0m [1m[7m-E[27m[0m, [1mgrep[0m [1m-F[0m, and [1mgrep[0m [1m-r[0m, respectively.  These variants are deprecated upstream,[m
+       but Debian provides for backward compatibility. For portability reasons, it is recommended to[m
+       avoid the variant programs, and use [1mgrep[0m with the related option instead.[m
+[m
+[1mOPTIONS[0m[m
+   [1mGeneric[0m [1mProgram[0m [1mInformation[0m[m
+       [1m--help[0m Output a usage message and exit.[m
+[m
+       [1m-V[0m, [1m--version[0m[m
+              Output the version number of [1mgrep[0m and exit.[m
+[m
+   [1mPattern[0m [1mSyntax[0m[m
+       [1m[7m-E[27m[0m, [1m--extended-regexp[0m[m
+              Interpret [4mPATTERNS[24m as extended regular expressions (EREs, see below).[m
+[m
+       [1m-F[0m, [1m--fixed-strings[0m[m
+              Interpret [4mPATTERNS[24m as fixed strings, not regular expressions.[m
+[m
+[7m Manual page grep(1) line 20/546 5% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-G[0m, [1m--basic-regexp[0m[m
+[7m Manual page grep(1) line 21/546 6% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Interpret  [4mPATTERNS[24m  as  basic  regular  expressions  (BREs,  see below).  This is the[m
+[7m Manual page grep(1) line 22/546 6% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              default.[m
+[7m Manual page grep(1) line 23/546 6% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page grep(1) line 24/546 6% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-P[0m, [1m--perl-regexp[0m[m
+[7m Manual page grep(1) line 25/546 6% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Interpret [4mPATTERNS[24m as Perl-compatible regular expressions  (PCREs).   This  option  is[m
+[7m Manual page grep(1) line 26/546 6% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              experimental  when  combined with the [1m-z[0m ([1m--null-data[0m) option, and [1mgrep[0m [1m-P[0m may warn of[m
+[7m Manual page grep(1) line 27/546 7% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              unimplemented features.[m
+[7m Manual page grep(1) line 28/546 7% (press h for help or q to quit)[27m[K[H[2J[H       [1m-V[0m, [1m--version[0m[m
+              Output the version number of [1mgrep[0m and exit.[m
+[m
+   [1mPattern[0m [1mSyntax[0m[m
+       [1m[7m-E[27m[0m, [1m--extended-regexp[0m[m
+              Interpret [4mPATTERNS[24m as extended regular expressions (EREs, see below).[m
+[m
+       [1m-F[0m, [1m--fixed-strings[0m[m
+              Interpret [4mPATTERNS[24m as fixed strings, not regular expressions.[m
+[m
+       [1m-G[0m, [1m--basic-regexp[0m[m
+              Interpret  [4mPATTERNS[24m  as  basic  regular  expressions  (BREs,  see below).  This is the[m
+              default.[m
+[m
+       [1m-P[0m, [1m--perl-regexp[0m[m
+              Interpret [4mPATTERNS[24m as Perl-compatible regular expressions  (PCREs).   This  option  is[m
+              experimental  when  combined with the [1m-z[0m ([1m--null-data[0m) option, and [1mgrep[0m [1m-P[0m may warn of[m
+[7m Manual page grep(1) line 28/546 7% (press h for help or q to quit)[27m[K[H[2J[H       [1m-V[0m, [1m--version[0m[m
+              Output the version number of [1mgrep[0m and exit.[m
+[m
+   [1mPattern[0m [1mSyntax[0m[m
+       [1m[7m-E[27m[0m, [1m--extended-regexp[0m[m
+              Interpret [4mPATTERNS[24m as extended regular expressions (EREs, see below).[m
+[m
+       [1m-F[0m, [1m--fixed-strings[0m[m
+              Interpret [4mPATTERNS[24m as fixed strings, not regular expressions.[m
+[m
+       [1m-G[0m, [1m--basic-regexp[0m[m
+              Interpret  [4mPATTERNS[24m  as  basic  regular  expressions  (BREs,  see below).  This is the[m
+              default.[m
+[m
+       [1m-P[0m, [1m--perl-regexp[0m[m
+              Interpret [4mPATTERNS[24m as Perl-compatible regular expressions  (PCREs).   This  option  is[m
+[7m Manual page grep(1) line 28/546 6% (press h for help or q to quit)[27m[K[H[2J[H       [1m-V[0m, [1m--version[0m[m
+              Output the version number of [1mgrep[0m and exit.[m
+[m
+   [1mPattern[0m [1mSyntax[0m[m
+       [1m[7m-E[27m[0m, [1m--extended-regexp[0m[m
+              Interpret [4mPATTERNS[24m as extended regular expressions (EREs, see below).[m
+[m
+       [1m-F[0m, [1m--fixed-strings[0m[m
+              Interpret [4mPATTERNS[24m as fixed strings, not regular expressions.[m
+[m
+       [1m-G[0m, [1m--basic-regexp[0m[m
+              Interpret  [4mPATTERNS[24m  as  basic  regular  expressions  (BREs,  see below).  This is the[m
+              default.[m
+[m
+       [1m-P[0m, [1m--perl-regexp[0m[m
+[7m Manual page grep(1) line 28/546 6% (press h for help or q to quit)[27m[K[H[2J[H       [1m-V[0m, [1m--version[0m[m
+              Output the version number of [1mgrep[0m and exit.[m
+[m
+   [1mPattern[0m [1mSyntax[0m[m
+       [1m[7m-E[27m[0m, [1m--extended-regexp[0m[m
+              Interpret [4mPATTERNS[24m as extended regular expressions (EREs, see below).[m
+[m
+       [1m-F[0m, [1m--fixed-strings[0m[m
+              Interpret [4mPATTERNS[24m as fixed strings, not regular expressions.[m
+[m
+       [1m-G[0m, [1m--basic-regexp[0m[m
+              Interpret  [4mPATTERNS[24m  as  basic  regular  expressions  (BREs,  see below).  This is the[m
+              default.[m
+[m
+[7m Manual page grep(1) line 28/546 6% (press h for help or q to quit)[27m[K[H[2J[H       [1m-V[0m, [1m--version[0m[m
+              Output the version number of [1mgrep[0m and exit.[m
+[m
+   [1mPattern[0m [1mSyntax[0m[m
+       [1m[7m-E[27m[0m, [1m--extended-regexp[0m[m
+              Interpret [4mPATTERNS[24m as extended regular expressions (EREs, see below).[m
+[m
+       [1m-F[0m, [1m--fixed-strings[0m[m
+              Interpret [4mPATTERNS[24m as fixed strings, not regular expressions.[m
+[m
+       [1m-G[0m, [1m--basic-regexp[0m[m
+              Interpret  [4mPATTERNS[24m  as  basic  regular  expressions  (BREs,  see below).  This is the[m
+              default.[m
+[7m Manual page grep(1) line 28/546 6% (press h for help or q to quit)[27m[K[H[2J[H       [1m-V[0m, [1m--version[0m[m
+              Output the version number of [1mgrep[0m and exit.[m
+[m
+   [1mPattern[0m [1mSyntax[0m[m
+       [1m[7m-E[27m[0m, [1m--extended-regexp[0m[m
+              Interpret [4mPATTERNS[24m as extended regular expressions (EREs, see below).[m
+[m
+       [1m-F[0m, [1m--fixed-strings[0m[m
+              Interpret [4mPATTERNS[24m as fixed strings, not regular expressions.[m
+[m
+       [1m-G[0m, [1m--basic-regexp[0m[m
+              Interpret  [4mPATTERNS[24m  as  basic  regular  expressions  (BREs,  see below).  This is the[m
+[7m Manual page grep(1) line 28/546 6% (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h
+[34ml1-live/241014[0m [90m241014[38;5;218m*​​[36m [33m3m39s[0m 
+[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m grep stork wikipedia.txt [H[2J
+[34ml1-live/241014[0m [90m241014[38;5;218m*​​[36m [33m3m39s[0m 
+[35m❯[0m grep stork wikipedia.txt 
+[?2004lThe white stork (Ciconia ciconia) is a large bird in the stork family, 
+mammals, and small birds. This white stork in flight was photographed in 
+[?2004h
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [0m
+[35m❯[0m man grep
+[?2004l[?1049h[22;0;0t[?1h=GREP(1)                                     User Commands                                    GREP(1)[m
+[m
+[1mNAME[0m[m
+       grep, egrep, fgrep, rgrep - print lines that match patterns[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mgrep[0m [[4mOPTION[24m...] [4mPATTERNS[24m [[4mFILE[24m...][m
+       [1mgrep[0m [[4mOPTION[24m...] [1m-e[0m [4mPATTERNS[24m ... [[4mFILE[24m...][m
+       [1mgrep[0m [[4mOPTION[24m...] [1m-f[0m [4mPATTERN_FILE[24m ... [[4mFILE[24m...][m
+[m
+[1mDESCRIPTION[0m[m
+       [1mgrep[0m  searches  for  [4mPATTERNS[24m  in  each  [4mFILE[24m.  [4mPATTERNS[24m is one or more patterns separated by[m
+       newline characters, and [1mgrep[0m prints each line that matches  a  pattern.   Typically  [4mPATTERNS[24m[m
+       should be quoted when [1mgrep[0m is used in a shell command.[m
+[m
+       A [4mFILE[24m of “[1m-[0m” stands for standard input.  If no [4mFILE[24m is given, recursive searches examine the[m
+       working directory, and nonrecursive searches read standard input.[m
+[7m Manual page grep(1) line 1 (press h for help or q to quit)[27m[K[K[m
+       Debian also includes the variant programs [1megrep[0m, [1mfgrep[0m and [1mrgrep[0m.   These  programs  are  the[m
+       same as [1mgrep[0m [1m-E[0m, [1mgrep[0m [1m-F[0m, and [1mgrep[0m [1m-r[0m, respectively.  These variants are deprecated upstream,[m
+       but Debian provides for backward compatibility. For portability reasons, it is recommended to[m
+       avoid the variant programs, and use [1mgrep[0m with the related option instead.[m
+[m
+[1mOPTIONS[0m[m
+   [1mGeneric[0m [1mProgram[0m [1mInformation[0m[m
+       [1m--help[0m Output a usage message and exit.[m
+[m
+       [1m-V[0m, [1m--version[0m[m
+              Output the version number of [1mgrep[0m and exit.[m
+[m
+   [1mPattern[0m [1mSyntax[0m[m
+       [1m-E[0m, [1m--extended-regexp[0m[m
+              Interpret [4mPATTERNS[24m as extended regular expressions (EREs, see below).[m
+[m
+[7m Manual page grep(1) line 18 (press h for help or q to quit)[27m[K[K       [1m-F[0m, [1m--fixed-strings[0m[m
+              Interpret [4mPATTERNS[24m as fixed strings, not regular expressions.[m
+[m
+       [1m-G[0m, [1m--basic-regexp[0m[m
+              Interpret  [4mPATTERNS[24m  as  basic  regular  expressions  (BREs,  see below).  This is the[m
+              default.[m
+[m
+       [1m-P[0m, [1m--perl-regexp[0m[m
+              Interpret [4mPATTERNS[24m as Perl-compatible regular expressions  (PCREs).   This  option  is[m
+              experimental  when  combined with the [1m-z[0m ([1m--null-data[0m) option, and [1mgrep[0m [1m-P[0m may warn of[m
+              unimplemented features.[m
+[m
+   [1mMatching[0m [1mControl[0m[m
+       [1m-e[0m [4mPATTERNS[24m, [1m--regexp=[0m[4mPATTERNS[24m[m
+              Use [4mPATTERNS[24m as the patterns.  If this option is used multiple times  or  is  combined[m
+              with  the  [1m-f[0m ([1m--file[0m) option, search for all patterns given.  This option can be used[m
+              to protect a pattern beginning with “-”.[m
+[7m Manual page grep(1) line 35 (press h for help or q to quit)[27m[K[K[m
+       [1m-f[0m [4mFILE[24m, [1m--file=[0m[4mFILE[24m[m
+              Obtain patterns from [4mFILE[24m, one per line.  If this option is used multiple times or  is[m
+              combined with the [1m-e[0m ([1m--regexp[0m) option, search for all patterns given.  The empty file[m
+              contains zero patterns, and therefore matches nothing.[m
+[m
+       [1m-i[0m, [1m--ignore-case[0m[m
+              Ignore case distinctions in patterns and input data, so that  characters  that  differ[m
+              only in case match each other.[m
+[m
+       [1m--no-ignore-case[0m[m
+              Do  not  ignore  case  distinctions  in patterns and input data.  This is the default.[m
+              This option is useful for passing to shell scripts that already use [1m-i[0m, to cancel  its[m
+              effects because the two options override each other.[m
+[m
+       [1m-v[0m, [1m--invert-match[0m[m
+              Invert the sense of matching, to select non-matching lines.[m
+[7m Manual page grep(1) line 52 (press h for help or q to quit)[27m[K[K[m
+       [1m-w[0m, [1m--word-regexp[0m[m
+              Select  only  those  lines containing matches that form whole words.  The test is that[m
+              the matching substring must either be at the beginning of the line, or preceded  by  a[m
+              non-word  constituent  character.  Similarly, it must be either at the end of the line[m
+              or followed by a non-word  constituent  character.   Word-constituent  characters  are[m
+              letters,  digits,  and  the  underscore.   This  option  has  no  effect if [1m-x[0m is also[m
+              specified.[m
+[m
+       [1m-x[0m, [1m--line-regexp[0m[m
+              Select only those matches that exactly match the whole line.  For a regular expression[m
+              pattern, this is like parenthesizing the pattern and then surrounding it with [1m^[0m and [1m$[0m.[m
+[m
+   [1mGeneral[0m [1mOutput[0m [1mControl[0m[m
+       [1m-c[0m, [1m--count[0m[m
+              Suppress  normal  output; instead print a count of matching lines for each input file.[m
+              With the [1m-v[0m, [1m--invert-match[0m option (see above), count non-matching lines.[m
+[7m Manual page grep(1) line 69 (press h for help or q to quit)[27m[K[K[m
+       [1m--color[0m[[1m=[0m[4mWHEN[24m], [1m--colour[0m[[1m=[0m[4mWHEN[24m][m
+              Surround the matched (non-empty) strings, matching lines, context lines,  file  names,[m
+              line  numbers,  byte  offsets, and separators (for fields and groups of context lines)[m
+              with escape sequences to display them in  color  on  the  terminal.   The  colors  are[m
+              defined by the environment variable [1mGREP_COLORS[0m.  [4mWHEN[24m is [1mnever[0m, [1malways[0m, or [1mauto[0m.[m
+[m
+       [1m-L[0m, [1m--files-without-match[0m[m
+              Suppress normal output; instead print the name of each input file from which no output[m
+              would normally have been printed.[m
+[m
+       [1m-l[0m, [1m--files-with-matches[0m[m
+              Suppress normal output; instead print the name of each input file  from  which  output[m
+              would normally have been printed.  Scanning each input file stops upon first match.[m
+[m
+       [1m-m[0m [4mNUM[24m, [1m--max-count=[0m[4mNUM[24m[m
+              Stop  reading  a file after [4mNUM[24m matching lines.  If [4mNUM[24m is zero, [1mgrep[0m stops right away[m
+[7m Manual page grep(1) line 86 (press h for help or q to quit)[27m[K[K              without reading input.  A [4mNUM[24m of -1 is treated as infinity and  [1mgrep[0m  does  not  stop;[m
+              this  is  the  default.   If  the input is standard input from a regular file, and [4mNUM[24m[m
+              matching lines are output, [1mgrep[0m ensures that the standard input is positioned to  just[m
+              after  the  last  matching line before exiting, regardless of the presence of trailing[m
+              context lines.  This enables a calling process to resume a search.   When  [1mgrep[0m  stops[m
+              after  [4mNUM[24m  matching  lines,  it  outputs  any trailing context lines.  When the [1m-c[0m or[m
+              [1m--count[0m option is also used, [1mgrep[0m does not output a count greater than [4mNUM[24m.  When  the[m
+              [1m-v[0m or [1m--invert-match[0m option is also used, [1mgrep[0m stops after outputting [4mNUM[24m non-matching[m
+              lines.[m
+[m
+       [1m-o[0m, [1m--only-matching[0m[m
+              Print only the matched (non-empty) parts of a matching line, with each such part on  a[m
+              separate output line.[m
+[m
+       [1m-q[0m, [1m--quiet[0m, [1m--silent[0m[m
+              Quiet; do not write anything to standard output.  Exit immediately with zero status if[m
+              any match is found, even if an error was detected.  Also see the [1m-s[0m  or  [1m--no-messages[0m[m
+[7m Manual page grep(1) line 103 (press h for help or q to quit)[27m[K[K              option.[m
+[m
+       [1m-s[0m, [1m--no-messages[0m[m
+              Suppress error messages about nonexistent or unreadable files.[m
+[m
+   [1mOutput[0m [1mLine[0m [1mPrefix[0m [1mControl[0m[m
+       [1m-b[0m, [1m--byte-offset[0m[m
+              Print the 0-based byte offset within the input file before each line of output.  If [1m-o[0m[m
+              ([1m--only-matching[0m) is specified, print the offset of the matching part itself.[m
+[m
+       [1m-H[0m, [1m--with-filename[0m[m
+              Print the file name for each match.  This is the default when there is more  than  one[m
+              file to search.  This is a GNU extension.[m
+[m
+       [1m-h[0m, [1m--no-filename[0m[m
+              Suppress  the  prefixing  of  file names on output.  This is the default when there is[m
+              only one file (or only standard input) to search.[m
+[7m Manual page grep(1) line 120 (press h for help or q to quit)[27m[K[K[m
+       [1m--label=[0m[4mLABEL[24m[m
+              Display input actually coming from standard input as input  coming  from  file  [4mLABEL[24m.[m
+              This  can  be  useful  for commands that transform a file's contents before searching,[m
+              e.g., [1mgzip[0m [1m-cd[0m [1mfoo.gz[0m [1m|[0m [1mgrep[0m [1m--label=foo[0m [1m-H[0m [1m'some[0m [1mpattern'[0m.  See also the [1m-H[0m option.[m
+[m
+       [1m-n[0m, [1m--line-number[0m[m
+              Prefix each line of output with the 1-based line number within its input file.[m
+[m
+       [1m-T[0m, [1m--initial-tab[0m[m
+              Make sure that the first character of actual line content lies on a tab stop, so  that[m
+              the  alignment  of  tabs  looks normal.  This is useful with options that prefix their[m
+              output to the actual content: [1m-H[0m,[1m-n[0m, and [1m-b[0m.  In order to improve the probability that[m
+              lines  from a single file will all start at the same column, this also causes the line[m
+              number and byte offset (if present) to be printed in a minimum size field width.[m
+[m
+       [1m-Z[0m, [1m--null[0m[m
+[7m Manual page grep(1) line 137 (press h for help or q to quit)[27m[K[K/[Kcc[Koo[Kll[Koo[Krr[K[1;1H[m
+[2;1H       [1m--label=[0m[4mLABEL[24m[m
+[3;1H              Display input actually coming from standard input as input  coming  from  file  [4mLABEL[24m.[m
+[4;1H              This  can  be  useful  for commands that transform a file's contents before searching,[m
+[5;1H              e.g., [1mgzip[0m [1m-cd[0m [1mfoo.gz[0m [1m|[0m [1mgrep[0m [1m--label=foo[0m [1m-H[0m [1m'some[0m [1mpattern'[0m.  See also the [1m-H[0m option.[m
+[6;1H[m
+[7;1H       [1m-n[0m, [1m--line-number[0m[m
+[8;1H              Prefix each line of output with the 1-based line number within its input file.[m
+[9;1H[m
+[10;1H       [1m-T[0m, [1m--initial-tab[0m[m
+[11;1H              Make sure that the first character of actual line content lies on a tab stop, so  that[m
+[12;1H              the  alignment  of  tabs  looks normal.  This is useful with options that prefix their[m
+[13;1H              output to the actual content: [1m-H[0m,[1m-n[0m, and [1m-b[0m.  In order to improve the probability that[m
+[14;1H              lines  from a single file will all start at the same column, this also causes the line[m
+[15;1H              number and byte offset (if present) to be printed in a minimum size field width.[m
+[16;1H[m
+[17;1H       [1m-Z[0m, [1m--null[0m[m
+[18;1H[1;1H[m
+[2;1H       [1m--label=[0m[4mLABEL[24m[m
+[3;1H              Display input actually coming from standard input as input  coming  from  file  [4mLABEL[24m.[m
+[4;1H              This  can  be  useful  for commands that transform a file's contents before searching,[m
+[5;1H              e.g., [1mgzip[0m [1m-cd[0m [1mfoo.gz[0m [1m|[0m [1mgrep[0m [1m--label=foo[0m [1m-H[0m [1m'some[0m [1mpattern'[0m.  See also the [1m-H[0m option.[m
+[6;1H[m
+[7;1H       [1m-n[0m, [1m--line-number[0m[m
+[8;1H              Prefix each line of output with the 1-based line number within its input file.[m
+[9;1H[m
+[10;1H       [1m-T[0m, [1m--initial-tab[0m[m
+[11;1H              Make sure that the first character of actual line content lies on a tab stop, so  that[m
+[12;1H              the  alignment  of  tabs  looks normal.  This is useful with options that prefix their[m
+[13;1H              output to the actual content: [1m-H[0m,[1m-n[0m, and [1m-b[0m.  In order to improve the probability that[m
+[14;1H              lines  from a single file will all start at the same column, this also causes the line[m
+[15;1H              number and byte offset (if present) to be printed in a minimum size field width.[m
+[16;1H[m
+[17;1H       [1m-Z[0m, [1m--null[0m[m
+[18;1H...skipping...
+       [1mGREP_[0m[1m[7mCOLOR[27m[0m[1mS[0m[m
+              Controls how the [1m--[0m[1m[7mcolor[27m[0m option highlights output.  Its  value  is  a  colon-separated[m
+              list           of           capabilities           that           defaults          to[m
+              [1mms=01;31:mc=01;31:sl=:cx=:fn=35:ln=32:bn=32:se=36[0m  with  the   [1mrv[0m   and   [1mne[0m   boolean[m
+              capabilities omitted (i.e., false).  Supported capabilities are as follows.[m
+[m
+              [1msl=[0m    SGR  substring  for  whole  selected  lines  (i.e.,  matching lines when the [1m-v[0m[m
+                     command-line option is omitted, or non-matching lines when  [1m-v[0m  is  specified).[m
+                     If  however  the  boolean [1mrv[0m capability and the [1m-v[0m command-line option are both[m
+                     specified, it applies to context matching lines instead.  The default is  empty[m
+                     (i.e., the terminal's default [7mcolor[27m pair).[m
+[m
+              [1mcx=[0m    SGR  substring  for  whole  context lines (i.e., non-matching lines when the [1m-v[0m[m
+                     command-line option is omitted, or matching lines when [1m-v[0m  is  specified).   If[m
+                     however  the  boolean  [1mrv[0m  capability  and  the [1m-v[0m command-line option are both[m
+                     specified, it applies to selected non-matching lines instead.  The  default  is[m
+                     empty (i.e., the terminal's default [7mcolor[27m pair).[m
+[7m Manual page grep(1) line 388 (press h for help or q to quit)[27m[K[K/[K[m
+[7m Manual page grep(1) line 389 (press h for help or q to quit)[27m[K[K/[K              [1mrv[0m     Boolean   value  that  reverses  (swaps)  the  meanings  of  the  [1msl=[0m  and  [1mcx=[0m[m
+                     capabilities when the [1m-v[0m command-line option  is  specified.   The  default  is[m
+                     false (i.e., the capability is omitted).[m
+[m
+              [1mmt=01;31[0m[m
+                     SGR  substring  for  matching  non-empty  text  in  any  matching line (i.e., a[m
+                     selected line when the [1m-v[0m command-line option is omitted,  or  a  context  line[m
+                     when  [1m-v[0m is specified).  Setting this is equivalent to setting both [1mms=[0m and [1mmc=[0m[m
+                     at once to the same value.  The default is a bold red text foreground over  the[m
+[7m Manual page grep(1) line 398 (press h for help or q to quit)[27m[K[K/[K                     current line background.[m
+[m
+              [1mms=01;31[0m[m
+                     SGR  substring  for  matching non-empty text in a selected line.  (This is only[m
+                     used when the [1m-v[0m command-line option is omitted.)  The effect of  the  [1msl=[0m  (or[m
+                     [1mcx=[0m if [1mrv[0m) capability remains active when this kicks in.  The default is a bold[m
+[7m Manual page grep(1) line 404 (press h for help or q to quit)[27m[K[K/[K...skipping...
+                     (EL) to Right ([1m\33[K[0m) each time a [7mcolor[27mized  item  ends.   This  is  needed  on[m
+                     terminals  on  which  EL is not supported.  It is otherwise useful on terminals[m
+                     for which the [1mback_[0m[1m[7mcolor[27m[0m[1m_erase[0m  ([1mbce[0m)  boolean  terminfo  capability  does  not[m
+                     apply,  when  the chosen highlight [7mcolor[27ms do not affect the background, or when[m
+                     EL is too slow or causes too much flicker.  The default  is  false  (i.e.,  the[m
+                     capability is omitted).[m
+[m
+              Note  that  boolean capabilities have no [1m=[0m... part.  They are omitted (i.e., false) by[m
+              default and become true when specified.[m
+[m
+              See the Select Graphic Rendition (SGR)  section  in  the  documentation  of  the  text[m
+              terminal  that is used for permitted values and their meaning as character attributes.[m
+              These substring values are integers in decimal representation and can be  concatenated[m
+              with  semicolons.   [1mgrep[0m  takes  care  of  assembling  the  result into a complete SGR[m
+              sequence ([1m\33[[0m...[1mm[0m).   Common  values  to  concatenate  include  [1m1[0m  for  bold,  [1m4[0m  for[m
+              underline,  [1m5[0m  for blink, [1m7[0m for inverse, [1m39[0m for default foreground [7mcolor[27m, [1m30[0m to [1m37[0m for[m
+              foreground [7mcolor[27ms, [1m90[0m to [1m97[0m for 16-[7mcolor[27m mode foreground [7mcolor[27ms,  [1m38;5;0[0m  to  [1m38;5;255[0m[m
+[7m Manual page grep(1) line 444 (press h for help or q to quit)[27m[K[K/[K              for  88-[7mcolor[27m  and 256-[7mcolor[27m modes foreground [7mcolor[27ms, [1m49[0m for default background [7mcolor[27m,[m
+              [1m40[0m to [1m47[0m for background [7mcolor[27ms, [1m100[0m to [1m107[0m for 16-[7mcolor[27m mode  background  [7mcolor[27ms,  and[m
+[7m Manual page grep(1) line 446 (press h for help or q to quit)[27m[K[K/[K              [1m48;5;0[0m to [1m48;5;255[0m for 88-[7mcolor[27m and 256-[7mcolor[27m modes background [7mcolor[27ms.[m
+[7m Manual page grep(1) line 447 (press h for help or q to quit)[27m[K[K/[K[m
+       [1mLC_ALL[0m, [1mLC_COLLATE[0m, [1mLANG[0m[m
+              These  variables  specify the locale for the [1mLC_COLLATE[0m category, which determines the[m
+              collating sequence used to interpret range expressions like [1m[a-z][0m.[m
+[m
+       [1mLC_ALL[0m, [1mLC_CTYPE[0m, [1mLANG[0m[m
+              These variables specify the locale for the [1mLC_CTYPE[0m  category,  which  determines  the[m
+              type  of  characters,  e.g.,  which  characters  are  whitespace.   This category also[m
+              determines the character encoding, that is, whether text is encoded in  UTF-8,  ASCII,[m
+              or  some  other  encoding.   In the C or POSIX locale, all characters are encoded as a[m
+              single byte and every byte is a valid character.[m
+[m
+[7m Manual page grep(1) line 459 (press h for help or q to quit)[27m[K[K/[K       [1mLC_ALL[0m, [1mLC_MESSAGES[0m, [1mLANG[0m[m
+[7m Manual page grep(1) line 460 (press h for help or q to quit)[27m[K[K/[K              These variables specify the locale for the [1mLC_MESSAGES[0m category, which determines  the[m
+[7m Manual page grep(1) line 461 (press h for help or q to quit)[27m[K[K/[K              language  that  [1mgrep[0m  uses  for  messages.  The default C locale uses American English[m
+[7m Manual page grep(1) line 462 (press h for help or q to quit)[27m[K[K/[K              messages.[m
+[7m Manual page grep(1) line 463 (press h for help or q to quit)[27m[K[K/[K[K[7mPattern not found  (press RETURN)[27m[18;1H[K[K/[K[K[7mPattern not found  (press RETURN)[27m[18;1H[K[K[H[2J[HM       working directory, and nonrecursive searches read standard input.[m
+[HM       A [4mFILE[24m of “[1m-[0m” stands for standard input.  If no [4mFILE[24m is given, recursive searches examine the[m
+[HM[m
+[HM       should be quoted when [1mgrep[0m is used in a shell command.[m
+[HM       newline characters, and [1mgrep[0m prints each line that matches  a  pattern.   Typically  [4mPATTERNS[24m[m
+[HM       [1mgrep[0m  searches  for  [4mPATTERNS[24m  in  each  [4mFILE[24m.  [4mPATTERNS[24m is one or more patterns separated by[m
+[HM[1mDESCRIPTION[0m[m
+[HM[m
+[HM       [1mgrep[0m [[4mOPTION[24m...] [1m-f[0m [4mPATTERN_FILE[24m ... [[4mFILE[24m...][m
+[HM       [1mgrep[0m [[4mOPTION[24m...] [1m-e[0m [4mPATTERNS[24m ... [[4mFILE[24m...][m
+[HM       [1mgrep[0m [[4mOPTION[24m...] [4mPATTERNS[24m [[4mFILE[24m...][m
+[HM[1mSYNOPSIS[0m[m
+[HM[m
+[HM       grep, egrep, fgrep, rgrep - print lines that match patterns[m
+[HM[1mNAME[0m[m
+[HM[m
+[HMGREP(1)                                     User Commands                                    GREP(1)[m
+[18;1H[K[7m Manual page grep(1) line 1/546 3% (press h for help or q to quit)[27m[K[K[K[7m Manual page grep(1) line 1/546 3% (press h for help or q to quit)[27m[K[K[m
+       Debian also includes the variant programs [1megrep[0m, [1mfgrep[0m and [1mrgrep[0m.   These  programs  are  the[m
+       same as [1mgrep[0m [1m-E[0m, [1mgrep[0m [1m-F[0m, and [1mgrep[0m [1m-r[0m, respectively.  These variants are deprecated upstream,[m
+       but Debian provides for backward compatibility. For portability reasons, it is recommended to[m
+       avoid the variant programs, and use [1mgrep[0m with the related option instead.[m
+[m
+[1mOPTIONS[0m[m
+   [1mGeneric[0m [1mProgram[0m [1mInformation[0m[m
+       [1m--help[0m Output a usage message and exit.[m
+[m
+       [1m-V[0m, [1m--version[0m[m
+              Output the version number of [1mgrep[0m and exit.[m
+[m
+   [1mPattern[0m [1mSyntax[0m[m
+       [1m-E[0m, [1m--extended-regexp[0m[m
+              Interpret [4mPATTERNS[24m as extended regular expressions (EREs, see below).[m
+[m
+[7m Manual page grep(1) line 18/546 5% (press h for help or q to quit)[27m[K[K       [1m-F[0m, [1m--fixed-strings[0m[m
+              Interpret [4mPATTERNS[24m as fixed strings, not regular expressions.[m
+[m
+       [1m-G[0m, [1m--basic-regexp[0m[m
+              Interpret  [4mPATTERNS[24m  as  basic  regular  expressions  (BREs,  see below).  This is the[m
+              default.[m
+[m
+       [1m-P[0m, [1m--perl-regexp[0m[m
+              Interpret [4mPATTERNS[24m as Perl-compatible regular expressions  (PCREs).   This  option  is[m
+              experimental  when  combined with the [1m-z[0m ([1m--null-data[0m) option, and [1mgrep[0m [1m-P[0m may warn of[m
+              unimplemented features.[m
+[m
+   [1mMatching[0m [1mControl[0m[m
+       [1m-e[0m [4mPATTERNS[24m, [1m--regexp=[0m[4mPATTERNS[24m[m
+              Use [4mPATTERNS[24m as the patterns.  If this option is used multiple times  or  is  combined[m
+              with  the  [1m-f[0m ([1m--file[0m) option, search for all patterns given.  This option can be used[m
+              to protect a pattern beginning with “-”.[m
+[7m Manual page grep(1) line 35/546 8% (press h for help or q to quit)[27m[K[K[m
+       [1m-f[0m [4mFILE[24m, [1m--file=[0m[4mFILE[24m[m
+              Obtain patterns from [4mFILE[24m, one per line.  If this option is used multiple times or  is[m
+              combined with the [1m-e[0m ([1m--regexp[0m) option, search for all patterns given.  The empty file[m
+              contains zero patterns, and therefore matches nothing.[m
+[m
+       [1m-i[0m, [1m--ignore-case[0m[m
+              Ignore case distinctions in patterns and input data, so that  characters  that  differ[m
+              only in case match each other.[m
+[m
+       [1m--no-ignore-case[0m[m
+              Do  not  ignore  case  distinctions  in patterns and input data.  This is the default.[m
+              This option is useful for passing to shell scripts that already use [1m-i[0m, to cancel  its[m
+              effects because the two options override each other.[m
+[m
+       [1m-v[0m, [1m--invert-match[0m[m
+              Invert the sense of matching, to select non-matching lines.[m
+[7m Manual page grep(1) line 52/546 10% (press h for help or q to quit)[27m[K[K[m
+       [1m-w[0m, [1m--word-regexp[0m[m
+              Select  only  those  lines containing matches that form whole words.  The test is that[m
+              the matching substring must either be at the beginning of the line, or preceded  by  a[m
+              non-word  constituent  character.  Similarly, it must be either at the end of the line[m
+              or followed by a non-word  constituent  character.   Word-constituent  characters  are[m
+              letters,  digits,  and  the  underscore.   This  option  has  no  effect if [1m-x[0m is also[m
+              specified.[m
+[m
+       [1m-x[0m, [1m--line-regexp[0m[m
+              Select only those matches that exactly match the whole line.  For a regular expression[m
+              pattern, this is like parenthesizing the pattern and then surrounding it with [1m^[0m and [1m$[0m.[m
+[m
+   [1mGeneral[0m [1mOutput[0m [1mControl[0m[m
+       [1m-c[0m, [1m--count[0m[m
+              Suppress  normal  output; instead print a count of matching lines for each input file.[m
+              With the [1m-v[0m, [1m--invert-match[0m option (see above), count non-matching lines.[m
+[7m Manual page grep(1) line 69/546 13% (press h for help or q to quit)[27m[K[K[m
+       [1m--[0m[1m[7mcolor[27m[0m[[1m=[0m[4mWHEN[24m], [1m--colour[0m[[1m=[0m[4mWHEN[24m][m
+              Surround the matched (non-empty) strings, matching lines, context lines,  file  names,[m
+              line  numbers,  byte  offsets, and separators (for fields and groups of context lines)[m
+              with escape sequences to display them in  [7mcolor[27m  on  the  terminal.   The  [7mcolor[27ms  are[m
+              defined by the environment variable [1mGREP_[0m[1m[7mCOLOR[27m[0m[1mS[0m.  [4mWHEN[24m is [1mnever[0m, [1malways[0m, or [1mauto[0m.[m
+[m
+       [1m-L[0m, [1m--files-without-match[0m[m
+              Suppress normal output; instead print the name of each input file from which no output[m
+              would normally have been printed.[m
+[m
+       [1m-l[0m, [1m--files-with-matches[0m[m
+              Suppress normal output; instead print the name of each input file  from  which  output[m
+              would normally have been printed.  Scanning each input file stops upon first match.[m
+[m
+       [1m-m[0m [4mNUM[24m, [1m--max-count=[0m[4mNUM[24m[m
+              Stop  reading  a file after [4mNUM[24m matching lines.  If [4mNUM[24m is zero, [1mgrep[0m stops right away[m
+[7m Manual page grep(1) line 86/546 17% (press h for help or q to quit)[27m[K[K              without reading input.  A [4mNUM[24m of -1 is treated as infinity and  [1mgrep[0m  does  not  stop;[m
+              this  is  the  default.   If  the input is standard input from a regular file, and [4mNUM[24m[m
+              matching lines are output, [1mgrep[0m ensures that the standard input is positioned to  just[m
+              after  the  last  matching line before exiting, regardless of the presence of trailing[m
+              context lines.  This enables a calling process to resume a search.   When  [1mgrep[0m  stops[m
+              after  [4mNUM[24m  matching  lines,  it  outputs  any trailing context lines.  When the [1m-c[0m or[m
+              [1m--count[0m option is also used, [1mgrep[0m does not output a count greater than [4mNUM[24m.  When  the[m
+              [1m-v[0m or [1m--invert-match[0m option is also used, [1mgrep[0m stops after outputting [4mNUM[24m non-matching[m
+              lines.[m
+[m
+       [1m-o[0m, [1m--only-matching[0m[m
+              Print only the matched (non-empty) parts of a matching line, with each such part on  a[m
+              separate output line.[m
+[m
+       [1m-q[0m, [1m--quiet[0m, [1m--silent[0m[m
+              Quiet; do not write anything to standard output.  Exit immediately with zero status if[m
+              any match is found, even if an error was detected.  Also see the [1m-s[0m  or  [1m--no-messages[0m[m
+[7m Manual page grep(1) line 103/546 20% (press h for help or q to quit)[27m[K[K              option.[m
+[m
+       [1m-s[0m, [1m--no-messages[0m[m
+              Suppress error messages about nonexistent or unreadable files.[m
+[m
+   [1mOutput[0m [1mLine[0m [1mPrefix[0m [1mControl[0m[m
+       [1m-b[0m, [1m--byte-offset[0m[m
+              Print the 0-based byte offset within the input file before each line of output.  If [1m-o[0m[m
+              ([1m--only-matching[0m) is specified, print the offset of the matching part itself.[m
+[m
+       [1m-H[0m, [1m--with-filename[0m[m
+              Print the file name for each match.  This is the default when there is more  than  one[m
+              file to search.  This is a GNU extension.[m
+[m
+       [1m-h[0m, [1m--no-filename[0m[m
+              Suppress  the  prefixing  of  file names on output.  This is the default when there is[m
+              only one file (or only standard input) to search.[m
+[7m Manual page grep(1) line 120/546 23% (press h for help or q to quit)[27m[K[K[m
+       [1m--label=[0m[4mLABEL[24m[m
+              Display input actually coming from standard input as input  coming  from  file  [4mLABEL[24m.[m
+              This  can  be  useful  for commands that transform a file's contents before searching,[m
+              e.g., [1mgzip[0m [1m-cd[0m [1mfoo.gz[0m [1m|[0m [1mgrep[0m [1m--label=foo[0m [1m-H[0m [1m'some[0m [1mpattern'[0m.  See also the [1m-H[0m option.[m
+[m
+       [1m-n[0m, [1m--line-number[0m[m
+              Prefix each line of output with the 1-based line number within its input file.[m
+[m
+       [1m-T[0m, [1m--initial-tab[0m[m
+              Make sure that the first character of actual line content lies on a tab stop, so  that[m
+              the  alignment  of  tabs  looks normal.  This is useful with options that prefix their[m
+              output to the actual content: [1m-H[0m,[1m-n[0m, and [1m-b[0m.  In order to improve the probability that[m
+              lines  from a single file will all start at the same column, this also causes the line[m
+              number and byte offset (if present) to be printed in a minimum size field width.[m
+[m
+       [1m-Z[0m, [1m--null[0m[m
+[7m Manual page grep(1) line 137/546 26% (press h for help or q to quit)[27m[K[K              Output a zero byte (the ASCII [1mNUL[0m character) instead of the  character  that  normally[m
+              follows  a  file name.  For example, [1mgrep[0m [1m-lZ[0m outputs a zero byte after each file name[m
+              instead of the usual newline.  This option makes the output unambiguous, even  in  the[m
+              presence  of  file names containing unusual characters like newlines.  This option can[m
+              be used with commands like [1mfind[0m [1m-print0[0m, [1mperl[0m [1m-0[0m, [1msort[0m [1m-z[0m, and  [1mxargs[0m  [1m-0[0m  to  process[m
+              arbitrary file names, even those that contain newline characters.[m
+[m
+   [1mContext[0m [1mLine[0m [1mControl[0m[m
+       [1m-A[0m [4mNUM[24m, [1m--after-context=[0m[4mNUM[24m[m
+              Print  [4mNUM[24m lines of trailing context after matching lines.  Places a line containing a[m
+              group  separator  ([1m--[0m)  between  contiguous  groups  of  matches.   With  the  [1m-o[0m   or[m
+              [1m--only-matching[0m option, this has no effect and a warning is given.[m
+[m
+       [1m-B[0m [4mNUM[24m, [1m--before-context=[0m[4mNUM[24m[m
+              Print  [4mNUM[24m lines of leading context before matching lines.  Places a line containing a[m
+              group  separator  ([1m--[0m)  between  contiguous  groups  of  matches.   With  the  [1m-o[0m   or[m
+              [1m--only-matching[0m option, this has no effect and a warning is given.[m
+[7m Manual page grep(1) line 154/546 29% (press h for help or q to quit)[27m[K[K[m
+       [1m-C[0m [4mNUM[24m, [1m-[0m[4mNUM[24m, [1m--context=[0m[4mNUM[24m[m
+              Print  [4mNUM[24m  lines  of output context.  Places a line containing a group separator ([1m--[0m)[m
+              between contiguous groups of matches.  With the [1m-o[0m or [1m--only-matching[0m option, this has[m
+              no effect and a warning is given.[m
+[m
+       [1m--group-separator=[0m[4mSEP[24m[m
+              When [1m-A[0m, [1m-B[0m, or [1m-C[0m are in use, print [4mSEP[24m instead of [1m--[0m between groups of lines.[m
+[m
+       [1m--no-group-separator[0m[m
+              When [1m-A[0m, [1m-B[0m, or [1m-C[0m are in use, do not print a separator between groups of lines.[m
+[m
+   [1mFile[0m [1mand[0m [1mDirectory[0m [1mSelection[0m[m
+       [1m-a[0m, [1m--text[0m[m
+              Process   a   binary   file   as   if   it  were  text;  this  is  equivalent  to  the[m
+              [1m--binary-files=text[0m option.[m
+[m
+[7m Manual page grep(1) line 171/546 32% (press h for help or q to quit)[27m[K[K       [1m--binary-files=[0m[4mTYPE[24m[m
+              If a file's data or metadata indicate that the file contains binary data, assume  that[m
+              the  file  is  of  type  [4mTYPE[24m.   Non-text bytes indicate binary data; these are either[m
+              output bytes that are improperly encoded for the current locale, or null  input  bytes[m
+              when the [1m-z[0m option is not given.[m
+[m
+              By default, [4mTYPE[24m is [1mbinary[0m, and [1mgrep[0m suppresses output after null input binary data is[m
+              discovered, and suppresses output lines that contain improperly  encoded  data.   When[m
+              some  output  is  suppressed, [1mgrep[0m follows any output with a message to standard error[m
+              saying that a binary file matches.[m
+[m
+              If [4mTYPE[24m is [1mwithout-match[0m, when [1mgrep[0m discovers null input binary data it  assumes  that[m
+              the rest of the file does not match; this is equivalent to the [1m-I[0m option.[m
+[m
+              If  [4mTYPE[24m  is [1mtext[0m, [1mgrep[0m processes a binary file as if it were text; this is equivalent[m
+              to the [1m-a[0m option.[m
+[m
+[7m Manual page grep(1) line 188/546 35% (press h for help or q to quit)[27m[K[K              When [4mtype[24m is [1mbinary[0m, [1mgrep[0m may treat non-text bytes as line  terminators  even  without[m
+              the  [1m-z[0m  option.   This means choosing [1mbinary[0m versus [1mtext[0m can affect whether a pattern[m
+              matches a file.  For example, when [4mtype[24m  is  [1mbinary[0m  the  pattern  [1mq$[0m  [1mmight[0m  match  [1mq[0m[m
+              immediately  followed  by  a  null  byte, even though this is not matched when [4mtype[24m is[m
+              [1mtext[0m.  Conversely, when [4mtype[24m is [1mbinary[0m the pattern [1m.[0m (period) might not match  a  null[m
+              byte.[m
+[m
+              [4mWarning:[24m  The [1m-a[0m option might output binary garbage, which can have nasty side effects[m
+              if the output is a terminal and if the  terminal  driver  interprets  some  of  it  as[m
+              commands.   On the other hand, when reading files whose text encodings are unknown, it[m
+              can be helpful to use [1m-a[0m or to set [1mLC_ALL='C'[0m in the environment,  in  order  to  find[m
+              more matches even if the matches are unsafe for direct display.[m
+[m
+       [1m-D[0m [4mACTION[24m, [1m--devices=[0m[4mACTION[24m[m
+              If  an  input file is a device, FIFO or socket, use [4mACTION[24m to process it.  By default,[m
+              [4mACTION[24m is [1mread[0m, which means that devices are read just as if they were ordinary files.[m
+              If [4mACTION[24m is [1mskip[0m, devices are silently skipped.[m
+[7m Manual page grep(1) line 205/546 39% (press h for help or q to quit)[27m[K[K[m
+       [1m-d[0m [4mACTION[24m, [1m--directories=[0m[4mACTION[24m[m
+              If  an  input  file  is  a directory, use [4mACTION[24m to process it.  By default, [4mACTION[24m is[m
+              [1mread[0m, i.e., read directories just as if they were ordinary files.  If [4mACTION[24m is  [1mskip[0m,[m
+              silently skip directories.  If [4mACTION[24m is [1mrecurse[0m, read all files under each directory,[m
+              recursively, following symbolic links only if they are on the command line.   This  is[m
+              equivalent to the [1m-r[0m option.[m
+[m
+       [1m--exclude=[0m[4mGLOB[24m[m
+              Skip  any  command-line  file  with a name suffix that matches the pattern [4mGLOB[24m, using[m
+              wildcard matching; a name suffix is either the whole name, or  a  trailing  part  that[m
+              starts  with  a  non-slash  character immediately after a slash ([1m/[0m) in the name.  When[m
+              searching recursively, skip any subfile whose base name matches [4mGLOB[24m; the base name is[m
+              the  part after the last slash.  A pattern can use [1m*[0m, [1m?[0m, and [1m[[0m...[1m][0m as wildcards, and [1m\[0m[m
+              to quote a wildcard or backslash character literally.[m
+[m
+       [1m--exclude-from=[0m[4mFILE[24m[m
+[7m Manual page grep(1) line 222/546 42% (press h for help or q to quit)[27m[K[K              Skip files whose base name matches any of the file-name globs read  from  [4mFILE[24m  (using[m
+              wildcard matching as described under [1m--exclude[0m).[m
+[m
+       [1m--exclude-dir=[0m[4mGLOB[24m[m
+              Skip  any  command-line  directory  with  a name suffix that matches the pattern [4mGLOB[24m.[m
+              When searching recursively, skip  any  subdirectory  whose  base  name  matches  [4mGLOB[24m.[m
+              Ignore any redundant trailing slashes in [4mGLOB[24m.[m
+[m
+       [1m-I[0m     Process  a  binary  file as if it did not contain matching data; this is equivalent to[m
+              the [1m--binary-files=without-match[0m option.[m
+[m
+       [1m--include=[0m[4mGLOB[24m[m
+              Search only files whose base name matches [4mGLOB[24m (using wildcard matching  as  described[m
+              under  [1m--exclude[0m).   If  contradictory  [1m--include[0m and [1m--exclude[0m options are given, the[m
+              last matching one wins.  If no  [1m--include[0m  or  [1m--exclude[0m  options  match,  a  file  is[m
+              included unless the first such option is [1m--include[0m.[m
+[m
+[7m Manual page grep(1) line 239/546 46% (press h for help or q to quit)[27m[K[K       [1m-r[0m, [1m--recursive[0m[m
+              Read  all  files  under  each directory, recursively, following symbolic links only if[m
+              they are on the command line.  Note that if no file operand is  given,  [1mgrep[0m  searches[m
+              the working directory.  This is equivalent to the [1m-d[0m [1mrecurse[0m option.[m
+[m
+       [1m-R[0m, [1m--dereference-recursive[0m[m
+              Read  all  files under each directory, recursively.  Follow all symbolic links, unlike[m
+              [1m-r[0m.[m
+[m
+   [1mOther[0m [1mOptions[0m[m
+       [1m--line-buffered[0m[m
+              Use line buffering on output.  This can cause a performance penalty.[m
+[m
+       [1m-U[0m, [1m--binary[0m[m
+              Treat the file(s) as binary.  By default, under MS-DOS and  MS-Windows,  [1mgrep[0m  guesses[m
+              whether  a file is text or binary as described for the [1m--binary-files[0m option.  If [1mgrep[0m[m
+              decides the file is a text file, it strips the CR characters from  the  original  file[m
+[7m Manual page grep(1) line 256/546 48% (press h for help or q to quit)[27m[K[K              contents  (to  make  regular  expressions with [1m^[0m and [1m$[0m work correctly).  Specifying [1m-U[0m[m
+              overrules this guesswork, causing all files to be read  and  passed  to  the  matching[m
+              mechanism  verbatim;  if  the  file is a text file with CR/LF pairs at the end of each[m
+              line, this will cause some regular expressions to fail.  This option has no effect  on[m
+              platforms other than MS-DOS and MS-Windows.[m
+[m
+       [1m-z[0m, [1m--null-data[0m[m
+              Treat input and output data as sequences of lines, each terminated by a zero byte (the[m
+              ASCII NUL character) instead of a newline.  Like the [1m-Z[0m or [1m--null[0m option, this  option[m
+              can be used with commands like [1msort[0m [1m-z[0m to process arbitrary file names.[m
+[m
+[1mREGULAR[0m [1mEXPRESSIONS[0m[m
+       A  regular  expression is a pattern that describes a set of strings.  Regular expressions are[m
+       constructed analogously to arithmetic expressions, by  using  various  operators  to  combine[m
+       smaller expressions.[m
+[m
+       [1mgrep[0m  understands  three  different  versions  of  regular  expression syntax: “basic” (BRE),[m
+[7m Manual page grep(1) line 273/546 51% (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [33m47s[0m 
+[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [H[2J
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [33m47s[0m 
+[35m❯[0m man grep
+[?2004l[?1049h[22;0;0t[?1h=GREP(1)                                     User Commands                                    GREP(1)[m
+[m
+[1mNAME[0m[m
+       grep, egrep, fgrep, rgrep - print lines that match patterns[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mgrep[0m [[4mOPTION[24m...] [4mPATTERNS[24m [[4mFILE[24m...][m
+       [1mgrep[0m [[4mOPTION[24m...] [1m-e[0m [4mPATTERNS[24m ... [[4mFILE[24m...][m
+       [1mgrep[0m [[4mOPTION[24m...] [1m-f[0m [4mPATTERN_FILE[24m ... [[4mFILE[24m...][m
+[m
+[1mDESCRIPTION[0m[m
+       [1mgrep[0m  searches  for  [4mPATTERNS[24m  in  each  [4mFILE[24m.  [4mPATTERNS[24m is one or more patterns separated by[m
+       newline characters, and [1mgrep[0m prints each line that matches  a  pattern.   Typically  [4mPATTERNS[24m[m
+       should be quoted when [1mgrep[0m is used in a shell command.[m
+[7m Manual page grep(1) line 1 (press h for help or q to quit)[27m[K[K-[K[7m Manual page grep(1) line 1 (press h for help or q to quit)[27m[K[K/[K++[K[K--[Koo[K[1;1HGREP(1)                                     User Commands                                    GREP(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       grep, egrep, fgrep, rgrep - print lines that match patterns[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mgrep[0m [[4mOPTION[24m...] [4mPATTERNS[24m [[4mFILE[24m...][m
+[8;1H       [1mgrep[0m [[4mOPTION[24m...] [1m-e[0m [4mPATTERNS[24m ... [[4mFILE[24m...][m
+[9;1H       [1mgrep[0m [[4mOPTION[24m...] [1m-f[0m [4mPATTERN_FILE[24m ... [[4mFILE[24m...][m
+[10;1H[m
+[11;1H[1mDESCRIPTION[0m[m
+[12;1H       [1mgrep[0m  searches  for  [4mPATTERNS[24m  in  each  [4mFILE[24m.  [4mPATTERNS[24m is one or more patterns separated by[m
+[13;1H       newline characters, and [1mgrep[0m prints each line that matches  a  pattern.   Typically  [4mPATTERNS[24m[m
+[14;1H       should be quoted when [1mgrep[0m is used in a shell command.[m
+[15;1H[1;1HGREP(1)                                     User Commands                                    GREP(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       grep, egrep, fgrep, rgrep - print lines that match patterns[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mgrep[0m [[4mOPTION[24m...] [4mPATTERNS[24m [[4mFILE[24m...][m
+[8;1H       [1mgrep[0m [[4mOPTION[24m...] [1m-e[0m [4mPATTERNS[24m ... [[4mFILE[24m...][m
+[9;1H       [1mgrep[0m [[4mOPTION[24m...] [1m-f[0m [4mPATTERN_FILE[24m ... [[4mFILE[24m...][m
+[10;1H[m
+[11;1H[1mDESCRIPTION[0m[m
+[12;1H       [1mgrep[0m  searches  for  [4mPATTERNS[24m  in  each  [4mFILE[24m.  [4mPATTERNS[24m is one or more patterns separated by[m
+[13;1H       newline characters, and [1mgrep[0m prints each line that matches  a  pattern.   Typically  [4mPATTERNS[24m[m
+[14;1H       should be quoted when [1mgrep[0m is used in a shell command.[m
+[15;1H...skipping...
+       [1m[7m-o[27m[0m, [1m-[0m[1m[7m-o[27m[0m[1mnly-matching[0m[m
+              Print only the matched (non-empty) parts of a matching line, with each such part on  a[m
+              separate output line.[m
+[m
+       [1m-q[0m, [1m--quiet[0m, [1m--silent[0m[m
+              Quiet; do not write anything to standard output.  Exit immediately with zero status if[m
+              any match is found, even if an error was detected.  Also see the [1m-s[0m  or  [1m--no-messages[0m[m
+              option.[m
+[m
+       [1m-s[0m, [1m--no-messages[0m[m
+              Suppress error messages about nonexistent or unreadable files.[m
+[m
+   [1mOutput[0m [1mLine[0m [1mPrefix[0m [1mControl[0m[m
+       [1m-b[0m, [1m--byte[0m[1m[7m-o[27m[0m[1mffset[0m[m
+[7m Manual page grep(1) line 113 (press h for help or q to quit)[27m[K[K[7m Manual page grep(1) line 113 (press h for help or q to quit)[27m[K[H[2J[H       [1m[7m-o[27m[0m, [1m-[0m[1m[7m-o[27m[0m[1mnly-matching[0m[m
+              Print only the matched (non-empty) parts of a matching line, with each such part on  a[m
+              separate output line.[m
+[m
+       [1m-q[0m, [1m--quiet[0m, [1m--silent[0m[m
+              Quiet; do not write anything to standard output.  Exit immediately with zero status if[m
+              any match is found, even if an error was detected.  Also see the [1m-s[0m  or  [1m--no-messages[0m[m
+              option.[m
+[m
+       [1m-s[0m, [1m--no-messages[0m[m
+              Suppress error messages about nonexistent or unreadable files.[m
+[m
+   [1mOutput[0m [1mLine[0m [1mPrefix[0m [1mControl[0m[m
+[7m Manual page grep(1) line 113 (press h for help or q to quit)[27m[K[H[2J[H       [1m[7m-o[27m[0m, [1m-[0m[1m[7m-o[27m[0m[1mnly-matching[0m[m
+              Print only the matched (non-empty) parts of a matching line, with each such part on  a[m
+              separate output line.[m
+[m
+       [1m-q[0m, [1m--quiet[0m, [1m--silent[0m[m
+              Quiet; do not write anything to standard output.  Exit immediately with zero status if[m
+              any match is found, even if an error was detected.  Also see the [1m-s[0m  or  [1m--no-messages[0m[m
+              option.[m
+[m
+       [1m-s[0m, [1m--no-messages[0m[m
+              Suppress error messages about nonexistent or unreadable files.[m
+[m
+[7m Manual page grep(1) line 113 (press h for help or q to quit)[27m[K[H[2J[H       [1m[7m-o[27m[0m, [1m-[0m[1m[7m-o[27m[0m[1mnly-matching[0m[m
+              Print only the matched (non-empty) parts of a matching line, with each such part on  a[m
+              separate output line.[m
+[m
+       [1m-q[0m, [1m--quiet[0m, [1m--silent[0m[m
+              Quiet; do not write anything to standard output.  Exit immediately with zero status if[m
+              any match is found, even if an error was detected.  Also see the [1m-s[0m  or  [1m--no-messages[0m[m
+              option.[m
+[m
+       [1m-s[0m, [1m--no-messages[0m[m
+              Suppress error messages about nonexistent or unreadable files.[m
+[7m Manual page grep(1) line 113 (press h for help or q to quit)[27m[K[H[2J[H       [1m[7m-o[27m[0m, [1m-[0m[1m[7m-o[27m[0m[1mnly-matching[0m[m
+              Print only the matched (non-empty) parts of a matching line, with each such part on  a[m
+              separate output line.[m
+[m
+       [1m-q[0m, [1m--quiet[0m, [1m--silent[0m[m
+              Quiet; do not write anything to standard output.  Exit immediately with zero status if[m
+              any match is found, even if an error was detected.  Also see the [1m-s[0m  or  [1m--no-messages[0m[m
+              option.[m
+[m
+       [1m-s[0m, [1m--no-messages[0m[m
+[7m Manual page grep(1) line 113 (press h for help or q to quit)[27m[K[H[2J[H       [1m[7m-o[27m[0m, [1m-[0m[1m[7m-o[27m[0m[1mnly-matching[0m[m
+              Print only the matched (non-empty) parts of a matching line, with each such part on  a[m
+              separate output line.[m
+[m
+       [1m-q[0m, [1m--quiet[0m, [1m--silent[0m[m
+              Quiet; do not write anything to standard output.  Exit immediately with zero status if[m
+              any match is found, even if an error was detected.  Also see the [1m-s[0m  or  [1m--no-messages[0m[m
+              option.[m
+[m
+[7m Manual page grep(1) line 113 (press h for help or q to quit)[27m[K[H[2J[H       [1m[7m-o[27m[0m, [1m-[0m[1m[7m-o[27m[0m[1mnly-matching[0m[m
+              Print only the matched (non-empty) parts of a matching line, with each such part on  a[m
+              separate output line.[m
+[m
+       [1m-q[0m, [1m--quiet[0m, [1m--silent[0m[m
+              Quiet; do not write anything to standard output.  Exit immediately with zero status if[m
+              any match is found, even if an error was detected.  Also see the [1m-s[0m  or  [1m--no-messages[0m[m
+              option.[m
+[m
+       [1m-s[0m, [1m--no-messages[0m[m
+[7m Manual page grep(1) line 113 (press h for help or q to quit)[27m[K[H[2J[H       [1m[7m-o[27m[0m, [1m-[0m[1m[7m-o[27m[0m[1mnly-matching[0m[m
+              Print only the matched (non-empty) parts of a matching line, with each such part on  a[m
+              separate output line.[m
+[m
+       [1m-q[0m, [1m--quiet[0m, [1m--silent[0m[m
+              Quiet; do not write anything to standard output.  Exit immediately with zero status if[m
+              any match is found, even if an error was detected.  Also see the [1m-s[0m  or  [1m--no-messages[0m[m
+              option.[m
+[m
+       [1m-s[0m, [1m--no-messages[0m[m
+              Suppress error messages about nonexistent or unreadable files.[m
+[7m Manual page grep(1) line 113 (press h for help or q to quit)[27m[K[H[2J[H       [1m[7m-o[27m[0m, [1m-[0m[1m[7m-o[27m[0m[1mnly-matching[0m[m
+              Print only the matched (non-empty) parts of a matching line, with each such part on  a[m
+              separate output line.[m
+[m
+       [1m-q[0m, [1m--quiet[0m, [1m--silent[0m[m
+              Quiet; do not write anything to standard output.  Exit immediately with zero status if[m
+              any match is found, even if an error was detected.  Also see the [1m-s[0m  or  [1m--no-messages[0m[m
+              option.[m
+[m
+       [1m-s[0m, [1m--no-messages[0m[m
+              Suppress error messages about nonexistent or unreadable files.[m
+[m
+[7m Manual page grep(1) line 113 (press h for help or q to quit)[27m[K[H[2J[H       [1m[7m-o[27m[0m, [1m-[0m[1m[7m-o[27m[0m[1mnly-matching[0m[m
+              Print only the matched (non-empty) parts of a matching line, with each such part on  a[m
+              separate output line.[m
+[m
+       [1m-q[0m, [1m--quiet[0m, [1m--silent[0m[m
+              Quiet; do not write anything to standard output.  Exit immediately with zero status if[m
+              any match is found, even if an error was detected.  Also see the [1m-s[0m  or  [1m--no-messages[0m[m
+              option.[m
+[m
+       [1m-s[0m, [1m--no-messages[0m[m
+              Suppress error messages about nonexistent or unreadable files.[m
+[m
+   [1mOutput[0m [1mLine[0m [1mPrefix[0m [1mControl[0m[m
+[7m Manual page grep(1) line 113 (press h for help or q to quit)[27m[K[H[2J[H       [1m[7m-o[27m[0m, [1m-[0m[1m[7m-o[27m[0m[1mnly-matching[0m[m
+              Print only the matched (non-empty) parts of a matching line, with each such part on  a[m
+              separate output line.[m
+[m
+       [1m-q[0m, [1m--quiet[0m, [1m--silent[0m[m
+              Quiet; do not write anything to standard output.  Exit immediately with zero status if[m
+              any match is found, even if an error was detected.  Also see the [1m-s[0m  or  [1m--no-messages[0m[m
+              option.[m
+[m
+       [1m-s[0m, [1m--no-messages[0m[m
+              Suppress error messages about nonexistent or unreadable files.[m
+[m
+   [1mOutput[0m [1mLine[0m [1mPrefix[0m [1mControl[0m[m
+       [1m-b[0m, [1m--byte[0m[1m[7m-o[27m[0m[1mffset[0m[m
+[7m Manual page grep(1) line 113 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [33m2m15s[0m 
+[35m❯[0m [H[2J
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [33m2m15s[0m 
+[35m❯[0m less /etc/ssh/sshd_config
+[?2004l[?1049h[22;0;0t[?1h=
+# This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+# This sshd was compiled with PATH=/usr/local/bin:/usr/bin:/bin:/usr/games
+
+# The strategy used for options in the default sshd_config shipped with
+# OpenSSH is to specify options with their default value where
+# possible, but leave them commented.  Uncommented options override the
+# default value.
+
+Include /etc/ssh/sshd_config.d/*.conf
+
+#Port 22
+[7m/etc/ssh/sshd_config[27m[K...skipping...
+
+# This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+# This sshd was compiled with PATH=/usr/local/bin:/usr/bin:/bin:/usr/games
+
+# The strategy used for options in the default sshd_config shipped with
+# OpenSSH is to specify options with their default value where
+# possible, but leave them commented.  Uncommented options override the
+# default value.
+
+Include /etc/ssh/sshd_config.d/*.conf
+
+#Port 22
+#AddressFamily any
+:[K...skipping...
+
+# This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+# This sshd was compiled with PATH=/usr/local/bin:/usr/bin:/bin:/usr/games
+
+# The strategy used for options in the default sshd_config shipped with
+# OpenSSH is to specify options with their default value where
+# possible, but leave them commented.  Uncommented options override the
+# default value.
+
+Include /etc/ssh/sshd_config.d/*.conf
+
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+:[K[K [KESCESC[KOO[KBB[K#ListenAddress ::
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K#HostKey /etc/ssh/ssh_host_rsa_key
+:[K[K [KESCESC[KOO[KBB[K#HostKey /etc/ssh/ssh_host_ecdsa_key
+:[K[K [KESCESC[KOO[KBB[K#HostKey /etc/ssh/ssh_host_ed25519_key
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# Ciphers and keying
+:[K[K [KESCESC[KOO[KBB[K#RekeyLimit default none
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# Logging
+:[K[K [KESCESC[KOO[KBB[K#SyslogFacility AUTH
+:[K[K [KESCESC[KOO[KBB[K#LogLevel INFO
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# Authentication:
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K#LoginGraceTime 2m
+:[K[K [KESCESC[KOO[KBB[K#PermitRootLogin prohibit-password
+:[K[K [KESCESC[KOO[KBB[K#StrictModes yes
+:[K[K [KESCESC[KOO[KBB[K#MaxAuthTries 6
+:[K[K [KESCESC[KOO[KBB[K#MaxSessions 10
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K#PubkeyAuthentication yes
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# Expect .ssh/authorized_keys2 to be disregarded by default in future.
+:[K[K [KESCESC[KOO[KBB[K#AuthorizedKeysFile     .ssh/authorized_keys .ssh/authorized_keys2
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K#AuthorizedPrincipalsFile none
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K#AuthorizedKeysCommand none
+:[K[K [KESCESC[KOO[KBB[K#AuthorizedKeysCommandUser nobody
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# For this to work you will also need host keys in /etc/ssh/ssh_known_hosts
+:[K[K [KESCESC[KOO[KBB[K#HostbasedAuthentication no
+:[K[K [KESCESC[KOO[KBB[K# Change to yes if you don't trust ~/.ssh/known_hosts for
+:[K[K [KESCESC[KOO[KBB[K# HostbasedAuthentication
+:[K[K [KESCESC[KOO[KBB[K#IgnoreUserKnownHosts no
+:[K[K [KESCESC[KOO[KBB[K# Don't read the user's ~/.rhosts and ~/.shosts files
+:[K[K [KESCESC[KOO[KBB[K#IgnoreRhosts yes
+:[K[K:[K[K[?1l>[?1049l[23;0;0t[?2004h
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [33m35s[0m 
+[35m❯[0m less /etc/ssh/sshd_config[C[C[C[C[1P /etc/ssh/sshd_config[1P /etc/ssh/sshd_config[1P /etc/ssh/sshd_config[1P /etc/ssh/sshd_configs /etc/ssh/sshd_configu /etc/ssh/sshd_configd /etc/ssh/sshd_configo /etc/ssh/sshd_confige /etc/ssh/sshd_configd /etc/ssh/sshd_configi /etc/ssh/sshd_configt /etc/ssh/sshd_config
+[?2004l[sudo] password for kent: 
+Sorry, try again.
+[sudo] password for kent: 
+^Csudoedit: 2 incorrect password attempts
+[?2004h
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [33m10s[0m 
+[31m❯[0m sudoedit /etc/ssh/sshd_config
+[?2004l[sudo] password for kent: 
+[?2004h[?1049h[22;0;0t[1;17r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[15;45H(B[0;7m[ Reading... ](B[m[15;43H(B[0;7m[ Read 122 lines ](B[m[H(B[0;7m  GNU nano 7.2                         /var/tmp/sshd_config.TwpDyXaz                                   [1;102H(B[m[16d(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[16;57H(B[0;7m^T(B[m Execute    (B[0;7m^C(B[m Location   (B[0;7mM-U(B[m Undo[17d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[57G(B[0;7m^J(B[m Justify    (B[0;7m^/(B[m Go To Line (B[0;7mM-E(B[m Redo[3d[36m# This is the sshd server system-wide configuration file.  See[4d# sshd_config(5) for more information.[6d# This sshd was compiled with PATH=/usr/local/bin:/usr/bin:/bin:/usr/games[8d# The strategy used for options in the default sshd_config shipped with[9d# OpenSSH is to specify options with their default value where[10d# possible, but leave them commented.  Uncommented options override the[11d# default value.[13d[39m(B[mInclude /etc/ssh/sshd_config.d/*.conf[2d[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h7[2;14r8
+[1;17r[14;1H[36m#Port 22[39m(B[m[?25l[?12l[?25h7[2;14r8
+[1;17r[14;1H[36m#AddressFamily any[39m(B[m[?25l[?12l[?25h7[2;14r8
+[1;17r[14;1H[36m#ListenAddress 0.0.0.0[39m(B[m[?25l[?12l[?25h7[2;14r8
+[1;17r[14;1H[36m#ListenAddress ::[39m(B[m[?25l[?12l[?25h7[2;14r8
+[1;17r[14;1H[?25l[?12l[?25h7[2;14r8
+[1;17r[14;1H[36m#HostKey /etc/ssh/ssh_host_rsa_key[39m(B[m[?25l[?12l[?25h7[2;14r8
+[1;17r[14;1H[36m#HostKey /etc/ssh/ssh_host_ecdsa_key[39m(B[m[?25l[15d[K[?12l[?25h7[2;15r8
+[1;17r[14;1H[36m#HostKey /etc/ssh/ssh_host_ed25519_key[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# Ciphers and keying[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#RekeyLimit default none[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# Logging[39m(B[m[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[1;70H(B[0;7m*[102G(B[m[?12l[?25h[7d[36m #HostKey /etc/ssh/ssh_host_rsa_key [39m(B[m[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11;2H[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14;2H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#SyslogFacility AUTH#[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#LogLevel INFO#[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# Authentication:#[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#LoginGraceTime 2m#[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#PermitRootLogin prohibit-password#[39m(B[m[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#StrictModes yes[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#MaxAuthTries 6[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#MaxSessions 10[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#PubkeyAuthentication yes[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# Expect .ssh/authorized_keys2 to be disregarded by default in future.[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#AuthorizedKeysFile[38;5;208m     [36m.ssh/authorized_keys .ssh/authorized_keys2[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#AuthorizedPrincipalsFile none[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#AuthorizedKeysCommand none[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#AuthorizedKeysCommandUser nobody[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# For this to work you will also need host keys in /etc/ssh/ssh_known_hosts[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#HostbasedAuthentication no[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# Change to yes if you don't trust ~/.ssh/known_hosts for[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# HostbasedAuthentication[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#IgnoreUserKnownHosts no[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# Don't read the user's ~/.rhosts and ~/.shosts files[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#IgnoreRhosts yes[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# To disable tunneled clear text passwords, change to no here![39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#PasswordAuthentication yes[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#PermitEmptyPasswords no[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# Change to yes to enable challenge-response passwords (beware issues with[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# some PAM modules and threads)[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1HKbdInteractiveAuthentication no[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# Kerberos options[39m(B[m[?25l[?12l[?25h[A[?25l[?12l[?25h[14d[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#KerberosAuthentication no[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#KerberosOrLocalPasswd yes[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#KerberosTicketCleanup yes[39m(B[m[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h KbdInteractiveAuthentication no [?25l[?12l[?25h  KbdInteractiveAuthentication no  [?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#KerberosGetAFSToken no[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# GSSAPI options[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#GSSAPIAuthentication no[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#GSSAPICleanupCredentials yes[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#GSSAPIStrictAcceptorCheck yes[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#GSSAPIKeyExchange no[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# Set this to 'yes' to enable PAM authentication, account processing,[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# and session processing. If this is enabled, PAM authentication will[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# be allowed through the KbdInteractiveAuthentication and[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# PasswordAuthentication.  Depending on your PAM configuration,[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# PAM authentication via KbdInteractiveAuthentication may bypass[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# the setting of "PermitRootLogin prohibit-password".[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# If you just want the PAM account and session checks to run without[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# PAM authentication, then enable this but set PasswordAuthentication[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# and KbdInteractiveAuthentication to 'no'.[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1HUsePAM yes[?25l[?12l[?25h UsePAM yes [?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#AllowAgentForwarding yes#[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#AllowTcpForwarding yes#[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#GatewayPorts no#[39m(B[m[?25l[15d(B[0;7mSave modified buffer?                                                                                  [16;1H Y(B[m Yes[K[17d(B[0;7m N(B[m No  [15G  (B[0;7m^C(B[m Cancel[K[15;23H[?12l[?25h[?25l[16d(B[0;7m^G(B[m Help[16;26H(B[0;7mM-D(B[m DOS Format[16;51H(B[0;7mM-A(B[m Append[16;76H(B[0;7mM-B(B[m Backup File[17d(B[0;7m^C(B[m Cancel[17G         (B[0;7mM-M(B[m Mac Format[17;51H(B[0;7mM-P(B[m Prepend[17;76H(B[0;7m^T(B[m Browse[15d(B[0;7mFile Name to Write: /var/tmp/sshd_config.TwpDyXaz(B[m[?12l[?25h[?25l[44G[1K (B[0;7m[ Writing... ](B[m[K[1;70H(B[0;7m [102G(B[m[15;43H(B[0;7m[ Wrote 122 lines ](B[m[J[17d[?12l[?25h[17;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [33m25s[0m 
+[35m❯[0m cat [C[Csudoedit /etc/ssh/sshd_config[C[C[C[C[C[C[C[C[1P /etc/ssh/sshd_config[1P /etc/ssh/sshd_config[1P /etc/ssh/sshd_config[1P /etc/ssh/sshd_config[1P /etc/ssh/sshd_config[1P /etc/ssh/sshd_config[1P /etc/ssh/sshd_config[1P /etc/ssh/sshd_configc /etc/ssh/sshd_configa /etc/ssh/sshd_configt /etc/ssh/sshd_config
+[?2004l
+# This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+# This sshd was compiled with PATH=/usr/local/bin:/usr/bin:/bin:/usr/games
+
+# The strategy used for options in the default sshd_config shipped with
+# OpenSSH is to specify options with their default value where
+# possible, but leave them commented.  Uncommented options override the
+# default value.
+
+Include /etc/ssh/sshd_config.d/*.conf
+
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+
+ #HostKey /etc/ssh/ssh_host_rsa_key
+#HostKey /etc/ssh/ssh_host_ecdsa_key
+#HostKey /etc/ssh/ssh_host_ed25519_key
+
+# Ciphers and keying
+#RekeyLimit default none
+
+# Logging
+#SyslogFacility AUTH
+#LogLevel INFO
+
+# Authentication:
+
+#LoginGraceTime 2m
+#PermitRootLogin prohibit-password
+#StrictModes yes
+#MaxAuthTries 6
+#MaxSessions 10
+
+#PubkeyAuthentication yes
+
+# Expect .ssh/authorized_keys2 to be disregarded by default in future.
+#AuthorizedKeysFile	.ssh/authorized_keys .ssh/authorized_keys2
+
+#AuthorizedPrincipalsFile none
+
+#AuthorizedKeysCommand none
+#AuthorizedKeysCommandUser nobody
+
+# For this to work you will also need host keys in /etc/ssh/ssh_known_hosts
+#HostbasedAuthentication no
+# Change to yes if you don't trust ~/.ssh/known_hosts for
+# HostbasedAuthentication
+#IgnoreUserKnownHosts no
+# Don't read the user's ~/.rhosts and ~/.shosts files
+#IgnoreRhosts yes
+
+# To disable tunneled clear text passwords, change to no here!
+#PasswordAuthentication yes
+#PermitEmptyPasswords no
+
+# Change to yes to enable challenge-response passwords (beware issues with
+# some PAM modules and threads)
+  KbdInteractiveAuthentication no
+
+# Kerberos options
+#KerberosAuthentication no
+#KerberosOrLocalPasswd yes
+#KerberosTicketCleanup yes
+#KerberosGetAFSToken no
+
+# GSSAPI options
+#GSSAPIAuthentication no
+#GSSAPICleanupCredentials yes
+#GSSAPIStrictAcceptorCheck yes
+#GSSAPIKeyExchange no
+
+# Set this to 'yes' to enable PAM authentication, account processing,
+# and session processing. If this is enabled, PAM authentication will
+# be allowed through the KbdInteractiveAuthentication and
+# PasswordAuthentication.  Depending on your PAM configuration,
+# PAM authentication via KbdInteractiveAuthentication may bypass
+# the setting of "PermitRootLogin prohibit-password".
+# If you just want the PAM account and session checks to run without
+# PAM authentication, then enable this but set PasswordAuthentication
+# and KbdInteractiveAuthentication to 'no'.
+ UsePAM yes
+
+#AllowAgentForwarding yes
+#AllowTcpForwarding yes
+#GatewayPorts no
+X11Forwarding yes
+#X11DisplayOffset 10
+#X11UseLocalhost yes
+#PermitTTY yes
+PrintMotd no
+#PrintLastLog yes
+#TCPKeepAlive yes
+#PermitUserEnvironment no
+#Compression delayed
+#ClientAliveInterval 0
+#ClientAliveCountMax 3
+#UseDNS no
+#PidFile /run/sshd.pid
+#MaxStartups 10:30:100
+#PermitTunnel no
+#ChrootDirectory none
+#VersionAddendum none
+
+# no default banner path
+#Banner none
+
+# Allow client to pass locale environment variables
+AcceptEnv LANG LC_*
+
+# override default of no subsystems
+Subsystem	sftp	/usr/lib/openssh/sftp-server
+
+# Example of overriding settings on a per-user basis
+#Match User anoncvs
+#	X11Forwarding no
+#	AllowTcpForwarding no
+#	PermitTTY no
+#	ForceCommand cvs server
+[?2004h
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [0m
+[35m❯[0m [H[2J
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [0m
+[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m (reverse-i-search)`': s': cat /etc/ssh/s[7ms[27mhd_configu': [7msu[27mdoedit /etc/ssh/sshd_config[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8@failed reverse-i-search)`sue': su[1@o[C[C[C[1@d[C[C[C[32P[35m❯[0m 
+[?2004l[?2004h[?1049h[22;0;0t[1;12r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[10;46H(B[0;7m[ Reading... ](B[m[10;44H(B[0;7m[ Read 122 lines ](B[m[H(B[0;7m  GNU nano 7.2                          /var/tmp/sshd_config.8obkrVKr                                   [1;103H(B[m[11d(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[11;57H(B[0;7m^T(B[m Execute    (B[0;7m^C(B[m Location   (B[0;7mM-U(B[m Undo[12d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[57G(B[0;7m^J(B[m Justify    (B[0;7m^/(B[m Go To Line (B[0;7mM-E(B[m Redo[3d[36m# This is the sshd server system-wide configuration file.  See[4d# sshd_config(5) for more information.[6d# This sshd was compiled with PATH=/usr/local/bin:/usr/bin:/bin:/usr/games[8d# The strategy used for options in the default sshd_config shipped with[9d# OpenSSH is to specify options with their default value where[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[1;71H(B[0;7m*[103G(B[m[?12l[?25h[7d [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[4;5H[?25l[?12l[?25h[5d[?25l[?12l[?25h[8G[38;5;208m[1K [39m(B[m[?25l[?12l[?25h [?25l[?12l[?25h[6d[?25l[10d(B[0;7mSave modified buffer?                                                                                   [11;1H Y(B[m Yes[K[12d(B[0;7m N(B[m No  [15G  (B[0;7m^C(B[m Cancel[K[10;23H[?12l[?25h[?25l[11d(B[0;7m^G(B[m Help[11;27H(B[0;7mM-D(B[m DOS Format[11;53H(B[0;7mM-A(B[m Append[11;79H(B[0;7mM-B(B[m Backup File[12d(B[0;7m^C(B[m Cancel[17G          (B[0;7mM-M(B[m Mac Format[12;53H(B[0;7mM-P(B[m Prepend[12;79H(B[0;7m^T(B[m Browse[10d(B[0;7mFile Name to Write: /var/tmp/sshd_config.8obkrVKr(B[m[?12l[?25h[?25l[45G[1K (B[0;7m[ Writing... ](B[m[K[1;71H(B[0;7m [103G(B[m[10;43H(B[0;7m[ Wrote 122 lines ](B[m[J[12d[?12l[?25h[12;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [33m12s[0m 
+[35m❯[0m nano grepex [H[2J
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [33m12s[0m 
+[35m❯[0m nano grepex 
+[?2004l[?2004h[?1049h[22;0;0t[1;12r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[10;46H(B[0;7m[ Reading... ](B[m[10;44H(B[0;7m[ Read 29 lines ](B[m[H(B[0;7m  GNU nano 7.2                                     grepex                                               [1;103H(B[m[11d(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[11;57H(B[0;7m^T(B[m Execute    (B[0;7m^C(B[m Location   (B[0;7mM-U(B[m Undo[12d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[57G(B[0;7m^J(B[m Justify    (B[0;7m^/(B[m Go To Line (B[0;7mM-E(B[m Redo[2d[36m#!/bin/bash[4d# \( \) utan -E. Vi kör med -E då det är mer lättläst.[5d# ( ) med -E.[7d# grep -E (B[0;1m[33m'stork'(B[0m[36m wikipedia.txt[8d# grep -E (B[0;1m[33m'stork|animal'(B[0m[36m wikipedia.txt[9d# grep --color -E (B[0;1m[33m'[0-9]+'(B[0m[36m wikipedia.txt[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h7[2;9r8
+[1;12r[9;1H[36m# grep --color -E (B[0;1m[33m'[0-9]+|stork'(B[0m[36m wikipedia.txt[39m(B[m[?25l[?12l[?25h7[2;9r8
+[1;12r[9;1H[36m# grep --color -E (B[0;1m[33m'... | ... '(B[0m[36m wikipedia.txt  # Klurig! Hur matcha ord på tre tecken?[39m(B[m[?25l[?12l[?25h7[2;9r8
+[1;12r[9;1H[36m# grep -o -E (B[0;1m[33m'[0-9]+'(B[0m[36m wikipedia.txt[39m(B[m[?25l[?12l[?25h7[2;9r8
+[1;12r[9;1H[?25l[?12l[?25h7[2;9r8
+[1;12r[9;1H[36m# denna kan matcha kommentarsrader genom att tolkas stjärnan i (B[0;1m[33m' *'(B[0m[36m  som inget och (B[0;1m[33m"äta upp"[39m(B[m[?25l[?12l[?25h7[2;9r8
+[1;12r[9;1H[36m# mellanslaget i [^#] istället.[39m(B[m[?25l[?12l[?25h7[2;9r8
+[1;12r[9;1H[36m# grep --color -E (B[0;1m[33m'^ *[^#]'(B[0m[36m /etc/ssh/sshd_config[39m(B[m[?25l[?12l[?25h7[2;9r8
+[1;12r[9;1H[?25l[?12l[?25h7[2;9r8
+[1;12r[9;1H[36m# Fixen blir att inte tillåta mellanslag i teckengruppen efter stjärnan.[39m(B[m[?25l[?12l[?25h7[2;9r8
+[1;12r[9;1H[36m# grep --color -E (B[0;1m[33m'^ *[^# ]'(B[0m[36m /etc/ssh/sshd_config[39m(B[m[?25l[?12l[?25h7[2;9r8
+[1;12r[9;1H[?25l[?12l[?25h7[2;9r8
+[1;12r[9;1H[36m# Matcha de som ÄR kommentarer[39m(B[m[?25l[10d[K[?12l[?25h7[2;10r8
+[1;12r[9;1H[?25l[?12l[?25h7[2;10r8[10d
+[1;12r[9;1H[36m# grep --color -E (B[0;1m[33m'^ *#'(B[0m[36m /etc/ssh/sshd_config[39m(B[m[?25l[?12l[?25h7[2;10r8[10d
+[1;12r[9;1H[?25l[?12l[?25h7[2;10r8[10d
+[1;12r[9;1H[36m# -v betyder visa alla rader som INTE matchar.[39m(B[m[?25l[?12l[?25h7[2;10r8[10d
+[1;12r[9;1H[?25l[?12l[?25h7[2;10r8[10d
+[1;12r[9;1H[36m# grep --color -Ev (B[0;1m[33m'^ *#'(B[0m[36m /etc/ssh/sshd_config[39m(B[m[?25l[?12l[?25h7[2;10r8[10d
+[1;12r[9;1H[?25l[?12l[?25h7[2;10r8[10d
+[1;12r[9;1H[36m# ^$ matchar tomma rader, som med -v exkluderar dem[39m(B[m[?25l[?12l[?25h7[2;10r8[10d
+[1;12r[9;1H(B[0;1m[34mgrep[35m --color[39m(B[m -Ev (B[0;1m[33m'^ *#|^[ ]*$'[39m(B[m /etc/ssh/sshd_config[?25l[?12l[?25h7[2;10r8[10d
+[1;12r[9;1H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[8;52H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[C[?25l[1;59H(B[0;7m*[103G(B[m[?12l[?25h[8;26H(B[0;1m[33m       ]*$'[39m(B[m /etc/ssh/sshd_config[8;33H[?25l[?12l[?25h[9d[?25l[?12l[?25h[?25l[10d(B[0;7mSave modified buffer?                                                                                   [11;1H Y(B[m Yes[K[12d(B[0;7m N(B[m No  [15G  (B[0;7m^C(B[m Cancel[K[10;23H[?12l[?25h[?25l[11d(B[0;7m^G(B[m Help[11;27H(B[0;7mM-D(B[m DOS Format[11;53H(B[0;7mM-A(B[m Append[11;79H(B[0;7mM-B(B[m Backup File[12d(B[0;7m^C(B[m Cancel[17G          (B[0;7mM-M(B[m Mac Format[12;53H(B[0;7mM-P(B[m Prepend[12;79H(B[0;7m^T(B[m Browse[10d(B[0;7mFile Name to Write: grepex(B[m[?12l[?25h[?25l[10;45H[1K (B[0;7m[ Writing... ](B[m[K[1;59H(B[0;7m [103G(B[m[10;44H(B[0;7m[ Wrote 29 lines ](B[m[J[12d[?12l[?25h[12;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [33m11s[0m 
+[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [H[2J
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [33m11s[0m 
+[35m❯[0m man sed
+[?2004l[?1049h[22;0;0t[?1h=SED(1)                                      User Commands                                      SED(1)[m
+[m
+[1mNAME[0m[m
+       sed - stream editor for filtering and transforming text[m
+[m
+[1mSYNOPSIS[0m[m
+       sed [-V] [--version] [--help] [-n] [--quiet] [--silent][m
+           [-l N] [--line-length=N] [-u] [--unbuffered][m
+           [-E] [-r] [--regexp-extended][m
+           [-e script] [--expression=script][m
+           [-f script-file] [--file=script-file][m
+           [script-if-no-other-script][m
+           [file...][m
+[m
+[1mDESCRIPTION[0m[m
+       [4mSed[24m  is  a stream editor.  A stream editor is used to perform basic text transformations on an[m
+       input stream (a file or input from a pipeline).  While in some ways similar to an editor which[m
+       permits  scripted edits (such as [4med[24m), [4msed[24m works by making only one pass over the input(s), and[m
+[7m Manual page sed(1) line 1 (press h for help or q to quit)[27m[K[K&/[K[7m Manual page sed(1) line 1 (press h for help or q to quit)[27m[K[K[7m Manual page sed(1) line 1 (press h for help or q to quit)[27m[K[K&/[K[7m Manual page sed(1) line 1 (press h for help or q to quit)[27m[K[K/[K--[KEE[K[1;1HSED(1)                                      User Commands                                      SED(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       sed - stream editor for filtering and transforming text[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       sed [-V] [--version] [--help] [-n] [--quiet] [--silent][m
+[8;1H           [-l N] [--line-length=N] [-u] [--unbuffered][m
+[9;1H           [-E] [-r] [--regexp-extended][m
+[10;1H           [-e script] [--expression=script][m
+[11;1H           [-f script-file] [--file=script-file][m
+[12;1H           [script-if-no-other-script][m
+[13;1H           [file...][m
+[14;1H[m
+[15;1H[1mDESCRIPTION[0m[m
+[16;1H       [4mSed[24m  is  a stream editor.  A stream editor is used to perform basic text transformations on an[m
+[17;1H       input stream (a file or input from a pipeline).  While in some ways similar to an editor which[m
+[18;1H       permits  scripted edits (such as [4med[24m), [4msed[24m works by making only one pass over the input(s), and[m
+[19;1H[1;1HSED(1)                                      User Commands                                      SED(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       sed - stream editor for filtering and transforming text[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       sed [-V] [--version] [--help] [-n] [--quiet] [--silent][m
+[8;1H           [-l N] [--line-length=N] [-u] [--unbuffered][m
+[9;1H           [[7m-E[27m] [-r] [--regexp-extended][m
+[10;1H           [-e script] [--expression=script][m
+[11;1H           [-f script-file] [--file=script-file][m
+[12;1H           [script-if-no-other-script][m
+[13;1H           [file...][m
+[14;1H[m
+[15;1H[1mDESCRIPTION[0m[m
+[16;1H       [4mSed[24m  is  a stream editor.  A stream editor is used to perform basic text transformations on an[m
+[17;1H       input stream (a file or input from a pipeline).  While in some ways similar to an editor which[m
+[18;1H       permits  scripted edits (such as [4med[24m), [4msed[24m works by making only one pass over the input(s), and[m
+[19;1H       is consequently more efficient.  But it is [4msed[24m's ability to filter text in  a  pipeline  which[m
+       particularly distinguishes it from other types of editors.[m
+[m
+       [1m-n[0m, [1m--quiet[0m, [1m--silent[0m[m
+[m
+              suppress automatic printing of pattern space[m
+[m
+       [1m--debug[0m[m
+[7m Manual page sed(1) line 9 (press h for help or q to quit)[27m[K[K/[K...skipping...
+       [1m[7m-E[27m[0m, [1m-r[0m, [1m--regexp-extended[0m[m
+[m
+              use extended regular expressions in the script (for portability use POSIX [1m[7m-E[27m[0m).[m
+[m
+       [1m-s[0m, [1m--separate[0m[m
+[m
+              consider files as separate rather than as a single, continuous long stream.[m
+[m
+       [1m--sandbox[0m[m
+[m
+              operate in sandbox mode (disable e/r/w commands).[m
+[m
+       [1m-u[0m, [1m--unbuffered[0m[m
+[m
+              load minimal amounts of data from the input files and flush the output buffers more of‐[m
+              ten[m
+[m
+       [1m-z[0m, [1m--null-data[0m[m
+[7m Manual page sed(1) line 54 (press h for help or q to quit)[27m[K[K[7m Manual page sed(1) line 54 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h
+[34ml1-live/241014[0m [90m241014[38;5;218m*​​[36m [33m27s[0m 
+[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m man sed
+[?2004l[?1049h[22;0;0t[?1h=SED(1)                                      User Commands                                      SED(1)[m
+[m
+[1mNAME[0m[m
+       sed - stream editor for filtering and transforming text[m
+[m
+[1mSYNOPSIS[0m[m
+       sed [-V] [--version] [--help] [-n] [--quiet] [--silent][m
+           [-l N] [--line-length=N] [-u] [--unbuffered][m
+           [-E] [-r] [--regexp-extended][m
+           [-e script] [--expression=script][m
+           [-f script-file] [--file=script-file][m
+           [script-if-no-other-script][m
+           [file...][m
+[m
+[1mDESCRIPTION[0m[m
+       [4mSed[24m  is  a stream editor.  A stream editor is used to perform basic text transformations on an[m
+       input stream (a file or input from a pipeline).  While in some ways similar to an editor which[m
+       permits  scripted edits (such as [4med[24m), [4msed[24m works by making only one pass over the input(s), and[m
+       is consequently more efficient.  But it is [4msed[24m's ability to filter text in  a  pipeline  which[m
+       particularly distinguishes it from other types of editors.[m
+[m
+       [1m-n[0m, [1m--quiet[0m, [1m--silent[0m[m
+[7m Manual page sed(1) line 1 (press h for help or q to quit)[27m[K[K[m
+              suppress automatic printing of pattern space[m
+[m
+       [1m--debug[0m[m
+[m
+              annotate program execution[m
+[m
+       [1m-e[0m script, [1m--expression[0m=[4mscript[24m[m
+[m
+              add the script to the commands to be executed[m
+[m
+       [1m-f[0m script-file, [1m--file[0m=[4mscript-file[24m[m
+[m
+              add the contents of script-file to the commands to be executed[m
+[m
+       [1m--follow-symlinks[0m[m
+[m
+              follow symlinks when processing in place[m
+[m
+       [1m-i[SUFFIX][0m, [1m--in-place[0m[=[4mSUFFIX[24m][m
+[m
+              edit files in place (makes backup if SUFFIX supplied)[m
+[7m Manual page sed(1) line 23 (press h for help or q to quit)[27m[K[K[m
+       [1m-l[0m N, [1m--line-length[0m=[4mN[24m[m
+[m
+              specify the desired line-wrap length for the `l' command[m
+[m
+       [1m--posix[0m[m
+[m
+              disable all GNU extensions.[m
+[m
+       [1m-E[0m, [1m-r[0m, [1m--regexp-extended[0m[m
+[m
+              use extended regular expressions in the script (for portability use POSIX [1m-E[0m).[m
+[m
+       [1m-s[0m, [1m--separate[0m[m
+[m
+              consider files as separate rather than as a single, continuous long stream.[m
+[m
+       [1m--sandbox[0m[m
+[m
+              operate in sandbox mode (disable e/r/w commands).[m
+[m
+       [1m-u[0m, [1m--unbuffered[0m[m
+[7m Manual page sed(1) line 45 (press h for help or q to quit)[27m[K[K[m
+              load minimal amounts of data from the input files and flush the output buffers more of‐[m
+              ten[m
+[m
+       [1m-z[0m, [1m--null-data[0m[m
+[m
+              separate lines by NUL characters[m
+[m
+       [1m--help[0m[m
+              display this help and exit[m
+[m
+       [1m--version[0m[m
+              output version information and exit[m
+[m
+       If no [1m-e[0m, [1m--expression[0m, [1m-f[0m, or [1m--file[0m option is given, then the first non-option  argument  is[m
+       taken as the sed script to interpret.  All remaining arguments are names of input files; if no[m
+       input files are specified, then the standard input is read.[m
+[m
+       GNU sed home page: <https://www.gnu.org/software/sed/>.   General  help  using  GNU  software:[m
+       <https://www.gnu.org/gethelp/>.  E-mail bug reports to: <bug-sed@gnu.org>.[m
+[m
+       Packaged  by  Debian  Copyright © 2022 Free Software Foundation, Inc.  License GPLv3+: GNU GPL[m
+[7m Manual page sed(1) line 67 (press h for help or q to quit)[27m[K[K       version 3 or later <https://gnu.org/licenses/gpl.html>.  This is free software: you  are  free[m
+       to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.[m
+[m
+[1mCOMMAND[0m [1mSYNOPSIS[0m[m
+       This is just a brief synopsis of [4msed[24m commands to serve as a reminder to those who already know[m
+       [4msed[24m; other documentation (such as the texinfo document) must be consulted for fuller  descrip‐[m
+       tions.[m
+[m
+   [1mZero-address[0m [1m``commands''[0m[m
+       : [4mlabel[24m[m
+              Label for [1mb[0m and [1mt[0m commands.[m
+[m
+       #[4mcomment[24m[m
+              The comment extends until the next newline (or the end of a [1m-e[0m script fragment).[m
+[m
+       }      The closing bracket of a { } block.[m
+[m
+   [1mZero-[0m [1mor[0m [1mOne-[0m [1maddress[0m [1mcommands[0m[m
+       =      Print the current line number.[m
+[m
+       a \[m
+[m
+[7m Manual page sed(1) line 89 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mtext[24m   Append [4mtext[24m, which has each embedded newline preceded by a backslash.[m
+[7m Manual page sed(1) line 90 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 91 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       i \[m
+[7m Manual page sed(1) line 92 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 93 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mtext[24m   Insert [4mtext[24m, which has each embedded newline preceded by a backslash.[m
+[7m Manual page sed(1) line 94 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 95 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       q [[4mexit-code[24m][m
+[7m Manual page sed(1) line 96 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Immediately quit the [4msed[24m script without processing any more input, except that if auto-[m
+[7m Manual page sed(1) line 97 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              print is not disabled the current pattern space will be printed.  The exit  code  argu‐[m
+[7m Manual page sed(1) line 98 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ment is a GNU extension.[m
+[7m Manual page sed(1) line 99 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 100 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Q [[4mexit-code[24m][m
+[7m Manual page sed(1) line 101 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Immediately  quit  the [4msed[24m script without processing any more input.  This is a GNU ex‐[m
+[7m Manual page sed(1) line 102 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tension.[m
+[7m Manual page sed(1) line 103 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 104 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       r [4mfilename[24m[m
+[7m Manual page sed(1) line 105 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Append text read from [4mfilename[24m.[m
+[7m Manual page sed(1) line 106 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 107 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       R [4mfilename[24m[m
+[7m Manual page sed(1) line 108 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Append a line read from [4mfilename[24m.  Each invocation of the command reads a line from the[m
+[7m Manual page sed(1) line 109 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              file.  This is a GNU extension.[m
+[7m Manual page sed(1) line 110 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 111 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mCommands[0m [1mwhich[0m [1maccept[0m [1maddress[0m [1mranges[0m[m
+[7m Manual page sed(1) line 112 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       {      Begin a block of commands (end with a }).[m
+[7m Manual page sed(1) line 113 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 114 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       b [4mlabel[24m[m
+[7m Manual page sed(1) line 115 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Branch to [4mlabel[24m; if [4mlabel[24m is omitted, branch to end of script.[m
+[7m Manual page sed(1) line 116 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 117 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       c \[m
+[7m Manual page sed(1) line 118 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 119 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mtext[24m   Replace  the  selected  lines  with [4mtext[24m, which has each embedded newline preceded by a[m
+[7m Manual page sed(1) line 120 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              backslash.[m
+[7m Manual page sed(1) line 121 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 122 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       d      Delete pattern space.  Start next cycle.[m
+[7m Manual page sed(1) line 123 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 124 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       D      If pattern space contains no newline, start a normal new cycle as if the d command  was[m
+[7m Manual page sed(1) line 125 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              issued.   Otherwise,  delete  text  in  the  pattern space up to the first newline, and[m
+[7m Manual page sed(1) line 126 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              restart cycle with the resultant pattern space, without reading a new line of input.[m
+[7m Manual page sed(1) line 127 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 128 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       h H    Copy/append pattern space to hold space.[m
+[7m Manual page sed(1) line 129 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 130 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       g G    Copy/append hold space to pattern space.[m
+[7m Manual page sed(1) line 131 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 132 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       l      List out the current line in a ``visually unambiguous'' form.[m
+[7m Manual page sed(1) line 133 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 134 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       l [4mwidth[24m[m
+[7m Manual page sed(1) line 135 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              List out the current line in a ``visually unambiguous''  form,  breaking  it  at  [4mwidth[24m[m
+[7m Manual page sed(1) line 136 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              characters.  This is a GNU extension.[m
+[7m Manual page sed(1) line 137 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 138 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       n N    Read/append the next line of input into the pattern space.[m
+[7m Manual page sed(1) line 139 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 140 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       p      Print the current pattern space.[m
+[7m Manual page sed(1) line 141 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 142 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       P      Print up to the first embedded newline of the current pattern space.[m
+[7m Manual page sed(1) line 143 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 144 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       s/[4mregexp[24m/[4mreplacement[24m/[m
+[7m Manual page sed(1) line 145 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Attempt to match [4mregexp[24m against the pattern space.  If successful, replace that portion[m
+[7m Manual page sed(1) line 146 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              matched with [4mreplacement[24m.  The [4mreplacement[24m may contain the special character [1m&[0m to refer[m
+[7m Manual page sed(1) line 147 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              to  that portion of the pattern space which matched, and the special escapes \1 through[m
+[7m Manual page sed(1) line 148 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              \9 to refer to the corresponding matching sub-expressions in the [4mregexp[24m.[m
+[7m Manual page sed(1) line 149 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 150 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       t [4mlabel[24m[m
+[7m Manual page sed(1) line 151 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              If a s/// has done a successful substitution since the last input  line  was  read  and[m
+[7m Manual page sed(1) line 152 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              since the last t or T command, then branch to [4mlabel[24m; if [4mlabel[24m is omitted, branch to end[m
+[7m Manual page sed(1) line 153 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              of script.[m
+[7m Manual page sed(1) line 154 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 155 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       T [4mlabel[24m[m
+[7m Manual page sed(1) line 156 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              If no s/// has done a successful substitution since the last input line  was  read  and[m
+[7m Manual page sed(1) line 157 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              since the last t or T command, then branch to [4mlabel[24m; if [4mlabel[24m is omitted, branch to end[m
+[7m Manual page sed(1) line 158 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              of script.  This is a GNU extension.[m
+[7m Manual page sed(1) line 159 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 160 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       w [4mfilename[24m[m
+[7m Manual page sed(1) line 161 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Write the current pattern space to [4mfilename[24m.[m
+[7m Manual page sed(1) line 162 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 163 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h
+[34ml1-live/241014[0m [90m241014[38;5;218m*​​[36m [33m32s[0m 
+[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [H[2J
+[34ml1-live/241014[0m [90m241014[38;5;218m*​​[36m [33m32s[0m 
+[35m❯[0m man sed
+[?2004l[?1049h[22;0;0t[?1h=SED(1)                                      User Commands                                      SED(1)[m
+[m
+[1mNAME[0m[m
+       sed - stream editor for filtering and transforming text[m
+[m
+[1mSYNOPSIS[0m[m
+       sed [-V] [--version] [--help] [-n] [--quiet] [--silent][m
+           [-l N] [--line-length=N] [-u] [--unbuffered][m
+           [-E] [-r] [--regexp-extended][m
+           [-e script] [--expression=script][m
+           [-f script-file] [--file=script-file][m
+           [script-if-no-other-script][m
+[7m Manual page sed(1) line 1 (press h for help or q to quit)[27m[K[K/[Kcc[Koo[Kll[Koo[Krr[K[1;1HSED(1)                                      User Commands                                      SED(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       sed - stream editor for filtering and transforming text[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       sed [-V] [--version] [--help] [-n] [--quiet] [--silent][m
+[8;1H           [-l N] [--line-length=N] [-u] [--unbuffered][m
+[9;1H           [-E] [-r] [--regexp-extended][m
+[10;1H           [-e script] [--expression=script][m
+[11;1H           [-f script-file] [--file=script-file][m
+[12;1H           [script-if-no-other-script][m
+[13;1H[1;1HSED(1)                                      User Commands                                      SED(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       sed - stream editor for filtering and transforming text[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       sed [-V] [--version] [--help] [-n] [--quiet] [--silent][m
+[8;1H           [-l N] [--line-length=N] [-u] [--unbuffered][m
+[9;1H           [-E] [-r] [--regexp-extended][m
+[10;1H           [-e script] [--expression=script][m
+[11;1H           [-f script-file] [--file=script-file][m
+[12;1H           [script-if-no-other-script][m
+[13;1H[K[7mPattern not found  (press RETURN)[27m[13;1H[K[K[7m Manual page sed(1) line 1/273 4% (press h for help or q to quit)[27m[K[K           [file...][m
+[m
+[1mDESCRIPTION[0m[m
+       [4mSed[24m  is  a stream editor.  A stream editor is used to perform basic text transformations on an[m
+       input stream (a file or input from a pipeline).  While in some ways similar to an editor which[m
+       permits  scripted edits (such as [4med[24m), [4msed[24m works by making only one pass over the input(s), and[m
+       is consequently more efficient.  But it is [4msed[24m's ability to filter text in  a  pipeline  which[m
+       particularly distinguishes it from other types of editors.[m
+[m
+       [1m-n[0m, [1m--quiet[0m, [1m--silent[0m[m
+[m
+              suppress automatic printing of pattern space[m
+[7m Manual page sed(1) line 13/273 9% (press h for help or q to quit)[27m[K[K[m
+       [1m--debug[0m[m
+[m
+              annotate program execution[m
+[m
+       [1m-e[0m script, [1m--expression[0m=[4mscript[24m[m
+[m
+              add the script to the commands to be executed[m
+[m
+       [1m-f[0m script-file, [1m--file[0m=[4mscript-file[24m[m
+[m
+              add the contents of script-file to the commands to be executed[m
+[7m Manual page sed(1) line 25/273 12% (press h for help or q to quit)[27m[K[K[m
+       [1m--follow-symlinks[0m[m
+[m
+              follow symlinks when processing in place[m
+[m
+       [1m-i[SUFFIX][0m, [1m--in-place[0m[=[4mSUFFIX[24m][m
+[m
+              edit files in place (makes backup if SUFFIX supplied)[m
+[m
+       [1m-l[0m N, [1m--line-length[0m=[4mN[24m[m
+[m
+              specify the desired line-wrap length for the `l' command[m
+[7m Manual page sed(1) line 37/273 15% (press h for help or q to quit)[27m[K[K[m
+       [1m--posix[0m[m
+[m
+              disable all GNU extensions.[m
+[m
+       [1m-E[0m, [1m-r[0m, [1m--regexp-extended[0m[m
+[m
+              use extended regular expressions in the script (for portability use POSIX [1m-E[0m).[m
+[m
+       [1m-s[0m, [1m--separate[0m[m
+[m
+              consider files as separate rather than as a single, continuous long stream.[m
+[7m Manual page sed(1) line 49/273 18% (press h for help or q to quit)[27m[K[K[m
+       [1m--sandbox[0m[m
+[m
+              operate in sandbox mode (disable e/r/w commands).[m
+[m
+       [1m-u[0m, [1m--unbuffered[0m[m
+[m
+              load minimal amounts of data from the input files and flush the output buffers more of‐[m
+              ten[m
+[m
+       [1m-z[0m, [1m--null-data[0m[m
+[m
+[7m Manual page sed(1) line 61/273 20% (press h for help or q to quit)[27m[K[K              separate lines by NUL characters[m
+[m
+       [1m--help[0m[m
+              display this help and exit[m
+[m
+       [1m--version[0m[m
+              output version information and exit[m
+[m
+       If no [1m-e[0m, [1m--expression[0m, [1m-f[0m, or [1m--file[0m option is given, then the first non-option  argument  is[m
+       taken as the sed script to interpret.  All remaining arguments are names of input files; if no[m
+       input files are specified, then the standard input is read.[m
+[m
+[7m Manual page sed(1) line 73/273 24% (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h
+[34ml1-live/241014[0m [90m241014[38;5;218m*​​[36m [33m8s[0m 
+[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m 
