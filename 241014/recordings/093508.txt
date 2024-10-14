@@ -1052,4 +1052,674 @@ mammals, and small birds. This white stork in flight was photographed in
               any match is found, even if an error was detected.  Also see the [1m-s[0m  or  [1m--no-messages[0m[m
               option.[m
 [m
-       [1m-s[0m, 
+       [1m-s[0m, [1m--no-messages[0m[m
+              Suppress error messages about nonexistent or unreadable files.[m
+[m
+   [1mOutput[0m [1mLine[0m [1mPrefix[0m [1mControl[0m[m
+[7m Manual page grep(1) line 113 (press h for help or q to quit)[27m[K[H[2J[H       [1m[7m-o[27m[0m, [1m-[0m[1m[7m-o[27m[0m[1mnly-matching[0m[m
+              Print only the matched (non-empty) parts of a matching line, with each such part on  a[m
+              separate output line.[m
+[m
+       [1m-q[0m, [1m--quiet[0m, [1m--silent[0m[m
+              Quiet; do not write anything to standard output.  Exit immediately with zero status if[m
+              any match is found, even if an error was detected.  Also see the [1m-s[0m  or  [1m--no-messages[0m[m
+              option.[m
+[m
+       [1m-s[0m, [1m--no-messages[0m[m
+              Suppress error messages about nonexistent or unreadable files.[m
+[m
+   [1mOutput[0m [1mLine[0m [1mPrefix[0m [1mControl[0m[m
+       [1m-b[0m, [1m--byte[0m[1m[7m-o[27m[0m[1mffset[0m[m
+[7m Manual page grep(1) line 113 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [33m2m15s[0m 
+[35m❯[0m [H[2J
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [33m2m15s[0m 
+[35m❯[0m less /etc/ssh/sshd_config
+[?2004l[?1049h[22;0;0t[?1h=
+# This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+# This sshd was compiled with PATH=/usr/local/bin:/usr/bin:/bin:/usr/games
+
+# The strategy used for options in the default sshd_config shipped with
+# OpenSSH is to specify options with their default value where
+# possible, but leave them commented.  Uncommented options override the
+# default value.
+
+Include /etc/ssh/sshd_config.d/*.conf
+
+#Port 22
+[7m/etc/ssh/sshd_config[27m[K...skipping...
+
+# This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+# This sshd was compiled with PATH=/usr/local/bin:/usr/bin:/bin:/usr/games
+
+# The strategy used for options in the default sshd_config shipped with
+# OpenSSH is to specify options with their default value where
+# possible, but leave them commented.  Uncommented options override the
+# default value.
+
+Include /etc/ssh/sshd_config.d/*.conf
+
+#Port 22
+#AddressFamily any
+:[K...skipping...
+
+# This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+# This sshd was compiled with PATH=/usr/local/bin:/usr/bin:/bin:/usr/games
+
+# The strategy used for options in the default sshd_config shipped with
+# OpenSSH is to specify options with their default value where
+# possible, but leave them commented.  Uncommented options override the
+# default value.
+
+Include /etc/ssh/sshd_config.d/*.conf
+
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+:[K[K [KESCESC[KOO[KBB[K#ListenAddress ::
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K#HostKey /etc/ssh/ssh_host_rsa_key
+:[K[K [KESCESC[KOO[KBB[K#HostKey /etc/ssh/ssh_host_ecdsa_key
+:[K[K [KESCESC[KOO[KBB[K#HostKey /etc/ssh/ssh_host_ed25519_key
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# Ciphers and keying
+:[K[K [KESCESC[KOO[KBB[K#RekeyLimit default none
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# Logging
+:[K[K [KESCESC[KOO[KBB[K#SyslogFacility AUTH
+:[K[K [KESCESC[KOO[KBB[K#LogLevel INFO
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# Authentication:
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K#LoginGraceTime 2m
+:[K[K [KESCESC[KOO[KBB[K#PermitRootLogin prohibit-password
+:[K[K [KESCESC[KOO[KBB[K#StrictModes yes
+:[K[K [KESCESC[KOO[KBB[K#MaxAuthTries 6
+:[K[K [KESCESC[KOO[KBB[K#MaxSessions 10
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K#PubkeyAuthentication yes
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# Expect .ssh/authorized_keys2 to be disregarded by default in future.
+:[K[K [KESCESC[KOO[KBB[K#AuthorizedKeysFile     .ssh/authorized_keys .ssh/authorized_keys2
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K#AuthorizedPrincipalsFile none
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K#AuthorizedKeysCommand none
+:[K[K [KESCESC[KOO[KBB[K#AuthorizedKeysCommandUser nobody
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# For this to work you will also need host keys in /etc/ssh/ssh_known_hosts
+:[K[K [KESCESC[KOO[KBB[K#HostbasedAuthentication no
+:[K[K [KESCESC[KOO[KBB[K# Change to yes if you don't trust ~/.ssh/known_hosts for
+:[K[K [KESCESC[KOO[KBB[K# HostbasedAuthentication
+:[K[K [KESCESC[KOO[KBB[K#IgnoreUserKnownHosts no
+:[K[K [KESCESC[KOO[KBB[K# Don't read the user's ~/.rhosts and ~/.shosts files
+:[K[K [KESCESC[KOO[KBB[K#IgnoreRhosts yes
+:[K[K:[K[K[?1l>[?1049l[23;0;0t[?2004h
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [33m35s[0m 
+[35m❯[0m less /etc/ssh/sshd_config[C[C[C[C[1P /etc/ssh/sshd_config[1P /etc/ssh/sshd_config[1P /etc/ssh/sshd_config[1P /etc/ssh/sshd_configs /etc/ssh/sshd_configu /etc/ssh/sshd_configd /etc/ssh/sshd_configo /etc/ssh/sshd_confige /etc/ssh/sshd_configd /etc/ssh/sshd_configi /etc/ssh/sshd_configt /etc/ssh/sshd_config
+[?2004l[sudo] password for kent: 
+Sorry, try again.
+[sudo] password for kent: 
+^Csudoedit: 2 incorrect password attempts
+[?2004h
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [33m10s[0m 
+[31m❯[0m sudoedit /etc/ssh/sshd_config
+[?2004l[sudo] password for kent: 
+[?2004h[?1049h[22;0;0t[1;17r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[15;45H(B[0;7m[ Reading... ](B[m[15;43H(B[0;7m[ Read 122 lines ](B[m[H(B[0;7m  GNU nano 7.2                         /var/tmp/sshd_config.TwpDyXaz                                   [1;102H(B[m[16d(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[16;57H(B[0;7m^T(B[m Execute    (B[0;7m^C(B[m Location   (B[0;7mM-U(B[m Undo[17d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[57G(B[0;7m^J(B[m Justify    (B[0;7m^/(B[m Go To Line (B[0;7mM-E(B[m Redo[3d[36m# This is the sshd server system-wide configuration file.  See[4d# sshd_config(5) for more information.[6d# This sshd was compiled with PATH=/usr/local/bin:/usr/bin:/bin:/usr/games[8d# The strategy used for options in the default sshd_config shipped with[9d# OpenSSH is to specify options with their default value where[10d# possible, but leave them commented.  Uncommented options override the[11d# default value.[13d[39m(B[mInclude /etc/ssh/sshd_config.d/*.conf[2d[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h7[2;14r8
+[1;17r[14;1H[36m#Port 22[39m(B[m[?25l[?12l[?25h7[2;14r8
+[1;17r[14;1H[36m#AddressFamily any[39m(B[m[?25l[?12l[?25h7[2;14r8
+[1;17r[14;1H[36m#ListenAddress 0.0.0.0[39m(B[m[?25l[?12l[?25h7[2;14r8
+[1;17r[14;1H[36m#ListenAddress ::[39m(B[m[?25l[?12l[?25h7[2;14r8
+[1;17r[14;1H[?25l[?12l[?25h7[2;14r8
+[1;17r[14;1H[36m#HostKey /etc/ssh/ssh_host_rsa_key[39m(B[m[?25l[?12l[?25h7[2;14r8
+[1;17r[14;1H[36m#HostKey /etc/ssh/ssh_host_ecdsa_key[39m(B[m[?25l[15d[K[?12l[?25h7[2;15r8
+[1;17r[14;1H[36m#HostKey /etc/ssh/ssh_host_ed25519_key[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# Ciphers and keying[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#RekeyLimit default none[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# Logging[39m(B[m[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[1;70H(B[0;7m*[102G(B[m[?12l[?25h[7d[36m #HostKey /etc/ssh/ssh_host_rsa_key [39m(B[m[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11;2H[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14;2H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#SyslogFacility AUTH#[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#LogLevel INFO#[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# Authentication:#[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#LoginGraceTime 2m#[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#PermitRootLogin prohibit-password#[39m(B[m[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#StrictModes yes[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#MaxAuthTries 6[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#MaxSessions 10[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#PubkeyAuthentication yes[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# Expect .ssh/authorized_keys2 to be disregarded by default in future.[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#AuthorizedKeysFile[38;5;208m     [36m.ssh/authorized_keys .ssh/authorized_keys2[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#AuthorizedPrincipalsFile none[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#AuthorizedKeysCommand none[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#AuthorizedKeysCommandUser nobody[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# For this to work you will also need host keys in /etc/ssh/ssh_known_hosts[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#HostbasedAuthentication no[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# Change to yes if you don't trust ~/.ssh/known_hosts for[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# HostbasedAuthentication[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#IgnoreUserKnownHosts no[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# Don't read the user's ~/.rhosts and ~/.shosts files[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#IgnoreRhosts yes[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# To disable tunneled clear text passwords, change to no here![39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#PasswordAuthentication yes[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#PermitEmptyPasswords no[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# Change to yes to enable challenge-response passwords (beware issues with[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# some PAM modules and threads)[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1HKbdInteractiveAuthentication no[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# Kerberos options[39m(B[m[?25l[?12l[?25h[A[?25l[?12l[?25h[14d[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#KerberosAuthentication no[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#KerberosOrLocalPasswd yes[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#KerberosTicketCleanup yes[39m(B[m[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h KbdInteractiveAuthentication no [?25l[?12l[?25h  KbdInteractiveAuthentication no  [?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#KerberosGetAFSToken no[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# GSSAPI options[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#GSSAPIAuthentication no[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#GSSAPICleanupCredentials yes[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#GSSAPIStrictAcceptorCheck yes[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#GSSAPIKeyExchange no[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# Set this to 'yes' to enable PAM authentication, account processing,[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# and session processing. If this is enabled, PAM authentication will[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# be allowed through the KbdInteractiveAuthentication and[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# PasswordAuthentication.  Depending on your PAM configuration,[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# PAM authentication via KbdInteractiveAuthentication may bypass[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# the setting of "PermitRootLogin prohibit-password".[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# If you just want the PAM account and session checks to run without[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# PAM authentication, then enable this but set PasswordAuthentication[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m# and KbdInteractiveAuthentication to 'no'.[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1HUsePAM yes[?25l[?12l[?25h UsePAM yes [?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#AllowAgentForwarding yes#[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#AllowTcpForwarding yes#[39m(B[m[?25l[?12l[?25h7[2;15r8[15d
+[1;17r[14;1H[36m#GatewayPorts no#[39m(B[m[?25l[15d(B[0;7mSave modified buffer?                                                                                  [16;1H Y(B[m Yes[K[17d(B[0;7m N(B[m No  [15G  (B[0;7m^C(B[m Cancel[K[15;23H[?12l[?25h[?25l[16d(B[0;7m^G(B[m Help[16;26H(B[0;7mM-D(B[m DOS Format[16;51H(B[0;7mM-A(B[m Append[16;76H(B[0;7mM-B(B[m Backup File[17d(B[0;7m^C(B[m Cancel[17G         (B[0;7mM-M(B[m Mac Format[17;51H(B[0;7mM-P(B[m Prepend[17;76H(B[0;7m^T(B[m Browse[15d(B[0;7mFile Name to Write: /var/tmp/sshd_config.TwpDyXaz(B[m[?12l[?25h[?25l[44G[1K (B[0;7m[ Writing... ](B[m[K[1;70H(B[0;7m [102G(B[m[15;43H(B[0;7m[ Wrote 122 lines ](B[m[J[17d[?12l[?25h[17;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [33m25s[0m 
+[35m❯[0m cat [C[Csudoedit /etc/ssh/sshd_config[C[C[C[C[C[C[C[C[1P /etc/ssh/sshd_config[1P /etc/ssh/sshd_config[1P /etc/ssh/sshd_config[1P /etc/ssh/sshd_config[1P /etc/ssh/sshd_config[1P /etc/ssh/sshd_config[1P /etc/ssh/sshd_config[1P /etc/ssh/sshd_configc /etc/ssh/sshd_configa /etc/ssh/sshd_configt /etc/ssh/sshd_config
+[?2004l
+# This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+# This sshd was compiled with PATH=/usr/local/bin:/usr/bin:/bin:/usr/games
+
+# The strategy used for options in the default sshd_config shipped with
+# OpenSSH is to specify options with their default value where
+# possible, but leave them commented.  Uncommented options override the
+# default value.
+
+Include /etc/ssh/sshd_config.d/*.conf
+
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+
+ #HostKey /etc/ssh/ssh_host_rsa_key
+#HostKey /etc/ssh/ssh_host_ecdsa_key
+#HostKey /etc/ssh/ssh_host_ed25519_key
+
+# Ciphers and keying
+#RekeyLimit default none
+
+# Logging
+#SyslogFacility AUTH
+#LogLevel INFO
+
+# Authentication:
+
+#LoginGraceTime 2m
+#PermitRootLogin prohibit-password
+#StrictModes yes
+#MaxAuthTries 6
+#MaxSessions 10
+
+#PubkeyAuthentication yes
+
+# Expect .ssh/authorized_keys2 to be disregarded by default in future.
+#AuthorizedKeysFile	.ssh/authorized_keys .ssh/authorized_keys2
+
+#AuthorizedPrincipalsFile none
+
+#AuthorizedKeysCommand none
+#AuthorizedKeysCommandUser nobody
+
+# For this to work you will also need host keys in /etc/ssh/ssh_known_hosts
+#HostbasedAuthentication no
+# Change to yes if you don't trust ~/.ssh/known_hosts for
+# HostbasedAuthentication
+#IgnoreUserKnownHosts no
+# Don't read the user's ~/.rhosts and ~/.shosts files
+#IgnoreRhosts yes
+
+# To disable tunneled clear text passwords, change to no here!
+#PasswordAuthentication yes
+#PermitEmptyPasswords no
+
+# Change to yes to enable challenge-response passwords (beware issues with
+# some PAM modules and threads)
+  KbdInteractiveAuthentication no
+
+# Kerberos options
+#KerberosAuthentication no
+#KerberosOrLocalPasswd yes
+#KerberosTicketCleanup yes
+#KerberosGetAFSToken no
+
+# GSSAPI options
+#GSSAPIAuthentication no
+#GSSAPICleanupCredentials yes
+#GSSAPIStrictAcceptorCheck yes
+#GSSAPIKeyExchange no
+
+# Set this to 'yes' to enable PAM authentication, account processing,
+# and session processing. If this is enabled, PAM authentication will
+# be allowed through the KbdInteractiveAuthentication and
+# PasswordAuthentication.  Depending on your PAM configuration,
+# PAM authentication via KbdInteractiveAuthentication may bypass
+# the setting of "PermitRootLogin prohibit-password".
+# If you just want the PAM account and session checks to run without
+# PAM authentication, then enable this but set PasswordAuthentication
+# and KbdInteractiveAuthentication to 'no'.
+ UsePAM yes
+
+#AllowAgentForwarding yes
+#AllowTcpForwarding yes
+#GatewayPorts no
+X11Forwarding yes
+#X11DisplayOffset 10
+#X11UseLocalhost yes
+#PermitTTY yes
+PrintMotd no
+#PrintLastLog yes
+#TCPKeepAlive yes
+#PermitUserEnvironment no
+#Compression delayed
+#ClientAliveInterval 0
+#ClientAliveCountMax 3
+#UseDNS no
+#PidFile /run/sshd.pid
+#MaxStartups 10:30:100
+#PermitTunnel no
+#ChrootDirectory none
+#VersionAddendum none
+
+# no default banner path
+#Banner none
+
+# Allow client to pass locale environment variables
+AcceptEnv LANG LC_*
+
+# override default of no subsystems
+Subsystem	sftp	/usr/lib/openssh/sftp-server
+
+# Example of overriding settings on a per-user basis
+#Match User anoncvs
+#	X11Forwarding no
+#	AllowTcpForwarding no
+#	PermitTTY no
+#	ForceCommand cvs server
+[?2004h
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [0m
+[35m❯[0m [H[2J
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [0m
+[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m (reverse-i-search)`': s': cat /etc/ssh/s[7ms[27mhd_configu': [7msu[27mdoedit /etc/ssh/sshd_config[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8@failed reverse-i-search)`sue': su[1@o[C[C[C[1@d[C[C[C[32P[35m❯[0m 
+[?2004l[?2004h[?1049h[22;0;0t[1;12r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[10;46H(B[0;7m[ Reading... ](B[m[10;44H(B[0;7m[ Read 122 lines ](B[m[H(B[0;7m  GNU nano 7.2                          /var/tmp/sshd_config.8obkrVKr                                   [1;103H(B[m[11d(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[11;57H(B[0;7m^T(B[m Execute    (B[0;7m^C(B[m Location   (B[0;7mM-U(B[m Undo[12d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[57G(B[0;7m^J(B[m Justify    (B[0;7m^/(B[m Go To Line (B[0;7mM-E(B[m Redo[3d[36m# This is the sshd server system-wide configuration file.  See[4d# sshd_config(5) for more information.[6d# This sshd was compiled with PATH=/usr/local/bin:/usr/bin:/bin:/usr/games[8d# The strategy used for options in the default sshd_config shipped with[9d# OpenSSH is to specify options with their default value where[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[1;71H(B[0;7m*[103G(B[m[?12l[?25h[7d [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[4;5H[?25l[?12l[?25h[5d[?25l[?12l[?25h[8G[38;5;208m[1K [39m(B[m[?25l[?12l[?25h [?25l[?12l[?25h[6d[?25l[10d(B[0;7mSave modified buffer?                                                                                   [11;1H Y(B[m Yes[K[12d(B[0;7m N(B[m No  [15G  (B[0;7m^C(B[m Cancel[K[10;23H[?12l[?25h[?25l[11d(B[0;7m^G(B[m Help[11;27H(B[0;7mM-D(B[m DOS Format[11;53H(B[0;7mM-A(B[m Append[11;79H(B[0;7mM-B(B[m Backup File[12d(B[0;7m^C(B[m Cancel[17G          (B[0;7mM-M(B[m Mac Format[12;53H(B[0;7mM-P(B[m Prepend[12;79H(B[0;7m^T(B[m Browse[10d(B[0;7mFile Name to Write: /var/tmp/sshd_config.8obkrVKr(B[m[?12l[?25h[?25l[45G[1K (B[0;7m[ Writing... ](B[m[K[1;71H(B[0;7m [103G(B[m[10;43H(B[0;7m[ Wrote 122 lines ](B[m[J[12d[?12l[?25h[12;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [33m12s[0m 
+[35m❯[0m nano grepex [H[2J
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [33m12s[0m 
+[35m❯[0m nano grepex 
+[?2004l[?2004h[?1049h[22;0;0t[1;12r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[10;46H(B[0;7m[ Reading... ](B[m[10;44H(B[0;7m[ Read 29 lines ](B[m[H(B[0;7m  GNU nano 7.2                                     grepex                                               [1;103H(B[m[11d(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[11;57H(B[0;7m^T(B[m Execute    (B[0;7m^C(B[m Location   (B[0;7mM-U(B[m Undo[12d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[57G(B[0;7m^J(B[m Justify    (B[0;7m^/(B[m Go To Line (B[0;7mM-E(B[m Redo[2d[36m#!/bin/bash[4d# \( \) utan -E. Vi kör med -E då det är mer lättläst.[5d# ( ) med -E.[7d# grep -E (B[0;1m[33m'stork'(B[0m[36m wikipedia.txt[8d# grep -E (B[0;1m[33m'stork|animal'(B[0m[36m wikipedia.txt[9d# grep --color -E (B[0;1m[33m'[0-9]+'(B[0m[36m wikipedia.txt[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h7[2;9r8
+[1;12r[9;1H[36m# grep --color -E (B[0;1m[33m'[0-9]+|stork'(B[0m[36m wikipedia.txt[39m(B[m[?25l[?12l[?25h7[2;9r8
+[1;12r[9;1H[36m# grep --color -E (B[0;1m[33m'... | ... '(B[0m[36m wikipedia.txt  # Klurig! Hur matcha ord på tre tecken?[39m(B[m[?25l[?12l[?25h7[2;9r8
+[1;12r[9;1H[36m# grep -o -E (B[0;1m[33m'[0-9]+'(B[0m[36m wikipedia.txt[39m(B[m[?25l[?12l[?25h7[2;9r8
+[1;12r[9;1H[?25l[?12l[?25h7[2;9r8
+[1;12r[9;1H[36m# denna kan matcha kommentarsrader genom att tolkas stjärnan i (B[0;1m[33m' *'(B[0m[36m  som inget och (B[0;1m[33m"äta upp"[39m(B[m[?25l[?12l[?25h7[2;9r8
+[1;12r[9;1H[36m# mellanslaget i [^#] istället.[39m(B[m[?25l[?12l[?25h7[2;9r8
+[1;12r[9;1H[36m# grep --color -E (B[0;1m[33m'^ *[^#]'(B[0m[36m /etc/ssh/sshd_config[39m(B[m[?25l[?12l[?25h7[2;9r8
+[1;12r[9;1H[?25l[?12l[?25h7[2;9r8
+[1;12r[9;1H[36m# Fixen blir att inte tillåta mellanslag i teckengruppen efter stjärnan.[39m(B[m[?25l[?12l[?25h7[2;9r8
+[1;12r[9;1H[36m# grep --color -E (B[0;1m[33m'^ *[^# ]'(B[0m[36m /etc/ssh/sshd_config[39m(B[m[?25l[?12l[?25h7[2;9r8
+[1;12r[9;1H[?25l[?12l[?25h7[2;9r8
+[1;12r[9;1H[36m# Matcha de som ÄR kommentarer[39m(B[m[?25l[10d[K[?12l[?25h7[2;10r8
+[1;12r[9;1H[?25l[?12l[?25h7[2;10r8[10d
+[1;12r[9;1H[36m# grep --color -E (B[0;1m[33m'^ *#'(B[0m[36m /etc/ssh/sshd_config[39m(B[m[?25l[?12l[?25h7[2;10r8[10d
+[1;12r[9;1H[?25l[?12l[?25h7[2;10r8[10d
+[1;12r[9;1H[36m# -v betyder visa alla rader som INTE matchar.[39m(B[m[?25l[?12l[?25h7[2;10r8[10d
+[1;12r[9;1H[?25l[?12l[?25h7[2;10r8[10d
+[1;12r[9;1H[36m# grep --color -Ev (B[0;1m[33m'^ *#'(B[0m[36m /etc/ssh/sshd_config[39m(B[m[?25l[?12l[?25h7[2;10r8[10d
+[1;12r[9;1H[?25l[?12l[?25h7[2;10r8[10d
+[1;12r[9;1H[36m# ^$ matchar tomma rader, som med -v exkluderar dem[39m(B[m[?25l[?12l[?25h7[2;10r8[10d
+[1;12r[9;1H(B[0;1m[34mgrep[35m --color[39m(B[m -Ev (B[0;1m[33m'^ *#|^[ ]*$'[39m(B[m /etc/ssh/sshd_config[?25l[?12l[?25h7[2;10r8[10d
+[1;12r[9;1H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[8;52H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[C[?25l[1;59H(B[0;7m*[103G(B[m[?12l[?25h[8;26H(B[0;1m[33m       ]*$'[39m(B[m /etc/ssh/sshd_config[8;33H[?25l[?12l[?25h[9d[?25l[?12l[?25h[?25l[10d(B[0;7mSave modified buffer?                                                                                   [11;1H Y(B[m Yes[K[12d(B[0;7m N(B[m No  [15G  (B[0;7m^C(B[m Cancel[K[10;23H[?12l[?25h[?25l[11d(B[0;7m^G(B[m Help[11;27H(B[0;7mM-D(B[m DOS Format[11;53H(B[0;7mM-A(B[m Append[11;79H(B[0;7mM-B(B[m Backup File[12d(B[0;7m^C(B[m Cancel[17G          (B[0;7mM-M(B[m Mac Format[12;53H(B[0;7mM-P(B[m Prepend[12;79H(B[0;7m^T(B[m Browse[10d(B[0;7mFile Name to Write: grepex(B[m[?12l[?25h[?25l[10;45H[1K (B[0;7m[ Writing... ](B[m[K[1;59H(B[0;7m [103G(B[m[10;44H(B[0;7m[ Wrote 29 lines ](B[m[J[12d[?12l[?25h[12;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [33m11s[0m 
+[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [H[2J
+[34ml1-live/241014[0m [90m241014[38;5;218m*​[36m [33m11s[0m 
+[35m❯[0m man sed
+[?2004l[?1049h[22;0;0t[?1h=SED(1)                                      User Commands                                      SED(1)[m
+[m
+[1mNAME[0m[m
+       sed - stream editor for filtering and transforming text[m
+[m
+[1mSYNOPSIS[0m[m
+       sed [-V] [--version] [--help] [-n] [--quiet] [--silent][m
+           [-l N] [--line-length=N] [-u] [--unbuffered][m
+           [-E] [-r] [--regexp-extended][m
+           [-e script] [--expression=script][m
+           [-f script-file] [--file=script-file][m
+           [script-if-no-other-script][m
+           [file...][m
+[m
+[1mDESCRIPTION[0m[m
+       [4mSed[24m  is  a stream editor.  A stream editor is used to perform basic text transformations on an[m
+       input stream (a file or input from a pipeline).  While in some ways similar to an editor which[m
+       permits  scripted edits (such as [4med[24m), [4msed[24m works by making only one pass over the input(s), and[m
+[7m Manual page sed(1) line 1 (press h for help or q to quit)[27m[K[K&/[K[7m Manual page sed(1) line 1 (press h for help or q to quit)[27m[K[K[7m Manual page sed(1) line 1 (press h for help or q to quit)[27m[K[K&/[K[7m Manual page sed(1) line 1 (press h for help or q to quit)[27m[K[K/[K--[KEE[K[1;1HSED(1)                                      User Commands                                      SED(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       sed - stream editor for filtering and transforming text[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       sed [-V] [--version] [--help] [-n] [--quiet] [--silent][m
+[8;1H           [-l N] [--line-length=N] [-u] [--unbuffered][m
+[9;1H           [-E] [-r] [--regexp-extended][m
+[10;1H           [-e script] [--expression=script][m
+[11;1H           [-f script-file] [--file=script-file][m
+[12;1H           [script-if-no-other-script][m
+[13;1H           [file...][m
+[14;1H[m
+[15;1H[1mDESCRIPTION[0m[m
+[16;1H       [4mSed[24m  is  a stream editor.  A stream editor is used to perform basic text transformations on an[m
+[17;1H       input stream (a file or input from a pipeline).  While in some ways similar to an editor which[m
+[18;1H       permits  scripted edits (such as [4med[24m), [4msed[24m works by making only one pass over the input(s), and[m
+[19;1H[1;1HSED(1)                                      User Commands                                      SED(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       sed - stream editor for filtering and transforming text[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       sed [-V] [--version] [--help] [-n] [--quiet] [--silent][m
+[8;1H           [-l N] [--line-length=N] [-u] [--unbuffered][m
+[9;1H           [[7m-E[27m] [-r] [--regexp-extended][m
+[10;1H           [-e script] [--expression=script][m
+[11;1H           [-f script-file] [--file=script-file][m
+[12;1H           [script-if-no-other-script][m
+[13;1H           [file...][m
+[14;1H[m
+[15;1H[1mDESCRIPTION[0m[m
+[16;1H       [4mSed[24m  is  a stream editor.  A stream editor is used to perform basic text transformations on an[m
+[17;1H       input stream (a file or input from a pipeline).  While in some ways similar to an editor which[m
+[18;1H       permits  scripted edits (such as [4med[24m), [4msed[24m works by making only one pass over the input(s), and[m
+[19;1H       is consequently more efficient.  But it is [4msed[24m's ability to filter text in  a  pipeline  which[m
+       particularly distinguishes it from other types of editors.[m
+[m
+       [1m-n[0m, [1m--quiet[0m, [1m--silent[0m[m
+[m
+              suppress automatic printing of pattern space[m
+[m
+       [1m--debug[0m[m
+[7m Manual page sed(1) line 9 (press h for help or q to quit)[27m[K[K/[K...skipping...
+       [1m[7m-E[27m[0m, [1m-r[0m, [1m--regexp-extended[0m[m
+[m
+              use extended regular expressions in the script (for portability use POSIX [1m[7m-E[27m[0m).[m
+[m
+       [1m-s[0m, [1m--separate[0m[m
+[m
+              consider files as separate rather than as a single, continuous long stream.[m
+[m
+       [1m--sandbox[0m[m
+[m
+              operate in sandbox mode (disable e/r/w commands).[m
+[m
+       [1m-u[0m, [1m--unbuffered[0m[m
+[m
+              load minimal amounts of data from the input files and flush the output buffers more of‐[m
+              ten[m
+[m
+       [1m-z[0m, [1m--null-data[0m[m
+[7m Manual page sed(1) line 54 (press h for help or q to quit)[27m[K[K[7m Manual page sed(1) line 54 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h
+[34ml1-live/241014[0m [90m241014[38;5;218m*​​[36m [33m27s[0m 
+[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m man sed
+[?2004l[?1049h[22;0;0t[?1h=SED(1)                                      User Commands                                      SED(1)[m
+[m
+[1mNAME[0m[m
+       sed - stream editor for filtering and transforming text[m
+[m
+[1mSYNOPSIS[0m[m
+       sed [-V] [--version] [--help] [-n] [--quiet] [--silent][m
+           [-l N] [--line-length=N] [-u] [--unbuffered][m
+           [-E] [-r] [--regexp-extended][m
+           [-e script] [--expression=script][m
+           [-f script-file] [--file=script-file][m
+           [script-if-no-other-script][m
+           [file...][m
+[m
+[1mDESCRIPTION[0m[m
+       [4mSed[24m  is  a stream editor.  A stream editor is used to perform basic text transformations on an[m
+       input stream (a file or input from a pipeline).  While in some ways similar to an editor which[m
+       permits  scripted edits (such as [4med[24m), [4msed[24m works by making only one pass over the input(s), and[m
+       is consequently more efficient.  But it is [4msed[24m's ability to filter text in  a  pipeline  which[m
+       particularly distinguishes it from other types of editors.[m
+[m
+       [1m-n[0m, [1m--quiet[0m, [1m--silent[0m[m
+[7m Manual page sed(1) line 1 (press h for help or q to quit)[27m[K[K[m
+              suppress automatic printing of pattern space[m
+[m
+       [1m--debug[0m[m
+[m
+              annotate program execution[m
+[m
+       [1m-e[0m script, [1m--expression[0m=[4mscript[24m[m
+[m
+              add the script to the commands to be executed[m
+[m
+       [1m-f[0m script-file, [1m--file[0m=[4mscript-file[24m[m
+[m
+              add the contents of script-file to the commands to be executed[m
+[m
+       [1m--follow-symlinks[0m[m
+[m
+              follow symlinks when processing in place[m
+[m
+       [1m-i[SUFFIX][0m, [1m--in-place[0m[=[4mSUFFIX[24m][m
+[m
+              edit files in place (makes backup if SUFFIX supplied)[m
+[7m Manual page sed(1) line 23 (press h for help or q to quit)[27m[K[K[m
+       [1m-l[0m N, [1m--line-length[0m=[4mN[24m[m
+[m
+              specify the desired line-wrap length for the `l' command[m
+[m
+       [1m--posix[0m[m
+[m
+              disable all GNU extensions.[m
+[m
+       [1m-E[0m, [1m-r[0m, [1m--regexp-extended[0m[m
+[m
+              use extended regular expressions in the script (for portability use POSIX [1m-E[0m).[m
+[m
+       [1m-s[0m, [1m--separate[0m[m
+[m
+              consider files as separate rather than as a single, continuous long stream.[m
+[m
+       [1m--sandbox[0m[m
+[m
+              operate in sandbox mode (disable e/r/w commands).[m
+[m
+       [1m-u[0m, [1m--unbuffered[0m[m
+[7m Manual page sed(1) line 45 (press h for help or q to quit)[27m[K[K[m
+              load minimal amounts of data from the input files and flush the output buffers more of‐[m
+              ten[m
+[m
+       [1m-z[0m, [1m--null-data[0m[m
+[m
+              separate lines by NUL characters[m
+[m
+       [1m--help[0m[m
+              display this help and exit[m
+[m
+       [1m--version[0m[m
+              output version information and exit[m
+[m
+       If no [1m-e[0m, [1m--expression[0m, [1m-f[0m, or [1m--file[0m option is given, then the first non-option  argument  is[m
+       taken as the sed script to interpret.  All remaining arguments are names of input files; if no[m
+       input files are specified, then the standard input is read.[m
+[m
+       GNU sed home page: <https://www.gnu.org/software/sed/>.   General  help  using  GNU  software:[m
+       <https://www.gnu.org/gethelp/>.  E-mail bug reports to: <bug-sed@gnu.org>.[m
+[m
+       Packaged  by  Debian  Copyright © 2022 Free Software Foundation, Inc.  License GPLv3+: GNU GPL[m
+[7m Manual page sed(1) line 67 (press h for help or q to quit)[27m[K[K       version 3 or later <https://gnu.org/licenses/gpl.html>.  This is free software: you  are  free[m
+       to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.[m
+[m
+[1mCOMMAND[0m [1mSYNOPSIS[0m[m
+       This is just a brief synopsis of [4msed[24m commands to serve as a reminder to those who already know[m
+       [4msed[24m; other documentation (such as the texinfo document) must be consulted for fuller  descrip‐[m
+       tions.[m
+[m
+   [1mZero-address[0m [1m``commands''[0m[m
+       : [4mlabel[24m[m
+              Label for [1mb[0m and [1mt[0m commands.[m
+[m
+       #[4mcomment[24m[m
+              The comment extends until the next newline (or the end of a [1m-e[0m script fragment).[m
+[m
+       }      The closing bracket of a { } block.[m
+[m
+   [1mZero-[0m [1mor[0m [1mOne-[0m [1maddress[0m [1mcommands[0m[m
+       =      Print the current line number.[m
+[m
+       a \[m
+[m
+[7m Manual page sed(1) line 89 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mtext[24m   Append [4mtext[24m, which has each embedded newline preceded by a backslash.[m
+[7m Manual page sed(1) line 90 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 91 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       i \[m
+[7m Manual page sed(1) line 92 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 93 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mtext[24m   Insert [4mtext[24m, which has each embedded newline preceded by a backslash.[m
+[7m Manual page sed(1) line 94 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 95 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       q [[4mexit-code[24m][m
+[7m Manual page sed(1) line 96 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Immediately quit the [4msed[24m script without processing any more input, except that if auto-[m
+[7m Manual page sed(1) line 97 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              print is not disabled the current pattern space will be printed.  The exit  code  argu‐[m
+[7m Manual page sed(1) line 98 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ment is a GNU extension.[m
+[7m Manual page sed(1) line 99 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 100 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Q [[4mexit-code[24m][m
+[7m Manual page sed(1) line 101 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Immediately  quit  the [4msed[24m script without processing any more input.  This is a GNU ex‐[m
+[7m Manual page sed(1) line 102 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tension.[m
+[7m Manual page sed(1) line 103 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 104 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       r [4mfilename[24m[m
+[7m Manual page sed(1) line 105 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Append text read from [4mfilename[24m.[m
+[7m Manual page sed(1) line 106 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 107 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       R [4mfilename[24m[m
+[7m Manual page sed(1) line 108 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Append a line read from [4mfilename[24m.  Each invocation of the command reads a line from the[m
+[7m Manual page sed(1) line 109 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              file.  This is a GNU extension.[m
+[7m Manual page sed(1) line 110 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 111 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mCommands[0m [1mwhich[0m [1maccept[0m [1maddress[0m [1mranges[0m[m
+[7m Manual page sed(1) line 112 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       {      Begin a block of commands (end with a }).[m
+[7m Manual page sed(1) line 113 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 114 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       b [4mlabel[24m[m
+[7m Manual page sed(1) line 115 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Branch to [4mlabel[24m; if [4mlabel[24m is omitted, branch to end of script.[m
+[7m Manual page sed(1) line 116 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 117 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       c \[m
+[7m Manual page sed(1) line 118 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 119 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mtext[24m   Replace  the  selected  lines  with [4mtext[24m, which has each embedded newline preceded by a[m
+[7m Manual page sed(1) line 120 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              backslash.[m
+[7m Manual page sed(1) line 121 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 122 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       d      Delete pattern space.  Start next cycle.[m
+[7m Manual page sed(1) line 123 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 124 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       D      If pattern space contains no newline, start a normal new cycle as if the d command  was[m
+[7m Manual page sed(1) line 125 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              issued.   Otherwise,  delete  text  in  the  pattern space up to the first newline, and[m
+[7m Manual page sed(1) line 126 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              restart cycle with the resultant pattern space, without reading a new line of input.[m
+[7m Manual page sed(1) line 127 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 128 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       h H    Copy/append pattern space to hold space.[m
+[7m Manual page sed(1) line 129 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 130 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       g G    Copy/append hold space to pattern space.[m
+[7m Manual page sed(1) line 131 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 132 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       l      List out the current line in a ``visually unambiguous'' form.[m
+[7m Manual page sed(1) line 133 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 134 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       l [4mwidth[24m[m
+[7m Manual page sed(1) line 135 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              List out the current line in a ``visually unambiguous''  form,  breaking  it  at  [4mwidth[24m[m
+[7m Manual page sed(1) line 136 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              characters.  This is a GNU extension.[m
+[7m Manual page sed(1) line 137 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 138 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       n N    Read/append the next line of input into the pattern space.[m
+[7m Manual page sed(1) line 139 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 140 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       p      Print the current pattern space.[m
+[7m Manual page sed(1) line 141 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 142 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       P      Print up to the first embedded newline of the current pattern space.[m
+[7m Manual page sed(1) line 143 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 144 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       s/[4mregexp[24m/[4mreplacement[24m/[m
+[7m Manual page sed(1) line 145 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Attempt to match [4mregexp[24m against the pattern space.  If successful, replace that portion[m
+[7m Manual page sed(1) line 146 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              matched with [4mreplacement[24m.  The [4mreplacement[24m may contain the special character [1m&[0m to refer[m
+[7m Manual page sed(1) line 147 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              to  that portion of the pattern space which matched, and the special escapes \1 through[m
+[7m Manual page sed(1) line 148 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              \9 to refer to the corresponding matching sub-expressions in the [4mregexp[24m.[m
+[7m Manual page sed(1) line 149 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 150 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       t [4mlabel[24m[m
+[7m Manual page sed(1) line 151 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              If a s/// has done a successful substitution since the last input  line  was  read  and[m
+[7m Manual page sed(1) line 152 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              since the last t or T command, then branch to [4mlabel[24m; if [4mlabel[24m is omitted, branch to end[m
+[7m Manual page sed(1) line 153 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              of script.[m
+[7m Manual page sed(1) line 154 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 155 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       T [4mlabel[24m[m
+[7m Manual page sed(1) line 156 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              If no s/// has done a successful substitution since the last input line  was  read  and[m
+[7m Manual page sed(1) line 157 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              since the last t or T command, then branch to [4mlabel[24m; if [4mlabel[24m is omitted, branch to end[m
+[7m Manual page sed(1) line 158 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              of script.  This is a GNU extension.[m
+[7m Manual page sed(1) line 159 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 160 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       w [4mfilename[24m[m
+[7m Manual page sed(1) line 161 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Write the current pattern space to [4mfilename[24m.[m
+[7m Manual page sed(1) line 162 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page sed(1) line 163 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h
+[34ml1-live/241014[0m [90m241014[38;5;218m*​​[36m [33m32s[0m 
+[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [H[2J
+[34ml1-live/241014[0m [90m241014[38;5;218m*​​[36m [33m32s[0m 
+[35m❯[0m man sed
+[?2004l[?1049h[22;0;0t[?1h=SED(1)                                      User Commands                                      SED(1)[m
+[m
+[1mNAME[0m[m
+       sed - stream editor for filtering and transforming text[m
+[m
+[1mSYNOPSIS[0m[m
+       sed [-V] [--version] [--help] [-n] [--quiet] [--silent][m
+           [-l N] [--line-length=N] [-u] [--unbuffered][m
+           [-E] [-r] [--regexp-extended][m
+           [-e script] [--expression=script][m
+           [-f script-file] [--file=script-file][m
+           [script-if-no-other-script][m
+[7m Manual page sed(1) line 1 (press h for help or q to quit)[27m[K[K/[Kcc[Koo[Kll[Koo[Krr[K[1;1HSED(1)                                      User Commands                                      SED(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       sed - stream editor for filtering and transforming text[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       sed [-V] [--version] [--help] [-n] [--quiet] [--silent][m
+[8;1H           [-l N] [--line-length=N] [-u] [--unbuffered][m
+[9;1H           [-E] [-r] [--regexp-extended][m
+[10;1H           [-e script] [--expression=script][m
+[11;1H           [-f script-file] [--file=script-file][m
+[12;1H           [script-if-no-other-script][m
+[13;1H[1;1HSED(1)                                      User Commands                                      SED(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       sed - stream editor for filtering and transforming text[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       sed [-V] [--version] [--help] [-n] [--quiet] [--silent][m
+[8;1H           [-l N] [--line-length=N] [-u] [--unbuffered][m
+[9;1H           [-E] [-r] [--regexp-extended][m
+[10;1H           [-e script] [--expression=script][m
+[11;1H           [-f script-file] [--file=script-file][m
+[12;1H           [script-if-no-other-script][m
+[13;1H[K[7mPattern not found  (press RETURN)[27m[13;1H[K[K[7m Manual page sed(1) line 1/273 4% (press h for help or q to quit)[27m[K[K           [file...][m
+[m
+[1mDESCRIPTION[0m[m
+       [4mSed[24m  is  a stream editor.  A stream editor is used to perform basic text transformations on an[m
+       input stream (a file or input from a pipeline).  W

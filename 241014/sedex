@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Byter ut stork mot snake... byter ut första förekomsten på raden
+# s = substitute
+#sed -E 's/stork/snake/' wikipedia.txt
+
+# g = global, byter ut alla stork mot snake
+# sed -E 's/stork/snake/g' wikipedia.txt
+
+# Ta bort alla stork
+# sed -E 's/stork//g' wikipedia.txt
+
+#
+sed -E 's/stork//g' wikipedia.txt | sed -E 's/  / /g'
