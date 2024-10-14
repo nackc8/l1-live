@@ -5,3 +5,7 @@ awk '{ print $1 }' wikipedia.txt
 
 # de två första orden med mellanslag emellan
 awk '{ print $1 " " $2 }' wikipedia.txt
+
+# ange fältseparator med -F
+
+awk -F ':' '{ print $1 }' /etc/passwd
