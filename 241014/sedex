@@ -10,5 +10,8 @@
 # Ta bort alla stork
 # sed -E 's/stork//g' wikipedia.txt
 
-#
-sed -E 's/stork//g' wikipedia.txt
+# sed kan med fördel pipas
+# sed -E 's/stork//g' wikipedia.txt | sed -E 's/ +/ /g'
+
+# det går även att ha flera kommandon efter varandra med semikolon
+sed -E 's/stork//g;s/ +/ /g' wikipedia.txt
