@@ -263,4 +263,328 @@ Win11_23H2_EnglishInternational_x64v2.iso
        mand, the shell does not print another warning, and any stopped [7mjobs[27m are terminated.[m
 [m
        When  the  shell  is waiting for a job or process using the [1mwait[0m builtin, and job control is en‐[m
-       abled, [1mwait[0m will return when the
+       abled, [1mwait[0m will return when the job changes state. The [1m-f[0m option causes [1mwait[0m to wait until  the[m
+[7m Manual page bash(1) line 2499 (press h for help or q to quit)[27m[K[K/[K       job or process terminates before returning.[m
+[m
+[1mPROMPTING[0m[m
+       When  executing  interactively,  [1mbash[0m displays the primary prompt [1mPS1[0m when it is ready to read a[m
+       command, and the secondary prompt [1mPS2[0m when it needs more input to complete a command.  [1mBash[0m dis‐[m
+       plays  [1mPS0[0m  after  it  reads  a command but before executing it.  [1mBash[0m displays [1mPS4[0m as described[m
+       above before tracing each command when the [1m-x[0m option  is  enabled.   [1mBash[0m  allows  these  prompt[m
+       strings  to be customized by inserting a number of backslash-escaped special characters that are[m
+       decoded as follows:[m
+              [1m\a[0m     an ASCII bell character (07)[m
+              [1m\d[0m     the date in "Weekday Month Date" format (e.g., "Tue May 26")[m
+              [1m\D{[0m[4mformat[24m[1m}[0m[m
+                     the [4mformat[24m is passed to [4mstrftime[24m(3) and the result is  inserted  into  the  prompt[m
+[7m Manual page bash(1) line 2512 (press h for help or q to quit)[27m[K[K/[K                     string;  an  empty  [4mformat[24m  results in a locale-specific time representation.  The[m
+                     braces are required[m
+[7m Manual page bash(1) line 2514 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\e[0m     an ASCII escape character (033)[m
+[7m Manual page bash(1) line 2515 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\h[0m     the hostname up to the first `.'[m
+[7m Manual page bash(1) line 2516 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\H[0m     the hostname[m
+[7m Manual page bash(1) line 2517 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\j[0m     the number of [7mjobs[27m currently managed by the shell[m
+[7m Manual page bash(1) line 2518 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\l[0m     the basename of the shell's terminal device name[m
+[7m Manual page bash(1) line 2519 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\n[0m     newline[m
+[7m Manual page bash(1) line 2520 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\r[0m     carriage return[m
+[7m Manual page bash(1) line 2521 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\s[0m     the name of the shell, the basename of [1m$0[0m (the portion following the final slash)[m
+[7m Manual page bash(1) line 2522 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\t[0m     the current time in 24-hour HH:MM:SS format[m
+[7m Manual page bash(1) line 2523 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\T[0m     the current time in 12-hour HH:MM:SS format[m
+[7m Manual page bash(1) line 2524 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\@[0m     the current time in 12-hour am/pm format[m
+[7m Manual page bash(1) line 2525 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\A[0m     the current time in 24-hour HH:MM format[m
+[7m Manual page bash(1) line 2526 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\u[0m     the username of the current user[m
+[7m Manual page bash(1) line 2527 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\v[0m     the version of [1mbash[0m (e.g., 2.00)[m
+[7m Manual page bash(1) line 2528 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\V[0m     the release of [1mbash[0m, version + patch level (e.g., 2.00.0)[m
+[7m Manual page bash(1) line 2529 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\w[0m     the value of the [1mPWD[0m shell variable ([1m$PWD[0m), with [1m$HOME[0m abbreviated  with  a  tilde[m
+[7m Manual page bash(1) line 2530 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     (uses the value of the [1mPROMPT_DIRTRIM[0m variable)[m
+[7m Manual page bash(1) line 2531 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\W[0m     the basename of [1m$PWD[0m, with [1m$HOME[0m abbreviated with a tilde[m
+[7m Manual page bash(1) line 2532 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\![0m     the history number of this command[m
+[7m Manual page bash(1) line 2533 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\#[0m     the command number of this command[m
+[7m Manual page bash(1) line 2534 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\$[0m     if the effective UID is 0, a [1m#[0m, otherwise a [1m$[0m[m
+[7m Manual page bash(1) line 2535 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\[0m[4mnnn[24m   the character corresponding to the octal number [4mnnn[24m[m
+[7m Manual page bash(1) line 2536 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\\[0m     a backslash[m
+[7m Manual page bash(1) line 2537 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\[[0m     begin a sequence of non-printing characters, which could be used to embed a termi‐[m
+[7m Manual page bash(1) line 2538 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     nal control sequence into the prompt[m
+[7m Manual page bash(1) line 2539 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\][0m     end a sequence of non-printing characters[m
+[7m Manual page bash(1) line 2540 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 2541 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The command number and the history number are usually different: the history number of a command[m
+[7m Manual page bash(1) line 2542 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       is  its  position in the history list, which may include commands restored from the history file[m
+[7m Manual page bash(1) line 2543 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       (see [1mHISTORY[0m below), while the command number is the position in the sequence of  commands  exe‐[m
+[7m Manual page bash(1) line 2544 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       cuted during the current shell session.  After the string is decoded, it is expanded via parame‐[m
+[7m Manual page bash(1) line 2545 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ter expansion, command substitution, arithmetic expansion, and quote  removal,  subject  to  the[m
+[7m Manual page bash(1) line 2546 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       value  of  the  [1mpromptvars[0m  shell  option  (see the description of the [1mshopt[0m command under [1mSHELL[0m[m
+[7m Manual page bash(1) line 2547 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mBUILTIN[0m [1mCOMMANDS[0m below).  This can have unwanted side effects if escaped portions of the  string[m
+[7m Manual page bash(1) line 2548 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       appear within command substitution or contain characters special to word expansion.[m
+[7m Manual page bash(1) line 2549 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 2550 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mREADLINE[0m[m
+[7m Manual page bash(1) line 2551 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       This  is  the  library  that  handles  reading input when using an interactive shell, unless the[m
+[7m Manual page bash(1) line 2552 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--noediting[0m option is given at shell invocation.  Line editing is also used when  using  the  [1m-e[0m[m
+[7m Manual page bash(1) line 2553 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       option  to  the  [1mread[0m  builtin.   By  default, the line editing commands are similar to those of[m
+[7m Manual page bash(1) line 2554 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Emacs.  A vi-style line editing interface is also available.  Line editing can be enabled at any[m
+[7m Manual page bash(1) line 2555 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       time  using the [1m-o[0m [1memacs[0m or [1m-o[0m [1mvi[0m options to the [1mset[0m builtin (see [1mSHELL[0m [1mBUILTIN[0m [1mCOMMANDS[0m below).[m
+[7m Manual page bash(1) line 2556 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       To turn off line editing after the shell is running, use the [1m+o[0m [1memacs[0m or [1m+o[0m [1mvi[0m  options  to  the[m
+[7m Manual page bash(1) line 2557 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mset[0m builtin.[m
+[7m Manual page bash(1) line 2558 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 2559 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mReadline[0m [1mNotation[0m[m
+[7m Manual page bash(1) line 2560 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       In  this  section,  the Emacs-style notation is used to denote keystrokes.  Control keys are de‐[m
+[7m Manual page bash(1) line 2561 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       noted by C-[4mkey[24m, e.g., C-n means Control-N.  Similarly, [4mmeta[24m keys are denoted by  M-[4mkey[24m,  so  M-x[m
+[7m Manual page bash(1) line 2562 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       means  Meta-X.   (On  keyboards  without a [4mmeta[24m key, M-[4mx[24m means ESC [4mx[24m, i.e., press the Escape key[m
+[7m Manual page bash(1) line 2563 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       then the [4mx[24m key.  This makes ESC the [4mmeta[24m [4mprefix[24m.  The combination M-C-[4mx[24m means ESC-Control-[4mx[24m,  or[m
+[7m Manual page bash(1) line 2564 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       press the Escape key then hold the Control key while pressing the [4mx[24m key.)[m
+[7m Manual page bash(1) line 2565 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 2566 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Readline  commands  may be given numeric [4marguments[24m, which normally act as a repeat count.  Some‐[m
+[7m Manual page bash(1) line 2567 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       times, however, it is the sign of the argument that is significant.  Passing a negative argument[m
+[7m Manual page bash(1) line 2568 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       to  a command that acts in the forward direction (e.g., [1mkill-line[0m) causes that command to act in[m
+[7m Manual page bash(1) line 2569 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       a backward direction.  Commands whose behavior with arguments deviates from this are  noted  be‐[m
+[7m Manual page bash(1) line 2570 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       low.[m
+[7m Manual page bash(1) line 2571 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 2572 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       When  a  command is described as [4mkilling[24m text, the text deleted is saved for possible future re‐[m
+[7m Manual page bash(1) line 2573 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       trieval ([4myanking[24m).  The killed text is saved in a [4mkill[24m [4mring[24m.  Consecutive kills cause  the  text[m
+[7m Manual page bash(1) line 2574 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       to  be  accumulated  into one unit, which can be yanked all at once.  Commands which do not kill[m
+[7m Manual page bash(1) line 2575 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       text separate the chunks of text on the kill ring.[m
+[7m Manual page bash(1) line 2576 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 2577 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mReadline[0m [1mInitialization[0m[m
+[7m Manual page bash(1) line 2578 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Readline is customized by putting commands in an initialization file (the  [4minputrc[24m  file).   The[m
+[7m Manual page bash(1) line 2579 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       name  of  this file is taken from the value of the [1mINPUTRC[0m variable.  If that variable is unset,[m
+[7m Manual page bash(1) line 2580 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the default is [4m~/.inputrc[24m.  If that file  does not exist or cannot be read, the ultimate default[m
+[7m Manual page bash(1) line 2581 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       is  [4m/etc/inputrc[24m.   When a program which uses the readline library starts up, the initialization[m
+[7m Manual page bash(1) line 2582 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       file is read, and the key bindings and variables are set.  There are only a few basic constructs[m
+[7m Manual page bash(1) line 2583 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       allowed in the readline initialization file.  Blank lines are ignored.  Lines beginning with a [1m#[0m[m
+[7m Manual page bash(1) line 2584 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       are comments.  Lines beginning with a [1m$[0m indicate conditional constructs.  Other lines denote key[m
+[7m Manual page bash(1) line 2585 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       bindings and variable settings.[m
+[7m Manual page bash(1) line 2586 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 2587 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The  default key-bindings may be changed with an [4minputrc[24m file.  Other programs that use this li‐[m
+[7m Manual page bash(1) line 2588 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       brary may add their own commands and bindings.[m
+[7m Manual page bash(1) line 2589 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 2590 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       For example, placing[m
+[7m Manual page bash(1) line 2591 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 2592 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              M-Control-u: universal-argument[m
+[7m Manual page bash(1) line 2593 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       or[m
+[7m Manual page bash(1) line 2594 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              C-Meta-u: universal-argument[m
+[7m Manual page bash(1) line 2595 (press h for help or q to quit)[27m[K[K/[Kjj[Koo[Kbb[K  [Kcc[Koo[Knn[Ktt[Krr[Koo[Kll[K[1;1H       to  be  accumulated  into one unit, which can be yanked all at once.  Commands which do not kill[m
+[2;1H       text separate the chunks of text on the kill ring.[m
+[3;1H[m
+[4;1H   [1mReadline[0m [1mInitialization[0m[m
+[5;1H       Readline is customized by putting commands in an initialization file (the  [4minputrc[24m  file).   The[m
+[6;1H       name  of  this file is taken from the value of the [1mINPUTRC[0m variable.  If that variable is unset,[m
+[7;1H       the default is [4m~/.inputrc[24m.  If that file  does not exist or cannot be read, the ultimate default[m
+[8;1H       is  [4m/etc/inputrc[24m.   When a program which uses the readline library starts up, the initialization[m
+[9;1H       file is read, and the key bindings and variables are set.  There are only a few basic constructs[m
+[10;1H       allowed in the readline initialization file.  Blank lines are ignored.  Lines beginning with a [1m#[0m[m
+[11;1H       are comments.  Lines beginning with a [1m$[0m indicate conditional constructs.  Other lines denote key[m
+[12;1H       bindings and variable settings.[m
+[13;1H[m
+[14;1H       The  default key-bindings may be changed with an [4minputrc[24m file.  Other programs that use this li‐[m
+[15;1H       brary may add their own commands and bindings.[m
+[16;1H[m
+[17;1H       For example, placing[m
+[18;1H[m
+[19;1H              M-Control-u: universal-argument[m
+[20;1H       or[m
+[21;1H              C-Meta-u: universal-argument[m
+[22;1H[1;1H       to  be  accumulated  into one unit, which can be yanked all at once.  Commands which do not kill[m
+[2;1H       text separate the chunks of text on the kill ring.[m
+[3;1H[m
+[4;1H   [1mReadline[0m [1mInitialization[0m[m
+[5;1H       Readline is customized by putting commands in an initialization file (the  [4minputrc[24m  file).   The[m
+[6;1H       name  of  this file is taken from the value of the [1mINPUTRC[0m variable.  If that variable is unset,[m
+[7;1H       the default is [4m~/.inputrc[24m.  If that file  does not exist or cannot be read, the ultimate default[m
+[8;1H       is  [4m/etc/inputrc[24m.   When a program which uses the readline library starts up, the initialization[m
+[9;1H       file is read, and the key bindings and variables are set.  There are only a few basic constructs[m
+[10;1H       allowed in the readline initialization file.  Blank lines are ignored.  Lines beginning with a [1m#[0m[m
+[11;1H       are comments.  Lines beginning with a [1m$[0m indicate conditional constructs.  Other lines denote key[m
+[12;1H       bindings and variable settings.[m
+[13;1H[m
+[14;1H       The  default key-bindings may be changed with an [4minputrc[24m file.  Other programs that use this li‐[m
+[15;1H       brary may add their own commands and bindings.[m
+[16;1H[m
+[17;1H       For example, placing[m
+[18;1H[m
+[19;1H              M-Control-u: universal-argument[m
+[20;1H       or[m
+[21;1H              C-Meta-u: universal-argument[m
+[22;1H...skipping...
+              turns 0 unless run when [7mjob control[27m is disabled or, when run with  job  control  enabled,[m
+              any specified [4mjobspec[24m was not found or was started without [7mjob control[27m.[m
+[m
+       [1mbind[0m [[1m-m[0m [4mkeymap[24m] [[1m-lpsvPSVX[0m][m
+       [1mbind[0m [[1m-m[0m [4mkeymap[24m] [[1m-q[0m [4mfunction[24m] [[1m-u[0m [4mfunction[24m] [[1m-r[0m [4mkeyseq[24m][m
+       [1mbind[0m [[1m-m[0m [4mkeymap[24m] [1m-f[0m [4mfilename[24m[m
+       [1mbind[0m [[1m-m[0m [4mkeymap[24m] [1m-x[0m [4mkeyseq[24m:[4mshell-command[24m[m
+       [1mbind[0m [[1m-m[0m [4mkeymap[24m] [4mkeyseq[24m:[4mfunction-name[24m[m
+       [1mbind[0m [[1m-m[0m [4mkeymap[24m] [4mkeyseq[24m:[4mreadline-command[24m[m
+       [1mbind[0m [4mreadline-command-line[24m[m
+              Display  current  [1mreadline[0m  key  and function bindings, bind a key sequence to a [1mreadline[0m[m
+              function or macro, or set a [1mreadline[0m variable.  Each non-option argument is a command  as[m
+              it  would  appear in a [1mreadline[0m initialization file such as [4m.inputrc[24m, but each binding or[m
+              command must be passed as a separate  argument;  e.g.,  '"\C-x\C-r":  re-read-init-file'.[m
+              Options, if supplied, have the following meanings:[m
+              [1m-m[0m [4mkeymap[24m[m
+                     Use  [4mkeymap[24m  as  the keymap to be affected by the subsequent bindings.  Acceptable[m
+                     [4mkeymap[24m names are  [4memacs,[24m  [4memacs-standard,[24m  [4memacs-meta,[24m  [4memacs-ctlx,[24m  [4mvi,[24m  [4mvi-move,[24m[m
+                     [4mvi-command[24m, and [4mvi-insert[24m.  [4mvi[24m is equivalent to [4mvi-command[24m ([4mvi-move[24m is also a syn‐[m
+                     onym); [4memacs[24m is equivalent to [4memacs-standard[24m.[m
+              [1m-l[0m     List the names of all [1mreadline[0m functions.[m
+[7m Manual page bash(1) line 3678 (press h for help or q to quit)[27m[K[K/[K              [1m-p[0m     Display [1mreadline[0m function names and bindings in such a way that they  can  be  re-[m
+[7m Manual page bash(1) line 3679 (press h for help or q to quit)[27m[K[K/[K...skipping...
+                      [1mjob[0m     Job names, if [7mjob control[27m is active.  May also be specified as [1m-j[0m.[m
+                      [1mkeyword[0m Shell reserved words.  May also be specified as [1m-k[0m.[m
+                      [1mrunning[0m Names of running jobs, if [7mjob control[27m is active.[m
+                      [1mservice[0m Service names.  May also be specified as [1m-s[0m.[m
+                      [1msetopt[0m  Valid arguments for the [1m-o[0m option to the [1mset[0m builtin.[m
+                      [1mshopt[0m   Shell option names as accepted by the [1mshopt[0m builtin.[m
+                      [1msignal[0m  Signal names.[m
+                      [1mstopped[0m Names of stopped jobs, if [7mjob control[27m is active.[m
+                      [1muser[0m    User names.  May also be specified as [1m-u[0m.[m
+                      [1mvariable[0m[m
+                              Names of all shell variables.  May also be specified as [1m-v[0m.[m
+              [1m-C[0m [4mcommand[24m[m
+                      [4mcommand[24m is executed in a subshell environment, and its output is used as the pos‐[m
+                      sible completions.  Arguments are passed as with the [1m-F[0m option.[m
+              [1m-F[0m [4mfunction[24m[m
+                      The  shell  function [4mfunction[24m is executed in the current shell environment.  When[m
+                      the function is executed, the first argument ([1m$1[0m) is  the  name  of  the  command[m
+                      whose  arguments  are being completed, the second argument ([1m$2[0m) is the word being[m
+                      completed, and the third argument ([1m$3[0m) is the word preceding the word being  com‐[m
+                      pleted  on  the current command line.  When it finishes, the possible completions[m
+                      are retrieved from the value of the [1mCOMPREPLY[0m array variable.[m
+[7m Manual page bash(1) line 3873 (press h for help or q to quit)[27m[K[K/[K              [1m-G[0m [4mglobpat[24m[m
+                      The pathname expansion pattern [4mglobpat[24m is expanded to generate the possible  com‐[m
+[7m Manual page bash(1) line 3875 (press h for help or q to quit)[27m[K[K/[K                      pletions.[m
+              [1m-P[0m [4mprefix[24m[m
+                      [4mprefix[24m  is added at the beginning of each possible completion after all other op‐[m
+                      tions have been applied.[m
+              [1m-S[0m [4msuffix[24m[m
+[7m Manual page bash(1) line 3880 (press h for help or q to quit)[27m[K[K/[K...skipping...
+              command placed into the foreground, or failure if run when [7mjob control[27m  is  disabled  or,[m
+              when  run  with  job  control enabled, if [4mjobspec[24m does not specify a valid job or [4mjobspec[24m[m
+              specifies a job that was started without [7mjob control[27m.[m
+[m
+       [1mgetopts[0m [4moptstring[24m [4mname[24m [[4marg[24m [4m...[24m][m
+              [1mgetopts[0m is used by shell procedures to parse positional parameters.   [4moptstring[24m  contains[m
+              the option characters to be recognized; if a character is followed by a colon, the option[m
+              is expected to have an argument, which should be separated from it by white  space.   The[m
+              colon and question mark characters may not be used as option characters.  Each time it is[m
+              invoked, [1mgetopts[0m places the next option in the shell variable [4mname[24m, initializing [4mname[24m  if[m
+              it  does  not exist, and the index of the next argument to be processed into the variable[m
+              [1mOPTIND[0m.  [1mOPTIND[0m is initialized to 1 each time the shell or a  shell  script  is  invoked.[m
+              When  an  option requires an argument, [1mgetopts[0m places that argument into the variable [1mOP‐[0m[m
+              [1mTARG[0m.  The shell does not reset [1mOPTIND[0m automatically; it must be manually  reset  between[m
+              multiple  calls to [1mgetopts[0m within the same shell invocation if a new set of parameters is[m
+              to be used.[m
+[m
+              When the end of options is encountered, [1mgetopts[0m exits with a return  value  greater  than[m
+              zero.  [1mOPTIND[0m is set to the index of the first non-option argument, and [4mname[24m is set to ?.[m
+[m
+              [1mgetopts[0m  normally parses the positional parameters, but if more arguments are supplied as[m
+[7m Manual page bash(1) line 4141 (press h for help or q to quit)[27m[K[K/[K              [4marg[24m values, [1mgetopts[0m parses those instead.[m
+[m
+[7m Manual page bash(1) line 4143 (press h for help or q to quit)[27m[K[K/[K...skipping...
+                      the next primary prompt.  This is effective only when [7mjob control[27m is enabled.[m
+              [1m-e[0m      Exit immediately if a [4mpipeline[24m (which may consist of a single [4msimple[24m [4mcommand[24m),  a[m
+                      [4mlist[24m, or a [4mcompound[24m [4mcommand[24m (see [1mSHELL[0m [1mGRAMMAR[0m above), exits with a non-zero sta‐[m
+                      tus.  The shell does not exit if the command that fails is part  of  the  command[m
+                      list  immediately  following a [1mwhile[0m or [1muntil[0m keyword, part of the test following[m
+                      the [1mif[0m or [1melif[0m reserved words, part of any command executed in a [1m&&[0m  or  [1m||[0m  list[m
+                      except  the  command  following the final [1m&&[0m or [1m||[0m, any command in a pipeline but[m
+                      the last, or if the command's return value is being inverted with [1m![0m.  If  a  com‐[m
+                      pound  command  other than a subshell returns a non-zero status because a command[m
+                      failed while [1m-e[0m was being ignored, the shell does not exit.  A trap  on  [1mERR[0m,  if[m
+                      set,  is executed before the shell exits.  This option applies to the shell envi‐[m
+                      ronment and each subshell environment separately (see [1mCOMMAND[0m [1mEXECUTION[0m  [1mENVIRON‐[0m[m
+                      [1mMENT[0m above), and may cause subshells to exit before executing all the commands in[m
+                      the subshell.[m
+[m
+                      If a compound command or shell function executes in a context where [1m-e[0m  is  being[m
+                      ignored,  none  of  the commands executed within the compound command or function[m
+                      body will be affected by the [1m-e[0m setting, even if [1m-e[0m is set and a command  returns[m
+                      a  failure status.  If a compound command or shell function sets [1m-e[0m while execut‐[m
+                      ing in a context where [1m-e[0m is ignored, that setting will not have any effect until[m
+                      the compound command or the command containing the function call completes.[m
+[7m Manual page bash(1) line 4524 (press h for help or q to quit)[27m[K[K/[K...skipping...
+              [1m-m[0m      Monitor mode.  [7mJob control[27m is enabled.  This option is on by default for interac‐[m
+                      tive shells on systems that support it (see [1m[7mJOB[27m[0m[7m [27m[1m[7mCONTROL[27m[0m  above).   All  processes[m
+                      run  in  a  separate  process  group.  When a background job completes, the shell[m
+                      prints a line containing its exit status.[m
+              [1m-n[0m      Read commands but do not execute them.  This may be used to check a shell  script[m
+                      for syntax errors.  This is ignored by interactive shells.[m
+              [1m-o[0m [4moption-name[24m[m
+                      The [4moption-name[24m can be one of the following:[m
+                      [1mallexport[0m[m
+                              Same as [1m-a[0m.[m
+                      [1mbraceexpand[0m[m
+                              Same as [1m-B[0m.[m
+                      [1memacs[0m   Use  an  emacs-style  command line editing interface.  This is enabled by[m
+                              default when the shell is interactive, unless the shell is  started  with[m
+                              the [1m--noediting[0m option.  This also affects the editing interface used for[m
+                              [1mread[0m [1m-e[0m.[m
+                      [1merrexit[0m Same as [1m-e[0m.[m
+                      [1merrtrace[0m[m
+                              Same as [1m-E[0m.[m
+                      [1mfunctrace[0m[m
+                              Same as [1m-T[0m.[m
+[7m Manual page bash(1) line 4550 (press h for help or q to quit)[27m[K[K/[K                      [1mhashall[0m Same as [1m-h[0m.[m
+[7m Manual page bash(1) line 4551 (press h for help or q to quit)[27m[K[K/[K...skipping...
+                      If set, and [7mjob control[27m is not active, the shell runs the last command of a pipe‐[m
+                      line not executed in the background in the current shell environment.[m
+[m
+              [1mlithist[0m If  set,  and the [1mcmdhist[0m option is enabled, multi-line commands are saved to the[m
+                      history with embedded newlines rather than using semicolon separators where  pos‐[m
+                      sible.[m
+[m
+              [1mlocalvar_inherit[0m[m
+                      If  set,  local  variables  inherit the value and attributes of a variable of the[m
+                      same name that exists at a previous scope before any new value is assigned.   The[m
+                      nameref attribute is not inherited.[m
+[m
+              [1mlocalvar_unset[0m[m
+                      If  set,  calling [1munset[0m on local variables in previous function scopes marks them[m
+                      so subsequent lookups find them unset until that function returns. This is  iden‐[m
+                      tical to the behavior of unsetting local variables at the current function scope.[m
+[m
+              [1mlogin_shell[0m[m
+                      The  shell  sets  this  option  if it is started as a login shell (see [1mINVOCATION[0m[m
+                      above).  The value may not be changed.[m
+[m
+[7m Manual page bash(1) line 4859 (press h for help or q to quit)[27m[K[K/[K...skipping...
+              or a shell without [7mjob control[27m enabled, cannot be suspended; the [1m-f[0m option can be used to[m
+              override this and force the suspension.  The return status is 0 unless the shell is a lo‐[m
+              gin shell or [7mjob control[27m is not enabled and [1m-f[0m is not supplied.[m
+[m
+       [1mtest[0m [4mexpr[24m[m
+       [1m[[0m [4mexpr[24m [1m][0m[m
+              Return  a  status of 0 (true) or 1 (false) depending on the evaluation of the conditional[m
+              expression [4mexpr[24m.  Each operator and operand must be a separate argument.  Expressions are[m
+              composed  of  the primaries described above under [1mCONDITIONAL[0m [1mEXPRESSIONS[0m.  [1mtest[0m does not[m
+              accept any options, nor does it accept and ignore an argument of [1m--[0m as signifying the end[m
+              of options.[m
+[m
+              Expressions  may be combined using the following operators, listed in decreasing order of[m
+              precedence.  The evaluation depends on the number  of  arguments;  see  below.   Operator[m
+              precedence is used when there are five or more arguments.[m
+              [1m![0m [4mexpr[24m True if [4mexpr[24m is false.[m
+              [1m([0m [4mexpr[24m [1m)[0m[m
+                     Returns  the value of [4mexpr[24m.  This may be used to override the normal precedence of[m
+                     operators.[m
+              [4mexpr1[24m -[1ma[0m [4mexpr2[24m[m
+                     True if both [4mexpr1[24m and [4mexpr2[24m are true.[m
+[7m Manual page bash(1) line 4951 (press h for help or q to quit)[27m[K[K/[K              [4mexpr1[24m -[1mo[0m [4mexpr2[24m[m
+                     True if either [4mexpr1[24m or [4mexpr2[24m is true.[m
+[7m Manual page bash(1) line 4953 (press h for help or q to quit)[27m[K[K/[K...skipping...
+              tion  is  supplied.  Supplying the [1m-f[0m option, when [7mjob control[27m is enabled, forces [1mwait[0m to[m
+              wait for [4mid[24m to terminate before returning  its  status,  instead  of  returning  when  it[m
+              changes status.  If [4mid[24m specifies a non-existent process or job, the return status is 127.[m
+              If [1mwait[0m is interrupted by a signal, the return status will be greater than  128,  as  de‐[m
+              scribed under [1mSIGNALS[0m above.  Otherwise, the return status is the exit status of the last[m
+              process or job waited for.[m
+[m
+[1mSHELL[0m [1mCOMPATIBILITY[0m [1mMODE[0m[m
+       Bash-4.0 introduced the concept of a [4mshell[24m [4mcompatibility[24m [4mlevel[24m, specified as a set of options to[m
+       the  shopt builtin ( [1mcompat31[0m, [1mcompat32[0m, [1mcompat40[0m, [1mcompat41[0m, and so on).  There is only one cur‐[m
+       rent compatibility level -- each option is mutually exclusive.  The compatibility level  is  in‐[m
+       tended  to allow users to select behavior from previous versions that is incompatible with newer[m
+       versions while they migrate scripts to use current features and behavior. It's intended to be  a[m
+       temporary solution.[m
+[m
+       This  section does not mention behavior that is standard for a particular version (e.g., setting[m
+       [1mcompat32[0m means that quoting the rhs of the regexp matching operator quotes special regexp  char‐[m
+       acters in the word, which is default behavior in bash-3.2 and subsequen
