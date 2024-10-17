@@ -1,6 +1,7 @@
 #!/bin/bash
 
-trap 'echo Signal!' SIGINT
+trap 'echo Signal SIGINT!' SIGINT
+trap 'echo Signal SIGTSTP!' SIGTSTP
 
 while true; do
     echo -n '.'
