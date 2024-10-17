@@ -384,4 +384,644 @@ Sorry, try again.
 [m
        The use of BSD-style options will add process state (stat=STAT) to the default display[m
        and show the command args (args=COMMAND) instead of the executable name.  You can[m
-       override this with the [1mPS_FORMAT
+       override this with the [1mPS_FORMAT[0m environment variable. The use of BSD-style options[m
+       will also change the process selection to include processes on other terminals (TTYs)[m
+       that are owned by you; alternately, this may be described as setting the selection to[m
+[7m Manual page ps(1) line 21 (press h for help or q to quit)[27m[K[K       be the set of all processes filtered to exclude processes owned by other users or not[m
+       on a terminal.  These effects are not considered when options are described as being[m
+       "identical" below, so [1m-M[0m will be considered identical to [1mZ[0m and so on.[m
+[m
+       Except as described below, process selection options are additive.  The default[m
+       selection is discarded, and then the selected processes are added to the set of[m
+       processes to be displayed.  A process will thus be shown if it meets any of the given[m
+       selection criteria.[m
+[m
+[1mEXAMPLES[0m[m
+       To see every process on the system using standard syntax:[m
+          [1mps[0m [1m-e[0m[m
+          [1mps[0m [1m-ef[0m[m
+          [1mps[0m [1m-eF[0m[m
+          [1mps[0m [1m-ely[0m[m
+[m
+       To see every process on the system using BSD syntax:[m
+          [1mps[0m [1max[0m[m
+          [1mps[0m [1maxu[0m[m
+[m
+[7m Manual page ps(1) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       To print a process tree:[m
+[7m Manual page ps(1) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1m-ejH[0m[m
+[7m Manual page ps(1) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1maxjf[0m[m
+[7m Manual page ps(1) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       To get info about threads:[m
+[7m Manual page ps(1) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1m-eLf[0m[m
+[7m Manual page ps(1) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1maxms[0m[m
+[7m Manual page ps(1) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       To get security info:[m
+[7m Manual page ps(1) line 50 (press h for help or q to quit)[27m[K[H[2J[H[1mEXAMPLES[0m[m
+       To see every process on the system using standard syntax:[m
+          [1mps[0m [1m-e[0m[m
+          [1mps[0m [1m-ef[0m[m
+          [1mps[0m [1m-eF[0m[m
+          [1mps[0m [1m-ely[0m[m
+[m
+       To see every process on the system using BSD syntax:[m
+          [1mps[0m [1max[0m[m
+          [1mps[0m [1maxu[0m[m
+[m
+       To print a process tree:[m
+          [1mps[0m [1m-ejH[0m[m
+          [1mps[0m [1maxjf[0m[m
+[m
+       To get info about threads:[m
+          [1mps[0m [1m-eLf[0m[m
+          [1mps[0m [1maxms[0m[m
+[m
+[7m Manual page ps(1) line 50 (press h for help or q to quit)[27m[K[H[2J[H[1mEXAMPLES[0m[m
+       To see every process on the system using standard syntax:[m
+          [1mps[0m [1m-e[0m[m
+          [1mps[0m [1m-ef[0m[m
+          [1mps[0m [1m-eF[0m[m
+          [1mps[0m [1m-ely[0m[m
+[m
+       To see every process on the system using BSD syntax:[m
+          [1mps[0m [1max[0m[m
+          [1mps[0m [1maxu[0m[m
+[m
+       To print a process tree:[m
+          [1mps[0m [1m-ejH[0m[m
+          [1mps[0m [1maxjf[0m[m
+[m
+       To get info about threads:[m
+          [1mps[0m [1m-eLf[0m[m
+          [1mps[0m [1maxms[0m[m
+[7m Manual page ps(1) line 50 (press h for help or q to quit)[27m[K[H[2J[H[1mEXAMPLES[0m[m
+       To see every process on the system using standard syntax:[m
+          [1mps[0m [1m-e[0m[m
+          [1mps[0m [1m-ef[0m[m
+          [1mps[0m [1m-eF[0m[m
+          [1mps[0m [1m-ely[0m[m
+[m
+       To see every process on the system using BSD syntax:[m
+          [1mps[0m [1max[0m[m
+          [1mps[0m [1maxu[0m[m
+[m
+       To print a process tree:[m
+          [1mps[0m [1m-ejH[0m[m
+          [1mps[0m [1maxjf[0m[m
+[m
+       To get info about threads:[m
+          [1mps[0m [1m-eLf[0m[m
+[7m Manual page ps(1) line 50 (press h for help or q to quit)[27m[K[H[2J[H[1mEXAMPLES[0m[m
+       To see every process on the system using standard syntax:[m
+          [1mps[0m [1m-e[0m[m
+          [1mps[0m [1m-ef[0m[m
+          [1mps[0m [1m-eF[0m[m
+          [1mps[0m [1m-ely[0m[m
+[m
+       To see every process on the system using BSD syntax:[m
+          [1mps[0m [1max[0m[m
+          [1mps[0m [1maxu[0m[m
+[m
+       To print a process tree:[m
+          [1mps[0m [1m-ejH[0m[m
+          [1mps[0m [1maxjf[0m[m
+[m
+       To get info about threads:[m
+[7m Manual page ps(1) line 50 (press h for help or q to quit)[27m[K[H[2J[H[1mEXAMPLES[0m[m
+       To see every process on the system using standard syntax:[m
+          [1mps[0m [1m-e[0m[m
+          [1mps[0m [1m-ef[0m[m
+          [1mps[0m [1m-eF[0m[m
+          [1mps[0m [1m-ely[0m[m
+[m
+       To see every process on the system using BSD syntax:[m
+          [1mps[0m [1max[0m[m
+          [1mps[0m [1maxu[0m[m
+[m
+       To print a process tree:[m
+          [1mps[0m [1m-ejH[0m[m
+          [1mps[0m [1maxjf[0m[m
+[m
+[7m Manual page ps(1) line 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       To get info about threads:[m
+[7m Manual page ps(1) line 51 (press h for help or q to quit)[27m[K[H[2J[H       To see every process on the system using standard syntax:[m
+          [1mps[0m [1m-e[0m[m
+          [1mps[0m [1m-ef[0m[m
+          [1mps[0m [1m-eF[0m[m
+          [1mps[0m [1m-ely[0m[m
+[m
+       To see every process on the system using BSD syntax:[m
+          [1mps[0m [1max[0m[m
+          [1mps[0m [1maxu[0m[m
+[m
+       To print a process tree:[m
+          [1mps[0m [1m-ejH[0m[m
+          [1mps[0m [1maxjf[0m[m
+[m
+       To get info about threads:[m
+          [1mps[0m [1m-eLf[0m[m
+[7m Manual page ps(1) line 51 (press h for help or q to quit)[27m[K[H[2J[H       To see every process on the system using standard syntax:[m
+          [1mps[0m [1m-e[0m[m
+          [1mps[0m [1m-ef[0m[m
+          [1mps[0m [1m-eF[0m[m
+          [1mps[0m [1m-ely[0m[m
+[m
+       To see every process on the system using BSD syntax:[m
+          [1mps[0m [1max[0m[m
+          [1mps[0m [1maxu[0m[m
+[m
+       To print a process tree:[m
+          [1mps[0m [1m-ejH[0m[m
+          [1mps[0m [1maxjf[0m[m
+[m
+       To get info about threads:[m
+          [1mps[0m [1m-eLf[0m[m
+          [1mps[0m [1maxms[0m[m
+[7m Manual page ps(1) line 51 (press h for help or q to quit)[27m[K[H[2J[H       To see every process on the system using standard syntax:[m
+          [1mps[0m [1m-e[0m[m
+          [1mps[0m [1m-ef[0m[m
+          [1mps[0m [1m-eF[0m[m
+          [1mps[0m [1m-ely[0m[m
+[m
+       To see every process on the system using BSD syntax:[m
+          [1mps[0m [1max[0m[m
+          [1mps[0m [1maxu[0m[m
+[m
+       To print a process tree:[m
+          [1mps[0m [1m-ejH[0m[m
+          [1mps[0m [1maxjf[0m[m
+[m
+       To get info about threads:[m
+          [1mps[0m [1m-eLf[0m[m
+          [1mps[0m [1maxms[0m[m
+[m
+[7m Manual page ps(1) line 51 (press h for help or q to quit)[27m[K[H[2J[H       To see every process on the system using standard syntax:[m
+          [1mps[0m [1m-e[0m[m
+          [1mps[0m [1m-ef[0m[m
+          [1mps[0m [1m-eF[0m[m
+          [1mps[0m [1m-ely[0m[m
+[m
+       To see every process on the system using BSD syntax:[m
+          [1mps[0m [1max[0m[m
+          [1mps[0m [1maxu[0m[m
+[m
+       To print a process tree:[m
+          [1mps[0m [1m-ejH[0m[m
+          [1mps[0m [1maxjf[0m[m
+[m
+       To get info about threads:[m
+          [1mps[0m [1m-eLf[0m[m
+          [1mps[0m [1maxms[0m[m
+[m
+       To get security info:[m
+[7m Manual page ps(1) line 51 (press h for help or q to quit)[27m[K[H[2J[H       To see every process on the system using standard syntax:[m
+          [1mps[0m [1m-e[0m[m
+          [1mps[0m [1m-ef[0m[m
+          [1mps[0m [1m-eF[0m[m
+          [1mps[0m [1m-ely[0m[m
+[m
+       To see every process on the system using BSD syntax:[m
+          [1mps[0m [1max[0m[m
+          [1mps[0m [1maxu[0m[m
+[m
+       To print a process tree:[m
+          [1mps[0m [1m-ejH[0m[m
+          [1mps[0m [1maxjf[0m[m
+[m
+       To get info about threads:[m
+          [1mps[0m [1m-eLf[0m[m
+          [1mps[0m [1maxms[0m[m
+[m
+       To get security info:[m
+          [1mps[0m [1m-eo[0m [1meuser,ruser,suser,fuser,f,comm,label[0m[m
+[7m Manual page ps(1) line 51 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1maxZ[0m[m
+[7m Manual page ps(1) line 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1m-eM[0m[m
+[7m Manual page ps(1) line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 54 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       To see every process running as root (real & effective ID) in user format:[m
+[7m Manual page ps(1) line 55 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1m-U[0m [1mroot[0m [1m-u[0m [1mroot[0m [1mu[0m[m
+[7m Manual page ps(1) line 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       To see every process with a user-defined format:[m
+[7m Manual page ps(1) line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1m-eo[0m [1mpid,tid,class,rtprio,ni,pri,psr,pcpu,stat,wchan:14,comm[0m[m
+[7m Manual page ps(1) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1maxo[0m [1mstat,euid,ruid,tty,tpgid,sess,pgrp,ppid,pid,pcpu,comm[0m[m
+[7m Manual page ps(1) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1m-Ao[0m [1mpid,tt,user,fname,tmout,f,wchan[0m[m
+[7m Manual page ps(1) line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Print only the process IDs of syslogd:[m
+[7m Manual page ps(1) line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1m-C[0m [1msyslogd[0m [1m-o[0m [1mpid=[0m[m
+[7m Manual page ps(1) line 64 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 65 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Print only the name of PID 42:[m
+[7m Manual page ps(1) line 66 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1m-q[0m [1m42[0m [1m-o[0m [1mcomm=[0m[m
+[7m Manual page ps(1) line 67 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 68 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mSIMPLE[0m [1mPROCESS[0m [1mSELECTION[0m[m
+[7m Manual page ps(1) line 69 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1ma[0m      Lift the BSD-style "only yourself" restriction, which is imposed upon the set of[m
+[7m Manual page ps(1) line 70 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all processes when some BSD-style (without "-") options are used or when the [1mps[0m[m
+[7m Manual page ps(1) line 71 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              personality setting is BSD-like.  The set of processes selected in this manner[m
+[7m Manual page ps(1) line 72 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              is in addition to the set of processes selected by other means.  An alternate[m
+[7m Manual page ps(1) line 73 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              description is that this option causes [1mps[0m to list all processes with a terminal[m
+[7m Manual page ps(1) line 74 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              (tty), or to list all processes when used together with the [1mx[0m option.[m
+[7m Manual page ps(1) line 75 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 76 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-A[0m     Select all processes.  Identical to [1m-e[0m.[m
+[7m Manual page ps(1) line 77 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 78 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-a[0m     Select all processes except both session leaders (see [4mgetsid[24m(2)) and processes[m
+[7m Manual page ps(1) line 79 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              not associated with a terminal.[m
+[7m Manual page ps(1) line 80 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 81 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-d[0m     Select all processes except session leaders.[m
+[7m Manual page ps(1) line 82 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 83 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--deselect[0m[m
+[7m Manual page ps(1) line 84 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select all processes except those that fulfill the specified conditions (negates[m
+[7m Manual page ps(1) line 85 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the selection).  Identical to [1m-N[0m.[m
+[7m Manual page ps(1) line 86 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 87 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-e[0m     Select all processes.  Identical to [1m-A[0m.[m
+[7m Manual page ps(1) line 88 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 89 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mg[0m      Really all, even session leaders.  This flag is obsolete and may be discontinued[m
+[7m Manual page ps(1) line 90 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              in a future release.  It is normally implied by the [1ma[0m flag, and is only useful[m
+[7m Manual page ps(1) line 91 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              when operating in the sunos4 personality.[m
+[7m Manual page ps(1) line 92 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 93 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-N[0m     Select all processes except those that fulfill the specified conditions (negates[m
+[7m Manual page ps(1) line 94 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the selection).  Identical to [1m--deselect[0m.[m
+[7m Manual page ps(1) line 95 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 96 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mT[0m      Select all processes associated with this terminal.  Identical to the [1mt[0m option[m
+[7m Manual page ps(1) line 97 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              without any argument.[m
+[7m Manual page ps(1) line 98 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 99 (press h for help or q to quit)[27m[K[H[2J[H              not associated with a terminal.[m
+[m
+       [1m-d[0m     Select all processes except session leaders.[m
+[m
+       [1m--deselect[0m[m
+              Select all processes except those that fulfill the specified conditions (negates[m
+              the selection).  Identical to [1m-N[0m.[m
+[m
+       [1m-e[0m     Select all processes.  Identical to [1m-A[0m.[m
+[m
+       [1mg[0m      Really all, even session leaders.  This flag is obsolete and may be discontinued[m
+              in a future release.  It is normally implied by the [1ma[0m flag, and is only useful[m
+              when operating in the sunos4 personality.[m
+[m
+       [1m-N[0m     Select all processes except those that fulfill the specified conditions (negates[m
+              the selection).  Identical to [1m--deselect[0m.[m
+[m
+       [1mT[0m      Select all processes associated with this terminal.  Identical to the [1mt[0m option[m
+              without any argument.[m
+[7m Manual page ps(1) line 99 (press h for help or q to quit)[27m[K[H[2J[H              not associated with a terminal.[m
+[m
+       [1m-d[0m     Select all processes except session leaders.[m
+[m
+       [1m--deselect[0m[m
+              Select all processes except those that fulfill the specified conditions (negates[m
+              the selection).  Identical to [1m-N[0m.[m
+[m
+       [1m-e[0m     Select all processes.  Identical to [1m-A[0m.[m
+[m
+       [1mg[0m      Really all, even session leaders.  This flag is obsolete and may be discontinued[m
+              in a future release.  It is normally implied by the [1ma[0m flag, and is only useful[m
+              when operating in the sunos4 personality.[m
+[m
+       [1m-N[0m     Select all processes except those that fulfill the specified conditions (negates[m
+              the selection).  Identical to [1m--deselect[0m.[m
+[m
+       [1mT[0m      Select all processes associated with this terminal.  Identical to the [1mt[0m option[m
+[7m Manual page ps(1) line 99 (press h for help or q to quit)[27m[K[H[2J[H              not associated with a terminal.[m
+[m
+       [1m-d[0m     Select all processes except session leaders.[m
+[m
+       [1m--deselect[0m[m
+              Select all processes except those that fulfill the specified conditions (negates[m
+              the selection).  Identical to [1m-N[0m.[m
+[m
+       [1m-e[0m     Select all processes.  Identical to [1m-A[0m.[m
+[m
+       [1mg[0m      Really all, even session leaders.  This flag is obsolete and may be discontinued[m
+              in a future release.  It is normally implied by the [1ma[0m flag, and is only useful[m
+              when operating in the sunos4 personality.[m
+[m
+       [1m-N[0m     Select all processes except those that fulfill the specified conditions (negates[m
+              the selection).  Identical to [1m--deselect[0m.[m
+[m
+[7m Manual page ps(1) line 99 (press h for help or q to quit)[27m[K[H[2J[H              not associated with a terminal.[m
+[m
+       [1m-d[0m     Select all processes except session leaders.[m
+[m
+       [1m--deselect[0m[m
+              Select all processes except those that fulfill the specified conditions (negates[m
+              the selection).  Identical to [1m-N[0m.[m
+[m
+       [1m-e[0m     Select all processes.  Identical to [1m-A[0m.[m
+[m
+       [1mg[0m      Really all, even session leaders.  This flag is obsolete and may be discontinued[m
+              in a future release.  It is normally implied by the [1ma[0m flag, and is only useful[m
+              when operating in the sunos4 personality.[m
+[m
+       [1m-N[0m     Select all processes except those that fulfill the specified conditions (negates[m
+              the selection).  Identical to [1m--deselect[0m.[m
+[7m Manual page ps(1) line 99 (press h for help or q to quit)[27m[K[H[2J[H              not associated with a terminal.[m
+[m
+       [1m-d[0m     Select all processes except session leaders.[m
+[m
+       [1m--deselect[0m[m
+              Select all processes except those that fulfill the specified conditions (negates[m
+              the selection).  Identical to [1m-N[0m.[m
+[m
+       [1m-e[0m     Select all processes.  Identical to [1m-A[0m.[m
+[m
+       [1mg[0m      Really all, even session leaders.  This flag is obsolete and may be discontinued[m
+              in a future release.  It is normally implied by the [1ma[0m flag, and is only useful[m
+              when operating in the sunos4 personality.[m
+[m
+       [1m-N[0m     Select all processes except those that fulfill the specified conditions (negates[m
+[7m Manual page ps(1) line 99 (press h for help or q to quit)[27m[K[H[2J[H              not associated with a terminal.[m
+[m
+       [1m-d[0m     Select all processes except session leaders.[m
+[m
+       [1m--deselect[0m[m
+              Select all processes except those that fulfill the specified conditions (negates[m
+              the selection).  Identical to [1m-N[0m.[m
+[m
+       [1m-e[0m     Select all processes.  Identical to [1m-A[0m.[m
+[m
+       [1mg[0m      Really all, even session leaders.  This flag is obsolete and may be discontinued[m
+              in a future release.  It is normally implied by the [1ma[0m flag, and is only useful[m
+              when operating in the sunos4 personality.[m
+[m
+[7m Manual page ps(1) line 99 (press h for help or q to quit)[27m[K[H[2J[H              not associated with a terminal.[m
+[m
+       [1m-d[0m     Select all processes except session leaders.[m
+[m
+       [1m--deselect[0m[m
+              Select all processes except those that fulfill the specified conditions (negates[m
+              the selection).  Identical to [1m-N[0m.[m
+[m
+       [1m-e[0m     Select all processes.  Identical to [1m-A[0m.[m
+[m
+       [1mg[0m      Really all, even session leaders.  This flag is obsolete and may be discontinued[m
+              in a future release.  It is normally implied by the [1ma[0m flag, and is only useful[m
+              when operating in the sunos4 personality.[m
+[7m Manual page ps(1) line 99 (press h for help or q to quit)[27m[K[H[2J[H              not associated with a terminal.[m
+[m
+       [1m-d[0m     Select all processes except session leaders.[m
+[m
+       [1m--deselect[0m[m
+              Select all processes except those that fulfill the specified conditions (negates[m
+              the selection).  Identical to [1m-N[0m.[m
+[m
+       [1m-e[0m     Select all processes.  Identical to [1m-A[0m.[m
+[m
+       [1mg[0m      Really all, even session leaders.  This flag is obsolete and may be discontinued[m
+              in a future release.  It is normally implied by the [1ma[0m flag, and is only useful[m
+[7m Manual page ps(1) line 99 (press h for help or q to quit)[27m[K[H[2J[H              not associated with a terminal.[m
+[m
+       [1m-d[0m     Select all processes except session leaders.[m
+[m
+       [1m--deselect[0m[m
+              Select all processes except those that fulfill the specified conditions (negates[m
+              the selection).  Identical to [1m-N[0m.[m
+[m
+       [1m-e[0m     Select all processes.  Identical to [1m-A[0m.[m
+[m
+       [1mg[0m      Really all, even session leaders.  This flag is obsolete and may be discontinued[m
+              in a future release.  It is normally implied by the [1ma[0m flag, and is only useful[m
+              when operating in the sunos4 personality.[m
+[7m Manual page ps(1) line 99 (press h for help or q to quit)[27m[K[H[2J[H              not associated with a terminal.[m
+[m
+       [1m-d[0m     Select all processes except session leaders.[m
+[m
+       [1m--deselect[0m[m
+              Select all processes except those that fulfill the specified conditions (negates[m
+              the selection).  Identical to [1m-N[0m.[m
+[m
+       [1m-e[0m     Select all processes.  Identical to [1m-A[0m.[m
+[m
+       [1mg[0m      Really all, even session leaders.  This flag is obsolete and may be discontinued[m
+              in a future release.  It is normally implied by the [1ma[0m flag, and is only useful[m
+              when operating in the sunos4 personality.[m
+[m
+[7m Manual page ps(1) line 99 (press h for help or q to quit)[27m[K[H[2J[H              not associated with a terminal.[m
+[m
+       [1m-d[0m     Select all processes except session leaders.[m
+[m
+       [1m--deselect[0m[m
+              Select all processes except those that fulfill the specified conditions (negates[m
+              the selection).  Identical to [1m-N[0m.[m
+[m
+       [1m-e[0m     Select all processes.  Identical to [1m-A[0m.[m
+[m
+       [1mg[0m      Really all, even session leaders.  This flag is obsolete and may be discontinued[m
+              in a future release.  It is normally implied by the [1ma[0m flag, and is only useful[m
+              when operating in the sunos4 personality.[m
+[m
+       [1m-N[0m     Select all processes except those that fulfill the specified conditions (negates[m
+[7m Manual page ps(1) line 99 (press h for help or q to quit)[27m[K[H[2J[H              not associated with a terminal.[m
+[m
+       [1m-d[0m     Select all processes except session leaders.[m
+[m
+       [1m--deselect[0m[m
+              Select all processes except those that fulfill the specified conditions (negates[m
+              the selection).  Identical to [1m-N[0m.[m
+[m
+       [1m-e[0m     Select all processes.  Identical to [1m-A[0m.[m
+[m
+       [1mg[0m      Really all, even session leaders.  This flag is obsolete and may be discontinued[m
+              in a future release.  It is normally implied by the [1ma[0m flag, and is only useful[m
+              when operating in the sunos4 personality.[m
+[m
+       [1m-N[0m     Select all processes except those that fulfill the specified conditions (negates[m
+              the selection).  Identical to [1m--deselect[0m.[m
+[7m Manual page ps(1) line 99 (press h for help or q to quit)[27m[K[H[2J[H              not associated with a terminal.[m
+[m
+       [1m-d[0m     Select all processes except session leaders.[m
+[m
+       [1m--deselect[0m[m
+              Select all processes except those that fulfill the specified conditions (negates[m
+              the selection).  Identical to [1m-N[0m.[m
+[m
+       [1m-e[0m     Select all processes.  Identical to [1m-A[0m.[m
+[m
+       [1mg[0m      Really all, even session leaders.  This flag is obsolete and may be discontinued[m
+              in a future release.  It is normally implied by the [1ma[0m flag, and is only useful[m
+              when operating in the sunos4 personality.[m
+[m
+       [1m-N[0m     Select all processes except those that fulfill the specified conditions (negates[m
+              the selection).  Identical to [1m--deselect[0m.[m
+[m
+[7m Manual page ps(1) line 99 (press h for help or q to quit)[27m[K[H[2J[H              not associated with a terminal.[m
+[m
+       [1m-d[0m     Select all processes except session leaders.[m
+[m
+       [1m--deselect[0m[m
+              Select all processes except those that fulfill the specified conditions (negates[m
+              the selection).  Identical to [1m-N[0m.[m
+[m
+       [1m-e[0m     Select all processes.  Identical to [1m-A[0m.[m
+[m
+       [1mg[0m      Really all, even session leaders.  This flag is obsolete and may be discontinued[m
+              in a future release.  It is normally implied by the [1ma[0m flag, and is only useful[m
+              when operating in the sunos4 personality.[m
+[m
+       [1m-N[0m     Select all processes except those that fulfill the specified conditions (negates[m
+              the selection).  Identical to [1m--deselect[0m.[m
+[m
+       [1mT[0m      Select all processes associated with this terminal.  Identical to the [1mt[0m option[m
+[7m Manual page ps(1) line 99 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              without any argument.[m
+[7m Manual page ps(1) line 100 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 101 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mr[0m      Restrict the selection to only running processes.[m
+[7m Manual page ps(1) line 102 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 103 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mx[0m      Lift the BSD-style "must have a tty" restriction, which is imposed upon the set[m
+[7m Manual page ps(1) line 104 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              of all processes when some BSD-style (without "-") options are used or when the[m
+[7m Manual page ps(1) line 105 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mps[0m personality setting is BSD-like.  The set of processes selected in this[m
+[7m Manual page ps(1) line 106 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              manner is in addition to the set of processes selected by other means.  An[m
+[7m Manual page ps(1) line 107 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              alternate description is that this option causes [1mps[0m to list all processes owned[m
+[7m Manual page ps(1) line 108 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              by you (same EUID as [1mps[0m), or to list all processes when used together with the [1ma[0m[m
+[7m Manual page ps(1) line 109 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              option.[m
+[7m Manual page ps(1) line 110 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 111 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mPROCESS[0m [1mSELECTION[0m [1mBY[0m [1mLIST[0m[m
+[7m Manual page ps(1) line 112 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       These options accept a single argument in the form of a blank-separated or[m
+[7m Manual page ps(1) line 113 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       comma-separated list.  They can be used multiple times.  For example:[m
+[7m Manual page ps(1) line 114 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mps[0m [1m-p[0m [1m"1[0m [1m2"[0m [1m-p[0m [1m3,4[0m[m
+[7m Manual page ps(1) line 115 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 116 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[19;1H[K[7m Manual page ps(1) line 115 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              the selection).  Identical to [1m--deselect[0m.[m
+[19;1H[K[7m Manual page ps(1) line 114 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-N[0m     Select all processes except those that fulfill the specified conditions (negates[m
+[19;1H[K[7m Manual page ps(1) line 113 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[19;1H[K[7m Manual page ps(1) line 112 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              when operating in the sunos4 personality.[m
+[19;1H[K[7m Manual page ps(1) line 111 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              in a future release.  It is normally implied by the [1ma[0m flag, and is only useful[m
+[19;1H[K[7m Manual page ps(1) line 110 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mg[0m      Really all, even session leaders.  This flag is obsolete and may be discontinued[m
+[19;1H[K[7m Manual page ps(1) line 109 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[19;1H[K[7m Manual page ps(1) line 108 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-e[0m     Select all processes.  Identical to [1m-A[0m.[m
+[19;1H[K[7m Manual page ps(1) line 107 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[19;1H[K[7m Manual page ps(1) line 106 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              the selection).  Identical to [1m-N[0m.[m
+[19;1H[K[7m Manual page ps(1) line 105 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              Select all processes except those that fulfill the specified conditions (negates[m
+[19;1H[K[7m Manual page ps(1) line 104 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m--deselect[0m[m
+[19;1H[K[7m Manual page ps(1) line 103 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[19;1H[K[7m Manual page ps(1) line 102 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-d[0m     Select all processes except session leaders.[m
+[19;1H[K[7m Manual page ps(1) line 101 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[19;1H[K[7m Manual page ps(1) line 100 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              not associated with a terminal.[m
+[19;1H[K[7m Manual page ps(1) line 99 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-a[0m     Select all processes except both session leaders (see [4mgetsid[24m(2)) and processes[m
+[19;1H[K[7m Manual page ps(1) line 98 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[19;1H[K[7m Manual page ps(1) line 97 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-A[0m     Select all processes.  Identical to [1m-e[0m.[m
+[19;1H[K[7m Manual page ps(1) line 96 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[19;1H[K[7m Manual page ps(1) line 95 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-N[0m     Select all processes except those that fulfill the specified conditions (negates[m
+[7m Manual page ps(1) line 96 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the selection).  Identical to [1m--deselect[0m.[m
+[7m Manual page ps(1) line 97 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 98 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mT[0m      Select all processes associated with this terminal.  Identical to the [1mt[0m option[m
+[7m Manual page ps(1) line 99 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              without any argument.[m
+[7m Manual page ps(1) line 100 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 101 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mr[0m      Restrict the selection to only running processes.[m
+[7m Manual page ps(1) line 102 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 103 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mx[0m      Lift the BSD-style "must have a tty" restriction, which is imposed upon the set[m
+[7m Manual page ps(1) line 104 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              of all processes when some BSD-style (without "-") options are used or when the[m
+[7m Manual page ps(1) line 105 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mps[0m personality setting is BSD-like.  The set of processes selected in this[m
+[7m Manual page ps(1) line 106 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              manner is in addition to the set of processes selected by other means.  An[m
+[7m Manual page ps(1) line 107 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              alternate description is that this option causes [1mps[0m to list all processes owned[m
+[7m Manual page ps(1) line 108 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              by you (same EUID as [1mps[0m), or to list all processes when used together with the [1ma[0m[m
+[7m Manual page ps(1) line 109 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              option.[m
+[7m Manual page ps(1) line 110 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 111 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mPROCESS[0m [1mSELECTION[0m [1mBY[0m [1mLIST[0m[m
+[7m Manual page ps(1) line 112 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       These options accept a single argument in the form of a blank-separated or[m
+[7m Manual page ps(1) line 113 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       comma-separated list.  They can be used multiple times.  For example:[m
+[7m Manual page ps(1) line 114 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mps[0m [1m-p[0m [1m"1[0m [1m2"[0m [1m-p[0m [1m3,4[0m[m
+[7m Manual page ps(1) line 115 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 116 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       -[4m123[24m   Identical to [1m--pid[0m [4m123[24m.[m
+[7m Manual page ps(1) line 117 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 118 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m123[24m    Identical to [1m--pid[0m [4m123[24m.[m
+[7m Manual page ps(1) line 119 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 120 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-C[0m [4mcmdlist[24m[m
+[7m Manual page ps(1) line 121 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by command name.  This selects the processes whose executable name is[m
+[7m Manual page ps(1) line 122 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              given in [4mcmdlist[24m.  NOTE: The command name is not the same as the command line.[m
+[7m Manual page ps(1) line 123 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Previous versions of procps and the kernel truncated this command name to 15[m
+[7m Manual page ps(1) line 124 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              characters. This limitation is no longer present in both. If you depended on[m
+[7m Manual page ps(1) line 125 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              matching only 15 characters, you may no longer get a match.[m
+[7m Manual page ps(1) line 126 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 127 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-G[0m [4mgrplist[24m[m
+[7m Manual page ps(1) line 128 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by real group ID (RGID) or name.  This selects the processes whose real[m
+[7m Manual page ps(1) line 129 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              group name or ID is in the [4mgrplist[24m list.  The real group ID identifies the group[m
+[7m Manual page ps(1) line 130 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              of the user who created the process, see [4mgetgid[24m(2).[m
+[7m Manual page ps(1) line 131 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 132 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-g[0m [4mgrplist[24m[m
+[7m Manual page ps(1) line 133 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by session OR by effective group name.  Selection by session is specified[m
+[7m Manual page ps(1) line 134 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              by many standards, but selection by effective group is the logical behavior that[m
+[7m Manual page ps(1) line 135 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              several other operating systems use.  This [1mps[0m will select by session when the[m
+[7m Manual page ps(1) line 136 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              list is completely numeric (as sessions are).  Group ID numbers will work only[m
+[7m Manual page ps(1) line 137 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              when some group names are also specified.  See the [1m-s[0m and [1m--group[0m options.[m
+[7m Manual page ps(1) line 138 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 139 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--Group[0m [4mgrplist[24m[m
+[7m Manual page ps(1) line 140 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by real group ID (RGID) or name.  Identical to [1m-G[0m.[m
+[7m Manual page ps(1) line 141 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 142 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--group[0m [4mgrplist[24m[m
+[7m Manual page ps(1) line 143 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by effective group ID (EGID) or name.  This selects the processes whose[m
+[7m Manual page ps(1) line 144 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              effective group name or ID is in [4mgrplist[24m.  The effective group ID describes the[m
+[7m Manual page ps(1) line 145 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              group whose file access permissions are used by the process (see [4mgetegid[24m(2)).[m
+[7m Manual page ps(1) line 146 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              The [1m-g[0m option is often an alternative to [1m--group[0m.[m
+[7m Manual page ps(1) line 147 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 148 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mp[0m [4mpidlist[24m[m
+[7m Manual page ps(1) line 149 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by process ID.  Identical to [1m-p[0m and [1m--pid[0m.[m
+[7m Manual page ps(1) line 150 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 151 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-p[0m [4mpidlist[24m[m
+[7m Manual page ps(1) line 152 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by PID.  This selects the processes whose process ID numbers appear in[m
+[7m Manual page ps(1) line 153 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4mpidlist[24m.  Identical to [1mp[0m and [1m--pid[0m.[m
+[7m Manual page ps(1) line 154 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 155 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--pid[0m [4mpidlist[24m[m
+[7m Manual page ps(1) line 156 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by process ID.  Identical to [1m-p[0m and [1mp[0m.[m
+[7m Manual page ps(1) line 157 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 158 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--ppid[0m [4mpidlist[24m[m
+[7m Manual page ps(1) line 159 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by parent process ID.  This selects the processes with a parent[m
+[7m Manual page ps(1) line 160 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              process ID in [4mpidlist[24m.  That is, it selects processes that are children of those[m
+[7m Manual page ps(1) line 161 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              listed in [4mpidlist[24m.[m
+[7m Manual page ps(1) line 162 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 163 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mq[0m [4mpidlist[24m[m
+[7m Manual page ps(1) line 164 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by process ID (quick mode).  Identical to [1m-q[0m and [1m--quick-pid[0m.[m
+[7m Manual page ps(1) line 165 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 166 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-q[0m [4mpidlist[24m[m
+[7m Manual page ps(1) line 167 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by PID (quick mode).  This selects the processes whose process ID numbers[m
+[7m Manual page ps(1) line 168 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              appear in [4mpidlist[24m.  With this option [1mps[0m reads the necessary info only for the[m
+[7m Manual page ps(1) line 169 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              pids listed in the [4mpidlist[24m and doesn't apply additional filtering rules. The[m
+[7m Manual page ps(1) line 170 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              order of pids is unsorted and preserved. No additional selection options,[m
+[7m Manual page ps(1) line 171 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              sorting and forest type listings are allowed in this mode.  Identical to [1mq[0m and[m
+[7m Manual page ps(1) line 172 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m--quick-pid[0m.[m
+[7m Manual page ps(1) line 173 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 174 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--quick-pid[0m [4mpidlist[24m[m
+[7m Manual page ps(1) line 175 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by process ID (quick mode).  Identical to [1m-q[0m and [1mq[0m.[m
+[7m Manual page ps(1) line 176 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 177 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-s[0m [4msesslist[24m[m
+[7m Manual page ps(1) line 178 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by session ID.  This selects the processes with a session ID specified in[m
+[7m Manual page ps(1) line 179 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4msesslist[24m.[m
+[7m Manual page ps(1) line 180 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 181 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--sid[0m [4msesslist[24m[m
+[7m Manual page ps(1) line 182 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by session ID.  Identical to [1m-s[0m.[m
+[7m Manual page ps(1) line 183 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 184 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mt[0m [4mttylist[24m[m
+[7m Manual page ps(1) line 185 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by tty.  Nearly identical to [1m-t[0m and [1m--tty[0m, but can also be used with an[m
+[7m Manual page ps(1) line 186 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              empty [4mttylist[24m to indicate the terminal associated with [1mps[0m.  Using the [1mT[0m option[m
+[7m Manual page ps(1) line 187 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              is considered cleaner than using [1mt[0m with an empty [4mttylist[24m.[m
+[7m Manual page ps(1) line 188 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 189 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-t[0m [4mttylist[24m[m
+[7m Manual page ps(1) line 190 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by tty.  This selects the processes associated with the terminals given[m
+[7m Manual page ps(1) line 191 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              in [4mttylist[24m.  Terminals (ttys, or screens for text output) can be specified in[m
+[7m Manual page ps(1) line 192 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              several forms: /dev/ttyS1, ttyS1, S1.  A plain "-" may be used to select[m
+[7m Manual page ps(1) line 193 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              processes not attached to any terminal.[m
+[7m Manual page ps(1) line 194 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 195 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--tty[0m [4mttylist[24m[m
+[7m Manual page ps(1) line 196 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by terminal.  Identical to [1m-t[0m and [1mt[0m.[m
+[7m Manual page ps(1) line 197 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 198 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mU[0m [4muserlist[24m[m
+[7m Manual page ps(1) line 199 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by effective user ID (EUID) or name.  This selects the processes whose[m
+[7m Manual page ps(1) line 200 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              effective user name or ID is in [4muserlist[24m.  The effective user ID describes the[m
+[7m Manual page ps(1) line 201 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              user whose file access permissions are used by the process (see [4mgeteuid[24m(2)).[m
+[7m Manual page ps(1) line 202 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Identical to [1m-u[0m and [1m--user[0m.[m
+[7m Manual page ps(1) line 203 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 204 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-U[0m [4muserlist[24m[m
+[7m Manual page ps(1) line 205 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by real user ID (RUID) or name.  It selects the processes whose real user[m
+[7m Manual page ps(1) line 206 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              name or ID is in the [4muserlist[24m list.  The real user ID identifies the user who[m
+[7m Manual page ps(1) line 207 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              created the process, see [4mgetuid[24m(2).[m
+[7m Manual page ps(1) line 208 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 209 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-u[0m [4muserlist[24m[m
+[7m Manual page ps(1) line 210 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by effective user ID (EUID) or name.  This selects the processes whose[m
+[7m Manual page ps(1) line 211 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              effective user name or ID is in [4muserlist[24m.[m
+[7m Manual page ps(1) line 212 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 213 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              The effective user ID describes the user whose file access permissions are used[m
+[7m Manual page ps(1) line 214 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              by the process (see [4mgeteuid[24m(2)).  Identical to [1mU[0m and [1m--user[0m.[m
+[7m Manual page ps(1) line 215 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 216 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--User[0m [4muserlist[24m[m
+[7m Manual page ps(1) line 217 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by real user ID (RUID) or name.  Identical to [1m-U[0m.[m
+[7m Manual page ps(1) line 218 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 219 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--user[0m [4muserlist[24m[m
+[7m Manual page ps(1) line 220 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by effective user ID (EUID) or name.  Identical to [1m-u[0m and [1mU[0m.[m
+[7m Manual page ps(1) line 221 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 222 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mOUTPUT[0m [1mFORMAT[0m [1mCONTROL[0m[m
+[7m Manual page ps(1) line 223 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       These options are used to choose the information displayed by [1mps[0m.  The output may[m
+[7m Manual page ps(1) line 224 (press h for help or q to quit)[27m[K[K [KESCESC
