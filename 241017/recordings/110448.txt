@@ -846,4 +846,110 @@ fuse		  mei0		rtc0	    tty21     tty43  tty8   vcsa2
 [?2004h
 [34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
 [35m❯[0m [K[35m❯[0m [H[2J
-[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m lsblk
+[?2004lNAME               MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINTS
+nvme0n1            259:0    0   1.8T  0 disk  
+├─nvme0n1p1        259:1    0   100M  0 part  /boot/efi
+├─nvme0n1p2        259:2    0    16M  0 part  
+├─nvme0n1p3        259:3    0 292.1G  0 part  
+├─nvme0n1p4        259:4    0   769M  0 part  
+├─nvme0n1p5        259:5    0   954M  0 part  /boot
+├─nvme0n1p6        259:6    0  89.9G  0 part  
+│ └─root_decrypt   253:0    0  89.9G  0 crypt /
+└─nvme0n1p11       259:7    0   1.4T  0 part  
+  └─shared_decrypt 253:1    0   1.4T  0 crypt /shared
+[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m [H[2J
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m ssh ubse
+[?2004lssh: connect to host localhost port 3322: Connection refused
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [0m
+[31m❯[0m ssh ubse[H[2J
+[34ml1-live/241017[0m [90m241017[36m [0m
+[31m❯[0m ssh ubse
+[?2004lkent@localhost's password: 
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-45-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Thu Oct 17 11:00:44 AM UTC 2024
+
+  System load:  0.0                Processes:               122
+  Usage of /:   15.8% of 29.36GB   Users logged in:         0
+  Memory usage: 9%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+114 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+Last login: Thu Oct 17 10:31:17 2024 from 10.0.2.2
+[?2004h]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ [H[2J]0;kent@ubse: ~[01;32mkent@ubse[00m:[01;34m~[00m$ sudo -i
+[?2004l[sudo] password for kent: 
+[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# lsblk
+[?2004lNAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0   30G  0 part /
+sr0     11:0    1 1024M  0 rom  
+[?2004h]0;root@ubse: ~root@ubse:~# gfisk[K[K[K[Kdisk /dev/sda
+[?2004lGPT fdisk (gdisk) version 1.0.10
+
+Partition table scan:
+  MBR: protective
+  BSD: not present
+  APM: not present
+  GPT: present
+
+Found valid GPT with protective MBR; using GPT.
+
+Command (? for help): ?
+b	back up GPT data to a file
+c	change a partition's name
+d	delete a partition
+i	show detailed information on a partition
+l	list known partition types
+n	add a new partition
+o	create a new empty GUID partition table (GPT)
+p	print the partition table
+q	quit without saving changes
+r	recovery and transformation options (experts only)
+s	sort partitions
+t	change a partition's type code
+v	verify disk
+w	write table to disk and exit
+x	extra functionality (experts only)
+?	print this menu
+
+Command (? for help): p
+Disk /dev/sda: 83886080 sectors, 40.0 GiB
+Model: VBOX HARDDISK   
+Sector size (logical/physical): 512/512 bytes
+Disk identifier (GUID): 082A7145-80DA-440C-B51C-D6A4CBCE6B90
+Partition table holds up to 128 entries
+Main partition table begins at sector 2 and ends at sector 33
+First usable sector is 34, last usable sector is 83886046
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 18769853 sectors (8.9 GiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048         2203647   1.0 GiB     EF00  
+   2      
