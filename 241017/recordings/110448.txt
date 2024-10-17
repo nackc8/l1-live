@@ -1172,4 +1172,90 @@ Press the <Enter> key to see more codes, q to quit: a 
 8326 Linux PowerPC-64 BE root (/)        8327 Linux PowerPC-64 LE root (/)      
 8328 Linux RISC-V-32 root (/)            8329 Linux RISC-V-64 root (/)          
 832a Linux s390 root (/)                 832b Linux s390x root (/)              
-832c Linux TILE-Gx root (/)              832d Linux Alpha /usr             
+832c Linux TILE-Gx root (/)              832d Linux Alpha /usr                  
+832e Linux ARC /usr                      832f Linux LoongArch /usr              
+8330 Linux MIPS-32 BE /usr               8331 Linux MIPS-64 BE /usr             
+8332 Linux MIPS-32 LE /usr               8333 Linux MIPS-64 LE /usr             
+8334 Linux PA-RISC /usr                  8335 Linux PowerPC-32 /usr             
+8336 Linux PowerPC-64 BE /usr            8337 Linux PowerPC-64 LE /usr          
+8338 Linux RISC-V-32 /usr                8339 Linux RISC-V-64 /usr              
+833a Linux s390 /usr                     833b Linux s390x /usr                  
+833c Linux TILE-Gx /usr                  833d Linux Alpha root verity           
+833e Linux ARC root verity               833f Linux LoongArch root verity       
+Press the <Enter> key to see more codes, q to quit: q
+
+Hex code or GUID (L to show codes, Enter = 8300): 
+Changed type of partition to 'Linux filesystem'
+
+Command (? for help): p
+Disk /dev/sda: 83886080 sectors, 40.0 GiB
+Model: VBOX HARDDISK   
+Sector size (logical/physical): 512/512 bytes
+Disk identifier (GUID): 082A7145-80DA-440C-B51C-D6A4CBCE6B90
+Partition table holds up to 128 entries
+Main partition table begins at sector 2 and ends at sector 33
+First usable sector is 34, last usable sector is 83886046
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 14575549 sectors (6.9 GiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048         2203647   1.0 GiB     EF00  
+   2         2203648        65118207   30.0 GiB    8300  
+   3        65118208        69312511   2.0 GiB     8300  Linux filesystem
+
+Command (? for help): ?
+b	back up GPT data to a file
+c	change a partition's name
+d	delete a partition
+i	show detailed information on a partition
+l	list known partition types
+n	add a new partition
+o	create a new empty GUID partition table (GPT)
+p	print the partition table
+q	quit without saving changes
+r	recovery and transformation options (experts only)
+s	sort partitions
+t	change a partition's type code
+v	verify disk
+w	write table to disk and exit
+x	extra functionality (experts only)
+?	print this menu
+
+Command (? for help): w
+
+Final checks complete. About to write GPT data. THIS WILL OVERWRITE EXISTING
+PARTITIONS!!
+
+Do you want to proceed? (Y/N): y
+OK; writing new GUID partition table (GPT) to /dev/sda.
+Warning: The kernel is still using the old partition table.
+The new table will be used at the next reboot or after you
+run partprobe(8) or kpartx(8)
+The operation has completed successfully.
+[?2004h]0;root@ubse: ~root@ubse:~# partprobe
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# # ny part
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# lsblk
+[?2004lNAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+├─sda2   8:2    0   30G  0 part /
+└─sda3   8:3    0    2G  0 part 
+sr0     11:0    1 1024M  0 rom  
+[?2004h]0;root@ubse: ~root@ubse:~# mkfs.ext4 /dev/sda3
+[?2004lmke2fs 1.47.0 (5-Feb-2023)
+Creating filesystem with 524288 4k blocks and 131072 inodes
+Filesystem UUID: 45a7d02f-eb9d-4705-b5b8-6e2fcccb00f7
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912
+
+Allocating group tables:  0/16     done                            
+Writing inode tables:  0/16     done                            
+Creating journal (16384 blocks): done
+Writing superblocks and filesystem accounting information:  0/16     done
+
+[?2004h]0;root@ubse: ~root@ubse:~# mkdir /[H[2J]0;root@ubse: ~root@ubse:~# mkdir /[K]0;root@ubse: ~root@ubse:~# mkdir /minnyapartiton[K[Kioon[K[Kn
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# ls /mn[Kinnyapartition/
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# mount /deq[Kv/sd3 /minnyapartition/
+[?2004lmount: /minnyapartition: special device /dev/sd3 does not exist.
+       dmesg(1) may have more information after failed mount system call.
+[?2004h]0;root@ubse: ~root@ubse:~# mount /dev/sd3 /minnyapartition/
