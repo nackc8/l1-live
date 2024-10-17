@@ -1617,4 +1617,127 @@ Win11_23H2_EnglishInternational_x64v2.iso
 [7m Manual page bash(1) line 2477 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       which is the last job stopped while it was in the foreground or started in the background.   The[m
 [7m Manual page bash(1) line 2478 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mprevious[24m  [4mjob[24m  may be referenced using [1m%-[0m.  If there is only a single job, [1m%+[0m and [1m%-[0m can both be[m
 [7m Manual page bash(1) line 2479 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       used to refer to that job.  In output pertaining to jobs (e.g., the output of the [1mjobs[0m command),[m
-[7m Manual page bash(1) line 2480 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the  current job is alw
+[7m Manual page bash(1) line 2480 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the  current job is always flagged with a [1m+[0m, and the previous job with a [1m-[0m.  A single % (with no[m
+[7m Manual page bash(1) line 2481 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       accompanying job specification) also refers to the current job.[m
+[7m Manual page bash(1) line 2482 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 2483 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Simply naming a job can be used to bring it into the foreground: [1m%1[0m is a synonym for [1m``fg[0m  [1m%1''[0m,[m
+[7m Manual page bash(1) line 2484 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦3[0m [33m2m8s[0m 
+[35m❯[0m jobs
+[?2004l[2]   Stopped                 cp ~/Dropbox/c8/iso/Fedora-Server-dvd-x86_64-40-1.14.iso ~/
+[3]-  Stopped                 cp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop-amd64.iso ~/ubuntu$RANDOM
+[7]+  Stopped                 cp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop-amd64.iso ~/ubuntu$RANDOM
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦3[0m 
+[35m❯[0m bg %7
+[?2004l[7]+ cp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop-amd64.iso ~/ubuntu$RANDOM &
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦3[0m 
+[35m❯[0m bg %7[C[C[1Pjobs
+[?2004l[2]-  Stopped                 cp ~/Dropbox/c8/iso/Fedora-Server-dvd-x86_64-40-1.14.iso ~/
+[3]+  Stopped                 cp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop-amd64.iso ~/ubuntu$RANDOM
+[7]   Done                    cp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop-amd64.iso ~/ubuntu$RANDOM
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦2[0m 
+[35m❯[0m fg [K[K[Kbg
+[?2004l[3]+ cp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop-amd64.iso ~/ubuntu$RANDOM &
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦2[0m 
+[35m❯[0m jobs
+[?2004l[2]+  Stopped                 cp ~/Dropbox/c8/iso/Fedora-Server-dvd-x86_64-40-1.14.iso ~/
+[3]-  Running                 cp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop-amd64.iso ~/ubuntu$RANDOM &
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦2[0m 
+[35m❯[0m jobs
+[?2004l[2]+  Stopped                 cp ~/Dropbox/c8/iso/Fedora-Server-dvd-x86_64-40-1.14.iso ~/
+[3]-  Running                 cp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop-amd64.iso ~/ubuntu$RANDOM &
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦2[0m 
+[35m❯[0m jobs
+[?2004l[2]+  Stopped                 cp ~/Dropbox/c8/iso/Fedora-Server-dvd-x86_64-40-1.14.iso ~/
+[3]-  Running                 cp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop-amd64.iso ~/ubuntu$RANDOM &
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦2[0m 
+[35m❯[0m jobs[C[Cbg %7[K[K[K
+[?2004l[2]+ cp ~/Dropbox/c8/iso/Fedora-Server-dvd-x86_64-40-1.14.iso ~/ &
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦[0m 
+[35m❯[0m jobs
+[?2004l[2]+  Running                 cp ~/Dropbox/c8/iso/Fedora-Server-dvd-x86_64-40-1.14.iso ~/ &
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦[0m 
+[35m❯[0m jobs[C[C[Kjobs[C[Cbg %7[K[K[K
+[?2004lbash: bg: job has terminated
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [0m
+[31m❯[0m jobs[H[2J
+[34ml1-live/241017[0m [90m241017[36m [0m
+[31m❯[0m jobs
+[?2004l[?2004h
+[34ml1-live/241017[0m [90m241017[36m [0m
+[35m❯[0m ^[Ksleep 600 &
+[?2004l[1] 72739
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦[0m 
+[35m❯[0m jobs
+[?2004l[1]+  Running                 sleep 600 &
+[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [1;34m✦[0m 
+[35m❯[0m fg
+[?2004lsleep 600
+ijfoejf
+efefe
+^Z
+[1]+  Stopped                 sleep 600
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦[0m [33m50s[0m 
+[31m❯[0m bg
+[?2004l[1]+ sleep 600 &
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦[0m 
+[35m❯[0m [H[2J
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦[0m 
+[35m❯[0m man l[Ksleep
+[?2004l[?1049h[22;0;0t[?1h=SLEEP(1)                                     User Commands                                     SLEEP(1)[m
+[m
+[1mNAME[0m[m
+       sleep - delay for a specified amount of time[m
+[m
+[1mSYNOPSIS[0m[m
+       [1msleep[0m [4mNUMBER[24m[[4mSUFFIX[24m]...[m
+       [1msleep[0m [4mOPTION[24m[m
+[m
+[1mDESCRIPTION[0m[m
+       Pause for NUMBER seconds.  SUFFIX may be 's' for seconds (the default), 'm' for minutes, 'h' for[m
+       hours or 'd' for days.  NUMBER need not be an integer.  Given two or more arguments,  pause  for[m
+       the amount of time specified by the sum of their values.[m
+[m
+       [1m--help[0m display this help and exit[m
+[m
+       [1m--version[0m[m
+              output version information and exit[m
+[m
+[1mAUTHOR[0m[m
+[7m Manual page sleep(1) line 1 (press h for help or q to quit)[27m[K[K       Written by Jim Meyering and Paul Eggert.[m
+[m
+[1mREPORTING[0m [1mBUGS[0m[m
+       GNU coreutils online help: <https://www.gnu.org/software/coreutils/>[m
+       Report any translation bugs to <https://translationproject.org/team/>[m
+[m
+[1mCOPYRIGHT[0m[m
+       Copyright  ©  2022  Free  Software  Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later[m
+       <https://gnu.org/licenses/gpl.html>.[m
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the[m
+       extent permitted by law.[m
+[m
+[1mSEE[0m [1mALSO[0m[m
+       [1msleep[0m(3)[m
+[m
+       Full documentation <https://www.gnu.org/software/coreutils/sleep>[m
+       or available locally via: info '(coreutils) sleep invocation'[m
+[m
+GNU coreutils 9.1                            September 2022                                    SLEEP(1)[m
+[7m Manual page sleep(1) line 20/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[21;1H[K[7m Manual page sleep(1) line 19/39 94% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[KGNU coreutils 9.1                            September 2022                                    SLEEP(1)[m
+[7m Manual page sleep(1) line 20/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page sleep(1) line 20/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page sleep(1) line 20/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page sleep(1) line 20/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page sleep(1) line 20/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page sleep(1) line 20/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page sleep(1) line 20/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page sleep(1) line 20/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page sleep(1) line 20/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page sleep(1) line 20/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page sleep(1) line 20/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page sleep(1) line 20/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page sleep(1) line 20/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page sleep(1) line 20/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[21;1H[K[7m Manual page sleep(1) line 19/39 94% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              out
