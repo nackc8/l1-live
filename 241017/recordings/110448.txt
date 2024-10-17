@@ -729,4 +729,62 @@ Script started on 2024-10-17 11:04:48+02:00 [TERM="xterm-256color" TTY="/dev/pts
   man-db.timer                                                                                           [m[7m>[27m
 [7mlines 412-427[27m[K[K  plocate-updatedb.timer                                                                                 [m[7m>[27m
   podman-auto-update.timer                                                                               [m[7m>[27m
-  systemd-tmpfiles-clean.timer                         
+  systemd-tmpfiles-clean.timer                                                                           [m[7m>[27m
+[m
+LOAD   = Reflects whether the unit definition was properly loaded.[m
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.[m
+SUB    = The low-level unit activation state, values depend on unit type.[m
+[0;1;39m429 loaded units listed.[0m[m
+[0;38;5;245mTo show all installed unit files use 'systemctl list-unit-files'.[0m[m
+[7mlines 421-436/436 (END)[27m[K[K[K[7mlines 421-436/436 (END)[27m[K[K[K[7mlines 421-436/436 (END)[27m[K[K[K[7mlines 421-436/436 (END)[27m[K[K[?1l>[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​​[36m [33m54s[0m 
+[35m❯[0m [H[2J
+[34ml1-live/241017[0m [90m241017[38;5;218m*​​[36m [33m54s[0m 
+[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m sudo systemctl status ssh
+[?2004l[sudo] password for kent: 
+[?1h=[0;1;32m●[0m ssh.service - OpenBSD Secure Shell server[m
+     Loaded: loaded (]8;;file://klad/lib/systemd/system/ssh.service/lib/systemd/system/ssh.service]8;;; [0;1;32menabled[0m; preset: [0;1;32menabled[0m)[m
+     Active: [0;1;32mactive (running)[0m since Thu 2024-10-17 07:30:06 CEST; 3h 36min ago[m
+       Docs: ]8;;man:sshd(8)man:sshd(8)]8;;[m
+             ]8;;man:sshd_config(5)man:sshd_config(5)]8;;[m
+    Process: 1420 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)[m
+   Main PID: 1448 (sshd)[m
+      Tasks: 1 (limit: 18748)[m
+     Memory: 2.5M[m
+        CPU: 17ms[m
+     CGroup: /system.slice/ssh.service[m
+             └─[0;38;5;245m1448 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"[0m[m
+[m
+Oct 17 07:30:06 klad systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...[m
+Oct 17 07:30:06 klad sshd[1448]: Server listening on 0.0.0.0 port 22.[m
+Oct 17 07:30:06 klad sshd[1448]: Server listening on :: port 22.[m
+Oct 17 07:30:06 klad systemd[1]: Started ssh.service - OpenBSD Secure Shell server.[m
+[K[?1l>[?2004h
+[34ml1-live/241017[0m [90m241017[36m [33m4s[0m 
+[35m❯[0m [7msystemctl cat intressanttjanst.service[27m[C[Csystemctl cat intressanttjanst.service[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kssh.[H[2J
+[34ml1-live/241017[0m [90m241017[36m [33m4s[0m 
+[35m❯[0m systemctl cat ssh.service 
+[?2004l[?1h=[0;1;34m# ]8;;file://klad/lib/systemd/system/ssh.service/lib/systemd/system/ssh.service]8;;[0m[m
+[Unit][m
+Description=OpenBSD Secure Shell server[m
+Documentation=man:sshd(8) man:sshd_config(5)[m
+After=network.target auditd.service[m
+ConditionPathExists=!/etc/ssh/sshd_not_to_be_run[m
+[m
+[Service][m
+EnvironmentFile=-/etc/default/ssh[m
+ExecStartPre=/usr/sbin/sshd -t[m
+ExecStart=/usr/sbin/sshd -D $SSHD_OPTS[m
+ExecReload=/usr/sbin/sshd -t[m
+ExecReload=/bin/kill -HUP $MAINPID[m
+KillMode=process[m
+Restart=on-failure[m
+RestartPreventExitStatus=255[m
+Type=notify[m
+RuntimeDirectory=sshd[m
+RuntimeDirectoryMode=0755[m
+[m
+[Install][m
+[7mlines 1-21[27m[K[K [KESCESC[KOO[KBB[KWantedBy=multi-user.target[m
+[7mlines 2-22[27m[K[K [KESCESC[KOO[KBB[KAlias=sshd.service[m
+[7mlines 3-23[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESC
