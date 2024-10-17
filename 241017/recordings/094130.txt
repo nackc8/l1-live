@@ -1176,4 +1176,96 @@ Win11_23H2_EnglishInternational_x64v2.iso
 [31m❯[0m help k[Kjos[Kbs[H[2J
 [34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [1;34m✦3[0m 
 [31m❯[0m help jobs
-[?2004ljobs: job
+[?2004ljobs: jobs [-lnprs] [jobspec ...] or jobs -x command [args]
+    Display status of jobs.
+    
+    Lists the active jobs.  JOBSPEC restricts output to that job.
+    Without options, the status of all active jobs is displayed.
+    
+    Options:
+      -l	lists process IDs in addition to the normal information
+      -n	lists only processes that have changed status since the last
+    		notification
+      -p	lists process IDs only
+      -r	restrict output to running jobs
+      -s	restrict output to stopped jobs
+    
+    If -x is supplied, COMMAND is run after all job specifications that
+    appear in ARGS have been replaced with the process ID of that job's
+    process group leader.
+    
+    Exit Status:
+    Returns success unless an invalid option is given or an error occurs.
+    If -x is used, returns the exit status of COMMAND.
+[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [1;34m✦3[0m 
+[35m❯[0m [H[2J
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [1;34m✦3[0m 
+[35m❯[0m jobs
+[?2004l[1]   Stopped                 cp ~/Dropbox/c8/iso/Win11_23H2_EnglishInternational_x64v2.iso ~/
+[2]-  Stopped                 cp ~/Dropbox/c8/iso/Fedora-Server-dvd-x86_64-40-1.14.iso ~/
+[3]+  Stopped                 sleep 600
+[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [1;34m✦3[0m 
+[35m❯[0m job[K[K[Khelp bg[H[2J
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [1;34m✦3[0m 
+[35m❯[0m help bg
+[?2004lbg: bg [job_spec ...]
+    Move jobs to the background.
+    
+    Place the jobs identified by each JOB_SPEC in the background, as if they
+    had been started with `&'.  If JOB_SPEC is not present, the shell's notion
+    of the current job is used.
+    
+    Exit Status:
+    Returns success unless job control is not enabled or an error occurs.
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦3[0m 
+[35m❯[0m jobs
+[?2004l[1]   Stopped                 cp ~/Dropbox/c8/iso/Win11_23H2_EnglishInternational_x64v2.iso ~/
+[2]-  Stopped                 cp ~/Dropbox/c8/iso/Fedora-Server-dvd-x86_64-40-1.14.iso ~/
+[3]+  Stopped                 sleep 600
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦3[0m 
+[35m❯[0m bg %1
+[?2004l[1] cp ~/Dropbox/c8/iso/Win11_23H2_EnglishInternational_x64v2.iso ~/ &
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦3[0m 
+[35m❯[0m jobs
+[?2004l[1]   Running                 cp ~/Dropbox/c8/iso/Win11_23H2_EnglishInternational_x64v2.iso ~/ &
+[2]-  Stopped                 cp ~/Dropbox/c8/iso/Fedora-Server-dvd-x86_64-40-1.14.iso ~/
+[3]+  Stopped                 sleep 600
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦3[0m 
+[35m❯[0m bg %3
+[?2004l[3]+ sleep 600 &
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦[0m 
+[35m❯[0m 
+[?2004l[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦[0m 
+[35m❯[0m jobs
+[?2004l[2]+  Stopped                 cp ~/Dropbox/c8/iso/Fedora-Server-dvd-x86_64-40-1.14.iso ~/
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦[0m 
+[35m❯[0m [H[2J
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦[0m 
+[35m❯[0m help kjo[K[K[Kbg
+[?2004lbg: bg [job_spec ...]
+    Move jobs to the background.
+    
+    Place the jobs identified by each JOB_SPEC in the background, as if they
+    had been started with `&'.  If JOB_SPEC is not present, the shell's notion
+    of the current job is used.
+    
+    Exit Status:
+    Returns success unless job control is not enabled or an error occurs.
+[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [1;34m✦[0m 
+[35m❯[0m [H[2J
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [1;34m✦[0m 
+[35m❯[0m jjo[K[Kobs
+[?2004l[2]+  Stopped                 cp ~/Dropbox/c8/iso/Fedora-Server-dvd-x86_64-40-1.14.iso ~/
+[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [1;34m✦[0m 
+[35m❯[0m (reverse-i-search)`': u': ssh [7mu[27mbseb': ssh [7mub[27mseu': find /mnt -maxdepth 1 -mindepth 1 -print0 | sort | sudo xargs -0 -t -P 8 -I % cp ~/Dropbox/c8/iso/[7mubu[27mntu-24.04.1-desktop-amd64.iso %/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A[C[C[C[C[Cn': find /mnt -maxdepth 1 -mindepth 1 -print0 | sort | sudo xargs -0 -t -P 8 -I % cp [1@~/Dropbox/c8/iso/[7mubun[27m[A[C[C[C[C[Ct': find /mnt -maxdepth 1 -mindepth 1 -print0 | sort | sudo xargs -0 -t -P 8 -I % cp[1@ ~/Dropbox/c8/iso/[7mubunt[27m[A[C[C[C[C[Cu': find /mnt -maxdepth 1 -mindepth 1 -print0 | sort | sudo xargs -0 -t -P 8 -I % c[1@p ~/Dropbox/c8/iso/[7mubuntu[27m[A[C[C[C[C': find /mnt -maxdepth 1 -mindepth 1 -print0 | sort | sudo xargs -0 -t -P 8 -I % cp[1P ~/Dropbox/c8/iso/[7mubunt[27mu[A[C[C[C[C': find /mnt -maxdepth 1 -mindepth 1 -print0 | sort | sudo xargs -0 -t -P 8 -I % cp [1P~/Dropbox/c8/iso/[7mubun[27mt[A[C[C[C[C': find /mnt -maxdepth 1 -mindepth 1 -print0 | sort | sudo xargs -0 -t -P 8 -I % cp ~[1P/Dropbox/c8/iso/[7mubu[27mn[A[C[C[C[C': find /mnt -maxdepth 1 -mindepth 1 -print0 | sort | sudo xargs -0 -t -P 8 -I % cp ~/[1PDropbox/c8/iso/[7mub[27mu[A[C[C[C[C': find /mnt -maxdepth 1 -mindepth 1 -print0 | sort | sudo xargs -0 -t -P 8 -I % cp ~/D[1Propbox/c8/iso/[7mu[27mb[A[Cfailed reverse-i-search)`': find /mnt -maxdepth 1 -mindepth 1 -print0 | sort | sudo xargs -0 -t -P 8 -I % [6@cp ~/Dropbox/c8/iso/u[A[9@[35m❯[0m find /mnt -maxdepth 1 -mindepth 1 -print0 | sort | sudo xargs -0 -t -P 8 -I % cp ~/Dropbox/c8/iso/ubuntu-[27P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Dropbox/c8/iso/ubuntu-2[1P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Dropbox/c8/iso/ubuntu-24[1P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Dropbox/c8/iso/ubuntu-24.[1P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Dropbox/c8/iso/ubuntu-24.0[1P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Dropbox/c8/iso/ubuntu-24.04[1P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Dropbox/c8/iso/ubuntu-24.04.[1P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Dropbox/c8/iso/ubuntu-24.04.1[1P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Dropbox/c8/iso/ubuntu-24.04.1-[1P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Dropbox/c8/iso/ubuntu-24.04.1-d[1P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Dropbox/c8/iso/ubuntu-24.04.1-de[1P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Dropbox/c8/iso/ubuntu-24.04.1-des[1P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Dropbox/c8/iso/ubuntu-24.04.1-desk[1P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Dropbox/c8/iso/ubuntu-24.04.1-deskt[1P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Dropbox/c8/iso/ubuntu-24.04.1-deskto[1P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop[1P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop-[1P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop-a[1P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop-am[1P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop-amd[1P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop-amd6[1P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop-amd64[1P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop-amd64.[1P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop-amd64.i[1P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop-amd64.is[1P[A[35m❯[0m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~
