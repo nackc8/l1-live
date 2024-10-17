@@ -787,4 +787,63 @@ RuntimeDirectoryMode=0755[m
 [Install][m
 [7mlines 1-21[27m[K[K [KESCESC[KOO[KBB[KWantedBy=multi-user.target[m
 [7mlines 2-22[27m[K[K [KESCESC[KOO[KBB[KAlias=sshd.service[m
-[7mlines 3-23[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESC
+[7mlines 3-23[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 3-23/23 (END)[27m[K[K[?1l>[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [33m2m5s[0m 
+[35m❯[0m systemctl cat ssh.service [H[2J
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [33m2m5s[0m 
+[35m❯[0m systemctl cat ssh.service [K[K[K[K[K[K[K[Ku[Ks
+ssh.service  ssh.socket   
+
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [33m2m5s[0m 
+[35m❯[0m systemctl cat ssh.s
+ssh.service  ssh.socket   
+
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [33m2m5s[0m 
+[35m❯[0m systemctl cat ssh.socket [H[2J
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [33m2m5s[0m 
+[35m❯[0m systemctl cat ssh.socket 
+[?2004l[?1h=[0;1;34m# ]8;;file://klad/lib/systemd/system/ssh.socket/lib/systemd/system/ssh.socket]8;;[0m[m
+[Unit][m
+Description=OpenBSD Secure Shell server socket[m
+Before=sockets.target[m
+ConditionPathExists=!/etc/ssh/sshd_not_to_be_run[m
+[m
+[Socket][m
+ListenStream=22[m
+Accept=no[m
+[m
+[Install][m
+WantedBy=sockets.target[m
+[K[?1l>[?2004h
+[34ml1-live/241017[0m [90m241017[36m [0m
+[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [H[2J
+[34ml1-live/241017[0m [90m241017[36m [0m
+[35m❯[0m ls/[K /dev
+[?2004lacpi_thermal_rel  gpiochip0	mem	    shm       tty22  tty44  tty9	 vcsa3
+autofs		  hidraw0	mqueue	    snapshot  tty23  tty45  ttyS0	 vcsa4
+block		  hidraw1	net	    snd       tty24  tty46  ttyS1	 vcsa5
+btrfs-control	  hidraw2	ng0n1	    stderr    tty25  tty47  ttyS2	 vcsa6
+bus		  hpet		null	    stdin     tty26  tty48  ttyS3	 vcsu
+char		  hugepages	nvme0	    stdout    tty27  tty49  uhid	 vcsu1
+console		  hwrng		nvme0n1     tpm0      tty28  tty5   uinput	 vcsu2
+core		  initctl	nvme0n1p1   tpmrm0    tty29  tty50  urandom	 vcsu3
+cpu		  input		nvme0n1p11  tty       tty3   tty51  userfaultfd  vcsu4
+cpu_dma_latency   kmsg		nvme0n1p2   tty0      tty30  tty52  v4l		 vcsu5
+cuse		  kvm		nvme0n1p3   tty1      tty31  tty53  vboxdrv	 vcsu6
+disk		  log		nvme0n1p4   tty10     tty32  tty54  vboxdrvu	 vfio
+dm-0		  loop0		nvme0n1p5   tty11     tty33  tty55  vboxnetctl	 vga_arbiter
+dm-1		  loop1		nvme0n1p6   tty12     tty34  tty56  vboxusb	 vhci
+dri		  loop2		nvram	    tty13     tty35  tty57  vcs		 vhost-net
+drm_dp_aux0	  loop3		port	    tty14     tty36  tty58  vcs1	 vhost-vsock
+drm_dp_aux1	  loop4		ppp	    tty15     tty37  tty59  vcs2	 video0
+drm_dp_aux2	  loop5		psaux	    tty16     tty38  tty6   vcs3	 video1
+drm_dp_aux3	  loop6		ptmx	    tty17     tty39  tty60  vcs4	 watchdog
+drm_dp_aux4	  loop7		pts	    tty18     tty4   tty61  vcs5	 watchdog0
+fb0		  loop-control	random	    tty19     tty40  tty62  vcs6	 zero
+fd		  mapper	rfkill	    tty2      tty41  tty63  vcsa
+full		  media0	rtc	    tty20     tty42  tty7   vcsa1
+fuse		  mei0		rtc0	    tty21     tty43  tty8   vcsa2
+[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m [K[35m❯[0m [H[2J
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0
