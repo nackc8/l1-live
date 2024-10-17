@@ -1,3 +1,8 @@
 #!/bin/bash
 
-echo Hej
+trap 'echo Signal!' SIGINT
+
+while true; do
+    echo -n '.'
+    sleep 2
+done
