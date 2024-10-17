@@ -1563,4 +1563,58 @@ Win11_23H2_EnglishInternational_x64v2.iso
               the  entire script, and acts on the [1mSIGINT[0m (e.g., by running a [1mSIGINT[0m trap or exiting it‐[m
               self);[m
 [m
-       2.     If the command does not terminate due to [1mSIGINT[0m, the program handled  the  [1mSIGINT[0m  itself[m
+       2.     If the command does not terminate due to [1mSIGINT[0m, the program handled  the  [1mSIGINT[0m  itself[m
+              and  did  not  treat it as a fatal signal.  In that case, [1mbash[0m does not treat [1mSIGINT[0m as a[m
+              fatal signal, either, instead assuming that the [1mSIGINT[0m was used as part of the  program's[m
+              normal  operation  (e.g.,  emacs  uses it to abort editing commands) or deliberately dis‐[m
+              carded.  However, [1mbash[0m will run any trap set on [1mSIGINT[0m, as it does with any other trapped[m
+              signal  it  receives while it is waiting for the foreground command to complete, for com‐[m
+[7m Manual page bash(1) line 2432 (press h for help or q to quit)[27m[K[K/[K              patibility.[m
+[m
+[1m[7mJOB[27m[0m[7m [27m[1m[7mCONTROL[27m[0m[m
+       [4m[7mJob[27m[24m[7m [27m[4m[7mcontrol[27m[24m refers to the ability to selectively stop ([4msuspend[24m) the execution of  processes  and[m
+       continue  ([4mresume[24m) their execution at a later point.  A user typically employs this facility via[m
+       an interactive interface supplied jointly by the operating system kernel's terminal  driver  and[m
+[7m Manual page bash(1) line 2438 (press h for help or q to quit)[27m[K[K/[K       [1mbash[0m.[m
+[m
+       The  shell  associates  a [4mjob[24m with each pipeline.  It keeps a table of currently executing jobs,[m
+       which may be listed with the [1mjobs[0m command.  When [1mbash[0m starts a job asynchronously (in the  [4mback‐[24m[m
+       [4mground[24m), it prints a line that looks like:[m
+[m
+              [1] 25647[m
+[m
+       indicating  that  this  job  is  job number 1 and that the process ID of the last process in the[m
+       pipeline associated with this job is 25647.  All of the processes in a single pipeline are  mem‐[m
+       bers of the same job.  [1mBash[0m uses the [4mjob[24m abstraction as the basis for [7mjob control[27m.[m
+[m
+       To  facilitate  the  implementation  of  the user interface to [7mjob control[27m, the operating system[m
+       maintains the notion of a [4mcurrent[24m [4mterminal[24m [4mprocess[24m [4mgroup[24m [4mID[24m.   Members  of  this  process  group[m
+       (processes  whose  process  group  ID is equal to the current terminal process group ID) receive[m
+       keyboard-generated signals such as [1mSIGINT[0m.  These processes are said to be  in  the  [4mforeground[24m.[m
+[7m Manual page bash(1) line 2454 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mBackground[24m  processes  are  those  whose process group ID differs from the terminal's; such pro‐[m
+[7m Manual page bash(1) line 2455 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       cesses are immune to keyboard-generated signals.  Only foreground processes are allowed to  read[m
+[7m Manual page bash(1) line 2456 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       from or, if the user so specifies with stty tostop, write to the terminal.  Background processes[m
+[7m Manual page bash(1) line 2457 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       which attempt to read from (write to when stty tostop is in effect)  the  terminal  are  sent  a[m
+[7m Manual page bash(1) line 2458 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mSIGTTIN[0m  [1m(SIGTTOU)[0m  signal  by  the kernel's terminal driver, which, unless caught, suspends the[m
+[7m Manual page bash(1) line 2459 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       process.[m
+[7m Manual page bash(1) line 2460 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 2461 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       If the operating system on which [1mbash[0m is running supports [7mjob control[27m, [1mbash[0m contains  facilities[m
+[7m Manual page bash(1) line 2462 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       to  use  it.   Typing the [4msuspend[24m character (typically [1m^Z[0m, Control-Z) while a process is running[m
+[7m Manual page bash(1) line 2463 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       causes that process to be stopped and returns control to [1mbash[0m.  Typing the [4mdelayed[24m [4msuspend[24m char‐[m
+[7m Manual page bash(1) line 2464 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       acter  (typically [1m^Y[0m, Control-Y) causes the process to be stopped when it attempts to read input[m
+[7m Manual page bash(1) line 2465 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       from the terminal, and control to be returned to [1mbash[0m.  The user may then manipulate  the  state[m
+[7m Manual page bash(1) line 2466 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       of  this  job, using the [1mbg[0m command to continue it in the background, the [1mfg[0m command to continue[m
+[7m Manual page bash(1) line 2467 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       it in the foreground, or the [1mkill[0m command to kill it.  A [1m^Z[0m takes effect  immediately,  and  has[m
+[7m Manual page bash(1) line 2468 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the additional side effect of causing pending output and typeahead to be discarded.[m
+[7m Manual page bash(1) line 2469 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 2470 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       There  are  a  number  of ways to refer to a job in the shell.  The character [1m%[0m introduces a job[m
+[7m Manual page bash(1) line 2471 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       specification ([4mjobspec[24m).  Job number [4mn[24m may be referred to as [1m%n[0m.  A job may also be referred  to[m
+[7m Manual page bash(1) line 2472 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       using  a  prefix  of the name used to start it, or using a substring that appears in its command[m
+[7m Manual page bash(1) line 2473 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       line.  For example, [1m%ce[0m refers to a stopped job whose command name begins with [1mce[0m.  If a  prefix[m
+[7m Manual page bash(1) line 2474 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       matches  more than one job, [1mbash[0m reports an error.  Using [1m%?ce[0m, on the other hand, refers to any[m
+[7m Manual page bash(1) line 2475 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       job containing the string [1mce[0m in its command line.  If the substring matches more than  one  job,[m
+[7m Manual page bash(1) line 2476 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mbash[0m  reports  an  error.  The symbols [1m%%[0m and [1m%+[0m refer to the shell's notion of the [4mcurrent[24m [4mjob[24m,[m
+[7m Manual page bash(1) line 2477 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       which is the last job stopped while it was in the foreground or started in the background.   The[m
+[7m Manual page bash(1) line 2478 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mprevious[24m  [4mjob[24m  may be referenced using [1m%-[0m.  If there is only a single job, [1m%+[0m and [1m%-[0m can both be[m
+[7m Manual page bash(1) line 2479 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       used to refer to that job.  In output pertaining to jobs (e.g., the output of the [1mjobs[0m command),[m
+[7m Manual page bash(1) line 2480 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the  current job is alw
