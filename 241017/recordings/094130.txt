@@ -587,4 +587,520 @@ Win11_23H2_EnglishInternational_x64v2.iso
 [m
        This  section does not mention behavior that is standard for a particular version (e.g., setting[m
        [1mcompat32[0m means that quoting the rhs of the regexp matching operator quotes special regexp  char‐[m
-       acters in the word, which is default behavior in bash-3.2 and subsequen
+       acters in the word, which is default behavior in bash-3.2 and subsequent versions).[m
+[m
+       If a user enables, say, [1mcompat32[0m, it may affect the behavior of other compatibility levels up to[m
+       and including the current compatibility level.  The idea is that each compatibility  level  con‐[m
+[7m Manual page bash(1) line 5153 (press h for help or q to quit)[27m[K[K/[K[K[7mPattern not found  (press RETURN)[27m[22;1H[K[K[?1l>[?1049l[23;0;0t[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [1;34m✦3[0m [33m4m34s[0m 
+[35m❯[0m [H[2J
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [1;34m✦3[0m [33m4m34s[0m 
+[35m❯[0m help c[Kfg
+[?2004lfg: fg [job_spec]
+    Move job to the foreground.
+    
+    Place the job identified by JOB_SPEC in the foreground, making it the
+    current job.  If JOB_SPEC is not present, the shell's notion of the
+    current job is used.
+    
+    Exit Status:
+    Status of command placed in foreground, or failure if an error occurs.
+[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [1;34m✦3[0m 
+[35m❯[0m help kjob[K[K[K[Kko[K[Kjobs
+[?2004ljobs: jobs [-lnprs] [jobspec ...] or jobs -x command [args]
+    Display status of jobs.
+    
+    Lists the active jobs.  JOBSPEC restricts output to that job.
+    Without options, the status of all active jobs is displayed.
+    
+    Options:
+      -l	lists process IDs in addition to the normal information
+      -n	lists only processes that have changed status since the last
+    		notification
+      -p	lists process IDs only
+      -r	restrict output to running jobs
+      -s	restrict output to stopped jobs
+    
+    If -x is supplied, COMMAND is run after all job specifications that
+    appear in ARGS have been replaced with the process ID of that job's
+    process group leader.
+    
+    Exit Status:
+    Returns success unless an invalid option is given or an error occurs.
+    If -x is used, returns the exit status of COMMAND.
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦3[0m 
+[35m❯[0m hisor[Kt[K[Ktr[Kory
+[?2004l    1  Oct 17 - Thu - 09:41     udevadm info --query=all --name=/dev/sdb
+    2  Oct 14 - Mon - 20:08     usb-devices | grep Port=01
+    3  Oct 14 - Mon - 20:09     usb-devices | grep -E 'Bus=|Vendor|Product|Dev#=|Driver=usb-storage'
+    4  Oct 14 - Mon - 20:10     usb-devices > x
+    5  Oct 14 - Mon - 20:12     less x
+    6  Oct 14 - Mon - 20:17     ls /dev/bus/usb/
+    7  Oct 14 - Mon - 20:17     ls /dev/bus/usb/001/
+    8  Oct 14 - Mon - 20:17     ls /dev/bus/usb/001/001 
+    9  Oct 14 - Mon - 20:19     ls /sys/bus/usb/devices/
+   10  Oct 14 - Mon - 20:20     cat /sys/bus/usb/devices/2-0\:1.0/usb2-port1/connect_type 
+   11  Oct 14 - Mon - 20:20     cat /sys/bus/usb/devices/2-0\:1.0/usb2-port1/physical_location/horizontal_position 
+   12  Oct 14 - Mon - 20:24     lsusb 
+   13  Oct 14 - Mon - 20:24     lsusb  | grep Device 001
+   14  Oct 14 - Mon - 20:24     lsusb  | grep "Device 001"
+   15  Oct 14 - Mon - 20:25     lsusb -v -d 1d6b:0002
+   16  Oct 14 - Mon - 20:26     sudo lsusb -v -d 1d6b:0002
+   17  Oct 14 - Mon - 20:27     usb-devices | grep -A 2 -i 'hub'
+   18  Oct 14 - Mon - 20:28     mount /dev/sdo4 /mnt/
+   19  Oct 14 - Mon - 20:28     sudo mount /dev/sdo4 /mnt/
+   20  Oct 14 - Mon - 20:29     umount mn
+   21  Oct 14 - Mon - 20:29     sudo umount /mnt
+   22  Oct 14 - Mon - 20:29     sudo mount /dev/sda4 /mnt/
+   23  Oct 14 - Mon - 20:29     ls /mnt/
+   24  Oct 14 - Mon - 20:29     sudo umount /mnt 
+   25  Oct 14 - Mon - 21:30     rm x
+   26  Oct 14 - Mon - 21:30     chmod +x u
+   27  Oct 14 - Mon - 21:39     ./u
+   28  Oct 14 - Mon - 21:49     lsusb
+   29  Oct 14 - Mon - 21:49     lsusb -s 4:1
+   30  Oct 14 - Mon - 21:50     man lsusb
+   31  Oct 14 - Mon - 21:50     usbview
+   32  Oct 14 - Mon - 21:50     lsusb -s 4: -t
+   33  Oct 14 - Mon - 21:51     lsusb -t
+   34  Oct 14 - Mon - 21:52     usb-devices --help
+   35  Oct 14 - Mon - 21:54     lsusb -s 4:
+   36  Oct 14 - Mon - 21:55     lsblk -S -O
+   37  Oct 14 - Mon - 21:56     lsblk -S --scsi
+   38  Oct 14 - Mon - 21:58     diff med utan
+   39  Oct 14 - Mon - 21:58     rm med utan
+   40  Oct 14 - Mon - 21:59     (cd l1-live/ ; git checkout main; git pull )
+   41  Oct 14 - Mon - 21:59     bash
+   42  Oct 14 - Mon - 22:02     lsblk -S
+   43  Oct 14 - Mon - 22:02     ls blk
+   44  Oct 14 - Mon - 22:02     lsblk -O
+   45  Oct 14 - Mon - 22:02     lsblk -O | less
+   46  Oct 14 - Mon - 22:03     lsblk -o NAME
+   47  Oct 14 - Mon - 22:04     lsblk -l -o NAME
+   48  Oct 14 - Mon - 22:05     udevadm info --query=property --name=/dev/sda
+   49  Oct 14 - Mon - 22:10     man usb-devices
+   50  Oct 14 - Mon - 22:10     usb-devices
+   51  Oct 14 - Mon - 22:15     apt search usb
+   52  Oct 14 - Mon - 22:20     rm ventoy-1.0.99-linux.tar.gz 
+   53  Oct 14 - Mon - 22:20     lsblk
+   54  Oct 14 - Mon - 22:20     lsblk -l
+   55  Oct 14 - Mon - 22:21     lsblk -dno NAME
+   56  Oct 14 - Mon - 22:21     lsblk -dno NAME SIZE
+   57  Oct 14 - Mon - 22:21     lsblk -dno NAME,SIZE
+   58  Oct 14 - Mon - 22:21     man lsblk
+   59  Oct 14 - Mon - 22:22     qalc
+   60  Oct 14 - Mon - 22:22     lsblk -dnbo NAME,SIZE
+   61  Oct 14 - Mon - 22:23     lsblk -dnbo NAME,SIZE | grep ^sd
+   62  Oct 14 - Mon - 22:23     lsblk -dnbo NAME,SIZE | grep ^sd | awk '{ print $2 }'
+   63  Oct 14 - Mon - 22:23     lsblk -dnbo NAME,SIZE | grep ^sd | awk '{ print $1' '$2 }'
+   64  Oct 14 - Mon - 22:23     lsblk -dnbo NAME,SIZE | grep ^sd | awk '{ print $1 ' ' $2 }'
+   65  Oct 14 - Mon - 22:23     lsblk -dnbo NAME,SIZE | grep ^sd | awk '{ print $1 + ' ' + $2 }'
+   66  Oct 14 - Mon - 22:23     lsblk -dnbo NAME,SIZE | grep ^sd | awk '{ print $1,$2 }'
+   67  Oct 14 - Mon - 22:24     lsblk -dnbo NAME,SIZE | grep ^sd | awk '{ s=$2/1024 ; print $1,s }'
+   68  Oct 14 - Mon - 22:24     lsblk -dnbo NAME,SIZE | grep ^sd | awk '{ s=$2/1024/1024 ; print $1,s }'
+   69  Oct 14 - Mon - 22:24     lsblk -dnbo NAME,SIZE | grep ^sd | awk '{ s=$2/1024/1024/1024 ; print $1,s }'
+   70  Oct 14 - Mon - 22:26     cd Downloads
+   71  Oct 14 - Mon - 22:26     rm ITINF23*
+   72  Oct 14 - Mon - 22:26     rm Tidigare-Kursöversikt-ITINF23*
+   73  Oct 14 - Mon - 22:26     tar xf ventoy-1.0.99-linux.tar.gz 
+   74  Oct 14 - Mon - 22:26     cd ventoy-1.0.99/
+   75  Oct 14 - Mon - 22:26     less README 
+   76  Oct 14 - Mon - 22:29     wipefs
+   77  Oct 14 - Mon - 22:29     lsblk -dnbo NAME,SIZE | grep ^sd | awk '{ s=int($2/1024/1024/1024) ; print $1,s }'
+   78  Oct 14 - Mon - 22:30     while read -r dev size; do echo $dev; done < <(lsblk -dnbo NAME,SIZE | grep ^sd | awk '{ s=int($2/1024/1024/1024) ; print $1,s }')
+   79  Oct 14 - Mon - 22:30     code .
+   80  Oct 15 - Tue - 06:04     pgrep cp
+   81  Oct 15 - Tue - 06:04     sudo pstree
+   82  Oct 15 - Tue - 06:05     sudo pstree aux
+   83  Oct 15 - Tue - 06:05     sudo ps aux
+   84  Oct 15 - Tue - 06:06     sudo reboot
+   85  Oct 14 - Mon - 22:26     less README 
+   86  Oct 14 - Mon - 22:29     wipefs
+   87  Oct 14 - Mon - 22:29     lsblk -dnbo NAME,SIZE | grep ^sd | awk '{ s=int($2/1024/1024/1024) ; print $1,s }'
+   88  Oct 14 - Mon - 22:30     while read -r dev size; do echo $dev; done < <(lsblk -dnbo NAME,SIZE | grep ^sd | awk '{ s=int($2/1024/1024/1024) ; print $1,s }')
+   89  Oct 14 - Mon - 22:30     code .
+   90  Oct 15 - Tue - 06:04     pgrep cp
+   91  Oct 15 - Tue - 06:04     sudo pstree
+   92  Oct 15 - Tue - 06:05     sudo pstree aux
+   93  Oct 15 - Tue - 06:05     sudo ps aux
+   94  Oct 15 - Tue - 06:09     cd Downloads
+   95  Oct 15 - Tue - 06:09     rm Kursöversikt.pdf 
+   96  Oct 15 - Tue - 06:09     cd ventoy-1.0.99/
+   97  Oct 15 - Tue - 06:10     waitall
+   98  Oct 15 - Tue - 06:10     wait
+   99  Oct 15 - Tue - 06:10     man wait
+  100  Oct 15 - Tue - 06:10     help wait
+  101  Oct 15 - Tue - 06:12     nano mass
+  102  Oct 15 - Tue - 06:29     less mass
+  103  Oct 15 - Tue - 06:30     parted
+  104  Oct 15 - Tue - 06:30     sudo apt install parted
+  105  Oct 15 - Tue - 06:31     ./mass 
+  106  Oct 15 - Tue - 06:34     sudo ./mass 
+  107  Oct 15 - Tue - 06:39     nano mass 
+  108  Oct 15 - Tue - 06:39     sudo reboot
+  109  Oct 14 - Mon - 22:21     lsblk -dno NAME
+  110  Oct 14 - Mon - 22:21     lsblk -dno NAME SIZE
+  111  Oct 14 - Mon - 22:21     lsblk -dno NAME,SIZE
+  112  Oct 14 - Mon - 22:21     man lsblk
+  113  Oct 14 - Mon - 22:22     qalc
+  114  Oct 14 - Mon - 22:22     lsblk -dnbo NAME,SIZE
+  115  Oct 14 - Mon - 22:23     lsblk -dnbo NAME,SIZE | grep ^sd
+  116  Oct 14 - Mon - 22:23     lsblk -dnbo NAME,SIZE | grep ^sd | awk '{ print $2 }'
+  117  Oct 14 - Mon - 22:23     lsblk -dnbo NAME,SIZE | grep ^sd | awk '{ print $1' '$2 }'
+  118  Oct 14 - Mon - 22:23     lsblk -dnbo NAME,SIZE | grep ^sd | awk '{ print $1 ' ' $2 }'
+  119  Oct 14 - Mon - 22:23     lsblk -dnbo NAME,SIZE | grep ^sd | awk '{ print $1 + ' ' + $2 }'
+  120  Oct 14 - Mon - 22:23     lsblk -dnbo NAME,SIZE | grep ^sd | awk '{ print $1,$2 }'
+  121  Oct 14 - Mon - 22:24     lsblk -dnbo NAME,SIZE | grep ^sd | awk '{ s=$2/1024 ; print $1,s }'
+  122  Oct 14 - Mon - 22:24     lsblk -dnbo NAME,SIZE | grep ^sd | awk '{ s=$2/1024/1024 ; print $1,s }'
+  123  Oct 14 - Mon - 22:24     lsblk -dnbo NAME,SIZE | grep ^sd | awk '{ s=$2/1024/1024/1024 ; print $1,s }'
+  124  Oct 14 - Mon - 22:26     cd Downloads
+  125  Oct 14 - Mon - 22:26     rm ITINF23*
+  126  Oct 14 - Mon - 22:26     rm Tidigare-Kursöversikt-ITINF23*
+  127  Oct 14 - Mon - 22:26     tar xf ventoy-1.0.99-linux.tar.gz 
+  128  Oct 14 - Mon - 22:26     cd ventoy-1.0.99/
+  129  Oct 14 - Mon - 22:26     less README 
+  130  Oct 14 - Mon - 22:29     wipefs
+  131  Oct 14 - Mon - 22:29     lsblk -dnbo NAME,SIZE | grep ^sd | awk '{ s=int($2/1024/1024/1024) ; print $1,s }'
+  132  Oct 14 - Mon - 22:30     while read -r dev size; do echo $dev; done < <(lsblk -dnbo NAME,SIZE | grep ^sd | awk '{ s=int($2/1024/1024/1024) ; print $1,s }')
+  133  Oct 14 - Mon - 22:30     code .
+  134  Oct 15 - Tue - 06:05     sudo pstree aux
+  135  Oct 15 - Tue - 06:06     sudo reboot
+  136  Oct 15 - Tue - 06:16     sudo killall cp
+  137  Oct 15 - Tue - 06:16     sudo ps aux | grep cp
+  138  Oct 15 - Tue - 06:18     ptree 7936
+  139  Oct 15 - Tue - 06:18     pstree 7936
+  140  Oct 15 - Tue - 06:18     man pstree
+  141  Oct 15 - Tue - 06:19     pgrep -a cp
+  142  Oct 15 - Tue - 06:19     kill 7936
+  143  Oct 15 - Tue - 06:19     pstree -s 7936
+  144  Oct 15 - Tue - 06:25     ps
+  145  Oct 15 - Tue - 06:25     ps aux
+  146  Oct 15 - Tue - 06:25     pgrep cp
+  147  Oct 15 - Tue - 06:26     pgrep 'cp -v'
+  148  Oct 15 - Tue - 06:26     man pgrep
+  149  Oct 15 - Tue - 06:26     pgrep -f 'cp -v'
+  150  Oct 15 - Tue - 06:26     kill 8904
+  151  Oct 15 - Tue - 06:26     8905
+  152  Oct 15 - Tue - 06:26     sudo kill 8904 8905
+  153  Oct 15 - Tue - 06:27     ps aux | grep cp
+  154  Oct 15 - Tue - 06:27     man sgdisk
+  155  Oct 15 - Tue - 06:32     ls /mnt/
+  156  Oct 15 - Tue - 06:32     less mass 
+  157  Oct 15 - Tue - 06:33     iso="/home/kent/Dropbox/c8/iso"
+  158  Oct 15 - Tue - 06:33     ls $iso
+  159  Oct 15 - Tue - 06:35     sudo umount /mnt/*
+  160  Oct 15 - Tue - 06:35     sudo killall mass
+  161  Oct 15 - Tue - 06:36     sudo killall Ventoy2Disk.sh
+  162  Oct 15 - Tue - 06:36     umount /mnt/sda 
+  163  Oct 15 - Tue - 06:36     sudo pgrep /dev/sda
+  164  Oct 15 - Tue - 06:37     sudo pstree
+  165  Oct 15 - Tue - 06:38     sudo kill -910598 10599
+  166  Oct 15 - Tue - 06:38     sudo kill -9 10598 10599
+  167  Oct 15 - Tue - 06:38     sudo kill -9 10598 10599 10623
+  168  Oct 15 - Tue - 06:38     sudo ps aux
+  169  Oct 15 - Tue - 06:39     sudo umount /mnt/sda 
+  170  Oct 15 - Tue - 06:50     sudo kill mass
+  171  Oct 15 - Tue - 06:43     cd Downloads/ventoy-1.0.99/
+  172  Oct 15 - Tue - 06:43     less mass 
+  173  Oct 15 - Tue - 06:44     sudo ./mass 
+  174  Oct 15 - Tue - 06:43     less mass 
+  175  Oct 15 - Tue - 06:44     sudo ./mass 
+  176  Oct 15 - Tue - 07:54     sudo progress -m
+  177  Oct 15 - Tue - 07:54     ls /dev/sdn
+  178  Oct 15 - Tue - 07:54     ls /mnt/sdn
+  179  Oct 15 - Tue - 07:55     ls -l /mnt/sdn
+  180  Oct 15 - Tue - 07:55     df /mnt/sdn
+  181  Oct 15 - Tue - 06:36     umount /mnt/sda 
+  182  Oct 15 - Tue - 06:36     sudo pgrep /dev/sda
+  183  Oct 15 - Tue - 06:37     sudo pstree
+  184  Oct 15 - Tue - 06:38     sudo kill -910598 10599
+  185  Oct 15 - Tue - 06:38     sudo kill -9 10598 10599
+  186  Oct 15 - Tue - 06:38     sudo kill -9 10598 10599 10623
+  187  Oct 15 - Tue - 06:38     sudo ps aux
+  188  Oct 15 - Tue - 06:39     sudo umount /mnt/sda 
+  189  Oct 15 - Tue - 06:50     sudo kill mass
+  190  Oct 15 - Tue - 06:43     cd Downloads/ventoy-1.0.99/
+  191  Oct 15 - Tue - 06:55     cd Downloads
+  192  Oct 15 - Tue - 06:55     cd ventoy-1.0.99/
+  193  Oct 15 - Tue - 07:02     ls /mnt/dev/
+  194  Oct 15 - Tue - 07:02     rm -rf /mnt/dev/
+  195  Oct 15 - Tue - 07:02     sudo rm -rf /mnt/dev/
+  196  Oct 15 - Tue - 07:02     ls /mnt/sdc
+  197  Oct 15 - Tue - 07:03     find /mnt -maxdepth 1
+  198  Oct 15 - Tue - 07:03     find /mnt -maxdepth 1 -mindepth 1
+  199  Oct 15 - Tue - 07:03     find /mnt -maxdepth 1 -mindepth 1 | sort
+  200  Oct 15 - Tue - 07:04     find /mnt -maxdepth 1 -mindepth 1 -print0 | sort
+  201  Oct 15 - Tue - 07:07     man xargs
+  202  Oct 15 - Tue - 07:08     find /mnt -maxdepth 1 -mindepth 1 -print0 | sort | xargs -0 -I -P 5 echo %
+  203  Oct 15 - Tue - 07:08     find /mnt -maxdepth 1 -mindepth 1 -print0 | sort | xargs -0 -I echo %
+  204  Oct 15 - Tue - 07:08     find /mnt -maxdepth 1 -mindepth 1 -print0 | sort | xargs -0 -I % echo %
+  205  Oct 15 - Tue - 07:08     find /mnt -maxdepth 1 -mindepth 1 -print0 | sort | xargs -0 -P 2 -I % echo %
+  206  Oct 15 - Tue - 07:08     find /mnt -maxdepth 1 -mindepth 1 -print0 | sort | xargs -0 -P 5 -I % echo %
+  207  Oct 15 - Tue - 07:31     find /mnt -maxdepth 1 -mindepth 1 -print0 | sort | sudo xargs -0 -t -P 5 -I % cp ~/Dropbox/c8/iso/ubuntu-24.04-live-server-amd64.iso %/
+  208  Oct 15 - Tue - 07:48     ls /mnt/sde
+  209  Oct 15 - Tue - 07:48     ls /mnt/sdp
+  210  Oct 15 - Tue - 07:48     ls /mnt/
+  211  Oct 15 - Tue - 07:48     sudo umount /mnt/sd*
+  212  Oct 15 - Tue - 07:49     less mass 
+  213  Oct 15 - Tue - 07:50     nano mass 
+  214  Oct 15 - Tue - 07:50     sudo ./mass 
+  215  Oct 15 - Tue - 07:53     find /mnt -maxdepth 1 -mindepth 1 -print0 | sort | sudo xargs -0 -t -P 5 -I % cp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop-amd64.iso %/
+  216  Oct 15 - Tue - 07:54     find /mnt -maxdepth 1 -mindepth 1 -print0 | sort | sudo xargs -0 -t -P 8 -I % cp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop-amd64.iso %/
+  217  Oct 15 - Tue - 07:54     find /mnt -maxdepth 1 -mindepth 1 -print0 | sort | sudo xargs -0 -t -P 8 -I % cp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop-amd64.iso %/
+  218  Oct 15 - Tue - 20:12     sudo -i
+  219  Oct 15 - Tue - 20:15     gh chatgpt
+  220  Oct 15 - Tue - 20:15     setconsole
+  221  Oct 15 - Tue - 20:15     cons
+  222  Oct 15 - Tue - 20:15     lynx
+  223  Oct 15 - Tue - 20:17     journalctl -b
+  224  Oct 15 - Tue - 20:17     tldr joournal
+  225  Oct 15 - Tue - 20:17     tldr joournalctl
+  226  Oct 15 - Tue - 20:18     systemctl  start gdm
+  227  Oct 15 - Tue - 20:19     journalctl -xmu gdm.service
+  228  Oct 15 - Tue - 20:19     sudo journalctl -xmu gdm.service
+  229  Oct 15 - Tue - 20:20     sudo journalctl -xmu Accounts
+  230  Oct 15 - Tue - 20:20     sudo apt updadte
+  231  Oct 15 - Tue - 20:20     apt update
+  232  Oct 15 - Tue - 20:20     sudo apt update
+  233  Oct 15 - Tue - 07:48     ls /mnt/sdp
+  234  Oct 15 - Tue - 07:48     ls /mnt/
+  235  Oct 15 - Tue - 07:48     sudo umount /mnt/sd*
+  236  Oct 15 - Tue - 07:49     less mass 
+  237  Oct 15 - Tue - 07:50     nano mass 
+  238  Oct 15 - Tue - 07:50     sudo ./mass 
+  239  Oct 15 - Tue - 07:53     find /mnt -maxdepth 1 -mindepth 1 -print0 | sort | sudo xargs -0 -t -P 5 -I % cp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop-amd64.iso %/
+  240  Oct 15 - Tue - 07:54     find /mnt -maxdepth 1 -mindepth 1 -print0 | sort | sudo xargs -0 -t -P 8 -I % cp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop-amd64.iso %/
+  241  Oct 15 - Tue - 07:54     find /mnt -maxdepth 1 -mindepth 1 -print0 | sort | sudo xargs -0 -t -P 8 -I % cp ~/Dropbox/c8/iso/ubuntu-24.04.1-desktop-amd64.iso %/
+  242  Oct 15 - Tue - 20:12     sudo -i
+  243  Oct 15 - Tue - 20:15     gh chatgpt
+  244  Oct 15 - Tue - 20:15     setconsole
+  245  Oct 15 - Tue - 20:15     cons
+  246  Oct 15 - Tue - 20:15     lynx
+  247  Oct 15 - Tue - 20:17     journalctl -b
+  248  Oct 15 - Tue - 20:17     tldr joournal
+  249  Oct 15 - Tue - 20:17     tldr joournalctl
+  250  Oct 15 - Tue - 20:18     systemctl  start gdm
+  251  Oct 15 - Tue - 20:19     journalctl -xmu gdm.service
+  252  Oct 15 - Tue - 20:19     sudo journalctl -xmu gdm.service
+  253  Oct 15 - Tue - 20:20     sudo journalctl -xmu Accounts
+  254  Oct 15 - Tue - 20:20     sudo apt updadte
+  255  Oct 15 - Tue - 20:20     apt update
+  256  Oct 15 - Tue - 20:42     sudo apt update
+  257  Oct 15 - Tue - 20:42     df
+  258  Oct 15 - Tue - 20:42     sudo apt full-upgrade
+  259  Oct 15 - Tue - 21:24     sudo sshd -T
+  260  Oct 15 - Tue - 21:24     sudo sshd -T >x
+  261  Oct 15 - Tue - 21:24     less x
+  262  Oct 15 - Tue - 21:24     ls -l x
+  263  Oct 15 - Tue - 21:24     rm x
+  264  Oct 15 - Tue - 21:25     log() { date >>sshinfo; cat >>sshinfo }; 
+  265  Oct 15 - Tue - 21:25     log() { date >>sshinfo; cat >>sshinfo; }
+  266  Oct 15 - Tue - 21:26     unset log
+  267  Oct 15 - Tue - 21:26     log
+  268  Oct 15 - Tue - 21:27     log() {   }
+  269  Oct 15 - Tue - 21:27     man cat
+  270  Oct 15 - Tue - 21:27     less /etc/fstab
+  271  Oct 15 - Tue - 21:27     less /etc/fstab | cat
+  272  Oct 15 - Tue - 21:27     man less
+  273  Oct 15 - Tue - 21:31     cat -v /etc/fstab
+  274  Oct 15 - Tue - 21:31     cat -n /etc/fstab
+  275  Oct 15 - Tue - 21:34     x() { set -x ; echo "file: ${!#}"; "$("$@" | cat -n)"; set +x; }
+  276  Oct 15 - Tue - 21:35     x() { set -x ; echo "file: ${!#}"; "$("$@" | cat -n)"; }
+  277  Oct 15 - Tue - 21:35     x() { echo "file: ${!#}"; "$("$@" | cat -n)"; }
+  278  Oct 15 - Tue - 21:35     x
+  279  Oct 15 - Tue - 21:36     x cat /etc/stab
+  280  Oct 15 - Tue - 21:36     x() { echo "file: ${!#}"; "$("$@")"; }
+  281  Oct 15 - Tue - 21:37     x() { echo "file: ${!#}"; }
+  282  Oct 15 - Tue - 21:37     x() { echo "file: ${!#}"; $@; }
+  283  Oct 15 - Tue - 21:37     x() { echo "file: ${!#}"; "$@"; }
+  284  Oct 15 - Tue - 21:37     x() { echo "file: ${!#}"; "$@" | cat -n; }
+  285  Oct 15 - Tue - 21:38     x() { echo "file: ${!#}"; "$@" | cat -n; } > sshinfo
+  286  Oct 15 - Tue - 21:38     cat sshinfo 
+  287  Oct 15 - Tue - 21:39     x() { echo "$@"; "$@" | cat -n; } > sshinfo
+  288  Oct 15 - Tue - 21:39     x /etc/fstab
+  289  Oct 15 - Tue - 21:39     x cat /etc/fstab
+  290  Oct 15 - Tue - 21:40     less sshinfo 
+  291  Oct 15 - Tue - 21:40     x() { echo "$@"; "$@" | cat -n; } > debuginfo
+  292  Oct 15 - Tue - 21:40     d() { echo "$@"; "$@" | cat -n; } > debuginfo
+  293  Oct 15 - Tue - 21:41     d() { date; echo "$@"; "$@" | cat -n; } >> debuginfo
+  294  Oct 15 - Tue - 21:41     d() { echo "$@ # $(date)"; "$@" | cat -n; } >> debuginfo
+  295  Oct 15 - Tue - 21:41     rm debuginfo 
+  296  Oct 15 - Tue - 21:41     d cat /etc/fstab
+  297  Oct 15 - Tue - 21:42     d() { echo "$@ # $(date)"; "$@" | cat -n; } &>> debuginfo
+  298  Oct 15 - Tue - 21:43     d sudo systemctl daemon-reload
+  299  Oct 15 - Tue - 21:43     d sudo systemctl -v daemon-reload
+  300  Oct 15 - Tue - 21:43     cat debuginfo 
+  301  Oct 15 - Tue - 21:46     systemctl reload ssh
+  302  Oct 15 - Tue - 21:48     cat /run/systemd/generator/ssh.socket.d/addresses.conf
+  303  Oct 15 - Tue - 21:49     ssh ubse
+  304  Oct 15 - Tue - 21:49     nano .ssh/config 
+  305  Oct 15 - Tue - 21:50     cat .ssh/id_ed25519_ubse.pub 
+  306  Oct 15 - Tue - 21:50     exit
+  307  Oct 15 - Tue - 21:41     d() { echo "$@ # $(date)"; "$@" | cat -n; } >> debuginfo
+  308  Oct 15 - Tue - 21:41     rm debuginfo 
+  309  Oct 15 - Tue - 21:41     d cat /etc/fstab
+  310  Oct 15 - Tue - 21:42     d() { echo "$@ # $(date)"; "$@" | cat -n; } &>> debuginfo
+  311  Oct 15 - Tue - 21:43     d sudo systemctl daemon-reload
+  312  Oct 15 - Tue - 21:43     d sudo systemctl -v daemon-reload
+  313  Oct 15 - Tue - 21:43     cat debuginfo 
+  314  Oct 15 - Tue - 21:46     systemctl reload ssh
+  315  Oct 15 - Tue - 21:48     cat /run/systemd/generator/ssh.socket.d/addresses.conf
+  316  Oct 15 - Tue - 21:49     nano .ssh/config 
+  317  Oct 15 - Tue - 21:50     cat .ssh/id_ed25519_ubse.pub 
+  318  Oct 15 - Tue - 21:50     exit
+  319  Oct 15 - Tue - 21:50     ssh ubse
+  320  Oct 15 - Tue - 22:37     rm sshinfo 
+  321  Oct 15 - Tue - 22:40     git clone git@github.com:nackc8/i1-live.git
+  322  Oct 15 - Tue - 22:40     cd i1-live/
+  323  Oct 15 - Tue - 22:40     rm -rf 2410*
+  324  Oct 15 - Tue - 22:40     rm -rf ITINF24/
+  325  Oct 15 - Tue - 22:41     ls 
+  326  Oct 15 - Tue - 22:41     ls -a
+  327  Oct 15 - Tue - 22:41     ls ../l1-live/
+  328  Oct 15 - Tue - 22:41     ls -a ../l1-live/
+  329  Oct 15 - Tue - 22:41     cat ../l1-live/.state 
+  330  Oct 15 - Tue - 22:41     cp ../l1-live/.state .
+  331  Oct 15 - Tue - 22:41     nano .state 
+  332  Oct 15 - Tue - 22:42     git commit --amend
+  333  Oct 15 - Tue - 22:44     nano README.md 
+  334  Oct 15 - Tue - 22:59     git push -f | sort
+  335  Oct 15 - Tue - 22:59     history | sort
+  336  Oct 15 - Tue - 23:01     sudo sshd -T
+  337  Oct 15 - Tue - 23:02     cat /etc/passwd | awk '{ print $7; }'
+  338  Oct 15 - Tue - 23:02     cat /etc/passwd | awk '{ print $6; }'
+  339  Oct 15 - Tue - 23:02     cat /etc/passwd | awk '{ print $5; }'
+  340  Oct 15 - Tue - 23:02     cat /etc/passwd | awk '{ print $4 }'
+  341  Oct 15 - Tue - 23:02     cat /etc/passwd | awk '{ print $3 }'
+  342  Oct 15 - Tue - 23:03     cat /etc/passwd | awk -F : '{ print $7 }'
+  343  Oct 15 - Tue - 23:03     file README.md 
+  344  Oct 15 - Tue - 23:03     pow
+  345  Oct 15 - Tue - 23:04     ccd
+  346  Oct 15 - Tue - 23:04     cdd
+  347  Oct 15 - Tue - 23:04     l
+  348  Oct 15 - Tue - 23:04     ls bin/
+  349  Oct 15 - Tue - 23:05     lsblk
+  350  Oct 15 - Tue - 23:05     man lsblk
+  351  Oct 15 - Tue - 23:05     lsblk -l
+  352  Oct 15 - Tue - 23:05     lsblk -lb
+  353  Oct 15 - Tue - 23:08     cat /etc/passwd
+  354  Oct 15 - Tue - 23:10     less /var/log/faillog 
+  355  Oct 15 - Tue - 23:33     ls /etc/apt/sources.list
+  356  Oct 15 - Tue - 23:33     cat /etc/apt/sources.list
+  357  Oct 15 - Tue - 23:34     tail -f /etc/apt/sources.list
+  358  Oct 15 - Tue - 23:35     effect
+  359  Oct 15 - Tue - 23:35     effective
+  360  Oct 15 - Tue - 23:53     rm -rf i1-live/
+  361  Oct 15 - Tue - 23:53     git clone git@github.com:nackc8/i-live.git
+  362  Oct 15 - Tue - 23:55     cd i-live/
+  363  Oct 15 - Tue - 23:55     bin/educator 
+  364  Oct 15 - Tue - 23:55     rm -rf ignored-1729029350-gitignore 
+  365  Oct 15 - Tue - 23:56     cd ..
+  366  Oct 16 - Wed - 00:08     git clone git@github.com:nackc8/i1-bash-i3.git
+  367  Oct 16 - Wed - 00:08     cd i1-bash-i3/
+  368  Oct 16 - Wed - 00:08     code .
+  369  Oct 16 - Wed - 01:17     git status
+  370  Oct 16 - Wed - 01:17     git diff
+  371  Oct 16 - Wed - 01:17     git add .
+  372  Oct 16 - Wed - 01:17     git commit --amend --no-edit
+  373  Oct 16 - Wed - 01:18     git ira
+  374  Oct 16 - Wed - 01:19     git push -f
+  375  Oct 16 - Wed - 01:19     git log
+  376  Oct 16 - Wed - 01:18     less README.md 
+  377  Oct 16 - Wed - 09:06     cd /tmp
+  378  Oct 16 - Wed - 09:06     git clone git@github.com:nackc8/i-live.git
+  379  Oct 16 - Wed - 09:06     cd i-live/
+  380  Oct 16 - Wed - 09:07     ./bin/daystart 
+  381  Oct 16 - Wed - 09:07     exit
+  382  Oct 16 - Wed - 09:08     cd i-live/
+  383  Oct 16 - Wed - 09:08     code .
+  384  Oct 16 - Wed - 01:18     less README.md 
+  385  Oct 16 - Wed - 09:06     cd /tmp
+  386  Oct 16 - Wed - 09:06     git clone git@github.com:nackc8/i-live.git
+  387  Oct 16 - Wed - 09:06     cd i-live/
+  388  Oct 16 - Wed - 09:07     ./bin/daystart 
+  389  Oct 16 - Wed - 09:07     exit
+  390  Oct 16 - Wed - 09:08     cd i-live/
+  391  Oct 16 - Wed - 09:08     code .
+  392  Oct 16 - Wed - 11:18     greet Robin
+  393  Oct 16 - Wed - 11:22     cd ITINF23/lektion2
+  394  Oct 16 - Wed - 11:22     chmod +x grepex
+  395  Oct 16 - Wed - 11:32     ./grepex 
+  396  Oct 15 - Tue - 23:04     cdd
+  397  Oct 15 - Tue - 23:04     l
+  398  Oct 15 - Tue - 23:04     ls bin/
+  399  Oct 15 - Tue - 23:05     lsblk
+  400  Oct 15 - Tue - 23:05     man lsblk
+  401  Oct 15 - Tue - 23:05     lsblk -l
+  402  Oct 15 - Tue - 23:05     lsblk -lb
+  403  Oct 15 - Tue - 23:08     cat /etc/passwd
+  404  Oct 15 - Tue - 23:10     less /var/log/faillog 
+  405  Oct 15 - Tue - 23:33     ls /etc/apt/sources.list
+  406  Oct 15 - Tue - 23:33     cat /etc/apt/sources.list
+  407  Oct 15 - Tue - 23:34     tail -f /etc/apt/sources.list
+  408  Oct 15 - Tue - 23:35     effect
+  409  Oct 15 - Tue - 23:35     effective
+  410  Oct 15 - Tue - 23:53     rm -rf i1-live/
+  411  Oct 15 - Tue - 23:53     git clone git@github.com:nackc8/i-live.git
+  412  Oct 15 - Tue - 23:55     cd i-live/
+  413  Oct 15 - Tue - 23:55     bin/educator 
+  414  Oct 15 - Tue - 23:55     rm -rf ignored-1729029350-gitignore 
+  415  Oct 16 - Wed - 00:08     git clone git@github.com:nackc8/i1-bash-i3.git
+  416  Oct 16 - Wed - 00:08     cd i1-bash-i3/
+  417  Oct 16 - Wed - 00:08     code .
+  418  Oct 16 - Wed - 01:17     git status
+  419  Oct 16 - Wed - 01:17     git diff
+  420  Oct 16 - Wed - 01:17     git add .
+  421  Oct 16 - Wed - 01:17     git commit --amend --no-edit
+  422  Oct 16 - Wed - 01:18     git ira
+  423  Oct 16 - Wed - 01:19     git push -f
+  424  Oct 16 - Wed - 01:19     git log
+  425  Oct 16 - Wed - 01:18     less README.md 
+  426  Oct 16 - Wed - 09:06     cd /tmp
+  427  Oct 16 - Wed - 09:06     git clone git@github.com:nackc8/i-live.git
+  428  Oct 16 - Wed - 09:06     cd i-live/
+  429  Oct 16 - Wed - 09:07     ./bin/daystart 
+  430  Oct 16 - Wed - 09:07     exit
+  431  Oct 16 - Wed - 09:08     cd i-live/
+  432  Oct 16 - Wed - 09:08     code .
+  433  Oct 16 - Wed - 09:10     cd ..
+  434  Oct 16 - Wed - 09:11     cd ITINF23/
+  435  Oct 16 - Wed - 09:11     cd lektion2
+  436  Oct 16 - Wed - 09:20     read namn
+  437  Oct 16 - Wed - 09:20     echo $namn
+  438  Oct 16 - Wed - 09:22     read -p "Vad heter du? " namn
+  439  Oct 16 - Wed - 09:22     echo "$namn"
+  440  Oct 16 - Wed - 09:23     read -p "Vad heter du? " -r namn
+  441  Oct 16 - Wed - 09:23     echo $namn 
+  442  Oct 16 - Wed - 09:37     true
+  443  Oct 16 - Wed - 09:38     false
+  444  Oct 16 - Wed - 09:38     echo "Exit code: $?"
+  445  Oct 16 - Wed - 09:40     seq 1 100 | grep 5 | false # false exitkod blir pipens exitkod
+  446  Oct 16 - Wed - 09:41     seq 1 100 | grep 500 | echo "Sist" # echos exitkod blir pipens exitkod
+  447  Oct 16 - Wed - 09:42     set -o pipefail
+  448  Oct 16 - Wed - 09:42     seq 1 100 | grep 500 | echo "Sist" # exitkod blir fail när någon del misslyckas
+  449  Oct 16 - Wed - 09:43     help test
+  450  Oct 16 - Wed - 09:44     help cd
+  451  Oct 16 - Wed - 09:44     man cd
+  452  Oct 16 - Wed - 09:44     man test
+  453  Oct 16 - Wed - 09:50     a="hund"
+  454  Oct 16 - Wed - 09:50     b="katt"
+  455  Oct 16 - Wed - 09:50     test "$a" = "$b"
+  456  Oct 16 - Wed - 09:51     [ "$a" = "$b"
+  457  Oct 16 - Wed - 09:51     [ "$a" = "$b" ]
+  458  Oct 16 - Wed - 09:52     [ "$a" != "$b" ]
+  459  Oct 16 - Wed - 09:52     echo $?
+  460  Oct 16 - Wed - 09:57     ./ifelif
+  461  Oct 16 - Wed - 09:57     chmod +x ./ifelif 
+  462  Oct 16 - Wed - 10:09     nano djurfil
+  463  Oct 16 - Wed - 10:10     ./ifelif 
+  464  Oct 16 - Wed - 10:14     bash -x ./ifelif 
+  465  Oct 16 - Wed - 10:15     bash ./ifelif 
+  466  Oct 16 - Wed - 10:28     while true; do git pull; sleep 5; done
+  467  Oct 16 - Wed - 10:35     echo $RANDOM
+  468  Oct 16 - Wed - 10:35     name=Ove
+  469  Oct 16 - Wed - 10:35     echo $name
+  470  Oct 16 - Wed - 10:35     echo ${name}
+  471  Oct 16 - Wed - 10:36     echo $namesan
+  472  Oct 16 - Wed - 10:36 
