@@ -1,0 +1,1412 @@
+Script started on 2024-10-17 10:41:20+02:00 [TERM="xterm-256color" TTY="/dev/pts/7" COLUMNS="106" LINES="13"]
+[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m jobs
+[?2004l[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m ps -e | grep bash[H[2J
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m ps -e | grep bash
+[?2004l   8336 pts/1    00:00:00 bash
+   8975 pts/3    00:00:00 bash
+  34530 pts/0    00:00:00 bash
+  34779 pts/4    00:00:00 bash
+  36671 pts/5    00:00:00 bash
+  36904 pts/6    00:00:00 bash
+  83152 pts/7    00:00:00 bash
+  83383 pts/8    00:00:00 bash
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [0m
+[35m❯[0m ps -e | grep bash[H[2J
+[34ml1-live/241017[0m [90m241017[36m [0m
+[35m❯[0m ps -e | grep bash
+[?2004l   8336 pts/1    00:00:00 bash
+   8975 pts/3    00:00:00 bash
+  36671 pts/5    00:00:00 bash
+  36904 pts/6    00:00:00 bash
+  83152 pts/7    00:00:00 bash
+  83383 pts/8    00:00:00 bash
+[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m man ps
+[?2004l[?1049h[22;0;0t[?1h=PS(1)                                        User Commands                                        PS(1)[m
+[m
+[1mNAME[0m[m
+       ps - report a snapshot of the current processes.[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mps[0m [[4moptions[24m][m
+[m
+[1mDESCRIPTION[0m[m
+       [1mps[0m displays information about a selection of the active processes.  If you want a repetitive[m
+       update of the selection and the displayed information, use [1mtop[0m instead.[m
+[m
+[7m Manual page ps(1) line 1 (press h for help or q to quit)[27m[K[K/[Ktt[Krr[Kee[Kee[K[1;1HPS(1)                                        User Commands                                        PS(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       ps - report a snapshot of the current processes.[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mps[0m [[4moptions[24m][m
+[8;1H[m
+[9;1H[1mDESCRIPTION[0m[m
+[10;1H       [1mps[0m displays information about a selection of the active processes.  If you want a repetitive[m
+[11;1H       update of the selection and the displayed information, use [1mtop[0m instead.[m
+[12;1H[m
+[13;1H[1;1HPS(1)                                        User Commands                                        PS(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       ps - report a snapshot of the current processes.[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mps[0m [[4moptions[24m][m
+[8;1H[m
+[9;1H[1mDESCRIPTION[0m[m
+[10;1H       [1mps[0m displays information about a selection of the active processes.  If you want a repetitive[m
+[11;1H       update of the selection and the displayed information, use [1mtop[0m instead.[m
+[12;1H[m
+[13;1H...skipping...
+       To print a process [7mtree[27m:[m
+          [1mps[0m [1m-ejH[0m[m
+          [1mps[0m [1maxjf[0m[m
+[m
+       To get info about threads:[m
+          [1mps[0m [1m-eLf[0m[m
+          [1mps[0m [1maxms[0m[m
+[m
+       To get security info:[m
+          [1mps[0m [1m-eo[0m [1meuser,ruser,suser,fuser,f,comm,label[0m[m
+          [1mps[0m [1maxZ[0m[m
+          [1mps[0m [1m-eM[0m[m
+[7m Manual page ps(1) line 60 (press h for help or q to quit)[27m[K[K/[K...skipping...
+              ASCII art process [7mtree[27m.[m
+[m
+       [1mh[0m      No header.  (or, one header per screen in the BSD personality).  The [1mh[0m option is[m
+              problematic.  Standard BSD [1mps[0m uses this option to print a header on each page of output,[m
+              but older Linux [1mps[0m uses this option to totally disable the header.  This version of [1mps[0m[m
+              follows the Linux usage of not printing the header unless the BSD personality has been[m
+              selected, in which case it prints a header on each page of output.  Regardless of the[m
+              current personality, you can use the long options [1m--headers[0m and [1m--no-headers[0m to enable[m
+              printing headers each page or disable headers entirely, respectively.[m
+[m
+       [1m-H[0m     Show process hierarchy (forest).[m
+[m
+[7m Manual page ps(1) line 328 (press h for help or q to quit)[27m[K[K/[K...skipping...
+       [1mpgrep[0m(1), [1mps[0m[1m[7mtree[27m[0m(1), [1mtop[0m(1), [1mproc[0m(5).[m
+[m
+[1mSTANDARDS[0m[m
+       This [1mps[0m conforms to:[m
+[m
+       1   Version 2 of the Single Unix Specification[m
+       2   The Open Group Technical Standard Base Specifications, Issue 6[m
+       3   IEEE Std 1003.1, 2004 Edition[m
+       4   X/Open System Interfaces Extension [UP XSI][m
+       5   ISO/IEC 9945:2003[m
+[m
+[1mAUTHOR[0m[m
+[7m Manual page ps(1) line 1074/1097 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mSEE[0m [1mALSO[0m[m
+[13;1H[K[7m Manual page ps(1) line 1073/1097 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[13;1H[K[7m Manual page ps(1) line 1072/1097 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       unix98     standard[m
+[13;1H[K[7m Manual page ps(1) line 1071/1097 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       unix95     standard[m
+[13;1H[K[7m Manual page ps(1) line 1070/1097 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       unix       standard[m
+[13;1H[K[7m Manual page ps(1) line 1069/1097 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       tru64      like Tru64 (was Digital Unix, was OSF/1) [1mps[0m[m
+[13;1H[K[7m Manual page ps(1) line 1068/1097 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       sysv       standard[m
+[13;1H[K[7m Manual page ps(1) line 1067/1097 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       svr4       standard[m
+[13;1H[K[7m Manual page ps(1) line 1066/1097 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       sunos4     like SunOS 4 (Solaris 1) [1mps[0m (totally non-standard)[m
+[13;1H[K[7m Manual page ps(1) line 1065/1097 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       solaris2   like Solaris 2+ (SunOS 5) [1mps[0m[m
+[13;1H[K[7m Manual page ps(1) line 1064/1097 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       sgi        like Irix [1mps[0m[m
+[13;1H[K[7m Manual page ps(1) line 1063/1097 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       sco        like SCO [1mps[0m[m
+[13;1H[K[7m Manual page ps(1) line 1062/1097 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       s390       like OS/390 Open Edition [1mps[0m[m
+[13;1H[K[7m Manual page ps(1) line 1061/1097 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       posix      standard[m
+[13;1H[K[7m Manual page ps(1) line 1060/1097 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       os390      like OS/390 Open Edition [1mps[0m[m
+[13;1H[K[7m Manual page ps(1) line 1059/1097 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       old        like the original Linux [1mps[0m (totally non-standard)[m
+[13;1H[K[7m Manual page ps(1) line 1058/1097 98% (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [33m7s[0m 
+[35m❯[0m man ps
+[?2004l[?1049h[22;0;0t[?1h=PS(1)                                        User Commands                                        PS(1)[m
+[m
+[1mNAME[0m[m
+       ps - report a snapshot of the current processes.[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mps[0m [[4moptions[24m][m
+[m
+[1mDESCRIPTION[0m[m
+       [1mps[0m displays information about a selection of the active processes.  If you want a repetitive[m
+       update of the selection and the displayed information, use [1mtop[0m instead.[m
+[m
+[7m Manual page ps(1) line 1 (press h for help or q to quit)[27m[K[K/[Ktt[Krr[Kee[Kee[K[1;1HPS(1)                                        User Commands                                        PS(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       ps - report a snapshot of the current processes.[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mps[0m [[4moptions[24m][m
+[8;1H[m
+[9;1H[1mDESCRIPTION[0m[m
+[10;1H       [1mps[0m displays information about a selection of the active processes.  If you want a repetitive[m
+[11;1H       update of the selection and the displayed information, use [1mtop[0m instead.[m
+[12;1H[m
+[13;1H[1;1HPS(1)                                        User Commands                                        PS(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       ps - report a snapshot of the current processes.[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mps[0m [[4moptions[24m][m
+[8;1H[m
+[9;1H[1mDESCRIPTION[0m[m
+[10;1H       [1mps[0m displays information about a selection of the active processes.  If you want a repetitive[m
+[11;1H       update of the selection and the displayed information, use [1mtop[0m instead.[m
+[12;1H[m
+[13;1H...skipping...
+       To print a process [7mtree[27m:[m
+          [1mps[0m [1m-ejH[0m[m
+          [1mps[0m [1maxjf[0m[m
+[m
+       To get info about threads:[m
+          [1mps[0m [1m-eLf[0m[m
+          [1mps[0m [1maxms[0m[m
+[m
+       To get security info:[m
+          [1mps[0m [1m-eo[0m [1meuser,ruser,suser,fuser,f,comm,label[0m[m
+          [1mps[0m [1maxZ[0m[m
+          [1mps[0m [1m-eM[0m[m
+[7m Manual page ps(1) line 60 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [33m7s[0m 
+[35m❯[0m man ps[C[Cps -e | grep bash[1@j[1@H[H[2J
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [33m7s[0m 
+[35m❯[0m ps -ejH | grep bash[C[C[C[C[C[C[C[C[C
+[?2004l   8336    8336    8336 pts/1    00:00:00         bash
+   8975    8975    8975 pts/3    00:00:00             bash
+  36671   36671   36671 pts/5    00:00:00         bash
+  36904   36904   36904 pts/6    00:00:00             bash
+  83152   83152   83152 pts/7    00:00:00         bash
+  83383   83383   83383 pts/8    00:00:00             bash
+[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m echo $P[KBASHPID
+[?2004l83383
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m ⇡[0m
+[35m❯[0m [7m8975[27m[C[C8975k8975i8975l8975l8975 8975
+[?2004l[?2004h
+[34ml1-live/241017[0m [90m241017[36m [0m
+[35m❯[0m kill 8975-897598975 8975
+[?2004l[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m kill -9 8975[3P8975-9 8975[3P8975[C[Cecho $BASHPID[C[Cps -ejH | grep bash
+[?2004l  36671   36671   36671 pts/5    00:00:00         bash
+  36904   36904   36904 pts/6    00:00:00             bash
+  83152   83152   83152 pts/7    00:00:00         bash
+  83383   83383   83383 pts/8    00:00:00             bash
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m ⇡[0m
+[35m❯[0m ps -ejH | grep bash[C[C[7Pkill -9 8975[3P8975[C[Cecho $BASHPID
+[?2004l83383
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [0m
+[35m❯[0m [7m36671[27m[C[C36671k36671[C[C[Ci36671l36671l36671 36671-36671936671 36671
+[?2004l[?2004h
+[34ml1-live/241017[0m [90m241017[36m [0m
+[35m❯[0m ps -e | grep trapper[H[2J
+[34ml1-live/241017[0m [90m241017[36m [0m
+[35m❯[0m ps -e | grep trapper
+[?2004l  79954 pts/6    00:00:00 trapper
+  81770 pts/6    00:00:00 trapper
+  82489 pts/6    00:00:00 trapper
+  88053 pts/3    00:00:00 trapper
+[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m killall trapper
+[?2004l[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m killall trapper[C[C[5@ps -e | grep[C[C[C[C[C[C[C[C
+[?2004l  79954 pts/6    00:00:00 trapper
+  81770 pts/6    00:00:00 trapper
+[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m ps -e | grep trapper[C[C[5Pkillall[C[C[C[C[C[C[C[C[C-trapper9trapper trapper[H[2J
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m killall -9 trapper
+[?2004l[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m killall -9 trapper[C[C[2@ps -e | grep[C[C[C[C[C[C[C[C
+[?2004l[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[31m❯[0m [K[31m❯[0m [K[31m❯[0m [K[31m❯[0m [K[31m❯[0m [K[31m❯[0m [H[2J
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[31m❯[0m ps[K[Kps -e
+[?2004l    PID TTY          TIME CMD
+      1 ?        00:00:01 systemd
+      2 ?        00:00:00 kthreadd
+      3 ?        00:00:00 rcu_gp
+      4 ?        00:00:00 rcu_par_gp
+      5 ?        00:00:00 slub_flushwq
+      6 ?        00:00:00 netns
+      8 ?        00:00:00 kworker/0:0H-events_highpri
+     10 ?        00:00:00 mm_percpu_wq
+     11 ?        00:00:00 rcu_tasks_kthread
+     12 ?        00:00:00 rcu_tasks_rude_kthread
+     13 ?        00:00:00 rcu_tasks_trace_kthread
+     14 ?        00:00:00 ksoftirqd/0
+     15 ?        00:00:14 rcu_preempt
+     16 ?        00:00:00 migration/0
+     18 ?        00:00:00 cpuhp/0
+     19 ?        00:00:00 cpuhp/1
+     20 ?        00:00:01 migration/1
+     21 ?        00:00:00 ksoftirqd/1
+     23 ?        00:00:00 kworker/1:0H-events_highpri
+     24 ?        00:00:00 cpuhp/2
+     25 ?        00:00:00 migration/2
+     26 ?        00:00:00 ksoftirqd/2
+     28 ?        00:00:00 kworker/2:0H-events_highpri
+     29 ?        00:00:00 cpuhp/3
+     30 ?        00:00:01 migration/3
+     31 ?        00:00:00 ksoftirqd/3
+     33 ?        00:00:00 kworker/3:0H-events_highpri
+     34 ?        00:00:00 cpuhp/4
+     35 ?        00:00:00 migration/4
+     36 ?        00:00:00 ksoftirqd/4
+     38 ?        00:00:00 kworker/4:0H-events_highpri
+     39 ?        00:00:00 cpuhp/5
+     40 ?        00:00:01 migration/5
+     41 ?        00:00:00 ksoftirqd/5
+     43 ?        00:00:00 kworker/5:0H-events_highpri
+     44 ?        00:00:00 cpuhp/6
+     45 ?        00:00:00 migration/6
+     46 ?        00:00:00 ksoftirqd/6
+     48 ?        00:00:00 kworker/6:0H-events_highpri
+     49 ?        00:00:00 cpuhp/7
+     50 ?        00:00:03 migration/7
+     51 ?        00:00:00 ksoftirqd/7
+     53 ?        00:00:00 kworker/7:0H-events_highpri
+     54 ?        00:00:00 cpuhp/8
+     55 ?        00:00:02 migration/8
+     56 ?        00:00:00 ksoftirqd/8
+     58 ?        00:00:00 kworker/8:0H-events_highpri
+     59 ?        00:00:00 cpuhp/9
+     60 ?        00:00:02 migration/9
+     61 ?        00:00:00 ksoftirqd/9
+     63 ?        00:00:00 kworker/9:0H-events_highpri
+     64 ?        00:00:00 cpuhp/10
+     65 ?        00:00:02 migration/10
+     66 ?        00:00:00 ksoftirqd/10
+     68 ?        00:00:00 kworker/10:0H-events_highpri
+     69 ?        00:00:00 cpuhp/11
+     70 ?        00:00:03 migration/11
+     71 ?        00:00:00 ksoftirqd/11
+     73 ?        00:00:00 kworker/11:0H-events_highpri
+     75 ?        00:00:09 kworker/u24:1-kcryptd/253:1
+     85 ?        00:00:00 kdevtmpfs
+     86 ?        00:00:00 inet_frag_wq
+     87 ?        00:00:00 kauditd
+     88 ?        00:00:00 khungtaskd
+     89 ?        00:00:00 oom_reaper
+     90 ?        00:00:00 writeback
+     91 ?        00:00:02 kcompactd0
+     92 ?        00:00:00 ksmd
+     93 ?        00:00:00 khugepaged
+     94 ?        00:00:00 kintegrityd
+     95 ?        00:00:00 kblockd
+     96 ?        00:00:00 blkcg_punt_bio
+     97 ?        00:00:00 tpm_dev_wq
+     98 ?        00:00:00 edac-poller
+     99 ?        00:00:00 devfreq_wq
+    111 ?        00:00:00 kworker/1:1H-kblockd
+    112 ?        00:00:10 kswapd0
+    118 ?        00:00:00 kthrotld
+    120 ?        00:00:00 irq/124-pciehp
+    121 ?        00:00:00 irq/125-pciehp
+    122 ?        00:00:00 acpi_thermal_pm
+    123 ?        00:00:00 hwrng
+    125 ?        00:00:00 hfi-updates
+    126 ?        00:00:00 mld
+    127 ?        00:00:00 kworker/0:1H-kblockd
+    128 ?        00:00:00 ipv6_addrconf
+    133 ?        00:00:00 kstrp
+    138 ?        00:00:00 zswap-shrink
+    188 ?        00:00:00 kworker/2:1H-events_highpri
+    199 ?        00:00:01 kworker/8:1H-events_highpri
+    200 ?        00:00:01 kworker/9:1H-events_highpri
+    201 ?        00:00:00 kworker/5:1H-events_highpri
+    203 ?        00:00:00 kworker/6:1H-events_highpri
+    204 ?        00:00:01 kworker/7:1H-events_highpri
+    205 ?        00:00:00 kworker/10:1H-events_highpri
+    206 ?        00:00:00 kworker/11:1H-events_highpri
+    238 ?        00:00:00 kworker/4:1H-kblockd
+    239 ?        00:00:00 kworker/3:1H-events_highpri
+    240 ?        00:00:00 cryptd
+    325 ?        00:00:00 nvme-wq
+    326 ?        00:00:00 nvme-reset-wq
+    327 ?        00:00:00 nvme-delete-wq
+    329 ?        00:00:00 irq/161-ELAN050B:00
+    335 ?        00:00:00 card0-crtc0
+    336 ?        00:00:00 card0-crtc1
+    337 ?        00:00:00 card0-crtc2
+    338 ?        00:00:00 card0-crtc3
+    345 ?        00:00:00 md
+    356 ?        00:00:00 raid5wq
+    601 ?        00:00:00 kdmflush/253:0
+    602 ?        00:00:00 kcryptd_io/253:
+    603 ?        00:00:00 kcryptd/253:0
+    605 ?        00:00:03 dmcrypt_write/253:0
+    640 ?        00:00:00 jbd2/dm-0-8
+    641 ?        00:00:00 ext4-rsv-conver
+    700 ?        00:00:00 systemd-journal
+    715 ?        00:00:00 systemd-udevd
+    718 ?        00:00:00 rpciod
+    719 ?        00:00:00 xprtiod
+    814 ?        00:00:00 watchdogd
+    815 ?        00:00:00 irq/175-mei_me
+    905 ?        00:00:00 cfg80211
+    937 ?        00:00:04 irq/177-iwlwifi:default_queue
+    938 ?        00:00:00 irq/178-iwlwifi:queue_1
+    939 ?        00:00:00 irq/179-iwlwifi:queue_2
+    940 ?        00:00:00 irq/180-iwlwifi:queue_3
+    941 ?        00:00:00 irq/181-iwlwifi:queue_4
+    942 ?        00:00:00 irq/182-iwlwifi:queue_5
+    943 ?        00:00:00 irq/183-iwlwifi:queue_6
+    944 ?        00:00:00 irq/184-iwlwifi:queue_7
+    946 ?        00:00:00 irq/185-iwlwifi:queue_8
+    947 ?        00:00:00 irq/186-iwlwifi:queue_9
+    948 ?        00:00:01 irq/187-iwlwifi:queue_10
+    949 ?        00:00:00 irq/188-iwlwifi:queue_11
+    950 ?        00:00:00 irq/189-iwlwifi:queue_12
+    952 ?        00:00:00 irq/190-iwlwifi:exception
+    980 ?        00:00:02 irq/191-AudioDSP
+   1074 ?        00:00:00 jbd2/nvme0n1p5-8
+   1075 ?        00:00:00 ext4-rsv-conver
+   1196 ?        00:00:00 kdmflush/253:1
+   1197 ?        00:00:00 kcryptd_io/253:
+   1198 ?        00:00:00 kcryptd/253:1
+   1199 ?        00:00:03 dmcrypt_write/253:1
+   1207 ?        00:00:03 jbd2/dm-1-8
+   1208 ?        00:00:00 ext4-rsv-conver
+   1237 ?        00:00:00 rpcbind
+   1238 ?        00:00:00 systemd-timesyn
+   1249 ?        00:00:00 blkmapd
+   1250 ?        00:00:00 rpc.idmapd
+   1251 ?        00:00:00 nfsdcld
+   1256 ?        00:00:00 accounts-daemon
+   1261 ?        00:00:00 avahi-daemon
+   1263 ?        00:00:24 bluetoothd
+   1265 ?        00:00:00 cron
+   1266 ?        00:00:03 dbus-daemon
+   1270 ?        00:00:00 low-memory-moni
+   1273 ?        00:00:00 polkitd
+   1274 ?        00:00:00 power-profiles-
+   1277 ?        00:00:00 smartd
+   1279 ?        00:00:00 switcheroo-cont
+   1284 ?        00:00:00 systemd-logind
+   1287 ?        00:00:00 systemd-machine
+   1289 ?        00:00:00 udisksd
+   1291 ?        00:00:00 avahi-daemon
+   1349 ?        00:00:02 NetworkManager
+   1351 ?        00:00:00 psimon
+   1354 ?        00:00:00 wpa_supplicant
+   1374 ?        00:00:00 ModemManager
+   1377 ?        00:00:00 boltd
+   1413 ?        00:00:00 cupsd
+   1426 ?        00:00:52 tailscaled
+   1428 ?        00:00:11 containerd
+   1448 ?        00:00:00 sshd
+   1489 ?        00:00:00 gdm3
+   1657 ?        00:00:00 rtkit-daemon
+   1812 ?        00:00:00 iprt-VBoxWQueue
+   1817 ?        00:00:00 iprt-VBoxTscThread
+   1827 ?        00:00:09 kworker/u24:12-events_unbound
+   1932 ?        00:00:00 krfcommd
+   1980 ?        00:00:00 upowerd
+   2072 ?        00:00:02 geoclue
+   2087 ?        00:00:00 colord
+   2481 ?        00:00:00 cups-browsed
+   2484 ?        00:00:01 dockerd
+   2504 ?        00:00:00 rpc.statd
+   2506 ?        00:00:00 rpc.mountd
+   2528 ?        00:00:00 lockd
+   2807 ?        00:00:00 exim4
+   2811 ?        00:00:00 nfsd
+   2812 ?        00:00:00 nfsd
+   2813 ?        00:00:00 nfsd
+   2814 ?        00:00:00 nfsd
+   2815 ?        00:00:00 nfsd
+   2816 ?        00:00:00 nfsd
+   2817 ?        00:00:00 nfsd
+   2818 ?        00:00:00 nfsd
+   3163 ?        00:00:00 gdm-session-wor
+   3189 ?        00:00:00 systemd
+   3190 ?        00:00:00 (sd-pam)
+   3220 ?        00:00:00 pipewire
+   3222 ?        00:00:00 wireplumber
+   3223 ?        00:00:00 pipewire-pulse
+   3228 ?        00:00:00 gnome-keyring-d
+   3229 ?        00:00:00 dbus-daemon
+   3234 ?        00:00:00 gvfsd
+   3240 ?        00:00:00 gvfsd-fuse
+   3291 ?        00:00:01 tracker-miner-f
+   3296 ?        00:00:00 gvfs-udisks2-vo
+   3298 tty2     00:00:00 gdm-wayland-ses
+   3305 tty2     00:00:00 gnome-session-b
+   3326 ?        00:00:00 gvfs-gphoto2-vo
+   3337 ?        00:00:00 gvfs-mtp-volume
+   3341 ?        00:00:00 gvfs-goa-volume
+   3345 ?        00:00:00 goa-daemon
+   3369 ?        00:00:00 goa-identity-se
+   3379 ?        00:00:00 gcr-ssh-agent
+   3380 ?        00:00:00 gnome-session-c
+   3382 ?        00:00:00 ssh-agent
+   3386 ?        00:00:00 gvfs-afc-volume
+   3396 ?        00:00:00 gnome-session-b
+   3416 ?        00:00:00 at-spi-bus-laun
+   3417 ?        00:09:22 gnome-shell
+   3418 ?        00:00:00 xdg-permission-
+   3424 ?        00:00:00 dbus-daemon
+   3679 ?        00:00:00 dconf-service
+   3697 ?        00:00:00 gjs
+   3698 ?        00:00:00 at-spi2-registr
+   3715 ?        00:00:00 sh
+   3717 ?        00:00:00 gsd-a11y-settin
+   3719 ?        00:00:01 ibus-daemon
+   3721 ?        00:00:00 gsd-color
+   3723 ?        00:00:00 gsd-datetime
+   3725 ?        00:00:00 gsd-housekeepin
+   3729 ?        00:00:00 gsd-keyboard
+   3734 ?        00:00:00 gsd-media-keys
+   3735 ?        00:00:00 gsd-power
+   3738 ?        00:00:00 gsd-print-notif
+   3741 ?        00:00:00 gsd-rfkill
+   3745 ?        00:00:00 gsd-screensaver
+   3747 ?        00:00:00 gsd-sharing
+   3750 ?        00:00:00 gsd-smartcard
+   3752 ?        00:00:00 gsd-sound
+   3754 ?        00:00:00 gsd-usb-protect
+   3757 ?        00:00:00 gsd-wacom
+   3776 ?        00:00:00 gsd-disk-utilit
+   3781 ?        00:00:03 gnome-software
+   3842 ?        00:00:00 ibus-dconf
+   3844 ?        00:00:00 ibus-extension-
+   3849 ?        00:00:00 ibus-portal
+   3851 ?        00:00:00 gjs
+   3878 ?        00:00:00 gsd-printer
+   3911 ?        00:00:43 dropbox
+   3922 ?        00:00:00 ibus-engine-sim
+   3953 ?        00:00:00 xdg-desktop-por
+   3967 ?        00:00:00 xdg-document-po
+   3972 ?        00:00:00 fusermount3
+   3979 ?        00:00:18 xdg-desktop-por
+   4035 ?        00:00:00 xdg-desktop-por
+   4055 ?        00:00:00 xdg-desktop-por
+   4109 ?        00:00:00 gvfsd-metadata
+   4243 ?        00:03:59 chrome
+   4247 ?        00:00:00 cat
+   4248 ?        00:00:00 cat
+   4250 ?        00:00:00 chrome_crashpad
+   4252 ?        00:00:00 chrome_crashpad
+   4258 ?        00:00:00 chrome
+   4259 ?        00:00:00 chrome
+   4261 ?        00:00:00 chrome
+   4272 ?        00:03:18 Xwayland
+   4319 ?        00:00:01 gsd-xsettings
+   4351 ?        00:00:01 ibus-x11
+   4369 ?        00:03:00 chrome
+   4371 ?        00:00:51 chrome
+   4383 ?        00:00:01 chrome
+   4482 ?        00:00:24 chrome
+   4489 ?        00:00:34 chrome
+   4555 ?        00:00:00 chrome
+   4567 ?        00:00:00 uuidd
+   4571 ?        00:00:00 chrome
+   4974 ?        00:00:18 chrome
+   5000 ?        00:00:03 chrome
+   5064 ?        00:00:26 chrome
+   5124 ?        00:00:00 gnome-calendar
+   5172 ?        00:00:00 gvfsd-trash
+   5864 ?        00:00:00 gvfsd-network
+   5877 ?        00:00:00 gvfsd-dnssd
+   6041 ?        00:00:38 chrome
+   6344 ?        00:00:01 gedit
+   6628 ?        00:00:01 kworker/4:0-events
+   6792 ?        00:00:09 chrome
+   6808 ?        00:00:19 chrome
+   6938 ?        00:00:46 chrome
+   7513 ?        00:00:24 chrome
+   7538 ?        00:00:01 kworker/0:9-pm
+   7603 ?        00:00:13 kworker/u25:0-i915_flip
+   8055 ?        00:01:16 code
+   8081 ?        00:00:00 code
+   8082 ?        00:00:00 code
+   8084 ?        00:00:00 code
+   8103 ?        00:00:00 chrome_crashpad
+   8118 ?        00:08:08 code
+   8123 ?        00:00:02 code
+   8170 ?        00:11:01 code
+   8208 ?        00:00:06 code
+   8214 ?        00:00:08 code
+   8239 ?        00:00:55 code
+   8264 ?        00:00:56 code
+   8601 ?        00:00:00 ssh-agent
+   8714 pts/2    00:00:03 autocommit
+   9873 ?        00:03:28 chrome
+  15294 ?        00:00:09 chrome
+  16938 ?        00:00:01 kworker/0:6-pm
+  19502 ?        00:00:35 VirtualBox
+  19532 ?        00:00:14 VBoxXPCOMIPCD
+  19538 ?        00:00:40 VBoxSVC
+  19937 ?        00:00:00 dio/dm-1
+  20232 ?        00:00:01 kworker/2:1-events
+  22442 ?        00:10:40 VirtualBoxVM
+  22483 ?        00:00:00 VBoxNetDHCP
+  22484 ?        00:00:03 VBoxNetNAT
+  25116 ?        00:00:00 kworker/0:7-pm
+  27423 ?        00:00:09 kworker/u24:5-kcryptd/253:1
+  36903 ?        00:00:00 script
+  36904 pts/6    00:00:00 bash
+  37208 ?        00:00:00 code
+  38532 ?        00:00:00 kworker/0:4-usb_hub_wq
+  41930 ?        00:00:00 kworker/0:3-pm
+  47686 ?        00:00:00 kworker/0:8-mm_percpu_wq
+  49885 ?        00:00:06 kworker/u24:13-kcryptd/253:0
+  51792 ?        00:00:00 kworker/8:2-mm_percpu_wq
+  54894 ?        00:00:05 kworker/u25:3-hci0
+  59663 ?        00:00:00 kworker/0:1-mm_percpu_wq
+  61130 ?        00:00:00 kworker/6:0-events
+  63854 ?        00:00:04 kworker/u24:2-kcryptd/253:1
+  63855 ?        00:00:05 kworker/u24:3-kcryptd/253:1
+  63856 ?        00:00:04 kworker/u24:4-kcryptd/253:1
+  63857 ?        00:00:05 kworker/u24:6-kcryptd/253:0
+  63859 ?        00:00:04 kworker/u24:9-i915
+  66127 ?        00:00:03 kworker/u25:1+i915_flip
+  68748 ?        00:00:03 kworker/7:3-events
+  69767 ?        00:00:00 kworker/9:0-events
+  70500 ?        00:00:00 kworker/10:1-events
+  71420 ?        00:00:00 kworker/6:2-events
+  74535 ?        00:00:00 kworker/5:1-mm_percpu_wq
+  75018 ?        00:00:00 kworker/11:0-mm_percpu_wq
+  75319 ?        00:00:00 kworker/0:5-pm
+  75336 ?        00:00:00 kworker/3:2-events
+  75634 pts/6    00:00:00 nano
+  75962 ?        00:00:00 kworker/1:2-events
+  78751 ?        00:00:01 kworker/7:0-events
+  79253 ?        00:00:00 kworker/u24:7-kcryptd/253:1
+  79439 ?        00:00:00 kworker/5:2-events
+  79566 ?        00:00:00 kworker/10:0-events
+  79898 ?        00:00:00 kworker/u24:8-kcryptd/253:1
+  80160 ?        00:00:00 kworker/0:2-pm
+  80496 ?        00:00:00 kworker/11:2-pm
+  80497 ?        00:00:00 kworker/2:0-events
+  81104 ?        00:00:00 kworker/4:2
+  81203 ?        00:00:00 kworker/1:1-events
+  81793 ?        00:00:00 kworker/3:0-events
+  82214 ?        00:00:00 kworker/8:0-events
+  82771 ?        00:00:00 chrome
+  83152 pts/7    00:00:00 bash
+  83382 pts/7    00:00:00 script
+  83383 pts/8    00:00:00 bash
+  83889 ?        00:00:00 kworker/9:1-events
+  85027 ?        00:00:00 kworker/10:2
+  85090 ?        00:00:00 kworker/5:0-events
+  85560 ?        00:00:00 kworker/6:1-events
+  85829 ?        00:00:00 kworker/0:0-events
+  86345 ?        00:00:00 kworker/u25:2
+  86545 ?        00:00:00 kworker/2:2
+  86948 ?        00:00:00 kworker/11:1-events
+  86949 ?        00:00:00 kworker/11:3-events
+  87328 pts/3    00:00:00 bash
+  88158 ?        00:00:00 kworker/8:1-kdmflush/253:1
+  88355 ?        00:00:00 chrome
+  88642 ?        00:00:00 kworker/3:1
+  89612 ?        00:00:00 kworker/1:0-events
+  90030 ?        00:00:00 chrome
+  90142 ?        00:00:00 kworker/7:1-events
+  90182 pts/2    00:00:00 sleep
+  90227 pts/8    00:00:00 ps
+[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m top
+[?2004l[?1h=[?25l[H[2J(B[mtop - 10:47:46 up  2:20,  1 user,  load average: 1.04, 0.98, 0.99(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 387 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m 385 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m 25.0 (B[m[39;49mus,(B[m[39;49m[1m  0.0 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 75.0 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    451.1 (B[m[39;49mfree,(B[m[39;49m[1m   6700.2 (B[m[39;49mused,(B[m[39;49m[1m   9648.6 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8995.4 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+[7m    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                            (B[m[39;49m[K
+(B[m   8170 kent      20   0 1138.5g 256672  71264 S  26.7   1.6  11:02.44 code                               (B[m[39;49m[K
+(B[m   3417 kent      20   0 5662004 150080  52528 S  13.3   0.9   9:22.68 gnome-shell                        (B[m[39;49m[K
+(B[m   7603 root       0 -20       0      0      0 D   6.7   0.0   0:13.54 kworker/u25:0+i915_flip            (B[m[39;49m[K
+(B[m   8055 kent      20   0 1134.2g 105240  56420 S   6.7   0.7   1:16.48 code                               (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  92748  53476 S   6.7   0.6   8:08.90 code                               (B[m[39;49m[K
+(B[m  66127 root       0 -20       0      0      0 D   6.7   0.0   0:03.18 kworker/u25:1+i915_flip            (B[m[39;49m[K
+(B[m      1 root      20   0  168816  11184   7004 S   0.0   0.1   0:01.45 systemd                            (B[m[39;49m[K
+(B[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.02 kthreadd                           (B[m[39;49m[K
+(B[m      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp                             (B[m[39;49m[K
+(B[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp                         (B[m[39;49m[K
+(B[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_flushwq                       (B[m[39;49m[K[H(B[mtop - 10:47:49 up  2:20,  1 user,  load average: 1.04, 0.98, 0.99(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 384 (B[m[39;49mtotal,(B[m[39;49m[1m   3 (B[m[39;49mrunning,(B[m[39;49m[1m 380 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  3.9 (B[m[39;49mus,(B[m[39;49m[1m  1.4 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 94.6 (B[m[39;49mid,(B[m[39;49m[1m  0.1 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.1 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    446.6 (B[m[39;49mfree,(B[m[39;49m[1m   6704.6 (B[m[39;49mused,(B[m[39;49m[1m   9648.8 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8991.1 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m   8170 kent      20   0 1138.5g 252960  71308 S  16.3   1.6  11:02.93 code                               (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S  13.3   4.6  10:41.10 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  92636  53524 S  11.6   0.6   8:09.25 code                               (B[m[39;49m[K
+(B[m   3417 kent      20   0 5662004 150004  52528 S   7.3   0.9   9:22.90 gnome-shell                        (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195176  58200  29344 S   2.7   0.4   3:18.39 Xwayland                           (B[m[39;49m[K
+(B[m   4371 kent      20   0   32.4g  82672  61292 S   1.7   0.5   0:51.76 chrome                             (B[m[39;49m[K
+(B[m   4243 kent      20   0   32.7g 301196 152680 S   1.0   1.9   3:59.57 chrome                             (B[m[39;49m[K
+(B[m   8239 kent      20   0 1134.0g  68668  28688 S   1.0   0.4   0:56.01 code                               (B[m[39;49m[K
+(B[m   8264 kent      20   0 1140.2g 310716  33324 S   1.0   1.9   0:56.48 code                               (B[m[39;49m[K
+(B[m   4974 kent      20   0 1156.2g 208764  84716 S   0.7   1.3   0:18.90 chrome                             (B[m[39;49m[K
+(B[m  19538 kent      20   0  885840  15952   8172 S   0.7   0.1   0:40.90 VBoxSVC                            (B[m[39;49m[K[H(B[mtop - 10:47:52 up  2:20,  1 user,  load average: 1.04, 0.98, 1.00(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 384 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m 382 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  3.6 (B[m[39;49mus,(B[m[39;49m[1m  1.5 (B[m[39;49msy,(B[m[39;49m[1m  0.1 (B[m[39;49mni,(B[m[39;49m[1m 94.8 (B[m[39;49mid,(B[m[39;49m[1m  0.1 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    443.6 (B[m[39;49mfree,(B[m[39;49m[1m   6707.6 (B[m[39;49mused,(B[m[39;49m[1m   9648.8 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8988.1 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m   8170 kent      20   0 1138.5g 253808  71308 S  15.3   1.6  11:03.39 code                               (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S  14.0   4.6  10:41.52 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  92772  53524 S  11.3   0.6   8:09.59 code                               (B[m[39;49m[K
+(B[m   3417 kent      20   0 5662004 150004  52528 S   7.3   0.9   9:23.12 gnome-shell                        (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195176  58200  29344 S   3.0   0.4   3:18.48 Xwayland                           (B[m[39;49m[K
+(B[m   8239 kent      20   0 1134.0g  68728  28688 S   1.3   0.4   0:56.05 code                               (B[m[39;49m[K
+(B[m   1426 root      20   0 1318784  75840   6168 S   0.7   0.5   0:52.54 tailscaled                         (B[m[39;49m[K
+(B[m   4243 kent      20   0   32.7g 301196 152680 S   0.7   1.9   3:59.59 chrome                             (B[m[39;49m[K
+(B[m  19502 kent      20   0 3070436 129412  36824 S   0.7   0.8   0:35.96 VirtualBox                         (B[m[39;49m[K
+(B[m  19538 kent      20   0  885840  15952   8172 S   0.7   0.1   0:40.92 VBoxSVC                            (B[m[39;49m[K
+(B[m     15 root      20   0       0      0      0 I   0.3   0.0   0:14.59 rcu_preempt                        (B[m[39;49m[K[H(B[mtop - 10:47:55 up  2:20,  1 user,  load average: 1.04, 0.98, 1.00(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 387 (B[m[39;49mtotal,(B[m[39;49m[1m   2 (B[m[39;49mrunning,(B[m[39;49m[1m 384 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  3.7 (B[m[39;49mus,(B[m[39;49m[1m  1.5 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 94.4 (B[m[39;49mid,(B[m[39;49m[1m  0.3 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    449.1 (B[m[39;49mfree,(B[m[39;49m[1m   6701.8 (B[m[39;49mused,(B[m[39;49m[1m   9648.5 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8993.9 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m   8170 kent      20   0 1138.5g 253172  71308 S  16.6   1.6  11:03.89 code                               (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S  14.6   4.6  10:41.96 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  92924  53524 S  11.9   0.6   8:09.95 code                               (B[m[39;49m[K
+(B[m   3417 kent      20   0 5662004 150004  52528 S   7.6   0.9   9:23.35 gnome-shell                        (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195176  58200  29344 S   3.0   0.4   3:18.57 Xwayland                           (B[m[39;49m[K
+(B[m   1426 root      20   0 1318784  75840   6168 S   1.0   0.5   0:52.57 tailscaled                         (B[m[39;49m[K
+(B[m   4243 kent      20   0   32.7g 301668 152680 S   1.0   1.9   3:59.62 chrome                             (B[m[39;49m[K
+(B[m  19538 kent      20   0  885840  15952   8172 S   1.0   0.1   0:40.95 VBoxSVC                            (B[m[39;49m[K
+(B[m   8239 kent      20   0 1134.0g  68520  28688 S   0.7   0.4   0:56.07 code                               (B[m[39;49m[K
+(B[m[1m   8264 kent      20   0 1140.2g 310792  33324 R   0.7   1.9   0:56.50 code                               (B[m[39;49m[K
+(B[m  19502 kent      20   0 3070436 129412  36824 S   0.7   0.8   0:35.98 VirtualBox                         (B[m[39;49m[K[H(B[mtop - 10:47:58 up  2:20,  1 user,  load average: 1.27, 1.03, 1.01(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 384 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m 382 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  7.6 (B[m[39;49mus,(B[m[39;49m[1m  2.7 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 89.6 (B[m[39;49mid,(B[m[39;49m[1m  0.1 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    424.5 (B[m[39;49mfree,(B[m[39;49m[1m   6726.4 (B[m[39;49mused,(B[m[39;49m[1m   9661.2 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8969.2 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m   8170 kent      20   0 1138.5g 267024  71308 S  35.5   1.7  11:04.96 code                               (B[m[39;49m[K
+(B[m   3417 kent      20   0 5662008 150008  52528 S  20.9   0.9   9:23.98 gnome-shell                        (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  94952  53524 S  18.9   0.6   8:10.52 code                               (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S  11.0   4.6  10:42.29 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   8055 kent      20   0 1134.2g 105060  56420 S  10.0   0.7   1:16.79 code                               (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195176  58200  29344 S   7.6   0.4   3:18.80 Xwayland                           (B[m[39;49m[K
+(B[m   4489 kent      20   0 1157.8g 122120  85200 S   3.3   0.8   0:34.23 chrome                             (B[m[39;49m[K
+(B[m   3979 kent      20   0 2175720  64232  27804 S   1.3   0.4   0:18.77 xdg-desktop-por                    (B[m[39;49m[K
+(B[m     75 root      20   0       0      0      0 I   1.0   0.0   0:09.86 kworker/u24:1-i915                 (B[m[39;49m[K
+(B[m   1263 root      20   0   14236   5968   5068 S   1.0   0.0   0:24.26 bluetoothd                         (B[m[39;49m[K
+(B[m   4243 kent      20   0   32.7g 300376 152616 S   1.0   1.9   3:59.65 chrome                             (B[m[39;49m[K[H(B[mtop - 10:48:01 up  2:21,  1 user,  load average: 1.17, 1.02, 1.01(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 390 (B[m[39;49mtotal,(B[m[39;49m[1m   2 (B[m[39;49mrunning,(B[m[39;49m[1m 387 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  6.8 (B[m[39;49mus,(B[m[39;49m[1m  2.6 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 89.1 (B[m[39;49mid,(B[m[39;49m[1m  1.2 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.2 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    414.4 (B[m[39;49mfree,(B[m[39;49m[1m   6734.3 (B[m[39;49mused,(B[m[39;49m[1m   9673.0 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8961.4 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m   8170 kent      20   0 1138.5g 266152  71356 S  27.6   1.7  11:05.79 code                               (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  95876  53632 S  10.3   0.6   8:10.83 code                               (B[m[39;49m[K
+(B[m   3417 kent      20   0 5662004 150008  52528 S   9.3   0.9   9:24.26 gnome-shell                        (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S   8.0   4.6  10:42.53 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195176  58200  29344 S   3.3   0.4   3:18.90 Xwayland                           (B[m[39;49m[K
+(B[m   8055 kent      20   0 1134.2g 105012  56420 S   2.3   0.7   1:16.86 code                               (B[m[39;49m[K
+(B[m   4243 kent      20   0   32.7g 300312 152476 S   2.0   1.9   3:59.71 chrome                             (B[m[39;49m[K
+(B[m   8239 kent      20   0 1134.0g  69320  28688 S   2.0   0.4   0:56.16 code                               (B[m[39;49m[K
+(B[m   8264 kent      20   0 1140.2g 310876  33324 S   1.7   1.9   0:56.57 code                               (B[m[39;49m[K
+(B[m   9873 kent      20   0 1157.8g 449624  97404 S   1.0   2.8   3:28.81 chrome                             (B[m[39;49m[K
+(B[m   1263 root      20   0   14236   5968   5068 S   0.7   0.0   0:24.28 bluetoothd                         (B[m[39;49m[K[H(B[mtop - 10:48:04 up  2:21,  1 user,  load average: 1.17, 1.02, 1.01(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 387 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m 385 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  4.8 (B[m[39;49mus,(B[m[39;49m[1m  1.7 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 93.4 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    425.5 (B[m[39;49mfree,(B[m[39;49m[1m   6723.2 (B[m[39;49mused,(B[m[39;49m[1m   9671.3 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8972.5 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m   8170 kent      20   0 1138.5g 258500  71336 S  23.9   1.6  11:06.51 code                               (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  95732  53612 S  14.0   0.6   8:11.25 code                               (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S  13.6   4.6  10:42.94 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   3417 kent      20   0 5662004 150008  52528 S   9.6   0.9   9:24.55 gnome-shell                        (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195176  58200  29344 S   4.0   0.4   3:19.02 Xwayland                           (B[m[39;49m[K
+(B[m   8055 kent      20   0 1134.2g 105088  56420 S   2.3   0.7   1:16.93 code                               (B[m[39;49m[K
+(B[m   8239 kent      20   0 1134.0g  68632  28688 S   2.3   0.4   0:56.23 code                               (B[m[39;49m[K
+(B[m   8264 kent      20   0 1140.2g 310744  33324 S   1.3   1.9   0:56.61 code                               (B[m[39;49m[K
+(B[m   1426 root      20   0 1318784  75840   6168 S   1.0   0.5   0:52.63 tailscaled                         (B[m[39;49m[K
+(B[m   1428 root      20   0 2392188  19392   4700 S   0.7   0.1   0:11.04 containerd                         (B[m[39;49m[K
+(B[m   4243 kent      20   0   32.7g 300312 152476 S   0.7   1.9   3:59.73 chrome                             (B[m[39;49m[K[H(B[mtop - 10:48:07 up  2:21,  1 user,  load average: 1.16, 1.02, 1.01(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 387 (B[m[39;49mtotal,(B[m[39;49m[1m   2 (B[m[39;49mrunning,(B[m[39;49m[1m 384 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  4.4 (B[m[39;49mus,(B[m[39;49m[1m  1.7 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 93.7 (B[m[39;49mid,(B[m[39;49m[1m  0.1 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    449.1 (B[m[39;49mfree,(B[m[39;49m[1m   6699.5 (B[m[39;49mused,(B[m[39;49m[1m   9660.3 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8996.1 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m   8170 kent      20   0 1138.5g 257956  71340 S  21.3   1.6  11:07.15 code                               (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  95812  53616 S  13.0   0.6   8:11.64 code                               (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S  11.6   4.6  10:43.29 VirtualBoxVM                       (B[m[39;49m[K
+(B[m[1m   3417 kent      20   0 5662004 150008  52528 R   9.6   0.9   9:24.84 gnome-shell                        (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195112  58200  29344 S   3.3   0.4   3:19.12 Xwayland                           (B[m[39;49m[K
+(B[m   8239 kent      20   0 1134.0g  68692  28688 S   2.7   0.4   0:56.31 code                               (B[m[39;49m[K
+(B[m   8055 kent      20   0 1134.2g 105196  56420 S   2.0   0.7   1:16.99 code                               (B[m[39;49m[K
+(B[m  79253 root      20   0       0      0      0 I   1.0   0.0   0:00.95 kworker/u24:7-i915                 (B[m[39;49m[K
+(B[m   8264 kent      20   0 1140.2g 310832  33324 S   0.7   1.9   0:56.63 code                               (B[m[39;49m[K
+(B[m  19538 kent      20   0  885840  15952   8172 S   0.7   0.1   0:41.02 VBoxSVC                            (B[m[39;49m[K
+(B[m     15 root      20   0       0      0      0 I   0.3   0.0   0:14.63 rcu_preempt                        (B[m[39;49m[K[H(B[mtop - 10:48:10 up  2:21,  1 user,  load average: 1.16, 1.02, 1.01(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 390 (B[m[39;49mtotal,(B[m[39;49m[1m   2 (B[m[39;49mrunning,(B[m[39;49m[1m 387 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  4.9 (B[m[39;49mus,(B[m[39;49m[1m  1.7 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 93.1 (B[m[39;49mid,(B[m[39;49m[1m  0.1 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    429.4 (B[m[39;49mfree,(B[m[39;49m[1m   6719.2 (B[m[39;49mused,(B[m[39;49m[1m   9660.6 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8976.5 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m   8170 kent      20   0 1138.5g 268364  71352 R  21.9   1.7  11:07.81 code                               (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S  13.9   4.6  10:43.71 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  95824  53624 S  12.3   0.6   8:12.01 code                               (B[m[39;49m[K
+(B[m   3417 kent      20   0 5662004 150016  52528 S   9.6   0.9   9:25.13 gnome-shell                        (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195176  58200  29344 S   3.3   0.4   3:19.22 Xwayland                           (B[m[39;49m[K
+(B[m   8239 kent      20   0 1134.0g  68948  28688 S   2.3   0.4   0:56.38 code                               (B[m[39;49m[K
+(B[m   8055 kent      20   0 1134.2g 105300  56420 S   2.0   0.7   1:17.05 code                               (B[m[39;49m[K
+(B[m   8264 kent      20   0 1140.2g 310960  33324 S   1.7   1.9   0:56.68 code                               (B[m[39;49m[K
+(B[m   4371 kent      20   0   32.4g  82264  61292 S   1.3   0.5   0:51.86 chrome                             (B[m[39;49m[K
+(B[m   4243 kent      20   0   32.7g 300304 152476 S   1.0   1.9   3:59.76 chrome                             (B[m[39;49m[K
+(B[m   9873 kent      20   0 1157.8g 451772  97520 S   1.0   2.8   3:28.84 chrome                             (B[m[39;49m[K[H(B[mtop - 10:48:13 up  2:21,  1 user,  load average: 1.31, 1.05, 1.02(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 387 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m 385 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  5.5 (B[m[39;49mus,(B[m[39;49m[1m  2.1 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 92.4 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    430.4 (B[m[39;49mfree,(B[m[39;49m[1m   6718.1 (B[m[39;49mused,(B[m[39;49m[1m   9667.2 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8977.6 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m   8170 kent      20   0 1138.5g 265496  71540 S  33.6   1.7  11:08.82 code                               (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  95944  53660 S  14.6   0.6   8:12.45 code                               (B[m[39;49m[K
+(B[m   3417 kent      20   0 5662068 150020  52528 S  11.0   0.9   9:25.46 gnome-shell                        (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S  10.0   4.6  10:44.01 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195112  58200  29344 S   4.0   0.4   3:19.34 Xwayland                           (B[m[39;49m[K
+(B[m   8239 kent      20   0 1134.0g  68540  28688 S   3.0   0.4   0:56.47 code                               (B[m[39;49m[K
+(B[m   8055 kent      20   0 1134.2g 105168  56420 S   2.7   0.7   1:17.13 code                               (B[m[39;49m[K
+(B[m   8264 kent      20   0 1140.2g 311016  33324 S   1.3   1.9   0:56.72 code                               (B[m[39;49m[K
+(B[m   1426 root      20   0 1318784  75840   6168 S   0.7   0.5   0:52.68 tailscaled                         (B[m[39;49m[K
+(B[m   3911 kent      20   0 6706284 377588  43764 S   0.7   2.3   0:43.41 dropbox                            (B[m[39;49m[K
+(B[m  19502 kent      20   0 3070436 129412  36824 S   0.7   0.8   0:36.05 VirtualBox                         (B[m[39;49m[K[H(B[mtop - 10:48:16 up  2:21,  1 user,  load average: 1.20, 1.03, 1.01(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 390 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m 388 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  5.9 (B[m[39;49mus,(B[m[39;49m[1m  2.0 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 91.9 (B[m[39;49mid,(B[m[39;49m[1m  0.1 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    437.2 (B[m[39;49mfree,(B[m[39;49m[1m   6711.3 (B[m[39;49mused,(B[m[39;49m[1m   9664.2 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8984.4 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m   8170 kent      20   0 1138.5g 268092  71560 S  28.6   1.7  11:09.68 code                               (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  95948  53656 S  17.6   0.6   8:12.98 code                               (B[m[39;49m[K
+(B[m   3417 kent      20   0 5662004 150020  52528 S  13.3   0.9   9:25.86 gnome-shell                        (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S  11.6   4.6  10:44.36 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195176  58200  29344 S   5.0   0.4   3:19.49 Xwayland                           (B[m[39;49m[K
+(B[m   8239 kent      20   0 1134.0g  68860  28688 S   4.0   0.4   0:56.59 code                               (B[m[39;49m[K
+(B[m   8055 kent      20   0 1134.2g 105232  56420 S   3.7   0.7   1:17.24 code                               (B[m[39;49m[K
+(B[m   8264 kent      20   0 1140.2g 310860  33324 S   2.0   1.9   0:56.78 code                               (B[m[39;49m[K
+(B[m   1426 root      20   0 1318784  75840   6168 S   0.7   0.5   0:52.70 tailscaled                         (B[m[39;49m[K
+(B[m  19538 kent      20   0  885840  15952   8172 S   0.7   0.1   0:41.09 VBoxSVC                            (B[m[39;49m[K
+(B[m  27423 root      20   0       0      0      0 I   0.7   0.0   0:09.17 kworker/u24:5-i915                 (B[m[39;49m[K[H(B[mtop - 10:48:19 up  2:21,  1 user,  load average: 1.20, 1.03, 1.01(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 390 (B[m[39;49mtotal,(B[m[39;49m[1m   2 (B[m[39;49mrunning,(B[m[39;49m[1m 387 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  4.2 (B[m[39;49mus,(B[m[39;49m[1m  3.6 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 91.9 (B[m[39;49mid,(B[m[39;49m[1m  0.2 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.1 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    434.3 (B[m[39;49mfree,(B[m[39;49m[1m   6713.6 (B[m[39;49mused,(B[m[39;49m[1m   9658.3 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8982.1 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m  90745 kent      20   0    9236   6044   3460 R  40.2   0.0   0:01.22 bash                               (B[m[39;49m[K
+(B[m   8170 kent      20   0 1138.5g 257144  71560 S  12.6   1.6  11:10.06 code                               (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  96032  53668 S   8.3   0.6   8:13.23 code                               (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S   7.3   4.6  10:44.58 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   3417 kent      20   0 5662004 150020  52528 S   7.0   0.9   9:26.07 gnome-shell                        (B[m[39;49m[K
+(B[m   3369 kent      20   0  312572  11568   6916 S   4.7   0.1   0:00.25 goa-identity-se                    (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195240  58200  29344 S   2.3   0.4   3:19.56 Xwayland                           (B[m[39;49m[K
+(B[m   8239 kent      20   0 1134.0g  68712  28688 S   1.3   0.4   0:56.63 code                               (B[m[39;49m[K
+(B[m     46 root      20   0       0      0      0 S   0.7   0.0   0:00.20 ksoftirqd/6                        (B[m[39;49m[K
+(B[m   1426 root      20   0 1318784  75840   6168 S   0.7   0.5   0:52.72 tailscaled                         (B[m[39;49m[K
+(B[m   8264 kent      20   0 1140.2g 311032  33324 S   0.7   1.9   0:56.80 code                               (B[m[39;49m[K[H(B[mtop - 10:48:22 up  2:21,  1 user,  load average: 1.34, 1.06, 1.02(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 387 (B[m[39;49mtotal,(B[m[39;49m[1m   2 (B[m[39;49mrunning,(B[m[39;49m[1m 384 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  4.8 (B[m[39;49mus,(B[m[39;49m[1m  6.2 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 88.7 (B[m[39;49mid,(B[m[39;49m[1m  0.1 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.2 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    430.9 (B[m[39;49mfree,(B[m[39;49m[1m   6716.0 (B[m[39;49mused,(B[m[39;49m[1m   9665.0 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8979.7 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m  90745 kent      20   0    9236   6044   3460 R  98.0   0.0   0:04.17 bash                               (B[m[39;49m[K
+(B[m   3369 kent      20   0  312572  11568   6916 S  12.3   0.1   0:00.62 goa-identity-se                    (B[m[39;49m[K
+(B[m   8170 kent      20   0 1138.5g 254496  71544 S   5.0   1.6  11:10.21 code                               (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  96044  53668 S   4.0   0.6   8:13.35 code                               (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S   3.7   4.6  10:44.69 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   3417 kent      20   0 5662004 150024  52528 S   2.7   0.9   9:26.15 gnome-shell                        (B[m[39;49m[K
+(B[m     36 root      20   0       0      0      0 S   1.3   0.0   0:00.37 ksoftirqd/4                        (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195176  58200  29344 S   1.3   0.4   3:19.60 Xwayland                           (B[m[39;49m[K
+(B[m   8239 kent      20   0 1134.0g  68956  28688 S   0.7   0.4   0:56.65 code                               (B[m[39;49m[K
+(B[m   9873 kent      20   0 1157.8g 450644  97500 S   0.7   2.8   3:28.87 chrome                             (B[m[39;49m[K
+(B[m     46 root      20   0       0      0      0 S   0.3   0.0   0:00.21 ksoftirqd/6                        (B[m[39;49m[K[H(B[mtop - 10:48:25 up  2:21,  1 user,  load average: 1.34, 1.06, 1.02(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 390 (B[m[39;49mtotal,(B[m[39;49m[1m   2 (B[m[39;49mrunning,(B[m[39;49m[1m 387 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  6.1 (B[m[39;49mus,(B[m[39;49m[1m  6.1 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 87.5 (B[m[39;49mid,(B[m[39;49m[1m  0.1 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.2 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    428.1 (B[m[39;49mfree,(B[m[39;49m[1m   6717.6 (B[m[39;49mused,(B[m[39;49m[1m   9663.9 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8978.1 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m  90745 kent      20   0    9236   6044   3460 R  98.7   0.0   0:07.13 bash                               (B[m[39;49m[K
+(B[m   8170 kent      20   0 1138.5g 265352  71560 S  15.3   1.7  11:10.67 code                               (B[m[39;49m[K
+(B[m   3369 kent      20   0  312572  11568   6916 S  12.7   0.1   0:01.00 goa-identity-se                    (B[m[39;49m[K
+(B[m   3417 kent      20   0 5662004 150024  52528 S   5.3   0.9   9:26.31 gnome-shell                        (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  95936  53672 S   3.7   0.6   8:13.46 code                               (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S   3.7   4.6  10:44.80 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   8055 kent      20   0 1134.2g 105484  56420 S   2.3   0.7   1:17.32 code                               (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195176  58200  29344 S   1.3   0.4   3:19.64 Xwayland                           (B[m[39;49m[K
+(B[m     14 root      20   0       0      0      0 S   1.0   0.0   0:00.43 ksoftirqd/0                        (B[m[39;49m[K
+(B[m   3979 kent      20   0 2175720  64232  27804 S   0.7   0.4   0:18.80 xdg-desktop-por                    (B[m[39;49m[K
+(B[m   8239 kent      20   0 1134.0g  69028  28688 S   0.7   0.4   0:56.67 code                               (B[m[39;49m[K[H(B[mtop - 10:48:28 up  2:21,  1 user,  load average: 1.32, 1.06, 1.02(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 387 (B[m[39;49mtotal,(B[m[39;49m[1m   2 (B[m[39;49mrunning,(B[m[39;49m[1m 384 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  5.7 (B[m[39;49mus,(B[m[39;49m[1m  6.0 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 88.0 (B[m[39;49mid,(B[m[39;49m[1m  0.2 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.1 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    395.8 (B[m[39;49mfree,(B[m[39;49m[1m   6748.6 (B[m[39;49mused,(B[m[39;49m[1m   9685.0 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8947.1 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m  90745 kent      20   0    9236   6044   3460 R  98.3   0.0   0:10.09 bash                               (B[m[39;49m[K
+(B[m   3369 kent      20   0  312572  11568   6916 S  11.6   0.1   0:01.35 goa-identity-se                    (B[m[39;49m[K
+(B[m   8170 kent      20   0 1138.5g 266160  71592 S   9.3   1.7  11:10.95 code                               (B[m[39;49m[K
+(B[m   3417 kent      20   0 5662004 150028  52528 S   4.7   0.9   9:26.45 gnome-shell                        (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  96116  53704 S   4.7   0.6   8:13.60 code                               (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S   4.0   4.6  10:44.92 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195176  58200  29344 S   1.7   0.4   3:19.69 Xwayland                           (B[m[39;49m[K
+(B[m   8055 kent      20   0 1134.2g 105592  56420 S   1.3   0.7   1:17.36 code                               (B[m[39;49m[K
+(B[m     26 root      20   0       0      0      0 S   1.0   0.0   0:00.26 ksoftirqd/2                        (B[m[39;49m[K
+(B[m     14 root      20   0       0      0      0 S   0.3   0.0   0:00.44 ksoftirqd/0                        (B[m[39;49m[K
+(B[m     30 root      rt   0       0      0      0 S   0.3   0.0   0:01.63 migration/3                        (B[m[39;49m[K[H(B[mtop - 10:48:31 up  2:21,  1 user,  load average: 1.37, 1.08, 1.03(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 389 (B[m[39;49mtotal,(B[m[39;49m[1m   2 (B[m[39;49mrunning,(B[m[39;49m[1m 386 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  5.3 (B[m[39;49mus,(B[m[39;49m[1m  6.3 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 88.4 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    422.6 (B[m[39;49mfree,(B[m[39;49m[1m   6720.6 (B[m[39;49mused,(B[m[39;49m[1m   9683.4 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8975.1 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m  90745 kent      20   0    9236   6044   3460 R  99.3   0.0   0:13.07 bash                               (B[m[39;49m[K
+(B[m   3369 kent      20   0  312572  11568   6916 S  12.7   0.1   0:01.73 goa-identity-se                    (B[m[39;49m[K
+(B[m   8170 kent      20   0 1138.5g 256452  71568 S   7.7   1.6  11:11.18 code                               (B[m[39;49m[K
+(B[m   3417 kent      20   0 5662004 150036  52528 S   4.3   0.9   9:26.58 gnome-shell                        (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S   4.3   4.6  10:45.05 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  95744  53676 S   3.7   0.6   8:13.71 code                               (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195176  58200  29344 S   1.7   0.4   3:19.74 Xwayland                           (B[m[39;49m[K
+(B[m   8055 kent      20   0 1134.2g 105304  56420 S   1.7   0.7   1:17.41 code                               (B[m[39;49m[K
+(B[m     14 root      20   0       0      0      0 S   0.7   0.0   0:00.46 ksoftirqd/0                        (B[m[39;49m[K
+(B[m   4243 kent      20   0   32.7g 300108 152476 S   0.7   1.9   3:59.79 chrome                             (B[m[39;49m[K
+(B[m   8239 kent      20   0 1134.0g  68696  28688 S   0.7   0.4   0:56.70 code                               (B[m[39;49m[K[H(B[mtop - 10:48:34 up  2:21,  1 user,  load average: 1.37, 1.08, 1.03(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 386 (B[m[39;49mtotal,(B[m[39;49m[1m   2 (B[m[39;49mrunning,(B[m[39;49m[1m 383 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  5.6 (B[m[39;49mus,(B[m[39;49m[1m  6.1 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 88.2 (B[m[39;49mid,(B[m[39;49m[1m  0.1 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    411.7 (B[m[39;49mfree,(B[m[39;49m[1m   6730.4 (B[m[39;49mused,(B[m[39;49m[1m   9684.6 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8965.3 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m  90745 kent      20   0    9236   6044   3460 R  99.7   0.0   0:16.07 bash                               (B[m[39;49m[K
+(B[m   3369 kent      20   0  312572  11568   6916 S  12.6   0.1   0:02.11 goa-identity-se                    (B[m[39;49m[K
+(B[m   8170 kent      20   0 1138.5g 254856  71568 S   9.3   1.6  11:11.46 code                               (B[m[39;49m[K
+(B[m   3417 kent      20   0 5661940 150044  52528 S   5.3   0.9   9:26.74 gnome-shell                        (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S   4.3   4.6  10:45.18 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  95768  53688 S   3.7   0.6   8:13.82 code                               (B[m[39;49m[K
+(B[m   8055 kent      20   0 1134.2g 105164  56420 S   1.7   0.7   1:17.46 code                               (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195112  58200  29344 S   1.3   0.4   3:19.78 Xwayland                           (B[m[39;49m[K
+(B[m  19538 kent      20   0  885840  15952   8172 S   0.7   0.1   0:41.14 VBoxSVC                            (B[m[39;49m[K
+(B[m     60 root      rt   0       0      0      0 S   0.3   0.0   0:02.16 migration/9                        (B[m[39;49m[K
+(B[m     65 root      rt   0       0      0      0 S   0.3   0.0   0:02.27 migration/10                       (B[m[39;49m[K[H(B[mtop - 10:48:37 up  2:21,  1 user,  load average: 1.34, 1.08, 1.03(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 386 (B[m[39;49mtotal,(B[m[39;49m[1m   3 (B[m[39;49mrunning,(B[m[39;49m[1m 382 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  5.4 (B[m[39;49mus,(B[m[39;49m[1m  6.1 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 88.4 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    412.5 (B[m[39;49mfree,(B[m[39;49m[1m   6728.5 (B[m[39;49mused,(B[m[39;49m[1m   9684.7 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8967.2 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m  90745 kent      20   0    9236   6044   3460 R 100.0   0.0   0:19.08 bash                               (B[m[39;49m[K
+(B[m   3369 kent      20   0  312572  11568   6916 S  13.6   0.1   0:02.52 goa-identity-se                    (B[m[39;49m[K
+(B[m[1m   8170 kent      20   0 1138.5g 252392  71560 R   7.3   1.6  11:11.68 code                               (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S   4.3   4.6  10:45.31 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   3417 kent      20   0 5661940 150044  52528 S   3.7   0.9   9:26.85 gnome-shell                        (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  95840  53680 S   3.7   0.6   8:13.93 code                               (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195688  58200  29344 S   1.7   0.4   3:19.83 Xwayland                           (B[m[39;49m[K
+(B[m   8055 kent      20   0 1134.2g 105164  56420 S   1.3   0.7   1:17.50 code                               (B[m[39;49m[K
+(B[m   1426 root      20   0 1318784  75840   6168 S   0.7   0.5   0:52.77 tailscaled                         (B[m[39;49m[K
+(B[m   8239 kent      20   0 1134.0g  68404  28688 S   0.7   0.4   0:56.72 code                               (B[m[39;49m[K
+(B[m     15 root      20   0       0      0      0 I   0.3   0.0   0:14.69 rcu_preempt                        (B[m[39;49m[K[H(B[mtop - 10:48:40 up  2:21,  1 user,  load average: 1.34, 1.08, 1.03(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 389 (B[m[39;49mtotal,(B[m[39;49m[1m   2 (B[m[39;49mrunning,(B[m[39;49m[1m 386 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  5.8 (B[m[39;49mus,(B[m[39;49m[1m  5.8 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 88.4 (B[m[39;49mid,(B[m[39;49m[1m  0.1 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    422.0 (B[m[39;49mfree,(B[m[39;49m[1m   6717.8 (B[m[39;49mused,(B[m[39;49m[1m   9679.1 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8977.9 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m  90745 kent      20   0    9236   6044   3460 R 100.0   0.0   0:22.09 bash                               (B[m[39;49m[K
+(B[m   3369 kent      20   0  312572  11568   6916 S  13.3   0.1   0:02.92 goa-identity-se                    (B[m[39;49m[K
+(B[m   8170 kent      20   0 1138.5g 253200  71576 S   9.0   1.6  11:11.95 code                               (B[m[39;49m[K
+(B[m   3417 kent      20   0 5662004 150044  52528 S   4.7   0.9   9:26.99 gnome-shell                        (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S   4.7   4.6  10:45.45 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  96004  53684 S   4.0   0.6   8:14.05 code                               (B[m[39;49m[K
+(B[m   8055 kent      20   0 1134.2g 105180  56420 S   1.7   0.7   1:17.55 code                               (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195112  58200  29344 S   1.0   0.4   3:19.86 Xwayland                           (B[m[39;49m[K
+(B[m   8264 kent      20   0 1140.2g 311016  33324 S   0.7   1.9   0:56.88 code                               (B[m[39;49m[K
+(B[m     40 root      rt   0       0      0      0 S   0.3   0.0   0:01.87 migration/5                        (B[m[39;49m[K
+(B[m     55 root      rt   0       0      0      0 S   0.3   0.0   0:02.33 migration/8                        (B[m[39;49m[K[H(B[mtop - 10:48:43 up  2:21,  1 user,  load average: 1.31, 1.08, 1.02(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 386 (B[m[39;49mtotal,(B[m[39;49m[1m   3 (B[m[39;49mrunning,(B[m[39;49m[1m 382 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  5.2 (B[m[39;49mus,(B[m[39;49m[1m  5.8 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 88.9 (B[m[39;49mid,(B[m[39;49m[1m  0.1 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    423.5 (B[m[39;49mfree,(B[m[39;49m[1m   6715.1 (B[m[39;49mused,(B[m[39;49m[1m   9675.2 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8980.6 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m  90745 kent      20   0    9236   6044   3460 R  99.0   0.0   0:25.06 bash                               (B[m[39;49m[K
+(B[m   3369 kent      20   0  312572  12096   6916 S  12.0   0.1   0:03.28 goa-identity-se                    (B[m[39;49m[K
+(B[m   8170 kent      20   0 1138.5g 252696  71576 S   6.0   1.6  11:12.13 code                               (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S   4.3   4.6  10:45.58 VirtualBoxVM                       (B[m[39;49m[K
+(B[m[1m   3417 kent      20   0 5661940 150016  52528 R   4.0   0.9   9:27.11 gnome-shell                        (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  95908  53684 S   3.7   0.6   8:14.16 code                               (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195176  58200  29344 S   1.3   0.4   3:19.90 Xwayland                           (B[m[39;49m[K
+(B[m     15 root      20   0       0      0      0 I   0.3   0.0   0:14.70 rcu_preempt                        (B[m[39;49m[K
+(B[m     26 root      20   0       0      0      0 S   0.3   0.0   0:00.27 ksoftirqd/2                        (B[m[39;49m[K
+(B[m     75 root      20   0       0      0      0 I   0.3   0.0   0:09.89 kworker/u24:1-kcryptd/253:0        (B[m[39;49m[K
+(B[m    937 root     -51   0       0      0      0 S   0.3   0.0   0:04.08 irq/177-iwlwifi:default_queue      (B[m[39;49m[K[H(B[mtop - 10:48:46 up  2:21,  1 user,  load average: 1.29, 1.07, 1.02(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 389 (B[m[39;49mtotal,(B[m[39;49m[1m   2 (B[m[39;49mrunning,(B[m[39;49m[1m 386 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  5.9 (B[m[39;49mus,(B[m[39;49m[1m  6.3 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 87.7 (B[m[39;49mid,(B[m[39;49m[1m  0.2 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    442.3 (B[m[39;49mfree,(B[m[39;49m[1m   6695.0 (B[m[39;49mused,(B[m[39;49m[1m   9674.6 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   9000.6 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m  90745 kent      20   0    9236   6044   3460 R 100.0   0.0   0:28.08 bash                               (B[m[39;49m[K
+(B[m   3369 kent      20   0  312572  12096   6916 S  13.0   0.1   0:03.67 goa-identity-se                    (B[m[39;49m[K
+(B[m   8170 kent      20   0 1138.5g 253680  71576 S   8.3   1.6  11:12.38 code                               (B[m[39;49m[K
+(B[m   3417 kent      20   0 5661940 150016  52528 S   4.7   0.9   9:27.25 gnome-shell                        (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S   4.0   4.6  10:45.70 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  95912  53684 S   3.7   0.6   8:14.27 code                               (B[m[39;49m[K
+(B[m   8055 kent      20   0 1134.2g 105152  56420 S   1.7   0.7   1:17.61 code                               (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195176  58200  29344 S   1.3   0.4   3:19.94 Xwayland                           (B[m[39;49m[K
+(B[m   4371 kent      20   0   32.4g  82176  61288 S   0.7   0.5   0:51.91 chrome                             (B[m[39;49m[K
+(B[m   8239 kent      20   0 1134.0g  68848  28740 S   0.7   0.4   0:56.76 code                               (B[m[39;49m[K
+(B[m   8264 kent      20   0 1140.2g 311404  33324 S   0.7   1.9   0:56.90 code                               (B[m[39;49m[K[H(B[mtop - 10:48:49 up  2:21,  1 user,  load average: 1.29, 1.07, 1.02(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 386 (B[m[39;49mtotal,(B[m[39;49m[1m   2 (B[m[39;49mrunning,(B[m[39;49m[1m 383 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  5.6 (B[m[39;49mus,(B[m[39;49m[1m  5.8 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 88.5 (B[m[39;49mid,(B[m[39;49m[1m  0.1 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    426.6 (B[m[39;49mfree,(B[m[39;49m[1m   6709.5 (B[m[39;49mused,(B[m[39;49m[1m   9675.6 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8986.1 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m  90745 kent      20   0    9236   6044   3460 R  99.3   0.0   0:31.07 bash                               (B[m[39;49m[K
+(B[m   3369 kent      20   0  312572  12096   6916 S  13.3   0.1   0:04.07 goa-identity-se                    (B[m[39;49m[K
+(B[m   8170 kent      20   0 1138.5g 252788  71580 S  11.0   1.6  11:12.71 code                               (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S   4.7   4.6  10:45.84 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  95816  53688 S   3.3   0.6   8:14.37 code                               (B[m[39;49m[K
+(B[m   3417 kent      20   0 5662004 150016  52528 S   3.0   0.9   9:27.34 gnome-shell                        (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195176  58200  29344 S   1.3   0.4   3:19.98 Xwayland                           (B[m[39;49m[K
+(B[m   4371 kent      20   0   32.4g  82260  61288 S   0.7   0.5   0:51.93 chrome                             (B[m[39;49m[K
+(B[m     15 root      20   0       0      0      0 I   0.3   0.0   0:14.71 rcu_preempt                        (B[m[39;49m[K
+(B[m     70 root      rt   0       0      0      0 S   0.3   0.0   0:03.15 migration/11                       (B[m[39;49m[K
+(B[m     93 root      39  19       0      0      0 S   0.3   0.0   0:00.59 khugepaged                         (B[m[39;49m[K[H(B[mtop - 10:48:52 up  2:21,  1 user,  load average: 1.27, 1.07, 1.02(B[m[39;49m(B[m[39;49m[K
+
+%Cpu(s):(B[m[39;49m[1m  5.1 (B[m[39;49mus,(B[m[39;49m[1m  5.7 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 89.1 (B[m[39;49mid,(B[m[39;49m[1m  0.1 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    414.5 (B[m[39;49mfree,(B[m[39;49m[1m   6720.5 (B[m[39;49mused,(B[m[39;49m[1m   9677.4 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8975.2 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m  90745 kent      20   0    9236   6044   3460 R 100.0   0.0   0:34.08 bash                               (B[m[39;49m[K
+(B[m   3369 kent      20   0  312572  12096   6916 S  12.3   0.1   0:04.44 goa-identity-se                    (B[m[39;49m[K
+(B[m   8170 kent      20   0 1138.5g 252788  71580 S   4.3   1.6  11:12.84 code                               (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  95952  53688 S   4.0   0.6   8:14.49 code                               (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S   3.3   4.6  10:45.94 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   3417 kent      20   0 5661940 150020  52528 S   3.0   0.9   9:27.43 gnome-shell                        (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195176  58200  29344 S   1.0   0.4   3:20.01 Xwayland                           (B[m[39;49m[K
+(B[m   8239 kent      20   0 1134.0g  68432  28740 S   0.7   0.4   0:56.78 code                               (B[m[39;49m[K
+(B[m   8264 kent      20   0 1140.2g 311072  33324 S   0.7   1.9   0:56.92 code                               (B[m[39;49m[K
+(B[m     75 root      20   0       0      0      0 I   0.3   0.0   0:09.90 kworker/u24:1-i915                 (B[m[39;49m[K
+(B[m   1426 root      20   0 1318784  75840   6168 S   0.3   0.5   0:52.80 tailscaled                         (B[m[39;49m[K[H(B[mtop - 10:48:55 up  2:21,  1 user,  load average: 1.27, 1.07, 1.02(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 389 (B[m[39;49mtotal,(B[m[39;49m[1m   2 (B[m[39;49mrunning,(B[m[39;49m[1m 386 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  4.4 (B[m[39;49mus,(B[m[39;49m[1m  6.1 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 89.5 (B[m[39;49mid,(B[m[39;49m[1m  0.1 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    422.2 (B[m[39;49mfree,(B[m[39;49m[1m   6711.6 (B[m[39;49mused,(B[m[39;49m[1m   9680.6 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8984.1 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m  90745 kent      20   0    9236   6044   3460 R 100.0   0.0   0:37.09 bash                               (B[m[39;49m[K
+(B[m   3369 kent      20   0  312572  12096   6916 S  11.6   0.1   0:04.79 goa-identity-se                    (B[m[39;49m[K
+(B[m   8170 kent      20   0 1138.5g 251300  71580 S   4.3   1.6  11:12.97 code                               (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  95852  53688 S   3.7   0.6   8:14.60 code                               (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S   3.7   4.6  10:46.05 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   3417 kent      20   0 5661940 150020  52528 S   2.7   0.9   9:27.51 gnome-shell                        (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195176  58200  29344 S   1.0   0.4   3:20.04 Xwayland                           (B[m[39;49m[K
+(B[m   8239 kent      20   0 1134.0g  68488  28740 S   0.7   0.4   0:56.80 code                               (B[m[39;49m[K
+(B[m     15 root      20   0       0      0      0 I   0.3   0.0   0:14.72 rcu_preempt                        (B[m[39;49m[K
+(B[m     50 root      rt   0       0      0      0 S   0.3   0.0   0:03.65 migration/7                        (B[m[39;49m[K
+(B[m     65 root      rt   0       0      0      0 S   0.3   0.0   0:02.28 migration/10                       (B[m[39;49m[K[H(B[mtop - 10:48:58 up  2:21,  1 user,  load average: 1.24, 1.07, 1.02(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 386 (B[m[39;49mtotal,(B[m[39;49m[1m   2 (B[m[39;49mrunning,(B[m[39;49m[1m 383 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  4.8 (B[m[39;49mus,(B[m[39;49m[1m  5.7 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 89.3 (B[m[39;49mid,(B[m[39;49m[1m  0.2 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    405.0 (B[m[39;49mfree,(B[m[39;49m[1m   6727.6 (B[m[39;49mused,(B[m[39;49m[1m   9681.3 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8968.0 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m  90745 kent      20   0    9236   6044   3460 R  99.0   0.0   0:40.07 bash                               (B[m[39;49m[K
+(B[m   3369 kent      20   0  312572  12096   6916 S  12.6   0.1   0:05.17 goa-identity-se                    (B[m[39;49m[K
+(B[m   8170 kent      20   0 1138.5g 251944  71580 S   4.7   1.6  11:13.11 code                               (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  95856  53688 S   3.7   0.6   8:14.71 code                               (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S   3.7   4.6  10:46.16 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   3417 kent      20   0 5661940 150024  52528 S   2.7   0.9   9:27.59 gnome-shell                        (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195176  58200  29344 S   1.0   0.4   3:20.07 Xwayland                           (B[m[39;49m[K
+(B[m     75 root      20   0       0      0      0 I   0.3   0.0   0:09.92 kworker/u24:1-flush-253:0          (B[m[39;49m[K
+(B[m   1426 root      20   0 1318784  75840   6168 S   0.3   0.5   0:52.81 tailscaled                         (B[m[39;49m[K
+(B[m   1428 root      20   0 2392188  19392   4700 S   0.3   0.1   0:11.07 containerd                         (B[m[39;49m[K
+(B[m   3222 kent       9 -11  256448  12316   7896 S   0.3   0.1   0:00.46 wireplumber                        (B[m[39;49m[K[H(B[mtop - 10:49:01 up  2:22,  1 user,  load average: 1.22, 1.07, 1.02(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 389 (B[m[39;49mtotal,(B[m[39;49m[1m   2 (B[m[39;49mrunning,(B[m[39;49m[1m 386 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  5.3 (B[m[39;49mus,(B[m[39;49m[1m  5.9 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 87.8 (B[m[39;49mid,(B[m[39;49m[1m  1.1 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    415.4 (B[m[39;49mfree,(B[m[39;49m[1m   6715.1 (B[m[39;49mused,(B[m[39;49m[1m   9683.5 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8980.6 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m  90745 kent      20   0    9236   6044   3460 R 100.0   0.0   0:43.08 bash                               (B[m[39;49m[K
+(B[m   3369 kent      20   0  312572  12096   6916 S  13.0   0.1   0:05.56 goa-identity-se                    (B[m[39;49m[K
+(B[m   8170 kent      20   0 1138.5g 252108  71580 S   4.3   1.6  11:13.24 code                               (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  95756  53688 S   3.7   0.6   8:14.82 code                               (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S   3.7   4.6  10:46.27 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   3417 kent      20   0 5661940 150024  52528 S   3.0   0.9   9:27.68 gnome-shell                        (B[m[39;49m[K
+(B[m   4243 kent      20   0   32.7g 299660 152544 S   1.0   1.9   3:59.87 chrome                             (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195240  58200  29344 S   1.0   0.4   3:20.10 Xwayland                           (B[m[39;49m[K
+(B[m   8239 kent      20   0 1134.0g  68792  28740 S   0.7   0.4   0:56.83 code                               (B[m[39;49m[K
+(B[m     15 root      20   0       0      0      0 I   0.3   0.0   0:14.73 rcu_preempt                        (B[m[39;49m[K
+(B[m     20 root      rt   0       0      0      0 S   0.3   0.0   0:01.65 migration/1                        (B[m[39;49m[K[H(B[mtop - 10:49:04 up  2:22,  1 user,  load average: 1.22, 1.07, 1.02(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 386 (B[m[39;49mtotal,(B[m[39;49m[1m   2 (B[m[39;49mrunning,(B[m[39;49m[1m 383 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  5.0 (B[m[39;49mus,(B[m[39;49m[1m  5.6 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 89.2 (B[m[39;49mid,(B[m[39;49m[1m  0.1 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    412.7 (B[m[39;49mfree,(B[m[39;49m[1m   6716.6 (B[m[39;49mused,(B[m[39;49m[1m   9684.6 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8979.1 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m  90745 kent      20   0    9236   6044   3460 R 100.0   0.0   0:46.09 bash                               (B[m[39;49m[K
+(B[m   3369 kent      20   0  312572  12096   6916 S  12.6   0.1   0:05.94 goa-identity-se                    (B[m[39;49m[K
+(B[m   8170 kent      20   0 1138.5g 252108  71580 S   5.0   1.6  11:13.39 code                               (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  95924  53688 S   4.0   0.6   8:14.94 code                               (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S   3.3   4.6  10:46.37 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   3417 kent      20   0 5661940 150024  52528 S   3.0   0.9   9:27.77 gnome-shell                        (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195176  58200  29344 S   1.3   0.4   3:20.14 Xwayland                           (B[m[39;49m[K
+(B[m     55 root      rt   0       0      0      0 S   0.3   0.0   0:02.34 migration/8                        (B[m[39;49m[K
+(B[m   4482 kent      20   0 1157.8g 164400  83504 S   0.3   1.0   0:24.46 chrome                             (B[m[39;49m[K
+(B[m   7603 root       0 -20       0      0      0 D   0.3   0.0   0:13.75 kworker/u25:0+i915_flip            (B[m[39;49m[K
+(B[m   8264 kent      20   0 1140.2g 311100  33324 S   0.3   1.9   0:56.95 code                               (B[m[39;49m[K[H(B[mtop - 10:49:07 up  2:22,  1 user,  load average: 1.21, 1.07, 1.02(B[m[39;49m(B[m[39;49m[K
+
+%Cpu(s):(B[m[39;49m[1m  5.2 (B[m[39;49mus,(B[m[39;49m[1m  5.8 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 89.0 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.1 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    409.1 (B[m[39;49mfree,(B[m[39;49m[1m   6719.0 (B[m[39;49mused,(B[m[39;49m[1m   9685.8 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8976.6 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m  90745 kent      20   0    9236   6044   3460 R  99.3   0.0   0:49.07 bash                               (B[m[39;49m[K
+(B[m   3369 kent      20   0  312572  12096   6916 S  13.0   0.1   0:06.33 goa-identity-se                    (B[m[39;49m[K
+(B[m   8170 kent      20   0 1138.5g 265184  71580 S   7.3   1.6  11:13.61 code                               (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S   4.0   4.6  10:46.49 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   3417 kent      20   0 5662004 150024  52528 S   3.7   0.9   9:27.88 gnome-shell                        (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  96052  53688 S   3.7   0.6   8:15.05 code                               (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195112  58200  29344 S   1.3   0.4   3:20.18 Xwayland                           (B[m[39;49m[K
+(B[m   8055 kent      20   0 1134.2g 105196  56420 S   1.0   0.7   1:17.66 code                               (B[m[39;49m[K
+(B[m     14 root      20   0       0      0      0 S   0.3   0.0   0:00.47 ksoftirqd/0                        (B[m[39;49m[K
+(B[m     36 root      20   0       0      0      0 S   0.3   0.0   0:00.40 ksoftirqd/4                        (B[m[39;49m[K
+(B[m    980 root     -51   0       0      0      0 S   0.3   0.0   0:02.43 irq/191-AudioDSP                   (B[m[39;49m[K[H(B[mtop - 10:49:10 up  2:22,  1 user,  load average: 1.21, 1.07, 1.02(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 389 (B[m[39;49mtotal,(B[m[39;49m[1m   2 (B[m[39;49mrunning,(B[m[39;49m[1m 386 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  5.5 (B[m[39;49mus,(B[m[39;49m[1m  5.9 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 88.3 (B[m[39;49mid,(B[m[39;49m[1m  0.3 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.1 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    401.6 (B[m[39;49mfree,(B[m[39;49m[1m   6725.2 (B[m[39;49mused,(B[m[39;49m[1m   9687.7 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8970.5 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m  90745 kent      20   0    9236   6044   3460 R  98.3   0.0   0:52.03 bash                               (B[m[39;49m[K
+(B[m   3369 kent      20   0  312572  12096   6916 S  13.3   0.1   0:06.73 goa-identity-se                    (B[m[39;49m[K
+(B[m   8170 kent      20   0 1138.5g 256356  71584 S   7.3   1.6  11:13.83 code                               (B[m[39;49m[K
+(B[m   3417 kent      20   0 5662004 150024  52528 S   4.3   0.9   9:28.01 gnome-shell                        (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  96060  53692 S   3.7   0.6   8:15.16 code                               (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S   3.7   4.6  10:46.60 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195176  58200  29344 S   1.3   0.4   3:20.22 Xwayland                           (B[m[39;49m[K
+(B[m   8055 kent      20   0 1134.2g 105040  56420 S   1.0   0.7   1:17.69 code                               (B[m[39;49m[K
+(B[m     14 root      20   0       0      0      0 S   0.7   0.0   0:00.49 ksoftirqd/0                        (B[m[39;49m[K
+(B[m     36 root      20   0       0      0      0 S   0.7   0.0   0:00.42 ksoftirqd/4                        (B[m[39;49m[K
+(B[m   8239 kent      20   0 1134.0g  68912  28740 S   0.7   0.4   0:56.86 code                               (B[m[39;49m[K[H(B[mtop - 10:49:13 up  2:22,  1 user,  load average: 1.19, 1.07, 1.02(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 386 (B[m[39;49mtotal,(B[m[39;49m[1m   2 (B[m[39;49mrunning,(B[m[39;49m[1m 383 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  4.7 (B[m[39;49mus,(B[m[39;49m[1m  5.8 (B[m[39;49msy,(B[m[39;49m[1m  0.1 (B[m[39;49mni,(B[m[39;49m[1m 89.4 (B[m[39;49mid,(B[m[39;49m[1m  0.1 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    415.2 (B[m[39;49mfree,(B[m[39;49m[1m   6710.6 (B[m[39;49mused,(B[m[39;49m[1m   9688.8 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8985.1 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m  90745 kent      20   0    9236   6044   3460 R  99.3   0.0   0:55.01 bash                               (B[m[39;49m[K
+(B[m   3369 kent      20   0  312572  12096   6916 S  12.7   0.1   0:07.11 goa-identity-se                    (B[m[39;49m[K
+(B[m   8170 kent      20   0 1138.5g 256372  71584 S   5.0   1.6  11:13.98 code                               (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  95964  53692 S   4.0   0.6   8:15.28 code                               (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S   3.0   4.6  10:46.69 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   3417 kent      20   0 5662004 150024  52528 S   2.7   0.9   9:28.09 gnome-shell                        (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195176  58200  29344 S   1.0   0.4   3:20.25 Xwayland                           (B[m[39;49m[K
+(B[m     14 root      20   0       0      0      0 S   0.7   0.0   0:00.51 ksoftirqd/0                        (B[m[39;49m[K
+(B[m  19538 kent      20   0  885840  15952   8172 S   0.7   0.1   0:41.22 VBoxSVC                            (B[m[39;49m[K
+(B[m     40 root      rt   0       0      0      0 S   0.3   0.0   0:01.88 migration/5                        (B[m[39;49m[K
+(B[m   1426 root      20   0 1318784  75840   6168 S   0.3   0.5   0:52.84 tailscaled                         (B[m[39;49m[K[H(B[mtop - 10:49:16 up  2:22,  1 user,  load average: 1.17, 1.07, 1.02(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 389 (B[m[39;49mtotal,(B[m[39;49m[1m   2 (B[m[39;49mrunning,(B[m[39;49m[1m 386 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  4.8 (B[m[39;49mus,(B[m[39;49m[1m  6.0 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 89.2 (B[m[39;49mid,(B[m[39;49m[1m  0.1 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.1 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    410.2 (B[m[39;49mfree,(B[m[39;49m[1m   6714.3 (B[m[39;49mused,(B[m[39;49m[1m   9689.5 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8981.4 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m  90745 kent      20   0    9236   6044   3460 R  99.7   0.0   0:58.01 bash                               (B[m[39;49m[K
+(B[m   3369 kent      20   0  312572  12096   6916 S  13.0   0.1   0:07.50 goa-identity-se                    (B[m[39;49m[K
+(B[m   8170 kent      20   0 1138.5g 253108  71588 S   5.0   1.6  11:14.13 code                               (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  95872  53696 S   3.7   0.6   8:15.39 code                               (B[m[39;49m[K
+(B[m   3417 kent      20   0 5661940 150028  52528 S   3.3   0.9   9:28.19 gnome-shell                        (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S   3.0   4.6  10:46.78 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   4272 kent      20   0 1195240  58200  29344 S   1.0   0.4   3:20.28 Xwayland                           (B[m[39;49m[K
+(B[m   8239 kent      20   0 1134.0g  68808  28740 S   0.7   0.4   0:56.89 code                               (B[m[39;49m[K
+(B[m     15 root      20   0       0      0      0 I   0.3   0.0   0:14.75 rcu_preempt                        (B[m[39;49m[K
+(B[m     26 root      20   0       0      0      0 S   0.3   0.0   0:00.28 ksoftirqd/2                        (B[m[39;49m[K
+(B[m   1207 root      20   0       0      0      0 S   0.3   0.0   0:03.76 jbd2/dm-1-8                        (B[m[39;49m[K[H(B[mtop - 10:49:19 up  2:22,  1 user,  load average: 1.17, 1.07, 1.02(B[m[39;49m(B[m[39;49m[K
+
+%Cpu(s):(B[m[39;49m[1m  4.7 (B[m[39;49mus,(B[m[39;49m[1m  6.3 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 89.0 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    415.8 (B[m[39;49mfree,(B[m[39;49m[1m   6707.5 (B[m[39;49mused,(B[m[39;49m[1m   9686.5 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8988.2 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m  90745 kent      20   0    9236   6044   3460 R  99.0   0.0   1:00.98 bash                               (B[m[39;49m[K
+(B[m   3369 kent      20   0  312572  12096   6916 S  12.3   0.1   0:07.87 goa-identity-se                    (B[m[39;49m[K
+(B[m   8170 kent      20   0 1138.5g 254712  71588 S   8.3   1.6  11:14.38 code                               (B[m[39;49m[K
+(B[m   3417 kent      20   0 5661940 150028  52528 S   4.3   0.9   9:28.32 gnome-shell                        (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S   3.7   4.6  10:46.89 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  95776  53696 S   3.3   0.6   8:15.49 code                               (B[m[39;49m[K
+(B[m   4272 kent      20   0 1191080  58200  29344 S   1.7   0.4   3:20.33 Xwayland                           (B[m[39;49m[K
+(B[m   8055 kent      20   0 1134.2g 105060  56420 S   1.7   0.7   1:17.74 code                               (B[m[39;49m[K
+(B[m     14 root      20   0       0      0      0 S   0.7   0.0   0:00.53 ksoftirqd/0                        (B[m[39;49m[K
+(B[m     26 root      20   0       0      0      0 S   0.3   0.0   0:00.29 ksoftirqd/2                        (B[m[39;49m[K
+(B[m     30 root      rt   0       0      0      0 S   0.3   0.0   0:01.64 migration/3                        (B[m[39;49m[K[H(B[mtop - 10:49:22 up  2:22,  1 user,  load average: 1.32, 1.10, 1.03(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 386 (B[m[39;49mtotal,(B[m[39;49m[1m   2 (B[m[39;49mrunning,(B[m[39;49m[1m 383 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  5.6 (B[m[39;49mus,(B[m[39;49m[1m  6.3 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 87.9 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.1 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    409.9 (B[m[39;49mfree,(B[m[39;49m[1m   6712.4 (B[m[39;49mused,(B[m[39;49m[1m   9688.2 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8983.3 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m  90745 kent      20   0    9236   6044   3460 R  98.7   0.0   1:03.95 bash                               (B[m[39;49m[K
+(B[m   3369 kent      20   0  312572  12096   6916 S  14.0   0.1   0:08.29 goa-identity-se                    (B[m[39;49m[K
+(B[m   8170 kent      20   0 1138.5g 253620  71588 S  10.3   1.6  11:14.69 code                               (B[m[39;49m[K
+(B[m   3417 kent      20   0 5662004 150028  52528 S   5.3   0.9   9:28.48 gnome-shell                        (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  95780  53696 S   3.3   0.6   8:15.59 code                               (B[m[39;49m[K
+(B[m   8055 kent      20   0 1134.2g 105104  56420 S   3.0   0.7   1:17.83 code                               (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S   3.0   4.6  10:46.98 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   4272 kent      20   0 1191592  58200  29344 S   1.7   0.4   3:20.38 Xwayland                           (B[m[39;49m[K
+(B[m     26 root      20   0       0      0      0 S   1.0   0.0   0:00.32 ksoftirqd/2                        (B[m[39;49m[K
+(B[m   1263 root      20   0   14236   5968   5068 S   0.7   0.0   0:24.40 bluetoothd                         (B[m[39;49m[K
+(B[m   1426 root      20   0 1318784  75840   6168 S   0.7   0.5   0:52.86 tailscaled                         (B[m[39;49m[K[H(B[mtop - 10:49:25 up  2:22,  1 user,  load average: 1.32, 1.10, 1.03(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 386 (B[m[39;49mtotal,(B[m[39;49m[1m   4 (B[m[39;49mrunning,(B[m[39;49m[1m 381 (B[m[39;49msleeping,(B[m[39;49m[1m   1 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  5.7 (B[m[39;49mus,(B[m[39;49m[1m  6.0 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 88.0 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.2 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15695.7 (B[m[39;49mtotal,(B[m[39;49m[1m    386.3 (B[m[39;49mfree,(B[m[39;49m[1m   6734.9 (B[m[39;49mused,(B[m[39;49m[1m   9698.5 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   3000.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2166.7 (B[m[39;49mfree,(B[m[39;49m[1m    833.2 (B[m[39;49mused.(B[m[39;49m[1m   8960.8 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m[1m  90745 kent      20   0    9236   6044   3460 R 100.0   0.0   1:06.95 bash                               (B[m[39;49m[K
+(B[m   3369 kent      20   0  312572  12096   6916 S  13.3   0.1   0:08.69 goa-identity-se                    (B[m[39;49m[K
+(B[m   8170 kent      20   0 1138.5g 267072  71588 S  11.7   1.7  11:15.04 code                               (B[m[39;49m[K
+(B[m[1m   3417 kent      20   0 5662008 150028  52528 R   6.7   0.9   9:28.68 gnome-shell                        (B[m[39;49m[K
+(B[m   8118 kent      20   0   33.1g  95680  53696 S   5.7   0.6   8:15.76 code                               (B[m[39;49m[K
+(B[m  22442 kent      20   0 4826568 744300 615200 S   3.3   4.6  10:47.08 VirtualBoxVM                       (B[m[39;49m[K
+(B[m   8055 kent      20   0 1134.2g 105032  56420 S   2.3   0.7   1:17.90 code                               (B[m[39;49m[K
+(B[m[1m   4272 kent      20   0 1191080  58200  29344 R   2.0   0.4   3:20.44 Xwayland                           (B[m[39;49m[K
+(B[m   8264 kent      20   0 1140.2g 311324  33324 S   0.7   1.9   0:57.02 code                               (B[m[39;49m[K
+(B[m  27423 root      20   0       0      0      0 I   0.7   0.0   0:09.25 kworker/u24:5-events_unbound       (B[m[39;49m[K
+(B[m     55 root      rt   0       0      0      0 S   0.3   0.0   0:02.35 migration/8                        (B[m[39;49m[K[?1l>[19;1H
+[?12l[?25h[K[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​​[36m [33m1m41s[0m 
+[35m❯[0m kill [7m90745[27m90745
+[?2004l[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​​[36m [0m
+[35m❯[0m kill 90745-90745[C90745 90745
+[?2004l[?2004h
+[34ml1-live/241017[0m [90m241017[36m [0m
+[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [K[35m❯[0m [H[2J
+[34ml1-live/241017[0m [90m241017[36m [0m
+[35m❯[0m )[K()s)l)e)e)p) )5)ö) )[1P)[1P);) )e)c)h)o) )H)e)j)[C
+[?2004lHej
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [33m5s[0m 
+[35m❯[0m (sleep 5; echo Hej)
+[?2004l^Z
+[1]+  Stopped                 ( sleep 5; echo Hej )
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦[0m 
+[31m❯[0m jobs
+[?2004l[1]+  Stopped                 ( sleep 5; echo Hej )
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦[0m 
+[35m❯[0m bg
+[?2004l[1]+ ( sleep 5; echo Hej ) &
+Hej
+[1]+  Done                    ( sleep 5; echo Hej )
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦[0m 
+[35m❯[0m [H[2J
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦[0m 
+[35m❯[0m jobs[C[C(sleep 5; echo Hej)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C^C[?2004l[?2004h[?2004l
+[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[31m❯[0m [H[2J
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[31m❯[0m ls
+[?2004lrecordings  trapper
+[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m [H[2J
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m pwd
+[?2004l/home/kent/l1-live/241017
+[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m )[K(cd -[K/tmp ; toch[K[Kuch hej [Kl[K; chmod -w hej)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l[?2004h
+[34ml1-live/241017[0m [90m241017[36m [0m
+[35m❯[0m pwd
+[?2004l/home/kent/l1-live/241017
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [0m
+[35m❯[0m ls -l /tmp/hej 
+[?2004l-r--r--r-- 1 kent kent 0 Oct 17 10:54 /tmp/hej
+[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m )[K(cd jijijei[K[K[K[K[K[K[K[K[K[K[K[H[2J
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m )[K()w)h)i)l)e) )t)r)u)e)ö) )[1P)[1P);) )d)o) )s)l)e)e)p) )2);) )[1P[1@5[C[C )e )c )h )o )[C )' )' )[C[1@V[1@A[1@K[1@E[1@N[C; )[C )d )o )n )e )[C[C
+[?2004lVAKEN
+ehejhe
+VAKEN
+^C
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [33m10s[0m 
+[31m❯[0m (while true; do sleep 5; echo 'VAKEN'; done ) &[H[2J
+[34ml1-live/241017[0m [90m241017[36m [33m10s[0m 
+[31m❯[0m (while true; do sleep 5; echo 'VAKEN'; done ) &
+[?2004l[1] 98888
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦[0m 
+[35m❯[0m ls
+[?2004lrecordings  trapper
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦[0m 
+[35m❯[0m VAKEN
+
+[?2004l[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦[0m 
+[35m❯[0m VAKEN
+
+[?2004l[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦[0m 
+[35m❯[0m [H[2J
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦[0m 
+[35m❯[0m jobs
+[?2004l[1]+  Running                 ( while true; do
+    sleep 5; echo 'VAKEN';
+done ) &
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦[0m 
+[35m❯[0m VAKEN
+VAKEN
+
+[?2004l[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦[0m 
+[35m❯[0m VAKEN
+k[K
+[?2004l[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦[0m 
+[35m❯[0m ki;ll[K[K[KVAKEN
+ll %VAKEN
+1VAKEN
+VAKEN
+VAKEN
+VAKEN
+
+[?2004l[1]+  Terminated              ( while true; do
+    sleep 5; echo 'VAKEN';
+done )
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [1;34m✦[0m 
+[35m❯[0m kill %1[C[C[3Pjobs[C[C(while true; do sleep 5; echo 'VAKEN'; done ) &  ^C[?2004l[?2004h[?2004l
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [0m
+[31m❯[0m ^C[?2004l[?2004h[?2004l
+[?2004h
+[34ml1-live/241017[0m [90m241017[36m [0m
+[31m❯[0m [K[31m❯[0m [K[31m❯[0m [K[31m❯[0m [K[31m❯[0m [K[31m❯[0m [H[2J
+[34ml1-live/241017[0m [90m241017[36m [0m
+[31m❯[0m man true
+[?2004l[?1049h[22;0;0t[?1h=TRUE(1)                                      User Commands                                      TRUE(1)[m
+[m
+[1mNAME[0m[m
+       true - do nothing, successfully[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mtrue[0m [[4mignored[24m [4mcommand[24m [4mline[24m [4marguments[24m][m
+       [1mtrue[0m [4mOPTION[24m[m
+[m
+[1mDESCRIPTION[0m[m
+       Exit with a status code indicating success.[m
+[m
+       [1m--help[0m display this help and exit[m
+[m
+       [1m--version[0m[m
+              output version information and exit[m
+[7m Manual page true(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page true(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       NOTE:  your  shell  may  have  its own version of true, which usually supersedes the version de‐[m
+[7m Manual page true(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       scribed here.  Please refer to your shell's documentation for details about the options it  sup‐[m
+[7m Manual page true(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ports.[m
+[7m Manual page true(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page true(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mAUTHOR[0m[m
+[7m Manual page true(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Written by Jim Meyering.[m
+[7m Manual page true(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page true(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mREPORTING[0m [1mBUGS[0m[m
+[7m Manual page true(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       GNU coreutils online help: <https://www.gnu.org/software/coreutils/>[m
+[7m Manual page true(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Report any translation bugs to <https://translationproject.org/team/>[m
+[7m Manual page true(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page true(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mCOPYRIGHT[0m[m
+[7m Manual page true(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Copyright  ©  2022  Free  Software  Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later[m
+[7m Manual page true(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       <https://gnu.org/licenses/gpl.html>.[m
+[7m Manual page true(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the[m
+[7m Manual page true(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       extent permitted by law.[m
+[7m Manual page true(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page true(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mSEE[0m [1mALSO[0m[m
+[7m Manual page true(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Full documentation <https://www.gnu.org/software/coreutils/true>[m
+[7m Manual page true(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       or available locally via: info '(coreutils) true invocation'[m
+[7m Manual page true(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page true(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[KGNU coreutils 9.1                            September 2022                                     TRUE(1)[m
+[7m Manual page true(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page true(1) line 24/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page true(1) line 24/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page true(1) line 24/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page true(1) line 24/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page true(1) line 24/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page true(1) line 24/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page true(1) line 24/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page true(1) line 24/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page true(1) line 24/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page true(1) line 24/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page true(1) line 24/39 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       Written by Jim Meyering.[m
+[17;1H[K[7m Manual page true(1) line 23/39 94% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mAUTHOR[0m[m
+[17;1H[K[7m Manual page true(1) line 22/39 93% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[17;1H[K[7m Manual page true(1) line 21/39 89% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       ports.[m
+[17;1H[K[7m Manual page true(1) line 20/39 85% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       scribed here.  Please refer to your shell's documentation for details about the options it  sup‐[m
+[17;1H[K[7m Manual page true(1) line 19/39 83% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       NOTE:  your  shell  may  have  its own version of true, which usually supersedes the version de‐[m
+[17;1H[K[7m Manual page true(1) line 18/39 83% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[17;1H[K[7m Manual page true(1) line 17/39 81% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              output version information and exit[m
+[17;1H[K[7m Manual page true(1) line 16/39 75% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m--version[0m[m
+[17;1H[K[7m Manual page true(1) line 15/39 72% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[17;1H[K[7m Manual page true(1) line 14/39 66% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m--help[0m display this help and exit[m
+[17;1H[K[7m Manual page true(1) line 13/39 64% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[17;1H[K[7m Manual page true(1) line 12/39 64% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       Exit with a status code indicating success.[m
+[17;1H[K[7m Manual page true(1) line 11/39 59% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mDESCRIPTION[0m[m
+[17;1H[K[7m Manual page true(1) line 10/39 54% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[17;1H[K[7m Manual page true(1) line 9/39 52% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mtrue[0m [4mOPTION[24m[m
+[17;1H[K[7m Manual page true(1) line 8/39 52% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mtrue[0m [[4mignored[24m [4mcommand[24m [4mline[24m [4marguments[24m][m
+[17;1H[K[7m Manual page true(1) line 7/39 50% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mSYNOPSIS[0m[m
+[17;1H[K[7m Manual page true(1) line 6/39 49% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[17;1H[K[7m Manual page true(1) line 5/39 49% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       true - do nothing, successfully[m
+[17;1H[K[7m Manual page true(1) line 4/39 48% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mNAME[0m[m
+[17;1H[K[7m Manual page true(1) line 3/39 41% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[17;1H[K[7m Manual page true(1) line 2/39 34% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HMTRUE(1)                                      User Commands                                      TRUE(1)[m
+[17;1H[K[7m Manual page true(1) line 1/39 34% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page true(1) line 1/39 34% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page true(1) line 1/39 34% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page true(1) line 1/39 34% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page true(1) line 1/39 34% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page true(1) line 1/39 34% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page true(1) line 1/39 34% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page true(1) line 1/39 34% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page true(1) line 1/39 34% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page true(1) line 1/39 34% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page true(1) line 1/39 34% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page true(1) line 1/39 34% (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [33m7s[0m 
+[35m❯[0m help true
+[?2004ltrue: true
+    Return a successful result.
+    
+    Exit Status:
+    Always succeeds.
+[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m [H[2J
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m :
+[?2004l[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m echo $?
+[?2004l0
+[?2004h
+[34ml1-live/241017[0m [90m241017[38;5;218m*​[36m [0m
+[35m❯[0m [?2004l
+exit
+
+Script done on 2024-10-17 11:04:45+02:00 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,38 @@
+ps # visar nuvarande process och barnprocesser
+
+pid 1 är init-systemet # Nästan alltid systemd
+
+# -e     Select all processes.
+ps -e
+
+# -f     Do full-format listing.
+ps -ef
+ps -eF
+ps -ely
+
+cp ~/Dropbox/c8/iso/Win11_23H2_EnglishInternational_x64v2.iso
+Ctrl + Z # Avbryter
+jobs # listar alla bash-"jobb"
+cp ~/Dropbox/c8/iso/Fedora-Server-dvd-x86_64-40-1.14.iso ~/
+Ctrl + Z # Avbryter
+sleep 600
+Ctrl + Z # Avbryter
+
+jobs
+bg %1
+
+bg %4 %5 %6
+
+kill process
+kill -9 process
+
+killall trapper
+killall -9 trapper
+
+top # visar resursförbrukning i realtid
+
+(sleep 5; echo Hej) # körs i en barnprocess
+
+(cd /tmp ; touch hej; chmod -w hej) # ett sätt att inte påverka sin normala miljö
+
+(while true; do sleep 5; echo 'VAKEN'; done ) &
