@@ -1,0 +1,29 @@
+#!/bin/bash
+
+set -euo pipefail
+
+cd "$(dirname "${BASH_SOURCE[0]}")"
+root="$(git rev-parse --show-toplevel)"
+source "$root/.shared/repo.bash"
+
+marker_file="$root/.vscode/.initialized"
+
+if [ ! -e "$marker_file" ]; then
+	reset_vscode_profile_student
+	touch "$marker_file"
+fi
+
+date_ymd="$(date +"%y%m%d")"
+
+git config --local pull.rebase true
+git config --local rebase.autostash true
+
+git fetch
+
+if ! git checkout "$date_ymd" 2>/dev/null; then
+	msg <<-EOM
+		Dagens branch verkar inte skapad och pushad ännu.
+		Testa igen om en stund!
+	EOM
+	exit 1
+fi

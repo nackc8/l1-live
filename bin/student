@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -euo pipefail
+
+cd "$(dirname "${BASH_SOURCE[0]}")"
+root="$(git rev-parse --show-toplevel)"
+source "$root/.shared/repo.bash"
+
+answer=$(
+	ask --default n "Vill du återgå till studentläget? (j/N) " yYjJ nN
+)
+
+if [[ "$answer" == 'n' ]]; then
+	exit 1
+fi
+
+sleep 1
+timestamp="$(date +%s)"
+
+save=$(mktemp -d -t "educator-save-$timestamp-XXX")
+mv -v "$root/."{vscode,shellcheckrc,gitignore} "$save" 2>/dev/null || true
+
+reset_vscode_profile_student
