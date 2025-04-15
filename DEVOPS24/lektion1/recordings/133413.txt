@@ -137,4 +137,92 @@ Include /etc/ssh/sshd_config.d/*.conf
 :[K[K [KESCESC[KOO[KBB[K
 :[K[K [KESCESC[KOO[KBB[K#PubkeyAuthentication yes
 :[K[K [KESCESC[KOO[KBB[K
-:[K[K [KESCESC[KOO[KBB[K# Expect .ssh/authorized_keys2 to be disregarded by default
+:[K[K [KESCESC[KOO[KBB[K# Expect .ssh/authorized_keys2 to be disregarded by default in future.
+:[K[K [KESCESC[KOO[KBB[K#AuthorizedKeysFile     .ssh/authorized_keys .ssh/authorized_keys2
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K#AuthorizedPrincipalsFile none
+:[K[K [KESCESC[KOO[KAA[K[HM
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#RekeyLimit default none
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HM# Ciphers and keying
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#HostKey /etc/ssh/ssh_host_ed25519_key
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#HostKey /etc/ssh/ssh_host_ecdsa_key
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HM #HostKey /etc/ssh/ssh_host_rsa_key
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#ListenAddress ::
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#ListenAddress 0.0.0.0
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#AddressFamily any
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#Port 22
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMInclude /etc/ssh/sshd_config.d/*.conf
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HM# default value.
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HM# possible, but leave them commented.  Uncommented options override the
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HM# OpenSSH is to specify options with their default value where
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HM# The strategy used for options in the default sshd_config shipped with
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HM    
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HM# This sshd was compiled with PATH=/usr/local/bin:/usr/bin:/bin:/usr/games
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HM         
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HM# sshd_config(5) for more information.
+[19;1H[K:[K[K[HM# This is the sshd server system-wide configuration file.  See
+[HM
+[19;1H[K:[K[K...skipping...
+#ChrootDirectory none
+#VersionAddendum none
+
+# no default banner path
+#Banner none
+
+# Allow client to pass locale environment variables
+AcceptEnv LANG LC_*
+
+# override default of no subsystems
+Subsystem       sftp    /usr/lib/openssh/sftp-server
+
+# Example of overriding settings on a per-user basis
+#Match User anoncvs
+#       X11Forwarding no
+#       AllowTcpForwarding no
+#       PermitTTY no
+#       ForceCommand cvs server
+[7m(END)[27m[K[K[H[2J[HM
+[HM#ListenAddress ::
+[HM#ListenAddress 0.0.0.0
+[HM#AddressFamily any
+[HM#Port 22
+[HM
+[HMInclude /etc/ssh/sshd_config.d/*.conf
+[HM
+[HM# default value.
+[HM# possible, but leave them commented.  Uncommented options override the
+[HM# OpenSSH is to specify options with their default value where
+[HM# The strategy used for options in the default sshd_config shipped with
+[HM    
+[HM# This sshd was compiled with PATH=/usr/local/bin:/usr/bin:/bin:/usr/games
+[HM         
+[HM# sshd_config(5) for more information.
+[HM# This is the sshd server system-wide configuration file.  See
+[HM
+[19;1H[K:[K[K...skipping...
+#ChrootDirectory none
+#VersionAddendum none
+
+# no default banner path
+#Banner none
+
+# Allow client to pass locale environment variables
+AcceptEnv LANG LC_*
+
+# override default of no subsystems
+Subsystem       sftp    /usr/lib/openssh/sftp-server
+
+# Example of overriding settings on a per-user basis
+#Match User anoncvs
+#       X11Forwarding no
+#       AllowTcpForwarding no
+#       PermitTTY no
+#       ForceCommand cvs server
+[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KAA[K[HM#PermitTunnel no
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#MaxStartups 10:30:100
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#PidFile /run/sshd.pid
+[19;1H[K:[
