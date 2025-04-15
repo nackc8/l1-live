@@ -468,4 +468,54 @@ PrintMotd no
 # no default banner path
 #Banner none
 
-# Allow client to pass 
+# Allow client to pass locale environment variables
+AcceptEnv LANG LC_*
+
+# override default of no subsystems
+Subsystem	sftp	/usr/lib/openssh/sftp-server
+
+# Example of overriding settings on a per-user basis
+#Match User anoncvs
+#	X11Forwarding no
+#	AllowTcpForwarding no
+#	PermitTTY no
+#	ForceCommand cvs server
+[?2004h[94mDEVOPS24/lektion1
+(B[m$ [H[2J[94mDEVOPS24/lektion1
+(B[m$ touch mi[K[Kfilen101010.txt
+[?2004l[?2004h[94mDEVOPS24/lektion1
+(B[m$ ls
+[?2004lfilen  filen101010.txt	ln  minfinafil	recordings
+[?2004h[94mDEVOPS24/lektion1
+(B[m$ ls -l
+[?2004ltotal 16
+-rw-r--r-- 1 kent kent   21 Apr 15 13:46 filen
+-rw-r--r-- 1 kent kent    0 Apr 15 13:50 filen101010.txt
+drwxr-xr-x 2 kent kent 4096 Apr 15 13:07 ln
+-rw-r--r-- 1 kent kent    4 Apr 15 13:35 minfinafil
+drwxr-xr-x 2 kent kent 4096 Apr 15 13:34 recordings
+[?2004h[94mDEVOPS24/lektion1
+(B[m$ [H[2J[94mDEVOPS24/lektion1
+(B[m$ sudo apt update      
+[?2004l[sudo] password for kent: 
+[33m0% [Working][0m            Hit:1 http://deb.debian.org/debian bookworm InRelease
+[33m0% [Waiting for headers] [Connected to brave-browser-apt-release.s3.brave.com (3[0m                                                                                Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+                                                                                Hit:3 http://security.debian.org/debian-security bookworm-security InRelease
+[33m0% [Connected to brave-browser-apt-release.s3.brave.com (3.164.230.117)] [Connec[0m                                                                                Hit:4 http://download.virtualbox.org/virtualbox/debian bookworm InRelease
+[33m0% [Waiting for headers] [Connecting to dbeaver.io] [Connected to download.docke[0m                                                                                Hit:5 https://brave-browser-apt-release.s3.brave.com stable InRelease
+[33m0% [Connecting to dbeaver.io (209.38.51.239)] [Waiting for headers] [Waiting for[0m                                                                                Get:6 https://cli.github.com/packages stable InRelease [3,917 B]
+[33m0% [Connecting to dbeaver.io (209.38.51.239)] [Waiting for headers] [Waiting for[0m[33m0% [Connecting to dbeaver.io (209.38.51.239)] [Waiting for headers] [Waiting for[0m                                                                                Hit:7 https://download.docker.com/linux/debian bookworm InRelease
+[33m0% [Connecting to dbeaver.io (209.38.51.239)] [Waiting for headers] [Waiting for[0m                                                                                Get:8 https://dl.google.com/linux/chrome/deb stable InRelease [1,825 B]
+[33m0% [Connecting to dbeaver.io (209.38.51.239)] [Waiting for headers] [8 InRelease[0m[33m0% [Connecting to dbeaver.io (209.38.51.239)] [Waiting for headers] [Waiting for[0m[33m0% [Connecting to dbeaver.io (209.38.51.239)] [Waiting for headers] [Connected t[0m                                                                                Get:10 https://packages.microsoft.com/repos/code stable InRelease [3,590 B]
+[33m0% [Connected to dbeaver.io (209.38.51.239)] [Waiting for headers] [Connected to[0m[33m0% [Connected to dbeaver.io (209.38.51.239)] [Waiting for headers] [Connected to[0m[33m0% [Waiting for headers] [Connected to dbeaver.io (209.38.51.239)] [Waiting for [0m                                                                                Ign:11 http://linux.dropbox.com/debian bookworm InRelease
+[33m0% [Waiting for headers] [Connected to dbeaver.io (209.38.51.239)] [Waiting for [0m                                                                                Get:12 https://pkgs.tailscale.com/stable/debian bookworm InRelease
+[33m0% [Waiting for headers] [Waiting for headers] [Waiting for headers] [12 InRelea[0m[33m                                                                                0% [Waiting for headers] [Waiting for headers] [Waiting for headers][0m                                                                    Hit:13 https://dbeaver.io/debs/dbeaver-ce  InRelease
+                                                                    Hit:14 http://linux.dropbox.com/debian bookworm Release
+[33m                                                                    0% [Waiting for headers][0m[33m0% [Waiting for headers][0m                        Hit:9 https://packages.kopia.io/apt stable InRelease
+[33m                        0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m            Get:15 https://cli.github.com/packages stable/main amd64 Packages [343 B]
+[33m0% [15 Packages 343 B/343 B 100%][0m[33m                                 0% [Working][0m[33m0% [15 Packages store 0 B][0m[33m                          0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m            Get:16 https://dl.google.com/linux/chrome/deb stable/main amd64 Packages [1,214 B]
+[33m0% [16 Packages 1,214 B/1,214 B 100%][0m[33m                                     0% [Working][0m[33m0% [16 Packages store 0 B][0m[33m                          0% [Working][0m[33m0% [Working][0m            Get:17 https://packages.microsoft.com/repos/code stable/main arm64 Packages [19.2 kB]
+[33m0% [17 Packages 15.3 kB/19.2 kB 80%][0m[33m                                    0% [Working][0m[33m0% [17 Packages store 0 B][0m[33m                          0% [Waiting for headers][0m                        Get:18 https://packages.microsoft.com/repos/code stable/main armhf Packages [19.3 kB]
+[33m0% [18 Packages 15.3 kB/19.3 kB 79%][0m[33m                                    0% [Waiting for headers][0m[33m0% [18 Packages store 0 B] [Waiting for headers][0m                                                Get:19 https://packages.microsoft.com/repos/code stable/main amd64 Packages [19.1 kB]
+[33m0% [18 Packages store 0 B] [19 Packages 15.3 kB/19.1 kB 80%][0m[33m                                                            0% [19 Packages 15.3 kB/19.1 kB 80%][0m[33m                                    0% [Working][0m[33m0% [19 Packages store 0 B][0m[33m                          0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m100% [Working][0m              Fetched 131 kB in 2s (53.8 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 26%Reading package lists... 34%Reading package lists... 34%Reading package lists... 51%Reading package lists... 69%Reading package lists... 69%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Read
