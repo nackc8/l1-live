@@ -70,4 +70,60 @@ d------r-x 2 other nogroup 4096 Apr 16 22:48 [01;34mread_execute_directory[0m
 d------rw- 2 other nogroup 4096 Apr 16 22:48 [34;42mread_write_directory[0m
 d-------w- 2 other nogroup 4096 Apr 16 22:48 [34;42mwrite_directory[0m
 d-------wx 2 other nogroup 4096 Apr 16 22:48 [34;42mwrite_execute_directory[0m
-[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ rm minfil [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ rm minfil 
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l
+[?2004ltotal 24
+d--------x 2 other nogroup 4096 Apr 16 22:50 [0m[01;34mexecute_directory[0m
+d------r-- 2 other nogroup 4096 Apr 16 22:48 [01;34mread_directory[0m
+d------r-x 2 other nogroup 4096 Apr 16 22:48 [01;34mread_execute_directory[0m
+d------rw- 2 other nogroup 4096 Apr 16 22:48 [34;42mread_write_directory[0m
+d-------w- 2 other nogroup 4096 Apr 16 22:48 [34;42mwrite_directory[0m
+d-------wx 2 other nogroup 4096 Apr 16 22:48 [34;42mwrite_execute_directory[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls read_directory/
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ for in [K[K[Kx in *; sudi[Kpo[K[Ko[K[K[K[Kdo sudo -u other touch ; done[1@([1@c[1@d[1@ [1@$[1@x[1@;[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@)
+[?2004l[sudo] password for user: 
+touch: missing file operand
+Try 'touch --help' for more information.
+-bash: cd: read_directory: Permission denied
+touch: missing file operand
+Try 'touch --help' for more information.
+touch: missing file operand
+Try 'touch --help' for more information.
+-bash: cd: read_write_directory: Permission denied
+touch: missing file operand
+Try 'touch --help' for more information.
+-bash: cd: write_directory: Permission denied
+touch: missing file operand
+Try 'touch --help' for more information.
+touch: missing file operand
+Try 'touch --help' for more information.
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ for x in *; do (cd $x; sudo -u other touch) ; done[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@ [1@f[1@i[1@l[1@$[1@R[1@A[1@N[1@D[1@O[1@M[H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ for x in *; do (cd $x; sudo -u other touch fil$RANDOM) ; done
+[?2004ltouch: cannot touch 'fil24273': Permission denied
+-bash: cd: read_directory: Permission denied
+touch: cannot touch 'fil21841': Permission denied
+-bash: cd: read_write_directory: Permission denied
+-bash: cd: write_directory: Permission denied
+touch: cannot touch 'fil14105': Permission denied
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ sudo -i
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# 
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# ls
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# cd /dir/
+[?2004l[?2004h]0;root@ubse: /dirroot@ubse:/dir# [H[2J]0;root@ubse: /dirroot@ubse:/dir# ls
+[?2004l[0m[01;34mexecute_directory[0m  fil17384                [34;42mread_write_directory[0m
+fil16729           [01;34mread_directory[0m          [34;42mwrite_directory[0m
+fil17093           [01;34mread_execute_directory[0m  [34;42mwrite_execute_directory[0m
+[?2004h]0;root@ubse: /dirroot@ubse:/dir# rm fil1*
+[?2004l[?2004h]0;root@ubse: /dirroot@ubse:/dir# [H[2J]0;root@ubse: /dirroot@ubse:/dir# ls
+[?2004l[0m[01;34mexecute_directory[0m  [01;34mread_execute_directory[0m  [34;42mwrite_directory[0m
+[01;34mread_directory[0m     [34;42mread_write_directory[0m    [34;42mwrite_execute_directory[0m
+[?2004h]0;root@ubse: /dirroot@ubse:/dir# touch [K[K[K[K[K[Kfor x in *; do touch $x/m[Kminfil$RANDOM; done
+[?2004l[?2004h]0;root@ubse: /dirroot@ubse:/dir# chown -R other>o[K[K:other *
+[?2004l[?2004h]0;root@ubse: /dirroot@ubse:/dir# tree[H[2J]0;root@ubse: /dirroot@ubse:/dir# tree -a
+[?2004l[34;42m.[0m
+├── [01;34mexecute_directory[0m
+│   └── minfil21654
+├── [01;34mread_directory[0m
+│   └── minfil8612
+├── [01;34mread_execute_directory[0m
+│   └── minfil1034
+├── [34;42mread
