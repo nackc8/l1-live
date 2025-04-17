@@ -1602,4 +1602,261 @@ No containers need to be restarted.
 User sessions running outdated binaries:
  user @ user manager service: systemd[1715]
 
-No VM guests are running outdated h
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl .
+[?2004l# file: .
+# owner: other
+# group: other
+user::rwx
+group::rwx
+other::rwx
+
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -d[Kld .
+[?2004ldrwxrwxrwx 4 other other 12288 Apr 17 11:38 [0m[34;42m.[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ man setfacl
+[?2004l[?1049h[22;0;0t[?1h=[4mSETFACL[24m(1)                   Access Control Lists                   [4mSETFACL[24m(1)[m
+[m
+[1mNAME[0m[m
+       setfacl - set file access control lists[m
+[m
+[1mSYNOPSIS[0m[m
+       [1msetfacl [22m[-bkndRLPvh] [{-m|-x} acl_spec] [{-M|-X} acl_file] file ...[m
+[m
+       [1msetfacl [22m--restore={file|-}[m
+[m
+[1mDESCRIPTION[0m[m
+       This utility sets Access Control Lists (ACLs) of files and directories.[m
+       On  the  command line, a sequence of commands is followed by a sequence[m
+       of files (which in turn can be followed by  another  sequence  of  com‐[m
+       mands, ...).[m
+[m
+       The  [4m-m[24m  and [4m-x[24m options expect an ACL on the command line. Multiple ACL[m
+       entries are separated by comma characters (`,'). The [4m-M[24m and [4m-X[24m  options[m
+       read an ACL from a file or from standard input. The ACL entry format is[m
+[7m Manual page setfacl(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       described in Section ACL ENTRIES.[m
+[7m Manual page setfacl(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The  [4m--set[24m and [4m--set-file[24m options set the ACL of a file or a directory.[m
+[7m Manual page setfacl(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The previous ACL is replaced.  ACL entries for this operation must  in‐[m
+[7m Manual page setfacl(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       clude permissions.[m
+[7m Manual page setfacl(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The  [4m-m[24m  [4m(--modify)[24m  and [4m-M[24m [4m(--modify-file)[24m options modify the ACL of a[m
+[7m Manual page setfacl(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       file or directory.  ACL entries for this operation must include permis‐[m
+[7m Manual page setfacl(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       sions.[m
+[7m Manual page setfacl(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The [4m-x[24m [4m(--remove)[24m and [4m-X[24m [4m(--remove-file)[24m options remove ACL entries. It[m
+[7m Manual page setfacl(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       is not an error to remove an entry which does not exist.  Only ACL  en‐[m
+[7m Manual page setfacl(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tries  without  the  [4mperms[24m  field  are  accepted  as parameters, unless[m
+[7m Manual page setfacl(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       POSIXLY_CORRECT is defined.[m
+[7m Manual page setfacl(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       When reading from files using the [4m-M[24m and [4m-X[24m  options,  setfacl  accepts[m
+[7m Manual page setfacl(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the  output getfacl produces.  There is at most one ACL entry per line.[m
+[7m Manual page setfacl(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       After a Pound sign (`#'), everything up to  the  end  of  the  line  is[m
+[7m Manual page setfacl(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       treated as a comment.[m
+[7m Manual page setfacl(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       If  setfacl  is used on a file system which does not support ACLs, set‐[m
+[7m Manual page setfacl(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       facl operates on the file mode permission bits. If the ACL does not fit[m
+[7m Manual page setfacl(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       completely in the permission bits, setfacl modifies the file mode  per‐[m
+[7m Manual page setfacl(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       mission bits to reflect the ACL as closely as possible, writes an error[m
+[7m Manual page setfacl(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       message to standard error, and returns with an exit status greater than[m
+[7m Manual page setfacl(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       0.[m
+[7m Manual page setfacl(1) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mPERMISSIONS[0m[m
+[7m Manual page setfacl(1) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The  file  owner  and  processes  capable of CAP_FOWNER are granted the[m
+[7m Manual page setfacl(1) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       right to modify ACLs of a file. This is analogous  to  the  permissions[m
+[7m Manual page setfacl(1) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       required  for  accessing the file mode. (On current Linux systems, root[m
+[7m Manual page setfacl(1) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       is the only user with the CAP_FOWNER capability.)[m
+[7m Manual page setfacl(1) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mOPTIONS[0m[m
+[7m Manual page setfacl(1) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m-b,[24m [4m--remove-all[0m[m
+[7m Manual page setfacl(1) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Remove all extended ACL entries. The base ACL entries of the owner,[m
+[7m Manual page setfacl(1) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           group and others are retained.[m
+[7m Manual page setfacl(1) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m-k,[24m [4m--remove-default[0m[m
+[7m Manual page setfacl(1) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Remove the Default ACL. If no Default ACL exists, no  warnings  are[m
+[7m Manual page setfacl(1) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           issued.[m
+[7m Manual page setfacl(1) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m-n,[24m [4m--no-mask[0m[m
+[7m Manual page setfacl(1) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Do  not recalculate the effective rights mask. The default behavior[m
+[7m Manual page setfacl(1) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           of setfacl is to recalculate the ACL mask entry, unless a mask  en‐[m
+[7m Manual page setfacl(1) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           try  was  explicitly  given.  The mask entry is set to the union of[m
+[7m Manual page setfacl(1) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           all permissions of the owning group, and all named user  and  group[m
+[7m Manual page setfacl(1) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           entries.  (These  are  exactly the entries affected by the mask en‐[m
+[7m Manual page setfacl(1) line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           try).[m
+[7m Manual page setfacl(1) line 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 51 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m--mask[0m[m
+[7m Manual page setfacl(1) line 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Do recalculate the effective rights mask, even if an ACL mask entry[m
+[7m Manual page setfacl(1) line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           was explicitly given. (See the [4m-n[24m option.)[m
+[7m Manual page setfacl(1) line 54 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 55 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m-d,[24m [4m--default[0m[m
+[7m Manual page setfacl(1) line 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           All operations apply to the Default ACL. Regular ACL entries in the[m
+[7m Manual page setfacl(1) line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           input set are promoted to Default ACL entries. Default ACL  entries[m
+[7m Manual page setfacl(1) line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           in  the  input set are discarded. (A warning is issued if that hap‐[m
+[7m Manual page setfacl(1) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           pens).[m
+[7m Manual page setfacl(1) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m--restore={file|-}[0m[m
+[7m Manual page setfacl(1) line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Restore a permission backup created by `getfacl -R' or similar. All[m
+[7m Manual page setfacl(1) line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           permissions of a complete directory subtree are restored using this[m
+[7m Manual page setfacl(1) line 64 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           mechanism. If the input contains owner comments or group  comments,[m
+[7m Manual page setfacl(1) line 65 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           setfacl  attempts to restore the owner and owning group. If the in‐[m
+[7m Manual page setfacl(1) line 66 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           put contains flags comments (which define the setuid,  setgid,  and[m
+[7m Manual page setfacl(1) line 67 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           sticky bits), setfacl sets those three bits accordingly; otherwise,[m
+[7m Manual page setfacl(1) line 68 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           it  clears them. This option cannot be mixed with other options ex‐[m
+[7m Manual page setfacl(1) line 69 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           cept `--test'.  If the file specified is '[1m-[22m', then it will be  read[m
+[7m Manual page setfacl(1) line 70 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           from standard input.[m
+[7m Manual page setfacl(1) line 71 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 72 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m--test[0m[m
+[7m Manual page setfacl(1) line 73 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Test mode. Instead of changing the ACLs of any files, the resulting[m
+[7m Manual page setfacl(1) line 74 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           ACLs are listed.[m
+[7m Manual page setfacl(1) line 75 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 76 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m-R,[24m [4m--recursive[0m[m
+[7m Manual page setfacl(1) line 77 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Apply operations to all files and directories recursively. This op‐[m
+[7m Manual page setfacl(1) line 78 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           tion cannot be mixed with `--restore'.[m
+[7m Manual page setfacl(1) line 79 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 80 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m-L,[24m [4m--logical[0m[m
+[7m Manual page setfacl(1) line 81 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Logical walk, follow symbolic links to directories. The default be‐[m
+[7m Manual page setfacl(1) line 82 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           havior  is  to  follow  symbolic  link arguments, and skip symbolic[m
+[7m Manual page setfacl(1) line 83 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           links encountered in subdirectories.  Only effective in combination[m
+[7m Manual page setfacl(1) line 84 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           with -R.  This option cannot be mixed with `--restore'.[m
+[7m Manual page setfacl(1) line 85 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 86 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m-P,[24m [4m--physical[0m[m
+[7m Manual page setfacl(1) line 87 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Physical walk, do not follow symbolic links to  directories.   This[m
+[7m Manual page setfacl(1) line 88 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           also  skips symbolic link arguments.  Only effective in combination[m
+[7m Manual page setfacl(1) line 89 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           with -R.  This option cannot be mixed with `--restore'.[m
+[7m Manual page setfacl(1) line 90 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 91 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m-v,[24m [4m--version[0m[m
+[7m Manual page setfacl(1) line 92 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Print the version of setfacl and exit.[m
+[7m Manual page setfacl(1) line 93 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 94 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m-h,[24m [4m--help[0m[m
+[7m Manual page setfacl(1) line 95 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Print help explaining the command line options.[m
+[7m Manual page setfacl(1) line 96 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 97 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m--[24m  End of command line options. All remaining  parameters  are  inter‐[m
+[7m Manual page setfacl(1) line 98 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           preted as file names, even if they start with a dash.[m
+[7m Manual page setfacl(1) line 99 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 100 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m-[24m   If  the  file name parameter is a single dash, setfacl reads a list[m
+[7m Manual page setfacl(1) line 101 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           of files from standard input.[m
+[7m Manual page setfacl(1) line 102 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 103 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mACL ENTRIES[0m[m
+[7m Manual page setfacl(1) line 104 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The setfacl utility recognizes the following ACL entry formats  (blanks[m
+[7m Manual page setfacl(1) line 105 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       inserted for clarity):[m
+[7m Manual page setfacl(1) line 106 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 107 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [d[efault]:] [u[ser]:][4muid[24m [:[4mperms[24m][m
+[7m Manual page setfacl(1) line 108 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Permissions  of  a  named user. Permissions of the file owner if[m
+[7m Manual page setfacl(1) line 109 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4muid[24m is empty.[m
+[7m Manual page setfacl(1) line 110 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 111 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [d[efault]:] g[roup]:[4mgid[24m [:[4mperms[24m][m
+[7m Manual page setfacl(1) line 112 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Permissions of a named group. Permissions of the owning group if[m
+[7m Manual page setfacl(1) line 113 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page setfacl(1) line 112 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           Print the version of setfacl and exit.[m
+[20;1H[K[7m Manual page setfacl(1) line 111 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [4m-v,[24m [4m--version[0m[m
+[20;1H[K[7m Manual page setfacl(1) line 110 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page setfacl(1) line 109 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           with -R.  This option cannot be mixed with `--restore'.[m
+[20;1H[K[7m Manual page setfacl(1) line 108 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           also  skips symbolic link arguments.  Only effective in combination[m
+[20;1H[K[7m Manual page setfacl(1) line 107 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           Physical walk, do not follow symbolic links to  directories.   This[m
+[20;1H[K[7m Manual page setfacl(1) line 106 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [4m-P,[24m [4m--physical[0m[m
+[20;1H[K[7m Manual page setfacl(1) line 105 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page setfacl(1) line 104 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           with -R.  This option cannot be mixed with `--restore'.[m
+[20;1H[K[7m Manual page setfacl(1) line 103 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           links encountered in subdirectories.  Only effective in combination[m
+[20;1H[K[7m Manual page setfacl(1) line 102 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           havior  is  to  follow  symbolic  link arguments, and skip symbolic[m
+[20;1H[K[7m Manual page setfacl(1) line 101 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           Logical walk, follow symbolic links to directories. The default be‐[m
+[20;1H[K[7m Manual page setfacl(1) line 100 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [4m-L,[24m [4m--logical[0m[m
+[20;1H[K[7m Manual page setfacl(1) line 99 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page setfacl(1) line 98 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           tion cannot be mixed with `--restore'.[m
+[20;1H[K[7m Manual page setfacl(1) line 97 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           Apply operations to all files and directories recursively. This op‐[m
+[20;1H[K[7m Manual page setfacl(1) line 96 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [4m-R,[24m [4m--recursive[0m[m
+[20;1H[K[7m Manual page setfacl(1) line 95 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page setfacl(1) line 94 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           ACLs are listed.[m
+[20;1H[K[7m Manual page setfacl(1) line 93 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           Test mode. Instead of changing the ACLs of any files, the resulting[m
+[20;1H[K[7m Manual page setfacl(1) line 92 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [4m--test[0m[m
+[20;1H[K[7m Manual page setfacl(1) line 91 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page setfacl(1) line 90 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           from standard input.[m
+[20;1H[K[7m Manual page setfacl(1) line 89 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           cept `--test'.  If the file specified is '[1m-[22m', then it will be  read[m
+[20;1H[K[7m Manual page setfacl(1) line 88 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           it  clears them. This option cannot be mixed with other options ex‐[m
+[20;1H[K[7m Manual page setfacl(1) line 87 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           sticky bits), setfacl sets those three bits accordingly; otherwise,[m
+[20;1H[K[7m Manual page setfacl(1) line 86 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           put contains flags comments (which define the setuid,  setgid,  and[m
+[20;1H[K[7m Manual page setfacl(1) line 85 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           setfacl  attempts to restore the owner and owning group. If the in‐[m
+[20;1H[K[7m Manual page setfacl(1) line 84 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           mechanism. If the input contains owner comments or group  comments,[m
+[20;1H[K[7m Manual page setfacl(1) line 83 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           permissions of a complete directory subtree are restored using this[m
+[20;1H[K[7m Manual page setfacl(1) line 82 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           Restore a permission backup created by `getfacl -R' or similar. All[m
+[20;1H[K[7m Manual page setfacl(1) line 81 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [4m--restore={file|-}[0m[m
+[20;1H[K[7m Manual page setfacl(1) line 80 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page setfacl(1) line 79 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           pens).[m
+[20;1H[K[7m Manual page setfacl(1) line 78 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           in  the  input set are discarded. (A warning is issued if that hap‐[m
+[20;1H[K[7m Manual page setfacl(1) line 77 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           input set are promoted to Default ACL entries. Default ACL  entries[m
+[20;1H[K[7m Manual page setfacl(1) line 76 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           All operations apply to the Default ACL. Regular ACL entries in the[m
+[20;1H[K[7m Manual page setfacl(1) line 75 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [4m-d,[24m [4m--default[0m[m
+[20;1H[K[7m Manual page setfacl(1) line 74 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page setfacl(1) line 73 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           was explicitly given. (See the [4m-n[24m option.)[m
+[20;1H[K[7m Manual page setfacl(1) line 72 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           Do recalculate the effective rights mask, even if an ACL mask entry[m
+[20;1H[K[7m Manual page setfacl(1) line 71 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [4m--mask[0m[m
+[20;1H[K[7m Manual page setfacl(1) line 70 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page setfacl(1) line 69 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           try).[m
+[20;1H[K[7m Manual page setfacl(1) line 68 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           entries.  (These  are  exactly the entries affected by the mask en‐[m
+[20;1H[K[7m Manual page setfacl(1) line 67 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           all permissions of the owning group, and all named user  and  group[m
+[20;1H[K[7m Manual page setfacl(1) line 66 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           try  was  explicitly  given.  The mask entry is set to the union of[m
+[20;1H[K[7m Manual page setfacl(1) line 65 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           of setfacl is to recalculate the ACL mask entry, unless a mask  en‐[m
+[20;1H[K[7m Manual page setfacl(1) line 64 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           Do  not recalculate the effective rights mask. The default behavior[m
+[20;1H[K[7m Manual page setfacl(1) line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [4m-n,[24m [4m--no-mask[0m[m
+[20;1H[K[7m Manual page setfacl(1) line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page setfacl(1) line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           issued.[m
+[20;1H[K[7m Manual page setfacl(1) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           Remove the Default ACL. If no Default ACL exists, no  warnings  are[m
+[20;1H[K[7m Manual page setfacl(1) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [4m-k,[24m [4m--remove-default[0m[m
+[20;1H[K[7m Manual page setfacl(1) line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page setfacl(1) line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           group and others are retained.[m
+[20;1H[K[7m Manual page setfacl(1) line 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           Remove all extended ACL entries. The base ACL entries of the owner,[m
+[20;1H[K[7m Manual page setfacl(1) line 55 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [4m-b,[24m [4m--remove-all[0m[m
+[20;1H[K[7m Manual page setfacl(1) line 54 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mOPTIONS[0m[m
+[20;1H[K[7m Manual page setfacl(1) line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page setfacl(1) line 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       is the only user with the CAP_FOWNER capability.)[m
+[20;1H[K[7m Manual page setfacl(1) line 51 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       required  for  accessing the file mode. (On current Linux systems, root[m
+[20;1H[K[7m Manual page setfacl(1) line 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       right to modify ACLs of a file. This is analogous  to  the  permissions[m
+[20;1H[K[7m Manual page setfacl(1) line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       The  file  owner  and  processes  capable of CAP_FOWNER are granted the[m
+[20;1H[K[7m Manual page setfacl(1) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM   [1mPERMISSIONS[0m[m
+[20;1H[K[7m Manual page setfacl(1) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page setfacl(1) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       0.[m
+[20;1H[K[7m Manual page setfacl(1) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       message to standard error, and returns with an exit status greater than[m
+[20;1H[K[7m Manual page setfacl(1) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       mission bits to reflect the ACL as closely as possible, writes an error[m
+[20;1H[K[7m Manual page setfacl(1) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       completely in the permission bits, setfacl modifies the file mode  per‐[m
+[20;1H[K[7m Manual page setfacl(1) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       facl operates on the file mode permission bits. If the ACL does not fit[m
+[20;1H[K[7m Manual page setfacl(1) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       If  setfacl  is used on a file system which does not support ACLs, set‐[m
+[20;1H[K[7m Manual page setfacl(1) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page setfacl(1) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       treated as a comment.[m
+[20;1H[K[7m Manual page setfacl(1) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       After a Pound sign (`#'), everything up to  the  end  of  the  line  is[m
+[20;1H[K[7m Manual page setfacl(1) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       the  output getfacl produces.  There is at most one ACL entry per line.[m
+[20;1H[K[7m Manual page setfacl(1) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       When reading from files using the [4m-M[24m and [4m-X[24m  options,  setfacl  accepts[m
+[20;1H[K[7m Manual page setfacl(1) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page setfacl(1) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       POSIXLY_CORRECT is defined.[m
+[20;1H[K[7m Manual page setfacl(1) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       tries  without  the  [4mperms[24m  field  are  accepted  as parameters, unless[m
+[20;1H[K[7m Manual page setfacl(1) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       is not an error to remove an entry which does not exist.  Only ACL  en‐[m
+[20;1H[K[7m Manual page setfacl(1) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       The [4m-x[24m [4m(--remove)[24m and [4m-X[24m [4m(--remove-file)[24m options remove ACL entries. It[m
+[20;1H[K[7m Manual page setfacl(1) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       right to modify ACLs of a file. This is analogous  to  the  permissions[m
+[7m Manual page setfacl(1) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       The [4m-x[24m [4m(--remove)[24m and [4m-X[24m [4m(--remove-file)[24m options remove ACL entries. It[m
+[20;1H[K[7m Manual page setfacl(1) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page setfacl(1) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       sions.[m
+[20;1H[K[7m Manual page setfacl(1) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       file or directory.  ACL entries for this operation must include permis‐[m
+[20;1H[K[7m Manual page setfacl(1) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       The  [4m-m[24m  [4m(--modify)[24m  and [4m-M[24m [4m(--modify-file)[24m options modify the ACL of a[m
+[20;1H[K[7m Manual page setfacl(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page setfacl(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       clude permissions.[m
+[20;1H[K[7m Manual page setfacl(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       The previous ACL is replaced.  ACL entries for this operation must  in‐[m
+[20;1H[K[7m Manual page setfacl(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       The  [4m--set[24m and [4m--set-file[24m options set the ACL of a file or a directory.[m
+[20;1H[K[7m Manual page setfacl(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page setfacl(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       described in Section ACL ENTRIES.[m
+[20;1H[K[7m Manual page setfacl(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       read an ACL from a file or from standard input. The ACL entry format is[m
+[20;1H[K[7m Manual page setfacl(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       entries are separated by comma characters (`,'). The [4m-M[24m and [4m-X[24m  options[m
+[20;1H[K[7m Manual page setfacl(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       The  [4m-m[24m  and [4m-x[24m options expect an ACL on the command line. Multiple ACL[m
+[20;1H[K[7m Manual page setfacl(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page setfacl(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       mands, ...).[m
+[20;1H[K[7m Manual page setfacl(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       of files (which in turn can be followed by  another  sequence  of  com‐[m
+[20;1H[K[7m Manual page setfacl(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       On  the  command line, a sequence of commands is followed by a sequence[m
+[20;1H[K[7m Manual page setfacl(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       This utility sets Access Control Lists (ACLs) of files and directories.[m
+[20;1H[K[7m Manual page setfacl(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mDESCRIPTION[0m[m
+[20;1H[K[7m Manual page setfacl(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page setfacl(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1msetfacl [22m--restore={file|-}[m
+[20;1H[K[7m Manual page setfacl(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page setfacl(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1msetfacl [22m[-bkndRLPvh] [{-m|-x} acl_spec] [{-M|-X} acl_file] file ...[m
+[20;1H[K[7m Manual page setfacl(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mSYNOPSIS[0m[m
+[20;1H[K[7m Manual page setfacl(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page setfacl(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       setfacl - set file access control lists[m
+[20;1H[K[7m Manual page setfacl(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mNAME[0m[m
+[20;1H[K[7m Manual page setfacl(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page setfacl(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[4mSETFACL[24m(1)                   Access Control Lists                   [4mSETFACL[24m(1)[m
+[20;1H[K[7m Manual page setfacl(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page setfacl(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page setfacl(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page setfacl(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page setfacl(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page setfacl(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page setfacl(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page setfacl(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page
