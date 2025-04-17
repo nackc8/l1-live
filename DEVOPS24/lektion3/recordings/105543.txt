@@ -1941,4 +1941,65 @@ drwx------ 2 other other 4096 Apr 17 12:03 [01;34motherskat[0m
 drwxrwxr-x 2 user  user  4096 Apr 17 11:38 [01;34mvanligkatalog[0m
 [?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls otherskat/
 [?2004lls: cannot open directory 'otherskat/': Permission denied
-[?2004h]0;user@ubse: /dir[01;32muser@ubse[0
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl otherskat/[H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl otherskat/
+[?2004l# file: otherskat/
+# owner: other
+# group: other
+user::rwx
+group::---
+other::---
+
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl otherskat/[C otherskat/- otherskat/m otherskat/[C otherskat/[1P[1@s[C[C[C[C[C[C[C[C[C[C[C[C[C otherskat/[1@u[1@:[1@u[1@s[1@e[1@r[1@:[1@r[1@w[1@x[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@s[1@u[1@d[1@o[1@ 
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ sudo setfacl -m u:user:rwx  otherskat/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[20Pgetfacl[C[C[C[C[C[C[C[C[C[C[C
+[?2004l# file: otherskat/
+# owner: other
+# group: other
+user::rwx
+user:user:rwx
+group::---
+mask::rwx
+other::---
+
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls otherskat/
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ touch otherskat/hejsan
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l otherskat/
+[?2004ltotal 0
+-rw-rw-r-- 1 user user 0 Apr 17 12:05 hejsan
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l [Kd otherskat/
+[?2004ldrwxrwx---+ 2 other other 4096 Apr 17 12:05 [0m[01;34motherskat/[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ s[Kgetfe[Kacl otherskat/
+[?2004l# file: otherskat/
+# owner: other
+# group: other
+user::rwx
+user:user:rwx
+group::---
+mask::rwx
+other::---
+
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl otherskat/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pls -ld[C[C[C[C[C[C[C[C[C[C[C[1P otherskat/touch otherskat/hejsan[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9Pls otherskat/[5@getfacl[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[20@sudo setfacl -m u:user:rwx [C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1@g[1@r[1@e[1@e[1@n[H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ sudo setfacl -m u:green:rwx  otherskat/
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ (reverse-i-search)`': [Kg': sudo setfacl -m u:[7mg[27mreen:rwx  otherskat/[20Pe': [7mge[27mtfacl[1@t': [7mget[27m[C[8@failed reverse-i-search)`getd': get[1@f[C[C[C[1P[C[C[C[C[17Preverse-i-search)`get': [7mget[27mfacl .[9P]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ get[C[C[C[C[C[C[C[C[C[Kotherskat/
+[?2004l# file: otherskat/
+# owner: other
+# group: other
+user::rwx
+user:user:rwx
+user:green:rwx
+group::---
+mask::rwx
+other::---
+
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -ld otherskat/
+[?2004ldrwxrwx---+ 2 other other 4096 Apr 17 12:05 [0m[01;34motherskat/[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ sudo setfacl -x user[Cuser:user[C[C[C[C pt[K[Kotherskat/
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls [K[K[Kgetfacl otherskat/
+[?2004l# file: otherskat/
+# owner: other
+# group: other
+user::rwx
+user:green:rwx
+group::---
+mask::rwx
+other::---
+
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl otherskat/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[15@sudo setfacl -x u:user[C[C[C[C[C[C[C[C[C[C[C[C[1P[1@m[C[C[C[C[C[C[C[1P otherskat/[1P otherskat/[1P otherskat/[1P other
