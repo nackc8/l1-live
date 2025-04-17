@@ -1908,4 +1908,37 @@ other::rwx
 [7m Manual page setfacl(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       sions.[m
 [7m Manual page setfacl(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
 [7m Manual page setfacl(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The [4m-x[24m [4m(--remove)[24m and [4m-X[24m [4m(--remove-file)[24m options remove ACL entries. It[m
-[7m Manual page setfacl(1) line 12 (press h for help or q to quit)[27m[K[K [KESC
+[7m Manual page setfacl(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       is not an error to remove an entry which does not exist.  Only ACL  en‐[m
+[7m Manual page setfacl(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tries  without  the  [4mperms[24m  field  are  accepted  as parameters, unless[m
+[7m Manual page setfacl(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       POSIXLY_CORRECT is defined.[m
+[7m Manual page setfacl(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       When reading from files using the [4m[7m-M[27m[24m and [4m-X[24m  options,  setfacl  accepts[m
+[7m Manual page setfacl(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the  output getfacl produces.  There is at most one ACL entry per line.[m
+[7m Manual page setfacl(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       After a Pound sign (`#'), everything up to  the  end  of  the  line  is[m
+[7m Manual page setfacl(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       treated as a comment.[m
+[7m Manual page setfacl(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       If  setfacl  is used on a file system which does not support ACLs, set‐[m
+[7m Manual page setfacl(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       facl operates on the file mode permission bits. If the ACL does not fit[m
+[7m Manual page setfacl(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       completely in the permission bits, setfacl modifies the file mode  per‐[m
+[7m Manual page setfacl(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       mission bits to reflect the ACL as closely as possible, writes an error[m
+[7m Manual page setfacl(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       message to standard error, and returns with an exit status greater than[m
+[7m Manual page setfacl(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       0.[m
+[7m Manual page setfacl(1) line 27 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l[H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l
+[?2004ltotal 8
+drwxrwsr-x 2 user sudo 4096 Apr 17 11:38 [0m[01;34mkat[0m
+drwxrwxr-x 2 user user 4096 Apr 17 11:38 [01;34mvanligkatalog[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ sudo[Ku[Ko -u other mkdir otherskat
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l
+[?2004ltotal 12
+drwxrwsr-x 2 user  sudo  4096 Apr 17 11:38 [0m[01;34mkat[0m
+drwxrwxr-x 2 other other 4096 Apr 17 12:03 [01;34motherskat[0m
+drwxrwxr-x 2 user  user  4096 Apr 17 11:38 [01;34mvanligkatalog[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ch[K[Ksudo chmod 600 otherskat/[C[1P[1@7
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l
+[?2004ltotal 12
+drwxrwsr-x 2 user  sudo  4096 Apr 17 11:38 [0m[01;34mkat[0m
+drwx------ 2 other other 4096 Apr 17 12:03 [01;34motherskat[0m
+drwxrwxr-x 2 user  user  4096 Apr 17 11:38 [01;34mvanligkatalog[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls otherskat/
+[?2004lls: cannot open directory 'otherskat/': Permission denied
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[0
