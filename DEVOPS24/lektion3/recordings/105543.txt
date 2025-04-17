@@ -295,4 +295,58 @@ minfil8612
 [m
        1      if minor problems (e.g., cannot access subdirectory),[m
 [m
-       2      if serious trouble (e.g., cannot access
+       2      if serious trouble (e.g., cannot access command-line argument).[m
+[m
+[1mAUTHOR[0m[m
+       Written by Richard M. Stallman and David MacKenzie.[m
+[m
+[1mREPORTING BUGS[0m[m
+       GNU coreutils online help: <https://www.gnu.org/software/coreutils/>[m
+       Report any translation bugs to <https://translationproject.org/team/>[m
+[7m Manual page ls(1) line 217/249 94% (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ man lsls read_directory/
+[?2004lls: cannot access 'read_directory/minfil8612': Permission denied
+minfil8612
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls read_directory/[C read_directory/- read_directory/- read_directory/[7m--color=never.[27m read_directory/--color=never.[C[1P[C[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P read_directory/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lminfil8612
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l
+[?2004ltotal 24
+d--------x 2 other other 4096 Apr 17 09:02 [0m[01;34mexecute_directory[0m
+d------r-- 2 other other 4096 Apr 17 09:02 [01;34mread_directory[0m
+d------r-x 2 other other 4096 Apr 17 09:02 [01;34mread_execute_directory[0m
+d------rw- 2 other other 4096 Apr 17 09:02 [34;42mread_write_directory[0m
+d-------w- 2 other other 4096 Apr 17 09:02 [34;42mwrite_directory[0m
+d-------wx 2 other other 4096 Apr 17 09:02 [34;42mwrite_execute_directory[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ less /usr/bin/[K[K[K[Klocal/bin/
+myls  x     
+]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ less /usr/local/bin/
+myls  x     
+]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ less /usr/local/bin/myls [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ less /usr/local/bin/myls 
+[?2004l[?1049h[22;0;0t[?1h=#!/usr/bin/env python3
+
+import os
+import sys
+
+path = sys.argv[1] if len(sys.argv) == 2 else os.getcwd()
+
+with os.scandir(path) as it:
+    for entry in it:
+        try:
+            print(entry.inode(), entry.name)
+        except PermissionError as e:
+            print("Permission denied:", entry.name)
+[7m/usr/local/bin/myls (END)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ myls [K[K[K[K[Kls -l
+[?2004ltotal 24
+d--------x 2 other other 4096 Apr 17 09:02 [0m[01;34mexecute_directory[0m
+d------r-- 2 other other 4096 Apr 17 09:02 [01;34mread_directory[0m
+d------r-x 2 other other 4096 Apr 17 09:02 [01;34mread_execute_directory[0m
+d------rw- 2 other other 4096 Apr 17 09:02 [34;42mread_write_directory[0m
+d-------w- 2 other other 4096 Apr 17 09:02 [34;42mwrite_directory[0m
+d-------wx 2 other other 4096 Apr 17 09:02 [34;42mwrite_execute_directory[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ mysql [K[K[K[Kls read_directory/
+[?2004l1310731 minfil8612
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ cd execute_directory/
+[?2004l[?2004h]0;user@ubse: /dir/execute_directory[01;32muser@ubse[00m:[01;34m/dir/execute_directory[00m$ ls
+[?2004lls: cannot open directory '.': Permission denied
+[?2004h]0;user@ubse: /dir/execute_directory[01;32muser@ubse[00m:[01;34m/dir/execute_directory[00m$ sudo[K[K[K[Kpwd
+[?2004l/dir/execute_directory
+[?2004h]0;user@ubse: /dir/execute_directory[01;32muser@ubse[00m:[01;34m/dir/execute_directory[00m$ sudo [7m/dir/execute_directory[27m/dir/execute_directory[C /dir/execute_directory- /dir/execute_directoryl /dir/execute_directory[H[2J]0;user@ubse: /dir/execute_directory[01;32muser@ub
