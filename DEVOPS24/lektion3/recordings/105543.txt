@@ -126,4 +126,173 @@ fil17093           [01;34mread_execute_directory[0m  [34;42mwrite_execute_dir
 │   └── minfil8612
 ├── [01;34mread_execute_directory[0m
 │   └── minfil1034
-├── [34;42mread
+├── [34;42mread_write_directory[0m
+│   └── minfil30706
+├── [34;42mwrite_directory[0m
+│   └── minfil32148
+└── [34;42mwrite_execute_directory[0m
+    └── minfil32460
+
+7 directories, 6 files
+[?2004h]0;root@ubse: /dirroot@ubse:/dir# tree -al
+[?2004l[34;42m.[0m
+├── [01;34mexecute_directory[0m
+│   └── minfil21654
+├── [01;34mread_directory[0m
+│   └── minfil8612
+├── [01;34mread_execute_directory[0m
+│   └── minfil1034
+├── [34;42mread_write_directory[0m
+│   └── minfil30706
+├── [34;42mwrite_directory[0m
+│   └── minfil32148
+└── [34;42mwrite_execute_directory[0m
+    └── minfil32460
+
+7 directories, 6 files
+[?2004h]0;root@ubse: /dirroot@ubse:/dir# [H[2J]0;root@ubse: /dirroot@ubse:/dir# ls -lk[KR
+[?2004l.:
+total 24
+d--------x 2 other other 4096 Apr 17 09:02 [0m[01;34mexecute_directory[0m
+d------r-- 2 other other 4096 Apr 17 09:02 [01;34mread_directory[0m
+d------r-x 2 other other 4096 Apr 17 09:02 [01;34mread_execute_directory[0m
+d------rw- 2 other other 4096 Apr 17 09:02 [34;42mread_write_directory[0m
+d-------w- 2 other other 4096 Apr 17 09:02 [34;42mwrite_directory[0m
+d-------wx 2 other other 4096 Apr 17 09:02 [34;42mwrite_execute_directory[0m
+
+./execute_directory:
+total 0
+-rw-r--r-- 1 other other 0 Apr 17 09:02 minfil21654
+
+./read_directory:
+total 0
+-rw-r--r-- 1 other other 0 Apr 17 09:02 minfil8612
+
+./read_execute_directory:
+total 0
+-rw-r--r-- 1 other other 0 Apr 17 09:02 minfil1034
+
+./read_write_directory:
+total 0
+-rw-r--r-- 1 other other 0 Apr 17 09:02 minfil30706
+
+./write_directory:
+total 0
+-rw-r--r-- 1 other other 0 Apr 17 09:02 minfil32148
+
+./write_execute_directory:
+total 0
+-rw-r--r-- 1 other other 0 Apr 17 09:02 minfil32460
+[?2004h]0;root@ubse: /dirroot@ubse:/dir# exit
+[?2004llogout
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls
+[?2004l[0m[01;34mexecute_directory[0m  [01;34mread_execute_directory[0m  [34;42mwrite_directory[0m
+[01;34mread_directory[0m     [34;42mread_write_directory[0m    [34;42mwrite_execute_directory[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l[H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l
+[?2004ltotal 24
+d--------x 2 other other 4096 Apr 17 09:02 [0m[01;34mexecute_directory[0m
+d------r-- 2 other other 4096 Apr 17 09:02 [01;34mread_directory[0m
+d------r-x 2 other other 4096 Apr 17 09:02 [01;34mread_execute_directory[0m
+d------rw- 2 other other 4096 Apr 17 09:02 [34;42mread_write_directory[0m
+d-------w- 2 other other 4096 Apr 17 09:02 [34;42mwrite_directory[0m
+d-------wx 2 other other 4096 Apr 17 09:02 [34;42mwrite_execute_directory[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls read_directory/
+[?2004lls: cannot access 'read_directory/minfil8612': Permission denied
+minfil8612
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls read_directory/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C^C[?2004l[?2004h[?2004l
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ,am [K[K[K[Km[H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ man ls
+[?2004l[?1049h[22;0;0t[?1h=[4mLS[24m(1)                            User Commands                           [4mLS[24m(1)[m
+[m
+[1mNAME[0m[m
+       ls - list directory contents[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mls [22m[[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       List  information  about  the FILEs (the current directory by default).[m
+       Sort entries alphabetically if none of [1m-cftuvSUX [22mnor [1m--sort  [22mis  speci‐[m
+       fied.[m
+[m
+       Mandatory  arguments  to  long  options are mandatory for short options[m
+       too.[m
+[m
+       [1m-a[22m, [1m--all[0m[m
+              do not ignore entries starting with .[m
+[m
+[7m Manual page ls(1) line 1 (press h for help or q to quit)[27m[K[K/[Kcc[Koo[Kll[Koo[Krr[K[1;1H[4mLS[24m(1)                            User Commands                           [4mLS[24m(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       ls - list directory contents[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mls [22m[[4mOPTION[24m]... [[4mFILE[24m]...[m
+[8;1H[m
+[9;1H[1mDESCRIPTION[0m[m
+[10;1H       List  information  about  the FILEs (the current directory by default).[m
+[11;1H       Sort entries alphabetically if none of [1m-cftuvSUX [22mnor [1m--sort  [22mis  speci‐[m
+[12;1H       fied.[m
+[13;1H[m
+[14;1H       Mandatory  arguments  to  long  options are mandatory for short options[m
+[15;1H       too.[m
+[16;1H[m
+[17;1H       [1m-a[22m, [1m--all[0m[m
+[18;1H              do not ignore entries starting with .[m
+[19;1H[m
+[20;1H[1;1H[4mLS[24m(1)                            User Commands                           [4mLS[24m(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       ls - list directory contents[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mls [22m[[4mOPTION[24m]... [[4mFILE[24m]...[m
+[8;1H[m
+[9;1H[1mDESCRIPTION[0m[m
+[10;1H       List  information  about  the FILEs (the current directory by default).[m
+[11;1H       Sort entries alphabetically if none of [1m-cftuvSUX [22mnor [1m--sort  [22mis  speci‐[m
+[12;1H       fied.[m
+[13;1H[m
+[14;1H       Mandatory  arguments  to  long  options are mandatory for short options[m
+[15;1H       too.[m
+[16;1H[m
+[17;1H       [1m-a[22m, [1m--all[0m[m
+[18;1H              do not ignore entries starting with .[m
+[19;1H[m
+[20;1H...skipping...
+       [1m--[7mcolor[27m[22m[=[4mWHEN[24m][m
+              [7mcolor[27m the output WHEN; more info below[m
+[m
+       [1m-d[22m, [1m--directory[0m[m
+              list directories themselves, not their contents[m
+[m
+       [1m-D[22m, [1m--dired[0m[m
+              generate output designed for Emacs' dired mode[m
+[m
+       [1m-f     [22mlist all entries in directory order[m
+[m
+       [1m-F[22m, [1m--classify[22m[=[4mWHEN[24m][m
+              append indicator (one of */=>@|) to entries WHEN[m
+[m
+       [1m--file-type[0m[m
+              likewise, except do not append '*'[m
+[m
+       [1m--format[22m=[4mWORD[0m[m
+              across  [1m-x[22m, commas [1m-m[22m, horizontal [1m-x[22m, long [1m-l[22m, single-column [1m-1[22m,[m
+[7m Manual page ls(1) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page ls(1) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-C     [22mlist entries by columns[m
+[20;1H[K[7m Manual page ls(1) line 40 (press h for help or q to quit)[27m[K[K/[K       [1m--format[22m=[4mWORD[0m[m
+              across  [1m-x[22m, commas [1m-m[22m, horizontal [1m-x[22m, long [1m-l[22m, single-column [1m-1[22m,[m
+[7m Manual page ls(1) line 42 (press h for help or q to quit)[27m[K[K/[K              verbose [1m-l[22m, vertical [1m-C[0m[m
+[7m Manual page ls(1) line 43 (press h for help or q to quit)[27m[K[K/[K...skipping...
+       Using  [7mcolor[27m  to distinguish file types is disabled both by default and[m
+       with [1m--[7mcolor[27m[22m=[4mnever[24m.  With [1m--[7mcolor[27m[22m=[4mauto[24m, ls emits [7mcolor[27m[24m codes only  when[m
+       standard  output is connected to a terminal.  The LS_[7mCOLOR[27mS environment[m
+       variable can change the settings.  Use the [1mdir[7mcolor[27m[1ms[22m(1) command to  set[m
+       it.[m
+[m
+   [1mExit status:[0m[m
+       0      if OK,[m
+[m
+       1      if minor problems (e.g., cannot access subdirectory),[m
+[m
+       2      if serious trouble (e.g., cannot access
