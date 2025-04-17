@@ -2173,4 +2173,43 @@ other::---
 [7m Manual page setfacl(1) line 134 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The  [4mperms[24m  field is a combination of characters that indicate the read[m
 [7m Manual page setfacl(1) line 135 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m(r)[24m, write [4m(w)[24m, execute [4m(x)[24m permissions.  Dash characters in the  [4mperms[0m[m
 [7m Manual page setfacl(1) line 136 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       field  [4m(-)[24m are ignored.  The character [4mX[24m stands for the execute permis‐[m
-[7m Manual page setfacl(1) line 137 (p
+[7m Manual page setfacl(1) line 137 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       sion if the file is a directory or already has execute  permission  for[m
+[7m Manual page setfacl(1) line 138 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       some  user.   Alternatively, the [4mperms[24m field can define the permissions[m
+[7m Manual page setfacl(1) line 139 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       numerically, as a bit-wise combination of read [4m(4)[24m, write [4m(2)[24m, and exe‐[m
+[7m Manual page setfacl(1) line 140 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       cute [4m(1)[24m.  Zero [4mperms[24m fields or  [4mperms[24m  fields  that  only  consist  of[m
+[7m Manual page setfacl(1) line 141 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       dashes indicate no permissions.[m
+[7m Manual page setfacl(1) line 142 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page setfacl(1) line 143 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mAUTOMATICALLY CREATED ENTRIES[0m[m
+[7m Manual page setfacl(1) line 144 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Initially,  files  and  directories contain only the three base ACL en‐[m
+[7m Manual page setfacl(1) line 145 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tries for the owner, the group, and others. There are some  rules  that[m
+[7m Manual page setfacl(1) line 146 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       need to be satisfied in order for an ACL to be valid:[m
+[7m Manual page setfacl(1) line 147 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ man setfacl sudo setfacl -m user:0 otherskat/[1P otherskat/- otherskat/
+[?2004lsetfacl: Option -m: Invalid argument near character 6
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ sudo setfacl -m user:- otherskat/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[21Pman setfacl sudo setfacl -m user:- otherskat/[1P otherskat/0 otherskat/
+[?2004lsetfacl: Option -m incomplete
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfe[Kacl [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl .
+[?2004l# file: .
+# owner: other
+# group: other
+user::rwx
+group::rwx
+other::rwx
+
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl .[Kgetfacl .[Kgetfacl .[Kpt[K[Kotherskat/[H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl otherskat/
+[?2004l# file: otherskat/
+# owner: other
+# group: other
+user::rwx
+user:green:r-x
+group::---
+mask::r-x
+other::---
+
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls otherskat/
+[?2004lls: cannot open directory 'otherskat/': Permission denied
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ (reverse-i-search)`': [Ku': sudo setfacl -m [7mu[27mser:0 otherskat/[5@:': sudo setfacl -m [7mu:[27mgreen:rx[8P]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ sudo setfacl -m u:[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1@u[1@s[1@e[1@r[C[C[C[1P otherskat/w otherskat/x otherskat/
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ sudo d[Ksetfacl -m m:r-x otherskat/
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl 
+[?2004lUsage: getfacl [-aceEsRLPtpndvh] file ...
+Try `getfacl --help' for more information.
+[?2004h]0;user@ubse: /d
