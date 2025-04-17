@@ -2168,4 +2168,56 @@ Debian GNU/Linux                                                    [4mADDUSER
 [m
 Debian GNU/Linux                                                    [4mADDUSER[24m(8)[m
 [7m Manual page addgroup(8) line 444/462 (END) (press h for help or q to quit)[27m[K[K[H[2J[HM               [[1m--stdoutmsglevel [4m[22mprio[24m] [[1m--stderrmsglevel [4m[22mprio[24m][m
-[HM               [[1m--s
+[HM               [[1m--shell [4m[22mshell[24m] [[1m--uid [4m[22mid[24m] [[1m--quiet[22m] [[1m--verbose[22m][m
+[HM               [[1m--group[22m] [[1m--home [4m[22mdir[24m] [[1m--ingroup [4m[22mgroup[24m] [[1m--no-create-home[22m][m
+[HM       [1madduser --system [22m[[1m--comment [4m[22mcomment[24m] [[1m--conf [4m[22mfile[24m] [[1m--debug[22m] [[1m--gid [4m[22mid[24m][m
+[HM[m
+[HM               [[1m--logmsglevel [4m[22mprio[24m] [1muser[0m[m
+[HM               [[1m--stdoutmsglevel [4m[22mprio[24m] [[1m--stderrmsglevel [4m[22mprio[24m][m
+[HM               [[1m--shell [4m[22mshell[24m] [[1m--quiet[22m] [[1m--uid [4m[22mid[24m] [[1m--verbose[22m][m
+[HM               [[1m--lastgid [4m[22mid[24m] [[1m--lastuid [4m[22mid[24m] [[1m--no-create-home[22m][m
+[HM               [[1m--firstuid [4m[22mid[24m] [[1m--gid [4m[22mid[24m] [[1m--home [4m[22mdir[24m] [[1m--ingroup [4m[22mgroup[24m][m
+[HM               [[1m--disabled-password[22m] [[1m--encrypt-home[22m] [[1m--firstgid [4m[22mid[24m][m
+[HM               [[1m--comment [4m[22mcomment[24m] [[1m--conf [4m[22mfile[24m] [[1m--debug[22m] [[1m--disabled-login[22m][m
+[HM       [1madduser [22m[[1m--add-extra-groups[22m] [[1m--allow-all-names[22m] [[1m--allow-bad-names[22m][m
+[HM[1mSYNOPSIS[0m[m
+[HM[m
+[HM       adduser, addgroup - add or manipulate users or groups[m
+[HM[1mNAME[0m[m
+[HM[m
+[HM[4mADDUSER[24m(8)                  System Manager's Manual                 [4mADDUSER[24m(8)[m
+[20;1H[K[7m Manual page addgroup(8) line 1/462 6% (press h for help or q to quit)[27m[K[K...skipping...
+[m
+[1mBUGS[0m[m
+       Inconsistent use of terminology around the term [4msystem[24m [4maccount[24m in  docs[m
+       and  code  is  a  bug.   Please report this and allow us to improve our[m
+       docs.[m
+[m
+       [1madduser [22mtakes special attention to be directly usable in  Debian  main‐[m
+       tainer  scripts  without  conditional  wrappers,  error suppression and[m
+       other scaffolding.  The only thing that the package  maintainer  should[m
+       need  to  code  is  a  check  for the presence of the executable in the[m
+       postrm script.  The [1madduser [22mmaintainers consider  the  need  for  addi‐[m
+       tional  scaffolding  a  bug  and  encourage their fellow Debian package[m
+       maintainers to file bugs against the [1madduser [22mpackage in this case.[m
+[m
+[1mSEE ALSO[0m[m
+       [1madduser.conf[22m(5), [1mdeluser[22m(8), [1mgroupadd[22m(8), [1museradd[22m(8),  [1musermod[22m(8),  De‐[m
+       bian Policy 9.2.2.[m
+[m
+Debian GNU/Linux                                                    [4mADDUSER[24m(8)[m
+[7m Manual page addgroup(8) line 444/462 (END) (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ man deluser
+[?2004l[?1049h[22;0;0t[?1h=[4mDELUSER[24m(8)                  System Manager's Manual                 [4mDELUSER[24m(8)[m
+[m
+[1mNAME[0m[m
+       deluser, delgroup - remove a user or group from the system[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mdeluser [22m[[1m--backup[22m] [[1m--backup-suffix [4m[22mstr[24m] [[1m--backup-to [4m[22mdir[24m][m
+               [[1m--conf [4m[22mfile[24m] [[1m--debug[22m] [[1m--remove-all-files[22m] [[1m--remove-home[22m][m
+               [[1m--quiet[22m] [[1m--verbose[22m] [[1m--stdoutmsglevel [4m[22mprio[24m][m
+               [[1m--stderrmsglevel [4m[22mprio[24m] [[1m--logmsglevel [4m[22mprio[24m] [1muser[0m[m
+[m
+       [1mdeluser [22m[[1m--system[22m] [[1m--backup[22m] [[1m--backup-suffix [4m[22mstr[24m] [[1m--backup-to [4m[22mdir[24m][m
+               [[1m--conf [4m[22mfile[24m] [[1m--debug[22m] [[1m--remove-all-files[22m] [[1m--remove-home[22m][m
+               [[1m--quiet[22m] [[1m--verbose[22m] [[1m--stdoutmsgl
