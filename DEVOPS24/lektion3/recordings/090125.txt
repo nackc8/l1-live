@@ -1610,4 +1610,323 @@ bert/  green/ other/ user/
 [7m Manual page adduser(8) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       name.  This is commonly called [4mUsergroups[24m and allows group writable di‐[m
 [7m Manual page adduser(8) line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       rectories to be easily maintained by placing the appropriate  users  in[m
 [7m Manual page adduser(8) line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the  new  group, setting the set-group-ID bit in the directory, and en‐[m
-[7m Manual page adduser(8) line 63 (press h
+[7m Manual page adduser(8) line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       suring that all users use a umask of 002.[m
+[7m Manual page adduser(8) line 64 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page adduser(8) line 65 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       For a usergroup, [1madduser [22mwill choose the first available GID  from  the[m
+[7m Manual page adduser(8) line 66 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       range  specified  by  [1mFIRST_GID [22mand [1mLAST_GID [22min the configuration file.[m
+[7m Manual page adduser(8) line 67 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The range may be overridden with the [1m--firstgid [22mand [1m--lastgid  [22moptions.[m
+[7m Manual page adduser(8) line 68 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Finally, the GID can be set fully manually with the [1m--gid [22moption.[m
+[7m Manual page adduser(8) line 69 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page adduser(8) line 70 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The  interaction  between [1mUSERS_GID[22m, [1mUSERS_GROUP[22m, and [1mUSERGROUPS [22mis ex‐[m
+[7m Manual page adduser(8) line 71 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       plained in detail in [1madduser.conf[22m(5).[m
+[7m Manual page adduser(8) line 72 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page adduser(8) line 73 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Users' primary groups can also be overridden from the command line with[m
+[7m Manual page adduser(8) line 74 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the [1m--gid  [22mor [1m--ingroup [22moptions to set the group by id or name, respec‐[m
+[7m Manual page adduser(8) line 75 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tively.  Also, users can be added to one or  more  supplemental  groups[m
+[7m Manual page adduser(8) line 76 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       defined  as  [1mEXTRA_GROUPS  [22min  the configuration file either by setting[m
+[7m Manual page adduser(8) line 77 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mADD_EXTRA_GROUPS  [22mto  1  in  the  configuration  file,  or  by  passing[m
+[7m Manual page adduser(8) line 78 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--add-extra-groups [22mon the command line.[m
+[7m Manual page adduser(8) line 79 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page adduser(8) line 80 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1madduser  [22mwill  copy  files  from  [4m/etc/skel[24m into the home directory and[m
+[7m Manual page adduser(8) line 81 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       prompt for the comment field and a password if those functions have not[m
+[7m Manual page adduser(8) line 82 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       been turned off / overridden from the command line.[m
+[7m Manual page adduser(8) line 83 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page adduser(8) line 84 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       UID, comment, home directory and shell might be pre-determined with the[m
+[7m Manual page adduser(8) line 85 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mUID_POOL [22mand [1mGID_POOL [22moption, documented in [1madduser.conf[22m(5).[m
+[7m Manual page adduser(8) line 86 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page adduser(8) line 87 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       To set up an encrypted home directory for the new user, add  the  [1m--en‐[0m[m
+[7m Manual page adduser(8) line 88 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mcrypt-home  [22moption.   For  more  information, refer to the -b option of[m
+[7m Manual page adduser(8) line 89 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mecryptfs-setup-private(1).[0m[m
+[7m Manual page adduser(8) line 90 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page adduser(8) line 91 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mAdd a system user[0m[m
+[7m Manual page adduser(8) line 92 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       If called with one non-option argument and the [1m--system [22moption, [1madduser[0m[m
+[7m Manual page adduser(8) line 93 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       will add a [4mdynamically[24m [4mallocated[24m [4msystem[24m [4muser,[24m often abbreviated as [4msys‐[0m[m
+[7m Manual page adduser(8) line 94 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mtem[24m [4muser[24m in the context of the [1madduser [22mpackage.[m
+[7m Manual page adduser(8) line 95 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page adduser(8) line 96 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1madduser [22mwill choose the first available UID from the range specified by[m
+[7m Manual page adduser(8) line 97 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mFIRST_SYSTEM_UID [22mand [1mLAST_SYSTEM_UID [22min the configuration  file.   This[m
+[7m Manual page adduser(8) line 98 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       can be overridden with the [1m--uid [22moption.[m
+[7m Manual page adduser(8) line 99 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page adduser(8) line 100 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       By default, system users are placed in the [1mnogroup [22mgroup.  To place the[m
+[7m Manual page adduser(8) line 101 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       new  system  user  in an already existing group, use the [1m--gid [22mor [1m--in‐[0m[m
+[7m Manual page adduser(8) line 102 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mgroup [22moptions.  If the [1m--group [22mis given and the identically named group[m
+[7m Manual page adduser(8) line 103 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       does not already exist, it is created with the same ID.[m
+[7m Manual page adduser(8) line 104 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page adduser(8) line 105 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       If no home directory is specified, the default home directory for a new[m
+[7m Manual page adduser(8) line 106 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       system user is [4m/nonexistent[24m.  This directory should never exist on  any[m
+[7m Manual page adduser(8) line 107 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Debian system, and [1madduser [22mwill never create it automatically.[m
+[7m Manual page adduser(8) line 108 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page adduser(8) line 109 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Unless  a shell is explicitly set with the [1m--shell [22moption, the new sys‐[m
+[7m Manual page adduser(8) line 110 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tem user will have the shell set to [4m/usr/sbin/nologin[24m.  [1madduser  --sys‐[0m[m
+[7m Manual page adduser(8) line 111 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mtem  [22mdoes  not set a password for the new account.  Skeletal configura‐[m
+[7m Manual page adduser(8) line 112 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tion files are not copied.[m
+[7m Manual page adduser(8) line 113 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page adduser(8) line 114 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Other options will behave as for the creation of a  normal  user.   The[m
+[7m Manual page adduser(8) line 115 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       files referenced by [1mUID_POOL [22mand [1mGID_POOL [22mdo also work.[m
+[7m Manual page adduser(8) line 116 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page adduser(8) line 117 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mAdd a group[0m[m
+[7m Manual page adduser(8) line 118 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       If  [1madduser  [22mis called with the [1m--group [22moption and without the [1m--system[0m[m
+[7m Manual page adduser(8) line 119 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       option, or [1maddgroup [22mis called respectively, a user group will be added.[m
+[7m Manual page adduser(8) line 120 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page adduser(8) line 121 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       A [4mdynamically[24m [4mallocated[24m [4msystem[24m [4mgroup,[24m often abbreviated as [4msystem[24m [4mgroup[0m[m
+[7m Manual page adduser(8) line 122 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       in the context of the [1madduser [22mpackage, will be created  if  [1madduser  [22mis[m
+[7m Manual page adduser(8) line 123 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       called with the [1m--system [22moption.[m
+[7m Manual page adduser(8) line 124 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page adduser(8) line 125 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       A  GID  will  be chosen from the respective range specified for GIDs in[m
+[7m Manual page adduser(8) line 126 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the  configuration   file   ([1mFIRST_GID[22m,   [1mLAST_GID[22m,   [1mFIRST_SYSTEM_GID[22m,[m
+[7m Manual page adduser(8) line 127 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mLAST_SYSTEM_GID[22m).  To override that mechanism, you can give the GID us‐[m
+[7m Manual page adduser(8) line 128 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ing the [1m--gid [22moption.[m
+[7m Manual page adduser(8) line 129 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page adduser(8) line 130 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       For  non-system  groups,  the range specified in the configuration file[m
+[7m Manual page adduser(8) line 131 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       may be overridden with the [1m--firstgid [22mand [1m--lastgid [22moptions.[m
+[7m Manual page adduser(8) line 132 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page adduser(8) line 133 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The group is created with no members.[m
+[7m Manual page adduser(8) line 134 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page adduser(8) line 135 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mAdd an existing user to an existing group[0m[m
+[7m Manual page adduser(8) line 136 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       If called with two non-option arguments, [1madduser [22mwill add  an  existing[m
+[7m Manual page adduser(8) line 137 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       user to an existing group.[m
+[7m Manual page adduser(8) line 138 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page adduser(8) line 139 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mOPTIONS[0m[m
+[7m Manual page adduser(8) line 140 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Different  modes of [1madduser [22mallow different options.  If no valid modes[m
+[7m Manual page adduser(8) line 141 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       are listed for a option, it is accepted in all modes.[m
+[7m Manual page adduser(8) line 142 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page adduser(8) line 143 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Short versions for certain options may exist  for  historical  reasons.[m
+[7m Manual page adduser(8) line 144 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       They  are  going to stay supported, but are removed from the documenta‐[m
+[7m Manual page adduser(8) line 145 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tion.  Users are advised to migrate to the long version of options.[m
+[7m Manual page adduser(8) line 146 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page adduser(8) line 147 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--add-extra-groups[0m[m
+[7m Manual page adduser(8) line 148 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Add new user to extra groups defined in the configuration files'[m
+[7m Manual page adduser(8) line 149 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mEXTRA_GROUPS [22msetting.  The old  spelling  [1m--add_extra_groups  [22mis[m
+[7m Manual page adduser(8) line 150 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              deprecated and will be supported in Debian bookworm only.  Valid[m
+[7m Manual page adduser(8) line 151 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Modes: [1madduser[22m, [1madduser --system[22m.[m
+[7m Manual page adduser(8) line 152 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page adduser(8) line 153 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--allow-all-names[0m[m
+[7m Manual page adduser(8) line 154 (press h for help or q to quit)[27m[K[K/[Krr[Kee[Kmm[Koo[Kvv[Kee[K[1;1H   [1mAdd an existing user to an existing group[0m[m
+[2;1H       If called with two non-option arguments, [1madduser [22mwill add  an  existing[m
+[3;1H       user to an existing group.[m
+[4;1H[m
+[5;1H[1mOPTIONS[0m[m
+[6;1H       Different  modes of [1madduser [22mallow different options.  If no valid modes[m
+[7;1H       are listed for a option, it is accepted in all modes.[m
+[8;1H[m
+[9;1H       Short versions for certain options may exist  for  historical  reasons.[m
+[10;1H       They  are  going to stay supported, but are removed from the documenta‐[m
+[11;1H       tion.  Users are advised to migrate to the long version of options.[m
+[12;1H[m
+[13;1H       [1m--add-extra-groups[0m[m
+[14;1H              Add new user to extra groups defined in the configuration files'[m
+[15;1H              [1mEXTRA_GROUPS [22msetting.  The old  spelling  [1m--add_extra_groups  [22mis[m
+[16;1H              deprecated and will be supported in Debian bookworm only.  Valid[m
+[17;1H              Modes: [1madduser[22m, [1madduser --system[22m.[m
+[18;1H[m
+[19;1H       [1m--allow-all-names[0m[m
+[20;1H[1;1H   [1mAdd an existing user to an existing group[0m[m
+[2;1H       If called with two non-option arguments, [1madduser [22mwill add  an  existing[m
+[3;1H       user to an existing group.[m
+[4;1H[m
+[5;1H[1mOPTIONS[0m[m
+[6;1H       Different  modes of [1madduser [22mallow different options.  If no valid modes[m
+[7;1H       are listed for a option, it is accepted in all modes.[m
+[8;1H[m
+[9;1H       Short versions for certain options may exist  for  historical  reasons.[m
+[10;1H       They  are  going to stay supported, but are [7mremove[27md from the documenta‐[m
+[11;1H       tion.  Users are advised to migrate to the long version of options.[m
+[12;1H[m
+[13;1H       [1m--add-extra-groups[0m[m
+[14;1H              Add new user to extra groups defined in the configuration files'[m
+[15;1H              [1mEXTRA_GROUPS [22msetting.  The old  spelling  [1m--add_extra_groups  [22mis[m
+[16;1H              deprecated and will be supported in Debian bookworm only.  Valid[m
+[17;1H              Modes: [1madduser[22m, [1madduser --system[22m.[m
+[18;1H[m
+[19;1H       [1m--allow-all-names[0m[m
+[20;1H              Allow any user- and groupname which is supported by the underly‐[m
+              ing [1museradd[22m(8), including names containing non-ASCII characters.[m
+              See  VALID  NAMES in [1madduser.conf[22m(5).  Valid Modes: [1madduser[22m, [1mad‐[0m[m
+              [1mduser --system[22m, [1maddgroup[22m, [1maddgroup --system[22m.[m
+[m
+       [1m--allow-bad-names[0m[m
+              Disable [1mNAME_REGEX [22mand [1mSYS_NAME_REGEX [22mcheck of  names.   Only  a[m
+              weaker  check  for  validity  of the name is applied.  See VALID[m
+              NAMES in [1madduser.conf[22m(5).  Valid Modes: [1madduser[22m, [1madduser  --sys‐[0m[m
+[7m Manual page adduser(8) line 163 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       Short versions for certain options may exist  for  historical  reasons.[m
+[20;1H[K[7m Manual page adduser(8) line 162 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page adduser(8) line 161 (press h for help or q to quit)[27m[K[K/[K              weaker  check  for  validity  of the name is applied.  See VALID[m
+              NAMES in [1madduser.conf[22m(5).  Valid Modes: [1madduser[22m, [1madduser  --sys‐[0m[m
+[7m Manual page adduser(8) line 163 (press h for help or q to quit)[27m[K[K/[K...skipping...
+              [1m--gecos [22moption, which is deprecated and will  be  [7mremove[27m[22md  after[m
+              Debian bookworm.  Valid Modes: [1madduser[22m, [1madduser --system[22m.[m
+[m
+       [1m--conf [4m[22mfile[0m[m
+              Use  [4mfile[24m instead of [4m/etc/adduser.conf[24m.  Multiple [1m--conf [22moptions[m
+              can be given.[m
+[m
+       [1m--debug[0m[m
+              Synonymous to --stdoutmsglevel=debug. Deprecated.[m
+[m
+       [1m--disabled-login[0m[m
+       [1m--disabled-password[0m[m
+              Do not run [1mpasswd[22m(1) to set a password.  In most situations, lo‐[m
+              gins are still possible though (for example using  SSH  keys  or[m
+              through  PAM)  for  reasons  that  are  beyond  [1madduser[22m's scope.[m
+              [1m--disabled-login   [22mwill   additionally   set   the   shell    to[m
+              [4m/usr/sbin/nologin[24m.  Valid Mode: [1madduser[22m.[m
+[m
+       [1m--firstuid [4m[22mID[0m[m
+[7m Manual page adduser(8) line 189 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              tion that is used by the [1mfinger[22m(1) command.  This used to be the[m
+[20;1H[K[7m Manual page adduser(8) line 188 (press h for help or q to quit)[27m[K[K/[K       [1m--firstuid [4m[22mID[0m[m
+[7m Manual page adduser(8) line 189 (press h for help or q to quit)[27m[K[K/[K...skipping...
+              [7mremove[27md  during  the  release  cycle of the Debian release after[m
+              [4mbookworm[24m.[m
+[m
+       [1m--extrausers[0m[m
+              Uses extra users as the database.[m
+[m
+       [1m--gid [4m[22mID[0m[m
+              When creating a group, this option sets the group ID  number  of[m
+              the  new  group  to [4mGID[24m.  When creating a user, this option sets[m
+              the primary group ID number of  the  new  user  to  [4mGID[24m.   Valid[m
+              Modes: [1madduser[22m, [1madduser --system[22m, [1maddgroup[22m, [1maddgroup --system[22m.[m
+[m
+       [1m--group[0m[m
+              Using  this  option  in  [1madduser --system [22mindicates that the new[m
+              user should get an identically named group as its primary group.[m
+              If that identically named group is not already  present,  it  is[m
+              created.   If not combined with [1m--system[22m, a group with the given[m
+              name is created.  The latter is the default action if  the  pro‐[m
+              gram is invoked as [1maddgroup[22m.  Valid Modes: [1madduser --system[22m, [1mad‐[0m[m
+[7m Manual page adduser(8) line 223 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              These are the deprecated forms of [1m--allow-bad-names[22m.  It will be[m
+[20;1H[K[7m Manual page adduser(8) line 222 (press h for help or q to quit)[27m[K[K/[K              gram is invoked as [1maddgroup[22m.  Valid Modes: [1madduser --system[22m, [1mad‐[0m[m
+[7m Manual page adduser(8) line 223 (press h for help or q to quit)[27m[K[K/[K...skipping...
+       [1m42     [22mThe user that was requested to be [7mremove[27m[22md from a group is not  a[m
+              member in the first place.[m
+[m
+       [1m43     [22mIt  is  not possible to [7mremove[27m[22m a user from its primary group, or[m
+              no primary group selected for a new user by any method.[m
+[m
+       [1m51     [22mIncorrect number or order of command line parameters detected.[m
+[m
+       [1m52     [22mIncompatible options set in configuration file.[m
+[m
+       [1m53     [22mMutually incompatible command line options detected.[m
+[m
+       [1m54     adduser [22mand [1mdeluser [22minvoked as non-root and thus cannot work.[m
+[m
+       [1m55     deluser [22mwill refuse to delete the [4mroot[24m account.[m
+[m
+       [1m56     [22mA function was requested that needs  more  packages  to  be  in‐[m
+              stalled.  See Recommends: and Suggests: of the adduser package.[m
+[m
+[7m Manual page adduser(8) line 348/462 80% (press h for help or q to quit)[27m[K[K/[K       [1m61     [22mAdduser  was  aborted for some reason and tried to roll back the[m
+              changes that were done during execution.[m
+[m
+[7m Manual page adduser(8) line 351/462 80% (press h for help or q to quit)[27m[K[K/[K...skipping...
+       then.  You may then consider to [7mremove[27m [1m--quiet  [22mto  make  [1madduser  [22mmore[m
+       verbose.[m
+[m
+[1mSECURITY[0m[m
+       [1madduser  [22mneeds  root privileges and offers, via the [1m--conf [22mcommand line[m
+       option to use different configuration files.  Do  not  use  [1msudo[22m(8)  or[m
+       similar  tools  to  give  partial privileges to [1madduser [22mwith restricted[m
+       command line parameters.  This is easy to circumvent  and  might  allow[m
+       users to create arbitrary accounts.  If you want this, consider writing[m
+       your own wrapper script and giving privileges to execute that script.[m
+[m
+[1mFILES[0m[m
+       [4m/etc/adduser.conf[0m[m
+              Default configuration file for [1madduser[22m(8) and [1maddgroup[22m(8)[m
+[m
+       [4m/usr/local/sbin/adduser.local[0m[m
+              Optional custom add-ons, see [1madduser.local[22m(8)[m
+[m
+[1mNOTES[0m[m
+[7m Manual page adduser(8) line 393/462 87% (press h for help or q to quit)[27m[K[K/[K[K[7mPattern not found  (press RETURN)[27m[20;1H[K[K/[K[K[7mPattern not found  (press RETURN)[27m[20;1H[K[K/[K[K[7mPattern not found  (press RETURN)[27m[20;1H[K[K [KESCESC[KOO[KBB[K       Unfortunately,  the  term [4msystem[24m [4maccount[24m suffers from double use in De‐[m
+[7m Manual page adduser(8) line 394/462 87% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       then.  You may then consider to [7mremove[27m [1m--quiet  [22mto  make  [1madduser  [22mmore[m
+[20;1H[K[7m Manual page adduser(8) line 393/462 87% (press h for help or q to quit)[27m[K[K/[Kdd[Kee[Kll[K[1;1H       then.  You may then consider to remove [1m--quiet  [22mto  make  [1madduser  [22mmore[m
+[2;1H       verbose.[m
+[3;1H[m
+[4;1H[1mSECURITY[0m[m
+[5;1H       [1madduser  [22mneeds  root privileges and offers, via the [1m--conf [22mcommand line[m
+[6;1H       option to use different configuration files.  Do  not  use  [1msudo[22m(8)  or[m
+[7;1H       similar  tools  to  give  partial privileges to [1madduser [22mwith restricted[m
+[8;1H       command line parameters.  This is easy to circumvent  and  might  allow[m
+[9;1H       users to create arbitrary accounts.  If you want this, consider writing[m
+[10;1H       your own wrapper script and giving privileges to execute that script.[m
+[11;1H[m
+[12;1H[1mFILES[0m[m
+[13;1H       [4m/etc/adduser.conf[0m[m
+[14;1H              Default configuration file for [1madduser[22m(8) and [1maddgroup[22m(8)[m
+[15;1H[m
+[16;1H       [4m/usr/local/sbin/adduser.local[0m[m
+[17;1H              Optional custom add-ons, see [1madduser.local[22m(8)[m
+[18;1H[m
+[19;1H[1mNOTES[0m[m
+[20;1H[1;1H       then.  You may then consider to remove [1m--quiet  [22mto  make  [1madduser  [22mmore[m
+[2;1H       verbose.[m
+[3;1H[m
+[4;1H[1mSECURITY[0m[m
+[5;1H       [1madduser  [22mneeds  root privileges and offers, via the [1m--conf [22mcommand line[m
+[6;1H       option to use different configuration files.  Do  not  use  [1msudo[22m(8)  or[m
+[7;1H       similar  tools  to  give  partial privileges to [1madduser [22mwith restricted[m
+[8;1H       command line parameters.  This is easy to circumvent  and  might  allow[m
+[9;1H       users to create arbitrary accounts.  If you want this, consider writing[m
+[10;1H       your own wrapper script and giving privileges to execute that script.[m
+[11;1H[m
+[12;1H[1mFILES[0m[m
+[13;1H       [4m/etc/adduser.conf[0m[m
+[14;1H              Default configuration file for [1madduser[22m(8) and [1maddgroup[22m(8)[m
+[15;1H[m
+[16;1H       [4m/usr/local/sbin/adduser.local[0m[m
+[17;1H              Optional custom add-ons, see [1madduser.local[22m(8)[m
+[18;1H[m
+[19;1H[1mNOTES[0m[m
+[20;1H...skipping...
+       Since  [1madduser  [22mand  [1m[7mdel[27m[1muser[22m(8)  never address [4mapplication[24m [4maccounts[24m and[m
+       everything in this package concerns [4msystem[24m [4maccounts[24m here, the usage  of[m
+       the  terms [4muser[24m [4maccount[24m and [4msystem[24m [4maccount[24m is actually not ambiguous in[m
+       the context of this package.  For clarity, this document uses the defi‐[m
+       nition [4mlocal[24m [4msystem[24m [4maccount[24m [4mor[24m [4mgroup[24m if the distinction to  [4mapplication[0m[m
+       [4maccounts[24m or accounts managed in a directory service is needed.[m
+[m
+       [1madduser  [22mused  to  have the vision to be the universal front end to the[m
+       various directory services for creation and  [7mdel[27metion  of  regular  and[m
+       system  accounts  in  Debian  since  the 1990ies.  This vision has been[m
+       abandoned as of 2022.  The rationale  behind  this  includes:  that  in[m
+       practice, a small server system is not going to have write access to an[m
+       enterprise-wide  directory service anyway, that locally installed pack‐[m
+       ages are hard to manage with centrally controlled system accounts, that[m
+       enterprise directory services have their own management processes  any‐[m
+       way and that the personpower of the [1madduser [22mteam is unlikely to be ever[m
+       strong  enough to write and maintain support for the plethora of direc‐[m
+       tory services that need support.[m
+[m
+[7m Manual page adduser(8) line 422/462 95% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [4msystem[24m [4maccounts[24m.  Care must be taken to not confuse  this  terminology.[m
+[20;1H[K[7m Manual page adduser(8) line 421/462 95% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [4mallocated[24m  [4muser[24m  [4maccounts[24m,  meaning  in both cases special instances of[m
+[20;1H[K[7m Manual page adduser(8) line 420/462 95% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       ment of [4mdynamically[24m [4mallocated[24m [4msystem[24m [4musers[24m [4mand[24m [4mgroups[24m  and  [4mdynamically[0m[m
+[20;1H[K[7m Manual page adduser(8) line 419/462 95% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       Debian Policy, au contraire, in its Chapter 9.2.2, makes a distinguish‐[m
+[20;1H[K[7m Manual page adduser(8) line 418/462 95% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       has a UID, can be member in system groups, can own files and processes.[m
+[20;1H[K[7m Manual page adduser(8) line 417/462 94% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       in  this  definition  has the potential to log in to the actual system,[m
+[20;1H[K[7m Manual page adduser(8) line 416/462 94% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       user database of some application running on Debian.  A [4msystem[24m  [4maccount[0m[m
+[20;1H[K[7m Manual page adduser(8) line 415/462 94% (press h for help or q to quit)[27m[K[K/[K       enterprise-wide  directory service anyway, that locally installed pack‐[m
+       ages are hard to manage with centrally controlled system accounts, that[m
+       enterprise directory services have their own management processes  any‐[m
+       way and that the personpower of the [1madduser [22mteam is unlikely to be ever[m
+       strong  enough to write and maintain support for the plethora of direc‐[m
+       tory services that need support.[m
+[m
+[7m Manual page adduser(8) line 422/462 95% (press h for help or q to quit)[27m[K[K/[K       [1madduser [22mwill constrict itself to being a policy layer for  the  manage‐[m
+       ment  of local system accounts, using the tools from the [1mpassword [22mpack‐[m
+       age for the actual work.[m
+[m
+[1mBUGS[0m[m
+       Inconsistent use of terminology around the term [4msystem[24m [4maccount[24m in  docs[m
+       and  code  is  a  bug.   Please report this and allow us to improve our[m
+       docs.[m
+[7m Manual page adduser(8) line 430/462 97% (press h for help or q to quit)[27m[K[K...skipping...
+[m
+[1mBUGS[0m[m
+       Inconsistent use of terminology around the term [4msystem[24m [4maccount[24m in  docs[m
+       and  code  is  a  bug.   Please report this and allow us to improve our[m
+       docs.[m
+[m
+       [1madduser [22mtakes special attention to be directly usable in  Debian  main‐[m
+    
