@@ -777,4 +777,118 @@ d------r-x 2 user finance 4096 Apr 17 09:02 [01;34mread_execute_directory[0m
 d------rw- 2 user finance 4096 Apr 17 09:02 [34;42mread_write_directory[0m
 d-------w- 2 user finance 4096 Apr 17 09:02 [34;42mwrite_directory[0m
 d-------wx 2 user finance 4096 Apr 17 09:02 [34;42mwrite_execute_directory[0m
-[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ (reverse-i-search)`': [Ks': l[7ms[27m -lu': [7msu[27mdo chown -R user:finance /dir/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@d': [7msud[27m[1@o': [7msudo[27m[10P]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ sudo[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P /dir/[1P /dir/[1P /dir/[1P /dir/[1P /dir/[1P /dir/[1P /dir/[1P /dir/[1P /dir/[1P /dir/[1P /dir/[1P /dir/[1P/dir/[C /dir/o /dir/t /dir/h /dir/e /dir/r
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ (reverse-i-search)`': [Ks': l[7ms[27m -lu': [7msu[27mdo chown -R user:finance /dir/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@d': [7msud[27m[1@o': [7msudo[27m[10P]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ sudo[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P /dir/[1P /dir/[1P /dir/[1P /dir/[1P /dir/[1P /dir/[1P /dir/[1P /dir/[1P /dir/[1P /dir/[1P /dir/[1P /dir/[1P/dir/[C /dir/o /dir/t /dir/h /dir/e /dir/r /dir/: /dir/o /dir/t /dir/h /dir/e /dir/r /dir/
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l
+[?2004ltotal 24
+d--------x 2 other other 4096 Apr 17 09:02 [0m[01;34mexecute_directory[0m
+d------r-- 2 other other 4096 Apr 17 09:02 [01;34mread_directory[0m
+d------r-x 2 other other 4096 Apr 17 09:02 [01;34mread_execute_directory[0m
+d------rw- 2 other other 4096 Apr 17 09:02 [34;42mread_write_directory[0m
+d-------w- 2 other other 4096 Apr 17 09:02 [34;42mwrite_directory[0m
+d-------wx 2 other other 4096 Apr 17 09:02 [34;42mwrite_execute_directory[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ chown ex[K[Krea[K[K[Kuser:f[Knogroup e[Kread_directory/
+[?2004lchown: changing ownership of 'read_directory/': Operation not permitted
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ chown user:nogroup read_directory/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ksudo !!
+[?2004lsudo chown user:nogroup read_directory/
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l
+[?2004ltotal 24
+d--------x 2 other other   4096 Apr 17 09:02 [0m[01;34mexecute_directory[0m
+d------r-- 2 user  nogroup 4096 Apr 17 09:02 [01;34mread_directory[0m
+d------r-x 2 other other   4096 Apr 17 09:02 [01;34mread_execute_directory[0m
+d------rw- 2 other other   4096 Apr 17 09:02 [34;42mread_write_directory[0m
+d-------w- 2 other other   4096 Apr 17 09:02 [34;42mwrite_directory[0m
+d-------wx 2 other other   4096 Apr 17 09:02 [34;42mwrite_execute_directory[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ sudo chown --reference=read_directory/ write_directory/w[K write_execute_directory/
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l
+[?2004ltotal 24
+d--------x 2 other other   4096 Apr 17 09:02 [0m[01;34mexecute_directory[0m
+d------r-- 2 user  nogroup 4096 Apr 17 09:02 [01;34mread_directory[0m
+d------r-x 2 other other   4096 Apr 17 09:02 [01;34mread_execute_directory[0m
+d------rw- 2 other other   4096 Apr 17 09:02 [34;42mread_write_directory[0m
+d-------w- 2 user  nogroup 4096 Apr 17 09:02 [34;42mwrite_directory[0m
+d-------wx 2 user  nogroup 4096 Apr 17 09:02 [34;42mwrite_execute_directory[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ man chown
+[?2004l[?1049h[22;0;0t[?1h=[4mCHOWN[24m(1)                         User Commands                        [4mCHOWN[24m(1)[m
+[m
+[1mNAME[0m[m
+       chown - change file owner and group[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mchown [22m[[4mOPTION[24m]... [[4mOWNER[24m][[4m:[24m[[4mGROUP[24m]] [4mFILE[24m...[m
+       [1mchown [22m[[4mOPTION[24m]... [4m--reference=RFILE[24m [4mFILE[24m...[m
+[m
+[1mDESCRIPTION[0m[m
+       This manual page documents the GNU version of [1mchown[22m.  [1mchown [22mchanges the[m
+       user  and/or  group  ownership of each given file.  If only an owner (a[m
+       user name or numeric user ID) is given, that user is made the owner  of[m
+       each  given file, and the files' group is not changed.  If the owner is[m
+       followed by a colon and a group name (or numeric  group  ID),  with  no[m
+       spaces  between  them,  the  group ownership of the files is changed as[m
+       well.  If a colon but no group name follows the user name, that user is[m
+       made the owner of the files and the group of the files  is  changed  to[m
+       that  user's  login  group.   If the colon and group are given, but the[m
+[7m Manual page chown(1) line 1 (press h for help or q to quit)[27m[K[K/[K--[K--[Krr[Kee[Kff[Kee[Krr[Kee[Knn[Kcc[Kee[K[1;1H[4mCHOWN[24m(1)                         User Commands                        [4mCHOWN[24m(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       chown - change file owner and group[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mchown [22m[[4mOPTION[24m]... [[4mOWNER[24m][[4m:[24m[[4mGROUP[24m]] [4mFILE[24m...[m
+[8;1H       [1mchown [22m[[4mOPTION[24m]... [4m--reference=RFILE[24m [4mFILE[24m...[m
+[9;1H[m
+[10;1H[1mDESCRIPTION[0m[m
+[11;1H       This manual page documents the GNU version of [1mchown[22m.  [1mchown [22mchanges the[m
+[12;1H       user  and/or  group  ownership of each given file.  If only an owner (a[m
+[13;1H       user name or numeric user ID) is given, that user is made the owner  of[m
+[14;1H       each  given file, and the files' group is not changed.  If the owner is[m
+[15;1H       followed by a colon and a group name (or numeric  group  ID),  with  no[m
+[16;1H       spaces  between  them,  the  group ownership of the files is changed as[m
+[17;1H       well.  If a colon but no group name follows the user name, that user is[m
+[18;1H       made the owner of the files and the group of the files  is  changed  to[m
+[19;1H       that  user's  login  group.   If the colon and group are given, but the[m
+[20;1H[1;1H[4mCHOWN[24m(1)                         User Commands                        [4mCHOWN[24m(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       chown - change file owner and group[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mchown [22m[[4mOPTION[24m]... [[4mOWNER[24m][[4m:[24m[[4mGROUP[24m]] [4mFILE[24m...[m
+[8;1H       [1mchown [22m[[4mOPTION[24m]... [4m[7m--reference[27m[4m=RFILE[24m [4mFILE[24m...[m
+[9;1H[m
+[10;1H[1mDESCRIPTION[0m[m
+[11;1H       This manual page documents the GNU version of [1mchown[22m.  [1mchown [22mchanges the[m
+[12;1H       user  and/or  group  ownership of each given file.  If only an owner (a[m
+[13;1H       user name or numeric user ID) is given, that user is made the owner  of[m
+[14;1H       each  given file, and the files' group is not changed.  If the owner is[m
+[15;1H       followed by a colon and a group name (or numeric  group  ID),  with  no[m
+[16;1H       spaces  between  them,  the  group ownership of the files is changed as[m
+[17;1H       well.  If a colon but no group name follows the user name, that user is[m
+[18;1H       made the owner of the files and the group of the files  is  changed  to[m
+[19;1H       that  user's  login  group.   If the colon and group are given, but the[m
+[20;1H       owner is omitted, only the group of the files is changed; in this case,[m
+       [1mchown [22mperforms the same function as [1mchgrp[22m.  If only a colon  is  given,[m
+       or  if  the entire operand is empty, neither the owner nor the group is[m
+       changed.[m
+[m
+[1mOPTIONS[0m[m
+       Change the owner and/or group of each FILE to OWNER and/or GROUP.  With[m
+[7m Manual page chown(1) line 8/114 30% (press h for help or q to quit)[27m[K[K/[K       [1m[7m--reference[27m[22m, change the owner and group of each FILE to those of RFILE.[m
+[m
+       [1m-c[22m, [1m--changes[0m[m
+              like verbose but report only when a change is made[m
+[m
+       [1m-f[22m, [1m--silent[22m, [1m--quiet[0m[m
+              suppress most error messages[m
+[m
+       [1m-v[22m, [1m--verbose[0m[m
+              output a diagnostic for every file processed[m
+[m
+       [1m--dereference[0m[m
+              affect the referent of each symbolic link (this is the default),[m
+              rather than the symbolic link itself[m
+[m
+       [1m-h[22m, [1m--no-dereference[0m[m
+              affect symbolic links instead of  any  referenced  file  (useful[m
+              only on systems that can change the ownership of a symlink)[m
+[m
+[7m Manual page chown(1) line 27/114 46% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       Change the owner and/or group of each FI
