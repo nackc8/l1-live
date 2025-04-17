@@ -1106,4 +1106,37 @@ d-------wx 2 user  nogroup 4096 Apr 17 09:02 [34;42mwrite_execute_directory[0m
 [7m Manual page chmod(1) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       to be leading zeros.  The first digit selects the set user ID  (4)  and[m
 [7m Manual page chmod(1) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       set group ID (2) and restricted deletion or sticky (1) attributes.  The[m
 [7m Manual page chmod(1) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       second  digit  selects permissions for the user who owns the file: read[m
-[7m Manual page chmod(1) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       (4), write (2), and execute (1);  t
+[7m Manual page chmod(1) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       (4), write (2), and execute (1);  the  third  selects  permissions  for[m
+[7m Manual page chmod(1) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       other  users  in the file's group, with the same values; and the fourth[m
+[7m Manual page chmod(1) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       for other users not in the file's group, with the same values.[m
+[7m Manual page chmod(1) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page chmod(1) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mchmod [22mnever changes the permissions of symbolic links; the [1mchmod [22msystem[m
+[7m Manual page chmod(1) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       call cannot change their permissions.  This is not a problem since  the[m
+[7m Manual page chmod(1) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       permissions  of  symbolic links are never used.  However, for each sym‐[m
+[7m Manual page chmod(1) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       bolic link listed on the command line, [1mchmod [22mchanges the permissions of[m
+[7m Manual page chmod(1) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the pointed-to file.  In contrast, [1mchmod [22mignores symbolic links encoun‐[m
+[7m Manual page chmod(1) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tered during recursive directory traversals.[m
+[7m Manual page chmod(1) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page chmod(1) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mSETUID AND SETGID BITS[0m[m
+[7m Manual page chmod(1) line 43 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls
+[?2004l[0m[01;34mexecute_directory[0m  [01;34mread_execute_directory[0m  [34;42mwrite_execute_directory[0m
+[01;32mminfil[0m             [34;42mread_write_directory[0m
+[01;34mread_directory[0m     [34;42mwrite_directory[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ chmod 666 [C[C[C[Cminfil 
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls-l[K[K -l minfil 
+[?2004l-rw-rw-rw- 1 user user 0 Apr 17 10:49 minfil
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l minfil [4@chmod 666[C[C[C[C[C[C[C[C[C[C[C[1P[1@/[1P[1@-[1P[C[1@6[C[C[C[C[C[C[C[C[C[C[1P[1@0[C[C[C[C[C[C[C[C[C[K
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l minfil 
+[?2004l-rw----rw- 1 user user 0 Apr 17 10:49 minfil
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l minfil chmod 606 minfil[3Pls -l minfil chmod 606 minfil[C[C[C[C[C[C[C[C[C[C[C[C[C[C^C[?2004l[?2004h[?2004l
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l minfil chmod 606 minfil[1P[1@2[C[C
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ chmod 626 minfil[3Pls -l minfil 
+[?2004l-rw--w-rw- 1 user user 0 Apr 17 10:49 minfil
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ man chmod
+[?2004l[?1049h[22;0;0t[?1h=[4mCHMOD[24m(1)                         User Commands                        [4mCHMOD[24m(1)[m
+[m
+[1mNAME[0m[m
+       chmod - change file mode bits[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mchmod [22m[[4
