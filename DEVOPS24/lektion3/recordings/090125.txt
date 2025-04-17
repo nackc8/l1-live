@@ -1355,4 +1355,72 @@ GNU coreutils 9.4                 April 2024                             [4mLS
        or available locally via: info '(coreutils) ls invocation'[m
 [m
 GNU coreutils 9.4                 April 2024                             [4mLS[24m(1)[m
-[7m Manual page ls(1) line 231/249 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page ls(1) line 231/249 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page ls(1) line 231/249 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page ls(1) line 231/249 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page ls(1) line 231/249 (END)
+[7m Manual page ls(1) line 231/249 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page ls(1) line 231/249 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page ls(1) line 231/249 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page ls(1) line 231/249 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page ls(1) line 231/249 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mAUTHOR[0m[m
+[20;1H[K[7m Manual page ls(1) line 230/249 99% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page ls(1) line 229/249 99% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       2      if serious trouble (e.g., cannot access command-line argument).[m
+[20;1H[K[7m Manual page ls(1) line 228/249 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page ls(1) line 227/249 98% (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ sudo usermod -a -G finance bert
+[?2004l[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ id bert
+[?2004luid=1006(bert) gid=1006(bert) groups=1006(bert),100(users),1007(finance)
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ adduser bosse
+[?2004lfatal: Only root may add a user or group to the system.
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ sudo !!
+[?2004lsudo adduser bosse
+[sudo] password for user: 
+info: Adding user `bosse' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `bosse' (1008) ...
+info: Adding new user `bosse' (1008) with group `bosse (1008)' ...
+info: Creating home directory `/home/bosse' ...
+info: Copying files from `/etc/skel' ...
+New password: 
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for bosse
+Enter the new value, or press ENTER for the default
+	Full Name []: 
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] 
+info: Adding new user `bosse' to supplemental / extra groups `users' ...
+info: Adding user `bosse' to group `users' ...
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls
+[?2004l[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ id[K[Ksudo id bosse
+[?2004luid=1008(bosse) gid=1008(bosse) groups=1008(bosse),100(users)
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ sudo deluser bosse
+[?2004linfo: Removing crontab ...
+info: Removing user `bosse' ...
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ sudo deluser bosse[5Pid[C[C[C[C[C[C
+[?2004lid: ‘bosse’: no such user
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls /h[K[K/[K/home/[K
+[?2004l[0m[01;34mbert[0m  [01;34mbosse[0m  [01;34mgreen[0m  [01;34mother[0m  [01;34muser[0m
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ rm -rf /home/bosse/
+[?2004lrm: cannot remove '/home/bosse/': Permission denied
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ sudo !!
+[?2004lsudo rm -rf /home/bosse/
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ adduser bosse21[K
+[?2004lfatal: Only root may add a user or group to the system.
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ sudo !!
+[?2004lsudo adduser bosse2
+info: Adding user `bosse2' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `bosse2' (1008) ...
+info: Adding new user `bosse2' (1008) with group `bosse2 (1008)' ...
+info: Creating home directory `/home/bosse2' ...
+info: Copying files from `/etc/skel' ...
+New password: 
+Retype new password: 
+Sorry, passwords do not match.
+passwd: Authentication token manipulation error
+passwd: password unchanged
+Try again? [y/N] 
+Changing the user information for bosse2
+Enter the new value, or press ENTER for the default
+	Full Name []: 
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the info
