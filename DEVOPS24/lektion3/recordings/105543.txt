@@ -1042,4 +1042,68 @@ d--------x 2 other other   4096 Apr 17 09:02 [0m[01;34mexecute_directory[0m
 -rwxrw---- 1 user  user       0 Apr 17 10:49 [01;32mminfil[0m
 d------r-- 2 user  nogroup 4096 Apr 17 09:02 [01;34mread_directory[0m
 d------r-x 2 other other   4096 Apr 17 09:02 [01;34mread_execute_directory[0m
-d------rw- 2 ot
+d------rw- 2 other other   4096 Apr 17 09:02 [34;42mread_write_directory[0m
+d-------w- 2 user  nogroup 4096 Apr 17 09:02 [34;42mwrite_directory[0m
+d-------wx 2 user  nogroup 4096 Apr 17 09:02 [34;42mwrite_execute_directory[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -lchmod +w,u+x minfil[C[1@a[H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ chmod a+w,u+x minfil
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ chmod a+w,u+x minfil[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -l[K
+[?2004ltotal 24
+d--------x 2 other other   4096 Apr 17 09:02 [0m[01;34mexecute_directory[0m
+-rwxrw--w- 1 user  user       0 Apr 17 10:49 [01;32mminfil[0m
+d------r-- 2 user  nogroup 4096 Apr 17 09:02 [01;34mread_directory[0m
+d------r-x 2 other other   4096 Apr 17 09:02 [01;34mread_execute_directory[0m
+d------rw- 2 other other   4096 Apr 17 09:02 [34;42mread_write_directory[0m
+d-------w- 2 user  nogroup 4096 Apr 17 09:02 [34;42mwrite_directory[0m
+d-------wx 2 user  nogroup 4096 Apr 17 09:02 [34;42mwrite_execute_directory[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -lchmod a+w,u+x minfil[C[1P[C[1@a[C[C[C[C[C[C[C[C[C[C[C[C[C^C[?2004l[?2004h[?2004l
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ man chmod
+[?2004l[?1049h[22;0;0t[?1h=[4mCHMOD[24m(1)                         User Commands                        [4mCHMOD[24m(1)[m
+[m
+[1mNAME[0m[m
+       chmod - change file mode bits[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mchmod [22m[[4mOPTION[24m]... [4mMODE[24m[[4m,MODE[24m]... [4mFILE[24m...[m
+       [1mchmod [22m[[4mOPTION[24m]... [4mOCTAL-MODE[24m [4mFILE[24m...[m
+       [1mchmod [22m[[4mOPTION[24m]... [4m--reference=RFILE[24m [4mFILE[24m...[m
+[m
+[1mDESCRIPTION[0m[m
+       This manual page documents the GNU version of [1mchmod[22m.  [1mchmod [22mchanges the[m
+       file  mode  bits of each given file according to [4mmode[24m, which can be ei‐[m
+       ther a symbolic representation of changes to make, or an  octal  number[m
+       representing the bit pattern for the new mode bits.[m
+[m
+       The  format  of a symbolic mode is [[1mugoa[22m...][[[1m-+=[22m][[4mperms[24m...]...], where[m
+       [4mperms[24m is either zero or more letters from the set [1mrwxXst[22m, or  a  single[m
+       letter  from  the set [1mugo[22m.  Multiple symbolic modes can be given, sepa‐[m
+[7m Manual page chmod(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       rated by commas.[m
+[7m Manual page chmod(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page chmod(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       A combination of the letters [1mugoa [22mcontrols which users' access  to  the[m
+[7m Manual page chmod(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       file  will  be  changed:  the  user who owns it ([1mu[22m), other users in the[m
+[7m Manual page chmod(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       file's group ([1mg[22m), other users not in the file's group ([1mo[22m), or all users[m
+[7m Manual page chmod(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ([1ma[22m).  If none of these are given, the effect is as if ([1ma[22m)  were  given,[m
+[7m Manual page chmod(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       but bits that are set in the umask are not affected.[m
+[7m Manual page chmod(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page chmod(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The  operator  [1m+  [22mcauses the selected file mode bits to be added to the[m
+[7m Manual page chmod(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       existing file mode bits of each file; [1m- [22mcauses them to be removed;  and[m
+[7m Manual page chmod(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m= [22mcauses them to be added and causes unmentioned bits to be removed ex‐[m
+[7m Manual page chmod(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       cept  that a directory's unmentioned set user and group ID bits are not[m
+[7m Manual page chmod(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       affected.[m
+[7m Manual page chmod(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page chmod(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The letters [1mrwxXst [22mselect file mode bits for the affected  users:  read[m
+[7m Manual page chmod(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ([1mr[22m), write ([1mw[22m), execute (or search for directories) ([1mx[22m), execute/search[m
+[7m Manual page chmod(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       only  if  the file is a directory or already has execute permission for[m
+[7m Manual page chmod(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       some user ([1mX[22m), set user or group ID on execution ([1ms[22m), restricted  dele‐[m
+[7m Manual page chmod(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tion  flag or sticky bit ([1mt[22m).  Instead of one or more of these letters,[m
+[7m Manual page chmod(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       you can specify exactly one of the letters [1mugo[22m: the permissions granted[m
+[7m Manual page chmod(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       to the user who owns the file ([1mu[22m), the  permissions  granted  to  other[m
+[7m Manual page chmod(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       users  who  are  members  of  the file's group ([1mg[22m), and the permissions[m
+[7m Manual page chmod(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       granted to users that are in neither of the  two  preceding  categories[m
+[7m Manual page chmod(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ([1mo[22m).[m
+[7m Manual page chmod(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page chmod(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       A  numeric  mode  is  from  one  to four octal digits (0-7), derived by[m
+[7m Manual page chmod(1) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       adding up the bits with values 4, 2, and 1.  Omitted digits are assumed[m
+[7m Manual page chmod(1) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       to be leading zeros.  The first digit selects the set user ID  (4)  and[m
+[7m Manual page chmod(1) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       set group ID (2) and restricted deletion or sticky (1) attributes.  The[m
+[7m Manual page chmod(1) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       second  digit  selects permissions for the user who owns the file: read[m
+[7m Manual page chmod(1) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       (4), write (2), and execute (1);  t
