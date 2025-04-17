@@ -2212,4 +2212,112 @@ other::---
 [?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl 
 [?2004lUsage: getfacl [-aceEsRLPtpndvh] file ...
 Try `getfacl --help' for more information.
-[?2004h]0;user@ubse: /d
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl [Kgetfacl otherskat/[H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl otherskat/
+[?2004l# file: otherskat/
+# owner: other
+# group: other
+user::rwx
+user:user:rwx			#effective:r-x
+user:green:r-x
+group::---
+mask::r-x
+other::---
+
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ s[Ksd[Kudo setfacl -m m:rwx otherskat/
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ sudo setfacl -m m:rwx otherskat/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pgetfacl[C[C[C[C[C[C[C[C[C[C[C
+[?2004l# file: otherskat/
+# owner: other
+# group: other
+user::rwx
+user:user:rwx
+user:green:r-x
+group::---
+mask::rwx
+other::---
+
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls
+[?2004l[0m[01;34mkat[0m  [01;34motherskat[0m  [01;34mvanligkatalog[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ l[Kmkdir foo
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl foo/
+[?2004l# file: foo/
+# owner: user
+# group: user
+user::rwx
+group::rwx
+other::r-x
+
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ sudo setfacl -d -m [K[K[K-m u:other:rwx foo/
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ touch foo/usersfile
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl foo/
+[?2004l# file: foo/
+# owner: user
+# group: user
+user::rwx
+group::rwx
+other::r-x
+default:user::rwx
+default:user:other:rwx
+default:group::rwx
+default:mask::rwx
+default:other::r-x
+
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl foo/
+[?2004l# file: foo/
+# owner: user
+# group: user
+user::rwx
+group::rwx
+other::r-x
+default:user::rwx
+default:user:other:rwx
+default:group::rwx
+default:mask::rwx
+default:other::r-x
+
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl foo/usersfile [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl foo/usersfile 
+[?2004l# file: foo/usersfile
+# owner: user
+# group: user
+user::rw-
+user:other:rwx			#effective:rw-
+group::rwx			#effective:rw-
+mask::rw-
+other::r--
+
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl foo/usersfile [K[H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl foo/
+[?2004l# file: foo/
+# owner: user
+# group: user
+user::rwx
+group::rwx
+other::r-x
+default:user::rwx
+default:user:other:rwx
+default:group::rwx
+default:mask::rwx
+default:other::r-x
+
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ get f[K[Kfacl .[H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl .
+[?2004l# file: .
+# owner: other
+# group: other
+user::rwx
+group::rwx
+other::rwx
+
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls
+[?2004l[0m[01;34mfoo[0m  [01;34mkat[0m  [01;34motherskat[0m  [01;34mvanligkatalog[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl foo/
+[?2004l# file: foo/
+# owner: user
+# group: user
+user::rwx
+group::rwx
+other::r-x
+default:user::rwx
+default:user:other:rwx
+default:group::rwx
+default:mask::rwx
+default:other::r-x
+
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ (reverse-i-search)`': [K-': sudo setfacl -d [7m-[27mm u:other:rwx foo/[1@d': sudo setfacl [7m-d[27m -[8P]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ sudo setfacl -d[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P
