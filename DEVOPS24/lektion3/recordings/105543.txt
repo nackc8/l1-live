@@ -2380,4 +2380,58 @@ default:other::r-x
 [7m Manual page setfacl(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       file or directory.  ACL entries for this operation must include permis‐[m
 [7m Manual page setfacl(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       sions.[m
 [7m Manual page setfacl(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page 
+[7m Manual page setfacl(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The [4m-x[24m [4m(--remove)[24m and [4m-X[24m [4m(--remove-file)[24m options remove ACL entries. It[m
+[7m Manual page setfacl(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       is not an error to remove an entry which does not exist.  Only ACL  en‐[m
+[7m Manual page setfacl(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tries  without  the  [4mperms[24m  field  are  accepted  as parameters, unless[m
+[7m Manual page setfacl(1) line 14 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ man setfacl getfacl foo/
+[?2004l# file: foo/
+# owner: user
+# group: user
+user::rwx
+group::rwx
+other::r-x
+default:user::rwx
+default:user:other:r--
+default:user:green:rw-
+default:group::rwx
+default:mask::rwx
+default:other::r-x
+
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl foo/
+[?2004l# file: foo/
+# owner: user
+# group: user
+user::rwx
+group::rwx
+other::r-x
+default:user::rwx
+default:user:other:r--
+default:user:green:rw-
+default:group::rwx
+default:mask::rwx
+default:other::r-x
+
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ getfacl foo/man setfacl getfacl foo/[22@sudo setfacl -d -m u:green:rw[C[C[C[C[C[1P[1@-[1@s[1@e[1@t
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ sudo setfacl -d --set u:green:rw foo/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgetfacl foo/[K
+[?2004l# file: foo/
+# owner: user
+# group: user
+user::rwx
+group::rwx
+other::r-x
+default:user::rwx
+default:user:green:rw-
+default:group::rwx
+default:mask::rwx
+default:other::r-x
+
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls
+[?2004l[0m[01;34mfoo[0m  [01;34mkat[0m  [01;34motherskat[0m  [01;34mvanligkatalog[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ exit
+[?2004llogout
+Connection to localhost closed.
+[?2004h[94mDEVOPS24/lektion3
+(B[m$ exit
+[?2004lexit
+
+Script done on 2025-04-17 14:27:28+02:00 [COMMAND_EXIT_CODE="0"]
