@@ -891,4 +891,55 @@ d-------wx 2 user  nogroup 4096 Apr 17 09:02 [34;42mwrite_execute_directory[0m
               affect symbolic links instead of  any  referenced  file  (useful[m
               only on systems that can change the ownership of a symlink)[m
 [m
-[7m Manual page chown(1) line 27/114 46% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       Change the owner and/or group of each FI
+[7m Manual page chown(1) line 27/114 46% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       Change the owner and/or group of each FILE to OWNER and/or GROUP.  With[m
+[20;1H[K[7m Manual page chown(1) line 26/114 46% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mOPTIONS[0m[m
+[20;1H[K[7m Manual page chown(1) line 25/114 44% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page chown(1) line 24/114 42% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       changed.[m
+[20;1H[K[7m Manual page chown(1) line 23/114 41% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       or  if  the entire operand is empty, neither the owner nor the group is[m
+[20;1H[K[7m Manual page chown(1) line 22/114 41% (press h for help or q to quit)[27m[K[K/[K[m
+       [1m-h[22m, [1m--no-dereference[0m[m
+              affect symbolic links instead of  any  referenced  file  (useful[m
+              only on systems that can change the ownership of a symlink)[m
+[m
+[7m Manual page chown(1) line 27/114 46% (press h for help or q to quit)[27m[K[K/[K...skipping...
+       [1m[7m--reference[27m[22m=[4mRFILE[0m[m
+              use RFILE's owner and group rather than  specifying  OWNER:GROUP[m
+              values.  RFILE is always dereferenced.[m
+[m
+       [1m-R[22m, [1m--recursive[0m[m
+              operate on files and directories recursively[m
+[m
+       The  following  options modify how a hierarchy is traversed when the [1m-R[0m[m
+       option is also specified.  If more than one is specified, only the  fi‐[m
+       nal one takes effect.[m
+[m
+       [1m-H     [22mif  a  command  line argument is a symbolic link to a directory,[m
+              traverse it[m
+[m
+       [1m-L     [22mtraverse every symbolic link to a directory encountered[m
+[m
+       [1m-P     [22mdo not traverse any symbolic links (default)[m
+[m
+       [1m--help [22mdisplay this help and exit[m
+[7m Manual page chown(1) line 58/114 72% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page chown(1) line 57/114 71% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              fail to operate recursively on '/'[m
+[20;1H[K[7m Manual page chown(1) line 56/114 71% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m--preserve-root[0m[m
+[20;1H[K[7m Manual page chown(1) line 55/114 69% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page chown(1) line 54/114 69% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              do not treat '/' specially (the default)[m
+[20;1H[K[7m Manual page chown(1) line 53/114 68% (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l
+[?2004ltotal 24
+d--------x 2 other other   4096 Apr 17 09:02 [0m[01;34mexecute_directory[0m
+d------r-- 2 user  nogroup 4096 Apr 17 09:02 [01;34mread_directory[0m
+d------r-x 2 other other   4096 Apr 17 09:02 [01;34mread_execute_directory[0m
+d------rw- 2 other other   4096 Apr 17 09:02 [34;42mread_write_directory[0m
+d-------w- 2 user  nogroup 4096 Apr 17 09:02 [34;42mwrite_directory[0m
+d-------wx 2 user  nogroup 4096 Apr 17 09:02 [34;42mwrite_execute_directory[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ touch minfil
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l
+[?2004ltotal 24
+d--------x 2 other other   4096 Apr 17 09:02 [0m[01;34mexecute_directory[0m
+-rw-rw-r-- 1 user  user       0 Apr 17 10:49 minfil
+d------r-- 2 user  nogroup 4096 Apr 17 09:02 [01;34mread_directory[0m
+d------r-x 2 other other   4096 Apr 17 09:02 [01;34mread_execute_directory[0m
+d------rw- 2 other other   4096 Apr 17 09:02 [34;42mread_write_directory[0m
+d-------
