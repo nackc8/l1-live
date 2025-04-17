@@ -1139,4 +1139,53 @@ d-------wx 2 user  nogroup 4096 Apr 17 09:02 [34;42mwrite_execute_directory[0m
        chmod - change file mode bits[m
 [m
 [1mSYNOPSIS[0m[m
-       [1mchmod [22m[[4
+       [1mchmod [22m[[4mOPTION[24m]... [4mMODE[24m[[4m,MODE[24m]... [4mFILE[24m...[m
+       [1mchmod [22m[[4mOPTION[24m]... [4mOCTAL-MODE[24m [4mFILE[24m...[m
+       [1mchmod [22m[[4mOPTION[24m]... [4m--reference=RFILE[24m [4mFILE[24m...[m
+[m
+[1mDESCRIPTION[0m[m
+       This manual page documents the GNU version of [1mchmod[22m.  [1mchmod [22mchanges the[m
+       file  mode  bits of each given file according to [4mmode[24m, which can be ei‐[m
+       ther a symbolic representation of changes to make, or an  octal  number[m
+       representing the bit pattern for the new mode bits.[m
+[m
+       The  format  of a symbolic mode is [[1mugoa[22m...][[[1m-+=[22m][[4mperms[24m...]...], where[m
+       [4mperms[24m is either zero or more letters from the set [1mrwxXst[22m, or  a  single[m
+       letter  from  the set [1mugo[22m.  Multiple symbolic modes can be given, sepa‐[m
+[7m Manual page chmod(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ toich[K[K[Kuch hejsan
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l
+[?2004ltotal 24
+d--------x 2 other other   4096 Apr 17 09:02 [0m[01;34mexecute_directory[0m
+-rw-rw-r-- 1 user  user       0 Apr 17 11:02 hejsan
+-rw--w-rw- 1 user  user       0 Apr 17 10:49 minfil
+d------r-- 2 user  nogroup 4096 Apr 17 09:02 [01;34mread_directory[0m
+d------r-x 2 other other   4096 Apr 17 09:02 [01;34mread_execute_directory[0m
+d------rw- 2 other other   4096 Apr 17 09:02 [34;42mread_write_directory[0m
+d-------w- 2 user  nogroup 4096 Apr 17 09:02 [34;42mwrite_directory[0m
+d-------wx 2 user  nogroup 4096 Apr 17 09:02 [34;42mwrite_execute_directory[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ mkdir hejsandir
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l hejsan*
+[?2004l-rw-rw-r-- 1 user user    0 Apr 17 11:02 hejsan
+
+hejsandir:
+total 0
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l hejsan*d hejsan*[H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -ld hejsan*
+[?2004l-rw-rw-r-- 1 user user    0 Apr 17 11:02 hejsan
+drwxrwxr-x 2 user user 4096 Apr 17 11:03 [0m[01;34mhejsandir[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ umask
+[?2004l0002
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ umask
+[?2004l0002
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ touch nyfil
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l nyfil 
+[?2004l-rw-rw-r-- 1 user user 0 Apr 17 11:07 nyfil
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ umask 000[C[C[C[C[C[C[C[C[C
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ touch nollnollnoll
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l nollnollnoll 
+[?2004l-rw-rw-rw- 1 user user 0 Apr 17 11:09 nollnollnoll
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ umask 666
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ umask 666ls -l nollnollnoll [K[K[K[K[K[K[K[K[K[K[K[K[Ksexsexsex
+[?2004lls: cannot access 'sexsexsex': No such file or directory
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l sexsexsex[6Pumask 666ls -l sexsexsex[6Pumask 666ls -l nollnollnoll [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Ptouch nollnollnoll[K[K[K[K[K[K[K[K[K[K[K[Ksexsexsex
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l sexsexsex 
+[?2004l----
