@@ -1413,4 +1413,53 @@ drwx------ 3 root root 4096 Apr 17 07:56 [01;34msystemd-private-2f28fe4e2e14497
 [?2004ldrwxrwxrwt 14 root root 4096 Apr 17 11:33 [0m[30;42m/tmp/[0m
 [?2004h]0;user@ubse: /tmp[01;32muser@ubse[00m:[01;34m/tmp[00m$ sudo -i[Ku -i othe[K[K[K[K[K[C[C -ip -io -it -ih -i[1P -i[1P -i[1P -i[1P -io -it -ih -ie -ir -i
 [?2004l[?2004h]0;other@ubse: ~[01;32mother@ubse[00m:[01;34m~[00m$ cd /tmp/
-[?2004l[?2004h]0;other@ubse: /tmp[01;
+[?2004l[?2004h]0;other@ubse: /tmp[01;32mother@ubse[00m:[01;34m/tmp[00m$ [H[2J]0;other@ubse: /tmp[01;32mother@ubse[00m:[01;34m/tmp[00m$ ls -l othersfil 
+[?2004l-rw-rw-r-- 1 other other 0 Apr 17 11:33 othersfil
+[?2004h]0;other@ubse: /tmp[01;32mother@ubse[00m:[01;34m/tmp[00m$ rm othersfil 
+[?2004l[?2004h]0;other@ubse: /tmp[01;32mother@ubse[00m:[01;34m/tmp[00m$ rm othersfil [3@ls -l[C[C[C[C[C[C[C[C[C[C[C
+[?2004lls: cannot access 'othersfil': No such file or directory
+[?2004h]0;other@ubse: /tmp[01;32mother@ubse[00m:[01;34m/tmp[00m$ ls -ld /tmp/
+[?2004ldrwxrwxrwt 14 root root 4096 Apr 17 11:34 [0m[30;42m/tmp/[0m
+[?2004h]0;other@ubse: /tmp[01;32mother@ubse[00m:[01;34m/tmp[00m$ touch othersfil
+[?2004l[?2004h]0;other@ubse: /tmp[01;32mother@ubse[00m:[01;34m/tmp[00m$ exit
+[?2004llogout
+[?2004h]0;user@ubse: /tmp[01;32muser@ubse[00m:[01;34m/tmp[00m$ rm othersfil 
+[?2004lrm: remove write-protected regular empty file 'othersfil'? y
+rm: cannot remove 'othersfil': Operation not permitted
+[?2004h]0;user@ubse: /tmp[01;32muser@ubse[00m:[01;34m/tmp[00m$ ls -ld /tmp/
+[?2004ldrwxrwxrwt 14 root root 4096 Apr 17 11:35 [0m[30;42m/tmp/[0m
+[?2004h]0;user@ubse: /tmp[01;32muser@ubse[00m:[01;34m/tmp[00m$ [H[2J]0;user@ubse: /tmp[01;32muser@ubse[00m:[01;34m/tmp[00m$ cd /dir
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls
+[?2004l[0m[01;34mexecute_directory[0m  nollnollett-fil      [01;34mread_execute_directory[0m
+hejsan             [34;42mnollnollett-katalog[0m  [34;42mread_write_directory[0m
+[01;34mhejsandir[0m          nollnollnoll         sexsexsex
+[01;34mhejsvejs[0m           nyfil                [34;42mwrite_directory[0m
+minfil             [01;34mread_directory[0m       [34;42mwrite_execute_directory[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ sudo rm -rf *
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l
+[?2004ltotal 0
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ mkdir kat
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l
+[?2004ltotal 4
+drwxrwxr-x 2 user user 4096 Apr 17 11:36 [0m[01;34mkat[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ chmod g+s kat/
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l
+[?2004ltotal 4
+drwxrwsr-x 2 user user 4096 Apr 17 11:36 [0m[01;34mkat[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ sudo chown user>[K:k[Kuse[K[K[Ksudo kat/
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ [H[2J]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ ls -l
+[?2004ltotal 4
+drwxrwsr-x 2 user sudo 4096 Apr 17 11:36 [0m[01;34mkat[0m
+[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ mkdir vana[Kligkatalog
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ cd vanligkatalog/
+[?2004l[?2004h]0;user@ubse: /dir/vanligkatalog[01;32muser@ubse[00m:[01;34m/dir/vanligkatalog[00m$ touch hepp
+[?2004l[?2004h]0;user@ubse: /dir/vanligkatalog[01;32muser@ubse[00m:[01;34m/dir/vanligkatalog[00m$ ls -l
+[?2004ltotal 0
+-rw-rw-r-- 1 user user 0 Apr 17 11:38 hepp
+[?2004h]0;user@ubse: /dir/vanligkatalog[01;32muser@ubse[00m:[01;34m/dir/vanligkatalog[00m$ c [Kd ..
+[?2004l[?2004h]0;user@ubse: /dir[01;32muser@ubse[00m:[01;34m/dir[00m$ cd kat/
+[?2004l[?2004h]0;user@ubse: /dir/kat[01;32muser@ubse[00m:[01;34m/dir/kat[00m$ touch nyf[Kspeciellfil
+[?2004l[?2004h]0;user@ubse: /dir/kat[01;32muser@ubse[00m:[01;34m/dir/kat[00m$ ls -l
+[?2004ltotal 0
+-rw-rw-r-- 1 user sudo 0 Apr 17 11:38 nyspeciellfil
+[?2004h]0;user@ubse: /dir/kat[01;32muser@ubse[00m:[01;34m/dir/kat[00m$ [H
