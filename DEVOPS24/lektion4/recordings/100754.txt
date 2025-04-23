@@ -1586,4 +1586,73 @@ GNU Bash 5.2                              2022 September 19                     
        The += operator will append to an array variable when assigning using the compound assignment[m
        syntax; see [1mPARAMETERS[0m above.[m
 [m
-       Any element of an array may be referenced using ${[4mname[24m[[4msubscript[24m]}.  The braces are  re
+       Any element of an array may be referenced using ${[4mname[24m[[4msubscript[24m]}.  The braces are  required[m
+       to  avoid conflicts with pathname expansion.  If [4msubscript[24m is [1m@[0m or [1m*[0m, the word expands to all[m
+       members of [4mname[24m.  These subscripts differ only when the word appears  within  double  quotes.[m
+[7m Manual page bash(1) line 1224 (press h for help or q to quit)[27m[K[K/[K...skipping...
+[1m[7mEXPANSION[27m[0m[m
+       Expansion  is  performed  on  the command line after it has been split into words.  There are[m
+       seven kinds of expansion performed: [4mbrace[24m [4mexpansion[24m, [4mtilde[24m [4mexpansion[24m, [4mparameter[24m [4mand[24m  [4mvariable[24m[m
+       [4mexpansion[24m,  [4mcommand[24m  [4msubstitution[24m,  [4marithmetic[24m [4mexpansion[24m, [4mword[24m [4msplitting[24m, and [4mpathname[24m [4mexpan‐[24m[m
+       [4msion[24m.[m
+[m
+       The order of expansions is: brace expansion; tilde expansion, parameter and  variable  expan‐[m
+       sion,  arithmetic expansion, and command substitution (done in a left-to-right fashion); word[m
+       splitting; and pathname expansion.[m
+[m
+       On systems that can support it, there is an additional expansion available: [4mprocess[24m [4msubstitu‐[24m[m
+       [4mtion[24m.   This  is performed at the same time as tilde, parameter, variable, and arithmetic ex‐[m
+       pansion and command substitution.[m
+[m
+       After these expansions are performed, quote characters present in the original word  are  re‐[m
+       moved unless they have been quoted themselves ([4mquote[24m [4mremoval[24m).[m
+[m
+       Only brace expansion, word splitting, and pathname expansion can increase the number of words[m
+       of the expansion; other expansions expand a single word to a single word.   The  only  excep‐[m
+       tions  to  this  are  the  expansions  of  "[1m$@[0m"  and "[1m${[0m[4mname[24m[1m[@]}[0m", and, in most cases, [1m$*[0m and[m
+       [1m${[0m[4mname[24m[1m[*]}[0m as explained above (see [1mPARAMETERS[0m).[m
+[m
+   [1mBrace[0m [1mExpansion[0m[m
+       [4mBrace[24m [4mexpansion[24m is a mechanism by which arbitrary strings may be generated.   This  mechanism[m
+[7m Manual page bash(1) line 1292 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion4
+(B[m$ [H[2J[94mDEVOPS24/lektion4
+(B[m$ pwd
+[?2004l/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion4
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ ls ~
+[?2004l Android		 bokforing   Downloads	 Pictures      shared_desktop  'VirtualBox VMs'
+ AndroidStudioProjects	 Desktop     Dropbox	 Public        Templates        wineapps
+ bin			 Documents   Music	 Screenshots   Videos
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ ls ~[C[C[C[C[C[C[K/home/kent
+[?2004l Android		 bokforing   Downloads	 Pictures      shared_desktop  'VirtualBox VMs'
+ AndroidStudioProjects	 Desktop     Dropbox	 Public        Templates        wineapps
+ bin			 Documents   Music	 Screenshots   Videos
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ [H[2J[94mDEVOPS24/lektion4
+(B[m$ start-ubse
+[?2004lbash: start-ubse: command not found
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ ubse-start
+[?2004lbash: ubse-start: command not found
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ ssh ubse[H[2J[94mDEVOPS24/lektion4
+(B[m$ ssh ubse
+[?2004l^C
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ ssh ubse
+[?2004lWelcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-57-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Thu Apr 17 01:00:10 PM UTC 2025
+
+  System load:  0.0                Processes:               115
+  Usage of /:   17.1% of 38.04GB   Users logged in:         0
+  Memory usage: 4%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just r
