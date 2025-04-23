@@ -1,0 +1,591 @@
+Script started on 2025-04-23 10:08:00+02:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="114" LINES="7"]
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mDEVOPS24/lektion4
+(B[m$ man ls[K(B[m$ man ls[K(B[m$ man ls[K(B[m$ man ls[K(B[m$ man ls[K(B[m$ man ls[K(B[m$ man ls
+[?2004l[?1049h[22;0;0t[?1h=LS(1)                                       User Commands                                      LS(1)[m
+[m
+[1mNAME[0m[m
+       ls - list directory contents[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       List information about the FILEs (the current directory by default).  Sort entries alphabeti‐[m
+       cally if none of [1m-cftuvSUX[0m nor [1m--sort[0m is specified.[m
+[m
+       Mandatory arguments to long options are mandatory for short options too.[m
+[m
+       [1m-a[0m, [1m--all[0m[m
+              do not ignore entries starting with .[m
+[m
+       [1m-A[0m, [1m--almost-all[0m[m
+              do not list implied . and ..[m
+[m
+       [1m--author[0m[m
+              with [1m-l[0m, print the author of each file[m
+[m
+       [1m-b[0m, [1m--escape[0m[m
+[7m Manual page ls(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion4
+(B[m$ [H[2J[94mDEVOPS24/lektion4
+(B[m$ man git/[K-commitg[K
+[?2004l[?1049h[22;0;0t[?1h=GIT-COMMIT(1)                                Git Manual                                GIT-COMMIT(1)[m
+[m
+[1mNAME[0m[m
+       git-commit - Record changes to the repository[m
+[m
+[1mSYNOPSIS[0m[m
+       [4mgit[24m [4mcommit[24m [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend][m
+                  [--dry-run] [(-c | -C | --squash) <commit> | --fixup [(amend|reword):]<commit>)][m
+                  [-F <file> | -m <msg>] [--reset-author] [--allow-empty][m
+                  [--allow-empty-message] [--no-verify] [-e] [--author=<author>][m
+                  [--date=<date>] [--cleanup=<mode>] [--[no-]status][m
+                  [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]][m
+                  [(--trailer <token>[(=|:)<value>])...] [-S[<keyid>]][m
+                  [--] [<pathspec>...][m
+[m
+[1mDESCRIPTION[0m[m
+       Create a new commit containing the current contents of the index and the given log message[m
+       describing the changes. The new commit is a direct child of HEAD, usually the tip of the[m
+       current branch, and the branch is updated to point to it (unless no branch is associated with[m
+       the working tree, in which case HEAD is "detached" as described in [1mgit-checkout[0m(1)).[m
+[m
+       The content to be committed can be specified in several ways:[m
+[m
+        1. by using [1mgit-add[0m(1) to incrementally "add" changes to the index before using the [4mcommit[24m[m
+[7m Manual page git-commit(1) line 1 (press h for help or q to quit)[27m[K[K           command (Note: even modified files must be "added");[m
+[m
+        2. by using [1mgit-rm[0m(1) to remove files from the working tree and the index, again before[m
+           using the [4mcommit[24m command;[m
+[m
+        3. by listing files as arguments to the [4mcommit[24m command (without --interactive or --patch[m
+           switch), in which case the commit will ignore changes staged in the index, and instead[m
+           record the current content of the listed files (which must already be known to Git);[m
+[m
+        4. by using the -a switch with the [4mcommit[24m command to automatically "add" changes from all[m
+           known files (i.e. all files that are already listed in the index) and to automatically[m
+           "rm" files in the index that have been removed from the working tree, and then perform[m
+           the actual commit;[m
+[m
+        5. by using the --interactive or --patch switches with the [4mcommit[24m command to decide one by[m
+           one which files or hunks should be part of the commit in addition to contents in the[m
+           index, before finalizing the operation. See the “Interactive Mode” section of [1mgit-add[0m(1)[m
+           to learn how to operate these modes.[m
+[m
+       The [1m--dry-run[0m option can be used to obtain a summary of what is included by any of the above[m
+       for the next commit by giving the same set of parameters (options and paths).[m
+[m
+       If you make a commit and then find a mistake immediately after that, you can recover from it[m
+       with [4mgit[24m [4mreset[24m.[m
+[7m Manual page git-commit(1) line 25 (press h for help or q to quit)[27m[K[K[m
+[1mOPTIONS[0m[m
+       -a, --all[m
+           Tell the command to automatically stage files that have been modified and deleted, but[m
+           new files you have not told Git about are not affected.[m
+[m
+       -p, --patch[m
+           Use the interactive patch selection interface to choose which changes to commit. See [1mgit-[0m[m
+           [1madd[0m(1) for details.[m
+[m
+       -C <commit>, --reuse-message=<commit>[m
+           Take an existing commit object, and reuse the log message and the authorship information[m
+           (including the timestamp) when creating the commit.[m
+[m
+       -c <commit>, --reedit-message=<commit>[m
+           Like [4m-C[24m, but with [1m-c[0m the editor is invoked, so that the user can further edit the commit[m
+           message.[m
+[m
+       --fixup=[(amend|reword):]<commit>[m
+           Create a new commit which "fixes up" [1m<commit>[0m when applied with [1mgit[0m [1mrebase[0m [1m--autosquash[0m.[m
+           Plain [1m--fixup=<commit>[0m creates a "fixup!" commit which changes the content of [1m<commit>[0m[m
+           but leaves its log message untouched.  [1m--fixup=amend:<commit>[0m is similar but creates an[m
+           "amend!" commit which also replaces the log message of [1m<commit>[0m with the log message of[m
+           the "amend!" commit.  [1m--fixup=reword:<commit>[0m creates an "amend!" commit which replaces[m
+[7m Manual page git-commit(1) line 49 (press h for help or q to quit)[27m[K[K           the log message of [1m<commit>[0m with its own log message but makes no changes to the content[m
+           of [1m<commit>[0m.[m
+[m
+           The commit created by plain [1m--fixup=<commit>[0m has a subject composed of "fixup!" followed[m
+           by the subject line from <commit>, and is recognized specially by [1mgit[0m [1mrebase[0m[m
+           [1m--autosquash[0m. The [1m-m[0m option may be used to supplement the log message of the created[m
+           commit, but the additional commentary will be thrown away once the "fixup!" commit is[m
+           squashed into [1m<commit>[0m by [1mgit[0m [1mrebase[0m [1m--autosquash[0m.[m
+[m
+           The commit created by [1m--fixup=amend:<commit>[0m is similar but its subject is instead[m
+           prefixed with "amend!". The log message of <commit> is copied into the log message of the[m
+           "amend!" commit and opened in an editor so it can be refined. When [1mgit[0m [1mrebase[0m[m
+           [1m--autosquash[0m squashes the "amend!" commit into [1m<commit>[0m, the log message of [1m<commit>[0m is[m
+           replaced by the refined log message from the "amend!" commit. It is an error for the[m
+           "amend!" commit’s log message to be empty unless [1m--allow-empty-message[0m is specified.[m
+[m
+           [1m--fixup=reword:<commit>[0m is shorthand for [1m--fixup=amend:<commit>[0m [1m--only[0m. It creates an[m
+           "amend!" commit with only a log message (ignoring any changes staged in the index). When[m
+           squashed by [1mgit[0m [1mrebase[0m [1m--autosquash[0m, it replaces the log message of [1m<commit>[0m without[m
+           making any other changes.[m
+[m
+           Neither "fixup!" nor "amend!" commits change authorship of [1m<commit>[0m when applied by [1mgit[0m[m
+           [1mrebase[0m [1m--autosquash[0m. See [1mgit-rebase[0m(1) for details.[m
+[m
+[7m Manual page git-commit(1) line 73 (press h for help or q to quit)[27m[K[K       --squash=<commit>[m
+           Construct a commit message for use with [1mrebase[0m [1m--autosquash[0m. The commit message subject[m
+           line is taken from the specified commit with a prefix of "squash! ". Can be used with[m
+           additional commit message options ([1m-m[0m/[1m-c[0m/[1m-C[0m/[1m-F[0m). See [1mgit-rebase[0m(1) for details.[m
+[m
+       --reset-author[m
+           When used with -C/-c/--amend options, or when committing after a conflicting cherry-pick,[m
+           declare that the authorship of the resulting commit now belongs to the committer. This[m
+           also renews the author timestamp.[m
+[m
+       --short[m
+           When doing a dry-run, give the output in the short-format. See [1mgit-status[0m(1) for details.[m
+           Implies [1m--dry-run[0m.[m
+[m
+       --branch[m
+           Show the branch and tracking info even in short-format.[m
+[m
+       --porcelain[m
+           When doing a dry-run, give the output in a porcelain-ready format. See [1mgit-status[0m(1) for[m
+           details. Implies [1m--dry-run[0m.[m
+[m
+       --long[m
+           When doing a dry-run, give the output in the long-format. Implies [1m--dry-run[0m.[m
+[m
+[7m Manual page git-commit(1) line 97 (press h for help or q to quit)[27m[K[K       -z, --null[m
+           When showing [1mshort[0m or [1mporcelain[0m status output, print the filename verbatim and terminate[m
+           the entries with NUL, instead of LF. If no format is given, implies the [1m--porcelain[0m[m
+           output format. Without the [1m-z[0m option, filenames with "unusual" characters are quoted as[m
+           explained for the configuration variable [1mcore.quotePath[0m (see [1mgit-config[0m(1)).[m
+[m
+       -F <file>, --file=<file>[m
+           Take the commit message from the given file. Use [4m-[24m to read the message from the standard[m
+           input.[m
+[m
+       --author=<author>[m
+           Override the commit author. Specify an explicit author using the standard [1mA[0m [1mU[0m [1mThor[0m[m
+           [1m<author@example.com>[0m format. Otherwise <author> is assumed to be a pattern and is used to[m
+           search for an existing commit by that author (i.e. rev-list --all -i --author=<author>);[m
+           the commit author is then copied from the first such commit found.[m
+[m
+       --date=<date>[m
+           Override the author date used in the commit.[m
+[m
+       -m <msg>, --message=<msg>[m
+           Use the given <msg> as the commit message. If multiple [1m-m[0m options are given, their values[m
+           are concatenated as separate paragraphs.[m
+[m
+           The [1m-m[0m option is mutually exclusive with [1m-c[0m, [1m-C[0m, and [1m-F[0m.[m
+[7m Manual page git-commit(1) line 121 (press h for help or q to quit)[27m[K[K[m
+       -t <file>, --template=<file>[m
+           When editing the commit message, start the editor with the contents in the given file.[m
+           The [1mcommit.template[0m configuration variable is often used to give this option implicitly[m
+           to the command. This mechanism can be used by projects that want to guide participants[m
+           with some hints on what to write in the message in what order. If the user exits the[m
+           editor without editing the message, the commit is aborted. This has no effect when a[m
+           message is given by other means, e.g. with the [1m-m[0m or [1m-F[0m options.[m
+[m
+       -s, --signoff, --no-signoff[m
+           Add a [1mSigned-off-by[0m trailer by the committer at the end of the commit log message. The[m
+           meaning of a signoff depends on the project to which you’re committing. For example, it[m
+           may certify that the committer has the rights to submit the work under the project’s[m
+           license or agrees to some contributor representation, such as a Developer Certificate of[m
+           Origin. (See [1mhttp://developercertificate.org[0m for the one used by the Linux kernel and Git[m
+           projects.) Consult the documentation or leadership of the project to which you’re[m
+           contributing to understand how the signoffs are used in that project.[m
+[m
+           The --no-signoff option can be used to countermand an earlier --signoff option on the[m
+           command line.[m
+[m
+       --trailer <token>[(=|:)<value>][m
+           Specify a (<token>, <value>) pair that should be applied as a trailer. (e.g.  [1mgit[0m [1mcommit[0m[m
+           [1m--trailer[0m [1m"Signed-off-by:C[0m [1mO[0m [1mMitter[0m [1m\[0m [1m<committer@example.com>"[0m [1m--trailer[0m [1m"Helped-by:C[0m [1mO[0m[m
+[7m Manual page git-commit(1) line 145 (press h for help or q to quit)[27m[K[K           [1mMitter[0m [1m\[0m [1m<committer@example.com>"[0m will add the "Signed-off-by" trailer and the[m
+           "Helped-by" trailer to the commit message.) The [1mtrailer.*[0m  configuration variables ([1mgit-[0m[m
+           [1minterpret-trailers[0m(1)) can be used to define if a duplicated trailer is omitted, where in[m
+           the run of trailers each trailer would appear, and other details.[m
+[m
+       -n, --[no-]verify[m
+           By default, the pre-commit and commit-msg hooks are run. When any of [1m--no-verify[0m or [1m-n[0m is[m
+           given, these are bypassed. See also [1mgithooks[0m(5).[m
+[m
+       --allow-empty[m
+           Usually recording a commit that has the exact same tree as its sole parent commit is a[m
+           mistake, and the command prevents you from making such a commit. This option bypasses the[m
+           safety, and is primarily for use by foreign SCM interface scripts.[m
+[m
+       --allow-empty-message[m
+           Like --allow-empty this command is primarily for use by foreign SCM interface scripts. It[m
+           allows you to create a commit with an empty commit message without using plumbing[m
+           commands like [1mgit-commit-tree[0m(1).[m
+[m
+       --cleanup=<mode>[m
+           This option determines how the supplied commit message should be cleaned up before[m
+           committing. The [4m<mode>[24m can be [1mstrip[0m, [1mwhitespace[0m, [1mverbatim[0m, [1mscissors[0m or [1mdefault[0m.[m
+[m
+           strip[m
+[7m Manual page git-commit(1) line 169 (press h for help or q to quit)[27m[K[K               Strip leading and trailing empty lines, trailing whitespace, commentary and collapse[m
+               consecutive empty lines.[m
+[m
+           whitespace[m
+               Same as [1mstrip[0m except #commentary is not removed.[m
+[m
+           verbatim[m
+               Do not change the message at all.[m
+[m
+           scissors[m
+               Same as [1mwhitespace[0m except that everything from (and including) the line found below[m
+               is truncated, if the message is to be edited. "[1m#[0m" can be customized with[m
+               core.commentChar.[m
+[m
+                   # ------------------------ >8 ------------------------[m
+[m
+           default[m
+               Same as [1mstrip[0m if the message is to be edited. Otherwise [1mwhitespace[0m.[m
+[m
+           The default can be changed by the [1mcommit.cleanup[0m configuration variable (see [1mgit-[0m[m
+           [1mconfig[0m(1)).[m
+[m
+       -e, --edit[m
+           The message taken from file with [1m-F[0m, command line with [1m-m[0m, and from commit object with [1m-C[0m[m
+[7m Manual page git-commit(1) line 193 (press h for help or q to quit)[27m[K[K           are usually used as the commit log message unmodified. This option lets you further edit[m
+           the message taken from these sources.[m
+[m
+       --no-edit[m
+           Use the selected commit message without launching an editor. For example, [1mgit[0m [1mcommit[0m[m
+           [1m--amend[0m [1m--no-edit[0m amends a commit without changing its commit message.[m
+[m
+       --amend[m
+           Replace the tip of the current branch by creating a new commit. The recorded tree is[m
+           prepared as usual (including the effect of the [1m-i[0m and [1m-o[0m options and explicit pathspec),[m
+           and the message from the original commit is used as the starting point, instead of an[m
+           empty message, when no other message is specified from the command line via options such[m
+           as [1m-m[0m, [1m-F[0m, [1m-c[0m, etc. The new commit has the same parents and author as the current one[m
+           (the [1m--reset-author[0m option can countermand this).[m
+[m
+           It is a rough equivalent for:[m
+[m
+                       $ git reset --soft HEAD^[m
+                       $ ... do something else to come up with the right tree ...[m
+                       $ git commit -c ORIG_HEAD[m
+[m
+           but can be used to amend a merge commit.[m
+[m
+           You should understand the implications of rewriting history if you amend a commit that[m
+[7m Manual page git-commit(1) line 217 (press h for help or q to quit)[27m[K[K           has already been published. (See the "RECOVERING FROM UPSTREAM REBASE" section in [1mgit-[0m[m
+           [1mrebase[0m(1).)[m
+[m
+       --no-post-rewrite[m
+           Bypass the post-rewrite hook.[m
+[m
+       -i, --include[m
+           Before making a commit out of staged contents so far, stage the contents of paths given[m
+           on the command line as well. This is usually not what you want unless you are concluding[m
+           a conflicted merge.[m
+[m
+       -o, --only[m
+           Make a commit by taking the updated working tree contents of the paths specified on the[m
+           command line, disregarding any contents that have been staged for other paths. This is[m
+           the default mode of operation of [4mgit[24m [4mcommit[24m if any paths are given on the command line,[m
+           in which case this option can be omitted. If this option is specified together with[m
+           [1m--amend[0m, then no paths need to be specified, which can be used to amend the last commit[m
+           without committing changes that have already been staged. If used together with[m
+           [1m--allow-empty[0m paths are also not required, and an empty commit will be created.[m
+[m
+       --pathspec-from-file=<file>[m
+           Pathspec is passed in [1m<file>[0m instead of commandline args. If [1m<file>[0m is exactly [1m-[0m then[m
+           standard input is used. Pathspec elements are separated by LF or CR/LF. Pathspec elements[m
+           can be quoted as explained for the configuration variable [1mcore.quotePath[0m (see [1mgit-[0m[m
+[7m Manual page git-commit(1) line 241 (press h for help or q to quit)[27m[K[K           [1mconfig[0m(1)). See also [1m--pathspec-file-nul[0m and global [1m--literal-pathspecs[0m.[m
+[m
+       --pathspec-file-nul[m
+           Only meaningful with [1m--pathspec-from-file[0m. Pathspec elements are separated with NUL[m
+           character and all other characters are taken literally (including newlines and quotes).[m
+[m
+       -u[<mode>], --untracked-files[=<mode>][m
+           Show untracked files.[m
+[m
+           The mode parameter is optional (defaults to [4mall[24m), and is used to specify the handling of[m
+           untracked files; when -u is not used, the default is [4mnormal[24m, i.e. show untracked files[m
+           and directories.[m
+[m
+           The possible options are:[m
+[m
+           •   [4mno[24m - Show no untracked files[m
+[m
+           •   [4mnormal[24m - Shows untracked files and directories[m
+[m
+           •   [4mall[24m - Also shows individual files in untracked directories.[m
+[m
+           The default can be changed using the status.showUntrackedFiles configuration variable[m
+           documented in [1mgit-config[0m(1).[m
+[m
+[7m Manual page git-commit(1) line 265 (press h for help or q to quit)[27m[K[K       -v, --verbose[m
+           Show unified diff between the HEAD commit and what would be committed at the bottom of[m
+           the commit message template to help the user describe the commit by reminding what[m
+           changes the commit has. Note that this diff output doesn’t have its lines prefixed with[m
+           [4m#[24m. This diff will not be a part of the commit message. See the [1mcommit.verbose[0m[m
+           configuration variable in [1mgit-config[0m(1).[m
+[m
+           If specified twice, show in addition the unified diff between what would be committed and[m
+           the worktree files, i.e. the unstaged changes to tracked files.[m
+[m
+       -q, --quiet[m
+           Suppress commit summary message.[m
+[m
+       --dry-run[m
+           Do not create a commit, but show a list of paths that are to be committed, paths with[m
+           local changes that will be left uncommitted and paths that are untracked.[m
+[m
+       --status[m
+           Include the output of [1mgit-status[0m(1) in the commit message template when using an editor[m
+           to prepare the commit message. Defaults to on, but can be used to override configuration[m
+           variable commit.status.[m
+[m
+       --no-status[m
+           Do not include the output of [1mgit-status[0m(1) in the commit message template when using an[m
+[7m Manual page git-commit(1) line 289 (press h for help or q to quit)[27m[K[K           editor to prepare the default commit message.[m
+[m
+       -S[<keyid>], --gpg-sign[=<keyid>], --no-gpg-sign[m
+           GPG-sign commits. The [1mkeyid[0m argument is optional and defaults to the committer identity;[m
+           if specified, it must be stuck to the option without a space.  [1m--no-gpg-sign[0m is useful to[m
+           countermand both [1mcommit.gpgSign[0m configuration variable, and earlier [1m--gpg-sign[0m.[m
+[m
+       --[m
+           Do not interpret any more arguments as options.[m
+[m
+       <pathspec>...[m
+           When pathspec is given on the command line, commit the contents of the files that match[m
+           the pathspec without recording the changes already added to the index. The contents of[m
+           these files are also staged for the next commit on top of what have been staged before.[m
+[m
+           For more details, see the [4mpathspec[24m entry in [1mgitglossary[0m(7).[m
+[m
+[1mEXAMPLES[0m[m
+       When recording your own work, the contents of modified files in your working tree are[m
+       temporarily stored to a staging area called the "index" with [4mgit[24m [4madd[24m. A file can be reverted[m
+       back, only in the index but not in the working tree, to that of the last commit with [1mgit[0m[m
+       [1mrestore[0m [1m--staged[0m [1m<file>[0m, which effectively reverts [4mgit[24m [4madd[24m and prevents the changes to this[m
+       file from participating in the next commit. After building the state to be committed[m
+       incrementally with these commands, [1mgit[0m [1mcommit[0m (without any pathname parameter) is used to[m
+[7m Manual page git-commit(1) line 313 (press h for help or q to quit)[27m[K[K       record what has been staged so far. This is the most basic form of the command. An example:[m
+[m
+           $ edit hello.c[m
+           $ git rm goodbye.c[m
+           $ git add hello.c[m
+           $ git commit[m
+[m
+       Instead of staging files after each individual change, you can tell [1mgit[0m [1mcommit[0m to notice the[m
+       changes to the files whose contents are tracked in your working tree and do corresponding [1mgit[0m[m
+       [1madd[0m and [1mgit[0m [1mrm[0m for you. That is, this example does the same as the earlier example if there[m
+       is no other change in your working tree:[m
+[m
+           $ edit hello.c[m
+           $ rm goodbye.c[m
+           $ git commit -a[m
+[m
+       The command [1mgit[0m [1mcommit[0m [1m-a[0m first looks at your working tree, notices that you have modified[m
+       hello.c and removed goodbye.c, and performs necessary [1mgit[0m [1madd[0m and [1mgit[0m [1mrm[0m for you.[m
+[m
+       After staging changes to many files, you can alter the order the changes are recorded in, by[m
+       giving pathnames to [1mgit[0m [1mcommit[0m. When pathnames are given, the command makes a commit that[m
+       only records the changes made to the named paths:[m
+[m
+           $ edit hello.c hello.h[m
+[7m Manual page git-commit(1) line 337 (press h for help or q to quit)[27m[K[K           $ git add hello.c hello.h[m
+           $ edit Makefile[m
+           $ git commit Makefile[m
+[m
+       This makes a commit that records the modification to [1mMakefile[0m. The changes staged for [1mhello.c[0m[m
+       and [1mhello.h[0m are not included in the resulting commit. However, their changes are not lost —[m
+       they are still staged and merely held back. After the above sequence, if you do:[m
+[m
+           $ git commit[m
+[m
+       this second commit would record the changes to [1mhello.c[0m and [1mhello.h[0m as expected.[m
+[m
+       After a merge (initiated by [4mgit[24m [4mmerge[24m or [4mgit[24m [4mpull[24m) stops because of conflicts, cleanly merged[m
+       paths are already staged to be committed for you, and paths that conflicted are left in[m
+       unmerged state. You would have to first check which paths are conflicting with [4mgit[24m [4mstatus[24m and[m
+       after fixing them manually in your working tree, you would stage the result as usual with [4mgit[24m[m
+       [4madd[24m:[m
+[m
+           $ git status | grep unmerged[m
+           unmerged: hello.c[m
+           $ edit hello.c[m
+           $ git add hello.c[m
+[m
+       After resolving conflicts and staging the result, [1mgit[0m [1mls-files[0m [1m-u[0m would stop mentioning the[m
+[7m Manual page git-commit(1) line 361 (press h for help or q to quit)[27m[K[K       conflicted path. When you are done, run [1mgit[0m [1mcommit[0m to finally record the merge:[m
+[m
+           $ git commit[m
+[m
+       As with the case to record your own changes, you can use [1m-a[0m option to save typing. One[m
+       difference is that during a merge resolution, you cannot use [1mgit[0m [1mcommit[0m with pathnames to[m
+       alter the order the changes are committed, because the merge should be recorded as a single[m
+       commit. In fact, the command refuses to run when given pathnames (but see [1m-i[0m option).[m
+[m
+[1mCOMMIT[0m [1mINFORMATION[0m[m
+       Author and committer information is taken from the following environment variables, if set:[m
+[m
+           GIT_AUTHOR_NAME[m
+           GIT_AUTHOR_EMAIL[m
+           GIT_AUTHOR_DATE[m
+           GIT_COMMITTER_NAME[m
+           GIT_COMMITTER_EMAIL[m
+           GIT_COMMITTER_DATE[m
+[m
+       (nb "<", ">" and "\n"s are stripped)[m
+[m
+       The author and committer names are by convention some form of a personal name (that is, the[m
+       name by which other humans refer to you), although Git does not enforce or require any[m
+       particular form. Arbitrary Unicode may be used, subject to the constraints listed above. This[m
+[7m Manual page git-commit(1) line 385 (press h for help or q to quit)[27m[K[K       name has no effect on authentication; for that, see the [1mcredential.username[0m variable in [1mgit-[0m[m
+       [1mconfig[0m(1).[m
+[m
+       In case (some of) these environment variables are not set, the information is taken from the[m
+       configuration items [1muser.name[0m and [1muser.email[0m, or, if not present, the environment variable[m
+       EMAIL, or, if that is not set, system user name and the hostname used for outgoing mail[m
+       (taken from [1m/etc/mailname[0m and falling back to the fully qualified hostname when that file[m
+       does not exist).[m
+[m
+       The [1mauthor.name[0m and [1mcommitter.name[0m and their corresponding email options override [1muser.name[0m[m
+       and [1muser.email[0m if set and are overridden themselves by the environment variables.[m
+[m
+       The typical usage is to set just the [1muser.name[0m and [1muser.email[0m variables; the other options[m
+       are provided for more complex use cases.[m
+[m
+[1mDATE[0m [1mFORMATS[0m[m
+       The [1mGIT_AUTHOR_DATE[0m and [1mGIT_COMMITTER_DATE[0m environment variables support the following date[m
+       formats:[m
+[m
+       Git internal format[m
+           It is [1m<unix-timestamp>[0m [1m<time-zone-offset>[0m, where [1m<unix-timestamp>[0m is the number of[m
+           seconds since the UNIX epoch.  [1m<time-zone-offset>[0m is a positive or negative offset from[m
+           UTC. For example CET (which is 1 hour ahead of UTC) is [1m+0100[0m.[m
+[m
+[7m Manual page git-commit(1) line 409 (press h for help or q to quit)[27m[K[K       RFC 2822[m
+           The standard email format as described by RFC 2822, for example [1mThu,[0m [1m07[0m [1mApr[0m [1m2005[0m [1m22:13:13[0m[m
+           [1m+0200[0m.[m
+[m
+       ISO 8601[m
+           Time and date specified by the ISO 8601 standard, for example [1m2005-04-07T22:13:13[0m. The[m
+           parser accepts a space instead of the [1mT[0m character as well. Fractional parts of a second[m
+           will be ignored, for example [1m2005-04-07T22:13:13.019[0m will be treated as[m
+           [1m2005-04-07T22:13:13[0m.[m
+[m
+               [1mNote[0m[m
+               In addition, the date part is accepted in the following formats: [1mYYYY.MM.DD[0m,[m
+               [1mMM/DD/YYYY[0m and [1mDD.MM.YYYY[0m.[m
+[m
+       In addition to recognizing all date formats above, the [1m--date[0m option will also try to make[m
+       sense of other, more human-centric date formats, such as relative dates like "yesterday" or[m
+       "last Friday at noon".[m
+[m
+[1mDISCUSSION[0m[m
+       Though not required, it’s a good idea to begin the commit message with a single short (less[m
+       than 50 character) line summarizing the change, followed by a blank line and then a more[m
+       thorough description. The text up to the first blank line in a commit message is treated as[m
+       the commit title, and that title is used throughout Git. For example, [1mgit-format-patch[0m(1)[m
+       turns a commit into email, and it uses the title on the Subject line and the rest of the[m
+[7m Manual page git-commit(1) line 433 (press h for help or q to quit)[27m[K[K       commit in the body.[m
+[m
+       Git is to some extent character encoding agnostic.[m
+[m
+       •   The contents of the blob objects are uninterpreted sequences of bytes. There is no[m
+           encoding translation at the core level.[m
+[m
+       •   Path names are encoded in UTF-8 normalization form C. This applies to tree objects, the[m
+           index file, ref names, as well as path names in command line arguments, environment[m
+           variables and config files ([1m.git/config[0m (see [1mgit-config[0m(1)), [1mgitignore[0m(5),[m
+           [1mgitattributes[0m(5) and [1mgitmodules[0m(5)).[m
+[m
+           Note that Git at the core level treats path names simply as sequences of non-NUL bytes,[m
+           there are no path name encoding conversions (except on Mac and Windows). Therefore, using[m
+           non-ASCII path names will mostly work even on platforms and file systems that use legacy[m
+           extended ASCII encodings. However, repositories created on such systems will not work[m
+           properly on UTF-8-based systems (e.g. Linux, Mac, Windows) and vice versa. Additionally,[m
+           many Git-based tools simply assume path names to be UTF-8 and will fail to display other[m
+           encodings correctly.[m
+[m
+       •   Commit log messages are typically encoded in UTF-8, but other extended ASCII encodings[m
+           are also supported. This includes ISO-8859-x, CP125x and many others, but [4mnot[24m UTF-16/32,[m
+           EBCDIC and CJK multi-byte encodings (GBK, Shift-JIS, Big5, EUC-x, CP9xx etc.).[m
+[m
+[7m Manual page git-commit(1) line 457 (press h for help or q to quit)[27m[K[K       Although we encourage that the commit log messages are encoded in UTF-8, both the core and[m
+       Git Porcelain are designed not to force UTF-8 on projects. If all participants of a[m
+       particular project find it more convenient to use legacy encodings, Git does not forbid it.[m
+       However, there are a few things to keep in mind.[m
+[m
+        1. [4mgit[24m [4mcommit[24m and [4mgit[24m [4mcommit-tree[24m issues a warning if the commit log message given to it[m
+           does not look like a valid UTF-8 string, unless you explicitly say your project uses a[m
+           legacy encoding. The way to say this is to have [1mi18n.commitEncoding[0m in [1m.git/config[0m file,[m
+           like this:[m
+[m
+               [i18n][m
+                       commitEncoding = ISO-8859-1[m
+[m
+           Commit objects created with the above setting record the value of [1mi18n.commitEncoding[0m in[m
+           its [1mencoding[0m header. This is to help other people who look at them later. Lack of this[m
+           header implies that the commit log message is encoded in UTF-8.[m
+[m
+        2. [4mgit[24m [4mlog[24m, [4mgit[24m [4mshow[24m, [4mgit[24m [4mblame[24m and friends look at the [1mencoding[0m header of a commit object,[m
+           and try to re-code the log message into UTF-8 unless otherwise specified. You can specify[m
+           the desired output encoding with [1mi18n.logOutputEncoding[0m in [1m.git/config[0m file, like this:[m
+[m
+               [i18n][m
+                       logOutputEncoding = ISO-8859-1[m
+[m
+[7m Manual page git-commit(1) line 481 (press h for help or q to quit)[27m[K[K           If you do not have this configuration variable, the value of [1mi18n.commitEncoding[0m is used[m
+           instead.[m
+[m
+       Note that we deliberately chose not to re-code the commit log message when a commit is made[m
+       to force UTF-8 at the commit object level, because re-coding to UTF-8 is not necessarily a[m
+       reversible operation.[m
+[m
+[1mENVIRONMENT[0m [1mAND[0m [1mCONFIGURATION[0m [1mVARIABLES[0m[m
+       The editor used to edit the commit log message will be chosen from the [1mGIT_EDITOR[0m environment[m
+       variable, the core.editor configuration variable, the [1mVISUAL[0m environment variable, or the[m
+       [1mEDITOR[0m environment variable (in that order). See [1mgit-var[0m(1) for details.[m
+[m
+       Everything above this line in this section isn’t included from the [1mgit-config[0m(1)[m
+       documentation. The content that follows is the same as what’s found there:[m
+[m
+       commit.cleanup[m
+           This setting overrides the default of the [1m--cleanup[0m option in [1mgit[0m [1mcommit[0m. See [1mgit-[0m[m
+           [1mcommit[0m(1) for details. Changing the default can be useful when you always want to keep[m
+           lines that begin with comment character [1m#[0m in your log message, in which case you would do[m
+           [1mgit[0m [1mconfig[0m [1mcommit.cleanup[0m [1mwhitespace[0m (note that you will have to remove the help lines[m
+           that begin with [1m#[0m in the commit log template yourself, if you do this).[m
+[m
+       commit.gpgSign[m
+           A boolean to specify whether all commits should be GPG signed. Use of this option when[m
+[7m Manual page git-commit(1) line 505 (press h for help or q to quit)[27m[K[K           doing operations such as rebase can result in a large number of commits being signed. It[m
+           may be convenient to use an agent to avoid typing your GPG passphrase several times.[m
+[m
+       commit.status[m
+           A boolean to enable/disable inclusion of status information in the commit message[m
+           template when using an editor to prepare the commit message. Defaults to true.[m
+[m
+       commit.template[m
+           Specify the pathname of a file to use as the template for new commit messages.[m
+[m
+       commit.verbose[m
+           A boolean or int to specify the level of verbose with [1mgit[0m [1mcommit[0m. See [1mgit-commit[0m(1).[m
+[m
+[1mHOOKS[0m[m
+       This command can run [1mcommit-msg[0m, [1mprepare-commit-msg[0m, [1mpre-commit[0m, [1mpost-commit[0m and [1mpost-rewrite[0m[m
+       hooks. See [1mgithooks[0m(5) for more information.[m
+[m
+[1mFILES[0m[m
+       [1m$GIT_DIR/COMMIT_EDITMSG[0m[m
+           This file contains the commit message of a commit in progress. If [1mgit[0m [1mcommit[0m exits due to[m
+           an error before creating a commit, any commit message that has been provided by the user[m
+           (e.g., in an editor session) will be available in this file, but will be overwritten by[m
+           the next invocation of [1mgit[0m [1mcommit[0m.[m
+[m
+[7m Manual page git-commit(1) line 529 (press h for help or q to quit)[27m[K[K[1mSEE[0m [1mALSO[0m[m
+       [1mgit-add[0m(1), [1mgit-rm[0m(1), [1mgit-mv[0m(1), [1mgit-merge[0m(1), [1mgit-commit-tree[0m(1)[m
+[m
+[1mGIT[0m[m
+       Part of the [1mgit[0m(1) suite[m
+[m
+Git 2.39.5                                   01/11/2025                                GIT-COMMIT(1)[m
+[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-
