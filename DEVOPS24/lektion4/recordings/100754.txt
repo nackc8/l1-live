@@ -1655,4 +1655,257 @@ GNU Bash 5.2                              2022 September 19                     
   Swap usage:   0%
 
  * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
-   just r
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+170 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Thu Apr 17 13:00:11 2025 from 10.0.2.2
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls /home
+[?2004l[0m[01;34mbert[0m  [01;34mgreen[0m  [01;34mother[0m  [01;34muser[0m
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls GREEN[K[K[K[K[Kgreen~
+[?2004lls: cannot access 'green~': No such file or directory
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls green~[K[K[K[K[K[K~t[Kgreen
+[?2004lls: cannot open directory '/home/green': Permission denied
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls ~green
+[?2004lls: cannot open directory '/home/green': Permission denied
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ sudo -i[C[C
+[?2004l[sudo] password for user: 
+[?2004h]0;root@ubse: ~root@ubse:~# cd[K[Kls ~fre[K[K[Kgreen
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# ls ~green[C[C[C ~green- ~greenA ~green[H[2J]0;root@ubse: ~root@ubse:~# ls -A ~green[1P ~greena ~greenl ~green[1P ~green
+[?2004l[0m[01;34m.[0m  [01;34m..[0m  .bash_history  .bash_logout  .bashrc  .profile
+[?2004h]0;root@ubse: ~root@ubse:~# ls -a ~green[K[K[K[K[Kother
+[?2004l[0m[01;34m.[0m  [01;34m..[0m  .bash_history  .bash_logout  .bashrc  .profile
+[?2004h]0;root@ubse: ~root@ubse:~# [?2004l
+logout
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ echo $USER
+[?2004luser
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ echo $USER[KR/$USERh$USERo$USERm$USERe$USER/$USER[C[C[C[C[C
+[?2004l/home/user
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls ~[1P ~[1P ~e ~c ~h ~o ~
+[?2004l/home/user
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ echo $HOME
+[?2004l/home/user
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ echo $HOME[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K/[Khej
+[?2004lhej
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ echo hej[K[K[K$HOME
+[?2004l/home/user
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ echo $HOME[K[K[K[K[K/home/user[C[C[C[C[C[C[C[C[C[C
+[?2004l/home/user
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$  jiiejiejl jiiejiejs jiiejiej[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[Kmittalias ^C[?2004l[?2004h[?2004l
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ mittalias ^C[?2004l[?2004h[?2004l
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ~[K[H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ man us[K[Kbash
+[?2004l[?1049h[22;0;0t[?1h=[4mBASH[24m(1)                                General Commands Manual                               [4mBASH[24m(1)[m
+[m
+[1mNAME[0m[m
+       bash - GNU Bourne-Again SHell[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mbash [22m[options] [command_string | file][m
+[m
+[1mCOPYRIGHT[0m[m
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mBash  [22mis  an  [1msh[22m-compatible command language interpreter that executes commands read from the[m
+       standard input or from a file.  [1mBash [22malso incorporates useful features from the  [4mKorn[24m  and  [4mC[0m[m
+       shells ([1mksh [22mand [1mcsh[22m).[m
+[m
+       [1mBash  [22mis intended to be a conformant implementation of the Shell and Utilities portion of the[m
+       IEEE POSIX specification (IEEE Standard 1003.1).  [1mBash [22mcan be configured to be  POSIX-confor‐[m
+       mant by default.[m
+[m
+[1mOPTIONS[0m[m
+       All  of  the  single-character shell options documented in the description of the [1mset [22mbuiltin[m
+       command, including [1m-o[22m, can be used as options when the shell is invoked.  In  addition,  [1mbash[0m[m
+       interprets the following options when it is invoked:[m
+[7m Manual page bash(1) line 1 (press h for help or q to quit)[27m[K[K/[KEE[KXX[KPP[KAA[KNN[KSS[KII[KOO[KNN[K[1;1H[4mBASH[24m(1)                                General Commands Manual                               [4mBASH[24m(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       bash - GNU Bourne-Again SHell[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mbash [22m[options] [command_string | file][m
+[8;1H[m
+[9;1H[1mCOPYRIGHT[0m[m
+[10;1H       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.[m
+[11;1H[m
+[12;1H[1mDESCRIPTION[0m[m
+[13;1H       [1mBash  [22mis  an  [1msh[22m-compatible command language interpreter that executes commands read from the[m
+[14;1H       standard input or from a file.  [1mBash [22malso incorporates useful features from the  [4mKorn[24m  and  [4mC[0m[m
+[15;1H       shells ([1mksh [22mand [1mcsh[22m).[m
+[16;1H[m
+[17;1H       [1mBash  [22mis intended to be a conformant implementation of the Shell and Utilities portion of the[m
+[18;1H       IEEE POSIX specification (IEEE Standard 1003.1).  [1mBash [22mcan be configured to be  POSIX-confor‐[m
+[19;1H       mant by default.[m
+[20;1H[m
+[21;1H[1mOPTIONS[0m[m
+[22;1H       All  of  the  single-character shell options documented in the description of the [1mset [22mbuiltin[m
+[23;1H       command, including [1m-o[22m, can be used as options when the shell is invoked.  In  addition,  [1mbash[0m[m
+[24;1H       interprets the following options when it is invoked:[m
+[25;1H[1;1H[4mBASH[24m(1)                                General Commands Manual                               [4mBASH[24m(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       bash - GNU Bourne-Again SHell[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mbash [22m[options] [command_string | file][m
+[8;1H[m
+[9;1H[1mCOPYRIGHT[0m[m
+[10;1H       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.[m
+[11;1H[m
+[12;1H[1mDESCRIPTION[0m[m
+[13;1H       [1mBash  [22mis  an  [1msh[22m-compatible command language interpreter that executes commands read from the[m
+[14;1H       standard input or from a file.  [1mBash [22malso incorporates useful features from the  [4mKorn[24m  and  [4mC[0m[m
+[15;1H       shells ([1mksh [22mand [1mcsh[22m).[m
+[16;1H[m
+[17;1H       [1mBash  [22mis intended to be a conformant implementation of the Shell and Utilities portion of the[m
+[18;1H       IEEE POSIX specification (IEEE Standard 1003.1).  [1mBash [22mcan be configured to be  POSIX-confor‐[m
+[19;1H       mant by default.[m
+[20;1H[m
+[21;1H[1mOPTIONS[0m[m
+[22;1H       All  of  the  single-character shell options documented in the description of the [1mset [22mbuiltin[m
+[23;1H       command, including [1m-o[22m, can be used as options when the shell is invoked.  In  addition,  [1mbash[0m[m
+[24;1H       interprets the following options when it is invoked:[m
+[25;1H...skipping...
+       scribed below under [1mTilde Expansion [22min the [1m[7mEXPANSION[27m[1m [22msection.[m
+[m
+       When [1mbash [22mis invoked as an interactive login shell, or as a non-interactive  shell  with  the[m
+       [1m--login [22moption, it first reads and executes commands from the file [4m/etc/profile[24m, if that file[m
+       exists.   After  reading  that file, it looks for [4m~/.bash_profile[24m, [4m~/.bash_login[24m, and [4m~/.pro‐[0m[m
+       [4mfile[24m, in that order, and reads and executes commands from the first one that  exists  and  is[m
+       readable.   The  [1m--noprofile [22moption may be used when the shell is started to inhibit this be‐[m
+       havior.[m
+[m
+       When an interactive login shell exits, or a non-interactive login  shell  executes  the  [1mexit[0m[m
+       builtin command, [1mbash [22mreads and executes commands from the file [4m~/.bash_logout[24m, if it exists.[m
+[m
+       When  an interactive shell that is not a login shell is started, [1mbash [22mreads and executes com‐[m
+       mands from [4m/etc/bash.bashrc[24m and [4m~/.bashrc[24m, if these files exist.  This may  be  inhibited  by[m
+       using  the  [1m--norc [22moption.  The [1m--rcfile [4m[22mfile[24m option will force [1mbash [22mto read and execute com‐[m
+       mands from [4mfile[24m instead of [4m/etc/bash.bashrc[24m and [4m~/.bashrc[24m.[m
+[m
+       When [1mbash [22mis started non-interactively, to run a shell script, for example, it looks for  the[m
+       variable [1mBASH_ENV [22min the environment, expands its value if it appears there, and uses the ex‐[m
+       panded  value  as  the  name of a file to read and execute.  [1mBash [22mbehaves as if the following[m
+       command were executed:[m
+              if [ -n "$BASH_ENV" ]; then . "$BASH_ENV"; fi[m
+       but the value of the [1mPATH [22mvariable is not used to search for the filename.[m
+[m
+[7m Manual page bash(1) line 126 (press h for help or q to quit)[27m[K[K/[K...skipping...
+       When the command history expansion facilities are being used (see [1mHISTORY  [7mEXPANSION[27m[1m  [22mbelow),[m
+       the [4mhistory[24m [4mexpansion[24m character, usually [1m![22m, must be quoted to prevent history expansion.[m
+[m
+       There are three quoting mechanisms: the [4mescape[24m [4mcharacter[24m, single quotes, and double quotes.[m
+[m
+       A  non-quoted  backslash  ([1m\[22m) is the [4mescape[24m [4mcharacter[24m.  It preserves the literal value of the[m
+       next character that follows, with the exception of <newline>.  If a [1m\[22m<newline> pair  appears,[m
+       and  the  backslash  is  not  itself quoted, the [1m\[22m<newline> is treated as a line continuation[m
+       (that is, it is removed from the input stream and effectively ignored).[m
+[m
+       Enclosing characters in single quotes preserves the literal value of  each  character  within[m
+       the  quotes.   A  single  quote  may not occur between single quotes, even when preceded by a[m
+       backslash.[m
+[m
+       Enclosing characters in double quotes preserves the literal value of  all  characters  within[m
+       the  quotes,  with the exception of [1m$[22m, [1m`[22m, [1m\[22m, and, when history expansion is enabled, [1m![22m.  When[m
+       the shell is in [4mposix[24m [4mmode[24m, the [1m! [22mhas no special meaning within double quotes, even when his‐[m
+       tory expansion is enabled.  The characters [1m$ [22mand [1m` [22mretain their special meaning within double[m
+       quotes.  The backslash retains its special meaning only when followed by one of the following[m
+       characters: [1m$[22m, [1m`[22m, [1m"[22m, [1m\[22m, or [1m<newline>[22m.  A double quote may be quoted within double  quotes  by[m
+       preceding  it  with a backslash.  If enabled, history expansion will be performed unless an [1m![0m[m
+       appearing in double quotes is escaped using a backslash.  The backslash preceding the  [1m!   [22mis[m
+       not removed.[m
+[m
+[7m Manual page bash(1) line 515 (press h for help or q to quit)[27m[K[K/[K...skipping...
+       quote removal (see [1m[7mEXPANSION[27m[1m [22mbelow).  If the variable has its  [1minteger  [22mattribute  set,  then[m
+       [4mvalue[24m  is  evaluated  as  an arithmetic expression even if the $((...)) expansion is not used[m
+       (see [1mArithmetic Expansion [22mbelow).  Word splitting and pathname expansion are  not  performed.[m
+       Assignment  statements  may  also appear as arguments to the [1malias[22m, [1mdeclare[22m, [1mtypeset[22m, [1mexport[22m,[m
+       [1mreadonly[22m, and [1mlocal [22mbuiltin commands ([4mdeclaration[24m  commands).   When  in  [4mposix[24m  [4mmode[24m,  these[m
+       builtins  may  appear in a command after one or more instances of the [1mcommand [22mbuiltin and re‐[m
+       tain these assignment statement properties.[m
+[m
+       In the context where an assignment statement is assigning a value to a shell variable or  ar‐[m
+       ray  index, the += operator can be used to append to or add to the variable's previous value.[m
+       This includes arguments to builtin commands such as [1mdeclare [22mthat accept assignment statements[m
+       ([4mdeclaration[24m commands).  When += is applied to a variable for which the [1minteger [22mattribute has[m
+       been set, [4mvalue[24m is evaluated as an arithmetic expression and added to the variable's  current[m
+       value,  which  is also evaluated.  When += is applied to an array variable using compound as‐[m
+       signment (see [1mArrays [22mbelow), the variable's value is not unset (as it is when using  =),  and[m
+       new  values are appended to the array beginning at one greater than the array's maximum index[m
+       (for indexed arrays) or added as additional key-value pairs in an  associative  array.   When[m
+       applied to a string-valued variable, [4mvalue[24m is expanded and appended to the variable's value.[m
+[m
+       A  variable can be assigned the [4mnameref[24m attribute using the [1m-n [22moption to the [1mdeclare [22mor [1mlocal[0m[m
+       builtin commands (see the descriptions of [1mdeclare [22mand [1mlocal [22mbelow) to create a [4mnameref[24m, or  a[m
+       reference to another variable.  This allows variables to be manipulated indirectly.  Whenever[m
+       the nameref variable is referenced, assigned to, unset, or has its attributes modified (other[m
+       than  using or changing the [4mnameref[24m attribute itself), the operation is actually performed on[m
+[7m Manual page bash(1) line 598 (press h for help or q to quit)[27m[K[K/[K...skipping...
+       enclosed in braces (see [1m[7mEXPANSION[27m[1m [22mbelow).[m
+[m
+   [1mSpecial Parameters[0m[m
+       The shell treats several parameters specially.  These parameters may only be referenced;  as‐[m
+       signment to them is not allowed.[m
+       [1m*      [22mExpands  to  the  positional parameters, starting from one.  When the expansion is not[m
+              within double quotes, each positional parameter expands to a separate word.   In  con‐[m
+              texts  where  it  is  performed, those words are subject to further word splitting and[m
+              pathname expansion.  When the expansion occurs within double quotes, it expands  to  a[m
+              single  word  with the value of each parameter separated by the first character of the[m
+              [1mIFS [22mspecial variable.  That is, "[1m$*[22m" is equivalent to  "[1m$1[4m[22mc[24m[1m$2[4m[22mc[24m[1m...[22m",  where  [4mc[24m  is  the[m
+              first character of the value of the [1mIFS [22mvariable.  If [1mIFS [22mis unset, the parameters are[m
+              separated  by  spaces.   If [1mIFS [22mis null, the parameters are joined without intervening[m
+              separators.[m
+       [1m@      [22mExpands to the positional parameters, starting  from  one.   In  contexts  where  word[m
+              splitting  is performed, this expands each positional parameter to a separate word; if[m
+              not within double quotes, these words are subject  to  word  splitting.   In  contexts[m
+              where  word  splitting is not performed, this expands to a single word with each posi‐[m
+              tional parameter separated by a  space.   When  the  expansion  occurs  within  double[m
+              quotes,  each  parameter  expands  to a separate word.  That is, "[1m$@[22m" is equivalent to[m
+              "[1m$1[22m" "[1m$2[22m" ...  If the double-quoted expansion occurs within a word, the  expansion  of[m
+              the  first  parameter  is joined with the beginning part of the original word, and the[m
+              expansion of the last parameter is joined with the last part  of  the  original  word.[m
+              When there are no positional parameters, "[1m$@[22m" and [1m$@ [22mexpand to nothing (i.e., they are[m
+[7m Manual page bash(1) line 645 (press h for help or q to quit)[27m[K[K/[K...skipping...
+              [1mTORY  [7mEXPANSION[27m[1m  [22mbelow).   The first character is the [4mhistory[24m [4mexpansion[24m character, the[m
+              character which signals the start of a history expansion, normally  `[1m![22m'.   The  second[m
+              character  is the [4mquick[24m [4msubstitution[24m character, which is used as shorthand for re-run‐[m
+              ning the previous command entered, substituting one string for another in the command.[m
+              The default is `[1m^[22m'.  The optional third character is  the  character  which  indicates[m
+              that  the  remainder  of  the line is a comment when found as the first character of a[m
+              word, normally `[1m#[22m'.  The history comment character causes history substitution  to  be[m
+              skipped  for the remaining words on the line.  It does not necessarily cause the shell[m
+              parser to treat the rest of the line as a comment.[m
+[m
+   [1mArrays[0m[m
+       [1mBash [22mprovides one-dimensional indexed and associative array variables.  Any variable  may  be[m
+       used  as an indexed array; the [1mdeclare [22mbuiltin will explicitly declare an array.  There is no[m
+       maximum limit on the size of an array, nor any requirement that members  be  indexed  or  as‐[m
+       signed  contiguously.  Indexed arrays are referenced using integers (including arithmetic ex‐[m
+       pressions) and are zero-based; associative arrays are  referenced  using  arbitrary  strings.[m
+       Unless otherwise noted, indexed array indices must be non-negative integers.[m
+[m
+       An  indexed  array  is  created automatically if any variable is assigned to using the syntax[m
+       [4mname[24m[[4msubscript[24m]=[4mvalue[24m.  The [4msubscript[24m is treated as an arithmetic expression that must evalu‐[m
+       ate to a number.  To explicitly declare an indexed array, use  [1mdeclare  -a  [4m[22mname[24m  (see  [1mSHELL[0m[m
+       [1mBUILTIN  COMMANDS  [22mbelow).  [1mdeclare -a [4m[22mname[24m[1m[[4m[22msubscript[24m[1m] [22mis also accepted; the [4msubscript[24m is ig‐[m
+       nored.[m
+[m
+[7m Manual page bash(1) line 1192 (press h for help or q to quit)[27m[K[K/[K...skipping...
+       scribed  below  under  [1m[7mEXPANSION[27m[22m.  When assigning to indexed arrays, if the optional brackets[m
+       and subscript are supplied, that index is assigned to; otherwise the index of the element as‐[m
+       signed is the last index assigned to by the statement plus one.  Indexing starts at zero.[m
+[m
+       When assigning to an associative array, the words in a compound assignment may be either  as‐[m
+       signment  statements,  for which the subscript is required, or a list of words that is inter‐[m
+       preted as a sequence of alternating keys and values: [4mname[24m=[1m( [4m[22mkey1[24m  [4mvalue1[24m  [4mkey2[24m  [4mvalue2[24m  ...[1m)[22m.[m
+       These  are treated identically to [4mname[24m=[1m( [22m[[4mkey1[24m]=[4mvalue1[24m [[4mkey2[24m]=[4mvalue2[24m ...[1
