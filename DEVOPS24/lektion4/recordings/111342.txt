@@ -1219,4 +1219,143 @@ BASH_FUNC____rel_path%%=() {  local prompt;
  prompt="${prompt#/}";
  else
  prompt="${PWD/"$HOME"/\~}";
- fi;
+ fi;
+ echo -n "$prompt"
+}
+_=/usr/bin/printenv
+[?2004h[94mDEVOPS24/lektion4/vars
+(B[m$ unset VAR_Al[K[H[2J[94mDEVOPS24/lektion4/vars
+(B[m$ unset VAR_A
+[?2004l[?2004h[94mDEVOPS24/lektion4/vars
+(B[m$ unset VAR_A[C[C[3Pprintenv | grep VAR
+[?2004lVAR_B=Bil
+[?2004h[94mDEVOPS24/lektion4/vars
+(B[m$ ./mittskript 
+[?2004la:  b: Bil
+[?2004h[94mDEVOPS24/lektion4/vars
+(B[m$ VAR_B [K=Flygplan ./mittskript 
+[?2004la:  b: Flygplan
+[?2004h[94mDEVOPS24/lektion4/vars
+(B[m$ echo $VAR_B
+[?2004lBil
+[?2004h[94mDEVOPS24/lektion4/vars
+(B[m$ [H[2J[94mDEVOPS24/lektion4/vars
+(B[m$ printenv | less
+[?2004l[?1049h[22;0;0t[?1h=SHELL=/shared/kent/Documents/nackademin/linux1/l1-live/.profiles/educator/bash_noprofile_norc
+SESSION_MANAGER=local/klad:@/tmp/.ICE-unix/3711,unix/klad:/tmp/.ICE-unix/3711
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+VSCODE_DEBUGPY_ADAPTER_ENDPOINTS=/home/kent/.vscode/extensions/ms-python.debugpy-2025.6.0-linux-x64/.no ConfigDebugAdapterEndpoints/endpoint-11a5171076b8c09c.txt
+XDG_MENU_PREFIX=gnome-
+TERM_PROGRAM_VERSION=1.99.3
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+PYDEVD_DISABLE_FILE_VALIDATION=1
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=gnome-xorg
+SSH_AGENT_PID=3647
+EDITOR=nano
+GTK_MODULES=gail:atk-bridge
+PWD=/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion4/vars
+XDG_SESSION_DESKTOP=gnome-xorg
+:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KBB[KLOGNAME=kent
+:[K[K [KESCESC[KOO[KBB[KXDG_SESSION_TYPE=x11
+:[K[K [KESCESC[KOO[KBB[KGPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1
+:[K[K [KESCESC[KOO[KBB[KSYSTEMD_EXEC_PID=3736
+:[K[K [KESCESC[KOO[KBB[KBUNDLED_DEBUGPY_PATH=/home/kent/.vscode/extensions/ms-python.debugpy-2025.6.0-linux-x64/bundled/libs/de :[K[K [KESCESC[KOO[KBB[Kbugpy
+:[K[K [KESCESC[KOO[KBB[KXAUTHORITY=/run/user/1000/gdm/Xauthority
+:[K[K [KESCESC[KOO[KBB[KVSCODE_GIT_ASKPASS_NODE=/usr/share/code/code
+:[K[K [KESCESC[KOO[KBB[KUNISONBACKUPDIR=/shared/kent/Dropbox/.backups/Unison
+:[K[K [KESCESC[KOO[KBB[KWINDOWPATH=2
+:[K[K [KESCESC[KOO[KBB[KGDM_LANG=en_US.UTF-8
+:[K[K [KESCESC[KOO[KBB[KHOME=/home/kent
+:[K[K [KESCESC[KOO[KBB[KUSERNAME=kent
+:[K[K [KESCESC[KOO[KBB[KLANG=en_US.UTF-8
+:[K[K [KESCESC[KOO[KBB[KXDG_CURRENT_DESKTOP=GNOME
+:[K[K [KESCESC[KOO[KBB[KSTARSHIP_SHELL=bash
+:[K[K [KESCESC[KOO[KBB[KVTE_VERSION=7006
+:[K[K [KESCESC[KOO[KAA[K[HMGTK_MODULES=gail:atk-bridge
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMEDITOR=nano
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMSSH_AGENT_PID=3647
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMDESKTOP_SESSION=gnome-xorg
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMXMODIFIERS=@im=ibus
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMPYDEVD_DISABLE_FILE_VALIDATION=1
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMSSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMGTK_IM_MODULE=ibus
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMGNOME_DESKTOP_SESSION_ID=this-is-deprecated
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMTERM_PROGRAM_VERSION=1.99.3
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMXDG_MENU_PREFIX=gnome-
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMConfigDebugAdapterEndpoints/endpoint-11a5171076b8c09c.txt
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMVSCODE_DEBUGPY_ADAPTER_ENDPOINTS=/home/kent/.vscode/extensions/ms-python.debugpy-2025.6.0-linux-x64/.no[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMCOLORTERM=truecolor
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMQT_ACCESSIBILITY=1
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMSESSION_MANAGER=local/klad:@/tmp/.ICE-unix/3711,unix/klad:/tmp/.ICE-unix/3711
+[20;1H[K:[K[K/[KVV[KAA[KRR[K[1;1HSESSION_MANAGER=local/klad:@/tmp/.ICE-unix/3711,unix/klad:/tmp/.ICE-unix/3711
+[2;1HQT_ACCESSIBILITY=1
+[3;1HCOLORTERM=truecolor
+[4;1HVSCODE_DEBUGPY_ADAPTER_ENDPOINTS=/home/kent/.vscode/extensions/ms-python.debugpy-2025.6.0-linux-x64/.no [5;1HConfigDebugAdapterEndpoints/endpoint-11a5171076b8c09c.txt
+[6;1HXDG_MENU_PREFIX=gnome-
+[7;1HTERM_PROGRAM_VERSION=1.99.3
+[8;1HGNOME_DESKTOP_SESSION_ID=this-is-deprecated
+[9;1HGTK_IM_MODULE=ibus
+[10;1HSSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+[11;1HPYDEVD_DISABLE_FILE_VALIDATION=1
+[12;1HXMODIFIERS=@im=ibus
+[13;1HDESKTOP_SESSION=gnome-xorg
+[14;1HSSH_AGENT_PID=3647
+[15;1HEDITOR=nano
+[16;1HGTK_MODULES=gail:atk-bridge
+[17;1HPWD=/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion4/vars
+[18;1HXDG_SESSION_DESKTOP=gnome-xorg
+[19;1HLOGNAME=kent
+[20;1H[1;1HSESSION_MANAGER=local/klad:@/tmp/.ICE-unix/3711,unix/klad:/tmp/.ICE-unix/3711
+[2;1HQT_ACCESSIBILITY=1
+[3;1HCOLORTERM=truecolor
+[4;1HVSCODE_DEBUGPY_ADAPTER_ENDPOINTS=/home/kent/.vscode/extensions/ms-python.debugpy-2025.6.0-linux-x64/.no [5;1HConfigDebugAdapterEndpoints/endpoint-11a5171076b8c09c.txt
+[6;1HXDG_MENU_PREFIX=gnome-
+[7;1HTERM_PROGRAM_VERSION=1.99.3
+[8;1HGNOME_DESKTOP_SESSION_ID=this-is-deprecated
+[9;1HGTK_IM_MODULE=ibus
+[10;1HSSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+[11;1HPYDEVD_DISABLE_FILE_VALIDATION=1
+[12;1HXMODIFIERS=@im=ibus
+[13;1HDESKTOP_SESSION=gnome-xorg
+[14;1HSSH_AGENT_PID=3647
+[15;1HEDITOR=nano
+[16;1HGTK_MODULES=gail:atk-bridge
+[17;1HPWD=/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion4/vars
+[18;1HXDG_SESSION_DESKTOP=gnome-xorg
+[19;1HLOGNAME=kent
+[20;1H...skipping...
+[7mVAR[27m_B=Bil
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/1000
+BASETESTS_DEBUG=true
+VSCODE_GIT_ASKPASS_MAIN=/usr/share/code/resources/app/extensions/git/dist/askpass-main.js
+XDG_DATA_DIRS=/usr/share/gnome:/home/kent/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/s hare:/usr/local/share/:/usr/share/
+GDK_BACKEND=x11
+PATH=/home/kent/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/kent/.local/share/Je tBrains/Toolbox/scripts:/home/kent/.vscode/extensions/ms-python.debugpy-2025.6.0-linux-x64/bundled/scri pts/noConfigScripts:/home/kent/.config/Code/User/globalStorage/github.copilot-chat/debugCommand
+GDMSESSION=gnome-xorg
+ORIGINAL_XDG_CURRENT_DESKTOP=GNOME
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+OLDPWD=/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion4
+TERM_PROGRAM=vscode
+BASH_FUNC____set_bash_prompt%%=() {  local prompt=$(___rel_path);
+ if ((${#prompt} > 13)); then
+ prompt+="\n";
+:[K[K [KESCESC[KOO[KAA[K[HMSHLVL=4
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMDISPLAY=:0
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMGNOME_TERMINAL_SERVICE=:1.164
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMVSCODE_GIT_IPC_HANDLE=/run/user/1000/vscode-git-7bb8d30c57.sock
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMUSER=kent
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMTERM=xterm-256color
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMANDROID_HOME=/home/kent/Android/Sdk
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMXDG_SESSION_CLASS=user
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMCHEZMOI_DIFF_COMMAND=code --diff
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMVSCODE_GIT_ASKPASS_EXTRA_ARGS=
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMNVM_DIR=/home/kent/.nvm
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMSTARSHIP_SESSION_KEY=1408616372159931
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMCHROME_DESKTOP=code.desktop
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMQTWEBENGINE_DICTIONARIES_PATH=/usr/share/hunspell-bdic/
+[20;1H[K:[K[K [KESCESC[KOO[KAA[K[HMGNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/bf6bcc88_d176_49cc_a3de_5b43609b0fb3
+[
