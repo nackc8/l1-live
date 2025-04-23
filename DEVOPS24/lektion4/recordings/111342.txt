@@ -2394,4 +2394,145 @@ gtk-2.0			pki		       zsh
   System load:  0.01               Processes:               116
   Usage of /:   17.1% of 38.04GB   Users logged in:         0
   Memory usage: 6%                 IPv4 address for enp0s3: 10.0.2.15
-  Sw
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+170 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Wed Apr 23 09:50:25 2025 from 10.0.2.2
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ less .bashrc [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ less .bashrc 
+[?2004l[?1049h[22;0;0t[?1h=# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
+
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+[7m.bashrc[27m[K[K [KESCESC[KOO[KBB[KHISTSIZE=1000
+:[K[K [KESCESC[KOO[KBB[KHISTFILESIZE=2000
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# check the window size after each command and, if necessary,
+:[K[K [KESCESC[KOO[KBB[K# update the values of LINES and COLUMNS.
+:[K[K [KESCESC[KOO[KBB[Kshopt -s checkwinsize
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# If set, the pattern "**" used in a pathname expansion context will
+:[K[K [KESCESC[KOO[KBB[K# match all files and zero or more directories and subdirectories.
+:[K[K [KESCESC[KOO[KBB[K#shopt -s globstar
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# make less more friendly for non-text input files, see lesspipe(1)
+:[K[K [KESCESC[KOO[KBB[K[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# set variable identifying the chroot you work in (used in the prompt below)
+:[K[K [KESCESC[KOO[KBB[Kif [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+:[K[K [KESCESC[KOO[KBB[K    debian_chroot=$(cat /etc/debian_chroot)
+:[K[K [KESCESC[KOO[KBB[Kfi
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# set a fancy prompt (non-color, unless we know we "want" color)
+:[K[K [KESCESC[KOO[KBB[Kcase "$TERM" in
+:[K[K [KESCESC[KOO[KBB[K    xterm-color|*-256color) color_prompt=yes;;
+:[K[K [KESCESC[KOO[KBB[Kesac
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# uncomment for a colored prompt, if the terminal has the capability; turned
+:[K[K [KESCESC[KOO[KBB[K# off by default to not distract the user: the focus in a terminal window
+:[K[K [KESCESC[KOO[KBB[K# should be on the output of commands, not on the prompt
+:[K[K [KESCESC[KOO[KBB[K#force_color_prompt=yes
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[Kif [ -n "$force_color_prompt" ]; then
+:[K[K [KESCESC[KOO[KBB[K    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+:[K[K [KESCESC[KOO[KBB[K        # We have color support; assume it's compliant with Ecma-48
+:[K[K [KESCESC[KOO[KBB[K        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+:[K[K [KESCESC[KOO[KBB[K        # a case would tend to support setf rather than setaf.)
+:[K[K [KESCESC[KOO[KBB[K        color_prompt=yes
+:[K[K [KESCESC[KOO[KBB[K    else
+:[K[K [KESCESC[KOO[KBB[K        color_prompt=
+:[K[K [KESCESC[KOO[KBB[K    fi
+:[K[K [KESCESC[KOO[KAA[K[HM# set a fancy prompt (non-color, unless we know we "want" color)
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMfi
+[19;1H[K:[K[K [KESCESC[KOO[KBB[K    else
+:[K[K [KESCESC[KOO[KBB[K        color_prompt=
+:[K[K [KESCESC[KOO[KBB[K    fi
+:[K[K [KESCESC[KOO[KBB[Kfi
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[Kif [ "$color_prompt" = yes ]; then
+:[K[K [KESCESC[KOO[KBB[K    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\03 :[K[K [KESCESC[KOO[KBB[K3[01;34m\]\w\[\033[00m\]\$ '
+:[K[K [KESCESC[KOO[KBB[Kelse
+:[K[K [KESCESC[KOO[KBB[K    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+:[K[K [KESCESC[KOO[KBB[Kfi
+:[K[K [KESCESC[KOO[KBB[Kunset color_prompt force_color_prompt
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# If this is an xterm set the title to user@host:dir
+:[K[K [KESCESC[KOO[KBB[Kcase "$TERM" in
+:[K[K [KESCESC[KOO[KBB[Kxterm*|rxvt*)
+:[K[K [KESCESC[KOO[KBB[K    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+:[K[K [KESCESC[KOO[KBB[K    ;;
+:[K[K [KESCESC[KOO[KBB[K*)
+:[K[K [KESCESC[KOO[KBB[K    ;;
+:[K[K [KESCESC[KOO[KBB[Kesac
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# enable color support of ls and also add handy aliases
+:[K[K [KESCESC[KOO[KBB[Kif [ -x /usr/bin/dircolors ]; then
+:[K[K [KESCESC[KOO[KBB[K    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircol :[K[K [KESCESC[KOO[KBB[Kors -b)"
+:[K[K [KESCESC[KOO[KBB[K    alias ls='ls --color=auto'
+:[K[K    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo te=01'
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Add an "alert" alias for long running commands.  Use like so:
+:[K[K [KESCESC[KOO[KBB[K#   sleep 10; alert
+:[K[K [KESCESC[KOO[KBB[Kalias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo  :[K[K [KESCESC[KOO[KBB[Kerror)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'') :[K[K [KESCESC[KOO[KBB[K"'
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# Alias definitions.
+:[K[K [KESCESC[KOO[KBB[K# You may want to put all your additions into a separate file like
+:[K[K [KESCESC[KOO[KBB[K# ~/.bash_aliases, instead of adding them here directly.
+:[K[K [KESCESC[KOO[KBB[K# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[Kif [ -f ~/.bash_aliases ]; then
+:[K[K [KESCESC[KOO[KBB[K    . ~/.bash_aliases
+:[K[K [KESCESC[KOO[KBB[Kfi
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KB
