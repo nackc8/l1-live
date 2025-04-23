@@ -1,0 +1,2183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style type="text/css">
+pre {
+  font-family:Courier New;
+  font-size:10pt;
+}
+
+.af_line {
+  color: gray;
+  text-decoration: none;
+}
+
+</style>
+<title>100754.txt</title>
+</head>
+<body>
+<pre>Script started on 2025-04-23 10:08:00+02:00 [TERM=&quot;xterm-256color&quot; TTY=&quot;/dev/pts/2&quot; COLUMNS=&quot;114&quot; LINES=&quot;7&quot;]
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+<span style="color:#5c5cff;">">DEVOPS24/lektion4
+$ man ls man ls
+LS(1)                                       User Commands                                      LS(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       ls - list directory contents
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">ls</span> [<span style="text-decoration:underline;">OPTION</span>]... [<span style="text-decoration:underline;">FILE</span>]...
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       List information about the FILEs (the current directory by default).  Sort entries alphabeti‐
+       cally if none of <span style="font-weight:bold;color:#7f7f7f;">-cftuvSUX</span> nor <span style="font-weight:bold;color:#7f7f7f;">--sort</span> is specified.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-a</span>, <span style="font-weight:bold;color:#7f7f7f;">--all</span>
+              do not ignore entries starting with .
+
+       <span style="font-weight:bold;color:#7f7f7f;">-A</span>, <span style="font-weight:bold;color:#7f7f7f;">--almost-all</span>
+              do not list implied . and ..
+
+       <span style="font-weight:bold;color:#7f7f7f;">--author</span>
+              with <span style="font-weight:bold;color:#7f7f7f;">-l</span>, print the author of each file
+
+       <span style="font-weight:bold;color:#7f7f7f;">-b</span>, <span style="font-weight:bold;color:#7f7f7f;">--escape</span>
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS24/lektion4:#000000;background-color:#000000;">
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion4
+</span>$ man git-commit
+GIT-COMMIT(1)                                Git Manual                                GIT-COMMIT(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       git-commit - Record changes to the repository
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="text-decoration:underline;">git</span> <span style="text-decoration:underline;">commit</span> [-a | --interactive | --patch] [-s] [-v] [-u&lt;mode&gt;] [--amend]
+                  [--dry-run] [(-c | -C | --squash) &lt;commit&gt; | --fixup [(amend|reword):]&lt;commit&gt;)]
+                  [-F &lt;file&gt; | -m &lt;msg&gt;] [--reset-author] [--allow-empty]
+                  [--allow-empty-message] [--no-verify] [-e] [--author=&lt;author&gt;]
+                  [--date=&lt;date&gt;] [--cleanup=&lt;mode&gt;] [--[no-]status]
+                  [-i | -o] [--pathspec-from-file=&lt;file&gt; [--pathspec-file-nul]]
+                  [(--trailer &lt;token&gt;[(=|:)&lt;value&gt;])...] [-S[&lt;keyid&gt;]]
+                  [--] [&lt;pathspec&gt;...]
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       Create a new commit containing the current contents of the index and the given log message
+       describing the changes. The new commit is a direct child of HEAD, usually the tip of the
+       current branch, and the branch is updated to point to it (unless no branch is associated with
+       the working tree, in which case HEAD is &quot;detached&quot; as described in <span style="font-weight:bold;color:#7f7f7f;">git-checkout</span>(1)).
+
+       The content to be committed can be specified in several ways:
+
+        1. by using <span style="font-weight:bold;color:#7f7f7f;">git-add</span>(1) to incrementally &quot;add&quot; changes to the index before using the <span style="text-decoration:underline;">commit</span>
+<span style="color:#000000;background-color:#000000;">           command (Note: even modified files must be &quot;added&quot;);</span>yle="color:#000000;background-color:#000000;">
+
+        2. by using <span style="font-weight:bold;color:#7f7f7f;">git-rm</span>(1) to remove files from the working tree and the index, again before
+           using the <span style="text-decoration:underline;">commit</span> command;
+
+        3. by listing files as arguments to the <span style="text-decoration:underline;">commit</span> command (without --interactive or --patch
+           switch), in which case the commit will ignore changes staged in the index, and instead
+           record the current content of the listed files (which must already be known to Git);
+
+        4. by using the -a switch with the <span style="text-decoration:underline;">commit</span> command to automatically &quot;add&quot; changes from all
+           known files (i.e. all files that are already listed in the index) and to automatically
+           &quot;rm&quot; files in the index that have been removed from the working tree, and then perform
+           the actual commit;
+
+        5. by using the --interactive or --patch switches with the <span style="text-decoration:underline;">commit</span> command to decide one by
+           one which files or hunks should be part of the commit in addition to contents in the
+           index, before finalizing the operation. See the “Interactive Mode” section of <span style="font-weight:bold;color:#7f7f7f;">git-add</span>(1)
+           to learn how to operate these modes.
+
+       The <span style="font-weight:bold;color:#7f7f7f;">--dry-run</span> option can be used to obtain a summary of what is included by any of the above
+       for the next commit by giving the same set of parameters (options and paths).
+
+       If you make a commit and then find a mistake immediately after that, you can recover from it
+       with <span style="text-decoration:underline;">git</span> <span style="text-decoration:underline;">reset</span>.
+<span style="color:#000000;background-color:#000000;"></span> page git-commit(1) line 25 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="font-weight:bold;color:#7f7f7f;">OPTIONS</span>
+       -a, --all
+           Tell the command to automatically stage files that have been modified and deleted, but
+           new files you have not told Git about are not affected.
+
+       -p, --patch
+           Use the interactive patch selection interface to choose which changes to commit. See <span style="font-weight:bold;color:#7f7f7f;">git-</span>
+           <span style="font-weight:bold;color:#7f7f7f;">add</span>(1) for details.
+
+       -C &lt;commit&gt;, --reuse-message=&lt;commit&gt;
+           Take an existing commit object, and reuse the log message and the authorship information
+           (including the timestamp) when creating the commit.
+
+       -c &lt;commit&gt;, --reedit-message=&lt;commit&gt;
+           Like <span style="text-decoration:underline;">-C</span>, but with <span style="font-weight:bold;color:#7f7f7f;">-c</span> the editor is invoked, so that the user can further edit the commit
+           message.
+
+       --fixup=[(amend|reword):]&lt;commit&gt;
+           Create a new commit which &quot;fixes up&quot; <span style="font-weight:bold;color:#7f7f7f;">&lt;commit&gt;</span> when applied with <span style="font-weight:bold;color:#7f7f7f;">git</span> <span style="font-weight:bold;color:#7f7f7f;">rebase</span> <span style="font-weight:bold;color:#7f7f7f;">--autosquash</span>.
+           Plain <span style="font-weight:bold;color:#7f7f7f;">--fixup=&lt;commit&gt;</span> creates a &quot;fixup!&quot; commit which changes the content of <span style="font-weight:bold;color:#7f7f7f;">&lt;commit&gt;</span>
+           but leaves its log message untouched.  <span style="font-weight:bold;color:#7f7f7f;">--fixup=amend:&lt;commit&gt;</span> is similar but creates an
+           &quot;amend!&quot; commit which also replaces the log message of <span style="font-weight:bold;color:#7f7f7f;">&lt;commit&gt;</span> with the log message of
+           the &quot;amend!&quot; commit.  <span style="font-weight:bold;color:#7f7f7f;">--fixup=reword:&lt;commit&gt;</span> creates an &quot;amend!&quot; commit which replaces
+<span style="color:#000000;background-color:#000000;">           the log message of </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&lt;commit&gt;</span> with its own log message but makes no changes to the content
+           of <span style="font-weight:bold;color:#7f7f7f;">&lt;commit&gt;</span>.
+
+           The commit created by plain <span style="font-weight:bold;color:#7f7f7f;">--fixup=&lt;commit&gt;</span> has a subject composed of &quot;fixup!&quot; followed
+           by the subject line from &lt;commit&gt;, and is recognized specially by <span style="font-weight:bold;color:#7f7f7f;">git</span> <span style="font-weight:bold;color:#7f7f7f;">rebase</span>
+           <span style="font-weight:bold;color:#7f7f7f;">--autosquash</span>. The <span style="font-weight:bold;color:#7f7f7f;">-m</span> option may be used to supplement the log message of the created
+           commit, but the additional commentary will be thrown away once the &quot;fixup!&quot; commit is
+           squashed into <span style="font-weight:bold;color:#7f7f7f;">&lt;commit&gt;</span> by <span style="font-weight:bold;color:#7f7f7f;">git</span> <span style="font-weight:bold;color:#7f7f7f;">rebase</span> <span style="font-weight:bold;color:#7f7f7f;">--autosquash</span>.
+
+           The commit created by <span style="font-weight:bold;color:#7f7f7f;">--fixup=amend:&lt;commit&gt;</span> is similar but its subject is instead
+           prefixed with &quot;amend!&quot;. The log message of &lt;commit&gt; is copied into the log message of the
+           &quot;amend!&quot; commit and opened in an editor so it can be refined. When <span style="font-weight:bold;color:#7f7f7f;">git</span> <span style="font-weight:bold;color:#7f7f7f;">rebase</span>
+           <span style="font-weight:bold;color:#7f7f7f;">--autosquash</span> squashes the &quot;amend!&quot; commit into <span style="font-weight:bold;color:#7f7f7f;">&lt;commit&gt;</span>, the log message of <span style="font-weight:bold;color:#7f7f7f;">&lt;commit&gt;</span> is
+           replaced by the refined log message from the &quot;amend!&quot; commit. It is an error for the
+           &quot;amend!&quot; commit’s log message to be empty unless <span style="font-weight:bold;color:#7f7f7f;">--allow-empty-message</span> is specified.
+
+           <span style="font-weight:bold;color:#7f7f7f;">--fixup=reword:&lt;commit&gt;</span> is shorthand for <span style="font-weight:bold;color:#7f7f7f;">--fixup=amend:&lt;commit&gt;</span> <span style="font-weight:bold;color:#7f7f7f;">--only</span>. It creates an
+           &quot;amend!&quot; commit with only a log message (ignoring any changes staged in the index). When
+           squashed by <span style="font-weight:bold;color:#7f7f7f;">git</span> <span style="font-weight:bold;color:#7f7f7f;">rebase</span> <span style="font-weight:bold;color:#7f7f7f;">--autosquash</span>, it replaces the log message of <span style="font-weight:bold;color:#7f7f7f;">&lt;commit&gt;</span> without
+           making any other changes.
+
+           Neither &quot;fixup!&quot; nor &quot;amend!&quot; commits change authorship of <span style="font-weight:bold;color:#7f7f7f;">&lt;commit&gt;</span> when applied by <span style="font-weight:bold;color:#7f7f7f;">git</span>
+           <span style="font-weight:bold;color:#7f7f7f;">rebase</span> <span style="font-weight:bold;color:#7f7f7f;">--autosquash</span>. See <span style="font-weight:bold;color:#7f7f7f;">git-rebase</span>(1) for details.
+
+<span style="color:#000000;background-color:#000000;">       --squash=&lt;commit&gt;</span>ress h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+           Construct a commit message for use with <span style="font-weight:bold;color:#7f7f7f;">rebase</span> <span style="font-weight:bold;color:#7f7f7f;">--autosquash</span>. The commit message subject
+           line is taken from the specified commit with a prefix of &quot;squash! &quot;. Can be used with
+           additional commit message options (<span style="font-weight:bold;color:#7f7f7f;">-m</span>/<span style="font-weight:bold;color:#7f7f7f;">-c</span>/<span style="font-weight:bold;color:#7f7f7f;">-C</span>/<span style="font-weight:bold;color:#7f7f7f;">-F</span>). See <span style="font-weight:bold;color:#7f7f7f;">git-rebase</span>(1) for details.
+
+       --reset-author
+           When used with -C/-c/--amend options, or when committing after a conflicting cherry-pick,
+           declare that the authorship of the resulting commit now belongs to the committer. This
+           also renews the author timestamp.
+
+       --short
+           When doing a dry-run, give the output in the short-format. See <span style="font-weight:bold;color:#7f7f7f;">git-status</span>(1) for details.
+           Implies <span style="font-weight:bold;color:#7f7f7f;">--dry-run</span>.
+
+       --branch
+           Show the branch and tracking info even in short-format.
+
+       --porcelain
+           When doing a dry-run, give the output in a porcelain-ready format. See <span style="font-weight:bold;color:#7f7f7f;">git-status</span>(1) for
+           details. Implies <span style="font-weight:bold;color:#7f7f7f;">--dry-run</span>.
+
+       --long
+           When doing a dry-run, give the output in the long-format. Implies <span style="font-weight:bold;color:#7f7f7f;">--dry-run</span>.
+
+<span style="color:#000000;background-color:#000000;">       -z, --null</span>1) line 97 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+           When showing <span style="font-weight:bold;color:#7f7f7f;">short</span> or <span style="font-weight:bold;color:#7f7f7f;">porcelain</span> status output, print the filename verbatim and terminate
+           the entries with NUL, instead of LF. If no format is given, implies the <span style="font-weight:bold;color:#7f7f7f;">--porcelain</span>
+           output format. Without the <span style="font-weight:bold;color:#7f7f7f;">-z</span> option, filenames with &quot;unusual&quot; characters are quoted as
+           explained for the configuration variable <span style="font-weight:bold;color:#7f7f7f;">core.quotePath</span> (see <span style="font-weight:bold;color:#7f7f7f;">git-config</span>(1)).
+
+       -F &lt;file&gt;, --file=&lt;file&gt;
+           Take the commit message from the given file. Use <span style="text-decoration:underline;">-</span> to read the message from the standard
+           input.
+
+       --author=&lt;author&gt;
+           Override the commit author. Specify an explicit author using the standard <span style="font-weight:bold;color:#7f7f7f;">A</span> <span style="font-weight:bold;color:#7f7f7f;">U</span> <span style="font-weight:bold;color:#7f7f7f;">Thor</span>
+           <span style="font-weight:bold;color:#7f7f7f;">&lt;author&#64;example.com&gt;</span> format. Otherwise &lt;author&gt; is assumed to be a pattern and is used to
+           search for an existing commit by that author (i.e. rev-list --all -i --author=&lt;author&gt;);
+           the commit author is then copied from the first such commit found.
+
+       --date=&lt;date&gt;
+           Override the author date used in the commit.
+
+       -m &lt;msg&gt;, --message=&lt;msg&gt;
+           Use the given &lt;msg&gt; as the commit message. If multiple <span style="font-weight:bold;color:#7f7f7f;">-m</span> options are given, their values
+           are concatenated as separate paragraphs.
+
+           The <span style="font-weight:bold;color:#7f7f7f;">-m</span> option is mutually exclusive with <span style="font-weight:bold;color:#7f7f7f;">-c</span>, <span style="font-weight:bold;color:#7f7f7f;">-C</span>, and <span style="font-weight:bold;color:#7f7f7f;">-F</span>.
+<span style="color:#000000;background-color:#000000;"></span> page git-commit(1) line 121 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       -t &lt;file&gt;, --template=&lt;file&gt;
+           When editing the commit message, start the editor with the contents in the given file.
+           The <span style="font-weight:bold;color:#7f7f7f;">commit.template</span> configuration variable is often used to give this option implicitly
+           to the command. This mechanism can be used by projects that want to guide participants
+           with some hints on what to write in the message in what order. If the user exits the
+           editor without editing the message, the commit is aborted. This has no effect when a
+           message is given by other means, e.g. with the <span style="font-weight:bold;color:#7f7f7f;">-m</span> or <span style="font-weight:bold;color:#7f7f7f;">-F</span> options.
+
+       -s, --signoff, --no-signoff
+           Add a <span style="font-weight:bold;color:#7f7f7f;">Signed-off-by</span> trailer by the committer at the end of the commit log message. The
+           meaning of a signoff depends on the project to which you’re committing. For example, it
+           may certify that the committer has the rights to submit the work under the project’s
+           license or agrees to some contributor representation, such as a Developer Certificate of
+           Origin. (See <span style="font-weight:bold;color:#7f7f7f;">http://developercertificate.org</span> for the one used by the Linux kernel and Git
+           projects.) Consult the documentation or leadership of the project to which you’re
+           contributing to understand how the signoffs are used in that project.
+
+           The --no-signoff option can be used to countermand an earlier --signoff option on the
+           command line.
+
+       --trailer &lt;token&gt;[(=|:)&lt;value&gt;]
+           Specify a (&lt;token&gt;, &lt;value&gt;) pair that should be applied as a trailer. (e.g.  <span style="font-weight:bold;color:#7f7f7f;">git</span> <span style="font-weight:bold;color:#7f7f7f;">commit</span>
+           <span style="font-weight:bold;color:#7f7f7f;">--trailer</span> <span style="font-weight:bold;color:#7f7f7f;">&quot;Signed-off-by:C</span> <span style="font-weight:bold;color:#7f7f7f;">O</span> <span style="font-weight:bold;color:#7f7f7f;">Mitter</span> <span style="font-weight:bold;color:#7f7f7f;">\</span> <span style="font-weight:bold;color:#7f7f7f;">&lt;committer&#64;example.com&gt;&quot;</span> <span style="font-weight:bold;color:#7f7f7f;">--trailer</span> <span style="font-weight:bold;color:#7f7f7f;">&quot;Helped-by:C</span> <span style="font-weight:bold;color:#7f7f7f;">O</span>
+<span style="color:#000000;background-color:#000000;">           </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Mitter</span> <span style="font-weight:bold;color:#7f7f7f;">\</span> <span style="font-weight:bold;color:#7f7f7f;">&lt;committer&#64;example.com&gt;&quot;</span> will add the &quot;Signed-off-by&quot; trailer and the
+           &quot;Helped-by&quot; trailer to the commit message.) The <span style="font-weight:bold;color:#7f7f7f;">trailer.*</span>  configuration variables (<span style="font-weight:bold;color:#7f7f7f;">git-</span>
+           <span style="font-weight:bold;color:#7f7f7f;">interpret-trailers</span>(1)) can be used to define if a duplicated trailer is omitted, where in
+           the run of trailers each trailer would appear, and other details.
+
+       -n, --[no-]verify
+           By default, the pre-commit and commit-msg hooks are run. When any of <span style="font-weight:bold;color:#7f7f7f;">--no-verify</span> or <span style="font-weight:bold;color:#7f7f7f;">-n</span> is
+           given, these are bypassed. See also <span style="font-weight:bold;color:#7f7f7f;">githooks</span>(5).
+
+       --allow-empty
+           Usually recording a commit that has the exact same tree as its sole parent commit is a
+           mistake, and the command prevents you from making such a commit. This option bypasses the
+           safety, and is primarily for use by foreign SCM interface scripts.
+
+       --allow-empty-message
+           Like --allow-empty this command is primarily for use by foreign SCM interface scripts. It
+           allows you to create a commit with an empty commit message without using plumbing
+           commands like <span style="font-weight:bold;color:#7f7f7f;">git-commit-tree</span>(1).
+
+       --cleanup=&lt;mode&gt;
+           This option determines how the supplied commit message should be cleaned up before
+           committing. The <span style="text-decoration:underline;">&lt;mode&gt;</span> can be <span style="font-weight:bold;color:#7f7f7f;">strip</span>, <span style="font-weight:bold;color:#7f7f7f;">whitespace</span>, <span style="font-weight:bold;color:#7f7f7f;">verbatim</span>, <span style="font-weight:bold;color:#7f7f7f;">scissors</span> or <span style="font-weight:bold;color:#7f7f7f;">default</span>.
+
+           strip
+<span style="color:#000000;background-color:#000000;">               Strip leading and trailing empty lines, trailing whitespace, commentary and collapse</span>round-color:#000000;">
+               consecutive empty lines.
+
+           whitespace
+               Same as <span style="font-weight:bold;color:#7f7f7f;">strip</span> except #commentary is not removed.
+
+           verbatim
+               Do not change the message at all.
+
+           scissors
+               Same as <span style="font-weight:bold;color:#7f7f7f;">whitespace</span> except that everything from (and including) the line found below
+               is truncated, if the message is to be edited. &quot;<span style="font-weight:bold;color:#7f7f7f;">#</span>&quot; can be customized with
+               core.commentChar.
+
+                   # ------------------------ &gt;8 ------------------------
+
+           default
+               Same as <span style="font-weight:bold;color:#7f7f7f;">strip</span> if the message is to be edited. Otherwise <span style="font-weight:bold;color:#7f7f7f;">whitespace</span>.
+
+           The default can be changed by the <span style="font-weight:bold;color:#7f7f7f;">commit.cleanup</span> configuration variable (see <span style="font-weight:bold;color:#7f7f7f;">git-</span>
+           <span style="font-weight:bold;color:#7f7f7f;">config</span>(1)).
+
+       -e, --edit
+           The message taken from file with <span style="font-weight:bold;color:#7f7f7f;">-F</span>, command line with <span style="font-weight:bold;color:#7f7f7f;">-m</span>, and from commit object with <span style="font-weight:bold;color:#7f7f7f;">-C</span>
+<span style="color:#000000;background-color:#000000;">           are usually used as the commit log message unmodified. This option lets you further edit</span>round-color:#000000;">
+           the message taken from these sources.
+
+       --no-edit
+           Use the selected commit message without launching an editor. For example, <span style="font-weight:bold;color:#7f7f7f;">git</span> <span style="font-weight:bold;color:#7f7f7f;">commit</span>
+           <span style="font-weight:bold;color:#7f7f7f;">--amend</span> <span style="font-weight:bold;color:#7f7f7f;">--no-edit</span> amends a commit without changing its commit message.
+
+       --amend
+           Replace the tip of the current branch by creating a new commit. The recorded tree is
+           prepared as usual (including the effect of the <span style="font-weight:bold;color:#7f7f7f;">-i</span> and <span style="font-weight:bold;color:#7f7f7f;">-o</span> options and explicit pathspec),
+           and the message from the original commit is used as the starting point, instead of an
+           empty message, when no other message is specified from the command line via options such
+           as <span style="font-weight:bold;color:#7f7f7f;">-m</span>, <span style="font-weight:bold;color:#7f7f7f;">-F</span>, <span style="font-weight:bold;color:#7f7f7f;">-c</span>, etc. The new commit has the same parents and author as the current one
+           (the <span style="font-weight:bold;color:#7f7f7f;">--reset-author</span> option can countermand this).
+
+           It is a rough equivalent for:
+
+                       $ git reset --soft HEAD^
+                       $ ... do something else to come up with the right tree ...
+                       $ git commit -c ORIG_HEAD
+
+           but can be used to amend a merge commit.
+
+           You should understand the implications of rewriting history if you amend a commit that
+<span style="color:#000000;background-color:#000000;">           has already been published. (See the &quot;RECOVERING FROM UPSTREAM REBASE&quot; section in </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">git-</span>
+           <span style="font-weight:bold;color:#7f7f7f;">rebase</span>(1).)
+
+       --no-post-rewrite
+           Bypass the post-rewrite hook.
+
+       -i, --include
+           Before making a commit out of staged contents so far, stage the contents of paths given
+           on the command line as well. This is usually not what you want unless you are concluding
+           a conflicted merge.
+
+       -o, --only
+           Make a commit by taking the updated working tree contents of the paths specified on the
+           command line, disregarding any contents that have been staged for other paths. This is
+           the default mode of operation of <span style="text-decoration:underline;">git</span> <span style="text-decoration:underline;">commit</span> if any paths are given on the command line,
+           in which case this option can be omitted. If this option is specified together with
+           <span style="font-weight:bold;color:#7f7f7f;">--amend</span>, then no paths need to be specified, which can be used to amend the last commit
+           without committing changes that have already been staged. If used together with
+           <span style="font-weight:bold;color:#7f7f7f;">--allow-empty</span> paths are also not required, and an empty commit will be created.
+
+       --pathspec-from-file=&lt;file&gt;
+           Pathspec is passed in <span style="font-weight:bold;color:#7f7f7f;">&lt;file&gt;</span> instead of commandline args. If <span style="font-weight:bold;color:#7f7f7f;">&lt;file&gt;</span> is exactly <span style="font-weight:bold;color:#7f7f7f;">-</span> then
+           standard input is used. Pathspec elements are separated by LF or CR/LF. Pathspec elements
+           can be quoted as explained for the configuration variable <span style="font-weight:bold;color:#7f7f7f;">core.quotePath</span> (see <span style="font-weight:bold;color:#7f7f7f;">git-</span>
+<span style="color:#000000;background-color:#000000;">           </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">config</span>(1)). See also <span style="font-weight:bold;color:#7f7f7f;">--pathspec-file-nul</span> and global <span style="font-weight:bold;color:#7f7f7f;">--literal-pathspecs</span>.
+
+       --pathspec-file-nul
+           Only meaningful with <span style="font-weight:bold;color:#7f7f7f;">--pathspec-from-file</span>. Pathspec elements are separated with NUL
+           character and all other characters are taken literally (including newlines and quotes).
+
+       -u[&lt;mode&gt;], --untracked-files[=&lt;mode&gt;]
+           Show untracked files.
+
+           The mode parameter is optional (defaults to <span style="text-decoration:underline;">all</span>), and is used to specify the handling of
+           untracked files; when -u is not used, the default is <span style="text-decoration:underline;">normal</span>, i.e. show untracked files
+           and directories.
+
+           The possible options are:
+
+           •   <span style="text-decoration:underline;">no</span> - Show no untracked files
+
+           •   <span style="text-decoration:underline;">normal</span> - Shows untracked files and directories
+
+           •   <span style="text-decoration:underline;">all</span> - Also shows individual files in untracked directories.
+
+           The default can be changed using the status.showUntrackedFiles configuration variable
+           documented in <span style="font-weight:bold;color:#7f7f7f;">git-config</span>(1).
+
+<span style="color:#000000;background-color:#000000;">       -v, --verbose</span>line 265 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+           Show unified diff between the HEAD commit and what would be committed at the bottom of
+           the commit message template to help the user describe the commit by reminding what
+           changes the commit has. Note that this diff output doesn’t have its lines prefixed with
+           <span style="text-decoration:underline;">#</span>. This diff will not be a part of the commit message. See the <span style="font-weight:bold;color:#7f7f7f;">commit.verbose</span>
+           configuration variable in <span style="font-weight:bold;color:#7f7f7f;">git-config</span>(1).
+
+           If specified twice, show in addition the unified diff between what would be committed and
+           the worktree files, i.e. the unstaged changes to tracked files.
+
+       -q, --quiet
+           Suppress commit summary message.
+
+       --dry-run
+           Do not create a commit, but show a list of paths that are to be committed, paths with
+           local changes that will be left uncommitted and paths that are untracked.
+
+       --status
+           Include the output of <span style="font-weight:bold;color:#7f7f7f;">git-status</span>(1) in the commit message template when using an editor
+           to prepare the commit message. Defaults to on, but can be used to override configuration
+           variable commit.status.
+
+       --no-status
+           Do not include the output of <span style="font-weight:bold;color:#7f7f7f;">git-status</span>(1) in the commit message template when using an
+<span style="color:#000000;background-color:#000000;">           editor to prepare the default commit message.</span>uit)</span><span style="color:#000000;background-color:#000000;">
+
+       -S[&lt;keyid&gt;], --gpg-sign[=&lt;keyid&gt;], --no-gpg-sign
+           GPG-sign commits. The <span style="font-weight:bold;color:#7f7f7f;">keyid</span> argument is optional and defaults to the committer identity;
+           if specified, it must be stuck to the option without a space.  <span style="font-weight:bold;color:#7f7f7f;">--no-gpg-sign</span> is useful to
+           countermand both <span style="font-weight:bold;color:#7f7f7f;">commit.gpgSign</span> configuration variable, and earlier <span style="font-weight:bold;color:#7f7f7f;">--gpg-sign</span>.
+
+       --
+           Do not interpret any more arguments as options.
+
+       &lt;pathspec&gt;...
+           When pathspec is given on the command line, commit the contents of the files that match
+           the pathspec without recording the changes already added to the index. The contents of
+           these files are also staged for the next commit on top of what have been staged before.
+
+           For more details, see the <span style="text-decoration:underline;">pathspec</span> entry in <span style="font-weight:bold;color:#7f7f7f;">gitglossary</span>(7).
+
+<span style="font-weight:bold;color:#7f7f7f;">EXAMPLES</span>
+       When recording your own work, the contents of modified files in your working tree are
+       temporarily stored to a staging area called the &quot;index&quot; with <span style="text-decoration:underline;">git</span> <span style="text-decoration:underline;">add</span>. A file can be reverted
+       back, only in the index but not in the working tree, to that of the last commit with <span style="font-weight:bold;color:#7f7f7f;">git</span>
+       <span style="font-weight:bold;color:#7f7f7f;">restore</span> <span style="font-weight:bold;color:#7f7f7f;">--staged</span> <span style="font-weight:bold;color:#7f7f7f;">&lt;file&gt;</span>, which effectively reverts <span style="text-decoration:underline;">git</span> <span style="text-decoration:underline;">add</span> and prevents the changes to this
+       file from participating in the next commit. After building the state to be committed
+       incrementally with these commands, <span style="font-weight:bold;color:#7f7f7f;">git</span> <span style="font-weight:bold;color:#7f7f7f;">commit</span> (without any pathname parameter) is used to
+<span style="color:#000000;background-color:#000000;">       record what has been staged so far. This is the most basic form of the command. An example:</span>ground-color:#000000;">
+
+           $ edit hello.c
+           $ git rm goodbye.c
+           $ git add hello.c
+           $ git commit
+
+       Instead of staging files after each individual change, you can tell <span style="font-weight:bold;color:#7f7f7f;">git</span> <span style="font-weight:bold;color:#7f7f7f;">commit</span> to notice the
+       changes to the files whose contents are tracked in your working tree and do corresponding <span style="font-weight:bold;color:#7f7f7f;">git</span>
+       <span style="font-weight:bold;color:#7f7f7f;">add</span> and <span style="font-weight:bold;color:#7f7f7f;">git</span> <span style="font-weight:bold;color:#7f7f7f;">rm</span> for you. That is, this example does the same as the earlier example if there
+       is no other change in your working tree:
+
+           $ edit hello.c
+           $ rm goodbye.c
+           $ git commit -a
+
+       The command <span style="font-weight:bold;color:#7f7f7f;">git</span> <span style="font-weight:bold;color:#7f7f7f;">commit</span> <span style="font-weight:bold;color:#7f7f7f;">-a</span> first looks at your working tree, notices that you have modified
+       hello.c and removed goodbye.c, and performs necessary <span style="font-weight:bold;color:#7f7f7f;">git</span> <span style="font-weight:bold;color:#7f7f7f;">add</span> and <span style="font-weight:bold;color:#7f7f7f;">git</span> <span style="font-weight:bold;color:#7f7f7f;">rm</span> for you.
+
+       After staging changes to many files, you can alter the order the changes are recorded in, by
+       giving pathnames to <span style="font-weight:bold;color:#7f7f7f;">git</span> <span style="font-weight:bold;color:#7f7f7f;">commit</span>. When pathnames are given, the command makes a commit that
+       only records the changes made to the named paths:
+
+           $ edit hello.c hello.h
+<span style="color:#000000;background-color:#000000;">           $ git add hello.c hello.h</span>h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+           $ edit Makefile
+           $ git commit Makefile
+
+       This makes a commit that records the modification to <span style="font-weight:bold;color:#7f7f7f;">Makefile</span>. The changes staged for <span style="font-weight:bold;color:#7f7f7f;">hello.c</span>
+       and <span style="font-weight:bold;color:#7f7f7f;">hello.h</span> are not included in the resulting commit. However, their changes are not lost —
+       they are still staged and merely held back. After the above sequence, if you do:
+
+           $ git commit
+
+       this second commit would record the changes to <span style="font-weight:bold;color:#7f7f7f;">hello.c</span> and <span style="font-weight:bold;color:#7f7f7f;">hello.h</span> as expected.
+
+       After a merge (initiated by <span style="text-decoration:underline;">git</span> <span style="text-decoration:underline;">merge</span> or <span style="text-decoration:underline;">git</span> <span style="text-decoration:underline;">pull</span>) stops because of conflicts, cleanly merged
+       paths are already staged to be committed for you, and paths that conflicted are left in
+       unmerged state. You would have to first check which paths are conflicting with <span style="text-decoration:underline;">git</span> <span style="text-decoration:underline;">status</span> and
+       after fixing them manually in your working tree, you would stage the result as usual with <span style="text-decoration:underline;">git</span>
+       <span style="text-decoration:underline;">add</span>:
+
+           $ git status | grep unmerged
+           unmerged: hello.c
+           $ edit hello.c
+           $ git add hello.c
+
+       After resolving conflicts and staging the result, <span style="font-weight:bold;color:#7f7f7f;">git</span> <span style="font-weight:bold;color:#7f7f7f;">ls-files</span> <span style="font-weight:bold;color:#7f7f7f;">-u</span> would stop mentioning the
+<span style="color:#000000;background-color:#000000;">       conflicted path. When you are done, run </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">git</span> <span style="font-weight:bold;color:#7f7f7f;">commit</span> to finally record the merge:
+
+           $ git commit
+
+       As with the case to record your own changes, you can use <span style="font-weight:bold;color:#7f7f7f;">-a</span> option to save typing. One
+       difference is that during a merge resolution, you cannot use <span style="font-weight:bold;color:#7f7f7f;">git</span> <span style="font-weight:bold;color:#7f7f7f;">commit</span> with pathnames to
+       alter the order the changes are committed, because the merge should be recorded as a single
+       commit. In fact, the command refuses to run when given pathnames (but see <span style="font-weight:bold;color:#7f7f7f;">-i</span> option).
+
+<span style="font-weight:bold;color:#7f7f7f;">COMMIT</span> <span style="font-weight:bold;color:#7f7f7f;">INFORMATION</span>
+       Author and committer information is taken from the following environment variables, if set:
+
+           GIT_AUTHOR_NAME
+           GIT_AUTHOR_EMAIL
+           GIT_AUTHOR_DATE
+           GIT_COMMITTER_NAME
+           GIT_COMMITTER_EMAIL
+           GIT_COMMITTER_DATE
+
+       (nb &quot;&lt;&quot;, &quot;&gt;&quot; and &quot;\n&quot;s are stripped)
+
+       The author and committer names are by convention some form of a personal name (that is, the
+       name by which other humans refer to you), although Git does not enforce or require any
+       particular form. Arbitrary Unicode may be used, subject to the constraints listed above. This
+<span style="color:#000000;background-color:#000000;">       name has no effect on authentication; for that, see the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">credential.username</span> variable in <span style="font-weight:bold;color:#7f7f7f;">git-</span>
+       <span style="font-weight:bold;color:#7f7f7f;">config</span>(1).
+
+       In case (some of) these environment variables are not set, the information is taken from the
+       configuration items <span style="font-weight:bold;color:#7f7f7f;">user.name</span> and <span style="font-weight:bold;color:#7f7f7f;">user.email</span>, or, if not present, the environment variable
+       EMAIL, or, if that is not set, system user name and the hostname used for outgoing mail
+       (taken from <span style="font-weight:bold;color:#7f7f7f;">/etc/mailname</span> and falling back to the fully qualified hostname when that file
+       does not exist).
+
+       The <span style="font-weight:bold;color:#7f7f7f;">author.name</span> and <span style="font-weight:bold;color:#7f7f7f;">committer.name</span> and their corresponding email options override <span style="font-weight:bold;color:#7f7f7f;">user.name</span>
+       and <span style="font-weight:bold;color:#7f7f7f;">user.email</span> if set and are overridden themselves by the environment variables.
+
+       The typical usage is to set just the <span style="font-weight:bold;color:#7f7f7f;">user.name</span> and <span style="font-weight:bold;color:#7f7f7f;">user.email</span> variables; the other options
+       are provided for more complex use cases.
+
+<span style="font-weight:bold;color:#7f7f7f;">DATE</span> <span style="font-weight:bold;color:#7f7f7f;">FORMATS</span>
+       The <span style="font-weight:bold;color:#7f7f7f;">GIT_AUTHOR_DATE</span> and <span style="font-weight:bold;color:#7f7f7f;">GIT_COMMITTER_DATE</span> environment variables support the following date
+       formats:
+
+       Git internal format
+           It is <span style="font-weight:bold;color:#7f7f7f;">&lt;unix-timestamp&gt;</span> <span style="font-weight:bold;color:#7f7f7f;">&lt;time-zone-offset&gt;</span>, where <span style="font-weight:bold;color:#7f7f7f;">&lt;unix-timestamp&gt;</span> is the number of
+           seconds since the UNIX epoch.  <span style="font-weight:bold;color:#7f7f7f;">&lt;time-zone-offset&gt;</span> is a positive or negative offset from
+           UTC. For example CET (which is 1 hour ahead of UTC) is <span style="font-weight:bold;color:#7f7f7f;">+0100</span>.
+
+<span style="color:#000000;background-color:#000000;">       RFC 2822</span>t(1) line 409 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+           The standard email format as described by RFC 2822, for example <span style="font-weight:bold;color:#7f7f7f;">Thu,</span> <span style="font-weight:bold;color:#7f7f7f;">07</span> <span style="font-weight:bold;color:#7f7f7f;">Apr</span> <span style="font-weight:bold;color:#7f7f7f;">2005</span> <span style="font-weight:bold;color:#7f7f7f;">22:13:13</span>
+           <span style="font-weight:bold;color:#7f7f7f;">+0200</span>.
+
+       ISO 8601
+           Time and date specified by the ISO 8601 standard, for example <span style="font-weight:bold;color:#7f7f7f;">2005-04-07T22:13:13</span>. The
+           parser accepts a space instead of the <span style="font-weight:bold;color:#7f7f7f;">T</span> character as well. Fractional parts of a second
+           will be ignored, for example <span style="font-weight:bold;color:#7f7f7f;">2005-04-07T22:13:13.019</span> will be treated as
+           <span style="font-weight:bold;color:#7f7f7f;">2005-04-07T22:13:13</span>.
+
+               <span style="font-weight:bold;color:#7f7f7f;">Note</span>
+               In addition, the date part is accepted in the following formats: <span style="font-weight:bold;color:#7f7f7f;">YYYY.MM.DD</span>,
+               <span style="font-weight:bold;color:#7f7f7f;">MM/DD/YYYY</span> and <span style="font-weight:bold;color:#7f7f7f;">DD.MM.YYYY</span>.
+
+       In addition to recognizing all date formats above, the <span style="font-weight:bold;color:#7f7f7f;">--date</span> option will also try to make
+       sense of other, more human-centric date formats, such as relative dates like &quot;yesterday&quot; or
+       &quot;last Friday at noon&quot;.
+
+<span style="font-weight:bold;color:#7f7f7f;">DISCUSSION</span>
+       Though not required, it’s a good idea to begin the commit message with a single short (less
+       than 50 character) line summarizing the change, followed by a blank line and then a more
+       thorough description. The text up to the first blank line in a commit message is treated as
+       the commit title, and that title is used throughout Git. For example, <span style="font-weight:bold;color:#7f7f7f;">git-format-patch</span>(1)
+       turns a commit into email, and it uses the title on the Subject line and the rest of the
+<span style="color:#000000;background-color:#000000;">       commit in the body.</span>33 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+
+       Git is to some extent character encoding agnostic.
+
+       •   The contents of the blob objects are uninterpreted sequences of bytes. There is no
+           encoding translation at the core level.
+
+       •   Path names are encoded in UTF-8 normalization form C. This applies to tree objects, the
+           index file, ref names, as well as path names in command line arguments, environment
+           variables and config files (<span style="font-weight:bold;color:#7f7f7f;">.git/config</span> (see <span style="font-weight:bold;color:#7f7f7f;">git-config</span>(1)), <span style="font-weight:bold;color:#7f7f7f;">gitignore</span>(5),
+           <span style="font-weight:bold;color:#7f7f7f;">gitattributes</span>(5) and <span style="font-weight:bold;color:#7f7f7f;">gitmodules</span>(5)).
+
+           Note that Git at the core level treats path names simply as sequences of non-NUL bytes,
+           there are no path name encoding conversions (except on Mac and Windows). Therefore, using
+           non-ASCII path names will mostly work even on platforms and file systems that use legacy
+           extended ASCII encodings. However, repositories created on such systems will not work
+           properly on UTF-8-based systems (e.g. Linux, Mac, Windows) and vice versa. Additionally,
+           many Git-based tools simply assume path names to be UTF-8 and will fail to display other
+           encodings correctly.
+
+       •   Commit log messages are typically encoded in UTF-8, but other extended ASCII encodings
+           are also supported. This includes ISO-8859-x, CP125x and many others, but <span style="text-decoration:underline;">not</span> UTF-16/32,
+           EBCDIC and CJK multi-byte encodings (GBK, Shift-JIS, Big5, EUC-x, CP9xx etc.).
+
+<span style="color:#000000;background-color:#000000;">       Although we encourage that the commit log messages are encoded in UTF-8, both the core and</span>kground-color:#000000;">
+       Git Porcelain are designed not to force UTF-8 on projects. If all participants of a
+       particular project find it more convenient to use legacy encodings, Git does not forbid it.
+       However, there are a few things to keep in mind.
+
+        1. <span style="text-decoration:underline;">git</span> <span style="text-decoration:underline;">commit</span> and <span style="text-decoration:underline;">git</span> <span style="text-decoration:underline;">commit-tree</span> issues a warning if the commit log message given to it
+           does not look like a valid UTF-8 string, unless you explicitly say your project uses a
+           legacy encoding. The way to say this is to have <span style="font-weight:bold;color:#7f7f7f;">i18n.commitEncoding</span> in <span style="font-weight:bold;color:#7f7f7f;">.git/config</span> file,
+           like this:
+
+               [i18n]
+                       commitEncoding = ISO-8859-1
+
+           Commit objects created with the above setting record the value of <span style="font-weight:bold;color:#7f7f7f;">i18n.commitEncoding</span> in
+           its <span style="font-weight:bold;color:#7f7f7f;">encoding</span> header. This is to help other people who look at them later. Lack of this
+           header implies that the commit log message is encoded in UTF-8.
+
+        2. <span style="text-decoration:underline;">git</span> <span style="text-decoration:underline;">log</span>, <span style="text-decoration:underline;">git</span> <span style="text-decoration:underline;">show</span>, <span style="text-decoration:underline;">git</span> <span style="text-decoration:underline;">blame</span> and friends look at the <span style="font-weight:bold;color:#7f7f7f;">encoding</span> header of a commit object,
+           and try to re-code the log message into UTF-8 unless otherwise specified. You can specify
+           the desired output encoding with <span style="font-weight:bold;color:#7f7f7f;">i18n.logOutputEncoding</span> in <span style="font-weight:bold;color:#7f7f7f;">.git/config</span> file, like this:
+
+               [i18n]
+                       logOutputEncoding = ISO-8859-1
+
+<span style="color:#000000;background-color:#000000;">           If you do not have this configuration variable, the value of </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">i18n.commitEncoding</span> is used
+           instead.
+
+       Note that we deliberately chose not to re-code the commit log message when a commit is made
+       to force UTF-8 at the commit object level, because re-coding to UTF-8 is not necessarily a
+       reversible operation.
+
+<span style="font-weight:bold;color:#7f7f7f;">ENVIRONMENT</span> <span style="font-weight:bold;color:#7f7f7f;">AND</span> <span style="font-weight:bold;color:#7f7f7f;">CONFIGURATION</span> <span style="font-weight:bold;color:#7f7f7f;">VARIABLES</span>
+       The editor used to edit the commit log message will be chosen from the <span style="font-weight:bold;color:#7f7f7f;">GIT_EDITOR</span> environment
+       variable, the core.editor configuration variable, the <span style="font-weight:bold;color:#7f7f7f;">VISUAL</span> environment variable, or the
+       <span style="font-weight:bold;color:#7f7f7f;">EDITOR</span> environment variable (in that order). See <span style="font-weight:bold;color:#7f7f7f;">git-var</span>(1) for details.
+
+       Everything above this line in this section isn’t included from the <span style="font-weight:bold;color:#7f7f7f;">git-config</span>(1)
+       documentation. The content that follows is the same as what’s found there:
+
+       commit.cleanup
+           This setting overrides the default of the <span style="font-weight:bold;color:#7f7f7f;">--cleanup</span> option in <span style="font-weight:bold;color:#7f7f7f;">git</span> <span style="font-weight:bold;color:#7f7f7f;">commit</span>. See <span style="font-weight:bold;color:#7f7f7f;">git-</span>
+           <span style="font-weight:bold;color:#7f7f7f;">commit</span>(1) for details. Changing the default can be useful when you always want to keep
+           lines that begin with comment character <span style="font-weight:bold;color:#7f7f7f;">#</span> in your log message, in which case you would do
+           <span style="font-weight:bold;color:#7f7f7f;">git</span> <span style="font-weight:bold;color:#7f7f7f;">config</span> <span style="font-weight:bold;color:#7f7f7f;">commit.cleanup</span> <span style="font-weight:bold;color:#7f7f7f;">whitespace</span> (note that you will have to remove the help lines
+           that begin with <span style="font-weight:bold;color:#7f7f7f;">#</span> in the commit log template yourself, if you do this).
+
+       commit.gpgSign
+           A boolean to specify whether all commits should be GPG signed. Use of this option when
+<span style="color:#000000;background-color:#000000;">           doing operations such as rebase can result in a large number of commits being signed. It</span>round-color:#000000;">
+           may be convenient to use an agent to avoid typing your GPG passphrase several times.
+
+       commit.status
+           A boolean to enable/disable inclusion of status information in the commit message
+           template when using an editor to prepare the commit message. Defaults to true.
+
+       commit.template
+           Specify the pathname of a file to use as the template for new commit messages.
+
+       commit.verbose
+           A boolean or int to specify the level of verbose with <span style="font-weight:bold;color:#7f7f7f;">git</span> <span style="font-weight:bold;color:#7f7f7f;">commit</span>. See <span style="font-weight:bold;color:#7f7f7f;">git-commit</span>(1).
+
+<span style="font-weight:bold;color:#7f7f7f;">HOOKS</span>
+       This command can run <span style="font-weight:bold;color:#7f7f7f;">commit-msg</span>, <span style="font-weight:bold;color:#7f7f7f;">prepare-commit-msg</span>, <span style="font-weight:bold;color:#7f7f7f;">pre-commit</span>, <span style="font-weight:bold;color:#7f7f7f;">post-commit</span> and <span style="font-weight:bold;color:#7f7f7f;">post-rewrite</span>
+       hooks. See <span style="font-weight:bold;color:#7f7f7f;">githooks</span>(5) for more information.
+
+<span style="font-weight:bold;color:#7f7f7f;">FILES</span>
+       <span style="font-weight:bold;color:#7f7f7f;">$GIT_DIR/COMMIT_EDITMSG</span>
+           This file contains the commit message of a commit in progress. If <span style="font-weight:bold;color:#7f7f7f;">git</span> <span style="font-weight:bold;color:#7f7f7f;">commit</span> exits due to
+           an error before creating a commit, any commit message that has been provided by the user
+           (e.g., in an editor session) will be available in this file, but will be overwritten by
+           the next invocation of <span style="font-weight:bold;color:#7f7f7f;">git</span> <span style="font-weight:bold;color:#7f7f7f;">commit</span>.
+
+<span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">SEE</span> <span style="font-weight:bold;color:#7f7f7f;">ALSO</span>
+       <span style="font-weight:bold;color:#7f7f7f;">git-add</span>(1), <span style="font-weight:bold;color:#7f7f7f;">git-rm</span>(1), <span style="font-weight:bold;color:#7f7f7f;">git-mv</span>(1), <span style="font-weight:bold;color:#7f7f7f;">git-merge</span>(1), <span style="font-weight:bold;color:#7f7f7f;">git-commit-tree</span>(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">GIT</span>
+       Part of the <span style="font-weight:bold;color:#7f7f7f;">git</span>(1) suite
+
+Git 2.39.5                                   01/11/2025                                GIT-COMMIT(1)
+<span style="color:#000000;background-color:#000000;"> Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span><span style="color:#000000;background-color:#000000;"> Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS24/lektion4it(1) line 536/559 (END) (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion4
+</span>$ man ssh-keygen
+SSH-KEYGEN(1)                        BSD General Commands Manual                       SSH-KEYGEN(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> — OpenSSH authentication key utility
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> [<span style="font-weight:bold;color:#7f7f7f;">-q</span>] [<span style="font-weight:bold;color:#7f7f7f;">-a</span> <span style="text-decoration:underline;">rounds</span>] [<span style="font-weight:bold;color:#7f7f7f;">-b</span> <span style="text-decoration:underline;">bits</span>] [<span style="font-weight:bold;color:#7f7f7f;">-C</span> <span style="text-decoration:underline;">comment</span>] [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">output_keyfile</span>] [<span style="font-weight:bold;color:#7f7f7f;">-m</span> <span style="text-decoration:underline;">format</span>]
+                [<span style="font-weight:bold;color:#7f7f7f;">-N</span> <span style="text-decoration:underline;">new_passphrase</span>] [<span style="font-weight:bold;color:#7f7f7f;">-O</span> <span style="text-decoration:underline;">option</span>]
+                [<span style="font-weight:bold;color:#7f7f7f;">-t</span> <span style="font-weight:bold;color:#7f7f7f;">dsa</span> | <span style="font-weight:bold;color:#7f7f7f;">ecdsa</span> | <span style="font-weight:bold;color:#7f7f7f;">ecdsa-sk</span> | <span style="font-weight:bold;color:#7f7f7f;">ed25519</span> | <span style="font-weight:bold;color:#7f7f7f;">ed25519-sk</span> | <span style="font-weight:bold;color:#7f7f7f;">rsa</span>] [<span style="font-weight:bold;color:#7f7f7f;">-w</span> <span style="text-decoration:underline;">provider</span>] [<span style="font-weight:bold;color:#7f7f7f;">-Z</span> <span style="text-decoration:underline;">cipher</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-p</span> [<span style="font-weight:bold;color:#7f7f7f;">-a</span> <span style="text-decoration:underline;">rounds</span>] [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">keyfile</span>] [<span style="font-weight:bold;color:#7f7f7f;">-m</span> <span style="text-decoration:underline;">format</span>] [<span style="font-weight:bold;color:#7f7f7f;">-N</span> <span style="text-decoration:underline;">new_passphrase</span>] [<span style="font-weight:bold;color:#7f7f7f;">-P</span> <span style="text-decoration:underline;">old_passphrase</span>]
+                [<span style="font-weight:bold;color:#7f7f7f;">-Z</span> <span style="text-decoration:underline;">cipher</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-i</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_keyfile</span>] [<span style="font-weight:bold;color:#7f7f7f;">-m</span> <span style="text-decoration:underline;">key_format</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-e</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_keyfile</span>] [<span style="font-weight:bold;color:#7f7f7f;">-m</span> <span style="text-decoration:underline;">key_format</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-y</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_keyfile</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-c</span> [<span style="font-weight:bold;color:#7f7f7f;">-a</span> <span style="text-decoration:underline;">rounds</span>] [<span style="font-weight:bold;color:#7f7f7f;">-C</span> <span style="text-decoration:underline;">comment</span>] [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">keyfile</span>] [<span style="font-weight:bold;color:#7f7f7f;">-P</span> <span style="text-decoration:underline;">passphrase</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-l</span> [<span style="font-weight:bold;color:#7f7f7f;">-v</span>] [<span style="font-weight:bold;color:#7f7f7f;">-E</span> <span style="text-decoration:underline;">fingerprint_hash</span>] [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_keyfile</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-B</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_keyfile</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-D</span> <span style="text-decoration:underline;">pkcs11</span>
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-F</span> <span style="text-decoration:underline;">hostname</span> [<span style="font-weight:bold;color:#7f7f7f;">-lv</span>] [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">known_hosts_file</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-H</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">known_hosts_file</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-K</span> [<span style="font-weight:bold;color:#7f7f7f;">-a</span> <span style="text-decoration:underline;">rounds</span>] [<span style="font-weight:bold;color:#7f7f7f;">-w</span> <span style="text-decoration:underline;">provider</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-R</span> <span style="text-decoration:underline;">hostname</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">known_hosts_file</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-r</span> <span style="text-decoration:underline;">hostname</span> [<span style="font-weight:bold;color:#7f7f7f;">-g</span>] [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_keyfile</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-M</span> <span style="font-weight:bold;color:#7f7f7f;">generate</span> [<span style="font-weight:bold;color:#7f7f7f;">-O</span> <span style="text-decoration:underline;">option</span>] <span style="text-decoration:underline;">output_file</span>
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS24/lektion4e="color:#000000;background-color:#000000;">
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion4
+$ cat -h ls
+e
+jsan
+cat: invalid option -- &apos;h&apos;
+Try &apos;cat --help&apos; for more information.
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+cat -hejsa-hejsa-hejsa -hejsa
+
+
+
+
+
+
+
+
+
+
+
+cat: -hejsan: No such file or directory
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+<span style="color:#5c5cff;">:#5c5cff;">DEVOPS24/lektion4
+</span>$ cat --hejsa
+cat: unrecognized option &apos;--hejsan&apos;
+Try &apos;cat --help&apos; for more information.
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ cat --hejsa-hejsa-hejsa --hejsa
+Minusminus hejsan
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+<span style="color:#5c5cff;">="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ cat -- --
+Minusminus!
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion4
+</span>$ ls -l
+total 16
+-rw-r--r-- 1 kent kent   12 Apr 23 10:22 --
+-rw-r--r-- 1 kent kent   18 Apr 23 10:21 --hejsan
+-rw-r--r-- 1 kent kent    8 Apr 23 10:23 -l
+drwxr-xr-x 2 kent kent 4096 Apr 23 10:08 recordings
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+<span style="color:#5c5cff;">"color:#5c5cff;">DEVOPS24/lektion4
+</span>$ ls -- -
+-l
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+<span style="color:#5c5cff;">="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ ls -l -- -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-rw-r--r-- 1 kent kent 8 Apr 23 10:23 -l
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion4
+</span>$ python3 --.ph
+ej.py 
+unknown option --hej.py
+usage: python3 [option] ... [-c cmd | -m mod | file | -] [arg] ...
+Try `python -h&apos; for more information.
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ python3 --hej.py 
+Minuuuuus! Minuuus!
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion4
+</span>$ man python
+3
+
+PYTHON(1)                              General Commands Manual                             PYTHON(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       python - an interpreted, interactive, object-oriented programming language
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">python</span> [ <span style="font-weight:bold;color:#7f7f7f;">-B</span> ] [ <span style="font-weight:bold;color:#7f7f7f;">-b</span> ] [ <span style="font-weight:bold;color:#7f7f7f;">-d</span> ] [ <span style="font-weight:bold;color:#7f7f7f;">-E</span> ] [ <span style="font-weight:bold;color:#7f7f7f;">-h</span> ] [ <span style="font-weight:bold;color:#7f7f7f;">-i</span> ] [ <span style="font-weight:bold;color:#7f7f7f;">-I</span> ]
+              [ <span style="font-weight:bold;color:#7f7f7f;">-m</span> <span style="text-decoration:underline;">module-name</span> ] [ <span style="font-weight:bold;color:#7f7f7f;">-q</span> ] [ <span style="font-weight:bold;color:#7f7f7f;">-O</span> ] [ <span style="font-weight:bold;color:#7f7f7f;">-OO</span> ] [ <span style="font-weight:bold;color:#7f7f7f;">-P</span> ] [ <span style="font-weight:bold;color:#7f7f7f;">-s</span> ] [ <span style="font-weight:bold;color:#7f7f7f;">-S</span> ] [ <span style="font-weight:bold;color:#7f7f7f;">-u</span> ]
+              [ <span style="font-weight:bold;color:#7f7f7f;">-v</span> ] [ <span style="font-weight:bold;color:#7f7f7f;">-V</span> ] [ <span style="font-weight:bold;color:#7f7f7f;">-W</span> <span style="text-decoration:underline;">argument</span> ] [ <span style="font-weight:bold;color:#7f7f7f;">-x</span> ] [ <span style="font-weight:bold;color:#7f7f7f;">-X</span> <span style="text-decoration:underline;">option</span> ] [ <span style="font-weight:bold;color:#7f7f7f;">-?</span>  ]
+              [ <span style="font-weight:bold;color:#7f7f7f;">--check-hash-based-pycs</span> <span style="text-decoration:underline;">default</span> | <span style="text-decoration:underline;">always</span> | <span style="text-decoration:underline;">never</span> ]
+              [ <span style="font-weight:bold;color:#7f7f7f;">--help</span> ] [ <span style="font-weight:bold;color:#7f7f7f;">--help-env</span> ] [ <span style="font-weight:bold;color:#7f7f7f;">--help-xoptions</span> ] [ <span style="font-weight:bold;color:#7f7f7f;">--help-all</span> ]
+              [ <span style="font-weight:bold;color:#7f7f7f;">-c</span> <span style="text-decoration:underline;">command</span> | <span style="text-decoration:underline;">script</span> | - ] [ <span style="text-decoration:underline;">arguments</span> ]
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       Python is an interpreted, interactive, object-oriented programming language that combines re‐
+<span style="color:#000000;background-color:#000000;">       markable power with very clear syntax.  For an introduction to programming in Python, see the</span>color:#000000;">
+<span style="color:#000000;background-color:#000000;">       Python  Tutorial.   The  Python Library Reference documents built-in and standard types, con‐</span>lor:#000000;">
+<span style="color:#000000;background-color:#000000;">       stants, functions and modules.  Finally, the Python Reference Manual describes the syntax and</span>color:#000000;">
+<span style="color:#000000;background-color:#000000;">       semantics of the core language in (perhaps too) much detail.  (These documents may be located</span>color:#000000;">
+<span style="color:#000000;background-color:#000000;">       via the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">INTERNET</span> <span style="font-weight:bold;color:#7f7f7f;">RESOURCES</span> below; they may be installed on your system as well.)
+<span style="color:#000000;background-color:#000000;"></span>Bpage python3(1) line 6 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       Python&apos;s basic power can be extended with your own modules written in C or C++.  On most sys‐</span>000000;">
+<span style="color:#000000;background-color:#000000;">       tems  such  modules may be dynamically loaded.  Python is also adaptable as an extension lan‐</span>lor:#000000;">
+<span style="color:#000000;background-color:#000000;">       guage for existing applications.  See the internal documentation for hints.</span>000000;background-color:#000000;">
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS24/lektion4"color:#000000;background-color:#000000;">
+</span>$ python3 -c --h
+ej.py 
+Traceback (most recent call last):
+  File &quot;&lt;string&gt;&quot;, line 1, in &lt;module&gt;
+NameError: name &apos;hej&apos; is not defined. Did you mean: &apos;hex&apos;?
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ python3 -c --hej.py --hej.p --hej.p- --hej.p- --hej.p
+Minuuuuus! Minuuus!
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+<span style="color:#5c5cff;">pan style="color:#5c5cff;">DEVOPS24/lektion4
+<span style="color:#5c5cff;">v<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ python3 -v -- --hej.p
+import _frozen_importlib # frozen
+import _imp # builtin
+import &apos;_thread&apos; # &lt;class &apos;_frozen_importlib.BuiltinImporter&apos;&gt;
+import &apos;_warnings&apos; # &lt;class &apos;_frozen_importlib.BuiltinImporter&apos;&gt;
+import &apos;_weakref&apos; # &lt;class &apos;_frozen_importlib.BuiltinImporter&apos;&gt;
+import &apos;_io&apos; # &lt;class &apos;_frozen_importlib.BuiltinImporter&apos;&gt;
+import &apos;marshal&apos; # &lt;class &apos;_frozen_importlib.BuiltinImporter&apos;&gt;
+import &apos;posix&apos; # &lt;class &apos;_frozen_importlib.BuiltinImporter&apos;&gt;
+import &apos;_frozen_importlib_external&apos; # &lt;class &apos;_frozen_importlib.FrozenImporter&apos;&gt;
+# installing zipimport hook
+import &apos;time&apos; # &lt;class &apos;_frozen_importlib.BuiltinImporter&apos;&gt;
+import &apos;zipimport&apos; # &lt;class &apos;_frozen_importlib.FrozenImporter&apos;&gt;
+# installed zipimport hook
+# /usr/lib/python3.11/encodings/__pycache__/__init__.cpython-311.pyc matches /usr/lib/python3.11/encodings/__init__.py
+# code object from &apos;/usr/lib/python3.11/encodings/__pycache__/__init__.cpython-311.pyc&apos;
+import &apos;_codecs&apos; # &lt;class &apos;_frozen_importlib.BuiltinImporter&apos;&gt;
+import &apos;codecs&apos; # &lt;class &apos;_frozen_importlib.FrozenImporter&apos;&gt;
+# /usr/lib/python3.11/encodings/__pycache__/aliases.cpython-311.pyc matches /usr/lib/python3.11/encodings/aliases.py
+# code object from &apos;/usr/lib/python3.11/encodings/__pycache__/aliases.cpython-311.pyc&apos;
+import &apos;encodings.aliases&apos; # &lt;_frozen_importlib_external.SourceFileLoader object at 0x7ff33e5ea310&gt;
+import &apos;encodings&apos; # &lt;_frozen_importlib_external.SourceFileLoader object at 0x7ff33e5de750&gt;
+# /usr/lib/python3.11/encodings/__pycache__/utf_8.cpython-311.pyc matches /usr/lib/python3.11/encodings/utf_8.py
+# code object from &apos;/usr/lib/python3.11/encodings/__pycache__/utf_8.cpython-311.pyc&apos;
+import &apos;encodings.utf_8&apos; # &lt;_frozen_importlib_external.SourceFileLoader object at 0x7ff33e5def50&gt;
+import &apos;_signal&apos; # &lt;class &apos;_frozen_importlib.BuiltinImporter&apos;&gt;
+import &apos;_abc&apos; # &lt;class &apos;_frozen_importlib.BuiltinImporter&apos;&gt;
+import &apos;abc&apos; # &lt;class &apos;_frozen_importlib.FrozenImporter&apos;&gt;
+import &apos;io&apos; # &lt;class &apos;_frozen_importlib.FrozenImporter&apos;&gt;
+import &apos;_stat&apos; # &lt;class &apos;_frozen_importlib.BuiltinImporter&apos;&gt;
+import &apos;stat&apos; # &lt;class &apos;_frozen_importlib.FrozenImporter&apos;&gt;
+import &apos;_collections_abc&apos; # &lt;class &apos;_frozen_importlib.FrozenImporter&apos;&gt;
+import &apos;genericpath&apos; # &lt;class &apos;_frozen_importlib.FrozenImporter&apos;&gt;
+import &apos;posixpath&apos; # &lt;class &apos;_frozen_importlib.FrozenImporter&apos;&gt;
+import &apos;os&apos; # &lt;class &apos;_frozen_importlib.FrozenImporter&apos;&gt;
+import &apos;_sitebuiltins&apos; # &lt;class &apos;_frozen_importlib.FrozenImporter&apos;&gt;
+Processing user site-packages
+Processing global site-packages
+Adding directory: &apos;/usr/local/lib/python3.11/dist-packages&apos;
+Adding directory: &apos;/usr/lib/python3/dist-packages&apos;
+Processing .pth file: &apos;/usr/lib/python3/dist-packages/distutils-precedence.pth&apos;
+# /usr/lib/python3/dist-packages/_distutils_hack/__pycache__/__init__.cpython-311.pyc matches /usr/lib/python3/dist-packages/_distutils_hack/__init__.py
+# code object from &apos;/usr/lib/python3/dist-packages/_distutils_hack/__pycache__/__init__.cpython-311.pyc&apos;
+import &apos;_distutils_hack&apos; # &lt;_frozen_importlib_external.SourceFileLoader object at 0x7ff33e3d3f10&gt;
+Processing .pth file: &apos;/usr/lib/python3/dist-packages/ruamel.yaml-0.17.21-nspkg.pth&apos;
+# /usr/lib/python3.11/__pycache__/types.cpython-311.pyc matches /usr/lib/python3.11/types.py
+# code object from &apos;/usr/lib/python3.11/__pycache__/types.cpython-311.pyc&apos;
+import &apos;types&apos; # &lt;_frozen_importlib_external.SourceFileLoader object at 0x7ff33e3e1910&gt;
+# /usr/lib/python3.11/importlib/__pycache__/__init__.cpython-311.pyc matches /usr/lib/python3.11/importlib/__init__.py
+# code object from &apos;/usr/lib/python3.11/importlib/__pycache__/__init__.cpython-311.pyc&apos;
+# /usr/lib/python3.11/__pycache__/warnings.cpython-311.pyc matches /usr/lib/python3.11/warnings.py
+# code object from &apos;/usr/lib/python3.11/__pycache__/warnings.cpython-311.pyc&apos;
+import &apos;warnings&apos; # &lt;_frozen_importlib_external.SourceFileLoader object at 0x7ff33e3e3610&gt;
+import &apos;importlib&apos; # &lt;_frozen_importlib_external.SourceFileLoader object at 0x7ff33e3e2cd0&gt;
+# /usr/lib/python3.11/importlib/__pycache__/_abc.cpython-311.pyc matches /usr/lib/python3.11/importlib/_abc.py
+# code object from &apos;/usr/lib/python3.11/importlib/__pycache__/_abc.cpython-311.pyc&apos;
+import &apos;importlib._abc&apos; # &lt;_frozen_importlib_external.SourceFileLoader object at 0x7ff33e3fd890&gt;
+# /usr/lib/python3.11/__pycache__/contextlib.cpython-311.pyc matches /usr/lib/python3.11/contextlib.py
+# code object from &apos;/usr/lib/python3.11/__pycache__/contextlib.cpython-311.pyc&apos;
+# /usr/lib/python3.11/collections/__pycache__/__init__.cpython-311.pyc matches /usr/lib/python3.11/collections/__init__.py
+# code object from &apos;/usr/lib/python3.11/collections/__pycache__/__init__.cpython-311.pyc&apos;
+import &apos;itertools&apos; # &lt;class &apos;_frozen_importlib.BuiltinImporter&apos;&gt;
+# /usr/lib/python3.11/__pycache__/keyword.cpython-311.pyc matches /usr/lib/python3.11/keyword.py
+# code object from &apos;/usr/lib/python3.11/__pycache__/keyword.cpython-311.pyc&apos;
+import &apos;keyword&apos; # &lt;_frozen_importlib_external.SourceFileLoader object at 0x7ff33e423090&gt;
+# /usr/lib/python3.11/__pycache__/operator.cpython-311.pyc matches /usr/lib/python3.11/operator.py
+# code object from &apos;/usr/lib/python3.11/__pycache__/operator.cpython-311.pyc&apos;
+import &apos;_operator&apos; # &lt;class &apos;_frozen_importlib.BuiltinImporter&apos;&gt;
+import &apos;operator&apos; # &lt;_frozen_importlib_external.SourceFileLoader object at 0x7ff33e423b50&gt;
+# /usr/lib/python3.11/__pycache__/reprlib.cpython-311.pyc matches /usr/lib/python3.11/reprlib.py
+# code object from &apos;/usr/lib/python3.11/__pycache__/reprlib.cpython-311.pyc&apos;
+import &apos;reprlib&apos; # &lt;_frozen_importlib_external.SourceFileLoader object at 0x7ff33e4347d0&gt;
+import &apos;_collections&apos; # &lt;class &apos;_frozen_importlib.BuiltinImporter&apos;&gt;
+import &apos;collections&apos; # &lt;_frozen_importlib_external.SourceFileLoader object at 0x7ff33e3fe950&gt;
+# /usr/lib/python3.11/__pycache__/functools.cpython-311.pyc matches /usr/lib/python3.11/functools.py
+# code object from &apos;/usr/lib/python3.11/__pycache__/functools.cpython-311.pyc&apos;
+import &apos;_functools&apos; # &lt;class &apos;_frozen_importlib.BuiltinImporter&apos;&gt;
+import &apos;functools&apos; # &lt;_frozen_importlib_external.SourceFileLoader object at 0x7ff33e40d9d0&gt;
+import &apos;contextlib&apos; # &lt;_frozen_importlib_external.SourceFileLoader object at 0x7ff33e3e3450&gt;
+import &apos;importlib.util&apos; # &lt;class &apos;_frozen_importlib.FrozenImporter&apos;&gt;
+import &apos;importlib.machinery&apos; # &lt;class &apos;_frozen_importlib.FrozenImporter&apos;&gt;
+# possible namespace for /usr/lib/python3/dist-packages/ruamel
+Adding directory: &apos;/usr/lib/python3.11/dist-packages&apos;
+# /usr/lib/python3.11/__pycache__/sitecustomize.cpython-311.pyc matches /usr/lib/python3.11/sitecustomize.py
+# code object from &apos;/usr/lib/python3.11/__pycache__/sitecustomize.cpython-311.pyc&apos;
+import &apos;sitecustomize&apos; # &lt;_frozen_importlib_external.SourceFileLoader object at 0x7ff33e3e17d0&gt;
+import &apos;site&apos; # &lt;class &apos;_frozen_importlib.FrozenImporter&apos;&gt;
+Python 3.11.2 (main, Nov 30 2024, 21:22:50) [GCC 12.2.0] on linux
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+Minuuuuus! Minuuus!
+# clear builtins._
+# clear sys.path
+# clear sys.argv
+# clear sys.ps1
+# clear sys.ps2
+# clear sys.last_type
+# clear sys.last_value
+# clear sys.last_traceback
+# clear sys.path_hooks
+# clear sys.path_importer_cache
+# clear sys.meta_path
+# clear sys.__interactivehook__
+# restore sys.stdin
+# restore sys.stdout
+# restore sys.stderr
+# cleanup[2] removing sys
+# cleanup[2] removing builtins
+# cleanup[2] removing _frozen_importlib
+# cleanup[2] removing _imp
+# cleanup[2] removing _thread
+# cleanup[2] removing _warnings
+# cleanup[2] removing _weakref
+# cleanup[2] removing _io
+# cleanup[2] removing marshal
+# cleanup[2] removing posix
+# cleanup[2] removing _frozen_importlib_external
+# cleanup[2] removing time
+# cleanup[2] removing zipimport
+# destroy zipimport
+# cleanup[2] removing _codecs
+# cleanup[2] removing codecs
+# cleanup[2] removing encodings.aliases
+# cleanup[2] removing encodings
+# destroy encodings
+# cleanup[2] removing encodings.utf_8
+# cleanup[2] removing _signal
+# cleanup[2] removing _abc
+# cleanup[2] removing abc
+# cleanup[2] removing io
+# cleanup[2] removing __main__
+# destroy __main__
+# cleanup[2] removing _stat
+# cleanup[2] removing stat
+# cleanup[2] removing _collections_abc
+# cleanup[2] removing genericpath
+# cleanup[2] removing posixpath
+# cleanup[2] removing os.path
+# cleanup[2] removing os
+# cleanup[2] removing _sitebuiltins
+# cleanup[2] removing _distutils_hack
+# destroy _distutils_hack
+# cleanup[2] removing types
+# cleanup[2] removing importlib._bootstrap
+# cleanup[2] removing importlib._bootstrap_external
+# cleanup[2] removing warnings
+# cleanup[2] removing importlib
+# destroy importlib
+# cleanup[2] removing importlib._abc
+# cleanup[2] removing itertools
+# cleanup[2] removing keyword
+# destroy keyword
+# cleanup[2] removing _operator
+# cleanup[2] removing operator
+# destroy operator
+# cleanup[2] removing reprlib
+# destroy reprlib
+# cleanup[2] removing _collections
+# cleanup[2] removing collections
+# destroy collections
+# cleanup[2] removing _functools
+# cleanup[2] removing functools
+# cleanup[2] removing contextlib
+# destroy contextlib
+# cleanup[2] removing importlib.util
+# cleanup[2] removing importlib.machinery
+# cleanup[2] removing ruamel
+# destroy ruamel
+# cleanup[2] removing sitecustomize
+# destroy sitecustomize
+# cleanup[2] removing site
+# destroy site
+# destroy _signal
+# destroy _sitebuiltins
+# destroy io
+# destroy importlib._abc
+# destroy importlib.util
+# destroy importlib.machinery
+# destroy functools
+# destroy types
+# destroy warnings
+# destroy _collections_abc
+# destroy itertools
+# destroy _operator
+# destroy _collections
+# destroy _functools
+# cleanup[3] wiping importlib._bootstrap_external
+# cleanup[3] wiping importlib._bootstrap
+# cleanup[3] wiping os
+# destroy abc
+# destroy posixpath
+# cleanup[3] wiping genericpath
+# cleanup[3] wiping stat
+# cleanup[3] wiping _stat
+# destroy _stat
+# cleanup[3] wiping _abc
+# cleanup[3] wiping encodings.utf_8
+# cleanup[3] wiping encodings.aliases
+# cleanup[3] wiping codecs
+# cleanup[3] wiping _codecs
+# cleanup[3] wiping time
+# cleanup[3] wiping _frozen_importlib_external
+# cleanup[3] wiping posix
+# cleanup[3] wiping marshal
+# cleanup[3] wiping _io
+# cleanup[3] wiping _weakref
+# destroy _weakref
+# cleanup[3] wiping _warnings
+# cleanup[3] wiping _thread
+# cleanup[3] wiping _imp
+# cleanup[3] wiping _frozen_importlib
+# cleanup[3] wiping sys
+# cleanup[3] wiping builtins
+# destroy _thread
+# destroy _frozen_importlib_external
+# destroy _imp
+# destroy io
+# destroy marshal
+# destroy time
+# destroy _warnings
+# destroy os
+# destroy stat
+# destroy genericpath
+# destroy posix
+# destroy _abc
+# destroy _frozen_importlib
+# destroy codecs
+# destroy sys
+# destroy encodings.aliases
+# destroy encodings.utf_8
+# destroy _codecs
+# destroy builtins
+# clear sys.audit hooks
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+<span style="color:#5c5cff;">py<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ python3 -v -- --hej.pyq^C
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion4
+</span>$ man cat
+CAT(1)                                      User Commands                                     CAT(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       cat - concatenate files and print on the standard output
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">cat</span> [<span style="text-decoration:underline;">OPTION</span>]... [<span style="text-decoration:underline;">FILE</span>]...
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       Concatenate FILE(s) to standard output.
+
+       With no FILE, or when FILE is -, read standard input.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-A</span>, <span style="font-weight:bold;color:#7f7f7f;">--show-all</span>
+              equivalent to <span style="font-weight:bold;color:#7f7f7f;">-vET</span>
+<span style="color:#000000;background-color:#000000;"> Manual page cat(1) line 1 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">...skipping...
+CAT(1)                                      User Commands                                     CAT(1)</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       cat - concatenate files and print on the standard output
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">cat</span> [<span style="text-decoration:underline;">OPTION</span>]... [<span style="text-decoration:underline;">FILE</span>]...
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       Concatenate FILE(s) to standard output.
+
+       With no FILE, or when FILE is -, read standard input.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-A</span>, <span style="font-weight:bold;color:#7f7f7f;">--show-all</span>
+              equivalent to <span style="font-weight:bold;color:#7f7f7f;">-vET</span>
+
+<span style="color:#000000;background-color:#000000;"> Manual page cat(1) line 1 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">...skipping...
+CAT(1)                                      User Commands                                     CAT(1)</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       cat - concatenate files and print on the standard output
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">cat</span> [<span style="text-decoration:underline;">OPTION</span>]... [<span style="text-decoration:underline;">FILE</span>]...
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       Concatenate FILE(s) to standard output.
+
+       With no FILE, or when FILE is -, read standard input.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-A</span>, <span style="font-weight:bold;color:#7f7f7f;">--show-all</span>
+              equivalent to <span style="font-weight:bold;color:#7f7f7f;">-vET</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">-b</span>, <span style="font-weight:bold;color:#7f7f7f;">--number-nonblank</span>
+<span style="color:#000000;background-color:#000000;"> Manual page cat(1) line 1 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">...skipping...
+CAT(1)                                      User Commands                                     CAT(1)</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       cat - concatenate files and print on the standard output
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">cat</span> [<span style="text-decoration:underline;">OPTION</span>]... [<span style="text-decoration:underline;">FILE</span>]...
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       Concatenate FILE(s) to standard output.
+
+       With no FILE, or when FILE is -, read standard input.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-A</span>, <span style="font-weight:bold;color:#7f7f7f;">--show-all</span>
+              equivalent to <span style="font-weight:bold;color:#7f7f7f;">-vET</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">-b</span>, <span style="font-weight:bold;color:#7f7f7f;">--number-nonblank</span>
+              number nonempty output lines, overrides <span style="font-weight:bold;color:#7f7f7f;">-n</span>
+
+<span style="color:#000000;background-color:#000000;"> Manual page cat(1) line 1 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">...skipping...
+CAT(1)                                      User Commands                                     CAT(1)</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       cat - concatenate files and print on the standard output
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">cat</span> [<span style="text-decoration:underline;">OPTION</span>]... [<span style="text-decoration:underline;">FILE</span>]...
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       Concatenate FILE(s) to standard output.
+
+       With no FILE, or when FILE is -, read standard input.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-A</span>, <span style="font-weight:bold;color:#7f7f7f;">--show-all</span>
+              equivalent to <span style="font-weight:bold;color:#7f7f7f;">-vET</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">-b</span>, <span style="font-weight:bold;color:#7f7f7f;">--number-nonblank</span>
+              number nonempty output lines, overrides <span style="font-weight:bold;color:#7f7f7f;">-n</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">-e</span>     equivalent to <span style="font-weight:bold;color:#7f7f7f;">-vE</span>
+<span style="color:#000000;background-color:#000000;"> Manual page cat(1) line 1 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">...skipping...
+CAT(1)                                      User Commands                                     CAT(1)</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       cat - concatenate files and print on the standard output
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">cat</span> [<span style="text-decoration:underline;">OPTION</span>]... [<span style="text-decoration:underline;">FILE</span>]...
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       Concatenate FILE(s) to standard output.
+
+       With no FILE, or when FILE is -, read standard input.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-A</span>, <span style="font-weight:bold;color:#7f7f7f;">--show-all</span>
+              equivalent to <span style="font-weight:bold;color:#7f7f7f;">-vET</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">-b</span>, <span style="font-weight:bold;color:#7f7f7f;">--number-nonblank</span>
+              number nonempty output lines, overrides <span style="font-weight:bold;color:#7f7f7f;">-n</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">-e</span>     equivalent to <span style="font-weight:bold;color:#7f7f7f;">-vE</span>
+
+<span style="color:#000000;background-color:#000000;"> Manual page cat(1) line 1 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">...skipping...
+CAT(1)                                      User Commands                                     CAT(1)</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       cat - concatenate files and print on the standard output
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">cat</span> [<span style="text-decoration:underline;">OPTION</span>]... [<span style="text-decoration:underline;">FILE</span>]...
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       Concatenate FILE(s) to standard output.
+
+       With no FILE, or when FILE is -, read standard input.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-A</span>, <span style="font-weight:bold;color:#7f7f7f;">--show-all</span>
+              equivalent to <span style="font-weight:bold;color:#7f7f7f;">-vET</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">-b</span>, <span style="font-weight:bold;color:#7f7f7f;">--number-nonblank</span>
+              number nonempty output lines, overrides <span style="font-weight:bold;color:#7f7f7f;">-n</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">-e</span>     equivalent to <span style="font-weight:bold;color:#7f7f7f;">-vE</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">-E</span>, <span style="font-weight:bold;color:#7f7f7f;">--show-ends</span>
+<span style="color:#000000;background-color:#000000;">              display $ at end of each line</span>to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage cat(1) line 2 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-n</span>, <span style="font-weight:bold;color:#7f7f7f;">--number</span>
+<span style="color:#000000;background-color:#000000;">              number all output lines</span> or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage cat(1) line 5 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-s</span>, <span style="font-weight:bold;color:#7f7f7f;">--squeeze-blank</span>
+<span style="color:#000000;background-color:#000000;">              suppress repeated empty output lines</span>)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage cat(1) line 8 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-t</span>     equivalent to <span style="font-weight:bold;color:#7f7f7f;">-vT</span>
+<span style="color:#000000;background-color:#000000;"></span>Bpage cat(1) line 10 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-T</span>, <span style="font-weight:bold;color:#7f7f7f;">--show-tabs</span>
+<span style="color:#000000;background-color:#000000;">              display TAB characters as ^I</span>q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage cat(1) line 13 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-u</span>     (ignored)r:#000000;">
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS24/lektion4or:#000000;background-color:#000000;">
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion4
+</span>$ seq 1 120
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ nano nbollar.txt
+<span style="color:#5c5cff;">f;">DEVOPS24/lektion4rote 8 lines ]                                        Y Yes               bollar.txt                                            
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion4
+$ cat h$ 
+bollar.txt 
+fotboll
+basketboll
+handboll
+biljardboll
+baseboll
+bollkalle
+volleyboll
+
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ cat |
+
+
+
+<span style="color:#5c5cff;">5cff;">DEVOPS24/lektion4
+</span>$ echo hej | cat 
+
+hej
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ | |
+cat bo
+
+
+
+
+
+
+
+
+
+cat -
+hoppsan
+hoppsan
+mer
+mer
+mer
+mer
+mer
+mer
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+hejsanhejsahehejeijeiejiejiej^[[huhuhuhuh
+hhehejeijeiejiejihuhuhuhuh
+hej
+hej
+je
+je
+ej
+ej
+e
+e
+^C
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion4
+</span>$ man cat
+CAT(1)                                      User Commands                                     CAT(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       cat - concatenate files and print on the standard output
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">cat</span> [<span style="text-decoration:underline;">OPTION</span>]... [<span style="text-decoration:underline;">FILE</span>]...
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       Concatenate FILE(s) to standard output.
+
+       With no FILE, or when FILE is -, read standard input.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-A</span>, <span style="font-weight:bold;color:#7f7f7f;">--show-all</span>
+              equivalent to <span style="font-weight:bold;color:#7f7f7f;">-vET</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">-b</span>, <span style="font-weight:bold;color:#7f7f7f;">--number-nonblank</span>
+              number nonempty output lines, overrides <span style="font-weight:bold;color:#7f7f7f;">-n</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">-e</span>     equivalent to <span style="font-weight:bold;color:#7f7f7f;">-vE</span>
+ Manual page cat(1) line 1 (press h for help or q to quit)<span style="color:#000000;background-color:#000000;">
+CAT(1)                                      User Commands                                     CAT(1)</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       cat - concatenate files and print on the standard output
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">cat</span> [<span style="text-decoration:underline;">OPTION</span>]... [<span style="text-decoration:underline;">FILE</span>]...
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       Concatenate FILE(s) to standard output.
+
+       With no FILE, or when FILE is -, read standard input.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-A</span>, <span style="font-weight:bold;color:#7f7f7f;">--show-all</span>
+              equivalent to <span style="font-weight:bold;color:#7f7f7f;">-vET</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">-b</span>, <span style="font-weight:bold;color:#7f7f7f;">--number-nonblank</span>
+              number nonempty output lines, overrides <span style="font-weight:bold;color:#7f7f7f;">-n</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">-e</span>     equivalent to <span style="font-weight:bold;color:#7f7f7f;">-vE</span>
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS24/lektion4r:#000000;background-color:#000000;">
+</span>$ cat -
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ touch ballong
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ bba
+nanoi ballong 
+bash: nanoi: command not found
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ nanoi ballong
+<span style="color:#5c5cff;">f;">DEVOPS24/lektion4 2 lines ]                                            Y Yes                                  ballong                                              
+</span>$ cat b
+allong 
+ballong
+
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+cat - ballongballong 
+hh
+hh
+ii
+ii
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ sort fil | uniq | grep hej | tar - -o hej
+
+
+
+
+
+
+
+
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ mkdir minusminus
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion4
+</span>$ ls -ld
+drwxr-xr-x 4 kent kent 4096 Apr 23 10:47 .
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ ls 
+--  ballong  bollar.txt  --hej.py  --hejsan  -l  minusminus  recordings
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ ls
+mv -- -* minusminus/
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion4
+</span>$ ls minusminus/
+--  --hej.py  --hejsan	-l
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ 
+
+date
+Wed Apr 23 10:48:49 AM CEST 2025
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ mv b
+
+ballong     bollar.txt  
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ mv b* minusminus/
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion4
+</span>$ ls
+minusminus  recordings
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ ls
+minusminus  recordings
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ ls minusminus/ -l
+total 24
+-rw-r--r-- 1 kent kent 12 Apr 23 10:22 --
+-rw-r--r-- 1 kent kent  9 Apr 23 10:38 ballong
+-rw-r--r-- 1 kent kent 71 Apr 23 10:29 bollar.txt
+-rw-r--r-- 1 kent kent 29 Apr 23 10:25 --hej.py
+-rw-r--r-- 1 kent kent 18 Apr 23 10:21 --hejsan
+-rw-r--r-- 1 kent kent  8 Apr 23 10:23 -l
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ ls minusminus/ --
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ ls -l minusminus/
+total 24
+-rw-r--r-- 1 kent kent 12 Apr 23 10:22 --
+-rw-r--r-- 1 kent kent  9 Apr 23 10:38 ballong
+-rw-r--r-- 1 kent kent 71 Apr 23 10:29 bollar.txt
+-rw-r--r-- 1 kent kent 29 Apr 23 10:25 --hej.py
+-rw-r--r-- 1 kent kent 18 Apr 23 10:21 --hejsan
+-rw-r--r-- 1 kent kent  8 Apr 23 10:23 -l
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ ls -l minusminus minusminus- minusminus- minusminus^C
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ ls -
+
+
+
+
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ l
+ls -l
+total 8
+drwxr-xr-x 2 kent kent 4096 Apr 23 10:49 minusminus
+drwxr-xr-x 2 kent kent 4096 Apr 23 10:08 recordings
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ ls-l
+bash: ls-l: command not found
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion4
+</span>$ ls -la
+total 16
+drwxr-xr-x 4 kent kent 4096 Apr 23 10:49 .
+drwxr-xr-x 4 kent kent 4096 Apr 23 10:08 ..
+drwxr-xr-x 2 kent kent 4096 Apr 23 10:49 minusminus
+drwxr-xr-x 2 kent kent 4096 Apr 23 10:08 recordings
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ ls -ll
+total 16
+drwxr-xr-x 4 kent kent 4096 Apr 23 10:49 .
+drwxr-xr-x 4 kent kent 4096 Apr 23 10:08 ..
+drwxr-xr-x 2 kent kent 4096 Apr 23 10:49 minusminus
+drwxr-xr-x 2 kent kent 4096 Apr 23 10:08 recordings
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ ls -a -l
+total 16
+drwxr-xr-x 4 kent kent 4096 Apr 23 10:49 .
+drwxr-xr-x 4 kent kent 4096 Apr 23 10:08 ..
+drwxr-xr-x 2 kent kent 4096 Apr 23 10:49 minusminus
+drwxr-xr-x 2 kent kent 4096 Apr 23 10:08 recordings
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ ls -a - -l -
+a
+total 16
+drwxr-xr-x 4 kent kent 4096 Apr 23 10:49 .
+drwxr-xr-x 4 kent kent 4096 Apr 23 10:08 ..
+drwxr-xr-x 2 kent kent 4096 Apr 23 10:49 minusminus
+drwxr-xr-x 2 kent kent 4096 Apr 23 10:08 recordings
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion4
+</span>$ keoiek oke oek oe eo$
+
+
+
+
+
+
+
+ e e eO eK e
+^C
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+<span style="color:#5c5cff;">">DEVOPS24/lektion4
+</span>$ man bash
+BASH(1)                                General Commands Manual                               BASH(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       bash - GNU Bourne-Again SHell
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">bash</span> [options] [command_string | file]
+
+<span style="font-weight:bold;color:#7f7f7f;">COPYRIGHT</span>
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash</span>  is  an  <span style="font-weight:bold;color:#7f7f7f;">sh</span>-compatible command language interpreter that executes commands read from the
+       standard input or from a file.  <span style="font-weight:bold;color:#7f7f7f;">Bash</span> also incorporates useful features from the  <span style="text-decoration:underline;">Korn</span>  and  <span style="text-decoration:underline;">C</span>
+       shells (<span style="font-weight:bold;color:#7f7f7f;">ksh</span> and <span style="font-weight:bold;color:#7f7f7f;">csh</span>).
+
+       <span style="font-weight:bold;color:#7f7f7f;">Bash</span>  is intended to be a conformant implementation of the Shell and Utilities portion of the
+       IEEE POSIX specification (IEEE Standard 1003.1).  <span style="font-weight:bold;color:#7f7f7f;">Bash</span> can be configured to be  POSIX-confor‐
+       mant by default.
+
+<span style="font-weight:bold;color:#7f7f7f;">OPTIONS</span>
+       All  of  the  single-character shell options documented in the description of the <span style="font-weight:bold;color:#7f7f7f;">set</span> builtin
+       command, including <span style="font-weight:bold;color:#7f7f7f;">-o</span>, can be used as options when the shell is invoked.  In  addition,  <span style="font-weight:bold;color:#7f7f7f;">bash</span>
+       interprets the following options when it is invoked:
+<span style="color:#000000;background-color:#000000;">...skipping...le="color:#000000;background-color:#000000;">
+</span>
+       Comments   and   bug   reports   concerning   this   manual   page   should  be  directed  to
+       <span style="text-decoration:underline;">chet.ramey&#64;case.edu</span>.
+
+<span style="font-weight:bold;color:#7f7f7f;">BUGS</span>
+       It&apos;s too big and too slow.
+
+       There are some subtle differences between <span style="font-weight:bold;color:#7f7f7f;">bash</span> and traditional versions of <span style="font-weight:bold;color:#7f7f7f;">sh</span>, mostly because
+       of the <span style="font-weight:bold;color:#7f7f7f;">POSIX</span> specification.
+
+       Aliases are confusing in some uses.
+
+       Shell builtin commands and functions are not stoppable/restartable.
+
+       Compound  commands  and  command sequences of the form `a ; b ; c&apos; are not handled gracefully
+       when process suspension is attempted.  When a process is stopped, the shell immediately  exe‐
+       cutes  the  next  command in the sequence.  It suffices to place the sequence of commands be‐
+       tween parentheses to force it into a subshell, which may be stopped as a unit.
+
+       Array variables may not (yet) be exported.
+
+       There may be only one active coprocess at a time.
+
+GNU Bash 5.2                              2022 September 19                                  BASH(1)
+<span style="color:#000000;background-color:#000000;"> ESESCOBpage bash(1) line 5483/5506 (END) (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS24/lektion4line 5483/5506 (END) (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+</span>$ man bash
+BASH(1)                                General Commands Manual                               BASH(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       bash - GNU Bourne-Again SHell
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">bash</span> [options] [command_string | file]
+
+<span style="font-weight:bold;color:#7f7f7f;">COPYRIGHT</span>
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash</span>  is  an  <span style="font-weight:bold;color:#7f7f7f;">sh</span>-compatible command language interpreter that executes commands read from the
+       standard input or from a file.  <span style="font-weight:bold;color:#7f7f7f;">Bash</span> also incorporates useful features from the  <span style="text-decoration:underline;">Korn</span>  and  <span style="text-decoration:underline;">C</span>
+       shells (<span style="font-weight:bold;color:#7f7f7f;">ksh</span> and <span style="font-weight:bold;color:#7f7f7f;">csh</span>).
+
+       <span style="font-weight:bold;color:#7f7f7f;">Bash</span>  is intended to be a conformant implementation of the Shell and Utilities portion of the
+       IEEE POSIX specification (IEEE Standard 1003.1).  <span style="font-weight:bold;color:#7f7f7f;">Bash</span> can be configured to be  POSIX-confor‐
+       mant by default.
+
+<span style="font-weight:bold;color:#7f7f7f;">OPTIONS</span>
+       All  of  the  single-character shell options documented in the description of the <span style="font-weight:bold;color:#7f7f7f;">set</span> builtin
+       command, including <span style="font-weight:bold;color:#7f7f7f;">-o</span>, can be used as options when the shell is invoked.  In  addition,  <span style="font-weight:bold;color:#7f7f7f;">bash</span>
+       interprets the following options when it is invoked:
+<span style="color:#000000;background-color:#000000;">BASH(1)                                General Commands Manual                               BASH(1)</span>or:#000000;">
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       bash - GNU Bourne-Again SHell
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">bash</span> [options] [command_string | file]
+
+<span style="font-weight:bold;color:#7f7f7f;">COPYRIGHT</span>
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash</span>  is  an  <span style="font-weight:bold;color:#7f7f7f;">sh</span>-compatible command language interpreter that executes commands read from the
+       standard input or from a file.  <span style="font-weight:bold;color:#7f7f7f;">Bash</span> also incorporates useful features from the  <span style="text-decoration:underline;">Korn</span>  and  <span style="text-decoration:underline;">C</span>
+       shells (<span style="font-weight:bold;color:#7f7f7f;">ksh</span> and <span style="font-weight:bold;color:#7f7f7f;">csh</span>).
+
+       <span style="font-weight:bold;color:#7f7f7f;">Bash</span>  is intended to be a conformant implementation of the Shell and Utilities portion of the
+       IEEE POSIX specification (IEEE Standard 1003.1).  <span style="font-weight:bold;color:#7f7f7f;">Bash</span> can be configured to be  POSIX-confor‐
+       mant by default.
+
+<span style="font-weight:bold;color:#7f7f7f;">OPTIONS</span>
+       All  of  the  single-character shell options documented in the description of the <span style="font-weight:bold;color:#7f7f7f;">set</span> builtin
+       command, including <span style="font-weight:bold;color:#7f7f7f;">-o</span>, can be used as options when the shell is invoked.  In  addition,  <span style="font-weight:bold;color:#7f7f7f;">bash</span>
+       interprets the following options when it is invoked:
+BASH(1)                                General Commands Manual                               BASH(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       bash - GNU Bourne-Again SHell
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">bash</span> [options] [command_string | file]
+
+<span style="font-weight:bold;color:#7f7f7f;">COPYRIGHT</span>
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash</span>  is  an  <span style="font-weight:bold;color:#7f7f7f;">sh</span>-compatible command language interpreter that executes commands read from the
+       standard input or from a file.  <span style="font-weight:bold;color:#7f7f7f;">Bash</span> also incorporates useful features from the  <span style="text-decoration:underline;">Korn</span>  and  <span style="text-decoration:underline;">C</span>
+       shells (<span style="font-weight:bold;color:#7f7f7f;">ksh</span> and <span style="font-weight:bold;color:#7f7f7f;">csh</span>).
+
+       <span style="font-weight:bold;color:#7f7f7f;">Bash</span>  is intended to be a conformant implementation of the Shell and Utilities portion of the
+       IEEE POSIX specification (IEEE Standard 1003.1).  <span style="font-weight:bold;color:#7f7f7f;">Bash</span> can be configured to be  POSIX-confor‐
+       mant by default.
+
+<span style="font-weight:bold;color:#7f7f7f;">OPTIONS</span>
+       All  of  the  single-character shell options documented in the description of the <span style="font-weight:bold;color:#7f7f7f;">set</span> builtin
+       command, including <span style="font-weight:bold;color:#7f7f7f;">-o</span>, can be used as options when the shell is invoked.  In  addition,  <span style="font-weight:bold;color:#7f7f7f;">bash</span>
+       interprets the following options when it is invoked:
+...skipping...
+       scribed below under <span style="font-weight:bold;color:#7f7f7f;">Tilde</span> <span style="font-weight:bold;color:#7f7f7f;">Expansion</span> in the <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">EXPANSION</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> section.
+
+       When  <span style="font-weight:bold;color:#7f7f7f;">bash</span>  is  invoked as an interactive login shell, or as a non-interactive shell with the
+       <span style="font-weight:bold;color:#7f7f7f;">--login</span> option, it first reads and executes commands from the file <span style="text-decoration:underline;">/etc/profile</span>, if that file
+       exists.   After  reading  that file, it looks for <span style="text-decoration:underline;">~/.bash_profile</span>, <span style="text-decoration:underline;">~/.bash_login</span>, and <span style="text-decoration:underline;">~/.pro‐</span>
+       <span style="text-decoration:underline;">file</span>, in that order, and reads and executes commands from the first one that  exists  and  is
+       readable.   The  <span style="font-weight:bold;color:#7f7f7f;">--noprofile</span> option may be used when the shell is started to inhibit this be‐
+       havior.
+
+       When an interactive login shell exits, or a non-interactive login  shell  executes  the  <span style="font-weight:bold;color:#7f7f7f;">exit</span>
+       builtin command, <span style="font-weight:bold;color:#7f7f7f;">bash</span> reads and executes commands from the file <span style="text-decoration:underline;">~/.bash_logout</span>, if it exists.
+
+       When  an interactive shell that is not a login shell is started, <span style="font-weight:bold;color:#7f7f7f;">bash</span> reads and executes com‐
+       mands from <span style="text-decoration:underline;">/etc/bash.bashrc</span> and <span style="text-decoration:underline;">~/.bashrc</span>, if these files exist.  This may  be  inhibited  by
+       using  the  <span style="font-weight:bold;color:#7f7f7f;">--norc</span> option.  The <span style="font-weight:bold;color:#7f7f7f;">--rcfile</span> <span style="text-decoration:underline;">file</span> option will force <span style="font-weight:bold;color:#7f7f7f;">bash</span> to read and execute com‐
+       mands from <span style="text-decoration:underline;">file</span> instead of <span style="text-decoration:underline;">/etc/bash.bashrc</span> and <span style="text-decoration:underline;">~/.bashrc</span>.
+
+       When <span style="font-weight:bold;color:#7f7f7f;">bash</span> is started non-interactively, to run a shell script, for example, it looks for  the
+       variable <span style="font-weight:bold;color:#7f7f7f;">BASH_ENV</span> in the environment, expands its value if it appears there, and uses the ex‐
+       panded value as the name of a file to read and execute.  <span style="font-weight:bold;color:#7f7f7f;">Bash</span> behaves  as  if  the  following
+       command were executed:
+              if [ -n &quot;$BASH_ENV&quot; ]; then . &quot;$BASH_ENV&quot;; fi
+       but the value of the <span style="font-weight:bold;color:#7f7f7f;">PATH</span> variable is not used to search for the filename.
+
+<span style="color:#000000;background-color:#000000;">...skipping...ash(1) line 126 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       When  the  command history expansion facilities are being used (see </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">HISTORY</span> <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">EXPANSION</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> below),
+       the <span style="text-decoration:underline;">history</span> <span style="text-decoration:underline;">expansion</span> character, usually <span style="font-weight:bold;color:#7f7f7f;">!</span>, must be quoted to prevent history expansion.
+
+       There are three quoting mechanisms: the <span style="text-decoration:underline;">escape</span> <span style="text-decoration:underline;">character</span>, single quotes, and double quotes.
+
+       A non-quoted backslash (<span style="font-weight:bold;color:#7f7f7f;">\</span>) is the <span style="text-decoration:underline;">escape</span> <span style="text-decoration:underline;">character</span>.  It preserves the literal  value  of  the
+       next  character that follows, with the exception of &lt;newline&gt;.  If a <span style="font-weight:bold;color:#7f7f7f;">\</span>&lt;newline&gt; pair appears,
+       and the backslash is not itself quoted, the <span style="font-weight:bold;color:#7f7f7f;">\</span>&lt;newline&gt; is  treated  as  a  line  continuation
+       (that is, it is removed from the input stream and effectively ignored).
+
+       Enclosing  characters  in  single quotes preserves the literal value of each character within
+       the quotes.  A single quote may not occur between single quotes,  even  when  preceded  by  a
+       backslash.
+
+       Enclosing  characters  in  double quotes preserves the literal value of all characters within
+       the quotes, with the exception of <span style="font-weight:bold;color:#7f7f7f;">$</span>, <span style="font-weight:bold;color:#7f7f7f;">`</span>, <span style="font-weight:bold;color:#7f7f7f;">\</span>, and, when history expansion is enabled,  <span style="font-weight:bold;color:#7f7f7f;">!</span>.   When
+       the shell is in <span style="text-decoration:underline;">posix</span> <span style="text-decoration:underline;">mode</span>, the <span style="font-weight:bold;color:#7f7f7f;">!</span> has no special meaning within double quotes, even when his‐
+       tory expansion is enabled.  The characters <span style="font-weight:bold;color:#7f7f7f;">$</span> and <span style="font-weight:bold;color:#7f7f7f;">`</span> retain their special meaning within double
+       quotes.  The backslash retains its special meaning only when followed by one of the following
+       characters: <span style="font-weight:bold;color:#7f7f7f;">$</span>, <span style="font-weight:bold;color:#7f7f7f;">`</span>, <span style="font-weight:bold;color:#7f7f7f;">&quot;</span>, <span style="font-weight:bold;color:#7f7f7f;">\</span>, or <span style="font-weight:bold;color:#7f7f7f;">&lt;newline&gt;</span>.  A double quote may be quoted within double  quotes  by
+       preceding  it  with a backslash.  If enabled, history expansion will be performed unless an <span style="font-weight:bold;color:#7f7f7f;">!</span>
+       appearing in double quotes is escaped using a backslash.  The backslash preceding the  <span style="font-weight:bold;color:#7f7f7f;">!</span>   is
+       not removed.
+
+<span style="color:#000000;background-color:#000000;">...skipping...ash(1) line 515 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       quote removal (see </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">EXPANSION</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> below).  If the variable has its  <span style="font-weight:bold;color:#7f7f7f;">integer</span>  attribute  set,  then
+       <span style="text-decoration:underline;">value</span>  is  evaluated  as  an arithmetic expression even if the $((...)) expansion is not used
+       (see <span style="font-weight:bold;color:#7f7f7f;">Arithmetic</span> <span style="font-weight:bold;color:#7f7f7f;">Expansion</span> below).  Word splitting and pathname expansion are  not  performed.
+       Assignment  statements  may  also appear as arguments to the <span style="font-weight:bold;color:#7f7f7f;">alias</span>, <span style="font-weight:bold;color:#7f7f7f;">declare</span>, <span style="font-weight:bold;color:#7f7f7f;">typeset</span>, <span style="font-weight:bold;color:#7f7f7f;">export</span>,
+       <span style="font-weight:bold;color:#7f7f7f;">readonly</span>, and <span style="font-weight:bold;color:#7f7f7f;">local</span> builtin commands (<span style="text-decoration:underline;">declaration</span>  commands).   When  in  <span style="text-decoration:underline;">posix</span>  <span style="text-decoration:underline;">mode</span>,  these
+       builtins  may  appear in a command after one or more instances of the <span style="font-weight:bold;color:#7f7f7f;">command</span> builtin and re‐
+       tain these assignment statement properties.
+
+       In the context where an assignment statement is assigning a value to a shell variable or  ar‐
+       ray  index, the += operator can be used to append to or add to the variable&apos;s previous value.
+       This includes arguments to builtin commands such as <span style="font-weight:bold;color:#7f7f7f;">declare</span> that accept assignment statements
+       (<span style="text-decoration:underline;">declaration</span> commands).  When += is applied to a variable for which the <span style="font-weight:bold;color:#7f7f7f;">integer</span> attribute has
+       been set, <span style="text-decoration:underline;">value</span> is evaluated as an arithmetic expression and added to the variable&apos;s  current
+       value,  which  is also evaluated.  When += is applied to an array variable using compound as‐
+       signment (see <span style="font-weight:bold;color:#7f7f7f;">Arrays</span> below), the variable&apos;s value is not unset (as it is when using  =),  and
+       new  values are appended to the array beginning at one greater than the array&apos;s maximum index
+       (for indexed arrays) or added as additional key-value pairs in an  associative  array.   When
+       applied to a string-valued variable, <span style="text-decoration:underline;">value</span> is expanded and appended to the variable&apos;s value.
+
+       A  variable can be assigned the <span style="text-decoration:underline;">nameref</span> attribute using the <span style="font-weight:bold;color:#7f7f7f;">-n</span> option to the <span style="font-weight:bold;color:#7f7f7f;">declare</span> or <span style="font-weight:bold;color:#7f7f7f;">local</span>
+       builtin commands (see the descriptions of <span style="font-weight:bold;color:#7f7f7f;">declare</span> and <span style="font-weight:bold;color:#7f7f7f;">local</span> below) to create a <span style="text-decoration:underline;">nameref</span>, or  a
+       reference to another variable.  This allows variables to be manipulated indirectly.  Whenever
+       the nameref variable is referenced, assigned to, unset, or has its attributes modified (other
+       than  using or changing the <span style="text-decoration:underline;">nameref</span> attribute itself), the operation is actually performed on
+<span style="color:#000000;background-color:#000000;">...skipping...ash(1) line 598 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       enclosed in braces (see </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">EXPANSION</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> below).
+
+   <span style="font-weight:bold;color:#7f7f7f;">Special</span> <span style="font-weight:bold;color:#7f7f7f;">Parameters</span>
+       The shell treats several parameters specially.  These parameters may only be referenced;  as‐
+       signment to them is not allowed.
+       <span style="font-weight:bold;color:#7f7f7f;">*</span>      Expands  to  the  positional parameters, starting from one.  When the expansion is not
+              within double quotes, each positional parameter expands to a separate word.   In  con‐
+              texts  where  it  is  performed, those words are subject to further word splitting and
+              pathname expansion.  When the expansion occurs within double quotes, it expands  to  a
+              single  word  with the value of each parameter separated by the first character of the
+              <span style="font-weight:bold;color:#7f7f7f;">IFS</span> special variable.  That is, &quot;<span style="font-weight:bold;color:#7f7f7f;">$*</span>&quot; is equivalent to  &quot;<span style="font-weight:bold;color:#7f7f7f;">$1</span><span style="text-decoration:underline;">c</span><span style="font-weight:bold;color:#7f7f7f;">$2</span><span style="text-decoration:underline;">c</span><span style="font-weight:bold;color:#7f7f7f;">...</span>&quot;,  where  <span style="text-decoration:underline;">c</span>  is  the
+              first character of the value of the <span style="font-weight:bold;color:#7f7f7f;">IFS</span> variable.  If <span style="font-weight:bold;color:#7f7f7f;">IFS</span> is unset, the parameters are
+              separated by spaces.  If <span style="font-weight:bold;color:#7f7f7f;">IFS</span> is null, the parameters are  joined  without  intervening
+              separators.
+       <span style="font-weight:bold;color:#7f7f7f;">&#64;</span>      Expands  to  the  positional  parameters,  starting  from one.  In contexts where word
+              splitting is performed, this expands each positional parameter to a separate word;  if
+              not  within  double  quotes,  these  words are subject to word splitting.  In contexts
+              where word splitting is not performed, this expands to a single word with  each  posi‐
+              tional  parameter  separated  by  a  space.   When  the expansion occurs within double
+              quotes, each parameter expands to a separate word.  That is,  &quot;<span style="font-weight:bold;color:#7f7f7f;">$&#64;</span>&quot;  is  equivalent  to
+              &quot;<span style="font-weight:bold;color:#7f7f7f;">$1</span>&quot;  &quot;<span style="font-weight:bold;color:#7f7f7f;">$2</span>&quot;  ...  If the double-quoted expansion occurs within a word, the expansion of
+              the first parameter is joined with the beginning part of the original  word,  and  the
+              expansion  of  the  last  parameter is joined with the last part of the original word.
+              When there are no positional parameters, &quot;<span style="font-weight:bold;color:#7f7f7f;">$&#64;</span>&quot; and <span style="font-weight:bold;color:#7f7f7f;">$&#64;</span> expand to nothing (i.e., they are
+<span style="color:#000000;background-color:#000000;">...skipping...ash(1) line 645 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">TORY</span> <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">EXPANSION</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> below).  The first character is the <span style="text-decoration:underline;">history</span>  <span style="text-decoration:underline;">expansion</span>  character,  the
+              character  which  signals  the start of a history expansion, normally `<span style="font-weight:bold;color:#7f7f7f;">!</span>&apos;.  The second
+              character is the <span style="text-decoration:underline;">quick</span> <span style="text-decoration:underline;">substitution</span> character, which is used as shorthand for  re-run‐
+              ning the previous command entered, substituting one string for another in the command.
+              The default is `<span style="font-weight:bold;color:#7f7f7f;">^</span>&apos;.  The optional third character is  the  character  which  indicates
+              that  the  remainder  of  the line is a comment when found as the first character of a
+              word, normally `<span style="font-weight:bold;color:#7f7f7f;">#</span>&apos;.  The history comment character causes history substitution  to  be
+              skipped  for the remaining words on the line.  It does not necessarily cause the shell
+              parser to treat the rest of the line as a comment.
+
+   <span style="font-weight:bold;color:#7f7f7f;">Arrays</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash</span> provides one-dimensional indexed and associative array variables.  Any variable  may  be
+       used  as an indexed array; the <span style="font-weight:bold;color:#7f7f7f;">declare</span> builtin will explicitly declare an array.  There is no
+       maximum limit on the size of an array, nor any requirement that members  be  indexed  or  as‐
+       signed  contiguously.  Indexed arrays are referenced using integers (including arithmetic ex‐
+       pressions) and are zero-based; associative arrays are  referenced  using  arbitrary  strings.
+       Unless otherwise noted, indexed array indices must be non-negative integers.
+
+       An  indexed  array  is  created automatically if any variable is assigned to using the syntax
+       <span style="text-decoration:underline;">name</span>[<span style="text-decoration:underline;">subscript</span>]=<span style="text-decoration:underline;">value</span>.  The <span style="text-decoration:underline;">subscript</span> is treated as an arithmetic expression that must evalu‐
+       ate  to  a  number.   To  explicitly declare an indexed array, use <span style="font-weight:bold;color:#7f7f7f;">declare</span> <span style="font-weight:bold;color:#7f7f7f;">-a</span> <span style="text-decoration:underline;">name</span> (see <span style="font-weight:bold;color:#7f7f7f;">SHELL</span>
+       <span style="font-weight:bold;color:#7f7f7f;">BUILTIN</span> <span style="font-weight:bold;color:#7f7f7f;">COMMANDS</span> below).  <span style="font-weight:bold;color:#7f7f7f;">declare</span> <span style="font-weight:bold;color:#7f7f7f;">-a</span> <span style="text-decoration:underline;">name</span><span style="font-weight:bold;color:#7f7f7f;">[</span><span style="text-decoration:underline;">subscript</span><span style="font-weight:bold;color:#7f7f7f;">]</span> is also accepted; the <span style="text-decoration:underline;">subscript</span>  is  ig‐
+       nored.
+
+<span style="color:#000000;background-color:#000000;">...skipping...ash(1) line 1192 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       scribed  below  under  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">EXPANSION</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span>.  When assigning to indexed arrays, if the optional brackets
+       and subscript are supplied, that index is assigned to; otherwise the index of the element as‐
+       signed is the last index assigned to by the statement plus one.  Indexing starts at zero.
+
+       When  assigning to an associative array, the words in a compound assignment may be either as‐
+       signment statements, for which the subscript is required, or a list of words that  is  inter‐
+       preted  as  a  sequence  of alternating keys and values: <span style="text-decoration:underline;">name</span>=<span style="font-weight:bold;color:#7f7f7f;">(</span> <span style="text-decoration:underline;">key1</span> <span style="text-decoration:underline;">value1</span> <span style="text-decoration:underline;">key2</span> <span style="text-decoration:underline;">value2</span> ...<span style="font-weight:bold;color:#7f7f7f;">)</span>.
+       These are treated identically to <span style="text-decoration:underline;">name</span>=<span style="font-weight:bold;color:#7f7f7f;">(</span> [<span style="text-decoration:underline;">key1</span>]=<span style="text-decoration:underline;">value1</span> [<span style="text-decoration:underline;">key2</span>]=<span style="text-decoration:underline;">value2</span> ...<span style="font-weight:bold;color:#7f7f7f;">)</span>.  The first word  in
+       the  list  determines how the remaining words are interpreted; all assignments in a list must
+       be of the same type.  When using key/value pairs, the keys may not be missing or empty; a fi‐
+       nal missing value is treated like the empty string.
+
+       This  syntax  is  also accepted by the <span style="font-weight:bold;color:#7f7f7f;">declare</span> builtin.  Individual array elements may be as‐
+       signed to using the <span style="text-decoration:underline;">name</span>[<span style="text-decoration:underline;">subscript</span>]=<span style="text-decoration:underline;">value</span> syntax introduced above.  When assigning to an  in‐
+       dexed array, if <span style="text-decoration:underline;">name</span> is subscripted by a negative number, that number is interpreted as rela‐
+       tive to one greater than the maximum index of <span style="text-decoration:underline;">name</span>, so negative indices count back  from  the
+       end of the array, and an index of -1 references the last element.
+
+       The += operator will append to an array variable when assigning using the compound assignment
+       syntax; see <span style="font-weight:bold;color:#7f7f7f;">PARAMETERS</span> above.
+
+       Any element of an array may be referenced using ${<span style="text-decoration:underline;">name</span>[<span style="text-decoration:underline;">subscript</span>]}.  The braces are  required
+       to  avoid conflicts with pathname expansion.  If <span style="text-decoration:underline;">subscript</span> is <span style="font-weight:bold;color:#7f7f7f;">&#64;</span> or <span style="font-weight:bold;color:#7f7f7f;">*</span>, the word expands to all
+       members of <span style="text-decoration:underline;">name</span>.  These subscripts differ only when the word appears  within  double  quotes.
+<span style="color:#000000;background-color:#000000;">...skipping...ash(1) line 1224 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">EXPANSION</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span>
+       Expansion  is  performed  on  the command line after it has been split into words.  There are
+       seven kinds of expansion performed: <span style="text-decoration:underline;">brace</span> <span style="text-decoration:underline;">expansion</span>, <span style="text-decoration:underline;">tilde</span> <span style="text-decoration:underline;">expansion</span>, <span style="text-decoration:underline;">parameter</span> <span style="text-decoration:underline;">and</span>  <span style="text-decoration:underline;">variable</span>
+       <span style="text-decoration:underline;">expansion</span>,  <span style="text-decoration:underline;">command</span>  <span style="text-decoration:underline;">substitution</span>,  <span style="text-decoration:underline;">arithmetic</span> <span style="text-decoration:underline;">expansion</span>, <span style="text-decoration:underline;">word</span> <span style="text-decoration:underline;">splitting</span>, and <span style="text-decoration:underline;">pathname</span> <span style="text-decoration:underline;">expan‐</span>
+       <span style="text-decoration:underline;">sion</span>.
+
+       The order of expansions is: brace expansion; tilde expansion, parameter and  variable  expan‐
+       sion,  arithmetic expansion, and command substitution (done in a left-to-right fashion); word
+       splitting; and pathname expansion.
+
+       On systems that can support it, there is an additional expansion available: <span style="text-decoration:underline;">process</span> <span style="text-decoration:underline;">substitu‐</span>
+       <span style="text-decoration:underline;">tion</span>.   This  is performed at the same time as tilde, parameter, variable, and arithmetic ex‐
+       pansion and command substitution.
+
+       After these expansions are performed, quote characters present in the original word  are  re‐
+       moved unless they have been quoted themselves (<span style="text-decoration:underline;">quote</span> <span style="text-decoration:underline;">removal</span>).
+
+       Only brace expansion, word splitting, and pathname expansion can increase the number of words
+       of the expansion; other expansions expand a single word to a single word.   The  only  excep‐
+       tions  to  this  are  the  expansions  of  &quot;<span style="font-weight:bold;color:#7f7f7f;">$&#64;</span>&quot;  and &quot;<span style="font-weight:bold;color:#7f7f7f;">${</span><span style="text-decoration:underline;">name</span><span style="font-weight:bold;color:#7f7f7f;">[&#64;]}</span>&quot;, and, in most cases, <span style="font-weight:bold;color:#7f7f7f;">$*</span> and
+       <span style="font-weight:bold;color:#7f7f7f;">${</span><span style="text-decoration:underline;">name</span><span style="font-weight:bold;color:#7f7f7f;">[*]}</span> as explained above (see <span style="font-weight:bold;color:#7f7f7f;">PARAMETERS</span>).
+
+   <span style="font-weight:bold;color:#7f7f7f;">Brace</span> <span style="font-weight:bold;color:#7f7f7f;">Expansion</span>
+       <span style="text-decoration:underline;">Brace</span> <span style="text-decoration:underline;">expansion</span> is a mechanism by which arbitrary strings may be generated.   This  mechanism
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS24/lektion4color:#000000;background-color:#000000;">
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion4
+</span>$ pwd
+/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion4
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ ls ~
+ Android		 bokforing   Downloads	 Pictures      shared_desktop  &apos;VirtualBox VMs&apos;
+ AndroidStudioProjects	 Desktop     Dropbox	 Public        Templates        wineapps
+ bin			 Documents   Music	 Screenshots   Videos
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ ls 
+
+
+
+/home/kent
+ Android		 bokforing   Downloads	 Pictures      shared_desktop  &apos;VirtualBox VMs&apos;
+ AndroidStudioProjects	 Desktop     Dropbox	 Public        Templates        wineapps
+ bin			 Documents   Music	 Screenshots   Videos
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion4
+</span>$ start-ubse
+bash: start-ubse: command not found
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ ubse
+
+
+-start
+bash: ubse-start: command not found
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+<span style="color:#5c5cff;">"color:#5c5cff;">DEVOPS24/lektion4
+</span>$ ssh ubse
+^C
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ ssh ubse
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-57-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Thu Apr 17 01:00:10 PM UTC 2025
+
+  System load:  0.0                Processes:               115
+  Usage of /:   17.1% of 38.04GB   Users logged in:         0
+  Memory usage: 4%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+170 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Thu Apr 17 13:00:11 2025 from 10.0.2.2
+0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls /home
+<span style="font-weight:bold;color:#5c5cff;">bert</span>  <span style="font-weight:bold;color:#5c5cff;">green</span>  <span style="font-weight:bold;color:#5c5cff;">other</span>  <span style="font-weight:bold;color:#5c5cff;">user</span>
+0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls GREEgreen~
+ls: cannot access &apos;green~&apos;: No such file or directory
+0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls green~green
+ls: cannot open directory &apos;/home/green&apos;: Permission denied
+0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls ~green
+ls: cannot open directory &apos;/home/green&apos;: Permission denied
+0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ sudo -
+
+[sudo] password for user: 
+0;root&#64;ubse: ~
+root&#64;ubse:~# c
+ls ~frgreen
+0;root&#64;ubse: ~
+root&#64;ubse:~# ls ~gree ~gree- ~greeA ~gree0;root&#64;ubse: ~
+root&#64;ubse:~# ls -A ~gree ~greea ~greel ~gree ~gree
+<span style="font-weight:bold;color:#5c5cff;">.</span>  <span style="font-weight:bold;color:#5c5cff;">..</span>  .bash_history  .bash_logout  .bashrc  .profile
+0;root&#64;ubse: ~
+root&#64;ubse:~# ls -a ~greeother
+<span style="font-weight:bold;color:#5c5cff;">.</span>  <span style="font-weight:bold;color:#5c5cff;">..</span>  .bash_history  .bash_logout  .bashrc  .profile
+0;root&#64;ubse: ~
+root&#64;ubse:~# 
+logout
+0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ echo $USER
+user
+0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ echo $USE/$USEh$USEo$USEm$USEe$USE/$USE
+/home/user
+0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls   e c h o 
+/home/user
+0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ echo $HOME
+/home/user
+0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ echo $HOM
+
+
+
+
+
+
+
+
+
+
+hej
+hej
+0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ echo he$HOME
+/home/user
+0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ echo $HOM/home/use
+
+/home/user
+0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$  jiiejie
+
+l jiiejies jiiejie
+
+
+
+
+mittalias ^C
+0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ mittalias ^C
+0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ man ubash
+<span style="text-decoration:underline;">BASH</span>(1)                                General Commands Manual                               <span style="text-decoration:underline;">BASH</span>(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       bash - GNU Bourne-Again SHell
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">[options] [command_string | file]</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">COPYRIGHT</span>
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash  </span><span style="color:#7f7f7f;">is  an  </span><span style="font-weight:bold;color:#7f7f7f;">sh</span><span style="color:#7f7f7f;">-compatible command language interpreter that executes commands read from the</span>
+       standard input or from a file.  <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">also incorporates useful features from the  </span><span style="text-decoration:underline;color:#7f7f7f;">Korn</span><span style="color:#7f7f7f;">  and  </span><span style="text-decoration:underline;color:#7f7f7f;">C</span>
+       shells (<span style="font-weight:bold;color:#7f7f7f;">ksh </span><span style="color:#7f7f7f;">and </span><span style="font-weight:bold;color:#7f7f7f;">csh</span><span style="color:#7f7f7f;">).</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">Bash  </span><span style="color:#7f7f7f;">is intended to be a conformant implementation of the Shell and Utilities portion of the</span>
+       IEEE POSIX specification (IEEE Standard 1003.1).  <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">can be configured to be  POSIX-confor‐</span>
+       mant by default.
+
+<span style="font-weight:bold;color:#7f7f7f;">OPTIONS</span>
+       All  of  the  single-character shell options documented in the description of the <span style="font-weight:bold;color:#7f7f7f;">set </span><span style="color:#7f7f7f;">builtin</span>
+       command, including <span style="font-weight:bold;color:#7f7f7f;">-o</span><span style="color:#7f7f7f;">, can be used as options when the shell is invoked.  In  addition,  </span><span style="font-weight:bold;color:#7f7f7f;">bash</span>
+       interprets the following options when it is invoked:
+<span style="color:#000000;background-color:#000000;"></span><span style="text-decoration:underline;color:#000000;background-color:#000000;">BASH</span><span style="color:#000000;background-color:#000000;">(1)                                General Commands Manual                               </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">BASH</span><span style="color:#000000;background-color:#000000;">(1)</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       bash - GNU Bourne-Again SHell
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">[options] [command_string | file]</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">COPYRIGHT</span>
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash  </span><span style="color:#7f7f7f;">is  an  </span><span style="font-weight:bold;color:#7f7f7f;">sh</span><span style="color:#7f7f7f;">-compatible command language interpreter that executes commands read from the</span>
+       standard input or from a file.  <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">also incorporates useful features from the  </span><span style="text-decoration:underline;color:#7f7f7f;">Korn</span><span style="color:#7f7f7f;">  and  </span><span style="text-decoration:underline;color:#7f7f7f;">C</span>
+       shells (<span style="font-weight:bold;color:#7f7f7f;">ksh </span><span style="color:#7f7f7f;">and </span><span style="font-weight:bold;color:#7f7f7f;">csh</span><span style="color:#7f7f7f;">).</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">Bash  </span><span style="color:#7f7f7f;">is intended to be a conformant implementation of the Shell and Utilities portion of the</span>
+       IEEE POSIX specification (IEEE Standard 1003.1).  <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">can be configured to be  POSIX-confor‐</span>
+       mant by default.
+
+<span style="font-weight:bold;color:#7f7f7f;">OPTIONS</span>
+       All  of  the  single-character shell options documented in the description of the <span style="font-weight:bold;color:#7f7f7f;">set </span><span style="color:#7f7f7f;">builtin</span>
+       command, including <span style="font-weight:bold;color:#7f7f7f;">-o</span><span style="color:#7f7f7f;">, can be used as options when the shell is invoked.  In  addition,  </span><span style="font-weight:bold;color:#7f7f7f;">bash</span>
+       interprets the following options when it is invoked:
+<span style="text-decoration:underline;">BASH</span>(1)                                General Commands Manual                               <span style="text-decoration:underline;">BASH</span>(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       bash - GNU Bourne-Again SHell
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">[options] [command_string | file]</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">COPYRIGHT</span>
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash  </span><span style="color:#7f7f7f;">is  an  </span><span style="font-weight:bold;color:#7f7f7f;">sh</span><span style="color:#7f7f7f;">-compatible command language interpreter that executes commands read from the</span>
+       standard input or from a file.  <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">also incorporates useful features from the  </span><span style="text-decoration:underline;color:#7f7f7f;">Korn</span><span style="color:#7f7f7f;">  and  </span><span style="text-decoration:underline;color:#7f7f7f;">C</span>
+       shells (<span style="font-weight:bold;color:#7f7f7f;">ksh </span><span style="color:#7f7f7f;">and </span><span style="font-weight:bold;color:#7f7f7f;">csh</span><span style="color:#7f7f7f;">).</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">Bash  </span><span style="color:#7f7f7f;">is intended to be a conformant implementation of the Shell and Utilities portion of the</span>
+       IEEE POSIX specification (IEEE Standard 1003.1).  <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">can be configured to be  POSIX-confor‐</span>
+       mant by default.
+
+<span style="font-weight:bold;color:#7f7f7f;">OPTIONS</span>
+       All  of  the  single-character shell options documented in the description of the <span style="font-weight:bold;color:#7f7f7f;">set </span><span style="color:#7f7f7f;">builtin</span>
+       command, including <span style="font-weight:bold;color:#7f7f7f;">-o</span><span style="color:#7f7f7f;">, can be used as options when the shell is invoked.  In  addition,  </span><span style="font-weight:bold;color:#7f7f7f;">bash</span>
+       interprets the following options when it is invoked:
+...skipping...
+       scribed below under <span style="font-weight:bold;color:#7f7f7f;">Tilde Expansion </span><span style="color:#7f7f7f;">in the </span><span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">EXPANSION</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> </span><span style="color:#7f7f7f;background-color:#000000;">section.</span>
+
+       When <span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">is invoked as an interactive login shell, or as a non-interactive  shell  with  the</span>
+       <span style="font-weight:bold;color:#7f7f7f;">--login </span><span style="color:#7f7f7f;">option, it first reads and executes commands from the file </span><span style="text-decoration:underline;color:#7f7f7f;">/etc/profile</span><span style="color:#7f7f7f;">, if that file</span>
+       exists.   After  reading  that file, it looks for <span style="text-decoration:underline;">~/.bash_profile</span>, <span style="text-decoration:underline;">~/.bash_login</span>, and <span style="text-decoration:underline;">~/.pro‐</span>
+       <span style="text-decoration:underline;">file</span>, in that order, and reads and executes commands from the first one that  exists  and  is
+       readable.   The  <span style="font-weight:bold;color:#7f7f7f;">--noprofile </span><span style="color:#7f7f7f;">option may be used when the shell is started to inhibit this be‐</span>
+       havior.
+
+       When an interactive login shell exits, or a non-interactive login  shell  executes  the  <span style="font-weight:bold;color:#7f7f7f;">exit</span>
+       builtin command, <span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">reads and executes commands from the file </span><span style="text-decoration:underline;color:#7f7f7f;">~/.bash_logout</span><span style="color:#7f7f7f;">, if it exists.</span>
+
+       When  an interactive shell that is not a login shell is started, <span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">reads and executes com‐</span>
+       mands from <span style="text-decoration:underline;">/etc/bash.bashrc</span> and <span style="text-decoration:underline;">~/.bashrc</span>, if these files exist.  This may  be  inhibited  by
+       using  the  <span style="font-weight:bold;color:#7f7f7f;">--norc </span><span style="color:#7f7f7f;">option.  The </span><span style="font-weight:bold;color:#7f7f7f;">--rcfile </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">file</span><span style="color:#7f7f7f;"> option will force </span><span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">to read and execute com‐</span>
+       mands from <span style="text-decoration:underline;">file</span> instead of <span style="text-decoration:underline;">/etc/bash.bashrc</span> and <span style="text-decoration:underline;">~/.bashrc</span>.
+
+       When <span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">is started non-interactively, to run a shell script, for example, it looks for  the</span>
+       variable <span style="font-weight:bold;color:#7f7f7f;">BASH_ENV </span><span style="color:#7f7f7f;">in the environment, expands its value if it appears there, and uses the ex‐</span>
+       panded  value  as  the  name of a file to read and execute.  <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">behaves as if the following</span>
+       command were executed:
+              if [ -n &quot;$BASH_ENV&quot; ]; then . &quot;$BASH_ENV&quot;; fi
+       but the value of the <span style="font-weight:bold;color:#7f7f7f;">PATH </span><span style="color:#7f7f7f;">variable is not used to search for the filename.</span>
+
+<span style="color:#000000;background-color:#000000;">...skipping...ash(1) line 126 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       When the command history expansion facilities are being used (see </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">HISTORY  </span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">EXPANSION</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">  </span><span style="color:#7f7f7f;background-color:#000000;">below),</span>
+       the <span style="text-decoration:underline;">history</span> <span style="text-decoration:underline;">expansion</span> character, usually <span style="font-weight:bold;color:#7f7f7f;">!</span><span style="color:#7f7f7f;">, must be quoted to prevent history expansion.</span>
+
+       There are three quoting mechanisms: the <span style="text-decoration:underline;">escape</span> <span style="text-decoration:underline;">character</span>, single quotes, and double quotes.
+
+       A  non-quoted  backslash  (<span style="font-weight:bold;color:#7f7f7f;">\</span><span style="color:#7f7f7f;">) is the </span><span style="text-decoration:underline;color:#7f7f7f;">escape</span><span style="color:#7f7f7f;"> </span><span style="text-decoration:underline;color:#7f7f7f;">character</span><span style="color:#7f7f7f;">.  It preserves the literal value of the</span>
+       next character that follows, with the exception of &lt;newline&gt;.  If a <span style="font-weight:bold;color:#7f7f7f;">\</span><span style="color:#7f7f7f;">&lt;newline&gt; pair  appears,</span>
+       and  the  backslash  is  not  itself quoted, the <span style="font-weight:bold;color:#7f7f7f;">\</span><span style="color:#7f7f7f;">&lt;newline&gt; is treated as a line continuation</span>
+       (that is, it is removed from the input stream and effectively ignored).
+
+       Enclosing characters in single quotes preserves the literal value of  each  character  within
+       the  quotes.   A  single  quote  may not occur between single quotes, even when preceded by a
+       backslash.
+
+       Enclosing characters in double quotes preserves the literal value of  all  characters  within
+       the  quotes,  with the exception of <span style="font-weight:bold;color:#7f7f7f;">$</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">`</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">\</span><span style="color:#7f7f7f;">, and, when history expansion is enabled, </span><span style="font-weight:bold;color:#7f7f7f;">!</span><span style="color:#7f7f7f;">.  When</span>
+       the shell is in <span style="text-decoration:underline;">posix</span> <span style="text-decoration:underline;">mode</span>, the <span style="font-weight:bold;color:#7f7f7f;">! </span><span style="color:#7f7f7f;">has no special meaning within double quotes, even when his‐</span>
+       tory expansion is enabled.  The characters <span style="font-weight:bold;color:#7f7f7f;">$ </span><span style="color:#7f7f7f;">and </span><span style="font-weight:bold;color:#7f7f7f;">` </span><span style="color:#7f7f7f;">retain their special meaning within double</span>
+       quotes.  The backslash retains its special meaning only when followed by one of the following
+       characters: <span style="font-weight:bold;color:#7f7f7f;">$</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">`</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">&quot;</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">\</span><span style="color:#7f7f7f;">, or </span><span style="font-weight:bold;color:#7f7f7f;">&lt;newline&gt;</span><span style="color:#7f7f7f;">.  A double quote may be quoted within double  quotes  by</span>
+       preceding  it  with a backslash.  If enabled, history expansion will be performed unless an <span style="font-weight:bold;color:#7f7f7f;">!</span>
+       appearing in double quotes is escaped using a backslash.  The backslash preceding the  <span style="font-weight:bold;color:#7f7f7f;">!   </span><span style="color:#7f7f7f;">is</span>
+       not removed.
+
+<span style="color:#000000;background-color:#000000;">...skipping...ash(1) line 515 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       quote removal (see </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">EXPANSION</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> </span><span style="color:#7f7f7f;background-color:#000000;">below).  If the variable has its  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">integer  </span><span style="color:#7f7f7f;background-color:#000000;">attribute  set,  then</span>
+       <span style="text-decoration:underline;">value</span>  is  evaluated  as  an arithmetic expression even if the $((...)) expansion is not used
+       (see <span style="font-weight:bold;color:#7f7f7f;">Arithmetic Expansion </span><span style="color:#7f7f7f;">below).  Word splitting and pathname expansion are  not  performed.</span>
+       Assignment  statements  may  also appear as arguments to the <span style="font-weight:bold;color:#7f7f7f;">alias</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">declare</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">typeset</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">export</span><span style="color:#7f7f7f;">,</span>
+       <span style="font-weight:bold;color:#7f7f7f;">readonly</span><span style="color:#7f7f7f;">, and </span><span style="font-weight:bold;color:#7f7f7f;">local </span><span style="color:#7f7f7f;">builtin commands (</span><span style="text-decoration:underline;color:#7f7f7f;">declaration</span><span style="color:#7f7f7f;">  commands).   When  in  </span><span style="text-decoration:underline;color:#7f7f7f;">posix</span><span style="color:#7f7f7f;">  </span><span style="text-decoration:underline;color:#7f7f7f;">mode</span><span style="color:#7f7f7f;">,  these</span>
+       builtins  may  appear in a command after one or more instances of the <span style="font-weight:bold;color:#7f7f7f;">command </span><span style="color:#7f7f7f;">builtin and re‐</span>
+       tain these assignment statement properties.
+
+       In the context where an assignment statement is assigning a value to a shell variable or  ar‐
+       ray  index, the += operator can be used to append to or add to the variable&apos;s previous value.
+       This includes arguments to builtin commands such as <span style="font-weight:bold;color:#7f7f7f;">declare </span><span style="color:#7f7f7f;">that accept assignment statements</span>
+       (<span style="text-decoration:underline;">declaration</span> commands).  When += is applied to a variable for which the <span style="font-weight:bold;color:#7f7f7f;">integer </span><span style="color:#7f7f7f;">attribute has</span>
+       been set, <span style="text-decoration:underline;">value</span> is evaluated as an arithmetic expression and added to the variable&apos;s  current
+       value,  which  is also evaluated.  When += is applied to an array variable using compound as‐
+       signment (see <span style="font-weight:bold;color:#7f7f7f;">Arrays </span><span style="color:#7f7f7f;">below), the variable&apos;s value is not unset (as it is when using  =),  and</span>
+       new  values are appended to the array beginning at one greater than the array&apos;s maximum index
+       (for indexed arrays) or added as additional key-value pairs in an  associative  array.   When
+       applied to a string-valued variable, <span style="text-decoration:underline;">value</span> is expanded and appended to the variable&apos;s value.
+
+       A  variable can be assigned the <span style="text-decoration:underline;">nameref</span> attribute using the <span style="font-weight:bold;color:#7f7f7f;">-n </span><span style="color:#7f7f7f;">option to the </span><span style="font-weight:bold;color:#7f7f7f;">declare </span><span style="color:#7f7f7f;">or </span><span style="font-weight:bold;color:#7f7f7f;">local</span>
+       builtin commands (see the descriptions of <span style="font-weight:bold;color:#7f7f7f;">declare </span><span style="color:#7f7f7f;">and </span><span style="font-weight:bold;color:#7f7f7f;">local </span><span style="color:#7f7f7f;">below) to create a </span><span style="text-decoration:underline;color:#7f7f7f;">nameref</span><span style="color:#7f7f7f;">, or  a</span>
+       reference to another variable.  This allows variables to be manipulated indirectly.  Whenever
+       the nameref variable is referenced, assigned to, unset, or has its attributes modified (other
+       than  using or changing the <span style="text-decoration:underline;">nameref</span> attribute itself), the operation is actually performed on
+<span style="color:#000000;background-color:#000000;">...skipping...ash(1) line 598 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       enclosed in braces (see </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">EXPANSION</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> </span><span style="color:#7f7f7f;background-color:#000000;">below).</span>
+
+   <span style="font-weight:bold;color:#7f7f7f;">Special Parameters</span>
+       The shell treats several parameters specially.  These parameters may only be referenced;  as‐
+       signment to them is not allowed.
+       <span style="font-weight:bold;color:#7f7f7f;">*      </span><span style="color:#7f7f7f;">Expands  to  the  positional parameters, starting from one.  When the expansion is not</span>
+              within double quotes, each positional parameter expands to a separate word.   In  con‐
+              texts  where  it  is  performed, those words are subject to further word splitting and
+              pathname expansion.  When the expansion occurs within double quotes, it expands  to  a
+              single  word  with the value of each parameter separated by the first character of the
+              <span style="font-weight:bold;color:#7f7f7f;">IFS </span><span style="color:#7f7f7f;">special variable.  That is, &quot;</span><span style="font-weight:bold;color:#7f7f7f;">$*</span><span style="color:#7f7f7f;">&quot; is equivalent to  &quot;</span><span style="font-weight:bold;color:#7f7f7f;">$1</span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">c</span><span style="color:#7f7f7f;"></span><span style="font-weight:bold;color:#7f7f7f;">$2</span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">c</span><span style="color:#7f7f7f;"></span><span style="font-weight:bold;color:#7f7f7f;">...</span><span style="color:#7f7f7f;">&quot;,  where  </span><span style="text-decoration:underline;color:#7f7f7f;">c</span><span style="color:#7f7f7f;">  is  the</span>
+              first character of the value of the <span style="font-weight:bold;color:#7f7f7f;">IFS </span><span style="color:#7f7f7f;">variable.  If </span><span style="font-weight:bold;color:#7f7f7f;">IFS </span><span style="color:#7f7f7f;">is unset, the parameters are</span>
+              separated  by  spaces.   If <span style="font-weight:bold;color:#7f7f7f;">IFS </span><span style="color:#7f7f7f;">is null, the parameters are joined without intervening</span>
+              separators.
+       <span style="font-weight:bold;color:#7f7f7f;">&#64;      </span><span style="color:#7f7f7f;">Expands to the positional parameters, starting  from  one.   In  contexts  where  word</span>
+              splitting  is performed, this expands each positional parameter to a separate word; if
+              not within double quotes, these words are subject  to  word  splitting.   In  contexts
+              where  word  splitting is not performed, this expands to a single word with each posi‐
+              tional parameter separated by a  space.   When  the  expansion  occurs  within  double
+              quotes,  each  parameter  expands  to a separate word.  That is, &quot;<span style="font-weight:bold;color:#7f7f7f;">$&#64;</span><span style="color:#7f7f7f;">&quot; is equivalent to</span>
+              &quot;<span style="font-weight:bold;color:#7f7f7f;">$1</span><span style="color:#7f7f7f;">&quot; &quot;</span><span style="font-weight:bold;color:#7f7f7f;">$2</span><span style="color:#7f7f7f;">&quot; ...  If the double-quoted expansion occurs within a word, the  expansion  of</span>
+              the  first  parameter  is joined with the beginning part of the original word, and the
+              expansion of the last parameter is joined with the last part  of  the  original  word.
+              When there are no positional parameters, &quot;<span style="font-weight:bold;color:#7f7f7f;">$&#64;</span><span style="color:#7f7f7f;">&quot; and </span><span style="font-weight:bold;color:#7f7f7f;">$&#64; </span><span style="color:#7f7f7f;">expand to nothing (i.e., they are</span>
+<span style="color:#000000;background-color:#000000;">...skipping...ash(1) line 645 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">TORY  </span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">EXPANSION</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">  </span><span style="color:#7f7f7f;background-color:#000000;">below).   The first character is the </span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">history</span><span style="color:#7f7f7f;background-color:#000000;"> </span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">expansion</span><span style="color:#7f7f7f;background-color:#000000;"> character, the</span>
+              character which signals the start of a history expansion, normally  `<span style="font-weight:bold;color:#7f7f7f;">!</span><span style="color:#7f7f7f;">&apos;.   The  second</span>
+              character  is the <span style="text-decoration:underline;">quick</span> <span style="text-decoration:underline;">substitution</span> character, which is used as shorthand for re-run‐
+              ning the previous command entered, substituting one string for another in the command.
+              The default is `<span style="font-weight:bold;color:#7f7f7f;">^</span><span style="color:#7f7f7f;">&apos;.  The optional third character is  the  character  which  indicates</span>
+              that  the  remainder  of  the line is a comment when found as the first character of a
+              word, normally `<span style="font-weight:bold;color:#7f7f7f;">#</span><span style="color:#7f7f7f;">&apos;.  The history comment character causes history substitution  to  be</span>
+              skipped  for the remaining words on the line.  It does not necessarily cause the shell
+              parser to treat the rest of the line as a comment.
+
+   <span style="font-weight:bold;color:#7f7f7f;">Arrays</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">provides one-dimensional indexed and associative array variables.  Any variable  may  be</span>
+       used  as an indexed array; the <span style="font-weight:bold;color:#7f7f7f;">declare </span><span style="color:#7f7f7f;">builtin will explicitly declare an array.  There is no</span>
+       maximum limit on the size of an array, nor any requirement that members  be  indexed  or  as‐
+       signed  contiguously.  Indexed arrays are referenced using integers (including arithmetic ex‐
+       pressions) and are zero-based; associative arrays are  referenced  using  arbitrary  strings.
+       Unless otherwise noted, indexed array indices must be non-negative integers.
+
+       An  indexed  array  is  created automatically if any variable is assigned to using the syntax
+       <span style="text-decoration:underline;">name</span>[<span style="text-decoration:underline;">subscript</span>]=<span style="text-decoration:underline;">value</span>.  The <span style="text-decoration:underline;">subscript</span> is treated as an arithmetic expression that must evalu‐
+       ate to a number.  To explicitly declare an indexed array, use  <span style="font-weight:bold;color:#7f7f7f;">declare  -a  </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">name</span><span style="color:#7f7f7f;">  (see  </span><span style="font-weight:bold;color:#7f7f7f;">SHELL</span>
+       <span style="font-weight:bold;color:#7f7f7f;">BUILTIN  COMMANDS  </span><span style="color:#7f7f7f;">below).  </span><span style="font-weight:bold;color:#7f7f7f;">declare -a </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">name</span><span style="color:#7f7f7f;"></span><span style="font-weight:bold;color:#7f7f7f;">[</span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">subscript</span><span style="color:#7f7f7f;"></span><span style="font-weight:bold;color:#7f7f7f;">] </span><span style="color:#7f7f7f;">is also accepted; the </span><span style="text-decoration:underline;color:#7f7f7f;">subscript</span><span style="color:#7f7f7f;"> is ig‐</span>
+       nored.
+
+<span style="color:#000000;background-color:#000000;">...skipping...ash(1) line 1192 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       scribed  below  under  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">EXPANSION</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="color:#7f7f7f;background-color:#000000;">.  When assigning to indexed arrays, if the optional brackets</span>
+       and subscript are supplied, that index is assigned to; otherwise the index of the element as‐
+       signed is the last index assigned to by the statement plus one.  Indexing starts at zero.
+
+       When assigning to an associative array, the words in a compound assignment may be either  as‐
+       signment  statements,  for which the subscript is required, or a list of words that is inter‐
+       preted as a sequence of alternating keys and values: <span style="text-decoration:underline;">name</span>=<span style="font-weight:bold;color:#7f7f7f;">( </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">key1</span><span style="color:#7f7f7f;">  </span><span style="text-decoration:underline;color:#7f7f7f;">value1</span><span style="color:#7f7f7f;">  </span><span style="text-decoration:underline;color:#7f7f7f;">key2</span><span style="color:#7f7f7f;">  </span><span style="text-decoration:underline;color:#7f7f7f;">value2</span><span style="color:#7f7f7f;">  ...</span><span style="font-weight:bold;color:#7f7f7f;">)</span><span style="color:#7f7f7f;">.</span>
+       These  are treated identically to <span style="text-decoration:underline;">name</span>=<span style="font-weight:bold;color:#7f7f7f;">( </span><span style="color:#7f7f7f;">[</span><span style="text-decoration:underline;color:#7f7f7f;">key1</span><span style="color:#7f7f7f;">]=</span><span style="text-decoration:underline;color:#7f7f7f;">value1</span><span style="color:#7f7f7f;"> [</span><span style="text-decoration:underline;color:#7f7f7f;">key2</span><span style="color:#7f7f7f;">]=</span><span style="text-decoration:underline;color:#7f7f7f;">value2</span><span style="color:#7f7f7f;"> ...</span><span style="font-weight:bold;color:#7f7f7f;">)</span><span style="color:#7f7f7f;">.  The first word in</span>
+       the list determines how the remaining words are interpreted; all assignments in a  list  must
+       be of the same type.  When using key/value pairs, the keys may not be missing or empty; a fi‐
+       nal missing value is treated like the empty string.
+
+       This  syntax  is  also accepted by the <span style="font-weight:bold;color:#7f7f7f;">declare </span><span style="color:#7f7f7f;">builtin.  Individual array elements may be as‐</span>
+       signed to using the <span style="text-decoration:underline;">name</span>[<span style="text-decoration:underline;">subscript</span>]=<span style="text-decoration:underline;">value</span> syntax introduced above.  When assigning to an  in‐
+       dexed array, if <span style="text-decoration:underline;">name</span> is subscripted by a negative number, that number is interpreted as rela‐
+       tive  to  one greater than the maximum index of <span style="text-decoration:underline;">name</span>, so negative indices count back from the
+       end of the array, and an index of -1 references the last element.
+
+       The += operator will append to an array variable when assigning using the compound assignment
+       syntax; see <span style="font-weight:bold;color:#7f7f7f;">PARAMETERS </span><span style="color:#7f7f7f;">above.</span>
+
+       Any element of an array may be referenced using ${<span style="text-decoration:underline;">name</span>[<span style="text-decoration:underline;">subscript</span>]}.  The braces are  required
+       to  avoid conflicts with pathname expansion.  If <span style="text-decoration:underline;">subscript</span> is <span style="font-weight:bold;color:#7f7f7f;">&#64; </span><span style="color:#7f7f7f;">or </span><span style="font-weight:bold;color:#7f7f7f;">*</span><span style="color:#7f7f7f;">, the word expands to all</span>
+       members of <span style="text-decoration:underline;">name</span>.  These subscripts differ only when the word appears  within  double  quotes.
+<span style="color:#000000;background-color:#000000;">...skipping...ash(1) line 1224 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">EXPANSION</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span>
+       Expansion  is  performed  on  the command line after it has been split into words.  There are
+       seven kinds of expansion performed: <span style="text-decoration:underline;">brace</span> <span style="text-decoration:underline;">expansion</span>, <span style="text-decoration:underline;">tilde</span> <span style="text-decoration:underline;">expansion</span>, <span style="text-decoration:underline;">parameter</span> <span style="text-decoration:underline;">and</span>  <span style="text-decoration:underline;">variable</span>
+       <span style="text-decoration:underline;">expansion</span>,  <span style="text-decoration:underline;">command</span>  <span style="text-decoration:underline;">substitution</span>,  <span style="text-decoration:underline;">arithmetic</span> <span style="text-decoration:underline;">expansion</span>, <span style="text-decoration:underline;">word</span> <span style="text-decoration:underline;">splitting</span>, and <span style="text-decoration:underline;">pathname</span> <span style="text-decoration:underline;">expan‐</span>
+       <span style="text-decoration:underline;">sion</span>.
+
+       The order of expansions is: brace expansion; tilde expansion, parameter and  variable  expan‐
+       sion,  arithmetic expansion, and command substitution (done in a left-to-right fashion); word
+       splitting; and pathname expansion.
+
+       On systems that can support it, there is an additional expansion available: <span style="text-decoration:underline;">process</span> <span style="text-decoration:underline;">substitu‐</span>
+       <span style="text-decoration:underline;">tion</span>.  This is performed at the same time as tilde, parameter, variable, and  arithmetic  ex‐
+       pansion and command substitution.
+
+       After  these  expansions are performed, quote characters present in the original word are re‐
+       moved unless they have been quoted themselves (<span style="text-decoration:underline;">quote</span> <span style="text-decoration:underline;">removal</span>).
+
+       Only brace expansion, word splitting, and pathname expansion can increase the number of words
+       of the expansion; other expansions expand a single word to a single word.   The  only  excep‐
+       tions  to  this  are  the  expansions  of  &quot;<span style="font-weight:bold;color:#7f7f7f;">$&#64;</span><span style="color:#7f7f7f;">&quot;  and &quot;</span><span style="font-weight:bold;color:#7f7f7f;">${</span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">name</span><span style="color:#7f7f7f;"></span><span style="font-weight:bold;color:#7f7f7f;">[&#64;]}</span><span style="color:#7f7f7f;">&quot;, and, in most cases, </span><span style="font-weight:bold;color:#7f7f7f;">$* </span><span style="color:#7f7f7f;">and</span>
+       <span style="font-weight:bold;color:#7f7f7f;">${</span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">name</span><span style="color:#7f7f7f;"></span><span style="font-weight:bold;color:#7f7f7f;">[*]} </span><span style="color:#7f7f7f;">as explained above (see </span><span style="font-weight:bold;color:#7f7f7f;">PARAMETERS</span><span style="color:#7f7f7f;">).</span>
+
+   <span style="font-weight:bold;color:#7f7f7f;">Brace Expansion</span>
+       <span style="text-decoration:underline;">Brace</span> <span style="text-decoration:underline;">expansion</span> is a mechanism by which arbitrary strings may be generated.   This  mechanism
+<span style="color:#000000;background-color:#000000;">&gt;0;user&#64;ubse: ~ine 1292 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+</span><span style="font-weight:bold;color:#00ff00;background-color:#000000;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls &quot;~&quot;0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls &quot;~&quot;
+ls: cannot access &apos;~&apos;: No such file or directory
+0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls &quot;~
+
+
+~hej hopp
+
+
+
+
+
+
+
+
+
+
+
+
+
+ls: cannot access &apos;~hej hopp&apos;: No such file or directory
+0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls ~&quot;hej hopp/0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls ~/&quot;hej hopp
+ls: cannot access &apos;/home/user/hej hopp&apos;: No such file or directory
+0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ mkdir &apos;hej hopp
+0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls -l
+total 8
+-rwxrwxr-x 1 user user   18 Apr 17 09:19  <span style="font-weight:bold;color:#00ff00;">greeting</span>
+drwxrwxr-x 2 user user 4096 Apr 23 09:10 <span style="font-weight:bold;color:#5c5cff;">&apos;hej hopp&apos;</span>
+0;user&#64;ubse: ~
+ls ~/&quot;hej hopp&quot;bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls -mkdir &apos;hej hopp&apos;
+0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ touch hej\ hopp/enfil
+0;user&#64;ubse: ~
+ls ~/&quot;hej hopp&quot;bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ touch hej\ hopp/enfil
+enfil
+0;user&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">user&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 
+logout
+Connection to localhost closed.
+<span style="color:#5c5cff;">DEVOPS24/lektion4
+</span>$ 
+exit
+
+Script done on 2025-04-23 11:13:20+02:00 [COMMAND_EXIT_CODE=&quot;0&quot;]
+</pre>
+</body>
+</html>
+<!--HTML generated by ansifilter 2.18, http://www.andre-simon.de/-->
