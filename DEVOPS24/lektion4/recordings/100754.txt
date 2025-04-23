@@ -1908,4 +1908,50 @@ logout
        When assigning to an associative array, the words in a compound assignment may be either  as‐[m
        signment  statements,  for which the subscript is required, or a list of words that is inter‐[m
        preted as a sequence of alternating keys and values: [4mname[24m=[1m( [4m[22mkey1[24m  [4mvalue1[24m  [4mkey2[24m  [4mvalue2[24m  ...[1m)[22m.[m
-       These  are treated identically to [4mname[24m=[1m( [22m[[4mkey1[24m]=[4mvalue1[24m [[4mkey2[24m]=[4mvalue2[24m ...[1
+       These  are treated identically to [4mname[24m=[1m( [22m[[4mkey1[24m]=[4mvalue1[24m [[4mkey2[24m]=[4mvalue2[24m ...[1m)[22m.  The first word in[m
+       the list determines how the remaining words are interpreted; all assignments in a  list  must[m
+       be of the same type.  When using key/value pairs, the keys may not be missing or empty; a fi‐[m
+       nal missing value is treated like the empty string.[m
+[m
+       This  syntax  is  also accepted by the [1mdeclare [22mbuiltin.  Individual array elements may be as‐[m
+       signed to using the [4mname[24m[[4msubscript[24m]=[4mvalue[24m syntax introduced above.  When assigning to an  in‐[m
+       dexed array, if [4mname[24m is subscripted by a negative number, that number is interpreted as rela‐[m
+       tive  to  one greater than the maximum index of [4mname[24m, so negative indices count back from the[m
+       end of the array, and an index of -1 references the last element.[m
+[m
+       The += operator will append to an array variable when assigning using the compound assignment[m
+       syntax; see [1mPARAMETERS [22mabove.[m
+[m
+       Any element of an array may be referenced using ${[4mname[24m[[4msubscript[24m]}.  The braces are  required[m
+       to  avoid conflicts with pathname expansion.  If [4msubscript[24m is [1m@ [22mor [1m*[22m, the word expands to all[m
+       members of [4mname[24m.  These subscripts differ only when the word appears  within  double  quotes.[m
+[7m Manual page bash(1) line 1224 (press h for help or q to quit)[27m[K[K/[K...skipping...
+[1m[7mEXPANSION[27m[m
+       Expansion  is  performed  on  the command line after it has been split into words.  There are[m
+       seven kinds of expansion performed: [4mbrace[24m [4mexpansion[24m, [4mtilde[24m [4mexpansion[24m, [4mparameter[24m [4mand[24m  [4mvariable[0m[m
+       [4mexpansion[24m,  [4mcommand[24m  [4msubstitution[24m,  [4marithmetic[24m [4mexpansion[24m, [4mword[24m [4msplitting[24m, and [4mpathname[24m [4mexpan‐[0m[m
+       [4msion[24m.[m
+[m
+       The order of expansions is: brace expansion; tilde expansion, parameter and  variable  expan‐[m
+       sion,  arithmetic expansion, and command substitution (done in a left-to-right fashion); word[m
+       splitting; and pathname expansion.[m
+[m
+       On systems that can support it, there is an additional expansion available: [4mprocess[24m [4msubstitu‐[0m[m
+       [4mtion[24m.  This is performed at the same time as tilde, parameter, variable, and  arithmetic  ex‐[m
+       pansion and command substitution.[m
+[m
+       After  these  expansions are performed, quote characters present in the original word are re‐[m
+       moved unless they have been quoted themselves ([4mquote[24m [4mremoval[24m).[m
+[m
+       Only brace expansion, word splitting, and pathname expansion can increase the number of words[m
+       of the expansion; other expansions expand a single word to a single word.   The  only  excep‐[m
+       tions  to  this  are  the  expansions  of  "[1m$@[22m"  and "[1m${[4m[22mname[24m[1m[@]}[22m", and, in most cases, [1m$* [22mand[m
+       [1m${[4m[22mname[24m[1m[*]} [22mas explained above (see [1mPARAMETERS[22m).[m
+[m
+   [1mBrace Expansion[0m[m
+       [4mBrace[24m [4mexpansion[24m is a mechanism by which arbitrary strings may be generated.   This  mechanism[m
+[7m Manual page bash(1) line 1292 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls "~"[H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls "~"
+[?2004lls: cannot access '~': No such file or directory
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls "~"[C[C[C[C[C[C[C[C[C[C[C[C[C[1P~"[C[C"h"e"j" "h"o"p"p"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lls: cannot access '~hej hopp': No such file or directory
+[?2004h]0;user@ubse: ~
