@@ -7709,4 +7709,69 @@ rad3: Hejsan 3
 [7m Manual page bash(1) line 431 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              rameter  that  is set (see [1mPARAMETERS[0m below).  The return status[m
 [7m Manual page bash(1) line 432 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              is the exit status of the last command that  executes.   If  the[m
 [7m Manual page bash(1) line 433 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              expansion of the items following [1min[0m results in an empty list, no[m
-[7m Manual page bash(1) line 434 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              commands are executed, and the return status is 0
+[7m Manual page bash(1) line 434 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              commands are executed, and the return status is 0.[m
+[7m Manual page bash(1) line 435 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 436 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mfor[0m (( [4mexpr1[24m ; [4mexpr2[24m ; [4mexpr3[24m )) ; [1mdo[0m [4mlist[24m ; [1mdone[0m[m
+[7m Manual page bash(1) line 437 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              First, the arithmetic expression [4mexpr1[24m is evaluated according to[m
+[7m Manual page bash(1) line 438 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the  rules  described  below  under  [1mARITHMETIC[0m [1mEVALUATION[0m.  The[m
+[7m Manual page bash(1) line 439 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              arithmetic expression [4mexpr2[24m is then evaluated  repeatedly  until[m
+[7m Manual page bash(1) line 440 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              it  evaluates  to zero.  Each time [4mexpr2[24m evaluates to a non-zero[m
+[7m Manual page bash(1) line 441 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              value, [4mlist[24m is executed and the arithmetic expression  [4mexpr3[24m  is[m
+[7m Manual page bash(1) line 442 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              evaluated.   If  any  expression is omitted, it behaves as if it[m
+[7m Manual page bash(1) line 443 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              evaluates to 1.  The return value is the exit status of the last[m
+[7m Manual page bash(1) line 444 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              command in [4mlist[24m that is executed, or false if any of the expres‐[m
+[7m Manual page bash(1) line 445 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              sions is invalid.[m
+[7m Manual page bash(1) line 446 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 447 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mselect[0m [4mname[24m [ [1min[0m [4mword[24m ] ; [1mdo[0m [4mlist[24m ; [1mdone[0m[m
+[7m Manual page bash(1) line 448 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              The list of words following [1min[0m is expanded, generating a list of[m
+[7m Manual page bash(1) line 449 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              items,  and the set of expanded words is printed on the standard[m
+[7m Manual page bash(1) line 450 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              error, each preceded by a number.  If the [1min[0m  [4mword[24m  is  omitted,[m
+[7m Manual page bash(1) line 451 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the  positional  parameters  are printed (see [1mPARAMETERS[0m below).[m
+[7m Manual page bash(1) line 452 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mselect[0m then displays the [1mPS3[0m prompt and reads a  line  from  the[m
+[7m Manual page bash(1) line 453 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              standard  input.  If the line consists of a number corresponding[m
+[7m Manual page bash(1) line 454 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              to one of the displayed words, then the value of [4mname[24m is set  to[m
+[7m Manual page bash(1) line 455 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              that  word.  If the line is empty, the words and prompt are dis‐[m
+[7m Manual page bash(1) line 456 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              played again.  If EOF is read, the [1mselect[0m command completes  and[m
+[7m Manual page bash(1) line 457 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              returns  1.  Any other value read causes [4mname[24m to be set to null.[m
+[7m Manual page bash(1) line 458 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              The line read is saved in the variable [1mREPLY[0m.  The [4mlist[24m is  exe‐[m
+[7m Manual page bash(1) line 459 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              cuted  after  each  selection until a [1mbreak[0m command is executed.[m
+[7m Manual page bash(1) line 460 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              The exit status of [1mselect[0m is the exit status of the last command[m
+[7m Manual page bash(1) line 461 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              executed in [4mlist[24m, or zero if no commands were executed.[m
+[7m Manual page bash(1) line 462 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 463 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mcase[0m [4mword[24m [1min[0m [ [(] [4mpattern[24m [ [1m|[0m [4mpattern[24m ] ... ) [4mlist[24m ;; ] ... [1mesac[0m[m
+[7m Manual page bash(1) line 464 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              A [1mcase[0m command first expands [4mword[24m, and tries to match it against[m
+[7m Manual page bash(1) line 465 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              each [4mpattern[24m in turn, using the matching rules  described  under[m
+[7m Manual page bash(1) line 466 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mPattern[0m [1mMatching[0m below.  The [4mword[24m is expanded using tilde expan‐[m
+[7m Manual page bash(1) line 467 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              sion, parameter and variable  expansion,  arithmetic  expansion,[m
+[7m Manual page bash(1) line 468 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              command  substitution,  process  substitution and quote removal.[m
+[7m Manual page bash(1) line 469 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Each [4mpattern[24m examined is expanded using tilde expansion, parame‐[m
+[7m Manual page bash(1) line 470 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ter  and  variable expansion, arithmetic expansion, command sub‐[m
+[7m Manual page bash(1) line 471 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              stitution, process substitution, and quote removal.  If the  [1mno‐[0m[m
+[7m Manual page bash(1) line 472 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mcasematch[0m  shell option is enabled, the match is performed with‐[m
+[7m Manual page bash(1) line 473 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              out regard to the case of alphabetic characters.  When  a  match[m
+[7m Manual page bash(1) line 474 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              is  found, the corresponding [4mlist[24m is executed.  If the [1m;;[0m opera‐[m
+[7m Manual page bash(1) line 475 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tor is used, no subsequent matches are attempted after the first[m
+[7m Manual page bash(1) line 476 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              pattern match.  Using [1m;&[0m in place of [1m;;[0m causes execution to con‐[m
+[7m Manual page bash(1) line 477 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tinue with the [4mlist[24m associated with the next  set  of  patterns.[m
+[7m Manual page bash(1) line 478 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Using  [1m;;&[0m in place of [1m;;[0m causes the shell to test the next pat‐[m
+[7m Manual page bash(1) line 479 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tern list in the statement, if any, and execute  any  associated[m
+[7m Manual page bash(1) line 480 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4mlist[24m on a successful match, continuing the case statement execu‐[m
+[7m Manual page bash(1) line 481 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tion as if the pattern list had not matched.  The exit status is[m
+[7m Manual page bash(1) line 482 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              zero if no pattern matches.  Otherwise, it is the exit status of[m
+[7m Manual page bash(1) line 483 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the last command executed in [4mlist[24m.[m
+[7m Manual page bash(1) line 484 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 485 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mif[0m [4mlist[24m; [1mthen[0m [4mlist[24m; [ [1melif[0m [4mlist[24m; [1mthen[0m [4mlist[24m; ] ... [ [1melse[0m [4mlist[24m; ] [1mfi[0m[m
+[7m Manual page bash(1) line 486 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              The [1mif[0m [4mlist[24m is executed.  If its exit status is zero,  the  [1mthen[0m[m
+[7m Manual page bash(1) line 487 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4mlist[24m  is  executed.   Otherwise,  each  [1melif[0m [4mlist[24m is executed in[m
+[7m Manual page bash(1) line 488 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              turn, and if its exit status is  zero,  the  corresponding  [1mthen[0m[m
+[7m Manual page bash(1) line 489 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4mlist[24m is executed and the command completes.  Otherwise, the [1melse[0m[m
+[7m Manual page bash(1) line 490 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4mlist[24m is executed, if present.  The exit status is the exit  sta‐[m
+[7m Manual page bash(1) line 491 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tus of the last command executed, or zero if no condition tested[m
+[7m Manual page bash(1) line 492 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              true.[m
+[7m Manual page bash(1) line 493 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 494 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mwhile[0m [4mlist-1[24m; [1mdo[0m [4mlist-2[24m; [1mdone[0m[m
+[7m Manual page bash(1) line 495 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1muntil[0m [4mlist-1[24m; [1mdo[0m [4mlist-2[24m; [1mdone[0m[m
+[7m Manual page bash(1) line 496 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              The [1mwhile[0m command continuously executes the list [4mlist-2[24m as  long[m
+[7m Manual page bash(1) line 497 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              as the last command in the list [4mlist-1[24m returns an exit status of[m
+[7m Manual page bash(1) line 498 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              zero.  The [1muntil[0m command is identical to the [1mwhile[0m command,  ex‐[m
+[7m Manual
