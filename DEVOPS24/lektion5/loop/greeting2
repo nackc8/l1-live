@@ -1,6 +1,9 @@
 #!/bin/bash
 
-for huhuhu in $@; do
+# Utan "" bryts argumenten upp via Word Splitting, så
+# for huhuhu in @; do blir inte korrekt.
+
+for huhuhu in "$@"; do
 	echo Hej "$huhuhu"
 done
 
