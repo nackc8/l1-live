@@ -2,9 +2,8 @@
 
 # command substituion
 
-LSCOMMAND="ls -la"
+LSCOMMAND="lsX-la"
 
-echo $LSCOMMAND
-echo Nu kör vi!
-# "$LSCOMMAND" # fel utan word splitting
+IFS="X"
+
 $LSCOMMAND # korrekt MED word splitting
