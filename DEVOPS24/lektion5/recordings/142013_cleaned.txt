@@ -1,0 +1,885 @@
+Script started on 2025-04-24 14:20:13+02:00 [TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="71" LINES="15"]
+DEVOPS24/lektion5
+$ DEVOPS24/lektion5
+$ man bash
+BASH(1)                General Commands Manual                BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash  is  Copyright (C) 1989-2022 by the Free Software Founda‐
+       tion, Inc.
+
+DESCRIPTION
+       Bash is an sh-compatible command language interpreter that ex‐
+BASH(1)                General Commands Manual                BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash  is  Copyright (C) 1989-2022 by the Free Software Founda‐
+       tion, Inc.
+
+DESCRIPTION
+       Bash is an sh-compatible command language interpreter that ex‐
+BASH(1)                General Commands Manual                BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash  is  Copyright (C) 1989-2022 by the Free Software Founda‐
+       tion, Inc.
+
+DESCRIPTION
+       Bash is an sh-compatible command language interpreter that ex‐
+...skipping...
+   Parameter Expansion
+       The `$' character introduces parameter expansion, command sub‐
+       stitution,  or  arithmetic  expansion.   The parameter name or
+       symbol to be expanded may be enclosed in braces, which are op‐
+       tional  but  serve to protect the variable to be expanded from
+       characters immediately following it which could be interpreted
+       as part of the name.
+
+       When  braces  are used, the matching ending brace is the first
+       `}' not escaped by a backslash or within a quoted string,  and
+       not within an embedded arithmetic expansion, command substitu‐
+       tion, or parameter expansion.
+
+       ${parameter}
+              The value of parameter is substituted.  The braces  are
+              required  when parameter is a positional parameter with
+              more than one digit, or when parameter is followed by a
+              character which is not to be interpreted as part of its
+              name.  The parameter is a shell parameter as  described
+              above PARAMETERS) or an array reference (Arrays).
+ ESESCOBpage bash(1) line 1908 (press h for help or q to quit)
+       If  the  first  character of parameter is an exclamation point
+       (!), and parameter is not a nameref, it introduces a level  of
+       indirection.  Bash uses the value formed by expanding the rest
+       of parameter as the new parameter; this is then  expanded  and
+       that  value  is used in the rest of the expansion, rather than
+       the expansion of the original parameter.  This is known as in‐
+       direct  expansion.   The  value is subject to tilde expansion,
+       parameter expansion, command substitution, and arithmetic  ex‐
+       pansion.   If parameter is a nameref, this expands to the name
+       of the parameter referenced by parameter instead of performing
+       the  complete  indirect expansion.  The exceptions to this are
+       the expansions of ${!prefix*} and ${!name[@]} described below.
+       The  exclamation  point must immediately follow the left brace
+       in order to introduce indirection.or help or q to quit)
+ ESESCOBpage bash(1) line 1923 (press h for help or q to quit)
+       In each of the cases below, word is subject  to  tilde  expan‐
+       sion,  parameter  expansion,  command substitution, and arith‐
+       metic expansion.ne 1926 (press h for help or q to quit)
+ ESESCOBpage bash(1) line 1927 (press h for help or q to quit)
+       When not performing substring expansion, using the forms docu‐
+       mented  below  (e.g.,  :-), bash tests for a parameter that is
+       unset or null.  Omitting the colon results in a test only  for
+       a parameter that is unset.ress h for help or q to quit)
+ ESESCOBpage bash(1) line 1932 (press h for help or q to quit)
+       ${parameter:-word} 1933 (press h for help or q to quit)
+              Use Default Values.  If parameter is unset or null, the
+              expansion of word is substituted.  Otherwise, the value
+              of parameter is substituted.r help or q to quit)
+       ${parameter:=word} 1937 (press h for help or q to quit)
+              Assign  Default Values.  If parameter is unset or null,
+              the expansion of word is assigned  to  parameter.   The
+              value of parameter is then substituted.  Positional pa‐
+              rameters and special parameters may not be assigned  to
+              in this way.1942 (press h for help or q to quit)
+       ${parameter:?word} 1943 (press h for help or q to quit)
+              Display  Error  if Null or Unset.  If parameter is null
+              or unset, the expansion of word (or a message  to  that
+              effect  if word is not present) is written to the stan‐
+              dard error and the shell, if it is not interactive, ex‐
+              its.  Otherwise, the value of parameter is substituted.
+       ${parameter:+word} 1949 (press h for help or q to quit)
+              Use  Alternate  Value.   If parameter is null or unset,
+              nothing is substituted, otherwise the expansion of word
+              is substituted.2 (press h for help or q to quit)
+       ${parameter:offset}1953 (press h for help or q to quit)
+       ${parameter:offset:length}ress h for help or q to quit)
+              Substring  Expansion.   Expands to up to length charac‐
+              ters of the value of parameter starting at the  charac‐
+              ter  specified  by  offset.  If parameter is @ or *, an
+              indexed array subscripted by @ or *, or an  associative
+              array  name, the results differ as described below.  If
+              length is omitted, expands  to  the  substring  of  the
+              value  of parameter starting at the character specified
+              by offset and  extending  to  the  end  of  the  value.
+              length  and  offset  are  arithmetic  expressions  (see
+              ARITHMETIC EVALUATION below). help or q to quit)
+ ESESCOBpage bash(1) line 1965 (press h for help or q to quit)
+              If offset evaluates to a number  less  than  zero,  the
+              value  is  used as an offset in characters from the end
+              of the value of parameter.  If length  evaluates  to  a
+              number  less  than zero, it is interpreted as an offset
+              in characters from the end of the  value  of  parameter
+              rather  than  a number of characters, and the expansion
+              is the characters between offset and that result.  Note
+              that a negative offset must be separated from the colon
+              by at least one space to avoid being confused with  the
+              :- expansion.975 (press h for help or q to quit)
+ ESESCOBpage bash(1) line 1976 (press h for help or q to quit)
+              If parameter is @ or *, the result is length positional
+              parameters beginning at offset.  A negative  offset  is
+              taken  relative  to one greater than the greatest posi‐
+              tional parameter, so an offset of -1 evaluates  to  the
+              last positional parameter.  It is an expansion error if
+              length evaluates to a number less than zero.uit)
+ ESESCOBpage bash(1) line 1983 (press h for help or q to quit)
+              If parameter is an indexed array name subscripted by  @
+              or *, the result is the length members of the array be‐
+              ginning with ${parameter[offset]}.  A  negative  offset
+              is taken relative to one greater than the maximum index
+              of the specified array.  It is an  expansion  error  if
+              length evaluates to a number less than zero.uit)
+ ESESCOBpage bash(1) line 1990 (press h for help or q to quit)
+              Substring  expansion  applied  to  an associative array
+              produces undefined results.or help or q to quit)
+ ESESCOBpage bash(1) line 1993 (press h for help or q to quit)
+              Substring indexing is zero-based unless the  positional
+              parameters  are used, in which case the indexing starts
+              at 1 by default.  If offset is 0,  and  the  positional
+              parameters are used, $0 is prefixed to the list.
+ ESESCOBpage bash(1) line 1998 (press h for help or q to quit)
+       ${!prefix*}1) line 1999 (press h for help or q to quit)
+       ${!prefix@}1) line 2000 (press h for help or q to quit)
+              Names  matching  prefix.  Expands to the names of vari‐
+              ables whose names begin with prefix, separated  by  the
+              first character of the IFS special variable.  When @ is
+              used and the expansion appears  within  double  quotes,
+              each variable name expands to a separate word.t)
+ ESESCOBpage bash(1) line 2006 (press h for help or q to quit)
+       ${!name[@]}1) line 2007 (press h for help or q to quit)
+       ${!name[*]}1) line 2008 (press h for help or q to quit)
+              List  of array keys.  If name is an array variable, ex‐
+              pands to the list of array indices (keys)  assigned  in
+              name.  If name is not an array, expands to 0 if name is
+              set and null otherwise.  When @ is used and the  expan‐
+              sion  appears within double quotes, each key expands to
+              a separate word. (press h for help or q to quit)
+ ESESCOBpage bash(1) line 2015 (press h for help or q to quit)
+       ${#parameter} line 2016 (press h for help or q to quit)
+              Parameter length.  The  length  in  characters  of  the
+              value  of  parameter is substituted.  If parameter is *
+              or @, the value substituted is the number of positional
+              parameters.   If parameter is an array name subscripted
+              by * or @, the value substituted is the number of  ele‐
+              ments  in  the array.  If parameter is an indexed array
+              name subscripted by a negative number, that  number  is
+              interpreted as relative to one greater than the maximum
+              index of parameter, so negative indices count back from
+              the end of the array, and an index of -1 references the
+              last element.027 (press h for help or q to quit)
+ ESESCOBpage bash(1) line 2028 (press h for help or q to quit)
+M              a separate word.(press h for help or q to quit)
+ ESESCOBpage bash(1) line 2028 (press h for help or q to quit)
+       ${parameter#word}e 2029 (press h for help or q to quit)
+MESESCOApage bash(1) line 2030 (press h for help or q to quit)
+M              a separate word.(press h for help or q to quit)
+M              sion  appears within double quotes, each key expands to
+M              set and null otherwise.  When @ is used and the  expan‐
+M              name.  If name is not an array, expands to 0 if name is
+M              pands to the list of array indices (keys)  assigned  in
+              interpreted as relative to one greater than the maximum
+              index of parameter, so negative indices count back from
+              the end of the array, and an index of -1 references the
+              last element.027 (press h for help or q to quit)
+ ESESCOBpage bash(1) line 2028 (press h for help or q to quit)
+       ${parameter#word}e 2029 (press h for help or q to quit)
+       ${parameter##word} 2030 (press h for help or q to quit)
+              Remove matching prefix pattern.  The word  is  expanded
+              to produce a pattern just as in pathname expansion, and
+              matched against the expanded value of  parameter  using
+              the  rules  described under Pattern Matching below.  If
+              the pattern matches the beginning of the value  of  pa‐
+              rameter,  then  the  result of the expansion is the ex‐
+              panded value of parameter with  the  shortest  matching
+              pattern  (the  ``#'' case) or the longest matching pat‐
+              tern (the ``##'' case) deleted.  If parameter is  @  or
+              *, the pattern removal operation is applied to each po‐
+              sitional parameter in turn, and the  expansion  is  the
+              resultant list.  If parameter is an array variable sub‐
+              scripted with @ or *, the pattern removal operation  is
+              applied  to  each  member of the array in turn, and the
+              expansion is the resultant list.lp or q to quit)
+ ESESCOBpage bash(1) line 2046 (press h for help or q to quit)
+       ${parameter%word}e 2047 (press h for help or q to quit)
+       ${parameter%%word} 2048 (press h for help or q to quit)
+              Remove matching suffix pattern.  The word  is  expanded
+              to produce a pattern just as in pathname expansion, and
+              matched against the expanded value of  parameter  using
+              the  rules  described under Pattern Matching below.  If
+              the pattern matches a trailing portion of the  expanded
+              value of parameter, then the result of the expansion is
+              the expanded  value  of  parameter  with  the  shortest
+              matching pattern (the ``%'' case) or the longest match‐
+              ing pattern (the ``%%'' case) deleted.  If parameter is
+              @  or  *,  the  pattern removal operation is applied to
+              each positional parameter in turn, and the expansion is
+              the  resultant list.  If parameter is an array variable
+              subscripted with @ or *, the pattern removal  operation
+              is applied to each member of the array in turn, and the
+              expansion is the resultant list.lp or q to quit)
+ ESESCOBpage bash(1) line 2064 (press h for help or q to quit)
+       ${parameter/pattern/string}ess h for help or q to quit)
+       ${parameter//pattern/string}ss h for help or q to quit)
+       ${parameter/#pattern/string}ss h for help or q to quit)
+       ${parameter/%pattern/string}ss h for help or q to quit)
+              Pattern substitution.  The pattern is expanded to  pro‐
+              duce  a pattern just as in pathname expansion.  Parame‐
+              ter is  expanded  and  the  longest  match  of  pattern
+              against  its value is replaced with string.  string un‐
+              dergoes tilde expansion, parameter and variable  expan‐
+              sion, arithmetic expansion, command and process substi‐
+              tution, and quote removal.  The match is performed  us‐
+              ing  the  rules described under Pattern Matching below.
+              In the first form above, only the first  match  is  re‐
+              placed.   If there are two slashes separating parameter
+              and pattern (the second form  above),  all  matches  of
+              pattern  are  replaced with string.  If pattern is pre‐
+              ceded by # (the third form above), it must match at the
+              beginning  of the expanded value of parameter.  If pat‐
+              tern is preceded by % (the fourth form above), it  must
+              match  at  the  end of the expanded value of parameter.
+              If the expansion of string is null, matches of  pattern
+              are deleted.  If string is null, matches of pattern are
+              deleted and the / following pattern may be omitted.
+ ESESCOBpage bash(1) line 2088 (press h for help or q to quit)
+              If the patsub_replacement shell option is enabled using
+              shopt,  any  unquoted  instances of & in string are re‐
+              placed with the matching portion of pattern.uit)
+ ESESCOBpage bash(1) line 2092 (press h for help or q to quit)
+              Quoting any part of string inhibits replacement in  the
+              expansion  of the quoted portion, including replacement
+              strings stored in shell variables.  Backslash will  es‐
+              cape  & in string; the backslash is removed in order to
+              permit a literal & in the  replacement  string.   Back‐
+              slash  can  also  be used to escape a backslash; \\ re‐
+              sults in a literal backslash in the replacement.  Users
+              should  take  care  if string is double-quoted to avoid
+              unwanted interactions between the backslash and double-
+              quoting,  since  backslash  has  special meaning within
+              double quotes.  Pattern substitution performs the check
+              for  unquoted  & after expanding string; shell program‐
+              mers should quote any occurrences of & they want to  be
+              taken  literally  in the replacement and ensure any in‐
+              stances of & they want to be replaced are unquoted.
+ ESESCOBpage bash(1) line 2108 (press h for help or q to quit)
+              If the nocasematch shell option is enabled,  the  match
+              is  performed  without regard to the case of alphabetic
+              characters.  If parameter is @ or *,  the  substitution
+              operation  is  applied  to each positional parameter in
+              turn, and the expansion is the resultant list.  If  pa‐
+              rameter  is  an array variable subscripted with @ or *,
+              the substitution operation is applied to each member of
+              the  array  in turn, and the expansion is the resultant
+              list.) line 2117 (press h for help or q to quit)
+ ESESCOBpage bash(1) line 2118 (press h for help or q to quit)
+       ${parameter^pattern}119 (press h for help or q to quit)
+       ${parameter^^pattern}20 (press h for help or q to quit)
+       ${parameter,pattern}121 (press h for help or q to quit)
+       ${parameter,,pattern}22 (press h for help or q to quit)
+              Case modification.  This expansion modifies the case of
+              alphabetic characters in parameter.  The pattern is ex‐
+              panded to produce a pattern just as in pathname  expan‐
+              sion.   Each character in the expanded value of parame‐
+              ter is tested against pattern, and, if it  matches  the
+              pattern, its case is converted.  The pattern should not
+              attempt to match more than one character.  The ^ opera‐
+              tor  converts lowercase letters matching pattern to up‐
+              percase; the ,  operator  converts  matching  uppercase
+              letters to lowercase.  The ^^ and ,, expansions convert
+              each matched character in the expanded value; the ^ and
+              , expansions match and convert only the first character
+              in the expanded value.  If pattern is  omitted,  it  is
+              treated  like  a  ?, which matches every character.  If
+              parameter is @ or *, the case modification operation is
+              applied  to  each positional parameter in turn, and the
+              expansion is the resultant list.  If  parameter  is  an
+M              panded to produce a pattern just as in pathname  expan‐
+M              alphabetic characters in parameter.  The pattern is ex‐
+M              Case modification.  This expansion modifies the case of
+M       ${parameter,,pattern}7 (press h for help or q to quit)
+M       ${parameter,pattern}36 (press h for help or q to quit)
+M       ${parameter^^pattern}5 (press h for help or q to quit)
+M       ${parameter^pattern}34 (press h for help or q to quit)
+MESESCOApage bash(1) line 2133 (press h for help or q to quit)
+M              list. line 2132 (press h for help or q to quit)
+M              the  array  in turn, and the expansion is the resultant
+M              the substitution operation is applied to each member of
+M              rameter  is  an array variable subscripted with @ or *,
+              pattern, its case is converted.  The pattern should not
+              attempt to match more than one character.  The ^ opera‐
+              tor  converts lowercase letters matching pattern to up‐
+              percase; the ,  operator  converts  matching  uppercase
+              letters to lowercase.  The ^^ and ,, expansions convert
+              each matched character in the expanded value; the ^ and
+              , expansions match and convert only the first character
+              in the expanded value.  If pattern is  omitted,  it  is
+              treated  like  a  ?, which matches every character.  If
+              parameter is @ or *, the case modification operation is
+              applied  to  each positional parameter in turn, and the
+              expansion is the resultant list.  If  parameter  is  an
+              array  variable subscripted with @ or *, the case modi‐
+              fication operation is applied to each member of the ar‐
+              ray in turn, and the expansion is the resultant list.
+ ESESCOBpage bash(1) line 2143 (press h for help or q to quit)
+       ${parameter@operator}44 (press h for help or q to quit)
+              Parameter  transformation.   The  expansion is either a
+              transformation of the value of parameter or information
+              about parameter itself, depending on the value of oper‐
+              ator.  Each operator is a single letter:to quit)
+ ESESCOBpage bash(1) line 2149 (press h for help or q to quit)
+              U      The expansion is a string that is the  value  of
+                     parameter  with  lowercase alphabetic characters
+                     converted to uppercase.help or q to quit)
+              u      The expansion is a string that is the  value  of
+                     parameter  with the first character converted to
+                     uppercase, if it is alphabetic.q to quit)
+              L      The expansion is a string that is the  value  of
+                     parameter  with  uppercase alphabetic characters
+                     converted to lowercase.help or q to quit)
+              Q      The expansion is a string that is the  value  of
+                     parameter  quoted in a format that can be reused
+>DEVOPS24/lektion51) line 2161 (press h for help or q to quit)
+$ mkdir command_substituiotution
+DEVOPS24/lektion5
+$ cd command_substitution/
+DEVOPS24/lektion5/command_substitution
+$ DEVOPS24/lektion5/command_substitution
+$ cp ../param_expansion/greet .
+DEVOPS24/lektion5/command_substitution
+$ DEVOPS24/lektion5/command_substitution
+$ ls
+greet
+DEVOPS24/lektion5/command_substitution
+$ mv
+$ mv greet myls
+DEVOPS24/lektion5/command_substitution
+$ DEVOPS24/lektion5/command_substitution
+$ ./myls 
+
+Hej 0
+DEVOPS24/lektion5/command_substitution
+$ 
+DEVOPS24/lektion5/command_substitution
+$ code myls 
+DEVOPS24/lektion5/command_substitution
+./DEVOPS24/lektion5/command_substitution
+$ ./myls 
+LSOUTPUT: adduser.conf adjtime aliases alsa alternatives anacrontab apache2 apg.conf apparmor apparmor.d appstream.conf apt avahi bash.bashrc bash_completion bash_completion.d bindresvport.blacklist binfmt.d bluetooth bogofilter.cf ca-certificates ca-certificates.conf catdocrc chatscripts chromium cni console-setup containerd containers cracklib cron.d cron.daily cron.hourly cron.monthly crontab cron.weekly cron.yearly cryptsetup-initramfs crypttab cups cupshelpers dbus-1 dconf debconf.conf debian_version debsig debuginfod default deluser.conf dhcp dictionaries-common discover.conf.d discover-modprobe.conf docker dpkg dput.cf e2scrub.conf elinks emacs email-addresses environment environment.d ethertypes exim4 exports firefox-esr fish fonts fstab fstab.bak fuse.conf fwupd gai.conf gconf gdb gdm3 geoclue ghostscript gimp glvnd gnome gnome-chess GNUstep gprofng.rc groff group group- grub.d gshadow gshadow- gss gtk-2.0 gtk-3.0 host.conf hostname hosts hosts.allow hosts.deny idmapd.conf ifplugd ImageMagick-6 init.d initramfs-tools inputrc insserv.conf.d ipp-usb iproute2 issue issue.net java java-17-openjdk kernel kernel-img.conf keyutils ldap ld.so.cache ld.so.conf ld.so.conf.d libao.conf libaudit.conf libblockdev libguestfs-tools.conf libibverbs.d libnl-3 libpaper.d libreoffice libvirt lightdm lighttpd locale.alias locale.gen localtime logcheck login.defs logrotate.conf logrotate.d lvm lynx machine-id magic magic.mime mailcap mailcap.order mailname mail.rc manpath.config maven mdadm mdevctl.d mime.types mke2fs.conf ModemManager modprobe.d modules modules-load.d motd mtab mtools.conf mysql nanorc netconfig network NetworkManager networks nfs.conf nfs.conf.d nftables.conf nsswitch.conf ODBCDataSources odbc.ini odbcinst.ini openal openni2 opt os-release PackageKit pam.conf pam.d papersize passwd passwd- perl pki plymouth polkit-1 popularity-contest.conf ppp profile profile.d protocols pulse python3 python3.11 qemu-ifdown qemu-ifup rc0.d rc1.d rc2.d rc3.d rc4.d rc5.d rc6.d rcS.d reportbug.conf request-key.conf request-key.d resolv.conf resolv.pre-tailscale-backup.conf rmt rpc runit rygel.conf sane.d sasl2 security selinux sensors3.conf sensors.d services sgml shadow shadow- shells signon-ui skel smartd.conf smartmontools snmp speech-dispatcher ssh ssl subgid subgid- subuid subuid- sudo.conf sudoers sudoers.d sudo_logsrvd.conf sv swtpm-localca.conf swtpm-localca.options swtpm_setup.conf sysctl.conf sysctl.d systemd terminfo texmf timezone timidity tmpfiles.d ucf.conf udev udisks2 ufw updatedb.conf update-motd.d UPower usb_modeswitch.conf usb_modeswitch.d vbox vdpau_wrapper.cfg vim virt-builder vulkan w3m wgetrc wpa_supplicant X11 xattr.conf xdg xfce4 xml zsh
+DEVOPS24/lektion5/command_substitution
+$ qDEVOPS24/lektion5/command_substitution
+$ 
+e
+cd ..
+DEVOPS24/lektion5
+$ DEVOPS24/lektion5
+$ mkdrir wordpsplitting
+DEVOPS24/lektion5
+$ cd wordsplitting/
+DEVOPS24/lektion5/wordsplitting
+$ DEVOPS24/lektion5/wordsplitting
+$ cp ../command_substitution/myls .
+DEVOPS24/lektion5/wordsplitting
+$ DEVOPS24/lektion5/wordsplitting
+$ code myls 
+DEVOPS24/lektion5/wordsplitting
+$ ./myt
+ls DEVOPS24/lektion5/wordsplitting
+$ ./myls 
+LSOUTPUT: ls -la
+DEVOPS24/lektion5/wordsplitting
+$ ./myls DEVOPS24/lektion5/wordsplitting
+$ ./myls 
+LSOUTPUT: ls -la
+Nu kör vi!
+total 12
+drwxr-xr-x  2 kent kent 4096 Apr 24 14:26 .
+drwxr-xr-x 11 kent kent 4096 Apr 24 14:26 ..
+-rwxr-xr-x  1 kent kent  110 Apr 24 14:27 myls
+DEVOPS24/lektion5/wordsplitting
+$ ./myls DEVOPS24/lektion5/wordsplitting
+$ ./myls 
+LSOUTPUT: ls -la
+Nu kör vi!
+
+Hej 0
+total 12
+drwxr-xr-x  2 kent kent 4096 Apr 24 14:26 .
+drwxr-xr-x 11 kent kent 4096 Apr 24 14:26 ..
+-rwxr-xr-x  1 kent kent  179 Apr 24 14:31 myls
+DEVOPS24/lektion5/wordsplitting
+$ 
+DEVOPS24/lektion5/wordsplitting
+$ 
+DEVOPS24/lektion5/wordsplitting
+$ DEVOPS24/lektion5/wordsplitting
+$ ./myls 
+LSOUTPUT: ls -la
+Nu kör vi!
+
+Hej 0
+total 12
+drwxr-xr-x  2 kent kent 4096 Apr 24 14:26 .
+drwxr-xr-x 11 kent kent 4096 Apr 24 14:26 ..
+-rwxr-xr-x  1 kent kent  179 Apr 24 14:31 myls
+DEVOPS24/lektion5/wordsplitting
+$ ./myls DEVOPS24/lektion5/wordsplitting
+$ ./myls 
+LSOUTPUT: ls -la
+Nu kör vi!
+total 12
+drwxr-xr-x  2 kent kent 4096 Apr 24 14:26 .
+drwxr-xr-x 11 kent kent 4096 Apr 24 14:26 ..
+-rwxr-xr-x  1 kent kent  110 Apr 24 14:32 myls
+DEVOPS24/lektion5/wordsplitting
+$ ./myls DEVOPS24/lektion5/wordsplitting
+$ ./myls 
+ls -la
+Nu kör vi!
+total 12
+drwxr-xr-x  2 kent kent 4096 Apr 24 14:26 .
+drwxr-xr-x 11 kent kent 4096 Apr 24 14:26 ..
+-rwxr-xr-x  1 kent kent  100 Apr 24 14:32 myls
+DEVOPS24/lektion5/wordsplitting
+$ ./myls DEVOPS24/lektion5/wordsplitting
+$ ./myls 
+ls -la
+Nu kör vi!
+./myls: line 9: ls -la: command not found
+DEVOPS24/lektion5/wordsplitting
+$ ./myls DEVOPS24/lektion5/wordsplitting
+$ ./myls 
+ls -la
+Nu kör vi!
+total 12
+drwxr-xr-x  2 kent kent 4096 Apr 24 14:26 .
+drwxr-xr-x 11 kent kent 4096 Apr 24 14:26 ..
+-rwxr-xr-x  1 kent kent  170 Apr 24 14:34 myls
+DEVOPS24/lektion5/wordsplitting
+$ ./my
+lsDEVOPS24/lektion5/wordsplitting
+$ ./myls2
+total 16
+drwxr-xr-x  2 kent kent 4096 Apr 24 14:36 .
+drwxr-xr-x 11 kent kent 4096 Apr 24 14:26 ..
+-rwxr-xr-x  1 kent kent  170 Apr 24 14:34 myls
+-rwxr-xr-x  1 kent kent  105 Apr 24 14:37 myls2
+DEVOPS24/lektion5/wordsplitting
+$ cd ..
+DEVOPS24/lektion5
+$ DEVOPS24/lektion5
+$ ls
+command_substitution  readcsv	  tests
+loop		      recordings  tillbakablickL4
+param_expansion       redirect	  wordsplitting
+DEVOPS24/lektion5
+$ mkdir pathname_expansion
+DEVOPS24/lektion5
+$ DEVOPS24/lektion5
+$ ;ls
+command_substitution  readcsv	  tillbakablickL4
+loop		      recordings  wordsplitting
+param_expansion       redirect
+pathname_expansion    tests
+DEVOPS24/lektion5
+$ r
+
+bash: readcsv: command not found
+DEVOPS24/lektion5
+$ rlr
+ercrhror rDEVOPS24/lektion5
+$ echo r
+readcsv recordings redirect
+DEVOPS24/lektion5
+$ echo r.
+
+readcsv recordings redirect
+DEVOPS24/lektion5
+$ DEVOPS24/lektion5
+$ man cp
+CP(1)                       User Commands                       CP(1)
+
+NAME
+       cp - copy files and directories
+
+SYNOPSIS
+       cp [OPTION]... [-T] SOURCE DEST
+       cp [OPTION]... SOURCE... DIRECTORY
+       cp [OPTION]... -t DIRECTORY SOURCE...
+
+DESCRIPTION
+       Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.
+
+       Mandatory  arguments  to  long options are mandatory for short
+       options too.
+
+       -a, --archive
+              same as -dR --preserve=all
+>DEVOPS24/lektion5 line 1 (press h for help or q to quit)
+$ ls
+command_substitution  readcsv	  tillbakablickL4
+loop		      recordings  wordsplitting
+param_expansion       redirect
+pathname_expansion    tests
+DEVOPS24/lektion5
+$ cd pathname_expansion/
+DEVOPS24/lektion5/pathname_expansion
+$ DEVOPS24/lektion5/pathname_expansion
+$ ls
+DEVOPS24/lektion5/pathname_expansion
+$ 
+
+touch {a{1//..10
+
+DEVOPS24/lektion5/pathname_expansion
+$ touch a{1..10}
+DEVOPS24/lektion5/pathname_expansion
+$ touch a{1..10{1..10b{1..10
+DEVOPS24/lektion5/pathname_expansion
+$ touch b{1..10}c
+DEVOPS24/lektion5/pathname_expansion
+$ touch b{1..10}{1..10}d{1..10}
+
+
+
+e
+DEVOPS24/lektion5/pathname_expansion
+$ DEVOPS24/lektion5/pathname_expansion
+$ ls
+a1   a3  a6  a9   b10c	b2c  b4   b5c  b7   b8c  d10e  d3e  d6e  d9e
+a10  a4  a7  b1   b1c	b3   b4c  b6   b7c  b9	 d1e   d4e  d7e
+a2   a5  a8  b10  b2	b3c  b5   b6c  b8   b9c  d2e   d5e  d8e
+DEVOPS24/lektion5/pathname_expansion
+$ echo 2*
+2*
+DEVOPS24/lektion5/pathname_expansion
+$ echo 2*2DEVOPS24/lektion5/pathname_expansion
+$ echo *2
+a2 b2 b2c d2e
+DEVOPS24/lektion5/pathname_expansion
+$ echo *2 *2r *2a *2d *2e *2r *2a *2
+ gort nu
+radera a2 b2 b2c d2e gort nu
+DEVOPS24/lektion5/pathname_expansion
+$ echo radera *2* gort n *2 *2 *2 *2 *2 *2*2 *2 *2 *2 *2*
+
+
+
+r *2m *2 *2- *2r *2f *2
+
+
+
+
+
+
+
+
+
+
+echo DEVOPS24/lektion5/pathname_expansion
+$ echo rm -rf *2
+rm -rf a2 b2 b2c d2e
+DEVOPS24/lektion5/pathname_expansion
+$ echo rm -rf *2
+v *2
+removed 'a2'
+removed 'b2'
+removed 'b2c'
+removed 'd2e'
+DEVOPS24/lektion5/pathname_expansion
+$ DEVOPS24/lektion5/pathname_expansion
+$ ls
+a1   a4  a7  b1    b1c	b4   b5c  b7   b8c  d10e  d4e  d7e
+a10  a5  a8  b10   b3	b4c  b6   b7c  b9   d1e   d5e  d8e
+a3   a6  a9  b10c  b3c	b5   b6c  b8   b9c  d3e   d6e  d9e
+DEVOPS24/lektion5/pathname_expansion
+$ echo 
+
+?
+DEVOPS24/lektion5/pathname_expansion
+$ echo ??
+a1 a3 a4 a5 a6 a7 a8 a9 b1 b3 b4 b5 b6 b7 b8 b9
+DEVOPS24/lektion5/pathname_expansion
+$ echo ?2*
+?2*
+DEVOPS24/lektion5/pathname_expansion
+$ echo ?27DEVOPS24/lektion5/pathname_expansion
+$ echo ?7
+a7 b7 b7c d7e
+DEVOPS24/lektion5/pathname_expansion
+$ touch 7osjutiio
+DEVOPS24/lektion5/pathname_expansion
+echo ?7*7sjutiio
+a7 b7 b7c d7e
+DEVOPS24/lektion5/pathname_expansion
+$ echo ?77
+7sjutiio
+DEVOPS24/lektion5/pathname_expansion
+$ echo 7
+7sjutiio
+DEVOPS24/lektion5/pathname_expansion
+$ DEVOPS24/lektion5/pathname_expansion
+$ ls
+7sjutiio  a3  a6  a9   b10c  b3c  b5   b6c  b8	 b9c   d3e  d6e  d9e
+a1	  a4  a7  b1   b1c   b4   b5c  b7   b8c  d10e  d4e  d7e
+a10	  a5  a8  b10  b3    b4c  b6   b7c  b9	 d1e   d5e  d8e
+DEVOPS24/lektion5/pathname_expansion
+$ "
+'
+
+tocuuch 7'7
+'
+
+DEVOPS24/lektion5/pathname_expansion
+$ ls -l
+total 0
+-rw-r--r-- 1 kent kent 0 Apr 24 14:47 '7*'
+-rw-r--r-- 1 kent kent 0 Apr 24 14:46  7sjutiio
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  a1
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  a10
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  a3
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  a4
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  a5
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  a6
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  a7
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  a8
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  a9
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b1
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b10
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b10c
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b1c
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b3
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b3c
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b4
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b4c
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b5
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b5c
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b6
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b6c
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b7
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b7c
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b8
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b8c
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b9
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b9c
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  d10e
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  d1e
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  d3e
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  d4e
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  d5e
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  d6e
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  d7e
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  d8e
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  d9e
+DEVOPS24/lektion5/pathname_expansion
+$ DEVOPS24/lektion5/pathname_expansion
+touch '7*7
+
+DEVOPS24/lektion5/pathname_expansion
+$ touch 7
+
+
+
+
+
+
+
+echo 
+touch 7* 7sjutiio
+DEVOPS24/lektion5/pathname_expansion
+$ echo touch 79*
+touch 9*
+DEVOPS24/lektion5/pathname_expansion
+$ echo touch 9999999s9v9a9r9 9
+svar 9*
+DEVOPS24/lektion5/pathname_expansion
+$ touch 9
+
+DEVOPS24/lektion5/pathname_expansion
+$ ls DEVOPS24/lektion5/pathname_expansion
+$ ls 
+'7*'	    a10   a6   b1     b3    b5	  b7    b9     d3e   d7e
+ 7sjutiio   a3	  a7   b10    b3c   b5c   b7c   b9c    d4e   d8e
+'9*'	    a4	  a8   b10c   b4    b6	  b8    d10e   d5e   d9e
+ a1	    a5	  a9   b1c    b4c   b6c   b8c   d1e    d6e
+DEVOPS24/lektion5/pathname_expansion
+$ lstouch 9
+DEVOPS24/lektion5/pathname_expansion
+$ for x in 9*; do echo Match: $x; done
+Match: 9*
+DEVOPS24/lektion5/pathname_expansion
+$ for x in 9*; do echo Match: $x; don8DEVOPS24/lektion5/pathname_expansion
+$ for x in 8*; do echo Match: $x; don
+Match: 8*
+DEVOPS24/lektion5/pathname_expansion
+$ ls
+'7*'	    a10   a6   b1     b3    b5	  b7    b9     d3e   d7e
+ 7sjutiio   a3	  a7   b10    b3c   b5c   b7c   b9c    d4e   d8e
+'9*'	    a4	  a8   b10c   b4    b6	  b8    d10e   d5e   d9e
+ a1	    a5	  a9   b1c    b4c   b6c   b8c   d1e    d6e
+DEVOPS24/lektion5/pathname_expansion
+$ lfor x in 8*; do echo Match: $x; don
+
+
+
+
+
+
+
+^C
+DEVOPS24/lektion5/pathname_expansion
+$ DEVOPS24/lektion5/pathname_expansion
+$ sho
+
+shopt            showconsolefont  showkey          
+shotwell         showfigfonts     showrgb          
+DEVOPS24/lektion5/pathname_expansion
+$ shoptDEVOPS24/lektion5/pathname_expansion
+$ shopt
+autocd         	off
+assoc_expand_once	off
+cdable_vars    	off
+cdspell        	off
+checkhash      	off
+checkjobs      	off
+checkwinsize   	on
+cmdhist        	on
+compat31       	off
+compat32       	off
+compat40       	off
+compat41       	off
+compat42       	off
+compat43       	off
+compat44       	off
+complete_fullquote	on
+direxpand      	off
+dirspell       	off
+dotglob        	off
+execfail       	off
+expand_aliases 	on
+extdebug       	off
+extglob        	off
+extquote       	on
+failglob       	off
+force_fignore  	on
+globasciiranges	on
+globskipdots   	on
+globstar       	off
+gnu_errfmt     	off
+histappend     	off
+histreedit     	off
+histverify     	off
+hostcomplete   	on
+huponexit      	off
+inherit_errexit	off
+interactive_comments	on
+lastpipe       	off
+lithist        	off
+localvar_inherit	off
+localvar_unset 	off
+login_shell    	off
+mailwarn       	off
+no_empty_cmd_completion	off
+nocaseglob     	off
+nocasematch    	off
+noexpand_translation	off
+nullglob       	off
+patsub_replacement	on
+progcomp       	on
+progcomp_alias 	off
+promptvars     	on
+restricted_shell	off
+shift_verbose  	off
+sourcepath     	on
+varredir_close 	off
+xpg_echo       	off
+DEVOPS24/lektion5/pathname_expansion
+$ shopt | grep nullDEVOPS24/lektion5/pathname_expansion
+$ shopt | grep null
+nullglob       	off
+DEVOPS24/lektion5/pathname_expansion
+$ shopt nu
+llglob
+nullglob       	off
+DEVOPS24/lektion5/pathname_expansion
+$ shopt nullglob on
+nullglob       	off
+bash: shopt: on: invalid shell option name
+DEVOPS24/lektion5/pathname_expansion
+$ man shoptDEVOPS24/lektion5/pathname_expansion
+$ man shopt
+No manual entry for shopt
+DEVOPS24/lektion5/pathname_expansion
+man shoptlglob on
+help shoopt
+shopt: shopt [-pqsu] [-o] [optname ...]
+    Set and unset shell options.
+    
+    Change the setting of each shell option OPTNAME.  Without any option
+    arguments, list each supplied OPTNAME, or all shell options if no
+    OPTNAMEs are given, with an indication of whether or not each is set.
+    
+    Options:
+      -o	restrict OPTNAMEs to those defined for use with `set -o'
+      -p	print each shell option with an indication of its status
+      -q	suppress output
+      -s	enable (set) each OPTNAME
+      -u	disable (unset) each OPTNAME
+    
+    Exit Status:
+    Returns success if OPTNAME is enabled; fails if an invalid option is
+    given or OPTNAME is disabled.
+DEVOPS24/lektion5/pathname_expansion
+shopt nullglob o-nullglosnullglo nullgloDEVOPS24/lektion5/pathname_expansion
+$ shopt -s nullglo
+DEVOPS24/lektion5/pathname_expansion
+$ ls
+'7*'	    a10   a6   b1     b3    b5	  b7    b9     d3e   d7e
+ 7sjutiio   a3	  a7   b10    b3c   b5c   b7c   b9c    d4e   d8e
+'9*'	    a4	  a8   b10c   b4    b6	  b8    d10e   d5e   d9e
+ a1	    a5	  a9   b1c    b4c   b6c   b8c   d1e    d6e
+DEVOPS24/lektion5/pathname_expansion
+$ fofor': forarch)`':f': for x in 8*; do echo Match: $x; done
+
+
+
+
+
+
+DEVOPS24/lektion5/pathname_expansion
+lsfor x in 8*; do echo Match: $x; done
+for x in 8*; do echo Match: $x; don9
+
+
+
+
+
+
+
+
+
+
+
+Match: 9*
+DEVOPS24/lektion5/pathname_expansion
+$ 
+exit
+
+Script done on 2025-04-24 14:55:54+02:00 [COMMAND_EXIT_CODE="0"]
