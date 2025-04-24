@@ -6960,4 +6960,368 @@ read(2)                       System Calls Manual                      read(2)[
 [?2004lloop  recordings  redirect  tests  tillbakablickL4
 [?2004h[94mDEVOPS24/lektion5
 (B[m$ cd re
-[?2004lbash: cd: re: No 
+[?2004lbash: cd: re: No such file or directory
+[?2004h[94mDEVOPS24/lektion5
+(B[m$ cd redirect/
+[?2004l[?2004h[94mDEVOPS24/lektion5/redirect
+(B[m$ [H[2J[94mDEVOPS24/lektion5/redirect
+(B[m$ ls
+[?2004lnumberfile  numberfileoutput
+[?2004h[94mDEVOPS24/lektion5/redirect
+(B[m$ cat numberfileoutput 
+[?2004lHej hopp Terve
+[?2004h[94mDEVOPS24/lektion5/redirect
+(B[m$ [H[2J[94mDEVOPS24/lektion5/redirect
+(B[m$ seq 1 20
+[?2004l1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+[?2004h[94mDEVOPS24/lektion5/redirect
+(B[m$ seq 1 20[H[2J[94mDEVOPS24/lektion5/redirect
+(B[m$ seq 1 20 > testfil
+[?2004l[?2004h[94mDEVOPS24/lektion5/redirect
+(B[m$ less testfil 
+[?2004l[?1049h[22;0;0t[?1h=1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+[7mtestfil[27m[K[K16
+17
+18
+19
+20
+[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion5/redirect
+(B[m$ [H[2J[94mDEVOPS24/lektion5/redirect
+(B[m$ ls
+[?2004lnumberfile  numberfileoutput  testfil
+[?2004h[94mDEVOPS24/lektion5/redirect
+(B[m$ sed 0i[K[Ki[K0[K+i[K[K0i[K[Köåä[K[K[K;['[K[K[K-i ''[C[C[C[Cs'/'^'/'H'e'j' '[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lsed: -e expression #1, char 8: unterminated `s' command
+[?2004h[94mDEVOPS24/lektion5/redirect
+(B[m$ sed -i 's/^/Hej '/'[H[2J[94mDEVOPS24/lektion5/redirect
+(B[m$ sed -i 's/^/Hej /'
+[?2004lsed: no input files
+[?2004h[94mDEVOPS24/lektion5/redirect
+(B[m$ sed -i 's/^/Hej /'[C[C[Ksed -i 's/^/Hej /' testfil [H[2J[94mDEVOPS24/lektion5/redirect
+(B[m$ sed -i 's/^/Hej /' testfil 
+[?2004l[?2004h[94mDEVOPS24/lektion5/redirect
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ ./[H[2J[94mDEVOPS24/lektion5/redirect
+(B[m$ ./the[Kreelines_wrong [H[2J[94mDEVOPS24/lektion5/redirect
+(B[m$ ./threelines_wrong 
+[?2004lrad: Hej 1
+[?2004h[94mDEVOPS24/lektion5/redirect
+(B[m$ ./threelines_wrong [H[2J[94mDEVOPS24/lektion5/redirect
+(B[m$ ./threelines_wrong 
+[?2004lrad1: Hej 1
+rad2: Hej 1
+rad3: Hej 1
+[?2004h[94mDEVOPS24/lektion5/redirect
+(B[m$ ./threelines_wrong [H[2J[94mDEVOPS24/lektion5/redirect
+(B[m$ ./threelines_wrong [K[K[K[K[K[Kcorrect 
+[?2004lrad1: Hej 1
+rad2: Hej 2
+rad3: Hej 3
+[?2004h[94mDEVOPS24/lektion5/redirect
+(B[m$ ./threelines_correct [H[2J[94mDEVOPS24/lektion5/redirect
+(B[m$ ./threelines_correct 
+[?2004lrad1: Hej 1
+rad2: Hopp 2
+rad3: Hejsan 3
+[?2004h[94mDEVOPS24/lektion5/redirect
+(B[m$ ./threelines_correct [H[2J[94mDEVOPS24/lektion5/redirect
+(B[m$ ./threelines_correct 
+[?2004lrad1: Hej
+rad2: Hopp
+rad3: Hejsan
+[?2004h[94mDEVOPS24/lektion5/redirect
+(B[m$ ./threelines_correct [H[2J[94mDEVOPS24/lektion5/redirect
+(B[m$ ./threelines_correct 
+[?2004lrad1: Hej
+rad2: Hopp
+rad3: Hejsan
+[?2004h[94mDEVOPS24/lektion5/redirect
+(B[m$ ./threelines_correct [H[2J[94mDEVOPS24/lektion5/redirect
+(B[m$ ./threelines_correct 
+[?2004lrad1: Hej 1
+rad2: Hopp 2
+rad3: Hejsan 3
+[?2004h[94mDEVOPS24/lektion5/redirect
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mDEVOPS24/lektion5/redirect
+(B[m$ man bvas[K[K[Kash
+[?2004l[?1049h[22;0;0t[?1h=BASH(1)                     General Commands Manual                    BASH(1)[m
+[m
+[1mNAME[0m[m
+       bash - GNU Bourne-Again SHell[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mbash[0m [options] [command_string | file][m
+[m
+[1mCOPYRIGHT[0m[m
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mBash[0m  is  an  [1msh[0m-compatible  command language interpreter that executes[m
+       commands read from the standard input or from a file.  [1mBash[0m also incor‐[m
+       porates useful features from the [4mKorn[24m and [4mC[24m shells ([1mksh[0m and [1mcsh[0m).[m
+[m
+[7m Manual page bash(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mBash[0m  is  intended  to  be a conformant implementation of the Shell and[m
+[7m Manual page bash(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Utilities portion  of  the  IEEE  POSIX  specification  (IEEE  Standard[m
+[7m Manual page bash(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       1003.1).  [1mBash[0m can be configured to be POSIX-conformant by default.[m
+[7m Manual page bash(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mOPTIONS[0m[m
+[7m Manual page bash(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       All of the single-character shell options documented in the description[m
+[7m Manual page bash(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       of the [1mset[0m builtin command, including [1m-o[0m, can be used as  options  when[m
+[7m Manual page bash(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the  shell  is invoked.  In addition, [1mbash[0m interprets the following op‐[m
+[7m Manual page bash(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tions when it is invoked:[m
+[7m Manual page bash(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-c[0m        If the [1m-c[0m option is present, then commands are read from  the[m
+[7m Manual page bash(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 first non-option argument [4mcommand_string[24m.  If there are argu‐[m
+[7m Manual page bash(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 ments after the [4mcommand_string[24m, the  first  argument  is  as‐[m
+[7m Manual page bash(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 signed  to [1m$0[0m and any remaining arguments are assigned to the[m
+[7m Manual page bash(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 positional parameters.  The assignment to [1m$0[0m sets the name of[m
+[7m Manual page bash(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 the shell, which is used in warning and error messages.[m
+[7m Manual page bash(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-i[0m        If the [1m-i[0m option is present, the shell is [4minteractive[24m.[m
+[7m Manual page bash(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-l[0m        Make [1mbash[0m act as if it had been invoked as a login shell (see[m
+[7m Manual page bash(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 [1mINVOCATION[0m below).[m
+[7m Manual page bash(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-r[0m        If the [1m-r[0m option is present,  the  shell  becomes  [4mrestricted[24m[m
+[7m Manual page bash(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 (see [1mRESTRICTED[0m [1mSHELL[0m below).[m
+[7m Manual page bash(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-s[0m        If  the [1m-s[0m option is present, or if no arguments remain after[m
+[7m Manual page bash(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 option processing, then commands are read from  the  standard[m
+[7m Manual page bash(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 input.   This  option  allows the positional parameters to be[m
+[7m Manual page bash(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 set when invoking an interactive shell or when reading  input[m
+[7m Manual page bash(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 through a pipe.[m
+[7m Manual page bash(1) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-v[0m        Print shell input lines as they are read.[m
+[7m Manual page bash(1) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-x[0m        Print commands and their arguments as they are executed.[m
+[7m Manual page bash(1) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-D[0m        A  list of all double-quoted strings preceded by [1m$[0m is printed[m
+[7m Manual page bash(1) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 on the standard output.  These are the strings that are  sub‐[m
+[7m Manual page bash(1) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 ject to language translation when the current locale is not [1mC[0m[m
+[7m Manual page bash(1) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 or [1mPOSIX[0m.  This implies the [1m-n[0m option; no  commands  will  be[m
+[7m Manual page bash(1) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 executed.[m
+[7m Manual page bash(1) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m[-+]O[0m [1m[[0m[4mshopt_option[24m[1m][0m[m
+[7m Manual page bash(1) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 [4mshopt_option[24m  is  one  of  the  shell options accepted by the[m
+[7m Manual page bash(1) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 [1mshopt[0m  builtin  (see  [1mSHELL[0m  [1mBUILTIN[0m  [1mCOMMANDS[0m  below).    If[m
+[7m Manual page bash(1) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 [4mshopt_option[24m is present, [1m-O[0m sets the value of that option; [1m+O[0m[m
+[7m Manual page bash(1) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 unsets it.  If [4mshopt_option[24m is not supplied,  the  names  and[m
+[7m Manual page bash(1) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 values  of the shell options accepted by [1mshopt[0m are printed on[m
+[7m Manual page bash(1) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 the standard output.  If the invocation  option  is  [1m+O[0m,  the[m
+[7m Manual page bash(1) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 output is displayed in a format that may be reused as input.[m
+[7m Manual page bash(1) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--[0m        A  [1m--[0m  signals the end of options and disables further option[m
+[7m Manual page bash(1) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 processing.  Any arguments after the [1m--[0m are treated as  file‐[m
+[7m Manual page bash(1) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 names and arguments.  An argument of [1m-[0m is equivalent to [1m--[0m.[m
+[7m Manual page bash(1) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mBash[0m  also  interprets  a number of multi-character options.  These op‐[m
+[7m Manual page bash(1) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tions must appear on the command line before the  single-character  op‐[m
+[7m Manual page bash(1) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tions to be recognized.[m
+[7m Manual page bash(1) line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--debugger[0m[m
+[7m Manual page bash(1) line 51 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Arrange for the debugger profile to be executed before the shell[m
+[7m Manual page bash(1) line 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              starts.  Turns on extended debugging mode (see  the  description[m
+[7m Manual page bash(1) line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              of the [1mextdebug[0m option to the [1mshopt[0m builtin below).[m
+[7m Manual page bash(1) line 54 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--dump-po-strings[0m[m
+[7m Manual page bash(1) line 55 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Equivalent  to [1m-D[0m, but the output is in the GNU [4mgettext[24m [1mpo[0m (por‐[m
+[7m Manual page bash(1) line 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              table object) file format.[m
+[7m Manual page bash(1) line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--dump-strings[0m[m
+[7m Manual page bash(1) line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Equivalent to [1m-D[0m.[m
+[7m Manual page bash(1) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--help[0m Display a usage message on standard  output  and  exit  success‐[m
+[7m Manual page bash(1) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              fully.[m
+[7m Manual page bash(1) line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--init-file[0m [4mfile[24m[m
+[7m Manual page bash(1) line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--rcfile[0m [4mfile[24m[m
+[7m Manual page bash(1) line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Execute  commands  from [4mfile[24m instead of the system wide initial‐[m
+[7m Manual page bash(1) line 64 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ization file [4m/etc/bash.bashrc[24m and the standard personal initial‐[m
+[7m Manual page bash(1) line 65 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ization  file [4m~/.bashrc[24m if the shell is interactive (see [1mINVOCA‐[0m[m
+[7m Manual page bash(1) line 66 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mTION[0m below).[m
+[7m Manual page bash(1) line 67 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 68 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--login[0m[m
+[7m Manual page bash(1) line 69 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Equivalent to [1m-l[0m.[m
+[7m Manual page bash(1) line 70 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 71 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--noediting[0m[m
+[7m Manual page bash(1) line 72 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Do not use the GNU [1mreadline[0m library to read command  lines  when[m
+[7m Manual page bash(1) line 73 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the shell is interactive.[m
+[7m Manual page bash(1) line 74 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 75 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--noprofile[0m[m
+[7m Manual page bash(1) line 76 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Do  not read either the system-wide startup file [4m/etc/profile[24m or[m
+[7m Manual page bash(1) line 77 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              any  of  the  personal  initialization  files   [4m~/.bash_profile[24m,[m
+[7m Manual page bash(1) line 78 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4m~/.bash_login[24m,  or  [4m~/.profile[24m.   By  default,  [1mbash[0m reads these[m
+[7m Manual page bash(1) line 79 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              files when it is invoked as a login shell  (see  [1mINVOCATION[0m  be‐[m
+[7m Manual page bash(1) line 80 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              low).[m
+[7m Manual page bash(1) line 81 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 82 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--norc[0m Do  not  read  and  execute  the system wide initialization file[m
+[7m Manual page bash(1) line 83 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4m/etc/bash.bashrc[24m and the personal initialization file  [4m~/.bashrc[24m[m
+[7m Manual page bash(1) line 84 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              if  the  shell  is interactive.  This option is on by default if[m
+[7m Manual page bash(1) line 85 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the shell is invoked as [1msh[0m.[m
+[7m Manual page bash(1) line 86 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 87 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--posix[0m[m
+[7m Manual page bash(1) line 88 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Change the behavior of [1mbash[0m where the default operation  differs[m
+[7m Manual page bash(1) line 89 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              from the POSIX standard to match the standard ([4mposix[24m [4mmode[24m).  See[m
+[7m Manual page bash(1) line 90 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mSEE[0m [1mALSO[0m below for a reference to a document  that  details  how[m
+[7m Manual page bash(1) line 91 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              posix mode affects bash's behavior.[m
+[7m Manual page bash(1) line 92 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 93 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--restricted[0m[m
+[7m Manual page bash(1) line 94 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              The shell becomes restricted (see [1mRESTRICTED[0m [1mSHELL[0m below).[m
+[7m Manual page bash(1) line 95 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 96 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--verbose[0m[m
+[7m Manual page bash(1) line 97 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Equivalent to [1m-v[0m.[m
+[7m Manual page bash(1) line 98 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 99 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--version[0m[m
+[7m Manual page bash(1) line 100 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Show  version information for this instance of [1mbash[0m on the stan‐[m
+[7m Manual page bash(1) line 101 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              dard output and exit successfully.[m
+[7m Manual page bash(1) line 102 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 103 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mARGUMENTS[0m[m
+[7m Manual page bash(1) line 104 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       If arguments remain after option processing, and neither the [1m-c[0m nor the[m
+[7m Manual page bash(1) line 105 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-s[0m  option  has  been supplied, the first argument is assumed to be the[m
+[7m Manual page bash(1) line 106 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       name of a file containing shell commands.  If [1mbash[0m is invoked  in  this[m
+[7m Manual page bash(1) line 107 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       fashion,  [1m$0[0m is set to the name of the file, and the positional parame‐[m
+[7m Manual page bash(1) line 108 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ters are set to the remaining arguments.  [1mBash[0m reads and executes  com‐[m
+[7m Manual page bash(1) line 109 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       mands  from this file, then exits.  [1mBash[0m's exit status is the exit sta‐[m
+[7m Manual page bash(1) line 110 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tus of the last command executed in the script.  If no commands are ex‐[m
+[7m Manual page bash(1) line 111 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ecuted,  the  exit  status  is 0.  An attempt is first made to open the[m
+[7m Manual page bash(1) line 112 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       file in the current directory, and, if no file is found, then the shell[m
+[7m Manual page bash(1) line 113 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       searches the directories in [1mPATH[0m for the script.[m
+[7m Manual page bash(1) line 114 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 115 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mINVOCATION[0m[m
+[7m Manual page bash(1) line 116 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       A  [4mlogin[24m [4mshell[24m is one whose first character of argument zero is a [1m-[0m, or[m
+[7m Manual page bash(1) line 117 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       one started with the [1m--login[0m option.[m
+[7m Manual page bash(1) line 118 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 119 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       An [4minteractive[24m shell is one started without non-option  arguments  (un‐[m
+[7m Manual page bash(1) line 120 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       less  [1m-s[0m  is specified) and without the [1m-c[0m option, whose standard input[m
+[7m Manual page bash(1) line 121 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       and error are both connected to terminals (as determined by [4misatty[24m(3)),[m
+[7m Manual page bash(1) line 122 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       or  one  started  with  the [1m-i[0m option.  [1mPS1[0m is set and [1m$-[0m includes [1mi[0m if[m
+[7m Manual page bash(1) line 123 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mbash[0m is interactive, allowing a shell script or a startup file to  test[m
+[7m Manual page bash(1) line 124 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       this state.[m
+[7m Manual page bash(1) line 125 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 126 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The  following paragraphs describe how [1mbash[0m executes its startup files.[m
+[7m Manual page bash(1) line 127 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       If any of the files exist but cannot be read, [1mbash[0m  reports  an  error.[m
+[7m Manual page bash(1) line 128 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Tildes  are expanded in filenames as described below under [1mTilde[0m [1mExpan‐[0m[m
+[7m Manual page bash(1) line 129 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1msion[0m in the [1mEXPANSION[0m section.[m
+[7m Manual page bash(1) line 130 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 131 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       When [1mbash[0m is invoked as an interactive login shell, or as a  non-inter‐[m
+[7m Manual page bash(1) line 132 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       active  shell with the [1m--login[0m option, it first reads and executes com‐[m
+[7m Manual page bash(1) line 133 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       mands from the file [4m/etc/profile[24m, if that file exists.   After  reading[m
+[7m Manual page bash(1) line 134 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       that file, it looks for [4m~/.bash_profile[24m, [4m~/.bash_login[24m, and [4m~/.profile[24m,[m
+[7m Manual page bash(1) line 135 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       in that order, and reads and executes commands from the first one  that[m
+[7m Manual page bash(1) line 136 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       exists  and  is  readable.  The [1m--noprofile[0m option may be used when the[m
+[7m Manual page bash(1) line 137 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       shell is started to inhibit this behavior.[m
+[7m Manual page bash(1) line 138 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 139 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       When an interactive login shell exits, or a non-interactive login shell[m
+[7m Manual page bash(1) line 140 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       executes  the  [1mexit[0m  builtin  command, [1mbash[0m reads and executes commands[m
+[7m Manual page bash(1) line 141 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       from the file [4m~/.bash_logout[24m, if it exists.[m
+[7m Manual page bash(1) line 142 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 143 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       When an interactive shell that is not a login shell  is  started,  [1mbash[0m[m
+[7m Manual page bash(1) line 144 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       reads  and  executes  commands  from [4m/etc/bash.bashrc[24m and [4m~/.bashrc[24m, if[m
+[7m Manual page bash(1) line 145 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       these files exist.  This may be inhibited by using the  [1m--norc[0m  option.[m
+[7m Manual page bash(1) line 146 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The  [1m--rcfile[0m  [4mfile[24m option will force [1mbash[0m to read and execute commands[m
+[7m Manual page bash(1) line 147 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       from [4mfile[24m instead of [4m/etc/bash.bashrc[24m and [4m~/.bashrc[24m.[m
+[7m Manual page bash(1) line 148 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 149 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       When [1mbash[0m is started non-interactively, to run a shell script, for  ex‐[m
+[7m Manual page bash(1) line 150 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ample,  it  looks for the variable [1mBASH_ENV[0m in the environment, expands[m
+[7m Manual page bash(1) line 151 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       its value if it appears there, and uses the expanded value as the  name[m
+[7m Manual page bash(1) line 152 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       of  a  file to read and execute.  [1mBash[0m behaves as if the following com‐[m
+[7m Manual page bash(1) line 153 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       mand were executed:[m
+[7m Manual page bash(1) line 154 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              if [ -n "$BASH_ENV" ]; then . "$BASH_ENV"; fi[m
+[7m Manual page bash(1) line 155 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       but the value of the [1mPATH[0m variable is not used to search for the  file‐[m
+[7m Manual page bash(1) line 156 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       name.[m
+[7m Manual page bash(1) line 157 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 158 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       If  [1mbash[0m is invoked with the name [1msh[0m, it tries to mimic the startup be‐[m
+[7m Manual page bash(1) line 159 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       havior of historical versions of [1msh[0m as closely as possible, while  con‐[m
+[7m Manual page bash(1) line 160 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       forming  to the POSIX standard as well.  When invoked as an interactive[m
+[7m Manual page bash(1) line 161 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       login shell, or a non-interactive shell with  the  [1m--login[0m  option,  it[m
+[7m Manual page bash(1) line 162 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       first  attempts  to  read  and  execute  commands from [4m/etc/profile[24m and[m
+[7m Manual page bash(1) line 163 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m~/.profile[24m, in that order.  The [1m--noprofile[0m option may be used  to  in‐[m
+[7m Manual page bash(1) line 164 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       hibit  this  behavior.   When  invoked as an interactive shell with the[m
+[7m Manual page bash(1) line 165 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       name [1msh[0m, [1mbash[0m looks for the variable [1mENV[0m, expands its value  if  it  is[m
+[7m Manual page bash(1) line 166 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       defined,  and uses the expanded value as the name of a file to read and[m
+[7m Manual page bash(1) line 167 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       execute.  Since a shell invoked as [1msh[0m does not attempt to read and exe‐[m
+[7m Manual page bash(1) line 168 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       cute  commands from any other startup files, the [1m--rcfile[0m option has no[m
+[7m Manual page bash(1) line 169 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       effect.  A non-interactive shell invoked with the name [1msh[0m does not  at‐[m
+[7m Manual page bash(1) line 170 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tempt to read any other startup files.  When invoked as [1msh[0m, [1mbash[0m enters[m
+[7m Manual page bash(1) line 171 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mposix[24m mode after the startup files are read.[m
+[7m Manual page bash(1) line 172 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 173 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       When [1mbash[0m is started in [4mposix[24m mode, as with the  [1m--posix[0m  command  line[m
+[7m Manual page bash(1) line 174 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       option, it follows the POSIX standard for startup files.  In this mode,[m
+[7m Manual page bash(1) line 175 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       interactive shells expand the [1mENV[0m variable and commands  are  read  and[m
+[7m Manual page bash(1) line 176 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       executed  from  the  file  whose  name is the expanded value.  No other[m
+[7m Manual page bash(1) line 177 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       startup files are read.[m
+[7m Manual page bash(1) line 178 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 179 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mBash[0m attempts to determine when it is being run with its standard input[m
+[7m Manual page bash(1) line 180 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       connected  to  a network connection, as when executed by the historical[m
+[7m Manual page bash(1) line 181 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       remote shell daemon, usually [4mrshd[24m, or the secure shell daemon [4msshd[24m.  If[m
+[7m Manual page bash(1) line 182 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mbash[0m  determines  it is being run non-interactively in this fashion, it[m
+[7m Manual page bash(1) line 183 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       reads and executes commands from  [4m/etc/bash.bashrc[24m  and  [4m~/.bashrc[24m,  if[m
+[7m Manual page bash(1) line 184 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       these  files exist and are readable.  It will not do this if invoked as[m
+[7m Manual page bash(1) line 185 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1msh[0m.  The [1m--norc[0m option may be used to inhibit this  behavior,  and  the[m
+[7m Manual page bash(1) line 186 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--rcfile[0m  option may be used to force another file to be read, but nei‐[m
+[7m Manual page bash(1) line 187 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ther [4mrshd[24m nor [4msshd[24m generally invoke the shell with those options or al‐[m
+[7m Manual page bash(1) line 188 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       low them to be specified.[m
+[7m Manual page bash(1) line 189 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 190 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       If the shell is started with the effective user (group) id not equal to[m
+[7m Manual page bash(1) line 191 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the real user (group) id, and the [1m-p[0m option is not supplied, no startup[m
+[7m Manual page bash(1) line 192 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       files are read, shell functions are not inherited from the environment,[m
+[7m Manual page bash(1) line 193 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the [1mSHELLOPTS[0m, [1mBASHOPTS[0m, [1mCDPATH[0m, and [1mGLOBIGNORE[0m variables, if they  ap‐[m
+[7m Manual page bash(1) line 194 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       pear  in the environment, are ignored, and the effective user id is set[m
+[7m Manual page bash(1) line 195 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       to the real user id.  If the [1m-p[0m option is supplied at  invocation,  the[m
+[7m Manual page bash(1) line 196 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       startup behavior is the same, but the effective user id is not reset.[m
+[7m Manual page bash(1) line 197 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 198 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mDEFINITIONS[0m[m
+[7m Manual page bash(1) line 199 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The  following  definitions  are used throughout the rest of this docu‐[m
+[7m Manual page bash(1) line 200 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ment.[m
+[7m Manual page bash(1) line 201 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mblank[0m  A space or tab.[m
+[7m Manual page bash(1) line 202 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mword[0m   A sequence of characters considered as  a  single  unit  by  the[m
+[7m Manual page bash(1) line 203 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              shell.  Also known as a [1mtoken[0m.[m
+[7m Manual page bash(1) line 204 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mname[0m   A  [4mword[24m  consisting  only  of alphanumeric characters and under‐[m
+[7m Manual page bash(1) line 205 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              scores, and beginning with an alphabetic character or an  under‐[m
+[7m Manual page bash(1) line 206 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              score.  Also referred to as an [1midentifier[0m.[m
+[7m Manual page bash(1) line 207 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mmetacharacter[0m[m
+[7m Manual page bash(1) line 208 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              A  character  that,  when unquoted, separates words.  One of the[m
+[7m Manual page bash(1) line 209 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              following:[m
+[7m Manual page bash(1) line 210 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m|[0m  [1m&[0m [1m;[0m [1m([0m [1m)[0m [1m<[0m [1m>[0m [1mspace[0m [1mtab[0m [1mnewline[0m[m
+[7m Manual page bash(1) line 211 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mcontrol[0m [1moperator[0m[m
+[7m Manual page bash(1) line 212 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              A [4mtoken[24m that performs a control function.  It is one of the fol‐[m
+[7m Manual page bash(1) line 213 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              lowing symbols:[m
+[7m Manual page bash(1) line 214 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m||[0m [1m&[0m [1m&&[0m [1m;[0m [1m;;[0m [1m;&[0m [1m;;&[0m [1m([0m [1m)[0m [1m|[0m [1m|&[0m [1m<newline>[0m[m
+[7m Manual page bash(1) line 215 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 216 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mRESERVED[0m [1mWORDS[0m[m
+[7m Manual page bash(1) line 217 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mReserved[24m [4mwords[24m are words that have a special meaning to the shell.  The[m
+[7m Manual page bash(1) line 218 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       following words are recognized as reserved when unquoted and either the[m
+[7m Manual page bash(1) line 219 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       first  word of a command (see [1mSHELL[0m [1mGRAMMAR[0m below), the third word of a[m
+[7m Manual page bash(1) line 220 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mcase[0m or [1mselect[0m command (only [1min[0m is valid), or the third word of  a  [1mfor[0m[m
+[7m Manual page bash(1) line 221 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       command (only [1min[0m and [1mdo[0m are valid):[m
+[7m Manual page bash(1) line 222 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 223 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m![0m  [1mcase[0m   [1mcoproc[0m   [1mdo[0m  [1mdone[0m [1melif[0m [1melse[0m [1mesac[0m [1mfi[0m [1mfor[0m [1mfunction[0m [1mif[0m [1min[0m [1mselect[0m[m
+[7m Manual page bash(1) line 224 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mthen[0m [1muntil[0m [1mwhile[0m [1m{[0m [1m}[0m [1mtime[0m [1m[[[0m [1m]][0m[m
+[7m Manual page bash(1) line 225 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 226 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mSHELL[0m [1mGRAMMAR[0m[m
+[7m Manual page bash(1) line 227 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       This section describes the syntax of the various forms  of  shell  com‐[m
+[7m Manual page bash(1) line 228 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       mands.[m
+[7m Manual page bash(1) line 229 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 230 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mSimple[0m [1mCommands[0m[m
+[7m Manual page bash(1) line 231 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       A  [4msimple[24m  [4mcommand[24m  is a sequence of optional variable assignments fol‐[m
+[7m Manual page bash(1) line 232 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       lowed by [1mblank[0m-separated words and redirections, and  terminated  by  a[m
+[7m Manual page bash(1) line 233 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       
