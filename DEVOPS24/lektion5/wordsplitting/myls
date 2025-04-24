@@ -6,4 +6,10 @@ LSCOMMAND="ls -la"
 
 echo LSOUTPUT: $LSCOMMAND
 echo Nu kör vi!
-$LSCOMMAND
+#!/bin/bash
+
+# parameter expansion
+
+read -r name
+echo Hej "${#name}"
+"ls -la"
