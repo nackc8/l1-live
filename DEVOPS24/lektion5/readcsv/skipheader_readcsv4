@@ -5,6 +5,6 @@ while IFS="," read -r fornamn efternamn losenord operation; do
   echo "Value: $efternamn"
   echo "Value: $losenord"
   echo "Value: $operation"
-done <personer.csv
+done < <(tail -n +2 personer.csv)
 
- # förnamn,efternamn,lösenord,operation
+# förnamn,efternamn,lösenord,operation
