@@ -4768,4 +4768,709 @@ PS1="Hej \u@\h:"
   709  history
 [?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ echo $HISTIGNORE 
 [?2004lecho
-[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ echo $HISTIGNORE [K[1P$HISTIGNORE[1P$HISTIGNORE[1P$HISTIGNOR
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ echo $HISTIGNORE [K[1P$HISTIGNORE[1P$HISTIGNORE[1P$HISTIGNORE[1P$HISTIGNORE[1P$HISTIGNORE[C[1PHISTIGNORE=HISTIGNORE[1PHISTIGNORE[C[C[C[C[C[C[C[C[C[C=""e"c"h"o" "*"[C
+[?2004l[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ echo Hoppsan
+[?2004lHoppsan
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ history
+[?2004l    1  ip a
+    2  hostname
+    3  exit
+    4  ls -l
+    5  powd
+    6  pwd
+    7  adduser other
+    8  sudo adduser other
+    9  pwd
+   10  cd /
+   11  pwd
+   12  l
+   13  sudo mkdir kat1
+   14  ls -l kat1/
+   15  ls
+   16  ls -ld kat1/
+   17  sudo chmod 777 kat1/
+   18  ls -ld kat1/
+   19  cd kat1/
+   20  ls
+   21  ls ~other/
+   22  ls -ld ~other/
+   23  ls
+   24  nano x
+   25  nano check.py
+   26  y
+   27  code .
+   28  ls
+   29  exit
+   30  ls
+   31  cat /etc/passwd
+   32  ls
+   33  pwd
+   34  cd /
+   35  ls
+   36  cd kat1/
+   37  ls
+   38  cd ..
+   39  ls -la
+   40  cd kat1/
+   41  ls
+   42  ls -la
+   43  ls
+   44  ls -la
+   45  su otheruser
+   46  cat /etc/passwd
+   47  ls
+   48  su other
+   49  ls +la
+   50  ls -la
+   51  ls
+   52  pwd
+   53  echo {1..10}
+   54  echo {0..7}
+   55  echo {0..7}{0..7}
+   56  echo {0..7}{0..7}{0..7}
+   57  echo {0..7}{0..7}{0..7} | wc -w
+   58  ls
+   59  echo {0..7}{0..7}{0..7} | wc -w
+   60  echo {0..7}{0..7}{0..7}
+   61  echo {f,d}{0..7}{0..7}{0..7}
+   62  ls
+   63  echo {f,d}{0..7}{0..7}{0..7}
+   64  echo owner_{f,d}{0..7}{0..7}{0..7}
+   65  echo owner_{user,other}_{f,d}{0..7}{0..7}{0..7}
+   66  echo owner_{user,other}_group_{user,other}_{f,d}{0..7}{0..7}{0..7}
+   67  echo o={user,other}_group_{user,other}_{f,d}{0..7}{0..7}{0..7}
+   68  echo o={user,other}_g={user,other}_{f,d}{0..7}{0..7}{0..7}
+   69  echo o={user,other},g={user,other}_{f,d}{0..7}{0..7}{0..7}
+   70  echo owner={user,other},g={user,other}_{f,d}{0..7}{0..7}{0..7}
+   71  echo owner={user,other},group={user,other}_{f,d}{0..7}{0..7}{0..7}
+   72  echo owner={user,other},group={user,other}_{f,d}_perm{0..7}{0..7}{0..7}
+   73  echo owner={user,other},group={user,other}_{f,d}_perm{0..7}{0..7}{0..7} | wc -c
+   74  echo owner={user,other},group={user,other}_{f,d}_perm{0..7}{0..7}{0..7} | wc -w
+   75  echo owner={user,other},group={user,other}_{f,d}_perm{0..7}{0..7}{0..7}
+   76  echo {user,other},{user,other}_{f,d}_perm{0..7}{0..7}{0..7}
+   77  echo {user,other},{user,other}_{file,dir}_perm{0..7}{0..7}{0..7}
+   78  echo {user,other},{user,other}_{file,dir},{0..7}{0..7}{0..7}
+   79  echo {user,other},{user,other},{file,dir},{0..7}{0..7}{0..7}
+   80  man chown
+   81  echo {user,other}:{user,other},{file,dir},{0..7}{0..7}{0..7}
+   82  for username in user other; do echo $username; done
+   83  for username in user other; do sudo -u $username echo $username; done
+   84  groupadd shared
+   85  sudo groupadd shared
+   86  for username in user other; do sudo -u $username echo $username; done
+   87  ls
+   88  dir
+   89  ls
+   90  pwd
+   91  l
+   92  ls
+   93  nano tst.sh
+   94  chmod +x ./tst.sh 
+   95  ./tst.sh 
+   96  chmod +x ./tst.sh 
+   97  ./tst.sh 
+   98  nano tst.sh 
+   99  chmod +x tst.sh 
+  100  ./tst.sh 
+  101  nano tst.sh 
+  102  cd ..
+  103  exit
+  104  ls
+  105  ls -a
+  106  cd /
+  107  ls
+  108  cd kat1/
+  109  ls
+  110  ls /a
+  111  ls -a
+  112  rm tst.sh 
+  113  ls
+  114  echo ''
+  115  ls -la
+  116  ls -a
+  117  ls -A
+  118  less /etc/group
+  119  sudo groupadd tomgrupp
+  120  ls -a
+  121  for x in {0..7}; do echo $x; done
+  122  for x in {0..7}{0..7}{0..7}; do echo $x; done
+  123  for x in {0..7}{0..7}{0..7}; do echo $x; done | wc -l
+  124  for x in {0..7}{0..7}{0..7}; do echo $x; done
+  125  sudo
+  126  cd ..
+  127  sudo rm -rf kat1/
+  128  ls
+  129  sudo mkdir dir
+  130  ls -la
+  131  sudo chmod 666 dir/
+  132  sudo chmod 777 dir/
+  133  ls -l
+  134  cd dir/
+  135  ls
+  136  for x in {0..7}{0..7}{0..7}; do echo $x; done
+  137  for x in {0..7}{0..7}{0..7}; do echo d$x; done
+  138  for x in {0..7}{0..7}{0..7}; do echo $x; done
+  139  ls
+  140  sudo -g tomgrupp mkdir hej
+  141  ls -la
+  142  sudo rm hej/
+  143  sudo rm -rf hej/
+  144  for x in {0..7}{0..7}{0..7}; do sudo -g tomgrupp mkdir echo $x; done
+  145  ls
+  146  sudo rm -rf *
+  147  for x in {0..7}{0..7}{0..7}; do sudo -g tomgrupp mkdir $x; done
+  148  ls
+  149  ls -l
+  150  rm -rf *
+  151  for x in {0..7}{0..7}{0..7}; do sudo -g tomgrupp mkdir $x; sudo chmod $x $x; done
+  152  ls -l
+  153  for x in *; (cd $x); done
+  154  for x in *; do (cd $x); done
+  155  ls -l
+  156  for x in *; do (stat $x); done
+  157  for x in *; do (ls $x); done
+  158  ls
+  159  for x in *; do (ls $x); done
+  160  ls
+  161  rm -rf *
+  162  ls
+  163  ls -a
+  164  for x in {0..7}0{0..7}; do sudo -g tomgrupp mkdir $x; sudo chmod $x $x; done
+  165  ls
+  166  ls -l
+  167  (cd 700; ls)
+  168  (cd 702; ls)
+  169  ls
+  170  rm -rf *
+  171  ls
+  172  ls -a
+  173  useradd foo
+  174  sudo who
+  175  sudo id
+  176  id
+  177  man sudo
+  178  ls /etc/ssh/sshd_config
+  179  sudo -u other id
+  180  sudo -i -u other
+  181  man sudo
+  182  sudo -u other -i
+  183  man su
+  184  man sudo
+  185  man su
+  186  su
+  187  sudo su
+  188  su other
+  189  cd /
+  190  git clone git@github.com:nackc8/pg-gruppupg-d4-java-tonic.git
+  191  exit
+  192  ps -e
+  193  sudo killall sudo
+  194  ps -e
+  195  sudo killall 2065
+  196  sudo kill -9 2065
+  197  sudo kill -9 2064
+  198  ls
+  199  adduser green
+  200  sudo adduser green
+  201  exit
+  202  ls
+  203  addgroup marketing
+  204  sudo addgroup marketing
+  205  man addgroup
+  206  man adduser
+  207  man group
+  208  man group_member 
+  209  man groupmod 
+  210  man groupmems 
+  211  man usermod 
+  212  sudo usermod --append --groups marketing green
+  213  sudo id green
+  214  ls
+  215  ls -la
+  216  cd /
+  217  ls
+  218  ls -la
+  219  cd dir/
+  220  ls
+  221  ls -a
+  222  touch fil
+  223  ls
+  224  ls -la
+  225  sudo -i
+  226  ls
+  227  ls -la
+  228  sudo chown other:other *
+  229  ls -l
+  230  for x in byother-o\=* ; do sudo -u other $x/otherfile; done
+  231  sudo -u other echo hej
+  232  for x in byother-o\=* ; do sudo -u other -- $x/otherfile; done
+  233  for x in byother-o\=* ; do sudo -u other -- touch $x/otherfile; done
+  234  for x in byother-o\=* ; do sudo -u other -- mkdir $x/otherdir; done
+  235  ls -la
+  236  cd byother-o\=x/
+  237  ls
+  238  cd ..
+  239  ls -la
+  240  cd byother-o\=x
+  241  ls
+  242  cd ..
+  243  cd byother-o\=x/
+  244  ls
+  245  cd ..
+  246  ls -la
+  247  ls byother-o\=x/
+  248  ls byother-o\=rx/
+  249  ls
+  250  cd byother-o\=r
+  251  ls byother-o\=r
+  252  sudo ls -la byother-o\=r
+  253  ls
+  254  ls -la
+  255  cd byother-o\=r
+  256  cd byother-o\=x/
+  257  ls
+  258  exit
+  259  pwd
+  260  touch minfil
+  261  ls -i
+  262  ln -s minfil minlank
+  263  ls -i
+  264  ls -l
+  265  nano minfil 
+  266  nano minlank 
+  267  ln -s /etc/ssh/sshd_config min_sshd_config
+  268  ls -l
+  269  nano hej.py
+  270  python hej.py 
+  271  python3 hej.py 
+  272  ls -l
+  273  ln hej.py hej
+  274  python3 hej
+  275  nano hej.py 
+  276  ls -il
+  277  rm hej.py
+  278  ls
+  279  nano hej 
+  280  d
+  281  ls
+  282  exit
+  283  ls
+  284  rm hej minfil minlank min_sshd_config 
+  285  ls
+  286  pwd
+  287  cd /
+  288  stat dir
+  289  cd dir/
+  290  ls
+  291  rm -rf .
+  292  rm -rf .*
+  293  ls -a
+  294  sudo rm -rf .*
+  295  ls -la
+  296  sudo rm -rf *
+  297  ls -la
+  298  ls
+  299  pwd
+  300  ls
+  301  ls -la .
+  302  cd ..
+  303  cd dir/
+  304  ls
+  305  ls -l
+  306  ls -la
+  307  ls
+  308  sudo -u other mkdir -p a/b/c
+  309  tree
+  310  ls -R
+  311  ls -l
+  312  ls -l a/
+  313  ls -l a/b/
+  314  ls -l a/b/c/
+  315  sudo chmod -R o=x a
+  316  ls -Rl
+  317  ls
+  318  cd a
+  319  ls
+  320  cd b
+  321  ls
+  322  cd c
+  323  ls
+  324  touch hej
+  325  cd ..
+  326  ls
+  327  sudo ls -lR
+  328  ls
+  329  ls 
+  330  sudo -u other touch fil
+  331  sudo sudo -u other touch fil
+  332  sudo -u other touch fil
+  333  sudo -i
+  334  cd
+  335  cd /dir/
+  336  ls
+  337  ls -l
+  338  sudo rm -rf *
+  339  ls
+  340  sudo -i
+  341  umask
+  342  ls -ld /tmp/
+  343  exit
+  344  ls
+  345  sudo adduser Bert
+  346  sudo adduser bert
+  347  su bert
+  348  sudo -i -u bert
+  349  sudo addgroup marketing
+  350  sudo addgroup finance
+  351  man usermod
+  352  man ls
+  353  sudo usermod -a -G finance bert
+  354  id bert
+  355  adduser bosse
+  356  sudo adduser bosse
+  357  ls
+  358  sudo id bosse
+  359  sudo deluser bosse
+  360  sudo id bosse
+  361  ls /home
+  362  rm -rf /home/bosse/
+  363  sudo rm -rf /home/bosse/
+  364  adduser bosse2
+  365  sudo adduser bosse2
+  366  sudo deluser --remove-home bosse2
+  367  ls /home/
+  368  sudo addgroup petlovers
+  369  groups
+  370  group
+  371  less /etc/group
+  372  ls
+  373  grep love /etc/group
+  374  sudo delgroup petlovers
+  375  grep love /etc/group
+  376  man adduser
+  377  man deluser
+  378  man addgroup
+  379  man deluser
+  380  man groupadd
+  381  man deluser
+  382  man usermod
+  383  cd /dir/
+  384  ls -l
+  385  ls -la
+  386  pwd
+  387  id
+  388  exit
+  389  ls
+  390  cd /dir/
+  391  ls -l
+  392  ls *
+  393  ls -l
+  394  touch minfil
+  395  ls -l
+  396  rm minfil 
+  397  ls -l
+  398  ls read_directory/
+  399  for x in *; do (cd $x; sudo -u other touch) ; done
+  400  for x in *; do (cd $x; sudo -u other touch fil$RANDOM) ; done
+  401  sudo -i
+  402  ls
+  403  ls -l
+  404  ls read_directory/
+  405  man ls
+  406  ls read_directory/
+  407  ls --color=never read_directory/
+  408  ls -l
+  409  less /usr/local/bin/myls 
+  410  ls -l
+  411  myls read_directory/
+  412  cd execute_directory/
+  413  ls
+  414  pwd
+  415  sudo -la /dir/execute_directory
+  416  sudo ls -la /dir/execute_directory
+  417  cat minfil21654
+  418  ls
+  419  cat min*
+  420  cd ..
+  421  ls -l
+  422  cd /
+  423  ls 
+  424  cd home
+  425  ls
+  426  cd other/
+  427  cd user/
+  428  ls
+  429  nano greeting
+  430  bash greeting 
+  431  ls -l greeting 
+  432  ./greeting
+  433  chmod +x greeting 
+  434  ls -l greeting 
+  435  ./greeting 
+  436  cd /dir
+  437  ls -l
+  438  ls execute_directory/
+  439  ls read_directory/
+  440  ls --color=never read_directory/
+  441  myls read_directory/
+  442  ls
+  443  ls -l
+  444  sudo chown user:user execute_directory
+  445  ls -l
+  446  cd execute_directory/
+  447  sudo -u other -i
+  448  sudo chown user:finance execute_directory/
+  449  ls -l 
+  450  pwd
+  451  sudo chown -R user:finance /dir/
+  452  ls -l
+  453  man chown
+  454  ls
+  455  ls -l
+  456  sudo chown -R other:other /dir/
+  457  ls -l
+  458  chown user:nogroup read_directory/
+  459  sudo chown user:nogroup read_directory/
+  460  ls -l
+  461  sudo chown --reference=read_directory/ write_directory/ write_execute_directory/
+  462  ls -l
+  463  man chown
+  464  ls -l
+  465  touch minfil
+  466  ls -l
+  467  chmod u=rwx minfil 
+  468  ls -l
+  469  chmod u=r minfil 
+  470  ls -l
+  471  man chmod
+  472  ls-l
+  473  ls -l
+  474  chmod o= minfil
+  475  ls -l
+  476  chmod o=,g=r minfil
+  477  ls -l
+  478  chmod u+w minfil
+  479  ls -l
+  480  chmod u-w minfil
+  481  ls -l
+  482  chmod +w,u+x minfil
+  483  ls -l
+  484  chmod a+w,u+x minfil
+  485  ls -l
+  486  man chmod
+  487  ls
+  488  chmod 666 minfil 
+  489  ls -l minfil 
+  490  chmod 606 minfil
+  491  ls -l minfil 
+  492  chmod 626 minfil
+  493  ls -l minfil 
+  494  man chmod
+  495  touch hejsan
+  496  ls -l
+  497  mkdir hejsandir
+  498  ls -l hejsan*
+  499  ls -ld hejsan*
+  500  umask
+  501  touch nyfil
+  502  ls -l nyfil 
+  503  umask 000
+  504  touch nollnollnoll
+  505  ls -l nollnollnoll 
+  506  umask 666
+  507  ls -l sexsexsex
+  508  touch sexsexsex
+  509  ls -l sexsexsex 
+  510  umask 004
+  511  umask 001
+  512  touch nollnollett-fil
+  513  mkdir nollnollett-katalog
+  514  ls -ld nollnollett-*
+  515  ls -l
+  516  ls ~
+  517  nano /home/user/.bashrc 
+  518  umask 002
+  519  mkdir hejsvejs
+  520  ls -ld hejsvejs/
+  521  which passwd
+  522  ls -l /usr/bin/passwd
+  523  ls -l /tmp/
+  524  ls -l -d /tmp/
+  525  cd /tmp/
+  526  ls
+  527  sudo -u other touch /tmp/othersfil
+  528  ls -l othersfil 
+  529  ls -ld /tmp/
+  530  sudo -u other -i
+  531  rm othersfil 
+  532  ls -ld /tmp/
+  533  cd /dir
+  534  ls
+  535  sudo rm -rf *
+  536  ls -l
+  537  mkdir kat
+  538  ls -l
+  539  chmod g+s kat/
+  540  ls -l
+  541  sudo chown user:sudo kat/
+  542  ls -l
+  543  mkdir vanligkatalog
+  544  cd vanligkatalog/
+  545  touch hepp
+  546  ls -l
+  547  cd ..
+  548  cd kat/
+  549  touch nyspeciellfil
+  550  ls -l
+  551  cd ..
+  552  ls
+  553  cd vanligkatalog/
+  554  ls -l
+  555  cd ..
+  556  ls
+  557  cd /tmp/
+  558  ls -l
+  559  ls -ld /tmp/
+  560  rm othersfil 
+  561  ls -l
+  562  ls -ld /tmp/
+  563  which ls
+  564  cp /usr/bin/ls .
+  565  ls -l ls 
+  566  sudo chown root:user ls
+  567  ls -l ls 
+  568  ./ls
+  569  ./ls /root/
+  570  sudo chmod u+s ./ls
+  571  ls -l ls 
+  572  ls /root
+  573  ./ls /root/
+  574  ./ls -a /root/
+  575  ls -l ls
+  576  cp /usr/bin/nano .
+  577  ls -l nano
+  578  chmod g+s nano 
+  579  sudo chown user:root
+  580  sudo chown user:root nano 
+  581  ls -l nano 
+  582  sudo chmod g+s nano 
+  583  ls -l nano
+  584  ls -l nano ls
+  585  cd
+  586  cd /dir/
+  587  getfacl .
+  588  sudo apt install acl
+  589  getfacl .
+  590  ls -ld .
+  591  man setfacl
+  592  ls -l
+  593  sudo -u other mkdir otherskat
+  594  ls -l
+  595  sudo chmod 700 otherskat/
+  596  ls -l
+  597  ls otherskat/
+  598  getfacl otherskat/
+  599  sudo setfacl -m u:user:rwx  otherskat/
+  600  getfacl otherskat/
+  601  ls otherskat/
+  602  touch otherskat/hejsan
+  603  ls -l otherskat/
+  604  ls -ld otherskat/
+  605  getfacl otherskat/
+  606  sudo setfacl -m u:green:rwx  otherskat/
+  607  getfacl otherskat/
+  608  ls -ld otherskat/
+  609  sudo setfacl -x u:user otherskat/
+  610  getfacl otherskat/
+  611  sudo setfacl -m u:green:rx otherskat/
+  612  getfacl otherskat/
+  613  sudo setfacl -m user: otherskat/
+  614  sudo setfacl -m user:0 otherskat/
+  615  man setfacl 
+  616  sudo setfacl -m user:- otherskat/
+  617  sudo setfacl -m user:0 otherskat/
+  618  getfacl .
+  619  getfacl otherskat/
+  620  ls otherskat/
+  621  sudo setfacl -m u:user:rwx otherskat/
+  622  sudo setfacl -m m:r-x otherskat/
+  623  getfacl 
+  624  getfacl otherskat/
+  625  sudo setfacl -m m:rwx otherskat/
+  626  getfacl otherskat/
+  627  ls
+  628  mkdir foo
+  629  getfacl foo/
+  630  sudo setfacl -d -m u:other:rwx foo/
+  631  touch foo/usersfile
+  632  getfacl foo/
+  633  getfacl foo/usersfile 
+  634  getfacl foo/
+  635  getfacl .
+  636  ls
+  637  getfacl foo/
+  638  sudo setfacl -d -m u:other:r foo/
+  639  getfacl foo/
+  640  sudo setfacl -d -m u:green:rw foo/
+  641  getfacl foo/
+  642  man setfacl 
+  643  getfacl foo/
+  644  sudo setfacl -d --set u:green:rw foo/
+  645  getfacl foo/
+  646  ls
+  647  exit
+  648  ls
+  649  cd /dir/
+  650  ls
+  651  sudo rm -rf *
+  652  ls -l
+  653  mkdir x
+  654  ls x
+  655  ls -l
+  656  sudo -u other touch filen
+  657  ls -l
+  658  sudo chmod 662 filen 
+  659  ls -l filen 
+  660  echo hej >filen 
+  661  nano filen 
+  662  l
+  663  cd
+  664  ls
+  665  cd Down
+  666  cd
+  667  ezit
+  668  exit
+  669  ls /home
+  670  ls green~
+  671  ls ~green
+  672  sudo -i
+  673  echo $USER
+  674  echo /home/$USER
+  675  echo ~
+  676  echo $HOME
+  677  echo hej
+  678  echo $HOME
+  679  echo /home/user
+  680  man bash
+  681  ls "~"
+  682  ls ~"hej hopp"
+  683  ls ~/"hej hopp"
+  684  mkdir 'hej hopp'
+  685  ls -l
+  686  ls ~/"hej hopp"
+  687  touch hej\ hopp/enfil
+  688  ls ~/"hej hopp"
+  689  less ~/.profile 
+  690  exit
+  691  less .bashrc 
+  692  PS1="Hej :"
+  693  PS1="Hej \u:"
+  694  PS1="Hej \u@\h:"
+  695  sudo apt update
+  696  fidget
+  697  sudo apt install widget
+  698  sudo apt install perl-tk
+  699  sudo apt install acl
+  700  man bash
+  701  history
+  702  less 
