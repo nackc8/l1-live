@@ -519,4 +519,86 @@ pathname_expansion    tests
 [1mDESCRIPTION[0m[m
        Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.[m
 [m
-       Mandatory  arguments  to  lo
+       Mandatory  arguments  to  long options are mandatory for short[m
+       options too.[m
+[m
+       [1m-a[0m, [1m--archive[0m[m
+              same as [1m-dR[0m [1m--preserve[0m=[4mall[24m[m
+[7m Manual page cp(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion5
+(B[m$ ls
+[?2004lcommand_substitution  readcsv	  tillbakablickL4
+loop		      recordings  wordsplitting
+param_expansion       redirect
+pathname_expansion    tests
+[?2004h[94mDEVOPS24/lektion5
+(B[m$ cd pathname_expansion/
+[?2004l[?2004h[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ [H[2J[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ ls
+[?2004l[?2004h[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ touch {}[Ca{}[C1}/}/}[1P}[1P}.}.}1}0}[C[H[2J[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ touch a{1..10}
+[?2004l[?2004h[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ touch a{1..10}[1P{1..10}b{1..10}
+[?2004l[?2004h[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ touch b{1..10}c
+[?2004l[?2004h[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ touch b{1..10}c[C[1P{1..10}cd{1..10}c[C[C[C[C[C[C[C[C[Ke
+[?2004l[?2004h[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ [H[2J[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ ls
+[?2004la1   a3  a6  a9   b10c	b2c  b4   b5c  b7   b8c  d10e  d3e  d6e  d9e
+a10  a4  a7  b1   b1c	b3   b4c  b6   b7c  b9	 d1e   d4e  d7e
+a2   a5  a8  b10  b2	b3c  b5   b6c  b8   b9c  d2e   d5e  d8e
+[?2004h[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ echo 2*
+[?2004l2*
+[?2004h[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ echo 2**2*[H[2J[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ echo *2*
+[?2004la2 b2 b2c d2e
+[?2004h[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ echo *2*[C *2*r *2*a *2*d *2*e *2*r *2*a *2*[C[C[C[C gort nu![K
+[?2004lradera a2 b2 b2c d2e gort nu
+[?2004h[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ echo radera *2* gort nu[K[K[K[K[K[K[K[K[C[1P *2*[1P *2*[1P *2*[1P *2*[1P *2*[1P *2*[1P*2*[1P *2*[1P *2*[1P *2*[1P *2*[C[Cr *2*m *2*[C *2*- *2*r *2*f *2*[C[C[C[C[1@e[1@c[1@h[1@o[1@ [H[2J[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ echo rm -rf *2*[C[C[C[C[C[C[C
+[?2004lrm -rf a2 b2 b2c d2e
+[?2004h[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ echo rm -rf *2*[1P[1P[1P[1P[1P[C[C[C[C[C[Cv *2*
+[?2004lremoved 'a2'
+removed 'b2'
+removed 'b2c'
+removed 'd2e'
+[?2004h[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ [H[2J[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ ls
+[?2004la1   a4  a7  b1    b1c	b4   b5c  b7   b8c  d10e  d4e  d7e
+a10  a5  a8  b10   b3	b4c  b6   b7c  b9   d1e   d5e  d8e
+a3   a6  a9  b10c  b3c	b5   b6c  b8   b9c  d3e   d6e  d9e
+[?2004h[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ ?e?c?h?o? ?[C
+[?2004l?
+[?2004h[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ echo ??
+[?2004la1 a3 a4 a5 a6 a7 a8 a9 b1 b3 b4 b5 b6 b7 b8 b9
+[?2004h[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ echo ??[K2*
+[?2004l?2*
+[?2004h[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ echo ?2*[C[1P*7*[H[2J[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ echo ?7*
+[?2004la7 b7 b7c d7e
+[?2004h[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ touch 7os[K[Ksjutiio
+[?2004l[?2004h[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ touch 7sjutiio[C[C[6Pecho ?7*
+[?2004la7 b7 b7c d7e
+[?2004h[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ echo ?7*[C[1P7*
+[?2004l7sjutiio
+[?2004h[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ echo 7*
+[?2004l7sjutiio
+[?2004h[94mDEVOPS24/lektion5/pathname_expansion
+(B[m$ [H[2J[94mDEVOPS24/lektion5/pathname_ex
