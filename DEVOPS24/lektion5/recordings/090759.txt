@@ -871,4 +871,417 @@ Nyss skrev jag: apt install sl
 [19;1H[K[7m Manual page bash(1) line 1208 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              [4mignoreboth[24m is shorthand for [4mignorespace[24m and [4mignoredups[24m.  A value[m
 [19;1H[K[7m Manual page bash(1) line 1207 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              matching the previous history entry to not be saved.  A value of[m
 [19;1H[K[7m Manual page bash(1) line 1206 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              saved in the history list.  A value of [4mignoredups[24m  causes  lines[m
-[19;1H[K[7m Manual page bash(1) line 1205 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              [4mnorespace[24m,  lines  which  begin  with  a [1mspace[0m character
+[19;1H[K[7m Manual page bash(1) line 1205 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              [4mnorespace[24m,  lines  which  begin  with  a [1mspace[0m character are not[m
+[19;1H[K[7m Manual page bash(1) line 1204 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              saved on the history list.  If the list of values  includes  [4mig‐[24m[m
+[19;1H[K[7m Manual page bash(1) line 1203 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              A  colon-separated  list  of values controlling how commands are[m
+[19;1H[K[7m Manual page bash(1) line 1202 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mHISTCONTROL[0m[m
+[19;1H[K[7m Manual page bash(1) line 1201 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              patterns in [1mGLOBIGNORE[0m, it is removed from the list of matches.[m
+[19;1H[K[7m Manual page bash(1) line 1200 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              matched by a pathname expansion pattern also matches one of  the[m
+[19;1H[K[7m Manual page bash(1) line 1199 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              names  to  be  ignored  by  pathname  expansion.  If a file name[m
+[19;1H[K[7m Manual page bash(1) line 1198 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              A colon-separated list of patterns  defining  the  set  of  file[m
+[19;1H[K[7m Manual page bash(1) line 1197 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mGLOBIGNORE[0m[m
+[19;1H[K[7m Manual page bash(1) line 1196 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              nesting level will cause the current command to abort.[m
+[19;1H[K[7m Manual page bash(1) line 1195 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              function  nesting  level.  Function invocations that exceed this[m
+[19;1H[K[7m Manual page bash(1) line 1194 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion5/tillbakablickL4
+(B[m$ [H[2J[94mDEVOPS24/lektion5/tillbakablickL4
+(B[m$ history
+[?2004l   25  sudo -i
+   26  id
+   27  sudo -i
+   28  sudo su
+   29  adduser
+   30  ssh ubse
+   31  exit
+   32  man man
+   33  man 5 /etc/passwd
+   34  man 5 /etc/ssh/sshd_config
+   35  umask
+   36  ls
+   37  ssh ubse
+   38  exit
+   39  ssh ubse
+   40  cd Downloads
+   41  rm *
+   42  cd /tmp/
+   43  git clone git@github.com:nackc8/pg-gruppupg-d4-java-tonic.git
+   44  cd pg-gruppupg-d4-java-tonic/
+   45  code .
+   46  cd .
+   47  cd ..
+   48  rm -rf pg-gruppupg-d4-java-tonic/
+   49  exit
+   50  git status
+   51  exit
+   52  sudo su
+   53  adduser
+   54  ssh ubse
+   55  exit
+   56  man man
+   57  man 5 /etc/passwd
+   58  man 5 /etc/ssh/sshd_config
+   59  umask
+   60  ls
+   61  ssh ubse
+   62  exit
+   63  ssh ubse
+   64  rm *
+   65  cd /tmp/
+   66  git clone git@github.com:nackc8/pg-gruppupg-d4-java-tonic.git
+   67  cd pg-gruppupg-d4-java-tonic/
+   68  code .
+   69  cd .
+   70  rm -rf pg-gruppupg-d4-java-tonic/
+   71  exit
+   72  command -v vboxmanage
+   73  command -v vboxmanage 2>/dev/null
+   74  command -v vboxmanage >/dev/null
+   75  nano ~/.bashrc.d/00_virtualboxes.bash 
+   76  . ~/.bashrc.d/00_virtualboxes.bash 
+   77  ls ~/.bashrc.d/
+   78  chezmoi re-add .bashrc.d/00_flutter.bash 
+   79  chezmoi add .bashrc.d/*
+   80  chezmoi diff .config/
+   81  chezmoi diff .config
+   82  chezmoi cd
+   83  chezmoi diff
+   84  chezmoi apply .config/
+   85  git status
+   86  chezmoi status
+   87  sudo -i
+   88  wine
+   89  sudo apt upgrade
+   90  sudo apt full-upgrade
+   91  sudo apt install wine
+   92  wine --version
+   93  cd Downloads
+   94  rm Kursöversikt.pdf 
+   95  rm paint.net.5.1.7.install.anycpu.web.zip 
+   96  ls | less
+   97  mv paint.net.5.1.7.portable.x64.zip ..
+   98  rm -rf *
+   99  ls -la
+  100  rm .en_dold_fil 
+  101  mkdir -p wine-apps/paintnet
+  102  ls *paint*
+  103  ls *Paint*
+  104  ls Downloads
+  105  mv Downloads/paint.net.5.1.7.install.anycpu.web.zip wine-apps/paintnet/
+  106  cd Downloads/
+  107  cd wine-apps/
+  108  unzip paint.net.5.1.7.install.anycpu.web.zip 
+  109  rm paint.net.5.1.7.install.anycpu.web.*
+  110  mv ~/Downloads/paint.net.5.1.7.portable.x64.zip .
+  111  unzip paint.net.5.1.7.portable.x64.zip 
+  112  ls *.zip
+  113  rm paint.net.5.1.7.portable.x64.zip 
+  114  ls *.exe
+  115  file paintdotnet.exe 
+  116  sudo dpkg --add-architecture i386
+  117  sudo apt update
+  118  sudo apt install --install-recommends wine wine64 wine32 libwine libwine:i386 fonts-wine
+  119  rm -rf ~/.wine
+  120  winecfg
+  121  wine paintdotnet.exe 
+  122  rm -rf paintnet/
+  123  mkdir paintnet
+  124  mv ~/Downloads/PaintDotNet_3_36.exe paintnet/
+  125  cd paintnet/
+  126  wine ~/Downloads/dotnetfx35setup.exe 
+  127  sudo apt install --install-recommends winetricks
+  128  sudo winetricks --self-update
+  129  winetricks -q dotnet35
+  130  wine PaintDotNet_3_36.exe 
+  131  sudo apt-purge wine winetricks
+  132  sudo apt purge wine winetricks
+  133  cd ..
+  134  rm -rf wine-apps/
+  135  apt search flatpak
+  136  sudo apt install flatpak
+  137  flatpak install bottles
+  138  flatpak update
+  139  flatpak install
+  140  flatpak install flathub com.usebottles.bottles￼
+  141  flatpak install flathub com.usebottles.bottles
+  142  sudo apt install gnome-software-plugin-flatpak
+  143  flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+  144  flatpak run bottles
+  145  flatpak
+  146  flatpak --help
+  147  flatpak list
+  148  flatpak run com.usebottles.bottles
+  149  flatpak run com.usebottles.bottles 
+  150  sudo apt install pinta
+  151  apt search pinta
+  152  flatpak run com.github.PintaProject.Pinta 
+  153  flatpak run com.geekbench.Geekbench6 
+  154  exit
+  155  mkdir wineapps
+  156  mkdir wineapps/paintnet
+  157  mv ~/Downloads/paint.net.5.1.7.portable.x64.zip wineapps/paintnet/
+  158  cd wineapps/paintnet/
+  159  unzip paint.net.5.1.7.portable.x64.zip 
+  160  ls *.exe
+  161  ls *.zip
+  162  mv paint.net.5.1.7.portable.x64.zip ~/Downloads
+  163  cd ..
+  164  cd wineapps/
+  165  mv paintnet/ /home/kent/.var/app/com.usebottles.bottles/data/bottles/bottles/Paint.NET/drive_c/
+  166  cd Documents
+  167  cd flutter/
+  168  rm -rf *
+  169  ls -a
+  170  nano install_flutter.bash
+  171  bash install_flutter.bash 
+  172  grep -R import *
+  173  bash install_flutter.bash | grep py
+  174  grep -R import * | grep py
+  175  grep -R import * | grep '\.py'
+  176  ls ~/bin/
+  177  history | grep check-repos
+  178  check-repos /shared/kent/Dropbox/.backups/GitHub/nackc8/existing/py-*-i4-*
+  179  cd /tmp/
+  180  git clone git@github.com:nackc8/py-project-i4-pythoff.git
+  181  cd py-project-i4-pythoff/
+  182  code .
+  183  rm -rf /tmp/py-project-i4-pythoff/
+  184  exit
+  185  exit
+  186  flatpak
+  187  rm -rf Android*
+  188  ls -a
+  189  ls -la 
+  190  man ls
+  191  rm -rf .profile.bak 
+  192  rm -rf .andstudio/
+  193  ls .sshubse/
+  194  rm -rf .sshubse/
+  195  ls -lta 
+  196  less .face
+  197  rm .face*
+  198  ls .grsync/
+  199  less .grsync/grsync.ini 
+  200  rm -rf flutter/
+  201  cd Downloads
+  202  rm Philippe_Gaultier_resume_en.pdf 
+  203  exceltex 
+  204  cd ~/.bin/
+  205  code .
+  206  exit
+  207  python3 rmexcept.py 
+  208  python3 rmexcept.py 
+  209  cd Downloads
+  210  tar xf jetbrains-toolbox-2.6.0.40632.tar.gz 
+  211  cd jetbrains-toolbox-2.6.0.40632/
+  212  cd j
+  213  ls -l
+  214  ./jetbrains-toolbox 
+  215  cd bokforing
+  216  ls 2024/a91*
+  217  cd 2024
+  218  ./check 
+  219  exit
+  220  cd Downloads
+  221  rm *
+  222  rm -rf jetbrains-toolbox-2.6.0.40632/
+  223  exit
+  224  rm -rf jetbrains-toolbox-2.6.0.40632/
+  225  man ls
+  226  exit
+  227  exit
+  228  cd Downloads
+  229  cd ~/Documents/nackademin/linux1/l1-live/
+  230  git branch main
+  231  git checkout main
+  232  cd /tmp/
+  233  mkdir manode
+  234  cd manode/
+  235  nvm
+  236  nvm use lts
+  237  nvm installl lts
+  238  nvm install lts
+  239  echo $SHELL
+  240  npm ls-remote
+  241  nvm ls-remote
+  242  npm install v23.6.0
+  243  nvm install v23.6.0
+  244  npm init
+  245  l
+  246  less package.json 
+  247  cd Documents
+  248  cd nackademin/
+  249  cd linux1/
+  250  cd l1-live/
+  251  code .
+  252  man ls
+  253  man git-commit
+  254  man ssh-keygen
+  255  cat -hejsan
+  256  cat -- -hejsan
+  257  cat --hejsan
+  258  cat -- --hejsan
+  259  cat -- --
+  260  ls -l
+  261  ls -- -l
+  262  ls -l -- -l
+  263  python3 --hej.py 
+  264  python3 -- --hej.py 
+  265  man python3
+  266  python3 -c --hej.py 
+  267  python3 -- --hej.py
+  268  python3 -v -- --hej.py
+  269  man cat
+  270  seq 1 20
+  271  nano bollar.txt
+  272  cat bollar.txt 
+  273  echo hej | cat -
+  274  cat -
+  275  man cat
+  276  cat -
+  277  touch ballong
+  278  nanoi ballong 
+  279  nano ballong 
+  280  cat ballong 
+  281  cat -
+  282  mkdir minusminus
+  283  ls -ld
+  284  ls 
+  285  mv -- -* minusminus/
+  286  ls minusminus/
+  287  date
+  288  mv b* minusminus/
+  289  ls
+  290  ls
+  291  ls minusminus/ -l
+  292  ls -l minusminus/
+  293  ls -l
+  294  ls-l
+  295  ls -la
+  296  ls -al
+  297  ls -a -l
+  298  ls -l -a
+  299  man bash
+  300  man bash
+  301  pwd
+  302  ls ~
+  303  ls /home/kent
+  304  start-ubse
+  305  ubse-start
+  306  ssh ubse
+  307  ssh ubse
+  308  ls Downloads
+  309  rm Downloads/*
+  310  exit
+  311  less ~/.profile 
+  312  ssh ubse
+  313  man bash
+  314  man env
+  315  env python3 
+  316  echo $PATH
+  317  echo $PATH | tr : $'\n'
+  318  which cd
+  319  env cd
+  320  which env
+  321  exit
+  322  echo $TERM
+  323  echo $TERM
+  324  echo $TERM
+  325  echo $TERM
+  326  ls -la
+  327  alias ls='ls -la'
+  328  \ls
+  329  man cp
+  330  alias cp='cp -n'
+  331  touch finfil
+  332  cp README.md finfil 
+  333  less finfil 
+  334  unalias cp ls
+  335  alias
+  336  help source
+  337  exit
+  338  cd Documents/nackademin/linux1/l1-live/
+  339  HUSDJUR=katt
+  340  echo $HUSDJUR 
+  341  ls /etc/ssh/ssh_config
+  342  echo $HUSDJUR
+  343  echo Jag tycker om ${HUSDJUR}en
+  344  echo Jag tycker om $HUSDJURen
+  345  echo "Jag tycker om $HUSDJURen"
+  346  echo "Jag tycker om ${HUSDJUR}en"
+  347  echo $HUSDJUR
+  348  echo $HUSDJURen
+  349  echo $HUSDJUR-
+  350  echo ${HUSDJUR}-
+  351  echo ${HUSDJUR}-
+  352  echo $HUSDJUR
+  353  printenv
+  354  env
+  355  env | wc -l
+  356  printenv | wc -l
+  357  printenv
+  358  echo $HUSDJUR
+  359  printenv | less
+  360  ls
+  361  man bash
+  362  man bash
+  363  man bash
+  364  mkdir vars
+  365  cd vars/
+  366  nano mittskript
+  367  ./mittskript
+  368  ls -l mittskript 
+  369  chmod u+x mittskript 
+  370  ls -l mittskript 
+  371  ./mittskript 
+  372  cat mittskript 
+  373  VAR_A=Hejsan ./mittskript 
+  374  echo $VAR_A
+  375  man set
+  376  help set
+  377  VAR_A=Hejsan ./mittskript 
+  378  echo $VAR_A
+  379  VAR_A=Hejsan
+  380  echo $VAR_A
+  381  VAR_A=Terve ./mittskript 
+  382  echo $VAR_B
+  383  echo $VAR_A
+  384  printenv
+  385  printenv
+  386  printenv | grep VAR
+  387  printenv | grep LANG
+  388  printenv | grep VAR
+  389  echo $VAR_A 
+  390  ./mittskript 
+  391  VAR_A=Terve VAR_B=Rulle ./mittskript
+  392  ./mittskript 
+  393  export VAR_A
+  394  ./mittskript 
+  395  export VAR_B=Bil
+  396  ./mittskript 
+  397  printenv | grep VAR
+  398  printenv
+  399  printenv
+  400  unset VAR_A
+  401  printenv | grep VAR
+  402  ./mittskript 
+  403  VAR_B=Flygplan ./mittskript 
+  404  echo $VAR_B
+  405  printenv | less
+  406  /bin/bash mittskript 
+  407  /bin/bash mittskript
+  408  man env
+  409  env python3
+  410  python3
+  411  ./mittskript 
+  412  ls
+  413  cp mittskript mittskript_nej
+  414  ./mittskript_nej 
+  415  cp mittskript greet
+  416  ./greet 
+  417  ./greet Samuel
+  418  ./greet Samuel Khilkhil
+  419  ./greet Khilkhil Samuel
+  420  ./greet Khilkhil Samuel
+  421  ./greet Khilkhil Samuel
+  422  ./fin 
+  423  bash fin
+  42
