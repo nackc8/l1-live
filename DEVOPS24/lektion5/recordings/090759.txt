@@ -7324,4 +7324,100 @@ rad3: Hejsan 3
 [7m Manual page bash(1) line 230 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mSimple[0m [1mCommands[0m[m
 [7m Manual page bash(1) line 231 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       A  [4msimple[24m  [4mcommand[24m  is a sequence of optional variable assignments fol‐[m
 [7m Manual page bash(1) line 232 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       lowed by [1mblank[0m-separated words and redirections, and  terminated  by  a[m
-[7m Manual page bash(1) line 233 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       
+[7m Manual page bash(1) line 233 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mcontrol[24m [4moperator[24m.  The first word specifies the command to be executed,[m
+[7m Manual page bash(1) line 234 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       and is passed as argument zero.  The remaining words are passed as  ar‐[m
+[7m Manual page bash(1) line 235 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       guments to the invoked command.[m
+[7m Manual page bash(1) line 236 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 237 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The  return  value  of a [4msimple[24m [4mcommand[24m is its exit status, or 128+[4mn[24m if[m
+[7m Manual page bash(1) line 238 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the command is terminated by signal [4mn[24m.[m
+[7m Manual page bash(1) line 239 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 240 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mPipelines[0m[m
+[7m Manual page bash(1) line 241 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       A [4mpipeline[24m is a sequence of one or more commands separated  by  one  of[m
+[7m Manual page bash(1) line 242 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the control operators [1m|[0m or [1m|&[0m.  The format for a pipeline is:[m
+[7m Manual page bash(1) line 243 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 244 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [[1mtime[0m [[1m-p[0m]] [ ! ] [4mcommand1[24m [ [[1m|[0m⎪[1m|&[0m] [4mcommand2[24m ... ][m
+[7m Manual page bash(1) line 245 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 246 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The standard output of [4mcommand1[24m is connected via a pipe to the standard[m
+[7m Manual page bash(1) line 247 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       input of [4mcommand2[24m.  This connection is performed  before  any  redirec‐[m
+[7m Manual page bash(1) line 248 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tions specified by the [4mcommand1[24m(see [1mREDIRECTION[0m below).  If [1m|&[0m is used,[m
+[7m Manual page bash(1) line 249 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mcommand1[24m's standard error, in addition to its standard output, is  con‐[m
+[7m Manual page bash(1) line 250 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       nected  to  [4mcommand2[24m's standard input through the pipe; it is shorthand[m
+[7m Manual page bash(1) line 251 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       for [1m2>&1[0m [1m|[0m.  This implicit redirection of the  standard  error  to  the[m
+[7m Manual page bash(1) line 252 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       standard  output  is performed after any redirections specified by [4mcom‐[24m[m
+[7m Manual page bash(1) line 253 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mmand1[24m.[m
+[7m Manual page bash(1) line 254 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 255 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The return status of a pipeline is the exit status of the last command,[m
+[7m Manual page bash(1) line 256 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       unless  the  [1mpipefail[0m  option  is enabled.  If [1mpipefail[0m is enabled, the[m
+[7m Manual page bash(1) line 257 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       pipeline's return status is the value of the last  (rightmost)  command[m
+[7m Manual page bash(1) line 258 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       to  exit  with a non-zero status, or zero if all commands exit success‐[m
+[7m Manual page bash(1) line 259 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       fully.  If the reserved word [1m![0m  precedes a pipeline, the exit status of[m
+[7m Manual page bash(1) line 260 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       that  pipeline  is the logical negation of the exit status as described[m
+[7m Manual page bash(1) line 261 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       above.  The shell waits for all commands in the pipeline  to  terminate[m
+[7m Manual page bash(1) line 262 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       before returning a value.[m
+[7m Manual page bash(1) line 263 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 264 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       If  the  [1mtime[0m reserved word precedes a pipeline, the elapsed as well as[m
+[7m Manual page bash(1) line 265 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       user and system time consumed by its execution are  reported  when  the[m
+[7m Manual page bash(1) line 266 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       pipeline  terminates.   The [1m-p[0m option changes the output format to that[m
+[7m Manual page bash(1) line 267 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       specified by POSIX.  When the shell is in [4mposix[24m [4mmode[24m, it does not  rec‐[m
+[7m Manual page bash(1) line 268 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ognize  [1mtime[0m  as  a  reserved word if the next token begins with a `-'.[m
+[7m Manual page bash(1) line 269 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The [1mTIMEFORMAT[0m variable may be set to a format  string  that  specifies[m
+[7m Manual page bash(1) line 270 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       how  the timing information should be displayed; see the description of[m
+[7m Manual page bash(1) line 271 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mTIMEFORMAT[0m under [1mShell[0m [1mVariables[0m below.[m
+[7m Manual page bash(1) line 272 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 273 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       When the shell is in [4mposix[24m [4mmode[24m, [1mtime[0m may be followed by a newline.  In[m
+[7m Manual page bash(1) line 274 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       this  case,  the shell displays the total user and system time consumed[m
+[7m Manual page bash(1) line 275 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       by the shell and its children.  The [1mTIMEFORMAT[0m variable may be used  to[m
+[7m Manual page bash(1) line 276 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       specify the format of the time information.[m
+[7m Manual page bash(1) line 277 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 278 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Each  command  in a multi-command pipeline, where pipes are created, is[m
+[7m Manual page bash(1) line 279 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       executed in a [4msubshell[24m, which is a separate process.  See [1mCOMMAND[0m  [1mEXE‐[0m[m
+[7m Manual page bash(1) line 280 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mCUTION[0m  [1mENVIRONMENT[0m for a description of subshells and a subshell envi‐[m
+[7m Manual page bash(1) line 281 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ronment.  If the [1mlastpipe[0m option is enabled  using  the  [1mshopt[0m  builtin[m
+[7m Manual page bash(1) line 282 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       (see  the  description  of [1mshopt[0m below), the last element of a pipeline[m
+[7m Manual page bash(1) line 283 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       may be run by the shell process when job control is not active.[m
+[7m Manual page bash(1) line 284 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 285 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mLists[0m[m
+[7m Manual page bash(1) line 286 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       A [4mlist[24m is a sequence of one or more pipelines separated by one  of  the[m
+[7m Manual page bash(1) line 287 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       operators [1m;[0m, [1m&[0m, [1m&&[0m, or [1m||[0m, and optionally terminated by one of [1m;[0m, [1m&[0m, or[m
+[7m Manual page bash(1) line 288 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m<newline>[0m.[m
+[7m Manual page bash(1) line 289 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 290 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Of these list operators, [1m&&[0m and [1m||[0m have equal precedence, followed by [1m;[0m[m
+[7m Manual page bash(1) line 291 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       and [1m&[0m, which have equal precedence.[m
+[7m Manual page bash(1) line 292 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 293 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       A  sequence  of  one or more newlines may appear in a [4mlist[24m instead of a[m
+[7m Manual page bash(1) line 294 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       semicolon to delimit commands.[m
+[7m Manual page bash(1) line 295 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 296 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       If a command is terminated by the control operator [1m&[0m,  the  shell  exe‐[m
+[7m Manual page bash(1) line 297 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       cutes  the command in the [4mbackground[24m in a subshell.  The shell does not[m
+[7m Manual page bash(1) line 298 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       wait for the command to finish, and the return status is 0.  These  are[m
+[7m Manual page bash(1) line 299 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       referred  to  as  [4masynchronous[24m commands.  Commands separated by a [1m;[0m are[m
+[7m Manual page bash(1) line 300 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       executed sequentially; the shell waits for each command to terminate in[m
+[7m Manual page bash(1) line 301 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       turn.   The  return  status is the exit status of the last command exe‐[m
+[7m Manual page bash(1) line 302 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       cuted.[m
+[7m Manual page bash(1) line 303 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 304 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       AND and OR lists are sequences of one or more  pipelines  separated  by[m
+[7m Manual page bash(1) line 305 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the  [1m&&[0m  and  [1m||[0m control operators, respectively.  AND and OR lists are[m
+[7m Manual page bash(1) line 306 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       executed with left associativity.  An AND list has the form[m
+[7m Manual page bash(1) line 307 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 308 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4mcommand1[24m [1m&&[0m [4mcommand2[24m[m
+[7m Manual page bash(1) line 309 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 310 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mcommand2[24m is executed if, and only if, [4mcommand1[24m returns an  exit  status[m
+[7m Manual page bash(1) line 311 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       of zero (success).[m
+[7m Manual page bash(1) line 312 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 313 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       An OR list has the form[m
+[7m Manual page bash(1) line 314 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 315 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4mcommand1[24m [1m||[0m [4mcommand2[24m[m
+[7m Manual page bash(1) line 316 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 317 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mcommand2[24m  is executed if, and only if, [4mcommand1[24m returns a non-zero exit[m
+[7m Manual page bash(1) line 318 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       status.  The return status of AND and OR lists is the  exit  status  of[m
+[7m Manual page bash(1) line 319 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the last command executed in the list.[m
+[7m Manual page bash(1) line 320 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 321 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mCompound[0m [1mCommands[0m[m
+[7m Manual page bash(1) line 322 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       A  [4mcompound[24m [4mcommand[24m is one of the following.  In most cases a [4mlist[24m in a[m
+[7m Manual page bash(1) line 323 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       command's description may be separated from the rest of the command  by[m
+[7m Manual page bash(1) line 324 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       one  or  more  newlines, and may be followed by a newline in place of a[m
+[7m Manual page bash(1) line 325 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       semicolon.[m
+[7m Manual page bash(1) line 326 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 327 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ([4mlist[24m) [4mlist[24m is executed in a subshell (see [1mCOMMAND[0m  [1mEXECUTION[0m  [1mENVIRON‐[0m[m
+[7m Manual page bash(1) line 328 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mMENT[0m  below for a description of a subshell environment).  Vari‐[m
+[7m Manual page bash(1) line 329 (press h for help or q to quit)[27m[K[K [KE
