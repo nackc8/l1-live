@@ -7774,4 +7774,73 @@ rad3: Hejsan 3
 [7m Manual page bash(1) line 496 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              The [1mwhile[0m command continuously executes the list [4mlist-2[24m as  long[m
 [7m Manual page bash(1) line 497 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              as the last command in the list [4mlist-1[24m returns an exit status of[m
 [7m Manual page bash(1) line 498 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              zero.  The [1muntil[0m command is identical to the [1mwhile[0m command,  ex‐[m
-[7m Manual
+[7m Manual page bash(1) line 499 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              cept that the test is negated: [4mlist-2[24m is executed as long as the[m
+[7m Manual page bash(1) line 500 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              last command in [4mlist-1[24m returns a non-zero exit status.  The exit[m
+[7m Manual page bash(1) line 501 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              status of the [1mwhile[0m and [1muntil[0m commands is the exit status of the[m
+[7m Manual page bash(1) line 502 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              last command executed in [4mlist-2[24m, or zero if none was executed.[m
+[7m Manual page bash(1) line 503 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 504 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mCoprocesses[0m[m
+[7m Manual page bash(1) line 505 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       A [4mcoprocess[24m is a shell command preceded by the [1mcoproc[0m reserved word.  A[m
+[7m Manual page bash(1) line 506 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       coprocess  is  executed asynchronously in a subshell, as if the command[m
+[7m Manual page bash(1) line 507 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       had been terminated with the [1m&[0m control operator, with  a  two-way  pipe[m
+[7m Manual page bash(1) line 508 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       established between the executing shell and the coprocess.[m
+[7m Manual page bash(1) line 509 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 510 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion5/redirect
+(B[m$ cd ..
+[?2004l[?2004h[94mDEVOPS24/lektion5
+(B[m$ [H[2J[94mDEVOPS24/lektion5
+(B[m$ ls
+[?2004lloop  recordings  redirect  tests  tillbakablickL4
+[?2004h[94mDEVOPS24/lektion5
+(B[m$ mkdir readcsv
+[?2004l[?2004h[94mDEVOPS24/lektion5
+(B[m$ cd readcsv/
+[?2004l[?2004h[94mDEVOPS24/lektion5/readcsv
+(B[m$ [H[2J[94mDEVOPS24/lektion5/readcsv
+(B[m$ ls
+[?2004l[?2004h[94mDEVOPS24/lektion5/readcsv
+(B[m$ to[K[Ktouch readcs[Ksv
+[?2004l[?2004h[94mDEVOPS24/lektion5/readcsv
+(B[m$ code t[Kreadcsv 
+[?2004l[?2004h[94mDEVOPS24/lektion5/readcsv
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ chmod _+[K[K_[K+x readcsv 
+[?2004l[?2004h[94mDEVOPS24/lektion5/readcsv
+(B[m$ [K(B[m$ touch [7mpersoner.csv[27m[C[C[C[C[C[C[C[Cpersoner.csv
+[?2004l[?2004h[94mDEVOPS24/lektion5/readcsv
+(B[m$ code personer.csv 
+[?2004l[?2004h[94mDEVOPS24/lektion5/readcsv
+(B[m$ ./readcsv [H[2J[94mDEVOPS24/lektion5/readcsv
+(B[m$ ./readcsv 
+[?2004lValue: bosse
+Value: larsson
+Value: sommar2025
+Value: add
+Value: bosse
+Value: larsson
+Value: sommar2026
+Value: remove
+Value: ulla
+Value: myrdal
+Value: sommar2027
+Value: add
+Value: mayank
+Value: aurora
+Value: sommar2028
+Value: add
+[?2004h[94mDEVOPS24/lektion5/readcsv
+(B[m$ [K(B[m$ [H[2J[94mDEVOPS24/lektion5/readcsv
+(B[m$ man test
+[?2004l[?1049h[22;0;0t[?1h=TEST(1)                     User Commands                     TEST(1)[m
+[m
+[1mNAME[0m[m
+       test - check file types and compare values[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mtest[0m [4mEXPRESSION[24m[m
+       [1mtest[0m[m
+       [1m[[0m [4mEXPRESSION[24m [1m][0m[m
+       [1m[[0m [1m][0m[m
+[7m Manual page test(1) line 1 (press h for help or q to quit)[27m[K[K/[K--[Kzz[K[1;1HTEST(1)                     User Commands                     TEST(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       test - check file types
