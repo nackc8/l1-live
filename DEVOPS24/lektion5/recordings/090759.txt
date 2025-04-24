@@ -7843,4 +7843,152 @@ Value: add
 [7m Manual page test(1) line 1 (press h for help or q to quit)[27m[K[K/[K--[Kzz[K[1;1HTEST(1)                     User Commands                     TEST(1)[m
 [2;1H[m
 [3;1H[1mNAME[0m[m
-[4;1H       test - check file types
+[4;1H       test - check file types and compare values[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mtest[0m [4mEXPRESSION[24m[m
+[8;1H       [1mtest[0m[m
+[9;1H       [1m[[0m [4mEXPRESSION[24m [1m][0m[m
+[10;1H       [1m[[0m [1m][0m[m
+[11;1H[1;1HTEST(1)                     User Commands                     TEST(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       test - check file types and compare values[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mtest[0m [4mEXPRESSION[24m[m
+[8;1H       [1mtest[0m[m
+[9;1H       [1m[[0m [4mEXPRESSION[24m [1m][0m[m
+[10;1H       [1m[[0m [1m][0m[m
+[11;1H...skipping...
+       [1m[7m-z[27m[0m STRING[m
+              the length of STRING is zero[m
+[m
+       STRING1 = STRING2[m
+              the strings are equal[m
+[m
+       STRING1 != STRING2[m
+              the strings are not equal[m
+[m
+       INTEGER1 [1m-eq[0m INTEGER2[m
+[7m Manual page test(1) line 41/177 25% (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion5/readcsv
+(B[m$ ./s[Kreadcsv [H[2J[94mDEVOPS24/lektion5/readcsv
+(B[m$ ./readcsv 
+[?2004lValue: förnamn
+Value: efternamn
+Value: lösenord
+Value: operation
+Value: bosse
+Value: larsson
+Value: sommar2025
+Value: add
+Value: bosse
+Value: larsson
+Value: sommar2026
+Value: remove
+Value: ulla
+Value: myrdal
+Value: sommar2027
+Value: add
+Value: mayank
+Value: aurora
+Value: sommar2028
+Value: add
+[?2004h[94mDEVOPS24/lektion5/readcsv
+(B[m$ 
+[?2004l[?2004h[94mDEVOPS24/lektion5/readcsv
+(B[m$ [H[2J[94mDEVOPS24/lektion5/readcsv
+(B[m$ ./skipheader_readcsv1 
+[?2004lValue: förnamn
+Value: efternamn
+Value: lösenord
+Value: operation
+Value: bosse
+Value: larsson
+Value: sommar2025
+Value: add
+Value: bosse
+Value: larsson
+Value: sommar2026
+Value: remove
+Value: ulla
+Value: myrdal
+Value: sommar2027
+Value: add
+Value: mayank
+Value: aurora
+Value: sommar2028
+Value: add
+[?2004h[94mDEVOPS24/lektion5/readcsv
+(B[m$ ./skipheader_readcsv1 [H[2J[94mDEVOPS24/lektion5/readcsv
+(B[m$ ./skipheader_readcsv1 
+[?2004lValue: bosse
+Value: larsson
+Value: sommar2025
+Value: add
+Value: bosse
+Value: larsson
+Value: sommar2026
+Value: remove
+Value: ulla
+Value: myrdal
+Value: sommar2027
+Value: add
+Value: mayank
+Value: aurora
+Value: sommar2028
+Value: add
+[?2004h[94mDEVOPS24/lektion5/readcsv
+(B[m$ ./skipheader_readcsv1 [K[K2[H[2J[94mDEVOPS24/lektion5/readcsv
+(B[m$ ./skipheader_readcsv2
+[?2004lValue: bosse
+Value: larsson
+Value: sommar2025
+Value: add
+Value: bosse
+Value: larsson
+Value: sommar2026
+Value: remove
+Value: ulla
+Value: myrdal
+Value: sommar2027
+Value: add
+Value: mayank
+Value: aurora
+Value: sommar2028
+Value: add
+[?2004h[94mDEVOPS24/lektion5/readcsv
+(B[m$ ./skipheader_readcsv2[K3[H[2J[94mDEVOPS24/lektion5/readcsv
+(B[m$ ./skipheader_readcsv3
+[?2004lValue: bosse
+Value: larsson
+Value: sommar2025
+Value: add
+Value: bosse
+Value: larsson
+Value: sommar2026
+Value: remove
+Value: ulla
+Value: myrdal
+Value: sommar2027
+Value: add
+Value: mayank
+Value: aurora
+Value: sommar2028
+Value: add
+[?2004h[94mDEVOPS24/lektion5/readcsv
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mDEVOPS24/lektion5/readcsv
+(B[m$ head 
+personer.csv         skipheader_readcsv1  skipheader_readcsv3
+readcsv              skipheader_readcsv2  skipheader_readcsv4
+[94mDEVOPS24/lektion5/readcsv
+(B[m$ head personer.csv [H[2J[94mDEVOPS24/lektion5/readcsv
+(B[m$ head personer.csv 
+[?2004lförnamn,efternamn,lösenord,operation
+bosse,larsson,sommar2025,add
+bosse,larsson,sommar2026,remove
+ulla,myrdal,sommar2027,add
+mayank,aurora,sommar2028,add
+[?2004h[94mDEVOPS24/lektion5/readcsv
+(B[m$ head personer.csv [C[1@ [1@-[1@n[C[1@ [1@1[H[2J[94mDEVOPS24/lektion5/readcsv
+(B[m$ head -n 
