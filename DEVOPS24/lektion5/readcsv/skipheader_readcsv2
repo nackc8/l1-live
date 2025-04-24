@@ -2,9 +2,9 @@
 
 while IFS="," read -r fornamn efternamn losenord operation; do
   if [ -z "$seen_header" ]; then
-   seen_header=myrslok
-   continue
-  
+    seen_header=myrslok
+    continue
+  fi
   echo "Value: $fornamn"
   echo "Value: $efternamn"
   echo "Value: $losenord"
