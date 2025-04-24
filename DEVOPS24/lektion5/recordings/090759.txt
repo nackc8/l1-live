@@ -6555,4 +6555,140 @@ Fel
 [7m Manual page test(1) line 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
 [7m Manual page test(1) line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       FILE1 [1m-ot[0m FILE2[m
 [7m Manual page test(1) line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              FILE1 is older than FILE2[m
-[7m Manual page test(1) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K
+[7m Manual page test(1) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page test(1) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-b[0m FILE[m
+[7m Manual page test(1) line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              FILE exists and is block special[m
+[7m Manual page test(1) line 62 (press h for help or q to quit)[27m[K[K[m
+       [1m-c[0m FILE[m
+              FILE exists and is character special[m
+[m
+       [1m-d[0m FILE[m
+              FILE exists and is a directory[m
+[m
+       [1m-e[0m FILE[m
+              FILE exists[m
+[m
+       [1m-f[0m FILE[m
+              FILE exists and is a regular file[m
+[m
+       [1m-g[0m FILE[m
+              FILE exists and is set-group-ID[m
+[m
+       [1m-G[0m FILE[m
+[7m Manual page test(1) line 79 (press h for help or q to quit)[27m[K[K              FILE exists and is owned by the effective group ID[m
+[m
+       [1m-h[0m FILE[m
+              FILE exists and is a symbolic link (same as [1m-L[0m)[m
+[m
+       [1m-k[0m FILE[m
+              FILE exists and has its sticky bit set[m
+[m
+       [1m-L[0m FILE[m
+              FILE exists and is a symbolic link (same as [1m-h[0m)[m
+[m
+       [1m-N[0m FILE[m
+              FILE exists and has been modified since it was last read[m
+[m
+       [1m-O[0m FILE[m
+              FILE exists and is owned by the effective user ID[m
+[m
+[7m Manual page test(1) line 96 (press h for help or q to quit)[27m[K[K       [1m-p[0m FILE[m
+              FILE exists and is a named pipe[m
+[m
+       [1m-r[0m FILE[m
+              FILE exists and the user has read access[m
+[m
+       [1m-s[0m FILE[m
+              FILE exists and has a size greater than zero[m
+[m
+       [1m-S[0m FILE[m
+              FILE exists and is a socket[m
+[m
+       [1m-t[0m FD  file descriptor FD is opened on a terminal[m
+[m
+       [1m-u[0m FILE[m
+              FILE exists and its set-user-ID bit is set[m
+[m
+[7m Manual page test(1) line 113 (press h for help or q to quit)[27m[K[K       [1m-w[0m FILE[m
+              FILE exists and the user has write access[m
+[m
+       [1m-x[0m FILE[m
+              FILE exists and the user has execute (or search) access[m
+[m
+       Except for [1m-h[0m and  [1m-L[0m,  all  FILE-related  tests  dereference  symbolic[m
+       links.   Beware  that  parentheses  need  to be escaped (e.g., by back‐[m
+       slashes) for shells.  INTEGER may also be [1m-l[0m STRING, which evaluates to[m
+       the length of STRING.[m
+[m
+       NOTE:  Binary  [1m-a[0m  and [1m-o[0m are inherently ambiguous.  Use 'test EXPR1 &&[m
+       test EXPR2' or 'test EXPR1 || test EXPR2' instead.[m
+[m
+       NOTE: [ honors the [1m--help[0m and [1m--version[0m options,  but  test  does  not.[m
+       test treats each of those as it treats any other nonempty STRING.[m
+[m
+[7m Manual page test(1) line 130 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion5/tests
+(B[m$ [ [K[Kif[K[K[ -d kat1/ ] && ecgi[K[Kho ""H"e"j"
+[?2004lHej
+[?2004h[94mDEVOPS24/lektion5/tests
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ cd ..-[K/loop/
+[?2004l[?2004h[94mDEVOPS24/lektion5/loop
+(B[m$ [H[2J[94mDEVOPS24/lektion5/loop
+(B[m$ ls
+[?2004lgreeting
+[?2004h[94mDEVOPS24/lektion5/loop
+(B[m$ chmod +x greeting [H[2J[94mDEVOPS24/lektion5/loop
+(B[m$ chmod +x greeting 
+[?2004l[?2004h[94mDEVOPS24/lektion5/loop
+(B[m$ ./greeting 1[H[2J[94mDEVOPS24/lektion5/loop
+(B[m$ ./greeting 1[K
+[?2004lHa
+[?2004h[94mDEVOPS24/lektion5/loop
+(B[m$ ./greeting [H[2J[94mDEVOPS24/lektion5/loop
+(B[m$ ./greeting 
+[?2004l./greeting: line 4: syntax error near unexpected token `done'
+./greeting: line 4: `done'
+[?2004h[94mDEVOPS24/lektion5/loop
+(B[m$ ./greeting [H[2J[94mDEVOPS24/lektion5/loop
+(B[m$ ./greeting 
+[?2004l[?2004h[94mDEVOPS24/lektion5/loop
+(B[m$ ./greeting 
+[?2004l[?2004h[94mDEVOPS24/lektion5/loop
+(B[m$ [H[2J[94mDEVOPS24/lektion5/loop
+(B[m$ man tur[K[Krue
+[?2004l[?1049h[22;0;0t[?1h=TRUE(1)                          User Commands                         TRUE(1)[m
+[m
+[1mNAME[0m[m
+       true - do nothing, successfully[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mtrue[0m [[4mignored[24m [4mcommand[24m [4mline[24m [4marguments[24m][m
+       [1mtrue[0m [4mOPTION[24m[m
+[m
+[1mDESCRIPTION[0m[m
+       Exit with a status code indicating success.[m
+[m
+       [1m--help[0m display this help and exit[m
+[m
+[7m Manual page true(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--version[0m[m
+[7m Manual page true(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              output version information and exit[m
+[7m Manual page true(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page true(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       NOTE: your shell may have its own version of true, which usually super‐[m
+[7m Manual page true(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       sedes the version described here.  Please refer to your  shell's  docu‐[m
+[7m Manual page true(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       mentation for details about the options it supports.[m
+[7m Manual page true(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page true(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mAUTHOR[0m[m
+[7m Manual page true(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Written by Jim Meyering.[m
+[7m Manual page true(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page true(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mREPORTING[0m [1mBUGS[0m[m
+[7m Manual page true(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       GNU coreutils online help: <https://www.gnu.org/software/coreutils/>[m
+[7m Manual page true(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Report any translation bugs to <https://translationproject.org/team/>[m
+[7m Manual page true(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page true(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mCOPYRIGHT[0m[m
+[7m Manual page true(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Copyright  ©  2022  Free Software Foundation, Inc.  License GPLv3+: GNU[m
+[7m Manual page true(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       GPL version 3 or later <https://gnu.org/licenses/gpl.html>.[m
+[7m Manual page true(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       This is free software: you are free  to  change  and  redistribute  it.[m
+[7m Manual page true(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       There is NO WARRANTY, to the extent permitted by law.[m
+[7m Manual page true(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page true(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       mentation for details about the options it supports.[m
+[15;1H[K[7m Manual page true(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       sedes the version described here.  Please refer to your  shell's  docu‐[m
+[15;1H[K[7m Manual page true(1) line 19 (press h for help or q to quit)[27m[K[K [KES
