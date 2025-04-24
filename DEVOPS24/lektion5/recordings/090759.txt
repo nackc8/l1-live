@@ -2270,4 +2270,296 @@ acl is already the newest version (2.3.2-1build1.1).
   563  which ls
   564  cp /usr/bin/ls .
   565  ls -l ls 
-  566  sudo chown roo
+  566  sudo chown root:user ls
+  567  ls -l ls 
+  568  ./ls
+  569  ./ls /root/
+  570  sudo chmod u+s ./ls
+  571  ls -l ls 
+  572  ls /root
+  573  ./ls /root/
+  574  ./ls -a /root/
+  575  ls -l ls
+  576  cp /usr/bin/nano .
+  577  ls -l nano
+  578  chmod g+s nano 
+  579  sudo chown user:root
+  580  sudo chown user:root nano 
+  581  ls -l nano 
+  582  sudo chmod g+s nano 
+  583  ls -l nano
+  584  ls -l nano ls
+  585  cd
+  586  cd /dir/
+  587  getfacl .
+  588  sudo apt install acl
+  589  getfacl .
+  590  ls -ld .
+  591  man setfacl
+  592  ls -l
+  593  sudo -u other mkdir otherskat
+  594  ls -l
+  595  sudo chmod 700 otherskat/
+  596  ls -l
+  597  ls otherskat/
+  598  getfacl otherskat/
+  599  sudo setfacl -m u:user:rwx  otherskat/
+  600  getfacl otherskat/
+  601  ls otherskat/
+  602  touch otherskat/hejsan
+  603  ls -l otherskat/
+  604  ls -ld otherskat/
+  605  getfacl otherskat/
+  606  sudo setfacl -m u:green:rwx  otherskat/
+  607  getfacl otherskat/
+  608  ls -ld otherskat/
+  609  sudo setfacl -x u:user otherskat/
+  610  getfacl otherskat/
+  611  sudo setfacl -m u:green:rx otherskat/
+  612  getfacl otherskat/
+  613  sudo setfacl -m user: otherskat/
+  614  sudo setfacl -m user:0 otherskat/
+  615  man setfacl 
+  616  sudo setfacl -m user:- otherskat/
+  617  sudo setfacl -m user:0 otherskat/
+  618  getfacl .
+  619  getfacl otherskat/
+  620  ls otherskat/
+  621  sudo setfacl -m u:user:rwx otherskat/
+  622  sudo setfacl -m m:r-x otherskat/
+  623  getfacl 
+  624  getfacl otherskat/
+  625  sudo setfacl -m m:rwx otherskat/
+  626  getfacl otherskat/
+  627  ls
+  628  mkdir foo
+  629  getfacl foo/
+  630  sudo setfacl -d -m u:other:rwx foo/
+  631  touch foo/usersfile
+  632  getfacl foo/
+  633  getfacl foo/usersfile 
+  634  getfacl foo/
+  635  getfacl .
+  636  ls
+  637  getfacl foo/
+  638  sudo setfacl -d -m u:other:r foo/
+  639  getfacl foo/
+  640  sudo setfacl -d -m u:green:rw foo/
+  641  getfacl foo/
+  642  man setfacl 
+  643  getfacl foo/
+  644  sudo setfacl -d --set u:green:rw foo/
+  645  getfacl foo/
+  646  ls
+  647  exit
+  648  ls
+  649  cd /dir/
+  650  ls
+  651  sudo rm -rf *
+  652  ls -l
+  653  mkdir x
+  654  ls x
+  655  ls -l
+  656  sudo -u other touch filen
+  657  ls -l
+  658  sudo chmod 662 filen 
+  659  ls -l filen 
+  660  echo hej >filen 
+  661  nano filen 
+  662  l
+  663  cd
+  664  ls
+  665  cd Down
+  666  cd
+  667  ezit
+  668  exit
+  669  ls /home
+  670  ls green~
+  671  ls ~green
+  672  sudo -i
+  673  echo $USER
+  674  echo /home/$USER
+  675  echo ~
+  676  echo $HOME
+  677  echo hej
+  678  echo $HOME
+  679  echo /home/user
+  680  man bash
+  681  ls "~"
+  682  ls ~"hej hopp"
+  683  ls ~/"hej hopp"
+  684  mkdir 'hej hopp'
+  685  ls -l
+  686  ls ~/"hej hopp"
+  687  touch hej\ hopp/enfil
+  688  ls ~/"hej hopp"
+  689  less ~/.profile 
+  690  exit
+  691  less .bashrc 
+  692  PS1="Hej :"
+  693  PS1="Hej \u:"
+  694  PS1="Hej \u@\h:"
+  695  sudo apt update
+  696  fidget
+  697  sudo apt install widget
+  698  sudo apt install perl-tk
+  699  sudo apt install acl
+  700  man bash
+  701  history
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ historyman bash[1Phistory[Khistoryman bashsudo apt install acl[C[C[C[C[C[C[C[C[C[C[C[C[C[12Pman bash[1Phistory[K [Khieuhieuhiu[K[K[K[K[K[K[K[K[K[K[K [Krm .b[Kbash_history [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ rm .bash_history [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1@l[1@e[1@s[1@s
+[?2004l[?1049h[22;0;0t[?1h=ip a
+hostname
+exit
+ls -l
+powd
+pwd
+adduser other
+sudo adduser other
+pwd
+cd /
+pwd
+l
+sudo mkdir kat1
+ls -l kat1/
+ls
+ls -ld kat1/
+sudo chmod 777 kat1/
+ls -ld kat1/
+[7m.bash_history[27m[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KBB[Kcd kat1/
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KBB[Kls ~other/
+:[K[K [KESCESC[KOO[KBB[Kls -ld ~other/
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KBB[Knano x
+:[K[K [KESCESC[KOO[KBB[Knano check.py
+:[K[K [KESCESC[KOO[KBB[Ky
+:[K[K [KESCESC[KOO[KBB[Kcode .
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KBB[Kexit
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KBB[Kcat /etc/passwd
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KBB[Kpwd
+:[K[K [KESCESC[KOO[KBB[Kcd /
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KBB[Kcd kat1/
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KBB[Kcd ..
+:[K[K [KESCESC[KOO[KBB[Kls -la
+:[K[K [KESCESC[KOO[KBB[Kcd kat1/
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KBB[Kls -la
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KBB[Kls -la
+:[K[K [KESCESC[KOO[KBB[Ksu otheruser
+:[K[K [KESCESC[KOO[KBB[Kcat /etc/passwd
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KBB[Ksu other
+:[K[K [KESCESC[KOO[KBB[Kls +la
+:[K[K [KESCESC[KOO[KBB[Kls -la
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KBB[Kpwd
+:[K[K [KESCESC[KOO[KBB[Kecho {1..10}
+:[K[K [KESCESC[KOO[KBB[Kecho {0..7}
+:[K[K [KESCESC[KOO[KBB[Kecho {0..7}{0..7}
+:[K[K [KESCESC[KOO[KBB[Kecho {0..7}{0..7}{0..7}
+:[K[K [KESCESC[KOO[KBB[Kecho {0..7}{0..7}{0..7} | wc -w
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KAA[K[HMcd kat1/
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMls -la
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMcd ..
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMls
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMcd kat1/
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMls
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMcd /
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMpwd
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMls
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMcat /etc/passwd
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMls
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMexit
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMls
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMcode .
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMy
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMnano check.py
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMnano x
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMls
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMls -ld ~other/
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMls ~other/
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMls
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMcd kat1/
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMls -ld kat1/
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMsudo chmod 777 kat1/
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMls -ld kat1/
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMls
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMls -l kat1/
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMsudo mkdir kat1
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMl
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMpwd
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMcd /
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMpwd
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMsudo adduser other
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMadduser other
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMpwd
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMpowd
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMls -l
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMexit
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMhostname
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[HMip a
+[19;1H[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KBB[Kcd kat1/
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KBB[Kls ~other/
+:[K[K [KESCESC[KOO[KBB[Kls -ld ~other/
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KBB[Knano x
+:[K[K [KESCESC[KOO[KBB[Knano check.py
+:[K[K [KESCESC[KOO[KBB[Ky
+:[K[K [KESCESC[KOO[KBB[Kcode .
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KBB[Kexit
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KBB[Kcat /etc/passwd
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KBB[Kpwd
+:[K[K [KESCESC[KOO[KBB[Kcd /
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KBB[Kcd kat1/
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KBB[Kcd ..
+:[K[K [KESCESC[KOO[KBB[Kls -la
+:[K[K [KESCESC[KOO[KBB[Kcd kat1/
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KBB[Kls -la
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KBB[Kls -la
+:[K[K [KESCESC[KOO[KBB[Ksu otheruser
+:[K[K [KESCESC[KOO[KBB[Kcat /etc/passwd
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KBB[Ksu other
+:[K[K [KESCESC[KOO[KBB[Kls +la
+:[K[K [KESCESC[KOO[KBB[Kls -la
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KBB[Kpwd
+:[K[K [KESCESC[KOO[KBB[Kecho {1..10}
+:[K[K [KESCESC[KOO[KBB[Kecho {0..7}
+:[K[K [KESCESC[KOO[KBB[Kecho {0..7}{0..7}
+:[K[K [KESCESC[KOO[KBB[Kecho {0..7}{0..7}{0..7}
+:[K[K [KESCESC[KOO[KBB[Kecho {0..7}{0..7}{0..7} | wc -w
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KBB[Kecho {0..7}{0..7}{0..7} | wc -w
+:[K[K [KESCESC[KOO[KBB[Kecho {0..7}{0..7}{0..7}
+:[K[K [KESCESC[KOO[KBB[Kecho {f,d}{0..7}{0..7}{0..7}
+:[K[K [KESCESC[KOO[KBB[Kls
+:[K[K [KESCESC[KOO[KBB[Kecho {f,d}{0..7}{0..7}{0..7}
+:[K[K [KESCESC[KOO[KBB[Kecho owner_{f,d}{0..7}{0..7}{0..7}
+:[K[K [KESCESC[KOO[KBB[Kecho owner_{user,other}_{f,d}{0..7}{0..7}{0..7}
+:[K[K [KESCESC[KOO[KBB[Kecho owner_{user,other}_group_{user,other}_{f,d}{0..7}{0..7}{0..7}
+:[K[K [KESCESC[KOO[KBB[Kecho o={user,other}_group_{user,other}_{f,d}{0..7}{0..7}{0..7}
+:[K[K [KESCESC[KOO[KBB[Kecho o={user,other}_g={user,other}_{f,d}{0..7}{0..7}{0..7}
+:[K[K [KESCESC[KOO[KBB[Kecho o={user,other},g={user,other}_{f,d}{0..7}{0..7}{0..7}
+:[K[K [KESCESC[KOO[KBB[Kecho owner={user,other},g={user,other}_{f,d}{0..7}{0..7}{0..7}
+:[K[K [KESCESC[KOO[KBB[Kecho owner={user,other},group={user,other}_{f,d}{0..7}{0..7}{0..7}
+:[K[K [KESCESC[KOO[KBB[Kecho owner={user,other},group={user,other}_{f,d}_perm{0..7}{0..7}{0..7}
+:[K[K [KESCESC[KOO[KBB[Kecho owner={user,other},group={user,other}_{f,d}_perm{0..7}{0..7}{0..7} | wc -c
+:[K[K [KESCESC[KOO[KBB[Kecho owner={user,other},group={user,other}_{f,d}_perm{0..7}{0..7}{0..7} | wc -w
+:[K[K [KESCESC[KOO[KBB[Kecho owner={user,other},group={user,other}_{f,d}_perm{0..7}{0..7}{0..7}
+:[K[K [KESCESC[KOO[KBB[Kecho 
