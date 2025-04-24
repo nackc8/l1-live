@@ -2,7 +2,7 @@
 
 while IFS="," read -r fornamn efternamn losenord operation
 do
-  [ -z "" ]
+  [ ! -z "$seen_header" ]
   echo "Value: $fornamn"
   echo "Value: $efternamn"
   echo "Value: $losenord"
