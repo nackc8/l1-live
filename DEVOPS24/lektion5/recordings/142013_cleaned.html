@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style type="text/css">
+pre {
+  font-family:Courier New;
+  font-size:10pt;
+}
+
+.af_line {
+  color: gray;
+  text-decoration: none;
+}
+
+</style>
+<title>142013.txt</title>
+</head>
+<body>
+<pre>Script started on 2025-04-24 14:20:13+02:00 [TERM=&quot;xterm-256color&quot; TTY=&quot;/dev/pts/6&quot; COLUMNS=&quot;71&quot; LINES=&quot;15&quot;]
+<span style="color:#5c5cff;">DEVOPS24/lektion5
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion5
+</span>$ man bash
+BASH(1)                General Commands Manual                BASH(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       bash - GNU Bourne-Again SHell
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">bash</span> [options] [command_string | file]
+
+<span style="font-weight:bold;color:#7f7f7f;">COPYRIGHT</span>
+       Bash  is  Copyright (C) 1989-2022 by the Free Software Founda‐
+       tion, Inc.
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash</span> is an <span style="font-weight:bold;color:#7f7f7f;">sh</span>-compatible command language interpreter that ex‐
+<span style="color:#000000;background-color:#000000;">BASH(1)                General Commands Manual                BASH(1)</span>e="color:#000000;background-color:#000000;">
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       bash - GNU Bourne-Again SHell
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">bash</span> [options] [command_string | file]
+
+<span style="font-weight:bold;color:#7f7f7f;">COPYRIGHT</span>
+       Bash  is  Copyright (C) 1989-2022 by the Free Software Founda‐
+       tion, Inc.
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash</span> is an <span style="font-weight:bold;color:#7f7f7f;">sh</span>-compatible command language interpreter that ex‐
+BASH(1)                General Commands Manual                BASH(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       bash - GNU Bourne-Again SHell
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">bash</span> [options] [command_string | file]
+
+<span style="font-weight:bold;color:#7f7f7f;">COPYRIGHT</span>
+       Bash  is  Copyright (C) 1989-2022 by the Free Software Founda‐
+       tion, Inc.
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash</span> is an <span style="font-weight:bold;color:#7f7f7f;">sh</span>-compatible command language interpreter that ex‐
+...skipping...
+   <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">Parameter</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="color:#000000;background-color:#000000;"> </span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">Expansion</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span>
+       The `<span style="font-weight:bold;color:#7f7f7f;">$</span>&apos; character introduces parameter expansion, command sub‐
+       stitution,  or  arithmetic  expansion.   The parameter name or
+       symbol to be expanded may be enclosed in braces, which are op‐
+       tional  but  serve to protect the variable to be expanded from
+       characters immediately following it which could be interpreted
+       as part of the name.
+
+       When  braces  are used, the matching ending brace is the first
+       `<span style="font-weight:bold;color:#7f7f7f;">}</span>&apos; not escaped by a backslash or within a quoted string,  and
+       not within an embedded arithmetic expansion, command substitu‐
+       tion, or parameter expansion.
+
+       ${<span style="text-decoration:underline;">parameter</span>}
+<span style="color:#000000;background-color:#000000;">              The value of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> is substituted.  The braces  are</span>
+<span style="color:#000000;background-color:#000000;">              required  when </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> is a positional parameter with</span>
+<span style="color:#000000;background-color:#000000;">              more than one digit, or when </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> is followed by a</span>
+<span style="color:#000000;background-color:#000000;">              character which is not to be interpreted as part of its</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              name.  The </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> is a shell parameter as  described</span>
+<span style="color:#000000;background-color:#000000;">              above </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">PARAMETERS</span>) or an array reference (<span style="font-weight:bold;color:#7f7f7f;">Arrays</span>).
+<span style="color:#000000;background-color:#000000;"></span>Bpage bash(1) line 1908 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       If  the  first  character of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> is an exclamation point</span>
+<span style="color:#000000;background-color:#000000;">       (</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">!</span>), and <span style="text-decoration:underline;">parameter</span> is not a <span style="text-decoration:underline;">nameref</span>, it introduces a level  of
+<span style="color:#000000;background-color:#000000;">       indirection.  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Bash</span> uses the value formed by expanding the rest
+<span style="color:#000000;background-color:#000000;">       of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> as the new </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;">; this is then  expanded  and</span>
+<span style="color:#000000;background-color:#000000;">       that  value  is used in the rest of the expansion, rather than</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       the expansion of the original </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;">.  This is known as </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">in‐</span><span style="color:#000000;background-color:#000000;"></span>
+<span style="color:#000000;background-color:#000000;">       </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">direct</span><span style="color:#000000;background-color:#000000;">  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">expansion</span><span style="color:#000000;background-color:#000000;">.   The  value is subject to tilde expansion,</span>
+<span style="color:#000000;background-color:#000000;">       parameter expansion, command substitution, and arithmetic  ex‐</span>le="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       pansion.   If </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> is a nameref, this expands to the name</span>
+<span style="color:#000000;background-color:#000000;">       of the parameter referenced by </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> instead of performing</span>
+<span style="color:#000000;background-color:#000000;">       the  complete  indirect expansion.  The exceptions to this are</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       the expansions of ${</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">!</span><span style="text-decoration:underline;">prefix</span><span style="font-weight:bold;color:#7f7f7f;">*</span>} and ${<span style="font-weight:bold;color:#7f7f7f;">!</span><span style="text-decoration:underline;">name</span>[<span style="text-decoration:underline;">&#64;</span>]} described below.
+<span style="color:#000000;background-color:#000000;">       The  exclamation  point must immediately follow the left brace</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       in order to introduce indirection.</span> or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage bash(1) line 1923 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       In each of the cases below, </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">word</span><span style="color:#000000;background-color:#000000;"> is subject  to  tilde  expan‐</span>
+<span style="color:#000000;background-color:#000000;">       sion,  parameter  expansion,  command substitution, and arith‐</span>le="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       metic expansion.</span> (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage bash(1) line 1927 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       When not performing substring expansion, using the forms docu‐</span>le="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       mented  below  (e.g.,  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">:-</span>), <span style="font-weight:bold;color:#7f7f7f;">bash</span> tests for a parameter that is
+<span style="color:#000000;background-color:#000000;">       unset or null.  Omitting the colon results in a test only  for</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       a parameter that is unset.</span>for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage bash(1) line 1932 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">:-</span><span style="text-decoration:underline;">word</span>}
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Use</span> <span style="font-weight:bold;color:#7f7f7f;">Default</span> <span style="font-weight:bold;color:#7f7f7f;">Values</span>.  If <span style="text-decoration:underline;">parameter</span> is unset or null, the
+<span style="color:#000000;background-color:#000000;">              expansion of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">word</span><span style="color:#000000;background-color:#000000;"> is substituted.  Otherwise, the value</span>
+<span style="color:#000000;background-color:#000000;">              of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> is substituted.</span>
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">:=</span><span style="text-decoration:underline;">word</span>}
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Assign</span>  <span style="font-weight:bold;color:#7f7f7f;">Default</span> <span style="font-weight:bold;color:#7f7f7f;">Values</span>.  If <span style="text-decoration:underline;">parameter</span> is unset or null,
+<span style="color:#000000;background-color:#000000;">              the expansion of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">word</span><span style="color:#000000;background-color:#000000;"> is assigned  to  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;">.   The</span>
+<span style="color:#000000;background-color:#000000;">              value of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> is then substituted.  Positional pa‐</span>
+<span style="color:#000000;background-color:#000000;">              rameters and special parameters may not be assigned  to</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              in this way.</span>ress h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">:?</span><span style="text-decoration:underline;">word</span>}
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Display</span>  <span style="font-weight:bold;color:#7f7f7f;">Error</span>  <span style="font-weight:bold;color:#7f7f7f;">if</span> <span style="font-weight:bold;color:#7f7f7f;">Null</span> <span style="font-weight:bold;color:#7f7f7f;">or</span> <span style="font-weight:bold;color:#7f7f7f;">Unset</span>.  If <span style="text-decoration:underline;">parameter</span> is null
+<span style="color:#000000;background-color:#000000;">              or unset, the expansion of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">word</span><span style="color:#000000;background-color:#000000;"> (or a message  to  that</span>
+<span style="color:#000000;background-color:#000000;">              effect  if </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">word</span><span style="color:#000000;background-color:#000000;"> is not present) is written to the stan‐</span>
+<span style="color:#000000;background-color:#000000;">              dard error and the shell, if it is not interactive, ex‐</span>le="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              its.  Otherwise, the value of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> is substituted.</span>
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">:+</span><span style="text-decoration:underline;">word</span>}
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Use</span>  <span style="font-weight:bold;color:#7f7f7f;">Alternate</span>  <span style="font-weight:bold;color:#7f7f7f;">Value</span>.   If <span style="text-decoration:underline;">parameter</span> is null or unset,
+<span style="color:#000000;background-color:#000000;">              nothing is substituted, otherwise the expansion of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">word</span><span style="color:#000000;background-color:#000000;"></span>
+<span style="color:#000000;background-color:#000000;">              is substituted.</span>s h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">:</span><span style="text-decoration:underline;">offset</span>}
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">:</span><span style="text-decoration:underline;">offset</span><span style="font-weight:bold;color:#7f7f7f;">:</span><span style="text-decoration:underline;">length</span>}
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Substring</span>  <span style="font-weight:bold;color:#7f7f7f;">Expansion</span>.   Expands to up to <span style="text-decoration:underline;">length</span> charac‐
+<span style="color:#000000;background-color:#000000;">              ters of the value of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> starting at the  charac‐</span>
+<span style="color:#000000;background-color:#000000;">              ter  specified  by  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">offset</span><span style="color:#000000;background-color:#000000;">.  If </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> is </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&#64;</span> or <span style="font-weight:bold;color:#7f7f7f;">*</span>, an
+<span style="color:#000000;background-color:#000000;">              indexed array subscripted by </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&#64;</span> or <span style="font-weight:bold;color:#7f7f7f;">*</span>, or an  associative
+<span style="color:#000000;background-color:#000000;">              array  name, the results differ as described below.  If</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">length</span><span style="color:#000000;background-color:#000000;"> is omitted, expands  to  the  substring  of  the</span>
+<span style="color:#000000;background-color:#000000;">              value  of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> starting at the character specified</span>
+<span style="color:#000000;background-color:#000000;">              by </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">offset</span><span style="color:#000000;background-color:#000000;"> and  extending  to  the  end  of  the  value.</span>
+<span style="color:#000000;background-color:#000000;">              </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">length</span><span style="color:#000000;background-color:#000000;">  and  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">offset</span><span style="color:#000000;background-color:#000000;">  are  arithmetic  expressions  (see</span>
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ARITHMETIC</span> <span style="font-weight:bold;color:#7f7f7f;">EVALUATION</span> below).
+<span style="color:#000000;background-color:#000000;"></span>Bpage bash(1) line 1965 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              If </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">offset</span><span style="color:#000000;background-color:#000000;"> evaluates to a number  less  than  zero,  the</span>
+<span style="color:#000000;background-color:#000000;">              value  is  used as an offset in characters from the end</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              of the value of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;">.  If </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">length</span><span style="color:#000000;background-color:#000000;">  evaluates  to  a</span>
+<span style="color:#000000;background-color:#000000;">              number  less  than zero, it is interpreted as an offset</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              in characters from the end of the  value  of  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span>
+<span style="color:#000000;background-color:#000000;">              rather  than  a number of characters, and the expansion</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              is the characters between </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">offset</span><span style="color:#000000;background-color:#000000;"> and that result.  Note</span>
+<span style="color:#000000;background-color:#000000;">              that a negative offset must be separated from the colon</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              by at least one space to avoid being confused with  the</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">:-</span> expansion.:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage bash(1) line 1976 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              If </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> is </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&#64;</span> or <span style="font-weight:bold;color:#7f7f7f;">*</span>, the result is <span style="text-decoration:underline;">length</span> positional
+<span style="color:#000000;background-color:#000000;">              parameters beginning at </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">offset</span><span style="color:#000000;background-color:#000000;">.  A negative  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">offset</span><span style="color:#000000;background-color:#000000;">  is</span>
+<span style="color:#000000;background-color:#000000;">              taken  relative  to one greater than the greatest posi‐</span>le="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              tional parameter, so an offset of -1 evaluates  to  the</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              last positional parameter.  It is an expansion error if</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">length</span><span style="color:#000000;background-color:#000000;"> evaluates to a number less than zero.</span>
+<span style="color:#000000;background-color:#000000;"></span>Bpage bash(1) line 1983 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              If </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> is an indexed array name subscripted by  &#64;</span>
+<span style="color:#000000;background-color:#000000;">              or *, the result is the </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">length</span><span style="color:#000000;background-color:#000000;"> members of the array be‐</span>
+<span style="color:#000000;background-color:#000000;">              ginning with ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;">[</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">offset</span><span style="color:#000000;background-color:#000000;">]}.  A  negative  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">offset</span><span style="color:#000000;background-color:#000000;"></span>
+<span style="color:#000000;background-color:#000000;">              is taken relative to one greater than the maximum index</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              of the specified array.  It is an  expansion  error  if</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">length</span><span style="color:#000000;background-color:#000000;"> evaluates to a number less than zero.</span>
+<span style="color:#000000;background-color:#000000;"></span>Bpage bash(1) line 1990 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              Substring  expansion  applied  to  an associative array</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              produces undefined results.</span> or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage bash(1) line 1993 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              Substring indexing is zero-based unless the  positional</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              parameters  are used, in which case the indexing starts</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              at 1 by default.  If </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">offset</span><span style="color:#000000;background-color:#000000;"> is 0,  and  the  positional</span>
+<span style="color:#000000;background-color:#000000;">              parameters are used, </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">$0</span> is prefixed to the list.
+<span style="color:#000000;background-color:#000000;"></span>Bpage bash(1) line 1998 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">!</span><span style="text-decoration:underline;">prefix</span><span style="font-weight:bold;color:#7f7f7f;">*</span>}
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">!</span><span style="text-decoration:underline;">prefix</span><span style="font-weight:bold;color:#7f7f7f;">&#64;</span>}
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Names</span>  <span style="font-weight:bold;color:#7f7f7f;">matching</span>  <span style="font-weight:bold;color:#7f7f7f;">prefix</span>.  Expands to the names of vari‐
+<span style="color:#000000;background-color:#000000;">              ables whose names begin with </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">prefix</span><span style="color:#000000;background-color:#000000;">, separated  by  the</span>
+<span style="color:#000000;background-color:#000000;">              first character of the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">IFS</span> special variable.  When <span style="text-decoration:underline;">&#64;</span> is
+<span style="color:#000000;background-color:#000000;">              used and the expansion appears  within  double  quotes,</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              each variable name expands to a separate word.</span>n><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage bash(1) line 2006 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">!</span><span style="text-decoration:underline;">name</span>[<span style="text-decoration:underline;">&#64;</span>]}
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">!</span><span style="text-decoration:underline;">name</span>[<span style="text-decoration:underline;">*</span>]}
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">List</span>  <span style="font-weight:bold;color:#7f7f7f;">of</span> <span style="font-weight:bold;color:#7f7f7f;">array</span> <span style="font-weight:bold;color:#7f7f7f;">keys</span>.  If <span style="text-decoration:underline;">name</span> is an array variable, ex‐
+<span style="color:#000000;background-color:#000000;">              pands to the list of array indices (keys)  assigned  in</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">name</span><span style="color:#000000;background-color:#000000;">.  If </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">name</span><span style="color:#000000;background-color:#000000;"> is not an array, expands to 0 if </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">name</span><span style="color:#000000;background-color:#000000;"> is</span>
+<span style="color:#000000;background-color:#000000;">              set and null otherwise.  When </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">&#64;</span><span style="color:#000000;background-color:#000000;"> is used and the  expan‐</span>
+<span style="color:#000000;background-color:#000000;">              sion  appears within double quotes, each key expands to</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              a separate word.</span> h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage bash(1) line 2015 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">#</span><span style="text-decoration:underline;">parameter</span>}
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Parameter</span> <span style="font-weight:bold;color:#7f7f7f;">length</span>.  The  length  in  characters  of  the
+<span style="color:#000000;background-color:#000000;">              value  of  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> is substituted.  If </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> is </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">*</span>
+<span style="color:#000000;background-color:#000000;">              or </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&#64;</span>, the value substituted is the number of positional
+<span style="color:#000000;background-color:#000000;">              parameters.   If </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> is an array name subscripted</span>
+<span style="color:#000000;background-color:#000000;">              by </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">*</span> or <span style="font-weight:bold;color:#7f7f7f;">&#64;</span>, the value substituted is the number of  ele‐
+<span style="color:#000000;background-color:#000000;">              ments  in  the array.  If </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> is an indexed array</span>
+<span style="color:#000000;background-color:#000000;">              name subscripted by a negative number, that  number  is</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              interpreted as relative to one greater than the maximum</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              index of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;">, so negative indices count back from</span>
+<span style="color:#000000;background-color:#000000;">              the end of the array, and an index of -1 references the</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              last element.</span>ess h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage bash(1) line 2028 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M              a separate word.</span>h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage bash(1) line 2028 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">#</span><span style="text-decoration:underline;">word</span>}
+<span style="color:#000000;background-color:#000000;">M</span>page bash(1) line 2030 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M              a separate word.</span>h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M              sion  appears within double quotes, each key expands to</span>yle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M              set and null otherwise.  When </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">&#64;</span><span style="color:#000000;background-color:#000000;"> is used and the  expan‐</span>
+<span style="color:#000000;background-color:#000000;">M              </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">name</span><span style="color:#000000;background-color:#000000;">.  If </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">name</span><span style="color:#000000;background-color:#000000;"> is not an array, expands to 0 if </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">name</span><span style="color:#000000;background-color:#000000;"> is</span>
+<span style="color:#000000;background-color:#000000;">M              pands to the list of array indices (keys)  assigned  in</span>yle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              interpreted as relative to one greater than the maximum</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              index of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;">, so negative indices count back from</span>
+<span style="color:#000000;background-color:#000000;">              the end of the array, and an index of -1 references the</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              last element.</span>ess h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage bash(1) line 2028 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">#</span><span style="text-decoration:underline;">word</span>}
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">##</span><span style="text-decoration:underline;">word</span>}
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Remove</span> <span style="font-weight:bold;color:#7f7f7f;">matching</span> <span style="font-weight:bold;color:#7f7f7f;">prefix</span> <span style="font-weight:bold;color:#7f7f7f;">pattern</span>.  The <span style="text-decoration:underline;">word</span>  is  expanded
+<span style="color:#000000;background-color:#000000;">              to produce a pattern just as in pathname expansion, and</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              matched against the expanded value of  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;">  using</span>
+<span style="color:#000000;background-color:#000000;">              the  rules  described under </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Pattern</span> <span style="font-weight:bold;color:#7f7f7f;">Matching</span> below.  If
+<span style="color:#000000;background-color:#000000;">              the pattern matches the beginning of the value  of  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">pa‐</span><span style="color:#000000;background-color:#000000;"></span>
+<span style="color:#000000;background-color:#000000;">              </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">rameter</span><span style="color:#000000;background-color:#000000;">,  then  the  result of the expansion is the ex‐</span>
+<span style="color:#000000;background-color:#000000;">              panded value of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> with  the  shortest  matching</span>
+<span style="color:#000000;background-color:#000000;">              pattern  (the  ``</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">#</span>&apos;&apos; case) or the longest matching pat‐
+<span style="color:#000000;background-color:#000000;">              tern (the ``</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">##</span>&apos;&apos; case) deleted.  If <span style="text-decoration:underline;">parameter</span> is  <span style="font-weight:bold;color:#7f7f7f;">&#64;</span>  or
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">*</span>, the pattern removal operation is applied to each po‐
+<span style="color:#000000;background-color:#000000;">              sitional parameter in turn, and the  expansion  is  the</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              resultant list.  If </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> is an array variable sub‐</span>
+<span style="color:#000000;background-color:#000000;">              scripted with </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&#64;</span> or <span style="font-weight:bold;color:#7f7f7f;">*</span>, the pattern removal operation  is
+<span style="color:#000000;background-color:#000000;">              applied  to  each  member of the array in turn, and the</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              expansion is the resultant list.</span> to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage bash(1) line 2046 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">%</span><span style="text-decoration:underline;">word</span>}
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">%%</span><span style="text-decoration:underline;">word</span>}
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Remove</span> <span style="font-weight:bold;color:#7f7f7f;">matching</span> <span style="font-weight:bold;color:#7f7f7f;">suffix</span> <span style="font-weight:bold;color:#7f7f7f;">pattern</span>.  The <span style="text-decoration:underline;">word</span>  is  expanded
+<span style="color:#000000;background-color:#000000;">              to produce a pattern just as in pathname expansion, and</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              matched against the expanded value of  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;">  using</span>
+<span style="color:#000000;background-color:#000000;">              the  rules  described under </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Pattern</span> <span style="font-weight:bold;color:#7f7f7f;">Matching</span> below.  If
+<span style="color:#000000;background-color:#000000;">              the pattern matches a trailing portion of the  expanded</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              value of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;">, then the result of the expansion is</span>
+<span style="color:#000000;background-color:#000000;">              the expanded  value  of  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;">  with  the  shortest</span>
+<span style="color:#000000;background-color:#000000;">              matching pattern (the ``</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">%</span>&apos;&apos; case) or the longest match‐
+<span style="color:#000000;background-color:#000000;">              ing pattern (the ``</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">%%</span>&apos;&apos; case) deleted.  If <span style="text-decoration:underline;">parameter</span> is
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&#64;</span>  or  <span style="font-weight:bold;color:#7f7f7f;">*</span>,  the  pattern removal operation is applied to
+<span style="color:#000000;background-color:#000000;">              each positional parameter in turn, and the expansion is</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              the  resultant list.  If </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> is an array variable</span>
+<span style="color:#000000;background-color:#000000;">              subscripted with </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&#64;</span> or <span style="font-weight:bold;color:#7f7f7f;">*</span>, the pattern removal  operation
+<span style="color:#000000;background-color:#000000;">              is applied to each member of the array in turn, and the</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              expansion is the resultant list.</span> to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage bash(1) line 2064 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">/</span><span style="text-decoration:underline;">pattern</span><span style="font-weight:bold;color:#7f7f7f;">/</span><span style="text-decoration:underline;">string</span>}
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">//</span><span style="text-decoration:underline;">pattern</span><span style="font-weight:bold;color:#7f7f7f;">/</span><span style="text-decoration:underline;">string</span>}
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">/#</span><span style="text-decoration:underline;">pattern</span><span style="font-weight:bold;color:#7f7f7f;">/</span><span style="text-decoration:underline;">string</span>}
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">/%</span><span style="text-decoration:underline;">pattern</span><span style="font-weight:bold;color:#7f7f7f;">/</span><span style="text-decoration:underline;">string</span>}
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Pattern</span> <span style="font-weight:bold;color:#7f7f7f;">substitution</span>.  The <span style="text-decoration:underline;">pattern</span> is expanded to  pro‐
+<span style="color:#000000;background-color:#000000;">              duce  a pattern just as in pathname expansion.  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">Parame‐</span><span style="color:#000000;background-color:#000000;"></span>
+<span style="color:#000000;background-color:#000000;">              </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">ter</span><span style="color:#000000;background-color:#000000;"> is  expanded  and  the  longest  match  of  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">pattern</span><span style="color:#000000;background-color:#000000;"></span>
+<span style="color:#000000;background-color:#000000;">              against  its value is replaced with </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">string</span><span style="color:#000000;background-color:#000000;">.  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">string</span><span style="color:#000000;background-color:#000000;"> un‐</span>
+<span style="color:#000000;background-color:#000000;">              dergoes tilde expansion, parameter and variable  expan‐</span>le="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              sion, arithmetic expansion, command and process substi‐</span>le="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              tution, and quote removal.  The match is performed  us‐</span>le="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              ing  the  rules described under </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Pattern</span> <span style="font-weight:bold;color:#7f7f7f;">Matching</span> below.
+<span style="color:#000000;background-color:#000000;">              In the first form above, only the first  match  is  re‐</span>le="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              placed.   If there are two slashes separating </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span>
+<span style="color:#000000;background-color:#000000;">              and </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">pattern</span><span style="color:#000000;background-color:#000000;"> (the second form  above),  all  matches  of</span>
+<span style="color:#000000;background-color:#000000;">              </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">pattern</span><span style="color:#000000;background-color:#000000;">  are  replaced with </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">string</span><span style="color:#000000;background-color:#000000;">.  If </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">pattern</span><span style="color:#000000;background-color:#000000;"> is pre‐</span>
+<span style="color:#000000;background-color:#000000;">              ceded by </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">#</span> (the third form above), it must match at the
+<span style="color:#000000;background-color:#000000;">              beginning  of the expanded value of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;">.  If </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">pat‐</span><span style="color:#000000;background-color:#000000;"></span>
+<span style="color:#000000;background-color:#000000;">              </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">tern</span><span style="color:#000000;background-color:#000000;"> is preceded by </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">%</span> (the fourth form above), it  must
+<span style="color:#000000;background-color:#000000;">              match  at  the  end of the expanded value of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;">.</span>
+<span style="color:#000000;background-color:#000000;">              If the expansion of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">string</span><span style="color:#000000;background-color:#000000;"> is null, matches of  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">pattern</span><span style="color:#000000;background-color:#000000;"></span>
+<span style="color:#000000;background-color:#000000;">              are deleted.  If </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">string</span><span style="color:#000000;background-color:#000000;"> is null, matches of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">pattern</span><span style="color:#000000;background-color:#000000;"> are</span>
+<span style="color:#000000;background-color:#000000;">              deleted and the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">/</span> following <span style="text-decoration:underline;">pattern</span> may be omitted.
+<span style="color:#000000;background-color:#000000;"></span>Bpage bash(1) line 2088 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              If the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">patsub_replacement</span> shell option is enabled using
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">shopt</span>,  any  unquoted  instances of <span style="font-weight:bold;color:#7f7f7f;">&amp;</span> in <span style="text-decoration:underline;">string</span> are re‐
+<span style="color:#000000;background-color:#000000;">              placed with the matching portion of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">pattern</span><span style="color:#000000;background-color:#000000;">.</span>
+<span style="color:#000000;background-color:#000000;"></span>Bpage bash(1) line 2092 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              Quoting any part of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">string</span><span style="color:#000000;background-color:#000000;"> inhibits replacement in  the</span>
+<span style="color:#000000;background-color:#000000;">              expansion  of the quoted portion, including replacement</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              strings stored in shell variables.  Backslash will  es‐</span>le="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              cape  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&amp;</span> in <span style="text-decoration:underline;">string</span>; the backslash is removed in order to
+<span style="color:#000000;background-color:#000000;">              permit a literal </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&amp;</span> in the  replacement  string.   Back‐
+<span style="color:#000000;background-color:#000000;">              slash  can  also  be used to escape a backslash; </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">\\</span> re‐
+<span style="color:#000000;background-color:#000000;">              sults in a literal backslash in the replacement.  Users</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              should  take  care  if </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">string</span><span style="color:#000000;background-color:#000000;"> is double-quoted to avoid</span>
+<span style="color:#000000;background-color:#000000;">              unwanted interactions between the backslash and double-</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              quoting,  since  backslash  has  special meaning within</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              double quotes.  Pattern substitution performs the check</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              for  unquoted  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&amp;</span> after expanding <span style="text-decoration:underline;">string</span>; shell program‐
+<span style="color:#000000;background-color:#000000;">              mers should quote any occurrences of </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&amp;</span> they want to  be
+<span style="color:#000000;background-color:#000000;">              taken  literally  in the replacement and ensure any in‐</span>le="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              stances of </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&amp;</span> they want to be replaced are unquoted.
+<span style="color:#000000;background-color:#000000;"></span>Bpage bash(1) line 2108 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              If the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">nocasematch</span> shell option is enabled,  the  match
+<span style="color:#000000;background-color:#000000;">              is  performed  without regard to the case of alphabetic</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              characters.  If </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> is </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&#64;</span> or <span style="font-weight:bold;color:#7f7f7f;">*</span>,  the  substitution
+<span style="color:#000000;background-color:#000000;">              operation  is  applied  to each positional parameter in</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              turn, and the expansion is the resultant list.  If  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">pa‐</span><span style="color:#000000;background-color:#000000;"></span>
+<span style="color:#000000;background-color:#000000;">              </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">rameter</span><span style="color:#000000;background-color:#000000;">  is  an array variable subscripted with </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&#64;</span> or <span style="font-weight:bold;color:#7f7f7f;">*</span>,
+<span style="color:#000000;background-color:#000000;">              the substitution operation is applied to each member of</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              the  array  in turn, and the expansion is the resultant</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              list.</span>2117 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage bash(1) line 2118 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">^</span><span style="text-decoration:underline;">pattern</span>}
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">^^</span><span style="text-decoration:underline;">pattern</span>}
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">,</span><span style="text-decoration:underline;">pattern</span>}
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">,,</span><span style="text-decoration:underline;">pattern</span>}
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Case</span> <span style="font-weight:bold;color:#7f7f7f;">modification</span>.  This expansion modifies the case of
+<span style="color:#000000;background-color:#000000;">              alphabetic characters in </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;">.  The </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">pattern</span><span style="color:#000000;background-color:#000000;"> is ex‐</span>
+<span style="color:#000000;background-color:#000000;">              panded to produce a pattern just as in pathname  expan‐</span>le="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              sion.   Each character in the expanded value of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parame‐</span><span style="color:#000000;background-color:#000000;"></span>
+<span style="color:#000000;background-color:#000000;">              </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">ter</span><span style="color:#000000;background-color:#000000;"> is tested against </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">pattern</span><span style="color:#000000;background-color:#000000;">, and, if it  matches  the</span>
+<span style="color:#000000;background-color:#000000;">              pattern, its case is converted.  The pattern should not</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              attempt to match more than one character.  The </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">^</span> opera‐
+<span style="color:#000000;background-color:#000000;">              tor  converts lowercase letters matching </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">pattern</span><span style="color:#000000;background-color:#000000;"> to up‐</span>
+<span style="color:#000000;background-color:#000000;">              percase; the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">,</span>  operator  converts  matching  uppercase
+<span style="color:#000000;background-color:#000000;">              letters to lowercase.  The </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">^^</span> and <span style="font-weight:bold;color:#7f7f7f;">,,</span> expansions convert
+<span style="color:#000000;background-color:#000000;">              each matched character in the expanded value; the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">^</span> and
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">,</span> expansions match and convert only the first character
+<span style="color:#000000;background-color:#000000;">              in the expanded value.  If </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">pattern</span><span style="color:#000000;background-color:#000000;"> is  omitted,  it  is</span>
+<span style="color:#000000;background-color:#000000;">              treated  like  a  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">?</span>, which matches every character.  If
+<span style="color:#000000;background-color:#000000;">              </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> is </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&#64;</span> or <span style="font-weight:bold;color:#7f7f7f;">*</span>, the case modification operation is
+<span style="color:#000000;background-color:#000000;">              applied  to  each positional parameter in turn, and the</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              expansion is the resultant list.  If  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;">  is  an</span>
+<span style="color:#000000;background-color:#000000;">M              panded to produce a pattern just as in pathname  expan‐</span>e="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M              alphabetic characters in </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;">.  The </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">pattern</span><span style="color:#000000;background-color:#000000;"> is ex‐</span>
+<span style="color:#000000;background-color:#000000;">M              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Case</span> <span style="font-weight:bold;color:#7f7f7f;">modification</span>.  This expansion modifies the case of
+<span style="color:#000000;background-color:#000000;">M       ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">,,</span><span style="text-decoration:underline;">pattern</span>}
+<span style="color:#000000;background-color:#000000;">M       ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">,</span><span style="text-decoration:underline;">pattern</span>}
+<span style="color:#000000;background-color:#000000;">M       ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">^^</span><span style="text-decoration:underline;">pattern</span>}
+<span style="color:#000000;background-color:#000000;">M       ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">^</span><span style="text-decoration:underline;">pattern</span>}
+<span style="color:#000000;background-color:#000000;">M</span>page bash(1) line 2133 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M              list.</span>132 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M              the  array  in turn, and the expansion is the resultant</span>yle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M              the substitution operation is applied to each member of</span>yle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M              </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">rameter</span><span style="color:#000000;background-color:#000000;">  is  an array variable subscripted with </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&#64;</span> or <span style="font-weight:bold;color:#7f7f7f;">*</span>,
+<span style="color:#000000;background-color:#000000;">              pattern, its case is converted.  The pattern should not</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              attempt to match more than one character.  The </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">^</span> opera‐
+<span style="color:#000000;background-color:#000000;">              tor  converts lowercase letters matching </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">pattern</span><span style="color:#000000;background-color:#000000;"> to up‐</span>
+<span style="color:#000000;background-color:#000000;">              percase; the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">,</span>  operator  converts  matching  uppercase
+<span style="color:#000000;background-color:#000000;">              letters to lowercase.  The </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">^^</span> and <span style="font-weight:bold;color:#7f7f7f;">,,</span> expansions convert
+<span style="color:#000000;background-color:#000000;">              each matched character in the expanded value; the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">^</span> and
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">,</span> expansions match and convert only the first character
+<span style="color:#000000;background-color:#000000;">              in the expanded value.  If </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">pattern</span><span style="color:#000000;background-color:#000000;"> is  omitted,  it  is</span>
+<span style="color:#000000;background-color:#000000;">              treated  like  a  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">?</span>, which matches every character.  If
+<span style="color:#000000;background-color:#000000;">              </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> is </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&#64;</span> or <span style="font-weight:bold;color:#7f7f7f;">*</span>, the case modification operation is
+<span style="color:#000000;background-color:#000000;">              applied  to  each positional parameter in turn, and the</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              expansion is the resultant list.  If  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;">  is  an</span>
+<span style="color:#000000;background-color:#000000;">              array  variable subscripted with </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&#64;</span> or <span style="font-weight:bold;color:#7f7f7f;">*</span>, the case modi‐
+<span style="color:#000000;background-color:#000000;">              fication operation is applied to each member of the ar‐</span>le="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              ray in turn, and the expansion is the resultant list.</span> style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage bash(1) line 2143 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       ${</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&#64;</span><span style="text-decoration:underline;">operator</span>}
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Parameter</span>  <span style="font-weight:bold;color:#7f7f7f;">transformation</span>.   The  expansion is either a
+<span style="color:#000000;background-color:#000000;">              transformation of the value of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> or information</span>
+<span style="color:#000000;background-color:#000000;">              about </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;"> itself, depending on the value of </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">oper‐</span><span style="color:#000000;background-color:#000000;"></span>
+<span style="color:#000000;background-color:#000000;">              </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">ator</span><span style="color:#000000;background-color:#000000;">.  Each </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">operator</span><span style="color:#000000;background-color:#000000;"> is a single letter:</span>
+<span style="color:#000000;background-color:#000000;"></span>Bpage bash(1) line 2149 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">U</span>      The expansion is a string that is the  value  of
+<span style="color:#000000;background-color:#000000;">                     </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;">  with  lowercase alphabetic characters</span>
+<span style="color:#000000;background-color:#000000;">                     converted to uppercase.</span> q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">u</span>      The expansion is a string that is the  value  of
+<span style="color:#000000;background-color:#000000;">                     </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;">  with the first character converted to</span>
+<span style="color:#000000;background-color:#000000;">                     uppercase, if it is alphabetic.</span>it)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">L</span>      The expansion is a string that is the  value  of
+<span style="color:#000000;background-color:#000000;">                     </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;">  with  uppercase alphabetic characters</span>
+<span style="color:#000000;background-color:#000000;">                     converted to lowercase.</span> q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Q</span>      The expansion is a string that is the  value  of
+<span style="color:#000000;background-color:#000000;">                     </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">parameter</span><span style="color:#000000;background-color:#000000;">  quoted in a format that can be reused</span>
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS24/lektion5color:#000000;background-color:#000000;">
+</span>$ mkdir command_substituiotution
+<span style="color:#5c5cff;">DEVOPS24/lektion5
+</span>$ cd command_substitution/
+<span style="color:#5c5cff;">DEVOPS24/lektion5/command_substitution
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion5/command_substitution
+</span>$ cp ../param_expansion/greet .
+<span style="color:#5c5cff;">DEVOPS24/lektion5/command_substitution
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion5/command_substitution
+</span>$ ls
+greet
+<span style="color:#5c5cff;">DEVOPS24/lektion5/command_substitution
+</span>$ mv
+$ mv greet myls
+<span style="color:#5c5cff;">DEVOPS24/lektion5/command_substitution
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion5/command_substitution
+</span>$ ./myls 
+
+Hej 0
+<span style="color:#5c5cff;">DEVOPS24/lektion5/command_substitution
+</span>$ 
+<span style="color:#5c5cff;">DEVOPS24/lektion5/command_substitution
+</span>$ code myls 
+<span style="color:#5c5cff;">DEVOPS24/lektion5/command_substitution
+<span style="color:#5c5cff;">">DEVOPS24/lektion5/command_substitution
+</span>$ ./myls 
+LSOUTPUT: adduser.conf adjtime aliases alsa alternatives anacrontab apache2 apg.conf apparmor apparmor.d appstream.conf apt avahi bash.bashrc bash_completion bash_completion.d bindresvport.blacklist binfmt.d bluetooth bogofilter.cf ca-certificates ca-certificates.conf catdocrc chatscripts chromium cni console-setup containerd containers cracklib cron.d cron.daily cron.hourly cron.monthly crontab cron.weekly cron.yearly cryptsetup-initramfs crypttab cups cupshelpers dbus-1 dconf debconf.conf debian_version debsig debuginfod default deluser.conf dhcp dictionaries-common discover.conf.d discover-modprobe.conf docker dpkg dput.cf e2scrub.conf elinks emacs email-addresses environment environment.d ethertypes exim4 exports firefox-esr fish fonts fstab fstab.bak fuse.conf fwupd gai.conf gconf gdb gdm3 geoclue ghostscript gimp glvnd gnome gnome-chess GNUstep gprofng.rc groff group group- grub.d gshadow gshadow- gss gtk-2.0 gtk-3.0 host.conf hostname hosts hosts.allow hosts.deny idmapd.conf ifplugd ImageMagick-6 init.d initramfs-tools inputrc insserv.conf.d ipp-usb iproute2 issue issue.net java java-17-openjdk kernel kernel-img.conf keyutils ldap ld.so.cache ld.so.conf ld.so.conf.d libao.conf libaudit.conf libblockdev libguestfs-tools.conf libibverbs.d libnl-3 libpaper.d libreoffice libvirt lightdm lighttpd locale.alias locale.gen localtime logcheck login.defs logrotate.conf logrotate.d lvm lynx machine-id magic magic.mime mailcap mailcap.order mailname mail.rc manpath.config maven mdadm mdevctl.d mime.types mke2fs.conf ModemManager modprobe.d modules modules-load.d motd mtab mtools.conf mysql nanorc netconfig network NetworkManager networks nfs.conf nfs.conf.d nftables.conf nsswitch.conf ODBCDataSources odbc.ini odbcinst.ini openal openni2 opt os-release PackageKit pam.conf pam.d papersize passwd passwd- perl pki plymouth polkit-1 popularity-contest.conf ppp profile profile.d protocols pulse python3 python3.11 qemu-ifdown qemu-ifup rc0.d rc1.d rc2.d rc3.d rc4.d rc5.d rc6.d rcS.d reportbug.conf request-key.conf request-key.d resolv.conf resolv.pre-tailscale-backup.conf rmt rpc runit rygel.conf sane.d sasl2 security selinux sensors3.conf sensors.d services sgml shadow shadow- shells signon-ui skel smartd.conf smartmontools snmp speech-dispatcher ssh ssl subgid subgid- subuid subuid- sudo.conf sudoers sudoers.d sudo_logsrvd.conf sv swtpm-localca.conf swtpm-localca.options swtpm_setup.conf sysctl.conf sysctl.d systemd terminfo texmf timezone timidity tmpfiles.d ucf.conf udev udisks2 ufw updatedb.conf update-motd.d UPower usb_modeswitch.conf usb_modeswitch.d vbox vdpau_wrapper.cfg vim virt-builder vulkan w3m wgetrc wpa_supplicant X11 xattr.conf xdg xfce4 xml zsh
+<span style="color:#5c5cff;">DEVOPS24/lektion5/command_substitution
+<span style="color:#5c5cff;">#5c5cff;">DEVOPS24/lektion5/command_substitution
+</span>$ 
+e
+cd ..
+<span style="color:#5c5cff;">DEVOPS24/lektion5
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion5
+</span>$ mkdrir wordpsplitting
+<span style="color:#5c5cff;">DEVOPS24/lektion5
+</span>$ cd wordsplitting/
+<span style="color:#5c5cff;">DEVOPS24/lektion5/wordsplitting
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion5/wordsplitting
+</span>$ cp ../command_substitution/myls .
+<span style="color:#5c5cff;">DEVOPS24/lektion5/wordsplitting
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion5/wordsplitting
+</span>$ code myls 
+<span style="color:#5c5cff;">DEVOPS24/lektion5/wordsplitting
+</span>$ ./myt
+<span style="color:#5c5cff;">;">DEVOPS24/lektion5/wordsplitting
+</span>$ ./myls 
+LSOUTPUT: ls -la
+<span style="color:#5c5cff;">DEVOPS24/lektion5/wordsplitting
+<span style="color:#5c5cff;">color:#5c5cff;">DEVOPS24/lektion5/wordsplitting
+</span>$ ./myls 
+LSOUTPUT: ls -la
+Nu kör vi!
+total 12
+drwxr-xr-x  2 kent kent 4096 Apr 24 14:26 .
+drwxr-xr-x 11 kent kent 4096 Apr 24 14:26 ..
+-rwxr-xr-x  1 kent kent  110 Apr 24 14:27 myls
+<span style="color:#5c5cff;">DEVOPS24/lektion5/wordsplitting
+<span style="color:#5c5cff;">color:#5c5cff;">DEVOPS24/lektion5/wordsplitting
+</span>$ ./myls 
+LSOUTPUT: ls -la
+Nu kör vi!
+
+Hej 0
+total 12
+drwxr-xr-x  2 kent kent 4096 Apr 24 14:26 .
+drwxr-xr-x 11 kent kent 4096 Apr 24 14:26 ..
+-rwxr-xr-x  1 kent kent  179 Apr 24 14:31 myls
+<span style="color:#5c5cff;">DEVOPS24/lektion5/wordsplitting
+</span>$ 
+<span style="color:#5c5cff;">DEVOPS24/lektion5/wordsplitting
+</span>$ 
+<span style="color:#5c5cff;">DEVOPS24/lektion5/wordsplitting
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion5/wordsplitting
+</span>$ ./myls 
+LSOUTPUT: ls -la
+Nu kör vi!
+
+Hej 0
+total 12
+drwxr-xr-x  2 kent kent 4096 Apr 24 14:26 .
+drwxr-xr-x 11 kent kent 4096 Apr 24 14:26 ..
+-rwxr-xr-x  1 kent kent  179 Apr 24 14:31 myls
+<span style="color:#5c5cff;">DEVOPS24/lektion5/wordsplitting
+<span style="color:#5c5cff;">color:#5c5cff;">DEVOPS24/lektion5/wordsplitting
+</span>$ ./myls 
+LSOUTPUT: ls -la
+Nu kör vi!
+total 12
+drwxr-xr-x  2 kent kent 4096 Apr 24 14:26 .
+drwxr-xr-x 11 kent kent 4096 Apr 24 14:26 ..
+-rwxr-xr-x  1 kent kent  110 Apr 24 14:32 myls
+<span style="color:#5c5cff;">DEVOPS24/lektion5/wordsplitting
+<span style="color:#5c5cff;">color:#5c5cff;">DEVOPS24/lektion5/wordsplitting
+</span>$ ./myls 
+ls -la
+Nu kör vi!
+total 12
+drwxr-xr-x  2 kent kent 4096 Apr 24 14:26 .
+drwxr-xr-x 11 kent kent 4096 Apr 24 14:26 ..
+-rwxr-xr-x  1 kent kent  100 Apr 24 14:32 myls
+<span style="color:#5c5cff;">DEVOPS24/lektion5/wordsplitting
+<span style="color:#5c5cff;">color:#5c5cff;">DEVOPS24/lektion5/wordsplitting
+</span>$ ./myls 
+ls -la
+Nu kör vi!
+./myls: line 9: ls -la: command not found
+<span style="color:#5c5cff;">DEVOPS24/lektion5/wordsplitting
+<span style="color:#5c5cff;">color:#5c5cff;">DEVOPS24/lektion5/wordsplitting
+</span>$ ./myls 
+ls -la
+Nu kör vi!
+total 12
+drwxr-xr-x  2 kent kent 4096 Apr 24 14:26 .
+drwxr-xr-x 11 kent kent 4096 Apr 24 14:26 ..
+-rwxr-xr-x  1 kent kent  170 Apr 24 14:34 myls
+<span style="color:#5c5cff;">DEVOPS24/lektion5/wordsplitting
+$ ./my>$ 
+<span style="color:#5c5cff;">">DEVOPS24/lektion5/wordsplitting
+</span>$ ./myls2
+total 16
+drwxr-xr-x  2 kent kent 4096 Apr 24 14:36 .
+drwxr-xr-x 11 kent kent 4096 Apr 24 14:26 ..
+-rwxr-xr-x  1 kent kent  170 Apr 24 14:34 myls
+-rwxr-xr-x  1 kent kent  105 Apr 24 14:37 myls2
+<span style="color:#5c5cff;">DEVOPS24/lektion5/wordsplitting
+</span>$ cd ..
+<span style="color:#5c5cff;">DEVOPS24/lektion5
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion5
+</span>$ ls
+command_substitution  readcsv	  tests
+loop		      recordings  tillbakablickL4
+param_expansion       redirect	  wordsplitting
+<span style="color:#5c5cff;">DEVOPS24/lektion5
+</span>$ mkdir pathname_expansion
+<span style="color:#5c5cff;">DEVOPS24/lektion5
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion5
+$ ;lsn>$ 
+command_substitution  readcsv	  tillbakablickL4
+loop		      recordings  wordsplitting
+param_expansion       redirect
+pathname_expansion    tests
+<span style="color:#5c5cff;">DEVOPS24/lektion5
+</span>$ r
+
+bash: readcsv: command not found
+<span style="color:#5c5cff;">DEVOPS24/lektion5
+</span>$ rlr
+<span style="color:#5c5cff;">#5c5cff;">DEVOPS24/lektion5
+</span>$ echo r
+readcsv recordings redirect
+<span style="color:#5c5cff;">DEVOPS24/lektion5
+$ echo r.
+
+readcsv recordings redirect
+<span style="color:#5c5cff;">DEVOPS24/lektion5
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion5
+$ man cp 
+CP(1)                       User Commands                       CP(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       cp - copy files and directories
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">cp</span> [<span style="text-decoration:underline;">OPTION</span>]... [<span style="text-decoration:underline;">-T</span>] <span style="text-decoration:underline;">SOURCE</span> <span style="text-decoration:underline;">DEST</span>
+       <span style="font-weight:bold;color:#7f7f7f;">cp</span> [<span style="text-decoration:underline;">OPTION</span>]... <span style="text-decoration:underline;">SOURCE</span>... <span style="text-decoration:underline;">DIRECTORY</span>
+       <span style="font-weight:bold;color:#7f7f7f;">cp</span> [<span style="text-decoration:underline;">OPTION</span>]... <span style="text-decoration:underline;">-t</span> <span style="text-decoration:underline;">DIRECTORY</span> <span style="text-decoration:underline;">SOURCE</span>...
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.
+
+       Mandatory  arguments  to  long options are mandatory for short
+       options too.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-a</span>, <span style="font-weight:bold;color:#7f7f7f;">--archive</span>
+              same as <span style="font-weight:bold;color:#7f7f7f;">-dR</span> <span style="font-weight:bold;color:#7f7f7f;">--preserve</span>=<span style="text-decoration:underline;">all</span>
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS24/lektion5:#000000;background-color:#000000;">
+</span>$ ls
+command_substitution  readcsv	  tillbakablickL4
+loop		      recordings  wordsplitting
+param_expansion       redirect
+pathname_expansion    tests
+<span style="color:#5c5cff;">DEVOPS24/lektion5
+</span>$ cd pathname_expansion/
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ ls
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ 
+
+touch {a{1//..10
+
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ touch a{1..10}
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ touch a{1..10{1..10b{1..10
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ touch b{1..10}c
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ touch b{1..10}{1..10}d{1..10}
+
+
+
+e
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ ls
+a1   a3  a6  a9   b10c	b2c  b4   b5c  b7   b8c  d10e  d3e  d6e  d9e
+a10  a4  a7  b1   b1c	b3   b4c  b6   b7c  b9	 d1e   d4e  d7e
+a2   a5  a8  b10  b2	b3c  b5   b6c  b8   b9c  d2e   d5e  d8e
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ echo 2*
+2*
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+<span style="color:#5c5cff;">"color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ echo *2
+a2 b2 b2c d2e
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ echo *2 *2r *2a *2d *2e *2r *2a *2
+ gort nu
+radera a2 b2 b2c d2e gort nu
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ echo radera *2* gort n *2 *2 *2 *2 *2 *2*2 *2 *2 *2 *2*
+
+
+
+r *2m *2 *2- *2r *2f *2
+
+
+
+
+
+
+
+
+
+
+<span style="color:#5c5cff;">ff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ echo rm -rf *2
+rm -rf a2 b2 b2c d2e
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ echo rm -rf *2
+v *2
+removed &apos;a2&apos;
+removed &apos;b2&apos;
+removed &apos;b2c&apos;
+removed &apos;d2e&apos;
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ ls
+a1   a4  a7  b1    b1c	b4   b5c  b7   b8c  d10e  d4e  d7e
+a10  a5  a8  b10   b3	b4c  b6   b7c  b9   d1e   d5e  d8e
+a3   a6  a9  b10c  b3c	b5   b6c  b8   b9c  d3e   d6e  d9e
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ echo 
+
+?
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ echo ??
+a1 a3 a4 a5 a6 a7 a8 a9 b1 b3 b4 b5 b6 b7 b8 b9
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ echo ?2*
+?2*
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+<span style="color:#5c5cff;">"color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ echo ?7
+a7 b7 b7c d7e
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ touch 7osjutiio
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+echo ?7* touch 7sjutiio
+a7 b7 b7c d7e
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ echo ?77
+7sjutiio
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ echo 7
+7sjutiio
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ ls
+7sjutiio  a3  a6  a9   b10c  b3c  b5   b6c  b8	 b9c   d3e  d6e  d9e
+a1	  a4  a7  b1   b1c   b4   b5c  b7   b8c  d10e  d4e  d7e
+a10	  a5  a8  b10  b3    b4c  b6   b7c  b9	 d1e   d5e  d8e
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ &quot;
+&apos;
+
+tocuuch 7&apos;7
+&apos;
+
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ ls -l
+total 0
+-rw-r--r-- 1 kent kent 0 Apr 24 14:47 &apos;7*&apos;
+-rw-r--r-- 1 kent kent 0 Apr 24 14:46  7sjutiio
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  a1
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  a10
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  a3
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  a4
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  a5
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  a6
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  a7
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  a8
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  a9
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b1
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b10
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b10c
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b1c
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b3
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b3c
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b4
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b4c
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b5
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b5c
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b6
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b6c
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b7
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b7c
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b8
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b8c
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b9
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  b9c
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  d10e
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  d1e
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  d3e
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  d4e
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  d5e
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  d6e
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  d7e
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  d8e
+-rw-r--r-- 1 kent kent 0 Apr 24 14:41  d9e
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion5/pathname_expansion
+touch &apos;7*7
+
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ touch 7
+
+
+
+
+
+
+
+echo 
+touch 7* 7sjutiio
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ echo touch 79*
+touch 9*
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ echo touch 9999999s9v9a9r9 9
+svar 9*
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ touch 9
+
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+<span style="color:#5c5cff;">r:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ ls 
+&apos;7*&apos;	    a10   a6   b1     b3    b5	  b7    b9     d3e   d7e
+ 7sjutiio   a3	  a7   b10    b3c   b5c   b7c   b9c    d4e   d8e
+&apos;9*&apos;	    a4	  a8   b10c   b4    b6	  b8    d10e   d5e   d9e
+ a1	    a5	  a9   b1c    b4c   b6c   b8c   d1e    d6e
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ lstouch 9
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ for x in 9*; do echo Match: $x; done
+Match: 9*
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+<span style="color:#5c5cff;"> Match: $x; don8<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ for x in 8*; do echo Match: $x; don
+Match: 8*
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ ls
+&apos;7*&apos;	    a10   a6   b1     b3    b5	  b7    b9     d3e   d7e
+ 7sjutiio   a3	  a7   b10    b3c   b5c   b7c   b9c    d4e   d8e
+&apos;9*&apos;	    a4	  a8   b10c   b4    b6	  b8    d10e   d5e   d9e
+ a1	    a5	  a9   b1c    b4c   b6c   b8c   d1e    d6e
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ lfor x in 8*; do echo Match: $x; don
+
+
+
+
+
+
+
+^C
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ sho
+
+shopt            showconsolefont  showkey          
+shotwell         showfigfonts     showrgb          
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+<span style="color:#5c5cff;">lor:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ shopt
+autocd         	off
+assoc_expand_once	off
+cdable_vars    	off
+cdspell        	off
+checkhash      	off
+checkjobs      	off
+checkwinsize   	on
+cmdhist        	on
+compat31       	off
+compat32       	off
+compat40       	off
+compat41       	off
+compat42       	off
+compat43       	off
+compat44       	off
+complete_fullquote	on
+direxpand      	off
+dirspell       	off
+dotglob        	off
+execfail       	off
+expand_aliases 	on
+extdebug       	off
+extglob        	off
+extquote       	on
+failglob       	off
+force_fignore  	on
+globasciiranges	on
+globskipdots   	on
+globstar       	off
+gnu_errfmt     	off
+histappend     	off
+histreedit     	off
+histverify     	off
+hostcomplete   	on
+huponexit      	off
+inherit_errexit	off
+interactive_comments	on
+lastpipe       	off
+lithist        	off
+localvar_inherit	off
+localvar_unset 	off
+login_shell    	off
+mailwarn       	off
+no_empty_cmd_completion	off
+nocaseglob     	off
+nocasematch    	off
+noexpand_translation	off
+nullglob       	off
+patsub_replacement	on
+progcomp       	on
+progcomp_alias 	off
+promptvars     	on
+restricted_shell	off
+shift_verbose  	off
+sourcepath     	on
+varredir_close 	off
+xpg_echo       	off
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+<span style="color:#5c5cff;">an style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ shopt | grep null
+nullglob       	off
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ shopt nu
+llglob
+nullglob       	off
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ shopt nullglob on
+nullglob       	off
+bash: shopt: on: invalid shell option name
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+<span style="color:#5c5cff;">="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ man shopt
+No manual entry for shopt
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+man shoptlglob ont
+help shoopt
+shopt: shopt [-pqsu] [-o] [optname ...]
+    Set and unset shell options.
+    
+    Change the setting of each shell option OPTNAME.  Without any option
+    arguments, list each supplied OPTNAME, or all shell options if no
+    OPTNAMEs are given, with an indication of whether or not each is set.
+    
+    Options:
+      -o	restrict OPTNAMEs to those defined for use with `set -o&apos;
+      -p	print each shell option with an indication of its status
+      -q	suppress output
+      -s	enable (set) each OPTNAME
+      -u	disable (unset) each OPTNAME
+    
+    Exit Status:
+    Returns success if OPTNAME is enabled; fails if an invalid option is
+    given or OPTNAME is disabled.
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+<span style="color:#5c5cff;">glo nullglo<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ shopt -s nullglo
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ ls
+&apos;7*&apos;	    a10   a6   b1     b3    b5	  b7    b9     d3e   d7e
+ 7sjutiio   a3	  a7   b10    b3c   b5c   b7c   b9c    d4e   d8e
+&apos;9*&apos;	    a4	  a8   b10c   b4    b6	  b8    d10e   d5e   d9e
+ a1	    a5	  a9   b1c    b4c   b6c   b8c   d1e    d6e
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+<span style="color:#000000;background-color:#000000;"></span>$ fospan><span style="color:#000000;background-color:#000000;">fo</span><span style="color:#000000;background-color:#000000;">r&apos;: </span><span style="color:#000000;background-color:#000000;">for</span><span style="color:#000000;background-color:#000000;">
+
+
+
+
+
+
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+lsfor x in 8*; do echo Match: $x; donex; done
+for x in 8*; do echo Match: $x; don9
+
+
+
+
+
+
+
+
+
+
+
+Match: 9*
+<span style="color:#5c5cff;">DEVOPS24/lektion5/pathname_expansion
+</span>$ 
+exit
+
+Script done on 2025-04-24 14:55:54+02:00 [COMMAND_EXIT_CODE=&quot;0&quot;]
+</pre>
+</body>
+</html>
+<!--HTML generated by ansifilter 2.18, http://www.andre-simon.de/-->
