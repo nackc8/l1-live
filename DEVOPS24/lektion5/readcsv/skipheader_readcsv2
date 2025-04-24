@@ -1,7 +1,10 @@
 #!/bin/bash
 
 while IFS="," read -r fornamn efternamn losenord operation; do
-  [ -z "$seen_header" ] && seen_header=myrslok && continue
+  if [ -z "$seen_header" ]; then
+   seen_header=myrslok
+   continue
+  
   echo "Value: $fornamn"
   echo "Value: $efternamn"
   echo "Value: $losenord"
