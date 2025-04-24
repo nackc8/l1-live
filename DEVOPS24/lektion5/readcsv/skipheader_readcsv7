@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Bryt var jag vill med \ sist
-tail -n +2 \
-  personer.csv | while IFS="," read -r fornamn efternamn losenord operation; do
-  echo "Value: $fornamn"
-  echo "Value: $efternamn"
-  echo "Value: $losenord"
-  echo "Value: $operation"
-done
+tail -n +2 personer.csv |
+  while IFS="," read -r fornamn efternamn losenord operation; do
+    echo "Value: $fornamn"
+    echo "Value: $efternamn"
+    echo "Value: $losenord"
+    echo "Value: $operation"
+  done
 
 # förnamn,efternamn,lösenord,operation
