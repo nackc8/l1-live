@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# command substituion
+# parameter expansion
 
-LSOUTPUT=$(ls /etc)
-
-echo LSOUTPUT: $LSOUTPUT
+read -r name
+echo Hej "${#name}"
