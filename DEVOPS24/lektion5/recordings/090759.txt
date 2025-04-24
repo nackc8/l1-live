@@ -6369,4 +6369,131 @@ ECHO(1)                          User Commands                         ECHO(1)[
 (B[m$ ./numberfile [C[C[5Pman echo[C[Cecho man[C[Ccat numberfileoutput 
 [?2004lHejTerve
 [?2004h[94mDEVOPS24/lektion5/redirect
-(B[m$ cat numberfileoutput [C[C[8P./numberfile[C[H[
+(B[m$ cat numberfileoutput [C[C[8P./numberfile[C[H[2J[94mDEVOPS24/lektion5/redirect
+(B[m$ ./numberfile 
+[?2004l[?2004h[94mDEVOPS24/lektion5/redirect
+(B[m$ ./numberfile [C[C[8@cat numberfileoutput[C
+[?2004lHej hoppTerve
+[?2004h[94mDEVOPS24/lektion5/redirect
+(B[m$ cat numberfileoutput [C[C[8P./numberfile[C[H[2J[94mDEVOPS24/lektion5/redirect
+(B[m$ ./numberfile 
+[?2004l[?2004h[94mDEVOPS24/lektion5/redirect
+(B[m$ ./numberfile [C[C[8@cat numberfileoutput[C
+[?2004lHej hopp Terve
+[?2004h[94mDEVOPS24/lektion5/redirect
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ cd ..
+[?2004l[?2004h[94mDEVOPS24/lektion5
+(B[m$ [H[2J[94mDEVOPS24/lektion5
+(B[m$ ls
+[?2004lrecordings  redirect  tillbakablickL4
+[?2004h[94mDEVOPS24/lektion5
+(B[m$ mkdir tests
+[?2004l[?2004h[94mDEVOPS24/lektion5
+(B[m$ cd tests/
+[?2004l[?2004h[94mDEVOPS24/lektion5/tests
+(B[m$ [H[2J[94mDEVOPS24/lektion5/tests
+(B[m$ ls
+[?2004l[?2004h[94mDEVOPS24/lektion5/tests
+(B[m$ [H[2J[94mDEVOPS24/lektion5/tests
+(B[m$ mkdir kat1
+[?2004l[?2004h[94mDEVOPS24/lektion5/tests
+(B[m$ ls 
+[?2004lkat1
+[?2004h[94mDEVOPS24/lektion5/tests
+(B[m$ ls -l[H[2J[94mDEVOPS24/lektion5/tests
+(B[m$ ls -l
+[?2004ltotal 4
+drwxr-xr-x 2 kent kent 4096 Apr 24 11:22 kat1
+[?2004h[94mDEVOPS24/lektion5/tests
+(B[m$ test -d kat1
+[?2004l[?2004h[94mDEVOPS24/lektion5/tests
+(B[m$ echo $?
+[?2004l0
+[?2004h[94mDEVOPS24/lektion5/tests
+(B[m$ echo $?[C[Ctest -d kat1[1P kat1f kat1[H[2J[94mDEVOPS24/lektion5/tests
+(B[m$ test -f kat1
+[?2004l[?2004h[94mDEVOPS24/lektion5/tests
+(B[m$ test -f kat1[C[C[5Pecho $?
+[?2004l1
+[?2004h[94mDEVOPS24/lektion5/tests
+(B[m$ echo $?
+[?2004l0
+[?2004h[94mDEVOPS24/lektion5/tests
+(B[m$ echo $?[C[Ctest -f kat1[H[2J[94mDEVOPS24/lektion5/tests
+(B[m$ test -f kat1
+[?2004l[?2004h[94mDEVOPS24/lektion5/tests
+(B[m$ X=#?[K[K$?
+[?2004l[?2004h[94mDEVOPS24/lektion5/tests
+(B[m$ echo $?
+[?2004l0
+[?2004h[94mDEVOPS24/lektion5/tests
+(B[m$ echo $X
+[?2004l1
+[?2004h[94mDEVOPS24/lektion5/tests
+(B[m$ $X | [K[K|| echo "Fel"
+[?2004lbash: 1: command not found
+Fel
+[?2004h[94mDEVOPS24/lektion5/tests
+(B[m$ $X || echo "Fel"[H[2J[94mDEVOPS24/lektion5/tests
+(B[m$ $X || echo "Fel"[C[C[C[C[C
+[?2004lbash: 1: command not found
+Fel
+[?2004h[94mDEVOPS24/lektion5/tests
+(B[m$ $X || echo "Fel"[1@t[1@w[1@a[1@t[1P[1P[1P[1@e[1@s[1@t[1@ [C[C[C[1@ [1@=[C[1@ [1@1
+[?2004l[?2004h[94mDEVOPS24/lektion5/tests
+(B[m$ test $X = 1 || echo "Fel"[1P[1P[1@*[1@*[1P[1P[1@&[1@&
+[?2004lFel
+[?2004h[94mDEVOPS24/lektion5/tests
+(B[m$ [H[2J[94mDEVOPS24/lektion5/tests
+(B[m$ man test
+[?2004l[?1049h[22;0;0t[?1h=TEST(1)                          User Commands                         TEST(1)[m
+[m
+[1mNAME[0m[m
+       test - check file types and compare values[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mtest[0m [4mEXPRESSION[24m[m
+       [1mtest[0m[m
+       [1m[[0m [4mEXPRESSION[24m [1m][0m[m
+       [1m[[0m [1m][0m[m
+       [1m[[0m [4mOPTION[24m[m
+[m
+[1mDESCRIPTION[0m[m
+       Exit with the status determined by EXPRESSION.[m
+[m
+       [1m--help[0m display this help and exit[m
+[m
+[7m Manual page test(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--version[0m[m
+[7m Manual page test(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              output version information and exit[m
+[7m Manual page test(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page test(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       An omitted EXPRESSION defaults to false.  Otherwise, EXPRESSION is true[m
+[7m Manual page test(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       or false and sets exit status.  It is one of:[m
+[7m Manual page test(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page test(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ( EXPRESSION )[m
+[7m Manual page test(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              EXPRESSION is true[m
+[7m Manual page test(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page test(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ! EXPRESSION[m
+[7m Manual page test(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              EXPRESSION is false[m
+[7m Manual page test(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page test(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       EXPRESSION1 [1m-a[0m EXPRESSION2[m
+[7m Manual page test(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              both EXPRESSION1 and EXPRESSION2 are true[m
+[7m Manual page test(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page test(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       EXPRESSION1 [1m-o[0m EXPRESSION2[m
+[7m Manual page test(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              either EXPRESSION1 or EXPRESSION2 is true[m
+[7m Manual page test(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page test(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-n[0m STRING[m
+[7m Manual page test(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the length of STRING is nonzero[m
+[7m Manual page test(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page test(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       STRING equivalent to [1m-n[0m STRING[m
+[7m Manual page test(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page test(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-z[0m STRING[m
+[7m Manual page test(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the length of STRING is zero[m
+[7m Manual page test(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page test(1) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       STRING1 = STRING2[m
+[7m Manual page test(1) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       ! EXPRESSION[m
+[18;1H[K[7m Manual page test(1) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[18;1H[K[7m Manual page test(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              EXPRESSION is true[m
+[18;1H[K[7m Manual page test(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       ( EXPRESSION )[m
+[18;1H[K[7m Manual page test(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[18;1H[K[7m Manual page test(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       or false and sets exit status.  It is one of:[m
+[18;1H[K[7m Manual page test(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       An omitted EXPRESSION defaults to false.  Otherwise, EXPRESSIO
