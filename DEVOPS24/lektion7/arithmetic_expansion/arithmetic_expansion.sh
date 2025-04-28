@@ -7,3 +7,5 @@ echo $tal1 + $tal2 = $((tal1 + tal2))
 
 echo Tal 1 igen: $((tal1++))
 echo Tal 1 nu: "$tal1"
+
+echo Slumptal 0 - 99: $((RANDOM ))
