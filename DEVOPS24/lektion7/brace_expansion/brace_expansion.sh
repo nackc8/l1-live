@@ -11,3 +11,6 @@ echo innan_{a..z}_efter
 
 echo innan_{a..c}_efter_{stor,liten}.png
 # innan_a_efter_stor.png innan_a_efter_liten.png innan_b_efter_stor.png innan_b_efter_liten.png innan_c_efter_stor.png innan_c_efter_liten.png
+
+echo {hjarter,klover,spader,ruter}_{2..10,Knekt,Dam,Kung,Ess}
+# hjarter_2..10 hjarter_Knekt hjarter_Dam hjarter_Kung hjarter_Ess klover_2..10 klover_Knekt klover_Dam klover_Kung klover_Ess spader_2..10 spader_Knekt spader_Dam spader_Kung spader_Ess ruter_2..10 ruter_Knekt ruter_Dam ruter_Kung ruter_Ess
