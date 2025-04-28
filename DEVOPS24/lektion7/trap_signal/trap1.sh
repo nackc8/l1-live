@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+trap 'echo Avbryter;exit 0' SIGINT
 
 while true; do
 	echo Snurr
