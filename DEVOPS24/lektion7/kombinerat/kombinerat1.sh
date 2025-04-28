@@ -1,6 +1,3 @@
 #!/bin/bash
 
-A=Hej
-B=Hopp
-
-echo '$'{A,B}
+{ls,-l}
