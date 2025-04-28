@@ -11,3 +11,4 @@ for x in *.png; do echo "$x"; done
 
 # vanlig for-loop över kort
 for x in {hjarter,spader}{1..10}; do echo "$x"; done
+
