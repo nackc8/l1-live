@@ -6,4 +6,4 @@ foo() {
 	done
 }
 
-foo Ove Eva
+foo $@
