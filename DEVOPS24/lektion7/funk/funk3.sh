@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Funktion som körs i samma process!
+# Funktion som körs i barnprocess!
 foo() {
 	umask 123
 	for namn; do
