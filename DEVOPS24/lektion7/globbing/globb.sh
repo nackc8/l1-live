@@ -33,5 +33,5 @@ rm -v [0-9].txt
 # Vi vill ta bort alla filer som inte börjar med a eller b
 touch {1..10}.txt
 touch {a..f}.txt
-rm -v [0-9].txt
+rm -v [!ab]*.txt
 
