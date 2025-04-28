@@ -13,5 +13,5 @@ tempfil="temp$RANDOM"
 
 for ((val = 0; val < 30; val++)); do
 	echo Snurr "$val" | tee -a "$tempfil"
-	sleep 0
+	sleep 3
 done
