@@ -15,4 +15,6 @@ touch foo{1..10}.txt
 rm ?.txt
 
 touch {a..f}.txt
-# Nu har vi fler filer som bryter mönstret
+# Nu har vi fler filer som bryter mönstret, nu behöver
+# vi ett mer specifikt mönster för att ta bort alla
+# enligt förra exemplet (ett nummer och .txt)
