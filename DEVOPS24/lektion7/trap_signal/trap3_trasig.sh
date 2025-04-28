@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -x
-
 tempfil="temp$RANDOM"
 
 # EXIT körs vid Ctrl+C eller skriptets slut
