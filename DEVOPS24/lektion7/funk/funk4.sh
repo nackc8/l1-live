@@ -7,3 +7,6 @@ log() (
 ) >>loggfil
 
 log Hello world
+sleep 1
+log Hej varlden
+sleep 1
