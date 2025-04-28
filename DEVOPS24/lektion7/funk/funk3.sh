@@ -6,6 +6,8 @@ foo() (
 	for namn; do
 		echo "Hej $namn"
 	done
+	umask
+	echo Slut på funktionen
 )
 
 foo "$@" # Betyder foo "$1" "$2" "$3" ..
