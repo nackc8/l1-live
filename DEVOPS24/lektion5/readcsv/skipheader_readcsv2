@@ -1,0 +1,12 @@
+#!/bin/bash
+
+while IFS="," read -r fornamn efternamn losenord operation; do
+  if [ -z "$seen_header" ]; then
+    seen_header=myrslok
+    continue
+  fi
+  echo "Value: $fornamn"
+  echo "Value: $efternamn"
+  echo "Value: $losenord"
+  echo "Value: $operation"
+done <personer.csv # förnamn,efternamn,lösenord,operation

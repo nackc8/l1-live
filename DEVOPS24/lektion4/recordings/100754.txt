@@ -1,0 +1,1975 @@
+Script started on 2025-04-23 10:08:00+02:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="114" LINES="7"]
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mDEVOPS24/lektion4
+(B[m$ man ls[K(B[m$ man ls[K(B[m$ man ls[K(B[m$ man ls[K(B[m$ man ls[K(B[m$ man ls[K(B[m$ man ls
+[?2004l[?1049h[22;0;0t[?1h=LS(1)                                       User Commands                                      LS(1)[m
+[m
+[1mNAME[0m[m
+       ls - list directory contents[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       List information about the FILEs (the current directory by default).  Sort entries alphabeti‐[m
+       cally if none of [1m-cftuvSUX[0m nor [1m--sort[0m is specified.[m
+[m
+       Mandatory arguments to long options are mandatory for short options too.[m
+[m
+       [1m-a[0m, [1m--all[0m[m
+              do not ignore entries starting with .[m
+[m
+       [1m-A[0m, [1m--almost-all[0m[m
+              do not list implied . and ..[m
+[m
+       [1m--author[0m[m
+              with [1m-l[0m, print the author of each file[m
+[m
+       [1m-b[0m, [1m--escape[0m[m
+[7m Manual page ls(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion4
+(B[m$ [H[2J[94mDEVOPS24/lektion4
+(B[m$ man git/[K-commitg[K
+[?2004l[?1049h[22;0;0t[?1h=GIT-COMMIT(1)                                Git Manual                                GIT-COMMIT(1)[m
+[m
+[1mNAME[0m[m
+       git-commit - Record changes to the repository[m
+[m
+[1mSYNOPSIS[0m[m
+       [4mgit[24m [4mcommit[24m [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend][m
+                  [--dry-run] [(-c | -C | --squash) <commit> | --fixup [(amend|reword):]<commit>)][m
+                  [-F <file> | -m <msg>] [--reset-author] [--allow-empty][m
+                  [--allow-empty-message] [--no-verify] [-e] [--author=<author>][m
+                  [--date=<date>] [--cleanup=<mode>] [--[no-]status][m
+                  [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]][m
+                  [(--trailer <token>[(=|:)<value>])...] [-S[<keyid>]][m
+                  [--] [<pathspec>...][m
+[m
+[1mDESCRIPTION[0m[m
+       Create a new commit containing the current contents of the index and the given log message[m
+       describing the changes. The new commit is a direct child of HEAD, usually the tip of the[m
+       current branch, and the branch is updated to point to it (unless no branch is associated with[m
+       the working tree, in which case HEAD is "detached" as described in [1mgit-checkout[0m(1)).[m
+[m
+       The content to be committed can be specified in several ways:[m
+[m
+        1. by using [1mgit-add[0m(1) to incrementally "add" changes to the index before using the [4mcommit[24m[m
+[7m Manual page git-commit(1) line 1 (press h for help or q to quit)[27m[K[K           command (Note: even modified files must be "added");[m
+[m
+        2. by using [1mgit-rm[0m(1) to remove files from the working tree and the index, again before[m
+           using the [4mcommit[24m command;[m
+[m
+        3. by listing files as arguments to the [4mcommit[24m command (without --interactive or --patch[m
+           switch), in which case the commit will ignore changes staged in the index, and instead[m
+           record the current content of the listed files (which must already be known to Git);[m
+[m
+        4. by using the -a switch with the [4mcommit[24m command to automatically "add" changes from all[m
+           known files (i.e. all files that are already listed in the index) and to automatically[m
+           "rm" files in the index that have been removed from the working tree, and then perform[m
+           the actual commit;[m
+[m
+        5. by using the --interactive or --patch switches with the [4mcommit[24m command to decide one by[m
+           one which files or hunks should be part of the commit in addition to contents in the[m
+           index, before finalizing the operation. See the “Interactive Mode” section of [1mgit-add[0m(1)[m
+           to learn how to operate these modes.[m
+[m
+       The [1m--dry-run[0m option can be used to obtain a summary of what is included by any of the above[m
+       for the next commit by giving the same set of parameters (options and paths).[m
+[m
+       If you make a commit and then find a mistake immediately after that, you can recover from it[m
+       with [4mgit[24m [4mreset[24m.[m
+[7m Manual page git-commit(1) line 25 (press h for help or q to quit)[27m[K[K[m
+[1mOPTIONS[0m[m
+       -a, --all[m
+           Tell the command to automatically stage files that have been modified and deleted, but[m
+           new files you have not told Git about are not affected.[m
+[m
+       -p, --patch[m
+           Use the interactive patch selection interface to choose which changes to commit. See [1mgit-[0m[m
+           [1madd[0m(1) for details.[m
+[m
+       -C <commit>, --reuse-message=<commit>[m
+           Take an existing commit object, and reuse the log message and the authorship information[m
+           (including the timestamp) when creating the commit.[m
+[m
+       -c <commit>, --reedit-message=<commit>[m
+           Like [4m-C[24m, but with [1m-c[0m the editor is invoked, so that the user can further edit the commit[m
+           message.[m
+[m
+       --fixup=[(amend|reword):]<commit>[m
+           Create a new commit which "fixes up" [1m<commit>[0m when applied with [1mgit[0m [1mrebase[0m [1m--autosquash[0m.[m
+           Plain [1m--fixup=<commit>[0m creates a "fixup!" commit which changes the content of [1m<commit>[0m[m
+           but leaves its log message untouched.  [1m--fixup=amend:<commit>[0m is similar but creates an[m
+           "amend!" commit which also replaces the log message of [1m<commit>[0m with the log message of[m
+           the "amend!" commit.  [1m--fixup=reword:<commit>[0m creates an "amend!" commit which replaces[m
+[7m Manual page git-commit(1) line 49 (press h for help or q to quit)[27m[K[K           the log message of [1m<commit>[0m with its own log message but makes no changes to the content[m
+           of [1m<commit>[0m.[m
+[m
+           The commit created by plain [1m--fixup=<commit>[0m has a subject composed of "fixup!" followed[m
+           by the subject line from <commit>, and is recognized specially by [1mgit[0m [1mrebase[0m[m
+           [1m--autosquash[0m. The [1m-m[0m option may be used to supplement the log message of the created[m
+           commit, but the additional commentary will be thrown away once the "fixup!" commit is[m
+           squashed into [1m<commit>[0m by [1mgit[0m [1mrebase[0m [1m--autosquash[0m.[m
+[m
+           The commit created by [1m--fixup=amend:<commit>[0m is similar but its subject is instead[m
+           prefixed with "amend!". The log message of <commit> is copied into the log message of the[m
+           "amend!" commit and opened in an editor so it can be refined. When [1mgit[0m [1mrebase[0m[m
+           [1m--autosquash[0m squashes the "amend!" commit into [1m<commit>[0m, the log message of [1m<commit>[0m is[m
+           replaced by the refined log message from the "amend!" commit. It is an error for the[m
+           "amend!" commit’s log message to be empty unless [1m--allow-empty-message[0m is specified.[m
+[m
+           [1m--fixup=reword:<commit>[0m is shorthand for [1m--fixup=amend:<commit>[0m [1m--only[0m. It creates an[m
+           "amend!" commit with only a log message (ignoring any changes staged in the index). When[m
+           squashed by [1mgit[0m [1mrebase[0m [1m--autosquash[0m, it replaces the log message of [1m<commit>[0m without[m
+           making any other changes.[m
+[m
+           Neither "fixup!" nor "amend!" commits change authorship of [1m<commit>[0m when applied by [1mgit[0m[m
+           [1mrebase[0m [1m--autosquash[0m. See [1mgit-rebase[0m(1) for details.[m
+[m
+[7m Manual page git-commit(1) line 73 (press h for help or q to quit)[27m[K[K       --squash=<commit>[m
+           Construct a commit message for use with [1mrebase[0m [1m--autosquash[0m. The commit message subject[m
+           line is taken from the specified commit with a prefix of "squash! ". Can be used with[m
+           additional commit message options ([1m-m[0m/[1m-c[0m/[1m-C[0m/[1m-F[0m). See [1mgit-rebase[0m(1) for details.[m
+[m
+       --reset-author[m
+           When used with -C/-c/--amend options, or when committing after a conflicting cherry-pick,[m
+           declare that the authorship of the resulting commit now belongs to the committer. This[m
+           also renews the author timestamp.[m
+[m
+       --short[m
+           When doing a dry-run, give the output in the short-format. See [1mgit-status[0m(1) for details.[m
+           Implies [1m--dry-run[0m.[m
+[m
+       --branch[m
+           Show the branch and tracking info even in short-format.[m
+[m
+       --porcelain[m
+           When doing a dry-run, give the output in a porcelain-ready format. See [1mgit-status[0m(1) for[m
+           details. Implies [1m--dry-run[0m.[m
+[m
+       --long[m
+           When doing a dry-run, give the output in the long-format. Implies [1m--dry-run[0m.[m
+[m
+[7m Manual page git-commit(1) line 97 (press h for help or q to quit)[27m[K[K       -z, --null[m
+           When showing [1mshort[0m or [1mporcelain[0m status output, print the filename verbatim and terminate[m
+           the entries with NUL, instead of LF. If no format is given, implies the [1m--porcelain[0m[m
+           output format. Without the [1m-z[0m option, filenames with "unusual" characters are quoted as[m
+           explained for the configuration variable [1mcore.quotePath[0m (see [1mgit-config[0m(1)).[m
+[m
+       -F <file>, --file=<file>[m
+           Take the commit message from the given file. Use [4m-[24m to read the message from the standard[m
+           input.[m
+[m
+       --author=<author>[m
+           Override the commit author. Specify an explicit author using the standard [1mA[0m [1mU[0m [1mThor[0m[m
+           [1m<author@example.com>[0m format. Otherwise <author> is assumed to be a pattern and is used to[m
+           search for an existing commit by that author (i.e. rev-list --all -i --author=<author>);[m
+           the commit author is then copied from the first such commit found.[m
+[m
+       --date=<date>[m
+           Override the author date used in the commit.[m
+[m
+       -m <msg>, --message=<msg>[m
+           Use the given <msg> as the commit message. If multiple [1m-m[0m options are given, their values[m
+           are concatenated as separate paragraphs.[m
+[m
+           The [1m-m[0m option is mutually exclusive with [1m-c[0m, [1m-C[0m, and [1m-F[0m.[m
+[7m Manual page git-commit(1) line 121 (press h for help or q to quit)[27m[K[K[m
+       -t <file>, --template=<file>[m
+           When editing the commit message, start the editor with the contents in the given file.[m
+           The [1mcommit.template[0m configuration variable is often used to give this option implicitly[m
+           to the command. This mechanism can be used by projects that want to guide participants[m
+           with some hints on what to write in the message in what order. If the user exits the[m
+           editor without editing the message, the commit is aborted. This has no effect when a[m
+           message is given by other means, e.g. with the [1m-m[0m or [1m-F[0m options.[m
+[m
+       -s, --signoff, --no-signoff[m
+           Add a [1mSigned-off-by[0m trailer by the committer at the end of the commit log message. The[m
+           meaning of a signoff depends on the project to which you’re committing. For example, it[m
+           may certify that the committer has the rights to submit the work under the project’s[m
+           license or agrees to some contributor representation, such as a Developer Certificate of[m
+           Origin. (See [1mhttp://developercertificate.org[0m for the one used by the Linux kernel and Git[m
+           projects.) Consult the documentation or leadership of the project to which you’re[m
+           contributing to understand how the signoffs are used in that project.[m
+[m
+           The --no-signoff option can be used to countermand an earlier --signoff option on the[m
+           command line.[m
+[m
+       --trailer <token>[(=|:)<value>][m
+           Specify a (<token>, <value>) pair that should be applied as a trailer. (e.g.  [1mgit[0m [1mcommit[0m[m
+           [1m--trailer[0m [1m"Signed-off-by:C[0m [1mO[0m [1mMitter[0m [1m\[0m [1m<committer@example.com>"[0m [1m--trailer[0m [1m"Helped-by:C[0m [1mO[0m[m
+[7m Manual page git-commit(1) line 145 (press h for help or q to quit)[27m[K[K           [1mMitter[0m [1m\[0m [1m<committer@example.com>"[0m will add the "Signed-off-by" trailer and the[m
+           "Helped-by" trailer to the commit message.) The [1mtrailer.*[0m  configuration variables ([1mgit-[0m[m
+           [1minterpret-trailers[0m(1)) can be used to define if a duplicated trailer is omitted, where in[m
+           the run of trailers each trailer would appear, and other details.[m
+[m
+       -n, --[no-]verify[m
+           By default, the pre-commit and commit-msg hooks are run. When any of [1m--no-verify[0m or [1m-n[0m is[m
+           given, these are bypassed. See also [1mgithooks[0m(5).[m
+[m
+       --allow-empty[m
+           Usually recording a commit that has the exact same tree as its sole parent commit is a[m
+           mistake, and the command prevents you from making such a commit. This option bypasses the[m
+           safety, and is primarily for use by foreign SCM interface scripts.[m
+[m
+       --allow-empty-message[m
+           Like --allow-empty this command is primarily for use by foreign SCM interface scripts. It[m
+           allows you to create a commit with an empty commit message without using plumbing[m
+           commands like [1mgit-commit-tree[0m(1).[m
+[m
+       --cleanup=<mode>[m
+           This option determines how the supplied commit message should be cleaned up before[m
+           committing. The [4m<mode>[24m can be [1mstrip[0m, [1mwhitespace[0m, [1mverbatim[0m, [1mscissors[0m or [1mdefault[0m.[m
+[m
+           strip[m
+[7m Manual page git-commit(1) line 169 (press h for help or q to quit)[27m[K[K               Strip leading and trailing empty lines, trailing whitespace, commentary and collapse[m
+               consecutive empty lines.[m
+[m
+           whitespace[m
+               Same as [1mstrip[0m except #commentary is not removed.[m
+[m
+           verbatim[m
+               Do not change the message at all.[m
+[m
+           scissors[m
+               Same as [1mwhitespace[0m except that everything from (and including) the line found below[m
+               is truncated, if the message is to be edited. "[1m#[0m" can be customized with[m
+               core.commentChar.[m
+[m
+                   # ------------------------ >8 ------------------------[m
+[m
+           default[m
+               Same as [1mstrip[0m if the message is to be edited. Otherwise [1mwhitespace[0m.[m
+[m
+           The default can be changed by the [1mcommit.cleanup[0m configuration variable (see [1mgit-[0m[m
+           [1mconfig[0m(1)).[m
+[m
+       -e, --edit[m
+           The message taken from file with [1m-F[0m, command line with [1m-m[0m, and from commit object with [1m-C[0m[m
+[7m Manual page git-commit(1) line 193 (press h for help or q to quit)[27m[K[K           are usually used as the commit log message unmodified. This option lets you further edit[m
+           the message taken from these sources.[m
+[m
+       --no-edit[m
+           Use the selected commit message without launching an editor. For example, [1mgit[0m [1mcommit[0m[m
+           [1m--amend[0m [1m--no-edit[0m amends a commit without changing its commit message.[m
+[m
+       --amend[m
+           Replace the tip of the current branch by creating a new commit. The recorded tree is[m
+           prepared as usual (including the effect of the [1m-i[0m and [1m-o[0m options and explicit pathspec),[m
+           and the message from the original commit is used as the starting point, instead of an[m
+           empty message, when no other message is specified from the command line via options such[m
+           as [1m-m[0m, [1m-F[0m, [1m-c[0m, etc. The new commit has the same parents and author as the current one[m
+           (the [1m--reset-author[0m option can countermand this).[m
+[m
+           It is a rough equivalent for:[m
+[m
+                       $ git reset --soft HEAD^[m
+                       $ ... do something else to come up with the right tree ...[m
+                       $ git commit -c ORIG_HEAD[m
+[m
+           but can be used to amend a merge commit.[m
+[m
+           You should understand the implications of rewriting history if you amend a commit that[m
+[7m Manual page git-commit(1) line 217 (press h for help or q to quit)[27m[K[K           has already been published. (See the "RECOVERING FROM UPSTREAM REBASE" section in [1mgit-[0m[m
+           [1mrebase[0m(1).)[m
+[m
+       --no-post-rewrite[m
+           Bypass the post-rewrite hook.[m
+[m
+       -i, --include[m
+           Before making a commit out of staged contents so far, stage the contents of paths given[m
+           on the command line as well. This is usually not what you want unless you are concluding[m
+           a conflicted merge.[m
+[m
+       -o, --only[m
+           Make a commit by taking the updated working tree contents of the paths specified on the[m
+           command line, disregarding any contents that have been staged for other paths. This is[m
+           the default mode of operation of [4mgit[24m [4mcommit[24m if any paths are given on the command line,[m
+           in which case this option can be omitted. If this option is specified together with[m
+           [1m--amend[0m, then no paths need to be specified, which can be used to amend the last commit[m
+           without committing changes that have already been staged. If used together with[m
+           [1m--allow-empty[0m paths are also not required, and an empty commit will be created.[m
+[m
+       --pathspec-from-file=<file>[m
+           Pathspec is passed in [1m<file>[0m instead of commandline args. If [1m<file>[0m is exactly [1m-[0m then[m
+           standard input is used. Pathspec elements are separated by LF or CR/LF. Pathspec elements[m
+           can be quoted as explained for the configuration variable [1mcore.quotePath[0m (see [1mgit-[0m[m
+[7m Manual page git-commit(1) line 241 (press h for help or q to quit)[27m[K[K           [1mconfig[0m(1)). See also [1m--pathspec-file-nul[0m and global [1m--literal-pathspecs[0m.[m
+[m
+       --pathspec-file-nul[m
+           Only meaningful with [1m--pathspec-from-file[0m. Pathspec elements are separated with NUL[m
+           character and all other characters are taken literally (including newlines and quotes).[m
+[m
+       -u[<mode>], --untracked-files[=<mode>][m
+           Show untracked files.[m
+[m
+           The mode parameter is optional (defaults to [4mall[24m), and is used to specify the handling of[m
+           untracked files; when -u is not used, the default is [4mnormal[24m, i.e. show untracked files[m
+           and directories.[m
+[m
+           The possible options are:[m
+[m
+           •   [4mno[24m - Show no untracked files[m
+[m
+           •   [4mnormal[24m - Shows untracked files and directories[m
+[m
+           •   [4mall[24m - Also shows individual files in untracked directories.[m
+[m
+           The default can be changed using the status.showUntrackedFiles configuration variable[m
+           documented in [1mgit-config[0m(1).[m
+[m
+[7m Manual page git-commit(1) line 265 (press h for help or q to quit)[27m[K[K       -v, --verbose[m
+           Show unified diff between the HEAD commit and what would be committed at the bottom of[m
+           the commit message template to help the user describe the commit by reminding what[m
+           changes the commit has. Note that this diff output doesn’t have its lines prefixed with[m
+           [4m#[24m. This diff will not be a part of the commit message. See the [1mcommit.verbose[0m[m
+           configuration variable in [1mgit-config[0m(1).[m
+[m
+           If specified twice, show in addition the unified diff between what would be committed and[m
+           the worktree files, i.e. the unstaged changes to tracked files.[m
+[m
+       -q, --quiet[m
+           Suppress commit summary message.[m
+[m
+       --dry-run[m
+           Do not create a commit, but show a list of paths that are to be committed, paths with[m
+           local changes that will be left uncommitted and paths that are untracked.[m
+[m
+       --status[m
+           Include the output of [1mgit-status[0m(1) in the commit message template when using an editor[m
+           to prepare the commit message. Defaults to on, but can be used to override configuration[m
+           variable commit.status.[m
+[m
+       --no-status[m
+           Do not include the output of [1mgit-status[0m(1) in the commit message template when using an[m
+[7m Manual page git-commit(1) line 289 (press h for help or q to quit)[27m[K[K           editor to prepare the default commit message.[m
+[m
+       -S[<keyid>], --gpg-sign[=<keyid>], --no-gpg-sign[m
+           GPG-sign commits. The [1mkeyid[0m argument is optional and defaults to the committer identity;[m
+           if specified, it must be stuck to the option without a space.  [1m--no-gpg-sign[0m is useful to[m
+           countermand both [1mcommit.gpgSign[0m configuration variable, and earlier [1m--gpg-sign[0m.[m
+[m
+       --[m
+           Do not interpret any more arguments as options.[m
+[m
+       <pathspec>...[m
+           When pathspec is given on the command line, commit the contents of the files that match[m
+           the pathspec without recording the changes already added to the index. The contents of[m
+           these files are also staged for the next commit on top of what have been staged before.[m
+[m
+           For more details, see the [4mpathspec[24m entry in [1mgitglossary[0m(7).[m
+[m
+[1mEXAMPLES[0m[m
+       When recording your own work, the contents of modified files in your working tree are[m
+       temporarily stored to a staging area called the "index" with [4mgit[24m [4madd[24m. A file can be reverted[m
+       back, only in the index but not in the working tree, to that of the last commit with [1mgit[0m[m
+       [1mrestore[0m [1m--staged[0m [1m<file>[0m, which effectively reverts [4mgit[24m [4madd[24m and prevents the changes to this[m
+       file from participating in the next commit. After building the state to be committed[m
+       incrementally with these commands, [1mgit[0m [1mcommit[0m (without any pathname parameter) is used to[m
+[7m Manual page git-commit(1) line 313 (press h for help or q to quit)[27m[K[K       record what has been staged so far. This is the most basic form of the command. An example:[m
+[m
+           $ edit hello.c[m
+           $ git rm goodbye.c[m
+           $ git add hello.c[m
+           $ git commit[m
+[m
+       Instead of staging files after each individual change, you can tell [1mgit[0m [1mcommit[0m to notice the[m
+       changes to the files whose contents are tracked in your working tree and do corresponding [1mgit[0m[m
+       [1madd[0m and [1mgit[0m [1mrm[0m for you. That is, this example does the same as the earlier example if there[m
+       is no other change in your working tree:[m
+[m
+           $ edit hello.c[m
+           $ rm goodbye.c[m
+           $ git commit -a[m
+[m
+       The command [1mgit[0m [1mcommit[0m [1m-a[0m first looks at your working tree, notices that you have modified[m
+       hello.c and removed goodbye.c, and performs necessary [1mgit[0m [1madd[0m and [1mgit[0m [1mrm[0m for you.[m
+[m
+       After staging changes to many files, you can alter the order the changes are recorded in, by[m
+       giving pathnames to [1mgit[0m [1mcommit[0m. When pathnames are given, the command makes a commit that[m
+       only records the changes made to the named paths:[m
+[m
+           $ edit hello.c hello.h[m
+[7m Manual page git-commit(1) line 337 (press h for help or q to quit)[27m[K[K           $ git add hello.c hello.h[m
+           $ edit Makefile[m
+           $ git commit Makefile[m
+[m
+       This makes a commit that records the modification to [1mMakefile[0m. The changes staged for [1mhello.c[0m[m
+       and [1mhello.h[0m are not included in the resulting commit. However, their changes are not lost —[m
+       they are still staged and merely held back. After the above sequence, if you do:[m
+[m
+           $ git commit[m
+[m
+       this second commit would record the changes to [1mhello.c[0m and [1mhello.h[0m as expected.[m
+[m
+       After a merge (initiated by [4mgit[24m [4mmerge[24m or [4mgit[24m [4mpull[24m) stops because of conflicts, cleanly merged[m
+       paths are already staged to be committed for you, and paths that conflicted are left in[m
+       unmerged state. You would have to first check which paths are conflicting with [4mgit[24m [4mstatus[24m and[m
+       after fixing them manually in your working tree, you would stage the result as usual with [4mgit[24m[m
+       [4madd[24m:[m
+[m
+           $ git status | grep unmerged[m
+           unmerged: hello.c[m
+           $ edit hello.c[m
+           $ git add hello.c[m
+[m
+       After resolving conflicts and staging the result, [1mgit[0m [1mls-files[0m [1m-u[0m would stop mentioning the[m
+[7m Manual page git-commit(1) line 361 (press h for help or q to quit)[27m[K[K       conflicted path. When you are done, run [1mgit[0m [1mcommit[0m to finally record the merge:[m
+[m
+           $ git commit[m
+[m
+       As with the case to record your own changes, you can use [1m-a[0m option to save typing. One[m
+       difference is that during a merge resolution, you cannot use [1mgit[0m [1mcommit[0m with pathnames to[m
+       alter the order the changes are committed, because the merge should be recorded as a single[m
+       commit. In fact, the command refuses to run when given pathnames (but see [1m-i[0m option).[m
+[m
+[1mCOMMIT[0m [1mINFORMATION[0m[m
+       Author and committer information is taken from the following environment variables, if set:[m
+[m
+           GIT_AUTHOR_NAME[m
+           GIT_AUTHOR_EMAIL[m
+           GIT_AUTHOR_DATE[m
+           GIT_COMMITTER_NAME[m
+           GIT_COMMITTER_EMAIL[m
+           GIT_COMMITTER_DATE[m
+[m
+       (nb "<", ">" and "\n"s are stripped)[m
+[m
+       The author and committer names are by convention some form of a personal name (that is, the[m
+       name by which other humans refer to you), although Git does not enforce or require any[m
+       particular form. Arbitrary Unicode may be used, subject to the constraints listed above. This[m
+[7m Manual page git-commit(1) line 385 (press h for help or q to quit)[27m[K[K       name has no effect on authentication; for that, see the [1mcredential.username[0m variable in [1mgit-[0m[m
+       [1mconfig[0m(1).[m
+[m
+       In case (some of) these environment variables are not set, the information is taken from the[m
+       configuration items [1muser.name[0m and [1muser.email[0m, or, if not present, the environment variable[m
+       EMAIL, or, if that is not set, system user name and the hostname used for outgoing mail[m
+       (taken from [1m/etc/mailname[0m and falling back to the fully qualified hostname when that file[m
+       does not exist).[m
+[m
+       The [1mauthor.name[0m and [1mcommitter.name[0m and their corresponding email options override [1muser.name[0m[m
+       and [1muser.email[0m if set and are overridden themselves by the environment variables.[m
+[m
+       The typical usage is to set just the [1muser.name[0m and [1muser.email[0m variables; the other options[m
+       are provided for more complex use cases.[m
+[m
+[1mDATE[0m [1mFORMATS[0m[m
+       The [1mGIT_AUTHOR_DATE[0m and [1mGIT_COMMITTER_DATE[0m environment variables support the following date[m
+       formats:[m
+[m
+       Git internal format[m
+           It is [1m<unix-timestamp>[0m [1m<time-zone-offset>[0m, where [1m<unix-timestamp>[0m is the number of[m
+           seconds since the UNIX epoch.  [1m<time-zone-offset>[0m is a positive or negative offset from[m
+           UTC. For example CET (which is 1 hour ahead of UTC) is [1m+0100[0m.[m
+[m
+[7m Manual page git-commit(1) line 409 (press h for help or q to quit)[27m[K[K       RFC 2822[m
+           The standard email format as described by RFC 2822, for example [1mThu,[0m [1m07[0m [1mApr[0m [1m2005[0m [1m22:13:13[0m[m
+           [1m+0200[0m.[m
+[m
+       ISO 8601[m
+           Time and date specified by the ISO 8601 standard, for example [1m2005-04-07T22:13:13[0m. The[m
+           parser accepts a space instead of the [1mT[0m character as well. Fractional parts of a second[m
+           will be ignored, for example [1m2005-04-07T22:13:13.019[0m will be treated as[m
+           [1m2005-04-07T22:13:13[0m.[m
+[m
+               [1mNote[0m[m
+               In addition, the date part is accepted in the following formats: [1mYYYY.MM.DD[0m,[m
+               [1mMM/DD/YYYY[0m and [1mDD.MM.YYYY[0m.[m
+[m
+       In addition to recognizing all date formats above, the [1m--date[0m option will also try to make[m
+       sense of other, more human-centric date formats, such as relative dates like "yesterday" or[m
+       "last Friday at noon".[m
+[m
+[1mDISCUSSION[0m[m
+       Though not required, it’s a good idea to begin the commit message with a single short (less[m
+       than 50 character) line summarizing the change, followed by a blank line and then a more[m
+       thorough description. The text up to the first blank line in a commit message is treated as[m
+       the commit title, and that title is used throughout Git. For example, [1mgit-format-patch[0m(1)[m
+       turns a commit into email, and it uses the title on the Subject line and the rest of the[m
+[7m Manual page git-commit(1) line 433 (press h for help or q to quit)[27m[K[K       commit in the body.[m
+[m
+       Git is to some extent character encoding agnostic.[m
+[m
+       •   The contents of the blob objects are uninterpreted sequences of bytes. There is no[m
+           encoding translation at the core level.[m
+[m
+       •   Path names are encoded in UTF-8 normalization form C. This applies to tree objects, the[m
+           index file, ref names, as well as path names in command line arguments, environment[m
+           variables and config files ([1m.git/config[0m (see [1mgit-config[0m(1)), [1mgitignore[0m(5),[m
+           [1mgitattributes[0m(5) and [1mgitmodules[0m(5)).[m
+[m
+           Note that Git at the core level treats path names simply as sequences of non-NUL bytes,[m
+           there are no path name encoding conversions (except on Mac and Windows). Therefore, using[m
+           non-ASCII path names will mostly work even on platforms and file systems that use legacy[m
+           extended ASCII encodings. However, repositories created on such systems will not work[m
+           properly on UTF-8-based systems (e.g. Linux, Mac, Windows) and vice versa. Additionally,[m
+           many Git-based tools simply assume path names to be UTF-8 and will fail to display other[m
+           encodings correctly.[m
+[m
+       •   Commit log messages are typically encoded in UTF-8, but other extended ASCII encodings[m
+           are also supported. This includes ISO-8859-x, CP125x and many others, but [4mnot[24m UTF-16/32,[m
+           EBCDIC and CJK multi-byte encodings (GBK, Shift-JIS, Big5, EUC-x, CP9xx etc.).[m
+[m
+[7m Manual page git-commit(1) line 457 (press h for help or q to quit)[27m[K[K       Although we encourage that the commit log messages are encoded in UTF-8, both the core and[m
+       Git Porcelain are designed not to force UTF-8 on projects. If all participants of a[m
+       particular project find it more convenient to use legacy encodings, Git does not forbid it.[m
+       However, there are a few things to keep in mind.[m
+[m
+        1. [4mgit[24m [4mcommit[24m and [4mgit[24m [4mcommit-tree[24m issues a warning if the commit log message given to it[m
+           does not look like a valid UTF-8 string, unless you explicitly say your project uses a[m
+           legacy encoding. The way to say this is to have [1mi18n.commitEncoding[0m in [1m.git/config[0m file,[m
+           like this:[m
+[m
+               [i18n][m
+                       commitEncoding = ISO-8859-1[m
+[m
+           Commit objects created with the above setting record the value of [1mi18n.commitEncoding[0m in[m
+           its [1mencoding[0m header. This is to help other people who look at them later. Lack of this[m
+           header implies that the commit log message is encoded in UTF-8.[m
+[m
+        2. [4mgit[24m [4mlog[24m, [4mgit[24m [4mshow[24m, [4mgit[24m [4mblame[24m and friends look at the [1mencoding[0m header of a commit object,[m
+           and try to re-code the log message into UTF-8 unless otherwise specified. You can specify[m
+           the desired output encoding with [1mi18n.logOutputEncoding[0m in [1m.git/config[0m file, like this:[m
+[m
+               [i18n][m
+                       logOutputEncoding = ISO-8859-1[m
+[m
+[7m Manual page git-commit(1) line 481 (press h for help or q to quit)[27m[K[K           If you do not have this configuration variable, the value of [1mi18n.commitEncoding[0m is used[m
+           instead.[m
+[m
+       Note that we deliberately chose not to re-code the commit log message when a commit is made[m
+       to force UTF-8 at the commit object level, because re-coding to UTF-8 is not necessarily a[m
+       reversible operation.[m
+[m
+[1mENVIRONMENT[0m [1mAND[0m [1mCONFIGURATION[0m [1mVARIABLES[0m[m
+       The editor used to edit the commit log message will be chosen from the [1mGIT_EDITOR[0m environment[m
+       variable, the core.editor configuration variable, the [1mVISUAL[0m environment variable, or the[m
+       [1mEDITOR[0m environment variable (in that order). See [1mgit-var[0m(1) for details.[m
+[m
+       Everything above this line in this section isn’t included from the [1mgit-config[0m(1)[m
+       documentation. The content that follows is the same as what’s found there:[m
+[m
+       commit.cleanup[m
+           This setting overrides the default of the [1m--cleanup[0m option in [1mgit[0m [1mcommit[0m. See [1mgit-[0m[m
+           [1mcommit[0m(1) for details. Changing the default can be useful when you always want to keep[m
+           lines that begin with comment character [1m#[0m in your log message, in which case you would do[m
+           [1mgit[0m [1mconfig[0m [1mcommit.cleanup[0m [1mwhitespace[0m (note that you will have to remove the help lines[m
+           that begin with [1m#[0m in the commit log template yourself, if you do this).[m
+[m
+       commit.gpgSign[m
+           A boolean to specify whether all commits should be GPG signed. Use of this option when[m
+[7m Manual page git-commit(1) line 505 (press h for help or q to quit)[27m[K[K           doing operations such as rebase can result in a large number of commits being signed. It[m
+           may be convenient to use an agent to avoid typing your GPG passphrase several times.[m
+[m
+       commit.status[m
+           A boolean to enable/disable inclusion of status information in the commit message[m
+           template when using an editor to prepare the commit message. Defaults to true.[m
+[m
+       commit.template[m
+           Specify the pathname of a file to use as the template for new commit messages.[m
+[m
+       commit.verbose[m
+           A boolean or int to specify the level of verbose with [1mgit[0m [1mcommit[0m. See [1mgit-commit[0m(1).[m
+[m
+[1mHOOKS[0m[m
+       This command can run [1mcommit-msg[0m, [1mprepare-commit-msg[0m, [1mpre-commit[0m, [1mpost-commit[0m and [1mpost-rewrite[0m[m
+       hooks. See [1mgithooks[0m(5) for more information.[m
+[m
+[1mFILES[0m[m
+       [1m$GIT_DIR/COMMIT_EDITMSG[0m[m
+           This file contains the commit message of a commit in progress. If [1mgit[0m [1mcommit[0m exits due to[m
+           an error before creating a commit, any commit message that has been provided by the user[m
+           (e.g., in an editor session) will be available in this file, but will be overwritten by[m
+           the next invocation of [1mgit[0m [1mcommit[0m.[m
+[m
+[7m Manual page git-commit(1) line 529 (press h for help or q to quit)[27m[K[K[1mSEE[0m [1mALSO[0m[m
+       [1mgit-add[0m(1), [1mgit-rm[0m(1), [1mgit-mv[0m(1), [1mgit-merge[0m(1), [1mgit-commit-tree[0m(1)[m
+[m
+[1mGIT[0m[m
+       Part of the [1mgit[0m(1) suite[m
+[m
+Git 2.39.5                                   01/11/2025                                GIT-COMMIT(1)[m
+[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-commit(1) line 536/559 (END) (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion4
+(B[m$ [H[2J[94mDEVOPS24/lektion4
+(B[m$ man ssh/[K0[K-keygen
+[?2004l[?1049h[22;0;0t[?1h=SSH-KEYGEN(1)                        BSD General Commands Manual                       SSH-KEYGEN(1)[m
+[m
+[1mNAME[0m[m
+     [1mssh-keygen[0m — OpenSSH authentication key utility[m
+[m
+[1mSYNOPSIS[0m[m
+     [1mssh-keygen[0m [[1m-q[0m] [[1m-a[0m [4mrounds[24m] [[1m-b[0m [4mbits[24m] [[1m-C[0m [4mcomment[24m] [[1m-f[0m [4moutput_keyfile[24m] [[1m-m[0m [4mformat[24m][m
+                [[1m-N[0m [4mnew_passphrase[24m] [[1m-O[0m [4moption[24m][m
+                [[1m-t[0m [1mdsa[0m | [1mecdsa[0m | [1mecdsa-sk[0m | [1med25519[0m | [1med25519-sk[0m | [1mrsa[0m] [[1m-w[0m [4mprovider[24m] [[1m-Z[0m [4mcipher[24m][m
+     [1mssh-keygen[0m [1m-p[0m [[1m-a[0m [4mrounds[24m] [[1m-f[0m [4mkeyfile[24m] [[1m-m[0m [4mformat[24m] [[1m-N[0m [4mnew_passphrase[24m] [[1m-P[0m [4mold_passphrase[24m][m
+                [[1m-Z[0m [4mcipher[24m][m
+     [1mssh-keygen[0m [1m-i[0m [[1m-f[0m [4minput_keyfile[24m] [[1m-m[0m [4mkey_format[24m][m
+     [1mssh-keygen[0m [1m-e[0m [[1m-f[0m [4minput_keyfile[24m] [[1m-m[0m [4mkey_format[24m][m
+     [1mssh-keygen[0m [1m-y[0m [[1m-f[0m [4minput_keyfile[24m][m
+     [1mssh-keygen[0m [1m-c[0m [[1m-a[0m [4mrounds[24m] [[1m-C[0m [4mcomment[24m] [[1m-f[0m [4mkeyfile[24m] [[1m-P[0m [4mpassphrase[24m][m
+     [1mssh-keygen[0m [1m-l[0m [[1m-v[0m] [[1m-E[0m [4mfingerprint_hash[24m] [[1m-f[0m [4minput_keyfile[24m][m
+     [1mssh-keygen[0m [1m-B[0m [[1m-f[0m [4minput_keyfile[24m][m
+     [1mssh-keygen[0m [1m-D[0m [4mpkcs11[24m[m
+     [1mssh-keygen[0m [1m-F[0m [4mhostname[24m [[1m-lv[0m] [[1m-f[0m [4mknown_hosts_file[24m][m
+     [1mssh-keygen[0m [1m-H[0m [[1m-f[0m [4mknown_hosts_file[24m][m
+     [1mssh-keygen[0m [1m-K[0m [[1m-a[0m [4mrounds[24m] [[1m-w[0m [4mprovider[24m][m
+     [1mssh-keygen[0m [1m-R[0m [4mhostname[24m [[1m-f[0m [4mknown_hosts_file[24m][m
+     [1mssh-keygen[0m [1m-r[0m [4mhostname[24m [[1m-g[0m] [[1m-f[0m [4minput_keyfile[24m][m
+     [1mssh-keygen[0m [1m-M[0m [1mgenerate[0m [[1m-O[0m [4moption[24m] [4moutput_file[24m[m
+[7m Manual page ssh-keygen(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion4
+(B[m$ [H[2J[94mDEVOPS24/lektion4
+(B[m$ lsl[K[K[K[K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ cat -hejsan
+[?2004lcat: invalid option -- 'h'
+Try 'cat --help' for more information.
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ cat -hejsan[C[C[Kcat -hejsan[C-hejsan[C-hejsan -hejsan[C[C[C[C[C[C[C
+[?2004lcat: -hejsan: No such file or directory
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ cat -- -hejsan[C[C[C[C[C[C[C[3Phejsan-hejsan[H[2J[94mDEVOPS24/lektion4
+(B[m$ cat --hejsan
+[?2004lcat: unrecognized option '--hejsan'
+Try 'cat --help' for more information.
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ cat --hejsan[C[C-hejsan[C[C-hejsan --hejsan
+[?2004lMinusminus hejsan
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ cat -- --[H[2J[94mDEVOPS24/lektion4
+(B[m$ cat -- --
+[?2004lMinusminus!
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ [H[2J[94mDEVOPS24/lektion4
+(B[m$ ls -l
+[?2004ltotal 16
+-rw-r--r-- 1 kent kent   12 Apr 23 10:22 --
+-rw-r--r-- 1 kent kent   18 Apr 23 10:21 --hejsan
+-rw-r--r-- 1 kent kent    8 Apr 23 10:23 -l
+drwxr-xr-x 2 kent kent 4096 Apr 23 10:08 recordings
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ ls -l[C-l[C-l -l[H[2J[94mDEVOPS24/lektion4
+(B[m$ ls -- -l
+[?2004l-l
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ ls -- -l[C[1@ [1@-[1@l[1@d[1P[H[2J[94mDEVOPS24/lektion4
+(B[m$ ls -l -- -l[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l-rw-r--r-- 1 kent kent 8 Apr 23 10:23 -l
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ [H[2J[94mDEVOPS24/lektion4
+(B[m$ python [K3 --.py[K[K[Khej.py 
+[?2004lunknown option --hej.py
+usage: python3 [option] ... [-c cmd | -m mod | file | -] [arg] ...
+Try `python -h' for more information.
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ python3 --hej.py [C[C[1@-[C[C[1@-[1@ 
+[?2004lMinuuuuus! Minuuus!
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ [H[2J[94mDEVOPS24/lektion4
+(B[m$ man python3
+[?2004l[?1049h[22;0;0t[?1h=PYTHON(1)                              General Commands Manual                             PYTHON(1)[m
+[m
+[1mNAME[0m[m
+       python - an interpreted, interactive, object-oriented programming language[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mpython[0m [ [1m-B[0m ] [ [1m-b[0m ] [ [1m-d[0m ] [ [1m-E[0m ] [ [1m-h[0m ] [ [1m-i[0m ] [ [1m-I[0m ][m
+              [ [1m-m[0m [4mmodule-name[24m ] [ [1m-q[0m ] [ [1m-O[0m ] [ [1m-OO[0m ] [ [1m-P[0m ] [ [1m-s[0m ] [ [1m-S[0m ] [ [1m-u[0m ][m
+              [ [1m-v[0m ] [ [1m-V[0m ] [ [1m-W[0m [4margument[24m ] [ [1m-x[0m ] [ [1m-X[0m [4moption[24m ] [ [1m-?[0m  ][m
+              [ [1m--check-hash-based-pycs[0m [4mdefault[24m | [4malways[24m | [4mnever[24m ][m
+              [ [1m--help[0m ] [ [1m--help-env[0m ] [ [1m--help-xoptions[0m ] [ [1m--help-all[0m ][m
+              [ [1m-c[0m [4mcommand[24m | [4mscript[24m | - ] [ [4marguments[24m ][m
+[m
+[1mDESCRIPTION[0m[m
+       Python is an interpreted, interactive, object-oriented programming language that combines re‐[m
+[7m Manual page python3(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       markable power with very clear syntax.  For an introduction to programming in Python, see the[m
+[7m Manual page python3(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Python  Tutorial.   The  Python Library Reference documents built-in and standard types, con‐[m
+[7m Manual page python3(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       stants, functions and modules.  Finally, the Python Reference Manual describes the syntax and[m
+[7m Manual page python3(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       semantics of the core language in (perhaps too) much detail.  (These documents may be located[m
+[7m Manual page python3(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       via the [1mINTERNET[0m [1mRESOURCES[0m below; they may be installed on your system as well.)[m
+[7m Manual page python3(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page python3(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Python's basic power can be extended with your own modules written in C or C++.  On most sys‐[m
+[7m Manual page python3(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tems  such  modules may be dynamically loaded.  Python is also adaptable as an extension lan‐[m
+[7m Manual page python3(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       guage for existing applications.  See the internal documentation for hints.[m
+[7m Manual page python3(1) line 10 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion4
+(B[m$ python3 -c --hej.py 
+[?2004lTraceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'hej' is not defined. Did you mean: 'hex'?
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ python3 -c --hej.py [K[1P --hej.py[1P --hej.py- --hej.py- --hej.py
+[?2004lMinuuuuus! Minuuus!
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ python3 -- --hej.py[C[1@ [H[2J[94mDEVOPS24/lektion4
+(B[m$ python3  -- --hej.py[C[C[C[C[C[C[C[C[C[C[1@-[1@c[1P[1@v[H[2J[94mDEVOPS24/lektion4
+(B[m$ python3 -v -- --hej.py[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004limport _frozen_importlib # frozen
+import _imp # builtin
+import '_thread' # <class '_frozen_importlib.BuiltinImporter'>
+import '_warnings' # <class '_frozen_importlib.BuiltinImporter'>
+import '_weakref' # <class '_frozen_importlib.BuiltinImporter'>
+import '_io' # <class '_frozen_importlib.BuiltinImporter'>
+import 'marshal' # <class '_frozen_importlib.BuiltinImporter'>
+import 'posix' # <class '_frozen_importlib.BuiltinImporter'>
+import '_frozen_importlib_external' # <class '_frozen_importlib.FrozenImporter'>
+# installing zipimport hook
+import 'time' # <class '_frozen_importlib.BuiltinImporter'>
+import 'zipimport' # <class '_frozen_importlib.FrozenImporter'>
+# installed zipimport hook
+# /usr/lib/python3.11/encodings/__pycache__/__init__.cpython-311.pyc matches /usr/lib/python3.11/encodings/__init__.py
+# code object from '/usr/lib/python3.11/encodings/__pycache__/__init__.cpython-311.pyc'
+import '_codecs' # <class '_frozen_importlib.BuiltinImporter'>
+import 'codecs' # <class '_frozen_importlib.FrozenImporter'>
+# /usr/lib/python3.11/encodings/__pycache__/aliases.cpython-311.pyc matches /usr/lib/python3.11/encodings/aliases.py
+# code object from '/usr/lib/python3.11/encodings/__pycache__/aliases.cpython-311.pyc'
+import 'encodings.aliases' # <_frozen_importlib_external.SourceFileLoader object at 0x7ff33e5ea310>
+import 'encodings' # <_frozen_importlib_external.SourceFileLoader object at 0x7ff33e5de750>
+# /usr/lib/python3.11/encodings/__pycache__/utf_8.cpython-311.pyc matches /usr/lib/python3.11/encodings/utf_8.py
+# code object from '/usr/lib/python3.11/encodings/__pycache__/utf_8.cpython-311.pyc'
+import 'encodings.utf_8' # <_frozen_importlib_external.SourceFileLoader object at 0x7ff33e5def50>
+import '_signal' # <class '_frozen_importlib.BuiltinImporter'>
+import '_abc' # <class '_frozen_importlib.BuiltinImporter'>
+import 'abc' # <class '_frozen_importlib.FrozenImporter'>
+import 'io' # <class '_frozen_importlib.FrozenImporter'>
+import '_stat' # <class '_frozen_importlib.BuiltinImporter'>
+import 'stat' # <class '_frozen_importlib.FrozenImporter'>
+import '_collections_abc' # <class '_frozen_importlib.FrozenImporter'>
+import 'genericpath' # <class '_frozen_importlib.FrozenImporter'>
+import 'posixpath' # <class '_frozen_importlib.FrozenImporter'>
+import 'os' # <class '_frozen_importlib.FrozenImporter'>
+import '_sitebuiltins' # <class '_frozen_importlib.FrozenImporter'>
+Processing user site-packages
+Processing global site-packages
+Adding directory: '/usr/local/lib/python3.11/dist-packages'
+Adding directory: '/usr/lib/python3/dist-packages'
+Processing .pth file: '/usr/lib/python3/dist-packages/distutils-precedence.pth'
+# /usr/lib/python3/dist-packages/_distutils_hack/__pycache__/__init__.cpython-311.pyc matches /usr/lib/python3/dist-packages/_distutils_hack/__init__.py
+# code object from '/usr/lib/python3/dist-packages/_distutils_hack/__pycache__/__init__.cpython-311.pyc'
+import '_distutils_hack' # <_frozen_importlib_external.SourceFileLoader object at 0x7ff33e3d3f10>
+Processing .pth file: '/usr/lib/python3/dist-packages/ruamel.yaml-0.17.21-nspkg.pth'
+# /usr/lib/python3.11/__pycache__/types.cpython-311.pyc matches /usr/lib/python3.11/types.py
+# code object from '/usr/lib/python3.11/__pycache__/types.cpython-311.pyc'
+import 'types' # <_frozen_importlib_external.SourceFileLoader object at 0x7ff33e3e1910>
+# /usr/lib/python3.11/importlib/__pycache__/__init__.cpython-311.pyc matches /usr/lib/python3.11/importlib/__init__.py
+# code object from '/usr/lib/python3.11/importlib/__pycache__/__init__.cpython-311.pyc'
+# /usr/lib/python3.11/__pycache__/warnings.cpython-311.pyc matches /usr/lib/python3.11/warnings.py
+# code object from '/usr/lib/python3.11/__pycache__/warnings.cpython-311.pyc'
+import 'warnings' # <_frozen_importlib_external.SourceFileLoader object at 0x7ff33e3e3610>
+import 'importlib' # <_frozen_importlib_external.SourceFileLoader object at 0x7ff33e3e2cd0>
+# /usr/lib/python3.11/importlib/__pycache__/_abc.cpython-311.pyc matches /usr/lib/python3.11/importlib/_abc.py
+# code object from '/usr/lib/python3.11/importlib/__pycache__/_abc.cpython-311.pyc'
+import 'importlib._abc' # <_frozen_importlib_external.SourceFileLoader object at 0x7ff33e3fd890>
+# /usr/lib/python3.11/__pycache__/contextlib.cpython-311.pyc matches /usr/lib/python3.11/contextlib.py
+# code object from '/usr/lib/python3.11/__pycache__/contextlib.cpython-311.pyc'
+# /usr/lib/python3.11/collections/__pycache__/__init__.cpython-311.pyc matches /usr/lib/python3.11/collections/__init__.py
+# code object from '/usr/lib/python3.11/collections/__pycache__/__init__.cpython-311.pyc'
+import 'itertools' # <class '_frozen_importlib.BuiltinImporter'>
+# /usr/lib/python3.11/__pycache__/keyword.cpython-311.pyc matches /usr/lib/python3.11/keyword.py
+# code object from '/usr/lib/python3.11/__pycache__/keyword.cpython-311.pyc'
+import 'keyword' # <_frozen_importlib_external.SourceFileLoader object at 0x7ff33e423090>
+# /usr/lib/python3.11/__pycache__/operator.cpython-311.pyc matches /usr/lib/python3.11/operator.py
+# code object from '/usr/lib/python3.11/__pycache__/operator.cpython-311.pyc'
+import '_operator' # <class '_frozen_importlib.BuiltinImporter'>
+import 'operator' # <_frozen_importlib_external.SourceFileLoader object at 0x7ff33e423b50>
+# /usr/lib/python3.11/__pycache__/reprlib.cpython-311.pyc matches /usr/lib/python3.11/reprlib.py
+# code object from '/usr/lib/python3.11/__pycache__/reprlib.cpython-311.pyc'
+import 'reprlib' # <_frozen_importlib_external.SourceFileLoader object at 0x7ff33e4347d0>
+import '_collections' # <class '_frozen_importlib.BuiltinImporter'>
+import 'collections' # <_frozen_importlib_external.SourceFileLoader object at 0x7ff33e3fe950>
+# /usr/lib/python3.11/__pycache__/functools.cpython-311.pyc matches /usr/lib/python3.11/functools.py
+# code object from '/usr/lib/python3.11/__pycache__/functools.cpython-311.pyc'
+import '_functools' # <class '_frozen_importlib.BuiltinImporter'>
+import 'functools' # <_frozen_importlib_external.SourceFileLoader object at 0x7ff33e40d9d0>
+import 'contextlib' # <_frozen_importlib_external.SourceFileLoader object at 0x7ff33e3e3450>
+import 'importlib.util' # <class '_frozen_importlib.FrozenImporter'>
+import 'importlib.machinery' # <class '_frozen_importlib.FrozenImporter'>
+# possible namespace for /usr/lib/python3/dist-packages/ruamel
+Adding directory: '/usr/lib/python3.11/dist-packages'
+# /usr/lib/python3.11/__pycache__/sitecustomize.cpython-311.pyc matches /usr/lib/python3.11/sitecustomize.py
+# code object from '/usr/lib/python3.11/__pycache__/sitecustomize.cpython-311.pyc'
+import 'sitecustomize' # <_frozen_importlib_external.SourceFileLoader object at 0x7ff33e3e17d0>
+import 'site' # <class '_frozen_importlib.FrozenImporter'>
+Python 3.11.2 (main, Nov 30 2024, 21:22:50) [GCC 12.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+Minuuuuus! Minuuus!
+# clear builtins._
+# clear sys.path
+# clear sys.argv
+# clear sys.ps1
+# clear sys.ps2
+# clear sys.last_type
+# clear sys.last_value
+# clear sys.last_traceback
+# clear sys.path_hooks
+# clear sys.path_importer_cache
+# clear sys.meta_path
+# clear sys.__interactivehook__
+# restore sys.stdin
+# restore sys.stdout
+# restore sys.stderr
+# cleanup[2] removing sys
+# cleanup[2] removing builtins
+# cleanup[2] removing _frozen_importlib
+# cleanup[2] removing _imp
+# cleanup[2] removing _thread
+# cleanup[2] removing _warnings
+# cleanup[2] removing _weakref
+# cleanup[2] removing _io
+# cleanup[2] removing marshal
+# cleanup[2] removing posix
+# cleanup[2] removing _frozen_importlib_external
+# cleanup[2] removing time
+# cleanup[2] removing zipimport
+# destroy zipimport
+# cleanup[2] removing _codecs
+# cleanup[2] removing codecs
+# cleanup[2] removing encodings.aliases
+# cleanup[2] removing encodings
+# destroy encodings
+# cleanup[2] removing encodings.utf_8
+# cleanup[2] removing _signal
+# cleanup[2] removing _abc
+# cleanup[2] removing abc
+# cleanup[2] removing io
+# cleanup[2] removing __main__
+# destroy __main__
+# cleanup[2] removing _stat
+# cleanup[2] removing stat
+# cleanup[2] removing _collections_abc
+# cleanup[2] removing genericpath
+# cleanup[2] removing posixpath
+# cleanup[2] removing os.path
+# cleanup[2] removing os
+# cleanup[2] removing _sitebuiltins
+# cleanup[2] removing _distutils_hack
+# destroy _distutils_hack
+# cleanup[2] removing types
+# cleanup[2] removing importlib._bootstrap
+# cleanup[2] removing importlib._bootstrap_external
+# cleanup[2] removing warnings
+# cleanup[2] removing importlib
+# destroy importlib
+# cleanup[2] removing importlib._abc
+# cleanup[2] removing itertools
+# cleanup[2] removing keyword
+# destroy keyword
+# cleanup[2] removing _operator
+# cleanup[2] removing operator
+# destroy operator
+# cleanup[2] removing reprlib
+# destroy reprlib
+# cleanup[2] removing _collections
+# cleanup[2] removing collections
+# destroy collections
+# cleanup[2] removing _functools
+# cleanup[2] removing functools
+# cleanup[2] removing contextlib
+# destroy contextlib
+# cleanup[2] removing importlib.util
+# cleanup[2] removing importlib.machinery
+# cleanup[2] removing ruamel
+# destroy ruamel
+# cleanup[2] removing sitecustomize
+# destroy sitecustomize
+# cleanup[2] removing site
+# destroy site
+# destroy _signal
+# destroy _sitebuiltins
+# destroy io
+# destroy importlib._abc
+# destroy importlib.util
+# destroy importlib.machinery
+# destroy functools
+# destroy types
+# destroy warnings
+# destroy _collections_abc
+# destroy itertools
+# destroy _operator
+# destroy _collections
+# destroy _functools
+# cleanup[3] wiping importlib._bootstrap_external
+# cleanup[3] wiping importlib._bootstrap
+# cleanup[3] wiping os
+# destroy abc
+# destroy posixpath
+# cleanup[3] wiping genericpath
+# cleanup[3] wiping stat
+# cleanup[3] wiping _stat
+# destroy _stat
+# cleanup[3] wiping _abc
+# cleanup[3] wiping encodings.utf_8
+# cleanup[3] wiping encodings.aliases
+# cleanup[3] wiping codecs
+# cleanup[3] wiping _codecs
+# cleanup[3] wiping time
+# cleanup[3] wiping _frozen_importlib_external
+# cleanup[3] wiping posix
+# cleanup[3] wiping marshal
+# cleanup[3] wiping _io
+# cleanup[3] wiping _weakref
+# destroy _weakref
+# cleanup[3] wiping _warnings
+# cleanup[3] wiping _thread
+# cleanup[3] wiping _imp
+# cleanup[3] wiping _frozen_importlib
+# cleanup[3] wiping sys
+# cleanup[3] wiping builtins
+# destroy _thread
+# destroy _frozen_importlib_external
+# destroy _imp
+# destroy io
+# destroy marshal
+# destroy time
+# destroy _warnings
+# destroy os
+# destroy stat
+# destroy genericpath
+# destroy posix
+# destroy _abc
+# destroy _frozen_importlib
+# destroy codecs
+# destroy sys
+# destroy encodings.aliases
+# destroy encodings.utf_8
+# destroy _codecs
+# destroy builtins
+# clear sys.audit hooks
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ python3 -v -- --hej.py[H[2J[94mDEVOPS24/lektion4
+(B[m$ python3 -v -- --hej.pyq^C[?2004l[?2004h[?2004l
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ [H[2J[94mDEVOPS24/lektion4
+(B[m$ man cat
+[?2004l[?1049h[22;0;0t[?1h=CAT(1)                                      User Commands                                     CAT(1)[m
+[m
+[1mNAME[0m[m
+       cat - concatenate files and print on the standard output[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mcat[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       Concatenate FILE(s) to standard output.[m
+[m
+       With no FILE, or when FILE is -, read standard input.[m
+[m
+       [1m-A[0m, [1m--show-all[0m[m
+              equivalent to [1m-vET[0m[m
+[7m Manual page cat(1) line 1 (press h for help or q to quit)[27m[K...skipping...
+CAT(1)                                      User Commands                                     CAT(1)[m
+[m
+[1mNAME[0m[m
+       cat - concatenate files and print on the standard output[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mcat[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       Concatenate FILE(s) to standard output.[m
+[m
+       With no FILE, or when FILE is -, read standard input.[m
+[m
+       [1m-A[0m, [1m--show-all[0m[m
+              equivalent to [1m-vET[0m[m
+[m
+[7m Manual page cat(1) line 1 (press h for help or q to quit)[27m[K...skipping...
+CAT(1)                                      User Commands                                     CAT(1)[m
+[m
+[1mNAME[0m[m
+       cat - concatenate files and print on the standard output[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mcat[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       Concatenate FILE(s) to standard output.[m
+[m
+       With no FILE, or when FILE is -, read standard input.[m
+[m
+       [1m-A[0m, [1m--show-all[0m[m
+              equivalent to [1m-vET[0m[m
+[m
+       [1m-b[0m, [1m--number-nonblank[0m[m
+[7m Manual page cat(1) line 1 (press h for help or q to quit)[27m[K...skipping...
+CAT(1)                                      User Commands                                     CAT(1)[m
+[m
+[1mNAME[0m[m
+       cat - concatenate files and print on the standard output[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mcat[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       Concatenate FILE(s) to standard output.[m
+[m
+       With no FILE, or when FILE is -, read standard input.[m
+[m
+       [1m-A[0m, [1m--show-all[0m[m
+              equivalent to [1m-vET[0m[m
+[m
+       [1m-b[0m, [1m--number-nonblank[0m[m
+              number nonempty output lines, overrides [1m-n[0m[m
+[m
+[7m Manual page cat(1) line 1 (press h for help or q to quit)[27m[K...skipping...
+CAT(1)                                      User Commands                                     CAT(1)[m
+[m
+[1mNAME[0m[m
+       cat - concatenate files and print on the standard output[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mcat[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       Concatenate FILE(s) to standard output.[m
+[m
+       With no FILE, or when FILE is -, read standard input.[m
+[m
+       [1m-A[0m, [1m--show-all[0m[m
+              equivalent to [1m-vET[0m[m
+[m
+       [1m-b[0m, [1m--number-nonblank[0m[m
+              number nonempty output lines, overrides [1m-n[0m[m
+[m
+       [1m-e[0m     equivalent to [1m-vE[0m[m
+[7m Manual page cat(1) line 1 (press h for help or q to quit)[27m[K...skipping...
+CAT(1)                                      User Commands                                     CAT(1)[m
+[m
+[1mNAME[0m[m
+       cat - concatenate files and print on the standard output[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mcat[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       Concatenate FILE(s) to standard output.[m
+[m
+       With no FILE, or when FILE is -, read standard input.[m
+[m
+       [1m-A[0m, [1m--show-all[0m[m
+              equivalent to [1m-vET[0m[m
+[m
+       [1m-b[0m, [1m--number-nonblank[0m[m
+              number nonempty output lines, overrides [1m-n[0m[m
+[m
+       [1m-e[0m     equivalent to [1m-vE[0m[m
+[m
+[7m Manual page cat(1) line 1 (press h for help or q to quit)[27m[K...skipping...
+CAT(1)                                      User Commands                                     CAT(1)[m
+[m
+[1mNAME[0m[m
+       cat - concatenate files and print on the standard output[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mcat[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       Concatenate FILE(s) to standard output.[m
+[m
+       With no FILE, or when FILE is -, read standard input.[m
+[m
+       [1m-A[0m, [1m--show-all[0m[m
+              equivalent to [1m-vET[0m[m
+[m
+       [1m-b[0m, [1m--number-nonblank[0m[m
+              number nonempty output lines, overrides [1m-n[0m[m
+[m
+       [1m-e[0m     equivalent to [1m-vE[0m[m
+[m
+       [1m-E[0m, [1m--show-ends[0m[m
+[7m Manual page cat(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              display $ at end of each line[m
+[7m Manual page cat(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cat(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-n[0m, [1m--number[0m[m
+[7m Manual page cat(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              number all output lines[m
+[7m Manual page cat(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cat(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-s[0m, [1m--squeeze-blank[0m[m
+[7m Manual page cat(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              suppress repeated empty output lines[m
+[7m Manual page cat(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cat(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-t[0m     equivalent to [1m-vT[0m[m
+[7m Manual page cat(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cat(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-T[0m, [1m--show-tabs[0m[m
+[7m Manual page cat(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              display TAB characters as ^I[m
+[7m Manual page cat(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cat(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-u[0m     (ignored)[m
+[7m Manual page cat(1) line 15 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion4
+(B[m$ [H[2J[94mDEVOPS24/lektion4
+(B[m$ seq 1 10[K[K20
+[?2004l1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ nano no[K[Kbollar.txt
+[?2004l[?2004h[?1049h[22;0;0t[1;23r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[21;46H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 7.2                                   bollar.txt                                            [1;102H(B[m[22d(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[22;57H(B[0;7m^T(B[m Execute    (B[0;7m^C(B[m Location   (B[0;7mM-U(B[m Undo[23d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[57G(B[0;7m^J(B[m Justify    (B[0;7m^/(B[m Go To Line (B[0;7mM-E(B[m Redo[2d[?12l[?25h[?25l[1;61H(B[0;7m*[102G(B[m[?12l[?25h[2df[?25l[?12l[?25ho[?25l[?12l[?25ht[?25l[?12l[?25hb[?25l[?12l[?25ho[?25l[?12l[?25hl[?25l[?12l[?25hl[?25l[?12l[?25h.[?25l[?12l[?25h [?25l[3d[?12l[?25h[?25l[?12l[?25hh[?25l[?12l[?25h[K[?25l[?12l[?25hb[?25l[?12l[?25ha[?25l[?12l[?25hs[?25l[?12l[?25hk[?25l[?12l[?25he[?25l[?12l[?25ht[?25l[?12l[?25hb[?25l[21d[K[?12l[?25h[3;8Ho[?25l[?12l[?25hl[?25l[?12l[?25hl[?25l[4d[?12l[?25h[?25l[?12l[?25hh[?25l[?12l[?25ha[?25l[?12l[?25hn[?25l[?12l[?25hd[?25l[?12l[?25hb[?25l[?12l[?25ho[?25l[?12l[?25hl[?25l[?12l[?25hl[?25l[5d[?12l[?25h[?25l[?12l[?25hb[?25l[?12l[?25hi[?25l[?12l[?25hl[?25l[?12l[?25hj[?25l[?12l[?25ha[?25l[?12l[?25hr[?25l[?12l[?25hd[?25l[?12l[?25hb[?25l[?12l[?25ho[?25l[?12l[?25hl[?25l[?12l[?25hl[?25l[6d[?12l[?25h[?25l[?12l[?25hb[?25l[?12l[?25ha[?25l[?12l[?25hs[?25l[?12l[?25he[?25l[?12l[?25hb[?25l[?12l[?25ho[?25l[?12l[?25hl[?25l[?12l[?25hl[?25l[7d[?12l[?25h[?25l[?12l[?25hb[?25l[?12l[?25ho[?25l[?12l[?25hl[?25l[?12l[?25hl[?25l[?12l[?25hk[?25l[?12l[?25ha[?25l[?12l[?25hl[?25l[?12l[?25hl[?25l[?12l[?25he[?25l[8d[?12l[?25h[?25l[?12l[?25hv[?25l[?12l[?25ho[?25l[?12l[?25hl[?25l[?12l[?25hl[?25l[?12l[?25he[?25l[?12l[?25hy[?25l[?12l[?25hb[?25l[?12l[?25ho[?25l[?12l[?25hl[?25l[?12l[?25hl[?25l[9d[?12l[?25h[?25l[21d(B[0;7mSave modified buffer?                                                                                  [22;1H Y(B[m Yes[K[23d(B[0;7m N(B[m No  [15G  (B[0;7m^C(B[m Cancel[K[21;23H[?12l[?25h[?25l[22d(B[0;7m^G(B[m Help[22;26H(B[0;7mM-D(B[m DOS Format[22;51H(B[0;7mM-A(B[m Append[22;76H(B[0;7mM-B(B[m Backup File[23d(B[0;7m^C(B[m Cancel[17G         (B[0;7mM-M(B[m Mac Format[23;51H(B[0;7mM-P(B[m Prepend[23;76H(B[0;7m^T(B[m Browse[21d(B[0;7mFile Name to Write: bollar.txt(B[m[?12l[?25h[?25l(B[0;7m\(B[m[?12l[?25h[?25l(B[0;7mSave file under DIFFERENT NAME?[22d Y(B[m Yes[K[23d(B[0;7m N(B[m No    [17G(B[0;7m^C(B[m Cancel[K[21;33H[?12l[?25h[?25l[22d(B[0;7m^G(B[m Help[22;26H(B[0;7mM-D(B[m DOS Format[22;51H(B[0;7mM-A(B[m Append[22;76H(B[0;7mM-B(B[m Backup File[23d(B[0;7m^C(B[m Cancel[17G         (B[0;7mM-M(B[m Mac Format[23;51H(B[0;7mM-P(B[m Prepend[23;76H(B[0;7m^T(B[m Browse[21d(B[0;7mFile Name to Write: bollar.txt\(B[m[?12l[?25h[?25l(B[0;7m (B[m[?12l[?25h[?25l[21;44H[1K (B[0;7m[ Writing... ](B[m[K[1;61H(B[0;7m [102G(B[m[21;44H(B[0;7m[ Wrote 8 lines ](B[m[J[23d[?12l[?25h[23;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h[94mDEVOPS24/lektion4
+(B[m$ [H[2J[94mDEVOPS24/lektion4
+(B[m$ [K(B[m$ [K(B[m$ cat h[Kbollar.txt 
+[?2004lfotboll
+basketboll
+handboll
+biljardboll
+baseboll
+bollkalle
+volleyboll
+
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ cat -[1@|[1@ [1@ [C[C[C[C[C[C[1@e[1@c[1@h[1@o[C[1@ [1@h[1@e[1@j[H[2J[94mDEVOPS24/lektion4
+(B[m$ echo hej | cat -[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lhej
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ | | [K[K[K[Kcat boo[K[K[K[K[K[K[Kcat -
+[?2004lhoppsan
+hoppsan
+mer
+mer
+mer
+mer
+mer
+mer
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+hejsanhejsan           hehejeijeiejiejiej^[[D      huhuhuhuh
+hhehejeijeiejiejihuhuhuhuh
+hej
+hej
+je
+je
+ej
+ej
+e
+e
+^C
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ [H[2J[94mDEVOPS24/lektion4
+(B[m$ man cat
+[?2004l[?1049h[22;0;0t[?1h=CAT(1)                                      User Commands                                     CAT(1)[m
+[m
+[1mNAME[0m[m
+       cat - concatenate files and print on the standard output[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mcat[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       Concatenate FILE(s) to standard output.[m
+[m
+       With no FILE, or when FILE is -, read standard input.[m
+[m
+       [1m-A[0m, [1m--show-all[0m[m
+              equivalent to [1m-vET[0m[m
+[m
+       [1m-b[0m, [1m--number-nonblank[0m[m
+              number nonempty output lines, overrides [1m-n[0m[m
+[m
+       [1m-e[0m     equivalent to [1m-vE[0m[m
+[7m Manual page cat(1) line 1 (press h for help or q to quit)[27m[K[H[2J[H[H[2J[HCAT(1)                                      User Commands                                     CAT(1)[m
+[m
+[1mNAME[0m[m
+       cat - concatenate files and print on the standard output[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mcat[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       Concatenate FILE(s) to standard output.[m
+[m
+       With no FILE, or when FILE is -, read standard input.[m
+[m
+       [1m-A[0m, [1m--show-all[0m[m
+              equivalent to [1m-vET[0m[m
+[m
+       [1m-b[0m, [1m--number-nonblank[0m[m
+              number nonempty output lines, overrides [1m-n[0m[m
+[m
+       [1m-e[0m     equivalent to [1m-vE[0m[m
+[7m Manual page cat(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion4
+(B[m$ cat -
+[?2004l[?2004h[94mDEVOPS24/lektion4
+(B[m$ touch ballong
+[?2004l[?2004h[94mDEVOPS24/lektion4
+(B[m$ bbai[K[K[K[Knanoi ballong 
+[?2004lbash: nanoi: command not found
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ nanoi ballong [1P
+[?2004l[?2004h[?1049h[22;0;0t[1;21r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[19;45H(B[0;7m[ Reading... ](B[m[19;44H(B[0;7m[ Read 0 lines ](B[m[H(B[0;7m  GNU nano 7.2                                    ballong                                              [1;102H(B[m[20d(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[20;57H(B[0;7m^T(B[m Execute    (B[0;7m^C(B[m Location   (B[0;7mM-U(B[m Undo[21d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[57G(B[0;7m^J(B[m Justify    (B[0;7m^/(B[m Go To Line (B[0;7mM-E(B[m Redo[2d[?12l[?25h[?25l[1;59H(B[0;7m*[102G(B[m[?12l[?25h[2db[?25l[?12l[?25ha[?25l[?12l[?25hl[?25l[?12l[?25hl[?25l[?12l[?25ho[?25l[?12l[?25hn[?25l[?12l[?25hg[?25l[3d[?12l[?25h[?25l[19d(B[0;7mSave modified buffer?                                                                                  [20;1H Y(B[m Yes[K[21d(B[0;7m N(B[m No  [15G  (B[0;7m^C(B[m Cancel[K[19;23H[?12l[?25h[?25l[20d(B[0;7m^G(B[m Help[20;26H(B[0;7mM-D(B[m DOS Format[20;51H(B[0;7mM-A(B[m Append[20;76H(B[0;7mM-B(B[m Backup File[21d(B[0;7m^C(B[m Cancel[17G         (B[0;7mM-M(B[m Mac Format[21;51H(B[0;7mM-P(B[m Prepend[21;76H(B[0;7m^T(B[m Browse[19d(B[0;7mFile Name to Write: ballong(B[m[?12l[?25h[?25l[19;44H[1K (B[0;7m[ Writing... ](B[m[K[1;59H(B[0;7m [102G(B[m[19;44H(B[0;7m[ Wrote 2 lines ](B[m[J[21d[?12l[?25h[21;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h[94mDEVOPS24/lektion4
+(B[m$ ct[Kat ballong 
+[?2004lballong
+
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ cat ballong [C[C[1@nano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@i[C[C[C[C[C[C[C[C[C[C[C[1Ptouch ballong[C[C[8Pcat -
+[?2004lhh
+hh
+ii
+ii
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ sort fil | uniq | grep hej | tar -[K- -o hej.[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+[?2004l[?2004h[94mDEVOPS24/lektion4
+(B[m$ mkdir minusminus
+[?2004l[?2004h[94mDEVOPS24/lektion4
+(B[m$ [H[2J[94mDEVOPS24/lektion4
+(B[m$ ls -ld
+[?2004ldrwxr-xr-x 4 kent kent 4096 Apr 23 10:47 .
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ ls 
+[?2004l--  ballong  bollar.txt  --hej.py  --hejsan  -l  minusminus  recordings
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ ls [K[K[Kmv -- -* minusminus/
+[?2004l[?2004h[94mDEVOPS24/lektion4
+(B[m$ [H[2J[94mDEVOPS24/lektion4
+(B[m$ ls minusminus/
+[?2004l--  --hej.py  --hejsan	-l
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ date
+[?2004lWed Apr 23 10:48:49 AM CEST 2025
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ mv b
+ballong     bollar.txt  
+[94mDEVOPS24/lektion4
+(B[m$ mv b* minusminus/
+[?2004l[?2004h[94mDEVOPS24/lektion4
+(B[m$ [H[2J[94mDEVOPS24/lektion4
+(B[m$ ls
+[?2004lminusminus  recordings
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ ls
+[?2004lminusminus  recordings
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ ls minusminus/ -l
+[?2004ltotal 24
+-rw-r--r-- 1 kent kent 12 Apr 23 10:22 --
+-rw-r--r-- 1 kent kent  9 Apr 23 10:38 ballong
+-rw-r--r-- 1 kent kent 71 Apr 23 10:29 bollar.txt
+-rw-r--r-- 1 kent kent 29 Apr 23 10:25 --hej.py
+-rw-r--r-- 1 kent kent 18 Apr 23 10:21 --hejsan
+-rw-r--r-- 1 kent kent  8 Apr 23 10:23 -l
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ ls minusminus/ -l[K[K[C[C[C[1@ [1@-[1@l[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[H[2J[94mDEVOPS24/lektion4
+(B[m$ ls -l minusminus/
+[?2004ltotal 24
+-rw-r--r-- 1 kent kent 12 Apr 23 10:22 --
+-rw-r--r-- 1 kent kent  9 Apr 23 10:38 ballong
+-rw-r--r-- 1 kent kent 71 Apr 23 10:29 bollar.txt
+-rw-r--r-- 1 kent kent 29 Apr 23 10:25 --hej.py
+-rw-r--r-- 1 kent kent 18 Apr 23 10:21 --hejsan
+-rw-r--r-- 1 kent kent  8 Apr 23 10:23 -l
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ ls -l minusminus/[C[C[C[C[C[C minusminus/- minusminus/- minusminus/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C^C[?2004l[?2004h[?2004l
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ ls -l[K[K[K[K[K[H[2J[94mDEVOPS24/lektion4
+(B[m$ ls[K[Kls -l
+[?2004ltotal 8
+drwxr-xr-x 2 kent kent 4096 Apr 23 10:49 minusminus
+drwxr-xr-x 2 kent kent 4096 Apr 23 10:08 recordings
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ ls-l
+[?2004lbash: ls-l: command not found
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ [H[2J[94mDEVOPS24/lektion4
+(B[m$ ls -la
+[?2004ltotal 16
+drwxr-xr-x 4 kent kent 4096 Apr 23 10:49 .
+drwxr-xr-x 4 kent kent 4096 Apr 23 10:08 ..
+drwxr-xr-x 2 kent kent 4096 Apr 23 10:49 minusminus
+drwxr-xr-x 2 kent kent 4096 Apr 23 10:08 recordings
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ ls -la[1Pa[Cl
+[?2004ltotal 16
+drwxr-xr-x 4 kent kent 4096 Apr 23 10:49 .
+drwxr-xr-x 4 kent kent 4096 Apr 23 10:08 ..
+drwxr-xr-x 2 kent kent 4096 Apr 23 10:49 minusminus
+drwxr-xr-x 2 kent kent 4096 Apr 23 10:08 recordings
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ ls -al[K -l
+[?2004ltotal 16
+drwxr-xr-x 4 kent kent 4096 Apr 23 10:49 .
+drwxr-xr-x 4 kent kent 4096 Apr 23 10:08 ..
+drwxr-xr-x 2 kent kent 4096 Apr 23 10:49 minusminus
+drwxr-xr-x 2 kent kent 4096 Apr 23 10:08 recordings
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ ls -a -l[1P -ll -l[C[C[C[Ka
+[?2004ltotal 16
+drwxr-xr-x 4 kent kent 4096 Apr 23 10:49 .
+drwxr-xr-x 4 kent kent 4096 Apr 23 10:08 ..
+drwxr-xr-x 2 kent kent 4096 Apr 23 10:49 minusminus
+drwxr-xr-x 2 kent kent 4096 Apr 23 10:08 recordings
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ [H[2J[94mDEVOPS24/lektion4
+(B[m$ keoiek oke oek oe eo [1@$[C[C[C[C[C[C[K[C[C[C[1P eo[1P eo[1P eoO eoK eo[C[C[C^C[?2004l[?2004h[?2004l
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mDEVOPS24/lektion4
+(B[m$ man bash
+[?2004l[?1049h[22;0;0t[?1h=BASH(1)                                General Commands Manual                               BASH(1)[m
+[m
+[1mNAME[0m[m
+       bash - GNU Bourne-Again SHell[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mbash[0m [options] [command_string | file][m
+[m
+[1mCOPYRIGHT[0m[m
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mBash[0m  is  an  [1msh[0m-compatible command language interpreter that executes commands read from the[m
+       standard input or from a file.  [1mBash[0m also incorporates useful features from the  [4mKorn[24m  and  [4mC[24m[m
+       shells ([1mksh[0m and [1mcsh[0m).[m
+[m
+       [1mBash[0m  is intended to be a conformant implementation of the Shell and Utilities portion of the[m
+       IEEE POSIX specification (IEEE Standard 1003.1).  [1mBash[0m can be configured to be  POSIX-confor‐[m
+       mant by default.[m
+[m
+[1mOPTIONS[0m[m
+       All  of  the  single-character shell options documented in the description of the [1mset[0m builtin[m
+       command, including [1m-o[0m, can be used as options when the shell is invoked.  In  addition,  [1mbash[0m[m
+       interprets the following options when it is invoked:[m
+[7m Manual page bash(1) line 1 (press h for help or q to quit)[27m[K[K...skipping...
+[m
+       Comments   and   bug   reports   concerning   this   manual   page   should  be  directed  to[m
+       [4mchet.ramey@case.edu[24m.[m
+[m
+[1mBUGS[0m[m
+       It's too big and too slow.[m
+[m
+       There are some subtle differences between [1mbash[0m and traditional versions of [1msh[0m, mostly because[m
+       of the [1mPOSIX[0m specification.[m
+[m
+       Aliases are confusing in some uses.[m
+[m
+       Shell builtin commands and functions are not stoppable/restartable.[m
+[m
+       Compound  commands  and  command sequences of the form `a ; b ; c' are not handled gracefully[m
+       when process suspension is attempted.  When a process is stopped, the shell immediately  exe‐[m
+       cutes  the  next  command in the sequence.  It suffices to place the sequence of commands be‐[m
+       tween parentheses to force it into a subshell, which may be stopped as a unit.[m
+[m
+       Array variables may not (yet) be exported.[m
+[m
+       There may be only one active coprocess at a time.[m
+[m
+GNU Bash 5.2                              2022 September 19                                  BASH(1)[m
+[7m Manual page bash(1) line 5483/5506 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page bash(1) line 5483/5506 (END) (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion4
+(B[m$ man bash
+[?2004l[?1049h[22;0;0t[?1h=BASH(1)                                General Commands Manual                               BASH(1)[m
+[m
+[1mNAME[0m[m
+       bash - GNU Bourne-Again SHell[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mbash[0m [options] [command_string | file][m
+[m
+[1mCOPYRIGHT[0m[m
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mBash[0m  is  an  [1msh[0m-compatible command language interpreter that executes commands read from the[m
+       standard input or from a file.  [1mBash[0m also incorporates useful features from the  [4mKorn[24m  and  [4mC[24m[m
+       shells ([1mksh[0m and [1mcsh[0m).[m
+[m
+       [1mBash[0m  is intended to be a conformant implementation of the Shell and Utilities portion of the[m
+       IEEE POSIX specification (IEEE Standard 1003.1).  [1mBash[0m can be configured to be  POSIX-confor‐[m
+       mant by default.[m
+[m
+[1mOPTIONS[0m[m
+       All  of  the  single-character shell options documented in the description of the [1mset[0m builtin[m
+       command, including [1m-o[0m, can be used as options when the shell is invoked.  In  addition,  [1mbash[0m[m
+       interprets the following options when it is invoked:[m
+[7m Manual page bash(1) line 1 (press h for help or q to quit)[27m[K[K/[Kee[K[KEE[KXX[KPP[KAA[KNN[KSS[KII[KOO[KNN[K[1;1HBASH(1)                                General Commands Manual                               BASH(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       bash - GNU Bourne-Again SHell[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mbash[0m [options] [command_string | file][m
+[8;1H[m
+[9;1H[1mCOPYRIGHT[0m[m
+[10;1H       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.[m
+[11;1H[m
+[12;1H[1mDESCRIPTION[0m[m
+[13;1H       [1mBash[0m  is  an  [1msh[0m-compatible command language interpreter that executes commands read from the[m
+[14;1H       standard input or from a file.  [1mBash[0m also incorporates useful features from the  [4mKorn[24m  and  [4mC[24m[m
+[15;1H       shells ([1mksh[0m and [1mcsh[0m).[m
+[16;1H[m
+[17;1H       [1mBash[0m  is intended to be a conformant implementation of the Shell and Utilities portion of the[m
+[18;1H       IEEE POSIX specification (IEEE Standard 1003.1).  [1mBash[0m can be configured to be  POSIX-confor‐[m
+[19;1H       mant by default.[m
+[20;1H[m
+[21;1H[1mOPTIONS[0m[m
+[22;1H       All  of  the  single-character shell options documented in the description of the [1mset[0m builtin[m
+[23;1H       command, including [1m-o[0m, can be used as options when the shell is invoked.  In  addition,  [1mbash[0m[m
+[24;1H       interprets the following options when it is invoked:[m
+[25;1H[1;1HBASH(1)                                General Commands Manual                               BASH(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       bash - GNU Bourne-Again SHell[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mbash[0m [options] [command_string | file][m
+[8;1H[m
+[9;1H[1mCOPYRIGHT[0m[m
+[10;1H       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.[m
+[11;1H[m
+[12;1H[1mDESCRIPTION[0m[m
+[13;1H       [1mBash[0m  is  an  [1msh[0m-compatible command language interpreter that executes commands read from the[m
+[14;1H       standard input or from a file.  [1mBash[0m also incorporates useful features from the  [4mKorn[24m  and  [4mC[24m[m
+[15;1H       shells ([1mksh[0m and [1mcsh[0m).[m
+[16;1H[m
+[17;1H       [1mBash[0m  is intended to be a conformant implementation of the Shell and Utilities portion of the[m
+[18;1H       IEEE POSIX specification (IEEE Standard 1003.1).  [1mBash[0m can be configured to be  POSIX-confor‐[m
+[19;1H       mant by default.[m
+[20;1H[m
+[21;1H[1mOPTIONS[0m[m
+[22;1H       All  of  the  single-character shell options documented in the description of the [1mset[0m builtin[m
+[23;1H       command, including [1m-o[0m, can be used as options when the shell is invoked.  In  addition,  [1mbash[0m[m
+[24;1H       interprets the following options when it is invoked:[m
+[25;1H...skipping...
+       scribed below under [1mTilde[0m [1mExpansion[0m in the [1m[7mEXPANSION[27m[0m section.[m
+[m
+       When  [1mbash[0m  is  invoked as an interactive login shell, or as a non-interactive shell with the[m
+       [1m--login[0m option, it first reads and executes commands from the file [4m/etc/profile[24m, if that file[m
+       exists.   After  reading  that file, it looks for [4m~/.bash_profile[24m, [4m~/.bash_login[24m, and [4m~/.pro‐[24m[m
+       [4mfile[24m, in that order, and reads and executes commands from the first one that  exists  and  is[m
+       readable.   The  [1m--noprofile[0m option may be used when the shell is started to inhibit this be‐[m
+       havior.[m
+[m
+       When an interactive login shell exits, or a non-interactive login  shell  executes  the  [1mexit[0m[m
+       builtin command, [1mbash[0m reads and executes commands from the file [4m~/.bash_logout[24m, if it exists.[m
+[m
+       When  an interactive shell that is not a login shell is started, [1mbash[0m reads and executes com‐[m
+       mands from [4m/etc/bash.bashrc[24m and [4m~/.bashrc[24m, if these files exist.  This may  be  inhibited  by[m
+       using  the  [1m--norc[0m option.  The [1m--rcfile[0m [4mfile[24m option will force [1mbash[0m to read and execute com‐[m
+       mands from [4mfile[24m instead of [4m/etc/bash.bashrc[24m and [4m~/.bashrc[24m.[m
+[m
+       When [1mbash[0m is started non-interactively, to run a shell script, for example, it looks for  the[m
+       variable [1mBASH_ENV[0m in the environment, expands its value if it appears there, and uses the ex‐[m
+       panded value as the name of a file to read and execute.  [1mBash[0m behaves  as  if  the  following[m
+       command were executed:[m
+              if [ -n "$BASH_ENV" ]; then . "$BASH_ENV"; fi[m
+       but the value of the [1mPATH[0m variable is not used to search for the filename.[m
+[m
+[7m Manual page bash(1) line 126 (press h for help or q to quit)[27m[K[K/[K...skipping...
+       When  the  command history expansion facilities are being used (see [1mHISTORY[0m [1m[7mEXPANSION[27m[0m below),[m
+       the [4mhistory[24m [4mexpansion[24m character, usually [1m![0m, must be quoted to prevent history expansion.[m
+[m
+       There are three quoting mechanisms: the [4mescape[24m [4mcharacter[24m, single quotes, and double quotes.[m
+[m
+       A non-quoted backslash ([1m\[0m) is the [4mescape[24m [4mcharacter[24m.  It preserves the literal  value  of  the[m
+       next  character that follows, with the exception of <newline>.  If a [1m\[0m<newline> pair appears,[m
+       and the backslash is not itself quoted, the [1m\[0m<newline> is  treated  as  a  line  continuation[m
+       (that is, it is removed from the input stream and effectively ignored).[m
+[m
+       Enclosing  characters  in  single quotes preserves the literal value of each character within[m
+       the quotes.  A single quote may not occur between single quotes,  even  when  preceded  by  a[m
+       backslash.[m
+[m
+       Enclosing  characters  in  double quotes preserves the literal value of all characters within[m
+       the quotes, with the exception of [1m$[0m, [1m`[0m, [1m\[0m, and, when history expansion is enabled,  [1m![0m.   When[m
+       the shell is in [4mposix[24m [4mmode[24m, the [1m![0m has no special meaning within double quotes, even when his‐[m
+       tory expansion is enabled.  The characters [1m$[0m and [1m`[0m retain their special meaning within double[m
+       quotes.  The backslash retains its special meaning only when followed by one of the following[m
+       characters: [1m$[0m, [1m`[0m, [1m"[0m, [1m\[0m, or [1m<newline>[0m.  A double quote may be quoted within double  quotes  by[m
+       preceding  it  with a backslash.  If enabled, history expansion will be performed unless an [1m![0m[m
+       appearing in double quotes is escaped using a backslash.  The backslash preceding the  [1m![0m   is[m
+       not removed.[m
+[m
+[7m Manual page bash(1) line 515 (press h for help or q to quit)[27m[K[K/[K...skipping...
+       quote removal (see [1m[7mEXPANSION[27m[0m below).  If the variable has its  [1minteger[0m  attribute  set,  then[m
+       [4mvalue[24m  is  evaluated  as  an arithmetic expression even if the $((...)) expansion is not used[m
+       (see [1mArithmetic[0m [1mExpansion[0m below).  Word splitting and pathname expansion are  not  performed.[m
+       Assignment  statements  may  also appear as arguments to the [1malias[0m, [1mdeclare[0m, [1mtypeset[0m, [1mexport[0m,[m
+       [1mreadonly[0m, and [1mlocal[0m builtin commands ([4mdeclaration[24m  commands).   When  in  [4mposix[24m  [4mmode[24m,  these[m
+       builtins  may  appear in a command after one or more instances of the [1mcommand[0m builtin and re‐[m
+       tain these assignment statement properties.[m
+[m
+       In the context where an assignment statement is assigning a value to a shell variable or  ar‐[m
+       ray  index, the += operator can be used to append to or add to the variable's previous value.[m
+       This includes arguments to builtin commands such as [1mdeclare[0m that accept assignment statements[m
+       ([4mdeclaration[24m commands).  When += is applied to a variable for which the [1minteger[0m attribute has[m
+       been set, [4mvalue[24m is evaluated as an arithmetic expression and added to the variable's  current[m
+       value,  which  is also evaluated.  When += is applied to an array variable using compound as‐[m
+       signment (see [1mArrays[0m below), the variable's value is not unset (as it is when using  =),  and[m
+       new  values are appended to the array beginning at one greater than the array's maximum index[m
+       (for indexed arrays) or added as additional key-value pairs in an  associative  array.   When[m
+       applied to a string-valued variable, [4mvalue[24m is expanded and appended to the variable's value.[m
+[m
+       A  variable can be assigned the [4mnameref[24m attribute using the [1m-n[0m option to the [1mdeclare[0m or [1mlocal[0m[m
+       builtin commands (see the descriptions of [1mdeclare[0m and [1mlocal[0m below) to create a [4mnameref[24m, or  a[m
+       reference to another variable.  This allows variables to be manipulated indirectly.  Whenever[m
+       the nameref variable is referenced, assigned to, unset, or has its attributes modified (other[m
+       than  using or changing the [4mnameref[24m attribute itself), the operation is actually performed on[m
+[7m Manual page bash(1) line 598 (press h for help or q to quit)[27m[K[K/[K...skipping...
+       enclosed in braces (see [1m[7mEXPANSION[27m[0m below).[m
+[m
+   [1mSpecial[0m [1mParameters[0m[m
+       The shell treats several parameters specially.  These parameters may only be referenced;  as‐[m
+       signment to them is not allowed.[m
+       [1m*[0m      Expands  to  the  positional parameters, starting from one.  When the expansion is not[m
+              within double quotes, each positional parameter expands to a separate word.   In  con‐[m
+              texts  where  it  is  performed, those words are subject to further word splitting and[m
+              pathname expansion.  When the expansion occurs within double quotes, it expands  to  a[m
+              single  word  with the value of each parameter separated by the first character of the[m
+              [1mIFS[0m special variable.  That is, "[1m$*[0m" is equivalent to  "[1m$1[0m[4mc[24m[1m$2[0m[4mc[24m[1m...[0m",  where  [4mc[24m  is  the[m
+              first character of the value of the [1mIFS[0m variable.  If [1mIFS[0m is unset, the parameters are[m
+              separated by spaces.  If [1mIFS[0m is null, the parameters are  joined  without  intervening[m
+              separators.[m
+       [1m@[0m      Expands  to  the  positional  parameters,  starting  from one.  In contexts where word[m
+              splitting is performed, this expands each positional parameter to a separate word;  if[m
+              not  within  double  quotes,  these  words are subject to word splitting.  In contexts[m
+              where word splitting is not performed, this expands to a single word with  each  posi‐[m
+              tional  parameter  separated  by  a  space.   When  the expansion occurs within double[m
+              quotes, each parameter expands to a separate word.  That is,  "[1m$@[0m"  is  equivalent  to[m
+              "[1m$1[0m"  "[1m$2[0m"  ...  If the double-quoted expansion occurs within a word, the expansion of[m
+              the first parameter is joined with the beginning part of the original  word,  and  the[m
+              expansion  of  the  last  parameter is joined with the last part of the original word.[m
+              When there are no positional parameters, "[1m$@[0m" and [1m$@[0m expand to nothing (i.e., they are[m
+[7m Manual page bash(1) line 645 (press h for help or q to quit)[27m[K[K/[K...skipping...
+              [1mTORY[0m [1m[7mEXPANSION[27m[0m below).  The first character is the [4mhistory[24m  [4mexpansion[24m  character,  the[m
+              character  which  signals  the start of a history expansion, normally `[1m![0m'.  The second[m
+              character is the [4mquick[24m [4msubstitution[24m character, which is used as shorthand for  re-run‐[m
+              ning the previous command entered, substituting one string for another in the command.[m
+              The default is `[1m^[0m'.  The optional third character is  the  character  which  indicates[m
+              that  the  remainder  of  the line is a comment when found as the first character of a[m
+              word, normally `[1m#[0m'.  The history comment character causes history substitution  to  be[m
+              skipped  for the remaining words on the line.  It does not necessarily cause the shell[m
+              parser to treat the rest of the line as a comment.[m
+[m
+   [1mArrays[0m[m
+       [1mBash[0m provides one-dimensional indexed and associative array variables.  Any variable  may  be[m
+       used  as an indexed array; the [1mdeclare[0m builtin will explicitly declare an array.  There is no[m
+       maximum limit on the size of an array, nor any requirement that members  be  indexed  or  as‐[m
+       signed  contiguously.  Indexed arrays are referenced using integers (including arithmetic ex‐[m
+       pressions) and are zero-based; associative arrays are  referenced  using  arbitrary  strings.[m
+       Unless otherwise noted, indexed array indices must be non-negative integers.[m
+[m
+       An  indexed  array  is  created automatically if any variable is assigned to using the syntax[m
+       [4mname[24m[[4msubscript[24m]=[4mvalue[24m.  The [4msubscript[24m is treated as an arithmetic expression that must evalu‐[m
+       ate  to  a  number.   To  explicitly declare an indexed array, use [1mdeclare[0m [1m-a[0m [4mname[24m (see [1mSHELL[0m[m
+       [1mBUILTIN[0m [1mCOMMANDS[0m below).  [1mdeclare[0m [1m-a[0m [4mname[24m[1m[[0m[4msubscript[24m[1m][0m is also accepted; the [4msubscript[24m  is  ig‐[m
+       nored.[m
+[m
+[7m Manual page bash(1) line 1192 (press h for help or q to quit)[27m[K[K/[K...skipping...
+       scribed  below  under  [1m[7mEXPANSION[27m[0m.  When assigning to indexed arrays, if the optional brackets[m
+       and subscript are supplied, that index is assigned to; otherwise the index of the element as‐[m
+       signed is the last index assigned to by the statement plus one.  Indexing starts at zero.[m
+[m
+       When  assigning to an associative array, the words in a compound assignment may be either as‐[m
+       signment statements, for which the subscript is required, or a list of words that  is  inter‐[m
+       preted  as  a  sequence  of alternating keys and values: [4mname[24m=[1m([0m [4mkey1[24m [4mvalue1[24m [4mkey2[24m [4mvalue2[24m ...[1m)[0m.[m
+       These are treated identically to [4mname[24m=[1m([0m [[4mkey1[24m]=[4mvalue1[24m [[4mkey2[24m]=[4mvalue2[24m ...[1m)[0m.  The first word  in[m
+       the  list  determines how the remaining words are interpreted; all assignments in a list must[m
+       be of the same type.  When using key/value pairs, the keys may not be missing or empty; a fi‐[m
+       nal missing value is treated like the empty string.[m
+[m
+       This  syntax  is  also accepted by the [1mdeclare[0m builtin.  Individual array elements may be as‐[m
+       signed to using the [4mname[24m[[4msubscript[24m]=[4mvalue[24m syntax introduced above.  When assigning to an  in‐[m
+       dexed array, if [4mname[24m is subscripted by a negative number, that number is interpreted as rela‐[m
+       tive to one greater than the maximum index of [4mname[24m, so negative indices count back  from  the[m
+       end of the array, and an index of -1 references the last element.[m
+[m
+       The += operator will append to an array variable when assigning using the compound assignment[m
+       syntax; see [1mPARAMETERS[0m above.[m
+[m
+       Any element of an array may be referenced using ${[4mname[24m[[4msubscript[24m]}.  The braces are  required[m
+       to  avoid conflicts with pathname expansion.  If [4msubscript[24m is [1m@[0m or [1m*[0m, the word expands to all[m
+       members of [4mname[24m.  These subscripts differ only when the word appears  within  double  quotes.[m
+[7m Manual page bash(1) line 1224 (press h for help or q to quit)[27m[K[K/[K...skipping...
+[1m[7mEXPANSION[27m[0m[m
+       Expansion  is  performed  on  the command line after it has been split into words.  There are[m
+       seven kinds of expansion performed: [4mbrace[24m [4mexpansion[24m, [4mtilde[24m [4mexpansion[24m, [4mparameter[24m [4mand[24m  [4mvariable[24m[m
+       [4mexpansion[24m,  [4mcommand[24m  [4msubstitution[24m,  [4marithmetic[24m [4mexpansion[24m, [4mword[24m [4msplitting[24m, and [4mpathname[24m [4mexpan‐[24m[m
+       [4msion[24m.[m
+[m
+       The order of expansions is: brace expansion; tilde expansion, parameter and  variable  expan‐[m
+       sion,  arithmetic expansion, and command substitution (done in a left-to-right fashion); word[m
+       splitting; and pathname expansion.[m
+[m
+       On systems that can support it, there is an additional expansion available: [4mprocess[24m [4msubstitu‐[24m[m
+       [4mtion[24m.   This  is performed at the same time as tilde, parameter, variable, and arithmetic ex‐[m
+       pansion and command substitution.[m
+[m
+       After these expansions are performed, quote characters present in the original word  are  re‐[m
+       moved unless they have been quoted themselves ([4mquote[24m [4mremoval[24m).[m
+[m
+       Only brace expansion, word splitting, and pathname expansion can increase the number of words[m
+       of the expansion; other expansions expand a single word to a single word.   The  only  excep‐[m
+       tions  to  this  are  the  expansions  of  "[1m$@[0m"  and "[1m${[0m[4mname[24m[1m[@]}[0m", and, in most cases, [1m$*[0m and[m
+       [1m${[0m[4mname[24m[1m[*]}[0m as explained above (see [1mPARAMETERS[0m).[m
+[m
+   [1mBrace[0m [1mExpansion[0m[m
+       [4mBrace[24m [4mexpansion[24m is a mechanism by which arbitrary strings may be generated.   This  mechanism[m
+[7m Manual page bash(1) line 1292 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion4
+(B[m$ [H[2J[94mDEVOPS24/lektion4
+(B[m$ pwd
+[?2004l/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion4
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ ls ~
+[?2004l Android		 bokforing   Downloads	 Pictures      shared_desktop  'VirtualBox VMs'
+ AndroidStudioProjects	 Desktop     Dropbox	 Public        Templates        wineapps
+ bin			 Documents   Music	 Screenshots   Videos
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ ls ~[C[C[C[C[C[C[K/home/kent
+[?2004l Android		 bokforing   Downloads	 Pictures      shared_desktop  'VirtualBox VMs'
+ AndroidStudioProjects	 Desktop     Dropbox	 Public        Templates        wineapps
+ bin			 Documents   Music	 Screenshots   Videos
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ [H[2J[94mDEVOPS24/lektion4
+(B[m$ start-ubse
+[?2004lbash: start-ubse: command not found
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ ubse-start
+[?2004lbash: ubse-start: command not found
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ ssh ubse[H[2J[94mDEVOPS24/lektion4
+(B[m$ ssh ubse
+[?2004l^C
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ ssh ubse
+[?2004lWelcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-57-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Thu Apr 17 01:00:10 PM UTC 2025
+
+  System load:  0.0                Processes:               115
+  Usage of /:   17.1% of 38.04GB   Users logged in:         0
+  Memory usage: 4%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+170 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Thu Apr 17 13:00:11 2025 from 10.0.2.2
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls /home
+[?2004l[0m[01;34mbert[0m  [01;34mgreen[0m  [01;34mother[0m  [01;34muser[0m
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls GREEN[K[K[K[K[Kgreen~
+[?2004lls: cannot access 'green~': No such file or directory
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls green~[K[K[K[K[K[K~t[Kgreen
+[?2004lls: cannot open directory '/home/green': Permission denied
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls ~green
+[?2004lls: cannot open directory '/home/green': Permission denied
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ sudo -i[C[C
+[?2004l[sudo] password for user: 
+[?2004h]0;root@ubse: ~root@ubse:~# cd[K[Kls ~fre[K[K[Kgreen
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# ls ~green[C[C[C ~green- ~greenA ~green[H[2J]0;root@ubse: ~root@ubse:~# ls -A ~green[1P ~greena ~greenl ~green[1P ~green
+[?2004l[0m[01;34m.[0m  [01;34m..[0m  .bash_history  .bash_logout  .bashrc  .profile
+[?2004h]0;root@ubse: ~root@ubse:~# ls -a ~green[K[K[K[K[Kother
+[?2004l[0m[01;34m.[0m  [01;34m..[0m  .bash_history  .bash_logout  .bashrc  .profile
+[?2004h]0;root@ubse: ~root@ubse:~# [?2004l
+logout
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ echo $USER
+[?2004luser
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ echo $USER[KR/$USERh$USERo$USERm$USERe$USER/$USER[C[C[C[C[C
+[?2004l/home/user
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls ~[1P ~[1P ~e ~c ~h ~o ~
+[?2004l/home/user
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ echo $HOME
+[?2004l/home/user
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ echo $HOME[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K/[Khej
+[?2004lhej
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ echo hej[K[K[K$HOME
+[?2004l/home/user
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ echo $HOME[K[K[K[K[K/home/user[C[C[C[C[C[C[C[C[C[C
+[?2004l/home/user
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$  jiiejiejl jiiejiejs jiiejiej[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[Kmittalias ^C[?2004l[?2004h[?2004l
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ mittalias ^C[?2004l[?2004h[?2004l
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ~[K[H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ man us[K[Kbash
+[?2004l[?1049h[22;0;0t[?1h=[4mBASH[24m(1)                                General Commands Manual                               [4mBASH[24m(1)[m
+[m
+[1mNAME[0m[m
+       bash - GNU Bourne-Again SHell[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mbash [22m[options] [command_string | file][m
+[m
+[1mCOPYRIGHT[0m[m
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mBash  [22mis  an  [1msh[22m-compatible command language interpreter that executes commands read from the[m
+       standard input or from a file.  [1mBash [22malso incorporates useful features from the  [4mKorn[24m  and  [4mC[0m[m
+       shells ([1mksh [22mand [1mcsh[22m).[m
+[m
+       [1mBash  [22mis intended to be a conformant implementation of the Shell and Utilities portion of the[m
+       IEEE POSIX specification (IEEE Standard 1003.1).  [1mBash [22mcan be configured to be  POSIX-confor‐[m
+       mant by default.[m
+[m
+[1mOPTIONS[0m[m
+       All  of  the  single-character shell options documented in the description of the [1mset [22mbuiltin[m
+       command, including [1m-o[22m, can be used as options when the shell is invoked.  In  addition,  [1mbash[0m[m
+       interprets the following options when it is invoked:[m
+[7m Manual page bash(1) line 1 (press h for help or q to quit)[27m[K[K/[KEE[KXX[KPP[KAA[KNN[KSS[KII[KOO[KNN[K[1;1H[4mBASH[24m(1)                                General Commands Manual                               [4mBASH[24m(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       bash - GNU Bourne-Again SHell[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mbash [22m[options] [command_string | file][m
+[8;1H[m
+[9;1H[1mCOPYRIGHT[0m[m
+[10;1H       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.[m
+[11;1H[m
+[12;1H[1mDESCRIPTION[0m[m
+[13;1H       [1mBash  [22mis  an  [1msh[22m-compatible command language interpreter that executes commands read from the[m
+[14;1H       standard input or from a file.  [1mBash [22malso incorporates useful features from the  [4mKorn[24m  and  [4mC[0m[m
+[15;1H       shells ([1mksh [22mand [1mcsh[22m).[m
+[16;1H[m
+[17;1H       [1mBash  [22mis intended to be a conformant implementation of the Shell and Utilities portion of the[m
+[18;1H       IEEE POSIX specification (IEEE Standard 1003.1).  [1mBash [22mcan be configured to be  POSIX-confor‐[m
+[19;1H       mant by default.[m
+[20;1H[m
+[21;1H[1mOPTIONS[0m[m
+[22;1H       All  of  the  single-character shell options documented in the description of the [1mset [22mbuiltin[m
+[23;1H       command, including [1m-o[22m, can be used as options when the shell is invoked.  In  addition,  [1mbash[0m[m
+[24;1H       interprets the following options when it is invoked:[m
+[25;1H[1;1H[4mBASH[24m(1)                                General Commands Manual                               [4mBASH[24m(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       bash - GNU Bourne-Again SHell[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mbash [22m[options] [command_string | file][m
+[8;1H[m
+[9;1H[1mCOPYRIGHT[0m[m
+[10;1H       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.[m
+[11;1H[m
+[12;1H[1mDESCRIPTION[0m[m
+[13;1H       [1mBash  [22mis  an  [1msh[22m-compatible command language interpreter that executes commands read from the[m
+[14;1H       standard input or from a file.  [1mBash [22malso incorporates useful features from the  [4mKorn[24m  and  [4mC[0m[m
+[15;1H       shells ([1mksh [22mand [1mcsh[22m).[m
+[16;1H[m
+[17;1H       [1mBash  [22mis intended to be a conformant implementation of the Shell and Utilities portion of the[m
+[18;1H       IEEE POSIX specification (IEEE Standard 1003.1).  [1mBash [22mcan be configured to be  POSIX-confor‐[m
+[19;1H       mant by default.[m
+[20;1H[m
+[21;1H[1mOPTIONS[0m[m
+[22;1H       All  of  the  single-character shell options documented in the description of the [1mset [22mbuiltin[m
+[23;1H       command, including [1m-o[22m, can be used as options when the shell is invoked.  In  addition,  [1mbash[0m[m
+[24;1H       interprets the following options when it is invoked:[m
+[25;1H...skipping...
+       scribed below under [1mTilde Expansion [22min the [1m[7mEXPANSION[27m[1m [22msection.[m
+[m
+       When [1mbash [22mis invoked as an interactive login shell, or as a non-interactive  shell  with  the[m
+       [1m--login [22moption, it first reads and executes commands from the file [4m/etc/profile[24m, if that file[m
+       exists.   After  reading  that file, it looks for [4m~/.bash_profile[24m, [4m~/.bash_login[24m, and [4m~/.pro‐[0m[m
+       [4mfile[24m, in that order, and reads and executes commands from the first one that  exists  and  is[m
+       readable.   The  [1m--noprofile [22moption may be used when the shell is started to inhibit this be‐[m
+       havior.[m
+[m
+       When an interactive login shell exits, or a non-interactive login  shell  executes  the  [1mexit[0m[m
+       builtin command, [1mbash [22mreads and executes commands from the file [4m~/.bash_logout[24m, if it exists.[m
+[m
+       When  an interactive shell that is not a login shell is started, [1mbash [22mreads and executes com‐[m
+       mands from [4m/etc/bash.bashrc[24m and [4m~/.bashrc[24m, if these files exist.  This may  be  inhibited  by[m
+       using  the  [1m--norc [22moption.  The [1m--rcfile [4m[22mfile[24m option will force [1mbash [22mto read and execute com‐[m
+       mands from [4mfile[24m instead of [4m/etc/bash.bashrc[24m and [4m~/.bashrc[24m.[m
+[m
+       When [1mbash [22mis started non-interactively, to run a shell script, for example, it looks for  the[m
+       variable [1mBASH_ENV [22min the environment, expands its value if it appears there, and uses the ex‐[m
+       panded  value  as  the  name of a file to read and execute.  [1mBash [22mbehaves as if the following[m
+       command were executed:[m
+              if [ -n "$BASH_ENV" ]; then . "$BASH_ENV"; fi[m
+       but the value of the [1mPATH [22mvariable is not used to search for the filename.[m
+[m
+[7m Manual page bash(1) line 126 (press h for help or q to quit)[27m[K[K/[K...skipping...
+       When the command history expansion facilities are being used (see [1mHISTORY  [7mEXPANSION[27m[1m  [22mbelow),[m
+       the [4mhistory[24m [4mexpansion[24m character, usually [1m![22m, must be quoted to prevent history expansion.[m
+[m
+       There are three quoting mechanisms: the [4mescape[24m [4mcharacter[24m, single quotes, and double quotes.[m
+[m
+       A  non-quoted  backslash  ([1m\[22m) is the [4mescape[24m [4mcharacter[24m.  It preserves the literal value of the[m
+       next character that follows, with the exception of <newline>.  If a [1m\[22m<newline> pair  appears,[m
+       and  the  backslash  is  not  itself quoted, the [1m\[22m<newline> is treated as a line continuation[m
+       (that is, it is removed from the input stream and effectively ignored).[m
+[m
+       Enclosing characters in single quotes preserves the literal value of  each  character  within[m
+       the  quotes.   A  single  quote  may not occur between single quotes, even when preceded by a[m
+       backslash.[m
+[m
+       Enclosing characters in double quotes preserves the literal value of  all  characters  within[m
+       the  quotes,  with the exception of [1m$[22m, [1m`[22m, [1m\[22m, and, when history expansion is enabled, [1m![22m.  When[m
+       the shell is in [4mposix[24m [4mmode[24m, the [1m! [22mhas no special meaning within double quotes, even when his‐[m
+       tory expansion is enabled.  The characters [1m$ [22mand [1m` [22mretain their special meaning within double[m
+       quotes.  The backslash retains its special meaning only when followed by one of the following[m
+       characters: [1m$[22m, [1m`[22m, [1m"[22m, [1m\[22m, or [1m<newline>[22m.  A double quote may be quoted within double  quotes  by[m
+       preceding  it  with a backslash.  If enabled, history expansion will be performed unless an [1m![0m[m
+       appearing in double quotes is escaped using a backslash.  The backslash preceding the  [1m!   [22mis[m
+       not removed.[m
+[m
+[7m Manual page bash(1) line 515 (press h for help or q to quit)[27m[K[K/[K...skipping...
+       quote removal (see [1m[7mEXPANSION[27m[1m [22mbelow).  If the variable has its  [1minteger  [22mattribute  set,  then[m
+       [4mvalue[24m  is  evaluated  as  an arithmetic expression even if the $((...)) expansion is not used[m
+       (see [1mArithmetic Expansion [22mbelow).  Word splitting and pathname expansion are  not  performed.[m
+       Assignment  statements  may  also appear as arguments to the [1malias[22m, [1mdeclare[22m, [1mtypeset[22m, [1mexport[22m,[m
+       [1mreadonly[22m, and [1mlocal [22mbuiltin commands ([4mdeclaration[24m  commands).   When  in  [4mposix[24m  [4mmode[24m,  these[m
+       builtins  may  appear in a command after one or more instances of the [1mcommand [22mbuiltin and re‐[m
+       tain these assignment statement properties.[m
+[m
+       In the context where an assignment statement is assigning a value to a shell variable or  ar‐[m
+       ray  index, the += operator can be used to append to or add to the variable's previous value.[m
+       This includes arguments to builtin commands such as [1mdeclare [22mthat accept assignment statements[m
+       ([4mdeclaration[24m commands).  When += is applied to a variable for which the [1minteger [22mattribute has[m
+       been set, [4mvalue[24m is evaluated as an arithmetic expression and added to the variable's  current[m
+       value,  which  is also evaluated.  When += is applied to an array variable using compound as‐[m
+       signment (see [1mArrays [22mbelow), the variable's value is not unset (as it is when using  =),  and[m
+       new  values are appended to the array beginning at one greater than the array's maximum index[m
+       (for indexed arrays) or added as additional key-value pairs in an  associative  array.   When[m
+       applied to a string-valued variable, [4mvalue[24m is expanded and appended to the variable's value.[m
+[m
+       A  variable can be assigned the [4mnameref[24m attribute using the [1m-n [22moption to the [1mdeclare [22mor [1mlocal[0m[m
+       builtin commands (see the descriptions of [1mdeclare [22mand [1mlocal [22mbelow) to create a [4mnameref[24m, or  a[m
+       reference to another variable.  This allows variables to be manipulated indirectly.  Whenever[m
+       the nameref variable is referenced, assigned to, unset, or has its attributes modified (other[m
+       than  using or changing the [4mnameref[24m attribute itself), the operation is actually performed on[m
+[7m Manual page bash(1) line 598 (press h for help or q to quit)[27m[K[K/[K...skipping...
+       enclosed in braces (see [1m[7mEXPANSION[27m[1m [22mbelow).[m
+[m
+   [1mSpecial Parameters[0m[m
+       The shell treats several parameters specially.  These parameters may only be referenced;  as‐[m
+       signment to them is not allowed.[m
+       [1m*      [22mExpands  to  the  positional parameters, starting from one.  When the expansion is not[m
+              within double quotes, each positional parameter expands to a separate word.   In  con‐[m
+              texts  where  it  is  performed, those words are subject to further word splitting and[m
+              pathname expansion.  When the expansion occurs within double quotes, it expands  to  a[m
+              single  word  with the value of each parameter separated by the first character of the[m
+              [1mIFS [22mspecial variable.  That is, "[1m$*[22m" is equivalent to  "[1m$1[4m[22mc[24m[1m$2[4m[22mc[24m[1m...[22m",  where  [4mc[24m  is  the[m
+              first character of the value of the [1mIFS [22mvariable.  If [1mIFS [22mis unset, the parameters are[m
+              separated  by  spaces.   If [1mIFS [22mis null, the parameters are joined without intervening[m
+              separators.[m
+       [1m@      [22mExpands to the positional parameters, starting  from  one.   In  contexts  where  word[m
+              splitting  is performed, this expands each positional parameter to a separate word; if[m
+              not within double quotes, these words are subject  to  word  splitting.   In  contexts[m
+              where  word  splitting is not performed, this expands to a single word with each posi‐[m
+              tional parameter separated by a  space.   When  the  expansion  occurs  within  double[m
+              quotes,  each  parameter  expands  to a separate word.  That is, "[1m$@[22m" is equivalent to[m
+              "[1m$1[22m" "[1m$2[22m" ...  If the double-quoted expansion occurs within a word, the  expansion  of[m
+              the  first  parameter  is joined with the beginning part of the original word, and the[m
+              expansion of the last parameter is joined with the last part  of  the  original  word.[m
+              When there are no positional parameters, "[1m$@[22m" and [1m$@ [22mexpand to nothing (i.e., they are[m
+[7m Manual page bash(1) line 645 (press h for help or q to quit)[27m[K[K/[K...skipping...
+              [1mTORY  [7mEXPANSION[27m[1m  [22mbelow).   The first character is the [4mhistory[24m [4mexpansion[24m character, the[m
+              character which signals the start of a history expansion, normally  `[1m![22m'.   The  second[m
+              character  is the [4mquick[24m [4msubstitution[24m character, which is used as shorthand for re-run‐[m
+              ning the previous command entered, substituting one string for another in the command.[m
+              The default is `[1m^[22m'.  The optional third character is  the  character  which  indicates[m
+              that  the  remainder  of  the line is a comment when found as the first character of a[m
+              word, normally `[1m#[22m'.  The history comment character causes history substitution  to  be[m
+              skipped  for the remaining words on the line.  It does not necessarily cause the shell[m
+              parser to treat the rest of the line as a comment.[m
+[m
+   [1mArrays[0m[m
+       [1mBash [22mprovides one-dimensional indexed and associative array variables.  Any variable  may  be[m
+       used  as an indexed array; the [1mdeclare [22mbuiltin will explicitly declare an array.  There is no[m
+       maximum limit on the size of an array, nor any requirement that members  be  indexed  or  as‐[m
+       signed  contiguously.  Indexed arrays are referenced using integers (including arithmetic ex‐[m
+       pressions) and are zero-based; associative arrays are  referenced  using  arbitrary  strings.[m
+       Unless otherwise noted, indexed array indices must be non-negative integers.[m
+[m
+       An  indexed  array  is  created automatically if any variable is assigned to using the syntax[m
+       [4mname[24m[[4msubscript[24m]=[4mvalue[24m.  The [4msubscript[24m is treated as an arithmetic expression that must evalu‐[m
+       ate to a number.  To explicitly declare an indexed array, use  [1mdeclare  -a  [4m[22mname[24m  (see  [1mSHELL[0m[m
+       [1mBUILTIN  COMMANDS  [22mbelow).  [1mdeclare -a [4m[22mname[24m[1m[[4m[22msubscript[24m[1m] [22mis also accepted; the [4msubscript[24m is ig‐[m
+       nored.[m
+[m
+[7m Manual page bash(1) line 1192 (press h for help or q to quit)[27m[K[K/[K...skipping...
+       scribed  below  under  [1m[7mEXPANSION[27m[22m.  When assigning to indexed arrays, if the optional brackets[m
+       and subscript are supplied, that index is assigned to; otherwise the index of the element as‐[m
+       signed is the last index assigned to by the statement plus one.  Indexing starts at zero.[m
+[m
+       When assigning to an associative array, the words in a compound assignment may be either  as‐[m
+       signment  statements,  for which the subscript is required, or a list of words that is inter‐[m
+       preted as a sequence of alternating keys and values: [4mname[24m=[1m( [4m[22mkey1[24m  [4mvalue1[24m  [4mkey2[24m  [4mvalue2[24m  ...[1m)[22m.[m
+       These  are treated identically to [4mname[24m=[1m( [22m[[4mkey1[24m]=[4mvalue1[24m [[4mkey2[24m]=[4mvalue2[24m ...[1m)[22m.  The first word in[m
+       the list determines how the remaining words are interpreted; all assignments in a  list  must[m
+       be of the same type.  When using key/value pairs, the keys may not be missing or empty; a fi‐[m
+       nal missing value is treated like the empty string.[m
+[m
+       This  syntax  is  also accepted by the [1mdeclare [22mbuiltin.  Individual array elements may be as‐[m
+       signed to using the [4mname[24m[[4msubscript[24m]=[4mvalue[24m syntax introduced above.  When assigning to an  in‐[m
+       dexed array, if [4mname[24m is subscripted by a negative number, that number is interpreted as rela‐[m
+       tive  to  one greater than the maximum index of [4mname[24m, so negative indices count back from the[m
+       end of the array, and an index of -1 references the last element.[m
+[m
+       The += operator will append to an array variable when assigning using the compound assignment[m
+       syntax; see [1mPARAMETERS [22mabove.[m
+[m
+       Any element of an array may be referenced using ${[4mname[24m[[4msubscript[24m]}.  The braces are  required[m
+       to  avoid conflicts with pathname expansion.  If [4msubscript[24m is [1m@ [22mor [1m*[22m, the word expands to all[m
+       members of [4mname[24m.  These subscripts differ only when the word appears  within  double  quotes.[m
+[7m Manual page bash(1) line 1224 (press h for help or q to quit)[27m[K[K/[K...skipping...
+[1m[7mEXPANSION[27m[m
+       Expansion  is  performed  on  the command line after it has been split into words.  There are[m
+       seven kinds of expansion performed: [4mbrace[24m [4mexpansion[24m, [4mtilde[24m [4mexpansion[24m, [4mparameter[24m [4mand[24m  [4mvariable[0m[m
+       [4mexpansion[24m,  [4mcommand[24m  [4msubstitution[24m,  [4marithmetic[24m [4mexpansion[24m, [4mword[24m [4msplitting[24m, and [4mpathname[24m [4mexpan‐[0m[m
+       [4msion[24m.[m
+[m
+       The order of expansions is: brace expansion; tilde expansion, parameter and  variable  expan‐[m
+       sion,  arithmetic expansion, and command substitution (done in a left-to-right fashion); word[m
+       splitting; and pathname expansion.[m
+[m
+       On systems that can support it, there is an additional expansion available: [4mprocess[24m [4msubstitu‐[0m[m
+       [4mtion[24m.  This is performed at the same time as tilde, parameter, variable, and  arithmetic  ex‐[m
+       pansion and command substitution.[m
+[m
+       After  these  expansions are performed, quote characters present in the original word are re‐[m
+       moved unless they have been quoted themselves ([4mquote[24m [4mremoval[24m).[m
+[m
+       Only brace expansion, word splitting, and pathname expansion can increase the number of words[m
+       of the expansion; other expansions expand a single word to a single word.   The  only  excep‐[m
+       tions  to  this  are  the  expansions  of  "[1m$@[22m"  and "[1m${[4m[22mname[24m[1m[@]}[22m", and, in most cases, [1m$* [22mand[m
+       [1m${[4m[22mname[24m[1m[*]} [22mas explained above (see [1mPARAMETERS[22m).[m
+[m
+   [1mBrace Expansion[0m[m
+       [4mBrace[24m [4mexpansion[24m is a mechanism by which arbitrary strings may be generated.   This  mechanism[m
+[7m Manual page bash(1) line 1292 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls "~"[H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls "~"
+[?2004lls: cannot access '~': No such file or directory
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls "~"[C[C[C[C[C[C[C[C[C[C[C[C[C[1P~"[C[C"h"e"j" "h"o"p"p"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lls: cannot access '~hej hopp': No such file or directory
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls ~"hej hopp"[1@/[H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls ~/"hej hopp"
+[?2004lls: cannot access '/home/user/hej hopp': No such file or directory
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ mkdir ''h'e'j' 'h'o'p'p'
+[?2004l[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls -l
+[?2004ltotal 8
+-rwxrwxr-x 1 user user   18 Apr 17 09:19  [0m[01;32mgreeting[0m
+drwxrwxr-x 2 user user 4096 Apr 23 09:10 [01;34m'hej hopp'[0m
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls -lmkdir 'hej hopp'[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pls ~/"hej hopp"
+[?2004l[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ touch hej\ hopp/enfill[K
+[?2004l[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ \touch hej\ hopp/enfil[C[C[C[C[C[C[C[C[C[C[C[C[C[6Pls ~/"hej hopp"
+[?2004lenfil
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [?2004l
+logout
+Connection to localhost closed.
+[?2004h[94mDEVOPS24/lektion4
+(B[m$ [?2004l
+exit
+
+Script done on 2025-04-23 11:13:20+02:00 [COMMAND_EXIT_CODE="0"]
