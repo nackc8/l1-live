@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#set -e
+set -e
 
 # -e  Exit immediately if a command exits with a non-zero status.
 
-test -f finnsinte
+test -f finnsinte || true
 
 echo Denna rad körs inte
