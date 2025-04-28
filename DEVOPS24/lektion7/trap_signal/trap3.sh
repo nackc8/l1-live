@@ -1,5 +1,7 @@
 #!/bin/bash
 
+tempfil="temp$RANDOM"
+
 # EXIT körs vid Ctrl+C eller skriptets slut
 trap 'rm -v minfil.txt;exit 0' EXIT
 
