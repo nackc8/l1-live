@@ -3,4 +3,4 @@
 A=Hej
 B=Hopp
 
-echo ${A,B}
+echo '$'{A,B}
