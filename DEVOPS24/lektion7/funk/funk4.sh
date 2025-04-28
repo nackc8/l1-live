@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Funktion som körs i barnprocess!
+# Omdirigering, append av stdout
 log() (
 	echo -e "$(date +%T)\t$*"
 	echo Random "$RANDOM"
