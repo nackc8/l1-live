@@ -26,4 +26,6 @@ touch {a..f}.txt
 # Nu har vi fler filer som bryter mönstret, nu behöver
 # vi ett mer specifikt mönster för att ta bort alla
 # enligt förra exemplet (ett nummer och .txt)
+touch {1..10}.txt
+touch {a..f}.txt
 rm [0-9].txt
