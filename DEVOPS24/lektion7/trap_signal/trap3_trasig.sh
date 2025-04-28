@@ -5,9 +5,9 @@ set -x
 tempfil="temp$RANDOM"
 
 # EXIT körs vid Ctrl+C eller skriptets slut
-trap 'rm -v $tempfil;exit 0' EXIT
+trap "rm -v $tempfil;exit 0" EXIT
 
-# Ovan funkar med ändrat värde, $tempfil evalueras
+# Ovan funkar INTE med ändrat värde, $tempfil evalueras
 # när trappen körs.
 tempfil="temp$RANDOM"
 
