@@ -8,3 +8,6 @@ echo innan_{1..5}_efter
 
 echo innan_{a..z}_efter
 # innan_a_efter innan_b_efter innan_c_efter innan_d_efter innan_e_efter innan_f_efter innan_g_efter
+
+echo innan_{a..c}_efter_{stor,liten}.png
+# innan_a_efter_stor.png innan_a_efter_liten.png innan_b_efter_stor.png innan_b_efter_liten.png innan_c_efter_stor.png innan_c_efter_liten.png
