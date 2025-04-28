@@ -9446,4 +9446,191 @@ Snurr 25
 + (( val++ ))
 + (( val < 30 ))
 + echo Snurr 26
-+ 
++ tee -a temp7469
+Snurr 26
++ sleep 0
++ (( val++ ))
++ (( val < 30 ))
++ echo Snurr 27
++ tee -a temp7469
+Snurr 27
++ sleep 0
++ (( val++ ))
++ (( val < 30 ))
++ echo Snurr 28
++ tee -a temp7469
+Snurr 28
++ sleep 0
++ (( val++ ))
++ (( val < 30 ))
++ echo Snurr 29
++ tee -a temp7469
+Snurr 29
++ sleep 0
++ (( val++ ))
++ (( val < 30 ))
++ rm -v temp7469
+removed 'temp7469'
++ exit 0
+[?2004h[94mDEVOPS24/lektion7/trap_signal
+(B[m$ ./trap3.sh [H[2J[94mDEVOPS24/lektion7/trap_signal
+(B[m$ ./trap3.sh 
+[?2004l+ tempfil=temp1846
++ trap 'rm -v $tempfil;exit 0' EXIT
++ tempfil=temp15890
++ (( val = 0 ))
++ (( val < 30 ))
++ echo Snurr 0
++ tee -a temp15890
+Snurr 0
++ sleep 3
++ (( val++ ))
++ (( val < 30 ))
++ tee -a temp15890
++ echo Snurr 1
+Snurr 1
++ sleep 3
++ (( val++ ))
++ (( val < 30 ))
++ echo Snurr 2
++ tee -a temp15890
+Snurr 2
++ sleep 3
++ (( val++ ))
++ (( val < 30 ))
++ echo Snurr 3
++ tee -a temp15890
+Snurr 3
++ sleep 3
++ (( val++ ))
++ (( val < 30 ))
++ echo Snurr 4
++ tee -a temp15890
+Snurr 4
++ sleep 3
++ (( val++ ))
++ (( val < 30 ))
++ tee -a temp15890
++ echo Snurr 5
+Snurr 5
++ sleep 3
++ (( val++ ))
++ (( val < 30 ))
++ echo Snurr 6
++ tee -a temp15890
+Snurr 6
++ sleep 3
++ (( val++ ))
++ (( val < 30 ))
++ echo Snurr 7
++ tee -a temp15890
+Snurr 7
++ sleep 3
++ (( val++ ))
++ (( val < 30 ))
++ echo Snurr 8
++ tee -a temp15890
+Snurr 8
++ sleep 3
++ (( val++ ))
++ (( val < 30 ))
++ echo Snurr 9
++ tee -a temp15890
+Snurr 9
++ sleep 3
++ (( val++ ))
++ (( val < 30 ))
++ tee -a temp15890
++ echo Snurr 10
+Snurr 10
++ sleep 3
+^C++ rm -v temp15890
+removed 'temp15890'
+++ exit 0
+
+[?2004h[94mDEVOPS24/lektion7/trap_signal
+(B[m$ ./trap3.sh [H[2J[94mDEVOPS24/lektion7/trap_signal
+(B[m$ ./trap3.sh [K[K[K[K_f[Ktrasig.sh [H[2J[94mDEVOPS24/lektion7/trap_signal
+(B[m$ ./trap3_trasig.sh 
+[?2004l+ tempfil=temp18927
++ trap 'rm -v temp18927;exit 0' EXIT
++ tempfil=temp31343
++ (( val = 0 ))
++ (( val < 30 ))
++ echo Snurr 0
++ tee -a temp31343
+Snurr 0
++ sleep 3
+^C++ rm -v temp18927
+rm: cannot remove 'temp18927': No such file or directory
+++ exit 0
+
+[?2004h[94mDEVOPS24/lektion7/trap_signal
+(B[m$ [H[2J[94mDEVOPS24/lektion7/trap_signal
+(B[m$ bash -x trap3__[Ktrasig.sh 
+[?2004l+ tempfil=temp19788
++ trap 'rm -v temp19788;exit 0' EXIT
++ tempfil=temp9880
++ (( val = 0 ))
++ (( val < 30 ))
++ tee -a temp9880
++ echo Snurr 0
+Snurr 0
++ sleep 3
+^C++ rm -v temp19788
+rm: cannot remove 'temp19788': No such file or directory
+++ exit 0
+
+[?2004h[94mDEVOPS24/lektion7/trap_signal
+(B[m$ bash -x trap3_trasig.sh [H[2J[94mDEVOPS24/lektion7/trap_signal
+(B[m$ bash -x trap3_trasig.sh 
+[?2004l+ tempfil=temp12785
++ trap 'rm -v temp12785;exit 0' EXIT
++ tempfil=temp15547
++ (( val = 0 ))
++ (( val < 30 ))
++ echo Snurr 0
++ tee -a temp15547
+Snurr 0
++ sleep 3
+^C++ rm -v temp12785
+rm: cannot remove 'temp12785': No such file or directory
+++ exit 0
+
+[?2004h[94mDEVOPS24/lektion7/trap_signal
+(B[m$ ./trap4.sh [H[2J[94mDEVOPS24/lektion7/trap_signal
+(B[m$ ./trap4.sh 
+[?2004l[?2004h[94mDEVOPS24/lektion7/trap_signal
+(B[m$ ./trap4.sh [1@b[1@a[1@s[1@h[1@ [1@-[1@x[1@ [H[2J[94mDEVOPS24/lektion7/trap_signal
+(B[m$ bash -x ./trap4.sh [C[C[C[C[C[C[C[C[C[C
+[?2004l+ trap 'echo Nehe du!' SIGINT
+[?2004h[94mDEVOPS24/lektion7/trap_signal
+(B[m$ ./trap4.sh [H[2J[94mDEVOPS24/lektion7/trap_signal
+(B[m$ ./trap4.sh 
+[?2004lSpammeddelande spam spam
+Spammeddelande spam spam
+Spammeddelande spam spam
+Spammeddelande spam spam
+Spammeddelande spam spam
+Spammeddelande spam spam
+^CNehe du!
+Spammeddelande spam spam
+^CNehe du!
+Spammeddelande spam spam
+^CNehe du!
+Spammeddelande spam spam
+^CNehe du!
+Spammeddelande spam spam
+^CNehe du!
+Spammeddelande spam spam
+^CNehe du!
+Spammeddelande spam spam
+^CNehe du!
+Spammeddelande spam spam
+^CNehe du!
+Spammeddelande spam spam
+^CNehe du!
+Spammeddelande spam spam
+^CNehe du!
+Spammeddelande spam spam
+^CNehe du!
