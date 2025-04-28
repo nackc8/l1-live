@@ -8132,4 +8132,324 @@ kat_a_filer.txt  kat_b_filer.txt
 [7m Manual page bash(1) line 286 (press h for help or q to quit)[27m[K[K       The shell waits for all commands in the pipeline to  terminate[m
        before returning a value.[m
 [m
-       If  the [1mtime[0m reserved word prece
+       If  the [1mtime[0m reserved word precedes a pipeline, the elapsed as[m
+       well as user and system time consumed by its execution are re‐[m
+       ported  when  the  pipeline terminates.  The [1m-p[0m option changes[m
+       the output format to that specified by POSIX.  When the  shell[m
+       is  in  [4mposix[24m  [4mmode[24m,  it does not recognize [1mtime[0m as a reserved[m
+       word if the next token begins  with  a  `-'.   The  [1mTIMEFORMAT[0m[m
+       variable  may be set to a format string that specifies how the[m
+       timing information should be displayed; see the description of[m
+       [1mTIMEFORMAT[0m under [1mShell[0m [1mVariables[0m below.[m
+[m
+       When  the  shell  is  in [4mposix[24m [4mmode[24m, [1mtime[0m may be followed by a[m
+       newline.  In this case, the shell displays the total user  and[m
+       system time consumed by the shell and its children.  The [1mTIME‐[0m[m
+       [1mFORMAT[0m variable may be used to specify the format of the  time[m
+       information.[m
+[m
+[7m Manual page bash(1) line 305 (press h for help or q to quit)[27m[K[K       Each command in a multi-command pipeline, where pipes are cre‐[m
+       ated, is executed in a [4msubshell[24m, which is a separate  process.[m
+       See  [1mCOMMAND[0m  [1mEXECUTION[0m  [1mENVIRONMENT[0m for a description of sub‐[m
+       shells and a subshell environment.  If the [1mlastpipe[0m option  is[m
+       enabled  using the [1mshopt[0m builtin (see the description of [1mshopt[0m[m
+       below), the last element of a pipeline may be run by the shell[m
+       process when job control is not active.[m
+[m
+   [1mLists[0m[m
+       A [4mlist[24m is a sequence of one or more pipelines separated by one[m
+       of the operators [1m;[0m, [1m&[0m, [1m&&[0m, or [1m||[0m, and optionally terminated by[m
+       one of [1m;[0m, [1m&[0m, or [1m<newline>[0m.[m
+[m
+       Of these list operators, [1m&&[0m and [1m||[0m have equal precedence, fol‐[m
+       lowed by [1m;[0m and [1m&[0m, which have equal precedence.[m
+[m
+       A sequence of one or more newlines may appear in  a  [4mlist[24m  in‐[m
+       stead of a semicolon to delimit commands.[m
+[m
+[7m Manual page bash(1) line 324 (press h for help or q to quit)[27m[K[K       If  a  command  is  terminated  by the control operator [1m&[0m, the[m
+       shell executes the command in the [4mbackground[24m  in  a  subshell.[m
+       The shell does not wait for the command to finish, and the re‐[m
+       turn status is 0.  These are referred to as [4masynchronous[24m  com‐[m
+       mands.   Commands  separated by a [1m;[0m are executed sequentially;[m
+       the shell waits for each command to terminate  in  turn.   The[m
+       return status is the exit status of the last command executed.[m
+[m
+       AND  and OR lists are sequences of one or more pipelines sepa‐[m
+       rated by the [1m&&[0m and [1m||[0m control operators,  respectively.   AND[m
+       and  OR  lists  are  executed with left associativity.  An AND[m
+       list has the form[m
+[m
+              [4mcommand1[24m [1m&&[0m [4mcommand2[24m[m
+[m
+       [4mcommand2[24m is executed if, and only if, [4mcommand1[24m returns an exit[m
+       status of zero (success).[m
+[m
+       An OR list has the form[m
+[7m Manual page bash(1) line 343 (press h for help or q to quit)[27m[K[K[m
+              [4mcommand1[24m [1m||[0m [4mcommand2[24m[m
+[m
+       [4mcommand2[24m  is executed if, and only if, [4mcommand1[24m returns a non-[m
+       zero exit status.  The return status of AND and  OR  lists  is[m
+       the exit status of the last command executed in the list.[m
+[m
+   [1mCompound[0m [1mCommands[0m[m
+       A  [4mcompound[24m  [4mcommand[24m is one of the following.  In most cases a[m
+       [4mlist[24m in a command's description may be separated from the rest[m
+       of the command by one or more newlines, and may be followed by[m
+       a newline in place of a semicolon.[m
+[m
+       ([4mlist[24m) [4mlist[24m is executed in a subshell (see  [1mCOMMAND[0m  [1mEXECUTION[0m[m
+              [1mENVIRONMENT[0m below for a description of a subshell envi‐[m
+              ronment).  Variable assignments  and  builtin  commands[m
+              that  affect  the  shell's environment do not remain in[m
+              effect after the command completes.  The return  status[m
+              is the exit status of [4mlist[24m.[m
+[7m Manual page bash(1) line 362 (press h for help or q to quit)[27m[K[K[m
+       { [4mlist[24m; }[m
+              [4mlist[24m  is  simply executed in the current shell environ‐[m
+              ment.  [4mlist[24m must be terminated with a newline or  semi‐[m
+              colon.   This  is known as a [4mgroup[24m [4mcommand[24m.  The return[m
+              status is the exit status of [4mlist[24m.   Note  that  unlike[m
+              the  metacharacters [1m([0m and [1m)[0m, [1m{[0m and [1m}[0m are [4mreserved[24m [4mwords[24m[m
+              and must occur where a reserved word is permitted to be[m
+              recognized.  Since they do not cause a word break, they[m
+              must be separated from [4mlist[24m by  whitespace  or  another[m
+              shell metacharacter.[m
+[m
+       (([4mexpression[24m))[m
+              The  [4mexpression[24m is evaluated according to the rules de‐[m
+              scribed below  under  [1mARITHMETIC[0m  [1mEVALUATION[0m.   If  the[m
+              value  of the expression is non-zero, the return status[m
+              is 0; otherwise the return status is 1.  The [4mexpression[24m[m
+              undergoes the same expansions as if it were within dou‐[m
+              ble quotes, but double quote characters  in  [4mexpression[24m[m
+[7m Manual page bash(1) line 381 (press h for help or q to quit)[27m[K[K              are not treated specially and are removed.[m
+[m
+       [1m[[[0m [4mexpression[24m [1m]][0m[m
+              Return  a  status of 0 or 1 depending on the evaluation[m
+              of the conditional expression [4mexpression[24m.   Expressions[m
+              are  composed  of  the  primaries described below under[m
+              [1mCONDITIONAL[0m [1mEXPRESSIONS[0m.  The words between the [1m[[[0m  and[m
+              [1m]][0m  do  not  undergo word splitting and pathname expan‐[m
+              sion.  The shell performs  tilde  expansion,  parameter[m
+              and  variable  expansion, arithmetic expansion, command[m
+              substitution, process substitution, and  quote  removal[m
+              on  those words (the expansions that would occur if the[m
+              words were enclosed in double quotes).  Conditional op‐[m
+              erators such as [1m-f[0m must be unquoted to be recognized as[m
+              primaries.[m
+[m
+              When used with [1m[[[0m, the [1m<[0m and [1m>[0m operators  sort  lexico‐[m
+              graphically using the current locale.[m
+[m
+[7m Manual page bash(1) line 400 (press h for help or q to quit)[27m[K[K       See the description of the [4mtest[24m builtin command (section SHELL[m
+       BUILTIN COMMANDS below) for the handling of  parameters  (i.e.[m
+       missing parameters).[m
+[m
+       When the [1m==[0m and [1m!=[0m operators are used, the string to the right[m
+       of the operator is considered a pattern and matched  according[m
+       to the rules described below under [1mPattern[0m [1mMatching[0m, as if the[m
+       [1mextglob[0m shell option were enabled.  The [1m=[0m operator is  equiva‐[m
+       lent  to  [1m==[0m.  If the [1mnocasematch[0m shell option is enabled, the[m
+       match is performed without regard to the  case  of  alphabetic[m
+       characters.   The return value is 0 if the string matches ([1m==[0m)[m
+       or does not match ([1m!=[0m) the pattern, and 1 otherwise.  Any part[m
+       of the pattern may be quoted to force the quoted portion to be[m
+       matched as a string.[m
+[m
+       An additional binary operator, [1m=~[0m, is available, with the same[m
+       precedence  as  [1m==[0m and [1m!=[0m.  When it is used, the string to the[m
+       right of the operator is considered a POSIX  extended  regular[m
+       expression  and  matched  accordingly (using the POSIX [4mregcomp[24m[m
+[7m Manual page bash(1) line 419 (press h for help or q to quit)[27m[K[K       and [4mregexec[24m interfaces usually described  in  [4mregex[24m(3)).   The[m
+       return  value  is  0  if the string matches the pattern, and 1[m
+       otherwise.  If the regular expression is syntactically  incor‐[m
+       rect,  the conditional expression's return value is 2.  If the[m
+       [1mnocasematch[0m shell option is enabled, the  match  is  performed[m
+       without  regard  to the case of alphabetic characters.  If any[m
+       part of the pattern is quoted, the quoted portion  is  matched[m
+       literally.   This  means every character in the quoted portion[m
+       matches itself, instead of having any special pattern matching[m
+       meaning.   If the pattern is stored in a shell variable, quot‐[m
+       ing the variable expansion forces the  entire  pattern  to  be[m
+       matched  literally.   Treat bracket expressions in regular ex‐[m
+       pressions carefully, since normal quoting and pattern  charac‐[m
+       ters lose their meanings between brackets.[m
+[m
+       The  pattern  will match if it matches any part of the string.[m
+       Anchor the pattern using the [1m^[0m and [1m$[0m regular expression opera‐[m
+       tors  to force it to match the entire string.  The array vari‐[m
+       able [1mBASH_REMATCH[0m records which parts of  the  string  matched[m
+[7m Manual page bash(1) line 438 (press h for help or q to quit)[27m[K[K       the  pattern.   The  element of [1mBASH_REMATCH[0m with index 0 con‐[m
+       tains the portion of the string matching  the  entire  regular[m
+       expression.   Substrings  matched  by parenthesized subexpres‐[m
+       sions within the regular expression are saved in the remaining[m
+       [1mBASH_REMATCH[0m indices. The element of [1mBASH_REMATCH[0m with index [4mn[24m[m
+       is the portion of the string matching  the  [4mn[24mth  parenthesized[m
+       subexpression.   Bash  sets  [1mBASH_REMATCH[0m in the global scope;[m
+       declaring it as a local variable will lead to  unexpected  re‐[m
+       sults.[m
+[m
+       Expressions  may  be  combined  using the following operators,[m
+       listed in decreasing order of precedence:[m
+[m
+              [1m([0m [4mexpression[24m [1m)[0m[m
+                     Returns the value of [4mexpression[24m.   This  may  be[m
+                     used to override the normal precedence of opera‐[m
+                     tors.[m
+              [1m![0m [4mexpression[24m[m
+                     True if [4mexpression[24m is false.[m
+[7m Manual page bash(1) line 457 (press h for help or q to quit)[27m[K[K              [4mexpression1[24m [1m&&[0m [4mexpression2[24m[m
+                     True if both  [4mexpression1[24m  and  [4mexpression2[24m  are[m
+                     true.[m
+              [4mexpression1[24m [1m||[0m [4mexpression2[24m[m
+                     True  if  either  [4mexpression1[24m  or [4mexpression2[24m is[m
+                     true.[m
+[m
+              The [1m&&[0m and [1m||[0m operators do not evaluate [4mexpression2[24m  if[m
+              the value of [4mexpression1[24m is sufficient to determine the[m
+              return value of the entire conditional expression.[m
+[m
+       [1mfor[0m [4mname[24m [ [ [1min[0m [ [4mword[24m [4m...[24m ] ] ; ] [1mdo[0m [4mlist[24m ; [1mdone[0m[m
+              The list of words following [1min[0m is expanded,  generating[m
+              a list of items.  The variable [4mname[24m is set to each ele‐[m
+              ment of this list in turn, and [4mlist[24m  is  executed  each[m
+              time.   If the [1min[0m [4mword[24m is omitted, the [1mfor[0m command exe‐[m
+              cutes [4mlist[24m once for each positional parameter  that  is[m
+              set  (see  [1mPARAMETERS[0m below).  The return status is the[m
+              exit status of the last command that executes.  If  the[m
+[7m Manual page bash(1) line 476 (press h for help or q to quit)[27m[K[K              expansion of the items following [1min[0m results in an empty[m
+              list, no commands are executed, and the  return  status[m
+              is 0.[m
+[m
+       [1mfor[0m (( [4mexpr1[24m ; [4mexpr2[24m ; [4mexpr3[24m )) ; [1mdo[0m [4mlist[24m ; [1mdone[0m[m
+              First, the arithmetic expression [4mexpr1[24m is evaluated ac‐[m
+              cording to the rules described below  under  [1mARITHMETIC[0m[m
+              [1mEVALUATION[0m.   The  arithmetic  expression [4mexpr2[24m is then[m
+              evaluated repeatedly until it evaluates to zero.   Each[m
+              time  [4mexpr2[24m evaluates to a non-zero value, [4mlist[24m is exe‐[m
+              cuted and the arithmetic expression [4mexpr3[24m is evaluated.[m
+              If any expression is omitted, it behaves as if it eval‐[m
+              uates to 1.  The return value is the exit status of the[m
+              last  command in [4mlist[24m that is executed, or false if any[m
+              of the expressions is invalid.[m
+[m
+       [1mselect[0m [4mname[24m [ [1min[0m [4mword[24m ] ; [1mdo[0m [4mlist[24m ; [1mdone[0m[m
+              The list of words following [1min[0m is expanded,  generating[m
+              a  list  of  items,  and  the  set of expanded words is[m
+[7m Manual page bash(1) line 495 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              exit status of the last command that executes.  If  the[m
+[20;1H[K[7m Manual page bash(1) line 494 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              set  (see  [1mPARAMETERS[0m below).  The return status is the[m
+[20;1H[K[7m Manual page bash(1) line 493 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              cutes [4mlist[24m once for each positional parameter  that  is[m
+[20;1H[K[7m Manual page bash(1) line 492 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              time.   If the [1min[0m [4mword[24m is omitted, the [1mfor[0m command exe‐[m
+[20;1H[K[7m Manual page bash(1) line 491 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              ment of this list in turn, and [4mlist[24m  is  executed  each[m
+[20;1H[K[7m Manual page bash(1) line 490 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              a list of items.  The variable [4mname[24m is set to each ele‐[m
+[20;1H[K[7m Manual page bash(1) line 489 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              The list of words following [1min[0m is expanded,  generating[m
+[20;1H[K[7m Manual page bash(1) line 488 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mfor[0m [4mname[24m [ [ [1min[0m [ [4mword[24m [4m...[24m ] ] ; ] [1mdo[0m [4mlist[24m ; [1mdone[0m[m
+[20;1H[K[7m Manual page bash(1) line 487 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page bash(1) line 486 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              return value of the entire conditional expression.[m
+[20;1H[K[7m Manual page bash(1) line 485 (press h for help or q to quit)[27m[K[H[2J[H              return value of the entire conditional expression.[m
+[m
+       [1mfor[0m [4mname[24m [ [ [1min[0m [ [4mword[24m [4m...[24m ] ] ; ] [1mdo[0m [4mlist[24m ; [1mdone[0m[m
+              The list of words following [1min[0m is expanded,  generating[m
+              a list of items.  The variable [4mname[24m is set to each ele‐[m
+              ment of this list in turn, and [4mlist[24m  is  executed  each[m
+              time.   If the [1min[0m [4mword[24m is omitted, the [1mfor[0m command exe‐[m
+              cutes [4mlist[24m once for each positional parameter  that  is[m
+              set  (see  [1mPARAMETERS[0m below).  The return status is the[m
+              exit status of the last command that executes.  If  the[m
+              expansion of the items following [1min[0m results in an empty[m
+              list, no commands are executed, and the  return  status[m
+              is 0.[m
+[m
+       [1mfor[0m (( [4mexpr1[24m ; [4mexpr2[24m ; [4mexpr3[24m )) ; [1mdo[0m [4mlist[24m ; [1mdone[0m[m
+              First, the arithmetic expression [4mexpr1[24m is evaluated ac‐[m
+              cording to the rules described below  under  [1mARITHMETIC[0m[m
+              [1mEVALUATION[0m.   The  arithmetic  expression [4mexpr2[24m is then[m
+[7m Manual page bash(1) line 485 (press h for help or q to quit)[27m[K[H[2J[H              return value of the entire conditional expression.[m
+[m
+       [1mfor[0m [4mname[24m [ [ [1min[0m [ [4mword[24m [4m...[24m ] ] ; ] [1mdo[0m [4mlist[24m ; [1mdone[0m[m
+              The list of words following [1min[0m is expanded,  generating[m
+              a list of items.  The variable [4mname[24m is set to each ele‐[m
+              ment of this list in turn, and [4mlist[24m  is  executed  each[m
+              time.   If the [1min[0m [4mword[24m is omitted, the [1mfor[0m command exe‐[m
+              cutes [4mlist[24m once for each positional parameter  that  is[m
+              set  (see  [1mPARAMETERS[0m below).  The return status is the[m
+              exit status of the last command that executes.  If  the[m
+              expansion of the items following [1min[0m results in an empty[m
+              list, no commands are executed, and the  return  status[m
+              is 0.[m
+[m
+       [1mfor[0m (( [4mexpr1[24m ; [4mexpr2[24m ; [4mexpr3[24m )) ; [1mdo[0m [4mlist[24m ; [1mdone[0m[m
+              First, the arithmetic expression [4mexpr1[24m is evaluated ac‐[m
+              cording to the rules described below  under  [1mARITHMETIC[0m[m
+[7m Manual page bash(1) line 485 (press h for help or q to quit)[27m[K[H[2J[H              return value of the entire conditional expression.[m
+[m
+       [1mfor[0m [4mname[24m [ [ [1min[0m [ [4mword[24m [4m...[24m ] ] ; ] [1mdo[0m [4mlist[24m ; [1mdone[0m[m
+              The list of words following [1min[0m is expanded,  generating[m
+              a list of items.  The variable [4mname[24m is set to each ele‐[m
+              ment of this list in turn, and [4mlist[24m  is  executed  each[m
+              time.   If the [1min[0m [4mword[24m is omitted, the [1mfor[0m command exe‐[m
+              cutes [4mlist[24m once for each positional parameter  that  is[m
+              set  (see  [1mPARAMETERS[0m below).  The return status is the[m
+              exit status of the last command that executes.  If  the[m
+              expansion of the items following [1min[0m results in an empty[m
+              list, no commands are executed, and the  return  status[m
+              is 0.[m
+[m
+       [1mfor[0m (( [4mexpr1[24m ; [4mexpr2[24m ; [4mexpr3[24m )) ; [1mdo[0m [4mlist[24m ; [1mdone[0m[m
+              First, the arithmetic expression [4mexpr1[24m is evaluated ac‐[m
+[7m Manual page bash(1) line 485 (press h for help or q to quit)[27m[K[H[2J[H              return value of the entire conditional expression.[m
+[m
+       [1mfor[0m [4mname[24m [ [ [1min[0m [ [4mword[24m [4m...[24m ] ] ; ] [1mdo[0m [4mlist[24m ; [1mdone[0m[m
+              The list of words following [1min[0m is expanded,  generating[m
+              a list of items.  The variable [4mname[24m is set to each ele‐[m
+              ment of this list in turn, and [4mlist[24m  is  executed  each[m
+              time.   If the [1min[0m [4mword[24m is omitted, the [1mfor[0m command exe‐[m
+              cutes [4mlist[24m once for each positional parameter  that  is[m
+              set  (see  [1mPARAMETERS[0m below).  The return status is the[m
+              exit status of the last command that executes.  If  the[m
+              expansion of the items following [1min[0m results in an empty[m
+              list, no commands are executed, and the  return  status[m
+              is 0.[m
+[m
+       [1mfor[0m (( [4mexpr1[24m ; [4mexpr2[24m ; [4mexpr3[24m )) ; [1mdo[0m [4mlist[24m ; [1mdone[0m[m
+[7m Manual page bash(1) line 485 (press h for help or q to quit)[27m[K[H[2J[H              return value of the entire conditional expression.[m
+[m
+       [1mfor[0m [4mname[24m [ [ [1min[0m [ [4mword[24m [4m...[24m ] ] ; ] [1mdo[0m [4mlist[24m ; [1mdone[0m[m
+              The list of words following [1min[0m is expanded,  generating[m
+              a list of items.  The variable [4mname[24m is set to each ele‐[m
+              ment of this list in turn, and [4mlist[24m  is  executed  each[m
+              time.   If the [1min[0m [4mword[24m is omitted, the [1mfor[0m command exe‐[m
+              cutes [4mlist[24m once for each positional parameter  that  is[m
+              set  (see  [1mPARAMETERS[0m below).  The return status is the[m
+              exit status of the last command that executes.  If  the[m
+              expansion of the items following [1min[0m results in an empty[m
+              list, no commands are executed, and the  return  status[m
+              is 0.[m
+[m
+[7m Manual page bash(1) line 485 (press h for help or q to quit)[27m[K[H[2J[H              return value of the entire conditional expression.[m
+[m
+       [1mfor[0m [4mname[24m [ [ [1min[0m [ [4mword[24m [4m...[24m ] ] ; ] [1mdo[0m [4mlist[24m ; [1mdone[0m[m
+              The list of words following [1min[0m is expanded,  generating[m
+              a list of items.  The variable [4mname[24m is set to each ele‐[m
+              ment of this list in turn, and [4mlist[24m  is  executed  each[m
+              time.   If the [1min[0m [4mword[24m is omitted, the [1mfor[0m command exe‐[m
+              cutes [4mlist[24m once for each positional parameter  that  is[m
+              set  (see  [1mPARAMETERS[0m below).  The return status is the[m
+              exit status of the last command that executes.  If  the[m
+              expansion of the items following [1min[0m results in an empty[m
+              list, no commands are executed, and the  return  status[m
+              is 0.[m
+[7m Manual page bash(1) line 485 (press h for help or q to quit)[27m[K[H[2J[H              return value of the entire conditional expression.[m
+[m
+       [1mfor[0m [4mname[24m [ [ [1min[0m [ [4mword[24m [4m...[24m ] ] ; ] [1mdo[0m [4mlist[24m ; [1mdone[0m[m
+              The list of words following [1min[0m is expanded,  generating[m
+              a list of items.  The variable [4mname[24m is set to each ele‐[m
+              ment of this list in turn, and [4mlist[24m  is  executed  each[m
+              time.   If the [1min[0m [4mword[24m is omitted, the [1mfor[0m command exe‐[m
+              cutes [4mlist[24m once for each positional parameter  that  is[m
+              set  (see  [1mPARAMETERS[0m below).  The return status is the[m
+              exit status of the last command that executes.  If  the[m
+              expansion of the items following [1min[0m results in an empty[m
+[7m Manual page

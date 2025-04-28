@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# format:        for name [ [ in [ word ... ] ] ; ] do list ; done
+
 # vanlig for-loop över argumenten (från arg 1..)
 for x; do echo "$x"; done
 
