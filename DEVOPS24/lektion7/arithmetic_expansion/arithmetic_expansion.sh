@@ -11,3 +11,5 @@ echo Tal 1 nu: "$tal1"
 # Variabler i $(( )) behöver inte dollar först
 echo Slumptal 0 - 99: $((RANDOM % 100))
 echo Slumptal 0 - 99: $(($RANDOM % 100))
+
+echo Slumptal 0 eller 10: $((RANDOM > 100 ? 5 : 10))
