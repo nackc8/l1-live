@@ -9,3 +9,6 @@ touch foo{1..10}.txt
 #   ?     Ett tecken, vilket som helst
 #   *     Valfritt antal tecken, inklusive tomt
 #   [abc] Ett valfritt tecken av a,b eller c. Alla tecken inom hakparenteserna.
+
+# Ta bort alla filer med ett nummer följt av punkt .txt
+rm 
