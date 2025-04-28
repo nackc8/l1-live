@@ -10818,4 +10818,70 @@ Slut på funktionen
 [10;1H       used as options when the shell is invoked.  In addition,  [1mbash[0m[m
 [11;1H       interprets the following options when it is invoked:[m
 [12;1H[m
-[13;1H       [1m-c[0m        If  the [1m-c[0m option is present, 
+[13;1H       [1m-c[0m        If  the [1m-c[0m option is present, then commands are read[m
+[14;1H                 from the first non-option  argument  [4mcommand_string[24m.[m
+[15;1H                 If there are arguments after the [4mcommand_string[24m, the[m
+[16;1H                 first argument is assigned to [1m$0[0m and  any  remaining[m
+[17;1H                 arguments are assigned to the positional parameters.[m
+[18;1H...skipping...
+       is  available as the value of the variable [4mNAME[24m_[7mPID[27m.  The [1mwait[0m[m
+       builtin command may be used to wait for the coprocess to  ter‐[m
+       minate.[m
+[m
+       Since the coprocess is created as an asynchronous command, the[m
+       [1mcoproc[0m command always returns success.  The return status of a[m
+       coprocess is the exit status of [4mcommand[24m.[m
+[m
+   [1mShell[0m [1mFunction[0m [1mDefinitions[0m[m
+       A  shell  function  is  an object that is called like a simple[m
+       command and executes a compound command with a new set of  po‐[m
+       sitional parameters.  Shell functions are declared as follows:[m
+[m
+       [4mfname[24m () [4mcompound-command[24m [[4mredirection[24m][m
+       [1mfunction[0m [4mfname[24m [()] [4mcompound-command[24m [[4mredirection[24m][m
+              This defines a function named [4mfname[24m.  The reserved word[m
+              [1mfunction[0m is optional.  If the [1mfunction[0m reserved word is[m
+[7m Manual page bash(1) line 626 (press h for help or q to quit)[27m[K[K/[K...skipping...
+       [1mBASH[0m[1m[7mPID[27m[0m[m
+              Expands  to the process ID of the current [1mbash[0m process.[m
+              This differs from [1m$$[0m under certain circumstances,  such[m
+              as subshells that do not require [1mbash[0m to be re-initial‐[m
+              ized.  Assignments to [1mBASH[0m[1m[7mPID[27m[0m have no effect.  If [1mBASH‐[0m[m
+              [1m[7mPID[27m[0m  is unset, it loses its special properties, even if[m
+              it is subsequently reset.[m
+       [1mBASH_ALIASES[0m[m
+              An associative array variable whose members  correspond[m
+              to  the  internal  list of aliases as maintained by the[m
+              [1malias[0m builtin.  Elements added to this array appear  in[m
+              the  alias list; however, unsetting array elements cur‐[m
+              rently does not cause aliases to be  removed  from  the[m
+              alias  list.   If  [1mBASH_ALIASES[0m  is unset, it loses its[m
+              special properties, even if it is subsequently reset.[m
+       [1mBASH_ARGC[0m[m
+              An array variable whose values are the number of param‐[m
+[7m Manual page bash(1) line 940 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion7/funk
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ man bash[C[C./funk3.sh [H[2J[94mDEVOPS24/lektion7/funk
+(B[m$ ./funk3.sh 
+[?2004lProcess 177469
+Process 177470
+0123
+Slut på funktionen
+0022
+[?2004h[94mDEVOPS24/lektion7/funk
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ ./funk3.sh [H[2J[94mDEVOPS24/lektion7/funk
+(B[m$ ./funk3.sh 
+[?2004lProcess 178699
+Process 178700
+0123
+Slut på funktionen
+0022
+[?2004h[94mDEVOPS24/lektion7/funk
+(B[m$ ./funk3.sh 
+[?2004lProcess 178761
+Process 178762
+0123
+Slut på funktionen
+0022
+[?2004h[94mDEVOPS24/lektion7/funk
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mDEVOPS24/lektion7/funk
+(B[m$ oijwoifjoiwj[K[K[K[K
