@@ -2,4 +2,7 @@
 
 set -e
 
-while 
+while true; do
+	echo Snurr
+	sleep 1
+done
