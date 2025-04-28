@@ -2,9 +2,7 @@
 
 # Funktion som körs i barnprocess!
 log() (
-	echo $(date +)
+	echo -e "$(date +%T)\t$*"
 )
 
-echo Process "$BASHPID"
-foo "$@" # Betyder foo "$1" "$2" "$3" ..
-umask
+log Hello world
