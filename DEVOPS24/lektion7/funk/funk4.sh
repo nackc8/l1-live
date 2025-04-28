@@ -5,4 +5,4 @@ log() (
 	echo -e "$(date +%T)\t$*"
 )
 
-log Hello world
+log Hello world >>logfil
