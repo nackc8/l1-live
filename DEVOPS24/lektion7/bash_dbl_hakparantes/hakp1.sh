@@ -13,6 +13,7 @@ fi
 
 read -r -p "Vad är ditt namn? " namn
 
+# TODO: Återkommer
 if [[ namn =~ [0-9] ]]; then
 	echo Ditt namn börjar med ett nummer.
 fi
