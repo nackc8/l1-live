@@ -1,6 +1,7 @@
 #!/bin/bash
 
-set -x
+set -e
+#set -x
 
 echo Denna rad körs
 
