@@ -7,7 +7,9 @@ set -e
 # Vi sväljer felet
 # alt 1: test -f finnsinte || true
 # alt 2: test -f finnsinte && true
-test -f finnsinte
+if test -f finnsinte; then
+	echo Den fanns
+fi
 
 echo Denna rad körs
 
