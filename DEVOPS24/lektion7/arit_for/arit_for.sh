@@ -17,3 +17,6 @@ for x in {hjarter,spader}{1..10}; do echo "$x"; done
 # arit loop
 
 # format: for (( expr1 ; expr2 ; expr3 )) ; do list ; done
+
+# arit loop över jämna nummer lägre än 20
+for (( t=2 ;  ))
