@@ -530,4 +530,66 @@ c.txt	foo1.txt   foo5.txt  foo9.txt  food.txt  globb.sh
 [7m Manual page bash(1) line 2375 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     [1mLC_COLLATE[0m or [1mLC_ALL[0m shell  variables,  if  set.[m
 [7m Manual page bash(1) line 2376 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     To  obtain  the  traditional  interpretation  of[m
 [7m Manual page bash(1) line 2377 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     range expressions, where [1m[a-d][0m is equivalent  to[m
-[7m Manual page bash(1) line 2378 (press h for help or q t
+[7m Manual page bash(1) line 2378 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              [1m[...][0m  Matches  any  one of the enclosed characters.  A[m
+[14;1H[K[7m Manual page bash(1) line 2377 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ [7mrm -v [!ab]*.txt[27m
+[A[C[Crm -v [!ab]*.txt
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ rm -v [!ab]*.txt
+[?2004lremoved '10.txt'
+removed 'c.txt'
+removed 'd.txt'
+removed 'e.txt'
+removed 'foo10.txt'
+removed 'foo1.txt'
+removed 'foo2.txt'
+removed 'foo3.txt'
+removed 'foo4.txt'
+removed 'foo5.txt'
+removed 'foo6.txt'
+removed 'foo7.txt'
+removed 'foo8.txt'
+removed 'foo9.txt'
+removed 'fooa.txt'
+removed 'foob.txt'
+removed 'fooc.txt'
+removed 'food.txt'
+removed 'fooe.txt'
+removed 'foof.txt'
+removed 'f.txt'
+[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ [H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ ls
+[?2004la.txt  b.txt  globb.sh
+[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ [K(B[m$ [K(B[m$ ,v[K[Kr,[Km *.txtl[K[H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ rm *.txt[1@e[1@c[1@h[1@o[1@ 
+[?2004lrm a.txt b.txt
+[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ cp globb.sh ../brace_expansion/
+[?2004l[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ { }[K[K[K\[Kecho {a,b,c}
+[?2004la b c
+[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ echo {a,b,c}l,b,c}f,b,c}a,b,c}[C[Ce,c}t,c}a,c}[C[C[1P}h}e}j}[C[H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ echo {alfa,beta,hej}
+[?2004lalfa beta hej
+[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ tocuh alfa beta hej[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kecho {alfa,beta,hej}i{alfa,beta,hej}n{alfa,beta,hej}n{alfa,beta,hej}a{alfa,beta,hej}n{alfa,beta,hej}[H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ echo innan{alfa,beta,hej}[C[C[C[C[C[C[C[C[C[C[C[C[C[C_{alfa,beta,hej}[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004linnan_alfa innan_beta innan_hej
+[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ echo innan_{alfa,beta,hej}_efter[H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ echo innan_{alfa,beta,hej}_efter
+[?2004linnan_alfa_efter innan_beta_efter innan_hej_efter
+[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ echo innan_{alfa,beta,hej}_efter[C[C[C[C[C[C[C[C[C[C[C[C[1P}_efter[1P}_efter[1P}_efter[1P}_efter[1P}_efter[1P}_efter[1P}_efter[1P}_efter[1P}_efter[1P}_efter[1P}_efter[1P}_efter[1P}_efter[H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ echo innan_{}_efter[C[C[C[C[C[C[C[C[C[C[C[C[C[C1}_efter.}_efter.}_efter5}_efter[C[C[C[C[C[C[C
+[?2004linnan_1_efter innan_2_efter innan_3_efter innan_4_efter innan_5_efter
+[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ echo innan_{1..5}_efter[C[C[1P..5}_eftera..5}_efter[C[C[C[C[1P}_efterz}_efter[H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ echo innan_{a..z}_efter[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004linnan_a_efter innan_b_efter innan_c_efter innan_d_efter innan_e_efter innan_f_efter innan_g_efter innan_h_efter innan_i_efter innan_j_efter innan_k_efter innan_l_efter innan_m_efter innan_n_efter innan_o_efter innan_p_efter innan_q_efter innan_r_efter innan_s_efter innan_t_efter innan_u_efter innan_v_efter innan_w_efter innan_x_efter innan_y_efter innan_z_efter
+[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ echo innan_{a..z}_efter
