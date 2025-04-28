@@ -15,3 +15,6 @@ echo innan_{a..c}_efter_{stor,liten}.png
 # Nestlade brace expansions är OK
 echo {hjarter,klover,spader,ruter}_{{2..10},Knekt,Dam,Kung,Ess}
 # hjarter_2 hjarter_3 hjarter_4 hjarter_5 hjarter_6 hjarter_7 hjarter_8 hjarter_9 hjarter_10 hjarter_Knekt hjarter_Dam hjarter_Kung hjarter_Ess klover_2 klover_3 klover_4 klover_5 klover_6 klover_7 klover_8 klover_9 klover_10 klover_Knekt klover_Dam klover_Kung klover_Ess spader_2 spader_3 spader_4 spader_5 spader_6 spader_7 spader_8 spader_9 spader_10 spader_Knekt spader_Dam spader_Kung spader_Ess ruter_2 ruter_3 ruter_4 ruter_5 ruter_6 ruter_7 ruter_8 ruter_9 ruter_10 ruter_Knekt ruter_Dam ruter_Kung ruter_Ess
+
+echo /etc/apt/sources.list.d/{kopia,KOPIA}.list
+# /etc/apt/sources.list.d/kopia.list /etc/apt/sources.list.d/KOPIA.list
