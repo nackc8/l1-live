@@ -6,4 +6,4 @@ foo() {
 	done
 }
 
-foo $@
+foo "$@" # Betyder foo "$1" "$2" "$3" ..
