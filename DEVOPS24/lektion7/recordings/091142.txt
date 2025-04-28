@@ -75,4 +75,141 @@ b.txt	foo10.txt  foo4.txt  foo8.txt  fooc.txt  f.txt
 c.txt	foo1.txt   foo5.txt  foo9.txt  food.txt  globb.sh
 [?2004h[94mDEVOPS24/lektion7/globbing
 (B[m$ [H[2J[94mDEVOPS24/lektion7/globbing
-(B[m$ [K(B[m$ [K
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ man bash
+[?2004l[?1049h[22;0;0t[?1h=BASH(1)                General Commands Manual                BASH(1)[m
+[m
+[1mNAME[0m[m
+       bash - GNU Bourne-Again SHell[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mbash[0m [options] [command_string | file][m
+[m
+[1mCOPYRIGHT[0m[m
+       Bash  is  Copyright (C) 1989-2022 by the Free Software Founda‐[m
+       tion, Inc.[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mBash[0m is an [1msh[0m-compatible command language interpreter that ex‐[m
+       ecutes  commands  read from the standard input or from a file.[m
+       [1mBash[0m also incorporates useful features from  the  [4mKorn[24m  and  [4mC[24m[m
+       shells ([1mksh[0m and [1mcsh[0m).[m
+[7m Manual page bash(1) line 1 (press h for help or q to quit)[27m[K[K/[KPP[Kaa[Ktt[Khh[Knn[Kaa[Kmm[Kee[K  [KEE[Kxx[Kpp[Kaa[Knn[Kss[Kii[Koo[Knn[K[1;1HBASH(1)                General Commands Manual                BASH(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       bash - GNU Bourne-Again SHell[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mbash[0m [options] [command_string | file][m
+[8;1H[m
+[9;1H[1mCOPYRIGHT[0m[m
+[10;1H       Bash  is  Copyright (C) 1989-2022 by the Free Software Founda‐[m
+[11;1H       tion, Inc.[m
+[12;1H[m
+[13;1H[1mDESCRIPTION[0m[m
+[14;1H       [1mBash[0m is an [1msh[0m-compatible command language interpreter that ex‐[m
+[15;1H       ecutes  commands  read from the standard input or from a file.[m
+[16;1H       [1mBash[0m also incorporates useful features from  the  [4mKorn[24m  and  [4mC[24m[m
+[17;1H       shells ([1mksh[0m and [1mcsh[0m).[m
+[18;1H[1;1HBASH(1)                General Commands Manual                BASH(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       bash - GNU Bourne-Again SHell[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mbash[0m [options] [command_string | file][m
+[8;1H[m
+[9;1H[1mCOPYRIGHT[0m[m
+[10;1H       Bash  is  Copyright (C) 1989-2022 by the Free Software Founda‐[m
+[11;1H       tion, Inc.[m
+[12;1H[m
+[13;1H[1mDESCRIPTION[0m[m
+[14;1H       [1mBash[0m is an [1msh[0m-compatible command language interpreter that ex‐[m
+[15;1H       ecutes  commands  read from the standard input or from a file.[m
+[16;1H       [1mBash[0m also incorporates useful features from  the  [4mKorn[24m  and  [4mC[24m[m
+[17;1H       shells ([1mksh[0m and [1mcsh[0m).[m
+[18;1H...skipping...
+   [1m[7mPathname[27m[0m[7m [27m[1m[7mExpansion[27m[0m[m
+       After word splitting, unless the [1m-f[0m option has been set,  [1mbash[0m[m
+       scans  each  word  for  the characters [1m*[0m, [1m?[0m, and [1m[[0m.  If one of[m
+       these characters appears, and is not quoted, then the word  is[m
+       regarded  as  a  [4mpattern[24m,  and replaced with an alphabetically[m
+       sorted list of filenames matching  the  pattern  (see  [1mPattern[0m[m
+       [1mMatching[0m  below).  If no matching filenames are found, and the[m
+       shell option [1mnullglob[0m is not enabled, the  word  is  left  un‐[m
+       changed.   If  the  [1mnullglob[0m option is set, and no matches are[m
+       found, the word is removed.  If the [1mfailglob[0m shell  option  is[m
+       set, and no matches are found, an error message is printed and[m
+       the command is not executed.  If the shell  option  [1mnocaseglob[0m[m
+       is  enabled, the match is performed without regard to the case[m
+       of alphabetic characters.  Note that when using range  expres‐[m
+       sions like [a-z] (see below), letters of the other case may be[m
+       included, depending on the setting of [1mLC_COLLATE.[0m  When a pat‐[m
+       tern  is  used for pathname expansion, the character [1m``.''[0m  at[m
+[7m Manual page bash(1) line 2309 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the start of a name or immediately following a slash  must  be[m
+[7m Manual page bash(1) line 2310 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       matched  explicitly,  unless  the shell option [1mdotglob[0m is set.[m
+[7m Manual page bash(1) line 2311 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       In order to match the filenames [1m``.''[0m  and [1m``..''[0m, the pattern[m
+[7m Manual page bash(1) line 2312 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       must  begin  with ``.'' (for example, ``.?''), even if [1mdotglob[0m[m
+[7m Manual page bash(1) line 2313 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       is set.  If the [1mglobskipdots[0m  shell  option  is  enabled,  the[m
+[7m Manual page bash(1) line 2314 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       filenames  [1m``.''[0m   and  [1m``..''[0m  are never matched, even if the[m
+[7m Manual page bash(1) line 2315 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       pattern begins with a [1m``.''[0m.  When not matching pathnames, the[m
+[7m Manual page bash(1) line 2316 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m``.''[0m   character  is  not treated specially.  When matching a[m
+[7m Manual page bash(1) line 2317 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       pathname, the slash character must always be  matched  explic‐[m
+[7m Manual page bash(1) line 2318 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       itly by a slash in the pattern, but in other matching contexts[m
+[7m Manual page bash(1) line 2319 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       it can be matched by a special pattern character as  described[m
+[7m Manual page bash(1) line 2320 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       below  under  [1mPattern[0m  [1mMatching[0m.  See the description of [1mshopt[0m[m
+[7m Manual page bash(1) line 2321 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       below under [1mSHELL[0m [1mBUILTIN[0m [1mCOMMANDS[0m for a  description  of  the[m
+[7m Manual page bash(1) line 2322 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mnocaseglob[0m,  [1mnullglob[0m,  [1mglobskipdots[0m,  [1mfailglob[0m,  and  [1mdotglob[0m[m
+[7m Manual page bash(1) line 2323 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       shell options.[m
+[7m Manual page bash(1) line 2324 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 2325 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The [1mGLOBIGNORE[0m shell variable may be used to restrict the  set[m
+[7m Manual page bash(1) line 2326 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       of  file names matching a [4mpattern[24m.  If [1mGLOBIGNORE[0m is set, each[m
+[7m Manual page bash(1) line 2327 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       matching file name that also matches one of  the  patterns  in[m
+[7m Manual page bash(1) line 2328 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mGLOBIGNORE[0m  is  removed  from the list of matches.  If the [1mno‐[0m[m
+[7m Manual page bash(1) line 2329 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mcaseglob[0m option is set, the matching against the  patterns  in[m
+[7m Manual page bash(1) line 2330 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mGLOBIGNORE[0m is performed without regard to case.  The filenames[m
+[7m Manual page bash(1) line 2331 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m``.''[0m  and [1m``..''[0m  are always ignored when [1mGLOBIGNORE[0m  is  set[m
+[7m Manual page bash(1) line 2332 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       and not null.  However, setting [1mGLOBIGNORE[0m to a non-null value[m
+[7m Manual page bash(1) line 2333 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       has the effect of enabling the [1mdotglob[0m shell  option,  so  all[m
+[7m Manual page bash(1) line 2334 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       other  filenames  beginning  with a [1m``.''[0m  will match.  To get[m
+[7m Manual page bash(1) line 2335 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the old behavior of ignoring filenames beginning with a [1m``.''[0m,[m
+[7m Manual page bash(1) line 2336 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       make  [1m``.*''[0m   one of the patterns in [1mGLOBIGNORE[0m.  The [1mdotglob[0m[m
+[7m Manual page bash(1) line 2337 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       option is disabled when  [1mGLOBIGNORE[0m  is  unset.   The  pattern[m
+[7m Manual page bash(1) line 2338 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       matching honors the setting of the [1mextglob[0m shell option.[m
+[7m Manual page bash(1) line 2339 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 2340 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mPattern[0m [1mMatching[0m[m
+[7m Manual page bash(1) line 2341 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 2342 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Any  character  that appears in a pattern, other than the spe‐[m
+[7m Manual page bash(1) line 2343 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       cial pattern characters described below, matches itself.   The[m
+[7m Manual page bash(1) line 2344 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       NUL character may not occur in a pattern.  A backslash escapes[m
+[7m Manual page bash(1) line 2345 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the following character; the escaping backslash  is  discarded[m
+[7m Manual page bash(1) line 2346 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       when  matching.  The special pattern characters must be quoted[m
+[7m Manual page bash(1) line 2347 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       if they are to be matched literally.[m
+[7m Manual page bash(1) line 2348 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 2349 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The special pattern characters have the following meanings:[m
+[7m Manual page bash(1) line 2350 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 2351 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m*[0m      Matches any string, including the  null  string.[m
+[7m Manual page bash(1) line 2352 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     When the [1mglobstar[0m shell option is enabled, and [1m*[0m[m
+[7m Manual page bash(1) line 2353 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     is used in a pathname expansion context, two ad‐[m
+[7m Manual page bash(1) line 2354 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     jacent  [1m*[0ms  used  as a single pattern will match[m
+[7m Manual page bash(1) line 2355 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     all files and zero or more directories and  sub‐[m
+[7m Manual page bash(1) line 2356 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     directories.   If  followed by a [1m/[0m, two adjacent[m
+[7m Manual page bash(1) line 2357 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     [1m*[0ms will match only directories  and  subdirecto‐[m
+[7m Manual page bash(1) line 2358 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     ries.[m
+[7m Manual page bash(1) line 2359 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m?[0m      Matches any single character.[m
+[7m Manual page bash(1) line 2360 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m[...][0m  Matches  any  one of the enclosed characters.  A[m
+[7m Manual page bash(1) line 2361 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     pair of characters separated by a hyphen denotes[m
+[7m Manual page bash(1) line 2362 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     a [4mrange[24m [4mexpression[24m; any character that falls be‐[m
+[7m Manual page bash(1) line 2363 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     tween those two characters, inclusive, using the[m
+[7m Manual page bash(1) line 2364 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     current  locale's collating sequence and charac‐[m
+[7m Manual page bash(1) line 2365 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     ter set, is matched.   If  the  first  character[m
+[7m Manual page bash(1) line 2366 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     following  the [1m[[0m is a [1m![0m  or a [1m^[0m then any charac‐[m
+[7m Manual page bash(1) line 2367 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     ter not enclosed is matched.  The sorting  order[m
+[7m Manual page bash(1) line 2368 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     of  characters  in  range  expressions,  and the[m
+[7m Manual page bash(1) line 2369 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     characters included in the range, are determined[m
+[7m Manual page bash(1) line 2370 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     by  the  current  locale  and  the values of the[m
+[7m Manual page bash(1) line 2371 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     [1mLC_COLLATE[0m or [1mLC_ALL[0m shell  variables,  if  set.[m
+[7m Manual page bash(1) line 2372 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     To  obtain  the  traditional  interpretation  of[m
+[7m Manual page bash(1) line 2373 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     range expressions, where [1m[a-d][0m is equivalent  to[m
+[7m Manual page bash(1) line 2374 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     [1m[abcd][0m,  set  value of the [1mLC_ALL[0m shell variable[m
+[7m Manual page bash(1) line 2375 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     to [1mC[0m, or enable the  [1mg
