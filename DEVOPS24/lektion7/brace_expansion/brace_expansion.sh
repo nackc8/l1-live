@@ -21,3 +21,6 @@ echo /etc/apt/sources.list.d/{kopia,KOPIA}.list
 
 cp -v bokforing.txt{,.bak}
 # 'bokforing.txt' -> 'bokforing.txt.bak'
+
+mv -v bokforing.txt{.bak,}
+# renamed 'bokforing.txt.bak' -> 'bokforing.txt'
