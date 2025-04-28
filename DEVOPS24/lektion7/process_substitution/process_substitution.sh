@@ -9,6 +9,9 @@ diff kat_a_filer.txt kat_b_filer.txt
 rm kat_a_filer.txt kat_b_filer.txt
 
 # Med process substitution
+# Fördelar:
+# 1. Mindre kod
+# 2. Båda filerna skapas parallellt
 diff <(ls -1 kat_a/) <(ls -1 kat_b/)
 # 2d1
 # < 2
