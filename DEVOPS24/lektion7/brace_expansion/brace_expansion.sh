@@ -24,3 +24,12 @@ cp -v bokforing.txt{,.bak}
 
 mv -v bokforing.txt{.bak,}
 # renamed 'bokforing.txt.bak' -> 'bokforing.txt'
+
+for x in {0,1}{0,1}{0,1}{0,1}; do echo Tal: $x; done
+Tal: 0100
+Tal: 0101
+Tal: 0110
+Tal: 0111
+Tal: 1000
+Tal: 1001
+...
