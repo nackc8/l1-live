@@ -1,3 +1,5 @@
 #!/bin/bash
 
-{ls,-l}
+# vanlig for-loop
+
+for x
