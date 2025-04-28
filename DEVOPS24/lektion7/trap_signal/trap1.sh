@@ -3,6 +3,6 @@
 trap 'echo Avbryter;exit 0' SIGINT
 
 while true; do
-	echo Snurr
+	echo Snurr | tee minfil.txt
 	sleep 1
 done
