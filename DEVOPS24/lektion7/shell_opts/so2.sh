@@ -2,6 +2,8 @@
 
 set -e
 set -x
+#       -x  Print commands and their arguments as they are executed.
+# Bra för debug
 
 echo Denna rad körs
 
