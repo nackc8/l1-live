@@ -1,0 +1,78 @@
+Script started on 2025-04-28 09:11:49+02:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="71" LINES="7"]
+[?2004h[94mDEVOPS24/lektion7
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mDEVOPS24/lektion7
+(B[m$ cd globbing/
+[?2004l[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ [H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ ls
+[?2004lglobb.sh
+[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ touch {1..10}.txt
+[?2004l[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ [H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ touch {1..10}.txt[Cf{1..10}.txto{1..10}.txto{1..10}.txt
+[?2004l[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ [H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ ls
+[?2004l10.txt	3.txt  6.txt  9.txt	 foo2.txt  foo5.txt  foo8.txt
+1.txt	4.txt  7.txt  foo10.txt  foo3.txt  foo6.txt  foo9.txt
+2.txt	5.txt  8.txt  foo1.txt	 foo4.txt  foo7.txt  globb.sh
+[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ lstouch foo{1..10}.txt[C[C[1P..10}.txta..10}.txt[C[C[C[C[1P}.txt[1P}.txtf}.txt[C[C[C[C[C
+[?2004l[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ [H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ ls
+[?2004l10.txt	4.txt  8.txt	  foo2.txt  foo6.txt  fooa.txt	fooe.txt
+1.txt	5.txt  9.txt	  foo3.txt  foo7.txt  foob.txt	foof.txt
+2.txt	6.txt  foo10.txt  foo4.txt  foo8.txt  fooc.txt	globb.sh
+3.txt	7.txt  foo1.txt   foo5.txt  foo9.txt  food.txt
+[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ lstouch foo{a..f}.txt[1P{a..f}.txt[1P{a..f}.txt[1P{a..f}.txt[H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ touch {a..f}.txt[C[C[C[C[C[C[C[C
+[?2004l[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ [H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ ls
+[?2004l10.txt	5.txt  a.txt  foo10.txt  foo5.txt  fooa.txt  foof.txt
+1.txt	6.txt  b.txt  foo1.txt	 foo6.txt  foob.txt  f.txt
+2.txt	7.txt  c.txt  foo2.txt	 foo7.txt  fooc.txt  globb.sh
+3.txt	8.txt  d.txt  foo3.txt	 foo8.txt  food.txt
+4.txt	9.txt  e.txt  foo4.txt	 foo9.txt  fooe.txt
+[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ [H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ chmod +_[Kx globb.sh 
+[?2004l[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ [H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ ./globb.sh [H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ ./globb.sh 
+[?2004lrm: cannot remove '[0123456789].txt': No such file or directory
+[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ ls
+[?2004l10.txt	d.txt	   foo2.txt  foo6.txt  fooa.txt  fooe.txt
+a.txt	e.txt	   foo3.txt  foo7.txt  foob.txt  foof.txt
+b.txt	foo10.txt  foo4.txt  foo8.txt  fooc.txt  f.txt
+c.txt	foo1.txt   foo5.txt  foo9.txt  food.txt  globb.sh
+[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ ls[H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ ls./globb.sh 
+[?2004l[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ ls[H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ ls
+[?2004l10.txt	d.txt	   foo2.txt  foo6.txt  fooa.txt  fooe.txt
+a.txt	e.txt	   foo3.txt  foo7.txt  foob.txt  foof.txt
+b.txt	foo10.txt  foo4.txt  foo8.txt  fooc.txt  f.txt
+c.txt	foo1.txt   foo5.txt  foo9.txt  food.txt  globb.sh
+[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ ls./globb.sh [C[Cls[K[K[7mrm [0123456789].txt[27m
+[A[C[Crm [0123456789].txt
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ rm [0123456789].txt
+[?2004lrm: cannot remove '[0123456789].txt': No such file or directory
+[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ ls
+[?2004l10.txt	d.txt	   foo2.txt  foo6.txt  fooa.txt  fooe.txt
+a.txt	e.txt	   foo3.txt  foo7.txt  foob.txt  foof.txt
+b.txt	foo10.txt  foo4.txt  foo8.txt  fooc.txt  f.txt
+c.txt	foo1.txt   foo5.txt  foo9.txt  food.txt  globb.sh
+[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ [H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ [K(B[m$ [K
