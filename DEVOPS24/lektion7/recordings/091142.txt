@@ -8791,4 +8791,84 @@ kat_a_filer.txt  kat_b_filer.txt
        [1mfor[0m (( [4mexpr1[24m ; [4mexpr2[24m ; [4mexpr3[24m )) ; [1mdo[0m [4mlist[24m ; [1mdone[0m[m
               First, the arithmetic expression [4mexpr1[24m is evaluated ac‐[m
               cording to the rules described below  under  [1mARITHMETIC[0m[m
-              [1mEVALUATION[0m.   The  arithmetic  expression [4mexp
+              [1mEVALUATION[0m.   The  arithmetic  expression [4mexpr2[24m is then[m
+              evaluated repeatedly until it evaluates to zero.   Each[m
+              time  [4mexpr2[24m evaluates to a non-zero value, [4mlist[24m is exe‐[m
+              cuted and the arithmetic expression [4mexpr3[24m is evaluated.[m
+[7m Manual page bash(1) line 497 (press h for help or q to quit)[27m[K[H[2J[H              is 0.[m
+[m
+       [1mfor[0m (( [4mexpr1[24m ; [4mexpr2[24m ; [4mexpr3[24m )) ; [1mdo[0m [4mlist[24m ; [1mdone[0m[m
+              First, the arithmetic expression [4mexpr1[24m is evaluated ac‐[m
+              cording to the rules described below  under  [1mARITHMETIC[0m[m
+              [1mEVALUATION[0m.   The  arithmetic  expression [4mexpr2[24m is then[m
+              evaluated repeatedly until it evaluates to zero.   Each[m
+              time  [4mexpr2[24m evaluates to a non-zero value, [4mlist[24m is exe‐[m
+[7m Manual page bash(1) line 497 (press h for help or q to quit)[27m[K[H[2J[H              is 0.[m
+[m
+       [1mfor[0m (( [4mexpr1[24m ; [4mexpr2[24m ; [4mexpr3[24m )) ; [1mdo[0m [4mlist[24m ; [1mdone[0m[m
+              First, the arithmetic expression [4mexpr1[24m is evaluated ac‐[m
+              cording to the rules described below  under  [1mARITHMETIC[0m[m
+              [1mEVALUATION[0m.   The  arithmetic  expression [4mexpr2[24m is then[m
+              evaluated repeatedly until it evaluates to zero.   Each[m
+[7m Manual page bash(1) line 497 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion7/process_substitution
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [7mfor ((t = 2; t < 20; t = t + 2)); do[27m
+[7m        echo Tal: "$t"[27m
+[7mdone[27m[A[Afor ((t = 2; t < 20; t = t + 2)); do
+        echo Tal: "$t"
+done
+[?2004lTal: 2
+Tal: 4
+Tal: 6
+Tal: 8
+Tal: 10
+Tal: 12
+Tal: 14
+Tal: 16
+Tal: 18
+[?2004h[94mDEVOPS24/lektion7/process_substitution
+(B[m$ [H[2J[94mDEVOPS24/lektion7/process_substitution
+(B[m$ for ((t = 2; t < 20; t = t + 2)); do  echo Tal: "$t"; done
+[?2004lTal: 2
+Tal: 4
+Tal: 6
+Tal: 8
+Tal: 10
+Tal: 12
+Tal: 14
+Tal: 16
+Tal: 18
+[?2004h[94mDEVOPS24/lektion7/process_substitution
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mDEVOPS24/lektion7/process_substitution
+(B[m$ sert[K[Kt -v -e[K[K[K[K[K[K[K[K[Khelp set
+[?2004lset: set [-abefhkmnptuvxBCEHPT] [-o option-name] [--] [-] [arg ...]
+    Set or unset values of shell options and positional parameters.
+    
+    Change the value of shell attributes and positional parameters, or
+    display the names and values of shell variables.
+    
+    Options:
+      -a  Mark variables which are modified or created for export.
+      -b  Notify of job termination immediately.
+      -e  Exit immediately if a command exits with a non-zero status.
+      -f  Disable file name generation (globbing).
+      -h  Remember the location of commands as they are looked up.
+      -k  All assignment arguments are placed in the environment for a
+          command, not just those that precede the command name.
+      -m  Job control is enabled.
+      -n  Read commands but do not execute them.
+      -o option-name
+          Set the variable corresponding to option-name:
+              allexport    same as -a
+              braceexpand  same as -B
+              emacs        use an emacs-style line editing interface
+              errexit      same as -e
+              errtrace     same as -E
+              functrace    same as -T
+              hashall      same as -h
+              histexpand   same as -H
+              history      enable command history
+              ignoreeof    the shell will not exit upon reading EOF
+              interactive-comments
+                           allow comments to appear in interactive commands
+              keyword      same as -k
+              monitor      same as -m
