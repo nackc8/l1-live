@@ -18,3 +18,6 @@ echo {hjarter,klover,spader,ruter}_{{2..10},Knekt,Dam,Kung,Ess}
 
 echo /etc/apt/sources.list.d/{kopia,KOPIA}.list
 # /etc/apt/sources.list.d/kopia.list /etc/apt/sources.list.d/KOPIA.list
+
+cp -v bokforing.txt{,.bak}
+# 'bokforing.txt' -> 'bokforing.txt.bak'
