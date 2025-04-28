@@ -273,4 +273,115 @@ c.txt	foo1.txt   foo5.txt  foo9.txt  food.txt  globb.sh
 [7m Manual page rm(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ignore nonexistent files and arguments, never prompt[m
 [7m Manual page rm(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
 [7m Manual page rm(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-i[0m     prompt before every removal[m
-[7m Manual page rm(1) line 20 (press h for 
+[7m Manual page rm(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page rm(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-I[0m     prompt  once  before removing more than three files, or[m
+[7m Manual page rm(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              when removing  recursively;  less  intrusive  than  [1m-i[0m,[m
+[7m Manual page rm(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              while still giving protection against most mistakes[m
+[7m Manual page rm(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page rm(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--interactive[0m[=[4mWHEN[24m][m
+[7m Manual page rm(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              prompt  according  to WHEN: never, once ([1m-I[0m), or always[m
+[7m Manual page rm(1) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ([1m-i[0m); without WHEN, prompt always[m
+[7m Manual page rm(1) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page rm(1) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--one-file-system[0m[m
+[7m Manual page rm(1) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              when removing a hierarchy recursively, skip any  direc‐[m
+[7m Manual page rm(1) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tory  that  is  on a file system different from that of[m
+[7m Manual page rm(1) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page rm(1) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tory  that  is  on a file system different from that of[m
+[7m Manual page rm(1) line 32 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ [7mtouch {1..10}.txt[27m
+[7mtouch {a..f}.txt[27m
+[7mrm -i [0-9].txt[27m
+[A[A[A[C[Ctouch {1..10}.txt
+touch {a..f}.txt
+rm -i [0-9].txt
+[A
+[?2004lrm: remove regular empty file '1.txt'? y
+rm: remove regular empty file '2.txt'? n
+rm: remove regular empty file '3.txt'? y
+rm: remove regular empty file '4.txt'? y
+rm: remove regular empty file '5.txt'? n
+rm: remove regular empty file '6.txt'? n
+rm: remove regular empty file '7.txt'? n
+rm: remove regular empty file '8.txt'? n
+rm: remove regular empty file '9.txt'? n
+[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ [H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ ls
+[?2004l10.txt	8.txt  d.txt	  foo3.txt  foo8.txt  food.txt
+2.txt	9.txt  e.txt	  foo4.txt  foo9.txt  fooe.txt
+5.txt	a.txt  foo10.txt  foo5.txt  fooa.txt  foof.txt
+6.txt	b.txt  foo1.txt   foo6.txt  foob.txt  f.txt
+7.txt	c.txt  foo2.txt   foo7.txt  fooc.txt  globb.sh
+[?2004h[94mDEVOPS24/lektion7/globbing
+(B[m$ [H[2J[94mDEVOPS24/lektion7/globbing
+(B[m$ man rm
+[?2004l[?1049h[22;0;0t[?1h=RM(1)                       User Commands                       RM(1)[m
+[m
+[1mNAME[0m[m
+       rm - remove files or directories[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mrm[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       This  manual page documents the GNU version of [1mrm[0m.  [1mrm[0m removes[m
+       each specified file.  By default, it does not remove  directo‐[m
+       ries.[m
+[m
+[7m Manual page rm(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       If the [4m-I[24m or [4m--interactive=once[24m option is given, and there are[m
+[7m Manual page rm(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       more than three files or the [4m-r[24m, [4m-R[24m, or [4m--recursive[24m are given,[m
+[7m Manual page rm(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       then  [1mrm[0m  prompts the user for whether to proceed with the en‐[m
+[7m Manual page rm(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tire operation.  If the response is not affirmative,  the  en‐[m
+[7m Manual page rm(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tire command is aborted.[m
+[7m Manual page rm(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page rm(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Otherwise, if a file is unwritable, standard input is a termi‐[m
+[7m Manual page rm(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       nal, and the [4m-f[24m or [4m--force[24m option is not given, or the  [4m-i[24m  or[m
+[7m Manual page rm(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m--interactive=always[24m  option is given, [1mrm[0m prompts the user for[m
+[7m Manual page rm(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       whether to remove the file.  If the response is  not  affirma‐[m
+[7m Manual page rm(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tive, the file is skipped.[m
+[7m Manual page rm(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page rm(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mOPTIONS[0m[m
+[7m Manual page rm(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Remove (unlink) the FILE(s).[m
+[7m Manual page rm(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page rm(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-f[0m, [1m--force[0m[m
+[7m Manual page rm(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ignore nonexistent files and arguments, never prompt[m
+[7m Manual page rm(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page rm(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-i[0m     prompt before every removal[m
+[7m Manual page rm(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page rm(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-I[0m     prompt  once  before removing more than three files, or[m
+[7m Manual page rm(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              when removing  recursively;  less  intrusive  than  [1m-i[0m,[m
+[7m Manual page rm(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              while still giving protection against most mistakes[m
+[7m Manual page rm(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page rm(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--interactive[0m[=[4mWHEN[24m][m
+[7m Manual page rm(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              prompt  according  to WHEN: never, once ([1m-I[0m), or always[m
+[7m Manual page rm(1) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ([1m-i[0m); without WHEN, prompt always[m
+[7m Manual page rm(1) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page rm(1) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--one-file-system[0m[m
+[7m Manual page rm(1) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              when removing a hierarchy recursively, skip any  direc‐[m
+[7m Manual page rm(1) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tory  that  is  on a file system different from that of[m
+[7m Manual page rm(1) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the corresponding command line argument[m
+[7m Manual page rm(1) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page rm(1) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--no-preserve-root[0m[m
+[7m Manual page rm(1) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              do not treat '/' specially[m
+[7m Manual page rm(1) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page rm(1) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--preserve-root[0m[=[4mall[24m][m
+[7m Manual page rm(1) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              do not remove '/' (default);  with  'all',  reject  any[m
+[7m Manual page rm(1) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              command  line  argument  on  a separate device from its[m
+[7m Manual page rm(1) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              parent[m
+[7m Manual page rm(1) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page rm(1) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-r[0m, [1m-R[0m, [1m--recursive[0m[m
+[7m Manual page rm(1) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              remove directories and their contents recursively[m
+[7m Manual page rm(1) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page rm(1) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-d[0m, [1m--dir[0m[m
+[7m Manual page rm(1) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              remove empty directories[m
+[7m Manual page rm(1) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page rm(1) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-v[0m, [1m--verbose[0m[m
+[7m Manual page rm(1) line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              explain what is being done[m
+[7m Manual page rm(1) line 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page rm(1) line 51 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--help[0m display this help and exit[m
+[7m Manual page rm(1) line 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page rm(1) line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--version[0m[m
+[7m Manual page rm(1) line 54 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              output version information and exit[m
+[7m Manual page rm(1) line 55 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page rm(1) line 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       By default, rm does not remove directories.  Use the  [1m--recur‐[0m[m
+[7m Manual page rm(1) line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1msive[0m  ([1m-r[0m  or [1m-R[0m) option to remove each listed directory, too,

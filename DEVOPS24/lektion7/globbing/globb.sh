@@ -28,4 +28,4 @@ touch {a..f}.txt
 # enligt förra exemplet (ett nummer och .txt)
 touch {1..10}.txt
 touch {a..f}.txt
-rm -i [0-9].txt
+rm -v [0-9].txt
