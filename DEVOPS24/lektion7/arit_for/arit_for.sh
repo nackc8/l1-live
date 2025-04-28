@@ -15,3 +15,5 @@ for x in *.png; do echo "$x"; done
 for x in {hjarter,spader}{1..10}; do echo "$x"; done
 
 # arit loop
+
+# format: for (( expr1 ; expr2 ; expr3 )) ; do list ; done
