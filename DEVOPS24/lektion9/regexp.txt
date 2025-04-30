@@ -17,4 +17,6 @@ grep -E
         Samma som ovan, men -i betyder valfritt stor och liten bokstav
     grep -Eio '( |^)a[a-z]( |$)' wiki.txt
         Som ovan, men ger bara tillbaka matchningarna, en per rad
+    grep -Eio '( |^)a[a-z]( |$)' wiki.txt | sort | uniq -c
+        Ger oss en lista som räknar antal olika träffar
 
