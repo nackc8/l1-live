@@ -1,0 +1,55 @@
+# 1. Visa specifika kolumner från utdata
+
+Exempel: Visa endast användarnamn från /etc/passwd.
+
+awk -F: '{ print $1 }' /etc/passwd
+
+- -F: säger till awk att använda kolon som fältavgränsare.
+- $1 är det första fältet – användarnamnet.
+
+# 2. Skriv ut rader där ett villkor uppfylls
+
+Exempel: Visa rader i auth.log som innehåller ordet “Failed”.
+
+awk '/Failed/ { print }' /var/log/auth.log
+
+- /Failed/ matchar rader som innehåller "Failed".
+- { print } är underförstått – awk skriver ut matchande rader.
+
+# 3. Summera en kolumn (t.ex. diskutrymme)
+
+Exempel: Totala storleken av filer i aktuell katalog (i KB).
+
+ls -l | awk '/^-/{ total += $5 } END { print total }'
+
+- /^-/ filtrerar vanliga filer (rader som börjar med -).
+- $5 är filstorleken.
+- END-blocket körs efter att alla rader har behandlats.
+
+# 4. Visa systemresursanvändning
+
+Exempel: Skriv ut CPU- och minnesanvändning från top.
+
+top -b -n1 | awk '/^%Cpu/ || /^KiB Mem/ { print }'
+
+- Filtrerar rader som börjar med %Cpu eller KiB Mem.
+- Användbart för snabba resurstillstånd i skript.
+
+# 5. Formaterad utmatning med flera fält
+
+Exempel: Visa diskutrymme i ett snyggt format.
+
+df -h | awk 'NR==1 || /\/dev\// { printf "%-20s %-10s %-10s\n", $1, $3, $5 }'
+
+- NR==1 skriver ut rubriken.
+- /\/dev\// matchar riktiga diskpartitioner.
+- printf används för att formatera utmatningen.
+
+# 6. Ersätt cut och grep för loggfiltrering
+
+Exempel: Hämta IP-adresser från en nginx access-logg.
+
+awk '{ print $1 }' /var/log/nginx/access.log | sort | uniq -c | sort -nr
+
+- $1 är IP-adressen.
+- sort | uniq -c | sort -nr ger en räkning av förfrågningar per IP.
