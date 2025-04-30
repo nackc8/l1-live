@@ -20,3 +20,7 @@ sed -E '/[0-9]/s/e/X/g' wiki.txt
 sed -E '/[0-9]/!s/e/X/g' wiki.txt
     Samma, men byt ut på alla rader som INTE innehåller en siffra
 
+Utskrift
+
+sed -En '/[0-9]/!s/e/X/g;p' wiki.txt
+    
