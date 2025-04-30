@@ -497,4 +497,64 @@ av
 [7m Manual page grep(1) line 124 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m--invert-match[0m  option  is also used, [1mgrep[0m stops after[m
 [7m Manual page grep(1) line 125 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              outputting [4mNUM[24m non-matching lines.[m
 [7m Manual page grep(1) line 126 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-
+[7m Manual page grep(1) line 127 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-o[0m, [1m--only-matching[0m[m
+[7m Manual page grep(1) line 128 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Print only the matched (non-empty) parts of a matching[m
+[7m Manual page grep(1) line 129 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              line, with each such part on a separate output line.[m
+[7m Manual page grep(1) line 130 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page grep(1) line 131 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-q[0m, [1m--quiet[0m, [1m--silent[0m[m
+[7m Manual page grep(1) line 132 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Quiet; do not write anything to standard output.  Exit[m
+[7m Manual page grep(1) line 133 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              immediately with zero status if any  match  is  found,[m
+[7m Manual page grep(1) line 134 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              even  if  an  error  was detected.  Also see the [1m-s[0m or[m
+[7m Manual page grep(1) line 135 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m--no-messages[0m option.[m
+[7m Manual page grep(1) line 136 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page grep(1) line 137 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-s[0m, [1m--no-messages[0m[m
+[7m Manual page grep(1) line 138 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Suppress   error   messages   about   nonexistent   or[m
+[7m Manual page grep(1) line 139 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              unreadable files.[m
+[7m Manual page grep(1) line 140 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion9
+(B[m$ man grep[C[Cgrep -Ei '( |^)a[a-z]( |$)' wiki.txt[C[C[1@o[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l av 
+ av
+ av 
+ av 
+av
+ av
+av 
+ av 
+[?2004h[94mDEVOPS24/lektion9
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mDEVOPS24/lektion9
+(B[m$ grep -Eio '( |^)a[a-z]( |$)' wiki.txt
+[?2004l av 
+ av
+ av 
+ av 
+av
+ av
+av 
+ av 
+[?2004h[94mDEVOPS24/lektion9
+(B[m$ grep -Eio '( |^)a[a-z]( |$)' wiki.txt *[K*[K| soet[K[Krt[H[2J[94mDEVOPS24/lektion9
+(B[m$ grep -Eio '( |^)a[a-z]( |$)' wiki.txt | sort
+[?2004l av
+ av
+ av 
+ av 
+ av 
+ av 
+av
+av 
+[?2004h[94mDEVOPS24/lektion9
+(B[m$ grep -Eio '( |^)a[a-z]( |$)' wiki.txt | sort | uniq[H[2J[94mDEVOPS24/lektion9
+(B[m$ grep -Eio '( |^)a[a-z]( |$)' wiki.txt | sort | uniq
+[?2004l av
+ av 
+av
+av 
+[?2004h[94mDEVOPS24/lektion9
+(B[m$ grep -Eio '( |^)a[a-z]( |$)' wiki.txt | sort | uniq -c[H[2J[94mDEVOPS24/lektion9
+(B[m$ grep -Eio '( |^)a[a-z]( |$)' wiki.txt | sort | uniq -c
+[?2004l      2  av
+      4  av 
+      1 av
+      1 av 
+[?2004h[94mDEVOPS24/lektion9
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ grep -Eio '( |^)a[a-z]( |$)' wiki.txt | sort | uniq -c *[K| sed ''s'/' '/'_' [A(B[m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/'g'[C[H[2J[94mDEVOPS
