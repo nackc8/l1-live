@@ -220,4 +220,58 @@ _flatpak
 [7m Manual page awk(1) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-F[0m [4mfs[24m, [1m--field-separator[0m [4mfs[24m[m
 [7m Manual page awk(1) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Use  [4mfs[24m  for  the  input field separator (the value of the [1mFS[0m[m
 [7m Manual page awk(1) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              predefined variable).[m
-[7m Manual page awk(1) line 47 (press h for help or q to quit)[27m[K[K 
+[7m Manual page awk(1) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page awk(1) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-v[0m [4mvar[24m[1m=[0m[4mval[24m, [1m--assign[0m [4mvar[24m[1m=[0m[4mval[24m[m
+[7m Manual page awk(1) line 49 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion9
+(B[m$ man awk[C[C[Kecho ''e't't','t'v'å','t'r'e'[C * [K[K| awk -F, {}'{}[C[C' }'p}'r}'i}'n}'t}' }'[C }'$ }'2 }'; }'l }'[1P }'[1P }'[C[C[C
+[?2004ltvå
+[?2004h[94mDEVOPS24/lektion9
+(B[m$ [H[2J[94mDEVOPS24/lektion9
+(B[m$ [7mmango spenat lok[27m
+[A[C[Cmango spenat lok
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[7mawk '/Failed/ { print }' /var/log/auth.log[27m
+^C[?2004l[?2004h[?2004l
+[?2004h[94mDEVOPS24/lektion9
+(B[m$ echo 'ett,två,tre' | awk -F, '{ print $2 }'[C[C[K[7mawk '/Failed/ { print }' /var/log/auth.log[27m
+[A[C[Cawk '/Failed/ { print }' /var/log/auth.log
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lawk: fatal: cannot open file `/var/log/auth.log' for reading: No such file or directory
+[?2004h[94mDEVOPS24/lektion9
+(B[m$ awk '/Failed/ { print }' /var/log/auth.log[K[K[K[K[K[K[K[K
+alternatives.log         btmp                     lastlog
+alternatives.log.1       btmp.1                   libvirt/
+alternatives.log.10.gz   cups/                    popularity-contest
+alternatives.log.11.gz   dpkg.log                 popularity-contest.0
+alternatives.log.12.gz   dpkg.log.1               popularity-contest.1.gz
+alternatives.log.2.gz    dpkg.log.10.gz           popularity-contest.2.gz
+alternatives.log.3.gz    dpkg.log.11.gz           popularity-contest.3.gz
+alternatives.log.4.gz    dpkg.log.12.gz           popularity-contest.4.gz
+alternatives.log.5.gz    dpkg.log.2.gz            popularity-contest.5.gz
+alternatives.log.6.gz    dpkg.log.3.gz            popularity-contest.6.gz
+alternatives.log.7.gz    dpkg.log.4.gz            popularity-contest.gpg
+--More--[Kalternatives.log.8.gz    dpkg.log.5.gz            private/
+alternatives.log.9.gz    dpkg.log.6.gz            README
+apt/                     dpkg.log.7.gz            runit/
+boot.log                 dpkg.log.8.gz            speech-dispatcher/
+boot.log.1               dpkg.log.9.gz            vbox-setup.log
+boot.log.2               exim4/                   vbox-setup.log.1
+boot.log.3               faillog                  vbox-setup.log.2
+boot.log.4               fontconfig.log           vbox-setup.log.3
+boot.log.5               gdm3/                    vbox-setup.log.4
+boot.log.6               installer/               wtmp
+boot.log.7               journal/                 
+[94mDEVOPS24/lektion9
+(B[m$ awk '/Failed/ { print }' /var/log/boot.logl[K[H[2J[94mDEVOPS24/lektion9
+(B[m$ awk '/Failed/ { print }' /var/log/boot.log
+[?2004lawk: fatal: cannot open file `/var/log/boot.log' for reading: Permission denied
+[?2004h[94mDEVOPS24/lektion9
+(B[m$ awk '/Failed/ { print }' /var/log/boot.log[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kord.txt [C[C[1P[1P[1P[1P[1P[1P[1@^[1@A[1@D[1@D[C[C[C[C[C[C[C[C[C[C[1@ [1@$[1@2[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lmango
+[?2004h[94mDEVOPS24/lektion9
+(B[m$ [H[2J[94mDEVOPS24/lektion9
+(B[m$ ls -l
+[?2004ltotal 32
+-rw-r--r-- 1 kent kent 1715 Apr 30 12:13 awk.txt
+-rw-r--r-- 1 kent kent 2483 Apr 30 12:07 nginx_log.txt
+-rw-r--r-- 1 kent kent  106 Apr 30 14:22 ord.txt
+drwxr-xr-x 2 kent kent 40
