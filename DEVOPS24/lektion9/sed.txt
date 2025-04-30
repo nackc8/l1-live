@@ -17,4 +17,6 @@ sed '5,10s/e/X/g' wiki.txt
     Kör kommandot s på rad 2
 sed -E '/[0-9]/s/e/X/g' wiki.txt
     Byt e mot X på rader som innehåller en siffra
+sed -E '/[0-9]/!s/e/X/g' wiki.txt
+    Samma, men byt ut på alla rader som INTE innehåller en siffra
 
