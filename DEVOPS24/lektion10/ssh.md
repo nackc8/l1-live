@@ -9,9 +9,14 @@ $ ssh-keygen -t ed25519
 Generating public/private ed25519 key pair.
 Enter file in which to save the key (/home/kent/.ssh/id_ed25519): /home/kent/.ssh/id_ed25519_test
 Enter passphrase (empty for no passphrase):
-Enter same passphrase again: 
+Enter same passphrase again:
 Your identification has been saved in /home/kent/.ssh/id_ed25519_test
 ```bash
 
-    # Använd gärna standardnamnet, eller ändra som jag gör nedan
-    Enter file in which to save the key (/home/kent/.ssh/id_ed25519): /home/kent/.ssh/id_ed25519_test
+Ovan så valde vi nyckelnamnet `id_ed25519_test`. SSH-klienten `ssh` letar efter nycklar i katalogen `~/.ssh`. Vi lät den nya nyckeln skapas upp där.
+
+Genom att välja ett lösenord på nyckeln så räcker det inte med att komma över den privata nyckeln för att kunna använda den. Det kan kännas jobbigt att behöva skriva lösenordet, men det finns "agenter" som hjälper till.
+
+Om man vill kan man lägga nyckeln var man vill. Då behöver man säga åt `ssh` var den hittar nyckeln.
+
+Nyckelfilerna ovan är kopierade till samma katalog som den här filen.
