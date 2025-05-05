@@ -1601,4 +1601,81 @@ id_ed25519.pub
 [m
      Finally, [1mssh-keygen[0m can be used to generate and update Key Revoca‐[m
      tion Lists, and to test whether given keys have been revoked by[m
-     one.  See the [4mKEY[24m [4mREVOCATION[24m [4mLISTS[24m section for d
+     one.  See the [4mKEY[24m [4mREVOCATION[24m [4mLISTS[24m section for details.[m
+[m
+     Normally each user wishing to use SSH with public key authentica‐[m
+     tion runs this once to create the authentication key in[m
+     [4m~/.ssh/id_dsa[24m, [4m~/.ssh/id_ecdsa[24m, [4m~/.ssh/id_ecdsa_sk[24m,[m
+     [4m~/.ssh/id_ed25519[24m, [4m~/.ssh/id_ed25519_sk[24m or [4m~/.ssh/id_rsa[24m.  Addi‐[m
+[7m Manual page ssh-keygen(1) line 52 (press h for help or q to quit)[27m[K[K/[K...skipping...
+             [1mverify[0m[1m[7m-t[27m[0m[1mime[0m=[4mtimestamp[24m[m
+                     Specifies a time to use when validating signatures[m
+                     instead of the current time.  The time may be spec‐[m
+                     ified as a date or time in the YYYYMMDD[Z] or in[m
+                     YYYYMMDDHHMM[SS][Z] formats.  Dates and times will[m
+                     be interpreted in the current system time zone un‐[m
+                     less suffixed with a Z character, which causes them[m
+                     to be interpreted in the UTC time zone.[m
+[m
+             The [1m-O[0m option may be specified multiple times.[m
+[m
+     [1m-P[0m [4mpassphrase[24m[m
+             Provides the (old) passphrase.[m
+[m
+     [1m-p[0m      Requests changing the passphrase of a private key file in‐[m
+             stead of creating a new private key.  The program will[m
+[7m Manual page ssh-keygen(1) line 290 (press h for help or q to quit)[27m[K[K/[K...skipping...
+     [1m[7m-t[27m[0m [1mdsa[0m | [1mecdsa[0m | [1mecdsa-sk[0m | [1med25519[0m | [1med25519-sk[0m | [1mrsa[0m[m
+             Specifies the type of key to create.  The possible values[m
+             are “dsa”, “ecdsa”, “ecdsa-sk”, “ed25519”, “ed25519-sk”, or[m
+             “rsa”.[m
+[m
+             This flag may also be used to specify the desired signature[m
+             type when signing certificates using an RSA CA key.  The[m
+             available RSA signature variants are “ssh-rsa” (SHA1 signa‐[m
+             tures, not recommended), “rsa-sha2-256”, and “rsa-sha2-512”[m
+             (the default).[m
+[m
+     [1m-U[0m      When used in combination with [1m-s[0m or [1m-Y[0m [1msign[0m, this option[m
+             indicates that a CA key resides in a ssh-agent(1).  See the[m
+             [4mCERTIFICATES[24m section for more information.[m
+[m
+     [1m-u[0m      Update a KRL.  When specified with [1m-k[0m, keys listed via the[m
+[7m Manual page ssh-keygen(1) line 333 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion10
+(B[m$ man ssh-keygen [C[C[5Pls ~/.ssh/[C[Cman ssh-keygen [C[C[Kssh-e[Kkeygen -t 
+recordings/     ssh-nyckel.txt  
+[94mDEVOPS24/lektion10
+(B[m$ ssh-keygen -t ed25519
+[?2004lGenerating public/private ed25519 key pair.
+Enter file in which to save the key (/home/kent/.ssh/id_ed25519): id  /home/kent/.ssh/id_ed25519_test
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/kent/.ssh/id_ed25519_test
+Your public key has been saved in /home/kent/.ssh/id_ed25519_test.pub
+The key fingerprint is:
+SHA256:ouNRtf1qXix0JbD7Ir0KDeosRONfdoVAsrJmbX0JrGw kent@klad
+The key's randomart image is:
++--[ED25519 256]--+
+|    ...   .      |
+|     +.    o     |
+|  . . o.... . .  |
+|  o= o o.+.. o   |
+| o+.E = S.+ .    |
+| ooo +o=.o =     |
+| . .=o..o + =    |
+|  .+.o . ..*     |
+|   .+   .++      |
++----[SHA256]-----+
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ mv ½-[K[K~/.ssh/
+config                          id_ed25519_test.pub
+id_ed25519                      id_ed25519_ubse
+id_ed25519_github_personal      id_ed25519_ubse.pub
+id_ed25519_github_personal.pub  known_hosts
+id_ed25519.pub                  known_hosts.old
+id_ed25519_test                 
+[94mDEVOPS24/lektion10
+(B[m$ mv ~/.ssh/id_ed25519_test* .
+[?2004l[?2004h[94mDEVOPS24/lektion10
+(
