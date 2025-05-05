@@ -1,0 +1,2833 @@
+Script started on 2025-05-05 10:29:35+02:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="74" LINES="13"]
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ vbmox[K[K[Koxmanage *[K
+[?2004lOracle VM VirtualBox Command Line Management Interface Version 7.0.26
+Copyright (C) 2005-2025 Oracle and/or its affiliates
+
+Usage - Oracle VM VirtualBox command-line interface:
+
+  VBoxManage [-V | --version] [--dump-build-type] [-q | --nologo]
+      [--settingspw=password] [--settingspwfile=pw-file] [@response-file]
+      [[help] subcommand]
+
+
+  VBoxManage list [--long] [--sorted] [bridgedifs | cloudnets |
+      cloudprofiles | cloudproviders | cpu-profiles | dhcpservers | dvds
+      | extpacks | floppies | groups | hddbackends | hdds | hostcpuids |
+      hostdrives | hostdvds | hostfloppies | hostinfo | hostonlyifs |
+      hostonlynets | intnets | natnets | ostypes | runningvms |
+      screenshotformats | systemproperties | usbfilters | usbhost | vms |
+      webcams]
+
+
+  VBoxManage showvminfo <uuid | vmname> [--details] [--machinereadable]
+      [--password-id] [--password]
+
+  VBoxManage showvminfo <uuid | vmname> <--log=index> [--password-id id]
+      [--password file|-]
+
+
+  VBoxManage registervm <filename> --password file
+
+
+  VBoxManage unregistervm <uuid | vmname> [--delete] [--delete-all]
+
+
+  VBoxManage createvm <--name=name> [--basefolder=basefolder] [--default]
+      [--groups=group-ID,...] [--ostype=ostype] [--register]
+      [--uuid=uuid] [--cipher cipher] [--password-id password-id]
+      [--password file]
+
+
+  VBoxManage modifyvm <uuid | vmname> [--name=name] [--groups= 
+      group [,group...] ] [--description=description] [--os-type=OS-type]
+      [--icon-file=filename] [--memory=size-in-MB] [--page-fusion= on |
+      off ] [--vram=size-in-MB] [--acpi= on | off ] [--ioapic= on | off ]
+      [--hardware-uuid=UUID] [--cpus=CPU-count] [--cpu-hotplug= on | off
+      ] [--plug-cpu=CPU-ID] [--unplug-cpu=CPU-ID]
+      [--cpu-execution-cap=number] [--pae= on | off ] [--long-mode= on |
+      off ] [--ibpb-on-vm-exit= on | off ] [--ibpb-on-vm-entry= on | off
+      ] [--spec-ctrl= on | off ] [--l1d-flush-on-sched= on | off ]
+      [--l1d-flush-on-vm-entry= on | off ] [--mds-clear-on-sched= on |
+      off ] [--mds-clear-on-vm-entry= on | off ] [--cpu-profile= host |
+      Intel 8086 | Intel 80286 | Intel 80386 ] [--hpet= on | off ]
+      [--hwvirtex= on | off ] [--triple-fault-reset= on | off ] [--apic=
+      on | off ] [--x2apic= on | off ] [--paravirt-provider= none |
+      default | legacy | minimal | hyperv | kvm ] [--paravirt-debug= 
+      key=value [,key=value...] ] [--nested-paging= on | off ]
+      [--large-pages= on | off ] [--vtx-vpid= on | off ] [--vtx-ux= on |
+      off ] [--nested-hw-virt= on | off ] [--virt-vmsave-vmload= on | off
+      ] [--accelerate-3d= on | off ] [--accelerate-2d-video= on | off ]
+      [--chipset= ich9 | piix3 ] [--iommu= none | automatic | amd | intel
+      ] [--tpm-type= none | 1.2 | 2.0 | host | swtpm ] [--tpm-location=
+      location ] [--bios-logo-fade-in= on | off ] [--bios-logo-fade-out=
+      on | off ] [--bios-logo-display-time=msec]
+      [--bios-logo-image-path=pathname] [--bios-boot-menu= disabled |
+      menuonly | messageandmenu ] [--bios-apic= disabled | apic | x2apic
+      ] [--bios-system-time-offset=msec] [--bios-pxe-debug= on | off ]
+      [--system-uuid-le= on | off ] [--bootX= none | floppy | dvd | disk
+      | net ] [--rtc-use-utc= on | off ] [--graphicscontroller= none |
+      vboxvga | vmsvga | vboxsvga ] [--snapshot-folder= default |
+      pathname ] [--firmware= bios | efi | efi32 | efi64 ]
+      [--guest-memory-balloon=size-in-MB] [--default-frontend= default |
+      name ] [--vm-process-priority= default | flat | low | normal | high
+      ]
+
+  VBoxManage modifyvm <uuid | vmname> [--nicN= none | null | nat |
+      bridged | intnet | hostonly | hostonlynet | generic | natnetwork |
+      cloud ] [--nic-typeN= Am79C970A | Am79C973 | 82540EM | 82543GC |
+      82545EM | virtio ] [--cable-connectedN= on | off ] [--nic-traceN=
+      on | off ] [--nic-trace-fileN=filename] [--nic-propertyN=name= 
+      [value] ] [--nic-speedN=kbps] [--nic-boot-prioN=priority]
+      [--nic-promiscN= deny | allow-vms | allow-all ]
+      [--nic-bandwidth-groupN= none | name ] [--bridge-adapterN= none |
+      device-name ] [--cloud-networkN=network-name]
+      [--host-only-adapterN= none | device-name ]
+      [--host-only-netN=network-name] [--intnetN=network-name]
+      [--nat-networkN=network-name] [--nic-generic-drvN=driver-name]
+      [--mac-addressN= auto | MAC-address ]
+
+  VBoxManage modifyvm <uuid | vmname> [--nat-netN= network | default ]
+      [--nat-pfN= [rule-name],tcp |
+      udp,[host-IP],hostport,[guest-IP],guestport ]
+      [--nat-pfN=delete=rule-name] [--nat-tftp-prefixN=prefix]
+      [--nat-tftp-fileN=filename] [--nat-tftp-serverN=IP-address]
+      [--nat-bind-ipN=IP-address] [--nat-dns-pass-domainN= on | off ]
+      [--nat-dns-proxyN= on | off ] [--nat-dns-host-resolverN= on | off ]
+      [--nat-localhostreachableN= on | off ]
+      [--nat-settingsN=[mtu],[socksnd],[sockrcv],[tcpsnd],[tcprcv]]
+      [--nat-alias-modeN= default | [log],[proxyonly],[sameports] ]
+
+  VBoxManage modifyvm <uuid | vmname> [--mouse= ps2 | usb | usbtablet |
+      usbmultitouch | usbmtscreenpluspad ] [--keyboard= ps2 | usb ]
+      [--uartN= off | IO-baseIRQ ] [--uart-modeN= disconnected |
+      server pipe | client pipe | tcpserver port |
+      tcpclient hostname:port | file filename | device-name ]
+      [--uart-typeN= 16450 | 16550A | 16750 ] [--lpt-modeN=device-name]
+      [--lptN= off | IO-baseIRQ ] [--audio-controller= ac97 | hda | sb16
+      ] [--audio-codec= stac9700 | ad1980 | stac9221 | sb16 ]
+      [--audio-driver= none | default | null | dsound | was | oss | alsa
+      | pulse | coreaudio ] [--audio-enabled= on | off ] [--audio-in= on
+      | off ] [--audio-out= on | off ] [--clipboard-mode= disabled |
+      hosttoguest | guesttohost | bidirectional ] [--drag-and-drop=
+      disabled | hosttoguest | guesttohost | bidirectional ]
+      [--monitor-count=number] [--usb-ehci= on | off ] [--usb-ohci= on |
+      off ] [--usb-xhci= on | off ] [--usb-rename=old-namenew-name]
+
+  VBoxManage modifyvm <uuid | vmname> [--recording= on | off ]
+      [--recording-screens= all | none | screen-ID[,screen-ID...] ]
+      [--recording-file=filename] [--recording-max-size=MB]
+      [--recording-max-time=msec] [--recording-opts= 
+      key=value[,key=value...] ] [--recording-video-fps=fps]
+      [--recording-video-rate=rate] [--recording-video-res=widthheight]
+
+  VBoxManage modifyvm <uuid | vmname> [--vrde= on | off ]
+      [--vrde-property=property-name=  [property-value] ]
+      [--vrde-extpack= default | name ] [--vrde-port=port]
+      [--vrde-address=hostip] [--vrde-auth-type= null | external | guest
+      ] [--vrde-auth-library= default | name ] [--vrde-multi-con= on |
+      off ] [--vrde-reuse-con= on | off ] [--vrde-video-channel= on | off
+      ] [--vrde-video-channel-quality=percent]
+
+  VBoxManage modifyvm <uuid | vmname> [--teleporter= on | off ]
+      [--teleporter-port=port] [--teleporter-address= address | empty ]
+      [--teleporter-password=password] [--teleporter-password-file=
+      filename | stdin ] [--cpuid-portability-level=level]
+      [--cpuid-set=leaf [:subleaf] eax ebx ecx edx]
+      [--cpuid-remove=leaf [:subleaf] ] [--cpuid-remove-all]
+
+  VBoxManage modifyvm <uuid | vmname> [--tracing-enabled= on | off ]
+      [--tracing-config=string] [--tracing-allow-vm-access= on | off ]
+
+  VBoxManage modifyvm <uuid | vmname> [--usb-card-reader= on | off ]
+
+  VBoxManage modifyvm <uuid | vmname> [--autostart-enabled= on | off ]
+      [--autostart-delay=seconds]
+
+  VBoxManage modifyvm <uuid | vmname> [--guest-debug-provider= none |
+      native | gdb | kd ] [--guest-debug-io-provider= none | tcp | udp |
+      ipc ] [--guest-debug-address= IP-Address | path ]
+      [--guest-debug-port=port]
+
+  VBoxManage modifyvm <uuid | vmname> [--pci-attach=host-PCI-address
+      [@guest-PCI-bus-address] ] [--pci-detach=host-PCI-address]
+
+  VBoxManage modifyvm <uuid | vmname> [--testing-enabled= on | off ]
+      [--testing-mmio= on | off ] [--testing-cfg-dwordidx=value]
+
+
+  VBoxManage snapshot <uuid|vmname>
+
+  VBoxManage snapshot <uuid|vmname> take <snapshot-name>
+      [--description=description] [--live]
+      [--uniquename Number,Timestamp,Space,Force]
+
+  VBoxManage snapshot <uuid|vmname> delete <snapshot-name>
+
+  VBoxManage snapshot <uuid|vmname> restore <snapshot-name>
+
+  VBoxManage snapshot <uuid|vmname> restorecurrent
+
+  VBoxManage snapshot <uuid|vmname> edit <snapshot-name | --current>
+      [--description=description] [--name=new-name]
+
+  VBoxManage snapshot <uuid|vmname> list [--details | --machinereadable]
+
+  VBoxManage snapshot <uuid|vmname> showvminfo <snapshot-name>
+
+
+  VBoxManage clonevm <vmname|uuid> [--basefolder=basefolder]
+      [--groups=group,...] [--mode=machine | --mode=machinechildren |
+      --mode=all] [--name=name] [--options=option,...] [--register]
+      [--snapshot=snapshot-name] [--uuid=uuid]
+
+
+  VBoxManage movevm <uuid | vmname> [--type=basic] [--folder=folder-name]
+
+
+  VBoxManage encryptvm <uuid | vmname> setencryption --old-password file
+      --cipher cipher-identifier --new-password file
+      --new-password-id password-identifier --force
+
+  VBoxManage encryptvm <uuid | vmname> checkpassword <file>
+
+  VBoxManage encryptvm <uuid | vmname> addpassword --password file
+      --password-id password-identifier
+
+  VBoxManage encryptvm <uuid | vmname> removepassword
+      <password-identifier>
+
+
+  VBoxManage startvm <uuid | vmname...> [--putenv=name[=value]] [--type=
+      [gui | headless | sdl | separate] ] --password file
+      --password-id password identifier
+
+
+  VBoxManage controlvm <uuid | vmname> pause
+
+  VBoxManage controlvm <uuid | vmname> resume
+
+  VBoxManage controlvm <uuid | vmname> reset
+
+  VBoxManage controlvm <uuid | vmname> poweroff
+
+  VBoxManage controlvm <uuid | vmname> savestate
+
+  VBoxManage controlvm <uuid | vmname> acpipowerbutton
+
+  VBoxManage controlvm <uuid | vmname> acpisleepbutton
+
+  VBoxManage controlvm <uuid | vmname> reboot
+
+  VBoxManage controlvm <uuid | vmname> shutdown [--force]
+
+  VBoxManage controlvm <uuid | vmname> keyboardputscancode <hex> [hex...]
+
+  VBoxManage controlvm <uuid | vmname> keyboardputstring <string>
+      [string...]
+
+  VBoxManage controlvm <uuid | vmname> keyboardputfile <filename>
+
+  VBoxManage controlvm <uuid | vmname> setlinkstateN <on | off>
+
+  VBoxManage controlvm <uuid | vmname> nicN <null | nat | bridged |
+      intnet | hostonly | generic | natnetwork> [device-name]
+
+  VBoxManage controlvm <uuid | vmname> nictraceN <on | off>
+
+  VBoxManage controlvm <uuid | vmname> nictracefileN <filename>
+
+  VBoxManage controlvm <uuid | vmname> nicpropertyN
+      <prop-name=prop-value>
+
+  VBoxManage controlvm <uuid | vmname> nicpromiscN <deny | allow-vms |
+      allow-all>
+
+  VBoxManage controlvm <uuid | vmname> natpfN <[rulename] ,tcp | udp,
+      host-IP, hostport, guest-IP, guestport>
+
+  VBoxManage controlvm <uuid | vmname> natpfN delete <rulename>
+
+  VBoxManage controlvm <uuid | vmname> guestmemoryballoon <balloon-size>
+
+  VBoxManage controlvm <uuid | vmname> usbattach <uuid | address>
+      [--capturefile=filename]
+
+  VBoxManage controlvm <uuid | vmname> usbdetach <uuid | address>
+
+  VBoxManage controlvm <uuid | vmname> audioin <on | off>
+
+  VBoxManage controlvm <uuid | vmname> audioout <on | off>
+
+  VBoxManage controlvm <uuid | vmname> clipboard mode <disabled |
+      hosttoguest | guesttohost | bidirectional>
+
+  VBoxManage controlvm <uuid | vmname> clipboard filetransfers <on | off>
+
+  VBoxManage controlvm <uuid | vmname> draganddrop <disabled |
+      hosttoguest | guesttohost | bidirectional>
+
+  VBoxManage controlvm <uuid | vmname> vrde <on | off>
+
+  VBoxManage controlvm <uuid | vmname> vrdeport <port>
+
+  VBoxManage controlvm <uuid | vmname> vrdeproperty
+      <prop-name=prop-value>
+
+  VBoxManage controlvm <uuid | vmname> vrdevideochannelquality
+      <percentage>
+
+  VBoxManage controlvm <uuid | vmname> setvideomodehint <xres> <yres>
+      <bpp> [[display]  [enabled:yes | no | x-origin y-origin] ]
+
+  VBoxManage controlvm <uuid | vmname> setscreenlayout <display> <on |
+      primary x-origin y-origin x-resolution y-resolution bpp | off>
+
+  VBoxManage controlvm <uuid | vmname> screenshotpng <filename> [display]
+
+  VBoxManage controlvm <uuid | vmname> recording <on | off>
+
+  VBoxManage controlvm <uuid | vmname> recording screens <all | none |
+      screen-ID[,screen-ID...]>
+
+  VBoxManage controlvm <uuid | vmname> recording filename <filename>
+
+  VBoxManage controlvm <uuid | vmname> recording videores <widthxheight>
+
+  VBoxManage controlvm <uuid | vmname> recording videorate <rate>
+
+  VBoxManage controlvm <uuid | vmname> recording videofps <fps>
+
+  VBoxManage controlvm <uuid | vmname> recording maxtime <sec>
+
+  VBoxManage controlvm <uuid | vmname> recording maxfilesize <MB>
+
+  VBoxManage controlvm <uuid | vmname> setcredentials <username>
+      --passwordfile= <filename | password>  <domain-name>
+      --allowlocallogon= <yes | no>
+
+  VBoxManage controlvm <uuid | vmname> teleport <--host=host-name>
+      <--port=port-name> [--maxdowntime=msec] [--passwordfile=filename |
+      --password=password]
+
+  VBoxManage controlvm <uuid | vmname> plugcpu <ID>
+
+  VBoxManage controlvm <uuid | vmname> unplugcpu <ID>
+
+  VBoxManage controlvm <uuid | vmname> cpuexecutioncap <num>
+
+  VBoxManage controlvm <uuid | vmname> vm-process-priority <default |
+      flat | low | normal | high>
+
+  VBoxManage controlvm <uuid | vmname> webcam attach [pathname [settings]
+      ]
+
+  VBoxManage controlvm <uuid | vmname> webcam detach [pathname]
+
+  VBoxManage controlvm <uuid | vmname> webcam list
+
+  VBoxManage controlvm <uuid | vmname> addencpassword <ID> <password-file
+      | -> [--removeonsuspend= yes | no ]
+
+  VBoxManage controlvm <uuid | vmname> removeencpassword <ID>
+
+  VBoxManage controlvm <uuid | vmname> removeallencpasswords
+
+  VBoxManage controlvm <uuid | vmname> changeuartmodeN disconnected |
+      server pipe-name | client pipe-name | tcpserver port |
+      tcpclient hostname:port | file filename | device-name
+
+  VBoxManage controlvm <uuid | vmname> autostart-enabledN on | off
+
+  VBoxManage controlvm <uuid | vmname> autostart-delayseconds
+
+
+  VBoxManage import <ovfname | ovaname> [--dry-run] [--options=
+      keepallmacs | keepnatmacs | importtovdi ] [--vsys=n]
+      [--ostype=ostype] [--vmname=name] [--settingsfile=file]
+      [--basefolder=folder] [--group=group] [--memory=MB] [--cpus=n]
+      [--description=text] [--eula= show | accept ] [--unit=n] [--ignore]
+      [--scsitype= BusLogic | LsiLogic ] [--disk=path]
+      [--controller=index] [--port=n]
+
+  VBoxManage import OCI:// --cloud [--ostype=ostype] [--vmname=name]
+      [--basefolder=folder] [--memory=MB] [--cpus=n] [--description=text]
+      <--cloudprofile=profile> <--cloudinstanceid=id>
+      [--cloudbucket=bucket]
+
+
+  VBoxManage export <machines> <--output=name> [--legacy09 | --ovf09 |
+      --ovf10 | --ovf20] [--manifest] [--options= manifest | iso | nomacs
+      | nomacsbutnat... ] [--vsys=virtual-system-number]
+      [--description=description-info] [--eula=license-text]
+      [--eulafile=filename] [--product=product-name]
+      [--producturl=product-URL] [--vendor=vendor-name]
+      [--vendorurl=vendor-URL] [--version=version-info] [--vmname=vmname]
+
+  VBoxManage export <machine> <--output=cloud-service-provider> [--opc10]
+      [--vmname=vmname] [--cloud=virtual-system-number]
+      [--cloudprofile=cloud-profile-name] [--cloudshape=cloud-shape-name]
+      [--clouddomain=cloud-domain] [--clouddisksize=disk-size-in-GB]
+      [--cloudbucket=bucket-name] [--cloudocivcn=OCI-VCN-ID]
+      [--cloudocisubnet=OCI-subnet-ID] [--cloudkeepobject= true | false ]
+      [--cloudlaunchinstance= true | false ] [--cloudlaunchmode= EMULATED
+      | PARAVIRTUALIZED ] [--cloudpublicip= true | false ]
+
+
+  VBoxManage mediumio <--disk=uuid|filename | --dvd=uuid|filename |
+      --floppy=uuid|filename> [--password-file=-|filename] formatfat
+      [--quick]
+
+  VBoxManage mediumio <--disk=uuid|filename | --dvd=uuid|filename |
+      --floppy=uuid|filename> [--password-file=-|filename] cat [--hex]
+      [--offset=byte-offset] [--size=bytes] [--output=-|filename]
+
+  VBoxManage mediumio <--disk=uuid|filename | --dvd=uuid|filename |
+      --floppy=uuid|filename> [--password-file=-|filename] stream
+      [--format=image-format] [--variant=image-variant]
+      [--output=-|filename]
+
+
+  VBoxManage sharedfolder add <uuid | vmname> <--name=name>
+      <--hostpath=hostpath> [--readonly] [--transient] [--automount]
+      [--auto-mount-point=path]
+
+  VBoxManage sharedfolder remove <uuid | vmname> <--name=name>
+      [--transient]
+
+
+  VBoxManage dhcpserver add <--network=netname | --interface=ifname>
+      <--server-ip=address> <--netmask=mask> <--lower-ip=address>
+      <--upper-ip=address> <--enable | --disable>
+       [--global | --set-opt=dhcp-opt-no value... |
+           --set-opt-hex=dhcp-opt-no hexstring... |
+           --force-opt=dhcp-opt-no... | --supress-opt=dhcp-opt-no... |
+           --min-lease-time=seconds | --default-lease-time=seconds |
+           --max-lease-time=seconds...]
+       [--group=name | --set-opt=dhcp-opt-no value... |
+           --set-opt-hex=dhcp-opt-no hexstring... |
+           --force-opt=dhcp-opt-no... | --supress-opt=dhcp-opt-no... |
+           --incl-mac=address... | --excl-mac=address... |
+           --incl-mac-wild=pattern... | --excl-mac-wild=pattern... |
+           --incl-vendor=string... | --excl-vendor=string... |
+           --incl-vendor-wild=pattern... | --excl-vendor-wild=pattern...
+           | --incl-user=string... | --excl-user=string... |
+           --incl-user-wild=pattern... | --excl-user-wild=pattern... |
+           --min-lease-time=seconds | --default-lease-time=seconds |
+           --max-lease-time=seconds...]
+       [--vm=name|uuid | --nic=1-N | --set-opt=dhcp-opt-no value... |
+           --set-opt-hex=dhcp-opt-no hexstring... |
+           --force-opt=dhcp-opt-no... | --supress-opt=dhcp-opt-no... |
+           --min-lease-time=seconds | --default-lease-time=seconds |
+           --max-lease-time=seconds | --fixed-address=address...]
+       [--mac-address=address | --set-opt=dhcp-opt-no value... |
+           --set-opt-hex=dhcp-opt-no hexstring... |
+           --force-opt=dhcp-opt-no... | --supress-opt=dhcp-opt-no... |
+           --min-lease-time=seconds | --default-lease-time=seconds |
+           --max-lease-time=seconds | --fixed-address=address...]
+
+  VBoxManage dhcpserver modify <--network=netname | --interface=ifname>
+      [--server-ip=address] [--lower-ip=address] [--upper-ip=address]
+      [--netmask=mask] [--enable | --disable]
+       [--global | --del-opt=dhcp-opt-no... | --set-opt=dhcp-opt-no
+           value... | --set-opt-hex=dhcp-opt-no hexstring... |
+           --force-opt=dhcp-opt-no... | --unforce-opt=dhcp-opt-no... |
+           --supress-opt=dhcp-opt-no... | --unsupress-opt=dhcp-opt-no...
+           | --min-lease-time=seconds | --default-lease-time=seconds |
+           --max-lease-time=seconds | --remove-config...]
+       [--group=name | --set-opt=dhcp-opt-no value... |
+           --set-opt-hex=dhcp-opt-no hexstring... |
+           --force-opt=dhcp-opt-no... | --unforce-opt=dhcp-opt-no... |
+           --supress-opt=dhcp-opt-no... | --unsupress-opt=dhcp-opt-no...
+           | --del-mac=address... | --incl-mac=address... |
+           --excl-mac=address... | --del-mac-wild=pattern... |
+           --incl-mac-wild=pattern... | --excl-mac-wild=pattern... |
+           --del-vendor=string... | --incl-vendor=string... |
+           --excl-vendor=string... | --del-vendor-wild=pattern... |
+           --incl-vendor-wild=pattern... | --excl-vendor-wild=pattern...
+           | --del-user=string... | --incl-user=string... |
+           --excl-user=string... | --del-user-wild=pattern... |
+           --incl-user-wild=pattern... | --excl-user-wild=pattern... |
+           --zap-conditions | --min-lease-time=seconds |
+           --default-lease-time=seconds | --max-lease-time=seconds |
+           --remove-config...]
+       [--vm=name|uuid | --nic=1-N | --del-opt=dhcp-opt-no... |
+           --set-opt=dhcp-opt-no value... | --set-opt-hex=dhcp-opt-no
+           hexstring... | --force-opt=dhcp-opt-no... |
+           --unforce-opt=dhcp-opt-no... | --supress-opt=dhcp-opt-no... |
+           --unsupress-opt=dhcp-opt-no... | --min-lease-time=seconds |
+           --default-lease-time=seconds | --max-lease-time=seconds |
+           --fixed-address=address | --remove-config...]
+       [--mac-address=address | --del-opt=dhcp-opt-no... |
+           --set-opt=dhcp-opt-no value... | --set-opt-hex=dhcp-opt-no
+           hexstring... | --force-opt=dhcp-opt-no... |
+           --unforce-opt=dhcp-opt-no... | --supress-opt=dhcp-opt-no... |
+           --unsupress-opt=dhcp-opt-no... | --min-lease-time=seconds |
+           --default-lease-time=seconds | --max-lease-time=seconds |
+           --fixed-address=address | --remove-config...]
+
+  VBoxManage dhcpserver remove <--network=netname | --interface=ifname>
+
+  VBoxManage dhcpserver start <--network=netname | --interface=ifname>
+
+  VBoxManage dhcpserver restart <--network=netname | --interface=ifname>
+
+  VBoxManage dhcpserver stop <--network=netname | --interface=ifname>
+
+  VBoxManage dhcpserver findlease <--network=netname |
+      --interface=ifname> <--mac-address=mac>
+
+
+  VBoxManage debugvm <uuid|vmname> dumpvmcore [--filename=name]
+
+  VBoxManage debugvm <uuid|vmname> info <item> [args...]
+
+  VBoxManage debugvm <uuid|vmname> injectnmi
+
+  VBoxManage debugvm <uuid|vmname> log [--release | --debug]
+      [group-settings...]
+
+  VBoxManage debugvm <uuid|vmname> logdest [--release | --debug]
+      [destinations...]
+
+  VBoxManage debugvm <uuid|vmname> logflags [--release | --debug]
+      [flags...]
+
+  VBoxManage debugvm <uuid|vmname> osdetect
+
+  VBoxManage debugvm <uuid|vmname> osinfo
+
+  VBoxManage debugvm <uuid|vmname> osdmesg [--lines=lines]
+
+  VBoxManage debugvm <uuid|vmname> getregisters [--cpu=id]
+      [reg-set.reg-name...]
+
+  VBoxManage debugvm <uuid|vmname> setregisters [--cpu=id]
+      [reg-set.reg-name=value...]
+
+  VBoxManage debugvm <uuid|vmname> show [--human-readable | --sh-export |
+      --sh-eval | --cmd-set] [settings-item...]
+
+  VBoxManage debugvm <uuid|vmname> stack [--cpu=id]
+
+  VBoxManage debugvm <uuid|vmname> statistics [--reset] [--descriptions]
+      [--pattern=pattern]
+
+  VBoxManage debugvm <uuid|vmname> guestsample [--filename=filename]
+      [--sample-interval-us=interval] [--sample-time-us=time]
+
+
+  VBoxManage extpack install [--replace] [--accept-license=sha256]
+      <tarball>
+
+  VBoxManage extpack uninstall [--force] <name>
+
+  VBoxManage extpack cleanup
+
+
+  VBoxManage unattended detect <--iso=install-iso> [--machine-readable]
+
+  VBoxManage unattended install <uuid|vmname> <--iso=install-iso>
+      [--user=login] [--password=password] [--password-file=file]
+      [--full-user-name=name] [--key=product-key] [--install-additions]
+      [--no-install-additions] [--additions-iso=add-iso] [--install-txs]
+      [--no-install-txs] [--validation-kit-iso=testing-iso]
+      [--locale=ll_CC] [--country=CC] [--time-zone=tz] [--hostname=fqdn]
+      [--package-selection-adjustment=keyword] [--dry-run]
+      [--auxiliary-base-path=path] [--image-index=number]
+      [--script-template=file] [--post-install-template=file]
+      [--post-install-command=command]
+      [--extra-install-kernel-parameters=params] [--language=lang]
+      [--start-vm=session-type]
+
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       list instances [--state=string] [--compartment-id=string]
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       list images <--compartment-id=string> [--state=string]
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       list vnicattachments <--compartment-id=string> [--filter=string]
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       instance create <--domain-name=name> <--image-id=id |
+           --boot-volume-id=id> <--display-name=name> <--shape=type>
+           <--subnet=id> [--boot-disk-size=size in GB]
+           [--publicip=true/false] [--privateip=IP address]
+           [--public-ssh-key=key string...]
+           [--launch-mode=NATIVE/EMULATED/PARAVIRTUALIZED]
+           [--cloud-init-script-path=path to a script]
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       instance info <--id=unique id>
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       instance terminate <--id=unique id>
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       instance start <--id=unique id>
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       instance pause <--id=unique id>
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       instance reset <--id=unique id>
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       image create <--display-name=name> [--bucket-name=name]
+           [--object-name=name] [--instance-id=unique id]
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       image info <--id=unique id>
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       image delete <--id=unique id>
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       image import <--id=unique id> [--bucket-name=name]
+           [--object-name=name]
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       image export <--id=unique id> <--display-name=name>
+           [--bucket-name=name] [--object-name=name]
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       network setup [--gateway-os-name=string]
+           [--gateway-os-version=string] [--gateway-shape=string]
+           [--tunnel-network-name=string] [--tunnel-network-range=string]
+           [--proxy=string] [--compartment-id=string]
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       network create <--name=string> <--network-id=string> [--enable |
+           --disable]
+
+  VBoxManage cloud network update <--name=string> [--network-id=string]
+      [--enable | --disable]
+
+  VBoxManage cloud network delete <--name=string>
+
+  VBoxManage cloud network info <--name=string>
+
+
+  VBoxManage cloudprofile <--provider=name> <--profile=name> add
+      [--clouduser=unique id] [--fingerprint=MD5 string] [--keyfile=path]
+      [--passphrase=string] [--tenancy=unique id] [--compartment=unique
+      id] [--region=string]
+
+  VBoxManage cloudprofile <--provider=name> <--profile=name> update
+      [--clouduser=unique id] [--fingerprint=MD5 string] [--keyfile=path]
+      [--passphrase=string] [--tenancy=unique id] [--compartment=unique
+      id] [--region=string]
+
+  VBoxManage cloudprofile <--provider=name> <--profile=name> delete
+
+  VBoxManage cloudprofile <--provider=name> <--profile=name> show
+
+
+  VBoxManage signova <ova> <--certificate=file> <--private-key=file>
+      [--private-key-password-file=password-file |
+      --private-key-password=password] [--digest-type=type] [--pkcs7 |
+      --no-pkcs7] [--intermediate-cert=file] [--force] [--verbose]
+      [--quiet] [--dry-run]
+
+
+  VBoxManage modifynvram <uuid|vmname> inituefivarstore
+
+  VBoxManage modifynvram <uuid|vmname> enrollmssignatures
+
+  VBoxManage modifynvram <uuid|vmname> enrollorclpk
+
+  VBoxManage modifynvram <uuid|vmname> enrollpk [--platform-key=filename]
+      [--owner-uuid=uuid]
+
+  VBoxManage modifynvram <uuid|vmname> enrollmok [--mok=filename]
+      [--owner-uuid=uuid]
+
+  VBoxManage modifynvram <uuid|vmname> listvars
+
+  VBoxManage modifynvram <uuid|vmname> queryvar [--name=name]
+      [--filename=filename]
+
+  VBoxManage modifynvram <uuid|vmname> deletevar [--name=name]
+      [--owner-uuid=uuid]
+
+  VBoxManage modifynvram <uuid|vmname> changevar [--name=name]
+      [--filename=filename]
+
+
+  VBoxManage hostonlynet add <--name=netname> [--id=netid]
+      <--netmask=mask> <--lower-ip=address> <--upper-ip=address>
+      [--enable | --disable]
+
+  VBoxManage hostonlynet modify <--name=netname | --id=netid>
+      [--lower-ip=address] [--upper-ip=address] [--netmask=mask]
+      [--enable | --disable]
+
+  VBoxManage hostonlynet remove <--name=netname | --id=netid>
+
+
+  VBoxManage updatecheck perform [--machine-readable]
+
+  VBoxManage updatecheck list [--machine-readable]
+
+  VBoxManage updatecheck modify [--disable | --enable] [--channel=stable
+      | withbetas | all] [--frequency=days]
+
+
+  VBoxManage discardstate <uuid | vmname>
+
+
+  VBoxManage adoptstate <uuid | vmname> <state-filename>
+
+
+  VBoxManage closemedium [disk | dvd | floppy] <uuid | filename>
+      [--delete]
+
+
+  VBoxManage storageattach <uuid | vmname> <--storagectl=name>
+      [--bandwidthgroup= name | none ] [--comment=text] [--device=number]
+      [--discard= on | off ] [--encodedlun=lun] [--forceunmount]
+      [--hotpluggable= on | off ] [--initiator=initiator] [--intnet]
+      [--lun=lun] [--medium= none | emptydrive | additions | uuid |
+      filename | host:drive | iscsi ] [--mtype= normal | writethrough |
+      immutable | shareable | readonly | multiattach ] [--nonrotational=
+      on | off ] [--passthrough= on | off ] [--passwordfile=file]
+      [--password=password] [--port=number] [--server= name | ip ]
+      [--setparentuuid=uuid] [--setuuid=uuid] [--target=target]
+      [--tempeject= on | off ] [--tport=port] [--type= dvddrive | fdd |
+      hdd ] [--username=username]
+
+
+  VBoxManage storagectl <uuid | vmname> <--name=controller-name> [--add=
+      floppy | ide | pcie | sas | sata | scsi | usb ] [--controller=
+      BusLogic | I82078 | ICH6 | IntelAhci | LSILogic | LSILogicSAS |
+      NVMe | PIIX3 | PIIX4 | USB | VirtIO ] [--bootable= on | off ]
+      [--hostiocache= on | off ] [--portcount=count] [--remove]
+      [--rename=new-controller-name]
+
+
+  VBoxManage bandwidthctl <uuid | vmname> add <bandwidth-group-name>
+      <--limit=bandwidth-limit[k|m|g|K|M|G]> <--type=disk|network>
+
+  VBoxManage bandwidthctl <uuid | vmname> list [--machinereadable]
+
+  VBoxManage bandwidthctl <uuid | vmname> remove <bandwidth-group-name>
+
+  VBoxManage bandwidthctl <uuid | vmname> set <bandwidth-group-name>
+      <--limit=bandwidth-limit[k|m|g|K|M|G]>
+
+
+  VBoxManage showmediuminfo [disk | dvd | floppy] <uuid | filename>
+
+
+  VBoxManage createmedium [disk | dvd | floppy] <--filename=filename>
+      [--size=megabytes | --sizebyte=bytes] [--diffparent= UUID |
+      filename ] [--format= VDI | VMDK | VHD ]
+      [--variant Standard,Fixed,Split2G,Stream,ESX,Formatted,RawDisk]
+      --property name=value...
+      --property-file name=/path/to/file/with/value...
+
+
+  VBoxManage modifymedium [disk | dvd | floppy] <uuid | filename>
+      [--autoreset=on | off] [--compact] [--description=description]
+      [--move=pathname] [--property=name=[value]]
+      [--resize=megabytes | --resizebyte=bytes] [--setlocation=pathname]
+      [--type=normal | writethrough | immutable | shareable | readonly | multiattach]
+
+
+  VBoxManage clonemedium <uuid | source-medium> <uuid | target-medium>
+      [disk | dvd | floppy] [--existing] [--format= VDI | VMDK | VHD |
+      RAW | other ] [--variant=Standard,Fixed,Split2G,Stream,ESX]
+
+
+  VBoxManage mediumproperty [disk | dvd | floppy] set <uuid | filename>
+      <property-name> <property-value>
+
+  VBoxManage mediumproperty [disk | dvd | floppy] get <uuid | filename>
+      <property-name>
+
+  VBoxManage mediumproperty [disk | dvd | floppy] delete <uuid |
+      filename> <property-name>
+
+
+  VBoxManage encryptmedium <uuid | filename> [--cipher=cipher-ID]
+      [--newpassword=password] [--newpasswordid=password-ID]
+      [--oldpassword=password]
+
+
+  VBoxManage checkmediumpwd <uuid | filename> <password-file>
+
+
+  VBoxManage convertfromraw <inputfile> <outputfile> [--format= VDI |
+      VMDK | VHD ] [--uuid=uuid]
+      [--variant=Standard,Fixed,Split2G,Stream,ESX]
+
+  VBoxManage convertfromraw stdin <outputfile> <bytes> [--format= VDI |
+      VMDK | VHD ] [--uuid=uuid]
+      [--variant=Standard,Fixed,Split2G,Stream,ESX]
+
+
+  VBoxManage setextradata <global | uuid | vmname> <keyword> [value]
+
+
+  VBoxManage getextradata <global | uuid | vmname> keyword | enumerate
+
+
+  VBoxManage setproperty <property-name> <property-value>
+
+
+  VBoxManage usbfilter add <index,0-N> <--target= <uuid | vmname |
+      global> > <--name=string> <--action=ignore | hold>
+      [--active=yes | no] [--vendorid=XXXX] [--productid=XXXX]
+      [--revision=IIFF] [--manufacturer=string] [--product=string]
+      [--port=hex] [--remote=yes | no] [--serialnumber=string]
+      [--maskedinterfaces=XXXXXXXX]
+
+  VBoxManage usbfilter modify <index,0-N> <--target= <uuid | vmname |
+      global> > [--name=string] [--action=ignore | hold]
+      [--active=yes | no] [--vendorid=XXXX | ""] [--productid=XXXX | ""]
+      [--revision=IIFF | ""] [--manufacturer=string | ""]
+      [--product=string | ""] [--port=hex] [--remote=yes | no]
+      [--serialnumber=string | ""] [--maskedinterfaces=XXXXXXXX]
+
+  VBoxManage usbfilter remove <index,0-N> <--target= <uuid | vmname |
+      global> >
+
+
+  VBoxManage guestproperty get <uuid | vmname> <property-name>
+      [--verbose]
+
+  VBoxManage guestproperty enumerate <uuid | vmname> [--no-timestamp]
+      [--no-flags] [--relative] [--old-format] [patterns...]
+
+  VBoxManage guestproperty set <uuid | vmname> <property-name>
+      [property-value [--flags=flags] ]
+
+  VBoxManage guestproperty unset <uuid | vmname> <property-name>
+
+  VBoxManage guestproperty wait <uuid | vmname> <patterns>
+      [--timeout=msec] [--fail-on-timeout]
+
+
+  VBoxManage guestcontrol <uuid | vmname> run [--arg0=argument 0]
+      [--domain=domainname] [--dos2unix] [--exe=filename]
+      [--ignore-orphaned-processes] [--no-wait-stderr | --wait-stderr]
+      [--no-wait-stdout | --wait-stdout] [--passwordfile=password-file |
+      --password=password] [--profile] [--putenv=var-name=[value]]
+      [--quiet] [--timeout=msec] [--unix2dos] [--unquoted-args]
+      [--username=username] [--verbose] <-- [argument...] >
+
+  VBoxManage guestcontrol <uuid | vmname> start [--arg0=argument 0]
+      [--domain=domainname] [--exe=filename]
+      [--ignore-orphaned-processes] [--passwordfile=password-file |
+      --password=password] [--profile] [--putenv=var-name=[value]]
+      [--quiet] [--timeout=msec] [--unquoted-args] [--username=username]
+      [--verbose] <-- [argument...] >
+
+  VBoxManage guestcontrol <uuid | vmname> copyfrom [--dereference]
+      [--domain=domainname] [--passwordfile=password-file |
+      --password=password] [--quiet] [--no-replace] [--recursive]
+      [--target-directory=host-destination-dir] [--update]
+      [--username=username] [--verbose] <guest-source0>
+      guest-source1 [...] <host-destination>
+
+  VBoxManage guestcontrol <uuid | vmname> copyto [--dereference]
+      [--domain=domainname] [--passwordfile=password-file |
+      --password=password] [--quiet] [--no-replace] [--recursive]
+      [--target-directory=guest-destination-dir] [--update]
+      [--username=username] [--verbose] <host-source0> host-source1 [...]
+
+  VBoxManage guestcontrol <uuid | vmname> mkdir [--domain=domainname]
+      [--mode=mode] [--parents] [--passwordfile=password-file |
+      --password=password] [--quiet] [--username=username] [--verbose]
+      <guest-directory...>
+
+  VBoxManage guestcontrol <uuid | vmname> rmdir [--domain=domainname]
+      [--passwordfile=password-file | --password=password] [--quiet]
+      [--recursive] [--username=username] [--verbose]
+      <guest-directory...>
+
+  VBoxManage guestcontrol <uuid | vmname> rm [--domain=domainname]
+      [--force] [--passwordfile=password-file | --password=password]
+      [--quiet] [--username=username] [--verbose] <guest-directory...>
+
+  VBoxManage guestcontrol <uuid | vmname> mv [--domain=domainname]
+      [--passwordfile=password-file | --password=password] [--quiet]
+      [--username=username] [--verbose] <source...>
+      <destination-directory>
+
+  VBoxManage guestcontrol <uuid | vmname> mktemp [--directory]
+      [--domain=domainname] [--mode=mode] [--passwordfile=password-file |
+      --password=password] [--quiet] [--secure] [--tmpdir=directory-name]
+      [--username=username] [--verbose] <template-name>
+
+  VBoxManage guestcontrol <uuid | vmname> stat [--domain=domainname]
+      [--passwordfile=password-file | --password=password] [--quiet]
+      [--username=username] [--verbose] <filename>
+
+  VBoxManage guestcontrol <uuid | vmname> list <all | files | processes |
+      sessions> [--quiet] [--verbose]
+
+  VBoxManage guestcontrol <uuid | vmname> closeprocess [--session-id=ID |
+      --session-name=name-or-pattern] [--quiet] [--verbose] <PID...>
+
+  VBoxManage guestcontrol <uuid | vmname> closesession [--all |
+      --session-id=ID | --session-name=name-or-pattern] [--quiet]
+      [--verbose]
+
+  VBoxManage guestcontrol <uuid | vmname> updatega [--quiet] [--verbose]
+      [--source=guest-additions.ISO] [--wait-start] [--  [argument...] ]
+
+  VBoxManage guestcontrol <uuid | vmname> watch [--quiet] [--verbose]
+
+
+  VBoxManage metrics collect [--detach] [--list] [--period=seconds]
+      [--samples=count] [* | host | vmname metric-list]
+
+  VBoxManage metrics disable [--list] [* | host | vmname metric-list]
+
+  VBoxManage metrics enable [--list] [* | host | vmname metric-list]
+
+  VBoxManage metrics list [* | host | vmname metric-list]
+
+  VBoxManage metrics query [* | host | vmname metric-list]
+
+  VBoxManage metrics setup [--list] [--period seconds] [--samples count]
+      [* | host | vmname metric-list]
+
+
+  VBoxManage natnetwork add [--disable | --enable] <--netname=name>
+      <--network=network> [--dhcp=on|off] [--ipv6=on|off]
+      [--loopback-4=rule] [--loopback-6=rule] [--port-forward-4=rule]
+      [--port-forward-6=rule]
+
+  VBoxManage natnetwork list [filter-pattern]
+
+  VBoxManage natnetwork modify [--dhcp=on|off] [--disable | --enable]
+      <--netname=name> <--network=network> [--ipv6=on|off]
+      [--loopback-4=rule] [--loopback-6=rule] [--port-forward-4=rule]
+      [--port-forward-6=rule]
+
+  VBoxManage natnetwork remove <--netname=name>
+
+  VBoxManage natnetwork start <--netname=name>
+
+  VBoxManage natnetwork stop <--netname=name>
+
+
+  VBoxManage hostonlyif ipconfig <ifname> [--dhcp | --ip=IPv4-address
+      --netmask=IPv4-netmask | --ipv6=IPv6-address
+      --netmasklengthv6=length]
+
+  VBoxManage hostonlyif create
+
+  VBoxManage hostonlyif remove <ifname>
+
+
+  VBoxManage usbdevsource add <source-name> <--backend=backend>
+      <--address=address>
+
+  VBoxManage usbdevsource remove <source-name>
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ vboxmanage [H[2J[94mDEVOPS24/lektion10
+(B[m$ vboxmanage | less
+[?2004l[?1049h[22;0;0t[?1h=Oracle VM VirtualBox Command Line Management Interface Version 7.0.26
+Copyright (C) 2005-2025 Oracle and/or its affiliates
+
+Usage - Oracle VM VirtualBox command-line interface:
+
+  VBoxManage [-V | --version] [--dump-build-type] [-q | --nologo]
+      [--settingspw=password] [--settingspwfile=pw-file] [@response-file]
+      [[help] subcommand]
+
+
+  VBoxManage list [--long] [--sorted] [bridgedifs | cloudnets |
+      cloudprofiles | cloudproviders | cpu-profiles | dhcpservers | dvds
+      | extpacks | floppies | groups | hddbackends | hdds | hostcpuids |
+      hostdrives | hostdvds | hostfloppies | hostinfo | hostonlyifs |
+      hostonlynets | intnets | natnets | ostypes | runningvms |
+      screenshotformats | systemproperties | usbfilters | usbhost | vms |
+      webcams]
+
+
+:[K[K [KESCESC[KOO[KBB[K  VBoxManage showvminfo <uuid | vmname> [--details] [--machinereadable]
+:[K[K [KESCESC[KOO[KBB[K      [--password-id] [--password]
+:[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion10
+(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ vnox[K[K[Knoc[K[K[Kboxmanage list vms
+[?2004l"ubde" {940856f8-879f-4055-a944-ce279bfe9569}
+"ubse" {7b46b49c-1adb-4fc7-be19-4e1acf52e5af}
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ less ~/.co[K[Ksh[Ksh/config 
+[?2004l[?1049h[22;0;0t[?1h=Host ubse
+        HostName localhost
+        User user
+        Port 12022
+
+Host ubde1
+        HostName localhost
+        User user
+        Port 11022
+
+Host localhost 127.0.0.1
+        HostName localhost
+        StrictHostKeyChecking no
+        UserKnownHostsFile /dev/null
+
+Host kdwl
+        HostName kdwl
+        Port 2332
+
+[7m/home/kent/.ssh/config[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion10
+(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ ssh ubse
+[?2004lWelcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 08:31:52 AM UTC 2025
+
+  System load:  0.0                Processes:               119
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 3%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+173 updates can be applied immediately.
+4 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon Apr 28 16:25:40 2025 from 10.0.2.2
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ssh[K[K[Kexit
+[?2004llogout
+Connection to localhost closed.
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ ssh 22[K[K[K[K[K[Kman ssh
+[?2004l[?1049h[22;0;0t[?1h=SSH(1)                 BSD General Commands Manual                SSH(1)[m
+[m
+[1mNAME[0m[m
+     [1mssh[0m — OpenSSH remote login client[m
+[m
+[1mSYNOPSIS[0m[m
+     [1mssh[0m [[1m-46AaCfGgKkMNnqsTtVvXxYy[0m] [[1m-B[0m [4mbind_interface[24m][m
+         [[1m-b[0m [4mbind_address[24m] [[1m-c[0m [4mcipher_spec[24m] [[1m-D[0m [[4mbind_address[24m:][4mport[24m][m
+         [[1m-E[0m [4mlog_file[24m] [[1m-e[0m [4mescape_char[24m] [[1m-F[0m [4mconfigfile[24m] [[1m-I[0m [4mpkcs11[24m][m
+         [[1m-i[0m [4midentity_file[24m] [[1m-J[0m [4mdestination[24m] [[1m-L[0m [4maddress[24m][m
+         [[1m-l[0m [4mlogin_name[24m] [[1m-m[0m [4mmac_spec[24m] [[1m-O[0m [4mctl_cmd[24m] [[1m-o[0m [4moption[24m][m
+         [[1m-p[0m [4mport[24m] [[1m-Q[0m [4mquery_option[24m] [[1m-R[0m [4maddress[24m] [[1m-S[0m [4mctl_path[24m][m
+         [[1m-W[0m [4mhost[24m:[4mport[24m] [[1m-w[0m [4mlocal_tun[24m[:[4mremote_tun[24m]] [4mdestination[24m[m
+         [[4mcommand[24m [[4margument[24m [4m...[24m]][m
+[m
+[1mDESCRIPTION[0m[m
+     [1mssh[0m (SSH client) is a program for logging into a remote machine and[m
+     for executing commands on a remote machine.  It is intended to pro‐[m
+     vide secure encrypted communications between two untrusted hosts[m
+[7m Manual page ssh(1) line 1 (press h for help or q to quit)[27m[K[K     over an insecure network.  X11 connections, arbitrary TCP ports and[m
+     UNIX-domain sockets can also be forwarded over the secure channel.[m
+[m
+     [1mssh[0m connects and logs into the specified [4mdestination[24m, which may be[m
+     specified as either [user@]hostname or a URI of the form[m
+     ssh://[user@]hostname[:port].  The user must prove their identity[m
+     to the remote machine using one of several methods (see below).[m
+[m
+     If a [4mcommand[24m is specified, it will be executed on the remote host[m
+     instead of a login shell.  A complete command line may be specified[m
+     as [4mcommand[24m, or it may have additional arguments.  If supplied, the[m
+     arguments will be appended to the command, separated by spaces, be‐[m
+     fore it is sent to the server to be executed.[m
+[m
+     The options are as follows:[m
+[m
+     [1m-4[0m      Forces [1mssh[0m to use IPv4 addresses only.[m
+[m
+     [1m-6[0m      Forces [1mssh[0m to use IPv6 addresses only.[m
+[7m Manual page ssh(1) line 20 (press h for help or q to quit)[27m[K[K[m
+     [1m-A[0m      Enables forwarding of connections from an authentication[m
+             agent such as ssh-agent(1).  This can also be specified on[m
+             a per-host basis in a configuration file.[m
+[m
+             Agent forwarding should be enabled with caution.  Users[m
+             with the ability to bypass file permissions on the remote[m
+             host (for the agent's UNIX-domain socket) can access the[m
+             local agent through the forwarded connection.  An attacker[m
+             cannot obtain key material from the agent, however they can[m
+             perform operations on the keys that enable them to authen‐[m
+             ticate using the identities loaded into the agent.  A safer[m
+             alternative may be to use a jump host (see [1m-J[0m).[m
+[m
+     [1m-a[0m      Disables forwarding of the authentication agent connection.[m
+[m
+     [1m-B[0m [4mbind_interface[24m[m
+             Bind to the address of [4mbind_interface[24m before attempting to[m
+             connect to the destination host.  This is only useful on[m
+[7m Manual page ssh(1) line 39 (press h for help or q to quit)[27m[K[K             systems with more than one address.[m
+[m
+     [1m-b[0m [4mbind_address[24m[m
+             Use [4mbind_address[24m on the local machine as the source address[m
+             of the connection.  Only useful on systems with more than[m
+             one address.[m
+[m
+     [1m-C[0m      Requests compression of all data (including stdin, stdout,[m
+             stderr, and data for forwarded X11, TCP and UNIX-domain[m
+             connections).  The compression algorithm is the same used[m
+             by gzip(1).  Compression is desirable on modem lines and[m
+             other slow connections, but will only slow down things on[m
+             fast networks.  The default value can be set on a host-by-[m
+             host basis in the configuration files; see the [1mCompression[0m[m
+             option in ssh_config(5).[m
+[m
+     [1m-c[0m [4mcipher_spec[24m[m
+             Selects the cipher specification for encrypting the ses‐[m
+             sion.  [4mcipher_spec[24m is a comma-separated list of ciphers[m
+[7m Manual page ssh(1) line 58 (press h for help or q to quit)[27m[K[K             listed in order of preference.  See the [1mCiphers[0m keyword in[m
+             ssh_config(5) for more information.[m
+[m
+     [1m-D[0m [[4mbind_address[24m:][4mport[24m[m
+             Specifies a local “dynamic” application-level port forward‐[m
+             ing.  This works by allocating a socket to listen to [4mport[24m[m
+             on the local side, optionally bound to the specified[m
+             [4mbind_address[24m.  Whenever a connection is made to this port,[m
+             the connection is forwarded over the secure channel, and[m
+             the application protocol is then used to determine where to[m
+             connect to from the remote machine.  Currently the SOCKS4[m
+             and SOCKS5 protocols are supported, and [1mssh[0m will act as a[m
+             SOCKS server.  Only root can forward privileged ports.  Dy‐[m
+             namic port forwardings can also be specified in the config‐[m
+             uration file.[m
+[m
+             IPv6 addresses can be specified by enclosing the address in[m
+             square brackets.  Only the superuser can forward privileged[m
+             ports.  By default, the local port is bound in accordance[m
+[7m Manual page ssh(1) line 77 (press h for help or q to quit)[27m[K[K             with the [1mGatewayPorts[0m setting.  However, an explicit[m
+             [4mbind_address[24m may be used to bind the connection to a spe‐[m
+             cific address.  The [4mbind_address[24m of “localhost” indicates[m
+             that the listening port be bound for local use only, while[m
+             an empty address or ‘*’ indicates that the port should be[m
+             available from all interfaces.[m
+[m
+     [1m-E[0m [4mlog_file[24m[m
+             Append debug logs to [4mlog_file[24m instead of standard error.[m
+[m
+     [1m-e[0m [4mescape_char[24m[m
+             Sets the escape character for sessions with a pty (default:[m
+             ‘~’).  The escape character is only recognized at the be‐[m
+             ginning of a line.  The escape character followed by a dot[m
+             (‘.’) closes the connection; followed by control-Z suspends[m
+             the connection; and followed by itself sends the escape[m
+             character once.  Setting the character to “none” disables[m
+             any escapes and makes the session fully transparent.[m
+[m
+[7m Manual page ssh(1) line 96 (press h for help or q to quit)[27m[K[K     [1m-F[0m [4mconfigfile[24m[m
+             Specifies an alternative per-user configuration file.  If a[m
+             configuration file is given on the command line, the sys‐[m
+             tem-wide configuration file ([4m/etc/ssh/ssh_config[24m) will be[m
+             ignored.  The default for the per-user configuration file[m
+             is [4m~/.ssh/config[24m.  If set to “none”, no configuration files[m
+             will be read.[m
+[m
+     [1m-f[0m      Requests [1mssh[0m to go to background just before command execu‐[m
+             tion.  This is useful if [1mssh[0m is going to ask for passwords[m
+             or passphrases, but the user wants it in the background.[m
+             This implies [1m-n[0m.  The recommended way to start X11 programs[m
+             at a remote site is with something like [1mssh[0m [1m-f[0m [1mhost[0m [1mxterm[0m.[m
+[m
+             If the [1mExitOnForwardFailure[0m configuration option is set to[m
+             “yes”, then a client started with [1m-f[0m will wait for all re‐[m
+             mote port forwards to be successfully established before[m
+             placing itself in the background.  Refer to the description[m
+             of [1mForkAfterAuthentication[0m in ssh_config(5) for details.[m
+[7m Manual page ssh(1) line 115 (press h for help or q to quit)[27m[K[K[m
+     [1m-G[0m      Causes [1mssh[0m to print its configuration after evaluating [1mHost[0m[m
+             and [1mMatch[0m blocks and exit.[m
+[m
+     [1m-g[0m      Allows remote hosts to connect to local forwarded ports.[m
+             If used on a multiplexed connection, then this option must[m
+             be specified on the master process.[m
+[m
+     [1m-I[0m [4mpkcs11[24m[m
+             Specify the PKCS#11 shared library [1mssh[0m should use to commu‐[m
+             nicate with a PKCS#11 token providing keys for user authen‐[m
+             tication.[m
+[m
+     [1m-i[0m [4midentity_file[24m[m
+             Selects a file from which the identity (private key) for[m
+             public key authentication is read.  You can also specify a[m
+             public key file to use the corresponding private key that[m
+             is loaded in ssh-agent(1) when the private key file is not[m
+             present locally.  The default is [4m~/.ssh/id_rsa[24m,[m
+[7m Manual page ssh(1) line 134 (press h for help or q to quit)[27m[K[K             [4m~/.ssh/id_ecdsa[24m, [4m~/.ssh/id_ecdsa_sk[24m, [4m~/.ssh/id_ed25519[24m,[m
+             [4m~/.ssh/id_ed25519_sk[24m and [4m~/.ssh/id_dsa[24m.  Identity files may[m
+             also be specified on a per-host basis in the configuration[m
+             file.  It is possible to have multiple [1m-i[0m options (and mul‐[m
+             tiple identities specified in configuration files).  If no[m
+             certificates have been explicitly specified by the[m
+             [1mCertificateFile[0m directive, [1mssh[0m will also try to load cer‐[m
+             tificate information from the filename obtained by append‐[m
+             ing [4m-cert.pub[24m to identity filenames.[m
+[m
+     [1m-J[0m [4mdestination[24m[m
+             Connect to the target host by first making a [1mssh[0m connection[m
+             to the jump host described by [4mdestination[24m and then estab‐[m
+             lishing a TCP forwarding to the ultimate destination from[m
+             there.  Multiple jump hops may be specified separated by[m
+             comma characters.  This is a shortcut to specify a[m
+             [1mProxyJump[0m configuration directive.  Note that configuration[m
+             directives supplied on the command-line generally apply to[m
+             the destination host and not any specified jump hosts.  Use[m
+[7m Manual page ssh(1) line 153 (press h for help or q to quit)[27m[K[K             [4m~/.ssh/config[24m to specify configuration for jump hosts.[m
+[m
+     [1m-K[0m      Enables GSSAPI-based authentication and forwarding (delega‐[m
+             tion) of GSSAPI credentials to the server.[m
+[m
+     [1m-k[0m      Disables forwarding (delegation) of GSSAPI credentials to[m
+             the server.[m
+[m
+     [1m-L[0m [[4mbind_address[24m:][4mport[24m:[4mhost[24m:[4mhostport[24m[m
+     [1m-L[0m [[4mbind_address[24m:][4mport[24m:[4mremote_socket[24m[m
+     [1m-L[0m [4mlocal_socket[24m:[4mhost[24m:[4mhostport[24m[m
+     [1m-L[0m [4mlocal_socket[24m:[4mremote_socket[24m[m
+             Specifies that connections to the given TCP port or Unix[m
+             socket on the local (client) host are to be forwarded to[m
+             the given host and port, or Unix socket, on the remote[m
+             side.  This works by allocating a socket to listen to ei‐[m
+             ther a TCP [4mport[24m on the local side, optionally bound to the[m
+             specified [4mbind_address[24m, or to a Unix socket.  Whenever a[m
+             connection is made to the local port or socket, the connec‐[m
+[7m Manual page ssh(1) line 172 (press h for help or q to quit)[27m[K[K             tion is forwarded over the secure channel, and a connection[m
+             is made to either [4mhost[24m port [4mhostport[24m, or the Unix socket[m
+             [4mremote_socket[24m, from the remote machine.[m
+[m
+             Port forwardings can also be specified in the configuration[m
+             file.  Only the superuser can forward privileged ports.[m
+             IPv6 addresses can be specified by enclosing the address in[m
+             square brackets.[m
+[m
+             By default, the local port is bound in accordance with the[m
+             [1mGatewayPorts[0m setting.  However, an explicit [4mbind_address[24m[m
+             may be used to bind the connection to a specific address.[m
+             The [4mbind_address[24m of “localhost” indicates that the listen‐[m
+             ing port be bound for local use only, while an empty ad‐[m
+             dress or ‘*’ indicates that the port should be available[m
+             from all interfaces.[m
+[m
+     [1m-l[0m [4mlogin_name[24m[m
+             Specifies the user to log in as on the remote machine.[m
+[7m Manual page ssh(1) line 191 (press h for help or q to quit)[27m[K[K             This also may be specified on a per-host basis in the con‐[m
+             figuration file.[m
+[m
+     [1m-M[0m      Places the [1mssh[0m client into “master” mode for connection[m
+             sharing.  Multiple [1m-M[0m options places [1mssh[0m into “master” mode[m
+             but with confirmation required using ssh-askpass(1) before[m
+             each operation that changes the multiplexing state (e.g.[m
+             opening a new session).  Refer to the description of[m
+             [1mControlMaster[0m in ssh_config(5) for details.[m
+[m
+     [1m-m[0m [4mmac_spec[24m[m
+             A comma-separated list of MAC (message authentication code)[m
+             algorithms, specified in order of preference.  See the [1mMACs[0m[m
+             keyword in ssh_config(5) for more information.[m
+[m
+     [1m-N[0m      Do not execute a remote command.  This is useful for just[m
+             forwarding ports.  Refer to the description of [1mSessionType[0m[m
+             in ssh_config(5) for details.[m
+[m
+[7m Manual page ssh(1) line 210 (press h for help or q to quit)[27m[K[K     [1m-n[0m      Redirects stdin from [4m/dev/null[24m (actually, prevents reading[m
+             from stdin).  This must be used when [1mssh[0m is run in the[m
+             background.  A common trick is to use this to run X11 pro‐[m
+             grams on a remote machine.  For example, [1mssh[0m [1m-n[0m[m
+             [1mshadows.cs.hut.fi[0m [1memacs[0m [1m&[0m will start an emacs on shad‐[m
+             ows.cs.hut.fi, and the X11 connection will be automatically[m
+             forwarded over an encrypted channel.  The [1mssh[0m program will[m
+             be put in the background.  (This does not work if [1mssh[0m needs[m
+             to ask for a password or passphrase; see also the [1m-f[0m op‐[m
+             tion.)  Refer to the description of [1mStdinNull[0m in[m
+             ssh_config(5) for details.[m
+[m
+     [1m-O[0m [4mctl_cmd[24m[m
+             Control an active connection multiplexing master process.[m
+             When the [1m-O[0m option is specified, the [4mctl_cmd[24m argument is[m
+             interpreted and passed to the master process.  Valid com‐[m
+             mands are: “check” (check that the master process is run‐[m
+             ning), “forward” (request forwardings without command exe‐[m
+             cution), “cancel” (cancel forwardings), “exit” (request the[m
+[7m Manual page ssh(1) line 229 (press h for help or q to quit)[27m[K[K             master to exit), and “stop” (request the master to stop ac‐[m
+             cepting further multiplexing requests).[m
+[m
+     [1m-o[0m [4moption[24m[m
+             Can be used to give options in the format used in the con‐[m
+             figuration file.  This is useful for specifying options for[m
+             which there is no separate command-line flag.  For full de‐[m
+             tails of the options listed below, and their possible val‐[m
+             ues, see ssh_config(5).[m
+[m
+                   AddKeysToAgent[m
+                   AddressFamily[m
+                   BatchMode[m
+                   BindAddress[m
+                   CanonicalDomains[m
+                   CanonicalizeFallbackLocal[m
+                   CanonicalizeHostname[m
+                   CanonicalizeMaxDots[m
+                   CanonicalizePermittedCNAMEs[m
+[7m Manual page ssh(1) line 248 (press h for help or q to quit)[27m[K[K                   CASignatureAlgorithms[m
+                   CertificateFile[m
+                   CheckHostIP[m
+                   Ciphers[m
+                   ClearAllForwardings[m
+                   Compression[m
+                   ConnectionAttempts[m
+                   ConnectTimeout[m
+                   ControlMaster[m
+                   ControlPath[m
+                   ControlPersist[m
+                   DynamicForward[m
+                   EnableEscapeCommandline[m
+                   EscapeChar[m
+                   ExitOnForwardFailure[m
+                   FingerprintHash[m
+                   ForkAfterAuthentication[m
+                   ForwardAgent[m
+                   ForwardX11[m
+[7m Manual page ssh(1) line 267 (press h for help or q to quit)[27m[K[K                   ForwardX11Timeout[m
+                   ForwardX11Trusted[m
+                   GatewayPorts[m
+                   GlobalKnownHostsFile[m
+                   GSSAPIAuthentication[m
+                   GSSAPIKeyExchange[m
+                   GSSAPIClientIdentity[m
+                   GSSAPIDelegateCredentials[m
+                   GSSAPIKexAlgorithms[m
+                   GSSAPIRenewalForcesRekey[m
+                   GSSAPIServerIdentity[m
+                   GSSAPITrustDns[m
+                   HashKnownHosts[m
+                   Host[m
+                   HostbasedAcceptedAlgorithms[m
+                   HostbasedAuthentication[m
+                   HostKeyAlgorithms[m
+                   HostKeyAlias[m
+                   Hostname[m
+[7m Manual page ssh(1) line 286 (press h for help or q to quit)[27m[K[K                   IdentitiesOnly[m
+                   IdentityAgent[m
+                   IdentityFile[m
+                   IPQoS[m
+                   KbdInteractiveAuthentication[m
+                   KbdInteractiveDevices[m
+                   KexAlgorithms[m
+                   KnownHostsCommand[m
+                   LocalCommand[m
+                   LocalForward[m
+                   LogLevel[m
+                   MACs[m
+                   Match[m
+                   NoHostAuthenticationForLocalhost[m
+                   NumberOfPasswordPrompts[m
+                   PasswordAuthentication[m
+                   PermitLocalCommand[m
+                   PermitRemoteOpen[m
+                   PKCS11Provider[m
+[7m Manual page ssh(1) line 305 (press h for help or q to quit)[27m[K[K                   Port[m
+                   PreferredAuthentications[m
+                   ProxyCommand[m
+                   ProxyJump[m
+                   ProxyUseFdpass[m
+                   PubkeyAcceptedAlgorithms[m
+                   PubkeyAuthentication[m
+                   RekeyLimit[m
+                   RemoteCommand[m
+                   RemoteForward[m
+                   RequestTTY[m
+                   RequiredRSASize[m
+                   SendEnv[m
+                   ServerAliveInterval[m
+                   ServerAliveCountMax[m
+                   SessionType[m
+                   SetEnv[m
+                   StdinNull[m
+                   StreamLocalBindMask[m
+[7m Manual page ssh(1) line 324 (press h for help or q to quit)[27m[K[K                   StreamLocalBindUnlink[m
+                   StrictHostKeyChecking[m
+                   TCPKeepAlive[m
+                   Tunnel[m
+                   TunnelDevice[m
+                   UpdateHostKeys[m
+                   User[m
+                   UserKnownHostsFile[m
+                   VerifyHostKeyDNS[m
+                   VisualHostKey[m
+                   XAuthLocation[m
+[m
+     [1m-p[0m [4mport[24m[m
+             Port to connect to on the remote host.  This can be speci‐[m
+             fied on a per-host basis in the configuration file.[m
+[m
+     [1m-Q[0m [4mquery_option[24m[m
+             Queries for the algorithms supported by one of the follow‐[m
+             ing features: [4mcipher[24m (supported symmetric ciphers),[m
+[7m Manual page ssh(1) line 343 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             [4mcipher-auth[24m (supported symmetric ciphers that support au‐[m
+[7m Manual page ssh(1) line 344 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             thenticated encryption), [4mhelp[24m (supported query terms for[m
+[7m Manual page ssh(1) line 345 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             use with the [1m-Q[0m flag), [4mmac[24m (supported message integrity[m
+[7m Manual page ssh(1) line 346 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             codes), [4mkex[24m (key exchange algorithms), [4mkex-gss[24m (GSSAPI key[m
+[7m Manual page ssh(1) line 347 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             exchange algorithms), [4mkey[24m (key types), [4mkey-cert[24m (certifi‐[m
+[7m Manual page ssh(1) line 348 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             cate key types), [4mkey-plain[24m (non-certificate key types),[m
+[7m Manual page ssh(1) line 349 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion10
+(B[m$ ssh -p 120022[1P22[C[C user[K[K[K[Kadmiunis[K[K[K[Knstrator[K[K[K[K[K[K[K[K[K[K[K[Kkent[K[K[K[Kuser@oca[K[K[Klocalhost [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[?2004lWarning: Permanently added '[localhost]:12022' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 09:01:24 AM UTC 2025
+
+  System load:  0.0                Processes:               115
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 4%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+173 updates can be applied immediately.
+4 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon May  5 08:31:53 2025 from 10.0.2.2
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ exit
+[?2004llogout
+Connection to localhost closed.
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ ssh -p 12022 user@localhost
+[?2004lWarning: Permanently added '[localhost]:12022' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 09:16:56 AM UTC 2025
+
+  System load:  0.0                Processes:               113
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 3%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+173 updates can be applied immediately.
+4 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon May  5 09:01:24 2025 from 10.0.2.2
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ exit[K
+[?2004l[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ 
+[?2004l[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ 
+[?2004l[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ eix[K[K[K^C[?2004l[?2004h[?2004l
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [?2004l
+logout
+Connection to localhost closed.
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ ssh -p 12022 user@localhost
+[?2004lWarning: Permanently added '[localhost]:12022' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 09:19:00 AM UTC 2025
+
+  System load:  0.07               Processes:               114
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 4%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+173 updates can be applied immediately.
+4 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon May  5 09:16:56 2025 from 10.0.2.2
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls
+[?2004l [0m[01;32mgreeting[0m  [01;34m'hej hopp'[0m   [01;34mkat[0m
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls
+[?2004l [0m[01;32mgreeting[0m  [01;34m'hej hopp'[0m   [01;34mkat[0m
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ lsd -[K[K[K - A[K[K
+[?2004lls: cannot access '-': No such file or directory
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ als -A[H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls -A
+[?2004l .bash_history   [0m[01;34m.cache[0m      [01;34mkat[0m        .profile
+ .bash_logout    [01;32mgreeting[0m    .lesshst   [01;34m.ssh[0m
+ .bashrc        [01;34m'hej hopp'[0m   [01;34m.local[0m     .sudo_as_admin_successful
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ cd .ssh/
+[?2004l[?2004h]0;user@ubse: ~/.ssh[01;32muser@ubse[00m:[01;34m~/.ssh[00m$ [H[2J]0;user@ubse: ~/.ssh[01;32muser@ubse[00m:[01;34m~/.ssh[00m$ ls
+[?2004lauthorized_keys
+[?2004h]0;user@ubse: ~/.ssh[01;32muser@ubse[00m:[01;34m~/.ssh[00m$ ls -a
+[?2004l[0m[01;34m.[0m  [01;34m..[0m  authorized_keys
+[?2004h]0;user@ubse: ~/.ssh[01;32muser@ubse[00m:[01;34m~/.ssh[00m$ [?2004l
+logout
+Connection to localhost closed.
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ ls .ssh
+[?2004lls: cannot access '.ssh': No such file or directory
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ ls ~/.ssh/[H[2J[94mDEVOPS24/lektion10
+(B[m$ ls ~/.ssh/
+[?2004lconfig				id_ed25519_ubse
+id_ed25519			id_ed25519_ubse.pub
+id_ed25519_github_personal	known_hosts
+id_ed25519_github_personal.pub	known_hosts.old
+id_ed25519.pub
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ ssh-g[Kkeygen [1@m[1@a[1@n[1@ 
+[?2004l[?1049h[22;0;0t[?1h=SSH-KEYGEN(1)          BSD General Commands Manual         SSH-KEYGEN(1)[m
+[m
+[1mNAME[0m[m
+     [1mssh-keygen[0m — OpenSSH authentication key utility[m
+[m
+[1mSYNOPSIS[0m[m
+     [1mssh-keygen[0m [[1m-q[0m] [[1m-a[0m [4mrounds[24m] [[1m-b[0m [4mbits[24m] [[1m-C[0m [4mcomment[24m][m
+                [[1m-f[0m [4moutput_keyfile[24m] [[1m-m[0m [4mformat[24m] [[1m-N[0m [4mnew_passphrase[24m][m
+                [[1m-O[0m [4moption[24m][m
+                [[1m-t[0m [1mdsa[0m | [1mecdsa[0m | [1mecdsa-sk[0m | [1med25519[0m | [1med25519-sk[0m | [1mrsa[0m][m
+                [[1m-w[0m [4mprovider[24m] [[1m-Z[0m [4mcipher[24m][m
+     [1mssh-keygen[0m [1m-p[0m [[1m-a[0m [4mrounds[24m] [[1m-f[0m [4mkeyfile[24m] [[1m-m[0m [4mformat[24m][m
+                [[1m-N[0m [4mnew_passphrase[24m] [[1m-P[0m [4mold_passphrase[24m] [[1m-Z[0m [4mcipher[24m][m
+     [1mssh-keygen[0m [1m-i[0m [[1m-f[0m [4minput_keyfile[24m] [[1m-m[0m [4mkey_format[24m][m
+     [1mssh-keygen[0m [1m-e[0m [[1m-f[0m [4minput_keyfile[24m] [[1m-m[0m [4mkey_format[24m][m
+     [1mssh-keygen[0m [1m-y[0m [[1m-f[0m [4minput_keyfile[24m][m
+[7m Manual page ssh-keygen(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1mssh-keygen[0m [1m-c[0m [[1m-a[0m [4mrounds[24m] [[1m-C[0m [4mcomment[24m] [[1m-f[0m [4mkeyfile[24m] [[1m-P[0m [4mpassphrase[24m][m
+[7m Manual page ssh-keygen(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1mssh-keygen[0m [1m-l[0m [[1m-v[0m] [[1m-E[0m [4mfingerprint_hash[24m] [[1m-f[0m [4minput_keyfile[24m][m
+[7m Manual page ssh-keygen(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1mssh-keygen[0m [1m-B[0m [[1m-f[0m [4minput_keyfile[24m][m
+[7m Manual page ssh-keygen(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1mssh-keygen[0m [1m-D[0m [4mpkcs11[24m[m
+[7m Manual page ssh-keygen(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1mssh-keygen[0m [1m-F[0m [4mhostname[24m [[1m-lv[0m] [[1m-f[0m [4mknown_hosts_file[24m][m
+[7m Manual page ssh-keygen(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1mssh-keygen[0m [1m-H[0m [[1m-f[0m [4mknown_hosts_file[24m][m
+[7m Manual page ssh-keygen(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1mssh-keygen[0m [1m-K[0m [[1m-a[0m [4mrounds[24m] [[1m-w[0m [4mprovider[24m][m
+[7m Manual page ssh-keygen(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1mssh-keygen[0m [1m-R[0m [4mhostname[24m [[1m-f[0m [4mknown_hosts_file[24m][m
+[7m Manual page ssh-keygen(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1mssh-keygen[0m [1m-r[0m [4mhostname[24m [[1m-g[0m] [[1m-f[0m [4minput_keyfile[24m][m
+[7m Manual page ssh-keygen(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1mssh-keygen[0m [1m-M[0m [1mgenerate[0m [[1m-O[0m [4moption[24m] [4moutput_file[24m[m
+[7m Manual page ssh-keygen(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1mssh-keygen[0m [1m-M[0m [1mscreen[0m [[1m-f[0m [4minput_file[24m] [[1m-O[0m [4moption[24m] [4moutput_file[24m[m
+[7m Manual page ssh-keygen(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM                [[1m-w[0m [4mprovider[24m] [[1m-Z[0m [4mcipher[24m][m
+[17;1H[K[7m Manual page ssh-keygen(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM                [[1m-t[0m [1mdsa[0m | [1mecdsa[0m | [1mecdsa-sk[0m | [1med25519[0m | [1med25519-sk[0m | [1mrsa[0m][m
+[17;1H[K[7m Manual page ssh-keygen(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM                [[1m-O[0m [4moption[24m][m
+[17;1H[K[7m Manual page ssh-keygen(1) line 9 (press h for help or q to quit)[27m[K[K/[K--[Ktt[K[1;1H                [[1m-O[0m [4moption[24m][m
+[2;1H                [[1m-t[0m [1mdsa[0m | [1mecdsa[0m | [1mecdsa-sk[0m | [1med25519[0m | [1med25519-sk[0m | [1mrsa[0m][m
+[3;1H                [[1m-w[0m [4mprovider[24m] [[1m-Z[0m [4mcipher[24m][m
+[4;1H     [1mssh-keygen[0m [1m-p[0m [[1m-a[0m [4mrounds[24m] [[1m-f[0m [4mkeyfile[24m] [[1m-m[0m [4mformat[24m][m
+[5;1H                [[1m-N[0m [4mnew_passphrase[24m] [[1m-P[0m [4mold_passphrase[24m] [[1m-Z[0m [4mcipher[24m][m
+[6;1H     [1mssh-keygen[0m [1m-i[0m [[1m-f[0m [4minput_keyfile[24m] [[1m-m[0m [4mkey_format[24m][m
+[7;1H     [1mssh-keygen[0m [1m-e[0m [[1m-f[0m [4minput_keyfile[24m] [[1m-m[0m [4mkey_format[24m][m
+[8;1H     [1mssh-keygen[0m [1m-y[0m [[1m-f[0m [4minput_keyfile[24m][m
+[9;1H     [1mssh-keygen[0m [1m-c[0m [[1m-a[0m [4mrounds[24m] [[1m-C[0m [4mcomment[24m] [[1m-f[0m [4mkeyfile[24m] [[1m-P[0m [4mpassphrase[24m][m
+[10;1H     [1mssh-keygen[0m [1m-l[0m [[1m-v[0m] [[1m-E[0m [4mfingerprint_hash[24m] [[1m-f[0m [4minput_keyfile[24m][m
+[11;1H     [1mssh-keygen[0m [1m-B[0m [[1m-f[0m [4minput_keyfile[24m][m
+[12;1H     [1mssh-keygen[0m [1m-D[0m [4mpkcs11[24m[m
+[13;1H     [1mssh-keygen[0m [1m-F[0m [4mhostname[24m [[1m-lv[0m] [[1m-f[0m [4mknown_hosts_file[24m][m
+[14;1H     [1mssh-keygen[0m [1m-H[0m [[1m-f[0m [4mknown_hosts_file[24m][m
+[15;1H     [1mssh-keygen[0m [1m-K[0m [[1m-a[0m [4mrounds[24m] [[1m-w[0m [4mprovider[24m][m
+[16;1H     [1mssh-keygen[0m [1m-R[0m [4mhostname[24m [[1m-f[0m [4mknown_hosts_file[24m][m
+[17;1H[1;1H                [[1m-O[0m [4moption[24m][m
+[2;1H                [[1m[7m-t[27m[0m [1mdsa[0m | [1mecdsa[0m | [1mecdsa-sk[0m | [1med25519[0m | [1med25519-sk[0m | [1mrsa[0m][m
+[3;1H                [[1m-w[0m [4mprovider[24m] [[1m-Z[0m [4mcipher[24m][m
+[4;1H     [1mssh-keygen[0m [1m-p[0m [[1m-a[0m [4mrounds[24m] [[1m-f[0m [4mkeyfile[24m] [[1m-m[0m [4mformat[24m][m
+[5;1H                [[1m-N[0m [4mnew_passphrase[24m] [[1m-P[0m [4mold_passphrase[24m] [[1m-Z[0m [4mcipher[24m][m
+[6;1H     [1mssh-keygen[0m [1m-i[0m [[1m-f[0m [4minput_keyfile[24m] [[1m-m[0m [4mkey_format[24m][m
+[7;1H     [1mssh-keygen[0m [1m-e[0m [[1m-f[0m [4minput_keyfile[24m] [[1m-m[0m [4mkey_format[24m][m
+[8;1H     [1mssh-keygen[0m [1m-y[0m [[1m-f[0m [4minput_keyfile[24m][m
+[9;1H     [1mssh-keygen[0m [1m-c[0m [[1m-a[0m [4mrounds[24m] [[1m-C[0m [4mcomment[24m] [[1m-f[0m [4mkeyfile[24m] [[1m-P[0m [4mpassphrase[24m][m
+[10;1H     [1mssh-keygen[0m [1m-l[0m [[1m-v[0m] [[1m-E[0m [4mfingerprint_hash[24m] [[1m-f[0m [4minput_keyfile[24m][m
+[11;1H     [1mssh-keygen[0m [1m-B[0m [[1m-f[0m [4minput_keyfile[24m][m
+[12;1H     [1mssh-keygen[0m [1m-D[0m [4mpkcs11[24m[m
+[13;1H     [1mssh-keygen[0m [1m-F[0m [4mhostname[24m [[1m-lv[0m] [[1m-f[0m [4mknown_hosts_file[24m][m
+[14;1H     [1mssh-keygen[0m [1m-H[0m [[1m-f[0m [4mknown_hosts_file[24m][m
+[15;1H     [1mssh-keygen[0m [1m-K[0m [[1m-a[0m [4mrounds[24m] [[1m-w[0m [4mprovider[24m][m
+[16;1H     [1mssh-keygen[0m [1m-R[0m [4mhostname[24m [[1m-f[0m [4mknown_hosts_file[24m][m
+[17;1H     [1mssh-keygen[0m [1m-r[0m [4mhostname[24m [[1m-g[0m] [[1m-f[0m [4minput_keyfile[24m][m
+[7m Manual page ssh-keygen(1) line 10 (press h for help or q to quit)[27m[K[K/[K...skipping...
+     The type of key to be generated is specified with the [1m[7m-t[27m[0m option.[m
+     If invoked without any arguments, [1mssh-keygen[0m will generate an RSA[m
+     key.[m
+[m
+     [1mssh-keygen[0m is also used to generate groups for use in Diffie-Hell‐[m
+     man group exchange (DH-GEX).  See the [4mMODULI[24m [4mGENERATION[24m section for[m
+     details.[m
+[m
+     Finally, [1mssh-keygen[0m can be used to generate and update Key Revoca‐[m
+     tion Lists, and to test whether given keys have been revoked by[m
+     one.  See the [4mKEY[24m [4mREVOCATION[24m [4mLISTS[24m section for details.[m
+[m
+     Normally each user wishing to use SSH with public key authentica‐[m
+     tion runs this once to create the authentication key in[m
+     [4m~/.ssh/id_dsa[24m, [4m~/.ssh/id_ecdsa[24m, [4m~/.ssh/id_ecdsa_sk[24m,[m
+     [4m~/.ssh/id_ed25519[24m, [4m~/.ssh/id_ed25519_sk[24m or [4m~/.ssh/id_rsa[24m.  Addi‐[m
+[7m Manual page ssh-keygen(1) line 52 (press h for help or q to quit)[27m[K[K/[K...skipping...
+             [1mverify[0m[1m[7m-t[27m[0m[1mime[0m=[4mtimestamp[24m[m
+                     Specifies a time to use when validating signatures[m
+                     instead of the current time.  The time may be spec‐[m
+                     ified as a date or time in the YYYYMMDD[Z] or in[m
+                     YYYYMMDDHHMM[SS][Z] formats.  Dates and times will[m
+                     be interpreted in the current system time zone un‐[m
+                     less suffixed with a Z character, which causes them[m
+                     to be interpreted in the UTC time zone.[m
+[m
+             The [1m-O[0m option may be specified multiple times.[m
+[m
+     [1m-P[0m [4mpassphrase[24m[m
+             Provides the (old) passphrase.[m
+[m
+     [1m-p[0m      Requests changing the passphrase of a private key file in‐[m
+             stead of creating a new private key.  The program will[m
+[7m Manual page ssh-keygen(1) line 290 (press h for help or q to quit)[27m[K[K/[K...skipping...
+     [1m[7m-t[27m[0m [1mdsa[0m | [1mecdsa[0m | [1mecdsa-sk[0m | [1med25519[0m | [1med25519-sk[0m | [1mrsa[0m[m
+             Specifies the type of key to create.  The possible values[m
+             are “dsa”, “ecdsa”, “ecdsa-sk”, “ed25519”, “ed25519-sk”, or[m
+             “rsa”.[m
+[m
+             This flag may also be used to specify the desired signature[m
+             type when signing certificates using an RSA CA key.  The[m
+             available RSA signature variants are “ssh-rsa” (SHA1 signa‐[m
+             tures, not recommended), “rsa-sha2-256”, and “rsa-sha2-512”[m
+             (the default).[m
+[m
+     [1m-U[0m      When used in combination with [1m-s[0m or [1m-Y[0m [1msign[0m, this option[m
+             indicates that a CA key resides in a ssh-agent(1).  See the[m
+             [4mCERTIFICATES[24m section for more information.[m
+[m
+     [1m-u[0m      Update a KRL.  When specified with [1m-k[0m, keys listed via the[m
+[7m Manual page ssh-keygen(1) line 333 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion10
+(B[m$ man ssh-keygen [C[C[5Pls ~/.ssh/[C[Cman ssh-keygen [C[C[Kssh-e[Kkeygen -t 
+recordings/     ssh-nyckel.txt  
+[94mDEVOPS24/lektion10
+(B[m$ ssh-keygen -t ed25519
+[?2004lGenerating public/private ed25519 key pair.
+Enter file in which to save the key (/home/kent/.ssh/id_ed25519): id  /home/kent/.ssh/id_ed25519_test
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/kent/.ssh/id_ed25519_test
+Your public key has been saved in /home/kent/.ssh/id_ed25519_test.pub
+The key fingerprint is:
+SHA256:ouNRtf1qXix0JbD7Ir0KDeosRONfdoVAsrJmbX0JrGw kent@klad
+The key's randomart image is:
++--[ED25519 256]--+
+|    ...   .      |
+|     +.    o     |
+|  . . o.... . .  |
+|  o= o o.+.. o   |
+| o+.E = S.+ .    |
+| ooo +o=.o =     |
+| . .=o..o + =    |
+|  .+.o . ..*     |
+|   .+   .++      |
++----[SHA256]-----+
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ mv ½-[K[K~/.ssh/
+config                          id_ed25519_test.pub
+id_ed25519                      id_ed25519_ubse
+id_ed25519_github_personal      id_ed25519_ubse.pub
+id_ed25519_github_personal.pub  known_hosts
+id_ed25519.pub                  known_hosts.old
+id_ed25519_test                 
+[94mDEVOPS24/lektion10
+(B[m$ mv ~/.ssh/id_ed25519_test* .
+[?2004l[?2004h[94mDEVOPS24/lektion10
+(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ ls
+[?2004lid_ed25519_test  id_ed25519_test.pub  recordings  ssh-nyckel.txt
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ ssh -t[K[K[K-g[Kkeygen -t 
+id_ed25519_test      recordings/          
+id_ed25519_test.pub  ssh-nyckel.md        
+[94mDEVOPS24/lektion10
+(B[m$ ssh-keygen -t [K[K[K[K[K[K[K[K[K[K[K[K[K[K[H[2J[94mDEVOPS24/lektion10
+(B[m$ ssh ubse
+[?2004lWelcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 10:28:48 AM UTC 2025
+
+  System load:  0.0                Processes:               111
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 4%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+169 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon May  5 09:19:00 2025 from 10.0.2.2
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls
+[?2004l [0m[01;32mgreeting[0m  [01;34m'hej hopp'[0m   [01;34mkat[0m
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ rm.[K .ssh/authorized_keys 
+[?2004l[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ exit
+[?2004llogout
+Connection to localhost closed.
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ ssh ubse[C[C[Kssh-gen[K[K[Kkeygen -t ed25519
+[?2004lGenerating public/private ed25519 key pair.
+Enter file in which to save the key (/home/kent/.ssh/id_ed25519): id_ed25519_ubse
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in id_ed25519_ubse
+Your public key has been saved in id_ed25519_ubse.pub
+The key fingerprint is:
+SHA256:gT4NeF7B9juzABUzJquqP0G58YgvvVeHoaU/Xitg7rI kent@klad
+The key's randomart image is:
++--[ED25519 256]--+
+|      ..*.       |
+|     . =++       |
+|   .. =oo.       |
+|  +  =++ ..      |
+| o =.+++S  .     |
+|. +.* o.o +      |
+| o.+ + ... +     |
+|..= o +. ..      |
+|.oEB...o.        |
++----[SHA256]-----+
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ ls ~//[K.sh[Ksh/l[K[H[2J[94mDEVOPS24/lektion10
+(B[m$ ls ~/.ssh/
+[?2004lconfig			    id_ed25519_github_personal.pub  id_ed25519_ubse.pub
+id_ed25519		    id_ed25519.pub		    known_hosts
+id_ed25519_github_personal  id_ed25519_ubse		    known_hosts.old
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ [K(B[m$ [K(B[m$ $(which ssh-copy-id)[1@c[1@p[1@d[1P[1P[1@o[1@d[1@e[1@ 
+[?2004l[?2004h[94mDEVOPS24/lektion10
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ ssh-cco[K[Kopy-id [K[K[K[K[K[K[K[K[K[K[K[Kman
+[?2004lWhat manual page do you want?
+For example, try 'man man'.
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ man b[Kssh-coopy-[K[K[K[Kpy-id[H[2J[94mDEVOPS24/lektion10
+(B[m$ man ssh-copy-id
+[?2004l[?1049h[22;0;0t[?1h=SSH-COPY-ID(1)            BSD General Commands Manual           SSH-COPY-ID(1)[m
+[m
+[1mNAME[0m[m
+     [1mssh-copy-id[0m — use locally available keys to authorise logins on a remote[m
+     machine[m
+[m
+[1mSYNOPSIS[0m[m
+     [1mssh-copy-id[0m [[1m-f[0m] [[1m-n[0m] [[1m-s[0m] [[1m-i[0m [[4midentity_file[24m]] [[1m-p[0m [4mport[24m] [[1m-o[0m [4mssh_option[24m][m
+                 [[4muser[24m@][4mhostname[24m[m
+     [1mssh-copy-id[0m [1m-h[0m | [1m-[0m?[m
+[m
+[1mDESCRIPTION[0m[m
+[7m Manual page ssh-copy-id(1) line 1 (press h for help or q to quit)[27m[K...skipping...
+SSH-COPY-ID(1)            BSD General Commands Manual           SSH-COPY-ID(1)[m
+[m
+[1mNAME[0m[m
+     [1mssh-copy-id[0m — use locally available keys to authorise logins on a remote[m
+     machine[m
+[m
+[1mSYNOPSIS[0m[m
+     [1mssh-copy-id[0m [[1m-f[0m] [[1m-n[0m] [[1m-s[0m] [[1m-i[0m [[4midentity_file[24m]] [[1m-p[0m [4mport[24m] [[1m-o[0m [4mssh_option[24m][m
+                 [[4muser[24m@][4mhostname[24m[m
+     [1mssh-copy-id[0m [1m-h[0m | [1m-[0m?[m
+[m
+[1mDESCRIPTION[0m[m
+     [1mssh-copy-id[0m is a script that uses ssh(1) to log into a remote machine[m
+[7m Manual page ssh-copy-id(1) line 1 (press h for help or q to quit)[27m[K...skipping...
+SSH-COPY-ID(1)            BSD General Commands Manual           SSH-COPY-ID(1)[m
+[m
+[1mNAME[0m[m
+     [1mssh-copy-id[0m — use locally available keys to authorise logins on a remote[m
+     machine[m
+[m
+[1mSYNOPSIS[0m[m
+     [1mssh-copy-id[0m [[1m-f[0m] [[1m-n[0m] [[1m-s[0m] [[1m-i[0m [[4midentity_file[24m]] [[1m-p[0m [4mport[24m] [[1m-o[0m [4mssh_option[24m][m
+                 [[4muser[24m@][4mhostname[24m[m
+     [1mssh-copy-id[0m [1m-h[0m | [1m-[0m?[m
+[m
+[1mDESCRIPTION[0m[m
+     [1mssh-copy-id[0m is a script that uses ssh(1) to log into a remote machine[m
+     (presumably using a login password, so password authentication should be[m
+[7m Manual page ssh-copy-id(1) line 1 (press h for help or q to quit)[27m[K...skipping...
+SSH-COPY-ID(1)            BSD General Commands Manual           SSH-COPY-ID(1)[m
+[m
+[1mNAME[0m[m
+     [1mssh-copy-id[0m — use locally available keys to authorise logins on a remote[m
+     machine[m
+[m
+[1mSYNOPSIS[0m[m
+     [1mssh-copy-id[0m [[1m-f[0m] [[1m-n[0m] [[1m-s[0m] [[1m-i[0m [[4midentity_file[24m]] [[1m-p[0m [4mport[24m] [[1m-o[0m [4mssh_option[24m][m
+                 [[4muser[24m@][4mhostname[24m[m
+     [1mssh-copy-id[0m [1m-h[0m | [1m-[0m?[m
+[m
+[1mDESCRIPTION[0m[m
+     [1mssh-copy-id[0m is a script that uses ssh(1) to log into a remote machine[m
+     (presumably using a login password, so password authentication should be[m
+     enabled, unless you've done some clever use of multiple identities).  It[m
+[7m Manual page ssh-copy-id(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion10
+(B[m$ ls ~/.ssh/
+[?2004lconfig			    id_ed25519_github_personal.pub  id_ed25519_ubse.pub
+id_ed25519		    id_ed25519.pub		    known_hosts
+id_ed25519_github_personal  id_ed25519_ubse		    known_hosts.old
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ ssh-copy-id -i ~/.ssh//[K
+config                          id_ed25519_ubse
+id_ed25519                      id_ed25519_ubse.pub
+id_ed25519_github_personal      known_hosts
+id_ed25519_github_personal.pub  known_hosts.old
+id_ed25519.pub                  
+[94mDEVOPS24/lektion10
+(B[m$ ssh-copy-id -i ~/.ssh/id_ed25519_ubse[H[2J[94mDEVOPS24/lektion10
+(B[m$ ssh-copy-id -i ~/.ssh/id_ed25519_ubse[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@ [1@-[1@p[C[1@ [1@1[1@2[1@0[1@2[1@2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C user@localhost
+[?2004l/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/kent/.ssh/id_ed25519_ubse.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+Warning: Permanently added '[localhost]:12022' (ED25519) to the list of known hosts.
+user@localhost's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh -p '12022' 'user@localhost'"
+and check to make sure that only the key(s) you wanted were added.
+
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ ssh ubse
+[?2004lWelcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 11:00:20 AM UTC 2025
+
+  System load:  0.0                Processes:               111
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 4%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+169 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon May  5 10:28:48 2025 from 10.0.2.2
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ cd .ssh
+[?2004l[?2004h]0;user@ubse: ~/.ssh[01;32muser@ubse[00m:[01;34m~/.ssh[00m$ [H[2J]0;user@ubse: ~/.ssh[01;32muser@ubse[00m:[01;34m~/.ssh[00m$ ls +l[K[K-l
+[?2004ltotal 4
+-rw------- 1 user user 91 May  5 10:34 authorized_keys
+[?2004h]0;user@ubse: ~/.ssh[01;32muser@ubse[00m:[01;34m~/.ssh[00m$ less authorized_keys 
+[?2004l[?1049h[22;0;0t[?1h=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDdAQR3Eey3TFkvv4EMy9x58E3Di92La3Is5RatqpSMt  kent@klad
+[7mauthorized_keys (END)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;user@ubse: ~/.ssh[01;32muser@ubse[00m:[01;34m~/.ssh[00m$ less authorized_keys [1P[C[1P[1P[1P[1@n[1@a[1@n[1@o
+[?2004l[?2004h[?1049h[22;0;0t[1;16r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[14;34H(B[0;7m[ Reading... ](B[m[14;33H(B[0;7m[ Read 1 line ](B[m[H(B[0;7m  GNU nano 7.2                     authorized_keys                              [1;79H(B[m[15d(B[0;7m^G(B[m Help[14G(B[0;7m^O(B[m Write Out (B[0;7m^W(B[m Where Is  (B[0;7m^K(B[m Cut[53G(B[0;7m^T(B[m Execute   (B[0;7m^C(B[m Location[16d(B[0;7m^X(B[m Exit[14G(B[0;7m^R(B[m Read File (B[0;7m^\(B[m Replace   (B[0;7m^U(B[m Paste     (B[0;7m^J(B[m Justify   (B[0;7m^/(B[m Go To Line[2dssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDdAQR3Eey3TFkvv4EMy9x58E3Di92La3Is5RatqpSM(B[0;7m>[2;1H(B[m[?12l[?25h[?25l[?12l[?25hs[?25l[?12l[?25hs[?25l[?12l[?25hh[?25l[?12l[?25h-[?25l[?12l[?25he[?25l[?12l[?25hd[?25l[?12l[?25h2[?25l[?12l[?25h5[?25l[?12l[?25h[?25l[?12l[?25h5[?25l[?12l[?25h5[?25l[?12l[?25h1[?25l[?12l[?25h9[?25l[?12l[?25h [?25l[?12l[?25hA[?25l[?12l[?25hA[?25l[?12l[?25hA[?25l[?12l[?25hA[?25l[?12l[?25hC[?25l[14d[K[?12l[?25h[2;19H[?25l[?12l[?25hN[?25l[?12l[?25hz[?25l[?12l[?25ha[?25l[?12l[?25hC[?25l[?12l[?25h1[?25l[?12l[?25hl[?25l[?12l[?25hZ[?25l[?12l[?25hD[?25l[?12l[?25hI[?25l[?12l[?25h1[?25l[?12l[?25hN[?25l[?12l[?25hT[?25l[?12l[?25hE[?25l[?12l[?25h5[?25l[?12l[?25hA[?25l[?12l[?25hA[?25l[?12l[?25hA[?25l[?12l[?25hA[?25l[?12l[?25hI[?25l[?12l[?25hD[?25l[?12l[?25hd[?25l[?12l[?25hA[?25l[?12l[?25hQ[?25l[?12l[?25hR[?25l[?12l[?25h3[?25l[?12l[?25hE[?25l[?12l[?25he[?25l[?12l[?25hy[?25l[?12l[?25h3[?25l[?12l[?25hT[?25l[?12l[?25hF[?25l[?12l[?25hk[?25l[?12l[?25hv[?25l[?12l[?25hv[?25l[?12l[?25h4[?25l[?12l[?25hE[?25l[?12l[?25hM[?25l[?12l[?25hy[?25l[?12l[?25h9[?25l[?12l[?25hx[?25l[?12l[?25h5[?25l[?12l[?25h8[?25l[?12l[?25hE[?25l[?12l[?25h3[?25l[?12l[?25hD[?25l[?12l[?25hi[?25l[?12l[?25h9[?25l[?12l[?25h2[?25l[?12l[?25hL[?25l[?12l[?25ha[?25l[?12l[?25h3[?25l[?12l[?25hI[?25l[?12l[?25hs[?25l[?12l[?25h5[?25l[?12l[?25hR[?25l[?12l[?25ha[?25l[?12l[?25ht[?25l[?12l[?25hq[?25l[?12l[?25hp[?25l[?12l[?25h(B[0;7m<(B[matqpSMt kent@klad[K[7G[?25l[?12l[?25hM[?25l[?12l[?25ht[?25l[?12l[?25h [?25l[?12l[?25hk[?25l[?12l[?25he[?25l[?12l[?25hn[?25l[?12l[?25ht[?25l[?12l[?25h@[?25l[?12l[?25hk[?25l[?12l[?25hl[?25l[?12l[?25ha[?25l[?12l[?25hd[?25l[?12l[?25hssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDdAQR3Eey3TFkvv4EMy9x58E3Di92La3Is5RatqpSM(B[0;7m>[3;1H(B[m[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[A(B[0;7m<(B[matqpSMt kent@klad[K[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25hssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDdAQR3Eey3TFkvv4EMy9x58E3Di92La3Is5RatqpSM(B[0;7m>[2;78H(B[m[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[15d[J[16d[?12l[?25h[16;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;user@ubse: ~/.ssh[01;32muser@ubse[00m:[01;34m~/.ssh[00m$ less authorized_keys 
+[?2004l[?1049h[22;0;0t[?1h=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDdAQR3Eey3TFkvv4EMy9x58E3Di92La3Is5RatqpSMt  kent@klad
+[7mauthorized_keys (END)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;user@ubse: ~/.ssh[01;32muser@ubse[00m:[01;34m~/.ssh[00m$ [K]0;user@ubse: ~/.ssh[01;32muser@ubse[00m:[01;34m~/.ssh[00m$ [K]0;user@ubse: ~/.ssh[01;32muser@ubse[00m:[01;34m~/.ssh[00m$ [K]0;user@ubse: ~/.ssh[01;32muser@ubse[00m:[01;34m~/.ssh[00m$ nn[Kano authorized_keys 
+[?2004l[?2004h[?1049h[22;0;0t[1;13r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[11;34H(B[0;7m[ Reading... ](B[m[11;33H(B[0;7m[ Read 1 line ](B[m[H(B[0;7m  GNU nano 7.2                     authorized_keys                              [1;79H(B[m[12d(B[0;7m^G(B[m Help[14G(B[0;7m^O(B[m Write Out (B[0;7m^W(B[m Where Is  (B[0;7m^K(B[m Cut[53G(B[0;7m^T(B[m Execute   (B[0;7m^C(B[m Location[13d(B[0;7m^X(B[m Exit[14G(B[0;7m^R(B[m Read File (B[0;7m^\(B[m Replace   (B[0;7m^U(B[m Paste     (B[0;7m^J(B[m Justify   (B[0;7m^/(B[m Go To Line[2dssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDdAQR3Eey3TFkvv4EMy9x58E3Di92La3Is5RatqpSM(B[0;7m>[2;1H(B[m[?12l[?25h[?25l[11d[J[13d[?12l[?25h[13;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;user@ubse: ~/.ssh[01;32muser@ubse[00m:[01;34m~/.ssh[00m$ [H[2J]0;user@ubse: ~/.ssh[01;32muser@ubse[00m:[01;34m~/.ssh[00m$ exit
+[?2004llogout
+Connection to localhost closed.
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ code ~/.ssh/c[Kknown_hosts
+[?2004l[?2004h[94mDEVOPS24/lektion10
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ cp ~/.ssh/config ./cofn[K[Knfig_exempel
+[?2004l[?2004h[94mDEVOPS24/lektion10
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ ssh ubse
+[?2004lWelcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 11:18:19 AM UTC 2025
+
+  System load:  0.0                Processes:               111
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 4%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+169 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon May  5 11:00:21 2025 from 10.0.2.2
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [?2004l
+logout
+Connection to localhost closed.
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ ssh ubse[H[2J[94mDEVOPS24/lektion10
+(B[m$ ssh ubse[K[K[K[K-p[Ki shuhuhu[K[K[K[K[K[K[K[K[Kp 12022 username@host[K[K[K[Klocalhost^C[?2004l[?2004h[?2004l
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ ssh sub[K[K[Kubse
+[?2004lWelcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 11:18:19 AM UTC 2025
+
+  System load:  0.0                Processes:               111
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 4%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+169 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon May  5 11:18:19 2025 from 10.0.2.2
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ s[Ksudo /etc/ssh/sshd_config.d/[K[K[Kc/etc/ssh/sshd_configp/etc/ssh/sshd_config /etc/ssh/sshd_config[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C{},}.}b}a}k}[C[C /etc/ssh/sshd_config{,.bak}[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C- /etc/ssh/sshd_config{,.bak}[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cv /etc/ssh/sshd_config{,.bak}[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ sudo cp -v /etc/ssh/sshd_config{,.bak}
+[?2004l[sudo] password for user: 
+'/etc/ssh/sshd_config' -> '/etc/ssh/sshd_config.bak'
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ sudo nano[K[K[K[K[K[Ked[K[Koedit [C[C[C[C[C[C[C[C[C/etc/ssh/sshd_config
+[?2004l[?2004h[?1049h[22;0;0t[1;15r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[13;34H(B[0;7m[ Reading... ](B[m[13;32H(B[0;7m[ Read 122 lines ](B[m[H(B[0;7m  GNU nano 7.2              /var/tmp/sshd_config.2OJhc9dx                       [1;79H(B[m[14d(B[0;7m^G(B[m Help[14G(B[0;7m^O(B[m Write Out (B[0;7m^W(B[m Where Is  (B[0;7m^K(B[m Cut[53G(B[0;7m^T(B[m Execute   (B[0;7m^C(B[m Location[15d(B[0;7m^X(B[m Exit[14G(B[0;7m^R(B[m Read File (B[0;7m^\(B[m Replace   (B[0;7m^U(B[m Paste     (B[0;7m^J(B[m Justify   (B[0;7m^/(B[m Go To Line[3d[36m# This is the sshd server system-wide configuration file.  See[4d# sshd_config(5) for more information.[6d# This sshd was compiled with PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/us[39m(B[0;7m>[8;1H(B[0m[36m# The strategy used for options in the default sshd_config shipped with[9d# OpenSSH is to specify options with their default value where[10d# possible, but leave them commented.  Uncommented options override the[11d# default value.[2d[39m(B[m[?12l[?25h[15;1H[?1049l[23;0;0t[?1l>[?1049h[22;0;0t[1;16r[?12l[?25h[39;49m]104(B[m[4l[?7h[H[2J[?2004h[?1h=[?1h=(B[0;7m  GNU nano 7.2              /var/tmp/sshd_config.2OJhc9dx                       [1;79H(B[m[3d[36m# This is the sshd server system-wide configuration file.  See[4d# sshd_config(5) for more information.[6d# This sshd was compiled with PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/us[39m(B[0;7m>[8;1H(B[0m[36m# The strategy used for options in the default sshd_config shipped with[9d# OpenSSH is to specify options with their default value where[10d# possible, but leave them commented.  Uncommented options override the[11d# default value.[13d[39m(B[mInclude /etc/ssh/sshd_config.d/*.conf[15d(B[0;7m^G(B[m Help[14G(B[0;7m^O(B[m Write Out (B[0;7m^W(B[m Where Is  (B[0;7m^K(B[m Cut[53G(B[0;7m^T(B[m Execute   (B[0;7m^C(B[m Location[16d(B[0;7m^X(B[m Exit[14G(B[0;7m^R(B[m Read File (B[0;7m^\(B[m Replace   (B[0;7m^U(B[m Paste     (B[0;7m^J(B[m Justify   (B[0;7m^/(B[m Go To Line[?25l[?12l[?25h[2d[?25l[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[14d[?12l[?25h[4d[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#Port 22[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#AddressFamily any[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#ListenAddress 0.0.0.0[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#ListenAddress ::[39m(B[m[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25hI[?25l[?12l[?25h[?25l[?12l[?25h[9d[?25l[?12l[?25h[8;38H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25hi[?25l[?12l[?25hg[?25l[?12l[?25h.[?25l[?12l[?25hd[?25l[?12l[?25h/[?25l[?12l[?25h*[?25l[?12l[?25h.[?25l[?12l[?25hc[?25l[?12l[?25ho[?25l[?12l[?25hn[?25l[?12l[?25hf[?25l[?12l[?25h[9d[?25l[?12l[?25h[A[?25l[?12l[?25hI[?25l[?12l[?25hn[?25l[?12l[?25hc[?25l[?12l[?25hl[?25l[?12l[?25hu[?25l[?12l[?25hd[?25l[?12l[?25he[?25l[?12l[?25h [?25l[?12l[?25h/[?25l[?12l[?25he[?25l[?12l[?25ht[?25l[?12l[?25hc[?25l[?12l[?25h/[?25l[?12l[?25hs[?25l[?12l[?25hs[?25l[?12l[?25hh[?25l[?12l[?25h/[?25l[?12l[?25hs[?25l[?12l[?25hs[?25l[?12l[?25hh[?25l[?12l[?25hd[?25l[?12l[?25h_[?25l[?12l[?25hc[?25l[?12l[?25ho[?25l[?12l[?25hn[?25l[?12l[?25hf[?25l[?12l[?25hi[?25l[?12l[?25hg[?25l[?12l[?25h.[?25l[?12l[?25hd[?25l[?12l[?25h[A[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[8;38H[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#HostKey /etc/ssh/ssh_host_rsa_key[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#HostKey /etc/ssh/ssh_host_ecdsa_key[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#HostKey /etc/ssh/ssh_host_ed25519_key[39m(B[m[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[7d[?25l[?12l[?25h[6;9H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# Ciphers and keying[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#RekeyLimit default none[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# Logging[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#SyslogFacility AUTH[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#LogLevel INFO[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# Authentication:[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#LoginGraceTime 2m[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#PermitRootLogin prohibit-password[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#StrictModes yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#MaxAuthTries 6[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#MaxSessions 10[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#PubkeyAuthentication yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[C[?25l[1;59H(B[0;7m*[79G(B[m[?12l[?25h[7dPermitRootLogin prohibit-password[K[?25l[?12l[?25h[8d[?25l[?12l[?25h[7;34H[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25hn[?25l[?12l[?25ho[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[C[?25l[?12l[?25h[10d[?25l[?12l[?25h[?25l[?12l[?25h[9;16H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[?25l[?12l[?25h[C[?25l[?12l[?25h[?25l[?12l[?25h[C[?25l[?12l[?25h[10d[?25l[?12l[?25h[C[?25l[?12l[?25h[A[?25l[?12l[?25h[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[10d[?25l[?12l[?25h[A[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# Expect .ssh/authorized_keys2 to be disregarded by default in future.[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#AuthorizedKeysFile[38;5;208m     [36m.ssh/authorized_keys .ssh/authorized_keys2[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#AuthorizedPrincipalsFile none[39m(B[m[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#AuthorizedKeysCommand none[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#AuthorizedKeysCommandUser nobody[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# For this to work you will also need host keys in /etc/ssh/ssh_known_hosts[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#HostbasedAuthentication no[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# Change to yes if you don't trust ~/.ssh/known_hosts for[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# HostbasedAuthentication[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#IgnoreUserKnownHosts no[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# Don't read the user's ~/.rhosts and ~/.shosts files[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#IgnoreRhosts yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# To disable tunneled clear text passwords, change to no here![39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#PasswordAuthentication yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#PermitEmptyPasswords no[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# Change to yes to enable challenge-response passwords (beware issues with[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# some PAM modules and threads)[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1HKbdInteractiveAuthentication no[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[C[?25l[?12l[?25hPasswordAuthentication yes[K[?25l[?12l[?25h[9d[?25l[?12l[?25h[8;27H[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25hn[?25l[?12l[?25ho[?25l[?12l[?25h[9d[?25l[?12l[?25h[A[?25l[?12l[?25h[7;63H[?25l[?12l[?25h[8;26H[?25l[?12l[?25h[9d[?25l[?12l[?25h[A[?25l[?12l[?25h[9d[?25l[?12l[?25h[8;26H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25hs[?25l[?12l[?25hw[?25l[?12l[?25ho[?25l[?12l[?25hr[?25l[?12l[?25hd[?25l[?12l[?25hA[?25l[?12l[?25hu[?25l[?12l[?25ht[?25l[?12l[?25hh[?25l[?12l[?25he[?25l[?12l[?25hn[?25l[?12l[?25ht[?25l[?12l[?25hi[?25l[?12l[?25hc[?25l[?12l[?25ha[?25l[?12l[?25ht[?25l[?12l[?25hi[?25l[?12l[?25ho[?25l[?12l[?25hn[?25l[?12l[?25h [?25l[?12l[?25hn[?25l[?12l[?25ho[?25l[?12l[?25h[9d[?25l[?12l[?25h[A[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# Kerberos options[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#KerberosAuthentication no[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#KerberosOrLocalPasswd yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#KerberosTicketCleanup yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#KerberosGetAFSToken no[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h7[2;14r8M[1;16r[2;1HPasswordAuthentication no[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m# To disable tunneled clear text passwords, change to no here![39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m#IgnoreRhosts yes[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m# Don't read the user's ~/.rhosts and ~/.shosts files[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m#IgnoreUserKnownHosts no[39m(B[m[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[A[?25l[?12l[?25hP[?25l[?12l[?25ha[?25l[?12l[?25hs[?25l[?12l[?25hs[?25l[?12l[?25hw[?25l[?12l[?25ho[?25l[?12l[?25hr[?25l[?12l[?25hd[?25l[?12l[?25hA[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[36m#PasswordAuthentication no#[39m(B[m[?25l[?12l[?25h[36m PasswordAuthentication no# [39m(B[m[?25l[?12l[?25h[1P[?25l[?12l[?25hPasswordAuthentication no[K[?25l[?12l[?25h[8d[?25l[?12l[?25h[7;26H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25hn[?25l[?12l[?25ho[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[7d[?25l[?12l[?25hP[?25l[?12l[?25ha[?25l[?12l[?25hs[?25l[?12l[?25hs[?25l[?12l[?25hw[?25l[?12l[?25ho[?25l[?12l[?25hr[?25l[?12l[?25hd[?25l[?12l[?25hA[?25l[?12l[?25hu[?25l[?12l[?25ht[?25l[?12l[?25hh[?25l[?12l[?25he[?25l[?12l[?25hn[?25l[?12l[?25ht[?25l[?12l[?25hi[?25l[?12l[?25hc[?25l[?12l[?25ha[?25l[?12l[?25ht[?25l[?12l[?25hi[?25l[?12l[?25ho[?25l[?12l[?25hn[?25l[?12l[?25h [?25l[?12l[?25hn[?25l[?12l[?25ho[?25l[?12l[?25h[8d[?25l[?12l[?25h[A[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# Kerberos options[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#KerberosAuthentication no[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#KerberosOrLocalPasswd yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#KerberosTicketCleanup yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#KerberosGetAFSToken no[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# GSSAPI options[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#GSSAPIAuthentication no[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#GSSAPICleanupCredentials yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#GSSAPIStrictAcceptorCheck yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#GSSAPIKeyExchange no[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# Set this to 'yes' to enable PAM authentication, account processing,[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# and session processing. If this is enabled, PAM authentication will[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# be allowed through the KbdInteractiveAuthentication and[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# PasswordAuthentication.  Depending on your PAM configuration,[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# PAM authentication via KbdInteractiveAuthentication may bypass[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# the setting of "PermitRootLogin prohibit-password".[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# If you just want the PAM account and session checks to run without[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# PAM authentication, then enable this but set PasswordAuthentication[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# and KbdInteractiveAuthentication to 'no'.[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1HUsePAM yes[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#AllowAgentForwarding yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#AllowTcpForwarding yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#GatewayPorts no[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1HX11Forwarding yes[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#X11DisplayOffset 10[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#X11UseLocalhost yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#PermitTTY yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1HPrintMotd no[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#PrintLastLog yes[39m(B[m[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[8;18H[?25l[?12l[?25h[9d[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m# PAM authentication, then enable this but set PasswordAuthentication[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m# If you just want the PAM account and session checks to run without[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m# the setting of "PermitRootLogin prohibit-password".[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m# PAM authentication via KbdInteractiveAuthentication may bypass[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m# PasswordAuthentication.  Depending on your PAM configuration,[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m# be allowed through the KbdInteractiveAuthentication and[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m# and session processing. If this is enabled, PAM authentication will[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m# Set this to 'yes' to enable PAM authentication, account processing,[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[?25l[?12l[?25h7[2;14r8M[1;16r[2;1H[36m#GSSAPIKeyExchange no[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m#GSSAPIStrictAcceptorCheck yes[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m#GSSAPICleanupCredentials yes[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m#GSSAPIAuthentication no[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m# GSSAPI options[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m#KerberosGetAFSToken no[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m#KerberosTicketCleanup yes[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m#KerberosOrLocalPasswd yes[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m#KerberosAuthentication no[39m(B[m[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[A[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# and session processing. If this is enabled, PAM authentication will[39m(B[m[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m#KerberosAuthentication no[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m# Kerberos options[39m(B[m[?25l[?12l[?25h7[2;14r8M[1;16r[2;1H[?25l[?12l[?25h7[2;13r8M[1;16r[2;1HKbdInteractiveAuthentication no[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m# some PAM modules and threads)[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m# Change to yes to enable challenge-response passwords (beware issues with[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m#PermitEmptyPasswords no[39m(B[m[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# GSSAPI options[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#GSSAPIAuthentication no[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#GSSAPICleanupCredentials yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#GSSAPIStrictAcceptorCheck yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#GSSAPIKeyExchange no[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# Set this to 'yes' to enable PAM authentication, account processing,[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# and session processing. If this is enabled, PAM authentication will[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# be allowed through the KbdInteractiveAuthentication and[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# PasswordAuthentication.  Depending on your PAM configuration,[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# PAM authentication via KbdInteractiveAuthentication may bypass[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# the setting of "PermitRootLogin prohibit-password".[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# If you just want the PAM account and session checks to run without[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# PAM authentication, then enable this but set PasswordAuthentication[39m(B[m[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m#GSSAPIAuthentication no[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m# GSSAPI options[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m#KerberosGetAFSToken no[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m#KerberosTicketCleanup yes[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m#KerberosOrLocalPasswd yes[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m#KerberosAuthentication no[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m# Kerberos options[39m(B[m[?25l[?12l[?25h7[2;14r8M[1;16r[2;1H[?25l[?12l[?25h[3d[?25l[?12l[?25h[A[?25l[?12l[?25h7[2;13r8M[1;16r[2;1HKbdInteractiveAuthentication no[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m# some PAM modules and threads)[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m# Change to yes to enable challenge-response passwords (beware issues with[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m#PermitEmptyPasswords no[39m(B[m[?25l[?12l[?25h7[2;14r8M[1;16r[2;1HPasswordAuthentication no[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m# To disable tunneled clear text passwords, change to no here![39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m#IgnoreRhosts yes[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m# Don't read the user's ~/.rhosts and ~/.shosts files[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m#IgnoreUserKnownHosts no[39m(B[m[?25l[?12l[?25h7[2;14r8M[1;16r[2;1H[36m# HostbasedAuthentication[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m# Change to yes if you don't trust ~/.ssh/known_hosts for[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m#HostbasedAuthentication no[39m(B[m[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m# For this to work you will also need host keys in /etc/ssh/ssh_known_hosts[39m(B[m[?25l[?12l[?25h7[2;14r8M[1;16r[2;1H[?25l[?12l[?25h7[2;13r8M[1;16r[2;1H[36m#AuthorizedKeysCommandUser nobody[39m(B[m[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#PermitEmptyPasswords no[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# Change to yes to enable challenge-response passwords (beware issues with[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# some PAM modules and threads)[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1HKbdInteractiveAuthentication no[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# Kerberos options[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#KerberosAuthentication no[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#KerberosOrLocalPasswd yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#KerberosTicketCleanup yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#KerberosGetAFSToken no[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# GSSAPI options[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#GSSAPIAuthentication no[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#GSSAPICleanupCredentials yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#GSSAPIStrictAcceptorCheck yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#GSSAPIKeyExchange no[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# Set this to 'yes' to enable PAM authentication, account processing,[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# and session processing. If this is enabled, PAM authentication will[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# be allowed through the KbdInteractiveAuthentication and[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# PasswordAuthentication.  Depending on your PAM configuration,[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# PAM authentication via KbdInteractiveAuthentication may bypass[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# the setting of "PermitRootLogin prohibit-password".[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# If you just want the PAM account and session checks to run without[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# PAM authentication, then enable this but set PasswordAuthentication[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# and KbdInteractiveAuthentication to 'no'.[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1HUsePAM yes[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#AllowAgentForwarding yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#AllowTcpForwarding yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#GatewayPorts no[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1HX11Forwarding yes[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#X11DisplayOffset 10[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#X11UseLocalhost yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#PermitTTY yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1HPrintMotd no[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#PrintLastLog yes[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#TCPKeepAlive yes[39m(B[m[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[7;18H[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25hn[?25l[?12l[?25ho[?25l[?12l[?25h[8d[?25l[?12l[?25h[A[?25l[?12l[?25hX[?25l[?12l[?25h1[?25l[?12l[?25h1[?25l[?12l[?25hF[?25l[?12l[?25ho[?25l[?12l[?25hr[?25l[?12l[?25hw[?25l[?12l[?25ha[?25l[?12l[?25hr[?25l[?12l[?25hd[?25l[?12l[?25hi[?25l[?12l[?25hn[?25l[?12l[?25hg[?25l[?12l[?25h [?25l[?12l[?25hn[?25l[?12l[?25ho[?25l[?12l[?25h[8d[?25l[?12l[?25h[C[?25l[?12l[?25h[?25l[?12l[?25h[7;17H[?25l[?12l[?25h[?25l[?12l[?25ho[?25l[?12l[?25h[8d[?25l[?12l[?25h[A[?25l[?12l[?25h[8d[?25l[?12l[?25h[7;17H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25hn[?25l[?12l[?25ho[?25l[?12l[?25h[8d[?25l[?12l[?25h[A[?25l[?12l[?25hX[?25l[?12l[?25h1[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[8d[?25l[?12l[?25h[7;17H[?25l[?12l[?25h[8d[?25l[?12l[?25h[A[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[8d[?25l[?12l[?25h[7;17H[?25l[?12l[?25h[8d[?25l[?12l[?25h[A[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#PermitUserEnvironment no[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#Compression delayed[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#ClientAliveInterval 0[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#ClientAliveCountMax 3[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#UseDNS no[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#PidFile /run/sshd.pid[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#MaxStartups 10:30:100[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#PermitTunnel no[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#ChrootDirectory none[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#VersionAddendum none[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# no default banner path[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#Banner none[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# Allow client to pass locale environment variables[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1HAcceptEnv LANG LC_*[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# override default of no subsystems[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1HSubsystem[38;5;208m       [39m(B[msftp[38;5;208m    [39m(B[m/usr/lib/openssh/sftp-server[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m# Example of overriding settings on a per-user basis[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#Match User anoncvs[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#[38;5;208m       [36mX11Forwarding no[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#[38;5;208m       [36mAllowTcpForwarding no[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#[38;5;208m       [36mPermitTTY no[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[36m#[38;5;208m       [36mForceCommand cvs server[39m(B[m[?25l[?12l[?25h7[2;14r8[14d
+[1;16r[13;1H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[14d(B[0;7mSave modified buffer?                                                           [15;1H Y(B[m Yes[K[16d(B[0;7m N(B[m No  [14G   (B[0;7m^C(B[m Cancel[K[14;23H[?12l[?25h[?25l[15d(B[0;7m^G(B[m Help[15;21H(B[0;7mM-D(B[m DOS Format[41G(B[0;7mM-A(B[m Append[15;61H(B[0;7mM-B(B[m Backup File[16d(B[0;7m^C(B[m Cancel[17G    (B[0;7mM-M(B[m Mac Format[41G(B[0;7mM-P(B[m Prepend[16;61H(B[0;7m^T(B[m Browse[14d(B[0;7mFile Name to Write: /var/tmp/sshd_config.2OJhc9dx(B[m[?12l[?25h[?25l[14;33H[1K (B[0;7m[ Writing... ](B[m[K[1;59H(B[0;7m [79G(B[m[14;31H(B[0;7m[ Wrote 122 lines ](B[m[J[16d[?12l[?25h[16;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ssh[K[K[Ks[Ksudpo [K[K[Ko systemctl reload ssh
+[?2004l[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ exit
+[?2004llogout
+Connection to localhost closed.
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ ssh ubse
+[?2004lWelcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 11:30:06 AM UTC 2025
+
+  System load:  0.02               Processes:               117
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 4%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+169 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon May  5 11:19:00 2025 from 10.0.2.2
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ ls /etc/ssh/sshd_config.d/
+[?2004l50-cloud-init.conf
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [?2004l
+logout
+Connection to localhost closed.
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ ssh ubse[K[K[K[K[K[K[K[K[H[2J[94mDEVOPS24/lektion10
+(B[m$ mab n[K[K[Kn ssh
+[?2004l[?1049h[22;0;0t[?1h=SSH(1)                    BSD General Commands Manual                   SSH(1)[m
+[m
+[1mNAME[0m[m
+     [1mssh[0m — OpenSSH remote login client[m
+[m
+[1mSYNOPSIS[0m[m
+     [1mssh[0m [[1m-46AaCfGgKkMNnqsTtVvXxYy[0m] [[1m-B[0m [4mbind_interface[24m] [[1m-b[0m [4mbind_address[24m][m
+         [[1m-c[0m [4mcipher_spec[24m] [[1m-D[0m [[4mbind_address[24m:][4mport[24m] [[1m-E[0m [4mlog_file[24m][m
+         [[1m-e[0m [4mescape_char[24m] [[1m-F[0m [4mconfigfile[24m] [[1m-I[0m [4mpkcs11[24m] [[1m-i[0m [4midentity_file[24m][m
+         [[1m-J[0m [4mdestination[24m] [[1m-L[0m [4maddress[24m] [[1m-l[0m [4mlogin_name[24m] [[1m-m[0m [4mmac_spec[24m][m
+         [[1m-O[0m [4mctl_cmd[24m] [[1m-o[0m [4moption[24m] [[1m-p[0m [4mport[24m] [[1m-Q[0m [4mquery_option[24m] [[1m-R[0m [4maddress[24m][m
+         [[1m-S[0m [4mctl_path[24m] [[1m-W[0m [4mhost[24m:[4mport[24m] [[1m-w[0m [4mlocal_tun[24m[:[4mremote_tun[24m]] [4mdestination[24m[m
+         [[4mcommand[24m [[4margument[24m [4m...[24m]][m
+[m
+[1mDESCRIPTION[0m[m
+[7m Manual page ssh(1) line 1 (press h for help or q to quit)[27m[K[K     [1mssh[0m (SSH client) is a program for logging into a remote machine and for[m
+     executing commands on a remote machine.  It is intended to provide secure[m
+     encrypted communications between two untrusted hosts over an insecure[m
+     network.  X11 connections, arbitrary TCP ports and UNIX-domain sockets[m
+     can also be forwarded over the secure channel.[m
+[m
+     [1mssh[0m connects and logs into the specified [4mdestination[24m, which may be speci‐[m
+     fied as either [user@]hostname or a URI of the form[m
+     ssh://[user@]hostname[:port].  The user must prove their identity to the[m
+     remote machine using one of several methods (see below).[m
+[m
+     If a [4mcommand[24m is specified, it will be executed on the remote host instead[m
+     of a login shell.  A complete command line may be specified as [4mcommand[24m,[m
+     or it may have additional arguments.  If supplied, the arguments will be[m
+     appended to the command, separated by spaces, before it is sent to the[m
+[7m Manual page ssh(1) line 16 (press h for help or q to quit)[27m[K[K     server to be executed.[m
+[m
+     The options are as follows:[m
+[m
+     [1m-4[0m      Forces [1mssh[0m to use IPv4 addresses only.[m
+[m
+     [1m-6[0m      Forces [1mssh[0m to use IPv6 addresses only.[m
+[m
+     [1m-A[0m      Enables forwarding of connections from an authentication agent[m
+             such as ssh-agent(1).  This can also be specified on a per-host[m
+             basis in a configuration file.[m
+[m
+             Agent forwarding should be enabled with caution.  Users with the[m
+             ability to bypass file permissions on the remote host (for the[m
+             agent's UNIX-domain socket) can access the local agent through[m
+[7m Manual page ssh(1) line 31 (press h for help or q to quit)[27m[K[K             the forwarded connection.  An attacker cannot obtain key material[m
+             from the agent, however they can perform operations on the keys[m
+             that enable them to authenticate using the identities loaded into[m
+             the agent.  A safer alternative may be to use a jump host (see[m
+             [1m-J[0m).[m
+[m
+     [1m-a[0m      Disables forwarding of the authentication agent connection.[m
+[m
+     [1m-B[0m [4mbind_interface[24m[m
+             Bind to the address of [4mbind_interface[24m before attempting to con‐[m
+             nect to the destination host.  This is only useful on systems[m
+             with more than one address.[m
+[m
+     [1m-b[0m [4mbind_address[24m[m
+             Use [4mbind_address[24m on the local machine as the source address of[m
+[7m Manual page ssh(1) line 46 (press h for help or q to quit)[27m[K[K             the connection.  Only useful on systems with more than one ad‐[m
+             dress.[m
+[m
+     [1m-C[0m      Requests compression of all data (including stdin, stdout,[m
+             stderr, and data for forwarded X11, TCP and UNIX-domain connec‐[m
+             tions).  The compression algorithm is the same used by gzip(1).[m
+             Compression is desirable on modem lines and other slow connec‐[m
+             tions, but will only slow down things on fast networks.  The de‐[m
+             fault value can be set on a host-by-host basis in the configura‐[m
+             tion files; see the [1mCompression[0m option in ssh_config(5).[m
+[m
+     [1m-c[0m [4mcipher_spec[24m[m
+             Selects the cipher specification for encrypting the session.[m
+             [4mcipher_spec[24m is a comma-separated list of ciphers listed in order[m
+             of preference.  See the [1mCiphers[0m keyword in ssh_config(5) for more[m
+[7m Manual page ssh(1) line 61 (press h for help or q to quit)[27m[K[K             information.[m
+[m
+     [1m-D[0m [[4mbind_address[24m:][4mport[24m[m
+             Specifies a local “dynamic” application-level port forwarding.[m
+             This works by allocating a socket to listen to [4mport[24m on the local[m
+             side, optionally bound to the specified [4mbind_address[24m.  Whenever a[m
+             connection is made to this port, the connection is forwarded over[m
+             the secure channel, and the application protocol is then used to[m
+             determine where to connect to from the remote machine.  Currently[m
+             the SOCKS4 and SOCKS5 protocols are supported, and [1mssh[0m will act[m
+             as a SOCKS server.  Only root can forward privileged ports.  Dy‐[m
+             namic port forwardings can also be specified in the configuration[m
+             file.[m
+[m
+             IPv6 addresses can be specified by enclosing the address in[m
+[7m Manual page ssh(1) line 76 (press h for help or q to quit)[27m[K[K             square brackets.  Only the superuser can forward privileged[m
+             ports.  By default, the local port is bound in accordance with[m
+             the [1mGatewayPorts[0m setting.  However, an explicit [4mbind_address[24m may[m
+             be used to bind the connection to a specific address.  The[m
+             [4mbind_address[24m of “localhost” indicates that the listening port be[m
+             bound for local use only, while an empty address or ‘*’ indicates[m
+             that the port should be available from all interfaces.[m
+[m
+     [1m-E[0m [4mlog_file[24m[m
+             Append debug logs to [4mlog_file[24m instead of standard error.[m
+[m
+     [1m-e[0m [4mescape_char[24m[m
+             Sets the escape character for sessions with a pty (default: ‘~’).[m
+             The escape character is only recognized at the beginning of a[m
+             line.  The escape character followed by a dot (‘.’) closes the[m
+[7m Manual page ssh(1) line 91 (press h for help or q to quit)[27m[K[K             connection; followed by control-Z suspends the connection; and[m
+             followed by itself sends the escape character once.  Setting the[m
+             character to “none” disables any escapes and makes the session[m
+             fully transparent.[m
+[m
+     [1m-F[0m [4mconfigfile[24m[m
+             Specifies an alternative per-user configuration file.  If a con‐[m
+             figuration file is given on the command line, the system-wide[m
+             configuration file ([4m/etc/ssh/ssh_config[24m) will be ignored.  The[m
+             default for the per-user configuration file is [4m~/.ssh/config[24m.  If[m
+             set to “none”, no configuration files will be read.[m
+[m
+     [1m-f[0m      Requests [1mssh[0m to go to background just before command execution.[m
+             This is useful if [1mssh[0m is going to ask for passwords or[m
+             passphrases, but the user wants it in the background.  This im‐[m
+[7m Manual page ssh(1) line 106 (press h for help or q to quit)[27m[K[K             plies [1m-n[0m.  The recommended way to start X11 programs at a remote[m
+             site is with something like [1mssh[0m [1m-f[0m [1mhost[0m [1mxterm[0m.[m
+[m
+             If the [1mExitOnForwardFailure[0m configuration option is set to “yes”,[m
+             then a client started with [1m-f[0m will wait for all remote port for‐[m
+             wards to be successfully established before placing itself in the[m
+             background.  Refer to the description of [1mForkAfterAuthentication[0m[m
+             in ssh_config(5) for details.[m
+[m
+     [1m-G[0m      Causes [1mssh[0m to print its configuration after evaluating [1mHost[0m and[m
+             [1mMatch[0m blocks and exit.[m
+[m
+     [1m-g[0m      Allows remote hosts to connect to local forwarded ports.  If used[m
+             on a multiplexed connection, then this option must be specified[m
+             on the master process.[m
+[7m Manual page ssh(1) line 121 (press h for help or q to quit)[27m[K[K[m
+     [1m-I[0m [4mpkcs11[24m[m
+             Specify the PKCS#11 shared library [1mssh[0m should use to communicate[m
+             with a PKCS#11 token providing keys for user authentication.[m
+[m
+     [1m-i[0m [4midentity_file[24m[m
+             Selects a file from which the identity (private key) for public[m
+             key authentication is read.  You can also specify a public key[m
+             file to use the corresponding private key that is loaded in[m
+             ssh-agent(1) when the private key file is not present locally.[m
+             The default is [4m~/.ssh/id_rsa[24m, [4m~/.ssh/id_ecdsa[24m,[m
+             [4m~/.ssh/id_ecdsa_sk[24m, [4m~/.ssh/id_ed25519[24m, [4m~/.ssh/id_ed25519_sk[24m and[m
+             [4m~/.ssh/id_dsa[24m.  Identity files may also be specified on a per-[m
+             host basis in the configuration file.  It is possible to have[m
+             multiple [1m-i[0m options (and multiple identities specified in config‐[m
+[7m Manual page ssh(1) line 136 (press h for help or q to quit)[27m[K[K             uration files).  If no certificates have been explicitly speci‐[m
+             fied by the [1mCertificateFile[0m directive, [1mssh[0m will also try to load[m
+             certificate information from the filename obtained by appending[m
+             [4m-cert.pub[24m to identity filenames.[m
+[m
+     [1m-J[0m [4mdestination[24m[m
+             Connect to the target host by first making a [1mssh[0m connection to[m
+             the jump host described by [4mdestination[24m and then establishing a[m
+             TCP forwarding to the ultimate destination from there.  Multiple[m
+             jump hops may be specified separated by comma characters.  This[m
+             is a shortcut to specify a [1mProxyJump[0m configuration directive.[m
+             Note that configuration directives supplied on the command-line[m
+             generally apply to the destination host and not any specified[m
+             jump hosts.  Use [4m~/.ssh/config[24m to specify configuration for jump[m
+             hosts.[m
+[7m Manual page ssh(1) line 151 (press h for help or q to quit)[27m[K[K[m
+     [1m-K[0m      Enables GSSAPI-based authentication and forwarding (delegation)[m
+             of GSSAPI credentials to the server.[m
+[m
+     [1m-k[0m      Disables forwarding (delegation) of GSSAPI credentials to the[m
+             server.[m
+[m
+     [1m-L[0m [[4mbind_address[24m:][4mport[24m:[4mhost[24m:[4mhostport[24m[m
+     [1m-L[0m [[4mbind_address[24m:][4mport[24m:[4mremote_socket[24m[m
+     [1m-L[0m [4mlocal_socket[24m:[4mhost[24m:[4mhostport[24m[m
+     [1m-L[0m [4mlocal_socket[24m:[4mremote_socket[24m[m
+             Specifies that connections to the given TCP port or Unix socket[m
+             on the local (client) host are to be forwarded to the given host[m
+             and port, or Unix socket, on the remote side.  This works by al‐[m
+             locating a socket to listen to either a TCP [4mport[24m on the local[m
+[7m Manual page ssh(1) line 166 (press h for help or q to quit)[27m[K[K             side, optionally bound to the specified [4mbind_address[24m, or to a[m
+             Unix socket.  Whenever a connection is made to the local port or[m
+             socket, the connection is forwarded over the secure channel, and[m
+             a connection is made to either [4mhost[24m port [4mhostport[24m, or the Unix[m
+             socket [4mremote_socket[24m, from the remote machine.[m
+[m
+             Port forwardings can also be specified in the configuration file.[m
+             Only the superuser can forward privileged ports.  IPv6 addresses[m
+             can be specified by enclosing the address in square brackets.[m
+[m
+             By default, the local port is bound in accordance with the[m
+             [1mGatewayPorts[0m setting.  However, an explicit [4mbind_address[24m may be[m
+             used to bind the connection to a specific address.  The[m
+             [4mbind_address[24m of “localhost” indicates that the listening port be[m
+             bound for local use only, while an empty address or ‘*’ indicates[m
+[7m Manual page ssh(1) line 181 (press h for help or q to quit)[27m[K[K             that the port should be available from all interfaces.[m
+[m
+     [1m-l[0m [4mlogin_name[24m[m
+             Specifies the user to log in as on the remote machine.  This also[m
+             may be specified on a per-host basis in the configuration file.[m
+[m
+     [1m-M[0m      Places the [1mssh[0m client into “master” mode for connection sharing.[m
+             Multiple [1m-M[0m options places [1mssh[0m into “master” mode but with con‐[m
+             firmation required using ssh-askpass(1) before each operation[m
+             that changes the multiplexing state (e.g. opening a new session).[m
+             Refer to the description of [1mControlMaster[0m in ssh_config(5) for[m
+             details.[m
+[m
+     [1m-m[0m [4mmac_spec[24m[m
+             A comma-separated list of MAC (message authentication code) algo‐[m
+[7m Manual page ssh(1) line 196 (press h for help or q to quit)[27m[K[K             rithms, specified in order of preference.  See the [1mMACs[0m keyword[m
+             in ssh_config(5) for more information.[m
+[m
+     [1m-N[0m      Do not execute a remote command.  This is useful for just for‐[m
+             warding ports.  Refer to the description of [1mSessionType[0m in[m
+             ssh_config(5) for details.[m
+[m
+     [1m-n[0m      Redirects stdin from [4m/dev/null[24m (actually, prevents reading from[m
+             stdin).  This must be used when [1mssh[0m is run in the background.  A[m
+             common trick is to use this to run X11 programs on a remote ma‐[m
+             chine.  For example, [1mssh[0m [1m-n[0m [1mshadows.cs.hut.fi[0m [1memacs[0m [1m&[0m will start[m
+             an emacs on shadows.cs.hut.fi, and the X11 connection will be au‐[m
+             tomatically forwarded over an encrypted channel.  The [1mssh[0m program[m
+             will be put in the background.  (This does not work if [1mssh[0m needs[m
+             to ask for a password or passphrase; see also the [1m-f[0m option.)[m
+[7m Manual page ssh(1) line 211 (press h for help or q to quit)[27m[K[K             Refer to the description of [1mStdinNull[0m in ssh_config(5) for de‐[m
+             tails.[m
+[m
+     [1m-O[0m [4mctl_cmd[24m[m
+             Control an active connection multiplexing master process.  When[m
+             the [1m-O[0m option is specified, the [4mctl_cmd[24m argument is interpreted[m
+             and passed to the master process.  Valid commands are: “check”[m
+             (check that the master process is running), “forward” (request[m
+             forwardings without command execution), “cancel” (cancel forward‐[m
+             ings), “exit” (request the master to exit), and “stop” (request[m
+             the master to stop accepting further multiplexing requests).[m
+[m
+     [1m-o[0m [4moption[24m[m
+             Can be used to give options in the format used in the configura‐[m
+             tion file.  This is useful for specifying options for which there[m
+[7m Manual page ssh(1) line 226 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             is no separate command-line flag.  For full details of the op‐[m
+[7m Manual page ssh(1) line 227 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             tions listed below, and their possible values, see ssh_config(5).[m
+[7m Manual page ssh(1) line 228 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ssh(1) line 229 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   AddKeysToAgent[m
+[7m Manual page ssh(1) line 230 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   AddressFamily[m
+[7m Manual page ssh(1) line 231 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   BatchMode[m
+[7m Manual page ssh(1) line 232 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   BindAddress[m
+[7m Manual page ssh(1) line 233 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   CanonicalDomains[m
+[7m Manual page ssh(1) line 234 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   CanonicalizeFallbackLocal[m
+[7m Manual page ssh(1) line 235 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   CanonicalizeHostname[m
+[7m Manual page ssh(1) line 236 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   CanonicalizeMaxDots[m
+[7m Manual page ssh(1) line 237 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   CanonicalizePermittedCNAMEs[m
+[7m Manual page ssh(1) line 238 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   CASignatureAlgorithms[m
+[7m Manual page ssh(1) line 239 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   CertificateFile[m
+[7m Manual page ssh(1) line 240 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             Can be used to give options in the format used in the configura‐[m
+[16;1H[K[7m Manual page ssh(1) line 239 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM     [1m-o[0m [4moption[24m[m
+[16;1H[K[7m Manual page ssh(1) line 238 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[16;1H[K[7m Manual page ssh(1) line 237 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   CanonicalizePermittedCNAMEs[m
+[7m Manual page ssh(1) line 238 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   CASignatureAlgorithms[m
+[7m Manual page ssh(1) line 239 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   CertificateFile[m
+[7m Manual page ssh(1) line 240 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   CheckHostIP[m
+[7m Manual page ssh(1) line 241 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   Ciphers[m
+[7m Manual page ssh(1) line 242 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   ClearAllForwardings[m
+[7m Manual page ssh(1) line 243 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   Compression[m
+[7m Manual page ssh(1) line 244 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   ConnectionAttempts[m
+[7m Manual page ssh(1) line 245 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   ConnectTimeout[m
+[7m Manual page ssh(1) line 246 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   ControlMaster[m
+[7m Manual page ssh(1) line 247 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   ControlPath[m
+[7m Manual page ssh(1) line 248 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   ControlPersist[m
+[7m Manual page ssh(1) line 249 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   DynamicForward[m
+[7m Manual page ssh(1) line 250 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   EnableEscapeCommandline[m
+[7m Manual page ssh(1) line 251 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   EscapeChar[m
+[7m Manual page ssh(1) line 252 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   ExitOnForwardFailure[m
+[7m Manual page ssh(1) line 253 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   FingerprintHash[m
+[7m Manual page ssh(1) line 254 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   ForkAfterAuthentication[m
+[7m Manual page ssh(1) line 255 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   ForwardAgent[m
+[7m Manual page ssh(1) line 256 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   ForwardX11[m
+[7m Manual page ssh(1) line 257 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   ForwardX11Timeout[m
+[7m Manual page ssh(1) line 258 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   ForwardX11Trusted[m
+[7m Manual page ssh(1) line 259 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   GatewayPorts[m
+[7m Manual page ssh(1) line 260 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   GlobalKnownHostsFile[m
+[7m Manual page ssh(1) line 261 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   GSSAPIAuthentication[m
+[7m Manual page ssh(1) line 262 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   GSSAPIKeyExchange[m
+[7m Manual page ssh(1) line 263 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   GSSAPIClientIdentity[m
+[7m Manual page ssh(1) line 264 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   GSSAPIDelegateCredentials[m
+[7m Manual page ssh(1) line 265 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   GSSAPIKexAlgorithms[m
+[7m Manual page ssh(1) line 266 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   GSSAPIRenewalForcesRekey[m
+[7m Manual page ssh(1) line 267 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   GSSAPIServerIdentity[m
+[7m Manual page ssh(1) line 268 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   GSSAPITrustDns[m
+[7m Manual page ssh(1) line 269 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   HashKnownHosts[m
+[7m Manual page ssh(1) line 270 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   Host[m
+[7m Manual page ssh(1) line 271 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   HostbasedAcceptedAlgorithms[m
+[7m Manual page ssh(1) line 272 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   HostbasedAuthentication[m
+[7m Manual page ssh(1) line 273 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   HostKeyAlgorithms[m
+[7m Manual page ssh(1) line 274 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   HostKeyAlias[m
+[7m Manual page ssh(1) line 275 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   Hostname[m
+[7m Manual page ssh(1) line 276 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   IdentitiesOnly[m
+[7m Manual page ssh(1) line 277 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   IdentityAgent[m
+[7m Manual page ssh(1) line 278 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   IdentityFile[m
+[7m Manual page ssh(1) line 279 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   IPQoS[m
+[7m Manual page ssh(1) line 280 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   KbdInteractiveAuthentication[m
+[7m Manual page ssh(1) line 281 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   KbdInteractiveDevices[m
+[7m Manual page ssh(1) line 282 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   KexAlgorithms[m
+[7m Manual page ssh(1) line 283 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   KnownHostsCommand[m
+[7m Manual page ssh(1) line 284 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   LocalCommand[m
+[7m Manual page ssh(1) line 285 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   LocalForward[m
+[7m Manual page ssh(1) line 286 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   LogLevel[m
+[7m Manual page ssh(1) line 287 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   MACs[m
+[7m Manual page ssh(1) line 288 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   Match[m
+[7m Manual page ssh(1) line 289 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   NoHostAuthenticationForLocalhost[m
+[7m Manual page ssh(1) line 290 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   NumberOfPasswordPrompts[m
+[7m Manual page ssh(1) line 291 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   PasswordAuthentication[m
+[7m Manual page ssh(1) line 292 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   PermitLocalCommand[m
+[7m Manual page ssh(1) line 293 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   PermitRemoteOpen[m
+[7m Manual page ssh(1) line 294 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   PKCS11Provider[m
+[7m Manual page ssh(1) line 295 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   Port[m
+[7m Manual page ssh(1) line 296 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   PreferredAuthentications[m
+[7m Manual page ssh(1) line 297 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   ProxyCommand[m
+[7m Manual page ssh(1) line 298 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   ProxyJump[m
+[7m Manual page ssh(1) line 299 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   ProxyUseFdpass[m
+[7m Manual page ssh(1) line 300 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   PubkeyAcceptedAlgorithms[m
+[7m Manual page ssh(1) line 301 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   PubkeyAuthentication[m
+[7m Manual page ssh(1) line 302 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   RekeyLimit[m
+[7m Manual page ssh(1) line 303 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   RemoteCommand[m
+[7m Manual page ssh(1) line 304 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   RemoteForward[m
+[7m Manual page ssh(1) line 305 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   RequestTTY[m
+[7m Manual page ssh(1) line 306 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   RequiredRSASize[m
+[7m Manual page ssh(1) line 307 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   SendEnv[m
+[7m Manual page ssh(1) line 308 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   ServerAliveInterval[m
+[7m Manual page ssh(1) line 309 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   ServerAliveCountMax[m
+[7m Manual page ssh(1) line 310 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   SessionType[m
+[7m Manual page ssh(1) line 311 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   SetEnv[m
+[7m Manual page ssh(1) line 312 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   StdinNull[m
+[7m Manual page ssh(1) line 313 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   StreamLocalBindMask[m
+[7m Manual page ssh(1) line 314 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   StreamLocalBindUnlink[m
+[7m Manual page ssh(1) line 315 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   StrictHostKeyChecking[m
+[7m Manual page ssh(1) line 316 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   TCPKeepAlive[m
+[7m Manual page ssh(1) line 317 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   Tunnel[m
+[7m Manual page ssh(1) line 318 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   TunnelDevice[m
+[7m Manual page ssh(1) line 319 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   UpdateHostKeys[m
+[7m Manual page ssh(1) line 320 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion10
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ ssh ubse
+[?2004lWelcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 11:32:11 AM UTC 2025
+
+  System load:  0.0                Processes:               116
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 4%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+169 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon May  5 11:30:06 2025 from 10.0.2.2
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ diff /etc/ssh/
+moduli                    sshd_config.d/            ssh_host_rsa_key
+ssh_config                ssh_host_ecdsa_key        ssh_host_rsa_key.pub
+ssh_config.d/             ssh_host_ecdsa_key.pub    ssh_import_id
+sshd_config               ssh_host_ed25519_key      
+sshd_config.bak           ssh_host_ed25519_key.pub  
+]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ diff /etc/ssh/sshd_config[H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ diff /etc/ssh/sshd_config
+sshd_config      sshd_config.bak  sshd_config.d/   
+]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ diff /etc/ssh/sshd_config{},}.}b}a}k}[H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ diff /etc/ssh/sshd_config{,.bak}
+[?2004l33c33
+< PermitRootLogin no
+---
+> #PermitRootLogin prohibit-password
+57c57
+< PasswordAuthentication no
+---
+> #PasswordAuthentication yes
+90c90
+< X11Forwarding no
+---
+> X11Forwarding yes
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ diff /etc/ssh/sshd_config{,.bak}[1P.bak}[C[C[C[C,}[H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ diff /etc/ssh/sshd_config{.bak,}
+[?2004l33c33
+< #PermitRootLogin prohibit-password
+---
+> PermitRootLogin no
+57c57
+< #PasswordAuthentication yes
+---
+> PasswordAuthentication no
+90c90
+< X11Forwarding yes
+---
+> X11Forwarding no
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ 
+[?2004l[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ diff /etc/ssh/sshd_config{.bak,} | xsel
+[?2004lCommand 'xsel' not found, but can be installed with:
+sudo apt install xsel
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [K]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [K]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [K]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [K]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [K]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [K]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ EXIT[K[K[K[Kexit
+[?2004llogout
+Connection to localhost closed.
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ shh[K[Ksh ls[K[Kubse@localhost cat /etc/ssh/sshd_config
+[?2004lWarning: Permanently added 'localhost' (ED25519) to the list of known hosts.
+ubse@localhost's password: 
+Permission denied, please try again.
+ubse@localhost's password: 
+Permission denied, please try again.
+ubse@localhost's password: 
+
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ ^C[?2004l[?2004h[?2004l
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ ub[K[Kssh ubse[K[K[K[K[K[K[K[K[H[2J[94mDEVOPS24/lektion10
+(B[m$ ssh ubse@localhost cat /etc/ssh/sshd_config[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P
+[?2004l
+# This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+# This sshd was compiled with PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+
+# The strategy used for options in the default sshd_config shipped with
+# OpenSSH is to specify options with their default value where
+# possible, but leave them commented.  Uncommented options override the
+# default value.
+
+Include /etc/ssh/sshd_config.d/*.conf
+
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+
+#HostKey /etc/ssh/ssh_host_rsa_key
+#HostKey /etc/ssh/ssh_host_ecdsa_key
+#HostKey /etc/ssh/ssh_host_ed25519_key
+
+# Ciphers and keying
+#RekeyLimit default none
+
+# Logging
+#SyslogFacility AUTH
+#LogLevel INFO
+
+# Authentication:
+
+#LoginGraceTime 2m
+PermitRootLogin no
+#StrictModes yes
+#MaxAuthTries 6
+#MaxSessions 10
+
+#PubkeyAuthentication yes
+
+# Expect .ssh/authorized_keys2 to be disregarded by default in future.
+#AuthorizedKeysFile	.ssh/authorized_keys .ssh/authorized_keys2
+
+#AuthorizedPrincipalsFile none
+
+#AuthorizedKeysCommand none
+#AuthorizedKeysCommandUser nobody
+
+# For this to work you will also need host keys in /etc/ssh/ssh_known_hosts
+#HostbasedAuthentication no
+# Change to yes if you don't trust ~/.ssh/known_hosts for
+# HostbasedAuthentication
+#IgnoreUserKnownHosts no
+# Don't read the user's ~/.rhosts and ~/.shosts files
+#IgnoreRhosts yes
+
+# To disable tunneled clear text passwords, change to no here!
+PasswordAuthentication no
+#PermitEmptyPasswords no
+
+# Change to yes to enable challenge-response passwords (beware issues with
+# some PAM modules and threads)
+KbdInteractiveAuthentication no
+
+# Kerberos options
+#KerberosAuthentication no
+#KerberosOrLocalPasswd yes
+#KerberosTicketCleanup yes
+#KerberosGetAFSToken no
+
+# GSSAPI options
+#GSSAPIAuthentication no
+#GSSAPICleanupCredentials yes
+#GSSAPIStrictAcceptorCheck yes
+#GSSAPIKeyExchange no
+
+# Set this to 'yes' to enable PAM authentication, account processing,
+# and session processing. If this is enabled, PAM authentication will
+# be allowed through the KbdInteractiveAuthentication and
+# PasswordAuthentication.  Depending on your PAM configuration,
+# PAM authentication via KbdInteractiveAuthentication may bypass
+# the setting of "PermitRootLogin prohibit-password".
+# If you just want the PAM account and session checks to run without
+# PAM authentication, then enable this but set PasswordAuthentication
+# and KbdInteractiveAuthentication to 'no'.
+UsePAM yes
+
+#AllowAgentForwarding yes
+#AllowTcpForwarding yes
+#GatewayPorts no
+X11Forwarding no
+#X11DisplayOffset 10
+#X11UseLocalhost yes
+#PermitTTY yes
+PrintMotd no
+#PrintLastLog yes
+#TCPKeepAlive yes
+#PermitUserEnvironment no
+#Compression delayed
+#ClientAliveInterval 0
+#ClientAliveCountMax 3
+#UseDNS no
+#PidFile /run/sshd.pid
+#MaxStartups 10:30:100
+#PermitTunnel no
+#ChrootDirectory none
+#VersionAddendum none
+
+# no default banner path
+#Banner none
+
+# Allow client to pass locale environment variables
+AcceptEnv LANG LC_*
+
+# override default of no subsystems
+Subsystem	sftp	/usr/lib/openssh/sftp-server
+
+# Example of overriding settings on a per-user basis
+#Match User anoncvs
+#	X11Forwarding no
+#	AllowTcpForwarding no
+#	PermitTTY no
+#	ForceCommand cvs server
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ ssh ubse cat /etc/ssh/sshd_config[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kapt u[K[K[K[K[Kb[K[K[K[K[K[K[K[K[K[Knano srv.sh
+[?2004l[?2004h[?1049h[22;0;0t[1;15r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[13;35H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 7.2                         srv.sh                                   [1;79H(B[m[14d(B[0;7m^G(B[m Help[14G(B[0;7m^O(B[m Write Out (B[0;7m^W(B[m Where Is  (B[0;7m^K(B[m Cut[53G(B[0;7m^T(B[m Execute   (B[0;7m^C(B[m Location[15d(B[0;7m^X(B[m Exit[14G(B[0;7m^R(B[m Read File (B[0;7m^\(B[m Replace   (B[0;7m^U(B[m Paste     (B[0;7m^J(B[m Justify   (B[0;7m^/(B[m Go To Line[2d[?12l[?25h[?25l[1;47H(B[0;7m*[79G(B[m[?12l[?25h[2d[36m#[39m(B[m[?25l[?12l[?25h[36m![39m(B[m[?25l[?12l[?25h[36m/[39m(B[m[?25l[?12l[?25h[36mb[39m(B[m[?25l[?12l[?25h[36mi[39m(B[m[?25l[?12l[?25h[36mn[39m(B[m[?25l[?12l[?25h[36m/[39m(B[m[?25l[?12l[?25h[36mb[39m(B[m[?25l[?12l[?25h[36ma[39m(B[m[?25l[?12l[?25h[36ms[39m(B[m[?25l[?12l[?25h[36mh[39m(B[m[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[?12l[?25hd[?25l[?12l[?25hu[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[K[?25l[13d[K[?12l[?25h[4dl[?25l[?12l[?25hs[?25l[?12l[?25hb[?25l[?12l[?25hl[?25l[?12l[?25hk[?25l[5d[?12l[?25h[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[A[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25he[?25l[?12l[?25hc[?25l[?12l[?25hh[?25l[?12l[?25h(B[0;1m[34mecho[39m(B[m[?25l[?12l[?25hech[K[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[K[?25l[?12l[?25he[?25l[?12l[?25hc[?25l[?12l[?25hh[?25l[?12l[?25h(B[0;1m[34mecho[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h e[?25l[?12l[?25h[42m [49m(B[m[K[?25l[?12l[?25h H[?25l[?12l[?25he[?25l[?12l[?25hj[?25l[6d[?12l[?25h[?25l[13d(B[0;7mSave modified buffer?                                                           [14;1H Y(B[m Yes[K[15d(B[0;7m N(B[m No  [14G   (B[0;7m^C(B[m Cancel[K[13;23H[?12l[?25h[?25l[14d(B[0;7m^G(B[m Help[14;21H(B[0;7mM-D(B[m DOS Format[41G(B[0;7mM-A(B[m Append[14;61H(B[0;7mM-B(B[m Backup File[15d(B[0;7m^C(B[m Cancel[17G    (B[0;7mM-M(B[m Mac Format[41G(B[0;7mM-P(B[m Prepend[15;61H(B[0;7m^T(B[m Browse[13d(B[0;7mFile Name to Write: srv.sh(B[m[?12l[?25h[?25l[33G[1K (B[0;7m[ Writing... ](B[m[K[1;47H(B[0;7m [79G(B[m[13;32H(B[0;7m[ Wrote 5 lines ](B[m[J[15d[?12l[?25h[15;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h[94mDEVOPS24/lektion10
+(B[m$ cm[K[Knano srv.sh[C[Cssh ubse cat /etc/ssh/sshd_config[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K < srv.sh 
+[?2004lPseudo-terminal will not be allocated because stdin is not a terminal.
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 11:40:19 AM UTC 2025
+
+  System load:  0.0                Processes:               114
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 4%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+169 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sr0     11:0    1 1024M  0 rom  
+Hej
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ ssh ubse < srv.sh ^C[?2004l[?2004h[?2004l
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ seq 1 1000 >langfil
+[?2004l[?2004h[94mDEVOPS24/lektion10
+(B[m$ scp langfil ubse:[C
+[?2004llangfil                                         0%    0     0.0KB/s   --:-- ETAlangfil                                       100% 3893    12.5MB/s   00:00    
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ ssh ubse ls
+[?2004lgreeting
+hej hopp
+kat
+langfil
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ ssj [K[Kh ubse
+[?2004lWelcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 11:41:44 AM UTC 2025
+
+  System load:  0.0                Processes:               114
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 4%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+169 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon May  5 11:32:11 2025 from 10.0.2.2
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ nano [K[K[K[K[Kecho {a..z}{a..z} > bokstaver
+[?2004l[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ less bokstaver 
+[?2004l[?1049h[22;0;0t[?1h=aa ab ac ad ae af ag ah ai aj ak al am an ao ap aq ar as at au av aw ax ay az ba  bb bc bd be bf bg bh bi bj bk bl bm bn bo bp bq br bs bt bu bv bw bx by bz ca c b cc cd ce cf cg ch ci cj ck cl cm cn co cp cq cr cs ct cu cv cw cx cy cz da db  dc dd de df dg dh di dj dk dl dm dn do dp dq dr ds dt du dv dw dx dy dz ea eb ec  ed ee ef eg eh ei ej ek el em en eo ep eq er es et eu ev ew ex ey ez fa fb fc f d fe ff fg fh fi fj fk fl fm fn fo fp fq fr fs ft fu fv fw fx fy fz ga gb gc gd  ge gf gg gh gi gj gk gl gm gn go gp gq gr gs gt gu gv gw gx gy gz ha hb hc hd he  hf hg hh hi hj hk hl hm hn ho hp hq hr hs ht hu hv hw hx hy hz ia ib ic id ie i f ig ih ii ij ik il im in io ip iq ir is it iu iv iw ix iy iz ja jb jc jd je jf  jg jh ji jj jk jl jm jn jo jp jq jr js jt ju jv jw jx jy jz ka kb kc kd ke kf kg  kh ki kj kk kl km kn ko kp kq kr ks kt ku kv kw kx ky kz la lb lc ld le lf lg l h li lj lk ll lm ln lo lp lq lr ls lt lu lv lw lx ly lz ma mb mc md me mf mg mh  mi mj mk ml mm mn mo mp mq mr ms mt mu mv mw mx my mz na nb nc nd ne nf ng nh ni  nj nk nl nm nn no np nq nr ns nt nu nv nw nx ny nz oa ob oc od oe of og oh oi o [7mbokstaver[27m[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KBB[Kj ok ol om on oo op oq or os ot ou ov ow ox oy oz pa pb pc pd pe pf pg ph pi pj  :[K[K [KESCESC[KOO[KBB[Kpk pl pm pn po pp pq pr ps pt pu pv pw px py pz qa qb qc qd qe qf qg qh qi qj qk :[K[K [KESCESC[KOO[KBB[K ql qm qn qo qp qq qr qs qt qu qv qw qx qy qz ra rb rc rd re rf rg rh ri rj rk r :[K[K [KESCESC[KOO[KBB[Kl rm rn ro rp rq rr rs rt ru rv rw rx ry rz sa sb sc sd se sf sg sh si sj sk sl  :[K[K [KESCESC[KOO[KBB[Ksm sn so sp sq sr ss st su sv sw sx sy sz ta tb tc td te tf tg th ti tj tk tl tm :[K[K [KESCESC[KOO[KBB[K tn to tp tq tr ts tt tu tv tw tx ty tz ua ub uc ud ue uf ug uh ui uj uk ul um u :[K[K [KESCESC[KOO[KBB[Kn uo up uq ur us ut uu uv uw ux uy uz va vb vc vd ve vf vg vh vi vj vk vl vm vn  :[K[K [KESCESC[KOO[KBB[Kvo vp vq vr vs vt vu vv vw vx vy vz wa wb wc wd we wf wg wh wi wj wk wl wm wn wo :[K[K [KESCESC[KOO[KBB[K wp wq wr ws wt wu wv ww wx wy wz xa xb xc xd xe xf xg xh xi xj xk xl xm xn xo x :[K[K [KESCESC[KOO[KBB[Kp xq xr xs xt xu xv xw xx xy xz ya yb yc yd ye yf yg yh yi yj yk yl ym yn yo yp  :[K[K [KESCESC[KOO[KBB[Kyq yr ys yt yu yv yw yx yy yz za zb zc zd ze zf zg zh zi zj zk zl zm zn zo zp zq :[K[K [KESCESC[KOO[KBB[K zr zs zt zu zv zw zx zy zz
+[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ exit
+[?2004llogout
+Connection to localhost closed.
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ scp ubse>[K"[K>[K"[K:bokstaver .
+[?2004lbokstaver                                       0%    0     0.0KB/s   --:-- ETAbokstaver                                     100% 2028     2.6MB/s   00:00    
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ less bokstaver [H[2J[94mDEVOPS24/lektion10
+(B[m$ less bokstaver 
+[?2004l[?1049h[22;0;0t[?1h=aa ab ac ad ae af ag ah ai aj ak al am an ao ap aq ar as at au av aw ax ay az ba  bb bc bd be bf bg bh bi bj bk bl bm bn bo bp bq br bs bt bu bv bw bx by bz ca c b cc cd ce cf cg ch ci cj ck cl cm cn co cp cq cr cs ct cu cv cw cx cy cz da db  dc dd de df dg dh di dj dk dl dm dn do dp dq dr ds dt du dv dw dx dy dz ea eb ec  ed ee ef eg eh ei ej ek el em en eo ep eq er es et eu ev ew ex ey ez fa fb fc f d fe ff fg fh fi fj fk fl fm fn fo fp fq fr fs ft fu fv fw fx fy fz ga gb gc gd  ge gf gg gh gi gj gk gl gm gn go gp gq gr gs gt gu gv gw gx gy gz ha hb hc hd he  hf hg hh hi hj hk hl hm hn ho hp hq hr hs ht hu hv hw hx hy hz ia ib ic id ie i f ig ih ii ij ik il im in io ip iq ir is it iu iv iw ix iy iz ja jb jc jd je jf  jg jh ji jj jk jl jm jn jo jp jq jr js jt ju jv jw jx jy jz ka kb kc kd ke kf kg  kh ki kj kk kl km kn ko kp kq kr ks kt ku kv kw kx ky kz la lb lc ld le lf lg l h li lj lk ll lm ln lo lp lq lr ls lt lu lv lw lx ly lz ma mb mc md me mf mg mh  mi mj mk ml mm mn mo mp mq mr ms mt mu mv mw mx my mz na nb nc nd ne nf ng nh ni  nj nk nl nm nn no np nq nr ns nt nu nv nw nx ny nz oa ob oc od oe of og oh oi o [7mbokstaver[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion10
+(B[m$ less bokstaver [C[Cscp ubse:bokstaver .[C[C[C[12Psh ubse ls[K[K^C[?2004l[?2004h[?2004l
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ [?2004l
+exit
+
+Script done on 2025-05-05 13:45:17+02:00 [COMMAND_EXIT_CODE="130"]
