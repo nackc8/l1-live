@@ -855,3 +855,106 @@ Usage - Oracle VM VirtualBox command-line interface:
 
   VBoxManage guestcontrol <uuid | vmname> mv [--domain=domainname]
       [--passwordfile=password-file | --password=password] [--quiet]
+      [--username=username] [--verbose] <source...>
+      <destination-directory>
+
+  VBoxManage guestcontrol <uuid | vmname> mktemp [--directory]
+      [--domain=domainname] [--mode=mode] [--passwordfile=password-file |
+      --password=password] [--quiet] [--secure] [--tmpdir=directory-name]
+      [--username=username] [--verbose] <template-name>
+
+  VBoxManage guestcontrol <uuid | vmname> stat [--domain=domainname]
+      [--passwordfile=password-file | --password=password] [--quiet]
+      [--username=username] [--verbose] <filename>
+
+  VBoxManage guestcontrol <uuid | vmname> list <all | files | processes |
+      sessions> [--quiet] [--verbose]
+
+  VBoxManage guestcontrol <uuid | vmname> closeprocess [--session-id=ID |
+      --session-name=name-or-pattern] [--quiet] [--verbose] <PID...>
+
+  VBoxManage guestcontrol <uuid | vmname> closesession [--all |
+      --session-id=ID | --session-name=name-or-pattern] [--quiet]
+      [--verbose]
+
+  VBoxManage guestcontrol <uuid | vmname> updatega [--quiet] [--verbose]
+      [--source=guest-additions.ISO] [--wait-start] [--  [argument...] ]
+
+  VBoxManage guestcontrol <uuid | vmname> watch [--quiet] [--verbose]
+
+
+  VBoxManage metrics collect [--detach] [--list] [--period=seconds]
+      [--samples=count] [* | host | vmname metric-list]
+
+  VBoxManage metrics disable [--list] [* | host | vmname metric-list]
+
+  VBoxManage metrics enable [--list] [* | host | vmname metric-list]
+
+  VBoxManage metrics list [* | host | vmname metric-list]
+
+  VBoxManage metrics query [* | host | vmname metric-list]
+
+  VBoxManage metrics setup [--list] [--period seconds] [--samples count]
+      [* | host | vmname metric-list]
+
+
+  VBoxManage natnetwork add [--disable | --enable] <--netname=name>
+      <--network=network> [--dhcp=on|off] [--ipv6=on|off]
+      [--loopback-4=rule] [--loopback-6=rule] [--port-forward-4=rule]
+      [--port-forward-6=rule]
+
+  VBoxManage natnetwork list [filter-pattern]
+
+  VBoxManage natnetwork modify [--dhcp=on|off] [--disable | --enable]
+      <--netname=name> <--network=network> [--ipv6=on|off]
+      [--loopback-4=rule] [--loopback-6=rule] [--port-forward-4=rule]
+      [--port-forward-6=rule]
+
+  VBoxManage natnetwork remove <--netname=name>
+
+  VBoxManage natnetwork start <--netname=name>
+
+  VBoxManage natnetwork stop <--netname=name>
+
+
+  VBoxManage hostonlyif ipconfig <ifname> [--dhcp | --ip=IPv4-address
+      --netmask=IPv4-netmask | --ipv6=IPv6-address
+      --netmasklengthv6=length]
+
+  VBoxManage hostonlyif create
+
+  VBoxManage hostonlyif remove <ifname>
+
+
+  VBoxManage usbdevsource add <source-name> <--backend=backend>
+      <--address=address>
+
+  VBoxManage usbdevsource remove <source-name>
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ vboxmanage [H[2J[94mDEVOPS24/lektion10
+(B[m$ vboxmanage | less
+[?2004l[?1049h[22;0;0t[?1h=Oracle VM VirtualBox Command Line Management Interface Version 7.0.26
+Copyright (C) 2005-2025 Oracle and/or its affiliates
+
+Usage - Oracle VM VirtualBox command-line interface:
+
+  VBoxManage [-V | --version] [--dump-build-type] [-q | --nologo]
+      [--settingspw=password] [--settingspwfile=pw-file] [@response-file]
+      [[help] subcommand]
+
+
+  VBoxManage list [--long] [--sorted] [bridgedifs | cloudnets |
+      cloudprofiles | cloudproviders | cpu-profiles | dhcpservers | dvds
+      | extpacks | floppies | groups | hddbackends | hdds | hostcpuids |
+      hostdrives | hostdvds | hostfloppies | hostinfo | hostonlyifs |
+      hostonlynets | intnets | natnets | ostypes | runningvms |
+      screenshotformats | systemproperties | usbfilters | usbhost | vms |
+      webcams]
+
+
+:[K[K [KESCESC[KOO[KBB[K  VBoxManage showvminfo <uuid | vmname> [--details] [--machinereadable]
+:[K[K [KESCESC[KOO[KBB[K      [--password-id] [--password]
+:[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion10
+(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ vnox[K[K[Knoc[K[K[Kboxmanage list vms
+[?2004l"ubde" {940856f8-879f-4055-a944-ce279
