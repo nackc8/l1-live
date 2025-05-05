@@ -2512,4 +2512,78 @@ Connection to localhost closed.
 [7m Manual page ssh(1) line 308 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   ServerAliveInterval[m
 [7m Manual page ssh(1) line 309 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   ServerAliveCountMax[m
 [7m Manual page ssh(1) line 310 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   SessionType[m
-[7m Manual page ssh(1) line 311 (press h f
+[7m Manual page ssh(1) line 311 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   SetEnv[m
+[7m Manual page ssh(1) line 312 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   StdinNull[m
+[7m Manual page ssh(1) line 313 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   StreamLocalBindMask[m
+[7m Manual page ssh(1) line 314 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   StreamLocalBindUnlink[m
+[7m Manual page ssh(1) line 315 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   StrictHostKeyChecking[m
+[7m Manual page ssh(1) line 316 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   TCPKeepAlive[m
+[7m Manual page ssh(1) line 317 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   Tunnel[m
+[7m Manual page ssh(1) line 318 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   TunnelDevice[m
+[7m Manual page ssh(1) line 319 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   UpdateHostKeys[m
+[7m Manual page ssh(1) line 320 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion10
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ ssh ubse
+[?2004lWelcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 11:32:11 AM UTC 2025
+
+  System load:  0.0                Processes:               116
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 4%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+169 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon May  5 11:30:06 2025 from 10.0.2.2
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ [H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ diff /etc/ssh/
+moduli                    sshd_config.d/            ssh_host_rsa_key
+ssh_config                ssh_host_ecdsa_key        ssh_host_rsa_key.pub
+ssh_config.d/             ssh_host_ecdsa_key.pub    ssh_import_id
+sshd_config               ssh_host_ed25519_key      
+sshd_config.bak           ssh_host_ed25519_key.pub  
+]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ diff /etc/ssh/sshd_config[H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ diff /etc/ssh/sshd_config
+sshd_config      sshd_config.bak  sshd_config.d/   
+]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ diff /etc/ssh/sshd_config{},}.}b}a}k}[H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ diff /etc/ssh/sshd_config{,.bak}
+[?2004l33c33
+< PermitRootLogin no
+---
+> #PermitRootLogin prohibit-password
+57c57
+< PasswordAuthentication no
+---
+> #PasswordAuthentication yes
+90c90
+< X11Forwarding no
+---
+> X11Forwarding yes
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ diff /etc/ssh/sshd_config{,.bak}[1P.bak}[C[C[C[C,}[H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ diff /etc/ssh/sshd_config{.bak,}
+[?2004l33c33
+< #PermitRootLogin prohibit-password
+---
+> PermitRootLogin no
+57c57
+< #PasswordAuthentication yes
+---
+> PasswordAuthentication no
+90c90
+< X11Forwarding yes
+---
+> X11Forwarding no
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ 
+[?2004l[
