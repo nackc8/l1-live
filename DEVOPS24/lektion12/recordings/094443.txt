@@ -786,4 +786,78 @@ update-alternatives: warning: skip creation of /usr/share/man/man1/pico.1.gz bec
 [1;15r[12;1H[36m# Timeout: The number of seconds before receives and sends time out.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
 [1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
 [1;15r[12;1HTimeout 300[?25l[?12l[?25h7[2;13r8[13d
-[1;15r
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# KeepAlive: Whether or not to allow persistent connections (more than[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# one request per connection). Set to "Off" to deactivate.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HKeepAlive On[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# MaxKeepAliveRequests: The maximum number of requests to allow[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# during a persistent connection. Set to 0 to allow an unlimited amount.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# We recommend you leave this number high, for maximum performance.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HMaxKeepAliveRequests 100[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# KeepAliveTimeout: Number of seconds to wait for the next request from the[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# same client on the same connection.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HKeepAliveTimeout 5[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# These need to be set in /etc/apache2/envvars[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HUser ${APACHE_RUN_USER}[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HGroup ${APACHE_RUN_GROUP}[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# HostnameLookups: Log the names of clients or just their IP addresses[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# e.g., www.apache.org (on) or 204.62.129.132 (off).[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# The default is off because it'd be overall better for the net if people[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# had to knowingly turn this feature on, since enabling it means that[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# each client request will result in AT LEAST one lookup request to the[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# nameserver.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HHostnameLookups Off[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# ErrorLog: The location of the error log file.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# If you do not specify an ErrorLog directive within a <VirtualHost>[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# container, error messages relating to that virtual host will be[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# logged here.  If you *do* define an error logfile for a <VirtualHost>[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# container, that host's errors will be logged there and not here.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HErrorLog ${APACHE_LOG_DIR}/error.log[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# LogLevel: Control the severity of messages logged to the error_log.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# Available values: trace8, ..., trace1, debug, info, notice, warn,[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# error, crit, alert, emerg.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# It is also possible to configure the log level for particular modules, e.g.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# "LogLevel info ssl:warn"[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HLogLevel warn[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# Include module configuration:[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HIncludeOptional mods-enabled/*.load[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HIncludeOptional mods-enabled/*.conf[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# Include list of ports to listen on[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HInclude ports.conf[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# Sets the default security model of the Apache2 HTTPD server. It does[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# not allow access to the root filesystem outside of /usr/share and /var/www.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# The former is used by web applications packaged in Debian,[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# the latter may be used for local directories served by the web server. If[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# your system is serving content from a sub-directory in /srv you must allow[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# access here, or in any related virtual host.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H<Directory />[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;9HOptions FollowSymLinks[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;9HAllowOverride None[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h7[2;12r8M[1;15r[2;1HInclude ports.conf[?25l[?12l[?25h7[2;12r8M[1;15r[2;1H[36m# Include list of ports to listen on[39m(B[m[?25l[?12l[?25h7[2;12r8M[1;15r[2;1H[?25l[?12l[?25h7[2;12r8M[1;15r[2;1HIncludeOptional mods-enabled/*.conf[?25l[?12l[?25h7[2;12r8M[1;15r[2;1HIncludeOptional mods-enabled/*.load[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h7[2;12r8M[1;15r[2;1H[36m# Include module configuration:[39m(B[m[?25l[?12l[?25h7[2;12r8M[1;15r[2;1H[?25l[?12l[?25h7[2;12r8M[1;15r[2;1HLogLevel warn[?25l[?12l[?25h7[2;12r8M[1;15r[2;1H[36m#[39m(B[m[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# Sets the default security model of the Apache2 HTTPD server. It does[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# not allow access to the root filesystem outside of /usr/share and /var/www.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# The former is used by web applications packaged in Debian,[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# the latter may be used for local directories served by the web server. If[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# your system is serving content from a sub-directory in /srv you must allow[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# access here,
