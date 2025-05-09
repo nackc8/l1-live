@@ -5527,4 +5527,61 @@ sys	0m3.458s
     If the -p option is supplied, the process or job identifier of the job
     for which the exit status is returned is assigned to the variable VAR
     named by the option argument. The variable will be unset initially, before
-    any assignment. This is useful only when the -n option is suppl
+    any assignment. This is useful only when the -n option is supplied.
+    
+    If the -f option is supplied, and job control is enabled, waits for the
+    specified ID to terminate, instead of waiting for it to change status.
+    
+    Exit Status:
+    Returns the status of the last ID; fails if ID is invalid or an invalid
+    option is given, or if -n is supplied and the shell has no unwaited-for
+    children.
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ q[H[2J[94mDEVOPS24/lektion13
+(B[m$ q[K)[K(echo Startö [K[K; sleep 10; s[Kecho Slut) &
+[?2004l[1] 609581
+Start
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ wait; echo Haha
+[?2004lSlut
+[1]+  Done                    ( echo Start; sleep 10; echo Slut )
+Haha
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ .-[K&^[K[K/[H[2J[94mDEVOPS24/lektion13
+(B[m$ ./parallell 
+[?2004l^C
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ ./parallell [1@t[1@i[1@m[1@e[1@ [H[2J[94mDEVOPS24/lektion13
+(B[m$ time ./parallell [C[C[C[C[C[C[C
+[?2004lResult: b1730991091aaad68ec3a45f54910d23  -
+Result: b1730991091aaad68ec3a45f54910d23  -
+Result: b1730991091aaad68ec3a45f54910d23  -
+Result: b1730991091aaad68ec3a45f54910d23  -
+Result: b1730991091aaad68ec3a45f54910d23  -
+Result: b1730991091aaad68ec3a45f54910d23  -
+Result: b1730991091aaad68ec3a45f54910d23  -
+Result: b1730991091aaad68ec3a45f54910d23  -
+Result: b1730991091aaad68ec3a45f54910d23  -
+Result: b1730991091aaad68ec3a45f54910d23  -
+Result: b1730991091aaad68ec3a45f54910d23  -
+Result: b1730991091aaad68ec3a45f54910d23  -
+Result: b1730991091aaad68ec3a45f54910d23  -
+Result: b1730991091aaad68ec3a45f54910d23  -
+Result: b1730991091aaad68ec3a45f54910d23  -
+Result: b1730991091aaad68ec3a45f54910d23  -
+Result: b1730991091aaad68ec3a45f54910d23  -
+Result: b1730991091aaad68ec3a45f54910d23  -
+Result: b1730991091aaad68ec3a45f54910d23  -
+Result: b1730991091aaad68ec3a45f54910d23  -
+
+real	1m25.683s
+user	7m37.412s
+sys	1m59.490s
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ 
+[?2004l[?2004h[94mDEVOPS24/lektion13
+(B[m$ [H[2J[94mDEVOPS24/lektion13
+(B[m$ exit
+[?2004lexit
+
+Script done on 2025-05-09 10:30:11+02:00 [COMMAND_EXIT_CODE="0"]
