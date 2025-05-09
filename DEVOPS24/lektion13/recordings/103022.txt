@@ -2254,4 +2254,155 @@ May 09 08:58:00 ubse systemd[1]: Started apache2.service - The Apache HTTP Serve
                5 sockets listed.[m
 [m
            Note: because the addresses might contains spaces, this output is not suitable for[m
-[7m Manual page systemctl(1) line 95 (press h for hel
+[7m Manual page systemctl(1) line 95 (press h for help or q to quit)[27m[K[K           programmatic consumption.[m
+[m
+           Also see [1m--show-types[22m, [1m--all[22m, and [1m--state=[22m.[m
+[m
+           Added in version 202.[m
+[m
+       [1mlist-timers [22m[[4mPATTERN[24m...][m
+           List timer units currently in memory, ordered by the time they elapse next. If one or[m
+           more [4mPATTERN[24ms are specified, only units matching one of them are shown. Produces[m
+           output similar to[m
+[m
+               NEXT                         LEFT          LAST                         PASSED     U[m NIT                         ACTIVATES[m
+               -                            -             Thu 2017-02-23 13:40:29 EST  3 days ago u[m readahead-stop.timer        ureadahead-stop.service[m
+               Sun 2017-02-26 18:55:42 EST  1min 14s left Thu 2017-02-23 13:54:44 EST  3 days ago s[m ystemd-tmpfiles-clean.timer systemd-tmpfiles-clean.service[m
+               Sun 2017-02-26 20:37:16 EST  1h 42min left Sun 2017-02-26 11:56:36 EST  6h ago     a[m pt-daily.timer              apt-daily.service[m
+               Sun 2017-02-26 20:57:49 EST  2h 3min left  Sun 2017-02-26 11:56:36 EST  6h ago     s[m [7m Manual page systemctl(1) line 115 (press h for help or q to quit)[27m[K[Knapd.refresh.timer          snapd.refresh.service[m
+[m
+           [4mNEXT[24m shows the next time the timer will run.[m
+[m
+           [4mLEFT[24m shows how long till the next time the timer runs.[m
+[m
+           [4mLAST[24m shows the last time the timer ran.[m
+[m
+           [4mPASSED[24m shows how long has passed since the timer last ran.[m
+[m
+           [4mUNIT[24m shows the name of the timer[m
+[m
+           [4mACTIVATES[24m shows the name the service the timer activates when it runs.[m
+[m
+           Also see [1m--all [22mand [1m--state=[22m.[m
+[m
+           Added in version 209.[m
+[m
+       [1mis-active [4m[22mPATTERN[24m[1m...[0m[m
+           Check whether any of the specified units are active (i.e. running). Returns an exit[m
+[7m Manual page systemctl(1) line 130 (press h for help or q to quit)[27m[K[K           code [1m0 [22mif at least one is active, or non-zero otherwise. Unless [1m--quiet [22mis specified,[m
+           this will also print the current unit state to standard output.[m
+[m
+       [1mis-failed [[4m[22mPATTERN[24m...][m
+           Check whether any of the specified units is in the "failed" state. If no unit is[m
+           specified, check whether there are any failed units, which corresponds to the[m
+           "degraded" state returned by [1mis-system-running[22m. Returns an exit code [1m0 [22mif at least[m
+           one has failed, non-zero otherwise. Unless [1m--quiet [22mis specified, this will also print[m
+           the current unit or system state to standard output.[m
+[m
+           Added in version 197.[m
+[m
+       [1mstatus [22m[[4mPATTERN[24m...|[4mPID[24m...]][m
+           Show runtime status information about the whole system or about one or more units[m
+           followed by most recent log data from the journal. If no positional arguments are[m
+           specified, and no unit filter is given with [1m--type=[22m, [1m--state=[22m, or [1m--failed[22m, shows the[m
+           status of the whole system. If combined with [1m--all[22m, follows that with the status of[m
+           all units. If positional arguments are specified, each positional argument is treated[m
+           as either a unit name to show, or a glob pattern to show units whose names match that[m
+           pattern, or a PID to show the unit containing that PID. When [1m--type=[22m, [1m--state=[22m, or[m
+[7m Manual page systemctl(1) line 150 (press h for help or q to quit)[27m[K[K           [1m--failed [22mare used, units are additionally filtered by the TYPE and ACTIVE state.[m
+[m
+           This function is intended to generate human-readable output. If you are looking for[m
+           computer-parsable output, use [1mshow [22minstead. By default, this function only shows 10[m
+           lines of output and ellipsizes lines to fit in the terminal window. This can be[m
+           changed with [1m--lines [22mand [1m--full[22m, see above. In addition, [1mjournalctl --unit=[4m[22mNAME[24m or[m
+           [1mjournalctl --user-unit=[4m[22mNAME[24m use a similar filter for messages and might be more[m
+           convenient.[m
+[m
+           Note that this operation only displays [4mruntime[24m status, i.e. information about the[m
+           current invocation of the unit (if it is running) or the most recent invocation (if[m
+           it is not running anymore, and has not been released from memory). Information about[m
+           earlier invocations, invocations from previous system boots, or prior invocations[m
+           that have already been released from memory may be retrieved via [1mjournalctl --unit=[22m.[m
+[m
+           systemd implicitly loads units as necessary, so just running the [1mstatus [22mwill attempt[m
+           to load a file. The command is thus not useful for determining if something was[m
+           already loaded or not. The units may possibly also be quickly unloaded after the[m
+           operation is completed if there's no reason to keep it in memory thereafter.[m
+[m
+[7m Manual page systemctl(1) line 170 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           pattern, or a PID to show the unit containing that PID. When [1m--type=[22m, [1m--state=[22m, or[m
+[21;1H[K[7m Manual page systemctl(1) line 169 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           as either a unit name to show, or a glob pattern to show units whose names match that[m
+[21;1H[K[7m Manual page systemctl(1) line 168 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           all units. If positional arguments are specified, each positional argument is treated[m
+[21;1H[K[7m Manual page systemctl(1) line 167 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           status of the whole system. If combined with [1m--all[22m, follows that with the status of[m
+[21;1H[K[7m Manual page systemctl(1) line 166 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           specified, and no unit filter is given with [1m--type=[22m, [1m--state=[22m, or [1m--failed[22m, shows the[m
+[21;1H[K[7m Manual page systemctl(1) line 165 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           followed by most recent log data from the journal. If no positional arguments are[m
+[21;1H[K[7m Manual page systemctl(1) line 164 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           Show runtime status information about the whole system or about one or more units[m
+[21;1H[K[7m Manual page systemctl(1) line 163 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mstatus [22m[[4mPATTERN[24m...|[4mPID[24m...]][m
+[21;1H[K[7m Manual page systemctl(1) line 162 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[21;1H[K[7m Manual page systemctl(1) line 161 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           Added in version 197.[m
+[21;1H[K[7m Manual page systemctl(1) line 160 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           current invocation of the unit (if it is running) or the most recent invocation (if[m
+[7m Manual page systemctl(1) line 161 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           it is not running anymore, and has not been released from memory). Information about[m
+[7m Manual page systemctl(1) line 162 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           earlier invocations, invocations from previous system boots, or prior invocations[m
+[7m Manual page systemctl(1) line 163 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           that have already been released from memory may be retrieved via [1mjournalctl --unit=[22m.[m
+[7m Manual page systemctl(1) line 164 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemctl(1) line 165 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           systemd implicitly loads units as necessary, so just running the [1mstatus [22mwill attempt[m
+[7m Manual page systemctl(1) line 166 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           to load a file. The command is thus not useful for determining if something was[m
+[7m Manual page systemctl(1) line 167 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           already loaded or not. The units may possibly also be quickly unloaded after the[m
+[7m Manual page systemctl(1) line 168 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           operation is completed if there's no reason to keep it in memory thereafter.[m
+[7m Manual page systemctl(1) line 169 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemctl(1) line 170 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mExample 1. Example output from systemctl status[0m[m
+[7m Manual page systemctl(1) line 171 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemctl(1) line 172 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               $ systemctl status bluetooth[m
+[7m Manual page systemctl(1) line 173 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               ● bluetooth.service - Bluetooth service[m
+[7m Manual page systemctl(1) line 174 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                  Loaded: loaded (/usr/lib/systemd/system/bluetooth.service; enabled; preset: enabl[m [7m Manual page systemctl(1) line 175 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[Ked)[m
+[7m Manual page systemctl(1) line 176 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                  Active: active (running) since Wed 2017-01-04 13:54:04 EST; 1 weeks 0 days ago[m
+[7m Manual page systemctl(1) line 177 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                    Docs: man:bluetoothd(8)[m
+[7m Manual page systemctl(1) line 178 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                Main PID: 930 (bluetoothd)[m
+[7m Manual page systemctl(1) line 179 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                  Status: "Running"[m
+[7m Manual page systemctl(1) line 180 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                   Tasks: 1[m
+[7m Manual page systemctl(1) line 181 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                  Memory: 648.0K[m
+[7m Manual page systemctl(1) line 182 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     CPU: 435ms[m
+[7m Manual page systemctl(1) line 183 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                  CGroup: /system.slice/bluetooth.service[m
+[7m Manual page systemctl(1) line 184 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                          └─930 /usr/lib/bluetooth/bluetoothd[m
+[7m Manual page systemctl(1) line 185 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemctl(1) line 186 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               Jan 12 10:46:45 example.com bluetoothd[8900]: Not enough free handles to register se[m [7m Manual page systemctl(1) line 187 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[Krvice[m
+[7m Manual page systemctl(1) line 188 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               Jan 12 10:46:45 example.com bluetoothd[8900]: Current Time Service could not be regi[m [7m Manual page systemctl(1) line 189 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[Kstered[m
+[7m Manual page systemctl(1) line 190 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               Jan 12 10:46:45 example.com bluetoothd[8900]: gatt-time-server: Input/output error ([m [7m Manual page systemctl(1) line 191 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K5)[m
+[7m Manual page systemctl(1) line 192 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemctl(1) line 193 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           The dot ("●") uses color on supported terminals to summarize the unit state at a[m
+[7m Manual page systemctl(1) line 194 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           glance. Along with its color, its shape varies according to its state: "inactive" or[m
+[7m Manual page systemctl(1) line 194 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           "maintenance" is a white circle ("○"), "active" is a green dot ("●"), "deactivating"[m
+[7m Manual page systemctl(1) line 195 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           is a white dot, "failed" or "error" is a red cross ("×"), and "reloading" is a green[m
+[7m Manual page systemctl(1) line 196 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           clockwise circle arrow ("↻").[m
+[7m Manual page systemctl(1) line 197 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemctl(1) line 198 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           The "Loaded:" line in the output will show "loaded" if the unit has been loaded into[m
+[7m Manual page systemctl(1) line 199 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           memory. Other possible values for "Loaded:" include: "error" if there was a problem[m
+[7m Manual page systemctl(1) line 200 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           loading it, "not-found" if no unit file was found for this unit, "bad-setting" if an[m
+[7m Manual page systemctl(1) line 201 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           essential unit file setting could not be parsed and "masked" if the unit file has[m
+[7m Manual page systemctl(1) line 202 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           been masked. Along with showing the path to the unit file, this line will also show[m
+[7m Manual page systemctl(1) line 203 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           the enablement state. Enabled units are included in the dependency network between[m
+[7m Manual page systemctl(1) line 204 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           units, and thus are started at boot or via some other form of activation. See the[m
+[7m Manual page systemctl(1) line 205 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           full table of possible enablement states — including the definition of "masked" — in[m
+[7m Manual page systemctl(1) line 205 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           the documentation for the [1mis-enabled [22mcommand.[m
+[7m Manual page systemctl(1) line 206 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemctl(1) line 206 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           The "Active:" line shows active state. The value is usually "active" or "inactive".[m
+[7m Manual page systemctl(1) line 207 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Active could mean started, bound, plugged in, etc depending on the unit type. The[m
+[7m Manual page systemctl(1) line 207 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           unit could also be in process of changing states, reporting a state of "activating"[m
+[7m Manual page systemctl(1) line 208 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           or "deactivating". A special "failed" state is entered when the service failed in[m
+[7m Manual page systemctl(1) line 209 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           some way, such as a crash, exiting with an error code or timing out. If the failed[m
+[7m Manual page systemctl(1) line 210 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           state is entered the cause will be logged for later reference.[m
+[7m Manual page systemctl(1) line 211 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemctl(1) line 212 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mshow [22m[[4mPATTERN[24m...|[4mJOB[24m...][m
+[7m Manual page systemctl(1) line 213 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Show properties of one or more units, jobs, or the manager itself. If no argument is[m
+[7m Manual page systemctl(1) line 214 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           specified, properties of the manager will be shown. If a unit name is specified,[m
+[7m Manual page systemctl(1) line 215 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           properties of the unit are shown, and if a job ID is specified, properties of the job[m
+[7m Manual page systemctl(1) line 216 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           are shown. By default, empty properties are suppressed. Use [1m--all [22mto show those too.[m
+[7m Manual page systemctl(1) line 217 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           To select specific properties to show, use [1m--property=[22m. This command is intended to[m
+[7m Manual page systemctl(1) line 218 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           be used whenever computer-parsable output is required. Use [1mstatus [22mif you are looking[m
+[7m Manual page systemctl(1) line 219 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           for formatted human-readable output.[m
+[7m Manual page systemctl(1) line 220 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemctl(1) line 221 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Many properties shown by [1msystemctl show [22mmap directly to configuration settings of the[m
+[7m Manual page systemctl(1) line 222 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           system and service manager and its unit files. Note that the properties shown by the[m
+[7m Manual page systemctl(1) line 223 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           command are generally more low-level, normalized versions of the original[m
+[7m Manual page systemctl(1) line 224 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           configuration settings and expose runtime state in addition to configuration. For[m
+[7m Manual page systemctl(1) line 225 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           example, properties shown for service units include the service's current main[m
+[7m Manual page systemctl(1) line 226 (p
