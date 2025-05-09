@@ -2931,4 +2931,53 @@ WantedBy=multi-user.target[m
 [3;1H           the range 0...7 or one of the strings [1memerg[22m, [1malert[22m, [1mcrit[22m, [1merr[22m, [1mwarning[22m, [1mnotice[22m, [1minfo[22m,[m
 [4;1H           [1mdebug[22m; see [1msyslog[22m(3) for details.[m
 [5;1H[m
-[6;1H           The servi
+[6;1H           The service must have the appropriate [4mBusName=destination[24m property and also implement[m
+[7;1H           the generic [1morg.freedesktop.LogControl1[22m(5) interface. (systemctl will use the generic[m
+[8;1H           D-Bus protocol to access the org.freedesktop.LogControl1.LogLevel interface for the[m
+[9;1H           D-Bus name [4mdestination[24m.)[m
+[10;1H[m
+[11;1H           Added in version 247.[m
+[12;1H[m
+[13;1H       [1mservice-log-target [4m[22mSERVICE[24m [[4mTARGET[24m][m
+[14;1H           If the [4mTARGET[24m argument is not given, print the current log target as reported by[m
+[15;1H[1;1H           If the optional argument [4mLEVEL[24m is provided, then change the current log level of the[m
+[2;1H           service to [4mLEVEL[24m. The log level should be a typical syslog log level, i.e. a value in[m
+[3;1H           the range 0...7 or one of the strings [1memerg[22m, [1malert[22m, [1mcrit[22m, [1merr[22m, [1mwarning[22m, [1mnotice[22m, [1minfo[22m,[m
+[4;1H           [1mdebug[22m; see [1msyslog[22m(3) for details.[m
+[5;1H[m
+[6;1H           The service must have the appropriate [4mBusName=destination[24m property and also implement[m
+[7;1H           the generic [1morg.freedesktop.LogControl1[22m(5) interface. (systemctl will use the generic[m
+[8;1H           D-Bus protocol to access the org.freedesktop.LogControl1.LogLevel interface for the[m
+[9;1H           D-Bus name [4mdestination[24m.)[m
+[10;1H[m
+[11;1H           Added in version 247.[m
+[12;1H[m
+[13;1H       [1mservice-log-target [4m[22mSERVICE[24m [[4mTARGET[24m][m
+[14;1H           If the [4mTARGET[24m argument is not given, print the current log target as reported by[m
+[15;1H...skipping...
+           List unit files installed on the system, in combination with their [7menable[27mment state[m
+           (as reported by [1mis-[7menable[27m[1md[22m). If one or more [4mPATTERN[24ms are specified, only unit files[m
+           whose name matches one of them are shown (patterns matching unit file system paths[m
+           are not supported).[m
+[m
+           Unlike [1mlist-units [22mthis command will list template units in addition to explicitly[m
+           instantiated units.[m
+[m
+           Added in version 233.[m
+[m
+       [1m[7menable[27m[1m [4m[22mUNIT[24m[1m...[22m, [1m[7menable[27m[1m [4m[22mPATH[24m[1m...[0m[m
+           [7mEnable[27m one or more units or unit instances. This will create a set of symlinks, as[m
+           encoded in the [Install] sections of the indicated unit files. After the symlinks[m
+           have been created, the system manager configuration is reloaded (in a way equivalent[m
+[7m Manual page systemctl(1) line 551 (press h for help or q to quit)[27m[K[K/[K           to [1mdaemon-reload[22m), in order to ensure the changes are taken into account immediately.[m
+[7m Manual page systemctl(1) line 552 (press h for help or q to quit)[27m[K[K/[K           Note that this does [4mnot[24m have the effect of also starting any of the units being[m
+           [7menable[27md. If this is desired, combine this command with the [1m--now [22mswitch, or invoke[m
+           [1mstart [22mwith appropriate arguments later. Note that in case of unit instance [7menable[27m[22mment[m
+           (i.e. [7menable[27mment of units of the form foo@bar.service), symlinks named the same as[m
+           instances are created in the unit configuration directory, however they point to the[m
+           single template unit file they are instantiated from.[m
+[m
+           This command expects either valid unit names (in which case various unit file[m
+           directories are automatically searched for unit files with appropriate names), or[m
+[7m Manual page systemctl(1) line 561 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           absolute paths to unit files (in which case these files are read directly). If a[m
+[7m M
