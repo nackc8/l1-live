@@ -1572,4 +1572,57 @@ ervice                                    loaded active exited    File System Ch
   man-db.timer                                                                             loaded [m[7m>[27m
   motd-news.timer                                                                          loaded [m[7m>[27m
   sysstat-collect.timer                                                                    loaded [m[7m>[27m
-  sysstat-summary.timer                                                                
+  sysstat-summary.timer                                                                    loaded [m[7m>[27m
+  systemd-tmpfiles-clean.timer                                                             loaded [m[7m>[27m
+  update-notifier-download.timer                                                           loaded [m[7m>[27m
+  update-notifier-motd.timer                                                               loaded [m[7m>[27m
+[m
+[0;38;5;245mLegend: LOAD   → Reflects whether the unit definition was properly loaded.[0m[m
+[0;38;5;245m        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.[0m[m
+[7mlines 158-178[27m[K[K [KESCESC[KOO[KBB[K[0;38;5;245m        SUB    → The low-level unit activation state, values depend on unit type.[0m[m
+[7mlines 159-179[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mlines 160-180[27m[K[K [KESCESC[KOO[KBB[K[0;1;39m174 loaded units listed.[0m [0;38;5;245mPass --all to see loaded but inactive units, too.[0m[m
+[7mlines 161-181[27m[K[K [KESCESC[KOO[KBB[K[0;38;5;245mTo show all installed unit files use 'systemctl list-unit-files'.[0m[m
+[7mlines 162-182[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 162-182/182 (END)[27m[K[K [KESCESC[KOO[KBB[K[K[7mlines 162-182/182 (END)[27m[K[K[?1l>[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ sudo systemctl list-units[C[C[C[C[C[C[C[C[C[C[C[C[C[Kman systemctl 
+[?2004l[?1049h[22;0;0t[?1h=[4mSYSTEMCTL[24m(1)                                systemctl                               [4mSYSTEMCTL[24m(1)[m
+[m
+[1mNAME[0m[m
+       systemctl - Control the systemd system and service manager[m
+[m
+[1mSYNOPSIS[0m[m
+[m
+       [1msystemctl [22m[OPTIONS...] COMMAND [UNIT...][m
+[m
+[1mDESCRIPTION[0m[m
+       [1msystemctl [22mmay be used to introspect and control the state of the "systemd" system and[m
+       service manager. Please refer to [1msystemd[22m(1) for an introduction into the basic concepts[m
+       and functionality this tool manages.[m
+[m
+[1mCOMMANDS[0m[m
+       The following commands are understood:[m
+[m
+   [1mUnit Commands (Introspection and Modification)[0m[m
+       [1mlist-units [22m[[4mPATTERN[24m...][m
+           List units that [1msystemd [22mcurrently has in memory. This includes units that are either[m
+           referenced directly or through a dependency, units that are pinned by applications[m
+[7m Manual page systemctl(1) line 1 (press h for help or q to quit)[27m[K[K           programmatically, or units that were active in the past and have failed. By default[m
+           only units which are active, have pending jobs, or have failed are shown; this can be[m
+           changed with option [1m--all[22m. If one or more [4mPATTERN[24ms are specified, only units matching[m
+           one of them are shown. The units that are shown are additionally filtered by [1m--type=[0m[m
+           and [1m--state= [22mif those options are specified.[m
+[m
+           Note that this command does not show unit templates, but only instances of unit[m
+           templates. Units templates that aren't instantiated are not runnable, and will thus[m
+           never show up in the output of this command. Specifically this means that[m
+           foo@.service will never be shown in this list — unless instantiated, e.g. as[m
+           foo@bar.service. Use [1mlist-unit-files [22m(see below) for listing installed unit template[m
+           files.[m
+[m
+           Produces output similar to[m
+[m
+                 UNIT                         LOAD   ACTIVE SUB     DESCRIPTION[m
+                 sys-module-fuse.device       loaded active plugged /sys/module/fuse[m
+                 -.mount                      loaded active mounted Root Mount[m
+                 boot-efi.mount               loaded active mounted /boot/efi[m
+                 systemd-journald.service     loaded active running Journal Service[m
+                 systemd-logind.service       loaded ac
