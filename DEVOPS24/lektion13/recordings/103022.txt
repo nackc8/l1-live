@@ -2747,4 +2747,188 @@ WantedBy=multi-user.target[m
 [7m Manual page systemctl(1) line 310 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           reload Apache's httpd.conf in the web server, not the apache.service systemd unit[m
 [7m Manual page systemctl(1) line 311 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           file.[m
 [7m Manual page systemctl(1) line 312 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page systemctl(1) line 313 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           This command should not be confused with the [1md
+[7m Manual page systemctl(1) line 313 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           This command should not be confused with the [1mdaemon-reload [22mcommand.[m
+[7m Manual page systemctl(1) line 314 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemctl(1) line 315 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mrestart [4m[22mPATTERN[24m[1m...[0m[m
+[7m Manual page systemctl(1) line 316 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Stop and then start one or more units specified on the command line. If the units are[m
+[7m Manual page systemctl(1) line 317 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           not running yet, they will be started.[m
+[7m Manual page systemctl(1) line 318 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemctl(1) line 319 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Note that restarting a unit with this command does not necessarily flush out all of[m
+[7m Manual page systemctl(1) line 320 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           the unit's resources before it is started again. For example, the per-service file[m
+[7m Manual page systemctl(1) line 321 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           descriptor storage facility (see [4mFileDescriptorStoreMax=[24m in [1msystemd.service[22m(5)) will[m
+[7m Manual page systemctl(1) line 322 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           remain intact as long as the unit has a job pending, and is only cleared when the[m
+[7m Manual page systemctl(1) line 323 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           unit is fully stopped and no jobs are pending anymore. If it is intended that the[m
+[7m Manual page systemctl(1) line 324 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           file descriptor store is flushed out, too, during a restart operation an explicit[m
+[7m Manual page systemctl(1) line 325 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1msystemctl stop [22mcommand followed by [1msystemctl start [22mshould be issued.[m
+[7m Manual page systemctl(1) line 326 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemctl(1) line 327 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mtry-restart [4m[22mPATTERN[24m[1m...[0m[m
+[7m Manual page systemctl(1) line 328 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Stop and then start one or more units specified on the command line if the units are[m
+[7m Manual page systemctl(1) line 329 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           running. This does nothing if units are not running.[m
+[7m Manual page systemctl(1) line 330 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemctl(1) line 331 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mreload-or-restart [4m[22mPATTERN[24m[1m...[0m[m
+[7m Manual page systemctl(1) line 332 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Reload one or more units if they support it. If not, stop and then start them[m
+[7m Manual page systemctl(1) line 333 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           instead. If the units are not running yet, they will be started.[m
+[7m Manual page systemctl(1) line 334 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemctl(1) line 335 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mtry-reload-or-restart [4m[22mPATTERN[24m[1m...[0m[m
+[7m Manual page systemctl(1) line 336 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Reload one or more units if they support it. If not, stop and then start them[m
+[7m Manual page systemctl(1) line 337 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           instead. This does nothing if the units are not running.[m
+[7m Manual page systemctl(1) line 338 (press h for help or q to quit)[27m[K[K[m
+           Added in version 229.[m
+[m
+       [1misolate [4m[22mUNIT[0m[m
+           Start the unit specified on the command line and its dependencies and stop all[m
+           others, unless they have [1mIgnoreOnIsolate=yes [22m(see [1msystemd.unit[22m(5)). If a unit name[m
+           with no extension is given, an extension of ".target" will be assumed.[m
+[m
+           This command is dangerous, since it will immediately stop processes that are not[m
+           enabled in the new target, possibly including the graphical environment or terminal[m
+           you are currently using.[m
+[m
+           Note that this operation is allowed only on units where [1mAllowIsolate= [22mis enabled. See[m
+           [1msystemd.unit[22m(5) for details.[m
+[7m Manual page systemctl(1) line 352 (press h for help or q to quit)[27m[K[K[m
+       [1mkill [4m[22mPATTERN[24m[1m...[0m[m
+           Send a UNIX process signal to one or more processes of the unit. Use [1m--kill-whom= [22mto[m
+           select which process to send the signal to. Use [1m--signal= [22mto select the signal to[m
+           send. Combine with [1m--kill-value= [22mto enqueue a POSIX Realtime Signal with an[m
+           associated value.[m
+[m
+       [1mclean [4m[22mPATTERN[24m[1m...[0m[m
+           Remove the configuration, state, cache, logs or runtime data of the specified units.[m
+           Use [1m--what= [22mto select which kind of resource to remove. For service units this may be[m
+           used to remove the directories configured with [4mConfigurationDirectory=[24m,[m
+           [4mStateDirectory=[24m, [4mCacheDirectory=[24m, [4mLogsDirectory=[24m and [4mRuntimeDirectory=[24m, see[m
+           [1msystemd.exec[22m(5) for details. It may also be used to clear the file descriptor store[m
+           as enabled via [4mFileDescriptorStoreMax=[24m, see [1msystemd.service[22m(5) for details. For timer[m
+[7m Manual page systemctl(1) line 366 (press h for help or q to quit)[27m[K[K           units this may be used to clear out the persistent timestamp data if [4mPersistent=[24m is[m
+           used and [1m--what=state [22mis selected, see [1msystemd.timer[22m(5). This command only applies to[m
+           units that use either of these settings. If [1m--what= [22mis not specified, the cache and[m
+           runtime data as well as the file descriptor store are removed (as these three types[m
+           of resources are generally redundant and reproducible on the next invocation of the[m
+           unit). Note that the specified units must be stopped to invoke this operation.[m
+[m
+           Added in version 243.[m
+[m
+       [1mfreeze [4m[22mPATTERN[24m[1m...[0m[m
+           Freeze one or more units specified on the command line using cgroup freezer[m
+[m
+           Freezing the unit will cause all processes contained within the cgroup corresponding[m
+           to the unit to be suspended. Being suspended means that unit's processes won't be[m
+[7m Manual page systemctl(1) line 380 (press h for help or q to quit)[27m[K[K           scheduled to run on CPU until thawed. Note that this command is supported only on[m
+           systems that use unified cgroup hierarchy. Unit is automatically thawed just before[m
+           we execute a job against the unit, e.g. before the unit is stopped.[m
+[m
+           Added in version 246.[m
+[m
+       [1mthaw [4m[22mPATTERN[24m[1m...[0m[m
+           Thaw (unfreeze) one or more units specified on the command line.[m
+[m
+           This is the inverse operation to the [1mfreeze [22mcommand and resumes the execution of[m
+           processes in the unit's cgroup.[m
+[m
+           Added in version 246.[m
+[m
+[7m Manual page systemctl(1) line 394 (press h for help or q to quit)[27m[K[K       [1mset-property [4m[22mUNIT[24m [4mPROPERTY[24m[1m=[4m[22mVALUE[24m[1m...[0m[m
+           Set the specified unit properties at runtime where this is supported. This allows[m
+           changing configuration parameter properties such as resource control settings at[m
+           runtime. Not all properties may be changed at runtime, but many resource control[m
+           settings (primarily those in [1msystemd.resource-control[22m(5)) may. The changes are[m
+           applied immediately, and stored on disk for future boots, unless [1m--runtime [22mis passed,[m
+           in which case the settings only apply until the next reboot. The syntax of the[m
+           property assignment follows closely the syntax of assignments in unit files.[m
+[m
+           Example: [1msystemctl set-property foobar.service CPUWeight=200[0m[m
+[m
+           If the specified unit appears to be inactive, the changes will be only stored on disk[m
+           as described previously hence they will be effective when the unit will be started.[m
+[m
+[7m Manual page systemctl(1) line 408 (press h for help or q to quit)[27m[K[K           Note that this command allows changing multiple properties at the same time, which is[m
+           preferable over setting them individually.[m
+[m
+           Example: [1msystemctl set-property foobar.service CPUWeight=200 MemoryMax=2G[0m[m
+           [1mIPAccounting=yes[0m[m
+[m
+           Like with unit file configuration settings, assigning an empty setting usually resets[m
+           a property to its defaults.[m
+[m
+           Example: [1msystemctl set-property avahi-daemon.service IPAddressDeny=[0m[m
+[m
+           Added in version 206.[m
+[m
+       [1mbind [4m[22mUNIT[24m [4mPATH[24m [[4mPATH[24m][m
+[7m Manual page systemctl(1) line 422 (press h for help or q to quit)[27m[K[K           Bind-mounts a file or directory from the host into the specified unit's mount[m
+           namespace. The first path argument is the source file or directory on the host, the[m
+           second path argument is the destination file or directory in the unit's mount[m
+           namespace. When the latter is omitted, the destination path in the unit's mount[m
+           namespace is the same as the source path on the host. When combined with the[m
+           [1m--read-only [22mswitch, a ready-only bind mount is created. When combined with the[m
+           [1m--mkdir [22mswitch, the destination path is first created before the mount is applied.[m
+[m
+           Note that this option is currently only supported for units that run within a mount[m
+           namespace (e.g.: with [1mRootImage=[22m, [1mPrivateMounts=[22m, etc.). This command supports[m
+           bind-mounting directories, regular files, device nodes, [1mAF_UNIX [22msocket nodes, as well[m
+           as FIFOs. The bind mount is ephemeral, and it is undone as soon as the current unit[m
+           process exists. Note that the namespace mentioned here, where the bind mount will be[m
+           added to, is the one where the main service process runs. Other processes (those[m
+[7m Manual page systemctl(1) line 436 (press h for help or q to quit)[27m[K[K           exececuted by [1mExecReload=[22m, [1mExecStartPre=[22m, etc.) run in distinct namespaces.[m
+[m
+           If supported by the kernel, any prior mount on the selected target will be replaced[m
+           by the new mount. If not supported, any prior mount will be over-mounted, but remain[m
+           pinned and inaccessible.[m
+[m
+           Added in version 248.[m
+[m
+       [1mmount-image [4m[22mUNIT[24m [4mIMAGE[24m [[4mPATH[24m [[4mPARTITION_NAME[24m:[4mMOUNT_OPTIONS[24m]][m
+           Mounts an image from the host into the specified unit's mount namespace. The first[m
+           path argument is the source image on the host, the second path argument is the[m
+           destination directory in the unit's mount namespace (i.e. inside[m
+           [1mRootImage=[22m/[1mRootDirectory=[22m). The following argument, if any, is interpreted as a[m
+           colon-separated tuple of partition name and comma-separated list of mount options for[m
+[7m Manual page systemctl(1) line 450 (press h for help or q to quit)[27m[K[K           that partition. The format is the same as the service [1mMountImages= [22msetting. When[m
+           combined with the [1m--read-only [22mswitch, a ready-only mount is created. When combined[m
+           with the [1m--mkdir [22mswitch, the destination path is first created before the mount is[m
+           applied.[m
+[m
+           Note that this option is currently only supported for units that run within a mount[m
+           namespace (i.e. with [1mRootImage=[22m, [1mPrivateMounts=[22m, etc.). Note that the namespace[m
+           mentioned here where the image mount will be added to, is the one where the main[m
+           service process runs. Note that the namespace mentioned here, where the bind mount[m
+           will be added to, is the one where the main service process runs. Other processes[m
+           (those exececuted by [1mExecReload=[22m, [1mExecStartPre=[22m, etc.) run in distinct namespaces.[m
+[m
+           If supported by the kernel, any prior mount on the selected target will be replaced[m
+           by the new mount. If not supported, any prior mount will be over-mounted, but remain[m
+[7m Manual page systemctl(1) line 464 (press h for help or q to quit)[27m[K[K           pinned and inaccessible.[m
+[m
+           Example:[m
+[m
+               systemctl mount-image foo.service /tmp/img.raw /var/lib/image root:ro,nosuid[m
+[m
+               systemctl mount-image --mkdir bar.service /tmp/img.raw /var/lib/baz/img[m
+[m
+           Added in version 248.[m
+[m
+       [1mservice-log-level [4m[22mSERVICE[24m [[4mLEVEL[24m][m
+           If the [4mLEVEL[24m argument is not given, print the current log level as reported by[m
+           service [4mSERVICE[24m.[m
+[m
+[7m Manual page systemctl(1) line 478 (press h for help or q to quit)[27m[K[K           If the optional argument [4mLEVEL[24m is provided, then change the current log level of the[m
+           service to [4mLEVEL[24m. The log level should be a typical syslog log level, i.e. a value in[m
+           the range 0...7 or one of the strings [1memerg[22m, [1malert[22m, [1mcrit[22m, [1merr[22m, [1mwarning[22m, [1mnotice[22m, [1minfo[22m,[m
+           [1mdebug[22m; see [1msyslog[22m(3) for details.[m
+[m
+           The service must have the appropriate [4mBusName=destination[24m property and also implement[m
+           the generic [1morg.freedesktop.LogControl1[22m(5) interface. (systemctl will use the generic[m
+           D-Bus protocol to access the org.freedesktop.LogControl1.LogLevel interface for the[m
+           D-Bus name [4mdestination[24m.)[m
+[m
+           Added in version 247.[m
+[m
+       [1mservice-log-target [4m[22mSERVICE[24m [[4mTARGET[24m][m
+           If the [4mTARGET[24m argument is not given, print the current log target as reported by[m
+[7m Manual page systemctl(1) line 492 (press h for help or q to quit)[27m[K[K-[K[7m Manual page systemctl(1) line 492 (press h for help or q to quit)[27m[K[K/[Kee[Knn[Kaa[Kbb[Kll[Kee[K[1;1H           If the optional argument [4mLEVEL[24m is provided, then change the current log level of the[m
+[2;1H           service to [4mLEVEL[24m. The log level should be a typical syslog log level, i.e. a value in[m
+[3;1H           the range 0...7 or one of the strings [1memerg[22m, [1malert[22m, [1mcrit[22m, [1merr[22m, [1mwarning[22m, [1mnotice[22m, [1minfo[22m,[m
+[4;1H           [1mdebug[22m; see [1msyslog[22m(3) for details.[m
+[5;1H[m
+[6;1H           The servi
