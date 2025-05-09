@@ -3027,4 +3027,89 @@ WantedBy=multi-user.target[m
 [m
            This command expects valid unit names only, it does not accept paths to unit files.[m
 [m
-           In addition to the units specified as arguments, all units are disabled that are[m
+           In addition to the units specified as arguments, all units are disabled that are[m
+           listed in the [4mAlso=[24m setting contained in the [Install] section of any of the unit[m
+           files being operated on.[m
+[m
+           This command implicitly reloads the system manager configuration after completing the[m
+           operation. Note that this command does not implicitly stop the units that are being[m
+           disabled. If this is desired, either combine this command with the [1m--now [22mswitch, or[m
+           invoke the [1mstop [22mcommand with appropriate arguments later.[m
+[m
+[7m Manual page systemctl(1) line 618 (press h for help or q to quit)[27m[K[K           This command will print information about the file system operations (symlink[m
+           removals) executed. This output may be suppressed by passing [1m--quiet[22m.[m
+[m
+           If a unit gets disabled but its triggering units are still active, a warning[m
+           containing the names of the triggering units is shown.  [1m--no-warn [22mcan be used to[m
+           suppress the warning.[m
+[m
+           When this command is used with [1m--user[22m, the units being operated on might still be[m
+           [7menable[27md in global scope, and thus get started automatically even after a successful[m
+           disablement in user scope. In this case, a warning about it is shown, which can be[m
+           suppressed using [1m--no-warn[22m.[m
+[m
+           This command honors [1m--system[22m, [1m--user[22m, [1m--runtime[22m, [1m--global [22mand [1m--no-warn [22min a similar[m
+           way as [1m[7menable[27m[22m.[m
+[7m Manual page systemctl(1) line 632 (press h for help or q to quit)[27m[K[K[m
+           Added in version 238.[m
+[m
+       [1mre[7menable[27m[1m [4m[22mUNIT[24m[1m...[0m[m
+           Re[7menable[27m one or more units, as specified on the command line. This is a combination[m
+           of [1mdisable [22mand [1m[7menable[27m[1m [22mand is useful to reset the symlinks a unit file is [7menable[27m[22md with[m
+           to the defaults configured in its [Install] section. This command expects a unit name[m
+           only, it does not accept paths to unit files.[m
+[m
+           Added in version 238.[m
+[m
+       [1mpreset [4m[22mUNIT[24m[1m...[0m[m
+           Reset the [7menable[27m/disable status one or more unit files, as specified on the command[m
+           line, to the defaults configured in the preset policy files. This has the same effect[m
+[7m Manual page systemctl(1) line 646 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# man 5 systemd.unit
+[?2004l[?1049h[22;0;0t[?1h=[4mSYSTEMD.UNIT[24m(5)                           systemd.unit                           [4mSYSTEMD.UNIT[24m(5)[m
+[m
+[1mNAME[0m[m
+       systemd.unit - Unit configuration[m
+[m
+[1mSYNOPSIS[0m[m
+       [4mservice[24m.service, [4msocket[24m.socket, [4mdevice[24m.device, [4mmount[24m.mount, [4mautomount[24m.automount,[m
+       [4mswap[24m.swap, [4mtarget[24m.target, [4mpath[24m.path, [4mtimer[24m.timer, [4mslice[24m.slice, [4mscope[24m.scope[m
+[m
+   [1mSystem Unit Search Path[0m[m
+       /etc/systemd/system.control/*[m
+       /run/systemd/system.control/*[m
+       /run/systemd/transient/*[m
+       /run/systemd/generator.early/*[m
+       /etc/systemd/system/*[m
+       /etc/systemd/system.attached/*[m
+       /run/systemd/system/*[m
+       /run/systemd/system.attached/*[m
+       /run/systemd/generator/*[m
+       ...[m
+       /usr/lib/systemd/system/*[m
+       /run/systemd/generator.late/*[m
+[7m Manual page systemd.unit(5) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page systemd.unit(5) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemd.unit(5) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mUser Unit Search Path[0m[m
+[7m Manual page systemd.unit(5) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ~/.config/systemd/user.control/*[m
+[7m Manual page systemd.unit(5) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       $XDG_RUNTIME_DIR/systemd/user.control/*[m
+[7m Manual page systemd.unit(5) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       $XDG_RUNTIME_DIR/systemd/transient/*[m
+[7m Manual page systemd.unit(5) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       $XDG_RUNTIME_DIR/systemd/generator.early/*[m
+[7m Manual page systemd.unit(5) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ~/.config/systemd/user/*[m
+[7m Manual page systemd.unit(5) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       $XDG_CONFIG_DIRS/systemd/user/*[m
+[7m Manual page systemd.unit(5) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       /etc/systemd/user/*[m
+[7m Manual page systemd.unit(5) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       $XDG_RUNTIME_DIR/systemd/user/*[m
+[7m Manual page systemd.unit(5) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       /run/systemd/user/*[m
+[7m Manual page systemd.unit(5) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       $XDG_RUNTIME_DIR/systemd/generator/*[m
+[7m Manual page systemd.unit(5) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       $XDG_DATA_HOME/systemd/user/*[m
+[7m Manual page systemd.unit(5) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       $XDG_DATA_DIRS/systemd/user/*[m
+[7m Manual page systemd.unit(5) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ...[m
+[7m Manual page systemd.unit(5) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       /usr/lib/systemd/user/*[m
+[7m Manual page systemd.unit(5) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       $XDG_RUNTIME_DIR/systemd/generator.late/*[m
+[7m Manual page systemd.unit(5) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemd.unit(5) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mDESCRIPTION[0m[m
+[7m Manual page systemd.unit(5) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       A unit file is a plain text ini-style file that encodes information about a service, a[m
+[7m Manual page systemd.unit(5) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       socket, a device, a mount point, an automount point, a swap file or partition, a start-up[m
+[7m Manual page systemd.unit(5) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       target, a watched file system path, a timer controlled and supervised by [1msystemd[22m(1), a[m
+[7m Manual page systemd.unit(5) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       resource management slice or a group of externally created processes. See[m
+[7m Manual page systemd.unit(5) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1msystemd.syntax[22m(7) for a general description of the syntax.[m
+[7m Manual page systemd.unit(5) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemd.unit(5) line 26 (press h for help or q to qui
