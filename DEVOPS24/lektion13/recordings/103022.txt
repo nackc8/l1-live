@@ -2405,4 +2405,46 @@ May 09 08:58:00 ubse systemd[1]: Started apache2.service - The Apache HTTP Serve
 [7m Manual page systemctl(1) line 223 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           command are generally more low-level, normalized versions of the original[m
 [7m Manual page systemctl(1) line 224 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           configuration settings and expose runtime state in addition to configuration. For[m
 [7m Manual page systemctl(1) line 225 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           example, properties shown for service units include the service's current main[m
-[7m Manual page systemctl(1) line 226 (p
+[7m Manual page systemctl(1) line 226 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           process identifier as "MainPID" (which is runtime state), and time settings are[m
+[7m Manual page systemctl(1) line 227 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           always exposed as properties ending in the "...USec" suffix even if a matching[m
+[7m Manual page systemctl(1) line 228 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           configuration options end in "...Sec", because microseconds is the normalized time[m
+[7m Manual page systemctl(1) line 229 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           unit used internally by the system and service manager.[m
+[7m Manual page systemctl(1) line 230 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemctl(1) line 231 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           For details about many of these properties, see the documentation of the D-Bus[m
+[7m Manual page systemctl(1) line 232 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           interface backing these properties, see [1morg.freedesktop.systemd1[22m(5).[m
+[7m Manual page systemctl(1) line 233 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemctl(1) line 234 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           Show properties of one or more units, jobs, or the manager itself. If no argument is[m
+[21;1H[K[7m Manual page systemctl(1) line 233 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mshow [22m[[4mPATTERN[24m...|[4mJOB[24m...][m
+[21;1H[K[7m Manual page systemctl(1) line 232 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[21;1H[K[7m Manual page systemctl(1) line 231 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           state is entered the cause will be logged for later reference.[m
+[21;1H[K[7m Manual page systemctl(1) line 230 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           some way, such as a crash, exiting with an error code or timing out. If the failed[m
+[21;1H[K[7m Manual page systemctl(1) line 229 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t
+[1]+  Stopped                 man systemctl
+[?2004h]0;root@ubse: ~root@ubse:~# systemctl show apache2.service [K[K[K[K[K[K[K[K[K[K[K[Khe1[K2.service 1[K[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K.timer[K[K[K[K[K[K.service [K[K[K[K[K[K[K[K[K[H[2J]0;root@ubse: ~root@ubse:~# systemctl show apache2[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l[?1h=Type=forking[m
+ExitType=main[m
+Restart=on-abort[m
+RestartMode=normal[m
+NotifyAccess=none[m
+RestartUSec=100ms[m
+RestartSteps=0[m
+RestartMaxDelayUSec=infinity[m
+RestartUSecNext=100ms[m
+TimeoutStartUSec=1min 30s[m
+TimeoutStopUSec=1min 30s[m
+TimeoutAbortUSec=1min 30s[m
+TimeoutStartFailureMode=terminate[m
+TimeoutStopFailureMode=terminate[m
+RuntimeMaxUSec=infinity[m
+RuntimeRandomizedExtraUSec=0[m
+WatchdogUSec=0[m
+WatchdogTimestampMonotonic=0[m
+RootDirectoryStartOnly=no[m
+RemainAfterExit=no[m
+[7mlines 1-20[27m[K[K [KESCESC[KOO[KBB[KGuessMainPID=yes[m
+[7mlines 2-21[27m[K[K [KESCESC[KOO[KBB[KMainPID=2039[m
+[7mlines 3-22[27m[K[K [KESCESC[KOO[KBB[KControlPID=0[m
+[7mlines 4-23[27m[K[K [KESCESC[KOO[KBB[KFileDescriptorStoreMax=0[m
+[7mlines 5-24[27m[K[K [KESCESC[KOO[KBB[KNFileDescriptorStore=0[m
+[7mlines 6-25[27m[K[K [KESCESC[KOO[KBB[KFileDescriptorStorePreserve=restart[m
+[7mlines 7-26[27m[K[K [KESCESC[KOO[KBB[KStatusErrno=0
