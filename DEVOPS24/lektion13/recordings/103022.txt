@@ -3398,4 +3398,46 @@ WantedBy=multi-user.target[m
            recommended for services where [4mType=[24m is set to [1mforking[22m. The path specified typically[m
            points to a file below /run/. If a relative path is specified it is hence prefixed[m
            with /run/. The service manager will read the PID of the main process of the service[m
-           from this file after start-up of the service. The service m
+           from this file after start-up of the service. The service manager will not write to[m
+           the file configured here, although it will remove the file after the service has shut[m
+           down if it still exists. The PID file does not need to be owned by a privileged user,[m
+           but if it is owned by an unprivileged user additional safety restrictions are[m
+           enforced: the file may not be a symlink to a file owned by a different user (neither[m
+           directly nor indirectly), and the PID file must refer to a process already belonging[m
+[7m Manual page systemd.service(5) line 240 (press h for help or q to quit)[27m[K[K           to the service.[m
+[m
+           Note that PID files should be avoided in modern projects. Use [1mType=notify[22m,[m
+           [1mType=notify-reload [22mor [1mType=simple [22mwhere possible, which does not require use of PID[m
+           files to determine the main process of a service and avoids needless forking.[m
+[m
+       [4mBusName=[0m[m
+           Takes a D-Bus destination name that this service shall use. This option is mandatory[m
+           for services where [4mType=[24m is set to [1mdbus[22m. It is recommended to always set this[m
+           property if known to make it easy to map the service name to the D-Bus destination.[m
+           In particular, [1msystemctl service-log-level/service-log-target [22mverbs make use of this.[m
+[m
+       [4mExecStart=[0m[m
+           Commands that are executed when this service is started. The value is split into zero[m
+           or more command lines according to the rules described in the section "Command Lines"[m
+           below.[m
+[m
+           Unless [4mType=[24m is [1moneshot[22m, exactly one command must be given. When [4mType=oneshot[24m is[m
+[7m Manual page systemd.service(5) line 258 (press h for help or q to quit)[27m[K[K           used, zero or more commands may be specified. Commands may be specified by providing[m
+           multiple command lines in the same directive, or alternatively, this directive may be[m
+           specified more than once with the same effect. If the empty string is assigned to[m
+           this option, the list of commands to start is reset, prior assignments of this option[m
+           will have no effect. If no [4mExecStart=[24m is specified, then the service must have[m
+           [4mRemainAfterExit=yes[24m and at least one [4mExecStop=[24m line set. (Services lacking both[m
+           [4mExecStart=[24m and [4mExecStop=[24m are not valid.)[m
+[m
+           If more than one command is specified, the commands are invoked sequentially in the[m
+           order they appear in the unit file. If one of the commands fails (and is not prefixed[m
+           with "-"), other lines are not executed, and the unit is considered failed.[m
+[m
+           Unless [4mType=forking[24m is set, the process started via this command line will be[m
+           considered the main process of the daemon.[m
+[m
+       [4mExecStartPre=[24m, [4mExecStartPost=[0m[m
+           Additional commands that are executed before or after the command in [4mExecStart=[24m,[m
+           respectively. Syntax is the same as for [4mExecStart=[24m, except that multiple command[m
+[7m Manual page systemd.service(5) line 276 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0
