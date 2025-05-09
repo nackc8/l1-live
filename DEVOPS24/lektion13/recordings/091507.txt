@@ -3126,4 +3126,374 @@ Script started on 2025-05-09 09:15:14+02:00 [TERM="xterm-256color" TTY="/dev/pts
               or comma-separated list, which offers a way to specify individual output columns.[m
               The recognized keywords are described in the [1mSTANDARD[0m [1mFORMAT[0m [1mSPECIFIERS[0m section[m
               below.  Headers may be renamed ([1mps[0m [1m-o[0m [1mpid,ruser=RealUser[0m [1m-o[0m [1mcomm=Command[0m) as[m
-              desired.  If all column headers are empty ([1mps[0m [1m-o[0m [1mpid=[0m [1m-
+              desired.  If all column headers are empty ([1mps[0m [1m-o[0m [1mpid=[0m [1m-o[0m [1mcomm=[0m) then the header[m
+              line will not be output.  Column width will increase as needed for wide headers;[m
+              this may be used to widen up columns such as WCHAN ([1mps[0m [1m-o[0m [1mpid,wchan=WIDE-WCHAN-[0m[m
+              [1mCOLUMN[0m [1m-o[0m [1mcomm[0m).  Explicit width control ([1mps[0m [1mopid,wchan:42,cmd[0m) is offered too.[m
+              The behavior of [1mps[0m [1m-o[0m [1mpid=X,comm=Y[0m varies with personality; output may be one[m
+[7m Manual page ps(1) line 276/1126 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              Like [1m-o[0m, but preloaded with some default columns.  Identical to [1m-o[0m [1mpid,[0m[4mformat[24m[1m,[0m[m
+[16;1H[K[7m Manual page ps(1) line 275/1126 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-O[0m [4mformat[24m[m
+[16;1H[K[7m Manual page ps(1) line 274/1126 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[16;1H[K[7m Manual page ps(1) line 273/1126 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              is identical to [1m-O[0m, with the BSD personality.[m
+[16;1H[K[7m Manual page ps(1) line 272/1126 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              in some other way (e.g.  with [1m-O[0m or [1m--sort[0m).  When used as a formatting option, it[m
+[16;1H[K[7m Manual page ps(1) line 271/1126 26% (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion13
+(B[m$ ps +[K-eO
+[?2004lerror: format or sort specification must follow -O
+
+Usage:
+ ps [options]
+
+ Try 'ps --help <simple|list|output|threads|misc|all>'
+  or 'ps --help <s|l|o|t|m|a>'
+ for additional help text.
+
+For more details see ps(1).
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ ps -eO[Ko
+[?2004lerror: format specification must follow -o
+
+Usage:
+ ps [options]
+
+ Try 'ps --help <simple|list|output|threads|misc|all>'
+  or 'ps --help <s|l|o|t|m|a>'
+ for additional help text.
+
+For more details see ps(1).
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ ps -eoOstate[K[K[K[K[Kpid,state[H[2J[94mDEVOPS24/lektion13
+(B[m$ ps -eOpid,state
+[?2004l    PID     PID S S TTY          TIME COMMAND
+      1       1 S S ?        00:00:01 /sbin/init splash
+      2       2 S S ?        00:00:00 [kthreadd]
+      3       3 I I ?        00:00:00 [rcu_gp]
+      4       4 I I ?        00:00:00 [rcu_par_gp]
+      5       5 I I ?        00:00:00 [slub_flushwq]
+      6       6 I I ?        00:00:00 [netns]
+      8       8 I I ?        00:00:00 [kworker/0:0H-events_highpri]
+     10      10 I I ?        00:00:00 [mm_percpu_wq]
+     11      11 I I ?        00:00:00 [rcu_tasks_kthread]
+     12      12 I I ?        00:00:00 [rcu_tasks_rude_kthread]
+     13      13 I I ?        00:00:00 [rcu_tasks_trace_kthread]
+     14      14 S S ?        00:00:00 [ksoftirqd/0]
+     15      15 I I ?        00:00:03 [rcu_preempt]
+     16      16 S S ?        00:00:00 [migration/0]
+     17      17 I I ?        00:00:00 [kworker/0:1-events]
+     18      18 S S ?        00:00:00 [cpuhp/0]
+     19      19 S S ?        00:00:00 [cpuhp/1]
+     20      20 S S ?        00:00:00 [migration/1]
+     21      21 S S ?        00:00:00 [ksoftirqd/1]
+     23      23 I I ?        00:00:00 [kworker/1:0H-events_highpri]
+     24      24 S S ?        00:00:00 [cpuhp/2]
+     25      25 S S ?        00:00:00 [migration/2]
+     26      26 S S ?        00:00:00 [ksoftirqd/2]
+     28      28 I I ?        00:00:00 [kworker/2:0H-events_highpri]
+     29      29 S S ?        00:00:00 [cpuhp/3]
+     30      30 S S ?        00:00:00 [migration/3]
+     31      31 S S ?        00:00:00 [ksoftirqd/3]
+     33      33 I I ?        00:00:00 [kworker/3:0H-events_highpri]
+     34      34 S S ?        00:00:00 [cpuhp/4]
+     35      35 S S ?        00:00:00 [migration/4]
+     36      36 S S ?        00:00:00 [ksoftirqd/4]
+     38      38 I I ?        00:00:00 [kworker/4:0H-events_highpri]
+     39      39 S S ?        00:00:00 [cpuhp/5]
+     40      40 S S ?        00:00:00 [migration/5]
+     41      41 S S ?        00:00:00 [ksoftirqd/5]
+     43      43 I I ?        00:00:00 [kworker/5:0H-events_highpri]
+     44      44 S S ?        00:00:00 [cpuhp/6]
+     45      45 S S ?        00:00:00 [migration/6]
+     46      46 S S ?        00:00:00 [ksoftirqd/6]
+     48      48 I I ?        00:00:00 [kworker/6:0H-events_highpri]
+     49      49 S S ?        00:00:00 [cpuhp/7]
+     50      50 S S ?        00:00:00 [migration/7]
+     51      51 S S ?        00:00:00 [ksoftirqd/7]
+     53      53 I I ?        00:00:00 [kworker/7:0H-events_highpri]
+     54      54 S S ?        00:00:00 [cpuhp/8]
+     55      55 S S ?        00:00:00 [migration/8]
+     56      56 S S ?        00:00:00 [ksoftirqd/8]
+     58      58 I I ?        00:00:00 [kworker/8:0H-events_highpri]
+     59      59 S S ?        00:00:00 [cpuhp/9]
+     60      60 S S ?        00:00:00 [migration/9]
+     61      61 S S ?        00:00:00 [ksoftirqd/9]
+     63      63 I I ?        00:00:00 [kworker/9:0H-events_highpri]
+     64      64 S S ?        00:00:00 [cpuhp/10]
+     65      65 S S ?        00:00:00 [migration/10]
+     66      66 S S ?        00:00:00 [ksoftirqd/10]
+     68      68 I I ?        00:00:00 [kworker/10:0H-events_highpri]
+     69      69 S S ?        00:00:00 [cpuhp/11]
+     70      70 S S ?        00:00:00 [migration/11]
+     71      71 S S ?        00:00:00 [ksoftirqd/11]
+     73      73 I I ?        00:00:00 [kworker/11:0H-events_highpri]
+     83      83 I I ?        00:00:01 [kworker/u24:9-kcryptd/253:1]
+     84      84 S S ?        00:00:00 [kdevtmpfs]
+     85      85 I I ?        00:00:00 [inet_frag_wq]
+     86      86 S S ?        00:00:00 [kauditd]
+     87      87 S S ?        00:00:00 [khungtaskd]
+     88      88 S S ?        00:00:00 [oom_reaper]
+     89      89 I I ?        00:00:00 [writeback]
+     90      90 S S ?        00:00:00 [kcompactd0]
+     91      91 S S ?        00:00:00 [ksmd]
+     92      92 S S ?        00:00:00 [khugepaged]
+     93      93 I I ?        00:00:00 [kintegrityd]
+     94      94 I I ?        00:00:00 [kblockd]
+     95      95 I I ?        00:00:00 [blkcg_punt_bio]
+     96      96 I I ?        00:00:00 [kworker/2:1-events]
+     97      97 I I ?        00:00:00 [tpm_dev_wq]
+     98      98 I I ?        00:00:00 [edac-poller]
+     99      99 I I ?        00:00:00 [devfreq_wq]
+    101     101 I I ?        00:00:00 [kworker/4:1-events]
+    103     103 I I ?        00:00:00 [kworker/6:1-events]
+    110     110 I I ?        00:00:00 [kworker/2:1H-events_highpri]
+    111     111 S S ?        00:00:00 [kswapd0]
+    117     117 I I ?        00:00:00 [kthrotld]
+    119     119 S S ?        00:00:00 [irq/124-pciehp]
+    120     120 S S ?        00:00:00 [irq/125-pciehp]
+    121     121 I I ?        00:00:00 [acpi_thermal_pm]
+    122     122 S S ?        00:00:00 [hwrng]
+    124     124 I I ?        00:00:00 [hfi-updates]
+    125     125 I I ?        00:00:00 [mld]
+    126     126 I I ?        00:00:00 [ipv6_addrconf]
+    131     131 I I ?        00:00:00 [kstrp]
+    136     136 I I ?        00:00:00 [zswap-shrink]
+    187     187 I I ?        00:00:00 [kworker/6:1H-events_highpri]
+    200     200 I I ?        00:00:00 [kworker/10:1H-events_highpri]
+    201     201 I I ?        00:00:00 [kworker/3:1H-events_highpri]
+    202     202 I I ?        00:00:00 [kworker/4:1H-events_highpri]
+    203     203 I I ?        00:00:00 [kworker/1:1H-events_highpri]
+    204     204 I I ?        00:00:00 [kworker/5:1H-events_highpri]
+    205     205 I I ?        00:00:00 [kworker/0:1H-events_highpri]
+    206     206 I I ?        00:00:00 [kworker/8:1H-events_highpri]
+    207     207 I I ?        00:00:00 [kworker/9:1H-events_highpri]
+    237     237 I I ?        00:00:00 [kworker/11:1H-events_highpri]
+    238     238 I I ?        00:00:00 [kworker/7:1H-events_highpri]
+    241     241 I I ?        00:00:00 [cryptd]
+    323     323 I I ?        00:00:00 [nvme-wq]
+    324     324 I I ?        00:00:00 [nvme-reset-wq]
+    325     325 I I ?        00:00:00 [nvme-delete-wq]
+    328     328 I I ?        00:00:00 [kworker/9:2-events]
+    329     329 S S ?        00:00:00 [irq/161-ELAN050B:00]
+    332     332 S S ?        00:00:00 [card0-crtc0]
+    333     333 S S ?        00:00:00 [card0-crtc1]
+    334     334 S S ?        00:00:00 [card0-crtc2]
+    335     335 S S ?        00:00:00 [card0-crtc3]
+    338     338 I I ?        00:00:00 [kworker/7:2-events]
+    341     341 I I ?        00:00:00 [md]
+    352     352 I I ?        00:00:00 [raid5wq]
+    820     820 I I ?        00:00:00 [kdmflush/253:0]
+    821     821 I I ?        00:00:00 [kcryptd_io/253:]
+    822     822 I I ?        00:00:00 [kcryptd/253:0]
+    823     823 S S ?        00:00:00 [dmcrypt_write/253:0]
+    860     860 S S ?        00:00:00 [jbd2/dm-0-8]
+    861     861 I I ?        00:00:00 [ext4-rsv-conver]
+    921     921 S S ?        00:00:00 /lib/systemd/systemd-journald
+    937     937 I I ?        00:00:00 [rpciod]
+    938     938 I I ?        00:00:00 [xprtiod]
+    939     939 S S ?        00:00:00 /lib/systemd/systemd-udevd
+   1071    1071 S S ?        00:00:00 [watchdogd]
+   1072    1072 S S ?        00:00:00 [irq/175-mei_me]
+   1132    1132 I I ?        00:00:00 [cfg80211]
+   1140    1140 S S ?        00:00:02 [irq/177-iwlwifi:default_queue]
+   1141    1141 S S ?        00:00:00 [irq/178-iwlwifi:queue_1]
+   1142    1142 S S ?        00:00:00 [irq/179-iwlwifi:queue_2]
+   1143    1143 S S ?        00:00:02 [irq/180-iwlwifi:queue_3]
+   1145    1145 S S ?        00:00:00 [irq/181-iwlwifi:queue_4]
+   1151    1151 S S ?        00:00:00 [irq/182-iwlwifi:queue_5]
+   1153    1153 S S ?        00:00:00 [irq/183-iwlwifi:queue_6]
+   1158    1158 S S ?        00:00:00 [irq/184-iwlwifi:queue_7]
+   1159    1159 S S ?        00:00:00 [irq/185-iwlwifi:queue_8]
+   1160    1160 S S ?        00:00:00 [irq/186-iwlwifi:queue_9]
+   1161    1161 S S ?        00:00:03 [irq/187-iwlwifi:queue_10]
+   1162    1162 S S ?        00:00:02 [irq/188-iwlwifi:queue_11]
+   1163    1163 S S ?        00:00:00 [irq/189-iwlwifi:queue_12]
+   1164    1164 S S ?        00:00:00 [irq/190-iwlwifi:exception]
+   1208    1208 D D ?        00:00:03 [kworker/u25:2+i915_flip]
+   1213    1213 S S ?        00:00:00 [irq/191-AudioDSP]
+   1297    1297 S S ?        00:00:00 [jbd2/nvme0n1p5-8]
+   1298    1298 I I ?        00:00:00 [ext4-rsv-conver]
+   1435    1435 I I ?        00:00:00 [kdmflush/253:1]
+   1436    1436 I I ?        00:00:00 [kcryptd_io/253:]
+   1437    1437 I I ?        00:00:00 [kcryptd/253:1]
+   1438    1438 S S ?        00:00:00 [dmcrypt_write/253:1]
+   1446    1446 S S ?        00:00:00 [jbd2/dm-1-8]
+   1447    1447 I I ?        00:00:00 [ext4-rsv-conver]
+   1482    1482 S S ?        00:00:00 /sbin/rpcbind -f -w
+   1483    1483 S S ?        00:00:00 /lib/systemd/systemd-timesyncd
+   1488    1488 S S ?        00:00:00 /usr/sbin/blkmapd
+   1489    1489 S S ?        00:00:00 /usr/sbin/rpc.idmapd
+   1490    1490 S S ?        00:00:00 /usr/sbin/nfsdcld
+   1495    1495 S S ?        00:00:00 /usr/libexec/accounts-daemon
+   1498    1498 S S ?        00:00:01 avahi-daemon: running [klad.local]
+   1502    1502 S S ?        00:00:00 /usr/libexec/bluetooth/bluetoothd
+   1504    1504 S S ?        00:00:00 /usr/sbin/cron -f
+   1505    1505 S S ?        00:00:02 /usr/bin/dbus-daemon --system --address=systemd: --nofork --n
+   1509    1509 S S ?        00:00:00 /usr/libexec/low-memory-monitor
+   1512    1512 S S ?        00:00:00 /usr/lib/polkit-1/polkitd --no-debug
+   1514    1514 S S ?        00:00:00 /usr/libexec/power-profiles-daemon
+   1517    1517 S S ?        00:00:00 /usr/sbin/smartd -n
+   1522    1522 S S ?        00:00:00 /usr/libexec/switcheroo-control
+   1527    1527 S S ?        00:00:00 /lib/systemd/systemd-logind
+   1529    1529 S S ?        00:00:00 /lib/systemd/systemd-machined
+   1530    1530 S S ?        00:00:00 /usr/libexec/udisks2/udisksd
+   1535    1535 S S ?        00:00:00 avahi-daemon: chroot helper
+   1574    1574 S S ?        00:00:00 [psimon]
+   1575    1575 S S ?        00:00:01 /usr/sbin/NetworkManager --no-daemon
+   1577    1577 S S ?        00:00:00 /sbin/wpa_supplicant -u -s -O DIR=/run/wpa_supplicant GROUP=n
+   1609    1609 S S ?        00:00:00 /usr/sbin/ModemManager
+   1612    1612 S S ?        00:00:00 /usr/libexec/boltd
+   1631    1631 S S ?        00:00:00 /usr/sbin/cupsd -l
+   1647    1647 S S ?        00:00:06 /usr/sbin/tailscaled --state=/var/lib/tailscale/tailscaled.st
+   1650    1650 S S ?        00:00:03 /usr/bin/containerd
+   1665    1665 S S ?        00:00:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+   1696    1696 S S ?        00:00:00 /usr/sbin/gdm3
+   1715    1715 I I ?        00:00:02 [kworker/u24:12-kcryptd/253:1]
+   1989    1989 I I ?        00:00:00 [iprt-VBoxWQueue]
+   1991    1991 S S ?        00:00:00 [iprt-VBoxTscThread]
+   2006    2006 S S ?        00:00:00 /usr/libexec/rtkit-daemon
+   2071    2071 I I ?        00:00:00 [kworker/3:2-mm_percpu_wq]
+   2292    2292 S S ?        00:00:00 /usr/sbin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/defaul
+   2293    2293 S S ?        00:00:00 /usr/sbin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/defaul
+   2296    2296 S S ?        00:00:00 [krfcommd]
+   2306    2306 S S ?        00:00:00 /usr/libexec/upowerd
+   2375    2375 S S ?        00:00:01 /usr/libexec/geoclue
+   2401    2401 S S ?        00:00:00 /usr/libexec/colord
+   2799    2799 S S ?        00:00:00 /usr/sbin/cups-browsed
+   2802    2802 S S ?        00:00:00 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/contai
+   2822    2822 S S ?        00:00:00 /sbin/rpc.statd
+   2824    2824 S S ?        00:00:00 /usr/sbin/rpc.mountd
+   2856    2856 I I ?        00:00:00 [lockd]
+   3124    3124 I I ?        00:00:00 [nfsd]
+   3125    3125 I I ?        00:00:00 [nfsd]
+   3126    3126 I I ?        00:00:00 [nfsd]
+   3127    3127 I I ?        00:00:00 [nfsd]
+   3128    3128 I I ?        00:00:00 [nfsd]
+   3129    3129 I I ?        00:00:00 [nfsd]
+   3130    3130 I I ?        00:00:00 [nfsd]
+   3131    3131 I I ?        00:00:00 [nfsd]
+   3367    3367 I I ?        00:00:00 [kworker/1:2-events]
+   3377    3377 S S ?        00:00:00 /usr/sbin/exim4 -bd -q30m
+   3378    3378 I I ?        00:00:00 [kworker/5:2-mm_percpu_wq]
+   3448    3448 S S ?        00:00:00 gdm-session-worker [pam/gdm-password]
+   3520    3520 S S ?        00:00:00 /lib/systemd/systemd --user
+   3521    3521 S S ?        00:00:00 (sd-pam)
+   3552    3552 S S ?        00:00:00 /usr/bin/pipewire
+   3554    3554 S S ?        00:00:00 /usr/bin/wireplumber
+   3555    3555 S S ?        00:00:00 /usr/bin/pipewire-pulse
+   3559    3559 S S ?        00:00:00 /usr/bin/gnome-keyring-daemon --foreground --components=pkcs1
+   3561    3561 S S ?        00:00:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --
+   3565    3565 S S ?        00:00:00 /usr/libexec/gvfsd
+   3572    3572 S S ?        00:00:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+   3622    3622 S S ?        00:00:00 /usr/libexec/tracker-miner-fs-3
+   3627    3627 S S ?        00:00:00 /usr/libexec/gvfs-udisks2-volume-monitor
+   3632    3632 S S ?        00:00:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+   3636    3636 S S ?        00:00:00 /usr/libexec/gvfs-mtp-volume-monitor
+   3638    3638 S S tty2     00:00:00 /usr/libexec/gdm-x-session --run-script /usr/bin/gnome-sessio
+   3646    3646 S S ?        00:00:00 /usr/libexec/gvfs-goa-volume-monitor
+   3647    3647 S S tty2     00:00:57 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/
+   3651    3651 S S ?        00:00:00 /usr/libexec/goa-daemon
+   3679    3679 S S ?        00:00:00 /usr/libexec/goa-identity-service
+   3685    3685 S S ?        00:00:00 /usr/libexec/gvfs-afc-volume-monitor
+   3721    3721 S S ?        00:00:00 /usr/libexec/xdg-permission-store
+   3731    3731 S S tty2     00:00:00 /usr/libexec/gnome-session-binary
+   3809    3809 S S ?        00:00:00 /usr/bin/ssh-agent /usr/bin/im-launch /usr/bin/gnome-session
+   3855    3855 S S ?        00:00:00 /usr/libexec/at-spi-bus-launcher
+   3864    3864 S S ?        00:00:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi
+   3891    3891 S S ?        00:00:00 /usr/libexec/gcr-ssh-agent /run/user/1000/gcr
+   3892    3892 S S ?        00:00:00 /usr/libexec/gnome-session-ctl --monitor
+   3902    3902 S S ?        00:00:00 /usr/libexec/gnome-session-binary --systemd-service --session
+   3923    3923 S S ?        00:00:56 /usr/bin/gnome-shell
+   4009    4009 S S ?        00:00:00 /usr/libexec/gnome-shell-calendar-server
+   4018    4018 S S ?        00:00:00 /usr/libexec/evolution-source-registry
+   4065    4065 S S ?        00:00:00 /usr/libexec/gvfsd-metadata
+   4074    4074 S S ?        00:00:00 /usr/libexec/evolution-calendar-factory
+   4081    4081 S S ?        00:00:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shell.Notificat
+   4083    4083 S S ?        00:00:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+   4108    4108 S S ?        00:00:00 /usr/libexec/evolution-addressbook-factory
+   4133    4133 S S ?        00:00:00 sh -c /usr/bin/ibus-daemon --panel disable $([ "$XDG_SESSION_
+   4137    4137 S S ?        00:00:00 /usr/libexec/gsd-a11y-settings
+   4138    4138 S S ?        00:00:02 /usr/bin/ibus-daemon --panel disable --xim
+   4141    4141 S S ?        00:00:00 /usr/libexec/gsd-color
+   4143    4143 S S ?        00:00:00 /usr/libexec/gsd-datetime
+   4147    4147 S S ?        00:00:00 /usr/libexec/gsd-housekeeping
+   4150    4150 S S ?        00:00:00 /usr/libexec/evolution-data-server/evolution-alarm-notify
+   4152    4152 S S ?        00:00:00 /usr/libexec/gsd-keyboard
+   4155    4155 S S ?        00:00:00 /usr/libexec/gsd-media-keys
+   4157    4157 S S ?        00:00:00 /usr/libexec/gsd-power
+   4161    4161 S S ?        00:00:00 /usr/bin/python3 /usr/bin/blueman-applet
+   4162    4162 S S ?        00:00:00 /usr/libexec/gsd-print-notifications
+   4164    4164 S S ?        00:00:00 /usr/libexec/gsd-rfkill
+   4166    4166 S S ?        00:00:00 /usr/libexec/gsd-screensaver-proxy
+   4168    4168 S S ?        00:00:00 /usr/libexec/gsd-sharing
+   4170    4170 S S ?        00:00:00 /usr/libexec/gsd-smartcard
+   4173    4173 S S ?        00:00:00 /usr/libexec/gsd-sound
+   4175    4175 S S ?        00:00:00 /usr/libexec/gsd-usb-protection
+   4178    4178 S S ?        00:00:00 /usr/libexec/gsd-wacom
+   4181    4181 S S ?        00:00:00 /usr/libexec/gsd-xsettings
+   4185    4185 S S ?        00:00:00 /usr/libexec/dconf-service
+   4203    4203 S S ?        00:00:11 /usr/bin/gnome-software --gapplication-service
+   4213    4213 S S ?        00:00:00 /usr/libexec/gsd-disk-utility-notify
+   4241    4241 S S ?        00:00:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.ScreenSaver
+   4250    4250 S S ?        00:00:00 /usr/libexec/ibus-dconf
+   4255    4255 S S ?        00:00:00 /usr/libexec/gsd-printer
+   4256    4256 S S ?        00:00:01 /usr/libexec/ibus-extension-gtk3
+   4260    4260 S S ?        00:00:00 /usr/libexec/ibus-x11 --kill-daemon
+   4264    4264 S S ?        00:00:00 /usr/libexec/ibus-portal
+   4372    4372 S S ?        00:00:00 /usr/libexec/xdg-desktop-portal
+   4396    4396 S S ?        00:00:00 /usr/libexec/bluetooth/obexd
+   4400    4400 S S ?        00:00:02 /usr/bin/python3 /usr/bin/blueman-tray
+   4402    4402 S S ?        00:00:00 /usr/libexec/xdg-document-portal
+   4408    4408 S S ?        00:00:00 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,sub
+   4413    4413 S S ?        00:00:00 /usr/libexec/xdg-desktop-portal-gnome
+   4477    4477 S S ?        00:00:00 /usr/libexec/ibus-engine-simple
+   4517    4517 S S ?        00:00:00 /usr/libexec/xdg-desktop-portal-gtk
+   4551    4551 S S ?        00:00:00 /usr/lib/x86_64-linux-gnu/libexec/xdg-desktop-portal-kde
+   4612    4612 S S ?        00:00:01 /usr/libexec/fwupd/fwupd
+   6413    6413 I I ?        00:00:01 [kworker/u24:14-kcryptd/253:1]
+   6524    6524 I I ?        00:00:00 [kworker/11:2-mm_percpu_wq]
+   6610    6610 I I ?        00:00:00 [kworker/8:0-events]
+   6623    6623 S S ?        00:00:14 /opt/google/chrome/chrome
+   6629    6629 S S ?        00:00:00 cat
+   6630    6630 S S ?        00:00:00 cat
+   6632    6632 S S ?        00:00:00 /opt/google/chrome/chrome_crashpad_handler --monitor-self --m
+   6634    6634 S S ?        00:00:00 /opt/google/chrome/chrome_crashpad_handler --no-periodic-task
+   6640    6640 S S ?        00:00:00 /opt/google/chrome/chrome --type=zygote --no-zygote-sandbox -
+   6641    6641 S S ?        00:00:00 /opt/google/chrome/chrome --type=zygote --crashpad-handler-pi
+   6643    6643 S S ?        00:00:00 /opt/google/chrome/chrome --type=zygote --crashpad-handler-pi
+   6693    6693 S S ?        00:00:07 /opt/google/chrome/chrome --type=gpu-process --disable-gpu-ra
+   6695    6695 S S ?        00:00:04 /opt/google/chrome/chrome --type=utility --utility-sub-type=n
+   6715    6715 S S ?        00:00:00 /opt/google/chrome/chrome --type=utility --utility-sub-type=s
+   6773    6773 S S ?        00:00:01 /opt/google/chrome/chrome --type=renderer --crashpad-handler-
+   6789    6789 S S ?        00:00:00 /opt/google/chrome/chrome --type=renderer --crashpad-handler-
+   6796    6796 S S ?        00:00:01 /opt/google/chrome/chrome --type=renderer --crashpad-handler-
+   6860    6860 S S ?        00:00:00 /opt/google/chrome/chrome --type=renderer --crashpad-handler-
+   6883    6883 S S ?        00:00:00 /opt/google/chrome/chrome --type=utility --utility-sub-type=a
+   6910    6910 I I ?        00:00:00 [kworker/11:0]
+   7032    7032 I I ?        00:00:00 [kworker/5:1-events]
+   7044    7044 I I ?        00:00:00 [kworker/2:0-mm_percpu_wq]
+   7090    7090 S S ?        00:00:16 /opt/google/chrome/chrome --type=renderer --crashpad-handler-
+   7141    7141 S S ?        00:00:00 /opt/google/chrome/chrome --type=renderer --crashpad-handler-
+   7157    7157 I I ?        00:00:00 [kworker/4:2]
+   7158    7158 S S ?        00:00:00 /opt/google/chrome/chrome --type=renderer --crashpad-handler-
+   7228    7228 I I ?        00:00:02 [kworker/u25:0-rb_allocator]
+   7233    7233 R R ?        00:00:00 [kworker/u24:1+kcryptd/253:1]
+   7239    7239 I I ?        00:00:00 [kworker/7:0-events]
+   7240    7240 I I ?        00:00:03 [kworker/u25:3-rb_allocator]
+   7252    7252 S S ?        00:00:00 /usr/bin/gnome-calendar --gapplication-service
+   7304    7304 S S ?        00:00:00 /usr/libexec/gvfsd-trash --spawner :1.6 /org/gtk/gvfs/exec_sp
+   7570    7570 I I ?        00:00:01 [kworker/u24:3-kcryptd/253:1]
+   7705    7705 I I ?        00:00:00 [kworker/8:2]
+   7889    7889 I I ?        00:00:01 [kworker/u24:5-kcryptd/253:1]
+   8331    8331 I I ?        00:00:00 [kworker/6:0-events]
+   8400    8400 S S ?        00:00:17 /usr/share/code/code .
+   8426    8426 S S ?        00:00:00 /usr/share/code/code --type=zygote --no-zygote-sandbox
+   8427    8427 S S ?        00:00:00 /usr/share/code/code --type=zygote
+   8429    8429 S S ?        00:00:00 /usr/share/code/code --type=zygote
+   8448    8448 S S ?        00:00:00 /usr/share/code/chrome_crashpad_handler --monitor-self-annota
+   8464    8464 S S ?        00:01:12 /usr/share/code/code --type=gpu-process --crashpad-handler-pi
+   8468    8468 S S ?        00:00:00 /usr/share/code/code --type=utility --utility-sub-type=networ
+   8513    8513 S S ?        00:01:31 /usr/share/code/code --type=renderer --crashpad-handler-pid=8
+   8531    8531 S S ?        00:00:03 /usr/share/code/code --type=utility --utility-sub-type=node.m
+   8532    8532 S S ?        00:00:01 /usr/share/code/code --type=utility --utility-sub-type=node.m
+   8551    8551 S S ?        00:00:05 /usr/share/code/code --type=utility --utility-sub-type=node.m
+   8561    8561 S S ?        00:00:19 /usr/share/code/code --type=utility --utility-sub-type=node.m
+   8599    8599 S S pts/1    00:00:00 /usr/bin/bash --rcfile ./.profiles/educator/present_dot_bashr
+   8874  
