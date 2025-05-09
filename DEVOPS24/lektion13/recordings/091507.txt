@@ -883,4 +883,123 @@ Script started on 2025-05-09 09:15:14+02:00 [TERM="xterm-256color" TTY="/dev/pts
    8464    8400    8400 ?        00:00:19         code
    8427    8400    8400 ?        00:00:00       code
    8429    8400    8400 ?        00:00:00         code
-   85
+   8513    8400    8400 ?        00:00:28           code
+   8468    8400    8400 ?        00:00:00       code
+   8531    8400    8400 ?        00:00:03       code
+   8532    8400    8400 ?        00:00:00       code
+   8551    8400    8400 ?        00:00:01       code
+   8599    8599    8599 pts/1    00:00:00         bash
+   9151    8599    8599 pts/1    00:00:00           script
+   9152    9152    9152 pts/3    00:00:00             bash_noprofile_
+   9153    9153    9152 pts/3    00:00:00               bash
+  10109   10109    9152 pts/3    00:00:00                 man
+  10117   10109    9152 pts/3    00:00:00                   pager
+  12419   12419    9152 pts/3    00:00:00                 ps
+   8980    8980    8980 pts/2    00:00:00         autocommit
+  12367    8980    8980 pts/2    00:00:00           sleep
+   8561    8400    8400 ?        00:00:11       code
+   8874    8400    8400 ?        00:00:00         code
+   8448    8447    8447 ?        00:00:00     chrome_crashpad
+   4612    4612    4612 ?        00:00:01   fwupd
+   7562    7562    7562 ?        00:00:00   packagekitd
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ q[K[H[2J[94mDEVOPS24/lektion13
+(B[m$ [K(B[m$ [K(B[m$ man ps
+[?2004l[?1049h[22;0;0t[?1h=PS(1)                                     User Commands                                    PS(1)[m
+[m
+[1mNAME[0m[m
+       ps - report a snapshot of the current processes.[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mps[0m [[4moptions[24m][m
+[m
+[1mDESCRIPTION[0m[m
+       [1mps[0m displays information about a selection of the active processes.  If you want a[m
+       repetitive update of the selection and the displayed information, use [1mtop[0m instead.[m
+[m
+       This version of [1mps[0m accepts several kinds of options:[m
+[m
+       1   UNIX options, which may be grouped and must be preceded by a dash.[m
+       2   BSD options, which may be grouped and must not be used with a dash.[m
+       3   GNU long options, which are preceded by two dashes.[m
+[m
+[7m Manual page ps(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Options of different types may be freely mixed, but conflicts can appear.  There are some[m
+[7m Manual page ps(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       synonymous options, which are functionally identical, due to the many standards and [1mps[0m[m
+[7m Manual page ps(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       implementations that this [1mps[0m is compatible with.[m
+[7m Manual page ps(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Note that [1mps[0m [1m-aux[0m is distinct from [1mps[0m [1maux[0m.  The POSIX and UNIX standards require that[m
+[7m Manual page ps(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mps[0m [1m-aux[0m print all processes owned by a user named [4mx[24m, as well as printing all processes[m
+[7m Manual page ps(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       that would be selected by the [1m-a[0m option.  If the user named [4mx[24m does not exist, this [1mps[0m may[m
+[7m Manual page ps(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       interpret the command as [1mps[0m [1maux[0m instead and print a warning.  This behavior is intended[m
+[7m Manual page ps(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       to aid in transitioning old scripts and habits.  It is fragile, subject to change, and[m
+[7m Manual page ps(1) line 10 (press h for help or q to quit)[27m[K[K       thus should not be relied upon.[m
+[m
+       By default, [1mps[0m selects all processes with the same effective user ID (euid=EUID) as the[m
+       current user and associated with the same terminal as the invoker.  It displays the[m
+       process ID (pid=PID), the terminal associated with the process (tname=TTY), the cumulated[m
+       CPU time in [DD-]hh:mm:ss format (time=TIME), and the executable name (ucmd=CMD).  Output[m
+       is unsorted by default.[m
+[m
+       The use of BSD-style options will add process state (stat=STAT) to the default display[m
+       and show the command args (args=COMMAND) instead of the executable name.  You can[m
+       override this with the [1mPS_FORMAT[0m environment variable. The use of BSD-style options will[m
+       also change the process selection to include processes on other terminals (TTYs) that are[m
+       owned by you; alternately, this may be described as setting the selection to be the set[m
+       of all processes filtered to exclude processes owned by other users or not on a terminal.[m
+       These effects are not considered when options are described as being "identical" below,[m
+       so [1m-M[0m will be considered identical to [1mZ[0m and so on.[m
+[m
+       Except as described below, process selection options are additive.  The default selection[m
+[7m Manual page ps(1) line 28 (press h for help or q to quit)[27m[K[K       is discarded, and then the selected processes are added to the set of processes to be[m
+       displayed.  A process will thus be shown if it meets any of the given selection criteria.[m
+[m
+[1mEXAMPLES[0m[m
+       To see every process on the system using standard syntax:[m
+          [1mps[0m [1m-e[0m[m
+          [1mps[0m [1m-ef[0m[m
+          [1mps[0m [1m-eF[0m[m
+          [1mps[0m [1m-ely[0m[m
+[m
+       To see every process on the system using BSD syntax:[m
+          [1mps[0m [1max[0m[m
+          [1mps[0m [1maxu[0m[m
+[m
+       To print a process tree:[m
+          [1mps[0m [1m-ejH[0m[m
+          [1mps[0m [1maxjf[0m[m
+[m
+[7m Manual page ps(1) line 46 (press h for help or q to quit)[27m[K[K       To get info about threads:[m
+          [1mps[0m [1m-eLf[0m[m
+          [1mps[0m [1maxms[0m[m
+[m
+       To get security info:[m
+          [1mps[0m [1m-eo[0m [1meuser,ruser,suser,fuser,f,comm,label[0m[m
+          [1mps[0m [1maxZ[0m[m
+          [1mps[0m [1m-eM[0m[m
+[m
+       To see every process running as root (real & effective ID) in user format:[m
+          [1mps[0m [1m-U[0m [1mroot[0m [1m-u[0m [1mroot[0m [1mu[0m[m
+[m
+       To see every process with a user-defined format:[m
+          [1mps[0m [1m-eo[0m [1mpid,tid,class,rtprio,ni,pri,psr,pcpu,stat,wchan:14,comm[0m[m
+          [1mps[0m [1maxo[0m [1mstat,euid,ruid,tty,tpgid,sess,pgrp,ppid,pid,pcpu,comm[0m[m
+          [1mps[0m [1m-Ao[0m [1mpid,tt,user,fname,tmout,f,wchan[0m[m
+[m
+       Print only the process IDs of syslogd:[m
+[7m Manual page ps(1) line 64 (press h for help or q to quit)[27m[K[K          [1mps[0m [1m-C[0m [1msyslogd[0m [1m-o[0m [1mpid=[0m[m
+[m
+       Print only the name of PID 42:[m
+          [1mps[0m [1m-q[0m [1m42[0m [1m-o[0m [1mcomm=[0m[m
+[m
+[1mSIMPLE[0m [1mPROCESS[0m [1mSELECTION[0m[m
+       [1ma[0m      Lift the BSD-style "only yourself" restriction, which is imposed upon the set of[m
+              all processes when some BSD-style (without "-") options are used or when the [1mps[0m[m
+              personality setting is BSD-like.  The set of processes selected in this manner is[m
+              in addition to the set of processes selected by other means.  An alternate[m
+              description is that this option causes [1mps[0m to list all processes with a terminal[m
+              (tty), or to list all processes when used together with the [1mx[0m option.[m
+[m
+       [1m-A[0m     Select all processes.  Identical to [1m-e[0m.[m
+[m
+       [1m-a[0m     Select all processes except both session leaders (see [4mgetsid[24m(2)) and processes not[m
+              as
