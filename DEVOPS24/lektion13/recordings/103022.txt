@@ -2071,4 +2071,187 @@ No VM guests are running outdated hypervisor (qemu) binaries on this host.
      Memory: 5.2M (peak: 5.3M)[m
         CPU: 26ms[m
      CGroup: /system.slice/apache2.service[m
-  
+             ├─[0;38;5;245m2039 /usr/sbin/apache2 -k start[0m[m
+             ├─[0;38;5;245m2041 /usr/sbin/apache2 -k start[0m[m
+             └─[0;38;5;245m2042 /usr/sbin/apache2 -k start[0m[m
+[m
+May 09 08:58:00 ubse systemd[1]: Starting apache2.service - The Apache HTTP Server...[m
+May 09 08:58:00 ubse apachectl[2038]: AH00558: apache2: Could not reliably determine the server's [m[7m>[27m
+May 09 08:58:00 ubse systemd[1]: Started apache2.service - The Apache HTTP Server.[m
+[7mlines 1-16/16 (END)[27m[K[K[?1l>[?2004h]0;root@ubse: ~root@ubse:~# fg
+[?2004l-bash: fg: current: no such job
+[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# man systemctl 
+[?2004l[?1049h[22;0;0t[?1h=[4mSYSTEMCTL[24m(1)                                systemctl                               [4mSYSTEMCTL[24m(1)[m
+[m
+[1mNAME[0m[m
+       systemctl - Control the systemd system and service manager[m
+[m
+[1mSYNOPSIS[0m[m
+[m
+       [1msystemctl [22m[OPTIONS...] COMMAND [UNIT...][m
+[m
+[1mDESCRIPTION[0m[m
+       [1msystemctl [22mmay be used to introspect and control the state of the "systemd" system and[m
+       service manager. Please refer to [1msystemd[22m(1) for an introduction into the basic concepts[m
+       and functionality this tool manages.[m
+[m
+[1mCOMMANDS[0m[m
+       The following commands are understood:[m
+[m
+   [1mUnit Commands (Introspection and Modification)[0m[m
+       [1mlist-units [22m[[4mPATTERN[24m...][m
+           List units that [1msystemd [22mcurrently has in memory. This includes units that are either[m
+[7m Manual page systemctl(1) line 1 (press h for help or q to quit)[27m[K[K           referenced directly or through a dependency, units that are pinned by applications[m
+           programmatically, or units that were active in the past and have failed. By default[m
+           only units which are active, have pending jobs, or have failed are shown; this can be[m
+           changed with option [1m--all[22m. If one or more [4mPATTERN[24ms are specified, only units matching[m
+           one of them are shown. The units that are shown are additionally filtered by [1m--type=[0m[m
+           and [1m--state= [22mif those options are specified.[m
+[m
+           Note that this command does not show unit templates, but only instances of unit[m
+           templates. Units templates that aren't instantiated are not runnable, and will thus[m
+           never show up in the output of this command. Specifically this means that[m
+           foo@.service will never be shown in this list — unless instantiated, e.g. as[m
+           foo@bar.service. Use [1mlist-unit-files [22m(see below) for listing installed unit template[m
+           files.[m
+[m
+           Produces output similar to[m
+[m
+                 UNIT                         LOAD   ACTIVE SUB     DESCRIPTION[m
+                 sys-module-fuse.device       loaded active plugged /sys/module/fuse[m
+                 -.mount                      loaded active mounted Root Mount[m
+                 boot-efi.mount               loaded active mounted /boot/efi[m
+[7m Manual page systemctl(1) line 21 (press h for help or q to quit)[27m[K[Kset mark: [K[7mInvalid mark letter    (press RETURN)[27m[21;1H[K...skipping...
+           referenced directly or through a dependency, units that are pinned by applications[m
+           programmatically, or units that were active in the past and have failed. By default[m
+           only units which are active, have pending jobs, or have failed are shown; this can be[m
+           changed with option [1m--all[22m. If one or more [4mPATTERN[24ms are specified, only units matching[m
+           one of them are shown. The units that are shown are additionally filtered by [1m--type=[0m[m
+           and [1m--state= [22mif those options are specified.[m
+[m
+           Note that this command does not show unit templates, but only instances of unit[m
+           templates. Units templates that aren't instantiated are not runnable, and will thus[m
+           never show up in the output of this command. Specifically this means that[m
+           foo@.service will never be shown in this list — unless instantiated, e.g. as[m
+           foo@bar.service. Use [1mlist-unit-files [22m(see below) for listing installed unit template[m
+           files.[m
+[m
+           Produces output similar to[m
+[m
+                 UNIT                         LOAD   ACTIVE SUB     DESCRIPTION[m
+                 sys-module-fuse.device       loaded active plugged /sys/module/fuse[m
+                 -.mount                      loaded active mounted Root Mount[m
+                 boot-efi.mount               loaded active mounted /boot/efi[m
+[7m Manual page systemctl(1) line 21 (press h for help or q to quit)[27m[K[K                 systemd-journald.service     loaded active running Journal Service[m
+                 systemd-logind.service       loaded active running Login Service[m
+               ● user@1000.service            loaded failed failed  User Manager for UID 1000[m
+                 ...[m
+                 systemd-tmpfiles-clean.timer loaded active waiting Daily Cleanup of Temporary Dire[m ctories[m
+[m
+               LOAD   = Reflects whether the unit definition was properly loaded.[m
+               ACTIVE = The high-level unit activation state, i.e. generalization of SUB.[m
+               SUB    = The low-level unit activation state, values depend on unit type.[m
+[m
+               123 loaded units listed. Pass --all to see loaded but inactive units, too.[m
+               To show all installed unit files use 'systemctl list-unit-files'.[m
+[m
+           The header and the last unit of a given type are underlined if the terminal supports[m
+           that. A colored dot is shown next to services which were masked, not found, or[m
+           otherwise failed.[m
+[m
+           The LOAD column shows the load state, one of [1mloaded[22m, [1mnot-found[22m, [1mbad-setting[22m, [1merror[22m,[m
+           [1mmasked[22m. The ACTIVE columns shows the general unit state, one of [1mactive[22m, [1mreloading[22m,[m
+[7m Manual page systemctl(1) line 41 (press h for help or q to quit)[27m[K[K           [1minactive[22m, [1mfailed[22m, [1mactivating[22m, [1mdeactivating[22m. The SUB column shows the[m
+           unit-type-specific detailed state of the unit, possible values vary by unit type. The[m
+           list of possible LOAD, ACTIVE, and SUB states is not constant and new systemd[m
+           releases may both add and remove values.[m
+[m
+               systemctl --state=help[m
+[m
+           command may be used to display the current set of possible values.[m
+[m
+           This is the default command.[m
+[m
+       [1mlist-automounts [22m[[4mPATTERN[24m...][m
+           List automount units currently in memory, ordered by mount path. If one or more[m
+           [4mPATTERN[24ms are specified, only automount units matching one of them are shown. Produces[m
+           output similar to[m
+[m
+               WHAT        WHERE                    MOUNTED IDLE TIMEOUT UNIT[m
+               /dev/sdb1   /mnt/test                no      120s         mnt-test.automount[m
+               binfmt_misc /proc/sys/fs/binfmt_misc yes     0            proc-sys-fs-binfmt_misc.au[m tomount[m
+[7m Manual page systemctl(1) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KDD[H[2J[H           [1minactive[22m, [1mfailed[22m, [1mactivating[22m, [1mdeactivating[22m. The SUB column shows the[m
+           unit-type-specific detailed state of the unit, possible values vary by unit type. The[m
+           list of possible LOAD, ACTIVE, and SUB states is not constant and new systemd[m
+           releases may both add and remove values.[m
+[m
+               systemctl --state=help[m
+[m
+           command may be used to display the current set of possible values.[m
+[m
+           This is the default command.[m
+[m
+       [1mlist-automounts [22m[[4mPATTERN[24m...][m
+           List automount units currently in memory, ordered by mount path. If one or more[m
+           [4mPATTERN[24ms are specified, only automount units matching one of them are shown. Produces[m
+           output similar to[m
+[m
+               WHAT        WHERE                    MOUNTED IDLE TIMEOUT UNIT[m
+               /dev/sdb1   /mnt/test                no      120s         mnt-test.automount[m
+               binfmt_misc /proc/sys/fs/binfmt_misc yes     0            proc-sys-fs-binfmt_misc.au[m tomount[m
+[7m Manual page systemctl(1) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KDD[H[2J[H           [1minactive[22m, [1mfailed[22m, [1mactivating[22m, [1mdeactivating[22m. The SUB column shows the[m
+           unit-type-specific detailed state of the unit, possible values vary by unit type. The[m
+           list of possible LOAD, ACTIVE, and SUB states is not constant and new systemd[m
+           releases may both add and remove values.[m
+[m
+               systemctl --state=help[m
+[m
+           command may be used to display the current set of possible values.[m
+[m
+           This is the default command.[m
+[m
+       [1mlist-automounts [22m[[4mPATTERN[24m...][m
+           List automount units currently in memory, ordered by mount path. If one or more[m
+           [4mPATTERN[24ms are specified, only automount units matching one of them are shown. Produces[m
+           output similar to[m
+[m
+               WHAT        WHERE                    MOUNTED IDLE TIMEOUT UNIT[m
+               /dev/sdb1   /mnt/test                no      120s         mnt-test.automount[m
+               binfmt_misc /proc/sys/fs/binfmt_misc yes     0            proc-sys-fs-binfmt_misc.au[m tomount[m
+[7m Manual page systemctl(1) line 60 (press h for help or q to quit)[27m[K[K[m
+               2 automounts listed.[m
+[m
+           Also see [1m--show-types[22m, [1m--all[22m, and [1m--state=[22m.[m
+[m
+           Added in version 252.[m
+[m
+       [1mlist-paths [22m[[4mPATTERN[24m...][m
+           List path units currently in memory, ordered by path. If one or more [4mPATTERN[24ms are[m
+           specified, only path units matching one of them are shown. Produces output similar to[m
+[m
+               PATH                           CONDITION         UNIT                               [m ACTIVATES[m
+               /run/systemd/ask-password      DirectoryNotEmpty systemd-ask-password-plymouth.path [m systemd-ask-password-plymouth.service[m
+               /run/systemd/ask-password      DirectoryNotEmpty systemd-ask-password-wall.path     [m systemd-ask-password-wall.service[m
+               /var/cache/cups/org.cups.cupsd PathExists        cups.path                          [m cups.service[m
+[m
+[7m Manual page systemctl(1) line 79 (press h for help or q to quit)[27m[K[K               3 paths listed.[m
+[m
+           Also see [1m--show-types[22m, [1m--all[22m, and [1m--state=[22m.[m
+[m
+           Added in version 254.[m
+[m
+       [1mlist-sockets [22m[[4mPATTERN[24m...][m
+           List socket units currently in memory, ordered by listening address. If one or more[m
+           [4mPATTERN[24ms are specified, only socket units matching one of them are shown. Produces[m
+           output similar to[m
+[m
+               LISTEN           UNIT                        ACTIVATES[m
+               /dev/initctl     systemd-initctl.socket      systemd-initctl.service[m
+               ...[m
+               [::]:22          sshd.socket                 sshd.service[m
+               kobject-uevent 1 systemd-udevd-kernel.socket systemd-udevd.service[m
+[m
+               5 sockets listed.[m
+[m
+           Note: because the addresses might contains spaces, this output is not suitable for[m
+[7m Manual page systemctl(1) line 95 (press h for hel
