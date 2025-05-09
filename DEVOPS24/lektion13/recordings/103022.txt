@@ -3134,4 +3134,33 @@ WantedBy=multi-user.target[m
 [7m Manual page systemd.unit(5) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ".path", ".timer", ".slice", or ".scope".[m
 [7m Manual page systemd.unit(5) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
 [7m Manual page systemd.unit(5) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Unit names can be parameterized by a single argument called the "instance name". The unit[m
-[7m Manual page 
+[7m Manual page systemd.unit(5) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       is then constructed based on a "template file" which serves as the definition of multiple[m
+[7m Manual page systemd.unit(5) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       services or other units. A template unit must have a single "@" at the end of the unit[m
+[7m Manual page systemd.unit(5) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       name prefix (right before the type suffix). The name of the full unit is formed by[m
+[7m Manual page systemd.unit(5) line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       inserting the instance name between "@" and the unit type suffix. In the unit file[m
+[7m Manual page systemd.unit(5) line 50 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# [K]0;root@ubse: ~root@ubse:~# man 5 systemd.unit[K[K[K[Kservice
+[?2004l[?1049h[22;0;0t[?1h=[4mSYSTEMD.SERVICE[24m(5)                       systemd.service                      [4mSYSTEMD.SERVICE[24m(5)[m
+[m
+[1mNAME[0m[m
+       systemd.service - Service unit configuration[m
+[m
+[1mSYNOPSIS[0m[m
+       [4mservice[24m.service[m
+[m
+[1mDESCRIPTION[0m[m
+       A unit configuration file whose name ends in ".service" encodes information about a[m
+       process controlled and supervised by systemd.[m
+[m
+       This man page lists the configuration options specific to this unit type. See[m
+       [1msystemd.unit[22m(5) for the common options of all unit configuration files. The common[m
+       configuration items are configured in the generic [Unit] and [Install] sections. The[m
+       service specific configuration options are configured in the [Service] section.[m
+[m
+       Additional options are listed in [1msystemd.exec[22m(5), which define the execution environment[m
+[7m Manual page systemd.service(5) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the commands are executed in, and in [1msystemd.kill[22m(5), which define the way the processes[m
+[7m Manual page systemd.service(5) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       of the service are terminated, and in [1msystemd.resource-control[22m(5), which configure[m
+[7m Manual page systemd.service(5) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       resource control settings for the processes of the service.[m
+[7m Manual page systemd.service(5) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemd.service(5) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       If SysV init compat is enabled, systemd automatically creates service units that wrap[m
+[7m Manual page systemd.service(5) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       SysV init scripts (the service name is the same as the name of the script, with a[m
+[7m Manual page systemd.service(5) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ".service" suffix 
