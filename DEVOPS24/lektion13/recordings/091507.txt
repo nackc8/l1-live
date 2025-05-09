@@ -1,0 +1,445 @@
+Script started on 2025-05-09 09:15:14+02:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="120" LINES="9"]
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mDEVOPS24/lektion13
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ ps [K
+[?2004l    PID TTY          TIME CMD
+   9152 pts/3    00:00:00 bash_noprofile_
+   9153 pts/3    00:00:00 bash
+   9730 pts/3    00:00:00 ps
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ man ps[H[2J[94mDEVOPS24/lektion13
+(B[m$ man ps[K(B[m$ man ps[K(B[m$ man ps[K(B[m$ man ps[K(B[m$ man ps[K(B[m$ man ps
+[?2004l[?1049h[22;0;0t[?1h=PS(1)                                     User Commands                                    PS(1)[m
+[m
+[1mNAME[0m[m
+       ps - report a snapshot of the current processes.[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mps[0m [[4moptions[24m][m
+[m
+[1mDESCRIPTION[0m[m
+       [1mps[0m displays information about a selection of the active processes.  If you want a[m
+       repetitive update of the selection and the displayed information, use [1mtop[0m instead.[m
+[m
+       This version of [1mps[0m accepts several kinds of options:[m
+[m
+       1   UNIX options, which may be grouped and must be preceded by a dash.[m
+       2   BSD options, which may be grouped and must not be used with a dash.[m
+       3   GNU long options, which are preceded by two dashes.[m
+[m
+       Options of different types may be freely mixed, but conflicts can appear.  There are some[m
+       synonymous options, which are functionally identical, due to the many standards and [1mps[0m[m
+       implementations that this [1mps[0m is compatible with.[m
+[m
+       Note that [1mps[0m [1m-aux[0m is distinct from [1mps[0m [1maux[0m.  The POSIX and UNIX standards require that[m
+[7m Manual page ps(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mps[0m [1m-aux[0m print all processes owned by a user named [4mx[24m, as well as printing all processes[m
+[7m Manual page ps(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       that would be selected by the [1m-a[0m option.  If the user named [4mx[24m does not exist, this [1mps[0m may[m
+[7m Manual page ps(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       interpret the command as [1mps[0m [1maux[0m instead and print a warning.  This behavior is intended[m
+[7m Manual page ps(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       to aid in transitioning old scripts and habits.  It is fragile, subject to change, and[m
+[7m Manual page ps(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       thus should not be relied upon.[m
+[7m Manual page ps(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       By default, [1mps[0m selects all processes with the same effective user ID (euid=EUID) as the[m
+[7m Manual page ps(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       current user and associated with the same terminal as the invoker.  It displays the[m
+[7m Manual page ps(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       process ID (pid=PID), the terminal associated with the process (tname=TTY), the cumulated[m
+[7m Manual page ps(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       CPU time in [DD-]hh:mm:ss format (time=TIME), and the executable name (ucmd=CMD).  Output[m
+[7m Manual page ps(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       is unsorted by default.[m
+[7m Manual page ps(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The use of BSD-style options will add process state (stat=STAT) to the default display[m
+[7m Manual page ps(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       and show the command args (args=COMMAND) instead of the executable name.  You can[m
+[7m Manual page ps(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       override this with the [1mPS_FORMAT[0m environment variable. The use of BSD-style options will[m
+[7m Manual page ps(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       also change the process selection to include processes on other terminals (TTYs) that are[m
+[7m Manual page ps(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       owned by you; alternately, this may be described as setting the selection to be the set[m
+[7m Manual page ps(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       of all processes filtered to exclude processes owned by other users or not on a terminal.[m
+[7m Manual page ps(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       These effects are not considered when options are described as being "identical" below,[m
+[7m Manual page ps(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       so [1m-M[0m will be considered identical to [1mZ[0m and so on.[m
+[7m Manual page ps(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Except as described below, process selection options are additive.  The default selection[m
+[7m Manual page ps(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       is discarded, and then the selected processes are added to the set of processes to be[m
+[7m Manual page ps(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       displayed.  A process will thus be shown if it meets any of the given selection criteria.[m
+[7m Manual page ps(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mEXAMPLES[0m[m
+[7m Manual page ps(1) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       To see every process on the system using standard syntax:[m
+[7m Manual page ps(1) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1m-e[0m[m
+[7m Manual page ps(1) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1m-ef[0m[m
+[7m Manual page ps(1) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1m-eF[0m[m
+[7m Manual page ps(1) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1m-ely[0m[m
+[7m Manual page ps(1) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       To see every process on the system using BSD syntax:[m
+[7m Manual page ps(1) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1max[0m[m
+[7m Manual page ps(1) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1maxu[0m[m
+[7m Manual page ps(1) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       To print a process tree:[m
+[7m Manual page ps(1) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1m-ejH[0m[m
+[7m Manual page ps(1) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1maxjf[0m[m
+[7m Manual page ps(1) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       To get info about threads:[m
+[7m Manual page ps(1) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1m-eLf[0m[m
+[7m Manual page ps(1) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1maxms[0m[m
+[7m Manual page ps(1) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       To get security info:[m
+[7m Manual page ps(1) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1m-eo[0m [1meuser,ruser,suser,fuser,f,comm,label[0m[m
+[7m Manual page ps(1) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1maxZ[0m[m
+[7m Manual page ps(1) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mps[0m [1m-eM[0m[m
+[7m Manual page ps(1) line 49 (press h for help or q to quit)[27m[K[H[2J[H[1mEXAMPLES[0m[m
+       To see every process on the system using standard syntax:[m
+          [1mps[0m [1m-e[0m[m
+          [1mps[0m [1m-ef[0m[m
+          [1mps[0m [1m-eF[0m[m
+          [1mps[0m [1m-ely[0m[m
+[m
+       To see every process on the system using BSD syntax:[m
+          [1mps[0m [1max[0m[m
+          [1mps[0m [1maxu[0m[m
+[m
+       To print a process tree:[m
+          [1mps[0m [1m-ejH[0m[m
+          [1mps[0m [1maxjf[0m[m
+[m
+       To get info about threads:[m
+          [1mps[0m [1m-eLf[0m[m
+          [1mps[0m [1maxms[0m[m
+[m
+       To get security info:[m
+          [1mps[0m [1m-eo[0m [1meuser,ruser,suser,fuser,f,comm,label[0m[m
+          [1mps[0m [1maxZ[0m[m
+[7m Manual page ps(1) line 49 (press h for help or q to quit)[27m[K[H[2J[H[1mEXAMPLES[0m[m
+       To see every process on the system using standard syntax:[m
+          [1mps[0m [1m-e[0m[m
+          [1mps[0m [1m-ef[0m[m
+          [1mps[0m [1m-eF[0m[m
+          [1mps[0m [1m-ely[0m[m
+[m
+       To see every process on the system using BSD syntax:[m
+          [1mps[0m [1max[0m[m
+          [1mps[0m [1maxu[0m[m
+[m
+       To print a process tree:[m
+          [1mps[0m [1m-ejH[0m[m
+          [1mps[0m [1maxjf[0m[m
+[m
+       To get info about threads:[m
+          [1mps[0m [1m-eLf[0m[m
+          [1mps[0m [1maxms[0m[m
+[m
+       To get security info:[m
+          [1mps[0m [1m-eo[0m [1meuser,ruser,suser,fuser,f,comm,label[0m[m
+[7m Manual page ps(1) line 49 (press h for help or q to quit)[27m[K[H[2J[H[1mEXAMPLES[0m[m
+       To see every process on the system using standard syntax:[m
+          [1mps[0m [1m-e[0m[m
+          [1mps[0m [1m-ef[0m[m
+          [1mps[0m [1m-eF[0m[m
+          [1mps[0m [1m-ely[0m[m
+[m
+       To see every process on the system using BSD syntax:[m
+          [1mps[0m [1max[0m[m
+          [1mps[0m [1maxu[0m[m
+[m
+       To print a process tree:[m
+          [1mps[0m [1m-ejH[0m[m
+          [1mps[0m [1maxjf[0m[m
+[m
+       To get info about threads:[m
+          [1mps[0m [1m-eLf[0m[m
+          [1mps[0m [1maxms[0m[m
+[m
+       To get security info:[m
+[7m Manual page ps(1) line 49 (press h for help or q to quit)[27m[K
+[K[?1l>[?1049l[23;0;0t[1]+  Stopped                 man ps
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ [H[2J[94mDEVOPS24/lektion13
+(B[m$ [7mps -e[27m[C[Cps -e
+[?2004l    PID TTY          TIME CMD
+      1 ?        00:00:01 systemd
+      2 ?        00:00:00 kthreadd
+      3 ?        00:00:00 rcu_gp
+      4 ?        00:00:00 rcu_par_gp
+      5 ?        00:00:00 slub_flushwq
+      6 ?        00:00:00 netns
+      8 ?        00:00:00 kworker/0:0H-events_highpri
+     10 ?        00:00:00 mm_percpu_wq
+     11 ?        00:00:00 rcu_tasks_kthread
+     12 ?        00:00:00 rcu_tasks_rude_kthread
+     13 ?        00:00:00 rcu_tasks_trace_kthread
+     14 ?        00:00:00 ksoftirqd/0
+     15 ?        00:00:01 rcu_preempt
+     16 ?        00:00:00 migration/0
+     17 ?        00:00:00 kworker/0:1-events
+     18 ?        00:00:00 cpuhp/0
+     19 ?        00:00:00 cpuhp/1
+     20 ?        00:00:00 migration/1
+     21 ?        00:00:00 ksoftirqd/1
+     23 ?        00:00:00 kworker/1:0H-events_highpri
+     24 ?        00:00:00 cpuhp/2
+     25 ?        00:00:00 migration/2
+     26 ?        00:00:00 ksoftirqd/2
+     28 ?        00:00:00 kworker/2:0H-events_highpri
+     29 ?        00:00:00 cpuhp/3
+     30 ?        00:00:00 migration/3
+     31 ?        00:00:00 ksoftirqd/3
+     33 ?        00:00:00 kworker/3:0H-events_highpri
+     34 ?        00:00:00 cpuhp/4
+     35 ?        00:00:00 migration/4
+     36 ?        00:00:00 ksoftirqd/4
+     38 ?        00:00:00 kworker/4:0H-events_highpri
+     39 ?        00:00:00 cpuhp/5
+     40 ?        00:00:00 migration/5
+     41 ?        00:00:00 ksoftirqd/5
+     43 ?        00:00:00 kworker/5:0H-events_highpri
+     44 ?        00:00:00 cpuhp/6
+     45 ?        00:00:00 migration/6
+     46 ?        00:00:00 ksoftirqd/6
+     48 ?        00:00:00 kworker/6:0H-events_highpri
+     49 ?        00:00:00 cpuhp/7
+     50 ?        00:00:00 migration/7
+     51 ?        00:00:00 ksoftirqd/7
+     53 ?        00:00:00 kworker/7:0H-events_highpri
+     54 ?        00:00:00 cpuhp/8
+     55 ?        00:00:00 migration/8
+     56 ?        00:00:00 ksoftirqd/8
+     58 ?        00:00:00 kworker/8:0H-events_highpri
+     59 ?        00:00:00 cpuhp/9
+     60 ?        00:00:00 migration/9
+     61 ?        00:00:00 ksoftirqd/9
+     63 ?        00:00:00 kworker/9:0H-events_highpri
+     64 ?        00:00:00 cpuhp/10
+     65 ?        00:00:00 migration/10
+     66 ?        00:00:00 ksoftirqd/10
+     68 ?        00:00:00 kworker/10:0H-events_highpri
+     69 ?        00:00:00 cpuhp/11
+     70 ?        00:00:00 migration/11
+     71 ?        00:00:00 ksoftirqd/11
+     73 ?        00:00:00 kworker/11:0H-events_highpri
+     83 ?        00:00:00 kworker/u24:9-events_unbound
+     84 ?        00:00:00 kdevtmpfs
+     85 ?        00:00:00 inet_frag_wq
+     86 ?        00:00:00 kauditd
+     87 ?        00:00:00 khungtaskd
+     88 ?        00:00:00 oom_reaper
+     89 ?        00:00:00 writeback
+     90 ?        00:00:00 kcompactd0
+     91 ?        00:00:00 ksmd
+     92 ?        00:00:00 khugepaged
+     93 ?        00:00:00 kintegrityd
+     94 ?        00:00:00 kblockd
+     95 ?        00:00:00 blkcg_punt_bio
+     96 ?        00:00:00 kworker/2:1-events
+     97 ?        00:00:00 tpm_dev_wq
+     98 ?        00:00:00 edac-poller
+     99 ?        00:00:00 devfreq_wq
+    101 ?        00:00:00 kworker/4:1-events
+    103 ?        00:00:00 kworker/6:1-events
+    104 ?        00:00:00 kworker/9:1-cgroup_bpf_destroy
+    105 ?        00:00:00 kworker/8:1-events
+    108 ?        00:00:00 kworker/3:1-mm_percpu_wq
+    109 ?        00:00:00 kworker/7:1-events
+    110 ?        00:00:00 kworker/2:1H-events_highpri
+    111 ?        00:00:00 kswapd0
+    117 ?        00:00:00 kthrotld
+    119 ?        00:00:00 irq/124-pciehp
+    120 ?        00:00:00 irq/125-pciehp
+    121 ?        00:00:00 acpi_thermal_pm
+    122 ?        00:00:00 hwrng
+    124 ?        00:00:00 hfi-updates
+    125 ?        00:00:00 mld
+    126 ?        00:00:00 ipv6_addrconf
+    131 ?        00:00:00 kstrp
+    136 ?        00:00:00 zswap-shrink
+    187 ?        00:00:00 kworker/6:1H-events_highpri
+    200 ?        00:00:00 kworker/10:1H-events_highpri
+    201 ?        00:00:00 kworker/3:1H-events_highpri
+    202 ?        00:00:00 kworker/4:1H-events_highpri
+    203 ?        00:00:00 kworker/1:1H-events_highpri
+    204 ?        00:00:00 kworker/5:1H-events_highpri
+    205 ?        00:00:00 kworker/0:1H-events_highpri
+    206 ?        00:00:00 kworker/8:1H-events_highpri
+    207 ?        00:00:00 kworker/9:1H-events_highpri
+    237 ?        00:00:00 kworker/11:1H-events_highpri
+    238 ?        00:00:00 kworker/7:1H-events_highpri
+    241 ?        00:00:00 cryptd
+    323 ?        00:00:00 nvme-wq
+    324 ?        00:00:00 nvme-reset-wq
+    325 ?        00:00:00 nvme-delete-wq
+    328 ?        00:00:00 kworker/9:2-events
+    329 ?        00:00:00 irq/161-ELAN050B:00
+    332 ?        00:00:00 card0-crtc0
+    333 ?        00:00:00 card0-crtc1
+    334 ?        00:00:00 card0-crtc2
+    335 ?        00:00:00 card0-crtc3
+    338 ?        00:00:00 kworker/7:2-events
+    341 ?        00:00:00 md
+    352 ?        00:00:00 raid5wq
+    820 ?        00:00:00 kdmflush/253:0
+    821 ?        00:00:00 kcryptd_io/253:
+    822 ?        00:00:00 kcryptd/253:0
+    823 ?        00:00:00 dmcrypt_write/253:0
+    860 ?        00:00:00 jbd2/dm-0-8
+    861 ?        00:00:00 ext4-rsv-conver
+    921 ?        00:00:00 systemd-journal
+    937 ?        00:00:00 rpciod
+    938 ?        00:00:00 xprtiod
+    939 ?        00:00:00 systemd-udevd
+   1071 ?        00:00:00 watchdogd
+   1072 ?        00:00:00 irq/175-mei_me
+   1132 ?        00:00:00 cfg80211
+   1140 ?        00:00:02 irq/177-iwlwifi:default_queue
+   1141 ?        00:00:00 irq/178-iwlwifi:queue_1
+   1142 ?        00:00:00 irq/179-iwlwifi:queue_2
+   1143 ?        00:00:02 irq/180-iwlwifi:queue_3
+   1145 ?        00:00:00 irq/181-iwlwifi:queue_4
+   1151 ?        00:00:00 irq/182-iwlwifi:queue_5
+   1153 ?        00:00:00 irq/183-iwlwifi:queue_6
+   1158 ?        00:00:00 irq/184-iwlwifi:queue_7
+   1159 ?        00:00:00 irq/185-iwlwifi:queue_8
+   1160 ?        00:00:00 irq/186-iwlwifi:queue_9
+   1161 ?        00:00:03 irq/187-iwlwifi:queue_10
+   1162 ?        00:00:02 irq/188-iwlwifi:queue_11
+   1163 ?        00:00:00 irq/189-iwlwifi:queue_12
+   1164 ?        00:00:00 irq/190-iwlwifi:exception
+   1207 ?        00:00:00 kworker/u25:1-rb_allocator
+   1208 ?        00:00:00 kworker/u25:2-rb_allocator
+   1213 ?        00:00:00 irq/191-AudioDSP
+   1297 ?        00:00:00 jbd2/nvme0n1p5-8
+   1298 ?        00:00:00 ext4-rsv-conver
+   1435 ?        00:00:00 kdmflush/253:1
+   1436 ?        00:00:00 kcryptd_io/253:
+   1437 ?        00:00:00 kcryptd/253:1
+   1438 ?        00:00:00 dmcrypt_write/253:1
+   1446 ?        00:00:00 jbd2/dm-1-8
+   1447 ?        00:00:00 ext4-rsv-conver
+   1482 ?        00:00:00 rpcbind
+   1483 ?        00:00:00 systemd-timesyn
+   1488 ?        00:00:00 blkmapd
+   1489 ?        00:00:00 rpc.idmapd
+   1490 ?        00:00:00 nfsdcld
+   1495 ?        00:00:00 accounts-daemon
+   1498 ?        00:00:01 avahi-daemon
+   1502 ?        00:00:00 bluetoothd
+   1504 ?        00:00:00 cron
+   1505 ?        00:00:01 dbus-daemon
+   1509 ?        00:00:00 low-memory-moni
+   1512 ?        00:00:00 polkitd
+   1514 ?        00:00:00 power-profiles-
+   1517 ?        00:00:00 smartd
+   1522 ?        00:00:00 switcheroo-cont
+   1527 ?        00:00:00 systemd-logind
+   1529 ?        00:00:00 systemd-machine
+   1530 ?        00:00:00 udisksd
+   1535 ?        00:00:00 avahi-daemon
+   1574 ?        00:00:00 psimon
+   1575 ?        00:00:01 NetworkManager
+   1577 ?        00:00:00 wpa_supplicant
+   1609 ?        00:00:00 ModemManager
+   1612 ?        00:00:00 boltd
+   1631 ?        00:00:00 cupsd
+   1647 ?        00:00:03 tailscaled
+   1650 ?        00:00:02 containerd
+   1665 ?        00:00:00 sshd
+   1696 ?        00:00:00 gdm3
+   1715 ?        00:00:00 kworker/u24:12-kcryptd/253:0
+   1989 ?        00:00:00 iprt-VBoxWQueue
+   1991 ?        00:00:00 iprt-VBoxTscThread
+   2006 ?        00:00:00 rtkit-daemon
+   2071 ?        00:00:00 kworker/3:2-events
+   2292 ?        00:00:00 dnsmasq
+   2293 ?        00:00:00 dnsmasq
+   2296 ?        00:00:00 krfcommd
+   2306 ?        00:00:00 upowerd
+   2375 ?        00:00:01 geoclue
+   2401 ?        00:00:00 colord
+   2799 ?        00:00:00 cups-browsed
+   2802 ?        00:00:00 dockerd
+   2822 ?        00:00:00 rpc.statd
+   2824 ?        00:00:00 rpc.mountd
+   2856 ?        00:00:00 lockd
+   3124 ?        00:00:00 nfsd
+   3125 ?        00:00:00 nfsd
+   3126 ?        00:00:00 nfsd
+   3127 ?        00:00:00 nfsd
+   3128 ?        00:00:00 nfsd
+   3129 ?        00:00:00 nfsd
+   3130 ?        00:00:00 nfsd
+   3131 ?        00:00:00 nfsd
+   3367 ?        00:00:00 kworker/1:2-mm_percpu_wq
+   3377 ?        00:00:00 exim4
+   3378 ?        00:00:00 kworker/5:2-mm_percpu_wq
+   3448 ?        00:00:00 gdm-session-wor
+   3520 ?        00:00:00 systemd
+   3521 ?        00:00:00 (sd-pam)
+   3552 ?        00:00:00 pipewire
+   3554 ?        00:00:00 wireplumber
+   3555 ?        00:00:00 pipewire-pulse
+   3559 ?        00:00:00 gnome-keyring-d
+   3561 ?        00:00:00 dbus-daemon
+   3565 ?        00:00:00 gvfsd
+   3572 ?        00:00:00 gvfsd-fuse
+   3622 ?        00:00:00 tracker-miner-f
+   3627 ?        00:00:00 gvfs-udisks2-vo
+   3632 ?        00:00:00 gvfs-gphoto2-vo
+   3636 ?        00:00:00 gvfs-mtp-volume
+   3638 tty2     00:00:00 gdm-x-session
+   3646 ?        00:00:00 gvfs-goa-volume
+   3647 tty2     00:00:16 Xorg
+   3651 ?        00:00:00 goa-daemon
+   3679 ?        00:00:00 goa-identity-se
+   3685 ?        00:00:00 gvfs-afc-volume
+   3721 ?        00:00:00 xdg-permission-
+   3731 tty2     00:00:00 gnome-session-b
+   3809 ?        00:00:00 ssh-agent
+   3855 ?        00:00:00 at-spi-bus-laun
+   3864 ?        00:00:00 dbus-daemon
+   3891 ?        00:00:00 gcr-ssh-agent
+   3892 ?        00:00:00 gnome-session-c
+   3902 ?        00:00:00 gnome-session-b
+   3923 ?        00:00:21 gnome-shell
+   4009 ?        00:00:00 gnome-shell-cal
+   4018 ?        00:00:00 evolution-sourc
+   4065 ?        00:00:00 gvfsd-metadata
+   4074 ?        00:00:00 evolution-calen
+   4081 ?        00:00:00 gjs
+   4083 ?        00:00:00 at-spi2-registr
+   4108 ?        00:00:00 evolution-addre
+   4133 ?        00:00:00 sh
+   4137 ?        00:00:00 gsd-a11y-settin
+   4138 ?        00:00:01 ibus-daemon
+   4141 ?        00:00:00 gsd-color
+   4143 ?        00:00:00 gsd-datetime
+   4147 ?        00:00:00 gsd-housekeepin
+   4150 ?        00:00:00 evolution-alarm
+   4152 ?        00:00:00 gsd-keyboard
+   4155 ?        00:00:00 gsd-media-keys
+   4157 ?        00:00:00 gsd-power
+   4161 ?        00:00:00 blueman-applet
+   4162 ?        00:00:00 gsd-print-notif
+   4164 ?        00:00:00 gsd-rfkill
+   4166 ?        00:00:00 gsd-screensaver
+   4168 ?        00:00:00 gsd-sharing
+   4170 ?        00:00:00 gsd-smartcard
+   4173 ?        00:00:00 gsd-sound
+   4175 ?        00:00:00 gsd-usb-protect
+   4178 ?        00:00:00 gsd-wacom
+   4181 ?        00:00:00 gsd-xsettings
+   4185 ?        00:00:00 dconf-service
+   4203 ?        00:00:11 gnome-software
+   4213 ?        00:00:00 gsd-disk-utilit
+   4241 ?        00:00:00 gjs
+   4250 ?        00:00:00 ibus-dconf
+   4255 ?        00:00:00 gsd-printer
+   4256 ?        00:00:01 ibus-extension-
+   4260 ?        00:00:00 ibus-x11
+   4264 ?        00:00:00 ibus-portal
+   4372 ?        00:00:00 xdg-desktop-por
+   4396 ?        00:00:00 obexd
+   4400 ?        00:00:02 blueman-tray
+   4402 ?        00:00:00 xdg-document-po
+   4408 ?        00:00:00 fusermount3
+   4413 ?        00:00:00 xdg-desktop-por
+   4477 ?        00:00:00 ibus-engine-sim
+   4517 ?        00:00:00 xdg-desktop-por
+   4551 ?        00:00:00 xdg-desktop-por
+   4612 ?        00:00:01 fwupd
+   6413 ?        00:00:00 kworker/u24:14-events_unbound
+   6524 ?        00:00:00 kworker/11:2-mm_percpu_wq
+   6533 ?        00:00:00 kworker/1:1
+   6600 ?        00:00:00 kworker/10:1-events
+   6610 ?        00:00:00 kworker/8:0-events
+   6
