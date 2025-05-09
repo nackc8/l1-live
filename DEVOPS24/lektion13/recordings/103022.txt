@@ -121,4 +121,40 @@ Script started on 2025-05-09 10:30:22+02:00 [TERM="xterm-256color" TTY="/dev/pts
 [21;1H[1mOPTIONS[0m[m
 [22;1H       All  of  the  single-character  shell  options  documented  in the description of the [1mset[0m[m
 [23;1H       builtin command, including [1m-o[0m, can be used as options when the shell is invoked.  In  ad‐[m
-[24;1H       dition, [1mbash[0
+[24;1H       dition, [1mbash[0m interprets the following options when it is invoked:[m
+[25;1H...skipping...
+   [1m[7mBrace[27m[0m [1mExpansion[0m[m
+       [4m[7mBrace[27m[24m [4mexpansion[24m is a mechanism by which arbitrary strings may be generated.  This  mecha‐[m
+       nism  is similar to [4mpathname[24m [4mexpansion[24m, but the filenames generated need not exist.  Pat‐[m
+       terns to be brace expanded take the form of an optional [4mpreamble[24m, followed  by  either  a[m
+       series of comma-separated strings or a sequence expression between a pair of braces, fol‐[m
+       lowed by an optional [4mpostscript[24m.  The preamble  is  prefixed  to  each  string  contained[m
+       within  the braces, and the postscript is then appended to each resulting string, expand‐[m
+       ing left to right.[m
+[m
+       [7mBrace[27m expansions may be nested.  The results of each expanded string are not sorted; left[m
+       to right order is preserved.  For example, a[1m{[0md,c,b[1m}[0me expands into `ade ace abe'.[m
+[m
+       A sequence expression takes the form [1m{[0m[4mx[24m[1m..[0m[4my[24m[1m[..[0m[4mincr[24m[1m]}[0m, where [4mx[24m and [4my[24m are either integers or[m
+       single letters, and [4mincr[24m, an optional increment, is an integer.  When integers  are  sup‐[m
+       plied,  the expression expands to each number between [4mx[24m and [4my[24m, inclusive.  Supplied inte‐[m
+       gers may be prefixed with [4m0[24m to force each term to have the same width.  When either [4mx[24m  or[m
+       [4my[24m begins with a zero, the shell attempts to force all generated terms to contain the same[m
+       number of digits, zero-padding where necessary.  When letters are supplied,  the  expres‐[m
+       sion  expands  to  each character lexicographically between [4mx[24m and [4my[24m, inclusive, using the[m
+       default C locale.  Note that both [4mx[24m and [4my[24m must be of the same type (integer  or  letter).[m
+       When  the increment is supplied, it is used as the difference between each term.  The de‐[m
+       fault increment is 1 or -1 as appropriate.[m
+[m
+       [7mBrace[27m expansion is performed before any other expansions, and any characters  special  to[m
+[7m Manual page bash(1) line 1346/5660 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       other expansions are preserved in the result.  It is strictly textual.  [1mBash[0m does not ap‐[m
+[7m Manual page bash(1) line 1347/5660 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ply any syntactic interpretation to the context of the expansion or the text between  the[m
+[7m Manual page bash(1) line 1348/5660 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       braces.[m
+[7m Manual page bash(1) line 1349/5660 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1350/5660 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       A  correctly-formed brace expansion must contain unquoted opening and closing braces, and[m
+[7m Manual page bash(1) line 1351/5660 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       at least one unquoted comma or a valid sequence expression.  Any incorrectly formed brace[m
+[7m Manual page bash(1) line 1352/5660 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       expansion  is left unchanged.  A [1m{[0m or [1m,[0m may be quoted with a backslash to prevent its be‐[m
+[7m Manual page bash(1) line 1353/5660 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       within  the braces, and the postscript is then appended to each resulting string, expand‐[m
+[25;1H[K[7m Manual page bash(1) line 1352/5660 26% (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t
+[1]+  Stopped                 man bash
+[?2004h[94mDEVOPS24
