@@ -3602,4 +3602,379 @@ For more details see ps(1).
 :[K[K [KESCESC[KOO[KBB[K     87      87 S S ?        00:00:00 [khungtaskd]
 :[K[K [KESCESC[KOO[KBB[K     88      88 S S ?        00:00:00 [oom_reaper]
 :[K[K [KESCESC[KOO[KBB[K     89      89 I I ?        00:00:00 [writeback]
-:[K[K [
+:[K[K [KESCESC[KOO[KBB[K     90      90 S S ?        00:00:00 [kcompactd0]
+:[K[K [KESCESC[KOO[KBB[K     91      91 S S ?        00:00:00 [ksmd]
+:[K[K [KESCESC[KOO[KBB[K     92      92 S S ?        00:00:00 [khugepaged]
+:[K[K [KESCESC[KOO[KBB[K     93      93 I I ?        00:00:00 [kintegrityd]
+:[K[K [KESCESC[KOO[KBB[K     94      94 I I ?        00:00:00 [kblockd]
+:[K[K [KESCESC[KOO[KBB[K     95      95 I I ?        00:00:00 [blkcg_punt_bio]
+:[K[K [KESCESC[KOO[KBB[K     96      96 I I ?        00:00:00 [kworker/2:1-mm_percpu_wq]
+:[K[K [KESCESC[KOO[KBB[K     97      97 I I ?        00:00:00 [tpm_dev_wq]
+:[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion13
+(B[m$ [H[2J[94mDEVOPS24/lektion13
+(B[m$ ps -eOpid,state | less
+[?2004l[?1049h[22;0;0t[?1h=    PID     PID S S TTY          TIME COMMAND
+      1       1 S S ?        00:00:01 /sbin/init splash
+      2       2 S S ?        00:00:00 [kthreadd]
+      3       3 I I ?        00:00:00 [rcu_gp]
+      4       4 I I ?        00:00:00 [rcu_par_gp]
+      5       5 I I ?        00:00:00 [slub_flushwq]
+      6       6 I I ?        00:00:00 [netns]
+      8       8 I I ?        00:00:00 [kworker/0:0H-events_highpri]
+     10      10 I I ?        00:00:00 [mm_percpu_wq]
+     11      11 I I ?        00:00:00 [rcu_tasks_kthread]
+     12      12 I I ?        00:00:00 [rcu_tasks_rude_kthread]
+     13      13 I I ?        00:00:00 [rcu_tasks_trace_kthread]
+     14      14 S S ?        00:00:00 [ksoftirqd/0]
+     15      15 I I ?        00:00:03 [rcu_preempt]
+     16      16 S S ?        00:00:00 [migration/0]
+:[K[K/[Kss[Kll[Kee[Kee[Kpp[K[1;1H    PID     PID S S TTY          TIME COMMAND
+[2;1H      1       1 S S ?        00:00:01 /sbin/init splash
+[3;1H      2       2 S S ?        00:00:00 [kthreadd]
+[4;1H      3       3 I I ?        00:00:00 [rcu_gp]
+[5;1H      4       4 I I ?        00:00:00 [rcu_par_gp]
+[6;1H      5       5 I I ?        00:00:00 [slub_flushwq]
+[7;1H      6       6 I I ?        00:00:00 [netns]
+[8;1H      8       8 I I ?        00:00:00 [kworker/0:0H-events_highpri]
+[9;1H     10      10 I I ?        00:00:00 [mm_percpu_wq]
+[10;1H     11      11 I I ?        00:00:00 [rcu_tasks_kthread]
+[11;1H     12      12 I I ?        00:00:00 [rcu_tasks_rude_kthread]
+[12;1H     13      13 I I ?        00:00:00 [rcu_tasks_trace_kthread]
+[13;1H     14      14 S S ?        00:00:00 [ksoftirqd/0]
+[14;1H     15      15 I I ?        00:00:03 [rcu_preempt]
+[15;1H     16      16 S S ?        00:00:00 [migration/0]
+[16;1H[1;1H    PID     PID S S TTY          TIME COMMAND
+[2;1H      1       1 S S ?        00:00:01 /sbin/init splash
+[3;1H      2       2 S S ?        00:00:00 [kthreadd]
+[4;1H      3       3 I I ?        00:00:00 [rcu_gp]
+[5;1H      4       4 I I ?        00:00:00 [rcu_par_gp]
+[6;1H      5       5 I I ?        00:00:00 [slub_flushwq]
+[7;1H      6       6 I I ?        00:00:00 [netns]
+[8;1H      8       8 I I ?        00:00:00 [kworker/0:0H-events_highpri]
+[9;1H     10      10 I I ?        00:00:00 [mm_percpu_wq]
+[10;1H     11      11 I I ?        00:00:00 [rcu_tasks_kthread]
+[11;1H     12      12 I I ?        00:00:00 [rcu_tasks_rude_kthread]
+[12;1H     13      13 I I ?        00:00:00 [rcu_tasks_trace_kthread]
+[13;1H     14      14 S S ?        00:00:00 [ksoftirqd/0]
+[14;1H     15      15 I I ?        00:00:03 [rcu_preempt]
+[15;1H     16      16 S S ?        00:00:00 [migration/0]
+[16;1H...skipping...
+  28706   28706 S S pts/6    00:00:00 [7msleep[27m 100
+  28797   28797 S S pts/2    00:00:00 [7msleep[27m 10
+  28856   28856 S S ?        00:00:00 [7msleep[27m 1
+  28870   28870 R R pts/3    00:00:00 ps -eOpid,state
+  28871   28871 S S pts/3    00:00:00 less
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion13
+(B[m$ ps -eOpid,state | less
+[?2004l[?1049h[22;0;0t[?1h=    PID     PID S S TTY          TIME COMMAND
+      1       1 S S ?        00:00:01 /sbin/init splash
+      2       2 S S ?        00:00:00 [kthreadd]
+      3       3 I I ?        00:00:00 [rcu_gp]
+      4       4 I I ?        00:00:00 [rcu_par_gp]
+      5       5 I I ?        00:00:00 [slub_flushwq]
+      6       6 I I ?        00:00:00 [netns]
+      8       8 I I ?        00:00:00 [kworker/0:0H-events_highpri]
+     10      10 I I ?        00:00:00 [mm_percpu_wq]
+     11      11 I I ?        00:00:00 [rcu_tasks_kthread]
+     12      12 I I ?        00:00:00 [rcu_tasks_rude_kthread]
+     13      13 I I ?        00:00:00 [rcu_tasks_trace_kthread]
+     14      14 S S ?        00:00:00 [ksoftirqd/0]
+     15      15 I I ?        00:00:03 [rcu_preempt]
+     16      16 S S ?        00:00:00 [migration/0]
+:[K[K     17      17 I I ?        00:00:00 [kworker/0:1-events]
+     18      18 S S ?        00:00:00 [cpuhp/0]
+     19      19 S S ?        00:00:00 [cpuhp/1]
+     20      20 S S ?        00:00:00 [migration/1]
+     21      21 S S ?        00:00:00 [ksoftirqd/1]
+     23      23 I I ?        00:00:00 [kworker/1:0H-events_highpri]
+     24      24 S S ?        00:00:00 [cpuhp/2]
+     25      25 S S ?        00:00:00 [migration/2]
+     26      26 S S ?        00:00:00 [ksoftirqd/2]
+     28      28 I I ?        00:00:00 [kworker/2:0H-events_highpri]
+     29      29 S S ?        00:00:00 [cpuhp/3]
+     30      30 S S ?        00:00:00 [migration/3]
+     31      31 S S ?        00:00:00 [ksoftirqd/3]
+     33      33 I I ?        00:00:00 [kworker/3:0H-events_highpri]
+     34      34 S S ?        00:00:00 [cpuhp/4]
+:[K[K     35      35 S S ?        00:00:00 [migration/4]
+     36      36 S S ?        00:00:00 [ksoftirqd/4]
+     38      38 I I ?        00:00:00 [kworker/4:0H-events_highpri]
+     39      39 S S ?        00:00:00 [cpuhp/5]
+     40      40 S S ?        00:00:00 [migration/5]
+     41      41 S S ?        00:00:00 [ksoftirqd/5]
+     43      43 I I ?        00:00:00 [kworker/5:0H-events_highpri]
+     44      44 S S ?        00:00:00 [cpuhp/6]
+     45      45 S S ?        00:00:00 [migration/6]
+     46      46 S S ?        00:00:00 [ksoftirqd/6]
+     48      48 I I ?        00:00:00 [kworker/6:0H-events_highpri]
+     49      49 S S ?        00:00:00 [cpuhp/7]
+     50      50 S S ?        00:00:00 [migration/7]
+     51      51 S S ?        00:00:00 [ksoftirqd/7]
+     53      53 I I ?        00:00:00 [kworker/7:0H-events_highpri]
+:[K[K     54      54 S S ?        00:00:00 [cpuhp/8]
+     55      55 S S ?        00:00:00 [migration/8]
+     56      56 S S ?        00:00:00 [ksoftirqd/8]
+     58      58 I I ?        00:00:00 [kworker/8:0H-events_highpri]
+     59      59 S S ?        00:00:00 [cpuhp/9]
+     60      60 S S ?        00:00:00 [migration/9]
+     61      61 S S ?        00:00:00 [ksoftirqd/9]
+     63      63 I I ?        00:00:00 [kworker/9:0H-events_highpri]
+     64      64 S S ?        00:00:00 [cpuhp/10]
+     65      65 S S ?        00:00:00 [migration/10]
+     66      66 S S ?        00:00:00 [ksoftirqd/10]
+     68      68 I I ?        00:00:00 [kworker/10:0H-events_highpri]
+     69      69 S S ?        00:00:00 [cpuhp/11]
+     70      70 S S ?        00:00:00 [migration/11]
+     71      71 S S ?        00:00:00 [ksoftirqd/11]
+:[K[K     73      73 I I ?        00:00:00 [kworker/11:0H-events_highpri]
+     83      83 I I ?        00:00:02 [kworker/u24:9-kcryptd/253:0]
+     84      84 S S ?        00:00:00 [kdevtmpfs]
+     85      85 I I ?        00:00:00 [inet_frag_wq]
+     86      86 S S ?        00:00:00 [kauditd]
+     87      87 S S ?        00:00:00 [khungtaskd]
+     88      88 S S ?        00:00:00 [oom_reaper]
+     89      89 I I ?        00:00:00 [writeback]
+     90      90 S S ?        00:00:00 [kcompactd0]
+     91      91 S S ?        00:00:00 [ksmd]
+     92      92 S S ?        00:00:00 [khugepaged]
+     93      93 I I ?        00:00:00 [kintegrityd]
+     94      94 I I ?        00:00:00 [kblockd]
+     95      95 I I ?        00:00:00 [blkcg_punt_bio]
+     96      96 I I ?        00:00:00 [kworker/2:1-events]
+:[K[K [KESCESC[KOO[KAA[K[HM     71      71 S S ?        00:00:00 [ksoftirqd/11]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     70      70 S S ?        00:00:00 [migration/11]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     69      69 S S ?        00:00:00 [cpuhp/11]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     68      68 I I ?        00:00:00 [kworker/10:0H-events_highpri]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     66      66 S S ?        00:00:00 [ksoftirqd/10]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     65      65 S S ?        00:00:00 [migration/10]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     64      64 S S ?        00:00:00 [cpuhp/10]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     63      63 I I ?        00:00:00 [kworker/9:0H-events_highpri]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     61      61 S S ?        00:00:00 [ksoftirqd/9]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     60      60 S S ?        00:00:00 [migration/9]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     59      59 S S ?        00:00:00 [cpuhp/9]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     58      58 I I ?        00:00:00 [kworker/8:0H-events_highpri]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     56      56 S S ?        00:00:00 [ksoftirqd/8]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     55      55 S S ?        00:00:00 [migration/8]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     54      54 S S ?        00:00:00 [cpuhp/8]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     53      53 I I ?        00:00:00 [kworker/7:0H-events_highpri]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     51      51 S S ?        00:00:00 [ksoftirqd/7]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     50      50 S S ?        00:00:00 [migration/7]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     49      49 S S ?        00:00:00 [cpuhp/7]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     48      48 I I ?        00:00:00 [kworker/6:0H-events_highpri]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     46      46 S S ?        00:00:00 [ksoftirqd/6]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     45      45 S S ?        00:00:00 [migration/6]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     44      44 S S ?        00:00:00 [cpuhp/6]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     43      43 I I ?        00:00:00 [kworker/5:0H-events_highpri]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     41      41 S S ?        00:00:00 [ksoftirqd/5]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     40      40 S S ?        00:00:00 [migration/5]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     39      39 S S ?        00:00:00 [cpuhp/5]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     38      38 I I ?        00:00:00 [kworker/4:0H-events_highpri]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     36      36 S S ?        00:00:00 [ksoftirqd/4]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     35      35 S S ?        00:00:00 [migration/4]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     34      34 S S ?        00:00:00 [cpuhp/4]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     33      33 I I ?        00:00:00 [kworker/3:0H-events_highpri]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     31      31 S S ?        00:00:00 [ksoftirqd/3]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     30      30 S S ?        00:00:00 [migration/3]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     29      29 S S ?        00:00:00 [cpuhp/3]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     28      28 I I ?        00:00:00 [kworker/2:0H-events_highpri]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     26      26 S S ?        00:00:00 [ksoftirqd/2]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     25      25 S S ?        00:00:00 [migration/2]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     24      24 S S ?        00:00:00 [cpuhp/2]
+[16;1H[K:[K[K [KESCESC[KOO[KAA[K[HM     23      23 I I ?        00:00:00 [kworker/1:0H-events_highpri]
+[16;1H[K:[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion13
+(B[m$ [H[2J[94mDEVOPS24/lektion13
+(B[m$ man ps
+[?2004l[?1049h[22;0;0t[?1h=PS(1)                                     User Commands                                    PS(1)[m
+[m
+[1mNAME[0m[m
+       ps - report a snapshot of the current processes.[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mps[0m [[4moptions[24m][m
+[m
+[1mDESCRIPTION[0m[m
+       [1mps[0m displays information about a selection of the active processes.  If you want a[m
+       repetitive update of the selection and the displayed information, use [1mtop[0m instead.[m
+[m
+       This version of [1mps[0m accepts several kinds of options:[m
+[m
+       1   UNIX options, which may be grouped and must be preceded by a dash.[m
+[7m Manual page ps(1) line 1 (press h for help or q to quit)[27m[K[K/[Kss[Ktt[Kaa[Ktt[Kee[K[1;1HPS(1)                                     User Commands                                    PS(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       ps - report a snapshot of the current processes.[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mps[0m [[4moptions[24m][m
+[8;1H[m
+[9;1H[1mDESCRIPTION[0m[m
+[10;1H       [1mps[0m displays information about a selection of the active processes.  If you want a[m
+[11;1H       repetitive update of the selection and the displayed information, use [1mtop[0m instead.[m
+[12;1H[m
+[13;1H       This version of [1mps[0m accepts several kinds of options:[m
+[14;1H[m
+[15;1H       1   UNIX options, which may be grouped and must be preceded by a dash.[m
+[16;1H[1;1HPS(1)                                     User Commands                                    PS(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       ps - report a snapshot of the current processes.[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mps[0m [[4moptions[24m][m
+[8;1H[m
+[9;1H[1mDESCRIPTION[0m[m
+[10;1H       [1mps[0m displays information about a selection of the active processes.  If you want a[m
+[11;1H       repetitive update of the selection and the displayed information, use [1mtop[0m instead.[m
+[12;1H[m
+[13;1H       This version of [1mps[0m accepts several kinds of options:[m
+[14;1H[m
+[15;1H       1   UNIX options, which may be grouped and must be preceded by a dash.[m
+[16;1H...skipping...
+       The use of BSD-style options will add process [7mstate[27m (stat=STAT) to the default display[m
+       and show the command args (args=COMMAND) instead of the executable name.  You can[m
+       override this with the [1mPS_FORMAT[0m environment variable. The use of BSD-style options will[m
+       also change the process selection to include processes on other terminals (TTYs) that are[m
+       owned by you; alternately, this may be described as setting the selection to be the set[m
+       of all processes filtered to exclude processes owned by other users or not on a terminal.[m
+       These effects are not considered when options are described as being "identical" below,[m
+       so [1m-M[0m will be considered identical to [1mZ[0m and so on.[m
+[m
+       Except as described below, process selection options are additive.  The default selection[m
+       is discarded, and then the selected processes are added to the set of processes to be[m
+       displayed.  A process will thus be shown if it meets any of the given selection criteria.[m
+[m
+[1mEXAMPLES[0m[m
+       To see every process on the system using standard syntax:[m
+[7m Manual page ps(1) line 36 (press h for help or q to quit)[27m[K[K/[K...skipping...
+              [1m[7mstate[27m[0m[1m,tname,time,command[0m or [1m-o[0m [1mpid,[0m[4mformat[24m[1m,tname,time,cmd[0m, see [1m-o[0m below.[m
+[m
+       [1mo[0m [4mformat[24m[m
+              Specify user-defined format.  Identical to [1m-o[0m and [1m--format[0m.[m
+[m
+       [1m-o[0m [4mformat[24m[m
+              User-defined format.  [4mformat[24m is a single argument in the form of a blank-separated[m
+              or comma-separated list, which offers a way to specify individual output columns.[m
+              The recognized keywords are described in the [1mSTANDARD[0m [1mFORMAT[0m [1mSPECIFIERS[0m section[m
+              below.  Headers may be renamed ([1mps[0m [1m-o[0m [1mpid,ruser=RealUser[0m [1m-o[0m [1mcomm=Command[0m) as[m
+              desired.  If all column headers are empty ([1mps[0m [1m-o[0m [1mpid=[0m [1m-o[0m [1mcomm=[0m) then the header[m
+              line will not be output.  Column width will increase as needed for wide headers;[m
+              this may be used to widen up columns such as WCHAN ([1mps[0m [1m-o[0m [1mpid,wchan=WIDE-WCHAN-[0m[m
+              [1mCOLUMN[0m [1m-o[0m [1mcomm[0m).  Explicit width control ([1mps[0m [1mopid,wchan:42,cmd[0m) is offered too.[m
+              The behavior of [1mps[0m [1m-o[0m [1mpid=X,comm=Y[0m varies with personality; output may be one[m
+[7m Manual page ps(1) line 276 (press h for help or q to quit)[27m[K[K/[K...skipping...
+[1mPROCESS[0m [1m[7mSTATE[27m[0m [1mCODES[0m[m
+       Here are the different values that the [1ms[0m, [1mstat[0m and [1m[7mstate[27m[0m output specifiers (header "STAT"[m
+       or "S") will display to describe the [7mstate[27m of a process:[m
+[m
+               D    uninterruptible sleep (usually IO)[m
+               I    Idle kernel thread[m
+               R    running or runnable (on run queue)[m
+               S    interruptible sleep (waiting for an event to complete)[m
+               T    stopped by job control signal[m
+               t    stopped by debugger during the tracing[m
+               W    paging (not valid since the 2.6.xx kernel)[m
+               X    dead (should never be seen)[m
+               Z    defunct ("zombie") process, terminated but not reaped by its parent[m
+[m
+       For BSD formats and when the [1mstat[0m keyword is used, additional characters may be[m
+[7m Manual page ps(1) line 464 (press h for help or q to quit)[27m[K[H[2J[H[1mPROCESS[0m [1m[7mSTATE[27m[0m [1mCODES[0m[m
+       Here are the different values that the [1ms[0m, [1mstat[0m and [1m[7mstate[27m[0m output specifiers (header "STAT"[m
+       or "S") will display to describe the [7mstate[27m of a process:[m
+[m
+               D    uninterruptible sleep (usually IO)[m
+               I    Idle kernel thread[m
+               R    running or runnable (on run queue)[m
+               S    interruptible sleep (waiting for an event to complete)[m
+               T    stopped by job control signal[m
+               t    stopped by debugger during the tracing[m
+               W    paging (not valid since the 2.6.xx kernel)[m
+               X    dead (should never be seen)[m
+               Z    defunct ("zombie") process, terminated but not reaped by its parent[m
+[m
+       For BSD formats and when the [1mstat[0m keyword is used, additional characters may be[m
+       displayed:[m
+[7m Manual page ps(1) line 464 (press h for help or q to quit)[27m[K[H[2J[H[1mPROCESS[0m [1m[7mSTATE[27m[0m [1mCODES[0m[m
+       Here are the different values that the [1ms[0m, [1mstat[0m and [1m[7mstate[27m[0m output specifiers (header "STAT"[m
+       or "S") will display to describe the [7mstate[27m of a process:[m
+[m
+               D    uninterruptible sleep (usually IO)[m
+               I    Idle kernel thread[m
+               R    running or runnable (on run queue)[m
+               S    interruptible sleep (waiting for an event to complete)[m
+               T    stopped by job control signal[m
+               t    stopped by debugger during the tracing[m
+               W    paging (not valid since the 2.6.xx kernel)[m
+               X    dead (should never be seen)[m
+               Z    defunct ("zombie") process, terminated but not reaped by its parent[m
+[m
+       For BSD formats and when the [1mstat[0m keyword is used, additional characters may be[m
+       displayed:[m
+[m
+[7m Manual page ps(1) line 464 (press h for help or q to quit)[27m[K[H[2J[H[1mPROCESS[0m [1m[7mSTATE[27m[0m [1mCODES[0m[m
+       Here are the different values that the [1ms[0m, [1mstat[0m and [1m[7mstate[27m[0m output specifiers (header "STAT"[m
+       or "S") will display to describe the [7mstate[27m of a process:[m
+[m
+               D    uninterruptible sleep (usually IO)[m
+               I    Idle kernel thread[m
+               R    running or runnable (on run queue)[m
+               S    interruptible sleep (waiting for an event to complete)[m
+               T    stopped by job control signal[m
+               t    stopped by debugger during the tracing[m
+               W    paging (not valid since the 2.6.xx kernel)[m
+               X    dead (should never be seen)[m
+               Z    defunct ("zombie") process, terminated but not reaped by its parent[m
+[m
+       For BSD formats and when the [1mstat[0m keyword is used, additional characters may be[m
+       displayed:[m
+[m
+               <    high-priority (not nice to other users)[m
+[7m Manual page ps(1) line 464 (press h for help or q to quit)[27m[K[H[2J[H[1mPROCESS[0m [1m[7mSTATE[27m[0m [1mCODES[0m[m
+       Here are the different values that the [1ms[0m, [1mstat[0m and [1m[7mstate[27m[0m output specifiers (header "STAT"[m
+       or "S") will display to describe the [7mstate[27m of a process:[m
+[m
+               D    uninterruptible sleep (usually IO)[m
+               I    Idle kernel thread[m
+               R    running or runnable (on run queue)[m
+               S    interruptible sleep (waiting for an event to complete)[m
+               T    stopped by job control signal[m
+               t    stopped by debugger during the tracing[m
+               W    paging (not valid since the 2.6.xx kernel)[m
+               X    dead (should never be seen)[m
+               Z    defunct ("zombie") process, terminated but not reaped by its parent[m
+[m
+       For BSD formats and when the [1mstat[0m keyword is used, additional characters may be[m
+       displayed:[m
+[m
+               <    high-priority (not nice to other users)[m
+               N    low-priority (nice to other users)[m
+[7m Manual page ps(1) line 464 (press h for help or q to quit)[27m[K[H[2J[H[1mPROCESS[0m [1m[7mSTATE[27m[0m [1mCODES[0m[m
+       Here are the different values that the [1ms[0m, [1mstat[0m and [1m[7mstate[27m[0m output specifiers (header "STAT"[m
+       or "S") will display to describe the [7mstate[27m of a process:[m
+[m
+               D    uninterruptible sleep (usually IO)[m
+               I    Idle kernel thread[m
+               R    running or runnable (on run queue)[m
+               S    interruptible sleep (waiting for an event to complete)[m
+               T    stopped by job control signal[m
+               t    stopped by debugger during the tracing[m
+               W    paging (not valid since the 2.6.xx kernel)[m
+               X    dead (should never be seen)[m
+               Z    defunct ("zombie") process, terminated but not reaped by its parent[m
+[m
+       For BSD formats and when the [1mstat[0m keyword is used, additional characters may be[m
+       displayed:[m
+[m
+               <    high-priority (not nice to other users)[m
+               N    low-priority (nice to other users)[m
+               L    has pages locked into memory (for real-time and custom IO)[m
+[7m Manual page ps(1) line 464 (press h for help or q to 
