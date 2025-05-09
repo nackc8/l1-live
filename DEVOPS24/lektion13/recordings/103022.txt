@@ -3163,4 +3163,70 @@ WantedBy=multi-user.target[m
 [7m Manual page systemd.service(5) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
 [7m Manual page systemd.service(5) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       If SysV init compat is enabled, systemd automatically creates service units that wrap[m
 [7m Manual page systemd.service(5) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       SysV init scripts (the service name is the same as the name of the script, with a[m
-[7m Manual page systemd.service(5) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ".service" suffix 
+[7m Manual page systemd.service(5) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ".service" suffix added); see [1msystemd-sysv-generator[22m(8).[m
+[7m Manual page systemd.service(5) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemd.service(5) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The [1msystemd-run[22m(1) command allows creating .service and .scope units dynamically and[m
+[7m Manual page systemd.service(5) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       transiently from the command line.[m
+[7m Manual page systemd.service(5) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemd.service(5) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mSERVICE TEMPLATES[0m[m
+[7m Manual page systemd.service(5) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       It is possible for [1msystemd [22mservices to take a single argument via the[m
+[7m Manual page systemd.service(5) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       "[4mservice[24m@[4margument[24m.service" syntax. Such services are called "instantiated" services,[m
+[7m Manual page systemd.service(5) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       while the unit definition without the [4margument[24m parameter is called a "template". An[m
+[7m Manual page systemd.service(5) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       example could be a dhcpcd@.service service template which takes a network interface as a[m
+[7m Manual page systemd.service(5) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       parameter to form an instantiated service. Within the service file, this parameter or[m
+[7m Manual page systemd.service(5) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       "instance name" can be accessed with %-specifiers. See [1msystemd.unit[22m(5) for details.[m
+[7m Manual page systemd.service(5) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemd.service(5) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mAUTOMATIC DEPENDENCIES[0m[m
+[7m Manual page systemd.service(5) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mImplicit Dependencies[0m[m
+[7m Manual page systemd.service(5) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The following dependencies are implicitly added:[m
+[7m Manual page systemd.service(5) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemd.service(5) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       •   Services with [4mType=dbus[24m set automatically acquire dependencies of type [4mRequires=[24m and[m
+[7m Manual page systemd.service(5) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [4mAfter=[24m on dbus.socket.[m
+[7m Manual page systemd.service(5) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemd.service(5) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       •   Socket activated services are automatically ordered after their activating .socket[m
+[7m Manual page systemd.service(5) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           units via an automatic [4mAfter=[24m dependency. Services also pull in all .socket units[m
+[7m Manual page systemd.service(5) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           listed in [4mSockets=[24m via automatic [4mWants=[24m and [4mAfter=[24m dependencies.[m
+[7m Manual page systemd.service(5) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemd.service(5) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Additional implicit dependencies may be added as result of execution and resource control[m
+[7m Manual page systemd.service(5) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       parameters as documented in [1msystemd.exec[22m(5) and [1msystemd.resource-control[22m(5).[m
+[7m Manual page systemd.service(5) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemd.service(5) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mDefault Dependencies[0m[m
+[7m Manual page systemd.service(5) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The following dependencies are added unless [4mDefaultDependencies=no[24m is set:[m
+[7m Manual page systemd.service(5) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemd.service(5) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       •   Service units will have dependencies of type [4mRequires=[24m and [4mAfter=[24m on sysinit.target,[m
+[7m Manual page systemd.service(5) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           a dependency of type [4mAfter=[24m on basic.target as well as dependencies of type[m
+[7m Manual page systemd.service(5) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [4mConflicts=[24m and [4mBefore=[24m on shutdown.target. These ensure that normal service units[m
+[7m Manual page systemd.service(5) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           pull in basic system initialization, and are terminated cleanly prior to system[m
+[7m Manual page systemd.service(5) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           shutdown. Only services involved with early boot or late system shutdown should[m
+[7m Manual page systemd.service(5) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           disable this option.[m
+[7m Manual page systemd.service(5) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemd.service(5) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       •   Instanced service units (i.e. service units with an "@" in their name) are assigned[m
+[7m Manual page systemd.service(5) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           by default a per-template slice unit (see [1msystemd.slice[22m(5)), named after the template[m
+[7m Manual page systemd.service(5) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           unit, containing all instances of the specific template. This slice is normally[m
+[7m Manual page systemd.service(5) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           stopped at shutdown, together with all template instances. If that is not desired,[m
+[7m Manual page systemd.service(5) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           set [4mDefaultDependencies=no[24m in the template unit, and either define your own[m
+[7m Manual page systemd.service(5) line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           per-template slice unit file that also sets [4mDefaultDependencies=no[24m, or set[m
+[7m Manual page systemd.service(5) line 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [4mSlice=system.slice[24m (or another suitable slice) in the template unit. Also see[m
+[7m Manual page systemd.service(5) line 51 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1msystemd.resource-control[22m(5).[m
+[7m Manual page systemd.service(5) line 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemd.service(5) line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mOPTIONS[0m[m
+[7m Manual page systemd.service(5) line 54 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Service unit files may include [Unit] and [Install] sections, which are described in[m
+[7m Manual page systemd.service(5) line 55 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1msystemd.unit[22m(5).[m
+[7m Manual page systemd.service(5) line 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemd.service(5) line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Service unit files must include a [Service] section, which carries information about the[m
+[7m Manual page systemd.service(5) line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       service and the process it supervises. A number of options that may be used in this[m
+[7m Manual page systemd.service(5) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       section are shared with other unit types. These options are documented in[m
+[7m Manual page systemd.service(5) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1msystemd.exec[22m(5), [1msystemd.kill[22m(5) and [1msystemd.resource-control[22m(5). The options specific to[m
+[7m Manual page systemd.service(5) line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the [Service] section of service units are the following:[m
+[7m Manual page systemd.service(5) line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemd.service(5) line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mType=[0m[m
+[7m Manual page systemd.service(5) line 64 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Configures the mechanism via which the service notifies the manager that the service[m
+[7m Manual page systemd.service(5) line 65 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           start-up has finished. One of [1msimple[22m, [1mexec[22m, [1mforking[22m, [1moneshot[22m, [1mdbus[22m, [1mnotify[22m,[m
+[7m Manual page systemd.service(5) line 66 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mnotify-reload[22m, or [1midle[22m:[m
+[7m Manual page systemd.service(5) line 67 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemd.service(5) line 68 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           •   If set to [1msimple [22m(the default if [4mExecStart=[24m is specified but neither [4mType=[24m nor[m
+[7m Manual page systemd.service(5) line 69 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               [4mBusName=[24m are), the service manager will consider the unit started immediately[m
+[7m Manual page systemd.service(5) line 70 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               after the main service process has been forked off (i.e. immediately after[m
+[7m Manual page systemd.service(5) line 71 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               [1mfork()[22m, and before various process attributes have been configured and in[m
+[7m Manual page systemd.service(5) line 72 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               particular before the new process has called [1mexecve() [22mto invoke the actual[m
+[7m Manual page systemd.service(5) line 73 (press h for help or q to quit)[27m[K
