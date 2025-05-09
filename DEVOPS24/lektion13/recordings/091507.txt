@@ -5444,4 +5444,87 @@ e^C[?2004l[?2004h[?2004l
 hej
 [?2004h[94mDEVOPS24/lektion13
 (B[m$ 
-[?2004l[?2004h[94mDEVOPS2
+[?2004l[?2004h[94mDEVOPS24/lektion13
+(B[m$ hopp
+ls
+[?2004ljob_control.txt  processer.txt	recordings
+[1]+  Done                    ( echo hej; sleep 3; echo hopp )
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ ls[H[2J[94mDEVOPS24/lektion13
+(B[m$ ls( echo hej; sleep 3; echo hopp; ) &[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C^C[?2004l[?2004h[?2004l
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ md5sumemd5sum[C[C[Ccmd5sum[C[C[C[Chmd5sumomd5sum md5sumhmd5sumemd5sumjmd5sum md5sum|md5sum md5sum
+[?2004lff961dc5e8da688fa78540651160b223  -
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ chmod +x ./intense 
+[?2004l[?2004h[94mDEVOPS24/lektion13
+(B[m$ [H[2J[94mDEVOPS24/lektion13
+(B[m$ ./intense 
+[?2004lResult: b1730991091aaad68ec3a45f54910d23  -
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ ./intense 
+[?2004lResult: b1730991091aaad68ec3a45f54910d23  -
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ ./intense 
+[?2004lResult: b1730991091aaad68ec3a45f54910d23  -
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ chmod _[K+_x[K[Kx ./parallell 
+[?2004l[?2004h[94mDEVOPS24/lektion13
+(B[m$ [H[2J[94mDEVOPS24/lektion13
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mDEVOPS24/lektion13
+(B[m$ time ./parallell 
+[?2004lResult: b1730991091aaad68ec3a45f54910d23  -
+./parallell: line 6: siellt: command not found
+^C
+
+real	0m38.701s
+user	0m41.306s
+sys	0m6.690s
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ [K(B[m$ [K(B[m$ time ./parallell [C[C[Ktime ./parallell [H[2J[94mDEVOPS24/lektion13
+(B[m$ time ./parallell 
+[?2004lResult: b1730991091aaad68ec3a45f54910d23  -
+./parallell: line 6: /intense: No such file or directory
+
+real	0m19.568s
+user	0m20.812s
+sys	0m3.458s
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ [H[2J[94mDEVOPS24/lektion13
+(B[m$ man q[Kwait
+[?2004l[?1049h[22;0;0t[?1h=wait(2)                                  System Calls Manual                                 wait(2)[m
+[m
+[1mNAME[0m[m
+       wait, waitpid, waitid - wait for process to change state[m
+[m
+[1mLIBRARY[0m[m
+       Standard C library ([4mlibc[24m, [4m-lc[24m)[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<sys/wait.h>[0m[m
+[m
+       [1mpid_t[0m [1mwait(int[0m [1m*_Nullable[0m [4mwstatus[24m[1m);[0m[m
+       [1mpid_t[0m [1mwaitpid(pid_t[0m [4mpid[24m[1m,[0m [1mint[0m [1m*_Nullable[0m [4mwstatus[24m[1m,[0m [1mint[0m [4moptions[24m[1m);[0m[m
+[m
+       [1mint[0m [1mwaitid(idtype_t[0m [4midtype[24m[1m,[0m [1mid_t[0m [4mid[24m[1m,[0m [1msiginfo_t[0m [1m*[0m[4minfop[24m[1m,[0m [1mint[0m [4moptions[24m[1m);[0m[m
+                       /* This is the glibc and POSIX interface; see[m
+[7m Manual page wait(2) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion13
+(B[m$ help wait[H[2J[94mDEVOPS24/lektion13
+(B[m$ help wait
+[?2004lwait: wait [-fn] [-p var] [id ...]
+    Wait for job completion and return exit status.
+    
+    Waits for each process identified by an ID, which may be a process ID or a
+    job specification, and reports its termination status.  If ID is not
+    given, waits for all currently active child processes, and the return
+    status is zero.  If ID is a job specification, waits for all processes
+    in that job's pipeline.
+    
+    If the -n option is supplied, waits for a single job from the list of IDs,
+    or, if no IDs are supplied, for the next job to complete and returns its
+    exit status.
+    
+    If the -p option is supplied, the process or job identifier of the job
+    for which the exit status is returned is assigned to the variable VAR
+    named by the option argument. The variable will be unset initially, before
+    any assignment. This is useful only when the -n option is suppl
