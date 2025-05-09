@@ -3977,4 +3977,75 @@ For more details see ps(1).
                <    high-priority (not nice to other users)[m
                N    low-priority (nice to other users)[m
                L    has pages locked into memory (for real-time and custom IO)[m
-[7m Manual page ps(1) line 464 (press h for help or q to 
+[7m Manual page ps(1) line 464 (press h for help or q to quit)[27m[K[H[2J[H[1mPROCESS[0m [1m[7mSTATE[27m[0m [1mCODES[0m[m
+       Here are the different values that the [1ms[0m, [1mstat[0m and [1m[7mstate[27m[0m output specifiers (header "STAT"[m
+       or "S") will display to describe the [7mstate[27m of a process:[m
+[m
+               D    uninterruptible sleep (usually IO)[m
+               I    Idle kernel thread[m
+               R    running or runnable (on run queue)[m
+               S    interruptible sleep (waiting for an event to complete)[m
+               T    stopped by job control signal[m
+               t    stopped by debugger during the tracing[m
+               W    paging (not valid since the 2.6.xx kernel)[m
+               X    dead (should never be seen)[m
+               Z    defunct ("zombie") process, terminated but not reaped by its parent[m
+[m
+       For BSD formats and when the [1mstat[0m keyword is used, additional characters may be[m
+       displayed:[m
+[m
+               <    high-priority (not nice to other users)[m
+               N    low-priority (nice to other users)[m
+               L    has pages locked into memory (for real-time and custom IO)[m
+               s    is a session leader[m
+[7m Manual page ps(1) line 464 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t
+[2]+  Stopped                 man ps
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ man ps[C[Cps -eOpid,state | less[H[2J[94mDEVOPS24/lektion13
+(B[m$ ps -eOpid,state | less
+[?2004l[?1049h[22;0;0t[?1h=    PID     PID S S TTY          TIME COMMAND
+      1       1 S S ?        00:00:01 /sbin/init splash
+      2       2 S S ?        00:00:00 [kthreadd]
+      3       3 I I ?        00:00:00 [rcu_gp]
+      4       4 I I ?        00:00:00 [rcu_par_gp]
+      5       5 I I ?        00:00:00 [slub_flushwq]
+      6       6 I I ?        00:00:00 [netns]
+      8       8 I I ?        00:00:00 [kworker/0:0H-events_highpri]
+     10      10 I I ?        00:00:00 [mm_percpu_wq]
+     11      11 I I ?        00:00:00 [rcu_tasks_kthread]
+     12      12 I I ?        00:00:00 [rcu_tasks_rude_kthread]
+     13      13 I I ?        00:00:00 [rcu_tasks_trace_kthread]
+     14      14 S S ?        00:00:00 [ksoftirqd/0]
+     15      15 I I ?        00:00:04 [rcu_preempt]
+     16      16 S S ?        00:00:00 [migration/0]
+     17      17 I I ?        00:00:00 [kworker/0:1-events]
+     18      18 S S ?        00:00:00 [cpuhp/0]
+     19      19 S S ?        00:00:00 [cpuhp/1]
+     20      20 S S ?        00:00:00 [migration/1]
+     21      21 S S ?        00:00:00 [ksoftirqd/1]
+     23      23 I I ?        00:00:00 [kworker/1:0H-events_highpri]
+:[K[K     24      24 S S ?        00:00:00 [cpuhp/2]
+     25      25 S S ?        00:00:00 [migration/2]
+     26      26 S S ?        00:00:00 [ksoftirqd/2]
+     28      28 I I ?        00:00:00 [kworker/2:0H-events_highpri]
+     29      29 S S ?        00:00:00 [cpuhp/3]
+     30      30 S S ?        00:00:00 [migration/3]
+     31      31 S S ?        00:00:00 [ksoftirqd/3]
+     33      33 I I ?        00:00:00 [kworker/3:0H-events_highpri]
+     34      34 S S ?        00:00:00 [cpuhp/4]
+     35      35 S S ?        00:00:00 [migration/4]
+     36      36 S S ?        00:00:00 [ksoftirqd/4]
+     38      38 I I ?        00:00:00 [kworker/4:0H-events_highpri]
+     39      39 S S ?        00:00:00 [cpuhp/5]
+     40      40 S S ?        00:00:00 [migration/5]
+     41      41 S S ?        00:00:00 [ksoftirqd/5]
+     43      43 I I ?        00:00:00 [kworker/5:0H-events_highpri]
+     44      44 S S ?        00:00:00 [cpuhp/6]
+     45      45 S S ?        00:00:00 [migration/6]
+     46      46 S S ?        00:00:00 [ksoftirqd/6]
+     48      48 I I ?        00:00:00 [kworker/6:0H-events_highpri]
+     49      49 S S ?        00:00:00 [cpuhp/7]
+:[K[K     50      50 S S ?        00:00:00 [migration/7]
+     51      51 S S ?        00:00:00 [ksoftirqd/7]
+     53      53 I I ?        00:00:00 [kworker/7:0H-events_highpri]
+     54      54 S 
