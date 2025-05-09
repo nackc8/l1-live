@@ -5350,4 +5350,98 @@ For more details see ps(1).
 (B[m$ ps
 [?2004l    PID TTY          TIME CMD
    9152 pts/3    00:00:00 bash_noprofile_
-   9153 
+   9153 pts/3    00:00:00 bash
+  10109 pts/3    00:00:00 man
+  10117 pts/3    00:00:00 pager
+  29420 pts/3    00:00:00 man
+  29428 pts/3    00:00:00 pager
+  54867 pts/3    00:00:00 sleep
+  55080 pts/3    00:00:00 ps
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ ps -jH[H[2J[94mDEVOPS24/lektion13
+(B[m$ ps -jH
+[?2004l    PID    PGID     SID TTY          TIME CMD
+   9152    9152    9152 pts/3    00:00:00 bash_noprofile_
+   9153    9153    9152 pts/3    00:00:00   bash
+  10109   10109    9152 pts/3    00:00:00     man
+  10117   10109    9152 pts/3    00:00:00       pager
+  29420   29420    9152 pts/3    00:00:00     man
+  29428   29420    9152 pts/3    00:00:00       pager
+  54867   54867    9152 pts/3    00:00:00     sleep
+  55623   55623    9152 pts/3    00:00:00     ps
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ [H[2J[94mDEVOPS24/lektion13
+(B[m$ jobs
+[?2004l[1]-  Stopped                 man ps
+[2]+  Stopped                 man ps
+[3]   Running                 sleep 100 &
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ kill %1%[K %2
+[?2004l[1]   Terminated              man ps
+[2]-  Terminated              man ps
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ kill %1 %2[C[C[6Pjobs[H[2J[94mDEVOPS24/lektion13
+(B[m$ jobs
+[?2004l[3]+  Done                    sleep 100
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ jobs
+[?2004l[?2004h[94mDEVOPS24/lektion13
+(B[m$ jobs[C[Ckill %1 %2[C[C[6Pjobs[C[Cps -jH[Ksleep 100 &[H[2J[94mDEVOPS24/lektion13
+(B[m$ sleep 100 &
+[?2004l[1] 56921
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ jobs
+[?2004l[1]+  Running                 sleep 100 &
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ fg[H[2J[94mDEVOPS24/lektion13
+(B[m$ fg[K[Kkjpn[K[K[K[Kjobs
+[?2004l[1]+  Running                 sleep 100 &
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ fg
+[?2004lsleep 100
+^C
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ [H[2J[94mDEVOPS24/lektion13
+(B[m$ Å[K{ }[C[C }e }c }h }o }[C }h }e }j }, }[C }[1P}[1P }; }[C }s }l }e }e }p }[C }1 }; }[C }e }c }h }o }[C }h }o }p }p }[C[C
+[?2004l[?2004h> ^C[?2004l[?2004h[?2004l
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ { echo hej; sleep 1; echo hopp }l }[1P }; }[H[2J[94mDEVOPS24/lektion13
+(B[m$ { echo hej; sleep 1; echo hopp; }
+[?2004lhej
+hopp
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ { echo hej; sleep 1; echo hopp; }[H[2J[94mDEVOPS24/lektion13
+(B[m$ { echo hej; sleep 1; echo hopp; }
+[?2004lhej
+hopp
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ { echo hej; sleep 1; echo hopp; }[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K)[C[1P[1@([C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lhej
+hopp
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ ( echo hej; sleep 1; echo hopp; )[H[2J[94mDEVOPS24/lektion13
+(B[m$ ( echo hej; sleep 1; echo hopp; ) *[K&
+[?2004l[1] 59553
+hej
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ jehopp
+ieieieie
+[?2004lbash: jeieieieie: command not found
+[1]+  Done                    ( echo hej; sleep 1; echo hopp )
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ jeieieieie[C[C( echo hej; sleep 1; echo hopp; ) &[H[2J[94mDEVOPS24/lektion13
+(B[m$ ( echo hej; sleep 1; echo hopp; ) &[1P[1@3[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l[1] 59727
+hej
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ hejsioejhopp
+e^C[?2004l[?2004h[?2004l
+[1]+  Done                    ( echo hej; sleep 3; echo hopp )
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ ( echo hej; sleep 3; echo hopp; ) &[H[2J[94mDEVOPS24/lektion13
+(B[m$ ( echo hej; sleep 3; echo hopp; ) &
+[?2004l[1] 60303
+hej
+[?2004h[94mDEVOPS24/lektion13
+(B[m$ 
+[?2004l[?2004h[94mDEVOPS2
