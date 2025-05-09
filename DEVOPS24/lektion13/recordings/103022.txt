@@ -3229,4 +3229,173 @@ WantedBy=multi-user.target[m
 [7m Manual page systemd.service(5) line 70 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               after the main service process has been forked off (i.e. immediately after[m
 [7m Manual page systemd.service(5) line 71 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               [1mfork()[22m, and before various process attributes have been configured and in[m
 [7m Manual page systemd.service(5) line 72 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               particular before the new process has called [1mexecve() [22mto invoke the actual[m
-[7m Manual page systemd.service(5) line 73 (press h for help or q to quit)[27m[K
+[7m Manual page systemd.service(5) line 73 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               service binary). Typically, [4mType=[24m[1mexec [22mis the better choice, see below.[m
+[7m Manual page systemd.service(5) line 74 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page systemd.service(5) line 75 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               It is expected that the process configured with [4mExecStart=[24m is the main process of[m
+[7m Manual page systemd.service(5) line 76 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               the service. In this mode, if the process offers functionality to other processes[m
+[7m Manual page systemd.service(5) line 77 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               on the system, its communication channels should be installed before the service[m
+[7m Manual page systemd.service(5) line 78 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               is started up (e.g. sockets set up by systemd, via socket activation), as the[m
+[7m Manual page systemd.service(5) line 79 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               service manager will immediately proceed starting follow-up units, right after[m
+[7m Manual page systemd.service(5) line 80 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               creating the main service process, and before executing the service's binary.[m
+[7m Manual page systemd.service(5) line 81 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[19;1H[K[7m Manual page systemd.service(5) line 80 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       the [Service] section of service units are the following:[m
+[19;1H[K[7m Manual page systemd.service(5) line 79 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               service manager will immediately proceed starting follow-up units, right after[m
+[7m Manual page systemd.service(5) line 80 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       the [Service] section of service units are the following:[m
+[19;1H[K[7m Manual page systemd.service(5) line 79 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1msystemd.exec[22m(5), [1msystemd.kill[22m(5) and [1msystemd.resource-control[22m(5). The options specific to[m
+[19;1H[K[7m Manual page systemd.service(5) line 78 (press h for help or q to quit)[27m[K[K               is started up (e.g. sockets set up by systemd, via socket activation), as the[m
+               service manager will immediately proceed starting follow-up units, right after[m
+               creating the main service process, and before executing the service's binary.[m
+               Note that this means [1msystemctl start [22mcommand lines for [1msimple [22mservices will[m
+               report success even if the service's binary cannot be invoked successfully (for[m
+               example because the selected [4mUser=[24m doesn't exist, or the service binary is[m
+               missing).[m
+[m
+           •   The [1mexec [22mtype is similar to [1msimple[22m, but the service manager will consider the[m
+               unit started immediately after the main service binary has been executed. The[m
+               service manager will delay starting of follow-up units until that point. (Or in[m
+               other words: [1msimple [22mproceeds with further jobs right after [1mfork() [22mreturns, while[m
+               [1mexec [22mwill not proceed before both [1mfork() [22mand [1mexecve() [22min the service process[m
+               succeeded.) Note that this means [1msystemctl start [22mcommand lines for [1mexec [22mservices[m
+               will report failure when the service's binary cannot be invoked successfully (for[m
+               example because the selected [4mUser=[24m doesn't exist, or the service binary is[m
+               missing).[m
+[m
+[7m Manual page systemd.service(5) line 96 (press h for help or q to quit)[27m[K[K           •   If set to [1mforking[22m, the manager will consider the unit started immediately after[m
+               the binary that forked off by the manager exits.  [4mThe[24m [4muse[24m [4mof[24m [4mthis[24m [4mtype[24m [4mis[0m[m
+               [4mdiscouraged,[24m [4muse[24m [1mnotify[4m[22m,[24m [1mnotify-reload[4m[22m,[24m [4mor[24m [1mdbus [4m[22minstead.[0m[m
+[m
+               It is expected that the process configured with [4mExecStart=[24m will call [1mfork() [22mas[m
+               part of its start-up. The parent process is expected to exit when start-up is[m
+               complete and all communication channels are set up. The child continues to run as[m
+               the main service process, and the service manager will consider the unit started[m
+               when the parent process exits. This is the behavior of traditional UNIX services.[m
+               If this setting is used, it is recommended to also use the [4mPIDFile=[24m option, so[m
+               that systemd can reliably identify the main process of the service. The manager[m
+               will proceed with starting follow-up units after the parent process exits.[m
+[m
+           •   Behavior of [1moneshot [22mis similar to [1msimple[22m; however, the service manager will[m
+               consider the unit up after the main process exits. It will then start follow-up[m
+               units.  [4mRemainAfterExit=[24m is particularly useful for this type of service.[m
+               [4mType=[24m[1moneshot [22mis the implied default if neither [4mType=[24m nor [4mExecStart=[24m are[m
+               specified. Note that if this option is used without [4mRemainAfterExit=[24m the service[m
+[7m Manual page systemd.service(5) line 114 (press h for help or q to quit)[27m[K[K               will never enter "active" unit state, but will directly transition from[m
+               "activating" to "deactivating" or "dead", since no process is configured that[m
+               shall run continuously. In particular this means that after a service of this[m
+               type ran (and which has [4mRemainAfterExit=[24m not set) it will not show up as started[m
+               afterwards, but as dead.[m
+[m
+           •   Behavior of [1mdbus [22mis similar to [1msimple[22m; however, units of this type must have the[m
+               [4mBusName=[24m specified and the service manager will consider the unit up when the[m
+               specified bus name has been acquired. This type is the default if [4mBusName=[24m is[m
+               specified.[m
+[m
+               Service units with this option configured implicitly gain dependencies on the[m
+               dbus.socket unit. A service unit of this type is considered to be in the[m
+               activating state until the specified bus name is acquired. It is considered[m
+               activated while the bus name is taken. Once the bus name is released the service[m
+               is considered being no longer functional which has the effect that the service[m
+               manager attempts to terminate any remaining processes belonging to the service.[m
+               Services that drop their bus name as part of their shutdown logic thus should be[m
+[7m Manual page systemd.service(5) line 132 (press h for help or q to quit)[27m[K[K               prepared to receive a [1mSIGTERM [22m(or whichever signal is configured in [4mKillSignal=[24m)[m
+               as result.[m
+[m
+           •   Behavior of [1mnotify [22mis similar to [1mexec[22m; however, it is expected that the service[m
+               sends a "READY=1" notification message via [1msd_notify[22m(3) or an equivalent call[m
+               when it has finished starting up. systemd will proceed with starting follow-up[m
+               units after this notification message has been sent. If this option is used,[m
+               [4mNotifyAccess=[24m (see below) should be set to open access to the notification socket[m
+               provided by systemd. If [4mNotifyAccess=[24m is missing or set to [1mnone[22m, it will be[m
+               forcibly set to [1mmain[22m.[m
+[m
+               If the service supports reloading, and uses a signal to start the reload, using[m
+               [1mnotify-reload [22minstead is recommended.[m
+[m
+           •   Behavior of [1mnotify-reload [22mis similar to [1mnotify[22m, with one difference: the [1mSIGHUP[0m[m
+               UNIX process signal is sent to the service's main process when the service is[m
+               asked to reload and the manager will wait for a notification about the reload[m
+               being finished.[m
+[7m Manual page systemd.service(5) line 150 (press h for help or q to quit)[27m[K[K[m
+               When initiating the reload process the service is expected to reply with a[m
+               notification message via [1msd_notify[22m(3) that contains the "RELOADING=1" field in[m
+               combination with "MONOTONIC_USEC=" set to the current monotonic time (i.e.[m
+               [1mCLOCK_MONOTONIC [22min [1mclock_gettime[22m(2)) in μs, formatted as decimal string. Once[m
+               reloading is complete another notification message must be sent, containing[m
+               "READY=1". Using this service type and implementing this reload protocol is an[m
+               efficient alternative to providing an [4mExecReload=[24m command for reloading of the[m
+               service's configuration.[m
+[m
+               The signal to send can be tweaked via [4mReloadSignal=[24m, see below.[m
+[m
+           •   Behavior of [1midle [22mis very similar to [1msimple[22m; however, actual execution of the[m
+               service program is delayed until all active jobs are dispatched. This may be used[m
+               to avoid interleaving of output of shell services with the status output on the[m
+               console. Note that this type is useful only to improve console output, it is not[m
+               useful as a general unit ordering tool, and the effect of this service type is[m
+               subject to a 5s timeout, after which the service program is invoked anyway.[m
+[7m Manual page systemd.service(5) line 168 (press h for help or q to quit)[27m[K[K[m
+           It is recommended to use [4mType=[24m[1mexec [22mfor long-running services, as it ensures that[m
+           process setup errors (e.g. errors such as a missing service executable, or missing[m
+           user) are properly tracked. However, as this service type won't propagate the[m
+           failures in the service's own startup code (as opposed to failures in the preparatory[m
+           steps the service manager executes before [1mexecve()[22m) and doesn't allow ordering of[m
+           other units against completion of initialization of the service code itself (which[m
+           for example is useful if clients need to connect to the service through some form of[m
+           IPC, and the IPC channel is only established by the service itself — in contrast to[m
+           doing this ahead of time through socket or bus activation or similar), it might not[m
+           be sufficient for many cases. If so, [1mnotify[22m, [1mnotify-reload[22m, or [1mdbus [22m(the latter only[m
+           in case the service provides a D-Bus interface) are the preferred options as they[m
+           allow service program code to precisely schedule when to consider the service started[m
+           up successfully and when to proceed with follow-up units. The [1mnotify[22m/[1mnotify-reload[0m[m
+           service types require explicit support in the service codebase (as [1msd_notify() [22mor an[m
+           equivalent API needs to be invoked by the service at the appropriate time) — if it's[m
+           not supported, then [1mforking [22mis an alternative: it supports the traditional[m
+           heavy-weight UNIX service start-up protocol. Note that using any type other than[m
+[7m Manual page systemd.service(5) line 186 (press h for help or q to quit)[27m[K[K           [1msimple [22mpossibly delays the boot process, as the service manager needs to wait for at[m
+           least some service initialization to complete. (Also note it is generally not[m
+           recommended to use [1midle [22mor [1moneshot [22mfor long-running services.)[m
+[m
+           Note that various service settings (e.g.  [4mUser=[24m, [4mGroup=[24m through libc NSS) might[m
+           result in "hidden" blocking IPC calls to other services when used. Sometimes it might[m
+           be advisable to use the [1msimple [22mservice type to ensure that the service manager's[m
+           transaction logic is not affected by such potentially slow operations and hidden[m
+           dependencies, as this is the only service type where the service manager will not[m
+           wait for such service execution setup operations to complete before proceeding.[m
+[m
+       [4mExitType=[0m[m
+           Specifies when the manager should consider the service to be finished. One of [1mmain [22mor[m
+           [1mcgroup[22m:[m
+[m
+           •   If set to [1mmain [22m(the default), the service manager will consider the unit stopped[m
+               when the main process, which is determined according to the [4mType=[24m, exits.[m
+               Consequently, it cannot be used with [4mType=[24m[1moneshot[22m.[m
+[7m Manual page systemd.service(5) line 204 (press h for help or q to quit)[27m[K[K[m
+           •   If set to [1mcgroup[22m, the service will be considered running as long as at least one[m
+               process in the cgroup has not exited.[m
+[m
+           It is generally recommended to use [4mExitType=[24m[1mmain [22mwhen a service has a known forking[m
+           model and a main process can reliably be determined.  [4mExitType=[24m [1mcgroup [22mis meant for[m
+           applications whose forking model is not known ahead of time and which might not have[m
+           a specific main process. It is well suited for transient or automatically generated[m
+           services, such as graphical applications inside of a desktop environment.[m
+[m
+           Added in version 250.[m
+[m
+       [4mRemainAfterExit=[0m[m
+           Takes a boolean value that specifies whether the service shall be considered active[m
+           even when all its processes exited. Defaults to [1mno[22m.[m
+[m
+       [4mGuessMainPID=[0m[m
+           Takes a boolean value that specifies whether systemd should try to guess the main PID[m
+[7m Manual page systemd.service(5) line 222 (press h for help or q to quit)[27m[K[K           of a service if it cannot be determined reliably. This option is ignored unless[m
+           [1mType=forking [22mis set and [1mPIDFile= [22mis unset because for the other types or with an[m
+           explicitly configured PID file, the main PID is always known. The guessing algorithm[m
+           might come to incorrect conclusions if a daemon consists of more than one process. If[m
+           the main PID cannot be determined, failure detection and automatic restarting of a[m
+           service will not work reliably. Defaults to [1myes[22m.[m
+[m
+       [4mPIDFile=[0m[m
+           Takes a path referring to the PID file of the service. Usage of this option is[m
+           recommended for services where [4mType=[24m is set to [1mforking[22m. The path specified typically[m
+           points to a file below /run/. If a relative path is specified it is hence prefixed[m
+           with /run/. The service manager will read the PID of the main process of the service[m
+           from this file after start-up of the service. The service m
