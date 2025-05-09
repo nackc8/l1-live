@@ -4258,4 +4258,270 @@ For more details see ps(1).
           [1mps[0m [1m-eM[0m[m
 [m
        To see every process running as root (real & effective ID) in user format:[m
-[7m Manual page ps(1) line 60 (press h for help or q to quit)[27m[K[K/[
+[7m Manual page ps(1) line 60 (press h for help or q to quit)[27m[K[K/[K...skipping...
+          [1mps[0m [1m-eo[0m [1mpid,tid,class,rt[0m[1m[7mpri[27m[0m[1mo,ni,[0m[1m[7mpri[27m[0m[1m,psr,pcpu,stat,wchan:14,comm[0m[m
+          [1mps[0m [1maxo[0m [1mstat,euid,ruid,tty,tpgid,sess,pgrp,ppid,pid,pcpu,comm[0m[m
+          [1mps[0m [1m-Ao[0m [1mpid,tt,user,fname,tmout,f,wchan[0m[m
+[m
+       [7mPri[27mnt only the process IDs of syslogd:[m
+          [1mps[0m [1m-C[0m [1msyslogd[0m [1m-o[0m [1mpid=[0m[m
+[m
+       [7mPri[27mnt only the name of PID 42:[m
+          [1mps[0m [1m-q[0m [1m42[0m [1m-o[0m [1mcomm=[0m[m
+[m
+[1mSIMPLE[0m [1mPROCESS[0m [1mSELECTION[0m[m
+       [1ma[0m      Lift the BSD-style "only yourself" restriction, which is imposed upon the set of[m
+              all processes when some BSD-style (without "-") options are used or when the [1mps[0m[m
+              personality setting is BSD-like.  The set of processes selected in this manner is[m
+[7m Manual page ps(1) line 77 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       To see every process with a user-defined format:[m
+[15;1H[K[7m Manual page ps(1) line 76 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[15;1H[K[7m Manual page ps(1) line 75 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion13
+(B[m$ man ps[C[Cps -eOpid,state | less[1P[1P[1P[1P[1P[1@p[1@r[1@i[1@,[1@p[1@g[1@r[1@p[1@.[1@,[1P[1P[1@,[1@u[1@s[1@e[1@r[H[2J[94mDEVOPS24/lektion13
+(B[m$ ps -eOpid,pri,pgrp,user | less[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l[?1049h[22;0;0t[?1h=    PID     PID PRI    PGRP USER     S TTY          TIME COMMAND
+      1       1  19       1 root     S ?        00:00:01 /sbin/init splash
+      2       2  19       0 root     S ?        00:00:00 [kthreadd]
+      3       3  39       0 root     I ?        00:00:00 [rcu_gp]
+      4       4  39       0 root     I ?        00:00:00 [rcu_par_gp]
+      5       5  39       0 root     I ?        00:00:00 [slub_flushwq]
+      6       6  39       0 root     I ?        00:00:00 [netns]
+      8       8  39       0 root     I ?        00:00:00 [kworker/0:0H-events_highpri]
+     10      10  39       0 root     I ?        00:00:00 [mm_percpu_wq]
+     11      11  19       0 root     I ?        00:00:00 [rcu_tasks_kthread]
+     12      12  19       0 root     I ?        00:00:00 [rcu_tasks_rude_kthread]
+     13      13  19       0 root     I ?        00:00:00 [rcu_tasks_trace_kthread]
+     14      14  19       0 root     S ?        00:00:00 [ksoftirqd/0]
+     15      15  19       0 root     I ?        00:00:05 [rcu_preempt]
+:[K...skipping...
+    PID     PID PRI    PGRP USER     S TTY          TIME COMMAND
+      1       1  19       1 root     S ?        00:00:01 /sbin/init splash
+      2       2  19       0 root     S ?        00:00:00 [kthreadd]
+      3       3  39       0 root     I ?        00:00:00 [rcu_gp]
+      4       4  39       0 root     I ?        00:00:00 [rcu_par_gp]
+      5       5  39       0 root     I ?        00:00:00 [slub_flushwq]
+      6       6  39       0 root     I ?        00:00:00 [netns]
+      8       8  39       0 root     I ?        00:00:00 [kworker/0:0H-events_highpri]
+     10      10  39       0 root     I ?        00:00:00 [mm_percpu_wq]
+     11      11  19       0 root     I ?        00:00:00 [rcu_tasks_kthread]
+     12      12  19       0 root     I ?        00:00:00 [rcu_tasks_rude_kthread]
+     13      13  19       0 root     I ?        00:00:00 [rcu_tasks_trace_kthread]
+     14      14  19       0 root     S ?        00:00:00 [ksoftirqd/0]
+     15      15  19       0 root     I ?        00:00:05 [rcu_preempt]
+     16      16 139       0 root     S ?        00:00:00 [migration/0]
+:[K...skipping...
+    PID     PID PRI    PGRP USER     S TTY          TIME COMMAND
+      1       1  19       1 root     S ?        00:00:01 /sbin/init splash
+      2       2  19       0 root     S ?        00:00:00 [kthreadd]
+      3       3  39       0 root     I ?        00:00:00 [rcu_gp]
+      4       4  39       0 root     I ?        00:00:00 [rcu_par_gp]
+      5       5  39       0 root     I ?        00:00:00 [slub_flushwq]
+      6       6  39       0 root     I ?        00:00:00 [netns]
+      8       8  39       0 root     I ?        00:00:00 [kworker/0:0H-events_highpri]
+     10      10  39       0 root     I ?        00:00:00 [mm_percpu_wq]
+     11      11  19       0 root     I ?        00:00:00 [rcu_tasks_kthread]
+     12      12  19       0 root     I ?        00:00:00 [rcu_tasks_rude_kthread]
+     13      13  19       0 root     I ?        00:00:00 [rcu_tasks_trace_kthread]
+     14      14  19       0 root     S ?        00:00:00 [ksoftirqd/0]
+     15      15  19       0 root     I ?        00:00:05 [rcu_preempt]
+     16      16 139       0 root     S ?        00:00:00 [migration/0]
+     17      17  19       0 root     I ?        00:00:00 [kworker/0:1-events]
+:[K...skipping...
+    PID     PID PRI    PGRP USER     S TTY          TIME COMMAND
+      1       1  19       1 root     S ?        00:00:01 /sbin/init splash
+      2       2  19       0 root     S ?        00:00:00 [kthreadd]
+      3       3  39       0 root     I ?        00:00:00 [rcu_gp]
+      4       4  39       0 root     I ?        00:00:00 [rcu_par_gp]
+      5       5  39       0 root     I ?        00:00:00 [slub_flushwq]
+      6       6  39       0 root     I ?        00:00:00 [netns]
+      8       8  39       0 root     I ?        00:00:00 [kworker/0:0H-events_highpri]
+     10      10  39       0 root     I ?        00:00:00 [mm_percpu_wq]
+     11      11  19       0 root     I ?        00:00:00 [rcu_tasks_kthread]
+     12      12  19       0 root     I ?        00:00:00 [rcu_tasks_rude_kthread]
+     13      13  19       0 root     I ?        00:00:00 [rcu_tasks_trace_kthread]
+     14      14  19       0 root     S ?        00:00:00 [ksoftirqd/0]
+     15      15  19       0 root     I ?        00:00:05 [rcu_preempt]
+     16      16 139       0 root     S ?        00:00:00 [migration/0]
+     17      17  19       0 root     I ?        00:00:00 [kworker/0:1-events]
+     18      18  19       0 root     S ?        00:00:00 [cpuhp/0]
+:[K...skipping...
+    PID     PID PRI    PGRP USER     S TTY          TIME COMMAND
+      1       1  19       1 root     S ?        00:00:01 /sbin/init splash
+      2       2  19       0 root     S ?        00:00:00 [kthreadd]
+      3       3  39       0 root     I ?        00:00:00 [rcu_gp]
+      4       4  39       0 root     I ?        00:00:00 [rcu_par_gp]
+      5       5  39       0 root     I ?        00:00:00 [slub_flushwq]
+      6       6  39       0 root     I ?        00:00:00 [netns]
+      8       8  39       0 root     I ?        00:00:00 [kworker/0:0H-events_highpri]
+     10      10  39       0 root     I ?        00:00:00 [mm_percpu_wq]
+     11      11  19       0 root     I ?        00:00:00 [rcu_tasks_kthread]
+     12      12  19       0 root     I ?        00:00:00 [rcu_tasks_rude_kthread]
+     13      13  19       0 root     I ?        00:00:00 [rcu_tasks_trace_kthread]
+     14      14  19       0 root     S ?        00:00:00 [ksoftirqd/0]
+     15      15  19       0 root     I ?        00:00:05 [rcu_preempt]
+     16      16 139       0 root     S ?        00:00:00 [migration/0]
+     17      17  19       0 root     I ?        00:00:00 [kworker/0:1-events]
+     18      18  19       0 root     S ?        00:00:00 [cpuhp/0]
+     19      19  19       0 root     S ?        00:00:00 [cpuhp/1]
+:[K...skipping...
+    PID     PID PRI    PGRP USER     S TTY          TIME COMMAND
+      1       1  19       1 root     S ?        00:00:01 /sbin/init splash
+      2       2  19       0 root     S ?        00:00:00 [kthreadd]
+      3       3  39       0 root     I ?        00:00:00 [rcu_gp]
+      4       4  39       0 root     I ?        00:00:00 [rcu_par_gp]
+      5       5  39       0 root     I ?        00:00:00 [slub_flushwq]
+      6       6  39       0 root     I ?        00:00:00 [netns]
+      8       8  39       0 root     I ?        00:00:00 [kworker/0:0H-events_highpri]
+     10      10  39       0 root     I ?        00:00:00 [mm_percpu_wq]
+     11      11  19       0 root     I ?        00:00:00 [rcu_tasks_kthread]
+     12      12  19       0 root     I ?        00:00:00 [rcu_tasks_rude_kthread]
+     13      13  19       0 root     I ?        00:00:00 [rcu_tasks_trace_kthread]
+     14      14  19       0 root     S ?        00:00:00 [ksoftirqd/0]
+     15      15  19       0 root     I ?        00:00:05 [rcu_preempt]
+     16      16 139       0 root     S ?        00:00:00 [migration/0]
+     17      17  19       0 root     I ?        00:00:00 [kworker/0:1-events]
+     18      18  19       0 root     S ?        00:00:00 [cpuhp/0]
+     19      19  19       0 root     S ?        00:00:00 [cpuhp/1]
+     20      20 139       0 root     S ?        00:00:00 [migration/1]
+:[K...skipping...
+    PID     PID PRI    PGRP USER     S TTY          TIME COMMAND
+      1       1  19       1 root     S ?        00:00:01 /sbin/init splash
+      2       2  19       0 root     S ?        00:00:00 [kthreadd]
+      3       3  39       0 root     I ?        00:00:00 [rcu_gp]
+      4       4  39       0 root     I ?        00:00:00 [rcu_par_gp]
+      5       5  39       0 root     I ?        00:00:00 [slub_flushwq]
+      6       6  39       0 root     I ?        00:00:00 [netns]
+      8       8  39       0 root     I ?        00:00:00 [kworker/0:0H-events_highpri]
+     10      10  39       0 root     I ?        00:00:00 [mm_percpu_wq]
+     11      11  19       0 root     I ?        00:00:00 [rcu_tasks_kthread]
+     12      12  19       0 root     I ?        00:00:00 [rcu_tasks_rude_kthread]
+     13      13  19       0 root     I ?        00:00:00 [rcu_tasks_trace_kthread]
+     14      14  19       0 root     S ?        00:00:00 [ksoftirqd/0]
+     15      15  19       0 root     I ?        00:00:05 [rcu_preempt]
+     16      16 139       0 root     S ?        00:00:00 [migration/0]
+     17      17  19       0 root     I ?        00:00:00 [kworker/0:1-events]
+     18      18  19       0 root     S ?        00:00:00 [cpuhp/0]
+     19      19  19       0 root     S ?        00:00:00 [cpuhp/1]
+     20      20 139       0 root     S ?        00:00:00 [migration/1]
+     21      21  19       0 root     S ?        00:00:00 [ksoftirqd/1]
+:[K[K [KESCESC[KOO[KBB[K     23      23  39       0 root     I ?        00:00:00 [kworker/1:0H-events_highpri]
+:[K[K [KESCESC[KOO[KBB[K     24      24  19       0 root     S ?        00:00:00 [cpuhp/2]
+:[K[K [KESCESC[KOO[KBB[K     25      25 139       0 root     S ?        00:00:00 [migration/2]
+:[K[K [KESCESC[KOO[KBB[K     26      26  19       0 root     S ?        00:00:00 [ksoftirqd/2]
+:[K[K [KESCESC[KOO[KBB[K     28      28  39       0 root     I ?        00:00:00 [kworker/2:0H-events_highpri]
+:[K[K [KESCESC[KOO[KBB[K     29      29  19       0 root     S ?        00:00:00 [cpuhp/3]
+:[K[K [KESCESC[KOO[KBB[K     30      30 139       0 root     S ?        00:00:00 [migration/3]
+:[K[K [KESCESC[KOO[KBB[K     31      31  19       0 root     S ?        00:00:00 [ksoftirqd/3]
+:[K[K [KESCESC[KOO[KBB[K     33      33  39       0 root     I ?        00:00:00 [kworker/3:0H-events_highpri]
+:[K[K [KESCESC[KOO[KBB[K     34      34  19       0 root     S ?        00:00:00 [cpuhp/4]
+:[K[K [KESCESC[KOO[KBB[K     35      35 139       0 root     S ?        00:00:00 [migration/4]
+:[K[K [KESCESC[KOO[KBB[K     36      36  19       0 root     S ?        00:00:00 [ksoftirqd/4]
+:[K[K [KESCESC[KOO[KBB[K     38      38  39       0 root     I ?        00:00:00 [kworker/4:0H-events_highpri]
+:[K[K [KESCESC[KOO[KBB[K     39      39  19       0 root     S ?        00:00:00 [cpuhp/5]
+:[K[K [KESCESC[KOO[KBB[K     40      40 139       0 root     S ?        00:00:00 [migration/5]
+:[K[K [KESCESC[KOO[KBB[K     41      41  19       0 root     S ?        00:00:00 [ksoftirqd/5]
+:[K[K [KESCESC[KOO[KBB[K     43      43  39       0 root     I ?        00:00:00 [kworker/5:0H-events_highpri]
+:[K[K [KESCESC[KOO[KBB[K     44      44  19       0 root     S ?        00:00:00 [cpuhp/6]
+:[K[K [KESCESC[KOO[KBB[K     45      45 139       0 root     S ?        00:00:00 [migration/6]
+:[K[K [KESCESC[KOO[KBB[K     46      46  19       0 root     S ?        00:00:00 [ksoftirqd/6]
+:[K[K [KESCESC[KOO[KBB[K     48      48  39       0 root     I ?        00:00:00 [kworker/6:0H-events_highpri]
+:[K[K [KESCESC[KOO[KBB[K     49      49  19       0 root     S ?        00:00:00 [cpuhp/7]
+:[K[K [KESCESC[KOO[KBB[K     50      50 139       0 root     S ?        00:00:00 [migration/7]
+:[K[K [KESCESC[KOO[KBB[K     51      51  19       0 root     S ?        00:00:00 [ksoftirqd/7]
+:[K[K [KESCESC[KOO[KBB[K     53      53  39       0 root     I ?        00:00:00 [kworker/7:0H-events_highpri]
+:[K[K [KESCESC[KOO[KBB[K     54      54  19       0 root     S ?        00:00:00 [cpuhp/8]
+:[K[K [KESCESC[KOO[KBB[K     55      55 139       0 root     S ?        00:00:00 [migration/8]
+:[K[K [KESCESC[KOO[KBB[K     56      56  19       0 root     S ?        00:00:00 [ksoftirqd/8]
+:[K[K [KESCESC[KOO[KBB[K     58      58  39       0 root     I ?        00:00:00 [kworker/8:0H-events_highpri]
+:[K[K [KESCESC[KOO[KBB[K     59      59  19       0 root     S ?        00:00:00 [cpuhp/9]
+:[K[K [KESCESC[KOO[KBB[K     60      60 139       0 root     S ?        00:00:00 [migration/9]
+:[K[K [KESCESC[KOO[KBB[K     61      61  19       0 root     S ?        00:00:00 [ksoftirqd/9]
+:[K[K [KESCESC[KOO[KBB[K     63      63  39       0 root     I ?        00:00:00 [kworker/9:0H-events_highpri]
+:[K[K [KESCESC[KOO[KBB[K     64      64  19       0 root     S ?        00:00:00 [cpuhp/10]
+:[K[K [KESCESC[KOO[KBB[K     65      65 139       0 root     S ?        00:00:00 [migration/10]
+:[K[K [KESCESC[KOO[KBB[K     66      66  19       0 root     S ?        00:00:00 [ksoftirqd/10]
+:[K[K [KESCESC[KOO[KBB[K     68      68  39       0 root     I ?        00:00:00 [kworker/10:0H-events_highpri]
+:[K[K [KESCESC[KOO[KBB[K     69      69  19       0 root     S ?        00:00:00 [cpuhp/11]
+:[K[K [KESCESC[KOO[KBB[K     70      70 139       0 root     S ?        00:00:00 [migration/11]
+:[K[K [KESCESC[KOO[KBB[K     71      71  19       0 root     S ?        00:00:00 [ksoftirqd/11]
+:[K[K [KESCESC[KOO[KBB[K     73      73  39       0 root     I ?        00:00:00 [kworker/11:0H-events_highpri]
+:[K[K [KESCESC[KOO[KBB[K     83      83  19       0 root     I ?        00:00:02 [kworker/u24:9-kcryptd/253:0]
+:[K[K [KESCESC[KOO[KBB[K     84      84  19       0 root     S ?        00:00:00 [kdevtmpfs]
+:[K[K [KESCESC[KOO[KBB[K     85      85  39       0 root     I ?        00:00:00 [inet_frag_wq]
+:[K[K [KESCESC[KOO[KBB[K     86      86  19       0 root     S ?        00:00:00 [kauditd]
+:[K[K [KESCESC[KOO[KBB[K     87      87  19       0 root     S ?        00:00:00 [khungtaskd]
+:[K[K [KESCESC[KOO[KBB[K     88      88  19       0 root     S ?        00:00:00 [oom_reaper]
+:[K[K [KESCESC[KOO[KBB[K     89      89  39       0 root     I ?        00:00:00 [writeback]
+:[K[K [KESCESC[KOO[KBB[K     90      90  19       0 root     S ?        00:00:00 [kcompactd0]
+:[K[K [KESCESC[KOO[KBB[K     91      91  14       0 root     S ?        00:00:00 [ksmd]
+:[K[K [KESCESC[KOO[KBB[K     92      92   0       0 root     S ?        00:00:00 [khugepaged]
+:[K[K [KESCESC[KOO[KBB[K     93      93  39       0 root     I ?        00:00:00 [kintegrityd]
+:[K[K [KESCESC[KOO[KBB[K     94      94  39       0 root     I ?        00:00:00 [kblockd]
+:[K[K [KESCESC[KOO[KBB[K     95      95  39       0 root     I ?        00:00:00 [blkcg_punt_bio]
+:[K[K [KESCESC[KOO[KBB[K     96      96  19       0 root     I ?        00:00:00 [kworker/2:1-events]
+:[K[K [KESCESC[KOO[KBB[K     97      97  39       0 root     I ?        00:00:00 [tpm_dev_wq]
+:[K[K [KESCESC[KOO[KBB[K     98      98  39       0 root     I ?        00:00:00 [edac-poller]
+:[K[K [KESCESC[KOO[KBB[K     99      99  39       0 root     I ?        00:00:00 [devfreq_wq]
+:[K[K [KESCESC[KOO[KBB[K    103     103  19       0 root     I ?        00:00:00 [kworker/6:1-events]
+:[K[K [KESCESC[KOO[KBB[K    110     110  39       0 root     I ?        00:00:00 [kworker/2:1H-events_highpri]
+:[K[K [KESCESC[KOO[KBB[K    111     111  19       0 root     S ?        00:00:00 [kswapd0]
+:[K[K [KESCESC[KOO[KBB[K    117     117  39       0 root     I ?        00:00:00 [kthrotld]
+:[K[K [KESCESC[KOO[KBB[K    119     119  90       0 root     S ?        00:00:00 [irq/124-pciehp]
+:[K[K [KESCESC[KOO[KBB[K    120     120  90       0 root     S ?        00:00:00 [irq/125-pciehp]
+:[K[K [KESCESC[KOO[KBB[K    121     121  39       0 root     I ?        00:00:00 [acpi_thermal_pm]
+:[K[K [KESCESC[KOO[KBB[K    122     122  19       0 root     S ?        00:00:00 [hwrng]
+:[K[K [KESCESC[KOO[KBB[K    124     124  39       0 root     I ?        00:00:00 [hfi-updates]
+:[K[K [KESCESC[KOO[KBB[K    125     125  39       0 root     I ?        00:00:00 [mld]
+:[K[K [KESCESC[KOO[KBB[K    126     126  39       0 root     I ?        00:00:00 [ipv6_addrconf]
+:[K[K [KESCESC[KOO[KBB[K    131     131  39       0 root     I ?        00:00:00 [kstrp]
+:[K[K [KESCESC[KOO[KBB[K    136     136  39       0 root     I ?        00:00:00 [zswap-shrink]
+:[K[K [KESCESC[KOO[KBB[K    187     187  39       0 root     I ?        00:00:00 [kworker/6:1H-events_highpri]
+:[K[K [KESCESC[KOO[KBB[K    200     200  39       0 root     I ?        00:00:00 [kworker/10:1H-events_highpri]
+:[K[K [KESCESC[KOO[KBB[K    201     201  39       0 root     I ?        00:00:00 [kworker/3:1H-events_highpri]
+:[K[K [KESCESC[KOO[KBB[K    202     202  39       0 root     I ?        00:00:00 [kworker/4:1H-events_highpri]
+:[K[K [KESCESC[KOO[KBB[K    203     203  39       0 root     I ?        00:00:00 [kworker/1:1H-events_highpri]
+:[K[K [KESCESC[KOO[KBB[K    204     204  39       0 root     I ?        00:00:00 [kworker/5:1H-events_highpri]
+:[K[K [KESCESC[KOO[KBB[K    205     205  39       0 root     I ?        00:00:00 [kworker/0:1H-events_highpri]
+:[K[K [KESCESC[KOO[KBB[K    206     206  39       0 root     I ?        00:00:00 [kworker/8:1H-events_highpri]
+:[K[K [KESCESC[KOO[KBB[K    207     207  39       0 root     I ?        00:00:00 [kworker/9:1H-events_highpri]
+:[K[K [KESCESC[KOO[KBB[K    237     237  39       0 root     I ?        00:00:00 [kworker/11:1H-events_highpri]
+:[K[K [KESCESC[KOO[KBB[K    238     238  39       0 root     I ?        00:00:00 [kworker/7:1H-kblockd]
+:[K[K [KESCESC[KOO[KBB[K    241     241  39       0 root     I ?        00:00:00 [cryptd]
+:[K[K [KESCESC[KOO[KBB[K    323     323  39       0 root     I ?        00:00:00 [nvme-wq]
+:[K[K [KESCESC[KOO[KBB[K    324     324  39       0 root     I ?        00:00:00 [nvme-reset-wq]
+:[K[K [KESCESC[KOO[KBB[K    325     325  39       0 root     I ?        00:00:00 [nvme-delete-wq]
+:[K[K [KESCESC[KOO[KBB[K    329     329  90       0 root     S ?        00:00:00 [irq/161-ELAN050B:00]
+:[K[K [KESCESC[KOO[KBB[K    332     332  90       0 root     S ?        00:00:00 [card0-crtc0]
+:[K[K [KESCESC[KOO[KBB[K    333     333  90       0 root     S ?        00:00:00 [card0-crtc1]
+:[K[K [KESCESC[KOO[KBB[K    334     334  90       0 root     S ?        00:00:00 [card0-crtc2]
+:[K[K [KESCESC[KOO[KBB[K    335     335  90       0 root     S ?        00:00:00 [card0-crtc3]
+:[K[K [KESCESC[KOO[KBB[K    338     338  19       0 root     I ?        00:00:00 [kworker/7:2-events]
+:[K[K [KESCESC[KOO[KBB[K    341     341  39       0 root     I ?        00:00:00 [md]
+:[K[K [KESCESC[KOO[KBB[K    352     352  39       0 root     I ?        00:00:00 [raid5wq]
+:[K[K [KESCESC[KOO[KBB[K    820     820  39       0 root     I ?        00:00:00 [kdmflush/253:0]
+:[K[K [KESCESC[KOO[KBB[K    821     821  39       0 root     I ?        00:00:00 [kcryptd_io/253:]
+:[K[K [KESCESC[KOO[KBB[K    822     822  39       0 root     I ?        00:00:00 [kcryptd/253:0]
+:[K[K [KESCESC[KOO[KBB[K    823     823  19       0 root     S ?        00:00:00 [dmcrypt_write/253:0]
+:[K[K [KESCESC[KOO[KBB[K    860     860  19       0 root     S ?        00:00:00 [jbd2/dm-0-8]
+:[K[K [KESCESC[KOO[KBB[K    861     861  39       0 root     I ?        00:00:00 [ext4-rsv-conver]
+:[K[K [KESCESC[KOO[KBB[K    921     921  19     921 root     S ?        00:00:00 /lib/systemd/systemd-journald
+:[K[K [KESCESC[KOO[KBB[K    937     937  39       0 root     I ?        00:00:00 [rpciod]
+:[K[K [KESCESC[KOO[KBB[K    938     938  39       0 root     I ?        00:00:00 [xprtiod]
+:[K[K [KESCESC[KOO[KBB[K    939     939  19     939 root     S ?        00:00:00 /lib/systemd/systemd-udevd
+:[K[K [KESCESC[KOO[KBB[K   1071    1071  90       0 root     S ?        00:00:00 [watchdogd]
+:[K[K [KESCESC[KOO[KBB[K   1072    1072  90       0 root     S ?        00:00:00 [irq/175-mei_me]
+:[K[K [KESCESC[KOO[KBB[K   1132    1132  39       0 root     I ?        00:00:00 [cfg80211]
+:[K[K [KESCESC[KOO[KBB[K   1140    1140  90       0 root     S ?        00:00:03 [irq/177-iwlwifi:default_queue]
+:[K[K [KESCESC[KOO[KBB[K   1141    1141  90       0 root     S ?        00:00:00 [irq/178-iwlwifi:queue_1]
+:[K[K [KESCESC[KOO[KBB[K   1142    1142  90       0 root     S ?        00:00:00 [irq/179-iwlwifi:queue_2]
+:[K[K [KESCESC[KOO[KBB[K   1143    1143  90       0 root     S ?        00:00:02 [irq/180-iwlwifi:queue_3]
+:[K[K [KESCESC[KOO[KBB[K   1145    1145  90       0 root     S ?        00:00:00 [irq/181-iwlwifi:queue_4]
+:[K[K [KESCESC[KOO[KBB[K   1151    1151  90       0 root     S ?        00:00:00 [irq/182-iwlwifi:queue_5]
+:[K[K [KESCESC[KOO[KBB[K   1153    1153  90       0 root     S ?        00:00:00 [irq/183-iwlwifi:queue_6]
+:[K[K [KESCESC[KOO[KBB[K   1158    1158  90       0 root     S ?        00:00:00 [irq/184-iwlwifi:queue_7]
+:[K[K [KESCESC[KOO[KBB[K   1159    1159  90       0 root     S ?        00:00:00 [irq/185-iwlwifi:queue_8]
+:[K[K [KESCESC[KOO[KBB[K   1160    1160  90       0 root     S ?        00:00:00 [irq/186-iwlwifi:queue_9]
+:[K[K [KESCESC[KOO[KBB[K   1161    1161  90       0 root     S ?        00:00:03 [irq/187-iwlwifi:queue_10]
+:[K[K [KESCESC[KOO[KBB[K   1162    1162  90       0 root     S ?        00:00:02 [irq/188-iwlwifi:queue_11]
+:[K[K [KESCESC[KOO[KBB[K   1163    1163  90       0 root     S ?        00:00:00 [irq/189-iwlwifi:queue_12]
+:[K[K [KESCESC[KOO[KBB[K   1164    1164  90       0 root     S ?        00:00:00 [irq/190-iwlwifi:exception]
+:[
