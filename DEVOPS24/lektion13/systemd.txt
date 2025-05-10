@@ -1,0 +1,30 @@
+- SystemV kommandot "service" finns kvar i vissa distributioner, men är förlegat.
+
+- systemctl list-units
+- systemctl status apache2
+    Se hur apache-http-servicen mår och dess allmänna status
+- systemctl show apache2
+    Visar vad som händer när den startar, stoppar etc och
+    alla properties
+- systemctl start|stop|reload|restart
+    De gör vad de låter som. Förutom reload, försöker ladda in
+    ny konfig utan avbrott. Medan restart innebär ett avbrott.
+- systemctl enable apache2
+    Gör så att apache2 startar med datorn
+- systemctl enable --now apache2
+    Kör igång den på en gång. Som att skriva systemctl start efteråt.
+- unit
+    Beskrivning av vilken sorts tjänst som körs, som när för timer
+- service
+    Beskrivning av HUR tjänsnten ska köras
+- se sånt som misslyckas
+- systemctl edit apache2
+    Skapa en override-fil med ändringar jämfört med standardbeteendet.
+
+
+Titta översiktligt på:
+    man 5 systemd.unit
+    man 5 systemd.service
+
+- systemd loggar till journal, ses med journalctl. Vi tittar mer på den sen.
+

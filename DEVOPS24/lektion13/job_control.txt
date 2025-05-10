@@ -1,0 +1,21 @@
+jobs - lista processer
+kommando &
+    Kör kommando i bakgrunden
+{ echo hej; sleep 1; echo hopp; }
+    Kör kommandona i "listan" i samma process
+( echo hej; sleep 1; echo hopp; )
+    Kör kommandona i "listan" i en barnprocess
+( echo hej; sleep 1; echo hopp; ) &
+    Kör kommandona i "listan" i en barnprocess i bakgrunden
+wait
+    Väntar den på att alla bakgrundsprocesser är färdiga
+
+Ctrl + Z
+    Sätter en process i STOPped läge i bakgrunden
+
+kill %1
+    Sänd stäng av signal till en barnprocess i Bash
+fg
+    Ta in en process i förgrunden och kör igång den
+bg
+    Kör igång en barnprocess, ta INTE in den i förgrunden

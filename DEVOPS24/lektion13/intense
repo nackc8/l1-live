@@ -1,0 +1,7 @@
+#!/bin/bash
+
+hash="hej"
+for ((i = 0; i < 30000; i++)); do
+	hash=$(echo "$hash" | md5sum)
+done
+echo "Result: $hash"
