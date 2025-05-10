@@ -1,0 +1,1139 @@
+Script started on 2025-05-08 09:44:43+02:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="81" LINES="15"]
+[?2004h[94mDEVOPS24/lektion12
+(B[m$ [H[2J[94mDEVOPS24/lektion12
+(B[m$ docek[K[Kker exec [K[K[K[K[K[K ps
+[?2004lCONTAINER ID   IMAGE          COMMAND        CREATED          STATUS          PORTS     NAMES
+97a83d556cf4   b9fb1407a0ac   "sleep 1000"   29 seconds ago   Up 28 seconds             clever_johnson
+[?2004h[94mDEVOPS24/lektion12
+(B[m$ docker exec [7mclever_johnson[27mclever_johnson[C clever_johnson- clever_johnsoni clever_johnsont clever_johnson[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C /bin/bash[H[2J[94mDEVOPS24/lektion12
+(B[m$ docker exec -it clever_johnson /bin/bash
+[?2004l[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# 
+[?2004l[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# ps[H[2J]0;root@97a83d556cf4: /root@97a83d556cf4:/# ps
+[?2004l    PID TTY          TIME CMD
+      7 pts/0    00:00:00 bash
+     15 pts/0    00:00:00 ps
+[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# ps -e
+[?2004l    PID TTY          TIME CMD
+      1 ?        00:00:00 sleep
+      7 pts/0    00:00:00 bash
+     16 pts/0    00:00:00 ps
+[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# [H[2J]0;root@97a83d556cf4: /root@97a83d556cf4:/# ps -e
+[?2004l    PID TTY          TIME CMD
+      1 ?        00:00:00 sleep
+      7 pts/0    00:00:00 bash
+     17 pts/0    00:00:00 ps
+[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# [?2004l
+exit
+[?2004h[94mDEVOPS24/lektion12
+(B[m$ docker exec -it clever_johnson /bin/bash[H[2J[94mDEVOPS24/lektion12
+(B[m$ docker exec -it clever_johnson /bin/bash
+[?2004l[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# id
+[?2004luid=0(root) gid=0(root) groups=0(root)
+[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# sudo
+[?2004lbash: sudo: command not found
+[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# [H[2J]0;root@97a83d556cf4: /root@97a83d556cf4:/# sudo      apt install apache2 [1@ [1@-[1@y
+[?2004lReading package lists... 0%Reading package lists... 0%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 3%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 98%Reading state information... Done
+[1;31mE: [0mUnable to locate package apache2[0m
+[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# apt update
+[?2004l[33m0% [Working][0m            Get:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+[33m0% [1 InRelease 14.2 kB/256 kB 6%] [Waiting for headers][0m                                                        Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+[33m0% [1 InRelease 14.2 kB/256 kB 6%] [2 InRelease 14.2 kB/126 kB 11%][0m[33m                                                                   0% [1 InRelease 139 kB/256 kB 54%][0m[33m0% [1 InRelease 214 kB/256 kB 84%][0m[33m                                  0% [Waiting for headers][0m                        Get:3 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1318 kB]
+[33m0% [Waiting for headers] [3 Packages 4096 B/1318 kB 0%][0m[33m0% [Waiting for headers] [3 Packages 28.7 kB/1318 kB 2%][0m                                                        Get:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+[33m0% [4 InRelease 8380 B/126 kB 7%] [3 Packages 41.8 kB/1318 kB 3%][0m[33m                                                                 0% [3 Packages 124 kB/1318 kB 9%][0m[33m0% [Waiting for headers] [3 Packages 194 kB/1318 kB 15%][0m                                                        Get:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+[33m0% [5 InRelease 10.3 kB/126 kB 8%] [3 Packages 237 kB/1318 kB 18%][0m[33m                                                                  0% [3 Packages 339 kB/1318 kB 26%][0m[33m15% [Waiting for headers] [3 Packages 549 kB/1318 kB 42%][0m                                                         Get:6 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+[33m15% [6 Packages 1209 B/331 kB 0%] [3 Packages 563 kB/1318 kB 43%][0m[33m                                                                 18% [Waiting for headers] [3 Packages 1242 kB/1318 kB 94%][0m                                                          Get:7 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+[33m18% [7 Packages 14.5 kB/1808 kB 1%] [3 Packages 1242 kB/1318 kB 94%][0m[33m18% [6 Packages store 0 B] [7 Packages 14.5 kB/1808 kB 1%] [3 Packages 1242 kB/1[0m[33m                                                                                19% [7 Packages 26.1 kB/1808 kB 1%] [3 Packages 1302 kB/1318 kB 99%][0m[33m                                                                    19% [7 Packages 62.9 kB/1808 kB 3%][0m[33m19% [3 Packages store 0 B] [7 Packages 62.9 kB/1808 kB 3%][0m[33m                                                          20% [7 Packages 269 kB/1808 kB 15%] [Waiting for headers][0m                                                         Get:8 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1080 kB]
+[33m20% [7 Packages 353 kB/1808 kB 19%] [8 Packages 14.2 kB/1080 kB 1%][0m[33m                                                                   25% [7 Packages 852 kB/1808 kB 47%] [Waiting for headers][0m                                                         Get:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1033 kB]
+[33m25% [7 Packages 852 kB/1808 kB 47%] [9 Packages 27.0 kB/1033 kB 3%][0m[33m25% [8 Packages store 0 B] [7 Packages 852 kB/1808 kB 47%] [9 Packages 27.0 kB/1[0m[33m                                                                                26% [7 Packages 923 kB/1808 kB 51%] [9 Packages 205 kB/1033 kB 20%][0m                                                                   Get:10 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [22.1 kB]
+[33m29% [7 Packages 1324 kB/1808 kB 73%] [10 Packages 22.1 kB/22.1 kB 100%][0m[33m                                                                       29% [7 Packages 1324 kB/1808 kB 73%][0m[33m29% [9 Packages store 0 B] [7 Packages 1324 kB/1808 kB 73%][0m[33m                                                           31% [7 Packages 1670 kB/1808 kB 92%][0m[33m31% [10 Packages store 0 B] [7 Packages 1670 kB/1808 kB 92%][0m[33m                                                            31% [7 Packages 1670 kB/1808 kB 92%][0m                                    Get:11 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+[33m                                    32% [11 Packages 6281 B/117 kB 5%][0m[33m32% [7 Packages store 0 B] [11 Packages 6281 B/117 kB 5%][0m[33m                                                         32% [7 Packages store 0 B] [Waiting for headers][0m                                                Get:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+[33m32% [7 Packages store 0 B] [12 Packages 2896 B/19.3 MB 0%][0m[33m                                                          33% [12 Packages 69.5 kB/19.3 MB 0%][0m[33m33% [11 Packages store 0 B] [12 Packages 69.5 kB/19.3 MB 0%][0m[33m                                                            33% [12 Packages 82.5 kB/19.3 MB 0%][0m[33m37% [12 Packages 1470 kB/19.3 MB 8%][0m[33m45% [12 Packages 4605 kB/19.3 MB 24%][0m[33m56% [12 Packages 8414 kB/19.3 MB 44%][0m[33m69% [12 Packages 13.4 MB/19.3 MB 69%][0m[33m83% [12 Packages 18.7 MB/19.3 MB 97%][0m[33m                                     85% [Waiting for headers][0m                         Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1353 kB]
+[33m85% [13 Packages 38.8 kB/1353 kB 3%][0m[33m85% [12 Packages store 0 B] [13 Packages 38.8 kB/1353 kB 3%][0m                                                            Get:14 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1362 kB]
+[33m                                                            88% [12 Packages store 0 B] [14 Packages 5969 B/1362 kB 0%][0m[33m                                                           92% [12 Packages store 0 B] [Waiting for headers][0m                                                 Get:15 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1379 kB]
+[33m92% [12 Packages store 0 B] [15 Packages 14.3 kB/1379 kB 1%][0m[33m                                                            95% [15 Packages 1036 kB/1379 kB 75%][0m[33m95% [13 Packages store 0 B] [15 Packages 1036 kB/1379 kB 75%][0m                                                             Get:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [26.7 kB]
+[33m                                                             96% [13 Packages store 0 B] [16 Packages 1148 B/26.7 kB 4%][0m[33m                                                           96% [13 Packages store 0 B] [Waiting for headers][0m                                                 Get:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [31.8 kB]
+[33m96% [13 Packages store 0 B] [17 Packages 7536 B/31.8 kB 24%][0m[33m                                                            97% [13 Packages store 0 B] [Waiting for headers][0m                                                 Get:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [48.0 kB]
+[33m97% [13 Packages store 0 B] [18 Packages 8754 B/48.0 kB 18%][0m[33m                                                            97% [13 Packages store 0 B][0m[33m                           97% [Working][0m[33m97% [14 Packages store 0 B][0m[33m                           98% [Working][0m[33m98% [15 Packages store 0 B][0m[33m                           98% [Working][0m[33m98% [16 Packages store 0 B][0m[33m                           99% [Working][0m[33m99% [17 Packages store 0 B][0m[33m                           99% [Working][0m[33m99% [18 Packages store 0 B][0m[33m                           100% [Working][0m              Fetched 29.9 MB in 4s (7125 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 6%Reading package lists... 6%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 69%Reading package lists... 69%Reading package lists... 74%Reading package lists... 74%Reading package lists... 80%Reading package lists... 80%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 86%Reading package lists... 86%Reading package lists... 86%Reading package lists... 86%Reading package lists... 89%Reading package lists... 89%Reading package lists... 94%Reading package lists... 94%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 98%Reading state information... Done
+All packages are up to date.
+[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# [H[2J]0;root@97a83d556cf4: /root@97a83d556cf4:/# apt updateinstall -y apache2
+[?2004lReading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 6%Reading package lists... 6%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 69%Reading package lists... 69%Reading package lists... 74%Reading package lists... 74%Reading package lists... 80%Reading package lists... 80%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 86%Reading package lists... 86%Reading package lists... 86%Reading package lists... 86%Reading package lists... 89%Reading package lists... 89%Reading package lists... 94%Reading package lists... 94%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 98%Reading state information... Done
+The following additional packages will be installed:
+  adduser apache2-bin apache2-data apache2-utils ca-certificates krb5-locales
+  libapr1t64 libaprutil1-dbd-sqlite3 libaprutil1-ldap libaprutil1t64 libbrotli1
+  libcurl4t64 libexpat1 libgdbm-compat4t64 libgdbm6t64 libgssapi-krb5-2
+  libicu74 libjansson4 libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0
+  libldap-common libldap2 liblua5.4-0 libnghttp2-14 libperl5.38t64 libpsl5t64
+  librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db libsqlite3-0
+  libssh-4 libxml2 media-types netbase openssl perl perl-modules-5.38
+  publicsuffix ssl-cert
+Suggested packages:
+  liblocale-gettext-perl cron quota ecryptfs-utils apache2-doc
+  apache2-suexec-pristine | apache2-suexec-custom www-browser ufw gdbm-l10n
+  krb5-doc krb5-user libsasl2-modules-gssapi-mit
+  | libsasl2-modules-gssapi-heimdal libsasl2-modules-ldap libsasl2-modules-otp
+  libsasl2-modules-sql perl-doc libterm-readline-gnu-perl
+  | libterm-readline-perl-perl make libtap-harness-archive-perl
+The following NEW packages will be installed:
+  adduser apache2 apache2-bin apache2-data apache2-utils ca-certificates
+  krb5-locales libapr1t64 libaprutil1-dbd-sqlite3 libaprutil1-ldap
+  libaprutil1t64 libbrotli1 libcurl4t64 libexpat1 libgdbm-compat4t64
+  libgdbm6t64 libgssapi-krb5-2 libicu74 libjansson4 libk5crypto3 libkeyutils1
+  libkrb5-3 libkrb5support0 libldap-common libldap2 liblua5.4-0 libnghttp2-14
+  libperl5.38t64 libpsl5t64 librtmp1 libsasl2-2 libsasl2-modules
+  libsasl2-modules-db libsqlite3-0 libssh-4 libxml2 media-types netbase openssl
+  perl perl-modules-5.38 publicsuffix ssl-cert
+0 upgraded, 43 newly installed, 0 to remove and 0 not upgraded.
+Need to get 26.3 MB of archives.
+After this operation, 109 MB of additional disk space will be used.
+[33m0% [Working][0m            Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 perl-modules-5.38 all 5.38.2-3.2ubuntu0.1 [3110 kB]
+[33m0% [1 perl-modules-5.38 6946 B/3110 kB 0%][0m[33m                                          10% [Working][0m             Get:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libgdbm6t64 amd64 1.23-5.1build1 [34.4 kB]
+[33m10% [2 libgdbm6t64 11.3 kB/34.4 kB 33%][0m                                       Get:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libgdbm-compat4t64 amd64 1.23-5.1build1 [6710 B]
+[33m11% [3 libgdbm-compat4t64 6710 B/6710 B 100%][0m                                             Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libperl5.38t64 amd64 5.38.2-3.2ubuntu0.1 [4871 kB]
+[33m                                             11% [4 libperl5.38t64 6946 B/4871 kB 0%][0m[33m                                        26% [Waiting for headers][0m                         Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 perl amd64 5.38.2-3.2ubuntu0.1 [231 kB]
+[33m26% [5 perl 7522 B/231 kB 3%][0m[33m                             27% [Waiting for headers][0m                         Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libapr1t64 amd64 1.7.2-3.1ubuntu0.1 [108 kB]
+[33m28% [6 libapr1t64 30.2 kB/108 kB 28%][0m                                     Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libexpat1 amd64 2.6.1-2ubuntu0.3 [88.0 kB]
+[33m28% [7 libexpat1 30.8 kB/88.0 kB 35%][0m                                     Get:8 http://archive.ubuntu.com/ubuntu noble/main amd64 libaprutil1t64 amd64 1.6.3-1.1ubuntu7 [91.9 kB]
+[33m29% [8 libaprutil1t64 13.4 kB/91.9 kB 15%][0m[33m                                          30% [Waiting for headers][0m                         Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsqlite3-0 amd64 3.45.1-1ubuntu2.1 [701 kB]
+[33m30% [9 libsqlite3-0 31.3 kB/701 kB 4%][0m[33m                                      32% [Waiting for headers][0m                         Get:10 http://archive.ubuntu.com/ubuntu noble/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.3-1.1ubuntu7 [11.2 kB]
+[33m33% [Waiting for headers][0m                         Get:11 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg1-5ubuntu3.1 [20.4 kB]
+[33m33% [11 libsasl2-modules-db 20.4 kB/20.4 kB 100%][0m[33m                                                 33% [Working][0m             Get:12 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsasl2-2 amd64 2.1.28+dfsg1-5ubuntu3.1 [53.2 kB]
+[33m33% [12 libsasl2-2 1076 B/53.2 kB 2%][0m[33m                                     34% [Waiting for headers][0m                         Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libldap2 amd64 2.6.7+dfsg-1~exp1ubuntu8.2 [196 kB]
+[33m34% [13 libldap2 17.1 kB/196 kB 9%][0m[33m                                   35% [Waiting for headers][0m                         Get:14 http://archive.ubuntu.com/ubuntu noble/main amd64 libaprutil1-ldap amd64 1.6.3-1.1ubuntu7 [9116 B]
+[33m36% [Waiting for headers][0m                         Get:15 http://archive.ubuntu.com/ubuntu noble/main amd64 libbrotli1 amd64 1.1.0-2build2 [331 kB]
+[33m36% [15 libbrotli1 37.5 kB/331 kB 11%][0m                                      Get:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5support0 amd64 1.20.1-6ubuntu2.5 [34.1 kB]
+[33m37% [16 libkrb5support0 6167 B/34.1 kB 18%][0m                                           Get:17 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libk5crypto3 amd64 1.20.1-6ubuntu2.5 [82.0 kB]
+[33m                                           38% [17 libk5crypto3 8688 B/82.0 kB 11%][0m[33m                                        38% [Waiting for headers][0m                         Get:18 http://archive.ubuntu.com/ubuntu noble/main amd64 libkeyutils1 amd64 1.6.3-3build1 [9490 B]
+[33m38% [18 libkeyutils1 9490 B/9490 B 100%][0m[33m                                        39% [Waiting for headers][0m                         Get:19 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5-3 amd64 1.20.1-6ubuntu2.5 [347 kB]
+[33m39% [19 libkrb5-3 27.2 kB/347 kB 8%][0m                                    Get:20 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgssapi-krb5-2 amd64 1.20.1-6ubuntu2.5 [143 kB]
+[33m40% [20 libgssapi-krb5-2 11.3 kB/143 kB 8%][0m                                           Get:21 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libnghttp2-14 amd64 1.59.0-1ubuntu0.2 [74.3 kB]
+[33m                                           41% [21 libnghttp2-14 11.9 kB/74.3 kB 16%][0m                                          Get:22 http://archive.ubuntu.com/ubuntu noble/main amd64 libpsl5t64 amd64 0.21.2-1.1build1 [57.1 kB]
+[33m                                          42% [22 libpsl5t64 10.1 kB/57.1 kB 18%][0m[33m                                       43% [Waiting for headers][0m                         Get:23 http://archive.ubuntu.com/ubuntu noble/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build7 [56.3 kB]
+[33m43% [23 librtmp1 27.2 kB/56.3 kB 48%][0m[33m                                     43% [Waiting for headers][0m                         Get:24 http://archive.ubuntu.com/ubuntu noble/main amd64 libssh-4 amd64 0.10.6-2build2 [188 kB]
+[33m43% [24 libssh-4 8236 B/188 kB 4%][0m[33m                                  44% [Waiting for headers][0m                         Get:25 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.6 [341 kB]
+[33m44% [25 libcurl4t64 4096 B/341 kB 1%][0m[33m                                     46% [Waiting for headers][0m                         Get:26 http://archive.ubuntu.com/ubuntu noble/main amd64 libjansson4 amd64 2.14-2build2 [32.8 kB]
+[33m46% [26 libjansson4 30.6 kB/32.8 kB 93%][0m                                        Get:27 http://archive.ubuntu.com/ubuntu noble/main amd64 liblua5.4-0 amd64 5.4.6-3build2 [166 kB]
+[33m                                        46% [27 liblua5.4-0 18.5 kB/166 kB 11%][0m[33m                                       47% [Waiting for headers][0m                         Get:28 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libicu74 amd64 74.2-1ubuntu3.1 [10.9 MB]
+[33m47% [28 libicu74 12.7 kB/10.9 MB 0%][0m[33m67% [28 libicu74 6517 kB/10.9 MB 60%][0m[33m                                     81% [Waiting for headers][0m                         Get:29 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libxml2 amd64 2.9.14+dfsg-1.3ubuntu3.3 [762 kB]
+[33m81% [29 libxml2 19.6 kB/762 kB 3%][0m[33m                                  84% [Waiting for headers][0m                         Get:30 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2-bin amd64 2.4.58-1ubuntu8.6 [1330 kB]
+[33m84% [30 apache2-bin 13.8 kB/1330 kB 1%][0m                                       Get:31 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2-data all 2.4.58-1ubuntu8.6 [163 kB]
+[33m88% [31 apache2-data 40.8 kB/163 kB 25%][0m                                        Get:32 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2-utils amd64 2.4.58-1ubuntu8.6 [97.2 kB]
+[33m89% [32 apache2-utils 25.1 kB/97.2 kB 26%][0m                                          Get:33 http://archive.ubuntu.com/ubuntu noble/main amd64 media-types all 10.1.0 [27.5 kB]
+[33m                                          90% [33 media-types 1430 B/27.5 kB 5%][0m[33m                                      90% [Waiting for headers][0m                         Get:34 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2 amd64 2.4.58-1ubuntu8.6 [90.2 kB]
+[33m90% [34 apache2 10.8 kB/90.2 kB 12%][0m[33m                                    91% [Working][0m             Get:35 http://archive.ubuntu.com/ubuntu noble/main amd64 adduser all 3.137ubuntu1 [101 kB]
+[33m91% [35 adduser 30.4 kB/101 kB 30%][0m[33m                                   92% [Waiting for headers][0m                         Get:36 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssl amd64 3.0.13-0ubuntu3.5 [1002 kB]
+[33m92% [36 openssl 3259 B/1002 kB 0%][0m                                  Get:37 http://archive.ubuntu.com/ubuntu noble/main amd64 ca-certificates all 20240203 [159 kB]
+[33m95% [37 ca-certificates 16.2 kB/159 kB 10%][0m[33m                                           96% [Waiting for headers][0m                         Get:38 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 krb5-locales all 1.20.1-6ubuntu2.5 [14.5 kB]
+[33m96% [38 krb5-locales 14.5 kB/14.5 kB 100%][0m[33m                                          97% [Waiting for headers][0m                         Get:39 http://archive.ubuntu.com/ubuntu noble/main amd64 netbase all 6.4 [13.1 kB]
+[33m97% [39 netbase 0 B/13.1 kB 0%][0m[33m                               97% [Working][0m             Get:40 http://archive.ubuntu.com/ubuntu noble/main amd64 publicsuffix all 20231001.0357-0.1 [129 kB]
+[33m97% [40 publicsuffix 0 B/129 kB 0%][0m[33m                                   98% [Waiting for headers][0m                         Get:41 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libldap-common all 2.6.7+dfsg-1~exp1ubuntu8.2 [31.7 kB]
+[33m98% [41 libldap-common 20.0 kB/31.7 kB 63%][0m[33m                                           99% [Working][0m             Get:42 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsasl2-modules amd64 2.1.28+dfsg1-5ubuntu3.1 [69.9 kB]
+[33m99% [42 libsasl2-modules 0 B/69.9 kB 0%][0m                                        Get:43 http://archive.ubuntu.com/ubuntu noble/main amd64 ssl-cert all 1.1.2ubuntu1 [17.8 kB]
+[33m                                        100% [43 ssl-cert 17.8 kB/17.8 kB 100%][0m[33m                                       100% [Working][0m              Fetched 26.3 MB in 2s (10.8 MB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+
+7[0;14r8[1ASelecting previously unselected package perl-modules-5.38.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4381 files and directories currently installed.)
+Preparing to unpack .../00-perl-modules-5.38_5.38.2-3.2ubuntu0.1_all.deb ...
+7[15;0f[42m[30mProgress: [  0%][49m[39m [...........................................................] 8Unpacking perl-modules-5.38 (5.38.2-3.2ubuntu0.1) ...
+7[15;0f[42m[30mProgress: [  1%][49m[39m [...........................................................] 8Selecting previously unselected package libgdbm6t64:amd64.
+Preparing to unpack .../01-libgdbm6t64_1.23-5.1build1_amd64.deb ...
+Unpacking libgdbm6t64:amd64 (1.23-5.1build1) ...
+7[15;0f[42m[30mProgress: [  2%][49m[39m [#..........................................................] 8Selecting previously unselected package libgdbm-compat4t64:amd64.
+Preparing to unpack .../02-libgdbm-compat4t64_1.23-5.1build1_amd64.deb ...
+Unpacking libgdbm-compat4t64:amd64 (1.23-5.1build1) ...
+7[15;0f[42m[30mProgress: [  3%][49m[39m [##.........................................................] 8Selecting previously unselected package libperl5.38t64:amd64.
+Preparing to unpack .../03-libperl5.38t64_5.38.2-3.2ubuntu0.1_amd64.deb ...
+7[15;0f[42m[30mProgress: [  4%][49m[39m [##.........................................................] 8Unpacking libperl5.38t64:amd64 (5.38.2-3.2ubuntu0.1) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../04-perl_5.38.2-3.2ubuntu0.1_amd64.deb ...
+7[15;0f[42m[30mProgress: [  5%][49m[39m [###........................................................] 8Unpacking perl (5.38.2-3.2ubuntu0.1) ...
+Selecting previously unselected package libapr1t64:amd64.
+Preparing to unpack .../05-libapr1t64_1.7.2-3.1ubuntu0.1_amd64.deb ...
+7[15;0f[42m[30mProgress: [  6%][49m[39m [###........................................................] 8Unpacking libapr1t64:amd64 (1.7.2-3.1ubuntu0.1) ...
+Selecting previously unselected package libexpat1:amd64.
+Preparing to unpack .../06-libexpat1_2.6.1-2ubuntu0.3_amd64.deb ...
+7[15;0f[42m[30mProgress: [  8%][49m[39m [####.......................................................] 8Unpacking libexpat1:amd64 (2.6.1-2ubuntu0.3) ...
+7[15;0f[42m[30mProgress: [  8%][49m[39m [####.......................................................] 8Selecting previously unselected package libaprutil1t64:amd64.
+Preparing to unpack .../07-libaprutil1t64_1.6.3-1.1ubuntu7_amd64.deb ...
+Unpacking libaprutil1t64:amd64 (1.6.3-1.1ubuntu7) ...
+7[15;0f[42m[30mProgress: [  9%][49m[39m [#####......................................................] 8Selecting previously unselected package libsqlite3-0:amd64.
+Preparing to unpack .../08-libsqlite3-0_3.45.1-1ubuntu2.1_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.45.1-1ubuntu2.1) ...
+7[15;0f[42m[30mProgress: [ 10%][49m[39m [######.....................................................] 8Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../09-libaprutil1-dbd-sqlite3_1.6.3-1.1ubuntu7_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.3-1.1ubuntu7) ...
+7[15;0f[42m[30mProgress: [ 12%][49m[39m [######.....................................................] 8Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../10-libsasl2-modules-db_2.1.28+dfsg1-5ubuntu3.1_amd64.deb ...
+7[15;0f[42m[30mProgress: [ 12%][49m[39m [#######....................................................] 8Unpacking libsasl2-modules-db:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../11-libsasl2-2_2.1.28+dfsg1-5ubuntu3.1_amd64.deb ...
+7[15;0f[42m[30mProgress: [ 13%][49m[39m [#######....................................................] 8Unpacking libsasl2-2:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Selecting previously unselected package libldap2:amd64.
+Preparing to unpack .../12-libldap2_2.6.7+dfsg-1~exp1ubuntu8.2_amd64.deb ...
+7[15;0f[42m[30mProgress: [ 14%][49m[39m [########...................................................] 8Unpacking libldap2:amd64 (2.6.7+dfsg-1~exp1ubuntu8.2) ...
+7[15;0f[42m[30mProgress: [ 15%][49m[39m [########...................................................] 8Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../13-libaprutil1-ldap_1.6.3-1.1ubuntu7_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.6.3-1.1ubuntu7) ...
+7[15;0f[42m[30mProgress: [ 16%][49m[39m [#########..................................................] 8Selecting previously unselected package libbrotli1:amd64.
+Preparing to unpack .../14-libbrotli1_1.1.0-2build2_amd64.deb ...
+Unpacking libbrotli1:amd64 (1.1.0-2build2) ...
+7[15;0f[42m[30mProgress: [ 17%][49m[39m [##########.................................................] 8Selecting previously unselected package libkrb5support0:amd64.
+Preparing to unpack .../15-libkrb5support0_1.20.1-6ubuntu2.5_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.20.1-6ubuntu2.5) ...
+7[15;0f[42m[30mProgress: [ 18%][49m[39m [##########.................................................] 8Selecting previously unselected package libk5crypto3:amd64.
+Preparing to unpack .../16-libk5crypto3_1.20.1-6ubuntu2.5_amd64.deb ...
+7[15;0f[42m[30mProgress: [ 19%][49m[39m [###########................................................] 8Unpacking libk5crypto3:amd64 (1.20.1-6ubuntu2.5) ...
+Selecting previously unselected package libkeyutils1:amd64.
+Preparing to unpack .../17-libkeyutils1_1.6.3-3build1_amd64.deb ...
+7[15;0f[42m[30mProgress: [ 20%][49m[39m [###########................................................] 8Unpacking libkeyutils1:amd64 (1.6.3-3build1) ...
+Selecting previously unselected package libkrb5-3:amd64.
+Preparing to unpack .../18-libkrb5-3_1.20.1-6ubuntu2.5_amd64.deb ...
+7[15;0f[42m[30mProgress: [ 21%][49m[39m [############...............................................] 8Unpacking libkrb5-3:amd64 (1.20.1-6ubuntu2.5) ...
+Selecting previously unselected package libgssapi-krb5-2:amd64.
+Preparing to unpack .../19-libgssapi-krb5-2_1.20.1-6ubuntu2.5_amd64.deb ...
+7[15;0f[42m[30mProgress: [ 23%][49m[39m [#############..............................................] 8Unpacking libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.5) ...
+7[15;0f[42m[30mProgress: [ 23%][49m[39m [#############..............................................] 8Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../20-libnghttp2-14_1.59.0-1ubuntu0.2_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.59.0-1ubuntu0.2) ...
+7[15;0f[42m[30mProgress: [ 24%][49m[39m [##############.............................................] 8Selecting previously unselected package libpsl5t64:amd64.
+Preparing to unpack .../21-libpsl5t64_0.21.2-1.1build1_amd64.deb ...
+Unpacking libpsl5t64:amd64 (0.21.2-1.1build1) ...
+7[15;0f[42m[30mProgress: [ 25%][49m[39m [###############............................................] 8Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../22-librtmp1_2.4+20151223.gitfa8646d.1-2build7_amd64.deb ...
+7[15;0f[42m[30mProgress: [ 26%][49m[39m [###############............................................] 8Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build7) ...
+Selecting previously unselected package libssh-4:amd64.
+Preparing to unpack .../23-libssh-4_0.10.6-2build2_amd64.deb ...
+7[15;0f[42m[30mProgress: [ 27%][49m[39m [################...........................................] 8Unpacking libssh-4:amd64 (0.10.6-2build2) ...
+Selecting previously unselected package libcurl4t64:amd64.
+Preparing to unpack .../24-libcurl4t64_8.5.0-2ubuntu10.6_amd64.deb ...
+7[15;0f[42m[30mProgress: [ 28%][49m[39m [################...........................................] 8Unpacking libcurl4t64:amd64 (8.5.0-2ubuntu10.6) ...
+Selecting previously unselected package libjansson4:amd64.
+Preparing to unpack .../25-libjansson4_2.14-2build2_amd64.deb ...
+7[15;0f[42m[30mProgress: [ 29%][49m[39m [#################..........................................] 8Unpacking libjansson4:amd64 (2.14-2build2) ...
+7[15;0f[42m[30mProgress: [ 30%][49m[39m [#################..........................................] 8Selecting previously unselected package liblua5.4-0:amd64.
+Preparing to unpack .../26-liblua5.4-0_5.4.6-3build2_amd64.deb ...
+Unpacking liblua5.4-0:amd64 (5.4.6-3build2) ...
+7[15;0f[42m[30mProgress: [ 31%][49m[39m [##################.........................................] 8Selecting previously unselected package libicu74:amd64.
+Preparing to unpack .../27-libicu74_74.2-1ubuntu3.1_amd64.deb ...
+Unpacking libicu74:amd64 (74.2-1ubuntu3.1) ...
+7[15;0f[42m[30mProgress: [ 32%][49m[39m [###################........................................] 8Selecting previously unselected package libxml2:amd64.
+Preparing to unpack .../28-libxml2_2.9.14+dfsg-1.3ubuntu3.3_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.14+dfsg-1.3ubuntu3.3) ...
+7[15;0f[42m[30mProgress: [ 34%][49m[39m [###################........................................] 8Selecting previously unselected package apache2-bin.
+Preparing to unpack .../29-apache2-bin_2.4.58-1ubuntu8.6_amd64.deb ...
+7[15;0f[42m[30mProgress: [ 34%][49m[39m [####################.......................................] 8Unpacking apache2-bin (2.4.58-1ubuntu8.6) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../30-apache2-data_2.4.58-1ubuntu8.6_all.deb ...
+7[15;0f[42m[30mProgress: [ 35%][49m[39m [####################.......................................] 8Unpacking apache2-data (2.4.58-1ubuntu8.6) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../31-apache2-utils_2.4.58-1ubuntu8.6_amd64.deb ...
+7[15;0f[42m[30mProgress: [ 36%][49m[39m [#####################......................................] 8Unpacking apache2-utils (2.4.58-1ubuntu8.6) ...
+Selecting previously unselected package media-types.
+Preparing to unpack .../32-media-types_10.1.0_all.deb ...
+7[15;0f[42m[30mProgress: [ 38%][49m[39m [######################.....................................] 8Unpacking media-types (10.1.0) ...
+7[15;0f[42m[30mProgress: [ 38%][49m[39m [######################.....................................] 8Selecting previously unselected package apache2.
+Preparing to unpack .../33-apache2_2.4.58-1ubuntu8.6_amd64.deb ...
+Unpacking apache2 (2.4.58-1ubuntu8.6) ...
+7[15;0f[42m[30mProgress: [ 39%][49m[39m [#######################....................................] 8Selecting previously unselected package adduser.
+Preparing to unpack .../34-adduser_3.137ubuntu1_all.deb ...
+Unpacking adduser (3.137ubuntu1) ...
+7[15;0f[42m[30mProgress: [ 40%][49m[39m [#######################....................................] 8Setting up adduser (3.137ubuntu1) ...
+7[15;0f[42m[30mProgress: [ 41%][49m[39m [########################...................................] 8Selecting previously unselected package openssl.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7309 files and directories currently installed.)
+Preparing to unpack .../0-openssl_3.0.13-0ubuntu3.5_amd64.deb ...
+7[15;0f[42m[30mProgress: [ 42%][49m[39m [########################...................................] 8Unpacking openssl (3.0.13-0ubuntu3.5) ...
+Selecting previously unselected package ca-certificates.
+Preparing to unpack .../1-ca-certificates_20240203_all.deb ...
+7[15;0f[42m[30mProgress: [ 43%][49m[39m [#########################..................................] 8Unpacking ca-certificates (20240203) ...
+Selecting previously unselected package krb5-locales.
+Preparing to unpack .../2-krb5-locales_1.20.1-6ubuntu2.5_all.deb ...
+7[15;0f[42m[30mProgress: [ 45%][49m[39m [##########################.................................] 8Unpacking krb5-locales (1.20.1-6ubuntu2.5) ...
+7[15;0f[42m[30mProgress: [ 45%][49m[39m [##########################.................................] 8Selecting previously unselected package netbase.
+Preparing to unpack .../3-netbase_6.4_all.deb ...
+Unpacking netbase (6.4) ...
+7[15;0f[42m[30mProgress: [ 46%][49m[39m [###########################................................] 8Selecting previously unselected package publicsuffix.
+Preparing to unpack .../4-publicsuffix_20231001.0357-0.1_all.deb ...
+Unpacking publicsuffix (20231001.0357-0.1) ...
+7[15;0f[42m[30mProgress: [ 47%][49m[39m [###########################................................] 8Selecting previously unselected package libldap-common.
+Preparing to unpack .../5-libldap-common_2.6.7+dfsg-1~exp1ubuntu8.2_all.deb ...
+Unpacking libldap-common (2.6.7+dfsg-1~exp1ubuntu8.2) ...
+7[15;0f[42m[30mProgress: [ 49%][49m[39m [############################...............................] 8Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../6-libsasl2-modules_2.1.28+dfsg1-5ubuntu3.1_amd64.deb ...
+7[15;0f[42m[30mProgress: [ 49%][49m[39m [############################...............................] 8Unpacking libsasl2-modules:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../7-ssl-cert_1.1.2ubuntu1_all.deb ...
+7[15;0f[42m[30mProgress: [ 50%][49m[39m [#############################..............................] 8Unpacking ssl-cert (1.1.2ubuntu1) ...
+Setting up libexpat1:amd64 (2.6.1-2ubuntu0.3) ...
+7[15;0f[42m[30mProgress: [ 51%][49m[39m [##############################.............................] 87[15;0f[42m[30mProgress: [ 52%][49m[39m [##############################.............................] 8Setting up media-types (10.1.0) ...
+7[15;0f[42m[30mProgress: [ 53%][49m[39m [###############################............................] 8Setting up libkeyutils1:amd64 (1.6.3-3build1) ...
+7[15;0f[42m[30mProgress: [ 54%][49m[39m [################################...........................] 8Setting up libgdbm6t64:amd64 (1.23-5.1build1) ...
+7[15;0f[42m[30mProgress: [ 55%][49m[39m [################################...........................] 8Setting up libgdbm-compat4t64:amd64 (1.23-5.1build1) ...
+7[15;0f[42m[30mProgress: [ 56%][49m[39m [#################################..........................] 8Setting up libbrotli1:amd64 (1.1.0-2build2) ...
+7[15;0f[42m[30mProgress: [ 57%][49m[39m [#################################..........................] 8Setting up libsqlite3-0:amd64 (3.45.1-1ubuntu2.1) ...
+7[15;0f[42m[30mProgress: [ 58%][49m[39m [##################################.........................] 8Setting up libsasl2-modules:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+7[15;0f[42m[30mProgress: [ 60%][49m[39m [###################################........................] 87[15;0f[42m[30mProgress: [ 60%][49m[39m [###################################........................] 8Setting up libpsl5t64:amd64 (0.21.2-1.1build1) ...
+7[15;0f[42m[30mProgress: [ 61%][49m[39m [####################################.......................] 8Setting up libnghttp2-14:amd64 (1.59.0-1ubuntu0.2) ...
+7[15;0f[42m[30mProgress: [ 62%][49m[39m [####################################.......................] 8Setting up krb5-locales (1.20.1-6ubuntu2.5) ...
+7[15;0f[42m[30mProgress: [ 63%][49m[39m [#####################################......................] 8Setting up libldap-common (2.6.7+dfsg-1~exp1ubuntu8.2) ...
+7[15;0f[42m[30mProgress: [ 64%][49m[39m [#####################################......................] 8Setting up libjansson4:amd64 (2.14-2build2) ...
+7[15;0f[42m[30mProgress: [ 65%][49m[39m [######################################.....................] 8Setting up libkrb5support0:amd64 (1.20.1-6ubuntu2.5) ...
+7[15;0f[42m[30mProgress: [ 66%][49m[39m [#######################################....................] 87[15;0f[42m[30mProgress: [ 67%][49m[39m [#######################################....................] 8Setting up libsasl2-modules-db:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+7[15;0f[42m[30mProgress: [ 68%][49m[39m [########################################...................] 8Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build7) ...
+7[15;0f[42m[30mProgress: [ 69%][49m[39m [########################################...................] 8Setting up perl-modules-5.38 (5.38.2-3.2ubuntu0.1) ...
+7[15;0f[42m[30mProgress: [ 71%][49m[39m [#########################################..................] 8Setting up libk5crypto3:amd64 (1.20.1-6ubuntu2.5) ...
+7[15;0f[42m[30mProgress: [ 71%][49m[39m [#########################################..................] 8Setting up libsasl2-2:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+7[15;0f[42m[30mProgress: [ 72%][49m[39m [##########################################.................] 8Setting up libicu74:amd64 (74.2-1ubuntu3.1) ...
+7[15;0f[42m[30mProgress: [ 73%][49m[39m [###########################################................] 8Setting up libapr1t64:amd64 (1.7.2-3.1ubuntu0.1) ...
+7[15;0f[42m[30mProgress: [ 75%][49m[39m [###########################################................] 87[15;0f[42m[30mProgress: [ 75%][49m[39m [############################################...............] 8Setting up liblua5.4-0:amd64 (5.4.6-3build2) ...
+7[15;0f[42m[30mProgress: [ 76%][49m[39m [#############################################..............] 8Setting up netbase (6.4) ...
+7[15;0f[42m[30mProgress: [ 77%][49m[39m [#############################################..............] 8Setting up libkrb5-3:amd64 (1.20.1-6ubuntu2.5) ...
+7[15;0f[42m[30mProgress: [ 78%][49m[39m [##############################################.............] 8Setting up apache2-data (2.4.58-1ubuntu8.6) ...
+7[15;0f[42m[30mProgress: [ 79%][49m[39m [##############################################.............] 8Setting up libperl5.38t64:amd64 (5.38.2-3.2ubuntu0.1) ...
+7[15;0f[42m[30mProgress: [ 80%][49m[39m [###############################################............] 8Setting up openssl (3.0.13-0ubuntu3.5) ...
+7[15;0f[42m[30mProgress: [ 82%][49m[39m [################################################...........] 87[15;0f[42m[30mProgress: [ 82%][49m[39m [################################################...........] 8Setting up publicsuffix (20231001.0357-0.1) ...
+7[15;0f[42m[30mProgress: [ 83%][49m[39m [#################################################..........] 8Setting up libxml2:amd64 (2.9.14+dfsg-1.3ubuntu3.3) ...
+7[15;0f[42m[30mProgress: [ 84%][49m[39m [#################################################..........] 8Setting up libldap2:amd64 (2.6.7+dfsg-1~exp1ubuntu8.2) ...
+7[15;0f[42m[30mProgress: [ 86%][49m[39m [##################################################.........] 8Setting up libaprutil1t64:amd64 (1.6.3-1.1ubuntu7) ...
+7[15;0f[42m[30mProgress: [ 86%][49m[39m [##################################################.........] 8Setting up libaprutil1-ldap:amd64 (1.6.3-1.1ubuntu7) ...
+7[15;0f[42m[30mProgress: [ 87%][49m[39m [###################################################........] 8Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.3-1.1ubuntu7) ...
+7[15;0f[42m[30mProgress: [ 88%][49m[39m [####################################################.......] 87[15;0f[42m[30mProgress: [ 89%][49m[39m [####################################################.......] 8Setting up ca-certificates (20240203) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Updating certificates in /etc/ssl/certs...
+146 added, 0 removed; done.
+7[15;0f[42m[30mProgress: [ 90%][49m[39m [#####################################################......] 8Setting up perl (5.38.2-3.2ubuntu0.1) ...
+Setting up ssl-cert (1.1.2ubuntu1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+7[15;0f[42m[30mProgress: [ 91%][49m[39m [#####################################################......] 8Setting up libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.5) ...
+7[15;0f[42m[30mProgress: [ 92%][49m[39m [######################################################.....] 8Setting up libssh-4:amd64 (0.10.6-2build2) ...
+7[15;0f[42m[30mProgress: [ 93%][49m[39m [######################################################.....] 8Setting up apache2-utils (2.4.58-1ubuntu8.6) ...
+7[15;0f[42m[30mProgress: [ 94%][49m[39m [#######################################################....] 8Setting up libcurl4t64:amd64 (8.5.0-2ubuntu10.6) ...
+7[15;0f[42m[30mProgress: [ 95%][49m[39m [########################################################...] 87[15;0f[42m[30mProgress: [ 96%][49m[39m [########################################################...] 8Setting up apache2-bin (2.4.58-1ubuntu8.6) ...
+7[15;0f[42m[30mProgress: [ 97%][49m[39m [#########################################################..] 8Setting up apache2 (2.4.58-1ubuntu8.6) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+7[15;0f[42m[30mProgress: [ 98%][49m[39m [#########################################################..] 8Processing triggers for libc-bin (2.39-0ubuntu8.4) ...
+Processing triggers for ca-certificates (20240203) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+7[15;0f[42m[30mProgress: [ 99%][49m[39m [##########################################################.] 8
+7[0;15r8[1A[J[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# apt install -y apache2^C[?2004l[?2004h[?2004l
+[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# [H[2J]0;root@97a83d556cf4: /root@97a83d556cf4:/# ls
+[?2004l[0m[01;36mbin[0m   [01;34mdev[0m  [01;34mhome[0m  [01;34mlib.usr-is-merged[0m  [01;34mmedia[0m  [01;34mopt[0m   [01;34mroot[0m  [01;36msbin[0m  [01;34msys[0m  [01;34musr[0m
+[01;34mboot[0m  [01;34metc[0m  [01;36mlib[0m   [01;36mlib64[0m              [01;34mmnt[0m    [01;34mproc[0m  [01;34mrun[0m   [01;34msrv[0m   [30;42mtmp[0m  [01;34mvar[0m
+[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# ls /var/www/
+[?2004l[0m[01;34mhtml[0m
+[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# ls /var/www/html/index.html [H[2J]0;root@97a83d556cf4: /root@97a83d556cf4:/# ls /var/www/html/index.html l[1@es[1@s
+[?2004lbash: less: command not found
+[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# [Kless /var/www/html/index.html less[1P[1P[1P[1P[1@m[1@o[1@r[1@e
+[?2004l<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org
+/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <!--
+    Modified from the Debian original for Ubuntu
+    Last updated: 2022-03-22
+    See: https://launchpad.net/bugs/1966004
+  -->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Apache2 Ubuntu Default Page: It works</title>
+    <style type="text/css" media="screen">
+  * {
+    margin: 0px 0px 0px 0px;
+[7m--More--(4%)[27m    padding: 0px 0px 0px 0px;
+  }
+
+  body, html {
+    padding: 3px 3px 3px 3px;
+
+    background-color: #D8DBE2;
+
+    font-family: Ubuntu, Verdana, sans-serif;
+    font-size: 11pt;
+    text-align: center;
+  }
+
+  div.main_page {
+[7m--More--(6%)[27m    position: relative;
+    display: table;
+
+    width: 800px;
+
+    margin-bottom: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 0px 0px 0px;
+
+    border-width: 2px;
+    border-color: #212738;
+    border-style: solid;
+
+[7m--More--(9%)[27m    background-color: #FFFFFF;
+
+    text-align: center;
+  }
+
+  div.page_header {
+    height: 180px;
+    width: 100%;
+
+    background-color: #F5F6F7;
+  }
+
+  div.page_header span {
+    margin: 15px 0px 0px 50px;
+[7m--More--(11%)[27m[K
+    font-size: 180%;
+    font-weight: bold;
+  }
+
+  div.page_header img {
+    margin: 3px 0px 0px 40px;
+
+    border: 0px 0px 0px;
+  }
+
+  div.banner {
+    padding: 9px 6px 9px 6px;
+    background-color: #E9510E;
+[7m--More--(13%)[27m    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 112%;
+    text-align: center;
+    position: absolute;
+    left: 40%;
+    bottom: 30px;
+    width: 20%;
+  }
+
+  div.table_of_contents {
+    clear: left;
+
+    min-width: 200px;
+[7m--More--(15%)[27m[K
+    margin: 3px 3px 3px 3px;
+
+    background-color: #FFFFFF;
+
+    text-align: left;
+  }
+
+  div.table_of_contents_item {
+    clear: left;
+
+    width: 100%;
+
+    margin: 4px 0px 0px 0px;
+[7m--More--(17%)[27m[K
+    background-color: #FFFFFF;
+
+    color: #000000;
+    text-align: left;
+  }
+
+  div.table_of_contents_item a {
+    margin: 6px 0px 0px 6px;
+  }
+
+  div.content_section {
+    margin: 3px 3px 3px 3px;
+
+[7m--More--(19%)[27m    background-color: #FFFFFF;
+
+    text-align: left;
+  }
+
+  div.content_section_text {
+    padding: 4px 8px 4px 8px;
+
+    color: #000000;
+    font-size: 100%;
+  }
+
+  div.content_section_text pre {
+    margin: 8px 0px 8px 0px;
+[7m--More--(21%)[27m    padding: 8px 8px 8px 8px;
+
+    border-width: 1px;
+    border-style: dotted;
+    border-color: #000000;
+
+    background-color: #F5F6F7;
+
+    font-style: italic;
+  }
+
+  div.content_section_text p {
+    margin-bottom: 6px;
+  }
+[7m--More--(23%)[27m[K
+  div.content_section_text ul, div.content_section_text li {
+    padding: 4px 8px 4px 16px;
+  }
+
+  div.section_header {
+    padding: 3px 6px 3px 6px;
+
+    background-color: #8E9CB2;
+
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 112%;
+    text-align: center;
+[7m--More--(25%)[27m  }[K
+
+  div.section_header_grey {
+    background-color: #9F9386;
+  }
+
+  .floating_element {
+    position: relative;
+    float: left;
+  }
+
+  div.table_of_contents_item a,
+  div.content_section_text a {
+    text-decoration: none;
+[7m--More--(27%)[27m    font-weight: bold;
+  }
+
+  div.table_of_contents_item a:link,
+  div.table_of_contents_item a:visited,
+  div.table_of_contents_item a:active {
+    color: #000000;
+  }
+
+  div.table_of_contents_item a:hover {
+    background-color: #000000;
+
+    color: #FFFFFF;
+  }
+[7m--More--(30%)[27m[K
+  div.content_section_text a:link,
+  div.content_section_text a:visited,
+   div.content_section_text a:active {
+    background-color: #DCDFE6;
+
+    color: #000000;
+  }
+
+  div.content_section_text a:hover {
+    background-color: #000000;
+
+    color: #DCDFE6;
+  }
+[7m--More--(32%)[27m[K
+  div.validator {
+  }
+    </style>
+  </head>
+  <body>
+    <div class="main_page">
+      <div class="page_header floating_element">
+        <img src="icons/ubuntu-logo.png" alt="Ubuntu Logo"
+             style="width:184px;height:146px;" class="floating_element" />
+        <div>
+          <span style="margin-top: 1.5em;" class="floating_element">
+            Apache2 Default Page
+          </span>
+[7m--More--(36%)[27m        </div>
+        <div class="banner">
+          <div id="about"></div>
+          It works!
+        </div>
+
+      </div>
+      <div class="content_section floating_element">
+        <div class="content_section_text">
+          <p>
+                This is the default welcome page used to test the correct 
+                operation of the Apache2 server after installation on Ubuntu syst
+ems.
+                It is based on the equivalent page on Debian, from which the Ubun
+[7m--More--(41%)[27mtu Apache[K
+                packaging is derived.
+                If you can read this page, it means that the Apache HTTP server i
+nstalled at
+                this site is working properly. You should <b>replace this file</b
+> (located at
+                <tt>/var/www/html/index.html</tt>) before continuing to operate y
+our HTTP server.
+          </p>
+
+          <p>
+                If you are a normal user of this web site and don't know what thi
+s page is
+                about, this probably means that the site is currently unavailable
+[7m--More--(46%)[27m[K[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# [K[H[2J]0;root@97a83d556cf4: /root@97a83d556cf4:/# apt install elinks
+[?2004lReading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 6%Reading package lists... 6%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 69%Reading package lists... 69%Reading package lists... 74%Reading package lists... 74%Reading package lists... 80%Reading package lists... 80%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 86%Reading package lists... 86%Reading package lists... 89%Reading package lists... 89%Reading package lists... 94%Reading package lists... 94%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 2%Reading state information... Done
+The following additional packages will be installed:
+  elinks-data libev4t64 libfsplib0t64 libgpm2 libidn12 liblua5.3-0 libtre5
+Suggested packages:
+  elinks-doc gpm tre-agrep
+The following NEW packages will be installed:
+  elinks elinks-data libev4t64 libfsplib0t64 libgpm2 libidn12 liblua5.3-0
+  libtre5
+0 upgraded, 8 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1333 kB of archives.
+After this operation, 4611 kB of additional disk space will be used.
+Do you want to continue? [Y/n] 
+[33m0% [Working][0m            Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libgpm2 amd64 1.20.7-11 [14.1 kB]
+[33m0% [1 libgpm2 4054 B/14.1 kB 29%][0m[33m                                 3% [Working][0m            Get:2 http://archive.ubuntu.com/ubuntu noble/universe amd64 libev4t64 amd64 1:4.33-2.1build1 [31.0 kB]
+[33m5% [2 libev4t64 24.3 kB/31.0 kB 78%][0m[33m                                    8% [Waiting for headers][0m                        Get:3 http://archive.ubuntu.com/ubuntu noble/universe amd64 libfsplib0t64 amd64 0.14-5.1build1 [13.3 kB]
+[33m8% [3 libfsplib0t64 280 B/13.3 kB 2%][0m[33m                                     11% [Working][0m             Get:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libidn12 amd64 1.42-1build1 [55.9 kB]
+[33m11% [4 libidn12 2596 B/55.9 kB 5%][0m[33m                                  17% [Waiting for headers][0m                         Get:5 http://archive.ubuntu.com/ubuntu noble/universe amd64 liblua5.3-0 amd64 5.3.6-2build2 [143 kB]
+[33m17% [5 liblua5.3-0 1436 B/143 kB 1%][0m[33m                                    28% [Working][0m             Get:6 http://archive.ubuntu.com/ubuntu noble/universe amd64 libtre5 amd64 0.8.0-7 [50.1 kB]
+[33m28% [6 libtre5 5792 B/50.1 kB 12%][0m[33m                                  33% [Waiting for headers][0m                         Get:7 http://archive.ubuntu.com/ubuntu noble/universe amd64 elinks-data all 0.16.1.1-4.1ubuntu3 [434 kB]
+[33m34% [7 elinks-data 1780 B/434 kB 0%][0m[33m                                    62% [Waiting for headers][0m                         Get:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 elinks amd64 0.16.1.1-4.1ubuntu3 [592 kB]
+[33m63% [8 elinks 21.0 kB/592 kB 4%][0m[33m                                100% [Working][0m              Fetched 1333 kB in 1s (996 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+
+7[0;14r8[1ASelecting previously unselected package libgpm2:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7852 files and directories currently installed.)
+Preparing to unpack .../0-libgpm2_1.20.7-11_amd64.deb ...
+7[15;0f[42m[30mProgress: [  0%][49m[39m [...........................................................] 87[15;0f[42m[30mProgress: [  3%][49m[39m [#..........................................................] 8Unpacking libgpm2:amd64 (1.20.7-11) ...
+7[15;0f[42m[30mProgress: [  6%][49m[39m [###........................................................] 8Selecting previously unselected package libev4t64:amd64.
+Preparing to unpack .../1-libev4t64_1%3a4.33-2.1build1_amd64.deb ...
+7[15;0f[42m[30mProgress: [  9%][49m[39m [#####......................................................] 8Unpacking libev4t64:amd64 (1:4.33-2.1build1) ...
+7[15;0f[42m[30mProgress: [ 12%][49m[39m [#######....................................................] 8Selecting previously unselected package libfsplib0t64.
+Preparing to unpack .../2-libfsplib0t64_0.14-5.1build1_amd64.deb ...
+7[15;0f[42m[30mProgress: [ 15%][49m[39m [########...................................................] 8Unpacking libfsplib0t64 (0.14-5.1build1) ...
+7[15;0f[42m[30mProgress: [ 18%][49m[39m [##########.................................................] 8Selecting previously unselected package libidn12:amd64.
+Preparing to unpack .../3-libidn12_1.42-1build1_amd64.deb ...
+7[15;0f[42m[30mProgress: [ 21%][49m[39m [############...............................................] 8Unpacking libidn12:amd64 (1.42-1build1) ...
+7[15;0f[42m[30mProgress: [ 24%][49m[39m [##############.............................................] 8Selecting previously unselected package liblua5.3-0:amd64.
+Preparing to unpack .../4-liblua5.3-0_5.3.6-2build2_amd64.deb ...
+7[15;0f[42m[30mProgress: [ 27%][49m[39m [################...........................................] 8Unpacking liblua5.3-0:amd64 (5.3.6-2build2) ...
+7[15;0f[42m[30mProgress: [ 30%][49m[39m [#################..........................................] 8Selecting previously unselected package libtre5:amd64.
+Preparing to unpack .../5-libtre5_0.8.0-7_amd64.deb ...
+7[15;0f[42m[30mProgress: [ 33%][49m[39m [###################........................................] 8Unpacking libtre5:amd64 (0.8.0-7) ...
+7[15;0f[42m[30mProgress: [ 36%][49m[39m [#####################......................................] 8Selecting previously unselected package elinks-data.
+Preparing to unpack .../6-elinks-data_0.16.1.1-4.1ubuntu3_all.deb ...
+7[15;0f[42m[30mProgress: [ 39%][49m[39m [#######################....................................] 8Unpacking elinks-data (0.16.1.1-4.1ubuntu3) ...
+7[15;0f[42m[30mProgress: [ 42%][49m[39m [#########################..................................] 8Selecting previously unselected package elinks.
+Preparing to unpack .../7-elinks_0.16.1.1-4.1ubuntu3_amd64.deb ...
+7[15;0f[42m[30mProgress: [ 45%][49m[39m [##########################.................................] 8Unpacking elinks (0.16.1.1-4.1ubuntu3) ...
+7[15;0f[42m[30mProgress: [ 48%][49m[39m [############################...............................] 8Setting up libev4t64:amd64 (1:4.33-2.1build1) ...
+7[15;0f[42m[30mProgress: [ 52%][49m[39m [##############################.............................] 87[15;0f[42m[30mProgress: [ 55%][49m[39m [################################...........................] 8Setting up libtre5:amd64 (0.8.0-7) ...
+7[15;0f[42m[30mProgress: [ 58%][49m[39m [#################################..........................] 87[15;0f[42m[30mProgress: [ 61%][49m[39m [###################################........................] 8Setting up elinks-data (0.16.1.1-4.1ubuntu3) ...
+7[15;0f[42m[30mProgress: [ 64%][49m[39m [#####################################......................] 87[15;0f[42m[30mProgress: [ 67%][49m[39m [#######################################....................] 8Setting up libgpm2:amd64 (1.20.7-11) ...
+7[15;0f[42m[30mProgress: [ 70%][49m[39m [#########################################..................] 87[15;0f[42m[30mProgress: [ 73%][49m[39m [##########################################.................] 8Setting up libidn12:amd64 (1.42-1build1) ...
+7[15;0f[42m[30mProgress: [ 76%][49m[39m [############################################...............] 87[15;0f[42m[30mProgress: [ 79%][49m[39m [##############################################.............] 8Setting up liblua5.3-0:amd64 (5.3.6-2build2) ...
+7[15;0f[42m[30mProgress: [ 82%][49m[39m [################################################...........] 87[15;0f[42m[30mProgress: [ 85%][49m[39m [##################################################.........] 8Setting up libfsplib0t64 (0.14-5.1build1) ...
+7[15;0f[42m[30mProgress: [ 88%][49m[39m [###################################################........] 87[15;0f[42m[30mProgress: [ 91%][49m[39m [#####################################################......] 8Setting up elinks (0.16.1.1-4.1ubuntu3) ...
+7[15;0f[42m[30mProgress: [ 94%][49m[39m [#######################################################....] 87[15;0f[42m[30mProgress: [ 97%][49m[39m [#########################################################..] 8Processing triggers for libc-bin (2.39-0ubuntu8.4) ...
+
+7[0;15r8[1A[J[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# [H[2J]0;root@97a83d556cf4: /root@97a83d556cf4:/# elinks localhost
+[?2004l)07[?47h[?2004h[?9h[?1000h[?1001s[?1000h[1;1H[2J[1;1H]0;ELinks[1;1H[24m[0m                                                                                 [2;1H[0;7m                                                                                 [3;1H    [0;7m                                                                        [0;7m     [4;1H    [0;7m   lqqqqqqqqqqqqqqqqqqqqqqqqqqq[0m Welcome [0;7mqqqqqqqqqqqqqqqqqqqqqqqqqqqqk   [0;7m     [5;1H    [0;7m   x                                                                x   [0;7m     [6;1H    [0;7m   x                       Welcome to ELinks!                       x   [0;7m     [7;1H    [0;7m   x                                                                x   [0;7m     [8;1H    [0;7m   x  Press ESC for menu. Documentation is available in Help menu.  x   [0;7m     [9;1H    [0;7m   x                                                                x   [0;7m     [10;1H    [0;7m   x                             [1m[0;1m[ [0;7mO[1m[0;1mK ][0;7m                             x   [0;7m     [11;1H    [0;7m   mqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj   [0;7m     [12;1H    [0;7m                                                                        [0;7m     [13;1H                                                                                 [14;1H                                                                                 [15;1H[0;7mLooking up host                                                                  [0m[10;40H[15;1H[24m[0;7mMaking connection                                                                [0m[10;40H[3;1H[24m[0;7m    [0;7m              lqqqqqqqqqqqqqqqqq[0m Error [0;7mqqqqqqqqqqqqqqqqqqk              [0;7m     [4;1H    [0;7m   lqqqqqqq   x                                          x   qqqqqqqk   [0;7m     [5;1H    [0;7m   x          x  Unable to retrieve https://localhost/:  x          x   [0;7m     [6;1H    [0;7m   x          x                                          x          x   [0;7m     [7;1H    [0;7m   x          x            Connection refused            x          x   [0;7m     [8;1H    [0;7m   x  Press   x                                          x   menu.  x   [0;7m     [9;1H    [0;7m   x          x       Retry without verification?        x          x   [0;7m     [10;1H    [0;7m   x          x                                          x          x   [0;7m     [11;1H    [0;7m   mqqqqqqq   x             [1m[0;1m[ [0;7mY[1m[0;1mes ][0;7m  [ [1m[0;1mN[0;7mo ]              x   qqqqqqqj   [0;7m     [12;1H    [0;7m              mqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj              [0;7m     [15;1H[0;7m                                                                                 [0m[11;35H[3;1H[24m[0;7m    [0;7m                                                                        [0;7m     [4;1H    [0;7m   lqqqqqqqqqqqqqqqqqqqqqqqqqqq[0m Welcome [0;7mqqqqqqqqqqqqqqqqqqqqqqqqqqqqk   [0;7m     [5;1H    [0;7m   x                                                                x   [0;7m     [6;1H    [0;7m   x                       Welcome to ELinks!                       x   [0;7m     [7;1H    [0;7m   x                                                                x   [0;7m     [8;1H    [0;7m   x  Press ESC for menu. Documentation is available in Help menu.  x   [0;7m     [9;1H    [0;7m   x                                                                x   [0;7m     [10;1H    [0;7m   x                             [1m[0;1m[ [0;7mO[1m[0;1mK ][0;7m                             x   [0;7m     [11;1H    [0;7m   mqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj   [0;7m     [12;1H    [0;7m                                                                        [0;7m     [15;1H[0;7mMaking connection                                                                [0m[10;40H[3;1H[24m[0;7m    [0;7m              lqqqqqqqqqqqqqqqqq[0m Error [0;7mqqqqqqqqqqqqqqqqqqk              [0;7m     [4;1H    [0;7m   lqqqqqqq   x                                          x   qqqqqqqk   [0;7m     [5;1H    [0;7m   x          x  Unable to retrieve https://localhost/:  x          x   [0;7m     [6;1H    [0;7m   x          x                                          x          x   [0;7m     [7;1H    [0;7m   x          x            Connection refused            x          x   [0;7m     [8;1H    [0;7m   x  Press   x                                          x   menu.  x   [0;7m     [9;1H    [0;7m   x          x       Retry without verification?        x          x   [0;7m     [10;1H    [0;7m   x          x                                          x          x   [0;7m     [11;1H    [0;7m   mqqqqqqq   x             [1m[0;1m[ [0;7mY[1m[0;1mes ][0;7m  [ [1m[0;1mN[0;7mo ]              x   qqqqqqqj   [0;7m     [12;1H    [0;7m              mqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj              [0;7m     [15;1H[0;7m                                                                                 [0m[11;35H[11;1H[24m[0;7m    [0;7m   mqqqqqqq   x             [ [1m[0;1mY[0;7mes ]  [1m[0;1m[ [0;7mN[1m[0;1mo ][0;7m              x   qqqqqqqj   [0;7m     [0m[11;44H[11;1H[24m[0;7m    [0;7m   mqqqqqqq   x             [1m[0;1m[ [0;7mY[1m[0;1mes ][0;7m  [ [1m[0;1mN[0;7mo ]              x   qqqqqqqj   [0;7m     [0m[11;35H[3;1H[24m[0;7m    [0;7m                                                                        [0;7m     [4;1H    [0;7m   lqqqqqqqqqqqqqqqqqqqqqqqqqqq[0m Welcome [0;7mqqqqqqqqqqqqqqqqqqqqqqqqqqqqk   [0;7m     [5;1H    [0;7m   x                                                                x   [0;7m     [6;1H    [0;7m   x                       Welcome to ELinks!                       x   [0;7m     [7;1H    [0;7m   x                                                                x   [0;7m     [8;1H    [0;7m   x  Press ESC for menu. Documentation is available in Help menu.  x   [0;7m     [9;1H    [0;7m   x                                                                x   [0;7m     [10;1H    [0;7m   x                             [1m[0;1m[ [0;7mO[1m[0;1mK ][0;7m                             x   [0;7m     [11;1H    [0;7m   mqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj   [0;7m     [12;1H    [0;7m                                                                        [0;7m     [15;1H[0;7mMaking connection                                                                [0m[10;40H[3;1H[24m[0;7m    [0;7m              lqqqqqqqqqqqqqqqqq[0m Error [0;7mqqqqqqqqqqqqqqqqqqk              [0;7m     [4;1H    [0;7m   lqqqqqqq   x                                          x   qqqqqqqk   [0;7m     [5;1H    [0;7m   x          x  Unable to retrieve https://localhost/:  x          x   [0;7m     [6;1H    [0;7m   x          x                                          x          x   [0;7m     [7;1H    [0;7m   x          x            Connection refused            x          x   [0;7m     [8;1H    [0;7m   x  Press   x                                          x   menu.  x   [0;7m     [9;1H    [0;7m   x          x       Retry without verification?        x          x   [0;7m     [10;1H    [0;7m   x          x                                          x          x   [0;7m     [11;1H    [0;7m   mqqqqqqq   x             [1m[0;1m[ [0;7mY[1m[0;1mes ][0;7m  [ [1m[0;1mN[0;7mo ]              x   qqqqqqqj   [0;7m     [12;1H    [0;7m              mqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj              [0;7m     [15;1H[0;7m                                                                                 [0m[11;35H[11;1H[24m[0;7m    [0;7m   mqqqqqqq   x             [ [1m[0;1mY[0;7mes ]  [1m[0;1m[ [0;7mN[1m[0;1mo ][0;7m              x   qqqqqqqj   [0;7m     [0m[11;44H[3;1H[24m[0;7m    [0;7m                                                                        [0;7m     [4;1H    [0;7m   lqqqqqqqqqqqqqqqqqqqqqqqqqqq[0m Welcome [0;7mqqqqqqqqqqqqqqqqqqqqqqqqqqqqk   [0;7m     [5;1H    [0;7m   x                                                                x   [0;7m     [6;1H    [0;7m   x                       Welcome to ELinks!                       x   [0;7m     [7;1H    [0;7m   x                                                                x   [0;7m     [8;1H    [0;7m   x  Press ESC for menu. Documentation is available in Help menu.  x   [0;7m     [9;1H    [0;7m   x                                                                x   [0;7m     [10;1H    [0;7m   x                             [1m[0;1m[ [0;7mO[1m[0;1mK ][0;7m                             x   [0;7m     [11;1H    [0;7m   mqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj   [0;7m     [12;1H    [0;7m                                                                        [0;7m     [0m[10;40H[4;1H[24m[0;7m                                                                                 [5;1H                                                                                 [6;1H                                                                                 [7;1H                                                                                 [8;1H                                                                                 [9;1H                                                                                 [10;1H                                                                                 [11;1H                                                                                 [0m[1;1H]0;xterm[?9l[?1000l[?2004l[2J[?9l[?1000l[?47l8 [?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# elinks localhostt[1@h[1@t[1@t[1@p[1@:[1@/[1@/localhost
+[?2004l)07[?47h[?2004h[?9h[?1000h[?1001s[?1000h[1;1H[2J[1;1H]0;ELinks[1;1H[24m[0m                                                                                 [2;1H[0;7m                                                                                 [3;1H                                                                                 [4;1H                                                                                 [5;1H                                                                                 [6;1H                                                                                 [7;1H                                                                                 [8;1H                                                                                 [9;1H                                                                                 [10;1H                                                                                 [11;1H                                                                                 [12;1H                                                                                 [13;1H                                                                                 [14;1H                                                                                 [15;1H[0;7mLooking up host                                                                  [0m[1;1H[15;1H[24m[0;7mMaking connection                                                                [0m[1;1H[4;1H[24m[0;7m                [0;7m   lqqqqqqqqqqqqqqqqq[0m Error [0;7mqqqqqqqqqqqqqqqqqk   [0;7m                [5;1H                [0;7m   x                                         x   [0;7m                [6;1H                [0;7m   x  Unable to retrieve http://localhost/:  x   [0;7m                [7;1H                [0;7m   x                                         x   [0;7m                [8;1H                [0;7m   x           Connection refused            x   [0;7m                [9;1H                [0;7m   x                                         x   [0;7m                [10;1H                [0;7m   x                 [1m[0;1m[ [0;7mO[1m[0;1mK ][0;7m                  x   [0;7m                [11;1H                [0;7m   mqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj   [0;7m                [15;1H[0;7m                                                                                 [0m[10;40H[4;1H[24m[0;7m                                                                                 [5;1H                                                                                 [6;1H                                                                                 [7;1H                                                                                 [8;1H                                                                                 [9;1H                                                                                 [10;1H                                                                                 [11;1H                                                                                 [0m[1;1H[?2004l[2J[?9l[?1000l[?47l8 
+[1]+  Stopped                 elinks http://localhost
+[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# [H[2J]0;root@97a83d556cf4: /root@97a83d556cf4:/# apache
+apache2     apache2ctl  apachectl   
+]0;root@97a83d556cf4: /root@97a83d556cf4:/# apache2
+apache2     apache2ctl  
+]0;root@97a83d556cf4: /root@97a83d556cf4:/# apache2
+apache2     apache2ctl  
+]0;root@97a83d556cf4: /root@97a83d556cf4:/# apache2 &
+[?2004l[2] 3535
+[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# [Thu May 08 07:49:45.288265 2025] [core:warn] [pid 3535] AH00111: Config variable ${APACHE_RUN_DIR} is not defined
+apache2: Syntax error on line 80 of /etc/apache2/apache2.conf: DefaultRuntimeDir must be a valid directory, absolute or relative to ServerRoot
+
+[?2004l[2]+  Exit 1                  apache2
+[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# [H[2J]0;root@97a83d556cf4: /root@97a83d556cf4:/# nano      apt install nano
+[?2004lReading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 6%Reading package lists... 6%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 69%Reading package lists... 69%Reading package lists... 74%Reading package lists... 74%Reading package lists... 80%Reading package lists... 80%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 86%Reading package lists... 86%Reading package lists... 89%Reading package lists... 89%Reading package lists... 94%Reading package lists... 94%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 1%Reading state information... Done
+Suggested packages:
+  hunspell
+The following NEW packages will be installed:
+  nano
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 282 kB of archives.
+After this operation, 856 kB of additional disk space will be used.
+[33m0% [Working][0m            Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 nano amd64 7.2-2ubuntu0.1 [282 kB]
+[33m4% [1 nano 14.2 kB/282 kB 5%][0m[33m                             100% [Working][0m              Fetched 282 kB in 1s (362 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+
+7[0;14r8[1ASelecting previously unselected package nano.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7986 files and directories currently installed.)
+Preparing to unpack .../nano_7.2-2ubuntu0.1_amd64.deb ...
+7[15;0f[42m[30mProgress: [  0%][49m[39m [...........................................................] 87[15;0f[42m[30mProgress: [ 20%][49m[39m [###########................................................] 8Unpacking nano (7.2-2ubuntu0.1) ...
+7[15;0f[42m[30mProgress: [ 40%][49m[39m [#######################....................................] 8Setting up nano (7.2-2ubuntu0.1) ...
+7[15;0f[42m[30mProgress: [ 60%][49m[39m [###################################........................] 8update-alternatives: using /bin/nano to provide /usr/bin/editor (editor) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/editor.1.gz because associated file /usr/share/man/man1/nano.1.gz (of link group editor) doesn't exist
+update-alternatives: using /bin/nano to provide /usr/bin/pico (pico) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/pico.1.gz because associated file /usr/share/man/man1/nano.1.gz (of link group pico) doesn't exist
+7[15;0f[42m[30mProgress: [ 80%][49m[39m [###############################################............] 8
+7[0;15r8[1A[J[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# [7m/etc/apache2/apache2.conf[27m/etc/apache2/apache2.conf[1@n[1@a[1@n[1@o[1@ [H[2J]0;root@97a83d556cf4: /root@97a83d556cf4:/# nano /etc/apache2/apache2.conf
+[?2004l[?2004h[?1049h[22;0;0t[1;15r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[13;34H(B[0;7m[ Reading... ](B[m[13;32H(B[0;7m[ Read 225 lines ](B[m[H(B[0;7m  GNU nano 7.2 [15b/etc/apache2/apache2.conf [24b [1;80H(B[m[14d(B[0;7m^G(B[m Help[14G(B[0;7m^O(B[m Write Out (B[0;7m^W(B[m Where Is  (B[0;7m^K(B[m Cut[53G(B[0;7m^T(B[m Execute   (B[0;7m^C(B[m Location[15d(B[0;7m^X(B[m Exit[14G(B[0;7m^R(B[m Read File (B[0;7m^\(B[m Replace   (B[0;7m^U(B[m Paste     (B[0;7m^J(B[m Justify   (B[0;7m^/(B[m Go To Line[2d[36m# This is the main Apache server configuration file.  It contains the[3d# configuration directives that give the server its instructions.[4d# See http://httpd.apache.org/docs/2.4/ for detailed information about[5d# the directives and /usr/share/doc/apache2/README.Debian about Debian specific[6d# hints.[7d#[8d#[9d# Summary of how the Apache 2 configuration works in Debian:[10d# The Apache 2 web server configuration in Debian is quite different to[11d# upstream's suggested way to configure the web server. This is because Debian's[12d# default Apache2 installation attempts to make adding and removing modules,[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h7[2;12r8
+[1;15r[12;1H[36m# virtual hosts, and extra configuration directives as flexible as possible, in[39m(B[m[?25l[?12l[?25h7[2;12r8
+[1;15r[12;1H[36m# order to make automating the changes and administering the server as easy as[39m(B[m[?25l[?12l[?25h7[2;12r8
+[1;15r[12;1H[36m# possible.[39m(B[m[?25l[?12l[?25h7[2;12r8
+[1;15r[12;1H[?25l[?12l[?25h7[2;12r8
+[1;15r[12;1H[36m# It is split into several files forming the configuration hierarchy outlined[39m(B[m[?25l[?12l[?25h7[2;12r8
+[1;15r[12;1H[36m# below, all located in the /etc/apache2/ directory:[39m(B[m[?25l[?12l[?25h7[2;12r8
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;12r8
+[1;15r[12;1H[36m#[9G/etc/apache2/[39m(B[m[?25l[?12l[?25h7[2;12r8
+[1;15r[12;1H[36m#[9G|-- apache2.conf[39m(B[m[?25l[13d[K[?12l[?25h7[2;13r8
+[1;15r[12;1H[36m#[9G|[17G`--  ports.conf[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[9G|-- mods-enabled[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[9G|[17G|-- *.load[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[9G|[17G`-- *.conf[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[9G|-- conf-enabled[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[9G|[17G`-- *.conf[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# [9G`-- sites-enabled[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[9G [17G`-- *.conf[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# * apache2.conf is the main configuration file (this file). It puts the pieces[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#   together by including all remaining configuration files when starting up the[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#   web server.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# * ports.conf is always included from the main configuration file. It is[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#   supposed to determine listening ports for incoming connections which can be[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#   customized anytime.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# * Configuration files in the mods-enabled/, conf-enabled/ and sites-enabled/[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#   directories contain particular configuration snippets which manage modules,[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#   global configuration fragments, or virtual host configurations,[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#   respectively.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#   They are activated by symlinking available configuration files from their[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#   respective *-available/ counterparts. These should be managed by using our[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#   helpers a2enmod/a2dismod, a2ensite/a2dissite and a2enconf/a2disconf. See[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#   their respective man pages for detailed information.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# * The binary is called apache2. Due to the use of environment variables, in[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#   the default configuration, apache2 needs to be started/stopped with[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#   /etc/init.d/apache2 or apache2ctl. Calling /usr/bin/apache2 directly will not[12;1H[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#   work with the default configuration.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# Global configuration[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# ServerRoot: The top of the directory tree under which the server's[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# configuration, error, and log files are kept.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# NOTE!  If you intend to place this on an NFS (or otherwise network)[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# mounted filesystem then please read the Mutex documentation (available[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# at <URL:http://httpd.apache.org/docs/2.4/mod/core.html#mutex>);[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# you will save yourself a lot of trouble.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# Do NOT add a slash at the end of the directory path.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#ServerRoot "/etc/apache2"[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# The accept serialization lock file MUST BE STORED ON A LOCAL DISK.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#Mutex file:${APACHE_LOCK_DIR} default[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# The directory where shm and other runtime files will be stored.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HDefaultRuntimeDir ${APACHE_RUN_DIR}[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# PidFile: The file in which the server should record its process[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# identification number when it starts.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# This needs to be set in /etc/apache2/envvars[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HPidFile ${APACHE_PID_FILE}[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# Timeout: The number of seconds before receives and sends time out.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HTimeout 300[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# KeepAlive: Whether or not to allow persistent connections (more than[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# one request per connection). Set to "Off" to deactivate.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HKeepAlive On[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# MaxKeepAliveRequests: The maximum number of requests to allow[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# during a persistent connection. Set to 0 to allow an unlimited amount.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# We recommend you leave this number high, for maximum performance.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HMaxKeepAliveRequests 100[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# KeepAliveTimeout: Number of seconds to wait for the next request from the[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# same client on the same connection.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HKeepAliveTimeout 5[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# These need to be set in /etc/apache2/envvars[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HUser ${APACHE_RUN_USER}[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HGroup ${APACHE_RUN_GROUP}[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# HostnameLookups: Log the names of clients or just their IP addresses[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# e.g., www.apache.org (on) or 204.62.129.132 (off).[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# The default is off because it'd be overall better for the net if people[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# had to knowingly turn this feature on, since enabling it means that[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# each client request will result in AT LEAST one lookup request to the[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# nameserver.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HHostnameLookups Off[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# ErrorLog: The location of the error log file.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# If you do not specify an ErrorLog directive within a <VirtualHost>[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# container, error messages relating to that virtual host will be[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# logged here.  If you *do* define an error logfile for a <VirtualHost>[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# container, that host's errors will be logged there and not here.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HErrorLog ${APACHE_LOG_DIR}/error.log[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# LogLevel: Control the severity of messages logged to the error_log.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# Available values: trace8, ..., trace1, debug, info, notice, warn,[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# error, crit, alert, emerg.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# It is also possible to configure the log level for particular modules, e.g.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# "LogLevel info ssl:warn"[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HLogLevel warn[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# Include module configuration:[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HIncludeOptional mods-enabled/*.load[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HIncludeOptional mods-enabled/*.conf[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# Include list of ports to listen on[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1HInclude ports.conf[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# Sets the default security model of the Apache2 HTTPD server. It does[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# not allow access to the root filesystem outside of /usr/share and /var/www.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# The former is used by web applications packaged in Debian,[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# the latter may be used for local directories served by the web server. If[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# your system is serving content from a sub-directory in /srv you must allow[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# access here, or in any related virtual host.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H<Directory />[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;9HOptions FollowSymLinks[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;9HAllowOverride None[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h7[2;12r8M[1;15r[2;1HInclude ports.conf[?25l[?12l[?25h7[2;12r8M[1;15r[2;1H[36m# Include list of ports to listen on[39m(B[m[?25l[?12l[?25h7[2;12r8M[1;15r[2;1H[?25l[?12l[?25h7[2;12r8M[1;15r[2;1HIncludeOptional mods-enabled/*.conf[?25l[?12l[?25h7[2;12r8M[1;15r[2;1HIncludeOptional mods-enabled/*.load[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h7[2;12r8M[1;15r[2;1H[36m# Include module configuration:[39m(B[m[?25l[?12l[?25h7[2;12r8M[1;15r[2;1H[?25l[?12l[?25h7[2;12r8M[1;15r[2;1HLogLevel warn[?25l[?12l[?25h7[2;12r8M[1;15r[2;1H[36m#[39m(B[m[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# Sets the default security model of the Apache2 HTTPD server. It does[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# not allow access to the root filesystem outside of /usr/share and /var/www.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# The former is used by web applications packaged in Debian,[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# the latter may be used for local directories served by the web server. If[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# your system is serving content from a sub-directory in /srv you must allow[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m# access here, or in any related virtual host.[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H<Directory />[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;9HOptions FollowSymLinks[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;9HAllowOverride None[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;9HRequire all denied[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H</Directory>[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H<Directory /usr/share>[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;9HAllowOverride None[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;9HRequire all granted[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H</Directory>[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h7[2;13r8M[1;15r[2;1H[36m# access here, or in any related virtual host.[39m(B[m[?25l[?12l[?25h7[2;12r8M[1;15r[2;1H[36m# your system is serving content from a sub-directory in /srv you must allow[39m(B[m[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[4;14H[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H</Directory>[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H<Directory /var/www/>[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;9HOptions Indexes FollowSymLinks[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;9HAllowOverride None[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;9HRequire all granted[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H</Directory>[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#<Directory /srv/>[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[9GOptions Indexes FollowSymLinks[39m(B[m[?25l[?12l[?25h7[2;13r8[13d
+[1;15r[12;1H[36m#[9GAllowOverride None[39m(B[m[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h<[?25l[?12l[?25hD[?25l[?12l[?25hi[?25l[?12l[?25hr[?25l[?12l[?25he[?25l[?12l[?25hc[?25l[?12l[?25ht[?25l[?12l[?25ho[?25l[?12l[?25hr[?25l[?12l[?25hy[?25l[?12l[?25h [?25l[?12l[?25h/[?25l[?12l[?25hv[?25l[?12l[?25ha[?25l[?12l[?25hr[?25l[?12l[?25h/[?25l[?12l[?25hw[?25l[?12l[?25hw[?25l[?12l[?25hw[?25l[?12l[?25h/[?25l[?12l[?25h>[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[14d[J[15d[?12l[?25h[15;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# [Kls /var/
+[?2004l[0m[01;34mbackups[0m  [01;34mcache[0m  [01;34mlib[0m  [01;34mlocal[0m  [01;36mlock[0m  [01;34mlog[0m  [01;34mmail[0m  [01;34mopt[0m  [01;36mrun[0m  [01;34mspool[0m  [30;42mtmp[0m  [01;34mwww[0m
+[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# ls /var/www/
+[?2004l[0m[01;34mhtml[0m
+[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# ls /var/www/[Knano /etc/apache2/apache2.conf[14Papt install nano[7Pache2 &t install nanonano /etc/apache2/apache2.confls /var/[Kwww/[K[K]0;root@97a83d556cf4: /root@97a83d556cf4:/# [K]0;root@97a83d556cf4: /root@97a83d556cf4:/# [K]0;root@97a83d556cf4: /root@97a83d556cf4:/# [K]0;root@97a83d556cf4: /root@97a83d556cf4:/# [H[2J]0;root@97a83d556cf4: /root@97a83d556cf4:/# sudo
+[?2004lbash: sudo: command not found
+[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# systm emtd  d[H[2J]0;root@97a83d556cf4: /root@97a83d556cf4:/# systemd
+[?2004lbash: systemd: command not found
+[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# systemd[Ksystemd[Kapache2
+apache2     apache2ctl  
+]0;root@97a83d556cf4: /root@97a83d556cf4:/# apache2
+[?2004l[Thu May 08 07:52:49.088872 2025] [core:warn] [pid 3569] AH00111: Config variable ${APACHE_RUN_DIR} is not defined
+apache2: Syntax error on line 80 of /etc/apache2/apache2.conf: DefaultRuntimeDir must be a valid directory, absolute or relative to ServerRoot
+[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# apache2[H[2J]0;root@97a83d556cf4: /root@97a83d556cf4:/# apache2^C[?2004l[?2004h[?2004l
+[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# [H[2J]0;root@97a83d556cf4: /root@97a83d556cf4:/# ls
+[?2004l[0m[01;36mbin[0m   [01;34mdev[0m  [01;34mhome[0m  [01;34mlib.usr-is-merged[0m  [01;34mmedia[0m  [01;34mopt[0m   [01;34mroot[0m  [01;36msbin[0m  [01;34msys[0m  [01;34musr[0m
+[01;34mboot[0m  [01;34metc[0m  [01;36mlib[0m   [01;36mlib64[0m              [01;34mmnt[0m    [01;34mproc[0m  [01;34mrun[0m   [01;34msrv[0m   [30;42mtmp[0m  [01;34mvar[0m
+[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# [H[2J]0;root@97a83d556cf4: /root@97a83d556cf4:/# ub  sudo
+[?2004lbash: sudo: command not found
+[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# less
+[?2004lbash: less: command not found
+[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# sudo    apt install less
+[?2004lReading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 6%Reading package lists... 6%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 69%Reading package lists... 69%Reading package lists... 74%Reading package lists... 74%Reading package lists... 80%Reading package lists... 80%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 86%Reading package lists... 86%Reading package lists... 89%Reading package lists... 89%Reading package lists... 94%Reading package lists... 94%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 1%Reading state information... Done
+The following NEW packages will be installed:
+  less
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 142 kB of archives.
+After this operation, 316 kB of additional disk space will be used.
+[33m0% [Working][0m            Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB]
+[33m1% [1 less 1156 B/142 kB 1%][0m[33m                            100% [Working][0m              Fetched 142 kB in 1s (167 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+
+7[0;10r8[1ASelecting previously unselected package less.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 8059 files and directories currently installed.)
+Preparing to unpack .../less_590-2ubuntu2.1_amd64.deb ...
+7[11;0f[42m[30mProgress: [  0%][49m[39m [...........................................................] 87[11;0f[42m[30mProgress: [ 20%][49m[39m [###########................................................] 8Unpacking less (590-2ubuntu2.1) ...
+7[11;0f[42m[30mProgress: [ 40%][49m[39m [#######################....................................] 8Setting up less (590-2ubuntu2.1) ...
+7[11;0f[42m[30mProgress: [ 60%][49m[39m [###################################........................] 87[11;0f[42m[30mProgress: [ 80%][49m[39m [###############################################............] 8
+7[0;11r8[1A[J[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# [H[2J]0;root@97a83d556cf4: /root@97a83d556cf4:/# less /etc/
+.pwd.lock               hosts                   rc0.d/
+adduser.conf            init.d/                 rc1.d/
+alternatives/           issue                   rc2.d/
+apache2/                issue.net               rc3.d/
+apt/                    kernel/                 rc4.d/
+bash.bashrc             ld.so.cache             rc5.d/
+bindresvport.blacklist  ld.so.conf              rc6.d/
+ca-certificates/        ld.so.conf.d/           rcS.d/
+ca-certificates.conf    ldap/                   resolv.conf
+cloud/                  legal                   rmt
+--More--[Kcron.d/                 libaudit.conf           rpc
+cron.daily/             login.defs              security/
+debconf.conf            logrotate.d/            selinux/
+debian_version          lsb-release             services
+default/                machine-id              shadow
+deluser.conf            mime.types              shadow-
+dpkg/                   mke2fs.conf             shells
+e2scrub.conf            mtab                    skel/
+elinks/                 nanorc                  ssl/
+environment             networks                subgid
+--More--[K]0;root@97a83d556cf4: /root@97a83d556cf4:/# less /etc/^C[?2004l[?2004h[?2004l
+[?2004h]0;root@97a83d556cf4: /root@97a83d556cf4:/# [H[2J]0;root@97a83d556cf4: /root@97a83d556cf4:/# [?2004l
+exit
+[?2004h[94mDEVOPS24/lektion12
+(B[m$ docker exec -it clever_johnson /bin/bash^C[?2004l[?2004h[?2004l
+[?2004h[94mDEVOPS24/lektion12
+(B[m$ [H[2J[94mDEVOPS24/lektion12
+(B[m$ docker ps
+[?2004lCONTAINER ID   IMAGE          COMMAND        CREATED          STATUS          PORTS     NAMES
+97a83d556cf4   b9fb1407a0ac   "sleep 1000"   10 minutes ago   Up 10 minutes             clever_johnson
+[?2004h[94mDEVOPS24/lektion12
+(B[m$ [K(B[m$ [H[2J[94mDEVOPS24/lektion12
+(B[m$ docker[K[K[K[K[K[Kdocker ps
+[?2004lCONTAINER ID   IMAGE          COMMAND        CREATED          STATUS          PORTS     NAMES
+97a83d556cf4   b9fb1407a0ac   "sleep 1000"   11 minutes ago   Up 11 minutes             clever_johnson
+[?2004h[94mDEVOPS24/lektion12
+(B[m$ docker stop clea[Kver_johnson
+[?2004lclever_johnson
+[?2004h[94mDEVOPS24/lektion12
+(B[m$ [H[2J[94mDEVOPS24/lektion12
+(B[m$ docker stop clever_johnson[C[C[C[C[C[C[C[C[Cps[K
+[?2004lCONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+[?2004h[94mDEVOPS24/lektion12
+(B[m$ docker run [K[K[K[K[K[K[K[K[K[K[K[H[2J[94mDEVOPS24/lektion12
+(B[m$ an [K[K[Kman docker-run
+[?2004l[?1049h[22;0;0t[?1h=DOCKER(1)                             Docker User Manuals                             DOCKER(1)[m
+[m
+[1mNAME[0m[m
+       docker-run - Create and run a new container from an image[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mdocker[0m    [1mrun[0m   [[1m-a[0m|[1m--attach[0m[=[4m[][24m]]   [[1m--add-host[0m[=[4m[][24m]]   [[1m--annotation[0m[=[4m[][24m]]   [[1m--blkio-[0m[m
+       [1mweight[0m[=[4m[BLKIO-WEIGHT][24m]]  [[1m--blkio-weight-device[0m[=[4m[][24m]]   [[1m-c[0m|[1m--cpu-shares[0m[=[4m0[24m]]   [[1m--cap-[0m[m
+       [1madd[0m[=[4m[][24m]]  [[1m--cap-drop[0m[=[4m[][24m]]  [[1m--cgroupns[0m[=[4m[][24m]]  [[1m--cgroup-parent[0m[=[4mCGROUP-PATH[24m]] [[1m--cid‐[0m[m
+       [1mfile[0m[=[4mCIDFILE[24m]]   [[1m--cpu-count[0m[=[4m0[24m]]   [[1m--cpu-percent[0m[=[4m0[24m]]   [[1m--cpu-period[0m[=[4m0[24m]]   [[1m--cpu-[0m[m
+[7m Manual page docker-run(1) line 1 (press h for help or q to quit)[27m[K...skipping...
+DOCKER(1)                             Docker User Manuals                             DOCKER(1)[m
+[m
+[1mNAME[0m[m
+       docker-run - Create and run a new container from an image[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mdocker[0m    [1mrun[0m   [[1m-a[0m|[1m--attach[0m[=[4m[][24m]]   [[1m--add-host[0m[=[4m[][24m]]   [[1m--annotation[0m[=[4m[][24m]]   [[1m--blkio-[0m[m
+       [1mweight[0m[=[4m[BLKIO-WEIGHT][24m]]  [[1m--blkio-weight-device[0m[=[4m[][24m]]   [[1m-c[0m|[1m--cpu-shares[0m[=[4m0[24m]]   [[1m--cap-[0m[m
+       [1madd[0m[=[4m[][24m]]  [[1m--cap-drop[0m[=[4m[][24m]]  [[1m--cgroupns[0m[=[4m[][24m]]  [[1m--cgroup-parent[0m[=[4mCGROUP-PATH[24m]] [[1m--cid‐[0m[m
+       [1mfile[0m[=[4mCIDFILE[24m]]   [[1m--cpu-count[0m[=[4m0[24m]]   [[1m--cpu-percent[0m[=[4m0[24m]]   [[1m--cpu-period[0m[=[4m0[24m]]   [[1m--cpu-[0m[m
+       [1mquota[0m[=[4m0[24m]]   [[1m--cpu-rt-period[0m[=[4m0[24m]]   [[1m--cpu-rt-runtime[0m[=[4m0[24m]]   [[1m--cpus[0m[=[4m0.0[24m]]  [[1m--cpuset-[0m[m
+[7m Manual page docker-run(1) line 1 (press h for help or q to quit)[27m[K...skipping...
+DOCKER(1)                             Docker User Manuals                             DOCKER(1)[m
+[m
+[1mNAME[0m[m
+       docker-run - Create and run a new container from an image[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mdocker[0m    [1mrun[0m   [[1m-a[0m|[1m--attach[0m[=[4m[][24m]]   [[1m--add-host[0m[=[4m[][24m]]   [[1m--annotation[0m[=[4m[][24m]]   [[1m--blkio-[0m[m
+       [1mweight[0m[=[4m[BLKIO-WEIGHT][24m]]  [[1m--blkio-weight-device[0m[=[4m[][24m]]   [[1m-c[0m|[1m--cpu-shares[0m[=[4m0[24m]]   [[1m--cap-[0m[m
+       [1madd[0m[=[4m[][24m]]  [[1m--cap-drop[0m[=[4m[][24m]]  [[1m--cgroupns[0m[=[4m[][24m]]  [[1m--cgroup-parent[0m[=[4mCGROUP-PATH[24m]] [[1m--cid‐[0m[m
+       [1mfile[0m[=[4mCIDFILE[24m]]   [[1m--cpu-count[0m[=[4m0[24m]]   [[1m--cpu-percent[0m[=[4m0[24m]]   [[1m--cpu-period[0m[=[4m0[24m]]   [[1m--cpu-[0m[m
+       [1mquota[0m[=[4m0[24m]]   [[1m--cpu-rt-period[0m[=[4m0[24m]]   [[1m--cpu-rt-runtime[0m[=[4m0[24m]]   [[1m--cpus[0m[=[4m0.0[24m]]  [[1m--cpuset-[0m[m
+       [1mcpus[0m[=[4mCPUSET-CPUS[24m]]  [[1m--cpuset-mems[0m[=[4mCPUSET-MEMS[24m]]  [[1m-d[0m|[1m--detach[0m]   [[1m--detach-keys[0m[=[4m[][24m]][m
+[7m Manual page docker-run(1) line 1 (press h for help or q to quit)[27m[K...skipping...
+DOCKER(1)                             Docker User Manuals                             DOCKER(1)[m
+[m
+[1mNAME[0m[m
+       docker-run - Create and run a new container from an image[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mdocker[0m    [1mrun[0m   [[1m-a[0m|[1m--attach[0m[=[4m[][24m]]   [[1m--add-host[0m[=[4m[][24m]]   [[1m--annotation[0m[=[4m[][24m]]   [[1m--blkio-[0m[m
+       [1mweight[0m[=[4m[BLKIO-WEIGHT][24m]]  [[1m--blkio-weight-device[0m[=[4m[][24m]]   [[1m-c[0m|[1m--cpu-shares[0m[=[4m0[24m]]   [[1m--cap-[0m[m
+       [1madd[0m[=[4m[][24m]]  [[1m--cap-drop[0m[=[4m[][24m]]  [[1m--cgroupns[0m[=[4m[][24m]]  [[1m--cgroup-parent[0m[=[4mCGROUP-PATH[24m]] [[1m--cid‐[0m[m
+       [1mfile[0m[=[4mCIDFILE[24m]]   [[1m--cpu-count[0m[=[4m0[24m]]   [[1m--cpu-percent[0m[=[4m0[24m]]   [[1m--cpu-period[0m[=[4m0[24m]]   [[1m--cpu-[0m[m
+       [1mquota[0m[=[4m0[24m]]   [[1m--cpu-rt-period[0m[=[4m0[24m]]   [[1m--cpu-rt-runtime[0m[=[4m0[24m]]   [[1m--cpus[0m[=[4m0.0[24m]]  [[1m--cpuset-[0m[m
+       [1mcpus[0m[=[4mCPUSET-CPUS[24m]]  [[1m--cpuset-mems[0m[=[4mCPUSET-MEMS[24m]]  [[1m-d[0m|[1m--detach[0m]   [[1m--detach-keys[0m[=[4m[][24m]][m
+       [[1m--device[0m[=[4m[][24m]]   [[1m--device-cgroup-rule[0m[=[4m[][24m]]  [[1m--device-read-bps[0m[=[4m[][24m]]  [[1m--device-read-[0m[m
+[7m Manual page docker-run(1) line 1 (press h for help or q to quit)[27m[K...skipping...
+DOCKER(1)                             Docker User Manuals                             DOCKER(1)[m
+[m
+[1mNAME[0m[m
+       docker-run - Create and run a new container from an image[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mdocker[0m    [1mrun[0m   [[1m-a[0m|[1m--attach[0m[=[4m[][24m]]   [[1m--add-host[0m[=[4m[][24m]]   [[1m--annotation[0m[=[4m[][24m]]   [[1m--blkio-[0m[m
+       [1mweight[0m[=[4m[BLKIO-WEIGHT][24m]]  [[1m--blkio-weight-device[0m[=[4m[][24m]]   [[1m-c[0m|[1m--cpu-shares[0m[=[4m0[24m]]   [[1m--cap-[0m[m
+       [1madd[0m[=[4m[][24m]]  [[1m--cap-drop[0m[=[4m[][24m]]  [[1m--cgroupns[0m[=[4m[][24m]]  [[1m--cgroup-parent[0m[=[4mCGROUP-PATH[24m]] [[1m--cid‐[0m[m
+       [1mfile[0m[=[4mCIDFILE[24m]]   [[1m--cpu-count[0m[=[4m0[24m]]   [[1m--cpu-percent[0m[=[4m0[24m]]   [[1m--cpu-period[0m[=[4m0[24m]]   [[1m--cpu-[0m[m
+       [1mquota[0m[=[4m0[24m]]   [[1m--cpu-rt-period[0m[=[4m0[24m]]   [[1m--cpu-rt-runtime[0m[=[4m0[24m]]   [[1m--cpus[0m[=[4m0.0[24m]]  [[1m--cpuset-[0m[m
+       [1mcpus[0m[=[4mCPUSET-CPUS[24m]]  [[1m--cpuset-mems[0m[=[4mCPUSET-MEMS[24m]]  [[1m-d[0m|[1m--detach[0m]   [[1m--detach-keys[0m[=[4m[][24m]][m
+       [[1m--device[0m[=[4m[][24m]]   [[1m--device-cgroup-rule[0m[=[4m[][24m]]  [[1m--device-read-bps[0m[=[4m[][24m]]  [[1m--device-read-[0m[m
+       [1miops[0m[=[4m[][24m]] [[1m--device-write-bps[0m[=[4m[][24m]] [[1m--device-write-iops[0m[=[4m[][24m]] [[1m--dns[0m[=[4m[][24m]]  [[1m--dns-op‐[0m[m
+[7m Manual page docker-run(1) line 1 (press h for help or q to quit)[27m[K...skipping...
+DOCKER(1)                             Docker User Manuals                             DOCKER(1)[m
+[m
+[1mNAME[0m[m
+       docker-run - Create and run a new container from an image[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mdocker[0m    [1mrun[0m   [[1m-a[0m|[1m--attach[0m[=[4m[][24m]]   [[1m--add-host[0m[=[4m[][24m]]   [[1m--annotation[0m[=[4m[][24m]]   [[1m--blkio-[0m[m
+       [1mweight[0m[=[4m[BLKIO-WEIGHT][24m]]  [[1m--blkio-weight-device[0m[=[4m[][24m]]   [[1m-c[0m|[1m--cpu-shares[0m[=[4m0[24m]]   [[1m--cap-[0m[m
+       [1madd[0m[=[4m[][24m]]  [[1m--cap-drop[0m[=[4m[][24m]]  [[1m--cgroupns[0m[=[4m[][24m]]  [[1m--cgroup-parent[0m[=[4mCGROUP-PATH[24m]] [[1m--cid‐[0m[m
+       [1mfile[0m[=[4mCIDFILE[24m]]   [[1m--cpu-count[0m[=[4m0[24m]]   [[1m--cpu-percent[0m[=[4m0[24m]]   [[1m--cpu-period[0m[=[4m0[24m]]   [[1m--cpu-[0m[m
+       [1mquota[0m[=[4m0[24m]]   [[1m--cpu-rt-period[0m[=[4m0[24m]]   [[1m--cpu-rt-runtime[0m[=[4m0[24m]]   [[1m--cpus[0m[=[4m0.0[24m]]  [[1m--cpuset-[0m[m
+       [1mcpus[0m[=[4mCPUSET-CPUS[24m]]  [[1m--cpuset-mems[0m[=[4mCPUSET-MEMS[24m]]  [[1m-d[0m|[1m--detach[0m]   [[1m--detach-keys[0m[=[4m[][24m]][m
+       [[1m--device[0m[=[4m[][24m]]   [[1m--device-cgroup-rule[0m[=[4m[][24m]]  [[1m--device-read-bps[0m[=[4m[][24m]]  [[1m--device-read-[0m[m
+       [1miops[0m[=[4m[][24m]] [[1m--device-write-bps[0m[=[4m[][24m]] [[1m--device-write-iops[0m[=[4m[][24m]] [[1m--dns[0m[=[4m[][24m]]  [[1m--dns-op‐[0m[m
+       [1mtion[0m[=[4m[][24m]]  [[1m--dns-search[0m[=[4m[][24m]]  [[1m--domainname[0m[=[4mDOMAINNAME[24m]]  [[1m-e[0m|[1m--env[0m[=[4m[][24m]]  [[1m--entry‐[0m[m
+[7m Manual page docker-run(1) line 1 (press h for help or q to quit)[27m[K...skipping...
+DOCKER(1)                             Docker User Manuals                             DOCKER(1)[m
+[m
+[1mNAME[0m[m
+       docker-run - Create and run a new container from an image[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mdocker[0m    [1mrun[0m   [[1m-a[0m|[1m--attach[0m[=[4m[][24m]]   [[1m--add-host[0m[=[4m[][24m]]   [[1m--annotation[0m[=[4m[][24m]]   [[1m--blkio-[0m[m
+       [1mweight[0m[=[4m[BLKIO-WEIGHT][24m]]  [[1m--blkio-weight-device[0m[=[4m[][24m]]   [[1m-c[0m|[1m--cpu-shares[0m[=[4m0[24m]]   [[1m--cap-[0m[m
+       [1madd[0m[=[4m[][24m]]  [[1m--cap-drop[0m[=[4m[][24m]]  [[1m--cgroupns[0m[=[4m[][24m]]  [[1m--cgroup-parent[0m[=[4mCGROUP-PATH[24m]] [[1m--cid‐[0m[m
+       [1mfile[0m[=[4mCIDFILE[24m]]   [[1m--cpu-count[0m[=[4m0[24m]]   [[1m--cpu-percent[0m[=[4m0[24m]]   [[1m--cpu-period[0m[=[4m0[24m]]   [[1m--cpu-[0m[m
+       [1mquota[0m[=[4m0[24m]]   [[1m--cpu-rt-period[0m[=[4m0[24m]]   [[1m--cpu-rt-runtime[0m[=[4m0[24m]]   [[1m--cpus[0m[=[4m0.0[24m]]  [[1m--cpuset-[0m[m
+       [1mcpus[0m[=[4mCPUSET-CPUS[24m]]  [[1m--cpuset-mems[0m[=[4mCPUSET-MEMS[24m]]  [[1m-d[0m|[1m--detach[0m]   [[1m--detach-keys[0m[=[4m[][24m]][m
+       [[1m--device[0m[=[4m[][24m]]   [[1m--device-cgroup-rule[0m[=[4m[][24m]]  [[1m--device-read-bps[0m[=[4m[][24m]]  [[1m--device-read-[0m[m
+       [1miops[0m[=[4m[][24m]] [[1m--device-write-bps[0m[=[4m[][24m]] [[1m--device-write-iops[0m[=[4m[][24m]] [[1m--dns[0m[=[4m[][24m]]  [[1m--dns-op‐[0m[m
+       [1mtion[0m[=[4m[][24m]]  [[1m--dns-search[0m[=[4m[][24m]]  [[1m--domainname[0m[=[4mDOMAINNAME[24m]]  [[1m-e[0m|[1m--env[0m[=[4m[][24m]]  [[1m--entry‐[0m[m
+       [1mpoint[0m[=[4mENTRYPOINT[24m]]  [[1m--env-file[0m[=[4m[][24m]]  [[1m--expose[0m[=[4m[][24m]]  [[1m--group-add[0m[=[4m[][24m]]  [[1m-h[0m|[1m--host‐[0m[m
+[7m Manual page docker-run(1) line 1 (press h for help or q to quit)[27m[K...skipping...
+DOCKER(1)                             Docker User Manuals                             DOCKER(1)[m
+[m
+[1mNAME[0m[m
+       docker-run - Create and run a new container from an image[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mdocker[0m    [1mrun[0m   [[1m-a[0m|[1m--attach[0m[=[4m[][24m]]   [[1m--add-host[0m[=[4m[][24m]]   [[1m--annotation[0m[=[4m[][24m]]   [[1m--blkio-[0m[m
+       [1mweight[0m[=[4m[BLKIO-WEIGHT][24m]]  [[1m--blkio-weight-device[0m[=[4m[][24m]]   [[1m-c[0m|[1m--cpu-shares[0m[=[4m0[24m]]   [[1m--cap-[0m[m
+       [1madd[0m[=[4m[][24m]]  [[1m--cap-drop[0m[=[4m[][24m]]  [[1m--cgroupns[0m[=[4m[][24m]]  [[1m--cgroup-parent[0m[=[4mCGROUP-PATH[24m]] [[1m--cid‐[0m[m
+       [1mfile[0m[=[4mCIDFILE[24m]]   [[1m--cpu-count[0m[=[4m0[24m]]   [[1m--cpu-percent[0m[=[4m0[24m]]   [[1m--cpu-period[0m[=[4m0[24m]]   [[1m--cpu-[0m[m
+       [1mquota[0m[=[4m0[24m]]   [[1m--cpu-rt-period[0m[=[4m0[24m]]   [[1m--cpu-rt-runtime[0m[=[4m0[24m]]   [[1m--cpus[0m[=[4m0.0[24m]]  [[1m--cpuset-[0m[m
+       [1mcpus[0m[=[4mCPUSET-CPUS[24m]]  [[1m--cpuset-mems[0m[=[4mCPUSET-MEMS[24m]]  [[1m-d[0m|[1m--detach[0m]   [[1m--detach-keys[0m[=[4m[][24m]][m
+       [[1m--device[0m[=[4m[][24m]]   [[1m--device-cgroup-rule[0m[=[4m[][24m]]  [[1m--device-read-bps[0m[=[4m[][24m]]  [[1m--device-read-[0m[m
+       [1miops[0m[=[4m[][24m]] [[1m--device-write-bps[0m[=[4m[][24m]] [[1m--device-write-iops[0m[=[4m[][24m]] [[1m--dns[0m[=[4m[][24m]]  [[1m--dns-op‐[0m[m
+       [1mtion[0m[=[4m[][24m]]  [[1m--dns-search[0m[=[4m[][24m]]  [[1m--domainname[0m[=[4mDOMAINNAME[24m]]  [[1m-e[0m|[1m--env[0m[=[4m[][24m]]  [[1m--entry‐[0m[m
+       [1mpoint[0m[=[4mENTRYPOINT[24m]]  [[1m--env-file[0m[=[4m[][24m]]  [[1m--expose[0m[=[4m[][24m]]  [[1m--group-add[0m[=[4m[][24m]]  [[1m-h[0m|[1m--host‐[0m[m
+       [1mname[0m[=[4mHOSTNAME[24m]]     [[1m--help[0m]    [[1m--init[0m]    [[1m-i[0m|[1m--interactive[0m]    [[1m--ip[0m[=[4mIPv4-ADDRESS[24m]][m
+[7m Manual page docker-run(1) line 1 (press h for help or q to quit)[27m[K...skipping...
+DOCKER(1)                             Docker User Manuals                             DOCKER(1)[m
+[m
+[1mNAME[0m[m
+       docker-run - Create and run a new container from an image[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mdocker[0m    [1mrun[0m   [[1m-a[0m|[1m--attach[0m[=[4m[][24m]]   [[1m--add-host[0m[=[4m[][24m]]   [[1m--annotation[0m[=[4m[][24m]]   [[1m--blkio-[0m[m
+       [1mweight[0m[=[4m[BLKIO-WEIGHT][24m]]  [[1m--blkio-weight-device[0m[=[4m[][24m]]   [[1m-c[0m|[1m--cpu-shares[0m[=[4m0[24m]]   [[1m--cap-[0m[m
+       [1madd[0m[=[4m[][24m]]  [[1m--cap-drop[0m[=[4m[][24m]]  [[1m--cgroupns[0m[=[4m[][24m]]  [[1m--cgroup-parent[0m[=[4mCGROUP-PATH[24m]] [[1m--cid‐[0m[m
+       [1mfile[0m[=[4mCIDFILE[24m]]   [[1m--cpu-count[0m[=[4m0[24m]]   [[1m--cpu-percent[0m[=[4m0[24m]]   [[1m--cpu-period[0m[=[4m0[24m]]   [[1m--cpu-[0m[m
+       [1mquota[0m[=[4m0[24m]]   [[1m--cpu-rt-period[0m[=[4m0[24m]]   [[1m--cpu-rt-runtime[0m[=[4m0[24m]]   [[1m--cpus[0m[=[4m0.0[24m]]  [[1m--cpuset-[0m[m
+       [1mcpus[0m[=[4mCPUSET-CPUS[24m]]  [[1m--cpuset-mems[0m[=[4mCPUSET-MEMS[24m]]  [[1m-d[0m|[1m--detach[0m]   [[1m--detach-keys[0m[=[4m[][24m]][m
+       [[1m--device[0m[=[4m[][24m]]   [[1m--device-cgroup-rule[0m[=[4m[][24m]]  [[1m--device-read-bps[0m[=[4m[][24m]]  [[1m--device-read-[0m[m
+       [1miops[0m[=[4m[][24m]] [[1m--device-write-bps[0m[=[4m[][24m]] [[1m--device-write-iops[0m[=[4m[][24m]] [[1m--dns[0m[=[4m[][24m]]  [[1m--dns-op‐[0m[m
+       [1mtion[0m[=[4m[][24m]]  [[1m--dns-search[0m[=[4m[][24m]]  [[1m--domainname[0m[=[4mDOMAINNAME[24m]]  [[1m-e[0m|[1m--env[0m[=[4m[][24m]]  [[1m--entry‐[0m[m
+       [1mpoint[0m[=[4mENTRYPOINT[24m]]  [[1m--env-file[0m[=[4m[][24m]]  [[1m--expose[0m[=[4m[][24m]]  [[1m--group-add[0m[=[4m[][24m]]  [[1m-h[0m|[1m--host‐[0m[m
+       [1mname[0m[=[4mHOSTNAME[24m]]     [[1m--help[0m]    [[1m--init[0m]    [[1m-i[0m|[1m--interactive[0m]    [[1m--ip[0m[=[4mIPv4-ADDRESS[24m]][m
+       [[1m--ip6[0m[=[4mIPv6-ADDRESS[24m]] [[1m--ipc[0m[=[4mIPC[24m]]  [[1m--isolation[0m[=[4mdefault[24m]]  [[1m--kernel-memory[0m[=[4mKERNEL-[24m[m
+[7m Manual page docker-run(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page docker-run(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mMEMORY[24m]]   [[1m-l[0m|[1m--label[0m[=[4m[][24m]]  [[1m--label-file[0m[=[4m[][24m]]  [[1m--link[0m[=[4m[][24m]]  [[1m--link-local-ip[0m[=[4m[][24m]][m
+[7m Manual page docker-run(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [[1m--log-driver[0m[=[4m[][24m]]  [[1m--log-opt[0m[=[4m[][24m]]   [[1m-m[0m|[1m--memory[0m[=[4mMEMORY[24m]]   [[1m--mac-address[0m[=[4mMAC-AD‐[24m[m
+[7m Manual page docker-run(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mDRESS[24m]]  [[1m--memory-reservation[0m[=[4mMEMORY-RESERVATION[24m]]  [[1m--memory-swap[0m[=[4mLIMIT[24m]] [[1m--memory-[0m[m
+[7m Manual page docker-run(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mswappiness[0m[=[4mMEMORY-SWAPPINESS[24m]]    [[1m--mount[0m[=[4m[MOUNT][24m]]    [[1m--name[0m[=[4mNAME[24m]]    [[1m--network-[0m[m
+[7m Manual page docker-run(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1malias[0m[=[4m[][24m]] [[1m--network[0m[=[4m"bridge"[24m]] [[1m--oom-kill-disable[0m] [[1m--oom-score-adj[0m[=[4m0[24m]] [[1m-P[0m|[1m--pub‐[0m[m
+[7m Manual page docker-run(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mlish-all[0m]     [[1m-p[0m|[1m--publish[0m[=[4m[][24m]]     [[1m--pid[0m[=[4m[PID][24m]]      [[1m--userns[0m[=[4m[][24m]]      [[1m--pids-[0m[m
+[7m Manual page docker-run(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mlimit[0m[=[4mPIDS_LIMIT[24m]]  [[1m--privileged[0m]  [[1m--read-only[0m] [[1m--restart[0m[=[4mRESTART[24m]] [[1m--rm[0m] [[1m--secu‐[0m[m
+[7m Manual page docker-run(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mrity-opt[0m[=[4m[][24m]] [[1m--storage-opt[0m[=[4m[][24m]] [[1m--stop-signal[0m[=[4mSIGNAL[24m]]  [[1m--stop-timeout[0m[=[4mTIMEOUT[24m]][m
+[7m Manual page docker-run(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [[1m--shm-size[0m[=[4m[][24m]]  [[1m--sig-proxy[0m[=[4mtrue[24m]] [[1m--sysctl[0m[=[4m[][24m]] [[1m-t[0m|[1m--tty[0m] [[1m--tmpfs[0m[=[4m[CONTAINER-[24m[m
+[7m Manual page docker-run(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mDIR[:OPTIONS][24m]] [[1m-u[0m|[1m--user[0m[=[4mUSER[24m]]  [[1m--ulimit[0m[=[4m[][24m]]  [[1m--uts[0m[=[4m[][24m]]  [[1m-v[0m|[1m--volume[0m[=[4m[[HOST-[24m[m
+[7m Manual page docker-run(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mDIR:]CONTAINER-DIR[:OPTIONS]][24m]]     [[1m--volume-driver[0m[=[4mDRIVER[24m]]     [[1m--volumes-from[0m[=[4m[][24m]][m
+[7m Manual page docker-run(1) line 12 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion12
+(B[m$ man docker-run[C[C[5Pdocker psstop clever_johnson[C[C[C[C[C[C[C[C[Cps[Kexec -it clever_johnson /bin/bash[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cps[Kexec -it clever_johnson /bin/bash[C[C[C[C[C[C[C[C[Cps[Kexec -it clever_johnson /bin/bash[C[C[C[C[C[C[C[C[Cps[K^C[?2004l[?2004h[?2004l
+[?2004h[94mDEVOPS24/lektion12
+(B[m$ (reverse-i-search)`': r': man docker-[7mr[27munu': man docker-[7mru[27mnn': man docker-[7mrun[27m[Cfailed reverse-i-search)`run': man docker-run^C[?2004l[?2004h[?2004l
+[?2004h[94mDEVOPS24/lektion12
+(B[m$ docke[K[K[K[K[Kdovk[K[Kcker image ls[H[2J[94mDEVOPS24/lektion12
+(B[m$ docker image ls
+[?2004lREPOSITORY               TAG       IMAGE ID       CREATED         SIZE
+<none>                   <none>    b9fb1407a0ac   9 days ago      78.1MB
+debian                   12        d4ccddb816ba   2 months ago    117MB
+mariadb                  latest    4815a3e162ea   2 months ago    328MB
+minlag/mermaid-cli       latest    45d7b5ace607   2 months ago    1.89GB
+kopia-server-image       latest    ef7eb39bc583   3 months ago    491MB
+<none>                   <none>    b519542508bc   3 months ago    491MB
+<none>                   <none>    6b478e89aefd   3 months ago    491MB
+<none>                   <none>    6e962152673c   3 months ago    491MB
+<none>                   <none>    4b83b52150dd   3 months ago    491MB
+<none>                   <none>    4ad20ab61f23   3 months ago    491MB
+<none>                   <none>    97202a5cd17c   3 months ago    491MB
+kopia-client-image       latest    c92ed318a697   3 months ago    491MB
+ghcr.io/astral-sh/ruff   0.3.0     46a2e1cf64b3   14 months ago   31.5MB
+[?2004h[94mDEVOPS24/lektion12
+(B[m$ docker run [7mb9fb1407a0ac[27mb9fb1407a0ac[H[2J[94mDEVOPS24/lektion12
+(B[m$ docker run b9fb1407a0ac[C b9fb1407a0ac- b9fb1407a0acp b9fb1407a0ac8 b9fb1407a0ac0 b9fb1407a0ac0 b9fb1407a0ac8 b9fb1407a0ac0 b9fb1407a0ac[1P b9fb1407a0ac[1P b9fb1407a0ac[1P b9fb1407a0ac8 b9fb1407a0ac0 b9fb1407a0ac> b9fb1407a0ac[1P b9fb1407a0ac: b9fb1407a0ac9 b9fb1407a0ac8 b9fb1407a0ac0 b9fb1407a0ac[1P b9fb1407a0ac[1P b9fb1407a0ac
