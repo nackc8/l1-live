@@ -449,4 +449,71 @@ luksAddKey         luksHeaderRestore  luksUUID           tcryptDump
 [?2004l[?2004h]0;root@ubse: ~root@ubse:~# ls /dev/mapper/
 [?2004l[0m[40;33;01mcontrol[0m
 [?2004h]0;root@ubse: ~root@ubse:~# cryptsetup ip[K[Kopen /dev/sdb2
-[?20
+[?2004lCommand requires device and mapped name as arguments.
+[?2004h]0;root@ubse: ~root@ubse:~# cryptsetup open /dev/sdb2 crypt
+[?2004lEnter passphrase for /dev/sdb2: 
+[?2004h]0;root@ubse: ~root@ubse:~# cryptsetup open /dev/sdb2 crypt[K[C[C[C[C[C[C[C[C[C[C[C[C[C[10Pls /dev/mapper/
+[?2004l[0m[40;33;01mcontrol[0m  [01;36mcrypt[0m
+[?2004h]0;root@ubse: ~root@ubse:~# ls /dev/sdb2
+[?2004l[0m[40;33;01m/dev/sdb2[0m
+[?2004h]0;root@ubse: ~root@ubse:~# gidks[K[K[K[Kdisk //dev/[K[K[K[K[Kev/[K[K[Kdev/mapper/cy[Krypt [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kls /dev/mapper/crypt 
+[?2004l[0m[01;36m/dev/mapper/crypt[0m
+[?2004h]0;root@ubse: ~root@ubse:~# mkfs
+mkfs         mkfs.cramfs  mkfs.ext4    mkfs.msdos   mkfs.xfs     
+mkfs.bfs     mkfs.ext2    mkfs.fat     mkfs.ntfs    
+mkfs.btrfs   mkfs.ext3    mkfs.minix   mkfs.vfat    
+]0;root@ubse: ~root@ubse:~# mkfs.xfs /dev/mapper/crypt 
+[?2004lFilesystem must be larger than 300MB.
+Usage: mkfs.xfs
+/* blocksize */		[-b size=num]
+/* config file */	[-c options=xxx]
+/* metadata */		[-m crc=0|1,finobt=0|1,uuid=xxx,rmapbt=0|1,reflink=0|1,
+			    inobtcount=0|1,bigtime=0|1]
+/* data subvol */	[-d agcount=n,agsize=n,file,name=xxx,size=num,
+			    (sunit=value,swidth=value|su=num,sw=num|noalign),
+			    sectsize=num
+/* force overwrite */	[-f]
+/* inode size */	[-i perblock=n|size=num,maxpct=n,attr=0|1|2,
+			    projid32bit=0|1,sparse=0|1,nrext64=0|1]
+/* no discard */	[-K]
+/* log subvol */	[-l agnum=n,internal,size=num,logdev=xxx,version=n
+			    sunit=value|su=num,sectsize=num,lazy-count=0|1]
+/* label */		[-L label (maximum 12 characters)]
+/* naming */		[-n size=num,version=2|ci,ftype=0|1]
+/* no-op info only */	[-N]
+/* prototype file */	[-p fname]
+/* quiet */		[-q]
+/* realtime subvol */	[-r extsize=num,size=num,rtdev=xxx]
+/* sectorsize */	[-s size=num]
+/* version */		[-V]
+			devicename
+<devicename> is required unless -d name=xxx is given.
+<num> is xxx (bytes), xxxs (sectors), xxxb (fs blocks), xxxk (xxx KiB),
+      xxxm (xxx MiB), xxxg (xxx GiB), xxxt (xxx TiB) or xxxp (xxx PiB).
+<value> is xxx (512 byte blocks).
+[?2004h]0;root@ubse: ~root@ubse:~# mkfs.xfs /dev/mapper/crypt [C[1P[1P[1P[1@e[1@x[1@t[1@4[C
+[?2004lmke2fs 1.47.0 (5-Feb-2023)
+Creating filesystem with 72704 4k blocks and 72720 inodes
+Filesystem UUID: d8026a68-0ae7-4f16-bdad-0e5f6b0eeec4
+Superblock backups stored on blocks: 
+	32768
+
+Allocating group tables: 0/3   done                            
+Writing inode tables: 0/3   done                            
+Creating journal (4096 blocks): done
+Writing superblocks and filesystem accounting information: 0/3   done
+
+[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# lsblk
+[?2004lNAME      MAJ:MIN RM  SIZE RO TYPE  MOUNTPOINTS
+sda         8:0    0   40G  0 disk  
+├─sda1      8:1    0    1G  0 part  /boot/efi
+└─sda2      8:2    0 38.9G  0 part  /
+sdb         8:16   0   25G  0 disk  
+├─sdb1      8:17   0  100M  0 part  /minnyapartition
+└─sdb2      8:18   0  300M  0 part  
+  └─crypt 252:0    0  284M  0 crypt 
+sr0        11:0    1 1024M  0 rom   
+[?2004h]0;root@ubse: ~root@ubse:~# mkdir /hemligt
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# moutn [K[K[Knt /dev/mapper/crypt /hemligt/
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# nano /hemligt/
+[?2004l[?2004h[?1049h[22;0;0t[1;19r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[17;26H(B[0;1m[37m[41m[ "/hemligt/" is a directory ][39;49m(B[m[H(B[0;7m  GNU nano 7.2                        New Buffer                                 [1;80H(B[m[18d(B[0;7m^G(B[m Help[14G(B[0;7m^O(B[m Write Out (B[0;7m^W(B[m Where Is  (B[0;7m^K(B[m Cut[53G(B[0;7m^T(B[m Execute   (B[0;7m^C(B[m Location[19d(B[0;7m^X(B[m Exit[14G(B[0;7m^R(B[m Read File (B[0;7m^\(B[m Replace   (B[0;7m^U(B
