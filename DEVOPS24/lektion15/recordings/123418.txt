@@ -360,4 +360,93 @@ Last sector (206848-52428766, default = 52426751) or {+-}size{KMGTP}: +300M
 Current type is 8300 (Linux filesystem)
 Hex code or GUID (L to show codes, Enter = 8300): L
 Type search string, or <Enter> to show all codes: LUKS
-8309 Linux
+8309 Linux LUKS                          f813 Ceph dm-crypt LUKS journal        
+f814 Ceph dm-crypt LUKS block            f815 Ceph dm-crypt LUKS block DB       
+f816 Ceph dm-crypt LUKS block write-ahe  f817 Ceph dm-crypt LUKS OSD            
+
+Hex code or GUID (L to show codes, Enter = 8300): 8309
+Changed type of partition to 'Linux LUKS'
+
+Command (? for help): p
+Disk /dev/sdb: 52428800 sectors, 25.0 GiB
+Model: VBOX HARDDISK   
+Sector size (logical/physical): 512/512 bytes
+Disk identifier (GUID): 98FA2BB1-D45F-485E-B663-212BC95935AD
+Partition table holds up to 128 entries
+Main partition table begins at sector 2 and ends at sector 33
+First usable sector is 34, last usable sector is 52428766
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 51609533 sectors (24.6 GiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048          206847   100.0 MiB   8300  Linux filesystem
+   2          206848          821247   300.0 MiB   8309  Linux LUKS
+
+Command (? for help): w
+
+Final checks complete. About to write GPT data. THIS WILL OVERWRITE EXISTING
+PARTITIONS!!
+
+Do you want to proceed? (Y/N): y
+OK; writing new GUID partition table (GPT) to /dev/sdb.
+Warning: The kernel is still using the old partition table.
+The new table will be used at the next reboot or after you
+run partprobe(8) or kpartx(8)
+The operation has completed successfully.
+[?2004h]0;root@ubse: ~root@ubse:~# lslblk
+[?2004lCommand 'lslblk' not found, did you mean:
+  command 'lsblk' from deb util-linux (2.39.3-9ubuntu6.2)
+Try: apt install <deb name>
+[?2004h]0;root@ubse: ~root@ubse:~# lsblk
+[?2004lNAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part /minnyapartition
+sr0     11:0    1 1024M  0 rom  
+[?2004h]0;root@ubse: ~root@ubse:~# partprobe 
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# partprobe [5Plsblk
+[?2004lNAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+├─sdb1   8:17   0  100M  0 part /minnyapartition
+└─sdb2   8:18   0  300M  0 part 
+sr0     11:0    1 1024M  0 rom  
+[?2004h]0;root@ubse: ~root@ubse:~# cryptsetup 
+benchmark          luksChangeKey      luksKillSlot       open
+close              luksDump           luksRemoveKey      repair
+erase              luksFormat         luksResume         resize
+isLuks             luksHeaderBackup   luksSuspend        status
+luksAddKey         luksHeaderRestore  luksUUID           tcryptDump
+]0;root@ubse: ~root@ubse:~# cryptsetup luksFormat /dev/sdb2
+[?2004l
+WARNING!
+========
+This will overwrite data on /dev/sdb2 irrevocably.
+
+Are you sure? (Type 'yes' in capital letters): YES
+Enter passphrase for /dev/sdb2: 
+Verify passphrase: 
+[?2004h]0;root@ubse: ~root@ubse:~# lsblk
+[?2004lNAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+├─sdb1   8:17   0  100M  0 part /minnyapartition
+└─sdb2   8:18   0  300M  0 part 
+sr0     11:0    1 1024M  0 rom  
+[?2004h]0;root@ubse: ~root@ubse:~# l[Kcryptsetup 
+benchmark          luksChangeKey      luksKillSlot       open
+close              luksDump           luksRemoveKey      repair
+erase              luksFormat         luksResume         resize
+isLuks             luksHeaderBackup   luksSuspend        status
+luksAddKey         luksHeaderRestore  luksUUID           tcryptDump
+]0;root@ubse: ~root@ubse:~# cryptsetup open [C[C[C[C[C[C[C[C[C[C[C[C[C[1@@[1P[1@#
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# ls /dev/mapper/
+[?2004l[0m[40;33;01mcontrol[0m
+[?2004h]0;root@ubse: ~root@ubse:~# cryptsetup ip[K[Kopen /dev/sdb2
+[?20
