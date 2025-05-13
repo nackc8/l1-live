@@ -116,4 +116,58 @@ sr0     11:0    1 1024M  0 rom
 [?2004lmount: /minnyapartition: /dev/sdb1 already mounted on /minnyapartition.
        dmesg(1) may have more information after failed mount system call.
 [?2004h]0;root@ubse: ~root@ubse:~# lsblk
-
+[?2004lNAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part /minnyapartition
+sr0     11:0    1 1024M  0 rom  
+[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# ls ./[K[K/minnyapartition/
+[?2004lhejsan  [0m[01;34mlost+found[0m
+[?2004h]0;root@ubse: ~root@ubse:~# (reverse-i-search)`': [Km': ls /[7mm[27minnyapartition/o': [7mmo[27munt /minnyapartition[1@u': [7mmou[27m[1@n': [7mmoun[27m[1@t': [7mmount[27mu[7mmount[27m /minnyapartition [14P]0;root@ubse: ~root@ubse:~# umount[C[C[C[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K ^C[?2004l[?2004h[?2004l
+[?2004h]0;root@ubse: ~root@ubse:~# umount /d[Kminnyapartition 
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# lsblk
+[?2004lNAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part 
+sr0     11:0    1 1024M  0 rom  
+[?2004h]0;root@ubse: ~root@ubse:~# mount[K[K[K[K[K[H[2J]0;root@ubse: ~root@ubse:~# f[Kgrep -a'-a[C[C'='-a'[1P'-a'-'-a'-'-a' '-a'[1@m[1@a[1@n[1@ [1@m[1@o[1@u[1@n[1@t[1@ [1@|[1@ 
+[?2004ltroff:<standard input>:46: warning [p 1, 3.2i]: cannot break line
+       mount [01;31m[K-a[m[K [-fFnrsvw] [-t fstype] [-O optlist]
+       exception is -[01;31m[K-a[m[Kll, in this case already mounted filesystems are
+       ignored (see -[01;31m[K-a[m[Kll below for more details).
+          mount [01;31m[K-a[m[K [-t type] [-O optlist]
+       [01;31m[K-a[m[K, -[01;31m[K-a[m[Kll
+           -[01;31m[K-a[m[Kll. This means that all duplicated fstab entries will be
+           filesystems before mount [01;31m[K-a[m[K is executed, or keep /proc and /sys at
+           The option -[01;31m[K-a[m[Kll is possible to use for remount operation too. In
+           Note that it is a bad practice to use mount [01;31m[K-a[m[K for fstab checking.
+           (Used in conjunction with [01;31m[K-a[m[K.) Fork off a new incarnation of mount
+           Limit the set of filesystems to which the [01;31m[K-a[m[K option applies. In
+           without [01;31m[K-a[m[K. For example, the command
+           mount [01;31m[K-a[m[K -O no_netdev
+           mount [01;31m[K-a[m[K -t ext2 -O  _netdev
+           This behavior is the default for -[01;31m[K-a[m[Kll; otherwise, it depends on
+           mount -[01;31m[K-a[m[Kll --target-prefix /chroot -o X-mount.mkdir
+           The prefix no can be meaningful with the [01;31m[K-a[m[K option. For example,
+           mount [01;31m[K-a[m[K -t nomsdos,smbfs
+           Can be mounted with the [01;31m[K-a[m[K option.
+           Can only be mounted explicitly (i.e., the [01;31m[K-a[m[K option will not cause
+           mount allows the use of -[01;31m[K-a[m[Kll to remount all already mounted
+           mount -[01;31m[K-a[m[Kll -o remount,ro -t vfat
+           X[01;31m[K-a[m[Kppname.option.
+           Enable bulk-read. VFS read[01;31m[K-a[m[Khead is disabled because it slows down
+           The command mount [01;31m[K-a[m[K returns 0 (all succeeded), 32 (all failed), or
+[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# mount -[K[K[K[K[K[K[Ks[Klsblk
+[?2004lNAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part 
+sr0     11:0    1 1024M  0 rom  
+[?2004h]0;root@ubse: ~root@ubse:~# mount /a[K[K-
