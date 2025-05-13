@@ -219,4 +219,66 @@ No VM guests are running outdated hypervisor (qemu) binaries on this host.
        the [1mfallocate[22m(2) system call, preallocation is done quickly by[m
        allocating blocks and marking them as uninitialized, requiring no IO to[m
        the data blocks. This is much faster than creating a file by filling it[m
-[7m Manual page fallocate(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;root@ubse: ~root@ubse:~# fallocate[K[K[K[Ka[K[Ka[Kcate -l [C[1@o
+[7m Manual page fallocate(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;root@ubse: ~root@ubse:~# fallocate[K[K[K[Ka[K[Ka[Kcate -l [C[1@o[C[C[C[C[C[C[C[C^C[?2004l[?2004h[?2004l
+[?2004h]0;root@ubse: ~root@ubse:~# man fallocate
+[?2004l[?1049h[22;0;0t[?1h=[4mFALLOCATE[24m(1)                     User Commands                    [4mFALLOCATE[24m(1)[m
+[m
+[1mNAME[0m[m
+       fallocate - preallocate or deallocate space to a file[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mfallocate [22m[[1m-c[22m|[1m-p[22m|[1m-z[22m] [[1m-o [4m[22moffset[24m] [1m-l [4m[22mlength[24m [[1m-n[22m] [4mfilename[0m[m
+[m
+       [1mfallocate -d [22m[[1m-o [4m[22moffset[24m] [[1m-l [4m[22mlength[24m] [4mfilename[0m[m
+[m
+       [1mfallocate -x [22m[[1m-o [4m[22moffset[24m] [1m-l [4m[22mlength[24m [4mfilename[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mfallocate [22mis used to manipulate the allocated disk space for a file,[m
+       either to deallocate or preallocate it. For filesystems which support[m
+       the [1mfallocate[22m(2) system call, preallocation is done quickly by[m
+       allocating blocks and marking them as uninitialized, requiring no IO to[m
+       the data blocks. This is much faster than creating a file by filling it[m
+[7m Manual page fallocate(1) line 1 (press h for help or q to quit)[27m[K[K/[Kll[Kee[Knn[Kgg[Ktt[Khh[K[1;1H[4mFALLOCATE[24m(1)                     User Commands                    [4mFALLOCATE[24m(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       fallocate - preallocate or deallocate space to a file[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mfallocate [22m[[1m-c[22m|[1m-p[22m|[1m-z[22m] [[1m-o [4m[22moffset[24m] [1m-l [4m[22mlength[24m [[1m-n[22m] [4mfilename[0m[m
+[8;1H[m
+[9;1H       [1mfallocate -d [22m[[1m-o [4m[22moffset[24m] [[1m-l [4m[22mlength[24m] [4mfilename[0m[m
+[10;1H[m
+[11;1H       [1mfallocate -x [22m[[1m-o [4m[22moffset[24m] [1m-l [4m[22mlength[24m [4mfilename[0m[m
+[12;1H[m
+[13;1H[1mDESCRIPTION[0m[m
+[14;1H       [1mfallocate [22mis used to manipulate the allocated disk space for a file,[m
+[15;1H       either to deallocate or preallocate it. For filesystems which support[m
+[16;1H       the [1mfallocate[22m(2) system call, preallocation is done quickly by[m
+[17;1H       allocating blocks and marking them as uninitialized, requiring no IO to[m
+[18;1H       the data blocks. This is much faster than creating a file by filling it[m
+[19;1H[1;1H[4mFALLOCATE[24m(1)                     User Commands                    [4mFALLOCATE[24m(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       fallocate - preallocate or deallocate space to a file[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mfallocate [22m[[1m-c[22m|[1m-p[22m|[1m-z[22m] [[1m-o [4m[22moffset[24m] [1m-l [4m[22m[7mlength[27m[24m [[1m-n[22m] [4mfilename[0m[m
+[8;1H[m
+[9;1H       [1mfallocate -d [22m[[1m-o [4m[22moffset[24m] [[1m-l [4m[22m[7mlength[27m[24m] [4mfilename[0m[m
+[10;1H[m
+[11;1H       [1mfallocate -x [22m[[1m-o [4m[22moffset[24m] [1m-l [4m[22m[7mlength[27m[24m [4mfilename[0m[m
+[12;1H[m
+[13;1H[1mDESCRIPTION[0m[m
+[14;1H       [1mfallocate [22mis used to manipulate the allocated disk space for a file,[m
+[15;1H       either to deallocate or preallocate it. For filesystems which support[m
+[16;1H       the [1mfallocate[22m(2) system call, preallocation is done quickly by[m
+[17;1H       allocating blocks and marking them as uninitialized, requiring no IO to[m
+[18;1H       the data blocks. This is much faster than creating a file by filling it[m
+[19;1H       with zeroes.[m
+[m
+       The exit status returned by [1mfallocate [22mis 0 on success and 1 on failure.[m
+[m
+[1mOPTIONS[0m[m
+       The [4m[7mlength[27m[24m and [4moffset[24m arguments may be followed by the multiplicative[m
+[7m Manual page fallocate(1) line 7/140 17% (press h for help or q to quit)[27m[K[K/[K       suffixes KiB (=1024), MiB (=1024*1024), and so on for GiB
