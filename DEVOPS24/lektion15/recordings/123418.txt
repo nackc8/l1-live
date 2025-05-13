@@ -55,4 +55,63 @@ mkfs.btrfs   mkfs.ext3    mkfs.minix   mkfs.vfat
        ] [ [1m-v [22m] [4mexternal-journal[24m [ [4mfs-size[24m ][m
 [m
 [7m Manual page mkfs.ext4(8) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mDESCRIPTION[0m[m
-[7m Manual page mkfs.ext4(8) line 2 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0
+[7m Manual page mkfs.ext4(8) line 2 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# lsblk
+[?2004lNAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part /minnyapartition
+sr0     11:0    1 1024M  0 rom  
+[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# df
+[?2004lFilesystem     1K-blocks    Used Available Use% Mounted on
+tmpfs             590652    1080    589572   1% /run
+efivarfs             256      99       153  40% /sys/firmware/efi/efivars
+/dev/sda2       39887136 7492376  30336368  20% /
+tmpfs            2953260       0   2953260   0% /dev/shm
+tmpfs               5120       0      5120   0% /run/lock
+/dev/sda1        1098628    6284   1092344   1% /boot/efi
+/dev/sdb1          91840      24     84648   1% /minnyapartition
+tmpfs             590652      12    590640   1% /run/user/1000
+[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# ls
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# du /boot/vi[Kmlinuz.old [C
+[?2004l0	/boot/vmlinuz.old
+[?2004h]0;root@ubse: ~root@ubse:~# ls /bop[Kot/
+[?2004lconfig-6.8.0-58-generic  initrd.img-6.8.0-58-generic  [0m[01;36mvmlinuz[0m
+config-6.8.0-59-generic  initrd.img-6.8.0-59-generic  vmlinuz-6.8.0-58-generic
+[01;34mefi[0m                      [01;36minitrd.img.old[0m               vmlinuz-6.8.0-59-generic
+[01;34mgrub[0m                     System.map-6.8.0-58-generic  [01;36mvmlinuz.old[0m
+[01;36minitrd.img[0m               System.map-6.8.0-59-generic
+[?2004h]0;root@ubse: ~root@ubse:~# ls /boot/du /boot/vmlinuz.old [K[K[K[K[K[K[K[K[K[K[K[Kinitrd.img
+[?2004l0	/boot/initrd.img
+[?2004h]0;root@ubse: ~root@ubse:~# dde[K[K[Kseq 1 100 > filll
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# du filll [H[2J]0;root@ubse: ~root@ubse:~# du filll 
+[?2004l4	filll
+[?2004h]0;root@ubse: ~root@ubse:~# man du
+[?2004l[?1049h[22;0;0t[?1h=[4mDU[24m(1)                            User Commands                           [4mDU[24m(1)[m
+[m
+[1mNAME[0m[m
+       du - estimate file space usage[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mdu [22m[[4mOPTION[24m]... [[4mFILE[24m]...[m
+       [1mdu [22m[[4mOPTION[24m]... [4m--files0-from=F[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       Summarize  device  usage  of the set of FILEs, recursively for directo‐[m
+       ries.[m
+[m
+       Mandatory arguments to long options are  mandatory  for  short  options[m
+       too.[m
+[m
+       [1m-0[22m, [1m--null[0m[m
+              end each output line with NUL, not newline[m
+[7m Manual page du(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page du(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-a[22m, [1m--all[0m[m
+[7m Manual page du(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              write counts for all files, not just directories[m
+[7m Manual page du(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page du(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--apparent-size[0m[m
+[7m Manual page du(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              print  apparent sizes rather than device usage; although the ap‐[m
+[7m Manual page du(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              parent size is usually smaller, it may be larger due to holes in[m
+[7m Manual page du(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ('sparse') files, internal fragmentation, indirect  blocks,  and[m
+[7m Manual page du(1) line 9 (press h for help or q to quit)[27m[K[K [KESC
