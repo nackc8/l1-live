@@ -1,0 +1,425 @@
+Script started on 2025-05-13 09:15:34+02:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="70" LINES="20"]
+DEVOPS24/lektion15
+$ top
+=top - 09:15:36 up  1:07,  1 user,  load average: 2.73, 1.74, 1.10
+Tasks: 1450 total,   6 running, 1444 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 16.0 us, 36.0 sy,  0.0 ni, 48.0 id,  0.0 wa,  0.0 hi,  0.0 si
+MiB Mem :  15695.7 total,   5995.9 free,   7330.4 used,   3471.3 buff/
+MiB Swap:   3000.0 total,   3000.0 free,      0.0 used.   8365.2 avail
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM 
+  32232 kent      20   0   10540   5256   1244 S  52.9   0.0 
+  32147 kent      20   0   10540   5252   1244 S  47.1   0.0 
+  32012 kent      20   0   10536   5248   1244 S  35.3   0.0 
+  30938 kent      20   0    7340   3780   3040 S  29.4   0.0 
+  32325 kent      20   0   10540   5260   1244 R  29.4   0.0 
+   1434 root      20   0 1320764 111244  23236 S  17.6   0.7 
+  31818 kent      20   0   10536   5244   1244 S  11.8   0.0 
+   3409 kent      20   0 1917592 115280  61084 R   5.9   0.7 
+   6841 kent      20   0   33.1g 155956 104212 S   5.9   1.0 
+   6887 kent      20   0 1163.4g 277496 106052 S   5.9   1.7 
+  32032 kent      20   0   12512   6112   3172 R   5.9   0.0 
+  32386 kent      20   0   12408   5752   2972 R   5.9   0.0 
+      1 root      20   0  168848  13328   9136 S   0.0   0.1 top - 09:15:39 up  1:07,  1 user,  load average: 2.73, 1.74, 1.10
+Tasks: 1507 total,   3 running, 1504 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  2.8 us, 21.5 sy,  0.0 ni, 75.5 id,  0.0 wa,  0.0 hi,  0.2 si
+MiB Mem :  15695.7 total,   5782.2 free,   7544.3 used,   3464.1 buff/
+MiB Swap:   3000.0 total,   3000.0 free,      0.0 used.   8151.4 avail
+
+
+   6841 kent      20   0   33.0g 155888 104320 S   7.6   1.0 
+   6887 kent      20   0 1163.4g 278404 106140 S   5.3   1.7 
+   3409 kent      20   0 1917592 115280  61084 S   5.0   0.7 
+   3691 kent      20   0 6071084 290300 129252 S   4.6   1.8 
+   1434 root      20   0 1320764 111244  23236 S   4.3   0.7 
+   7836 kent      20   0 1161.5g 120308  74424 S   3.3   0.7 
+  32763 kent      20   0   10568   5316   1244 S   3.3   0.0 
+  33846 kent      20   0   10724   5368   1244 S   3.3   0.0 
+  33977 kent      20   0   10724   5368   1244 S   3.3   0.0 
+  34494 kent      20   0   10732   5384   1244 S   3.3   0.0 
+  34880 kent      20   0   10736   5392   1244 S   3.3   0.0 
+  34978 kent      20   0   10744   5408   1244 S   3.3   0.0 
+  34980 kent      20   0   10744   5408   1244 S   3.3   0.0 top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks: 1567 total,   2 running, 1565 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  2.4 us, 19.2 sy,  0.0 ni, 78.3 id,  0.0 wa,  0.0 hi,  0.0 si
+MiB Mem :  15695.7 total,   5583.9 free,   7737.3 used,   3471.0 buff/
+MiB Swap:   3000.0 total,   3000.0 free,      0.0 used.   7958.4 avail
+
+
+   6887 kent      20   0 1163.4g 279456 106188 S   9.0   1.7 
+   6841 kent      20   0   33.0g 155836 104348 S   7.0   1.0 
+   3409 kent      20   0 1917592 115280  61084 S   5.3   0.7 
+   3691 kent      20   0 6071148 290236 129252 S   5.0   1.8 
+  35058 kent      20   0   10796   5512   1244 S   3.7   0.0 
+  35075 kent      20   0   10800   5528   1244 S   3.7   0.0 
+  35078 kent      20   0   10804   5536   1244 S   3.7   0.0 
+  35092 kent      20   0   10812   5548   1244 S   3.7   0.0 
+  35116 kent      20   0   10820   5564   1244 S   3.7   0.0 
+  35121 kent      20   0   10824   5572   1244 S   3.7   0.0 
+  35148 kent      20   0   10828   5588   1244 S   3.7   0.0 
+  35151 kent      20   0   10828   5532   1188 S   3.7   0.0 
+  35152 kent      20   0   10832   5588   1244 S   3.7   0.0 top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks: 1569 total,   4 running, 1565 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  5.8 us, 19.2 sy,  0.0 ni, 75.0 id,  0.0 wa,  0.0 hi,  0.0 si,
+MiB Mem :  15695.7 total,   5527.2 free,   7794.0 used,   3500.2 buff/c
+MiB Swap:   3000.0 total,   3000.0 free,      0.0 used.   7901.7 avail 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+  35203 kent      20   0   10988   5648   1244 S  40.7   0.0   0:00.11 
+  35201 kent      20   0   10988   5612   1216 S  37.0   0.0   0:00.10 
+  35193 kent      20   0   10984   5640   1244 S  33.3   0.0   0:00.09 
+  35205 kent      20   0   10988   5648   1244 R  33.3   0.0   0:00.09 
+   6887 kent      20   0 1163.4g 282560 106212 R  25.9   1.8   0:50.30 
+  35192 kent      20   0   10984   5636   1244 S  25.9   0.0   0:00.09 
+   6841 kent      20   0   33.1g 155836 104348 S  14.8   1.0   0:52.00 
+  35207 kent      20   0   10992   5648   1244 R  11.1   0.0   0:00.03 
+   3409 kent      20   0 1917592 115280  61084 S   7.4   0.7   1:26.70 
+   3691 kent      20   0 6071148 290236 129252 S   7.4   1.8   1:29.50 
+  35190 kent      20   0   10984   5632   1244 S   7.4   0.0   0:00.09 
+   6787 kent      20   0 1161.7g 207156 144956 S   3.7   1.3   0:09.28 
+   7813 kent      20   0 1163.1g 496876  84088 S   3.7   3.1   0:12.44 top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks: 1569 total,   5 running, 1564 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 11.1 us, 33.3 sy,  0.0 ni, 55.6 id,  0.0 wa,  0.0 hi,  0.0 si,
+MiB Mem :  15695.7 total,   5516.5 free,   7804.6 used,   3508.5 buff/c
+MiB Swap:   3000.0 total,   3000.0 free,      0.0 used.   7891.1 avail 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+   6887 kent      20   0 1163.4g 283072 106216 R 100.0   1.8   0:50.32 
+  32032 kent      20   0   12832   6372   3172 R 100.0   0.0   0:00.09 
+  35205 kent      20   0   10988   5648   1244 R 100.0   0.0   0:00.11 
+  35207 kent      20   0   10992   5648   1244 R 100.0   0.0   0:00.05 
+   6841 kent      20   0   33.1g 155836 104348 S  50.0   1.0   0:52.01 
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      9 root      20   0       0      0      0 I   0.0   0.0   0:02.43 top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks: 1570 total,   4 running, 1566 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 23.8 us, 28.6 sy,  0.0 ni, 47.6 id,  0.0 wa,  0.0 hi,  0.0 si, 
+MiB Mem :  15695.7 total,   5502.0 free,   7819.2 used,   3518.5 buff/ca
+MiB Swap:   3000.0 total,   3000.0 free,      0.0 used.   7876.5 avail M
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+   6787 kent      20   0 1161.7g 207156 144956 S 200.0   1.3   0:09.29 
+   6887 kent      20   0 1163.4g 283844 106216 R 200.0   1.8   0:50.33 
+  32032 kent      20   0   12832   6372   3172 R 100.0   0.0   0:00.10 
+  35207 kent      20   0   10992   5648   1244 R 100.0   0.0   0:00.06 
+  35209 kent      20   0   10992   5656   1244 R 100.0   0.0   0:00.01 
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      9 root      20   0       0      0      0 I   0.0   0.0   0:02.43 top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks: 1570 total,   4 running, 1566 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 11.8 us, 29.4 sy,  0.0 ni, 58.8 id,  0.0 wa,  0.0 hi,  0.0 si,  
+MiB Mem :  15695.7 total,   5490.1 free,   7831.0 used,   3528.5 buff/cac
+MiB Swap:   3000.0 total,   3000.0 free,      0.0 used.   7864.6 avail Me
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+   6841 kent      20   0   33.1g 155836 104348 S 100.0   1.0   0:52.03 
+   6887 kent      20   0 1163.4g 282672 106220 R 100.0   1.8   0:50.35 
+  32032 kent      20   0   12832   6372   3172 R 100.0   0.0   0:00.12 
+  35207 kent      20   0   10992   5648   1244 R 100.0   0.0   0:00.08 
+   7836 kent      20   0 1161.5g 120864  74424 S  50.0   0.8   0:04.89 
+  35209 kent      20   0   10992   5656   1244 R  50.0   0.0   0:00.02 
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks: 1570 total,   5 running, 1565 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 33.3 us, 28.6 sy,  0.0 ni, 38.1 id,  0.0 wa,  0.0 hi,  0.0 si,  0
+MiB Mem :  15695.7 total,   5481.5 free,   7839.7 used,   3533.3 buff/cach
+MiB Swap:   3000.0 total,   3000.0 free,      0.0 used.   7856.0 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+   6887 kent      20   0 1163.4g 283084 106224 R 400.0   1.8   0:50.37 
+  32032 kent      20   0   12832   6372   3172 R 100.0   0.0   0:00.14 
+  35207 kent      20   0   10992   5648   1244 R 100.0   0.0   0:00.10 
+  35209 kent      20   0   10992   5656   1244 R 100.0   0.0   0:00.04 
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      9 root      20   0       0      0      0 I   0.0   0.0   0:02.43 
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks: 1571 total,   6 running, 1565 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 68.0 us, 20.0 sy,  0.0 ni, 12.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.
+MiB Mem :  15695.7 total,   5476.1 free,   7845.1 used,   3534.8 buff/cache
+MiB Swap:   3000.0 total,   3000.0 free,      0.0 used.   7850.6 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+   6887 kent      20   0 1163.4g 284060 106228 R 550.0   1.8   0:50.48 
+  32032 kent      20   0   12832   6372   3172 R 100.0   0.0   0:00.16 
+  35209 kent      20   0   10992   5656   1244 R 100.0   0.0   0:00.06 
+   7836 kent      20   0 1161.5g 120744  74424 R  50.0   0.8   0:04.90 
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      9 root      20   0       0      0      0 I   0.0   0.0   0:02.43 
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks: 1571 total,   6 running, 1565 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 21.1 us, 21.1 sy,  0.0 ni, 57.9 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0
+MiB Mem :  15695.7 total,   5476.1 free,   7845.1 used,   3534.8 buff/cache 
+MiB Swap:   3000.0 total,   3000.0 free,      0.0 used.   7850.6 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+   6887 kent      20   0 1163.4g 284844 106228 R 450.0   1.8   0:50.57 
+  35211 kent      20   0   10996   5656   1244 R 100.0   0.0   0:00.02 
+     50 root      rt   0       0      0      0 S  50.0   0.0   0:00.35 
+   3409 kent      20   0 1917592 115280  61084 R  50.0   0.7   1:26.71 
+   6841 kent      20   0   33.1g 155968 104388 S  50.0   1.0   0:52.04 
+   7836 kent      20   0 1161.5g 120928  74424 S  50.0   0.8   0:04.91 
+  32032 kent      20   0   12832   6372   3172 R  50.0   0.0   0:00.17 
+  35209 kent      20   0   10992   5656   1244 R  50.0   0.0   0:00.07 
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks: 1572 total,   5 running, 1567 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 20.0 us, 23.3 sy,  0.0 ni, 56.7 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 
+MiB Mem :  15695.7 total,   5471.6 free,   7849.5 used,   3535.1 buff/cache  
+MiB Swap:   3000.0 total,   3000.0 free,      0.0 used.   7846.2 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+   6887 kent      20   0 1163.4g 285264 106228 R 100.0   1.8   0:50.60 
+  32032 kent      20   0   12832   6372   3172 R  66.7   0.0   0:00.19 
+  35209 kent      20   0   10992   5656   1244 S  66.7   0.0   0:00.09 
+  35211 kent      20   0   10996   5656   1244 R  66.7   0.0   0:00.04 
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      9 root      20   0       0      0      0 I   0.0   0.0   0:02.43 
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks: 1572 total,   5 running, 1567 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 34.6 us, 26.9 sy,  0.0 ni, 38.5 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 
+MiB Mem :  15695.7 total,   5471.6 free,   7849.5 used,   3535.1 buff/cache  
+MiB Swap:   3000.0 total,   3000.0 free,      0.0 used.   7846.2 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+   6887 kent      20   0 1163.4g 283172 106236 R  1000   1.8   0:50.65 
+  32032 kent      20   0   12832   6372   3172 R 100.0   0.0   0:00.21 
+  35211 kent      20   0   10996   5656   1244 R 100.0   0.0   0:00.06 
+  35212 kent      20   0   10996   5664   1244 R 100.0   0.0   0:00.02 
+   6787 kent      20   0 1161.7g 207136 144956 S 200.0   1.3   0:09.30 
+   6841 kent      20   0   33.1g 155968 104388 S 200.0   1.0   0:52.05 
+   7813 kent      20   0 1163.1g 496884  84088 S 200.0   3.1   0:12.45 
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks: 1572 total,   6 running, 1566 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 13.3 us, 20.0 sy,  0.0 ni, 66.7 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 s
+MiB Mem :  15695.7 total,   5471.6 free,   7849.5 used,   3535.1 buff/cache   
+MiB Swap:   3000.0 total,   3000.0 free,      0.0 used.   7846.2 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+   6887 kent      20   0 1163.4g 283548 106236 R 150.0   1.8   0:50.68 
+     20 root      rt   0       0      0      0 S  50.0   0.0   0:00.19 
+     55 root      rt   0       0      0      0 S  50.0   0.0   0:00.40 
+   7836 kent      20   0 1161.5g 120904  74424 S  50.0   0.8   0:04.92 
+  32032 kent      20   0   12832   6372   3172 R  50.0   0.0   0:00.22 
+  35211 kent      20   0   10996   5656   1244 S  50.0   0.0   0:00.07 
+  35212 kent      20   0   10996   5664   1244 R  50.0   0.0   0:00.03 
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks: 1573 total,   6 running, 1567 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 20.0 us, 22.9 sy,  0.0 ni, 57.1 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :  15695.7 total,   5439.7 free,   7881.5 used,   3567.8 buff/cache    
+MiB Swap:   3000.0 total,   3000.0 free,      0.0 used.   7814.2 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND 
+  35212 kent      20   0   10996   5664   1244 R 100.0   0.0   0:00.06 bash    
+   6887 kent      20   0 1163.4g 282684 106236 R  66.7   1.8   0:50.70 code    
+  35215 kent      20   0   10996   5664   1244 R  66.7   0.0   0:00.02 bash    
+   6841 kent      20   0   33.1g 155968 104388 R  33.3   1.0   0:52.06 code    
+  32032 kent      20   0   12832   6372   3172 R  33.3   0.0   0:00.23 top     
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 systemd 
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthrea+ 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp  
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_pa+ 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_f+ 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns   
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworke+ 
+      9 root      20   0       0      0      0 I   0.0   0.0   0:02.43 kworke+ top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks: 1573 total,   3 running, 1570 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 15.0 us, 30.0 sy,  0.0 ni, 55.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :  15695.7 total,   5439.7 free,   7881.5 used,   3567.8 buff/cache    
+MiB Swap:   3000.0 total,   3000.0 free,      0.0 used.   7814.2 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND 
+   6887 kent      20   0 1163.4g 282360 106240 S 600.0   1.8   0:50.73 code    
+  32032 kent      20   0   12832   6372   3172 R 100.0   0.0   0:00.25 top     
+  35212 kent      20   0   10996   5664   1244 R 100.0   0.0   0:00.08 bash    
+   3691 kent      20   0 6071148 290236 129252 S 200.0   1.8   1:29.51 gnome-+ 
+   6841 kent      20   0   33.1g 155968 104388 S 200.0   1.0   0:52.07 code    
+  35215 kent      20   0   10996   5664   1244 R 100.0   0.0   0:00.03 bash    
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 systemd 
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthrea+ 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp  
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_pa+ 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_f+ 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns   
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworke+ top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks: 1574 total,   4 running, 1570 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 15.0 us, 22.5 sy,  0.0 ni, 62.5 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :  15695.7 total,   5402.8 free,   7918.4 used,   3598.1 buff/cache     
+MiB Swap:   3000.0 total,   3000.0 free,      0.0 used.   7777.3 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  
+  35215 kent      20   0   10996   5664   1244 R 100.0   0.0   0:00.07 bash     
+   6887 kent      20   0 1163.4g 282832 106256 S  75.0   1.8   0:50.76 code     
+  32032 kent      20   0   12832   6372   3172 R  50.0   0.0   0:00.27 top      
+  35217 kent      20   0   11000   5664   1244 R  50.0   0.0   0:00.02 bash     
+   3409 kent      20   0 1917592 115280  61084 S  25.0   0.7   1:26.72 Xorg     
+   6787 kent      20   0 1161.7g 207136 144956 S  25.0   1.3   0:09.31 code     
+   6841 kent      20   0   33.2g 155968 104388 R  25.0   1.0   0:52.08 code     
+  35212 kent      20   0   10996   5664   1244 S  25.0   0.0   0:00.09 bash     
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 systemd  
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp   
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par+ 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_fl+ top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks: 1574 total,   3 running, 1571 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  5.9 us, 23.5 sy,  0.0 ni, 70.6 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :  15695.7 total,   5402.8 free,   7918.4 used,   3598.1 buff/cache     
+MiB Swap:   3000.0 total,   3000.0 free,      0.0 used.   7777.3 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  
+   6887 kent      20   0 1163.4g 283000 106256 S 200.0   1.8   0:50.77 code     
+  32032 kent      20   0   12832   6372   3172 R 100.0   0.0   0:00.28 top      
+  35215 kent      20   0   10996   5664   1244 R 100.0   0.0   0:00.08 bash     
+  35217 kent      20   0   11000   5664   1244 R 100.0   0.0   0:00.03 bash     
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 systemd  
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp   
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par+ 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_fl+ 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns    
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+ 
+      9 root      20   0       0      0      0 I   0.0   0.0   0:02.43 kworker+ 
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_perc+ top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks: 1575 total,   5 running, 1570 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 11.4 us, 21.5 sy,  0.0 ni, 67.1 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :  15695.7 total,   5394.4 free,   7926.7 used,   3600.2 buff/cache     
+MiB Swap:   3000.0 total,   3000.0 free,      0.0 used.   7768.9 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND   
+  35217 kent      20   0   11000   5664   1244 R 100.0   0.0   0:00.10 bash      
+   6887 kent      20   0 1163.4g 283552 106264 R  85.7   1.8   0:50.83 code      
+  35219 kent      20   0   11000   5672   1244 R  57.1   0.0   0:00.04 bash      
+  35215 kent      20   0   10996   5664   1244 S  42.9   0.0   0:00.11 bash      
+   6841 kent      20   0   33.2g 155976 104380 S  28.6   1.0   0:52.10 code      
+  32032 kent      20   0   12832   6372   3172 R  28.6   0.0   0:00.30 top       
+   3409 kent      20   0 1917592 115280  61084 S  14.3   0.7   1:26.73 Xorg      
+   6255 kent      20   0 2306296 667404 604748 S  14.3   4.2   1:06.56 VBoxHead+ 
+   7813 kent      20   0 1163.1g 496860  84088 S  14.3   3.1   0:12.46 code      
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 systemd   
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd  
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp    
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_+ top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks: 1575 total,   3 running, 1572 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 20.0 us, 20.0 sy,  0.0 ni, 60.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :  15695.7 total,   5394.4 free,   7926.7 used,   3600.2 buff/cache     
+MiB Swap:   3000.0 total,   3000.0 free,      0.0 used.   7768.9 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND   
+   6787 kent      20   0 1161.7g 207028 144956 S 200.0   1.3   0:09.32 code      
+   6887 kent      20   0 1163.4g 283872 106268 S 200.0   1.8   0:50.84 code      
+  32032 kent      20   0   12832   6372   3172 R 100.0   0.0   0:00.31 top       
+  35217 kent      20   0   11000   5664   1244 R 100.0   0.0   0:00.11 bash      
+  35219 kent      20   0   11000   5672   1244 R 100.0   0.0   0:00.05 bash      
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 systemd   
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd  
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp    
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_+ 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_flu+ 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns     
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/+ 
+      9 root      20   0       0      0      0 I   0.0   0.0   0:02.43 kworker/+ top - 09:15:45 up  1:07,  1 user,  load average: 2.99, 1.83, 1.14
+Tasks: 1627 total,   4 running, 1623 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  3.6 us, 19.0 sy,  0.0 ni, 77.3 id,  0.1 wa,  0.0 hi,  0.1 si,  0.0 st 
+MiB Mem :  15695.7 total,   5287.3 free,   8033.6 used,   3525.7 buff/cache     
+MiB Swap:   3000.0 total,   3000.0 free,      0.0 used.   7662.0 avail Mem 
+
+
+   6887 kent      20   0 1163.4g 277532 106200 S  19.2   1.7   0:51.42 code      
+   6841 kent      20   0   33.1g 156076 104356 S   7.6   1.0   0:52.33 code      
+   3409 kent      20   0 1917656 115280  61084 S   6.3   0.7   1:26.92 Xorg      
+   3691 kent      20   0 6071084 290244 129252 S   5.3   1.8   1:29.67 gnome-sh+ 
+   6787 kent      20   0 1161.7g 206088 144956 S   4.6   1.3   0:09.46 code      
+  35220 kent      20   0   11000   5672   1244 S   4.0   0.0   0:00.12 bash      
+  35224 kent      20   0   11004   5680   1244 S   4.0   0.0   0:00.12 bash      
+  35249 kent      20   0   11016   5700   1244 S   4.0   0.0   0:00.12 bash      
+  35269 kent      20   0   11024   5724   1244 S   4.0   0.0   0:00.12 bash      
+  35271 kent      20   0   11024   5724   1244 S   4.0   0.0   0:00.12 bash      
+  35278 kent      20   0   11032   5732   1244 S   4.0   0.0   0:00.12 bash      
+  35280 kent      20   0   11032   5676   1180 S   4.0   0.0   0:00.12 bash      
+  35290 kent      20   0   11040   5752   1244 S   4.0   0.0   0:00.12 bash      top - 09:15:48 up  1:07,  1 user,  load average: 2.99, 1.83, 1.14
+Tasks: 1677 total,   5 running, 1672 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  2.7 us, 19.1 sy,  0.0 ni, 78.2 id,  0.0 wa,  0.0 hi,  0.1 si,  0.0 st 
+MiB Mem :  15695.7 total,   5110.6 free,   8210.1 used,   3514.7 buff/cache     
+MiB Swap:   3000.0 total,   3000.0 free,      0.0 used.   7485.6 avail Mem 
+
+
+   6887 kent      20   0 1163.4g 276772 106200 S  10.3   1.7   0:51.73 code      
+   6841 kent      20   0   33.1g 156000 104356 S   7.0   1.0   0:52.54 code      
+   3409 kent      20   0 1917656 115280  61084 R   6.3   0.7   1:27.11 Xorg      
+   3691 kent      20   0 6071084 290244 129252 R   5.0   1.8   1:29.82 gnome-sh+ 
+  35387 kent      20   0   11084   5848   1244 S   4.3   0.0   0:00.13 bash      
+  35419 kent      20   0   11232   5884   1244 S   4.3   0.0   0:00.13 bash      
+  35421 kent      20   0   11232   5784   1144 S   4.3   0.0   0:00.13 bash      
+  35422 kent      20   0   11236   5864   1220 S   4.3   0.0   0:00.13 bash      
+  35435 kent      20   0   11236   5892   1244 S   4.3   0.0   0:00.13 bash      
+  35444 kent      20   0   11240   5864   1204 S   4.3   0.0   0:00.13 bash      
+  35466 kent      20   0   11248   5840   1168 S   4.3   0.0   0:00.13 bash      
+  35469 kent      20   0   11248   5920   1244 S   4.3   0.0   0:00.13 bash      
+  35471 kent      20   0   11252   5920   1240 S   4.3   0.0   0:00.13 bash      top - 09:15:51 up  1:07,  1 user,  load average: 2.91, 1.83, 1.15
+Tasks: 1723 total,   3 running, 1720 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  2.5 us, 19.6 sy,  0.0 ni, 77.7 id,  0.1 wa,  0.0 hi,  0.1 si,  0.0 st 
+MiB Mem :  15695.7 total,   4998.8 free,   8321.1 used,   3452.6 buff/cache     
+MiB Swap:   3000.0 total,   3000.0 free,      0.0 used.   7374.6 avail Mem 
+
+
+   6887 kent      20   0 1163.4g 280376 106216 S  10.6   1.7   0:52.05 code      
+   6841 kent      20   0   33.0g 156020 104364 S   7.3   1.0   0:52.76 code      
+   3409 kent      20   0 1917656 115280  61084 S   5.6   0.7   1:27.28 Xorg      
+   7813 kent      20   0 1163.1g 496316  84088 S   5.0   3.1   0:12.69 code      
+   3691 kent      20   0 6071084 290244 129252 S   4.6   1.8   1:29.96 gnome-sh+ 
+  35547 kent      20   0   11292   6012   1244 S   4.6   0.0   0:00.14 bash      
+  35549 kent      20   0   11296   6012   1244 S   4.6   0.0   0:00.14 bash      
+  35559 kent      20   0   11300   6028   1244 S   4.6   0.0   0:00.14 bash      
+  35565 kent      20   0   11304   6036   1244 S   4.6   0.0   0:00.14 bash      
+  35582 kent      20   0   11312   6048   1244 S   4.6   0.0   0:00.14 bash      
+  35599 kent      20   0   11320   6064   1244 S   4.6   0.0   0:00.14 bash      
+  35638 kent      20   0   11332   6092   1244 S   4.6   0.0   0:00.14 bash      
+  35644 kent      20   0   11332   6096   1244 S   4.6   0.0   0:00.14 bash      >
+DEVOPS24/lektion15
+$ 
+
