@@ -1,0 +1,67 @@
+Script started on 2025-05-13 11:09:29+02:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="81" LINES="23"]
+[?2004h[94mDEVOPS24/lektion15
+(B[m$ ssh ubse
+[?2004lWelcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-59-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue May 13 09:09:32 AM UTC 2025
+
+  System load:  0.05               Processes:               116
+  Usage of /:   18.8% of 38.04GB   Users logged in:         0
+  Memory usage: 3%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+173 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Tue May 13 08:27:04 2025 from 10.0.2.2
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ sod[K[Kudo -r[Ki[H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ sudo -i
+[?2004l[sudo] password for user: 
+[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# ls
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# lsblk[H[2J]0;root@ubse: ~root@ubse:~# lsblk
+[?2004lNAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part 
+sr0     11:0    1 1024M  0 rom  
+[?2004h]0;root@ubse: ~root@ubse:~# umount[K[K[K[K[K[Klsblk[Kmount | grep sda[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kblk[Kmount /minnyapartition/ /s[Kdev/sdb1
+[?2004lmount: /dev/sdb1: /minnyapartition is not a block device.
+       dmesg(1) may have more information after failed mount system call.
+[?2004h]0;root@ubse: ~root@ubse:~# mount /minnyapartition/ /dev/sdb1[1P/dev/sdb1[1Pdev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1Pdev/sdb1[C[C[C[C[C[C[C[C[C /minnyapartition/
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# lsblk
+[?2004lNAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part /minnyapartition
+sr0     11:0    1 1024M  0 rom  
+[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# mount
+[?2004lsysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+udev on /dev type devtmpfs (rw,nosuid,relatime,size=2915196k,nr_inodes=728799,mode=755,inode64)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,noexec,relatime,size=590656k,mode=755,inode64)
+efivarfs on /sys/firmware/efi/efivars type efivarfs (rw,nosuid,nodev,noexec,relatime)
+/dev/sda2 on / type ext4 (rw,relatime)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,inode64)
+tmpfs on /run/lock type tmpfs (rw,nosuid,nodev,noexec,relatime,size=5120k,inode64)
+cgroup2 on /sys/fs/cgroup type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot)
+pstore on /sys/fs/pstore type pstore (rw,n
