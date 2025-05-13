@@ -281,4 +281,83 @@ No VM guests are running outdated hypervisor (qemu) binaries on this host.
 [m
 [1mOPTIONS[0m[m
        The [4m[7mlength[27m[24m and [4moffset[24m arguments may be followed by the multiplicative[m
-[7m Manual page fallocate(1) line 7/140 17% (press h for help or q to quit)[27m[K[K/[K       suffixes KiB (=1024), MiB (=1024*1024), and so on for GiB
+[7m Manual page fallocate(1) line 7/140 17% (press h for help or q to quit)[27m[K[K/[K       suffixes KiB (=1024), MiB (=1024*1024), and so on for GiB, TiB, PiB,[m
+       EiB, ZiB, and YiB (the "iB" is optional, e.g., "K" has the same meaning[m
+[7m Manual page fallocate(1) line 9/140 20% (press h for help or q to quit)[27m[K[K/[K       as "KiB") or the suffixes KB (=1000), MB (=1000*1000), and so on for[m
+       GB, TB, PB, EB, ZB, and YB.[m
+[7m Manual page fallocate(1) line 11/140 21% (press h for help or q to quit)[27m[K[K/[K[m
+       The options [1m--collapse-range[22m, [1m--dig-holes[22m, [1m--punch-hole[22m, and[m
+       [1m--zero-range [22mare mutually exclusive.[m
+[m
+       [1m-c[22m, [1m--collapse-range[0m[m
+           Removes a byte range from a file, without leaving a hole. The byte[m
+           range to be collapsed starts at [4moffset[24m and continues for [4m[7mlength[27m[m
+           bytes. At the completion of the operation, the contents of the file[m
+           starting at the location [4moffset[24m+[4m[7mlength[27m[24m will be appended at the[m
+           location [4moffset[24m, and the file will be [4m[7mlength[27m[24m bytes smaller. The[m
+           option [1m--keep-size [22mmay not be specified for the collapse-range[m
+           operation.[m
+[m
+[7m Manual page fallocate(1) line 24/140 32% (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;root@ubse: ~root@ubse:~# fallocate /l[K[K-l n2[K[K2MiB .[K/n[K[K-n tomfil
+[?2004lfallocate: cannot open tomfil: No such file or directory
+[?2004h]0;root@ubse: ~root@ubse:~# fallocate -l 2MiB -n tomfil[1Ptomfil[1Ptomfil[1Ptomfil
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# ls
+[?2004lslumpfil  tomfil
+[?2004h]0;root@ubse: ~root@ubse:~# ls -l
+[?2004ltotal 4096
+-rw-r--r-- 1 root root 2097152 May 13 10:41 slumpfil
+-rw-r--r-- 1 root root 2097152 May 13 10:43 tomfil
+[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# du *[C *- *h *[C[C
+[?2004l2.0M	slumpfil
+2.0M	tomfil
+[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# (reverse-i-search)`': [Kg': du /boot/initrd.im[7mg[27m[4Pd': [7mgd[27misk /dev/sdb[1@i': [7mgdi[27m[1@s': [7mgdis[27m[1@k': [7mgdisk[27m[14P]0;root@ubse: ~root@ubse:~# gdisk[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lGPT fdisk (gdisk) version 1.0.10
+
+Partition table scan:
+  MBR: protective
+  BSD: not present
+  APM: not present
+  GPT: present
+
+Found valid GPT with protective MBR; using GPT.
+
+Command (? for help): p
+Disk /dev/sdb: 52428800 sectors, 25.0 GiB
+Model: VBOX HARDDISK   
+Sector size (logical/physical): 512/512 bytes
+Disk identifier (GUID): 98FA2BB1-D45F-485E-B663-212BC95935AD
+Partition table holds up to 128 entries
+Main partition table begins at sector 2 and ends at sector 33
+First usable sector is 34, last usable sector is 52428766
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 52223933 sectors (24.9 GiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048          206847   100.0 MiB   8300  Linux filesystem
+
+Command (? for help): ?
+b	back up GPT data to a file
+c	change a partition's name
+d	delete a partition
+i	show detailed information on a partition
+l	list known partition types
+n	add a new partition
+o	create a new empty GUID partition table (GPT)
+p	print the partition table
+q	quit without saving changes
+r	recovery and transformation options (experts only)
+s	sort partitions
+t	change a partition's type code
+v	verify disk
+w	write table to disk and exit
+x	extra functionality (experts only)
+?	print this menu
+
+Command (? for help): n
+Partition number (2-128, default 2): 
+First sector (34-52428766, default = 206848) or {+-}size{KMGTP}: 
+Last sector (206848-52428766, default = 52426751) or {+-}size{KMGTP}: +300M
+Current type is 8300 (Linux filesystem)
+Hex code or GUID (L to show codes, Enter = 8300): L
+Type search string, or <Enter> to show all codes: LUKS
+8309 Linux
