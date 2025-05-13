@@ -555,4 +555,232 @@ Use "fg" to return to nano.
 [1mSYNOPSIS[0m[m
        [1mman [22m[[4mman[24m [4moptions[24m] [[[4msection[24m] [4mpage[24m ...] ...[m
        [1mman -k [22m[[4mapropos[24m [4moptions[24m] [4mregexp[24m ...[m
-       [1mman -K 
+       [1mman -K [22m[[4mman[24m [4moptions[24m] [[4msection[24m] [4mterm[24m ...[m
+       [1mman -f [22m[[4mwhatis[24m [4moptions[24m] [4mpage[24m ...[m
+       [1mman -l [22m[[4mman[24m [4moptions[24m] [4mfile[24m ...[m
+       [1mman -w[22m|[1m-W [22m[[4mman[24m [4moptions[24m] [4mpage[24m ...[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mman  [22mis  the system's manual pager.  Each [4mpage[24m argument given to [1mman [22mis[m
+       normally the name of a program, utility or function.  The  [4mmanual[24m  [4mpage[0m[m
+       associated with each of these arguments is then found and displayed.  A[m
+       [4msection[24m,  if  provided, will direct [1mman [22mto look only in that [4msection[24m of[m
+[7m Manual page man(1) line 1 (press h for help or q to quit)[27m[K[K       the manual.  The default action is to search in all  of  the  available[m
+       [4msections[24m following a pre-defined order (see [1mDEFAULTS[22m), and to show only[m
+       the first [4mpage[24m found, even if [4mpage[24m exists in several [4msections[24m.[m
+[m
+       The table below shows the [4msection[24m numbers of the manual followed by the[m
+       types of pages they contain.[m
+[m
+       1   Executable programs or shell commands[m
+       2   System calls (functions provided by the kernel)[m
+       3   Library calls (functions within program libraries)[m
+       4   Special files (usually found in [4m/dev[24m)[m
+       5   File formats and conventions, e.g. [4m/etc/passwd[0m[m
+       6   Games[m
+       7   Miscellaneous  (including  macro  packages  and  conventions), e.g.[m
+           [1mman[22m(7), [1mgroff[22m(7), [1mman-pages[22m(7)[m
+       8   System administration commands (usually only for root)[m
+       9   Kernel routines [Non standard][m
+[m
+[7m Manual page man(1) line 19 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;root@ubse: ~root@ubse:~# man 5 /cr[K[Ketc/cryt[Kpttab
+[?2004l[?1049h[22;0;0t[?1h=# <target name> <source device>         <key file>      <options>[m
+[m
+[7m Manual page crypttab line 1/2 (END) (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;root@ubse: ~root@ubse:~# man 5 /etc/crypttab[1Pcrypttab[1Prypttab[1Pcrypttab[1Pcrypttab[1Pcrypttab
+[?2004l[?1049h[22;0;0t[?1h=[4mCRYPTTAB[24m(5)                    cryptsetup manual                   [4mCRYPTTAB[24m(5)[m
+[m
+[1mNAME[0m[m
+       crypttab - static information about encrypted filesystems[m
+[m
+[1mDESCRIPTION[0m[m
+       The file /etc/crypttab contains descriptive information about encrypted[m
+       devices. crypttab is only read by programs (e.g. [1mcryptdisks_start [22mand[m
+       [1mcryptdisks_stop[22m), and not written; it is the duty of the system[m
+       administrator to properly create and maintain this file. crypttab[m
+       entries are treated sequentially, so their order matters (dependencies[m
+       need to listed first).[m
+[m
+       Each encrypted device is described on a separate line. Fields on each[m
+       line are separated by tabs or spaces. Lines starting with '#' are[m
+       comments, and blank lines are ignored. Octal sequences \0[4mnum[24m within a[m
+       field are decoded, which can be used for values containing spaces or[m
+       special characters. A backslash which doesn't start an octal sequence[m
+[7m Manual page crypttab(5) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       yields undefined behavior.[m
+[7m Manual page crypttab(5) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The first field, [4mtarget[24m, describes the mapped device name. It must be a[m
+[7m Manual page crypttab(5) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       plain filename without any directory components. A mapped device which[m
+[7m Manual page crypttab(5) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       encrypts/decrypts data to/from the [4msource[24m [4mdevice[24m will be created at[m
+[7m Manual page crypttab(5) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       /dev/mapper/target by [1mcryptsetup[22m.[m
+[7m Manual page crypttab(5) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The second field, [4msource[24m [4mdevice[24m, describes either the block special[m
+[7m Manual page crypttab(5) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       device or file that contains the encrypted data. Instead of giving the[m
+[7m Manual page crypttab(5) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4msource[24m [4mdevice[24m explicitly, the UUID (resp. LABEL, PARTUUID and[m
+[7m Manual page crypttab(5) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       PARTLABEL) is supported as well, using “UUID=<uuid>” (resp.[m
+[7m Manual page crypttab(5) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       “LABEL=<label>”, “PARTUUID=<partuuid>” and “PARTLABEL=<partlabel>”).[m
+[7m Manual page crypttab(5) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The third field, [4mkey[24m [4mfile[24m, describes the file to use as a key for[m
+[7m Manual page crypttab(5) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       decrypting the data of the [4msource[24m [4mdevice[24m. In case of a [4mkeyscript[24m, the[m
+[7m Manual page crypttab(5) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       value of this field is given as argument to the keyscript. Note that[m
+[7m Manual page crypttab(5) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the [4mentire[24m key file will be used as the passphrase; the passphrase must[m
+[7m Manual page crypttab(5) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mnot[24m be followed by a newline character.[m
+[7m Manual page crypttab(5) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       It can also be a device name (e.g. /dev/urandom), note however that[m
+[7m Manual page crypttab(5) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       LUKS requires a persistent key and therefore does [4mnot[24m support random[m
+[7m Manual page crypttab(5) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       data keys.[m
+[7m Manual page crypttab(5) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       If the [4mkey[24m [4mfile[24m is the string [4mnone[24m, a passphrase will be read[m
+[7m Manual page crypttab(5) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       interactively from the console. In this case, the options check,[m
+[7m Manual page crypttab(5) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       checkargs and tries may be useful.[m
+[7m Manual page crypttab(5) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The fourth field, [4moptions[24m, is an optional comma-separated list of[m
+[7m Manual page crypttab(5) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       options and/or flags describing the device type ([4mluks[24m, [4mtcrypt[24m, [4mbitlk[24m,[m
+[7m Manual page crypttab(5) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mfvault2[24m, or [4mplain[24m which is also the default) and cryptsetup options[m
+[7m Manual page crypttab(5) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       associated with the encryption process. The supported options are[m
+[7m Manual page crypttab(5) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       described below. For plain dm-crypt devices the [4mcipher[24m, [4mhash[24m and [4msize[0m[m
+[7m Manual page crypttab(5) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       options are required. Some options can be changed on active mappings[m
+[7m Manual page crypttab(5) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       using [1mcryptsetup refresh [<options>] <name>[22m. Furthermore some options[m
+[7m Manual page crypttab(5) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       can be permanently written into metadata of LUKS2 headers using[m
+[7m Manual page crypttab(5) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       cryptsetup's [4m--persistent[24m flag.[m
+[7m Manual page crypttab(5) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Note that the first three fields are required and that a missing field[m
+[7m Manual page crypttab(5) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       will lead to unspecified behaviour.[m
+[7m Manual page crypttab(5) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mON DIFFERENT CRYPTTAB FORMATS[0m[m
+[7m Manual page crypttab(5) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Please note that there are several independent cryptsetup wrappers with[m
+[7m Manual page crypttab(5) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       their own [4mcrypttab[24m format. This manpage covers Debian's implementation[m
+[7m Manual page crypttab(5) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       for [4minitramfs[24m scripts and [4mSysVinit[24m init scripts. [4msystemd[24m brings its own[m
+[7m Manual page crypttab(5) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mcrypttab[24m implementation. We try to cover the differences between the[m
+[7m Manual page crypttab(5) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4msystemd[24m and our implementation in this manpage, but if in doubt, better[m
+[7m Manual page crypttab(5) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       check the [4msystemd[24m [1mcrypttab[22m(5) manpage, e.g. online at[m
+[7m Manual page crypttab(5) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [34m[1mhttps://www.freedesktop.org/software/systemd/man/crypttab.html[0m[1m[22m.[m
+[7m Manual page crypttab(5) line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mOPTIONS[0m[m
+[7m Manual page crypttab(5) line 51 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mcipher[24m=<cipher>[m
+[7m Manual page crypttab(5) line 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Encryption algorithm (ignored for LUKS and TCRYPT devices). See[m
+[7m Manual page crypttab(5) line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mcryptsetup -c[22m.[m
+[7m Manual page crypttab(5) line 54 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 55 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4msize[24m=<size>[m
+[7m Manual page crypttab(5) line 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Encryption key size (ignored for LUKS and TCRYPT devices). See[m
+[7m Manual page crypttab(5) line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mcryptsetup -s[22m.[m
+[7m Manual page crypttab(5) line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4msector-size[24m=<bytes>[m
+[7m Manual page crypttab(5) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Sector size. See [1mcryptsetup[22m(8) for possible values and the default[m
+[7m Manual page crypttab(5) line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           value of this option.[m
+[7m Manual page crypttab(5) line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mhash[24m=<hash>[m
+[7m Manual page crypttab(5) line 64 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Hash algorithm (ignored for LUKS and TCRYPT devices). See[m
+[7m Manual page crypttab(5) line 65 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mcryptsetup -h[22m.[m
+[7m Manual page crypttab(5) line 66 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 67 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4moffset[24m=<offset>[m
+[7m Manual page crypttab(5) line 68 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Start offset (ignored for LUKS and TCRYPT devices). Uses [1mcryptsetup[0m[m
+[7m Manual page crypttab(5) line 69 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1m-o[22m.[m
+[7m Manual page crypttab(5) line 70 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 71 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mskip[24m=<skip>[m
+[7m Manual page crypttab(5) line 72 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Skip sectors at the beginning (ignored for LUKS and TCRYPT[m
+[7m Manual page crypttab(5) line 73 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           devices). Uses [1mcryptsetup -p[22m.[m
+[7m Manual page crypttab(5) line 74 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 75 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mkeyfile-offset[24m=<keyfile-offset>[m
+[7m Manual page crypttab(5) line 76 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Specifies the number of bytes to skip at the start of the key file.[m
+[7m Manual page crypttab(5) line 77 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 78 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mkeyfile-size[24m=<keyfile-size>[m
+[7m Manual page crypttab(5) line 79 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Specifies the maximum number of bytes to read from the key file.[m
+[7m Manual page crypttab(5) line 80 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           The default is to read the whole file up to the compiled-in[m
+[7m Manual page crypttab(5) line 81 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           maximum, that can be queried with [1mcryptsetup --help[22m. This option is[m
+[7m Manual page crypttab(5) line 82 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           ignored for plain dm-crypt devices, as the key file size is then[m
+[7m Manual page crypttab(5) line 83 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           given by the encryption key size (option [4msize[24m).[m
+[7m Manual page crypttab(5) line 84 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 85 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mkeyslot[24m=<slot>, [4mkey-slot[24m=<slot>[m
+[7m Manual page crypttab(5) line 86 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Key slot (ignored for non-LUKS devices). See [1mcryptsetup -S[22m.[m
+[7m Manual page crypttab(5) line 87 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 88 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mheader[24m=<path>[m
+[7m Manual page crypttab(5) line 89 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Detached header file (ignored for plain dm-crypt devices). See[m
+[7m Manual page crypttab(5) line 90 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mcryptsetup --header[22m.[m
+[7m Manual page crypttab(5) line 91 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 92 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mverify[0m[m
+[7m Manual page crypttab(5) line 93 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Verify password. Uses [1mcryptsetup -y[22m.[m
+[7m Manual page crypttab(5) line 94 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 95 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mreadonly[24m, [4mread-only[0m[m
+[7m Manual page crypttab(5) line 96 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Set up a read-only mapping.[m
+[7m Manual page crypttab(5) line 97 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 98 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mtries[24m=<num>[m
+[7m Manual page crypttab(5) line 99 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Try to unlock the device <num> before failing. It's particularly[m
+[7m Manual page crypttab(5) line 100 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           useful when using a passphrase or a [4mkeyscript[24m that asks for[m
+[7m Manual page crypttab(5) line 101 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           interactive input. If you want to disable retries, pass “tries=1”.[m
+[7m Manual page crypttab(5) line 102 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Default is “3”. Setting “tries=0” means infinitive retries.[m
+[7m Manual page crypttab(5) line 103 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 104 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mdiscard[0m[m
+[7m Manual page crypttab(5) line 105 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Allow using of discards (TRIM) requests for device.[m
+[7m Manual page crypttab(5) line 106 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 107 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Starting with Debian 10 (Buster), this option is added per default[m
+[7m Manual page crypttab(5) line 108 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           to new dm-crypt devices by the Debian Installer. If you don't care[m
+[7m Manual page crypttab(5) line 109 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           about leaking access patterns (filesystem type, used space) and[m
+[7m Manual page crypttab(5) line 110 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           don't have hidden truecrypt volumes inside this volume, then it[m
+[7m Manual page crypttab(5) line 111 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           should be safe to enable this option. See the following warning for[m
+[7m Manual page crypttab(5) line 112 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           further information.[m
+[7m Manual page crypttab(5) line 113 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 114 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mWARNING[22m: Assess the specific security risks carefully before[m
+[7m Manual page crypttab(5) line 115 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           enabling this option. For example, allowing discards on encrypted[m
+[7m Manual page crypttab(5) line 116 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           devices may lead to the leak of information about the ciphertext[m
+[7m Manual page crypttab(5) line 117 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           device (filesystem type, used space etc.) if the discarded blocks[m
+[7m Manual page crypttab(5) line 118 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           can be located easily on the device later.[m
+[7m Manual page crypttab(5) line 119 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 120 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mluks[0m[m
+[7m Manual page crypttab(5) line 121 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Force LUKS mode. When this mode is used, the following options are[m
+[7m Manual page crypttab(5) line 122 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           ignored since they are provided by the LUKS header on the device:[m
+[7m Manual page crypttab(5) line 123 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [4mcipher=[24m, [4mhash=[24m, [4msize=[0m[m
+[7m Manual page crypttab(5) line 124 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 125 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mplain[0m[m
+[7m Manual page crypttab(5) line 126 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Force plain encryption mode.[m
+[7m Manual page crypttab(5) line 127 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 128 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mbitlk[0m[m
+[7m Manual page crypttab(5) line 129 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Force BITLK (Windows BitLocker-compatible) mode. WARNING: [4mcrypttab[0m[m
+[7m Manual page crypttab(5) line 130 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           support is currently experimental.[m
+[7m Manual page crypttab(5) line 131 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 132 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mfvault2[0m[m
+[7m Manual page crypttab(5) line 133 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Force Apple's FileVault2 mode. Only the (legacy) FileVault2 format[m
+[7m Manual page crypttab(5) line 134 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           based on Core Storage and HFS+ filesystem (introduced in MacOS X[m
+[7m Manual page crypttab(5) line 135 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           10.7 Lion) is currently supported; the new version of FileVault[m
+[7m Manual page crypttab(5) line 136 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           based on the APFS filesystem used in recent macOS versions is not[m
+[7m Manual page crypttab(5) line 137 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           supported.[m
+[7m Manual page crypttab(5) line 138 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 139 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mtcrypt[0m[m
+[7m Manual page crypttab(5) line 140 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Use TrueCrypt encryption mode. When this mode is used, the[m
+[7m Manual page crypttab(5) line 141 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           following options are ignored since they are provided by the[m
+[7m Manual page crypttab(5) line 142 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           TrueCrypt header on the device or do not apply: [4mcipher=[24m, [4mhash=[24m,[m
+[7m Manual page crypttab(5) line 143 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [4mkeyfile-offset=[24m, [4mkeyfile-size=[24m, [4msize=[0m[m
+[7m Manual page crypttab(5) line 144 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 145 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mveracrypt[24m, [4mtcrypt-veracrypt[0m[m
+[7m Manual page crypttab(5) line 146 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Use VeraCrypt extension to TrueCrypt device. Only useful in[m
+[7m Manual page crypttab(5) line 147 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           conjunction with [4mtcrypt[24m option (ignored for non-TrueCrypt devices).[m
+[7m Manual page crypttab(5) line 148 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 149 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mtcrypthidden[24m, [4mtcrypt-hidden[0m[m
+[7m Manual page crypttab(5) line 150 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Use hidden TCRYPT header (ignored for non-TCRYPT devices).[m
+[7m Manual page crypttab(5) line 151 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 152 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4msame-cpu-crypt[0m[m
+[7m Manual page crypttab(5) line 153 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Perform encryption using the same cpu that IO was submitted on.[m
+[7m Manual page crypttab(5) line 154 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 155 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4msubmit-from-crypt-cpus[0m[m
+[7m Manual page crypttab(5) line 156 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Disable offloading writes to a separate thread after encryption.[m
+[7m Manual page crypttab(5) line 157 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 158 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mno-read-workqueue[24m, [4mno-write-workqueue[0m[m
+[7m Manual page crypttab(5) line 159 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Bypass dm-crypt internal workqueue and process read or write[m
+[7m Manual page crypttab(5) line 160 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           requests synchronously.[m
+[7m Manual page crypttab(5) line 161 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 162 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mswap[0m[m
+[7m Manual page crypttab(5) line 163 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Run [1mmkswap [22mon the created device.[m
+[7m Manual page crypttab(5) line 164 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 165 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           This option is ignored for [4minitramfs[24m devices.[m
+[7m Manual page crypttab(5) line 166 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 167 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mtmp[24m[=<tmpfs>][m
+[7m Manual page crypttab(5) line 168 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Run [1mmkfs [22mwith filesystem type <tmpfs> (or ext4 if omitted) on the[m
+[7m Manual page crypttab(5) line 169 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           created device.[m
+[7m Manual page crypttab(5) line 170 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 171 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           This option is ignored for [4minitramfs[24m devices.[m
+[7m Manual page crypttab(5) line 172 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page crypttab(5) line 173 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mcheck[24m[=<check>][m
+[7m Manual page crypttab(5) line 174 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Check the content of the target device by a suitable program; if[m
+[7m Manual page crypttab(5) line 175 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           the check fails, the device is closed immediately. The program is[m
+[7m Manual page crypttab(5) line 176 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           being run with decrypted volume (target device) as first positional[m
+[7m Manual page crypttab(5) line 177 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;root@ubse: ~root@ubse:~# man 5 crypttab/etc/crypttab[5Pcrypttab[Kfg
+[?2004lnano /etc/crypttab
+[?1049h[22;0;0t[1;19r[?12l[?25h[39;49m]104(B[m[4l[?7h[H[2J(B[0;7m  GNU nano 7.2                      /etc/crypttab *                              [2;1H(B[0m[36m# <target name>[38;5;208m [36m<source device>[38;5;208m         [36m<key file>[38;5;208m      [36m<options>[3d[39m(B[m/hemligt /dev/sdb2 none[17d(B[0;7mCom
