@@ -1,0 +1,72 @@
+#!/bin/bash
+
+# Skriptet läser konfigurationsfil
+#  ✓ Startkatalog för backupen
+#  ✓ Vilka filmönster som ska ignoreras
+#  ✓ Destinationen för backupen
+
+CONFIG_FILENAME=backupme.config
+BACKUP_MARKER=.backupme
+
+sleep 1
+
+backup_find() {
+	local start=${1}
+	local pattern=${2}
+
+	local SKIP="-path /proc -o -path /sys -o -path /dev -o -path /run -o -path /tmp -o -path /var/tmp -o -path /snap"
+
+	# shellcheck disable=SC2086
+	find -H "$start" \( $SKIP \) -prune -o -type f -name "$pattern" -print 2>/dev/null
+}
+
+# TODO: ✓ Validera konfigvariablerna
+
+if [ -f "$CONFIG_FILENAME" ]; then
+	# I första hand från nuvarande arbetskatalog
+	source "$CONFIG_FILENAME"
+elif [ -f "/etc/$CONFIG_FILENAME" ]; then
+	# I andra hand från /etc/backupme.config
+	source "/etc/$CONFIG_FILENAME"
+else
+	echo "Vad 17! Ingen '$CONFIG_FILENAME' hittad." >&2
+	exit 1
+fi
+
+DESTINATION=$(realpath "$DESTINATION")
+
+# echo "START_DIR: $START_DIR"
+# echo "IGNORE_PATTERN: $IGNORE_PATTERN"
+# echo "DESTINATION: $DESTINATION"
+
+# Vid körning ska skriptet hitta alla
+# kataloger som innehåller en fil vid
+# namn .backupme och göra en backup på dem.
+
+# TODO: Fixa, find / gav inte match
+# TODO: Funkar inte, find /home/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion16/testkat -xdev -type f -name '.backupme' -exec dirname '{}' ';'
+
+# {} ersätts med filnament
+# \; skickar semikolon till find, som behöver det sist efter -exec
+
+BACKUP_ID=$(date "+%Y-%m-%d-%H%M%S")
+
+backup_find "$START_DIR" "$BACKUP_MARKER" |
+	while IFS= read -r backup_marker_file; do
+		# Hitta katalogen som backupmarkören finns i och
+		# lagra dess absoluta sökväg. Det körs "innifrån
+		# och ut"
+		original=$(realpath $(dirname "$backup_marker_file"))
+		# Buggar! Men det får duga nu. # TODO: Fixa det!!!
+		if echo "$original" | grep -q "$IGNORE_PATTERN"; then
+			continue
+		fi
+
+		# DESTINATION har / sist. TODO: Snygga till detta
+		backup="$(echo "$DESTINATION/$BACKUP_ID/$original" | sed 's#//#/#')"
+		if [ "$original" == "$backup" ]; then
+			continue
+		fi
+		mkdir -pv "$backup"
+		cp -rv "$original/" "$backup/"
+	done
