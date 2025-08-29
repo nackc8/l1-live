@@ -333,4 +333,60 @@ qemu-system-x86_64-microvm  qemu-system-xtensaeb
                      Controls the use of split  w^x  mapping[m
 [7mmu-system-x86_64(1) line 268 (press h for help or q to quit)[27m[K[K                     for  the  TCG  code  generation buffer.[m
                      Some operating systems require this  to[m
-                     be  enabled, 
+                     be  enabled,  and  in  such a case this[m
+                     will default  on.  On  other  operating[m
+                     systems, this will default off, but one[m
+                     may enable this for testing  or  debug‐[m
+                     ging.[m
+[m
+              [1mtb-size=n[0m[m
+                     Controls  the  size (in MiB) of the TCG[m
+                     translation block cache.[m
+[m
+              [1mthread=single|multi[0m[m
+                     Controls number of  TCG  threads.  When[m
+                     the TCG is multi-threaded there will be[m
+                     one thread per  vCPU  therefore  taking[m
+                     advantage of additional host cores. The[m
+                     default is  to  enable  multi-threading[m
+[7mmu-system-x86_64(1) line 286 (press h for help or q to quit)[27m[K[K                     where  both the back-end and front-ends[m
+                     support it and no incompatible TCG fea‐[m
+                     tures    have    been   enabled   (e.g.[m
+                     icount/replay).[m
+[m
+              [1mdirty-ring-size=n[0m[m
+                     When the KVM accelerator  is  used,  it[m
+                     controls the size of the per-vCPU dirty[m
+                     page ring buffer (number of entries for[m
+                     each  vCPU).  It should be a value that[m
+                     is power of two, and it should be  1024[m
+                     or bigger (but still less than the max‐[m
+                     imum value that the  kernel  supports).[m
+                     4096  could  be a good initial value if[m
+                     you have no idea  which  is  the  best.[m
+                     Set this value to 0 to disable the fea‐[m
+                     ture.  By default, this feature is dis‐[m
+                     abled  (dirty-ring-size=0).   When  en‐[m
+[7mmu-system-x86_64(1) line 304 (press h for help or q to quit)[27m[K[K                     abled, KVM will  instead  record  dirty[m
+                     pages in a bitmap.[m
+[m
+              [1mnotify-vmexit=run|internal-error|disable,no‐[0m[m
+              [1mtify-window=n[0m[m
+                     Enables or disables notify VM exit sup‐[m
+                     port on x86 host and specify the corre‐[m
+                     sponding notify window to  trigger  the[m
+                     VM exit if enabled.  [1mrun[0m option enables[m
+                     the feature. It does nothing  and  con‐[m
+                     tinue if the exit happens. [1minternal-er‐[0m[m
+                     [1mror[0m option  enables  the  feature.   It[m
+                     raises a internal error. [1mdisable[0m option[m
+                     doesn't enable the feature.  This  fea‐[m
+                     ture  can  mitigate the CPU stuck issue[m
+                     due to event windows don't open up  for[m
+                     a  specified  of time (i.e. notify-win‐[m
+                     dow).   Default:  notify-vmexit=run,no‐[m
+[7mmu-system-x86_64(1) line 322 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mDEVOPS24/lektion17
+(B[m$ [K(B[m$ [?2004l
+exit
+
+Script done on 2025-08-29 11:54:26+02:00 [COMMAND_EXIT_CODE="0"]
