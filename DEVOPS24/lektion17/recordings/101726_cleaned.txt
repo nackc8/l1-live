@@ -1,0 +1,414 @@
+Script started on 2025-08-29 10:17:31+02:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="53" LINES="13"]
+DEVOPS24/lektion17
+$ DEVOPS24/lektion17
+$ lscpu | grep 'Vendor ID'
+
+lscpu | grep 'Vendor ID'
+
+Vendor ID:                               GenuineIntel
+DEVOPS24/lektion17
+$ cat /sys/module/kvm_intel/parameters/nested
+
+cat /sys/module/kvm_intel/parameters/nested
+
+Y
+DEVOPS24/lektion17
+$ DEVOPS24/lektion17
+(reverse-i-search)`':s': cat /sys/module/kvm_intel/parameters/nestey': cat /sys/module/kvm_intel/parameters/nested': cat /sys/module/kvm_intel/parameters/nested
+
+reverse-i-search)`q': dpkg -S /usr/bin/qemu-system-mips64e': dpkg -S /usr/bin/qemu-system-mips64m': dpkg -S /usr/bin/qemu-system-mips64u': dpkg -S /usr/bin/qemu-system-mips64-': dpkg -S /usr/bin/qemu-system-mips64s': dpkg -S /usr/bin/qemu-system-mips64y': dpkg -S /usr/bin/qemu-system-mips64s': dpkg -S /usr/bin/qemu-system-mips64t': dpkg -S /usr/bin/qemu-system-mips64e': dpkg -S /usr/bin/qemu-system-mips64m': dpkg -S /usr/bin/qemu-system-mips64Lwhich qemu-system-mips64man qemu-system-cris 
+failed reverse-i-search)`qemu-system': man qemu-system-cris 
+
+
+^C
+
+DEVOPS24/lektion17
+$ DEVOPS24/lektion17
+$ man qemu§�
+
+
+
+
+
+
+qemu
+-
+
+qemu-img                    qemu-system-mipsel
+qemu-io                     qemu-system-nios2
+qemu-nbd                    qemu-system-or1k
+qemu-pr-helper              qemu-system-ppc
+qemu-storage-daemon         qemu-system-ppc64
+qemu-system-aarch64         qemu-system-ppc64le
+qemu-system-alpha           qemu-system-riscv32
+qemu-system-arm             qemu-system-riscv64
+qemu-system-avr             qemu-system-rx
+qemu-system-cris            qemu-system-s390x
+qemu-system-hppa            qemu-system-sh4
+qemu-system-i386            qemu-system-sh4eb
+qemu-system-loongarch64     qemu-system-sparc
+qemu-system-m68k            qemu-system-sparc64
+qemu-system-microblaze      qemu-system-tricore
+qemu-system-microblazeel    qemu-system-x86_64
+qemu-system-mips            qemu-system-x86_64-microvm
+qemu-system-mips64          qemu-system-xtensa
+--More--
+qemu-system-mips64el        qemu-system-xtensaeb
+DEVOPS24/lektion17
+$ qemu-sys
+tem-x
+DEVOPS24/lektion17
+$ qemu-system-x
+
+qemu-system-x86_64          qemu-system-xtensa
+qemu-system-x86_64-microvm  qemu-system-xtensaeb
+DEVOPS24/lektion17
+$ qemu-system-x86
+_6mqemu-system-x86_6aqemu-system-x86_6nqemu-system-x86_6 qemu-system-x86_6lqemu-system-x86_6qemu-system-x86_6DEVOPS24/lektion17
+$ man qemu-system-x86_6
+QEMU(1)                     QEMU                     QEMU(1)
+
+NAME
+       qemu - QEMU User Documentation
+
+SYNOPSIS
+          qemu-system-x86_64 [options] [disk_image]
+
+DESCRIPTION
+       The  QEMU  PC System emulator simulates the following
+       peripherals:
+
+       • i440FX host PCI bridge and PIIX3 PCI to ISA bridge
+
+       • Cirrus CLGD 5446 PCI VGA card  or  dummy  VGA  card
+         with Bochs VESA extensions (hardware level, includ‐
+         ing all non standard modes).
+
+       • PS/2 mouse and keyboards h for help or q to quit)
+qemu-system-x86_64(1) line 2 (press h for help or q to quit)
+       • 2 PCI IDE interfaces with hard disk and CD-ROM sup‐
+         port
+
+       • Floppy disk
+
+       • PCI and ISA network adapters
+
+       • Serial ports
+
+       • IPMI BMC, either and internal or external one
+
+       • Creative SoundBlaster 16 sound card
+
+       • ENSONIQ AudioPCI ES1370 sound card
+
+       • Intel 82801AA AC97 Audio compatible sound card
+
+       • Intel HD Audio Controller and HDA codecq to quit)
+
+       • Adlib (OPL2) - Yamaha YM3812 compatible chip
+
+       • Gravis Ultrasound GF1 sound card
+
+       • CS4231A compatible sound card
+
+       • PC speaker
+
+       • PCI  UHCI,  OHCI, EHCI or XHCI USB controller and a
+         virtual USB-1.1 hub.
+
+       SMP is supported with up to 255 CPUs.
+
+       QEMU uses the PC BIOS from the  Seabios  project  and
+       the Plex86/Bochs LGPL VGA BIOS.
+
+       QEMU uses YM3812 emulation by Tatsuyuki Satoh.o quit)
+
+       QEMU      uses      GUS      emulation      (GUSEMU32
+       http://www.deinmeister.de/gusemu/)  by   Tibor   "TS"
+       Schütz.
+
+       Note  that, by default, GUS shares IRQ(7) with paral‐
+       lel ports and so QEMU must be told to not have paral‐
+       lel ports to have working GUS.
+
+          qemu-system-x86_64 dos.img -device gus -parallel none
+
+       Alternatively:
+
+          qemu-system-x86_64 dos.img -device gus,irq=5
+
+       Or some other unclaimed IRQ.
+emu-system-x86_64(1) line 56 (press h for help or q to quit)
+       CS4231A  is the chip used in Windows Sound System and
+       GUSMAX products
+
+       The PC speaker audio device can be  configured  using
+       the pcspk-audiodev machine property, i.e.
+
+          qemu-system-x86_64 some.img -audiodev <backend>,id=<name> -machine pcspk-audiodev=<name>
+
+OPTIONS
+       disk_image is a raw hard disk image for IDE hard disk
+       0. Some targets do not need a disk image.
+
+   Standard options
+       -h     Display help and exit
+
+       -version
+M       Or some other unclaimed IRQ.h for help or q to quit)
+       -version64(1) line 72 (press h for help or q to quit)
+              Display version information and exit
+
+       -machine [type=]name[,prop=value[,...]]
+              Select the emulated machine by name. Use  -ma‐
+              chine help to list available machines.
+
+              For  architectures  which  aim to support live
+              migration compatibility across releases,  each
+              release will introduce a new versioned machine
+              type. For example, the  2.8.0  release  intro‐
+              duced   machine   types   "pc-i440fx-2.8"  and
+              "pc-q35-2.8"  for  the  x86_64/i686  architec‐
+              tures.
+
+              To  allow  live  migration of guests from QEMU
+              version 2.8.0,  to  QEMU  version  2.9.0,  the
+              2.9.0 version must support the "pc-i440fx-2.8"
+              and "pc-q35-2.8" machines too. To allow  users
+              live migrating VMs to skip multiple intermedi‐
+              ate releases when upgrading, new  releases  of
+              QEMU will support machine types from many pre‐
+              vious versions.
+
+              Supported machine properties are:
+
+              accel=accels1[:accels2[:...]]
+                     This is used to enable an  accelerator.
+                     Depending  on  the target architecture,
+                     kvm, xen, hax, hvf, nvmm, whpx  or  tcg
+                     can  be  available.  By default, tcg is
+                     used. If there is more than one  accel‐
+                     erator  specified, the next one is used
+                     if the previous one fails  to  initial‐
+                     ize.
+
+              vmport=on|off|auto
+                     Enables  emulation  of  VMWare IO port,
+                     for vmmouse etc. auto  says  to  select
+                     the value based on accel. For accel=xen
+                     the default is off  otherwise  the  de‐
+                     fault is on.
+
+              dump-guest-core=on|off
+                     Include  guest  memory  in a core dump.
+                     The default is on.
+
+              mem-merge=on|off
+                     Enables or disables memory  merge  sup‐
+                     port.  This  feature, when supported by
+                     the host, de-duplicates identical  mem‐
+                     ory  pages among VMs instances (enabled
+                     by default).
+
+              aes-key-wrap=on|off
+                     Enables or disables  AES  key  wrapping
+                     support  on  s390-ccw hosts.  This fea‐
+                     ture controls whether AES wrapping keys
+                     will  be  created to allow execution of
+                     AES cryptographic  functions.  The  de‐
+                     fault is on.
+
+              dea-key-wrap=on|off
+                     Enables  or  disables  DEA key wrapping
+                     support on s390-ccw hosts.   This  fea‐
+                     ture controls whether DEA wrapping keys
+                     will be created to allow  execution  of
+                     DEA  cryptographic  functions.  The de‐
+                     fault is on.
+
+              nvdimm=on|off
+                     Enables or disables NVDIMM support. The
+                     default is off.
+
+              memory-encryption=
+                     Memory  encryption  object  to use. The
+                     default is none.
+
+              hmat=on|off
+                     Enables or disables ACPI  Heterogeneous
+                     Memory  Attribute Table (HMAT) support.
+                     The default is off.
+
+              memory-backend='id'
+                     An alternative to legacy -mem-path  and
+                     mem-prealloc  options.  Allows to use a
+                     memory backend as main RAM.
+
+                     For example:
+
+                        -object memory-backend-file,id=pc.ram,size=512M,mem-path=/hugetlbfs,prealloc=on,share=on
+                        -machine memory-backend=pc.ram
+                        -m 512Mress h for help or q to quit)
+
+                     Migration compatibility note:
+
+                     • as backend id one shall use value  of
+                       'default-ram-id',  advertised  by ma‐
+                       chine type (available  via  query-ma‐
+                       chines  QMP  command),  if  migration
+                       to/from old QEMU (<5.0) is expected.
+
+                     • for machine types 4.0 and older, user
+                       shall        use        x-use-canoni‐
+                       cal-path-for-ramblock-id=off  backend
+                       option  if migration to/from old QEMU
+                       (<5.0) is expected.
+
+                     For example:
+
+                        -object memory-backend-ram,id=pc.ram,size=512M,x-use-canonical-path-for-ramblock-id=off
+                        -machine memory-backend=pc.ram
+                        -m 512M
+
+              cxl-fmw.0.targets.0=firsttarget,cxl-fmw.0.tar‐
+              gets.1=secondtar‐
+              get,cxl-fmw.0.size=size[,cxl-fmw.0.inter‐
+              leave-granularity=granularity]
+                     Define   a   CXL  Fixed  Memory  Window
+                     (CFMW).
+
+                     Described in  the  CXL  2.0  ECN:  CEDT
+                     CFMWS & QTG _DSM.
+
+                     They  are  regions of Host Physical Ad‐
+                     dresses (HPA) on a system which may  be
+                     interleaved across one or more CXL host
+                     bridges.  The system software will  as‐
+                     sign particular devices into these win‐
+                     dows  and  configure   the   downstream
+                     Host-managed  Device  Memory  (HDM) de‐
+                     coders in root ports, switch ports  and
+                     devices  appropriately  to meet the in‐
+                     terleave requirements  before  enabling
+                     the memory devices.
+
+                     targets.X=target  provides  the mapping
+                     to CXL host bridges which may be  iden‐
+                     tified  by  the id provided in the -de‐
+                     vice  entry.   Multiple   entries   are
+                     needed  to specify all the targets when
+                     the fixed memory window represents  in‐
+                     terleaved memory. X is the target index
+                     from 0.
+
+                     size=size sets the size  of  the  CFMW.
+                     This  must be a multiple of 256MiB. The
+                     region will be aligned  to  256MiB  but
+                     the location is platform and configura‐
+                     tion dependent.
+
+                     interleave-granularity=granularity sets
+                     the  granularity of interleave. Default
+                     256 (bytes). Only 256, 512, 1k, 2k, 4k,
+                     8k and 16k granularities supported.
+
+                     Example:
+
+                        -machine cxl-fmw.0.targets.0=cxl.0,cxl-fmw.0.targets.1=cxl.1,cxl-fmw.0.size=128G,cxl-fmw.0.interleave-granularity=512
+
+       sgx-epc.0.memdev=@var{memid},sgx-epc.0.node=@var{nu‐
+       maid}6_64(1) line 234 (press h for help or q to quit)
+              Define an SGX EPC section.
+
+       -cpu model
+              Select CPU model (-cpu help for list and addi‐
+              tional feature selection)
+
+       -accel name[,prop=value[,...]]
+              This is used to enable an accelerator. Depend‐
+              ing on the target architecture, kvm, xen, hax,
+              hvf,  nvmm,  whpx  or tcg can be available. By
+              default, tcg is used. If there  is  more  than
+              one  accelerator  specified,  the  next one is
+              used if the previous one fails to initialize.
+
+              igd-passthru=on|off
+                     When Xen is in use,  this  option  con‐
+                     trols whether Intel integrated graphics
+                     devices can be passed  through  to  the
+                     guest (default=off)
+
+              kernel-irqchip=on|off|split
+                     Controls KVM in-kernel irqchip support.
+                     The default is full acceleration of the
+                     interrupt  controllers.  On  x86, split
+                     irqchip reduces the kernel attack  sur‐
+                     face, at a performance cost for non-MSI
+                     interrupts.  Disabling  the   in-kernel
+                     irqchip  completely  is not recommended
+                     except for debugging purposes.
+
+              kvm-shadow-mem=size
+                     Defines the size of the KVM shadow MMU.
+
+              split-wx=on|off
+                     Controls the use of split  w^x  mapping
+                     for  the  TCG  code  generation buffer.
+                     Some operating systems require this  to
+                     be  enabled,  and  in  such a case this
+                     will default  on.  On  other  operating
+                     systems, this will default off, but one
+                     may enable this for testing  or  debug‐
+                     ging.
+
+              tb-size=n
+                     Controls  the  size (in MiB) of the TCG
+                     translation block cache.
+
+              thread=single|multi
+                     Controls number of  TCG  threads.  When
+                     the TCG is multi-threaded there will be
+                     one thread per  vCPU  therefore  taking
+                     advantage of additional host cores. The
+                     default is  to  enable  multi-threading
+                     where  both the back-end and front-ends
+                     support it and no incompatible TCG fea‐
+                     tures    have    been   enabled   (e.g.
+                     icount/replay).
+
+              dirty-ring-size=n
+                     When the KVM accelerator  is  used,  it
+                     controls the size of the per-vCPU dirty
+                     page ring buffer (number of entries for
+                     each  vCPU).  It should be a value that
+                     is power of two, and it should be  1024
+                     or bigger (but still less than the max‐
+                     imum value that the  kernel  supports).
+                     4096  could  be a good initial value if
+                     you have no idea  which  is  the  best.
+                     Set this value to 0 to disable the fea‐
+                     ture.  By default, this feature is dis‐
+                     abled  (dirty-ring-size=0).   When  en‐
+                     abled, KVM will  instead  record  dirty
+                     pages in a bitmap.
+
+              notify-vmexit=run|internal-error|disable,no‐
+              tify-window=n
+                     Enables or disables notify VM exit sup‐
+                     port on x86 host and specify the corre‐
+                     sponding notify window to  trigger  the
+                     VM exit if enabled.  run option enables
+                     the feature. It does nothing  and  con‐
+                     tinue if the exit happens. internal-er‐
+                     ror option  enables  the  feature.   It
+                     raises a internal error. disable option
+                     doesn't enable the feature.  This  fea‐
+                     ture  can  mitigate the CPU stuck issue
+                     due to event windows don't open up  for
+                     a  specified  of time (i.e. notify-win‐
+                     dow).   Default:  notify-vmexit=run,no‐
+>DEVOPS24/lektion17 line 322 (press h for help or q to quit)
+$ 
+exit
+
+Script done on 2025-08-29 11:54:26+02:00 [COMMAND_EXIT_CODE="0"]
