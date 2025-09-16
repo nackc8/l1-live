@@ -108,4 +108,59 @@ Script started on 2025-09-16 09:03:15+02:00 [TERM="xterm-256color" TTY="/dev/pts
 [7m Manual page ls(1) line 73 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              points to a directory[m
 [7m Manual page ls(1) line 74 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
 [7m Manual page ls(1) line 75 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--hide[0m=[4mPATTERN[24m[m
-[7m Manual page
+[7m Manual page ls(1) line 76 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              do not list implied entries matching shell PAT‐[m
+[7m Manual page ls(1) line 77 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              TERN (overridden by [1m-a[0m or [1m-A[0m)[m
+[7m Manual page ls(1) line 78 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 79 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--hyperlink[0m[=[4mWHEN[24m][m
+[7m Manual page ls(1) line 80 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              hyperlink file names WHEN[m
+[7m Manual page ls(1) line 81 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 82 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--indicator-style[0m=[4mWORD[24m[m
+[7m Manual page ls(1) line 83 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              append  indicator  with  style  WORD  to  entry[m
+[7m Manual page ls(1) line 84 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              names: none (default),  slash  ([1m-p[0m),  file-type[m
+[7m Manual page ls(1) line 85 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ([1m--file-type[0m), classify ([1m-F[0m)[m
+[7m Manual page ls(1) line 86 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 87 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-i[0m, [1m--inode[0m[m
+[7m Manual page ls(1) line 88 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              print the index number of each file[m
+[7m Manual page ls(1) line 89 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 90 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-I[0m, [1m--ignore[0m=[4mPATTERN[24m[m
+[7m Manual page ls(1) line 91 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              do not list implied entries matching shell PAT‐[m
+[7m Manual page ls(1) line 92 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              TERN[m
+[7m Manual page ls(1) line 93 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 94 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mITINF25/lektion1
+(B[m$ ls +i[K[K-i /
+[?2004l     12 bin		4055297 persistent-data
+      2 boot		      1 proc
+      1 dev		 261644 root
+ 130817 etc		      1 run
+ 654083 home		     15 sbin
+     33 initrd.img	      2 shared
+     31 initrd.img.old	 261647 srv
+     13 lib		     23 swapfile
+     32 lib32		      1 sys
+     14 lib64		1308162 tmp
+     11 lost+found	 523265 usr
+1308161 media		 392449 var
+1177345 mnt		     16 vmlinuz
+     19 opt		     20 vmlinuz.old
+[?2004h[94mITINF25/lektion1
+(B[m$ cd /etc/ssh/s[Kssh[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcd /etc/ssh
+[?2004l[?2004h[94m/etc/ssh (B[m$ ls
+[?2004lmoduli		ssh_host_ecdsa_key
+ssh_config	ssh_host_ecdsa_key.pub
+ssh_config.bak	ssh_host_ed25519_key
+ssh_config.d	ssh_host_ed25519_key.pub
+sshd_config	ssh_host_rsa_key
+sshd_config.d	ssh_host_rsa_key.pub
+[?2004h[94m/etc/ssh (B[m$ [H[2J[94m/etc/ssh (B[m$ ls -a
+[?2004l.		sshd_config.d
+..		ssh_host_ecdsa_key
+moduli		ssh_host_ecdsa_key.pub
+ssh_config	ssh_host_ed25519_key
+ssh_config.bak	ssh_host_ed25519_key.pub
+ssh_config.d	ssh_host_rsa_key
+sshd_config	ssh_host_rsa_key.pub
+[?2004h[94m/etc/ssh (B[m$ stat .
+[?2004l  File: .
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 253,0	Inode: 131691      Links: 4
+Access: (0755/drwxr-xr-x)  Uid: (    0/    root)   Gid: (    0/    root
