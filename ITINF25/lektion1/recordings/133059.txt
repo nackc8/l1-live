@@ -452,4 +452,161 @@ Change: 2025-09-16 13:31:06.643013019 +0200
        [1m--indicator[0m[1m[7m-s[27m[0m[1mtyle[0m=[4mWORD[24m[m
 [7mal page ls(1) line 83/274 36% (press h for help or q to quit)[27m[K[K/[K              append  indicator  with  style  WORD  to  entry[m
               names: none (default),  slash  ([1m-p[0m),  file-type[m
-              ([1m--file-type[0m), classify 
+              ([1m--file-type[0m), classify ([1m-F[0m)[m
+[m
+       [1m-i[0m, [1m--inode[0m[m
+              print the index number of each file[m
+[7mal page ls(1) line 89/274 39% (press h for help or q to quit)[27m[K[K/[K[m
+       [1m-I[0m, [1m--ignore[0m=[4mPATTERN[24m[m
+              do not list implied entries matching shell PAT‐[m
+              TERN[m
+[m
+       [1m-k[0m, [1m--kibibytes[0m[m
+              default to 1024-byte blocks for file system us‐[m
+              age; used only with [1m[7m-s[27m[0m and per directory totals[m
+[m
+       [1m-l[0m     use a long listing format[m
+[m
+[7ml page ls(1) line 100/274 43% (press h for help or q to quit)[27m[K[K/[K       [1m-L[0m, [1m--dereference[0m[m
+              when  showing  file  information for a symbolic[m
+              link, show information for the  file  the  link[m
+              references rather than for the link itself[m
+[m
+       [1m-m[0m     fill  width  with a comma separated list of en‐[m
+              tries[m
+[m
+       [1m-n[0m, [1m--numeric-uid-gid[0m[m
+              like [1m-l[0m, but list numeric user and group IDs[m
+[m
+       [1m-N[0m, [1m--literal[0m[m
+              print entry names without quoting[m
+[m
+[7ml page ls(1) line 114/274 48% (press h for help or q to quit)[27m[K[K/[K...skipping...
+       [1m-p[0m, [1m--indicator[0m[1m[7m-s[27m[0m[1mtyle[0m=[4mslash[24m[m
+              append / indicator to directories[m
+[m
+       [1m-q[0m, [1m--hide-control-chars[0m[m
+              print ? instead of nongraphic characters[m
+[m
+       [1m-[0m[1m[7m-s[27m[0m[1mhow-control-chars[0m[m
+              show nongraphic characters as-is (the  default,[m
+              unless  program  is 'ls' and output is a termi‐[m
+              nal)[m
+[m
+       [1m-Q[0m, [1m--quote-name[0m[m
+              enclose entry names in double quotes[m
+[m
+       [1m--quoting[0m[1m[7m-s[27m[0m[1mtyle[0m=[4mWORD[24m[m
+              use quoting style WORD for  entry  names:  lit‐[m
+              eral,  locale,  shell,  shell-always, shell-es‐[m
+              cape, shell-escape-always, c, escape (overrides[m
+[7ml page ls(1) line 134/274 56% (press h for help or q to quit)[27m[K[K/[K              QUOTING_STYLE environment variable)[m
+[m
+       [1m-r[0m, [1m--reverse[0m[m
+              reverse order while sorting[m
+[m
+       [1m-R[0m, [1m--recursive[0m[m
+[7ml page ls(1) line 140/274 58% (press h for help or q to quit)[27m[K[K/[K              list subdirectories recursively[m
+[m
+       [1m[7m-s[27m[0m, [1m-[0m[1m[7m-s[27m[0m[1mize[0m[m
+              print  the  allocated  size  of  each  file, in[m
+              blocks[m
+[m
+       [1m[7m-S[27m[0m     sort by file size, largest first[m
+[m
+[7ml page ls(1) line 148/274 60% (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mITINF25/lektion1
+(B[m$ man ls[Kn[H[2J[94mITINF25/lektion1
+(B[m$ man ln
+[?2004l[?1049h[22;0;0t[?1h=LN(1)                   User Commands                   LN(1)[m
+[m
+[1mNAME[0m[m
+       ln - make links between files[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mln[0m [[4mOPTION[24m]... [[4m-T[24m] [4mTARGET[24m [4mLINK_NAME[24m[m
+       [1mln[0m [[4mOPTION[24m]... [4mTARGET[24m[m
+       [1mln[0m [[4mOPTION[24m]... [4mTARGET[24m... [4mDIRECTORY[24m[m
+       [1mln[0m [[4mOPTION[24m]... [4m-t[24m [4mDIRECTORY[24m [4mTARGET[24m...[m
+[m
+[1mDESCRIPTION[0m[m
+       In the 1st form, create a link to TARGET with the name[m
+       LINK_NAME.  In the 2nd form, create a link  to  TARGET[m
+       in  the  current directory.  In the 3rd and 4th forms,[m
+       create links to each TARGET in DIRECTORY.  Create hard[m
+       links  by default, symbolic links with [1m--symbolic[0m.  By[m
+       default, each destination (name of  new  link)  should[m
+[7m Manual page ln(1) line 1 (press h for help or q to quit)[27m[K[K/[Kss[Kyy[Kmm[Kbb[Koo[Kll[Kii[Kcc[K[1;1HLN(1)                   User Commands                   LN(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       ln - make links between files[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mln[0m [[4mOPTION[24m]... [[4m-T[24m] [4mTARGET[24m [4mLINK_NAME[24m[m
+[8;1H       [1mln[0m [[4mOPTION[24m]... [4mTARGET[24m[m
+[9;1H       [1mln[0m [[4mOPTION[24m]... [4mTARGET[24m... [4mDIRECTORY[24m[m
+[10;1H       [1mln[0m [[4mOPTION[24m]... [4m-t[24m [4mDIRECTORY[24m [4mTARGET[24m...[m
+[11;1H[m
+[12;1H[1mDESCRIPTION[0m[m
+[13;1H       In the 1st form, create a link to TARGET with the name[m
+[14;1H       LINK_NAME.  In the 2nd form, create a link  to  TARGET[m
+[15;1H       in  the  current directory.  In the 3rd and 4th forms,[m
+[16;1H       create links to each TARGET in DIRECTORY.  Create hard[m
+[17;1H       links  by default, symbolic links with [1m--symbolic[0m.  By[m
+[18;1H       default, each destination (name of  new  link)  should[m
+[19;1H[1;1HLN(1)                   User Commands                   LN(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       ln - make links between files[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mln[0m [[4mOPTION[24m]... [[4m-T[24m] [4mTARGET[24m [4mLINK_NAME[24m[m
+[8;1H       [1mln[0m [[4mOPTION[24m]... [4mTARGET[24m[m
+[9;1H       [1mln[0m [[4mOPTION[24m]... [4mTARGET[24m... [4mDIRECTORY[24m[m
+[10;1H       [1mln[0m [[4mOPTION[24m]... [4m-t[24m [4mDIRECTORY[24m [4mTARGET[24m...[m
+[11;1H[m
+[12;1H[1mDESCRIPTION[0m[m
+[13;1H       In the 1st form, create a link to TARGET with the name[m
+[14;1H       LINK_NAME.  In the 2nd form, create a link  to  TARGET[m
+[15;1H       in  the  current directory.  In the 3rd and 4th forms,[m
+[16;1H       create links to each TARGET in DIRECTORY.  Create hard[m
+[17;1H       links  by default, [7msymbolic[27m links with [1m--[0m[1m[7msymbolic[27m[0m.  By[m
+[18;1H       default, each destination (name of  new  link)  should[m
+[19;1H       not  already  exist.   When  creating hard links, each[m
+       TARGET must exist.  [7mSymbolic[27m links can hold  arbitrary[m
+       text;  if  later  resolved,  a relative link is inter‐[m
+       preted in relation to its parent directory.[m
+[m
+       Mandatory arguments to long options are mandatory  for[m
+       short options too.[m
+[m
+       [1m--backup[0m[=[4mCONTROL[24m][m
+              make a backup of each existing destination file[m
+[m
+       [1m-b[0m     like [1m--backup[0m but does not accept an argument[m
+[m
+       [1m-d[0m, [1m-F[0m, [1m--directory[0m[m
+              allow the superuser to attempt to hard link di‐[m
+              rectories (note: will probably fail due to sys‐[m
+[7mal page ln(1) line 17/125 33% (press h for help or q to quit)[27m[K[K/[K              tem restrictions, even for the superuser)[m
+[m
+       [1m-f[0m, [1m--force[0m[m
+[7mal page ln(1) line 20/125 35% (press h for help or q to quit)[27m[K[K/[K...skipping...
+              dereference TARGETs that are [7msymbolic[27m links[m
+[m
+       [1m-n[0m, [1m--no-dereference[0m[m
+              treat  LINK_NAME  as  a  normal file if it is a[m
+              [7msymbolic[27m link to a directory[m
+[m
+       [1m-P[0m, [1m--physical[0m[m
+              make hard links directly to [7msymbolic[27m links[m
+[m
+       [1m-r[0m, [1m--relative[0m[m
+              with [1m-s[0m, create links relative to link location[m
+[m
+       [1m-s[0m, [1m--[0m[1m[7msymbolic[27m[0m[m
+              make [7msymbolic[27m links instead of hard links[m
+[m
+       [1m-S[0m, [1m--suffix[0m=[4mSUFFIX[24m[m
+              override the usual backup suffix[m
+[m
+[7mal page ln(1) line 44/125 53% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-t[0m, [1m--target-directory[0m=
