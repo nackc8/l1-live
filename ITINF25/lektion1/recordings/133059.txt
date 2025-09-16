@@ -1,0 +1,455 @@
+Script started on 2025-09-16 13:30:59+02:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="63" LINES="19"]
+[?2004h[94mITINF25/lektion1
+(B[m$ [H[2J[94mITINF25/lektion1
+(B[m$ ls
+[?2004lrecordings
+[?2004h[94mITINF25/lektion1
+(B[m$ mkdir katalog
+[?2004l[?2004h[94mITINF25/lektion1
+(B[m$ stat sk[K[Kja[K[Kla[K[Kkatalog/
+[?2004l  File: katalog/
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 253,1	Inode: 93722113    Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/    kent)   Gid: ( 1000/    kent)
+Access: 2025-09-16 13:31:10.999108209 +0200
+Modify: 2025-09-16 13:31:06.643013019 +0200
+Change: 2025-09-16 13:31:06.643013019 +0200
+ Birth: 2025-09-16 13:31:06.643013019 +0200
+[?2004h[94mITINF25/lektion1
+(B[m$ [H[2J[94mITINF25/lektion1
+(B[m$ ln katalog/ minhardlink
+[?2004lln: katalog/: hard link not allowed for directory
+[?2004h[94mITINF25/lektion1
+(B[m$ man ls
+[?2004l[?1049h[22;0;0t[?1h=LS(1)                   User Commands                   LS(1)[m
+[m
+[1mNAME[0m[m
+       ls - list directory contents[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       List  information  about the FILEs (the current direc‐[m
+       tory by default).  Sort entries alphabetically if none[m
+       of [1m-cftuvSUX[0m nor [1m--sort[0m is specified.[m
+[m
+       Mandatory  arguments to long options are mandatory for[m
+       short options too.[m
+[m
+       [1m-a[0m, [1m--all[0m[m
+              do not ignore entries starting with .[m
+[7m Manual page ls(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-A[0m, [1m--almost-all[0m[m
+[7m Manual page ls(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              do not list implied . and ..[m
+[7m Manual page ls(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--author[0m[m
+[7m Manual page ls(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              with [1m-l[0m, print the author of each file[m
+[7m Manual page ls(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-b[0m, [1m--escape[0m[m
+[7m Manual page ls(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              print C-style escapes for nongraphic characters[m
+[7m Manual page ls(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--block-size[0m=[4mSIZE[24m[m
+[7m Manual page ls(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              with [1m-l[0m, scale  sizes  by  SIZE  when  printing[m
+[7m Manual page ls(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              them;  e.g.,  '--block-size=M'; see SIZE format[m
+[7m Manual page ls(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              below[m
+[7m Manual page ls(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-B[0m, [1m--ignore-backups[0m[m
+[7m Manual page ls(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              do not list implied entries ending with ~[m
+[7m Manual page ls(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-c[0m     with [1m-lt[0m: sort by, and  show,  ctime  (time  of[m
+[7m Manual page ls(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              last  modification of file status information);[m
+[7m Manual page ls(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              with [1m-l[0m: show ctime and sort  by  name;  other‐[m
+[7m Manual page ls(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              wise: sort by ctime, newest first[m
+[7m Manual page ls(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-C[0m     list entries by columns[m
+[7m Manual page ls(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--color[0m[=[4mWHEN[24m][m
+[7m Manual page ls(1) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              color the output WHEN; more info below[m
+[7m Manual page ls(1) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-d[0m, [1m--directory[0m[m
+[7m Manual page ls(1) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              list directories themselves, not their contents[m
+[7m Manual page ls(1) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-D[0m, [1m--dired[0m[m
+[7m Manual page ls(1) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              generate output designed for Emacs' dired mode[m
+[7m Manual page ls(1) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-f[0m     list all entries in directory order[m
+[7m Manual page ls(1) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-F[0m, [1m--classify[0m[=[4mWHEN[24m][m
+[7m Manual page ls(1) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              append  indicator  (one  of  */=>@|) to entries[m
+[7m Manual page ls(1) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              WHEN[m
+[7m Manual page ls(1) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--file-type[0m[m
+[7m Manual page ls(1) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              likewise, except do not append '*'[m
+[7m Manual page ls(1) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--format[0m=[4mWORD[24m[m
+[7m Manual page ls(1) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              across [1m-x[0m, commas [1m-m[0m, horizontal [1m-x[0m,  long  [1m-l[0m,[m
+[7m Manual page ls(1) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              single-column [1m-1[0m, verbose [1m-l[0m, vertical [1m-C[0m[m
+[7m Manual page ls(1) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--full-time[0m[m
+[7m Manual page ls(1) line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              like [1m-l[0m [1m--time-style[0m=[4mfull-iso[24m[m
+[7m Manual page ls(1) line 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 51 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-g[0m     like [1m-l[0m, but do not list owner[m
+[7m Manual page ls(1) line 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--group-directories-first[0m[m
+[7m Manual page ls(1) line 54 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              group  directories  before  files;  can be aug‐[m
+[7m Manual page ls(1) line 55 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              mented with a [1m--sort[0m option,  but  any  use  of[m
+[7m Manual page ls(1) line 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m--sort[0m=[4mnone[24m ([1m-U[0m) disables grouping[m
+[7m Manual page ls(1) line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-G[0m, [1m--no-group[0m[m
+[7m Manual page ls(1) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              in a long listing, don't print group names[m
+[7m Manual page ls(1) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-h[0m, [1m--human-readable[0m[m
+[7m Manual page ls(1) line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              with  [1m-l[0m  and  [1m-s[0m,  print sizes like 1K 234M 2G[m
+[7m Manual page ls(1) line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              etc.[m
+[7m Manual page ls(1) line 64 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 65 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--si[0m   likewise, but use powers of 1000 not 1024[m
+[7m Manual page ls(1) line 66 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 67 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-H[0m, [1m--dereference-command-line[0m[m
+[7m Manual page ls(1) line 68 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              follow symbolic links  listed  on  the  command[m
+[7m Manual page ls(1) line 69 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              line[m
+[7m Manual page ls(1) line 70 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 71 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--dereference-command-line-symlink-to-dir[0m[m
+[7m Manual page ls(1) line 72 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              follow  each  command  line  symbolic link that[m
+[7m Manual page ls(1) line 73 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              points to a directory[m
+[7m Manual page ls(1) line 74 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 75 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--hide[0m=[4mPATTERN[24m[m
+[7m Manual page ls(1) line 76 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              do not list implied entries matching shell PAT‐[m
+[7m Manual page ls(1) line 77 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              TERN (overridden by [1m-a[0m or [1m-A[0m)[m
+[7m Manual page ls(1) line 78 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 79 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--hyperlink[0m[=[4mWHEN[24m][m
+[7m Manual page ls(1) line 80 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              hyperlink file names WHEN[m
+[7m Manual page ls(1) line 81 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 82 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--indicator-style[0m=[4mWORD[24m[m
+[7m Manual page ls(1) line 83 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              append  indicator  with  style  WORD  to  entry[m
+[7m Manual page ls(1) line 84 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              names: none (default),  slash  ([1m-p[0m),  file-type[m
+[7m Manual page ls(1) line 85 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ([1m--file-type[0m), classify ([1m-F[0m)[m
+[7m Manual page ls(1) line 86 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 87 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-i[0m, [1m--inode[0m[m
+[7m Manual page ls(1) line 88 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              print the index number of each file[m
+[7m Manual page ls(1) line 89 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 90 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-I[0m, [1m--ignore[0m=[4mPATTERN[24m[m
+[7m Manual page ls(1) line 91 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              do not list implied entries matching shell PAT‐[m
+[7m Manual page ls(1) line 92 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              TERN[m
+[7m Manual page ls(1) line 93 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 94 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-k[0m, [1m--kibibytes[0m[m
+[7m Manual page ls(1) line 95 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              default to 1024-byte blocks for file system us‐[m
+[7m Manual page ls(1) line 96 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              age; used only with [1m-s[0m and per directory totals[m
+[7m Manual page ls(1) line 97 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 98 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-l[0m     use a long listing format[m
+[7m Manual page ls(1) line 99 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 100 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-L[0m, [1m--dereference[0m[m
+[7m Manual page ls(1) line 101 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              when  showing  file  information for a symbolic[m
+[7m Manual page ls(1) line 102 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              link, show information for the  file  the  link[m
+[7m Manual page ls(1) line 103 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              references rather than for the link itself[m
+[7m Manual page ls(1) line 104 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 105 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-m[0m     fill  width  with a comma separated list of en‐[m
+[7m Manual page ls(1) line 106 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tries[m
+[7m Manual page ls(1) line 107 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 108 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-n[0m, [1m--numeric-uid-gid[0m[m
+[7m Manual page ls(1) line 109 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              like [1m-l[0m, but list numeric user and group IDs[m
+[7m Manual page ls(1) line 110 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 111 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-N[0m, [1m--literal[0m[m
+[7m Manual page ls(1) line 112 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              print entry names without quoting[m
+[7m Manual page ls(1) line 113 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 114 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-o[0m     like [1m-l[0m, but do not list group information[m
+[7m Manual page ls(1) line 115 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 116 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-p[0m, [1m--indicator-style[0m=[4mslash[24m[m
+[7m Manual page ls(1) line 117 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              append / indicator to directories[m
+[7m Manual page ls(1) line 118 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 119 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-q[0m, [1m--hide-control-chars[0m[m
+[7m Manual page ls(1) line 120 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              print ? instead of nongraphic characters[m
+[7m Manual page ls(1) line 121 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 122 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--show-control-chars[0m[m
+[7m Manual page ls(1) line 123 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              show nongraphic characters as-is (the  default,[m
+[7m Manual page ls(1) line 124 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              unless  program  is 'ls' and output is a termi‐[m
+[7m Manual page ls(1) line 125 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              nal)[m
+[7m Manual page ls(1) line 126 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 127 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-Q[0m, [1m--quote-name[0m[m
+[7m Manual page ls(1) line 128 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              enclose entry names in double quotes[m
+[7m Manual page ls(1) line 129 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 130 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--quoting-style[0m=[4mWORD[24m[m
+[7m Manual page ls(1) line 131 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              use quoting style WORD for  entry  names:  lit‐[m
+[7m Manual page ls(1) line 132 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              eral,  locale,  shell,  shell-always, shell-es‐[m
+[7m Manual page ls(1) line 133 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              cape, shell-escape-always, c, escape (overrides[m
+[7m Manual page ls(1) line 134 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              QUOTING_STYLE environment variable)[m
+[7m Manual page ls(1) line 135 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 136 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-r[0m, [1m--reverse[0m[m
+[7m Manual page ls(1) line 137 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              reverse order while sorting[m
+[7m Manual page ls(1) line 138 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 139 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-R[0m, [1m--recursive[0m[m
+[7m Manual page ls(1) line 140 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              list subdirectories recursively[m
+[7m Manual page ls(1) line 141 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 142 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-s[0m, [1m--size[0m[m
+[7m Manual page ls(1) line 143 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              print  the  allocated  size  of  each  file, in[m
+[7m Manual page ls(1) line 144 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              blocks[m
+[7m Manual page ls(1) line 145 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 146 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-S[0m     sort by file size, largest first[m
+[7m Manual page ls(1) line 147 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 148 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--sort[0m=[4mWORD[24m[m
+[7m Manual page ls(1) line 149 (press h for help or q to quit)[27m[K[K/[Kss[Kyy[Kmm[Kbb[Koo[Kll[Kii[Kcc[K[1;1H              use quoting style WORD for  entry  names:  lit‐[m
+[2;1H              eral,  locale,  shell,  shell-always, shell-es‐[m
+[3;1H              cape, shell-escape-always, c, escape (overrides[m
+[4;1H              QUOTING_STYLE environment variable)[m
+[5;1H[m
+[6;1H       [1m-r[0m, [1m--reverse[0m[m
+[7;1H              reverse order while sorting[m
+[8;1H[m
+[9;1H       [1m-R[0m, [1m--recursive[0m[m
+[10;1H              list subdirectories recursively[m
+[11;1H[m
+[12;1H       [1m-s[0m, [1m--size[0m[m
+[13;1H              print  the  allocated  size  of  each  file, in[m
+[14;1H              blocks[m
+[15;1H[m
+[16;1H       [1m-S[0m     sort by file size, largest first[m
+[17;1H[m
+[18;1H       [1m--sort[0m=[4mWORD[24m[m
+[19;1H[1;1H              use quoting style WORD for  entry  names:  lit‐[m
+[2;1H              eral,  locale,  shell,  shell-always, shell-es‐[m
+[3;1H              cape, shell-escape-always, c, escape (overrides[m
+[4;1H              QUOTING_STYLE environment variable)[m
+[5;1H[m
+[6;1H       [1m-r[0m, [1m--reverse[0m[m
+[7;1H              reverse order while sorting[m
+[8;1H[m
+[9;1H       [1m-R[0m, [1m--recursive[0m[m
+[10;1H              list subdirectories recursively[m
+[11;1H[m
+[12;1H       [1m-s[0m, [1m--size[0m[m
+[13;1H              print  the  allocated  size  of  each  file, in[m
+[14;1H              blocks[m
+[15;1H[m
+[16;1H       [1m-S[0m     sort by file size, largest first[m
+[17;1H[m
+[18;1H       [1m--sort[0m=[4mWORD[24m[m
+[19;1H[K[7mPattern not found  (press RETURN)[27m[19;1H[K[K[H[2J[HM              do not ignore entries starting with .[m
+[HM       [1m-a[0m, [1m--all[0m[m
+[HM[m
+[HM       short options too.[m
+[HM       Mandatory  arguments to long options are mandatory for[m
+[HM[m
+[HM       of [1m-cftuvSUX[0m nor [1m--sort[0m is specified.[m
+[HM       tory by default).  Sort entries alphabetically if none[m
+[HM       List  information  about the FILEs (the current direc‐[m
+[HM[1mDESCRIPTION[0m[m
+[HM[m
+[HM       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[HM[1mSYNOPSIS[0m[m
+[HM[m
+[HM       ls - list directory contents[m
+[HM[1mNAME[0m[m
+[HM[m
+[HMLS(1)                   User Commands                   LS(1)[m
+[19;1H[K[7mnual page ls(1) line 1/274 6% (press h for help or q to quit)[27m[K[K/[Kss[Kyy[Kmm[K[1;1HLS(1)                   User Commands                   LS(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       ls - list directory contents[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[8;1H[m
+[9;1H[1mDESCRIPTION[0m[m
+[10;1H       List  information  about the FILEs (the current direc‐[m
+[11;1H       tory by default).  Sort entries alphabetically if none[m
+[12;1H       of [1m-cftuvSUX[0m nor [1m--sort[0m is specified.[m
+[13;1H[m
+[14;1H       Mandatory  arguments to long options are mandatory for[m
+[15;1H       short options too.[m
+[16;1H[m
+[17;1H       [1m-a[0m, [1m--all[0m[m
+[18;1H              do not ignore entries starting with .[m
+[19;1H[1;1HLS(1)                   User Commands                   LS(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       ls - list directory contents[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[8;1H[m
+[9;1H[1mDESCRIPTION[0m[m
+[10;1H       List  information  about the FILEs (the current direc‐[m
+[11;1H       tory by default).  Sort entries alphabetically if none[m
+[12;1H       of [1m-cftuvSUX[0m nor [1m--sort[0m is specified.[m
+[13;1H[m
+[14;1H       Mandatory  arguments to long options are mandatory for[m
+[15;1H       short options too.[m
+[16;1H[m
+[17;1H       [1m-a[0m, [1m--all[0m[m
+[18;1H              do not ignore entries starting with .[m
+[19;1H...skipping...
+              follow [7msym[27mbolic links  listed  on  the  command[m
+              line[m
+[m
+       [1m--dereference-command-line-[0m[1m[7msym[27m[0m[1mlink-to-dir[0m[m
+              follow  each  command  line  [7msym[27mbolic link that[m
+              points to a directory[m
+[m
+       [1m--hide[0m=[4mPATTERN[24m[m
+              do not list implied entries matching shell PAT‐[m
+              TERN (overridden by [1m-a[0m or [1m-A[0m)[m
+[m
+       [1m--hyperlink[0m[=[4mWHEN[24m][m
+              hyperlink file names WHEN[m
+[m
+       [1m--indicator-style[0m=[4mWORD[24m[m
+              append  indicator  with  style  WORD  to  entry[m
+              names: none (default),  slash  ([1m-p[0m),  file-type[m
+              ([1m--file-type[0m), classify ([1m-F[0m)[m
+[7mal page ls(1) line 86/274 38% (press h for help or q to quit)[27m[K[K/[K[m
+       [1m-i[0m, [1m--inode[0m[m
+              print the index number of each file[m
+[7mal page ls(1) line 89/274 39% (press h for help or q to quit)[27m[K[K/[K[m
+[7mal page ls(1) line 90/274 39% (press h for help or q to quit)[27m[K[K/[K...skipping...
+              when  showing  file  information for a [7msym[27mbolic[m
+              link, show information for the  file  the  link[m
+              references rather than for the link itself[m
+[m
+       [1m-m[0m     fill  width  with a comma separated list of en‐[m
+              tries[m
+[m
+       [1m-n[0m, [1m--numeric-uid-gid[0m[m
+              like [1m-l[0m, but list numeric user and group IDs[m
+[m
+       [1m-N[0m, [1m--literal[0m[m
+              print entry names without quoting[m
+[m
+       [1m-o[0m     like [1m-l[0m, but do not list group information[m
+[m
+       [1m-p[0m, [1m--indicator-style[0m=[4mslash[24m[m
+              append / indicator to directories[m
+[m
+[7ml page ls(1) line 119/274 50% (press h for help or q to quit)[27m[K[K/[K[K[7mPattern not found  (press RETURN)[27m[19;1H[K[K [KESCESC[KOO[KAA[K[HM       [1m-L[0m, [1m--dereference[0m[m
+[19;1H[K[7ml page ls(1) line 118/274 50% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[19;1H[K[7ml page ls(1) line 117/274 49% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-l[0m     use a long listing format[m
+[19;1H[K[7ml page ls(1) line 116/274 48% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[19;1H[K[7ml page ls(1) line 115/274 48% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              age; used only with [1m-s[0m and per directory totals[m
+[19;1H[K[7ml page ls(1) line 114/274 48% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              default to 1024-byte blocks for file system us‐[m
+[19;1H[K[7ml page ls(1) line 113/274 48% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-k[0m, [1m--kibibytes[0m[m
+[19;1H[K[7ml page ls(1) line 112/274 47% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[19;1H[K[7ml page ls(1) line 111/274 47% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              TERN[m
+[19;1H[K[7ml page ls(1) line 110/274 47% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              do not list implied entries matching shell PAT‐[m
+[19;1H[K[7ml page ls(1) line 109/274 46% (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mITINF25/lektion1
+(B[m$ man ls
+[?2004l[?1049h[22;0;0t[?1h=LS(1)                   User Commands                   LS(1)[m
+[m
+[1mNAME[0m[m
+       ls - list directory contents[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       List  information  about the FILEs (the current direc‐[m
+       tory by default).  Sort entries alphabetically if none[m
+       of [1m-cftuvSUX[0m nor [1m--sort[0m is specified.[m
+[m
+       Mandatory  arguments to long options are mandatory for[m
+       short options too.[m
+[m
+       [1m-a[0m, [1m--all[0m[m
+              do not ignore entries starting with .[m
+[7m Manual page ls(1) line 1 (press h for help or q to quit)[27m[K[K/[K--[Kss[K[1;1HLS(1)                   User Commands                   LS(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       ls - list directory contents[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[8;1H[m
+[9;1H[1mDESCRIPTION[0m[m
+[10;1H       List  information  about the FILEs (the current direc‐[m
+[11;1H       tory by default).  Sort entries alphabetically if none[m
+[12;1H       of [1m-cftuvSUX[0m nor [1m--sort[0m is specified.[m
+[13;1H[m
+[14;1H       Mandatory  arguments to long options are mandatory for[m
+[15;1H       short options too.[m
+[16;1H[m
+[17;1H       [1m-a[0m, [1m--all[0m[m
+[18;1H              do not ignore entries starting with .[m
+[19;1H[1;1HLS(1)                   User Commands                   LS(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       ls - list directory contents[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[8;1H[m
+[9;1H[1mDESCRIPTION[0m[m
+[10;1H       List  information  about the FILEs (the current direc‐[m
+[11;1H       tory by default).  Sort entries alphabetically if none[m
+[12;1H       of [1m-cftuvSUX[0m nor [1m-[0m[1m[7m-s[27m[0m[1mort[0m is specified.[m
+[13;1H[m
+[14;1H       Mandatory  arguments to long options are mandatory for[m
+[15;1H       short options too.[m
+[16;1H[m
+[17;1H       [1m-a[0m, [1m--all[0m[m
+[18;1H              do not ignore entries starting with .[m
+[19;1H[m
+       [1m-A[0m, [1m--almost-all[0m[m
+              do not list implied . and ..[m
+[m
+       [1m--author[0m[m
+              with [1m-l[0m, print the author of each file[m
+[m
+       [1m-b[0m, [1m--escape[0m[m
+              print C[7m-s[27mtyle escapes for nongraphic characters[m
+[m
+       [1m--block[0m[1m[7m-s[27m[0m[1mize[0m=[4mSIZE[24m[m
+[7m Manual page ls(1) line 12 (press h for help or q to quit)[27m[K[K/[K              with [1m-l[0m, scale  sizes  by  SIZE  when  printing[m
+              them;  e.g.,  '--block[7m-s[27mize=M'; see SIZE format[m
+              below[m
+[m
+       [1m-B[0m, [1m--ignore-backups[0m[m
+              do not list implied entries ending with ~[m
+[m
+       [1m-c[0m     with [1m-lt[0m: sort by, and  show,  ctime  (time  of[m
+              last  modification of file status information);[m
+              with [1m-l[0m: show ctime and sort  by  name;  other‐[m
+              wise: sort by ctime, newest first[m
+[m
+       [1m-C[0m     list entries by columns[m
+[m
+       [1m--color[0m[=[4mWHEN[24m][m
+[7m Manual page ls(1) line 27 (press h for help or q to quit)[27m[K[K/[K              color the output WHEN; more info below[m
+[m
+[7m Manual page ls(1) line 29 (press h for help or q to quit)[27m[K[K/[K       [1m-d[0m, [1m--directory[0m[m
+              list directories themselves, not their contents[m
+[7m Manual page ls(1) line 31 (press h for help or q to quit)[27m[K[K/[K...skipping...
+              like [1m-l[0m [1m--time[0m[1m[7m-s[27m[0m[1mtyle[0m=[4mfull-iso[24m[m
+[m
+       [1m-g[0m     like [1m-l[0m, but do not list owner[m
+[m
+       [1m--group-directories-first[0m[m
+              group  directories  before  files;  can be aug‐[m
+              mented with a [1m-[0m[1m[7m-s[27m[0m[1mort[0m option,  but  any  use  of[m
+              [1m-[0m[1m[7m-s[27m[0m[1mort[0m=[4mnone[24m ([1m-U[0m) disables grouping[m
+[m
+       [1m-G[0m, [1m--no-group[0m[m
+              in a long listing, don't print group names[m
+[m
+       [1m-h[0m, [1m--human-readable[0m[m
+              with  [1m-l[0m  and  [1m[7m-s[27m[0m,  print sizes like 1K 234M 2G[m
+              etc.[m
+[m
+       [1m-[0m[1m[7m-s[27m[0m[1mi[0m   likewise, but use powers of 1000 not 1024[m
+[m
+[7m Manual page ls(1) line 67 (press h for help or q to quit)[27m[K[K/[K       [1m-H[0m, [1m--dereference-command-line[0m[m
+              follow symbolic links  listed  on  the  command[m
+              line[m
+[m
+       [1m--dereference-command-line[0m[1m[7m-s[27m[0m[1mymlink-to-dir[0m[m
+              follow  each  command  line  symbolic link that[m
+[7m Manual page ls(1) line 73 (press h for help or q to quit)[27m[K[K/[K              points to a directory[m
+[7m Manual page ls(1) line 74 (press h for help or q to quit)[27m[K[K/[K[m
+       [1m--hide[0m=[4mPATTERN[24m[m
+              do not list implied entries matching shell PAT‐[m
+              TERN (overridden by [1m-a[0m or [1m-A[0m)[m
+[m
+       [1m--hyperlink[0m[=[4mWHEN[24m][m
+[7m Manual page ls(1) line 80 (press h for help or q to quit)[27m[K[K/[K              hyperlink file names WHEN[m
+[m
+       [1m--indicator[0m[1m[7m-s[27m[0m[1mtyle[0m=[4mWORD[24m[m
+[7mal page ls(1) line 83/274 36% (press h for help or q to quit)[27m[K[K/[K              append  indicator  with  style  WORD  to  entry[m
+              names: none (default),  slash  ([1m-p[0m),  file-type[m
+              ([1m--file-type[0m), classify 
