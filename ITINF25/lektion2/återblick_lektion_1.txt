@@ -1,0 +1,53 @@
+fil
+    namn -> inode -> information
+
+Arbetskatalog
+    "Stället där man står"
+    "Där du behinner dig just nu"
+    "Nuvarande arbetskatalog"
+    "Gå till till"
+    "cd ." (gå ingenstans)
+    "CWD" = "Current working directory"
+    Många kommandon använder nuvarande arbetskatalog om man inte anger en sökväg
+
+Sökvägar:
+    Absoluta har alltid / (slash) först
+    Relativa, är alla som inte absoluta
+    Båda kan alltid användas (i 99.999% av fallen, om det inte är något udda program)
+    Absolut funkar jämnt oavsett var man står
+    Relativ är kortare om du är i en föräldrakatalog till målet
+    Absolut är alltid kortare än relativ, om du måste punktpunkta dig upp till / (root).
+    . den katalog där man är
+    .. den ovanför (förutom om du är i root /, då är den som .)
+
+CRUD = Create Read Update Delete
+
+CRUD för en vanlig fil (ej katalog):
+
+    CREATE:
+        touch tomfil
+        nano textfil
+    READ:
+        cat textfil
+        less textfil
+        more textfil
+        nano textfil (akta dig för att skriva om du inte vill det)
+    UPDATE
+        nano textfil
+    DELETE
+        rm textfil
+
+# allt efter ett #-tecken, är en kommentar, raden ut
+
+CRUD för en vanlig katalog (ej fil):
+    CREATE
+        mkdir minkatalog
+    READ
+        ls minkatalog
+        ls # listar filerna i .
+    UPDATE
+        mv minkatalog/ katalogattplaceradenunder/
+        mv minkatalog/ nyttnamn/
+    DELETE
+        rm -r minkatalog/ # tar bort katalogen, oavsett om den är tom eller ej
+        rmdir mintommakatalog/ # använd denna om du antar att katalog är tom
