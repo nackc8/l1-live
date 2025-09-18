@@ -1469,4 +1469,56 @@ passwd: password updated successfully
 [7mManual page sudo(8) line 15 (press h for help or q to quit)[27m[K[K/[K     section for more information.[m
 [m
      The security policy determines what privileges, if[m
-     any, a user has to run [1msudo[0m.  The policy may require
+     any, a user has to run [1msudo[0m.  The policy may require[m
+     that users authenticate themselves with a password or[m
+     another authentication mechanism.  If authentication[m
+     is required, [1msudo[0m will exit if the user's password is[m
+     not entered within a configurable time limit.  This[m
+     limit is policy-specific; the default password prompt[m
+[7mManual page sudo(8) line 24 (press h for help or q to quit)[27m[K[K/[K...skipping...
+             meric group[7m-I[27mD (GID) prefixed with the ‘#’[m
+             character (e.g., ‘#0’ for GID 0).  When run‐[m
+             ning a [4mcommand[24m as a GID, many shells require[m
+             that the ‘#’ be escaped with a backslash[m
+             (‘\’).  If no [1m-u[0m option is specified, the[m
+             [4mcommand[24m will be run as the invoking user.  In[m
+             either case, the primary group will be set to[m
+             [4mgroup[24m.  The [4msudoers[24m policy permits any of the[m
+             target user's groups to be specified via the[m
+             [1m-g[0m option as long as the [1m-P[0m option is not in[m
+             use.[m
+[m
+     [1m-H[0m, [1m--set-home[0m[m
+             Request that the security policy set the HOME[m
+             environment variable to the home directory[m
+             specified by the target user's password data‐[m
+             base entry.  Depending on the policy, this may[m
+             be the default behavior.[m
+[7manual page sudo(8) line 201 (press h for help or q to quit)[27m[K[K/[K...skipping...
+     [1m[7m-i[27m[0m, [1m--login[0m[m
+             Run the shell specified by the target user's[m
+             password database entry as a login shell.[m
+             This means that login-specific resource files[m
+             such as [4m.profile[24m, [4m.bash_profile[24m, or [4m.login[24m[m
+             will be read by the shell.  If a [4mcommand[24m is[m
+             specified, it is passed to the shell as a sim‐[m
+             ple [4mcommand[24m using the [1m-c[0m option.  The [4mcommand[24m[m
+             and any [4marg[24ms are concatenated, separated by[m
+             spaces, after escaping each character[m
+             (including white space) with a backslash (‘\’)[m
+             except for alphanumerics, underscores, hy‐[m
+             phens, and dollar signs.  If no [4mcommand[24m is[m
+             specified, an interactive shell is executed.[m
+             [1msudo[0m attempts to change to that user's home[m
+             directory before running the shell.  The[m
+             [4mcommand[24m is run with an environment similar to[m
+             the one a user would receive at log in.  Most[m
+[7manual page sudo(8) line 233 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             shells behave differently when a [4mcommand[24m is[m
+[7manual page sudo(8) line 234 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             specified as compared to an interactive ses‐[m
+[7manual page sudo(8) line 235 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             sion; consult the shell's manual for details.[m
+[7manual page sudo(8) line 236 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             The [4mCommand[24m [4menvironment[24m section in the[m
+[7manual page sudo(8) line 237 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             sudoers(5) manual documents how the [1m[7m-i[27m[0m option[m
+[7manual page sudo(8) line 238 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             affects the environment in which a [4mcommand[24m is[m
+[7manual page sudo(8) line 239 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             run when the [4msudoers[24m policy is in use.[m
+[7manual page sudo(8) line 240 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[
