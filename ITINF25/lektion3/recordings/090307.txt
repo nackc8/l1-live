@@ -913,4 +913,560 @@ passwd: password updated successfully
 (B[m$ ls -a /home/green/
 [?2004l.  ..  .bash_logout  .bashrc  .face  .face.icon  .profile
 [?2004h[94mITINF25/lektion3
-(B[m$ ls -a /home/green/[C[C[C[C[C[9P/home/[C[C[5Pcd -[C[C
+(B[m$ ls -a /home/green/[C[C[C[C[C[9P/home/[C[C[5Pcd -[C[C[2Plscd /home/[C[Csudo passwd green[C[C[C[C[C[C[C[4@useradd -m[C[C[C[C[C[C  ^C[?2004l[?2004h[?2004l
+[?2004h[94mITINF25/lektion3
+(B[m$ ls -a /home/green/[C[C[C[C[C[9P/home/[C[C[5Pcd -[C[C[2Plscd /home/[C[Csudo passwd green[C[C[C[C[C[C[C[4@useradd -m[C[C[C[C[C[C[C[C[C[C[C[C[C[4Ppasswd[C[C[C[C[C[C  ^C[?2004l[?2004h[?2004l
+[?2004h[94mITINF25/lektion3
+(B[m$ sudo --[Ku green id[H[2J[94mITINF25/lektion3
+(B[m$ sudo -u green id
+[?2004luid=1001(green) gid=1001(green) groups=1001(green)
+[?2004h[94mITINF25/lektion3
+(B[m$ sudo -u green id[C[1P id[1P id[1P id[1P id[1P id[1Pid[1P id[1P id[1Pid
+[?2004luid=0(root) gid=0(root) groups=0(root),123(vboxusers)
+[?2004h[94mITINF25/lektion3
+(B[m$ id [K
+[?2004luid=1000(kent) gid=1000(kent) groups=1000(kent),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),100(users),104(kvm),106(netdev),112(bluetooth),114(lpadmin),117(scanner),123(vboxusers),127(libvirt),994(docker),64055(libvirt-qemu)
+[?2004h[94mITINF25/lektion3
+(B[m$ [H[2J[94mITINF25/lektion3
+(B[m$ man sudo
+[?2004l[?1049h[22;0;0t[?1h=SUDO(8)         BSD System Manager's Manual         SUDO(8)[m
+[m
+[1mNAME[0m[m
+     [1msudo[0m, [1msudoedit[0m — execute a command as another user[m
+[m
+[1mSYNOPSIS[0m[m
+     [1msudo[0m [1m-h[0m | [1m-K[0m | [1m-k[0m | [1m-V[0m[m
+     [1msudo[0m [1m-v[0m [[1m-ABkNnS[0m] [[1m-g[0m [4mgroup[24m] [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m][m
+          [[1m-u[0m [4muser[24m][m
+     [1msudo[0m [1m-l[0m [[1m-ABkNnS[0m] [[1m-g[0m [4mgroup[24m] [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m][m
+          [[1m-U[0m [4muser[24m] [[1m-u[0m [4muser[24m] [[4mcommand[24m [[4marg[24m [4m...[24m]][m
+     [1msudo[0m [[1m-ABbEHnPS[0m] [[1m-C[0m [4mnum[24m] [[1m-D[0m [4mdirectory[24m] [[1m-g[0m [4mgroup[24m][m
+          [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m] [[1m-R[0m [4mdirectory[24m] [[1m-r[0m [4mrole[24m][m
+          [[1m-t[0m [4mtype[24m] [[1m-T[0m [4mtimeout[24m] [[1m-u[0m [4muser[24m] [[4mVAR[24m=[4mvalue[24m][m
+          [[1m-i[0m | [1m-s[0m] [[4mcommand[24m [[4marg[24m [4m...[24m]][m
+     [1msudoedit[0m [[1m-ABkNnS[0m] [[1m-C[0m [4mnum[24m] [[1m-D[0m [4mdirectory[24m] [[1m-g[0m [4mgroup[24m][m
+          [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m] [[1m-R[0m [4mdirectory[24m] [[1m-r[0m [4mrole[24m][m
+          [[1m-t[0m [4mtype[24m] [[1m-T[0m [4mtimeout[24m] [[1m-u[0m [4muser[24m] [4mfile[24m [4m...[24m[m
+[7m Manual page sudo(8) line 1 (press h for help or q to quit)[27m[K[K/[K[7m Manual page sudo(8) line 1 (press h for help or q to quit)[27m[K[K[m
+[1mDESCRIPTION[0m[m
+     [1msudo[0m allows a permitted user to execute a [4mcommand[24m as[m
+     the superuser or another user, as specified by the se‐[m
+     curity policy.  The invoking user's real ([4mnot[24m[m
+     effective) user-ID is used to determine the user name[m
+     with which to query the security policy.[m
+[m
+     [1msudo[0m supports a plugin architecture for security poli‐[m
+     cies, auditing, and input/output logging.  Third par‐[m
+     ties can develop and distribute their own plugins to[m
+     work seamlessly with the [1msudo[0m front-end.  The default[m
+     security policy is [4msudoers[24m, which is configured via[m
+     the file [4m/etc/sudoers[24m, or via LDAP.  See the [4mPlugins[24m[m
+     section for more information.[m
+[m
+     The security policy determines what privileges, if[m
+     any, a user has to run [1msudo[0m.  The policy may require[m
+[7mManual page sudo(8) line 19 (press h for help or q to quit)[27m[K[K     that users authenticate themselves with a password or[m
+     another authentication mechanism.  If authentication[m
+     is required, [1msudo[0m will exit if the user's password is[m
+     not entered within a configurable time limit.  This[m
+     limit is policy-specific; the default password prompt[m
+     timeout for the [4msudoers[24m security policy is 0 minutes.[m
+[m
+     Security policies may support credential caching to[m
+     allow the user to run [1msudo[0m again for a period of time[m
+     without requiring authentication.  By default, the[m
+     [4msudoers[24m policy caches credentials on a per-terminal[m
+     basis for 15 minutes.  See the [4mtimestamp_type[24m and[m
+     [4mtimestamp_timeout[24m options in sudoers(5) for more in‐[m
+     formation.  By running [1msudo[0m with the [1m-v[0m option, a user[m
+     can update the cached credentials without running a[m
+     [4mcommand[24m.[m
+[m
+     On systems where [1msudo[0m is the primary method of gaining[m
+[7mManual page sudo(8) line 37 (press h for help or q to quit)[27m[K[K     superuser privileges, it is imperative to avoid syntax[m
+     errors in the security policy configuration files.[m
+     For the default security policy, sudoers(5), changes[m
+     to the configuration files should be made using the[m
+     visudo(8) utility which will ensure that no syntax er‐[m
+     rors are introduced.[m
+[m
+     When invoked as [1msudoedit[0m, the [1m-e[0m option (described be‐[m
+     low), is implied.[m
+[m
+     Security policies and audit plugins may log successful[m
+     and failed attempts to run [1msudo[0m.  If an I/O plugin is[m
+     configured, the running [4mcommand[24m's input and output may[m
+     be logged as well.[m
+[m
+     The options are as follows:[m
+[m
+     [1m-A[0m, [1m--askpass[0m[m
+[7mManual page sudo(8) line 55 (press h for help or q to quit)[27m[K[K             Normally, if [1msudo[0m requires a password, it will[m
+             read it from the user's terminal.  If the [1m-A[0m[m
+             ([4maskpass[24m) option is specified, a (possibly[m
+             graphical) helper program is executed to read[m
+             the user's password and output the password to[m
+             the standard output.  If the SUDO_ASKPASS en‐[m
+             vironment variable is set, it specifies the[m
+             path to the helper program.  Otherwise, if[m
+             sudo.conf(5) contains a line specifying the[m
+             askpass program, that value will be used.  For[m
+             example:[m
+[m
+                 # Path to askpass helper program[m
+                 Path askpass /usr/X11R6/bin/ssh-askpass[m
+[m
+             If no askpass program is available, [1msudo[0m will[m
+             exit with an error.[m
+[m
+[7mManual page sudo(8) line 73 (press h for help or q to quit)[27m[K[K/[Kii[Knn[Ktt[Kee[Krr[Kaa[Kcc[Ktt[Kii[Kvv[Kee[K[1;1H             Normally, if [1msudo[0m requires a password, it will[m
+[2;1H             read it from the user's terminal.  If the [1m-A[0m[m
+[3;1H             ([4maskpass[24m) option is specified, a (possibly[m
+[4;1H             graphical) helper program is executed to read[m
+[5;1H             the user's password and output the password to[m
+[6;1H             the standard output.  If the SUDO_ASKPASS en‐[m
+[7;1H             vironment variable is set, it specifies the[m
+[8;1H             path to the helper program.  Otherwise, if[m
+[9;1H             sudo.conf(5) contains a line specifying the[m
+[10;1H             askpass program, that value will be used.  For[m
+[11;1H             example:[m
+[12;1H[m
+[13;1H                 # Path to askpass helper program[m
+[14;1H                 Path askpass /usr/X11R6/bin/ssh-askpass[m
+[15;1H[m
+[16;1H             If no askpass program is available, [1msudo[0m will[m
+[17;1H             exit with an error.[m
+[18;1H[m
+[19;1H[1;1H             Normally, if [1msudo[0m requires a password, it will[m
+[2;1H             read it from the user's terminal.  If the [1m-A[0m[m
+[3;1H             ([4maskpass[24m) option is specified, a (possibly[m
+[4;1H             graphical) helper program is executed to read[m
+[5;1H             the user's password and output the password to[m
+[6;1H             the standard output.  If the SUDO_ASKPASS en‐[m
+[7;1H             vironment variable is set, it specifies the[m
+[8;1H             path to the helper program.  Otherwise, if[m
+[9;1H             sudo.conf(5) contains a line specifying the[m
+[10;1H             askpass program, that value will be used.  For[m
+[11;1H             example:[m
+[12;1H[m
+[13;1H                 # Path to askpass helper program[m
+[14;1H                 Path askpass /usr/X11R6/bin/ssh-askpass[m
+[15;1H[m
+[16;1H             If no askpass program is available, [1msudo[0m will[m
+[17;1H             exit with an error.[m
+[18;1H[m
+[19;1H...skipping...
+             [1msudo[0m.  Most [7minteractive[27m [4mcommand[24ms will fail to[m
+             work properly in background mode.[m
+[m
+     [1m-C[0m [4mnum[24m, [1m--close-from[0m=[4mnum[24m[m
+             Close all file descriptors greater than or[m
+             equal to [4mnum[24m before executing a [4mcommand[24m.  Val‐[m
+             ues less than three are not permitted.  By de‐[m
+             fault, [1msudo[0m will close all open file descrip‐[m
+             tors other than standard input, standard out‐[m
+             put, and standard error when executing a[m
+             [4mcommand[24m.  The security policy may restrict the[m
+             user's ability to use this option.  The[m
+             [4msudoers[24m policy only permits use of the [1m-C[0m op‐[m
+             tion when the administrator has enabled the[m
+             [4mclosefrom_override[24m option.[m
+[m
+     [1m-D[0m [4mdirectory[24m, [1m--chdir[0m=[4mdirectory[24m[m
+             Run the [4mcommand[24m in the specified [4mdirectory[24m in‐[m
+[7manual page sudo(8) line 100 (press h for help or q to quit)[27m[K[K/[K...skipping...
+             specified, an [7minteractive[27m shell is executed.[m
+             [1msudo[0m attempts to change to that user's home[m
+             directory before running the shell.  The[m
+             [4mcommand[24m is run with an environment similar to[m
+             the one a user would receive at log in.  Most[m
+             shells behave differently when a [4mcommand[24m is[m
+             specified as compared to an [7minteractive[27m ses‐[m
+             sion; consult the shell's manual for details.[m
+             The [4mCommand[24m [4menvironment[24m section in the[m
+             sudoers(5) manual documents how the [1m-i[0m option[m
+             affects the environment in which a [4mcommand[24m is[m
+             run when the [4msudoers[24m policy is in use.[m
+[m
+     [1m-K[0m, [1m--remove-timestamp[0m[m
+             Similar to the [1m-k[0m option, except that it re‐[m
+             moves every cached credential for the user,[m
+             regardless of the terminal or parent process[m
+             ID.  The next time [1msudo[0m is run, a password[m
+[7manual page sudo(8) line 246 (press h for help or q to quit)[27m[K[K/[K             must be entered if the security policy re‐[m
+             quires authentication.  It is not possible to[m
+             use the [1m-K[0m option in conjunction with a[m
+             [4mcommand[24m or other option.  This option does not[m
+             require a password.  Not all security policies[m
+             support credential caching.[m
+[7manual page sudo(8) line 252 (press h for help or q to quit)[27m[K[K/[K...skipping...
+     [1m-n[0m, [1m--non-[0m[1m[7minteractive[27m[0m[m
+             Avoid prompting the user for input of any[m
+             kind.  If a password is required for the[m
+             [4mcommand[24m to run, [1msudo[0m will display an error[m
+             message and exit.[m
+[m
+     [1m-P[0m, [1m--preserve-groups[0m[m
+             Preserve the invoking user's group vector un‐[m
+             altered.  By default, the [4msudoers[24m policy will[m
+             initialize the group vector to the list of[m
+             groups the target user is a member of.  The[m
+             real and effective group-IDs, however, are[m
+             still set to match the target user.[m
+[m
+     [1m-p[0m [4mprompt[24m, [1m--prompt[0m=[4mprompt[24m[m
+             Use a custom password prompt with optional es‐[m
+             cape sequences.  The following percent (‘%’)[m
+             escape sequences are supported by the [4msudoers[24m[m
+[7manual page sudo(8) line 327 (press h for help or q to quit)[27m[K[K/[K...skipping...
+             If no [4mcommand[24m is specified, an [7minteractive[27m[m
+             shell is executed.  Most shells behave differ‐[m
+             ently when a [4mcommand[24m is specified as compared[m
+             to an [7minteractive[27m session; consult the shell's[m
+             manual for details.[m
+[m
+     [1m-t[0m [4mtype[24m, [1m--type[0m=[4mtype[24m[m
+             Run the [4mcommand[24m with an SELinux security con‐[m
+             text that includes the specified [4mtype[24m.  If no[m
+             [4mtype[24m is specified, the default type is derived[m
+             from the role.[m
+[m
+     [1m-U[0m [4muser[24m, [1m--other-user[0m=[4muser[24m[m
+             Used in conjunction with the [1m-l[0m option to list[m
+             the privileges for [4muser[24m instead of for the in‐[m
+             voking user.  The security policy may restrict[m
+             listing other users' privileges.  When using[m
+             the [4msudoers[24m policy, the [1m-U[0m option is re‐[m
+[7manual page sudo(8) line 404 (press h for help or q to quit)[27m[K[K/[K             stricted to the root user and users with ei‐[m
+             ther the “list” priviege for the specified[m
+             [4muser[24m or the ability to run any [4mcommand[24m as root[m
+[7manual page sudo(8) line 407 (press h for help or q to quit)[27m[K[K/[K[K[7mPattern not found  (press RETURN)[27m[19;1H[K[K/[K[K[7mPattern not found  (press RETURN)[27m[19;1H[K[K [KESCESC[KOO[KAA[K[HM             ently when a [4mcommand[24m is specified as compared[m
+[19;1H[K[7mge sudo(8) line 406/975 46% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             shell is executed.  Most shells behave differ‐[m
+[19;1H[K[7mge sudo(8) line 405/975 46% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             If no [4mcommand[24m is specified, an [7minteractive[27m[m
+[19;1H[K[7mge sudo(8) line 404/975 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             ics, underscores, hyphens, and dollar signs.[m
+[19;1H[K[7mge sudo(8) line 403/975 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             with a backslash (‘\’) except for alphanumer‐[m
+[19;1H[K[7mge sudo(8) line 402/975 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             caping each character (including white space)[m
+[19;1H[K[7mge sudo(8) line 401/975 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             concatenated, separated by spaces, after es‐[m
+[19;1H[K[7mge sudo(8) line 400/975 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             the [1m-c[0m option.  The [4mcommand[24m and any [4marg[24ms are[m
+[19;1H[K[7mge sudo(8) line 399/975 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             passed to the shell as a simple command using[m
+[19;1H[K[7mge sudo(8) line 398/975 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             entry.  If a [4mcommand[24m is specified, it is[m
+[19;1H[K[7mge sudo(8) line 397/975 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             fied by the invoking user's password database[m
+[19;1H[K[7mge sudo(8) line 396/975 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             ment variable if it is set or the shell speci‐[m
+[19;1H[K[7mge sudo(8) line 395/975 44% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             Run the shell specified by the SHELL environ‐[m
+[19;1H[K[7mge sudo(8) line 394/975 44% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM     [1m-s[0m, [1m--shell[0m[m
+[19;1H[K[7mge sudo(8) line 393/975 44% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[19;1H[K[7mge sudo(8) line 392/975 44% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             stead of using the terminal device.[m
+[19;1H[K[7mge sudo(8) line 391/975 44% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             read the password from the standard input in‐[m
+[19;1H[K[7mge sudo(8) line 390/975 44% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             Write the prompt to the standard error and[m
+[19;1H[K[7mge sudo(8) line 389/975 44% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM     [1m-S[0m, [1m--stdin[0m[m
+[19;1H[K[7mge sudo(8) line 388/975 44% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[19;1H[K[7mge sudo(8) line 387/975 44% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             text that includes the specified [4mrole[24m.[m
+[19;1H[K[7mge sudo(8) line 386/975 43% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             Run the [4mcommand[24m with an SELinux security con‐[m
+[19;1H[K[7mge sudo(8) line 385/975 43% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM     [1m-r[0m [4mrole[24m, [1m--role[0m=[4mrole[24m[m
+[19;1H[K[7mge sudo(8) line 384/975 43% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[19;1H[K[7mge sudo(8) line 383/975 43% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             root directory.[m
+[19;1H[K[7mge sudo(8) line 382/975 43% (press h for help or q to quit)[27m[K[K[H[2J[HM          [[1m-t[0m [4mtype[24m] [[1m-T[0m [4mtimeout[24m] [[1m-u[0m [4muser[24m] [4mfile[24m [4m...[24m[m
+[HM          [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m] [[1m-R[0m [4mdirectory[24m] [[1m-r[0m [4mrole[24m][m
+[HM     [1msudoedit[0m [[1m-ABkNnS[0m] [[1m-C[0m [4mnum[24m] [[1m-D[0m [4mdirectory[24m] [[1m-g[0m [4mgroup[24m][m
+[HM          [[1m-i[0m | [1m-s[0m] [[4mcommand[24m [[4marg[24m [4m...[24m]][m
+[HM          [[1m-t[0m [4mtype[24m] [[1m-T[0m [4mtimeout[24m] [[1m-u[0m [4muser[24m] [[4mVAR[24m=[4mvalue[24m][m
+[HM          [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m] [[1m-R[0m [4mdirectory[24m] [[1m-r[0m [4mrole[24m][m
+[HM     [1msudo[0m [[1m-ABbEHnPS[0m] [[1m-C[0m [4mnum[24m] [[1m-D[0m [4mdirectory[24m] [[1m-g[0m [4mgroup[24m][m
+[HM          [[1m-U[0m [4muser[24m] [[1m-u[0m [4muser[24m] [[4mcommand[24m [[4marg[24m [4m...[24m]][m
+[HM     [1msudo[0m [1m-l[0m [[1m-ABkNnS[0m] [[1m-g[0m [4mgroup[24m] [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m][m
+[HM          [[1m-u[0m [4muser[24m][m
+[HM     [1msudo[0m [1m-v[0m [[1m-ABkNnS[0m] [[1m-g[0m [4mgroup[24m] [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m][m
+[HM     [1msudo[0m [1m-h[0m | [1m-K[0m | [1m-k[0m | [1m-V[0m[m
+[HM[1mSYNOPSIS[0m[m
+[HM[m
+[HM     [1msudo[0m, [1msudoedit[0m — execute a command as another user[m
+[HM[1mNAME[0m[m
+[HM[m
+[HMSUDO(8)         BSD System Manager's Manual         SUDO(8)[m
+[19;1H[K[7m page sudo(8) line 1/975 3% (press h for help or q to quit)[27m[K[K/[Kii[Knn[Ktt[Kee[Krr[Kaa[Kcc[Ktt[Kii[Kvv[Kee[K[1;1HSUDO(8)         BSD System Manager's Manual         SUDO(8)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H     [1msudo[0m, [1msudoedit[0m — execute a command as another user[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H     [1msudo[0m [1m-h[0m | [1m-K[0m | [1m-k[0m | [1m-V[0m[m
+[8;1H     [1msudo[0m [1m-v[0m [[1m-ABkNnS[0m] [[1m-g[0m [4mgroup[24m] [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m][m
+[9;1H          [[1m-u[0m [4muser[24m][m
+[10;1H     [1msudo[0m [1m-l[0m [[1m-ABkNnS[0m] [[1m-g[0m [4mgroup[24m] [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m][m
+[11;1H          [[1m-U[0m [4muser[24m] [[1m-u[0m [4muser[24m] [[4mcommand[24m [[4marg[24m [4m...[24m]][m
+[12;1H     [1msudo[0m [[1m-ABbEHnPS[0m] [[1m-C[0m [4mnum[24m] [[1m-D[0m [4mdirectory[24m] [[1m-g[0m [4mgroup[24m][m
+[13;1H          [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m] [[1m-R[0m [4mdirectory[24m] [[1m-r[0m [4mrole[24m][m
+[14;1H          [[1m-t[0m [4mtype[24m] [[1m-T[0m [4mtimeout[24m] [[1m-u[0m [4muser[24m] [[4mVAR[24m=[4mvalue[24m][m
+[15;1H          [[1m-i[0m | [1m-s[0m] [[4mcommand[24m [[4marg[24m [4m...[24m]][m
+[16;1H     [1msudoedit[0m [[1m-ABkNnS[0m] [[1m-C[0m [4mnum[24m] [[1m-D[0m [4mdirectory[24m] [[1m-g[0m [4mgroup[24m][m
+[17;1H          [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m] [[1m-R[0m [4mdirectory[24m] [[1m-r[0m [4mrole[24m][m
+[18;1H          [[1m-t[0m [4mtype[24m] [[1m-T[0m [4mtimeout[24m] [[1m-u[0m [4muser[24m] [4mfile[24m [4m...[24m[m
+[19;1H[1;1HSUDO(8)         BSD System Manager's Manual         SUDO(8)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H     [1msudo[0m, [1msudoedit[0m — execute a command as another user[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H     [1msudo[0m [1m-h[0m | [1m-K[0m | [1m-k[0m | [1m-V[0m[m
+[8;1H     [1msudo[0m [1m-v[0m [[1m-ABkNnS[0m] [[1m-g[0m [4mgroup[24m] [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m][m
+[9;1H          [[1m-u[0m [4muser[24m][m
+[10;1H     [1msudo[0m [1m-l[0m [[1m-ABkNnS[0m] [[1m-g[0m [4mgroup[24m] [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m][m
+[11;1H          [[1m-U[0m [4muser[24m] [[1m-u[0m [4muser[24m] [[4mcommand[24m [[4marg[24m [4m...[24m]][m
+[12;1H     [1msudo[0m [[1m-ABbEHnPS[0m] [[1m-C[0m [4mnum[24m] [[1m-D[0m [4mdirectory[24m] [[1m-g[0m [4mgroup[24m][m
+[13;1H          [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m] [[1m-R[0m [4mdirectory[24m] [[1m-r[0m [4mrole[24m][m
+[14;1H          [[1m-t[0m [4mtype[24m] [[1m-T[0m [4mtimeout[24m] [[1m-u[0m [4muser[24m] [[4mVAR[24m=[4mvalue[24m][m
+[15;1H          [[1m-i[0m | [1m-s[0m] [[4mcommand[24m [[4marg[24m [4m...[24m]][m
+[16;1H     [1msudoedit[0m [[1m-ABkNnS[0m] [[1m-C[0m [4mnum[24m] [[1m-D[0m [4mdirectory[24m] [[1m-g[0m [4mgroup[24m][m
+[17;1H          [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m] [[1m-R[0m [4mdirectory[24m] [[1m-r[0m [4mrole[24m][m
+[18;1H          [[1m-t[0m [4mtype[24m] [[1m-T[0m [4mtimeout[24m] [[1m-u[0m [4muser[24m] [4mfile[24m [4m...[24m[m
+[19;1H...skipping...
+             [1msudo[0m.  Most [7minteractive[27m [4mcommand[24ms will fail to[m
+             work properly in background mode.[m
+[m
+     [1m-C[0m [4mnum[24m, [1m--close-from[0m=[4mnum[24m[m
+             Close all file descriptors greater than or[m
+             equal to [4mnum[24m before executing a [4mcommand[24m.  Val‐[m
+             ues less than three are not permitted.  By de‐[m
+             fault, [1msudo[0m will close all open file descrip‐[m
+             tors other than standard input, standard out‐[m
+             put, and standard error when executing a[m
+             [4mcommand[24m.  The security policy may restrict the[m
+             user's ability to use this option.  The[m
+             [4msudoers[24m policy only permits use of the [1m-C[0m op‐[m
+             tion when the administrator has enabled the[m
+             [4mclosefrom_override[24m option.[m
+[m
+     [1m-D[0m [4mdirectory[24m, [1m--chdir[0m=[4mdirectory[24m[m
+             Run the [4mcommand[24m in the specified [4mdirectory[24m in‐[m
+[7mge sudo(8) line 100/975 13% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             manipulate background processes started by[m
+[19;1H[K[7mage sudo(8) line 99/975 13% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             is not possible to use shell job control to[m
+[19;1H[K[7mage sudo(8) line 98/975 13% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             Run the given [4mcommand[24m in the background.  It[m
+[19;1H[K[7mage sudo(8) line 97/975 13% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM     [1m-b[0m, [1m--background[0m[m
+[19;1H[K[7mage sudo(8) line 96/975 13% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[19;1H[K[7mage sudo(8) line 95/975 13% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             no effect if an askpass program is used.[m
+[19;1H[K[7mage sudo(8) line 94/975 13% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             when a terminal is present.  This option has[m
+[19;1H[K[7mage sudo(8) line 93/975 12% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             Ring the bell as part of the password prompt[m
+[19;1H[K[7mage sudo(8) line 92/975 12% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM     [1m-B[0m, [1m--bell[0m[m
+[19;1H[K[7mage sudo(8) line 91/975 12% (press h for help or q to quit)[27m[K[K/[K             put, and standard error when executing a[m
+             [4mcommand[24m.  The security policy may restrict the[m
+             user's ability to use this option.  The[m
+             [4msudoers[24m policy only permits use of the [1m-C[0m op‐[m
+             tion when the administrator has enabled the[m
+             [4mclosefrom_override[24m option.[m
+[m
+     [1m-D[0m [4mdirectory[24m, [1m--chdir[0m=[4mdirectory[24m[m
+             Run the [4mcommand[24m in the specified [4mdirectory[24m in‐[m
+[7mge sudo(8) line 100/975 13% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             manipulate background processes started by[m
+[19;1H[K[7mage sudo(8) line 99/975 13% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             is not possible to use shell job control to[m
+[19;1H[K[7mage sudo(8) line 98/975 13% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             Run the given [4mcommand[24m in the background.  It[m
+[19;1H[K[7mage sudo(8) line 97/975 13% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM     [1m-b[0m, [1m--background[0m[m
+[19;1H[K[7mage sudo(8) line 96/975 13% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[19;1H[K[7mage sudo(8) line 95/975 13% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             no effect if an askpass program is used.[m
+[19;1H[K[7mage sudo(8) line 94/975 13% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             [4msudoers[24m policy only permits use of the [1m-C[0m op‐[m
+[7mage sudo(8) line 95/975 13% (press h for help or q to quit)[27m[K[K/[K             tion when the administrator has enabled the[m
+             [4mclosefrom_override[24m option.[m
+[m
+     [1m-D[0m [4mdirectory[24m, [1m--chdir[0m=[4mdirectory[24m[m
+             Run the [4mcommand[24m in the specified [4mdirectory[24m in‐[m
+[7mge sudo(8) line 100/975 13% (press h for help or q to quit)[27m[K[K/[K...skipping...
+             specified, an [7minteractive[27m shell is executed.[m
+             [1msudo[0m attempts to change to that user's home[m
+             directory before running the shell.  The[m
+             [4mcommand[24m is run with an environment similar to[m
+             the one a user would receive at log in.  Most[m
+             shells behave differently when a [4mcommand[24m is[m
+             specified as compared to an [7minteractive[27m ses‐[m
+             sion; consult the shell's manual for details.[m
+             The [4mCommand[24m [4menvironment[24m section in the[m
+             sudoers(5) manual documents how the [1m-i[0m option[m
+             affects the environment in which a [4mcommand[24m is[m
+             run when the [4msudoers[24m policy is in use.[m
+[m
+     [1m-K[0m, [1m--remove-timestamp[0m[m
+             Similar to the [1m-k[0m option, except that it re‐[m
+             moves every cached credential for the user,[m
+             regardless of the terminal or parent process[m
+             ID.  The next time [1msudo[0m is run, a password[m
+[7mge sudo(8) line 246/975 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             phens, and dollar signs.  If no [4mcommand[24m is[m
+[19;1H[K[7mge sudo(8) line 245/975 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             except for alphanumerics, underscores, hy‐[m
+[19;1H[K[7mge sudo(8) line 244/975 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             (including white space) with a backslash (‘\’)[m
+[19;1H[K[7mge sudo(8) line 243/975 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             spaces, after escaping each character[m
+[19;1H[K[7mge sudo(8) line 242/975 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             and any [4marg[24ms are concatenated, separated by[m
+[19;1H[K[7mge sudo(8) line 241/975 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             ple [4mcommand[24m using the [1m-c[0m option.  The [4mcommand[24m[m
+[19;1H[K[7mge sudo(8) line 240/975 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             specified, it is passed to the shell as a sim‐[m
+[19;1H[K[7mge sudo(8) line 239/975 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             will be read by the shell.  If a [4mcommand[24m is[m
+[19;1H[K[7mge sudo(8) line 238/975 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             such as [4m.profile[24m, [4m.bash_profile[24m, or [4m.login[24m[m
+[19;1H[K[7mge sudo(8) line 237/975 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             This means that login-specific resource files[m
+[19;1H[K[7mge sudo(8) line 236/975 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             password database entry as a login shell.[m
+[19;1H[K[7mge sudo(8) line 235/975 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             Run the shell specified by the target user's[m
+[19;1H[K[7mge sudo(8) line 234/975 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM     [1m-i[0m, [1m--login[0m[m
+[19;1H[K[7mge sudo(8) line 233/975 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[19;1H[K[7mge sudo(8) line 232/975 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             mote host.[m
+[19;1H[K[7mge sudo(8) line 231/975 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             option to list a user's privileges for the re‐[m
+[19;1H[K[7mge sudo(8) line 230/975 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             may also be used in conjunction with the [1m-l[0m[m
+[19;1H[K[7mge sudo(8) line 229/975 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             rently support running remote [4mcommand[24ms. This[m
+[19;1H[K[7mge sudo(8) line 228/975 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             [4mcommand[24ms. The [4msudoers[24m plugin does not cur‐[m
+[19;1H[K[7mge sudo(8) line 227/975 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             security policy plugin supports remote[m
+[19;1H[K[7mge sudo(8) line 226/975 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             Run the [4mcommand[24m on the specified [4mhost[24m if the[m
+[19;1H[K[7mge sudo(8) line 225/975 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             (including white space) with a backslash (‘\’)[m
+[7mge sudo(8) line 226/975 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             except for alphanumerics, underscores, hy‐[m
+[7mge sudo(8) line 227/975 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             phens, and dollar signs.  If no [4mcommand[24m is[m
+[7mge sudo(8) line 228/975 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             specified, an [7minteractive[27m shell is executed.[m
+[7mge sudo(8) line 229/975 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             [1msudo[0m attempts to change to that user's home[m
+[7mge sudo(8) line 230/975 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             directory before running the shell.  The[m
+[7mge sudo(8) line 231/975 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             [4mcommand[24m is run with an environment similar to[m
+[7mge sudo(8) line 232/975 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             the one a user would receive at log in.  Most[m
+[7mge sudo(8) line 233/975 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             shells behave differently when a [4mcommand[24m is[m
+[7mge sudo(8) line 234/975 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             specified as compared to an [7minteractive[27m ses‐[m
+[7mge sudo(8) line 235/975 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             sion; consult the shell's manual for details.[m
+[7mge sudo(8) line 236/975 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             The [4mCommand[24m [4menvironment[24m section in the[m
+[7mge sudo(8) line 237/975 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             sudoers(5) manual documents how the [1m-i[0m option[m
+[7mge sudo(8) line 238/975 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             affects the environment in which a [4mcommand[24m is[m
+[7mge sudo(8) line 239/975 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             run when the [4msudoers[24m policy is in use.[m
+[7mge sudo(8) line 240/975 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mge sudo(8) line 241/975 28% (press h for help or q to quit)[27m[K[K/[K     [1m-K[0m, [1m--remove-timestamp[0m[m
+             Similar to the [1m-k[0m option, except that it re‐[m
+             moves every cached credential for the user,[m
+             regardless of the terminal or parent process[m
+             ID.  The next time [1msudo[0m is run, a password[m
+[7mge sudo(8) line 246/975 29% (press h for help or q to quit)[27m[K[K/[K             must be entered if the security policy re‐[m
+             quires authentication.  It is not possible to[m
+             use the [1m-K[0m option in conjunction with a[m
+             [4mcommand[24m or other option.  This option does not[m
+             require a password.  Not all security policies[m
+             support credential caching.[m
+[7mge sudo(8) line 252/975 30% (press h for help or q to quit)[27m[K[K/[K...skipping...
+     [1m-n[0m, [1m--non-[0m[1m[7minteractive[27m[0m[m
+             Avoid prompting the user for input of any[m
+             kind.  If a password is required for the[m
+             [4mcommand[24m to run, [1msudo[0m will display an error[m
+             message and exit.[m
+[m
+     [1m-P[0m, [1m--preserve-groups[0m[m
+             Preserve the invoking user's group vector un‐[m
+             altered.  By default, the [4msudoers[24m policy will[m
+             initialize the group vector to the list of[m
+             groups the target user is a member of.  The[m
+             real and effective group-IDs, however, are[m
+             still set to match the target user.[m
+[m
+     [1m-p[0m [4mprompt[24m, [1m--prompt[0m=[4mprompt[24m[m
+             Use a custom password prompt with optional es‐[m
+             cape sequences.  The following percent (‘%’)[m
+             escape sequences are supported by the [4msudoers[24m[m
+[7mge sudo(8) line 327/975 38% (press h for help or q to quit)[27m[K[K/[K...skipping...
+             If no [4mcommand[24m is specified, an [7minteractive[27m[m
+             shell is executed.  Most shells behave differ‐[m
+             ently when a [4mcommand[24m is specified as compared[m
+             to an [7minteractive[27m session; consult the shell's[m
+             manual for details.[m
+[m
+     [1m-t[0m [4mtype[24m, [1m--type[0m=[4mtype[24m[m
+             Run the [4mcommand[24m with an SELinux security con‐[m
+             text that includes the specified [4mtype[24m.  If no[m
+             [4mtype[24m is specified, the default type is derived[m
+             from the role.[m
+[m
+     [1m-U[0m [4muser[24m, [1m--other-user[0m=[4muser[24m[m
+             Used in conjunction with the [1m-l[0m option to list[m
+             the privileges for [4muser[24m instead of for the in‐[m
+             voking user.  The security policy may restrict[m
+             listing other users' privileges.  When using[m
+             the [4msudoers[24m policy, the [1m-U[0m option is re‐[m
+[7mge sudo(8) line 404/975 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             ics, underscores, hyphens, and dollar signs.[m
+[19;1H[K[7mge sudo(8) line 403/975 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             with a backslash (‘\’) except for alphanumer‐[m
+[19;1H[K[7mge sudo(8) line 402/975 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             caping each character (including white space)[m
+[19;1H[K[7mge sudo(8) line 401/975 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             concatenated, separated by spaces, after es‐[m
+[19;1H[K[7mge sudo(8) line 400/975 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             the [1m-c[0m option.  The [4mcommand[24m and any [4marg[24ms are[m
+[19;1H[K[7mge sudo(8) line 399/975 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             passed to the shell as a simple command using[m
+[19;1H[K[7mge sudo(8) line 398/975 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             entry.  If a [4mcommand[24m is specified, it is[m
+[19;1H[K[7mge sudo(8) line 397/975 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             fied by the invoking user's password database[m
+[19;1H[K[7mge sudo(8) line 396/975 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             ment variable if it is set or the shell speci‐[m
+[19;1H[K[7mge sudo(8) line 395/975 44% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             Run the shell specified by the SHELL environ‐[m
+[19;1H[K[7mge sudo(8) line 394/975 44% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             text that includes the specified [4mtype[24m.  If no[m
+[7mge sudo(8) line 395/975 44% (press h for help or q to quit)[27m[K[K/[K             [4mtype[24m is specified, the default type is derived[m
+             from the role.[m
+[m
+     [1m-U[0m [4muser[24m, [1m--other-user[0m=[4muser[24m[m
+             Used in conjunction with the [1m-l[0m option to list[m
+             the privileges for [4muser[24m instead of for the in‐[m
+             voking user.  The security policy may restrict[m
+             listing other users' privileges.  When using[m
+             the [4msudoers[24m policy, the [1m-U[0m option is re‐[m
+[7mge sudo(8) line 404/975 45% (press h for help or q to quit)[27m[K[K/[K             stricted to the root user and users with ei‐[m
+             ther the “list” priviege for the specified[m
+             [4muser[24m or the ability to run any [4mcommand[24m as root[m
+[7mge sudo(8) line 407/975 46% (press h for help or q to quit)[27m[K[K/[K[K[7mPattern not found  (press RETURN)[27m[19;1H[K[K/[K[K[7mPattern not found  (press RETURN)[27m[19;1H[K[K[?1l>[?1049l[23;0;0t[?2004h[94mITINF25/lektion3
+(B[m$ man sudo
+[?2004l[?1049h[22;0;0t[?1h=SUDO(8)         BSD System Manager's Manual         SUDO(8)[m
+[m
+[1mNAME[0m[m
+     [1msudo[0m, [1msudoedit[0m — execute a command as another user[m
+[m
+[1mSYNOPSIS[0m[m
+     [1msudo[0m [1m-h[0m | [1m-K[0m | [1m-k[0m | [1m-V[0m[m
+     [1msudo[0m [1m-v[0m [[1m-ABkNnS[0m] [[1m-g[0m [4mgroup[24m] [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m][m
+          [[1m-u[0m [4muser[24m][m
+     [1msudo[0m [1m-l[0m [[1m-ABkNnS[0m] [[1m-g[0m [4mgroup[24m] [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m][m
+          [[1m-U[0m [4muser[24m] [[1m-u[0m [4muser[24m] [[4mcommand[24m [[4marg[24m [4m...[24m]][m
+     [1msudo[0m [[1m-ABbEHnPS[0m] [[1m-C[0m [4mnum[24m] [[1m-D[0m [4mdirectory[24m] [[1m-g[0m [4mgroup[24m][m
+          [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m] [[1m-R[0m [4mdirectory[24m] [[1m-r[0m [4mrole[24m][m
+          [[1m-t[0m [4mtype[24m] [[1m-T[0m [4mtimeout[24m] [[1m-u[0m [4muser[24m] [[4mVAR[24m=[4mvalue[24m][m
+          [[1m-i[0m | [1m-s[0m] [[4mcommand[24m [[4marg[24m [4m...[24m]][m
+     [1msudoedit[0m [[1m-ABkNnS[0m] [[1m-C[0m [4mnum[24m] [[1m-D[0m [4mdirectory[24m] [[1m-g[0m [4mgroup[24m][m
+          [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m] [[1m-R[0m [4mdirectory[24m] [[1m-r[0m [4mrole[24m][m
+          [[1m-t[0m [4mtype[24m] [[1m-T[0m [4mtimeout[24m] [[1m-u[0m [4muser[24m] [4mfile[24m [4m...[24m[m
+[7m Manual page sudo(8) line 1 (press h for help or q to quit)[27m[K[K/[K--[Kii[K[1;1HSUDO(8)         BSD System Manager's Manual         SUDO(8)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H     [1msudo[0m, [1msudoedit[0m — execute a command as another user[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H     [1msudo[0m [1m-h[0m | [1m-K[0m | [1m-k[0m | [1m-V[0m[m
+[8;1H     [1msudo[0m [1m-v[0m [[1m-ABkNnS[0m] [[1m-g[0m [4mgroup[24m] [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m][m
+[9;1H          [[1m-u[0m [4muser[24m][m
+[10;1H     [1msudo[0m [1m-l[0m [[1m-ABkNnS[0m] [[1m-g[0m [4mgroup[24m] [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m][m
+[11;1H          [[1m-U[0m [4muser[24m] [[1m-u[0m [4muser[24m] [[4mcommand[24m [[4marg[24m [4m...[24m]][m
+[12;1H     [1msudo[0m [[1m-ABbEHnPS[0m] [[1m-C[0m [4mnum[24m] [[1m-D[0m [4mdirectory[24m] [[1m-g[0m [4mgroup[24m][m
+[13;1H          [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m] [[1m-R[0m [4mdirectory[24m] [[1m-r[0m [4mrole[24m][m
+[14;1H          [[1m-t[0m [4mtype[24m] [[1m-T[0m [4mtimeout[24m] [[1m-u[0m [4muser[24m] [[4mVAR[24m=[4mvalue[24m][m
+[15;1H          [[1m-i[0m | [1m-s[0m] [[4mcommand[24m [[4marg[24m [4m...[24m]][m
+[16;1H     [1msudoedit[0m [[1m-ABkNnS[0m] [[1m-C[0m [4mnum[24m] [[1m-D[0m [4mdirectory[24m] [[1m-g[0m [4mgroup[24m][m
+[17;1H          [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m] [[1m-R[0m [4mdirectory[24m] [[1m-r[0m [4mrole[24m][m
+[18;1H          [[1m-t[0m [4mtype[24m] [[1m-T[0m [4mtimeout[24m] [[1m-u[0m [4muser[24m] [4mfile[24m [4m...[24m[m
+[19;1H[1;1HSUDO(8)         BSD System Manager's Manual         SUDO(8)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H     [1msudo[0m, [1msudoedit[0m — execute a command as another user[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H     [1msudo[0m [1m-h[0m | [1m-K[0m | [1m-k[0m | [1m-V[0m[m
+[8;1H     [1msudo[0m [1m-v[0m [[1m-ABkNnS[0m] [[1m-g[0m [4mgroup[24m] [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m][m
+[9;1H          [[1m-u[0m [4muser[24m][m
+[10;1H     [1msudo[0m [1m-l[0m [[1m-ABkNnS[0m] [[1m-g[0m [4mgroup[24m] [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m][m
+[11;1H          [[1m-U[0m [4muser[24m] [[1m-u[0m [4muser[24m] [[4mcommand[24m [[4marg[24m [4m...[24m]][m
+[12;1H     [1msudo[0m [[1m-ABbEHnPS[0m] [[1m-C[0m [4mnum[24m] [[1m-D[0m [4mdirectory[24m] [[1m-g[0m [4mgroup[24m][m
+[13;1H          [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m] [[1m-R[0m [4mdirectory[24m] [[1m-r[0m [4mrole[24m][m
+[14;1H          [[1m-t[0m [4mtype[24m] [[1m-T[0m [4mtimeout[24m] [[1m-u[0m [4muser[24m] [[4mVAR[24m=[4mvalue[24m][m
+[15;1H          [[1m[7m-i[27m[0m | [1m-s[0m] [[4mcommand[24m [[4marg[24m [4m...[24m]][m
+[16;1H     [1msudoedit[0m [[1m-ABkNnS[0m] [[1m-C[0m [4mnum[24m] [[1m-D[0m [4mdirectory[24m] [[1m-g[0m [4mgroup[24m][m
+[17;1H          [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m] [[1m-R[0m [4mdirectory[24m] [[1m-r[0m [4mrole[24m][m
+[18;1H          [[1m-t[0m [4mtype[24m] [[1m-T[0m [4mtimeout[24m] [[1m-u[0m [4muser[24m] [4mfile[24m [4m...[24m[m
+[19;1H[m
+[1mDESCRIPTION[0m[m
+     [1msudo[0m allows a permitted user to execute a [4mcommand[24m as[m
+     the superuser or another user, as specified by the se‐[m
+     curity policy.  The invoking user's real ([4mnot[24m[m
+     effective) user[7m-I[27mD is used to determine the user name[m
+     with which to query the security policy.[m
+[m
+     [1msudo[0m supports a plugin architecture for security poli‐[m
+     cies, auditing, and input/output logging.  Third par‐[m
+     ties can develop and distribute their own plugins to[m
+     work seamlessly with the [1msudo[0m front-end.  The default[m
+     security policy is [4msudoers[24m, which is configured via[m
+     the file [4m/etc/sudoers[24m, or via LDAP.  See the [4mPlugins[24m[m
+[7mManual page sudo(8) line 15 (press h for help or q to quit)[27m[K[K/[K     section for more information.[m
+[m
+     The security policy determines what privileges, if[m
+     any, a user has to run [1msudo[0m.  The policy may require
