@@ -205,4 +205,354 @@ No VM guests are running outdated hypervisor (qemu) binaries
        [1m-L [4m[22mlevel[0m[m
               Max display depth of the directory tree.[m
 [m
-       [1
+       [1m-R     [22mRecursively cross down the  tree  each  [4mlevel[0m[m
+              directories  (see  [1m-L  [22moption),  and  at each[m
+[7mManual page tree(1) line 57 (press h for help or q to quit)[27m[K[K              level outputting to a file named  [1m00Tree.html[0m[m
+              (ala [1m-o[22m).[m
+[m
+       [1m-P [4m[22mpattern[0m[m
+              List  only  those  files that match the wild-[m
+              card [4mpattern[24m.  You may have multiple  -P  op‐[m
+              tions.  Note:  you  must use the [4m-a[24m option to[m
+              also consider those files  beginning  with  a[m
+              dot  `.' for matching.  Valid wildcard opera‐[m
+              tors are `*' (any zero or  more  characters),[m
+              `**`  (any zero or more characters as well as[m
+              null /'s, i.e. /**/ may match  a  single  /),[m
+              `?' (any single character), `[...]' (any sin‐[m
+              gle  character  listed  between brackets (op‐[m
+[7mManual page tree(1) line 71 (press h for help or q to quit)[27m[K[K              tional - (dash) for character  range  may  be[m
+              used:  ex:  [A-Z]),  and `[^...]' (any single[m
+              character not listed  in  brackets)  and  `|'[m
+              separates  alternate  patterns.  A '/' at the[m
+              end of the pattern matches  directories,  but[m
+              not files.[m
+[m
+       [1m-I [4m[22mpattern[0m[m
+              Do  not list those files that match the wild-[m
+              card [4mpattern[24m.  You may have multiple  -I  op‐[m
+              tions.  See [4m-P[24m above for information on wild‐[m
+              card patterns.[m
+[m
+       [1m--gitignore[0m[m
+[7mManual page tree(1) line 85 (press h for help or q to quit)[27m[K[K              Uses git [1m.gitignore [22mfiles for filtering files[m
+              and directories.  Also uses [1m$GIT_DIR/info/ex‐[0m[m
+              [1mclude [22mif present.[m
+[m
+       [1m--gitfile[22m[[1m=[22m][4mfile[0m[m
+              Use [4mfile[24m explicitly as a gitignore file.[m
+[m
+       [1m--ignore-case[0m[m
+              If  a match pattern is specified by the [1m-P [22mor[m
+              [1m-I [22moption, this will  cause  the  pattern  to[m
+              match without regard to the case of each let‐[m
+              ter.[m
+[m
+       [1m--matchdirs[0m[m
+[7mManual page tree(1) line 99 (press h for help or q to quit)[27m[K[K              If a match pattern is specified by the [1m-P [22mop‐[m
+              tion,  this  will cause the pattern to be ap‐[m
+              plied to  directory  names  (in  addition  to[m
+              filenames).   In  the event of a match on the[m
+              directory name, matching is disabled for  the[m
+              directory's  contents.  If the [1m--prune [22moption[m
+              is used, empty folders that match the pattern[m
+              will not be pruned.[m
+[m
+       [1m--metafirst[0m[m
+              Print the meta-data information at the begin‐[m
+              ning of the line rather than after the inden‐[m
+              tation lines.[m
+[m
+[7manual page tree(1) line 113 (press h for help or q to quit)[27m[K[K       [1m--prune[0m[m
+              Makes tree prune empty directories  from  the[m
+              output,  useful when used in conjunction with[m
+              [1m-P [22mor [1m-I[22m.  See [1mBUGS AND NOTES [22mbelow for  more[m
+              information on this option.[m
+[m
+       [1m--info [22mPrints  file  comments  found in .info files.[m
+              See [1m.INFO FILES [22mbelow for more information on[m
+              the format of .info files.[m
+[m
+       [1m--infofile[22m[[1m=[22m][4mfile[0m[m
+              Use [4mfile[24m explicitly as a info file.[m
+[m
+       [1m--noreport[0m[m
+[7manual page tree(1) line 127 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[15;1H[K[7manual page tree(1) line 126 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              tation lines.[m
+[15;1H[K[7manual page tree(1) line 125 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              ning of the line rather than after the inden‐[m
+[15;1H[K[7manual page tree(1) line 124 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              Print the meta-data information at the begin‐[m
+[15;1H[K[7manual page tree(1) line 123 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m--metafirst[0m[m
+[15;1H[K[7manual page tree(1) line 122 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[15;1H[K[7manual page tree(1) line 121 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              will not be pruned.[m
+[15;1H[K[7manual page tree(1) line 120 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              is used, empty folders that match the pattern[m
+[15;1H[K[7manual page tree(1) line 119 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              directory's  contents.  If the [1m--prune [22moption[m
+[15;1H[K[7manual page tree(1) line 118 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              directory name, matching is disabled for  the[m
+[15;1H[K[7manual page tree(1) line 117 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              filenames).   In  the event of a match on the[m
+[15;1H[K[7manual page tree(1) line 116 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              plied to  directory  names  (in  addition  to[m
+[15;1H[K[7manual page tree(1) line 115 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              tion,  this  will cause the pattern to be ap‐[m
+[15;1H[K[7manual page tree(1) line 114 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              If a match pattern is specified by the [1m-P [22mop‐[m
+[15;1H[K[7manual page tree(1) line 113 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--prune[0m[m
+[7manual page tree(1) line 114 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Makes tree prune empty directories  from  the[m
+[7manual page tree(1) line 115 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              output,  useful when used in conjunction with[m
+[7manual page tree(1) line 116 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m-P [22mor [1m-I[22m.  See [1mBUGS AND NOTES [22mbelow for  more[m
+[7manual page tree(1) line 117 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              information on this option.[m
+[7manual page tree(1) line 118 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 119 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--info [22mPrints  file  comments  found in .info files.[m
+[7manual page tree(1) line 120 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              See [1m.INFO FILES [22mbelow for more information on[m
+[7manual page tree(1) line 121 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the format of .info files.[m
+[7manual page tree(1) line 122 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 123 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--infofile[22m[[1m=[22m][4mfile[0m[m
+[7manual page tree(1) line 124 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Use [4mfile[24m explicitly as a info file.[m
+[7manual page tree(1) line 125 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 126 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--noreport[0m[m
+[7manual page tree(1) line 127 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Omits printing of the file and directory  re‐[m
+[7manual page tree(1) line 128 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              port at the end of the tree listing.[m
+[7manual page tree(1) line 129 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 130 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--charset[22m[[1m=[22m][4mcharset[0m[m
+[7manual page tree(1) line 131 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Set  the character set to use when outputting[m
+[7manual page tree(1) line 132 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              HTML and for line drawing.[m
+[7manual page tree(1) line 133 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 134 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--filelimit[22m[[1m=[22m][4m#[0m[m
+[7manual page tree(1) line 135 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Do not descend directories that contain  more[m
+[7manual page tree(1) line 136 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              than [4m#[24m entries.[m
+[7manual page tree(1) line 137 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 138 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--timefmt[22m[[1m=[22m][4mformat[0m[m
+[7manual page tree(1) line 139 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Prints  (implies -D) and formats the date ac‐[m
+[7manual page tree(1) line 140 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              cording to the format string which  uses  the[m
+[7manual page tree(1) line 141 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mstrftime[22m(3) syntax.[m
+[7manual page tree(1) line 142 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 143 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-o [4m[22mfilename[0m[m
+[7manual page tree(1) line 144 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Send output to [4mfilename[24m.[m
+[7manual page tree(1) line 145 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 146 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mFILE OPTIONS[0m[m
+[7manual page tree(1) line 147 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-q     [22mPrint  non-printable  characters in filenames[m
+[7manual page tree(1) line 148 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              as question marks instead of the default.[m
+[7manual page tree(1) line 149 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 150 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-N     [22mPrint non-printable characters as is  instead[m
+[7manual page tree(1) line 151 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              of as escaped octal numbers.[m
+[7manual page tree(1) line 152 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 153 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-Q     [22mQuote the names of files in double quotes.[m
+[7manual page tree(1) line 154 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 155 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-p     [22mPrint  the file type and permissions for each[m
+[7manual page tree(1) line 156 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              file (as per ls -l).[m
+[7manual page tree(1) line 157 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 158 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-u     [22mPrint the username, or UID # if  no  username[m
+[7manual page tree(1) line 159 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              is available, of the file.[m
+[7manual page tree(1) line 160 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 161 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-g     [22mPrint  the  group  name, or GID # if no group[m
+[7manual page tree(1) line 162 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              name is available, of the file.[m
+[7manual page tree(1) line 163 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 164 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-s     [22mPrint the size of each file  in  bytes  along[m
+[7manual page tree(1) line 165 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              with the name.[m
+[7manual page tree(1) line 166 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 167 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-h     [22mPrint the size of each file but in a more hu‐[m
+[7manual page tree(1) line 168 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              man  readable way, e.g. appending a size let‐[m
+[7manual page tree(1) line 169 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ter for kilobytes (K), megabytes  (M),  giga‐[m
+[7manual page tree(1) line 170 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              bytes  (G),  terabytes (T), petabytes (P) and[m
+[7manual page tree(1) line 171 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              exabytes (E).[m
+[7manual page tree(1) line 172 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 173 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--si   [22mLike [1m-h [22mbut use SI units (powers of 1000) in‐[m
+[7manual page tree(1) line 174 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              stead.[m
+[7manual page tree(1) line 175 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 176 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--du   [22mFor each directory report its size as the ac‐[m
+[7manual page tree(1) line 177 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              cumulation of sizes of all its files and sub-[m
+[7manual page tree(1) line 178 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              directories (and their  files,  and  so  on).[m
+[7manual page tree(1) line 179 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              The  total amount of used space is also given[m
+[7manual page tree(1) line 180 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              in the final report (like the  'du  -c'  com‐[m
+[7manual page tree(1) line 181 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              mand.)  This option requires tree to read the[m
+[7manual page tree(1) line 182 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              entire directory tree before emitting it, see[m
+[7manual page tree(1) line 183 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mBUGS AND NOTES [22mbelow.  Implies [1m-s[22m.[m
+[7manual page tree(1) line 184 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 185 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-D     [22mPrint the date of the last modification  time[m
+[7manual page tree(1) line 186 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              or if [1m-c [22mis used, the last status change time[m
+[7manual page tree(1) line 187 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              for the file listed.[m
+[7manual page tree(1) line 188 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 189 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-F     [22mAppend  a  `/'  for  directories,  a  `=' for[m
+[7manual page tree(1) line 190 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              socket files, a `*' for executable  files,  a[m
+[7manual page tree(1) line 191 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              `>' for doors (Solaris) and a `|' for FIFO's,[m
+[7manual page tree(1) line 192 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              as per ls -F[m
+[7manual page tree(1) line 193 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 194 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--inodes[0m[m
+[7manual page tree(1) line 195 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Prints the inode number of the file or direc‐[m
+[7manual page tree(1) line 196 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tory[m
+[7manual page tree(1) line 197 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 198 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--device[0m[m
+[7manual page tree(1) line 199 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Prints the device number to which the file or[m
+[7manual page tree(1) line 200 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              directory belongs[m
+[7manual page tree(1) line 201 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 202 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mSORTING OPTIONS[0m[m
+[7manual page tree(1) line 203 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-v     [22mSort the output by version.[m
+[7manual page tree(1) line 204 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 205 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-t     [22mSort the output by last modification time in‐[m
+[7manual page tree(1) line 206 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              stead of alphabetically.[m
+[7manual page tree(1) line 207 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 208 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-c     [22mSort the output by last status change instead[m
+[7manual page tree(1) line 209 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              of  alphabetically.   Modifies  the [1m-D [22moption[m
+[7manual page tree(1) line 210 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              (if used) to print the last status change in‐[m
+[7manual page tree(1) line 211 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              stead of modification time.[m
+[7manual page tree(1) line 212 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 213 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-U     [22mDo not sort.  Lists files in directory order.[m
+[7manual page tree(1) line 214 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Disables [1m--dirsfirst[22m.[m
+[7manual page tree(1) line 215 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page tree(1) line 216 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-r     [22mSort the output in reverse order.  This is  a[m
+[7manual page tree(1) line 217 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              meta-sort  that  alter the above sorts.  This[m
+[7manual page tree(1) line 218 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              option is disabled when [1m-U [22mis used.[m
+[7manual page tree(1) line 219 (press h for help or q to quit)[27m[K[K/[Kpp[Kdd[Kff[Kmm[K[K[K[Kee[Krr[Kmm[K[1;1H       [1m-t     [22mSort the output by last modification time in‐[m
+[2;1H              stead of alphabetically.[m
+[3;1H[m
+[4;1H       [1m-c     [22mSort the output by last status change instead[m
+[5;1H              of  alphabetically.   Modifies  the [1m-D [22moption[m
+[6;1H              (if used) to print the last status change in‐[m
+[7;1H              stead of modification time.[m
+[8;1H[m
+[9;1H       [1m-U     [22mDo not sort.  Lists files in directory order.[m
+[10;1H              Disables [1m--dirsfirst[22m.[m
+[11;1H[m
+[12;1H       [1m-r     [22mSort the output in reverse order.  This is  a[m
+[13;1H              meta-sort  that  alter the above sorts.  This[m
+[14;1H              option is disabled when [1m-U [22mis used.[m
+[15;1H[1;1H       [1m-t     [22mSort the output by last modification time in‐[m
+[2;1H              stead of alphabetically.[m
+[3;1H[m
+[4;1H       [1m-c     [22mSort the output by last status change instead[m
+[5;1H              of  alphabetically.   Modifies  the [1m-D [22moption[m
+[6;1H              (if used) to print the last status change in‐[m
+[7;1H              stead of modification time.[m
+[8;1H[m
+[9;1H       [1m-U     [22mDo not sort.  Lists files in directory order.[m
+[10;1H              Disables [1m--dirsfirst[22m.[m
+[11;1H[m
+[12;1H       [1m-r     [22mSort the output in reverse order.  This is  a[m
+[13;1H              meta-sort  that  alter the above sorts.  This[m
+[14;1H              option is disabled when [1m-U [22mis used.[m
+[15;1H[K[7mPattern not found  (press RETURN)[27m[15;1H[K[K/[Kpp[Kee[Krr[Kmm[Kii[Kss[Kii[Koo[Knn[Kss[K[1;1H       [1m-t     [22mSort the output by last modification time in‐[m
+[2;1H              stead of alphabetically.[m
+[3;1H[m
+[4;1H       [1m-c     [22mSort the output by last status change instead[m
+[5;1H              of  alphabetically.   Modifies  the [1m-D [22moption[m
+[6;1H              (if used) to print the last status change in‐[m
+[7;1H              stead of modification time.[m
+[8;1H[m
+[9;1H       [1m-U     [22mDo not sort.  Lists files in directory order.[m
+[10;1H              Disables [1m--dirsfirst[22m.[m
+[11;1H[m
+[12;1H       [1m-r     [22mSort the output in reverse order.  This is  a[m
+[13;1H              meta-sort  that  alter the above sorts.  This[m
+[14;1H              option is disabled when [1m-U [22mis used.[m
+[15;1H[1;1H       [1m-t     [22mSort the output by last modification time in‐[m
+[2;1H              stead of alphabetically.[m
+[3;1H[m
+[4;1H       [1m-c     [22mSort the output by last status change instead[m
+[5;1H              of  alphabetically.   Modifies  the [1m-D [22moption[m
+[6;1H              (if used) to print the last status change in‐[m
+[7;1H              stead of modification time.[m
+[8;1H[m
+[9;1H       [1m-U     [22mDo not sort.  Lists files in directory order.[m
+[10;1H              Disables [1m--dirsfirst[22m.[m
+[11;1H[m
+[12;1H       [1m-r     [22mSort the output in reverse order.  This is  a[m
+[13;1H              meta-sort  that  alter the above sorts.  This[m
+[14;1H              option is disabled when [1m-U [22mis used.[m
+[15;1H[K[7mPattern not found  (press RETURN)[27m[15;1H[K[K/[Krr[Kee[Kaa[Kdd[K[1;1H       [1m-t     [22mSort the output by last modification time in‐[m
+[2;1H              stead of alphabetically.[m
+[3;1H[m
+[4;1H       [1m-c     [22mSort the output by last status change instead[m
+[5;1H              of  alphabetically.   Modifies  the [1m-D [22moption[m
+[6;1H              (if used) to print the last status change in‐[m
+[7;1H              stead of modification time.[m
+[8;1H[m
+[9;1H       [1m-U     [22mDo not sort.  Lists files in directory order.[m
+[10;1H              Disables [1m--dirsfirst[22m.[m
+[11;1H[m
+[12;1H       [1m-r     [22mSort the output in reverse order.  This is  a[m
+[13;1H              meta-sort  that  alter the above sorts.  This[m
+[14;1H              option is disabled when [1m-U [22mis used.[m
+[15;1H[1;1H       [1m-t     [22mSort the output by last modification time in‐[m
+[2;1H              stead of alphabetically.[m
+[3;1H[m
+[4;1H       [1m-c     [22mSort the output by last status change instead[m
+[5;1H              of  alphabetically.   Modifies  the [1m-D [22moption[m
+[6;1H              (if used) to print the last status change in‐[m
+[7;1H              stead of modification time.[m
+[8;1H[m
+[9;1H       [1m-U     [22mDo not sort.  Lists files in directory order.[m
+[10;1H              Disables [1m--dirsfirst[22m.[m
+[11;1H[m
+[12;1H       [1m-r     [22mSort the output in reverse order.  This is  a[m
+[13;1H              meta-sort  that  alter the above sorts.  This[m
+[14;1H              option is disabled when [1m-U [22mis used.[m
+[15;1H...skipping...
+              [7mRead[27ms  a directory listing from a file rather[m
+              than the file-system.  Paths provided on  the[m
+              command  line  are  files to [7mread[27m from rather[m
+              than directories to search.  The dot (.)  di‐[m
+              rectory indicates that tree should [7mread[27m paths[m
+              from standard input. NOTE: this is only suit‐[m
+              able for [7mread[27ming the output of a program such[m
+              as  find,  not 'tree -fi' as symlinks are not[m
+              distinguished from files that simply  contain[m
+              '  ->  '  as  part of the filename unless the[m
+              [1m--fflinks [22moption is used.[m
+[m
+       [1m--fromtabfile[0m[m
+              Like [1m--fromfile[22m, tree [7mread[27m[22ms a directory  tree[m
+[7mge tree(1) line 313/441 75% (press h for help or q to quit)[27m[K[K[H[2J[HM       [[1m--filesfirst[22m]   [[1m--filelimit   [4m[22m#[24m]   [[1m--si[22m]   [[1m--du[22m][m
+[HM       [1modes[22m]   [[1m--device[22m]   [[1m--sort[22m[[1m=[22m][4mname[24m]   [[1m--dirsfirst[22m][m
+[HM       [1mlinks[22m]  [[1m--hintro[22m[[1m=[22m][4mfile[24m]  [[1m--houtro[22m[[1m=[22m][4mfile[24m]  [[1m--in‐[0m[m
+[HM       [[1m--matchdirs[22m]  [[1m--metafirst[22m]  [[1m--ignore-case[22m] [[1m--no‐[0m[m
+[HM       [[1m-I   [4m[22mpattern[24m]   [[1m--gitignore[22m]    [[1m--gitfile[22m[[1m=[22m][4mfile[24m][m
+[HM       [[1m-H  [4m[22mbaseHREF[24m] [[1m-T [4m[22mtitle[24m] [[1m-o [4m[22mfilename[24m] [[1m-P [4m[22mpattern[24m][m
+[HM       [1mtree [22m[[1m-acdfghilnpqrstuvxACDFJQNSUX[22m] [[1m-L [4m[22mlevel[24m  [[1m-R[22m]][m
+[HM[1mSYNOPSIS[0m[m
+[HM[m
+[HM       format.[m
+[HM       tree  -  list contents of directories in a tree-like[m
+[HM[1mNAME[0m[m
+[HM[m
+[HM[4mTREE[24m(1)           General Commands Manual           [4mTREE[24m(1)[m
+[15;1H[K[7m page tree(1) line 1/441 5% (press h for help or q to quit)[27m[K[K/[Kpp[Kee[Krr[Kmm[K[1;1H[4mTREE[24m(1)           General Commands Manual           [4mTREE[24m(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       tree  -  list contents of directories in a tree-like[m
+[5;1H       format.[m
+[6;1H[m
+[7;1H[1mSYNOPSIS[0m[m
+[8;1H       [1mtree [22m[[1m-acdfghilnpqrstuvxACDFJQNSUX[22m] [[1m-L [4m[22mlevel[24m  [[1m-R[22m]][m
+[9;1H       [[1m-H  [4m[22mbaseHREF[24m] [[1m-T [4m[22mtitle[24m] [[1m-o [4m[22mfilename[24m] [[1m-P [4m[22mpattern[24m][m
+[10;1H       [[1m-I   [4m[22mpattern[24m]   [[1m--gitignore[22m]    [[1m--gitfile[22m[[1m=[22m][4mfile[24m][m
+[11;1H       [[1m--matchdirs[22m]  [[1m--metafirst[22m]  [[1m--ignore-case[22m] [[1m--no‐[0m[m
+[12;1H       [1mlinks[22m]  [[1m--hintro[22m[[1m=[22m][4mfile[24m]  [[1m--houtro[22m[[1m=[22m][4mfile[24m]  [[1m--in‐[0m[m
+[13;1H       [1modes[22m]   [[1m--device[22m]   [[1m--sort[22m[[1m=[22m][4mname[24m]   [[1m--dirsfirst[22m][m
+[14;1H       [[1m--filesfirst[22m]   [[1m--filelimit   [4m[22m#[24m]   [[1m--si[22m]   [[1m--du[22m][m
+[15;1H[1;1H[4mTREE[24m(1)           General Commands Manual           [4mTREE[24m(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       tree  -  list contents of directories in a tree-like[m
+[5;1H       format.[m
+[6;1H[m
+[7;1H[1mSYNOPSIS[0m[m
+[8;1H       [1mtree [22m[[1m-acdfghilnpqrstuvxACDFJQNSUX[22m] [[1m-L [4m[22mlevel[24m  [[1m-R[22m]][m
+[9;1H       [[1m-H  [4m[22mbaseHREF[24m] [[1m-T [4m[22mtitle[24m] [[1m-o [4m[22mfilename[24m] [[1m-P [4m[22mpattern[24m][m
+[10;1H       [[1m-I   [4m[22mpattern[24m]   [[1m--gitignore[22m]    [[1m--gitfile[22m[[1m=[22m][4mfile[24m][m
+[11;1H       [[1m--matchdirs[22m]  [[1m--metafirst[22m]  [[1m--ignore-case[22m] [[1m--no‐[0m[m
+[12;1H       [1mlinks[22m]  [[1m--hintro[22m[[1m=[22m][4mfile[24m]  [[1m--houtro[22m[[1m=[22m][4mfile[24m]  [[1m--in‐[0m[m
+[13;1H       [1modes[22m]   [[1m--device[22m]   [[1m--sort[22m[[1m=[22m][4mname[24m]   [[1m--dirsfirst[22m][m
+[14;1H       [[1m--filesfirst[22m]   [[1m--filelimit   [4m[22m#[24m]   [[1m--si[22m]   [[1m--du[22m][m
+[15;1H...skipping...
+       [1m-p     [22mPrint  the file type and [7mperm[27m[22missions for each[m
+              file (as per ls -l).[m
+[m
+       [1m-u     [22mPrint the username, or UID # if  no  username[m
+              is available, of the file.[m
+[m
+       [1m-g     [22mPrint  the  group  name, or GID # if no group[m
+              name is available, of the file.[m
+[m
+       [1m-s     [22mPrint the size of each file  in  bytes  along[m
+              with the name.[m
+[m
+       [1m-h     [22mPrint the size of each file but in a more hu‐[m
+              man  readable way, e.g. appending a size let‐[m
+[7mge tree(1) line 169/441 43% (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ tree .[K-pug
+[?2004l[drwxr-x--- kent     pineapple]  [01;34m.[0m
+├── [drwxrwx--x kiwi     kent    ]  [01;34mexecute_inte_read[0m
