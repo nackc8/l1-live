@@ -1945,4 +1945,50 @@ Done.
        [1m[7m-G[27m[0m, [1m-[0m[1m[7m-g[27m[0m[1mroups[0m [4mGROUP1[24m[[4m,GROUP2,...[24m[[4m,GROUPN[24m]]][m
 [7mual page usermod(8) line 69 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
 [19;1H[K[7mual page usermod(8) line 68 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           none.[m
-[19;1H[K[7mual page usermod(8) line 67 
+[19;1H[K[7mual page usermod(8) line 67 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           /etc/shadow entry will be created if there were[m
+[19;1H[K[7mual page usermod(8) line 66 (press h for help or q to quit)[27m[K[K/[K           measure for special home directories such as /.[m
+[m
+       [1m[7m-G[27m[0m, [1m-[0m[1m[7m-g[27m[0m[1mroups[0m [4mGROUP1[24m[[4m,GROUP2,...[24m[[4m,GROUPN[24m]]][m
+[7mual page usermod(8) line 69 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           A list of supplementary groups which the user is[m
+[7mual page usermod(8) line 70 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           also a member of. Each group is separated from[m
+[7mual page usermod(8) line 71 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           the next by a comma, with no intervening[m
+[7mual page usermod(8) line 72 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           whitespace. The groups must exist.[m
+[7mual page usermod(8) line 73 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mual page usermod(8) line 74 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           If the user is currently a member of a group[m
+[7mual page usermod(8) line 75 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           which is not listed, the user will be removed[m
+[7mual page usermod(8) line 76 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           from the group. This behaviour can be changed[m
+[7mual page usermod(8) line 77 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           via the [1m-a[0m option, which appends the user to the[m
+[7mual page usermod(8) line 78 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           current supplementary group list.[m
+[7mual page usermod(8) line 79 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mual page usermod(8) line 80 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mITINF25/lektion3
+(B[m$ [H[2J[94mITINF25/lektion3
+(B[m$ id
+[?2004luid=1000(kent) gid=1000(kent) groups=1000(kent),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),100(users),104(kvm),106(netdev),112(bluetooth),114(lpadmin),117(scanner),123(vboxusers),127(libvirt),994(docker),64055(libvirt-qemu)
+[?2004h[94mITINF25/lektion3
+(B[m$ sudo -u yellow id[K[Kls[K[Kpwd
+[?2004l/shared/kent/Documents/nackademin/linux1/l1-live/ITINF25/lektion3
+[?2004h[94mITINF25/lektion3
+(B[m$ sudo -u yellow pwd[K[K[Kid
+[?2004luid=1002(yellow) gid=1002(yellow) groups=1002(yellow),100(users),1003(marketing)
+[?2004h[94mITINF25/lektion3
+(B[m$ [H[2J[94mITINF25/lektion3
+(B[m$ sudo -u yellow groups
+[?2004lyellow users marketing
+[?2004h[94mITINF25/lektion3
+(B[m$ groups
+[?2004lkent cdrom floppy sudo audio dip video plugdev users kvm netdev bluetooth lpadmin scanner vboxusers libvirt docker libvirt-qemu
+[?2004h[94mITINF25/lektion3
+(B[m$ groups[C[Csudo -u yellow groups[K[K[K[K[K[K-i
+[?2004l[?2004h]0;yellow@klad: ~[01;32myellow@klad[00m:[01;34m~[00m$ pwd
+[?2004l/home/yellow
+[?2004h]0;yellow@klad: ~[01;32myellow@klad[00m:[01;34m~[00m$ id
+[?2004luid=1002(yellow) gid=1002(yellow) groups=1002(yellow),100(users),1003(marketing)
+[?2004h]0;yellow@klad: ~[01;32myellow@klad[00m:[01;34m~[00m$ groups
+[?2004lyellow users marketing
+[?2004h]0;yellow@klad: ~[01;32myellow@klad[00m:[01;34m~[00m$ o[Kwe[K[Kexit
+[?2004llogout
+[?2004h[94mITINF25/lektion3
+(B[m$ [K(B[m$ exit
+[?2004lexit
+
+Script done on 2025-09-18 10:06:12+02:00 [COMMAND_EXIT_CODE="0"]
