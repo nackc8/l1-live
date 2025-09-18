@@ -1,0 +1,194 @@
+Script started on 2025-09-18 11:05:30+02:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="61" LINES="19"]
+ITINF25/lektion3
+$ ITINF25/lektion3
+$ ls
+itouchedthis  recordings
+ITINF25/lektion3
+$ ITINF25/lektion3
+$ ls -l
+total 4
+-rw-r--r-- 1 kent kent    0 Sep 18 09:11 itouchedthis
+drwxr-xr-x 2 kent kent 4096 Sep 18 11:05 recordings
+ITINF25/lektion3
+$ ITINF25/lektion3
+$ ls
+itouchedthis  recordings
+ITINF25/lektion3
+$ nano yellows/^?s/f-fil
+>ITINF25/lektion3e: yellows-fil [ Writing... ] [ Wrote 2 lines ]Yes        
+$ ls -l
+total 8
+-rw-r--r-- 1 kent kent    0 Sep 18 09:11 itouchedthis
+drwxr-xr-x 2 kent kent 4096 Sep 18 11:05 recordings
+-rw-r--r-- 1 kent kent   22 Sep 18 11:18 yellows-fil
+ITINF25/lektion3
+$ chown yellow yellows-fil 
+chown: changing ownership of 'yellows-fil': Operation not permitted
+ITINF25/lektion3
+$ 
+sudo !!
+sudo chown yellow yellows-fil 
+[sudo] password for kent: 
+ITINF25/lektion3
+$ ls -lITINF25/lektion3
+$ ls -l
+total 8
+-rw-r--r-- 1 kent   kent    0 Sep 18 09:11 itouchedthis
+drwxr-xr-x 2 kent   kent 4096 Sep 18 11:05 recordings
+-rw-r--r-- 1 yellow kent   22 Sep 18 11:18 yellows-fil
+ITINF25/lektion3
+$ nano yellows-fil 
+==[ Reading... ]
+>ITINF25/lektion3lowFile^\ Replace  ^U Paste    ^J Justify     yellows-fil                       
+$ ITINF25/lektion3
+$ ssh ubse
+^C
+ITINF25/lektion3
+$ ssh ubse
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-79-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Thu Sep 18 09:54:27 AM UTC 2025
+
+  System load:  0.08               Processes:               147
+  Usage of /:   33.4% of 15.62GB   Users logged in:         0
+  Memory usage: 7%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+170 updates can be applied immediately.
+1 of these updates is a standard security update.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+1 updates could not be installed automatically. For more details,
+see /var/log/unattended-upgrades/unattended-upgrades.log
+
+Last login: Thu Sep 18 09:51:51 2025 from 10.0.2.2
+0;kent@ubseuefi: ~
+kent@ubseuefi:~$ exit
+logout
+Connection to localhost closed.
+ITINF25/lektion3
+$ ITINF25/lektion3
+$ ssh 
+
+ssh ubs
+
+
+e
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-79-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Thu Sep 18 10:09:11 AM UTC 2025
+
+  System load:  0.0                Processes:               115
+  Usage of /:   33.5% of 15.62GB   Users logged in:         0
+  Memory usage: 7%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+170 updates can be applied immediately.
+1 of these updates is a standard security update.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+1 updates could not be installed automatically. For more details,
+see /var/log/unattended-upgrades/unattended-upgrades.log
+
+Last login: Thu Sep 18 09:54:27 2025 from 10.0.2.2
+0;kent@ubseuefi: ~
+kent@ubseuefi:~$ 0;kent@ubseuefi: ~
+kent@ubseuefi:~$ ls
+0;kent@ubseuefi: ~
+kent@ubseuefi:~$ sudo -i
+[sudo] password for kent: 
+0;root@ubseuefi: ~
+root@ubseuefi:~# adduser yellow
+info: Adding user `yellow' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `yellow' (1001) ...
+info: Adding new user `yellow' (1001) with group `yellow (1001)' ...
+info: Creating home directory `/home/yellow' ...
+info: Copying files from `/etc/skel' ...
+New password: 
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for yellow
+Enter the new value, or press ENTER for the default
+	Full Name []: 
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] 
+info: Adding new user `yellow' to supplemental / extra groups `users' ...
+info: Adding user `yellow' to group `users' ...
+0;root@ubseuefi: ~
+root@ubseuefi:~# adduser yellogreen
+info: Adding user `green' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `green' (1002) ...
+info: Adding new user `green' (1002) with group `green (1002)' ...
+info: Creating home directory `/home/green' ...
+info: Copying files from `/etc/skel' ...
+New password: 
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for green
+Enter the new value, or press ENTER for the default
+	Full Name []: 
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] 
+info: Adding new user `green' to supplemental / extra groups `users' ...
+info: Adding user `green' to group `users' ...
+0;root@ubseuefi: ~
+root@ubseuefi:~# 0;root@ubseuefi: ~
+root@ubseuefi:~# exit
+logout
+0;kent@ubseuefi: ~
+kent@ubseuefi:~$ l0;kent@ubseuefi: ~
+kent@ubseuefi:~$ 
+ls
+0;kent@ubseuefi: ~
+kent@ubseuefi:~$ 
+0;kent@ubseuefi: ~
+kent@ubseuefi:~$ 
+0;kent@ubseuefi: ~
+kent@ubseuefi:~$ 
+0;kent@ubseuefi: ~
+kent@ubseuefi:~$ 
+0;kent@ubseuefi: ~
+kent@ubseuefi:~$ exit
+logout
+Connection to localhost closed.
+ITINF25/lektion3
+$ exit
+exit
+
+Script done on 2025-09-18 12:10:16+02:00 [COMMAND_EXIT_CODE="0"]
