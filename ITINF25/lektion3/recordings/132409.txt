@@ -681,4 +681,49 @@ User sessions running outdated binaries:
 
 No VM guests are running outdated hypervisor (qemu) binaries
  on this host.
-[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo apt install acl[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo apt install acl[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pgetfacl 000-fil 
+[?2004l# file: 000-fil
+# owner: kent
+# group: kent
+user::rw-
+group::rw-
+other::rw-
+
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l 000-fil 
+[?2004l-rw-rw-rw- 1 kent kent 0 Sep 18 11:40 000-fil
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo chmod o= 000-fil [H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo chmod o= 000-fil 
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l 000-fil 
+[?2004l-rw-rw---- 1 kent kent 0 Sep 18 11:40 000-fil
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l 000-fil [8@sudo chmod o=[C[C[C[C[C[C[C[C[C[1P[1P[1@3[1@5[1@4[1@3[1@5[1@4[1P[1P[1P[1P[1P[1P[1@5[1@5[1@0[C[C[C
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo chmod 550 000-fil [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9Pls -l[C[C[C[C[C[C[C[C[C
+[?2004l-r-xr-x--- 1 kent kent 0 Sep 18 11:40 [0m[01;32m000-fil[0m
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l 000-fil [9@sudo chmod 550[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1@6[1@6
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo chmod 660 000-fil [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9Pls -l[C[C[C[C[C[C[C[C[C
+[?2004l-rw-rw---- 1 kent kent 0 Sep 18 11:40 000-fil
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ setfacl [C[1@s[1@d[1P[1@u[1@d[1@o[1@ [C[C[C[C[C[C[C[C[H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo setfacl -m u:pineapple:rx
+[?2004lUsage: setfacl [-bkndRLP] { -m|-M|-x|-X ... } file ...
+Try `setfacl --help' for more information.
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo setfacl -m u:pineapple:rx 000-fil 
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ (reverse-i-search)`': [K[17@g': [7mg[27metfacl 000-fil[1@e': [7mge[27m[1@t': [7mget[27m[8P]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ get[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l# file: 000-fil
+# owner: kent
+# group: kent
+user::rw-
+user:pineapple:r-x
+group::rw-
+mask::rwx
+other::---
+
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo setfacl -b 000-fil 
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ getfacl 000-fil 
+[?2004l# file: 000-fil
+# owner: kent
+# group: kent
+user::rw-
+group::rw-
+other::---
+
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ (reverse-i-search)`': [K[25@s': sudo [7ms[27metfacl -b 000-fil[1@e': sudo [7mse[27m[1@t': sudo [7mset[27m[C[C[C[C[C[C[C[C[Cm u:pineapple:rx 000-fil [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo setfacl -m u:pineapple:rx 000-fil 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo setfacl -m u:pineapple:rx 000-fil [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo setfacl -m u:pineapple:rx 000-fil [C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@k[1@i[1@w[1@i[C[C[C[1P[1P[1@w[1@x
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ (reverse-i-search)`': [K[17@g': [7mg[27metfacl 000-fil[1@e': [7mge[27m[7P]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ge[C
