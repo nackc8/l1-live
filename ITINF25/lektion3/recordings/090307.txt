@@ -1521,4 +1521,107 @@ passwd: password updated successfully
 [7manual page sudo(8) line 238 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             affects the environment in which a [4mcommand[24m is[m
 [7manual page sudo(8) line 239 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             run when the [4msudoers[24m policy is in use.[m
 [7manual page sudo(8) line 240 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[
+[7manual page sudo(8) line 241 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mITINF25/lektion3
+(B[m$ sudo -i
+[?2004l[?2004hroot@klad:~# pwd
+[?2004l/root
+[?2004hroot@klad:~# exit
+[?2004llogout
+[?2004h[94mITINF25/lektion3
+(B[m$ [H[2J[94mITINF25/lektion3
+(B[m$ sudo -i -u green [K
+[?2004l$ pwd
+/home/green
+$ touch greenfil
+$ exit
+[?2004h[94mITINF25/lektion3
+(B[m$ pwd
+[?2004l/shared/kent/Documents/nackademin/linux1/l1-live/ITINF25/lektion3
+[?2004h[94mITINF25/lektion3
+(B[m$ id
+[?2004luid=1000(kent) gid=1000(kent) groups=1000(kent),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),100(users),104(kvm),106(netdev),112(bluetooth),114(lpadmin),117(scanner),123(vboxusers),127(libvirt),994(docker),64055(libvirt-qemu)
+[?2004h[94mITINF25/lektion3
+(B[m$ [H[2J[94mITINF25/lektion3
+(B[m$ su green
+[?2004lPassword: 
+$ pwd   id
+uid=1001(green) gid=1001(green) groups=1001(green)
+$ pwd
+/shared/kent/Documents/nackademin/linux1/l1-live/ITINF25/lektion3
+$ cd
+$ pwd
+/home/green
+$ cd /ho	 ome/green
+$ pwd
+/home/green
+$ ^[[A    ^[[A^[[A^[[A^[[A^[[A^[[A
+sh: 7: [A[A[A[A[A[A: Permission denied
+$ ^L  
+$ ^L
+sh: 9: : Permission denied
+$ exit
+[?2004h[94mITINF25/lektion3
+(B[m$ [H[2J[94mITINF25/lektion3
+(B[m$ adduser yellow
+[?2004lbash: adduser: command not found
+[?2004h[94mITINF25/lektion3
+(B[m$ sudo !![C[C
+[?2004lsudo adduser yellow
+Adding user `yellow' ...
+Adding new group `yellow' (1002) ...
+Adding new user `yellow' (1002) with group `yellow (1002)' ...
+Creating home directory `/home/yellow' ...
+Copying files from `/etc/skel' ...
+New password: 
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for yellow
+Enter the new value, or press ENTER for the default
+	Full Name []: 
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] 
+Adding new user `yellow' to supplemental / extra groups `users' ...
+Adding user `yellow' to group `users' ...
+[?2004h[94mITINF25/lektion3
+(B[m$ [H[2J[94mITINF25/lektion3
+(B[m$ s[Ks[Ks[Ks[Ks[Ksudo -i[Ku yellow
+[?2004lusage: sudo -h | -K | -k | -V
+usage: sudo -v [-ABkNnS] [-g group] [-h host] [-p prompt]
+            [-u user]
+usage: sudo -l [-ABkNnS] [-g group] [-h host] [-p prompt]
+            [-U user] [-u user] [command [arg ...]]
+usage: sudo [-ABbEHkNnPS] [-r role] [-t type] [-C num] [-D
+            directory] [-g group] [-h host] [-p prompt] [-R
+            directory] [-T timeout] [-u user] [VAR=value]
+            [-i | -s] [command [arg ...]]
+usage: sudo -e [-ABkNnS] [-r role] [-t type] [-C num] [-D
+            directory] [-g group] [-h host] [-p prompt] [-R
+            directory] [-T timeout] [-u user] file ...
+[?2004h[94mITINF25/lektion3
+(B[m$ sudo -u yellow[H[2J[94mITINF25/lektion3
+(B[m$ sudo -u yellow -i
+[?2004l[?2004h]0;yellow@klad: ~[01;32myellow@klad[00m:[01;34m~[00m$ ls
+[?2004l[?2004h]0;yellow@klad: ~[01;32myellow@klad[00m:[01;34m~[00m$ ls[Kecho hej
+[?2004lhej
+[?2004h]0;yellow@klad: ~[01;32myellow@klad[00m:[01;34m~[00m$ echo hejls[Kecho hejls[Kecho hej[C[C[C[C[C
+[?2004lhej
+[?2004h]0;yellow@klad: ~[01;32myellow@klad[00m:[01;34m~[00m$ [?2004l
+logout
+[?2004h[94mITINF25/lektion3
+(B[m$ sudo addgroup marketing[H[2J[94mITINF25/lektion3
+(B[m$ sudo addgroup marketing
+[?2004lAdding group `marketing' (GID 1003) ...
+Done.
+[?2004h[94mITINF25/lektion3
+(B[m$ sudo [H[2J[94mITINF25/lektion3
+(B[m$ sudo usermod --append --groups marketing yeloo[K[Klow
+[?2004l[?2004h[94mITINF25/lektion3
+(B[m$ sudo -u yellow -i[K[Kid
+[?2004luid=1002(yellow) gid=1002(yellow) groups=1002(yellow),100(users),1003(marketing)
+[?2004h[94mITINF25/lektion3
+(B[m$ sudo usermod -a -G marketing yellow
+[?2004l[?2004h[94mITINF25/lektion3
+(B[m$ sudo usermod -a -G marketing
