@@ -681,3 +681,68 @@ More information: https://www.gnu.org/software/coreutils/ls.
 [0m
  - [0m[32;23;22;24;25mList files in [l]ong format with size displayed using [h]uman-readable units (KiB, MiB, GiB):
    [33;23;22;24;25mls -lh[0m
+[0m
+ - [0m[32;23;22;24;25mList files in [l]ong format, sorted by [S]ize (descending) [R]ecursively:
+   [33;23;22;24;25mls -lSR[0m
+[0m
+ - [0m[32;23;22;24;25mList files in [l]ong format, sorted by [t]ime the file was modified and in [r]everse order (oldest first):
+   [33;23;22;24;25mls -ltr[0m
+[0m
+ - [0m[32;23;22;24;25mOnly list [d]irectories:
+   [33;23;22;24;25mls -d */[0m
+[0m[0m[?2004h[94mITINF25/lektion3
+(B[m$ [H[2J[94mITINF25/lektion3
+(B[m$ tldr
+[?2004ltldr - Simplified and community-driven man pages
+
+Usage: tldr [-v|--version] 
+            ((-u|--update) | [-p|--platform PLATFORM] [-L|--language LOCALE]
+              COMMAND |
+              (-a|--about)) [--auto-update-interval DAYS] [--color | --no-color]
+  tldr Client program
+
+Available options:
+  -h,--help                Show this help text
+  -v,--version             Show version
+  -u,--update              Update offline cache of tldr pages
+  -p,--platform PLATFORM   Prioritize a specific platform while searching. Valid
+                           values include linux, osx, windows, sunos
+  -L,--language LOCALE     Preferred language for the page returned
+  COMMAND                  name of the command
+  -a,--about               About this program
+  --auto-update-interval DAYS
+                           Perform an automatic update if the cache is older
+                           than DAYS
+  --color                  Force colored output, overriding the NO_COLOR
+                           environment variable
+  --no-color               Disable colored output
+[?2004h[94mITINF25/lektion3
+(B[m$ [H[2J[94mITINF25/lektion3
+(B[m$ tldr -u
+[?2004lDownloading tldr pages to /home/kent/.local/share/tldr
+[?2004h[94mITINF25/lektion3
+(B[m$ [H[2J[94mITINF25/lektion3
+(B[m$ ls -l
+[?2004ltotal 4
+-rw-r--r-- 1 kent kent    0 Sep 18 09:11 itouchedthis
+drwxr-xr-x 2 kent kent 4096 Sep 18 09:03 recordings
+[?2004h[94mITINF25/lektion3
+(B[m$ ls /home/[H[2J[94mITINF25/lektion3
+(B[m$ ls /home/
+[?2004lkent  user
+[?2004h[94mITINF25/lektion3
+(B[m$ ls /root/
+[?2004lls: cannot open directory '/root/': Permission denied
+[?2004h[94mITINF25/lektion3
+(B[m$ ls /root/[1@s[1@u[1@d[1@o[1@ [C[C[C[C[C[C[C[C[C
+[?2004l[?2004h[94mITINF25/lektion3
+(B[m$ sudo ls /root/[C /root/- /root/[1P /root/[1P/root/[C /root/- /root/a /root/
+[?2004l.			 .cache    .selected_editor
+..			 .config   .ssh
+.bash_history		 .lesshst  .sudo_as_admin_successful
+.bash_history-79727.tmp  .local    .synaptic
+.bashrc			 .profile  .wget-hsts
+[?2004h[94mITINF25/lektion3
+(B[m$ [H[2J[94mITINF25/lektion3
+(B[m$ sudo nano /etc/ssh/sshd_config
+[?2004l[?2004h[?1049h[22;0;0t[1;19r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[17;24H(B[0;7m[ Reading... ](B[m[17;22H(B[0;7m[ Read 122 lines ](B[m[H(B[0;7m  GNU nano 7.2         /etc/ssh/sshd_config                  [1;60H(B[m[18d(B[0;7m^G(B[m Help     (B[0;7m^O(B[m Write Out(B[0;7m^W(B[m Where Is (B[0;7m^K(B[m Cut[49G(B[0;7m^T(B[m Execute[19d(B[0;7m^X(B[m Exit     (B[0;7m^R(B[m Read File(B[0;7m^\(B[m Replace  (B[0;7m^U(B[m Paste    (B[0;7m^J(B[m Justify[3d[36m# This is the sshd server system-wide configuration file.  S[39m(B[0;7m>[4;1H(B[0m[36m# sshd_config(5) for more information.[5;8H[38;5;208m[1K[6d[36m# This sshd was compiled with PATH=/usr/local/bin:/usr/bin:/[39m(B[0;7m>[8;1H(B[0m[36m# The strategy used for options in the default sshd_config s[39m(B[0;7m>[9;1H(B[0m[36m# OpenSSH is to specify options with their default value whe[39m(B[0;7m>[10;1H(B[0m[36m# possible, but leave them commented.  Uncommented options o[39m(B[0;7m>[11;1H(B[0m[36m# default value.[13d[39m(B[mInclude /etc/ssh/sshd_config.d/*.conf[15d[36m#Port 22[16d#AddressFamily any[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d
