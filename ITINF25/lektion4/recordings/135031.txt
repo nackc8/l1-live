@@ -329,4 +329,90 @@ Connection to localhost closed.
              [4mbind_address[24m of [1mlocalhost[0m indicates that the lis‐[m
              tening port be bound for local use only, while an[m
              empty address or ‘*’ indicates that the port[m
-           
+             should be available from all interfaces.[m
+[m
+             Currently the SOCKS4 and SOCKS5 protocols are sup‐[m
+             ported, and ssh(1) will act as a SOCKS server.[m
+             Multiple forwardings may be specified, and addi‐[m
+             tional forwardings can be given on the command[m
+             line.  Only the superuser can forward privileged[m
+             ports.[m
+[7mual page ssh_config(5) line 421 (press h for help or q to quit)[27m[K[K/[K...skipping...
+     [1mGateway[0m[1m[7mPort[27m[0m[1ms[0m[m
+             Specifies whether remote hosts are allowed to con‐[m
+             nect to local forwarded ports.  By default, ssh(1)[m
+             binds local port forwardings to the loopback ad‐[m
+             dress.  This prevents other remote hosts from con‐[m
+             necting to forwarded ports.  [1mGateway[0m[1m[7mPort[27m[0m[1ms[0m can be[m
+             used to specify that ssh should bind local port[m
+             forwardings to the wildcard address, thus allowing[m
+             remote hosts to connect to forwarded ports.  The[m
+             argument must be [1myes[0m or [1mno[0m (the default).[m
+[m
+     [1mGlobalKnownHostsFile[0m[m
+             Specifies one or more files to use for the global[m
+             host key database, separated by whitespace.  The[m
+[7mual page ssh_config(5) line 557 (press h for help or q to quit)[27m[K[K/[K             default is [4m/etc/ssh/ssh_known_hosts[24m,[m
+             [4m/etc/ssh/ssh_known_hosts2[24m.[m
+[m
+     [1mGSSAPIAuthentication[0m[m
+             Specifies whether user authentication based on[m
+[7mual page ssh_config(5) line 562 (press h for help or q to quit)[27m[K[K/[K...skipping...
+             [1mGateway[0m[1m[7mPort[27m[0m[1ms[0m setting.  However, an explicit[m
+             [4mbind_address[24m may be used to bind the connection to[m
+             a specific address.  The [4mbind_address[24m of [1mlocalhost[0m[m
+             indicates that the listening port be bound for lo‐[m
+             cal use only, while an empty address or ‘*’ indi‐[m
+             cates that the port should be available from all[m
+             interfaces.  Unix domain socket paths may use the[m
+             tokens described in the [4mTOKENS[24m section and envi‐[m
+             ronment variables as described in the [4mENVIRONMENT[24m[m
+             [4mVARIABLES[24m section.[m
+[m
+     [1mLogLevel[0m[m
+             Gives the verbosity level that is used when log‐[m
+             ging messages from ssh(1).  The possible values[m
+[7mual page ssh_config(5) line 949 (press h for help or q to quit)[27m[K[K/[K...skipping...
+     [1m[7mPort[27m[0m    Specifies the port number to connect on the remote[m
+             host.  The default is 22.[m
+[m
+     [1mPreferredAuthentications[0m[m
+             Specifies the order in which the client should try[m
+             authentication methods.  This allows a client to[m
+             prefer one method (e.g. [1mkeyboard-interactive[0m) over[m
+             another method (e.g. [1mpassword[0m).  The default is:[m
+[m
+                   gssapi-with-mic,hostbased,publickey,[m
+                   keyboard-interactive,password[m
+[m
+     [1mProxyCommand[0m[m
+             Specifies the command to use to connect to the[m
+[7mal page ssh_config(5) line 1062 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[15;1H[K[7mal page ssh_config(5) line 1061 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             for user authentication.[m
+[15;1H[K[7mal page ssh_config(5) line 1060 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             communicate with a PKCS#11 token providing keys[m
+[15;1H[K[7mal page ssh_config(5) line 1059 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mal page ssh_config(5) line 1060 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1mProxyCommand[0m[m
+[7mal page ssh_config(5) line 1061 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             Specifies the command to use to connect to the[m
+[7mal page ssh_config(5) line 1062 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             server.  The command string extends to the end of[m
+[7mal page ssh_config(5) line 1063 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             the line, and is executed using the user's shell[m
+[7mal page ssh_config(5) line 1064 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             ‘exec’ directive to avoid a lingering shell[m
+[7mal page ssh_config(5) line 1065 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             process.[m
+[7mal page ssh_config(5) line 1066 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mal page ssh_config(5) line 1067 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             Arguments to [1mProxyCommand[0m accept the tokens de‐[m
+[7mal page ssh_config(5) line 1068 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             scribed in the [4mTOKENS[24m section.  The command can be[m
+[7mal page ssh_config(5) line 1069 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             basically anything, and should read from its stan‐[m
+[7mal page ssh_config(5) line 1070 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             another method (e.g. [1mpassword[0m).  The default is:[m
+[15;1H[K[7mal page ssh_config(5) line 1069 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             prefer one method (e.g. [1mkeyboard-interactive[0m) over[m
+[15;1H[K[7mal page ssh_config(5) line 1068 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             authentication methods.  This allows a client to[m
+[15;1H[K[7mal page ssh_config(5) line 1067 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             Specifies the order in which the client should try[m
+[15;1H[K[7mal page ssh_config(5) line 1066 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM     [1mPreferredAuthentications[0m[m
+[15;1H[K[7mal page ssh_config(5) line 1065 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[15;1H[K[7mal page ssh_config(5) line 1064 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             host.  The default is 22.[m
+[15;1H[K[7mal page ssh_config(5) line 1063 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM     [1m[7mPort[27m[0m    Specifies the port number to connect on the remote[m
+[15;1H[K[7mal page ssh_config(5) line 1062 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[15;1H[K[7mal page ssh_config(5) line 1061 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             for user authentication.[m
+[15;1H[K[7mal page ssh_config(5) line 1060 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             communicate with a PKCS#11 token providing keys[m
+[15;1H[K[7mal page ssh_config(5) line 1059 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             the PKCS#11 shared library ssh(1) should use to[m
+[15;1H[K[7mal page ssh_config(5) line 1058 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             fault).  The argument to this keyword is a path to[m
+[15;1H[K[7mal page ssh_config(5) line 1057 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             indicate that no provider should be used (the de‐[m
+[15;1H
