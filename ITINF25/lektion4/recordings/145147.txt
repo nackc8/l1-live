@@ -1,0 +1,66 @@
+Script started on 2025-09-22 14:51:47+02:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="65" LINES="13"]
+[?2004h[94mITINF25/lektion4
+(B[m$ [H[2J[94mITINF25/lektion4
+(B[m$ ls
+[?2004lconfig	info.sh  recordings  ssh_hardening.txt
+[?2004h[94mITINF25/lektion4
+(B[m$ cp info.sh ub[K[Kserv3er[K[K[Ker-kent/jdjidj[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[1@s[C[C[C[C[C[C[C[C[C[C [K[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[H[2J[94mITINF25/lektion4
+(B[m$ man scp
+[?2004l[?1049h[22;0;0t[?1h=SCP(1)            BSD General Commands Manual            SCP(1)[m
+[m
+[1mNAME[0m[m
+     [1mscp[0m — OpenSSH secure file copy[m
+[m
+[1mSYNOPSIS[0m[m
+     [1mscp[0m [[1m-346ABCOpqRrsTv[0m] [[1m-c[0m [4mcipher[24m] [[1m-D[0m [4msftp_server_path[24m][m
+         [[1m-F[0m [4mssh_config[24m] [[1m-i[0m [4midentity_file[24m] [[1m-J[0m [4mdestination[24m][m
+         [[1m-l[0m [4mlimit[24m] [[1m-o[0m [4mssh_option[24m] [[1m-P[0m [4mport[24m] [[1m-S[0m [4mprogram[24m][m
+         [[1m-X[0m [4msftp_option[24m] [4msource[24m [4m...[24m [4mtarget[24m[m
+[m
+[1mDESCRIPTION[0m[m
+[7m Manual page scp(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mITINF25/lektion4
+(B[m$ scp -p 10022 info.sh [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ckent@localhost:
+[?2004lWarning: Permanently added 'localhost' (ED25519) to the list of known hosts.
+kent@localhost's password: 
+Permission denied, please try again.
+kent@localhost's password: 
+[?2004h[94mITINF25/lektion4
+(B[m$ scp -p 10022 info.sh kent@localhost:[H[2J[94mITINF25/lektion4
+(B[m$ scp -p 10022 info.sh kent@localhost:[1P[1@P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lWarning: Permanently added '[localhost]:10022' (ED25519) to the list of known hosts.
+info.sh                          0%    0     0.0KB/s   --:-- ETAinfo.sh                        100%   40   136.5KB/s   00:00    
+[?2004h[94mITINF25/lektion4
+(B[m$ scp -P 10022 info.sh kent@localhost:[K[C[1Pkent@localhost[1Pkent@localhost[1Pkent@localhost[1Pkent@localhost[1Pkent@localhost[1Pkent@localhost[1Pkent@localhost[1Pkent@localhost[1P[1@p[H[2J[94mITINF25/lektion4
+(B[m$ scp -p 10022 kent@localhost[C[C[C[C[C[C[C[C
+[?2004lcp: cannot stat '10022': No such file or directory
+[?2004h[94mITINF25/lektion4
+(B[m$ scp -p 10022 kent@localhost[C[C[C[1P[1P[1P[1@s[1@s[1@h
+[?2004lWarning: Permanently added '[localhost]:10022' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-79-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon Sep 22 12:54:59 PM UTC 2025
+
+  System load:  0.0                Processes:               118
+  Usage of /:   34.6% of 16.07GB   Users logged in:         1
+  Memory usage: 12%                IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+175 updates can be applied immediately.
+1 of these updates is a standard security update.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+1 updates could not be installed automatically. For more details,
+see /var/log/unattended-upgrades/unattended-upgrades.log
+
+*** Sys
