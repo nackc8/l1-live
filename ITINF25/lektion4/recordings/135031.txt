@@ -1583,4 +1583,35 @@ SSH_CONFIG(5)       BSD File Formats Manual       SSH_CONFIG(5)[m
 [7mual page ssh_config(5) line 759 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             Arguments to [1mIdentityAgent[0m may use the tilde syn‐[m
 [7mual page ssh_config(5) line 760 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             tax to refer to a user's home directory, the to‐[m
 [7mual page ssh_config(5) line 761 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             kens described in the [4mTOKENS[24m section and environ‐[m
-[7mual page ssh_config(5) line 762 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             ment variables as described in the [4mEN
+[7mual page ssh_config(5) line 762 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             ment variables as described in the [4mENVIRONMENT[24m[m
+[7mual page ssh_config(5) line 763 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             [4mVARIABLES[24m section.[m
+[7mual page ssh_config(5) line 764 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mual page ssh_config(5) line 765 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1mIdentityFile[0m[m
+[7mual page ssh_config(5) line 766 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             Specifies a file from which the user's DSA, ECDSA,[m
+[7mual page ssh_config(5) line 767 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             authenticator-hosted ECDSA, Ed25519, authentica‐[m
+[7mual page ssh_config(5) line 768 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             tor-hosted Ed25519 or RSA authentication identity[m
+[7mual page ssh_config(5) line 769 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             is read.  You can also specify a public key file[m
+[7mual page ssh_config(5) line 770 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             to use the corresponding private key that is[m
+[7mual page ssh_config(5) line 771 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             loaded in ssh-agent(1) when the private key file[m
+[7mual page ssh_config(5) line 772 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             is not present locally.  The default is[m
+[7mual page ssh_config(5) line 773 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             [4m~/.ssh/id_rsa[24m, [4m~/.ssh/id_ecdsa[24m,[m
+[7mual page ssh_config(5) line 774 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             [4m~/.ssh/id_ecdsa_sk[24m, [4m~/.ssh/id_ed25519[24m,[m
+[7mual page ssh_config(5) line 775 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             [4m~/.ssh/id_ed25519_sk[24m and [4m~/.ssh/id_dsa[24m.  Addition‐[m
+[7mual page ssh_config(5) line 776 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             ally, any identities represented by the authenti‐[m
+[7mual page ssh_config(5) line 777 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             cation agent will be used for authentication un‐[m
+[7mual page ssh_config(5) line 778 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             less [1mIdentitiesOnly[0m is set.  If no certificates[m
+[7mual page ssh_config(5) line 779 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mITINF25/lektion4
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mITINF25/lektion4
+(B[m$ l[K~ [K[K/homd[KEk[K[KE[Ke/kent/.ssh/L/home/kent/.ssh/S/home/kent/.ssh/ /home/kent/.ssh/[1P/home/kent/.ssh/[1P/home/kent/.ssh/[1P/home/kent/.ssh/l/home/kent/.ssh/s/home/kent/.ssh/ /home/kent/.ssh/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cid_ed25519
+id_ed25519                      id_ed25519.pub
+id_ed25519_github_personal      id_ed25519_ubsembr
+id_ed25519_github_personal.pub  id_ed25519_ubsembr.pub
+[94mITINF25/lektion4
+(B[m$ ls /home/kent/.ssh/id_ed25519)[K_ubsembr 
+[?2004l/home/kent/.ssh/id_ed25519_ubsembr
+[?2004h[94mITINF25/lektion4
+(B[m$ code ~/.ssh//co[K[K[Kconfig 
+[?2004l[?2004h[94mITINF25/lektion4
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mITINF25/lektion4
+(B[m$ ssh server-kent
+[?2004lThe authenticity of host '[
