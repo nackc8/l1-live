@@ -1,0 +1,28 @@
+Script started on 2025-09-22 13:47:40+02:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="65" LINES="14"]
+ITINF25/lektion4
+$ cd /home/kent/.ssh/
+~/.ssh $ ~/.ssh $ ls
+config				id_ed25519_ubsembr
+id_ed25519			id_ed25519_ubsembr.pub
+id_ed25519_github_personal	known_hosts
+id_ed25519_github_personal.pub	known_hosts.old
+id_ed25519.pub			known_hosts_private
+~/.ssh $ less config 
+Host localhost 127.0.0.1
+        HostName localhost
+        StrictHostKeyChecking no
+        UserKnownHostsFile /dev/null
+
+Host *.farm 192.168.*.*
+        UserKnownHostsFile ~/.ssh/known_hosts_private
+        HashKnownHosts no
+        ForwardAgent yes
+
+Host ubse
+        HostName localhost
+        Port 2222
+>~/.ssh $ cideode config 
+~/.ssh $ 
+exit
+
+Script done on 2025-09-22 13:50:29+02:00 [COMMAND_EXIT_CODE="0"]
