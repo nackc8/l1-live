@@ -121,4 +121,212 @@ Connection to localhost closed.
        6   Games[m
        7   Miscellaneous (including macro packages and  conven‐[m
            tions), e.g. [1mman[0m(7), [1mgroff[0m(7), [1mman-pages[0m(7)[m
-       8   System  administration  commands  
+       8   System  administration  commands  (usually  only for[m
+           root)[m
+       9   Kernel routines [Non standard][m
+[m
+       A manual [4mpage[24m consists of several sections.[m
+[m
+[7m Manual page man(1) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[15;1H[K[7m Manual page man(1) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       followed by the types of pages they contain.[m
+[15;1H[K[7m Manual page man(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       The  table below shows the [4msection[24m numbers of the manual[m
+[15;1H[K[7m Manual page man(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[15;1H[K[7m Manual page man(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       9   Kernel routines [Non standard][m
+[7m Manual page man(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page man(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       A manual [4mpage[24m consists of several sections.[m
+[7m Manual page man(1) line 27 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mITINF25/lektion4
+(B[m$ man 5 ssh_config[H[2J[94mITINF25/lektion4
+(B[m$ man 5 ssh_config
+[?2004l[?1049h[22;0;0t[?1h=SSH_CONFIG(5)       BSD File Formats Manual       SSH_CONFIG(5)[m
+[m
+[1mNAME[0m[m
+     [1mssh_config[0m — OpenSSH client configuration file[m
+[m
+[1mDESCRIPTION[0m[m
+     ssh(1) obtains configuration data from the following[m
+     sources in the following order:[m
+[m
+           1.   command-line options[m
+           2.   user's configuration file ([4m~/.ssh/config[24m)[m
+           3.   system-wide configuration file[m
+                ([4m/etc/ssh/ssh_config[24m)[m
+[m
+[7manual page ssh_config(5) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     For each parameter, the first obtained value will be used.[m
+[7manual page ssh_config(5) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     The configuration files contain sections separated by [1mHost[0m[m
+[7manual page ssh_config(5) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     specifications, and that section is only applied for hosts[m
+[7manual page ssh_config(5) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     that match one of the patterns given in the specification.[m
+[7manual page ssh_config(5) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     The matched host name is usually the one given on the com‐[m
+[7manual page ssh_config(5) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     mand line (see the [1mCanonicalizeHostname[0m option for excep‐[m
+[7manual page ssh_config(5) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     tions).[m
+[7manual page ssh_config(5) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7manual page ssh_config(5) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     Since the first obtained value for each parameter is used,[m
+[7mnual page ssh_config(5) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     more host-specific declarations should be given near the[m
+[7mnual page ssh_config(5) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     beginning of the file, and general defaults at the end.[m
+[7mnual page ssh_config(5) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mnual page ssh_config(5) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     Note that the Debian [1mopenssh-client[0m package sets several[m
+[7mnual page ssh_config(5) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     options as standard in [4m/etc/ssh/ssh_config[24m which are not[m
+[7mnual page ssh_config(5) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     the default in ssh(1):[m
+[7mnual page ssh_config(5) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mnual page ssh_config(5) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1m•[0m   [1mInclude[0m [1m/etc/ssh/ssh_config.d/*.conf[0m[m
+[7mnual page ssh_config(5) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1m•[0m   [1mSendEnv[0m LANG LC_*[m
+[7mnual page ssh_config(5) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1m•[0m   [1mHashKnownHosts[0m yes[m
+[7mnual page ssh_config(5) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1m•[0m   [1mGSSAPIAuthentication[0m yes[m
+[7mnual page ssh_config(5) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mnual page ssh_config(5) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [4m/etc/ssh/ssh_config.d/*.conf[24m files are included at the[m
+[7mnual page ssh_config(5) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     start of the system-wide configuration file, so options[m
+[7mnual page ssh_config(5) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     set there will override those in [4m/etc/ssh/ssh_config.[24m[m
+[7mnual page ssh_config(5) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mnual page ssh_config(5) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     The file contains keyword-argument pairs, one per line.[m
+[7mnual page ssh_config(5) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     Lines starting with ‘#’ and empty lines are interpreted as[m
+[7mnual page ssh_config(5) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     comments.  Arguments may optionally be enclosed in double[m
+[7mnual page ssh_config(5) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     quotes (") in order to represent arguments containing spa‐[m
+[7mnual page ssh_config(5) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     ces.  Configuration options may be separated by whitespace[m
+[7mnual page ssh_config(5) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     or optional whitespace and exactly one ‘=’; the latter[m
+[7mnual page ssh_config(5) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     format is useful to avoid the need to quote whitespace[m
+[7mnual page ssh_config(5) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     when specifying configuration options using the [1mssh[0m, [1mscp[0m,[m
+[7mnual page ssh_config(5) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     and [1msftp[0m [1m-o[0m option.[m
+[7mnual page ssh_config(5) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mnual page ssh_config(5) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     The possible keywords and their meanings are as follows[m
+[7mnual page ssh_config(5) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     (note that keywords are case-insensitive and arguments are[m
+[7mnual page ssh_config(5) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     case-sensitive):[m
+[7mnual page ssh_config(5) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mnual page ssh_config(5) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1mHost[0m    Restricts the following declarations (up to the[m
+[7mnual page ssh_config(5) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             next [1mHost[0m or [1mMatch[0m keyword) to be only for those[m
+[7mnual page ssh_config(5) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             hosts that match one of the patterns given after[m
+[7mnual page ssh_config(5) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             the keyword.  If more than one pattern is pro‐[m
+[7mnual page ssh_config(5) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             vided, they should be separated by whitespace.  A[m
+[7mnual page ssh_config(5) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             single ‘*’ as a pattern can be used to provide[m
+[7mnual page ssh_config(5) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             global defaults for all hosts.  The host is usu‐[m
+[7mnual page ssh_config(5) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             ally the [4mhostname[24m argument given on the command[m
+[7mnual page ssh_config(5) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             line (see the [1mCanonicalizeHostname[0m keyword for ex‐[m
+[7mnual page ssh_config(5) line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             ceptions).[m
+[7mnual page ssh_config(5) line 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mnual page ssh_config(5) line 51 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             A pattern entry may be negated by prefixing it[m
+[7mnual page ssh_config(5) line 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             with an exclamation mark (‘!’).  If a negated en‐[m
+[7mnual page ssh_config(5) line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             try is matched, then the [1mHost[0m entry is ignored,[m
+[7mnual page ssh_config(5) line 54 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             regardless of whether any other patterns on the[m
+[7mnual page ssh_config(5) line 55 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             line match.  Negated matches are therefore useful[m
+[7mnual page ssh_config(5) line 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             to provide exceptions for wildcard matches.[m
+[7mnual page ssh_config(5) line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mnual page ssh_config(5) line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             See [4mPATTERNS[24m for more information on patterns.[m
+[7mnual page ssh_config(5) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mnual page ssh_config(5) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1mMatch[0m   Restricts the following declarations (up to the[m
+[7mnual page ssh_config(5) line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             next [1mHost[0m or [1mMatch[0m keyword) to be used only when[m
+[7mnual page ssh_config(5) line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             the conditions following the [1mMatch[0m keyword are[m
+[7mnual page ssh_config(5) line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             satisfied.  Match conditions are specified using[m
+[7mnual page ssh_config(5) line 64 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             one or more criteria or the single token [1mall[0m which[m
+[7mnual page ssh_config(5) line 65 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             always matches.  The available criteria keywords[m
+[7mnual page ssh_config(5) line 66 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             are: [1mcanonical[0m, [1mfinal[0m, [1mexec[0m, [1mhost[0m, [1moriginalhost[0m,[m
+[7mnual page ssh_config(5) line 67 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             [1muser[0m, and [1mlocaluser[0m.  The [1mall[0m criteria must appear[m
+[7mnual page ssh_config(5) line 68 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             alone or immediately after [1mcanonical[0m or [1mfinal[0m.[m
+[7mnual page ssh_config(5) line 69 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             Other criteria may be combined arbitrarily.  All[m
+[7mnual page ssh_config(5) line 70 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             criteria but [1mall[0m, [1mcanonical[0m, and [1mfinal[0m require an[m
+[7mnual page ssh_config(5) line 71 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             argument.  Criteria may be negated by prepending[m
+[7mnual page ssh_config(5) line 72 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             an exclamation mark (‘!’).[m
+[7mnual page ssh_config(5) line 73 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mnual page ssh_config(5) line 74 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             The [1mcanonical[0m keyword matches only when the con‐[m
+[7mnual page ssh_config(5) line 75 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             figuration file is being re-parsed after hostname[m
+[7mnual page ssh_config(5) line 76 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             canonicalization (see the [1mCanonicalizeHostname[0m op‐[m
+[7mnual page ssh_config(5) line 77 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             tion).  This may be useful to specify conditions[m
+[7mnual page ssh_config(5) line 78 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             that work with canonical host names only.[m
+[7mnual page ssh_config(5) line 79 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mnual page ssh_config(5) line 80 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             The [1mfinal[0m keyword requests that the configuration[m
+[7mnual page ssh_config(5) line 81 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             be re-parsed (regardless of whether[m
+[7mnual page ssh_config(5) line 82 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             [1mCanonicalizeHostname[0m is enabled), and matches only[m
+[7mnual page ssh_config(5) line 83 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             during this final pass.  If [1mCanonicalizeHostname[0m[m
+[7mnual page ssh_config(5) line 84 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             is enabled, then [1mcanonical[0m and [1mfinal[0m match during[m
+[7mnual page ssh_config(5) line 85 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             the same pass.[m
+[7mnual page ssh_config(5) line 86 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mnual page ssh_config(5) line 87 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             The [1mexec[0m keyword executes the specified command[m
+[7mnual page ssh_config(5) line 88 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             under the user's shell.  If the command returns a[m
+[7mnual page ssh_config(5) line 89 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             zero exit status then the condition is considered[m
+[7mnual page ssh_config(5) line 90 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             true.  Commands containing whitespace characters[m
+[7mnual page ssh_config(5) line 91 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             must be quoted.  Arguments to [1mexec[0m accept the to‐[m
+[7mnual page ssh_config(5) line 92 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             kens described in the [4mTOKENS[24m section.[m
+[7mnual page ssh_config(5) line 93 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mnual page ssh_config(5) line 94 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             The other keywords' criteria must be single en‐[m
+[7mnual page ssh_config(5) line 95 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             tries or comma-separated lists and may use the[m
+[7mnual page ssh_config(5) line 96 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             wildcard and negation operators described in the[m
+[7mnual page ssh_config(5) line 97 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             [4mPATTERNS[24m section.  The criteria for the [1mhost[0m key‐[m
+[7mnual page ssh_config(5) line 98 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             word are matched against the target hostname, af‐[m
+[7mnual page ssh_config(5) line 99 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             ter any substitution by the [1mHostname[0m or[m
+[7mual page ssh_config(5) line 100 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             [1mCanonicalizeHostname[0m options.  The [1moriginalhost[0m[m
+[7mual page ssh_config(5) line 101 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             keyword matches against the hostname as it was[m
+[7mual page ssh_config(5) line 102 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             specified on the command-line.  The [1muser[0m keyword[m
+[7mual page ssh_config(5) line 103 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             matches against the target username on the remote[m
+[7mual page ssh_config(5) line 104 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             host.  The [1mlocaluser[0m keyword matches against the[m
+[7mual page ssh_config(5) line 105 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             name of the local user running ssh(1) (this key‐[m
+[7mual page ssh_config(5) line 106 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             word may be useful in system-wide [1mssh_config[0m[m
+[7mual page ssh_config(5) line 107 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             files).[m
+[7mual page ssh_config(5) line 108 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mual page ssh_config(5) line 109 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1mAddKeysToAgent[0m[m
+[7mual page ssh_config(5) line 110 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             Specifies whether keys should be automatically[m
+[7mual page ssh_config(5) line 111 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             added to a running ssh-agent(1).  If this option[m
+[7mual page ssh_config(5) line 112 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             is set to [1myes[0m and a key is loaded from a file, the[m
+[7mual page ssh_config(5) line 113 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             key and its passphrase are added to the agent with[m
+[7mual page ssh_config(5) line 114 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             the default lifetime, as if by ssh-add(1).  If[m
+[7mual page ssh_config(5) line 115 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             this option is set to [1mask[0m, ssh(1) will require[m
+[7mual page ssh_config(5) line 116 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             confirmation using the SSH_ASKPASS program before[m
+[7mual page ssh_config(5) line 117 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             adding a key (see ssh-add(1) for details).  If[m
+[7mual page ssh_config(5) line 118 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             this option is set to [1mconfirm[0m, each use of the key[m
+[7mual page ssh_config(5) line 119 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             must be confirmed, as if the [1m-c[0m option was speci‐[m
+[7mual page ssh_config(5) line 120 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             fied to ssh-add(1).  If this option is set to [1mno[0m,[m
+[7mual page ssh_config(5) line 121 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             no keys are added to the agent.  Alternately, this[m
+[7mual page ssh_config(5) line 122 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             option may be specified as a time interval using[m
+[7mual page ssh_config(5) line 123 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             the format described in the [4mTIME[24m [4mFORMATS[24m section[m
+[7mual page ssh_config(5) line 124 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             of sshd_config(5) to specify the key's lifetime in[m
+[7mual page ssh_config(5) line 125 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             ssh-agent(1), after which it will automatically be[m
+[7mual page ssh_config(5) line 126 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             removed.  The argument must be [1mno[0m (the default),[m
+[7mual page ssh_config(5) line 127 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             [1myes[0m, [1mconfirm[0m (optionally followed by a time inter‐[m
+[7mual page ssh_config(5) line 128 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             val), [1mask[0m or a time interval.[m
+[7mual page ssh_config(5) line 129 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mual page ssh_config(5) line 130 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1mAddressFamily[0m[m
+[7mual page ssh_config(5) line 131 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             Specifies which address family to use when con‐[m
+[7mual page ssh_config(5) line 132 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             necting.  Valid arguments are [1many[0m (the default),[m
+[7mual page ssh_config(5) line 133 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             [1minet[0m (use IPv4 only), or [1minet6[0m (use IPv6 only).[m
+[7mual page ssh_config(5) line 134 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mual page ssh_config(5) line 135 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1mBatchMode[0m[m
+[7mual page ssh_config(5) line 136 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             If set to [1myes[0m, user interaction such as password[m
+[7mual page ssh_config(5) line 137 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             prompts and host key confirmation requests will be[m
+[7mual page ssh_config(5) line 138 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             disabled.  In addition, the [1mServerAliveInterval[0m[m
+[7mual page ssh_config(5) line 139 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             of sshd_config(5) to specify the key's lifetime in[m
+[15;1H[K[7mual page ssh_config(5) line 138 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             the format described in the [4mTIME[24m [4mFORMATS[24m section[m
+[15;1H[K[7mual page ssh_config(5) line 137 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             option may be specified as a time interval using[m
+[15;1H[K[7mual page ssh_config(5) line 136 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             no keys are added to the agent.  Alternately, this[m
+[15;1H[K[7mual page ssh_config(5) line 135 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             fied to ssh-add(1).  If this option is set to [1mno[0m,[m
+[15;1H[K[7mual page ssh_config(5) line 134 (press h for help or q to quit)[27m[K[K/[KPP[Koo[Krr[Ktt[K[1;1H             fied to ssh-add(1).  If this option is set to [1mno[0m,[m
+[2;1H             no keys are added to the agent.  Alternately, this[m
+[3;1H             option may be specified as a time interval using[m
+[4;1H             the format described in the [4mTIME[24m [4mFORMATS[24m section[m
+[5;1H             of sshd_config(5) to specify the key's lifetime in[m
+[6;1H             ssh-agent(1), after which it will automatically be[m
+[7;1H             removed.  The argument must be [1mno[0m (the default),[m
+[8;1H             [1myes[0m, [1mconfirm[0m (optionally followed by a time inter‐[m
+[9;1H             val), [1mask[0m or a time interval.[m
+[10;1H[m
+[11;1H     [1mAddressFamily[0m[m
+[12;1H             Specifies which address family to use when con‐[m
+[13;1H             necting.  Valid arguments are [1many[0m (the default),[m
+[14;1H             [1minet[0m (use IPv4 only), or [1minet6[0m (use IPv6 only).[m
+[15;1H[1;1H             fied to ssh-add(1).  If this option is set to [1mno[0m,[m
+[2;1H             no keys are added to the agent.  Alternately, this[m
+[3;1H             option may be specified as a time interval using[m
+[4;1H             the format described in the [4mTIME[24m [4mFORMATS[24m section[m
+[5;1H             of sshd_config(5) to specify the key's lifetime in[m
+[6;1H             ssh-agent(1), after which it will automatically be[m
+[7;1H             removed.  The argument must be [1mno[0m (the default),[m
+[8;1H             [1myes[0m, [1mconfirm[0m (optionally followed by a time inter‐[m
+[9;1H             val), [1mask[0m or a time interval.[m
+[10;1H[m
+[11;1H     [1mAddressFamily[0m[m
+[12;1H             Specifies which address family to use when con‐[m
+[13;1H             necting.  Valid arguments are [1many[0m (the default),[m
+[14;1H             [1minet[0m (use IPv4 only), or [1minet6[0m (use IPv6 only).[m
+[15;1H...skipping...
+             bound in accordance with the [1mGateway[0m[1m[7mPort[27m[0m[1ms[0m setting.[m
+             However, an explicit [4mbind_address[24m may be used to[m
+             bind the connection to a specific address.  The[m
+             [4mbind_address[24m of [1mlocalhost[0m indicates that the lis‐[m
+             tening port be bound for local use only, while an[m
+             empty address or ‘*’ indicates that the port[m
+           
