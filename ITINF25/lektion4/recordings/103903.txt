@@ -440,4 +440,77 @@ Connection to localhost closed.
 [17;1H[K[7mnual page ssh-copy-id(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mNAME[0m[m
 [17;1H[K[7mnual page ssh-copy-id(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
 [17;1H[K[7mnual page ssh-copy-id(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HMSSH-COPY-ID(1)    BSD General Commands Manual    SSH-COPY-ID(1)[m
-[17;1H[K[7mnual page ssh-copy-id(1) line 1 (press h for help or q to quit)[27m[K[K [
+[17;1H[K[7mnual page ssh-copy-id(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7mnual page ssh-copy-id(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7mnual page ssh-copy-id(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mITINF25/lektion4
+(B[m$ ssh-copy-id -p 10022 -i /home/a[Kkent/.ssh/[C
+config                          id_ed25519_ubsembr
+id_ed25519                      id_ed25519_ubsembr.pub
+id_ed25519_github_personal      known_hosts
+id_ed25519_github_personal.pub  known_hosts.old
+id_ed25519.pub                  known_hosts_private
+[94mITINF25/lektion4
+(B[m$ ssh-copy-id -p 10022 -i /home/kent/.ssh/id_ed25519[H[2J[94mITINF25/lektion4
+(B[m$ ssh-copy-id -p 10022 -i /home/kent/.ssh/id_ed25519
+id_ed25519                      id_ed25519.pub
+id_ed25519_github_personal      id_ed25519_ubsembr
+id_ed25519_github_personal.pub  id_ed25519_ubsembr.pub
+[94mITINF25/lektion4
+(B[m$ ssh-copy-id -p 10022 -i /home/kent/.ssh/id_ed25519_ubsembr
+id_ed25519_ubsembr      id_ed25519_ubsembr.pub
+[94mITINF25/lektion4
+(B[m$ ssh-copy-id -p 10022 -i /home/kent/.ssh/id_ed25519_ubsembr[H[2J[94mITINF25/lektion4
+(B[m$ ssh-copy-id -p 10022 -i /home/kent/.ssh/id_ed25519_ubsembr
+[?2004l/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/kent/.ssh/id_ed25519_ubsembr.pub"
+Usage: /usr/bin/ssh-copy-id [-h|-?|-f|-n|-s] [-i [identity_file]] [-p port] [-F alternative ssh_config file] [[-o <ssh -o options>] ...] [user@]hostname
+	-f: force mode -- copy keys without trying to check if they are already installed
+	-n: dry run    -- no keys are actually copied
+	-s: use sftp   -- use sftp instead of executing remote-commands. Can be useful if the remote only allows sftp
+	-h|-?: print this help
+[?2004h[94mITINF25/lektion4
+(B[m$ ssh-copy-id -p 10022 -i /home/kent/.ssh/id_ed25519_ubsembr [H[2J[94mITINF25/lektion4
+(B[m$ ssh-copy-id -p 10022 -i /home/kent/.ssh/id_ed25519_ubsembr loca lhost
+[?2004l/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/kent/.ssh/id_ed25519_ubsembr.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+Warning: Permanently added '[localhost]:10022' (ED25519) to the list of known hosts.
+kent@localhost's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh -p '10022' 'localhost'"
+and check to make sure that only the key(s) you wanted were added.
+
+[?2004h[94mITINF25/lektion4
+(B[m$ [H[2J[94mITINF25/lektion4
+(B[m$ ssh -p 10022 localhost
+[?2004lWarning: Permanently added '[localhost]:10022' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-79-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon Sep 22 09:36:15 AM UTC 2025
+
+  System load:  0.0                Processes:               115
+  Usage of /:   34.6% of 16.07GB   Users logged in:         1
+  Memory usage: 12%                IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+175 updates can be applied immediately.
+1 of these updates is a standard security update.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+1 updates could not be installed automatically. For more details,
+see /var/log/unattended-upgrades/unattended-upgrades.log
+
+*** System restart required ***
+Last login: Mon Sep 22 09:31:54 2025 from 10.0.2.2
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ cat .ssh/authorized_keys 
+[?2004lssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAA
