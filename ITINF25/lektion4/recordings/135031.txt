@@ -944,4 +944,643 @@ SSH_CONFIG(5)       BSD File Formats Manual       SSH_CONFIG(5)[m
              files are processed again using the new target[m
              name to pick up any new configuration in matching[m
              [1mHost[0m and [1mMatch[0m stanzas.  A value of [1mnone[0m disables[m
-             the use of a [1mPr
+             the use of a [1mProxyJump[0m host.[m
+[m
+     [1mCanonicalizeMaxDots[0m[m
+             Specifies the maximum number of dot characters in[m
+             a hostname before canonicalization is disabled.[m
+             The default, 1, allows a single dot (i.e. host‐[m
+             name.subdomain).[m
+[m
+     [1mCanonicalizePermittedCNAMEs[0m[m
+[7mual page ssh_config(5) line 196 (press h for help or q to quit)[27m[K[K             Specifies rules to determine whether CNAMEs should[m
+             be followed when canonicalizing hostnames.  The[m
+             rules consist of one or more arguments of[m
+             [4msource_domain_list[24m:[4mtarget_domain_list[24m, where[m
+             [4msource_domain_list[24m is a pattern-list of domains[m
+             that may follow CNAMEs in canonicalization, and[m
+             [4mtarget_domain_list[24m is a pattern-list of domains[m
+             that they may resolve to.[m
+[m
+             For example,[m
+             "*.a.example.com:*.b.example.com,*.c.example.com"[m
+             will allow hostnames matching "*.a.example.com" to[m
+             be canonicalized to names in the "*.b.example.com"[m
+             or "*.c.example.com" domains.[m
+[m
+[7mual page ssh_config(5) line 211 (press h for help or q to quit)[27m[K[K             A single argument of "none" causes no CNAMEs to be[m
+             considered for canonicalization.  This is the de‐[m
+             fault behaviour.[m
+[m
+     [1mCASignatureAlgorithms[0m[m
+             Specifies which algorithms are allowed for signing[m
+             of certificates by certificate authorities (CAs).[m
+             The default is:[m
+[m
+                   ssh-ed25519,ecdsa-sha2-nistp256,[m
+                   ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,[m
+                   sk-ssh-ed25519@openssh.com,[m
+                   sk-ecdsa-sha2-nistp256@openssh.com,[m
+                   rsa-sha2-512,rsa-sha2-256[m
+[m
+[7mual page ssh_config(5) line 226 (press h for help or q to quit)[27m[K[K             If the specified list begins with a ‘+’ character,[m
+             then the specified algorithms will be appended to[m
+             the default set instead of replacing them.  If the[m
+             specified list begins with a ‘-’ character, then[m
+             the specified algorithms (including wildcards)[m
+             will be removed from the default set instead of[m
+             replacing them.[m
+[m
+             ssh(1) will not accept host certificates signed[m
+             using algorithms other than those specified.[m
+[m
+     [1mCertificateFile[0m[m
+             Specifies a file from which the user's certificate[m
+             is read.  A corresponding private key must be pro‐[m
+             vided separately in order to use this certificate[m
+[7mual page ssh_config(5) line 241 (press h for help or q to quit)[27m[K[K             either from an [1mIdentityFile[0m directive or [1m-i[0m flag[m
+             to ssh(1), via ssh-agent(1), or via a[m
+             [1mPKCS11Provider[0m or [1mSecurityKeyProvider[0m.[m
+[m
+             Arguments to [1mCertificateFile[0m may use the tilde[m
+             syntax to refer to a user's home directory, the[m
+             tokens described in the [4mTOKENS[24m section and envi‐[m
+             ronment variables as described in the [4mENVIRONMENT[24m[m
+             [4mVARIABLES[24m section.[m
+[m
+             It is possible to have multiple certificate files[m
+             specified in configuration files; these certifi‐[m
+             cates will be tried in sequence.  Multiple[m
+             [1mCertificateFile[0m directives will add to the list of[m
+             certificates used for authentication.[m
+[7mual page ssh_config(5) line 256 (press h for help or q to quit)[27m[K[K[m
+     [1mCheckHostIP[0m[m
+             If set to [1myes[0m, ssh(1) will additionally check the[m
+             host IP address in the [4mknown_hosts[24m file.  This al‐[m
+             lows it to detect if a host key changed due to DNS[m
+             spoofing and will add addresses of destination[m
+             hosts to [4m~/.ssh/known_hosts[24m in the process, re‐[m
+             gardless of the setting of [1mStrictHostKeyChecking[0m.[m
+             If the option is set to [1mno[0m (the default), the[m
+             check will not be executed.[m
+[m
+     [1mCiphers[0m[m
+             Specifies the ciphers allowed and their order of[m
+             preference.  Multiple ciphers must be comma-sepa‐[m
+             rated.  If the specified list begins with a ‘+’[m
+[7mual page ssh_config(5) line 271 (press h for help or q to quit)[27m[K[K             character, then the specified ciphers will be ap‐[m
+             pended to the default set instead of replacing[m
+             them.  If the specified list begins with a ‘-’[m
+             character, then the specified ciphers (including[m
+             wildcards) will be removed from the default set[m
+             instead of replacing them.  If the specified list[m
+             begins with a ‘^’ character, then the specified[m
+             ciphers will be placed at the head of the default[m
+             set.[m
+[m
+             The supported ciphers are:[m
+[m
+                   3des-cbc[m
+                   aes128-cbc[m
+                   aes192-cbc[m
+[7mual page ssh_config(5) line 286 (press h for help or q to quit)[27m[K[K                   aes256-cbc[m
+                   aes128-ctr[m
+                   aes192-ctr[m
+                   aes256-ctr[m
+                   aes128-gcm@openssh.com[m
+                   aes256-gcm@openssh.com[m
+                   chacha20-poly1305@openssh.com[m
+[m
+             The default is:[m
+[m
+                   chacha20-poly1305@openssh.com,[m
+                   aes128-ctr,aes192-ctr,aes256-ctr,[m
+                   aes128-gcm@openssh.com,aes256-gcm@openssh.com[m
+[m
+             The list of available ciphers may also be obtained[m
+[7mual page ssh_config(5) line 301 (press h for help or q to quit)[27m[K[K             using "ssh -Q cipher".[m
+[m
+     [1mClearAllForwardings[0m[m
+             Specifies that all local, remote, and dynamic port[m
+             forwardings specified in the configuration files[m
+             or on the command line be cleared.  This option is[m
+             primarily useful when used from the ssh(1) command[m
+             line to clear port forwardings set in configura‐[m
+             tion files, and is automatically set by scp(1) and[m
+             sftp(1).  The argument must be [1myes[0m or [1mno[0m (the de‐[m
+             fault).[m
+[m
+     [1mCompression[0m[m
+             Specifies whether to use compression.  The argu‐[m
+             ment must be [1myes[0m or [1mno[0m (the default).[m
+[7mual page ssh_config(5) line 316 (press h for help or q to quit)[27m[K[K[m
+     [1mConnectionAttempts[0m[m
+             Specifies the number of tries (one per second) to[m
+             make before exiting.  The argument must be an in‐[m
+             teger.  This may be useful in scripts if the con‐[m
+             nection sometimes fails.  The default is 1.[m
+[m
+     [1mConnectTimeout[0m[m
+             Specifies the timeout (in seconds) used when con‐[m
+             necting to the SSH server, instead of using the[m
+             default system TCP timeout.  This timeout is ap‐[m
+             plied both to establishing the connection and to[m
+             performing the initial SSH protocol handshake and[m
+             key exchange.[m
+[m
+[7mual page ssh_config(5) line 331 (press h for help or q to quit)[27m[K[K     [1mControlMaster[0m[m
+             Enables the sharing of multiple sessions over a[m
+             single network connection.  When set to [1myes[0m,[m
+             ssh(1) will listen for connections on a control[m
+             socket specified using the [1mControlPath[0m argument.[m
+             Additional sessions can connect to this socket us‐[m
+             ing the same [1mControlPath[0m with [1mControlMaster[0m set to[m
+             [1mno[0m (the default).  These sessions will try to re‐[m
+             use the master instance's network connection[m
+             rather than initiating new ones, but will fall[m
+             back to connecting normally if the control socket[m
+             does not exist, or is not listening.[m
+[m
+             Setting this to [1mask[0m will cause ssh(1) to listen[m
+             for control connections, but require confirmation[m
+[7mual page ssh_config(5) line 346 (press h for help or q to quit)[27m[K[K             using ssh-askpass(1).  If the [1mControlPath[0m cannot[m
+             be opened, ssh(1) will continue without connecting[m
+             to a master instance.[m
+[m
+             X11 and ssh-agent(1) forwarding is supported over[m
+             these multiplexed connections, however the display[m
+             and agent forwarded will be the one belonging to[m
+             the master connection i.e. it is not possible to[m
+             forward multiple displays or agents.[m
+[m
+             Two additional options allow for opportunistic[m
+             multiplexing: try to use a master connection but[m
+             fall back to creating a new one if one does not[m
+             already exist.  These options are: [1mauto[0m and[m
+             [1mautoask[0m.  The latter requires confirmation like[m
+[7mual page ssh_config(5) line 361 (press h for help or q to quit)[27m[K[K             the [1mask[0m option.[m
+[m
+     [1mControlPath[0m[m
+             Specify the path to the control socket used for[m
+             connection sharing as described in the[m
+             [1mControlMaster[0m section above or the string [1mnone[0m to[m
+             disable connection sharing.  Arguments to[m
+             [1mControlPath[0m may use the tilde syntax to refer to a[m
+             user's home directory, the tokens described in the[m
+             [4mTOKENS[24m section and environment variables as de‐[m
+             scribed in the [4mENVIRONMENT[24m [4mVARIABLES[24m section.  It[m
+             is recommended that any [1mControlPath[0m used for op‐[m
+             portunistic connection sharing include at least[m
+             %h, %p, and %r (or alternatively %C) and be placed[m
+             in a directory that is not writable by other[m
+[7mual page ssh_config(5) line 376 (press h for help or q to quit)[27m[K[K             users.  This ensures that shared connections are[m
+             uniquely identified.[m
+[m
+     [1mControlPersist[0m[m
+             When used in conjunction with [1mControlMaster[0m, spec‐[m
+             ifies that the master connection should remain[m
+             open in the background (waiting for future client[m
+             connections) after the initial client connection[m
+             has been closed.  If set to [1mno[0m (the default), then[m
+             the master connection will not be placed into the[m
+             background, and will close as soon as the initial[m
+             client connection is closed.  If set to [1myes[0m or 0,[m
+             then the master connection will remain in the[m
+             background indefinitely (until killed or closed[m
+             via a mechanism such as the "ssh -O exit").  If[m
+[7mual page ssh_config(5) line 391 (press h for help or q to quit)[27m[K[K             set to a time in seconds, or a time in any of the[m
+             formats documented in sshd_config(5), then the[m
+             backgrounded master connection will automatically[m
+             terminate after it has remained idle (with no[m
+             client connections) for the specified time.[m
+[m
+     [1mDynamicForward[0m[m
+             Specifies that a TCP port on the local machine be[m
+             forwarded over the secure channel, and the appli‐[m
+             cation protocol is then used to determine where to[m
+             connect to from the remote machine.[m
+[m
+             The argument must be [[4mbind_address[24m:][4mport[24m.  IPv6[m
+             addresses can be specified by enclosing addresses[m
+             in square brackets.  By default, the local port is[m
+[7mual page ssh_config(5) line 406 (press h for help or q to quit)[27m[K[K             bound in accordance with the [1mGatewayPorts[0m setting.[m
+             However, an explicit [4mbind_address[24m may be used to[m
+             bind the connection to a specific address.  The[m
+             [4mbind_address[24m of [1mlocalhost[0m indicates that the lis‐[m
+             tening port be bound for local use only, while an[m
+             empty address or ‘*’ indicates that the port[m
+             should be available from all interfaces.[m
+[m
+             Currently the SOCKS4 and SOCKS5 protocols are sup‐[m
+             ported, and ssh(1) will act as a SOCKS server.[m
+             Multiple forwardings may be specified, and addi‐[m
+             tional forwardings can be given on the command[m
+             line.  Only the superuser can forward privileged[m
+             ports.[m
+[m
+[7mual page ssh_config(5) line 421 (press h for help or q to quit)[27m[K[K     [1mEnableEscapeCommandline[0m[m
+             Enables the command line option in the [1mEscapeChar[0m[m
+             menu for interactive sessions (default ‘~C’).  By[m
+             default, the command line is disabled.[m
+[m
+     [1mEnableSSHKeysign[0m[m
+             Setting this option to [1myes[0m in the global client[m
+             configuration file [4m/etc/ssh/ssh_config[24m enables the[m
+             use of the helper program ssh-keysign(8) during[m
+             [1mHostbasedAuthentication[0m.  The argument must be [1myes[0m[m
+             or [1mno[0m (the default).  This option should be placed[m
+             in the non-hostspecific section.  See[m
+             ssh-keysign(8) for more information.[m
+[m
+     [1mEscapeChar[0m[m
+[7mual page ssh_config(5) line 436 (press h for help or q to quit)[27m[K[K             Sets the escape character (default: ‘~’).  The es‐[m
+             cape character can also be set on the command[m
+             line.  The argument should be a single character,[m
+             ‘^’ followed by a letter, or [1mnone[0m to disable the[m
+             escape character entirely (making the connection[m
+             transparent for binary data).[m
+[m
+     [1mExitOnForwardFailure[0m[m
+             Specifies whether ssh(1) should terminate the con‐[m
+             nection if it cannot set up all requested dynamic,[m
+             tunnel, local, and remote port forwardings, (e.g.[m
+             if either end is unable to bind and listen on a[m
+             specified port).  Note that [1mExitOnForwardFailure[0m[m
+             does not apply to connections made over port for‐[m
+             wardings and will not, for example, cause ssh(1)[m
+[7mual page ssh_config(5) line 451 (press h for help or q to quit)[27m[K[K             to exit if TCP connections to the ultimate for‐[m
+             warding destination fail.  The argument must be[m
+             [1myes[0m or [1mno[0m (the default).[m
+[m
+     [1mFingerprintHash[0m[m
+             Specifies the hash algorithm used when displaying[m
+             key fingerprints.  Valid options are: [1mmd5[0m and[m
+             [1msha256[0m (the default).[m
+[m
+     [1mForkAfterAuthentication[0m[m
+             Requests [1mssh[0m to go to background just before com‐[m
+             mand execution.  This is useful if [1mssh[0m is going to[m
+             ask for passwords or passphrases, but the user[m
+             wants it in the background.  This implies the[m
+             [1mStdinNull[0m configuration option being set to “yes”.[m
+[7mual page ssh_config(5) line 466 (press h for help or q to quit)[27m[K[K             The recommended way to start X11 programs at a re‐[m
+             mote site is with something like [1mssh[0m [1m-f[0m [1mhost[0m[m
+             [1mxterm[0m, which is the same as [1mssh[0m [1mhost[0m [1mxterm[0m if the[m
+             [1mForkAfterAuthentication[0m configuration option is[m
+             set to “yes”.[m
+[m
+             If the [1mExitOnForwardFailure[0m configuration option[m
+             is set to “yes”, then a client started with the[m
+             [1mForkAfterAuthentication[0m configuration option being[m
+             set to “yes” will wait for all remote port for‐[m
+             wards to be successfully established before plac‐[m
+             ing itself in the background.  The argument to[m
+             this keyword must be [1myes[0m (same as the [1m-f[0m option)[m
+             or [1mno[0m (the default).[m
+[m
+[7mual page ssh_config(5) line 481 (press h for help or q to quit)[27m[K[K     [1mForwardAgent[0m[m
+             Specifies whether the connection to the authenti‐[m
+             cation agent (if any) will be forwarded to the re‐[m
+             mote machine.  The argument may be [1myes[0m, [1mno[0m (the[m
+             default), an explicit path to an agent socket or[m
+             the name of an environment variable (beginning[m
+             with ‘$’) in which to find the path.[m
+[m
+             Agent forwarding should be enabled with caution.[m
+             Users with the ability to bypass file permissions[m
+             on the remote host (for the agent's Unix-domain[m
+             socket) can access the local agent through the[m
+             forwarded connection.  An attacker cannot obtain[m
+             key material from the agent, however they can per‐[m
+             form operations on the keys that enable them to[m
+[7mual page ssh_config(5) line 496 (press h for help or q to quit)[27m[K[K             authenticate using the identities loaded into the[m
+             agent.[m
+[m
+     [1mForwardX11[0m[m
+             Specifies whether X11 connections will be automat‐[m
+             ically redirected over the secure channel and[m
+             DISPLAY set.  The argument must be [1myes[0m or [1mno[0m (the[m
+             default).[m
+[m
+             X11 forwarding should be enabled with caution.[m
+             Users with the ability to bypass file permissions[m
+             on the remote host (for the user's X11 authoriza‐[m
+             tion database) can access the local X11 display[m
+             through the forwarded connection.  An attacker may[m
+             then be able to perform activities such as key‐[m
+[7mual page ssh_config(5) line 511 (press h for help or q to quit)[27m[K[K             stroke monitoring if the [1mForwardX11Trusted[0m option[m
+             is also enabled.[m
+[m
+     [1mForwardX11Timeout[0m[m
+             Specify a timeout for untrusted X11 forwarding us‐[m
+             ing the format described in the [4mTIME[24m [4mFORMATS[24m sec‐[m
+             tion of sshd_config(5).  X11 connections received[m
+             by ssh(1) after this time will be refused.  Set‐[m
+             ting [1mForwardX11Timeout[0m to zero will disable the[m
+             timeout and permit X11 forwarding for the life of[m
+             the connection.  The default is to disable un‐[m
+             trusted X11 forwarding after twenty minutes has[m
+             elapsed.[m
+[m
+     [1mForwardX11Trusted[0m[m
+[7mual page ssh_config(5) line 526 (press h for help or q to quit)[27m[K[K             If this option is set to [1myes[0m, (the Debian-specific[m
+             default), remote X11 clients will have full access[m
+             to the original X11 display.[m
+[m
+             If this option is set to [1mno[0m (the upstream de‐[m
+             fault), remote X11 clients will be considered un‐[m
+             trusted and prevented from stealing or tampering[m
+             with data belonging to trusted X11 clients.  Fur‐[m
+             thermore, the xauth(1) token used for the session[m
+             will be set to expire after 20 minutes.  Remote[m
+             clients will be refused access after this time.[m
+[m
+             See the X11 SECURITY extension specification for[m
+             full details on the restrictions imposed on un‐[m
+             trusted clients.[m
+[7mual page ssh_config(5) line 541 (press h for help or q to quit)[27m[K[K[m
+     [1mGatewayPorts[0m[m
+             Specifies whether remote hosts are allowed to con‐[m
+             nect to local forwarded ports.  By default, ssh(1)[m
+             binds local port forwardings to the loopback ad‐[m
+             dress.  This prevents other remote hosts from con‐[m
+             necting to forwarded ports.  [1mGatewayPorts[0m can be[m
+             used to specify that ssh should bind local port[m
+             forwardings to the wildcard address, thus allowing[m
+             remote hosts to connect to forwarded ports.  The[m
+             argument must be [1myes[0m or [1mno[0m (the default).[m
+[m
+     [1mGlobalKnownHostsFile[0m[m
+             Specifies one or more files to use for the global[m
+             host key database, separated by whitespace.  The[m
+[7mual page ssh_config(5) line 556 (press h for help or q to quit)[27m[K[K             default is [4m/etc/ssh/ssh_known_hosts[24m,[m
+             [4m/etc/ssh/ssh_known_hosts2[24m.[m
+[m
+     [1mGSSAPIAuthentication[0m[m
+             Specifies whether user authentication based on[m
+             GSSAPI is allowed.  The default is [1mno[0m.[m
+[m
+     [1mGSSAPIClientIdentity[0m[m
+             If set, specifies the GSSAPI client identity that[m
+             ssh should use when connecting to the server. The[m
+             default is unset, which means that the default[m
+             identity will be used.[m
+[m
+     [1mGSSAPIDelegateCredentials[0m[m
+             Forward (delegate) credentials to the server.  The[m
+[7mual page ssh_config(5) line 571 (press h for help or q to quit)[27m[K[K             default is [1mno[0m.[m
+[m
+     [1mGSSAPIKeyExchange[0m[m
+             Specifies whether key exchange based on GSSAPI may[m
+             be used. When using GSSAPI key exchange the server[m
+             need not have a host key.  The default is “no”.[m
+[m
+     [1mGSSAPIRenewalForcesRekey[0m[m
+             If set to “yes” then renewal of the client's GSS‐[m
+             API credentials will force the rekeying of the ssh[m
+             connection. With a compatible server, this will[m
+             delegate the renewed credentials to a session on[m
+             the server.[m
+[m
+             Checks are made to ensure that credentials are[m
+[7mual page ssh_config(5) line 586 (press h for help or q to quit)[27m[K[K             only propagated when the new credentials match the[m
+             old ones on the originating client and where the[m
+             receiving server still has the old set in its[m
+             cache.[m
+[m
+             The default is “no”.[m
+[m
+             For this to work [1mGSSAPIKeyExchange[0m needs to be en‐[m
+             abled in the server and also used by the client.[m
+[m
+     [1mGSSAPIServerIdentity[0m[m
+             If set, specifies the GSSAPI server identity that[m
+             ssh should expect when connecting to the server.[m
+             The default is unset, which means that the ex‐[m
+             pected GSSAPI server identity will be determined[m
+[7mual page ssh_config(5) line 601 (press h for help or q to quit)[27m[K[K             from the target hostname.[m
+[m
+     [1mGSSAPITrustDns[0m[m
+             Set to “yes” to indicate that the DNS is trusted[m
+             to securely canonicalize the name of the host be‐[m
+             ing connected to. If “no”, the hostname entered on[m
+             the command line will be passed untouched to the[m
+             GSSAPI library.  The default is “no”.[m
+[m
+     [1mGSSAPIKexAlgorithms[0m[m
+             The list of key exchange algorithms that are of‐[m
+             fered for GSSAPI key exchange. Possible values are[m
+[m
+                gss-gex-sha1-,[m
+                gss-group1-sha1-,[m
+[7mual page ssh_config(5) line 616 (press h for help or q to quit)[27m[K[K                gss-group14-sha1-,[m
+                gss-group14-sha256-,[m
+                gss-group16-sha512-,[m
+                gss-nistp256-sha256-,[m
+                gss-curve25519-sha256-[m
+[m
+             The default is[m
+             “gss-group14-sha256-,gss-group16-sha512-,gss-nistp25[m 6-sha256-,gss-curve25519-sha256-,gss-gex-sha1-,gss-group14-sha1-”[m .[m
+             This option only applies to connections using GSS‐[m
+             API.[m
+[m
+     [1mHashKnownHosts[0m[m
+             Indicates that ssh(1) should hash host names and[m
+[7mual page ssh_config(5) line 631 (press h for help or q to quit)[27m[K[K             addresses when they are added to[m
+             [4m~/.ssh/known_hosts[24m.  These hashed names may be[m
+             used normally by ssh(1) and sshd(8), but they do[m
+             not visually reveal identifying information if the[m
+             file's contents are disclosed.  The default is [1mno[0m.[m
+             Note that existing names and addresses in known[m
+             hosts files will not be converted automatically,[m
+             but may be manually hashed using ssh-keygen(1).[m
+             Use of this option may break facilities such as[m
+             tab-completion that rely on being able to read un‐[m
+             hashed host names from [4m~/.ssh/known_hosts[24m.[m
+[m
+     [1mHostbasedAcceptedAlgorithms[0m[m
+             Specifies the signature algorithms that will be[m
+             used for hostbased authentication as a comma-sepa‐[m
+[7mual page ssh_config(5) line 644 (press h for help or q to quit)[27m[K[K             rated list of patterns.  Alternately if the speci‐[m
+             fied list begins with a ‘+’ character, then the[m
+             specified signature algorithms will be appended to[m
+             the default set instead of replacing them.  If the[m
+             specified list begins with a ‘-’ character, then[m
+             the specified signature algorithms (including[m
+             wildcards) will be removed from the default set[m
+             instead of replacing them.  If the specified list[m
+             begins with a ‘^’ character, then the specified[m
+             signature algorithms will be placed at the head of[m
+             the default set.  The default for this option is:[m
+[m
+                ssh-ed25519-cert-v01@openssh.com,[m
+                ecdsa-sha2-nistp256-cert-v01@openssh.com,[m
+                ecdsa-sha2-nistp384-cert-v01@openssh.com,[m
+[7mual page ssh_config(5) line 659 (press h for help or q to quit)[27m[K[K                ecdsa-sha2-nistp521-cert-v01@openssh.com,[m
+                sk-ssh-ed25519-cert-v01@openssh.com,[m
+                sk-ecdsa-sha2-nistp256-cert-v01@openssh.com,[m
+                rsa-sha2-512-cert-v01@openssh.com,[m
+                rsa-sha2-256-cert-v01@openssh.com,[m
+                ssh-ed25519,[m
+                ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha[m 2-nistp521,[m
+                sk-ssh-ed25519@openssh.com,[m
+                sk-ecdsa-sha2-nistp256@openssh.com,[m
+                rsa-sha2-512,rsa-sha2-256[m
+[m
+             The [1m-Q[0m option of ssh(1) may be used to list sup‐[m
+             ported signature algorithms.  This was formerly[m
+             named HostbasedKeyTypes.[m
+[7mual page ssh_config(5) line 674 (press h for help or q to quit)[27m[K[K[m
+     [1mHostbasedAuthentication[0m[m
+             Specifies whether to try rhosts based authentica‐[m
+             tion with public key authentication.  The argument[m
+             must be [1myes[0m or [1mno[0m (the default).[m
+[m
+     [1mHostKeyAlgorithms[0m[m
+             Specifies the host key signature algorithms that[m
+             the client wants to use in order of preference.[m
+             Alternately if the specified list begins with a[m
+             ‘+’ character, then the specified signature algo‐[m
+             rithms will be appended to the default set instead[m
+             of replacing them.  If the specified list begins[m
+             with a ‘-’ character, then the specified signature[m
+             algorithms (including wildcards) will be removed[m
+[7mual page ssh_config(5) line 688 (press h for help or q to quit)[27m[K[K             from the default set instead of replacing them.[m
+             If the specified list begins with a ‘^’ character,[m
+             then the specified signature algorithms will be[m
+             placed at the head of the default set.  The de‐[m
+             fault for this option is:[m
+[m
+                ssh-ed25519-cert-v01@openssh.com,[m
+                ecdsa-sha2-nistp256-cert-v01@openssh.com,[m
+                ecdsa-sha2-nistp384-cert-v01@openssh.com,[m
+                ecdsa-sha2-nistp521-cert-v01@openssh.com,[m
+                sk-ssh-ed25519-cert-v01@openssh.com,[m
+                sk-ecdsa-sha2-nistp256-cert-v01@openssh.com,[m
+                rsa-sha2-512-cert-v01@openssh.com,[m
+                rsa-sha2-256-cert-v01@openssh.com,[m
+                ssh-ed25519,[m
+[7mual page ssh_config(5) line 703 (press h for help or q to quit)[27m[K[K                ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha[m 2-nistp521,[m
+                sk-ecdsa-sha2-nistp256@openssh.com,[m
+                sk-ssh-ed25519@openssh.com,[m
+                rsa-sha2-512,rsa-sha2-256[m
+[m
+             If hostkeys are known for the destination host[m
+             then this default is modified to prefer their al‐[m
+             gorithms.[m
+[m
+             The list of available signature algorithms may[m
+             also be obtained using "ssh -Q HostKeyAlgorithms".[m
+[m
+     [1mHostKeyAlias[0m[m
+             Specifies an alias that should be used instead of[m
+[7mual page ssh_config(5) line 718 (press h for help or q to quit)[27m[K[K             the real host name when looking up or saving the[m
+             host key in the host key database files and when[m
+             validating host certificates.  This option is use‐[m
+             ful for tunneling SSH connections or for multiple[m
+             servers running on a single host.[m
+[m
+     [1mHostname[0m[m
+             Specifies the real host name to log into.  This[m
+             can be used to specify nicknames or abbreviations[m
+             for hosts.  Arguments to [1mHostname[0m accept the to‐[m
+             kens described in the [4mTOKENS[24m section.  Numeric IP[m
+             addresses are also permitted (both on the command[m
+             line and in [1mHostname[0m specifications).  The default[m
+             is the name given on the command line.[m
+[m
+[7mual page ssh_config(5) line 732 (press h for help or q to quit)[27m[K[K     [1mIdentitiesOnly[0m[m
+             Specifies that ssh(1) should only use the config‐[m
+             ured authentication identity and certificate files[m
+             (either the default files, or those explicitly[m
+             configured in the [1mssh_config[0m files or passed on[m
+             the ssh(1) command-line), even if ssh-agent(1) or[m
+             a [1mPKCS11Provider[0m or [1mSecurityKeyProvider[0m offers[m
+             more identities.  The argument to this keyword[m
+             must be [1myes[0m or [1mno[0m (the default).  This option is[m
+             intended for situations where ssh-agent offers[m
+             many different identities.[m
+[m
+     [1mIdentityAgent[0m[m
+             Specifies the UNIX-domain socket used to communi‐[m
+             cate with the authentication agent.[m
+[7mual page ssh_config(5) line 747 (press h for help or q to quit)[27m[K[K[m
+             This option overrides the SSH_AUTH_SOCK environ‐[m
+             ment variable and can be used to select a specific[m
+             agent.  Setting the socket name to [1mnone[0m disables[m
+             the use of an authentication agent.  If the string[m
+             "SSH_AUTH_SOCK" is specified, the location of the[m
+             socket will be read from the SSH_AUTH_SOCK envi‐[m
+             ronment variable.  Otherwise if the specified[m
+             value begins with a ‘$’ character, then it will be[m
+             treated as an environment variable containing the[m
+             location of the socket.[m
+[m
+             Arguments to [1mIdentityAgent[0m may use the tilde syn‐[m
+             tax to refer to a user's home directory, the to‐[m
+             kens described in the [4mTOKENS[24m section and environ‐[m
+[7mual page ssh_config(5) line 762 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             cate with the authentication agent.[m
+[16;1H[K[7mual page ssh_config(5) line 761 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             Specifies the UNIX-domain socket used to communi‐[m
+[16;1H[K[7mual page ssh_config(5) line 760 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM     [1mIdentityAgent[0m[m
+[16;1H[K[7mual page ssh_config(5) line 759 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[16;1H[K[7mual page ssh_config(5) line 758 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             many different identities.[m
+[16;1H[K[7mual page ssh_config(5) line 757 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             intended for situations where ssh-agent offers[m
+[16;1H[K[7mual page ssh_config(5) line 756 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             must be [1myes[0m or [1mno[0m (the default).  This option is[m
+[16;1H[K[7mual page ssh_config(5) line 755 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             more identities.  The argument to this keyword[m
+[16;1H[K[7mual page ssh_config(5) line 754 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             a [1mPKCS11Provider[0m or [1mSecurityKeyProvider[0m offers[m
+[16;1H[K[7mual page ssh_config(5) line 753 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             the ssh(1) command-line), even if ssh-agent(1) or[m
+[16;1H[K[7mual page ssh_config(5) line 752 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             configured in the [1mssh_config[0m files or passed on[m
+[16;1H[K[7mual page ssh_config(5) line 751 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             (either the default files, or those explicitly[m
+[16;1H[K[7mual page ssh_config(5) line 750 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             ured authentication identity and certificate files[m
+[16;1H[K[7mual page ssh_config(5) line 749 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             Specifies that ssh(1) should only use the config‐[m
+[16;1H[K[7mual page ssh_config(5) line 748 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM     [1mIdentitiesOnly[0m[m
+[16;1H[K[7mual page ssh_config(5) line 747 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[16;1H[K[7mual page ssh_config(5) line 746 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             is the name given on the command line.[m
+[16;1H[K[7mual page ssh_config(5) line 745 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             line and in [1mHostname[0m specifications).  The default[m
+[16;1H[K[7mual page ssh_config(5) line 744 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             addresses are also permitted (both on the command[m
+[16;1H[K[7mual page ssh_config(5) line 743 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             kens described in the [4mTOKENS[24m section.  Numeric IP[m
+[16;1H[K[7mual page ssh_config(5) line 742 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             for hosts.  Arguments to [1mHostname[0m accept the to‐[m
+[16;1H[K[7mual page ssh_config(5) line 741 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             can be used to specify nicknames or abbreviations[m
+[16;1H[K[7mual page ssh_config(5) line 740 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             Specifies the real host name to log into.  This[m
+[16;1H[K[7mual page ssh_config(5) line 739 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM     [1mHostname[0m[m
+[16;1H[K[7mual page ssh_config(5) line 738 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[16;1H[K[7mual page ssh_config(5) line 737 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             servers running on a single host.[m
+[16;1H[K[7mual page ssh_config(5) line 736 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             ful for tunneling SSH connections or for multiple[m
+[16;1H[K[7mual page ssh_config(5) line 735 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             validating host certificates.  This option is use‐[m
+[16;1H[K[7mual page ssh_config(5) line 734 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             host key in the host key database files and when[m
+[16;1H[K[7mual page ssh_config(5) line 733 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             the real host name when looking up or saving the[m
+[16;1H[K[7mual page ssh_config(5) line 732 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM             Specifies an alias that should be used instead of[m
+[16;1H[K[7mual page ssh_config(5) line 731 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM     [1mHostKeyAlias[0m[m
+[16;1H[K[7mual page ssh_config(5) line 730 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             is the name given on the command line.[m
+[7mual page ssh_config(5) line 731 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mual page ssh_config(5) line 732 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1mIdentitiesOnly[0m[m
+[7mual page ssh_config(5) line 733 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             Specifies that ssh(1) should only use the config‐[m
+[7mual page ssh_config(5) line 734 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             ured authentication identity and certificate files[m
+[7mual page ssh_config(5) line 735 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             (either the default files, or those explicitly[m
+[7mual page ssh_config(5) line 736 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             configured in the [1mssh_config[0m files or passed on[m
+[7mual page ssh_config(5) line 737 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             the ssh(1) command-line), even if ssh-agent(1) or[m
+[7mual page ssh_config(5) line 738 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             a [1mPKCS11Provider[0m or [1mSecurityKeyProvider[0m offers[m
+[7mual page ssh_config(5) line 739 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             more identities.  The argument to this keyword[m
+[7mual page ssh_config(5) line 740 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             must be [1myes[0m or [1mno[0m (the default).  This option is[m
+[7mual page ssh_config(5) line 741 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             intended for situations where ssh-agent offers[m
+[7mual page ssh_config(5) line 742 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             many different identities.[m
+[7mual page ssh_config(5) line 743 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mual page ssh_config(5) line 744 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1mIdentityAgent[0m[m
+[7mual page ssh_config(5) line 745 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             Specifies the UNIX-domain socket used to communi‐[m
+[7mual page ssh_config(5) line 746 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             cate with the authentication agent.[m
+[7mual page ssh_config(5) line 747 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mual page ssh_config(5) line 748 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             This option overrides the SSH_AUTH_SOCK environ‐[m
+[7mual page ssh_config(5) line 749 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             ment variable and can be used to select a specific[m
+[7mual page ssh_config(5) line 750 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             agent.  Setting the socket name to [1mnone[0m disables[m
+[7mual page ssh_config(5) line 751 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             the use of an authentication agent.  If the string[m
+[7mual page ssh_config(5) line 752 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             "SSH_AUTH_SOCK" is specified, the location of the[m
+[7mual page ssh_config(5) line 753 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             socket will be read from the SSH_AUTH_SOCK envi‐[m
+[7mual page ssh_config(5) line 754 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             ronment variable.  Otherwise if the specified[m
+[7mual page ssh_config(5) line 755 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             value begins with a ‘$’ character, then it will be[m
+[7mual page ssh_config(5) line 756 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             treated as an environment variable containing the[m
+[7mual page ssh_config(5) line 757 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             location of the socket.[m
+[7mual page ssh_config(5) line 758 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mual page ssh_config(5) line 759 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             Arguments to [1mIdentityAgent[0m may use the tilde syn‐[m
+[7mual page ssh_config(5) line 760 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             tax to refer to a user's home directory, the to‐[m
+[7mual page ssh_config(5) line 761 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             kens described in the [4mTOKENS[24m section and environ‐[m
+[7mual page ssh_config(5) line 762 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             ment variables as described in the [4mEN
