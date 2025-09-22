@@ -1,0 +1,56 @@
+Script started on 2025-09-22 14:35:20+02:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="65" LINES="11"]
+[?2004h[94mITINF25/lektion4
+(B[m$ ssh server-kent
+[?2004lWelcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-79-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon Sep 22 12:35:25 PM UTC 2025
+
+  System load:  0.0                Processes:               122
+  Usage of /:   34.6% of 16.07GB   Users logged in:         1
+  Memory usage: 12%                IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+175 updates can be applied immediately.
+1 of these updates is a standard security update.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+1 updates could not be installed automatically. For more details,
+see /var/log/unattended-upgrades/unattended-upgrades.log
+
+*** System restart required ***
+Last login: Mon Sep 22 12:17:05 2025 from 10.0.2.2
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ cd /etc/ssh/
+[?2004l[?2004h]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ sudo cp sshd_config sshd)_[K[K_config.bak
+[?2004l[sudo] password for kent: 
+[?2004h]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ diff ssh_[Kd_config sh[K[Kssh
+ssh_config                ssh_host_ecdsa_key.pub
+ssh_config.d/             ssh_host_ed25519_key
+sshd_config               ssh_host_ed25519_key.pub
+sshd_config.bak           ssh_host_rsa_key
+sshd_config.d/            ssh_host_rsa_key.pub
+ssh_host_ecdsa_key        ssh_import_id
+]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ diff sshd_config ssh_[Kd_config[H[2J]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ diff sshd_config sshd_config.bak 
+[?2004l42c42
+< PermitRootLogin no
+---
+> #PermitRootLogin prohibit-password
+66c66
+< PasswordAuthentication no
+---
+> #PasswordAuthentication yes
+99c99
+< X11Forwarding no
+---
+> X11Forwarding yes
+[?2004h]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m
