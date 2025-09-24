@@ -1,0 +1,376 @@
+Script started on 2025-09-22 14:35:20+02:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="65" LINES="11"]
+[?2004h[94mITINF25/lektion4
+(B[m$ ssh server-kent
+[?2004lWelcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-79-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon Sep 22 12:35:25 PM UTC 2025
+
+  System load:  0.0                Processes:               122
+  Usage of /:   34.6% of 16.07GB   Users logged in:         1
+  Memory usage: 12%                IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+175 updates can be applied immediately.
+1 of these updates is a standard security update.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+1 updates could not be installed automatically. For more details,
+see /var/log/unattended-upgrades/unattended-upgrades.log
+
+*** System restart required ***
+Last login: Mon Sep 22 12:17:05 2025 from 10.0.2.2
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ cd /etc/ssh/
+[?2004l[?2004h]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ sudo cp sshd_config sshd)_[K[K_config.bak
+[?2004l[sudo] password for kent: 
+[?2004h]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ diff ssh_[Kd_config sh[K[Kssh
+ssh_config                ssh_host_ecdsa_key.pub
+ssh_config.d/             ssh_host_ed25519_key
+sshd_config               ssh_host_ed25519_key.pub
+sshd_config.bak           ssh_host_rsa_key
+sshd_config.d/            ssh_host_rsa_key.pub
+ssh_host_ecdsa_key        ssh_import_id
+]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ diff sshd_config ssh_[Kd_config[H[2J]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ diff sshd_config sshd_config.bak 
+[?2004l42c42
+< PermitRootLogin no
+---
+> #PermitRootLogin prohibit-password
+66c66
+< PasswordAuthentication no
+---
+> #PasswordAuthentication yes
+99c99
+< X11Forwarding no
+---
+> X11Forwarding yes
+[?2004h]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [K]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [H[2J]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ ssh[K[K[Ksudo[Kd [K[Ko sshd
+[?2004lsshd re-exec requires execution with an absolute path
+[?2004h]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ [H[2J]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ sudo sshd -t
+[?2004l[?2004h]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ nan[K[K[K(reverse-i-search)`': [Ks': sudo s[7ms[27mhd -t[1@u': [7msu[27mdo ss[1@d': [7msud[27m[1@o': [7msudo[27m[C[8@failed reverse-i-search)`sudoe': sudo[1@d[C[C[C^C[?2004l[?2004h[?2004l
+[?2004h]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ (reverse-i-search)`': [Ks': sudo s[7ms[27mhd -t[1@u': [7msu[27mdo ss[1@d': [7msud[27m[1@o': [7msudo[27m[1@ ': [7msudo [27m^C[?2004l[?2004h[?2004l
+[?2004h]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ sudo nan [Ko /etc/ssh//s[K[Ksshd_config
+[?2004l[?2004h[?1049h[22;0;0t[1;12r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[10;26H(B[0;7m[ Reading... ](B[m[10;24H(B[0;7m[ Read 131 lines ](B[m[H(B[0;7m  GNU nano 7.2           /etc/ssh/sshd_config                    [1;64H(B[m[11d(B[0;7m^G(B[m Help[14G(B[0;7m^O(B[m Write Out (B[0;7m^W(B[m Where Is  (B[0;7m^K(B[m Cut[53G(B[0;7m^T(B[m Execute[12d(B[0;7m^X(B[m Exit[14G(B[0;7m^R(B[m Read File (B[0;7m^\(B[m Replace   (B[0;7m^U(B[m Paste     (B[0;7m^J(B[m Justify[3d[36m# This is the sshd server system-wide configuration file.  See[4d# sshd_config(5) for more information.[6d# This sshd was compiled with PATH=/usr/local/sbin:/usr/local/bi[39m(B[0;7m>[8;1H(B[0m[36m# The strategy used for options in the default sshd_config shipp[39m(B[0;7m>[9;1H(B[0m[36m# OpenSSH is to specify options with their default value where[2d[39m(B[m[?12l[?25h[?25l[1;47H(B[0;7m*[64G(B[m[?12l[?25h[2dh[?25l[?12l[?25hd[?25l[?12l[?25hd[?25l[?12l[?25hh[?25l[?12l[?25h[3d[?25l[10d(B[0;7mSave modified buffer?                                            [11;1H Y(B[m Yes[K[12d(B[0;7m N(B[m No  [14G   (B[0;7m^C(B[m Cancel[K[10;23H[?12l[?25h[?25l[11d(B[0;7m^G(B[m Help[11;17H(B[0;7mM-D(B[m DOS Format  (B[0;7mM-A(B[m Append[49G(B[0;7mM-B(B[m Backup File[12d(B[0;7m^C(B[m Cancel[17G(B[0;7mM-M(B[m Mac Format  (B[0;7mM-P(B[m Prepend     (B[0;7m^T(B[m Browse[10d(B[0;7mFile Name to Write: /etc/ssh/sshd_config(B[m[?12l[?25h[?25l[10;25H[1K (B[0;7m[ Writing... ](B[m[K[1;47H(B[0;7m [64G(B[m[10;24H(B[0;7m[ Wrote 131 lines ](B[m[J[12d[?12l[?25h[12;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ sudo nano /etc/ssh/sshd_configsshd -t[K
+[?2004l/etc/ssh/sshd_config line 1: no argument after keyword "hddh"
+/etc/ssh/sshd_config: terminating, 1 bad configuration options
+[?2004h]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ sudo sshd -tnano /etc/ssh/sshd_config
+[?2004l[?2004h[?1049h[22;0;0t[1;12r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[10;26H(B[0;7m[ Reading... ](B[m[10;24H(B[0;7m[ Read 131 lines ](B[m[H(B[0;7m  GNU nano 7.2           /etc/ssh/sshd_config                    [1;64H(B[m[11d(B[0;7m^G(B[m Help[14G(B[0;7m^O(B[m Write Out (B[0;7m^W(B[m Where Is  (B[0;7m^K(B[m Cut[53G(B[0;7m^T(B[m Execute[12d(B[0;7m^X(B[m Exit[14G(B[0;7m^R(B[m Read File (B[0;7m^\(B[m Replace   (B[0;7m^U(B[m Paste     (B[0;7m^J(B[m Justify[2dhddh[3d[36m# This is the sshd server system-wide configuration file.  See[4d# sshd_config(5) for more information.[6d# This sshd was compiled with PATH=/usr/local/sbin:/usr/local/bi[39m(B[0;7m>[8;1H(B[0m[36m# The strategy used for options in the default sshd_config shipp[39m(B[0;7m>[9;1H(B[0m[36m# OpenSSH is to specify options with their default value where[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25hh[?25l[?12l[?25h[?25l[?12l[?25hh[?25l[?12l[?25hd[?25l[?12l[?25hd[?25l[?12l[?25hh[?25l[?12l[?25h[3d[?25l[1;47H(B[0;7m*[64G(B[m[3;9r[9;1H
+[1;12r[2;5H# This is the sshd server system-wide configuration file.  S(B[0;7m>[9;1H(B[0m[36m# possible, but leave them commented.  Uncommented options overr[39m(B[0;7m>[2;5H(B[m[?12l[?25h[?25l[?12l[?25h# This is the sshd server system-wide configuration file.  See[2;4H[?25l[?12l[?25h[1Pd[?25l[?12l[?25h[1P[?25l[?12l[?25h[36m# This is the sshd server system-wide configuration file.  See[39m(B[m[K[?25l[?12l[?25h[?25l[10d(B[0;7mSave modified buffer?                                            [11;1H Y(B[m Yes[K[12d(B[0;7m N(B[m No  [14G   (B[0;7m^C(B[m Cancel[K[10;23H[?12l[?25h[?25l[11d(B[0;7m^G(B[m Help[11;17H(B[0;7mM-D(B[m DOS Format  (B[0;7mM-A(B[m Append[49G(B[0;7mM-B(B[m Backup File[12d(B[0;7m^C(B[m Cancel[17G(B[0;7mM-M(B[m Mac Format  (B[0;7mM-P(B[m Prepend     (B[0;7m^T(B[m Browse[10d(B[0;7mFile Name to Write: /etc/ssh/sshd_config(B[m[?12l[?25h[?25l[10;25H[1K (B[0;7m[ Writing... ](B[m[K[1;47H(B[0;7m [64G(B[m[10;24H(B[0;7m[ Wrote 130 lines ](B[m[J[12d[?12l[?25h[12;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;kent@ubsembr: /etc/ssh[01;32mkent@ubsembr[00m:[01;34m/etc/ssh[00m$ exigt[K[Kt
+[?2004llogout
+Connection to localhost closed.
+[?2004h[94mITINF25/lektion4
+(B[m$ [H[2J[94mITINF25/lektion4
+(B[m$ ssh server-kent
+[?2004lWelcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-79-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon Sep 22 12:42:51 PM UTC 2025
+
+  System load:  0.07               Processes:               123
+  Usage of /:   34.6% of 16.07GB   Users logged in:         1
+  Memory usage: 12%                IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+175 updates can be applied immediately.
+1 of these updates is a standard security update.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+1 updates could not be installed automatically. For more details,
+see /var/log/unattended-upgrades/unattended-upgrades.log
+
+*** System restart required ***
+Last login: Mon Sep 22 12:35:25 2025 from 10.0.2.2
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ ls
+[?2004l[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ sls
+[?2004lCommand 'sls' not found, but there are 21 similar ones.
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ slsl
+[?2004lCommand 'slsl' not found, did you mean:
+  command 'slsh' from deb slsh (2.3.3-3)
+Try: sudo apt install <deb name>
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [K]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [K]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [K]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ exit
+[?2004llogout
+Connection to localhost closed.
+[?2004h[94mITINF25/lektion4
+(B[m$ [H[2J[94mITINF25/lektion4
+(B[m$ [K(B[m$ [K(B[m$ ssh server-kent ls
+[?2004l[?2004h[94mITINF25/lektion4
+(B[m$ ssh server-kent ls -a[H[2J[94mITINF25/lektion4
+(B[m$ ssh server-kent ls -a[KA[Ka[KA[C
+[?2004l.bash_history
+.bash_logout
+.bashrc
+.cache
+.lesshst
+.local
+.profile
+.ssh
+.sudo_as_admin_successful
+[?2004h[94mITINF25/lektion4
+(B[m$ ssh server-kent ls -A[H[2J[94mITINF25/lektion4
+(B[m$ ssh server-kent ls -A[K[K[K[K[Khostname
+[?2004lubsembr
+[?2004h[94mITINF25/lektion4
+(B[m$ hostname
+[?2004lklad
+[?2004h[94mITINF25/lektion4
+(B[m$ hostname[C[Cssh server-kent hostname[H[2J[94mITINF25/lektion4
+(B[m$ ssh server-kent hostname[K[K[K[K[K[K[K[Kcat /etc/ssh/sshd_config
+[?2004l# This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+# This sshd was compiled with PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+
+# The strategy used for options in the default sshd_config shipped with
+# OpenSSH is to specify options with their default value where
+# possible, but leave them commented.  Uncommented options override the
+# default value.
+
+Include /etc/ssh/sshd_config.d/*.conf
+
+# When systemd socket activation is used (the default), the socket
+# configuration must be re-generated after changing Port, AddressFamily, or
+# ListenAddress.
+#
+# For changes to take effect, run:
+#
+#   systemctl daemon-reload
+#   systemctl restart ssh.socket
+#
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+
+#HostKey /etc/ssh/ssh_host_rsa_key
+#HostKey /etc/ssh/ssh_host_ecdsa_key
+#HostKey /etc/ssh/ssh_host_ed25519_key
+
+# Ciphers and keying
+#RekeyLimit default none
+
+# Logging
+#SyslogFacility AUTH
+#LogLevel INFO
+
+# Authentication:
+
+#LoginGraceTime 2m
+PermitRootLogin no
+#StrictModes yes
+#MaxAuthTries 6
+#MaxSessions 10
+
+#PubkeyAuthentication yes
+
+# Expect .ssh/authorized_keys2 to be disregarded by default in future.
+#AuthorizedKeysFile	.ssh/authorized_keys .ssh/authorized_keys2
+
+#AuthorizedPrincipalsFile none
+
+#AuthorizedKeysCommand none
+#AuthorizedKeysCommandUser nobody
+
+# For this to work you will also need host keys in /etc/ssh/ssh_known_hosts
+#HostbasedAuthentication no
+# Change to yes if you don't trust ~/.ssh/known_hosts for
+# HostbasedAuthentication
+#IgnoreUserKnownHosts no
+# Don't read the user's ~/.rhosts and ~/.shosts files
+#IgnoreRhosts yes
+
+# To disable tunneled clear text passwords, change to no here!
+PasswordAuthentication no
+#PermitEmptyPasswords no
+
+# Change to yes to enable challenge-response passwords (beware issues with
+# some PAM modules and threads)
+KbdInteractiveAuthentication no
+
+# Kerberos options
+#KerberosAuthentication no
+#KerberosOrLocalPasswd yes
+#KerberosTicketCleanup yes
+#KerberosGetAFSToken no
+
+# GSSAPI options
+#GSSAPIAuthentication no
+#GSSAPICleanupCredentials yes
+#GSSAPIStrictAcceptorCheck yes
+#GSSAPIKeyExchange no
+
+# Set this to 'yes' to enable PAM authentication, account processing,
+# and session processing. If this is enabled, PAM authentication will
+# be allowed through the KbdInteractiveAuthentication and
+# PasswordAuthentication.  Depending on your PAM configuration,
+# PAM authentication via KbdInteractiveAuthentication may bypass
+# the setting of "PermitRootLogin prohibit-password".
+# If you just want the PAM account and session checks to run without
+# PAM authentication, then enable this but set PasswordAuthentication
+# and KbdInteractiveAuthentication to 'no'.
+UsePAM yes
+
+#AllowAgentForwarding yes
+#AllowTcpForwarding yes
+#GatewayPorts no
+X11Forwarding no
+#X11DisplayOffset 10
+#X11UseLocalhost yes
+#PermitTTY yes
+PrintMotd no
+#PrintLastLog yes
+#TCPKeepAlive yes
+#PermitUserEnvironment no
+#Compression delayed
+#ClientAliveInterval 0
+#ClientAliveCountMax 3
+#UseDNS no
+#PidFile /run/sshd.pid
+#MaxStartups 10:30:100
+#PermitTunnel no
+#ChrootDirectory none
+#VersionAddendum none
+
+# no default banner path
+#Banner none
+
+# Allow client to pass locale environment variables
+AcceptEnv LANG LC_*
+
+# override default of no subsystems
+Subsystem	sftp	/usr/lib/openssh/sftp-server
+
+# Example of overriding settings on a per-user basis
+#Match User anoncvs
+#	X11Forwarding no
+#	AllowTcpForwarding no
+#	PermitTTY no
+#	ForceCommand cvs server
+[?2004h[94mITINF25/lektion4
+(B[m$ ssh server-kent cat /etc/ssh/sshd_config[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@s[1@u[1@d[1@o[1@ [H[2J[94mITINF25/lektion4
+(B[m$ ssh server-kent sudo cat /etc/ssh/sshd_config[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lsudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+[?2004h[94mITINF25/lektion4
+(B[m$ [H[2J[94mITINF25/lektion4
+(B[m$ nano info.sh[C[C[C[C[1P info.sh[1P info.sh[1P info.sh[1P info.shc info.sho info.shd info.she info.sh
+[?2004l[?2004h[94mITINF25/lektion4
+(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mITINF25/lektion4
+(B[m$ uptime
+[?2004l 14:46:44 up  5:48,  1 user,  load average: 0.47, 0.71, 0.80
+[?2004h[94mITINF25/lektion4
+(B[m$ [H[2J[94mITINF25/lektion4
+(B[m$ [H[2J[94mITINF25/lektion4
+(B[m$ chmod 700[C[C[K[K[K7--[K[K[K+x [1@a[C[C[C[C i n f o.sh 
+[?2004l[?2004h[94mITINF25/lektion4
+(B[m$ ./if[Knfo.sh [H[2J[94mITINF25/lektion4
+(B[m$ ./info.sh 
+[?2004l 14:48:51 up  5:50,  1 user,  load average: 0.58, 0.69, 0.78
+klad
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: wlp0s20f3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 78:af:08:69:72:2e brd ff:ff:ff:ff:ff:ff
+    inet 172.20.207.198/21 brd 172.20.207.255 scope global dynamic noprefixroute wlp0s20f3
+       valid_lft 22209sec preferred_lft 22209sec
+    inet6 fe80::d4dc:f674:761d:48f2/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: virbr0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+    link/ether 52:54:00:39:eb:65 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.122.1/24 brd 192.168.122.255 scope global virbr0
+       valid_lft forever preferred_lft forever
+4: tailscale0: <POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1280 qdisc fq_codel state UNKNOWN group default qlen 500
+    link/none 
+    inet6 fe80::4d40:a9c2:f8ce:e40a/64 scope link stable-privacy 
+       valid_lft forever preferred_lft forever
+5: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether f6:ac:bc:08:c9:7e brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+6: br-b83ffb830a25: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 56:d0:ea:21:05:ff brd ff:ff:ff:ff:ff:ff
+    inet 172.19.0.1/16 brd 172.19.255.255 scope global br-b83ffb830a25
+       valid_lft forever preferred_lft forever
+7: br-c2d213c508a3: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 2e:69:37:61:dd:d5 brd ff:ff:ff:ff:ff:ff
+    inet 172.18.0.1/16 brd 172.18.255.255 scope global br-c2d213c508a3
+       valid_lft forever preferred_lft forever
+[?2004h[94mITINF25/lektion4
+(B[m$ ./info.sh ^C[?2004l[?2004h[?2004l
+[?2004h[94mITINF25/lektion4
+(B[m$ (reverse-i-search)`': [11@s': ./info.[7ms[27mhs': ssh server-kent sudo cat /etc/ssh/[7mss[27mhd_config[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ch': ssh server-kent sudo cat /etc/ssh/[7mssh[27md_config[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7mssh[27m/sshd_co[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[18P(B[m$ ssh server-kent sudo cat /etc/ssh/sshd_config
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[H[2J[94mITINF25/lektion4
+(B[m$ ssh server-kent sudo cat /etc/ssh/sshd_config[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K< ./info.sh [C[C[1P[1P[1@/[1@h[1@o[1@m[1@e[1@/[1@k[1@e[1@n[1@t[1@/[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@.[1@/[1P[1P[1@~[1@/[C[1P[1P[1@.[1@/[1P[1P[C[1@.[1@/[1P[1P[H[2J[94mITINF25/lektion4
+(B[m$ ssh server-kent < info.sh [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(B[m$ ssh server-kent < info.sh [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(B[m$ ssh server-kent < info.sh [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(B[m$ ssh server-kent < info.sh [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(B[m$ ssh server-kent < info.sh [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(B[m$ ssh server-kent < info.sh [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(B[m$ ssh server-kent < info.sh [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(B[m$ ssh server-kent < info.sh [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lPseudo-terminal will not be allocated because stdin is not a terminal.
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-79-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon Sep 22 12:50:51 PM UTC 2025
+
+  System load:  0.0                Processes:               121
+  Usage of /:   34.6% of 16.07GB   Users logged in:         1
+  Memory usage: 12%                IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+175 updates can be applied immediately.
+1 of these updates is a standard security update.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+1 updates could not be installed automatically. For more details,
+see /var/log/unattended-upgrades/unattended-upgrades.log
+
+*** System restart required ***
+ 12:50:51 up  4:01,  3 users,  load average: 0.00, 0.00, 0.00
+ubsembr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:0a:a1:3f brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 metric 100 brd 10.0.2.255 scope global dynamic enp0s3
+       valid_lft 71943sec preferred_lft 71943sec
+    inet6 fe80::a00:27ff:fe0a:a13f/64 scope link 
+       valid_lft forever preferred_lft forever
+[?2004h[94mITINF25/lektion4
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ 
+[?2004l[?2004h[94mITINF25/lektion4
+(B[m$ [?2004l
+exit
+
+Script done on 2025-09-22 14:51:29+02:00 [COMMAND_EXIT_CODE="0"]
