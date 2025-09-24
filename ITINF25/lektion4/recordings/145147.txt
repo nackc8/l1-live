@@ -1,12 +1,19 @@
 Script started on 2025-09-22 14:51:47+02:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="65" LINES="13"]
-[?2004h[94mITINF25/lektion4
-(B[m$ [H[2J[94mITINF25/lektion4
+[?2004h[94mITINF25/lektion4
+
+(B[m$ [H[2J[94mITINF25/lektion4
+
 (B[m$ ls
-[?2004lconfig	info.sh  recordings  ssh_hardening.txt
-[?2004h[94mITINF25/lektion4
-(B[m$ cp info.sh ub[K[Kserv3er[K[K[Ker-kent/jdjidj[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[1@s[C[C[C[C[C[C[C[C[C[C [K[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[H[2J[94mITINF25/lektion4
+[?2004l
+config	info.sh  recordings  ssh_hardening.txt
+[?2004h[94mITINF25/lektion4
+
+(B[m$ cp info.sh ub[K[Kserv3er[K[K[Ker-kent/jdjidj[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[1@s[C[C[C[C[C[C[C[C[C[C [K[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[H[2J[94mITINF25/lektion4
+
 (B[m$ man scp
-[?2004l[?1049h[22;0;0t[?1h=SCP(1)            BSD General Commands Manual            SCP(1)[m
+[?2004l
+[?1049h[22;0;0t[?1h=
+SCP(1)            BSD General Commands Manual            SCP(1)[m
 [m
 [1mNAME[0m[m
      [1mscp[0m — OpenSSH secure file copy[m
@@ -18,24 +25,43 @@ Script started on 2025-09-22 14:51:47+02:00 [TERM="xterm-256color" TTY="/dev/pts
          [[1m-X[0m [4msftp_option[24m] [4msource[24m [4m...[24m [4mtarget[24m[m
 [m
 [1mDESCRIPTION[0m[m
-[7m Manual page scp(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mITINF25/lektion4
+[7m Manual page scp(1) line 1 (press h for help or q to quit)[27m[K
+[K[?1l>[?1049l[23;0;0t[?2004h[94mITINF25/lektion4
+
 (B[m$ scp -p 10022 info.sh [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ckent@localhost:
-[?2004lWarning: Permanently added 'localhost' (ED25519) to the list of known hosts.
-kent@localhost's password: 
-Permission denied, please try again.
-kent@localhost's password: 
-[?2004h[94mITINF25/lektion4
-(B[m$ scp -p 10022 info.sh kent@localhost:[H[2J[94mITINF25/lektion4
+[?2004l
+Warning: Permanently added 'localhost' (ED25519) to the list of known hosts.
+
+
+kent@localhost's password:
+Permission denied, please try again.
+
+
+kent@localhost's password:
+[?2004h[94mITINF25/lektion4
+
+(B[m$ scp -p 10022 info.sh kent@localhost:[H[2J[94mITINF25/lektion4
+
 (B[m$ scp -p 10022 info.sh kent@localhost:[1P[1@P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-[?2004lWarning: Permanently added '[localhost]:10022' (ED25519) to the list of known hosts.
-info.sh                          0%    0     0.0KB/s   --:-- ETAinfo.sh                        100%   40   136.5KB/s   00:00    
-[?2004h[94mITINF25/lektion4
-(B[m$ scp -P 10022 info.sh kent@localhost:[K[C[1Pkent@localhost[1Pkent@localhost[1Pkent@localhost[1Pkent@localhost[1Pkent@localhost[1Pkent@localhost[1Pkent@localhost[1Pkent@localhost[1P[1@p[H[2J[94mITINF25/lektion4
+[?2004l
+Warning: Permanently added '[localhost]:10022' (ED25519) to the list of known hosts.
+
+
+info.sh                          0%    0     0.0KB/s   --:-- ETA
+info.sh                        100%   40   136.5KB/s   00:00
+[?2004h[94mITINF25/lektion4
+
+(B[m$ scp -P 10022 info.sh kent@localhost:[K[C[1Pkent@localhost[1Pkent@localhost[1Pkent@localhost[1Pkent@localhost[1Pkent@localhost[1Pkent@localhost[1Pkent@localhost[1Pkent@localhost[1P[1@p[H[2J[94mITINF25/lektion4
+
 (B[m$ scp -p 10022 kent@localhost[C[C[C[C[C[C[C[C
-[?2004lcp: cannot stat '10022': No such file or directory
-[?2004h[94mITINF25/lektion4
+[?2004l
+cp: cannot stat '10022': No such file or directory
+[?2004h[94mITINF25/lektion4
+
 (B[m$ scp -p 10022 kent@localhost[C[C[C[1P[1P[1P[1@s[1@s[1@h
-[?2004lWarning: Permanently added '[localhost]:10022' (ED25519) to the list of known hosts.
+[?2004l
+Warning: Permanently added '[localhost]:10022' (ED25519) to the list of known hosts.
+
 Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-79-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com
@@ -64,41 +90,75 @@ See https://ubuntu.com/esm or run: sudo pro status
 see /var/log/unattended-upgrades/unattended-upgrades.log
 
 *** System restart required ***
-Last login: Mon Sep 22 12:42:51 2025 from 10.0.2.2
+Last login: Mon Sep 22 12:42:51 2025 from 10.0.2.2
+
 [?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ pwd
-[?2004l/home/kent
+[?2004l
+/home/kent
 [?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ ls
-[?2004l[0m[01;32minfo.sh[0m
+[?2004l
+[0m[01;32minfo.sh[0m
 [?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ ls -l
-[?2004ltotal 4
+[?2004l
+total 4
 -rwxr-xr-x 1 kent kent 40 Sep 22 12:54 [0m[01;32minfo.sh[0m
 [?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ eixt[K[Kx[K[Kxit
-[?2004llogout
-Connection to localhost closed.
-[?2004h[94mITINF25/lektion4
-(B[m$ [H[2J[94mITINF25/lektion4
-(B[m$ ssh -p 10022 kent@localhost[C[C[Ccp[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CP 10022 info.sh kent@localhost:[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P:[1P:[1P:[1P:[1P:[1P:[1P:[1P:[1P:[1P:[1P:[1P:[1P:[1P:s:e:r:v:e:r:-:k:e:n:t:[C
-[?2004linfo.sh                          0%    0     0.0KB/s   --:-- ETAinfo.sh                        100%   40   148.3KB/s   00:00    
-[?2004h[94mITINF25/lektion4
+[?2004l
+logout
+Connection to localhost closed.
+
+[?2004h[94mITINF25/lektion4
+
+(B[m$ [H[2J[94mITINF25/lektion4
+
+(B[m$ ssh -p 10022 kent@localhost
+[C[C[Ccp[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[CP 10022 info.sh kent@localhost:[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P:[1P:[1P:[1P:[1P:[1P:[1P:[1P:[1P:[1P:[1P:[1P:[1P:[1P:s:e:r:v:e:r:-:k:e:n:t:[C
+[?2004l
+
+info.sh                          0%    0     0.0KB/s   --:-- ETA
+info.sh                        100%   40   148.3KB/s   00:00
+[?2004h[94mITINF25/lektion4
+
 (B[m$ scp info.sh server-kent:info2.sh[K[K[K
-[?2004linfo.sh                          0%    0     0.0KB/s   --:-- ETAinfo.sh                        100%   40   189.8KB/s   00:00    
-[?2004h[94mITINF25/lektion4
+[?2004l
+
+info.sh                          0%    0     0.0KB/s   --:-- ETA
+info.sh                        100%   40   189.8KB/s   00:00
+[?2004h[94mITINF25/lektion4
+
 (B[m$ ssh server-kent ls
-[?2004linfo2
+[?2004l
+info2
 info.sh
-[?2004h[94mITINF25/lektion4
-(B[m$ ssh server-kent ls[C[C[Ccp info.sh server-kent:info2/info2hinfo2oinfo2minfo2einfo2kinfo2einfo2[1Pinfo2[1Pinfo2/info2kinfo2einfo2ninfo2tinfo2/info2[C[C[C[C[C[K3[H[2J[94mITINF25/lektion4
+[?2004h[94mITINF25/lektion4
+
+(B[m$ ssh server-kent ls
+[C[C[Ccp info.sh server-kent:info2/info2hinfo2oinfo2minfo2einfo2kinfo2einfo2[1Pinfo2[1Pinfo2/info2kinfo2einfo2ninfo2tinfo2/info2[C[C[C[C[C[K3[H[2J[94mITINF25/lektion4
+
 (B[m$ scp info.sh server-kent:/home/kent/info3
-[?2004linfo.sh                          0%    0     0.0KB/s   --:-- ETAinfo.sh                        100%   40    72.6KB/s   00:00    
-[?2004h[94mITINF25/lektion4
-(B[m$ scp info.sh server-kent:/home/kent/info3[C[C[C[22Psh server-kent ls
-[?2004linfo2
+[?2004l
+
+info.sh                          0%    0     0.0KB/s   --:-- ETA
+info.sh                        100%   40    72.6KB/s   00:00
+[?2004h[94mITINF25/lektion4
+
+(B[m$ scp info.sh server-kent:/home/kent/info3
+[C[C[C[22Psh server-kent ls
+[?2004l
+info2
 info3
 info.sh
-[?2004h[94mITINF25/lektion4
-(B[m$ [H[2J[94mITINF25/lektion4
-(B[m$ ssh server-kent ls[C[C[K(reverse-i-search)`': s': ssh server-kent l[7ms[27ms': [7mss[27mh server-kent ls[1@h': [7mssh[27m[23P(B[m$ ssh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K
-[?2004lWelcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-79-generic x86_64)
+[?2004h[94mITINF25/lektion4
+
+(B[m$ [H[2J[94mITINF25/lektion4
+
+(B[m$ ssh server-kent ls
+[C[C[K
+(reverse-i-search)`': s': ssh server-kent l[7ms[27ms': [7mss[27mh server-kent ls[1@h': [7mssh[27m
+[23P(B[m$ ssh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K
+[?2004l
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-79-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com
  * Management:     https://landscape.canonical.com
@@ -126,32 +186,235 @@ See https://ubuntu.com/esm or run: sudo pro status
 see /var/log/unattended-upgrades/unattended-upgrades.log
 
 *** System restart required ***
-Last login: Mon Sep 22 12:55:21 2025 from 10.0.2.2
+Last login: Mon Sep 22 12:55:21 2025 from 10.0.2.2
+
 [?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ cp uin[K[K[Kinfo.sh supwer[K[K[Kerinfo.sh
-[?2004l[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ nano superinfo.sh 
-[?2004l[?2004h[?1049h[22;0;0t[1;13r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[11;26H(B[0;7m[ Reading... ](B[m[11;25H(B[0;7m[ Read 5 lines ](B[m[H(B[0;7m  GNU nano 7.2               superinfo.sh                        [1;64H(B[m[12d(B[0;7m^G(B[m Help[14G(B[0;7m^O(B[m Write Out (B[0;7m^W(B[m Where Is  (B[0;7m^K(B[m Cut[53G(B[0;7m^T(B[m Execute[13d(B[0;7m^X(B[m Exit[14G(B[0;7m^R(B[m Read File (B[0;7m^\(B[m Replace   (B[0;7m^U(B[m Paste     (B[0;7m^J(B[m Justify[2d[36m#!/bin/bash[4d[39m(B[muptime[5dhostname[6dip address[2d[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[A[?25l[?12l[?25h[4d[?25l[1;43H(B[0;7m*[64G(B[m[?12l[?25h[4dfuptimef[?25l[?12l[?25hiuptimefi[?25l[?12l[?25hguptimefig[?25l[?12l[?25hluptime[5G[?25l[?12l[?25heuptime[6G[?25l[?12l[?25htuptime[7G[?25l[?12l[?25h uptime[8G[?25l[?12l[?25h(B[0;1m[31m$uptime[9G[39m(B[m[?25l[?12l[?25h[32m$([39m(B[muptime[10G[?25l[?12l[?25h[A[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[4;16H[?25l[?12l[?25h[32m)[39m(B[m[?25l[?12l[?25h[5d[?25l[11d[K[?12l[?25h[6d[?25l[?12l[?25h[A[?25l[11d(B[0;7mSave modified buffer?                                            [12;1H Y(B[m Yes[K[13d(B[0;7m N(B[m No  [14G   (B[0;7m^C(B[m Cancel[K[11;23H[?12l[?25h[?25l[12d(B[0;7m^G(B[m Help[12;17H(B[0;7mM-D(B[m DOS Format  (B[0;7mM-A(B[m Append[49G(B[0;7mM-B(B[m Backup File[13d(B[0;7m^C(B[m Cancel[17G(B[0;7mM-M(B[m Mac Format  (B[0;7mM-P(B[m Prepend     (B[0;7m^T(B[m Browse[11d(B[0;7mFile Name to Write: superinfo.sh(B[m[?12l[?25h[?25l[11;25H[1K (B[0;7m[ Writing... ](B[m[K[1;43H(B[0;7m [64G(B[m[11;25H(B[0;7m[ Wrote 5 lines ](B[m[J[13d[?12l[?25h[13;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ sudo apt install figlet
-[?2004l[sudo] password for kent: 
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
+[?2004l
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ nano superinfo.sh
+[?2004l
+[?2004h[?1049h[22;0;0t[1;13r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[11;26H(B[0;7m[ Reading... ](B[m[11;25H(B[0;7m[ Read 5 lines ](B[m[H(B[0;7m  GNU nano 7.2               superinfo.sh                        [1;64H(B[m
+[12d(B[0;7m^G(B[m Help[14G(B[0;7m^O(B[m Write Out (B[0;7m^W(B[m Where Is  (B[0;7m^K(B[m Cut[53G(B[0;7m^T(B[m Execute
+[13d(B[0;7m^X(B[m Exit[14G(B[0;7m^R(B[m Read File (B[0;7m^\(B[m Replace   (B[0;7m^U(B[m Paste     (B[0;7m^J(B[m Justify
+[2d[36m#!/bin/bash
+[4d[39m(B[muptime
+[5dhostname
+[6dip address
+[2d[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[A[?25l[?12l[?25h[4d[?25l[1;43H(B[0;7m*[64G(B[m[?12l[?25h
+[4dfuptime
+f[?25l[?12l[?25hiuptime
+fi[?25l[?12l[?25hguptime
+fig[?25l[?12l[?25hluptime[5G[?25l[?12l[?25heuptime[6G[?25l[?12l[?25htuptime[7G[?25l[?12l[?25h uptime[8G[?25l[?12l[?25h(B[0;1m[31m$uptime[9G[39m(B[m[?25l[?12l[?25h[32m$([39m(B[muptime[10G[?25l[?12l[?25h
+[A[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[4;16H[?25l[?12l[?25h[32m)[39m(B[m[?25l[?12l[?25h
+[5d[?25l[11d[K[?12l[?25h[6d[?25l[?12l[?25h[A[?25l[11d(B[0;7mSave modified buffer?                                            [12;1H Y(B[m Yes[K
+[13d(B[0;7m N(B[m No  [14G   (B[0;7m^C(B[m Cancel[K[11;23H[?12l[?25h[?25l
+[12d(B[0;7m^G(B[m Help[12;17H(B[0;7mM-D(B[m DOS Format  (B[0;7mM-A(B[m Append[49G(B[0;7mM-B(B[m Backup File
+[13d(B[0;7m^C(B[m Cancel[17G(B[0;7mM-M(B[m Mac Format  (B[0;7mM-P(B[m Prepend     (B[0;7m^T(B[m Browse
+[11d(B[0;7mFile Name to Write: superinfo.sh(B[m[?12l[?25h[?25l[11;25H[1K (B[0;7m[ Writing... ](B[m[K[1;43H(B[0;7m [64G(B[m[11;25H(B[0;7m[ Wrote 5 lines ](B[m
+[J[13d[?12l[?25h[13;1H[?1049l[23;0;0t
+[?1l>[?2004l[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ sudo apt install figlet
+[?2004l
+[sudo] password for kent:
+
+Reading package lists... 0%
+
+Reading package lists... 100%
+
+Reading package lists... Done
+
+
+Building dependency tree... 0%
+
+Building dependency tree... 0%
+
+Building dependency tree... 50%
+
+Building dependency tree... 50%
+
+Building dependency tree... Done
+
+
+Reading state information... 0%
+
+Reading state information... 0%
+
+Reading state information... Done
+
 The following NEW packages will be installed:
   figlet
 0 upgraded, 1 newly installed, 0 to remove and 169 not upgraded.
 Need to get 133 kB of archives.
 After this operation, 752 kB of additional disk space will be used.
-[33m0% [Working][0m            Get:1 http://se.archive.ubuntu.com/ubuntu noble/universe amd64 figlet amd64 2.2.5-3 [133 kB]
-[33m7% [1 figlet 11.4 kB/133 kB 9%][0m[33m                               100% [Working][0m              Fetched 133 kB in 0s (348 kB/s)
+[33m
+0% [Working][0m
+
+Get:1 http://se.archive.ubuntu.com/ubuntu noble/universe amd64 figlet amd64 2.2.5-3 [133 kB]
+[33m
+7% [1 figlet 11.4 kB/133 kB 9%][0m[33m
+
+100% [Working][0m
+
+Fetched 133 kB in 0s (348 kB/s)
 
 7[0;12r8[1ASelecting previously unselected package figlet.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 122068 files and directories currently installed.)
+(Reading database ...
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 122068 files and directories currently installed.)
 Preparing to unpack .../figlet_2.2.5-3_amd64.deb ...
 7[13;0f[42m[30mProgress: [  0%][49m[39m [...........................................] 87[13;0f[42m[30mProgress: [ 20%][49m[39m [########...................................] 8Unpacking figlet (2.2.5-3) ...
 7[13;0f[42m[30mProgress: [ 40%][49m[39m [#################..........................] 8Setting up figlet (2.2.5-3) ...
 7[13;0f[42m[30mProgress: [ 60%][49m[39m [#########################..................] 8update-alternatives: using /usr/bin/figlet-figlet to provide /usr/bin/figlet (figlet) in auto mode
 7[13;0f[42m[30mProgress: [ 80%][49m[39m [##################################.........] 8Processing triggers for man-db (2.12.0-4build2) ...
 
-7[0;13r8[1A[JScanning processes... [                                         ]Scanning processes... [                                         ]Scanning processes... [                                         ]Scanning processes... [=                                        ]Scanning processes... [=                                        ]Scanning processes... [=                                        ]Scanning processes... [==                                       ]Scanning processes... [==                                       ]Scanning processes... [==                                       ]Scanning processes... [===                                      ]Scanning processes... [===                                      ]Scanning processes... [===                                      ]Scanning processes... [====                                     ]Scanning processes... [====                                     ]Scanning processes... [====                                     ]Scanning processes... [=====                                    ]Scanning processes... [=====                                    ]Scanning processes... [=====                                    ]Scanning processes... [======                                   ]Scanning processes... [======                                   ]Scanning processes... [======                                   ]Scanning processes... [=======                                  ]Scanning processes... [=======                                  ]Scanning processes... [=======                                  ]Scanning processes... [========                                 ]Scanning processes... [========                                 ]Scanning processes... [========                                 ]Scanning processes... [=========                                ]Scanning processes... [=========                                ]Scanning processes... [=========                                ]Scanning processes... [==========                               ]Scanning processes... [==========                               ]Scanning processes... [==========                               ]Scanning processes... [===========                              ]Scanning processes... [===========                              ]Scanning processes... [===========                              ]Scanning processes... [============                             ]Scanning processes... [============                             ]Scanning processes... [============                             ]Scanning processes... [=============                            ]Scanning processes... [=============                            ]Scanning processes... [=============                            ]Scanning processes... [==============                           ]Scanning processes... [==============                           ]Scanning processes... [==============                           ]Scanning processes... [===============                          ]Scanning processes... [===============                          ]Scanning processes... [===============                          ]Scanning processes... [================                         ]Scanning processes... [================                         ]Scanning processes... [================                         ]Scanning processes... [=================                        ]Scanning processes... [=================                        ]Scanning processes... [=================                        ]Scanning processes... [==================                       ]Scanning processes... [==================                       ]Scanning processes... [==================                       ]Scanning processes... [===================                      ]Scanning processes... [===================                      ]Scanning processes... [===================                      ]Scanning processes... [====================                     ]Scanning processes... [====================                     ]Scanning processes... [====================                     ]Scanning processes... [=====================                    ]Scanning processes... [=====================                    ]Scanning processes... [=====================                    ]Scanning processes... [======================                   ]Scanning processes... [======================                   ]Scanning processes... [======================                   ]Scanning processes... [=======================                  ]Scanning processes... [=======================                  ]Scanning processes... [=======================                  ]Scanning processes... [========================                 ]Scanning processes... [========================                 ]Scanning processes... [========================                 ]Scanning processes... [=========================                ]Scanning processes... [=========================                ]Scanning processes... [=========================                ]Scanning processes... [==========================               ]Scanning processes... [==========================               ]Scanning processes... [==========================               ]Scanning processes... [===========================              ]Scanning processes... [===========================              ]Scanning processes... [===========================              ]Scanning processes... [============================             ]Scanning processes... [============================             ]Scanning processes... [============================             ]Scanning processes... [=============================            ]Scanning processes... [=============================            ]Scanning processes... [=============================            ]Scanning processes... [==============================           ]Scanning processes... [==============================           ]Scanning processes... [==============================           ]Scanning processes... [===============================          ]Scanning processes... [===============================          ]Scanning processes... [===============================          ]Scanning processes... [================================         ]Scanning processes... [================================         ]Scanning processes... [================================         ]Scanning processes... [=================================        ]Scanning processes... [=================================        ]Scanning processes... [=================================        ]Scanning processes... [==================================       ]Scanning processes... [==================================       ]Scanning processes... [==================================       ]Scanning processes... [===================================      ]Scanning processes... [===================================      ]Scanning processes... [===================================      ]Scanning processes... [====================================     ]Scanning processes... [====================================     ]Scanning processes... [====================================     ]Scanning processes... [=====================================    ]Scanning processes... [=====================================    ]Scanning processes... [=====================================    ]Scanning processes... [======================================   ]Scanning processes... [======================================   ]Scanning processes... [======================================   ]Scanning processes... [=======================================  ]Scanning processes... [=======================================  ]Scanning processes... [=======================================  ]Scanning processes... [======================================== ]Scanning processes... [======================================== ]Scanning processes... [======================================== ]Scanning processes... [=========================================]Scanning processes...                                            
-Scanning linux images... [                                      ]Scanning linux images... [=========                             ]Scanning linux images... [===================                   ]Scanning linux images... [============================          ]Scanning linux images... [======================================]Scanning linux images...                                         
+7[0;13r8[1A[JScanning processes... [                                         ]
+Scanning processes... [                                         ]
+Scanning processes... [                                         ]
+Scanning processes... [=                                        ]
+Scanning processes... [=                                        ]
+Scanning processes... [=                                        ]
+Scanning processes... [==                                       ]
+Scanning processes... [==                                       ]
+Scanning processes... [==                                       ]
+Scanning processes... [===                                      ]
+Scanning processes... [===                                      ]
+Scanning processes... [===                                      ]
+Scanning processes... [====                                     ]
+Scanning processes... [====                                     ]
+Scanning processes... [====                                     ]
+Scanning processes... [=====                                    ]
+Scanning processes... [=====                                    ]
+Scanning processes... [=====                                    ]
+Scanning processes... [======                                   ]
+Scanning processes... [======                                   ]
+Scanning processes... [======                                   ]
+Scanning processes... [=======                                  ]
+Scanning processes... [=======                                  ]
+Scanning processes... [=======                                  ]
+Scanning processes... [========                                 ]
+Scanning processes... [========                                 ]
+Scanning processes... [========                                 ]
+Scanning processes... [=========                                ]
+Scanning processes... [=========                                ]
+Scanning processes... [=========                                ]
+Scanning processes... [==========                               ]
+Scanning processes... [==========                               ]
+Scanning processes... [==========                               ]
+Scanning processes... [===========                              ]
+Scanning processes... [===========                              ]
+Scanning processes... [===========                              ]
+Scanning processes... [============                             ]
+Scanning processes... [============                             ]
+Scanning processes... [============                             ]
+Scanning processes... [=============                            ]
+Scanning processes... [=============                            ]
+Scanning processes... [=============                            ]
+Scanning processes... [==============                           ]
+Scanning processes... [==============                           ]
+Scanning processes... [==============                           ]
+Scanning processes... [===============                          ]
+Scanning processes... [===============                          ]
+Scanning processes... [===============                          ]
+Scanning processes... [================                         ]
+Scanning processes... [================                         ]
+Scanning processes... [================                         ]
+Scanning processes... [=================                        ]
+Scanning processes... [=================                        ]
+Scanning processes... [=================                        ]
+Scanning processes... [==================                       ]
+Scanning processes... [==================                       ]
+Scanning processes... [==================                       ]
+Scanning processes... [===================                      ]
+Scanning processes... [===================                      ]
+Scanning processes... [===================                      ]
+Scanning processes... [====================                     ]
+Scanning processes... [====================                     ]
+Scanning processes... [====================                     ]
+Scanning processes... [=====================                    ]
+Scanning processes... [=====================                    ]
+Scanning processes... [=====================                    ]
+Scanning processes... [======================                   ]
+Scanning processes... [======================                   ]
+Scanning processes... [======================                   ]
+Scanning processes... [=======================                  ]
+Scanning processes... [=======================                  ]
+Scanning processes... [=======================                  ]
+Scanning processes... [========================                 ]
+Scanning processes... [========================                 ]
+Scanning processes... [========================                 ]
+Scanning processes... [=========================                ]
+Scanning processes... [=========================                ]
+Scanning processes... [=========================                ]
+Scanning processes... [==========================               ]
+Scanning processes... [==========================               ]
+Scanning processes... [==========================               ]
+Scanning processes... [===========================              ]
+Scanning processes... [===========================              ]
+Scanning processes... [===========================              ]
+Scanning processes... [============================             ]
+Scanning processes... [============================             ]
+Scanning processes... [============================             ]
+Scanning processes... [=============================            ]
+Scanning processes... [=============================            ]
+Scanning processes... [=============================            ]
+Scanning processes... [==============================           ]
+Scanning processes... [==============================           ]
+Scanning processes... [==============================           ]
+Scanning processes... [===============================          ]
+Scanning processes... [===============================          ]
+Scanning processes... [===============================          ]
+Scanning processes... [================================         ]
+Scanning processes... [================================         ]
+Scanning processes... [================================         ]
+Scanning processes... [=================================        ]
+Scanning processes... [=================================        ]
+Scanning processes... [=================================        ]
+Scanning processes... [==================================       ]
+Scanning processes... [==================================       ]
+Scanning processes... [==================================       ]
+Scanning processes... [===================================      ]
+Scanning processes... [===================================      ]
+Scanning processes... [===================================      ]
+Scanning processes... [====================================     ]
+Scanning processes... [====================================     ]
+Scanning processes... [====================================     ]
+Scanning processes... [=====================================    ]
+Scanning processes... [=====================================    ]
+Scanning processes... [=====================================    ]
+Scanning processes... [======================================   ]
+Scanning processes... [======================================   ]
+Scanning processes... [======================================   ]
+Scanning processes... [=======================================  ]
+Scanning processes... [=======================================  ]
+Scanning processes... [=======================================  ]
+Scanning processes... [======================================== ]
+Scanning processes... [======================================== ]
+Scanning processes... [======================================== ]
+Scanning processes... [=========================================]
+Scanning processes...
+Scanning linux images... [                                      ]
+Scanning linux images... [=========                             ]
+Scanning linux images... [===================                   ]
+Scanning linux images... [============================          ]
+Scanning linux images... [======================================]
+Scanning linux images...
 
 Pending kernel upgrade!
 Running kernel version:
@@ -171,68 +434,88 @@ No user sessions are running outdated binaries.
 
 No VM guests are running outdated hypervisor (qemu) binaries on
  this host.
-[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ ./superinfo.sh 
-[?2004l _ _____   ___   ___    _  ___                  _  _    _  ___     ____  
-/ |___ /_ / _ \ / _ \ _/ |/ _ \   _   _ _ __   | || | _/ |/ _ \   |___ \ 
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ ./superinfo.sh
+[?2004l
+ _ _____   ___   ___    _  ___                  _  _    _  ___     ____
+/ |___ /_ / _ \ / _ \ _/ |/ _ \   _   _ _ __   | || | _/ |/ _ \   |___ \
 | | |_ (_) | | | | | (_) | (_) | | | | | '_ \  | || |(_) | | | |    __) |
-| |___) || |_| | |_| |_| |\__, | | |_| | |_) | |__   _|| | |_| |   / __/ 
+| |___) || |_| | |_| |_| |\__, | | |_| | |_) | |__   _|| | |_| |   / __/
 |_|____(_)\___/ \___/(_)_|  /_/   \__,_| .__/     |_|(_)_|\___( ) |_____|
-                                       |_|                    |/         
-                             _                 _ 
+                                       |_|                    |/
+                             _                 _
  _   _ ___  ___ _ __ ___    | | ___   __ _  __| |
 | | | / __|/ _ \ '__/ __|   | |/ _ \ / _` |/ _` |
 | |_| \__ \  __/ |  \__ \_  | | (_) | (_| | (_| |
  \__,_|___/\___|_|  |___( ) |_|\___/ \__,_|\__,_|
-                        |/                       
-                                           ___   ___   ___   
-  __ ___   _____ _ __ __ _  __ _  ___ _   / _ \ / _ \ / _ \  
- / _` \ \ / / _ \ '__/ _` |/ _` |/ _ (_) | | | | | | | | | | 
-| (_| |\ V /  __/ | | (_| | (_| |  __/_  | |_| | |_| | |_| | 
+                        |/
+                                           ___   ___   ___
+  __ ___   _____ _ __ __ _  __ _  ___ _   / _ \ / _ \ / _ \
+ / _` \ \ / / _ \ '__/ _` |/ _` |/ _ (_) | | | | | | | | | |
+| (_| |\ V /  __/ | | (_| | (_| |  __/_  | |_| | |_| | |_| |
  \__,_| \_/ \___|_|  \__,_|\__, |\___(_)  \___(_)___/ \___( )
-                           |___/                          |/ 
-  ___   ___   ___      ___   ___   ___  
- / _ \ / _ \ / _ \    / _ \ / _ \ / _ \ 
+                           |___/                          |/
+  ___   ___   ___      ___   ___   ___
+ / _ \ / _ \ / _ \    / _ \ / _ \ / _ \
 | | | | | | | | | |  | | | | | | | | | |
 | |_| | |_| | |_| |  | |_| | |_| | |_| |
- \___(_)___/ \___( )  \___(_)___/ \___/ 
-                 |/                     
+ \___(_)___/ \___( )  \___(_)___/ \___/
+                 |/
 ubsembr
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
     inet 127.0.0.1/8 scope host lo
        valid_lft forever preferred_lft forever
-    inet6 ::1/128 scope host noprefixroute 
+    inet6 ::1/128 scope host noprefixroute
        valid_lft forever preferred_lft forever
 2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
     link/ether 08:00:27:0a:a1:3f brd ff:ff:ff:ff:ff:ff
     inet 10.0.2.15/24 metric 100 brd 10.0.2.255 scope global dynamic enp0s3
        valid_lft 71375sec preferred_lft 71375sec
-    inet6 fe80::a00:27ff:fe0a:a13f/64 scope link 
+    inet6 fe80::a00:27ff:fe0a:a13f/64 scope link
        valid_lft forever preferred_lft forever
-[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ 
-[?2004l[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ dig[K[K[Kfiglet Hej
-[?2004l _   _       _ 
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$
+[?2004l
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ dig[K[K[Kfiglet Hej
+[?2004l
+ _   _       _
 | | | | ___ (_)
 | |_| |/ _ \| |
 |  _  |  __/| |
 |_| |_|\___|/ |
-          |__/ 
+          |__/
 [?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ exit
-[?2004llogout
-Connection to localhost closed.
-[?2004h[94mITINF25/lektion4
-(B[m$ [H[2J[94mITINF25/lektion4
+[?2004l
+logout
+Connection to localhost closed.
+
+[?2004h[94mITINF25/lektion4
+
+(B[m$ [H[2J[94mITINF25/lektion4
+
 (B[m$ ls
-[?2004lconfig	info.sh  recordings  ssh_hardening.txt
-[?2004h[94mITINF25/lektion4
-(B[m$ (reverse-i-search)`': s': l[7ms[27mc': [7msc[27mp info.sh server-kent:/home/kent/info3[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cp': [7mscp[27m info.sh server-kent:/home/kent/info3 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[23P(B[m$ scp
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[Ksuperinfo.sh[K[K[K.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pserver-kent:/home/kent/superinfo.sh[1Pserver-kent:/home/kent/superinfo.sh[1Perver-kent:/home/kent/superinfo.sh[1Pserver-kent:/home/kent/superinfo.sh[1Pserver-kent:/home/kent/superinfo.sh[1Pserver-kent:/home/kent/superinfo.sh[1Pserver-kent:/home/kent/superinfo.sh[1Pserver-kent:/home/kent/superinfo.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C .
-[?2004lsuperinfo.sh                     0%    0     0.0KB/s   --:-- ETAsuperinfo.sh                   100%   50    57.7KB/s   00:00    
-[?2004h[94mITINF25/lektion4
-(B[m$ cd /tmp/[H[2J[94mITINF25/lektion4
+[?2004l
+config	info.sh  recordings  ssh_hardening.txt
+[?2004h[94mITINF25/lektion4
+
+(B[m$
+(reverse-i-search)`': s': l[7ms[27mc': [7msc[27mp info.sh server-kent:/home/kent/info3
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cp': [7mscp[27m info.sh server-kent:/home/kent/info3 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[23P(B[m$ scp
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[Ksuperinfo.sh[K[K[K.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pserver-kent:/home/kent/superinfo.sh[1Pserver-kent:/home/kent/superinfo.sh[1Perver-kent:/home/kent/superinfo.sh[1Pserver-kent:/home/kent/superinfo.sh[1Pserver-kent:/home/kent/superinfo.sh[1Pserver-kent:/home/kent/superinfo.sh[1Pserver-kent:/home/kent/superinfo.sh[1Pserver-kent:/home/kent/superinfo.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C .
+[?2004l
+
+superinfo.sh                     0%    0     0.0KB/s   --:-- ETA
+superinfo.sh                   100%   50    57.7KB/s   00:00
+[?2004h[94mITINF25/lektion4
+
+(B[m$ cd /tmp/[H[2J[94mITINF25/lektion4
+
 (B[m$ cd /tmp/
-[?2004l[?2004h[94m/tmp (B[m$ ls
-[?2004lremote-file-71752ccfe2464e99
+[?2004l
+[?2004h[94m/tmp (B[m$ ls
+[?2004l
+remote-file-71752ccfe2464e99
 systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-bluetooth.service-xNqsgb
 systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-bolt.service-FgSo0x
 systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-colord.service-UdZszd
@@ -249,7 +532,8 @@ tracker-extract-3-files.1000
 tracker-extract-3-files.113
 VSLiveshareLogs
 [?2004h[94m/tmp (B[m$ [H[2J[94m/tmp (B[m$ ls
-[?2004lremote-file-71752ccfe2464e99
+[?2004l
+remote-file-71752ccfe2464e99
 systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-bluetooth.service-xNqsgb
 systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-bolt.service-FgSo0x
 systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-colord.service-UdZszd
@@ -266,23 +550,47 @@ tracker-extract-3-files.1000
 tracker-extract-3-files.113
 VSLiveshareLogs
 [?2004h[94m/tmp (B[m$ [H[2J[94m/tmp (B[m$ cd
-[?2004l[?2004h[94m~ (B[m$ [H[2J[94m~ (B[m$ ls
-[?2004l bin	     Downloads	 Public       'VirtualBox VMs'
+[?2004l
+[?2004h[94m~ (B[m$ [H[2J[94m~ (B[m$ ls
+[?2004l
+ bin	     Downloads	 Public       'VirtualBox VMs'
  bokforing   Dropbox	 Screenshots
  Desktop     Music	 Templates
  Documents   Pictures	 Videos
-[?2004h[94m~ (B[m$ [H[2J[94m~ (B[m$ git clone [7mgit@github.com:nackc8/l11-apache-d4-kc8se-1.git[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit@github.com:nackc8/l11-apache-d4-kc8se-1.git
-[?2004lCloning into 'l11-apache-d4-kc8se-1'...
+[?2004h[94m~ (B[m$ [H[2J[94m~ (B[m$ git clone [7mgit@github.com:nackc8/l11-apache-d4-kc8se-1.git[27m
+[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit@github.com:nackc8/l11-apache-d4-kc8se-1.git
+[?2004l
+Cloning into 'l11-apache-d4-kc8se-1'...
 remote: Enumerating objects: 10, done.[K
-remote: Counting objects:  33% (1/3)[Kremote: Counting objects:  66% (2/3)[Kremote: Counting objects: 100% (3/3)[Kremote: Counting objects: 100% (3/3), done.[K
-remote: Compressing objects:  33% (1/3)[Kremote: Compressing objects:  66% (2/3)[Kremote: Compressing objects: 100% (3/3)[Kremote: Compressing objects: 100% (3/3), done.[K
+remote: Counting objects:  33% (1/3)[K
+remote: Counting objects:  66% (2/3)[K
+remote: Counting objects: 100% (3/3)[K
+remote: Counting objects: 100% (3/3), done.[K
+remote: Compressing objects:  33% (1/3)[K
+remote: Compressing objects:  66% (2/3)[K
+remote: Compressing objects: 100% (3/3)[K
+remote: Compressing objects: 100% (3/3), done.[K
 remote: Total 10 (delta 0), reused 0 (delta 0), pack-reused 7 (from 2)[K
-Receiving objects:  10% (1/10)Receiving objects:  20% (2/10)Receiving objects:  30% (3/10)Receiving objects:  40% (4/10)Receiving objects:  50% (5/10)Receiving objects:  60% (6/10)Receiving objects:  70% (7/10)Receiving objects:  80% (8/10)Receiving objects:  90% (9/10)Receiving objects: 100% (10/10)Receiving objects: 100% (10/10), 5.37 KiB | 5.37 MiB/s, done.
+Receiving objects:  10% (1/10)
+Receiving objects:  20% (2/10)
+Receiving objects:  30% (3/10)
+Receiving objects:  40% (4/10)
+Receiving objects:  50% (5/10)
+Receiving objects:  60% (6/10)
+Receiving objects:  70% (7/10)
+Receiving objects:  80% (8/10)
+Receiving objects:  90% (9/10)
+Receiving objects: 100% (10/10)
+Receiving objects: 100% (10/10), 5.37 KiB | 5.37 MiB/s, done.
 [?2004h[94m~ (B[m$ cd l11-apache-d4-kc8se-1/
-[?2004l[?2004h[94m(B[m$ [H[2J[94m(B[m$ ls
-[?2004lindex.html  installation.md  README.md
+[?2004l
+[?2004h[94m(B[m$ [H[2J[94m(B[m$ ls
+[?2004l
+index.html  installation.md  README.md
 [?2004h[94m(B[m$ code .
-[?2004l[?2004h[94m(B[m$ [?2004l
+[?2004l
+[?2004h[94m(B[m$ [?2004l
+
 exit
 
 Script done on 2025-09-22 15:15:46+02:00 [COMMAND_EXIT_CODE="0"]
