@@ -2252,4 +2252,71 @@ esac
 fi
 
 if [ "$color_prompt" = yes ]; then
-:[K[K    PS1='${debian_chroot:+($debian_chroot
+:[K[K    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[ \033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+unset color_prompt force_color_prompt
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$P S1"
+    ;;
+*)
+:[K[K    ;;
+esac
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" | | eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+:[K[K [KESCESC[KOO[KBB[Kfi
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# colored GCC warnings and errors
+:[K[K [KESCESC[KOO[KBB[K#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01 :[K[K [KESCESC[KOO[KBB[K;32:locus=01:quote=01'
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# some more ls aliases
+:[K[K [KESCESC[KOO[KBB[Kalias ll='ls -alF'
+:[K[K [KESCESC[KOO[KBB[Kalias la='ls -A'
+:[K[K [KESCESC[KOO[KBB[Kalias l='ls -CF'
+:[K[K [KESCESC[KOO[KAA[K[HM    #alias vdir='vdir --color=auto'
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM    #alias dir='dir --color=auto'
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM    alias ls='ls --color=auto'
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM| eval "$(dircolors -b)"
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" |[15;1H[K:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# some more ls aliases
+:[K[K [KESCESC[KOO[KBB[Kalias ll='ls -alF'
+:[K[K [KESCESC[KOO[KBB[Kalias la='ls -A'
+:[K[K [KESCESC[KOO[KBB[Kalias l='ls -CF'
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# Add an "alert" alias for long running commands.  Use like so:
+:[K[K [KESCESC[KOO[KBB[K#   sleep 10; alert
+:[K[K [KESCESC[KOO[KBB[Kalias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo t :[K[K [KESCESC[KOO[KBB[Kerminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9 :[K[K [KESCESC[KOO[KBB[K]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# Alias definitions.
+:[K[K [KESCESC[KOO[KBB[K# You may want to put all your additions into a separate file lik :[K[K [KESCESC[KOO[KAA[K[HM;32:locus=01:quote=01'
+[15;1H[K:[K[K[?1l>[?1049l[23;0;0t[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ long
+[?2004lCommand 'long' not found, did you mean:
+  command 'kong' from snap kong (2.0.4)
+  command 'kong' from snap kong (0.13.1)
+See 'snap info <snapname>' for additional versions.
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ alias long=''-'l'[Cl-l's-l' -l'[C[C[C
+[?2004l[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ long [K
+[?2004ltotal 20
+-rw-rw-r-- 1 kent kent    0 Sep 24 11:02 annatskript
+-rwxr-xr-x 1 kent kent   40 Sep 22 12:56 [0m[01;32minfo2[0m
+-rwxr-xr-x 1 kent kent   40 Sep 22 12:57 [01;32minfo3[0m
+-rwxr-xr-x 1 kent kent   40 Sep 22 12:56 [01;32minfo.sh[0m
+drwxrwxr-x 2 kent kent 4096 Sep 24 11:53 [01;34mminkatt[0m
+-rwxr-xr-x 1 kent kent   50 Sep 22 13:00 [01;32msuperinfo.sh[0m
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ long /[K-F
+[?2004ltotal 20
+-rw-rw-r-- 1 kent kent    0 Sep 24 11:02 annatskript
+-rwxr-xr-x 1 kent kent   40 Sep 22 12:56 [0m[01;3
