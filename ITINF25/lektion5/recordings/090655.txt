@@ -1071,4 +1071,80 @@ BASH_FUNC____set_bash_prompt%%=() {  local prompt=$(___rel_path);
  PS1=$prompt
 }
 BASH_FUNC____rel_path%%=() {  local prompt;
- local root
+ local root;
+ root="$(git rev-parse --show-toplevel 2> /dev/null)";
+ if [[ $? == 0 ]]; then
+ prompt="${PWD#"$root"}";
+ prompt="${prompt#/}";
+ else
+ prompt="${PWD/"$HOME"/\~}";
+ fi;
+ echo -n "$prompt"
+}
+_=/usr/bin/printenv
+[?2004h[94mITINF25/lektion5
+(B[m$ [H[2J[94mITINF25/lektion5
+(B[m$ MININST1="Bra inst'll[K[K[Klll[K[K[KällningÄ[K"[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l[?2004h[94mITINF25/lektion5
+(B[m$ echo ¤[K$M
+$MACHTYPE    $MAILCHECK   $MANAGERPID  $MININST1
+[94mITINF25/lektion5
+(B[m$ echo $MININST1 
+[?2004lBra inställning
+[?2004h[94mITINF25/lektion5
+(B[m$ printenv | less
+[?2004l[?1049h[22;0;0t[?1h=SHELL=/shared/kent/Documents/nackademin/linux1/l1-live/.profiles/ educator/bash_noprofile_norc
+SESSION_MANAGER=local/klad:@/tmp/.ICE-unix/4067,unix/klad:/tmp/.I CE-unix/4067
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+VSCODE_DEBUGPY_ADAPTER_ENDPOINTS=/home/kent/.vscode/extensions/ms -python.debugpy-2025.6.0-linux-x64/.noConfigDebugAdapterEndpoints /endpoint-11a5171076b8c09c.txt
+SSH_AGENT_LAUNCHER=openssh
+XDG_MENU_PREFIX=gnome-
+TERM_PROGRAM_VERSION=1.104.1
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+NODE_OPTIONS= --disable-warning=ExperimentalWarning --disable-war ning=ExperimentalWarning
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+PYDEVD_DISABLE_FILE_VALIDATION=1
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=gnome
+:[K[K/[KMM[KII[KNN[KII[KNN[KSS[KTT[K11[K[1;1HSHELL=/shared/kent/Documents/nackademin/linux1/l1-live/.profiles/ [2;1Heducator/bash_noprofile_norc
+[3;1HSESSION_MANAGER=local/klad:@/tmp/.ICE-unix/4067,unix/klad:/tmp/.I [4;1HCE-unix/4067
+[5;1HQT_ACCESSIBILITY=1
+[6;1HCOLORTERM=truecolor
+[7;1HVSCODE_DEBUGPY_ADAPTER_ENDPOINTS=/home/kent/.vscode/extensions/ms [8;1H-python.debugpy-2025.6.0-linux-x64/.noConfigDebugAdapterEndpoints [9;1H/endpoint-11a5171076b8c09c.txt
+[10;1HSSH_AGENT_LAUNCHER=openssh
+[11;1HXDG_MENU_PREFIX=gnome-
+[12;1HTERM_PROGRAM_VERSION=1.104.1
+[13;1HGNOME_DESKTOP_SESSION_ID=this-is-deprecated
+[14;1HNODE_OPTIONS= --disable-warning=ExperimentalWarning --disable-war [15;1Hning=ExperimentalWarning
+[16;1HSSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+[17;1HPYDEVD_DISABLE_FILE_VALIDATION=1
+[18;1HXMODIFIERS=@im=ibus
+[19;1HDESKTOP_SESSION=gnome
+[20;1H[1;1HSHELL=/shared/kent/Documents/nackademin/linux1/l1-live/.profiles/ [2;1Heducator/bash_noprofile_norc
+[3;1HSESSION_MANAGER=local/klad:@/tmp/.ICE-unix/4067,unix/klad:/tmp/.I [4;1HCE-unix/4067
+[5;1HQT_ACCESSIBILITY=1
+[6;1HCOLORTERM=truecolor
+[7;1HVSCODE_DEBUGPY_ADAPTER_ENDPOINTS=/home/kent/.vscode/extensions/ms [8;1H-python.debugpy-2025.6.0-linux-x64/.noConfigDebugAdapterEndpoints [9;1H/endpoint-11a5171076b8c09c.txt
+[10;1HSSH_AGENT_LAUNCHER=openssh
+[11;1HXDG_MENU_PREFIX=gnome-
+[12;1HTERM_PROGRAM_VERSION=1.104.1
+[13;1HGNOME_DESKTOP_SESSION_ID=this-is-deprecated
+[14;1HNODE_OPTIONS= --disable-warning=ExperimentalWarning --disable-war [15;1Hning=ExperimentalWarning
+[16;1HSSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+[17;1HPYDEVD_DISABLE_FILE_VALIDATION=1
+[18;1HXMODIFIERS=@im=ibus
+[19;1HDESKTOP_SESSION=gnome
+[20;1H[K[7mPattern not found  (press RETURN)[27m[20;1H[K[K[?1l>[?1049l[23;0;0t[?2004h[94mITINF25/lektion5
+(B[m$ export MIN[K[K[K$[KMINS[K[K[K[K$MINST[K[KINST1[1PMININST1[C[C[C[C[C[C[C[C
+[?2004l[?2004h[94mITINF25/lektion5
+(B[m$ export MININST1[C[Cprintenv | less
+[?2004l[?1049h[22;0;0t[?1h=SHELL=/shared/kent/Documents/nackademin/linux1/l1-live/.profiles/ educator/bash_noprofile_norc
+SESSION_MANAGER=local/klad:@/tmp/.ICE-unix/4067,unix/klad:/tmp/.I CE-unix/4067
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+VSCODE_DEBUGPY_ADAPTER_ENDPOINTS=/home/kent/.vscode/extensions/ms -python.debugpy-2025.6.0-linux-x64/.noConfigDebugAdapterEndpoints /endpoint-11a5171076b8c09c.txt
+SSH_AGENT_LAUNCHER=openssh
+XDG_MENU_PREFIX=gnome-
+TERM_PROGRAM_VERSION=1.104.1
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
