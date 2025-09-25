@@ -12,4 +12,5 @@ TERMER
 
 VARIABLER
     NAMN=INNEHALL sätter en variabel
-    Hej $NAMN skriver ut Hej 
+    Hej $NAMN skriver ut Hej och varibelns innehåll
+    
