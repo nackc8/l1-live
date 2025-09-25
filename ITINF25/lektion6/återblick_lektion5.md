@@ -35,8 +35,8 @@ KOMMANDO
     För att jämnt få en inställning som ett alias, lägg den i ~/.bashrc
     ~ är din hemkatalog
 
-HUR BASH VÄLJER VAD DEN SKA KÖRA
+HUR BASH VÄLJER VAD DEN SKA KÖRA sl
     Är det ett alias, så ersätts det med sitt värde först.
 
     Först av:
-        1. Finns det en funktion
+        1. Finns det en funktion som heter sl? Kör den då!
