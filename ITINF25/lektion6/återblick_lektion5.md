@@ -27,4 +27,4 @@ SKRIPT
     #!/ett/program        - shebang! en rad som beskriver hur skriptet ska köras, i detta fall av /ett/program
     #!/bin/bash - exempel på en shebang
     #!/usr/bin/env/python - ett till exempel på en shebang
-    
+    Behöver execute-rättighet på skriptfilen
