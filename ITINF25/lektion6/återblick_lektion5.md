@@ -6,5 +6,6 @@ TERMER
         Bash är ett skal
         Zsh är ett skal, som KAN konfigureras mycket
         Fish är ett skal, som har mycket förkonfigurerat
+        PowerShell är ett skal...
 
 VARIABLER
