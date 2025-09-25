@@ -19,4 +19,5 @@ VARIABLER
 MILJÖVARIABELER
     Varibler som ärvs av mina barnprocesser
     Varibler som kopieras i program jag startar från min Bash
+    export XYZ   blir då en miljövariabel
     
