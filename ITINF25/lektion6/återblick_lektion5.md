@@ -30,4 +30,4 @@ SKRIPT
     Behöver execute-rättighet på skriptfilen för att kunna köras separat
     bash skriptnamn - kör filen skriptnamn med bash, då behövs varken shebang eller execute
 KOMMANDO
-    alias
+    alias x='find / -iname ' # skapar ett kort 
