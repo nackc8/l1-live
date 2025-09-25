@@ -20,4 +20,5 @@ MILJÖVARIABELER
     Varibler som ärvs av mina barnprocesser
     Varibler som kopieras i program jag startar från min Bash
     export XYZ   blir då en miljövariabel
-    AAA=1212 
+    AAA=1212 bash    då får barnprocessen bash miljövariabeln AAA
+    
