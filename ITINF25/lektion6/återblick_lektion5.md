@@ -36,4 +36,6 @@ KOMMANDO
     ~ är din hemkatalog
 
 HUR BASH VÄLJER VAD DEN SKA KÖRA
+    Är det ett alias, så ersätts det med sitt värde först.
+
     Först av:
