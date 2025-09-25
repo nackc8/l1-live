@@ -41,4 +41,4 @@ HUR BASH VÄLJER VAD DEN SKA KÖRA sl
     Först av:
         1. Finns det en funktion som heter sl? Kör den då!
         2. Är sl ett inbyggt kommando? Kör den!
-        3. Kolla i 
+        3. Kolla i $PATH. För varje del, som är separerad med : från vänster till höger
