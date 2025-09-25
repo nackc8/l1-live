@@ -23,3 +23,5 @@ MILJÖVARIABELER
     AAA=1212 bash    då får barnprocessen bash miljövariabeln AAA
     export BBB=990  # sätter vi variabeln, och exporterar den som en miljövariabel
 
+SKRIPT
+    #!/
