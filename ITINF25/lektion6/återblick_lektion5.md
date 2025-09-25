@@ -17,4 +17,5 @@ VARIABLER
     En variabel innehåller text
 
 MILJÖVARIABELER
-    Varibler som 
+    Varibler som ärvs av mina barnprocesser
+    Varibler 
