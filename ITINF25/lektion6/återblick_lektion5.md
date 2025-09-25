@@ -31,5 +31,5 @@ SKRIPT
     bash skriptnamn - kör filen skriptnamn med bash, då behövs varken shebang eller execute
 KOMMANDO
     alias x='find / -iname ' # skapar en kort version, som kan vara smidig att använda
-    För att jämnt få en inställning som ett alias, lägg den i .bashrc
+    För att jämnt få en inställning som ett alias, lägg den i ~/.bashrc
     
