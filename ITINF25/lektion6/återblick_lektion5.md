@@ -7,6 +7,6 @@ TERMER
         Zsh är ett skal, som KAN konfigureras mycket
         Fish är ett skal, som har mycket förkonfigurerat
         PowerShell är ett skal...
-    
+    Fönstret man läser output från, och skriver i - Terminal / Terminalemulator
 
 VARIABLER
