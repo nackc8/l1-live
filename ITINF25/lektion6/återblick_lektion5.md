@@ -34,4 +34,5 @@ KOMMANDO
     alias x='find / -iname ' # skapar en kort version, som kan vara smidig att använda
     För att jämnt få en inställning som ett alias, lägg den i ~/.bashrc
     ~ är din hemkatalog
-    
+
+HUR BASH VÄLJER VAD DEN SKA KÖRA
