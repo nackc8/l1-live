@@ -4631,4 +4631,87 @@ GNU Bash 5.2                   2022 September 19                        BASH(1)
 [HM       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.[m
 [HM[1mCOPYRIGHT[0m[m
 [HM[m
-[HM       [1mbash[0m [options]
+[HM       [1mbash[0m [options] [command_string | file][m
+[HM[1mSYNOPSIS[0m[m
+[HM[m
+[HM       bash - GNU Bourne-Again SHell[m
+[HM[1mNAME[0m[m
+[HM[m
+[HMBASH(1)                     General Commands Manual                     BASH(1)[m
+[21;1H[K[7m Manual page bash(1) line 1/6591 0% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mOPTIONS[0m[m
+[7m Manual page bash(1) line 2/6591 0% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       All  of the single-character shell options documented in the description[m
+[7m Manual page bash(1) line 3/6591 0% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       of the [1mset[0m builtin command, including [1m-o[0m, can be used  as  options  when[m
+[7m Manual page bash(1) line 4/6591 0% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the  shell  is  invoked.  In addition, [1mbash[0m interprets the following op‐[m
+[7m Manual page bash(1) line 5/6591 0% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tions when it is invoked:[m
+[7m Manual page bash(1) line 6/6591 0% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 7/6591 0% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-c[0m        If the [1m-c[0m option is present, then commands are read  from  the[m
+[7m Manual page bash(1) line 8/6591 0% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 first  non-option argument [4mcommand_string[24m.  If there are argu‐[m
+[7m Manual page bash(1) line 9/6591 0% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 ments after the [4mcommand_string[24m, the first argument is assigned[m
+[7m Manual page bash(1) line 10/6591 0% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 to  [1m$0[0m  and  any remaining arguments are assigned to the posi‐[m
+[7m Manual page bash(1) line 11/6591 0% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 tional parameters.  The assignment to [1m$0[0m sets the name of  the[m
+[7m Manual page bash(1) line 12/6591 0% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 shell, which is used in warning and error messages.[m
+[7m Manual page bash(1) line 13/6591 0% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-i[0m        If the [1m-i[0m option is present, the shell is [4minteractive[24m.[m
+[7m Manual page bash(1) line 14/6591 0% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-l[0m        Make  [1mbash[0m act as if it had been invoked as a login shell (see[m
+[7m Manual page bash(1) line 15/6591 0% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 [1mINVOCATION[0m below).[m
+[7m Manual page bash(1) line 16/6591 0% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-r[0m        If the [1m-r[0m option is present, the shell becomes [4mrestricted[24m (see[m
+[7m Manual page bash(1) line 17/6591 0% (press h for help or q to quit)[27m[K[K/[KPP[Kaa[Krr[Kaa[Kmm[Kee[Ktt[Kee[Krr[K  [KEE[Kxx[Kpp[Kaa[Knn[Kss[Kii[Koo[Knn[K[1;1H       [1mBash[0m  is  intended  to  be  a conformant implementation of the Shell and[m
+[2;1H       Utilities  portion  of  the  IEEE  POSIX  specification  (IEEE  Standard[m
+[3;1H       1003.1).  [1mBash[0m can be configured to be POSIX-conformant by default.[m
+[4;1H[m
+[5;1H[1mOPTIONS[0m[m
+[6;1H       All  of the single-character shell options documented in the description[m
+[7;1H       of the [1mset[0m builtin command, including [1m-o[0m, can be used  as  options  when[m
+[8;1H       the  shell  is  invoked.  In addition, [1mbash[0m interprets the following op‐[m
+[9;1H       tions when it is invoked:[m
+[10;1H[m
+[11;1H       [1m-c[0m        If the [1m-c[0m option is present, then commands are read  from  the[m
+[12;1H                 first  non-option argument [4mcommand_string[24m.  If there are argu‐[m
+[13;1H                 ments after the [4mcommand_string[24m, the first argument is assigned[m
+[14;1H                 to  [1m$0[0m  and  any remaining arguments are assigned to the posi‐[m
+[15;1H                 tional parameters.  The assignment to [1m$0[0m sets the name of  the[m
+[16;1H                 shell, which is used in warning and error messages.[m
+[17;1H       [1m-i[0m        If the [1m-i[0m option is present, the shell is [4minteractive[24m.[m
+[18;1H       [1m-l[0m        Make  [1mbash[0m act as if it had been invoked as a login shell (see[m
+[19;1H                 [1mINVOCATION[0m below).[m
+[20;1H       [1m-r[0m        If the [1m-r[0m option is present, the shell becomes [4mrestricted[24m (see[m
+[21;1H[1;1H       [1mBash[0m  is  intended  to  be  a conformant implementation of the Shell and[m
+[2;1H       Utilities  portion  of  the  IEEE  POSIX  specification  (IEEE  Standard[m
+[3;1H       1003.1).  [1mBash[0m can be configured to be POSIX-conformant by default.[m
+[4;1H[m
+[5;1H[1mOPTIONS[0m[m
+[6;1H       All  of the single-character shell options documented in the description[m
+[7;1H       of the [1mset[0m builtin command, including [1m-o[0m, can be used  as  options  when[m
+[8;1H       the  shell  is  invoked.  In addition, [1mbash[0m interprets the following op‐[m
+[9;1H       tions when it is invoked:[m
+[10;1H[m
+[11;1H       [1m-c[0m        If the [1m-c[0m option is present, then commands are read  from  the[m
+[12;1H                 first  non-option argument [4mcommand_string[24m.  If there are argu‐[m
+[13;1H                 ments after the [4mcommand_string[24m, the first argument is assigned[m
+[14;1H                 to  [1m$0[0m  and  any remaining arguments are assigned to the posi‐[m
+[15;1H                 tional parameters.  The assignment to [1m$0[0m sets the name of  the[m
+[16;1H                 shell, which is used in warning and error messages.[m
+[17;1H       [1m-i[0m        If the [1m-i[0m option is present, the shell is [4minteractive[24m.[m
+[18;1H       [1m-l[0m        Make  [1mbash[0m act as if it had been invoked as a login shell (see[m
+[19;1H                 [1mINVOCATION[0m below).[m
+[20;1H       [1m-r[0m        If the [1m-r[0m option is present, the shell becomes [4mrestricted[24m (see[m
+[21;1H...skipping...
+   [1m[7mParameter[27m[0m[7m [27m[1m[7mExpansion[27m[0m[m
+       The `[1m$[0m' character introduces parameter expansion, command  substitution,[m
+       or  arithmetic  expansion.   The parameter name or symbol to be expanded[m
+       may be enclosed in braces, which are optional but serve to  protect  the[m
+       variable  to  be expanded from characters immediately following it which[m
+       could be interpreted as part of the name.[m
+[m
+       When braces are used, the matching ending brace is the first `[1m}[0m' not es‐[m
+       caped by a backslash or within a quoted string, and not within an embed‐[m
+       ded arithmetic expansion, command substitution, or parameter expansion.[m
+[m
+       ${[4mparameter[24m}[m
+              The value of [4mparameter[24m is substituted.  The braces  are  required[m
+              when  [4mparameter[24m  is  a  positional  parameter  with more than one[m
+              digit, or when [4mparameter[24m is followed by a character which is  not[m
+              to  be interpreted as part of its name.  The [4mparameter[24m is a shell[m
+              parameter as described above [1mPARAMETERS[0m) or  an  array  reference[m
+              ([1mArrays[0m).[m
+[m
+       If the first character of [4mparameter[24m is an exclamation point ([1m![0m), and [4mpa‐[24
