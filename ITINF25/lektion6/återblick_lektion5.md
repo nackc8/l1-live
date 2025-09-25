@@ -24,4 +24,4 @@ MILJÖVARIABELER
     export BBB=990  # sätter vi variabeln, och exporterar den som en miljövariabel
 
 SKRIPT
-    #!/ett/program        - shebang! 
+    #!/ett/program        - shebang! en rad som beskriver hur skriptet ska köras
