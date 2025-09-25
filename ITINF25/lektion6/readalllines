@@ -1,13 +1,5 @@
 #!/bin/bash
 
-while read
-
-{
-	read -r rad1
-	read -r rad2
-	read -r rad3
-} <lsfil.txt
-
-echo "Rad 1: $rad1"
-echo "Rad 2: $rad2"
-echo "Rad 3: $rad3"
+while read -r rad; do
+	echo "Rad: $rad"
+done <lsfil.txt
