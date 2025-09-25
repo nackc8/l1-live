@@ -40,3 +40,4 @@ HUR BASH VÄLJER VAD DEN SKA KÖRA sl
 
     Först av:
         1. Finns det en funktion som heter sl? Kör den då!
+        2. 
