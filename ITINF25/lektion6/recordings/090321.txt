@@ -4756,4 +4756,101 @@ GNU Bash 5.2                   2022 September 19                        BASH(1)
 [7m Manual page bash(1) line 1702/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[4mparameter[24m[1m:[0m[4moffset[24m[1m:[0m[4mlength[24m}[m
 [7m Manual page bash(1) line 1703/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mSubstring[0m  [1mExpansion[0m.   Expands to up to [4mlength[24m characters of the[m
 [7m Manual page bash(1) line 1704/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              value of [4mparameter[24m starting at the character specified by [4moffset[24m.[m
-[7m Manual page bash(1) line 1705/6591 27% (press h for help or q t
+[7m Manual page bash(1) line 1705/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              If  [4mparameter[24m  is [1m@[0m or [1m*[0m, an indexed array subscripted by [1m@[0m or [1m*[0m,[m
+[7m Manual page bash(1) line 1706/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              or an associative array name, the results differ as described be‐[m
+[7m Manual page bash(1) line 1707/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              low.  If [4mlength[24m is omitted, expands to the substring of the value[m
+[7m Manual page bash(1) line 1708/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              of [4mparameter[24m starting at the character specified  by  [4moffset[24m  and[m
+[7m Manual page bash(1) line 1709/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              extending  to the end of the value.  [4mlength[24m and [4moffset[24m are arith‐[m
+[7m Manual page bash(1) line 1710/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              metic expressions (see [1mARITHMETIC[0m [1mEVALUATION[0m below).[m
+[7m Manual page bash(1) line 1711/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1712/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              If [4moffset[24m evaluates to a number less than zero, the value is used[m
+[7m Manual page bash(1) line 1713/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              as  an  offset in characters from the end of the value of [4mparame‐[24m[m
+[7m Manual page bash(1) line 1714/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4mter[24m.  If [4mlength[24m evaluates to a number less than zero, it  is  in‐[m
+[7m Manual page bash(1) line 1715/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              terpreted as an offset in characters from the end of the value of[m
+[7m Manual page bash(1) line 1716/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4mparameter[24m rather than a number of characters, and  the  expansion[m
+[7m Manual page bash(1) line 1717/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              is  the  characters  between [4moffset[24m and that result.  Note that a[m
+[7m Manual page bash(1) line 1718/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              negative offset must be separated from the colon by at least  one[m
+[7m Manual page bash(1) line 1719/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              space to avoid being confused with the [1m:-[0m expansion.[m
+[7m Manual page bash(1) line 1720/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1721/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              If  [4mparameter[24m  is [1m@[0m or [1m*[0m, the result is [4mlength[24m positional parame‐[m
+[7m Manual page bash(1) line 1722/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ters beginning at [4moffset[24m.  A negative [4moffset[24m is taken relative to[m
+[7m Manual page bash(1) line 1723/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              one  greater than the greatest positional parameter, so an offset[m
+[7m Manual page bash(1) line 1724/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              of -1 evaluates to the last positional parameter.  It is  an  ex‐[m
+[7m Manual page bash(1) line 1725/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              pansion error if [4mlength[24m evaluates to a number less than zero.[m
+[7m Manual page bash(1) line 1726/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1727/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              If  [4mparameter[24m is an indexed array name subscripted by @ or *, the[m
+[7m Manual page bash(1) line 1728/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              result is the [4mlength[24m members of the array beginning with ${[4mparam‐[24m[m
+[7m Manual page bash(1) line 1729/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4meter[24m[[4moffset[24m]}.   A  negative  [4moffset[24m  is  taken  relative  to one[m
+[7m Manual page bash(1) line 1730/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              greater than the maximum index of the specified array.  It is  an[m
+[7m Manual page bash(1) line 1731/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              expansion error if [4mlength[24m evaluates to a number less than zero.[m
+[7m Manual page bash(1) line 1732/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1733/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Substring  expansion applied to an associative array produces un‐[m
+[7m Manual page bash(1) line 1734/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              defined results.[m
+[7m Manual page bash(1) line 1735/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1736/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Substring indexing is zero-based unless the positional parameters[m
+[7m Manual page bash(1) line 1737/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              are  used, in which case the indexing starts at 1 by default.  If[m
+[7m Manual page bash(1) line 1738/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4moffset[24m is 0, and the positional parameters are used, [1m$0[0m  is  pre‐[m
+[7m Manual page bash(1) line 1739/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              fixed to the list.[m
+[7m Manual page bash(1) line 1740/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1741/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[1m![0m[4mprefix[24m[1m*[0m}[m
+[7m Manual page bash(1) line 1742/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[1m![0m[4mprefix[24m[1m@[0m}[m
+[7m Manual page bash(1) line 1743/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mNames[0m  [1mmatching[0m  [1mprefix[0m.  Expands to the names of variables whose[m
+[7m Manual page bash(1) line 1744/6591 28% (press h for help or q to quit)[27m[K[K              names begin with [4mprefix[24m, separated by the first character of  the[m
+              [1mIFS[0m  special  variable.  When [4m@[24m is used and the expansion appears[m
+              within double quotes, each variable name expands  to  a  separate[m
+              word.[m
+[m
+       ${[1m![0m[4mname[24m[[4m@[24m]}[m
+       ${[1m![0m[4mname[24m[[4m*[24m]}[m
+              [1mList[0m [1mof[0m [1marray[0m [1mkeys[0m.  If [4mname[24m is an array variable, expands to the[m
+              list of array indices (keys) assigned in [4mname[24m.  If [4mname[24m is not an[m
+              array, expands to 0 if [4mname[24m is set and null otherwise.  When [4m@[24m is[m
+              used and the expansion appears within double quotes, each key ex‐[m
+              pands to a separate word.[m
+[m
+       ${[1m#[0m[4mparameter[24m}[m
+              [1mParameter[0m  [1mlength[0m.   The length in characters of the value of [4mpa‐[24m[m
+              [4mrameter[24m is substituted.  If [4mparameter[24m is [1m*[0m or [1m@[0m, the  value  sub‐[m
+              stituted is the number of positional parameters.  If [4mparameter[24m is[m
+              an array name subscripted by [1m*[0m or [1m@[0m, the value substituted is the[m
+              number  of elements in the array.  If [4mparameter[24m is an indexed ar‐[m
+              ray name subscripted by a negative number, that number is  inter‐[m
+[7m Manual page bash(1) line 1764/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              preted  as  relative to one greater than the maximum index of [4mpa‐[24m[m
+[7m Manual page bash(1) line 1765/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              names begin with [4mprefix[24m, separated by the first character of  the[m
+[21;1H[K[7m Manual page bash(1) line 1764/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              [1mNames[0m  [1mmatching[0m  [1mprefix[0m.  Expands to the names of variables whose[m
+[21;1H[K[7m Manual page bash(1) line 1763/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       ${[1m![0m[4mprefix[24m[1m@[0m}[m
+[21;1H[K[7m Manual page bash(1) line 1762/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       ${[1m![0m[4mprefix[24m[1m*[0m}[m
+[21;1H[K[7m Manual page bash(1) line 1761/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[21;1H[K[7m Manual page bash(1) line 1760/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              fixed to the list.[m
+[21;1H[K[7m Manual page bash(1) line 1759/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              [4moffset[24m is 0, and the positional parameters are used, [1m$0[0m  is  pre‐[m
+[21;1H[K[7m Manual page bash(1) line 1758/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              are  used, in which case the indexing starts at 1 by default.  If[m
+[21;1H[K[7m Manual page bash(1) line 1757/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              Substring indexing is zero-based unless the positional parameters[m
+[21;1H[K[7m Manual page bash(1) line 1756/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[21;1H[K[7m Manual page bash(1) line 1755/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              defined results.[m
+[21;1H[K[7m Manual page bash(1) line 1754/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              Substring  expansion applied to an associative array produces un‐[m
+[21;1H[K[7m Manual page bash(1) line 1753/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[21;1H[K[7m Manual page bash(1) line 1752/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              expansion error if [4mlength[24m evaluates to a number less than zero.[m
+[21;1H[K[7m Manual page bash(1) line 1751/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              greater than the maximum index of the specified array.  It is  an[m
+[21;1H[K[7m Manual page bash(1) line 1750/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              [4meter[24m[[4moffset[24m]}.   A  negative  [4moffset[24m  is  taken  relative  to one[m
+[21;1H[K[7m Manual page bash(1) line 1749/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[1m![0m[4mname[24m[[4m@[24m]}[m
+[7m Manual page bash(1) line 1750/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[1m![0m[4mname[24m[[4m*[24m]}[m
+[7m Manual page bash(1) line 1751/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mList[0m [1mof[0m [1marray[0m [1mkeys[0m.  If [4mname[24m is an array variable, expands to the[m
+[7m Manual page bash(1) line 1752/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              list of array indices (keys) assigned in [4mname[24m.  If [4mname[24m is not an[m
+[7m Manual page bash(1) line 1753/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              array, expands to 0 if [4mname[24m is set and null otherwise.  When [4m@[24m is[m
+[7m Manual page bash(1) line 1754/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              used and the expansion appears within double quotes, each key ex‐[m
+[7m Manual page bash(1) line 1755/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              pands to a separate word.[m
+[7m Manual page bash(1) line 1756/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1757/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[1m#[0m[4mparameter[24m}[m
+[7m Manual page bash(1) line 1758/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mParameter[0m  [1mlength[0m.   The length in characters of the value of [4mpa‐[24m[m
+[7m Manual page bash(1) line 1759/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4mrameter[24m is substituted.  If [4mparameter[24m is [1m*[0m or [1m@[0m, the  value  sub‐[m
+[7m Manual page bash(1) line 1760/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              stituted is the number of positional parameters.  If [4mparameter[24m is[m
+[7m Manual page bash(1) line 1761/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              an array name subscripted by [1m*[0m or [1m@[0m, the value substituted is the[m
+[7m Manual page bash(1) line 1762/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              number  of elements in the array.  If [4mparameter[24m is an indexed ar‐[m
+[7m Manual page bash(1) line 1763/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ray name subscripted by a negative number, that number is  inter‐[m
+[7m Manual page bash(1) line 1764/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              preted  as  relative to one greater than the maximum index of [4mpa‐[24m[m
+[7m Manual page bash(1) line 1765/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4mrameter[24m, so negative indices count back from the end of  the  ar‐[m
+[7m Manual page bash(1) line 1766/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ray, and an index of -1 references the last element.[m
+[7m Manual page bash(1) line 1767/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1768/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[4mparameter[24m[1m#[0m[4mword[24m}[m
+[7m Manual page bash(1) line 1769/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[4mparameter[24m[1m##[0m[4mword[24m}[m
+[7m
