@@ -15,4 +15,5 @@ VARIABLER
     Hej $NAMN skriver ut Hej och varibelns innehåll
     DUBLETTINNEHALL=$NAMN
     En variabel innehåller text
-    
+
+MILJÖVARIABELER
