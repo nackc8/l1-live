@@ -17,3 +17,4 @@ VARIABLER
     En variabel innehåller text
 
 MILJÖVARIABELER
+    
