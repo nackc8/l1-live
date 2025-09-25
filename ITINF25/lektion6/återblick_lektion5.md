@@ -1,0 +1,3 @@
+TERMER
+    
+VARIABLER
