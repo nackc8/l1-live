@@ -21,4 +21,5 @@ MILJÖVARIABELER
     Varibler som kopieras i program jag startar från min Bash
     export XYZ   blir då en miljövariabel
     AAA=1212 bash    då får barnprocessen bash miljövariabeln AAA
-    export BBB=
+    export BBB=990
+    
