@@ -3406,4 +3406,81 @@ usb_modeswitch.d
    [1mOutput[0m [1mLine[0m [1mPrefix[0m [1mControl[0m[m
        [1m-b[0m, [1m--byte-offset[0m[m
               Print  the  0-based  byte  offset  within the[m
-   
+              input file before each line of output.  If [1m-o[0m[m
+[7manual page grep(1) line 166 (press h for help or q to quit)[27m[K[K/[K...skipping...
+[1mEXIT[0m [1m[7mSTATUS[27m[0m[m
+       Normally the exit [7mstatus[27m is 0 if a line is selected,[m
+       1 if no lines were  selected,  and  2  if  an  error[m
+       occurred.  However, if the [1m-q[0m or [1m--quiet[0m or [1m--silent[0m[m
+       is used and a line is selected, the exit [7mstatus[27m is 0[m
+       even if an error occurred.[m
+[m
+[1mENVIRONMENT[0m[m
+       The  behavior  of  [1mgrep[0m is affected by the following[m
+       environment variables.[m
+[m
+       The locale  for  category  [1mLC_[0m[4mfoo[24m  is  specified  by[m
+       examining  the  three  environment variables [1mLC_ALL[0m,[m
+[7manual page grep(1) line 553 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mITINF25/lektion6
+(B[m$ [H[2J[94mITINF25/lektion6
+(B[m$ true || [C[C[C[C[C[C[C[C[Cecho "Aloha!"
+[?2004l[?2004h[94mITINF25/lektion6
+(B[m$ true || echo "Aloha!"[C[C[C[C[C[C[C[1P[1P[1@&[1@&[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lAloha!
+[?2004h[94mITINF25/lektion6
+(B[m$ true && echo "Aloha!"[1P[1P[1P[1P[1@f[1@a[1@l[1@s[1@e[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l[?2004h[94mITINF25/lektion6
+(B[m$ false && echo "Aloha!"[1P[1P[1@|[1@|
+[?2004lAloha!
+[?2004h[94mITINF25/lektion6
+(B[m$ [H[2J[94mITINF25/lektion6
+(B[m$ bash
+[?2004l[?2004h
+[1;36ml1-live/ITINF25/lektion6[0m on [1;35m 250925[0m [1;31m[$][0m 
+[1;32m❯[0m exit
+[?2004lexit
+[?2004h[94mITINF25/lektion6
+(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mITINF25/lektion6
+(B[m$ chmod _[K+x falskt 
+[?2004l[?2004h[94mITINF25/lektion6
+(B[m$ ./falskt [H[2J[94mITINF25/lektion6
+(B[m$ ./falskt 
+[?2004l[?2004h[94mITINF25/lektion6
+(B[m$ echo $?
+[?2004l1
+[?2004h[94mITINF25/lektion6
+(B[m$ ./falskt [H[2J[94mITINF25/lektion6
+(B[m$ ./falskt || echo "Yo
+[?2004l[?2004h> "[K^C[?2004l[?2004h[?2004l
+[?2004h[94mITINF25/lektion6
+(B[m$ ./falskt || echo "Yo"[H[2J[94mITINF25/lektion6
+(B[m$ ./falskt || echo "Yo"
+[?2004lYo
+[?2004h[94mITINF25/lektion6
+(B[m$ cp falskt sant[H[2J[94mITINF25/lektion6
+(B[m$ cp falskt sant
+[?2004l[?2004h[94mITINF25/lektion6
+(B[m$ ./sant && echo "Oh yeah"
+[?2004lOh yeah
+[?2004h[94mITINF25/lektion6
+(B[m$ [H[2J[94mITINF25/lektion6
+(B[m$ [H[2J[94mITINF25/lektion6
+(B[m$ true | fakse[K[K[Klse | true | true |f[K false
+[?2004l[?2004h[94mITINF25/lektion6
+(B[m$ echo $?
+[?2004l1
+[?2004h[94mITINF25/lektion6
+(B[m$ echo $?[C[Ctrue | false | true | true | false[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C }[1@{[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C || echo "Falskt!"
+[?2004l[?2004h> ^C[?2004l[?2004h[?2004l
+[?2004h[94mITINF25/lektion6
+(B[m$ { true | false | true | true | false } || echo "Falskt!"
+[?2004l[?2004h> ^C[?2004l[?2004h[?2004l
+[?2004h[94mITINF25/lektion6
+(B[m$ { true | false | true | true | false } || echo "Falskt!"[H[2J[94mITINF25/lektion6
+(B[m$ { true | false | true | true | false } || echo "Falskt!"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+[?2004l[?2004h> ^C[?2004l[?2004h[?2004l
+[?2004h[94mITINF25/lektion6
+(B[m$ { true | false | true | true | false }[H[2J[94mITINF25/lektion6
+(B[m$ { true | false | true | true | false }[C[C; }[C[C
+[?2004l[?2004h[94mITINF25/lektion6
+(B[m$ { true | false | true | t
