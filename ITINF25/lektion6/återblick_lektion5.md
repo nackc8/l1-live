@@ -44,4 +44,4 @@ HUR BASH VÄLJER VAD DEN SKA KÖRA sl
         3. Kolla i $PATH. För varje del, som är separerad med : från vänster till höger
            1. Finns sl i denna del? Kör den!
            2. Titta på nästa del, hoppa till punkten ovan.
-    Om inget hittas och funktionen command_
+    Om inget hittas och funktionen command_not_found_handle finns? Kör den funktionen
