@@ -4,6 +4,7 @@ TERMER
     Det som kommandon skriver ut - output
     Det program som kör det man skrivit - Shell / Skal
         Bash är ett skal
-        
+        Zsh
+        Fish
 
 VARIABLER
