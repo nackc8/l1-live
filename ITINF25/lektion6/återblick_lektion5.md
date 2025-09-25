@@ -12,4 +12,4 @@ TERMER
 
 VARIABLER
     NAMN=INNEHALL sätter en variabel
-    
+    Hej $NAMN skriver ut Hej 
