@@ -914,4 +914,436 @@ Script started on 2025-09-25 14:32:59+02:00 [TERM="xterm-256color" TTY="/dev/pts
    [1mArrays[0m[m
        [1mBash[0m  provides  one-dimensional indexed and associative array variables.[m
        Any variable may be used as an indexed array; the [1mdeclare[0m  builtin  will[m
-       explicitly  declare  an array.  There
+       explicitly  declare  an array.  There is no maximum limit on the size of[m
+       an array, nor any requirement that members be indexed or  assigned  con‐[m
+       tiguously.   Indexed  arrays  are  referenced  using integers (including[m
+       arithmetic expressions) and are zero-based; associative arrays are  ref‐[m
+[7m Manual page bash(1) line 1424/6591 23% (press h for help or q to quit)[27m[K[K/[K...skipping...
+       sions described below under [1m[7mEXPANSION[27m[0m.  When assigning  to  indexed  ar‐[m
+       rays, if the optional brackets and subscript are supplied, that index is[m
+       assigned to; otherwise the index of the element assigned is the last in‐[m
+       dex assigned to by the statement plus one.  Indexing starts at zero.[m
+[m
+       When  assigning to an associative array, the words in a compound assign‐[m
+       ment may be either assignment statements, for which the subscript is re‐[m
+       quired,  or  a list of words that is interpreted as a sequence of alter‐[m
+       nating keys and values: [4mname[24m=[1m([0m [4mkey1[24m [4mvalue1[24m [4mkey2[24m [4mvalue2[24m ...[1m)[0m.  These  are[m
+       treated  identically  to  [4mname[24m=[1m([0m  [[4mkey1[24m]=[4mvalue1[24m [[4mkey2[24m]=[4mvalue2[24m ...[1m)[0m.  The[m
+       first word in the list determines how the  remaining  words  are  inter‐[m
+       preted;  all assignments in a list must be of the same type.  When using[m
+       key/value pairs, the keys may not be missing or empty; a  final  missing[m
+       value is treated like the empty string.[m
+[m
+       This  syntax  is also accepted by the [1mdeclare[0m builtin.  Individual array[m
+       elements may be assigned to using the [4mname[24m[[4msubscript[24m]=[4mvalue[24m  syntax  in‐[m
+       troduced  above.   When  assigning  to an indexed array, if [4mname[24m is sub‐[m
+       scripted by a negative number, that number is interpreted as relative to[m
+       one  greater  than  the maximum index of [4mname[24m, so negative indices count[m
+[7m Manual page bash(1) line 1463/6591 23% (press h for help or q to quit)[27m[K[K/[K...skipping...
+[1m[7mEXPANSION[27m[0m[m
+       Expansion is performed on the command line after it has been split  into[m
+       words.   There  are seven kinds of expansion performed: [4mbrace[24m [4mexpansion[24m,[m
+       [4mtilde[24m [4mexpansion[24m, [4mparameter[24m [4mand[24m [4mvariable[24m [4mexpansion[24m, [4mcommand[24m [4msubstitution[24m,[m
+       [4marithmetic[24m [4mexpansion[24m, [4mword[24m [4msplitting[24m, and [4mpathname[24m [4mexpansion[24m.[m
+[m
+       The  order of expansions is: brace expansion; tilde expansion, parameter[m
+       and variable expansion, arithmetic expansion, and  command  substitution[m
+       (done  in  a left-to-right fashion); word splitting; and pathname expan‐[m
+       sion.[m
+[m
+       On systems that can support it, there is an additional expansion  avail‐[m
+       able:  [4mprocess[24m  [4msubstitution[24m.   This  is  performed  at the same time as[m
+       tilde, parameter, variable, and arithmetic expansion and command substi‐[m
+       tution.[m
+[m
+       After  these  expansions  are performed, quote characters present in the[m
+       original word are removed unless they have been quoted themselves ([4mquote[24m[m
+       [4mremoval[24m).[m
+[m
+[7m Manual page bash(1) line 1545/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Only  brace  expansion,  word  splitting, and pathname expansion can in‐[m
+[7m Manual page bash(1) line 1546/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       crease the number of words of the expansion; other expansions  expand  a[m
+[7m Manual page bash(1) line 1547/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       single  word  to a single word.  The only exceptions to this are the ex‐[m
+[7m Manual page bash(1) line 1548/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       pansions of "[1m$@[0m" and "[1m${[0m[4mname[24m[1m[@]}[0m", and, in most cases, [1m$*[0m and [1m${[0m[4mname[24m[1m[*]}[0m[m
+[7m Manual page bash(1) line 1549/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       as explained above (see [1mPARAMETERS[0m).[m
+[7m Manual page bash(1) line 1550/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1551/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mBrace[0m [1mExpansion[0m[m
+[7m Manual page bash(1) line 1552/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mBrace[24m  [4mexpansion[24m is a mechanism by which arbitrary strings may be gener‐[m
+[7m Manual page bash(1) line 1553/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ated.  This mechanism is similar to [4mpathname[24m [4mexpansion[24m,  but  the  file‐[m
+[7m Manual page bash(1) line 1554/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       names  generated need not exist.  Patterns to be brace expanded take the[m
+[7m Manual page bash(1) line 1555/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       form of an optional [4mpreamble[24m, followed by either a series of comma-sepa‐[m
+[7m Manual page bash(1) line 1556/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       rated  strings  or  a sequence expression between a pair of braces, fol‐[m
+[7m Manual page bash(1) line 1557/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       lowed by an optional [4mpostscript[24m.   The  preamble  is  prefixed  to  each[m
+[7m Manual page bash(1) line 1558/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       string  contained within the braces, and the postscript is then appended[m
+[7m Manual page bash(1) line 1559/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       to each resulting string, expanding left to right.[m
+[7m Manual page bash(1) line 1560/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1561/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Brace expansions may be nested.  The results of each expanded string are[m
+[7m Manual page bash(1) line 1562/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       not  sorted;  left  to right order is preserved.  For example, a[1m{[0md,c,b[1m}[0me[m
+[7m Manual page bash(1) line 1563/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       expands into `ade ace abe'.[m
+[7m Manual page bash(1) line 1564/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1565/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       A sequence expression takes the form [1m{[0m[4mx[24m[1m..[0m[4my[24m[1m[..[0m[4mincr[24m[1m]}[0m, where [4mx[24m and  [4my[24m  are[m
+[7m Manual page bash(1) line 1566/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       either  integers  or single letters, and [4mincr[24m, an optional increment, is[m
+[7m Manual page bash(1) line 1567/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       an integer.  When integers are supplied, the expression expands to  each[m
+[7m Manual page bash(1) line 1568/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       number  between  [4mx[24m  and [4my[24m, inclusive.  Supplied integers may be prefixed[m
+[7m Manual page bash(1) line 1569/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       with [4m0[24m to force each term to have the same width.  When either  [4mx[24m  or  [4my[24m[m
+[7m Manual page bash(1) line 1570/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       begins  with  a zero, the shell attempts to force all generated terms to[m
+[7m Manual page bash(1) line 1571/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       contain the same number of digits, zero-padding where  necessary.   When[m
+[7m Manual page bash(1) line 1572/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       letters  are  supplied, the expression expands to each character lexico‐[m
+[7m Manual page bash(1) line 1573/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       graphically between [4mx[24m and [4my[24m, inclusive,  using  the  default  C  locale.[m
+[7m Manual page bash(1) line 1574/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Note  that  both  [4mx[24m  and [4my[24m must be of the same type (integer or letter).[m
+[7m Manual page bash(1) line 1575/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       When the increment is supplied, it is used  as  the  difference  between[m
+[7m Manual page bash(1) line 1576/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       each term.  The default increment is 1 or -1 as appropriate.[m
+[7m Manual page bash(1) line 1577/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1578/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Brace  expansion is performed before any other expansions, and any char‐[m
+[7m Manual page bash(1) line 1579/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       acters special to other expansions are preserved in the result.   It  is[m
+[7m Manual page bash(1) line 1580/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       strictly  textual.   [1mBash[0m does not apply any syntactic interpretation to[m
+[7m Manual page bash(1) line 1581/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the context of the expansion or the text between the braces.[m
+[7m Manual page bash(1) line 1582/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1583/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       A correctly-formed brace expansion must  contain  unquoted  opening  and[m
+[7m Manual page bash(1) line 1584/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       closing  braces, and at least one unquoted comma or a valid sequence ex‐[m
+[7m Manual page bash(1) line 1585/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       pression.  Any incorrectly formed brace expansion is left unchanged.   A[m
+[7m Manual page bash(1) line 1586/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m{[0m  or  [1m,[0m  may be quoted with a backslash to prevent its being considered[m
+[7m Manual page bash(1) line 1587/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       part of a brace expression.  To avoid conflicts  with  parameter  expan‐[m
+[7m Manual page bash(1) line 1588/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       sion,  the string [1m${[0m is not considered eligible for brace expansion, and[m
+[7m Manual page bash(1) line 1589/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       inhibits brace expansion until the closing [1m}[0m.[m
+[7m Manual page bash(1) line 1590/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1591/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       This construct is typically used as shorthand when the common prefix  of[m
+[7m Manual page bash(1) line 1592/6591 25% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the strings to be generated is longer than in the above example:[m
+[7m Manual page bash(1) line 1593/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1594/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              mkdir /usr/local/src/bash/{old,new,dist,bugs}[m
+[7m Manual page bash(1) line 1595/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       or[m
+[7m Manual page bash(1) line 1596/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              chown root /usr/{ucb/{ex,edit},lib/{ex?.?*,how_ex}}[m
+[7m Manual page bash(1) line 1597/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1598/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Brace expansion introduces a slight incompatibility with historical ver‐[m
+[7m Manual page bash(1) line 1599/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       sions of [1msh[0m.  [1msh[0m does not treat opening or closing braces specially when[m
+[7m Manual page bash(1) line 1600/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       they  appear  as part of a word, and preserves them in the output.  [1mBash[0m[m
+[7m Manual page bash(1) line 1601/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       removes braces from words as a consequence of brace expansion.  For  ex‐[m
+[7m Manual page bash(1) line 1602/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ample, a word entered to [1msh[0m as [4mfile{1,2}[24m appears identically in the out‐[m
+[7m Manual page bash(1) line 1603/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       put.  The same word is output as [4mfile1[24m [4mfile2[24m after  expansion  by  [1mbash[0m.[m
+[7m Manual page bash(1) line 1604/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       If  strict  compatibility with [1msh[0m is desired, start [1mbash[0m with the [1m+B[0m op‐[m
+[7m Manual page bash(1) line 1605/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tion or disable brace expansion with the [1m+B[0m option to  the  [1mset[0m  command[m
+[7m Manual page bash(1) line 1606/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       (see [1mSHELL[0m [1mBUILTIN[0m [1mCOMMANDS[0m below).[m
+[7m Manual page bash(1) line 1607/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1608/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mTilde[0m [1mExpansion[0m[m
+[7m Manual page bash(1) line 1609/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       If  a  word  begins  with  an unquoted tilde character (`[1m~[0m'), all of the[m
+[7m Manual page bash(1) line 1610/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       characters preceding the first unquoted slash  (or  all  characters,  if[m
+[7m Manual page bash(1) line 1611/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       there  is  no unquoted slash) are considered a [4mtilde-prefix[24m.  If none of[m
+[7m Manual page bash(1) line 1612/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the characters in the tilde-prefix are quoted,  the  characters  in  the[m
+[7m Manual page bash(1) line 1613/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tilde-prefix  following  the tilde are treated as a possible [4mlogin[24m [4mname[24m.[m
+[7m Manual page bash(1) line 1614/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       If this login name is the null string, the tilde is  replaced  with  the[m
+[7m Manual page bash(1) line 1615/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       value of the shell parameter [1mHOME[0m.  If [1mHOME[0m is unset, the home directory[m
+[7m Manual page bash(1) line 1616/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       of the user executing the shell is substituted instead.  Otherwise,  the[m
+[7m Manual page bash(1) line 1617/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tilde-prefix  is  replaced  with  the home directory associated with the[m
+[7m Manual page bash(1) line 1618/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       specified login name.[m
+[7m Manual page bash(1) line 1619/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1620/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       If the tilde-prefix is a `~+', the value of the shell variable  [1mPWD[0m  re‐[m
+[7m Manual page bash(1) line 1621/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       places  the  tilde-prefix.   If the tilde-prefix is a `~-', the value of[m
+[7m Manual page bash(1) line 1622/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the shell variable [1mOLDPWD[0m, if it is set, is substituted.  If the charac‐[m
+[7m Manual page bash(1) line 1623/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ters  following the tilde in the tilde-prefix consist of a number [4mN[24m, op‐[m
+[7m Manual page bash(1) line 1624/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tionally prefixed by a `+' or a `-', the tilde-prefix is  replaced  with[m
+[7m Manual page bash(1) line 1625/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the  corresponding element from the directory stack, as it would be dis‐[m
+[7m Manual page bash(1) line 1626/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       played by the [1mdirs[0m builtin invoked with the tilde-prefix as an argument.[m
+[7m Manual page bash(1) line 1627/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       If  the  characters following the tilde in the tilde-prefix consist of a[m
+[7m Manual page bash(1) line 1628/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       number without a leading `+' or `-', `+' is assumed.[m
+[7m Manual page bash(1) line 1629/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM   [1mTilde[0m [1mExpansion[0m[m
+[21;1H[K[7m Manual page bash(1) line 1628/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       number without a leading `+' or `-', `+' is assumed.[m
+[7m Manual page bash(1) line 1629/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1630/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       If the login name is invalid, or the tilde expansion fails, the word  is[m
+[7m Manual page bash(1) line 1631/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       unchanged.[m
+[7m Manual page bash(1) line 1632/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1633/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Each  variable assignment is checked for unquoted tilde-prefixes immedi‐[m
+[7m Manual page bash(1) line 1634/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ately following a [1m:[0m or the first [1m=[0m.  In these cases, tilde expansion  is[m
+[7m Manual page bash(1) line 1635/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       also  performed.  Consequently, one may use filenames with tildes in as‐[m
+[7m Manual page bash(1) line 1636/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       signments to [1mPATH[0m, [1mMAILPATH[0m, and [1mCDPATH[0m, and the shell assigns  the  ex‐[m
+[7m Manual page bash(1) line 1637/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       panded value.[m
+[7m Manual page bash(1) line 1638/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1639/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Bash also performs tilde expansion on words satisfying the conditions of[m
+[7m Manual page bash(1) line 1640/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       variable assignments (as described above under [1mPARAMETERS[0m) when they ap‐[m
+[7m Manual page bash(1) line 1641/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       pear as arguments to simple commands.  Bash does not do this, except for[m
+[7m Manual page bash(1) line 1642/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the [4mdeclaration[24m commands listed above, when in [4mposix[24m [4mmode[24m.[m
+[7m Manual page bash(1) line 1643/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1644/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mParameter[0m [1mExpansion[0m[m
+[7m Manual page bash(1) line 1645/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The `[1m$[0m' character introduces parameter expansion, command  substitution,[m
+[7m Manual page bash(1) line 1646/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       or  arithmetic  expansion.   The parameter name or symbol to be expanded[m
+[7m Manual page bash(1) line 1647/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       may be enclosed in braces, which are optional but serve to  protect  the[m
+[7m Manual page bash(1) line 1648/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       variable  to  be expanded from characters immediately following it which[m
+[7m Manual page bash(1) line 1649/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       could be interpreted as part of the name.[m
+[7m Manual page bash(1) line 1650/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1651/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       When braces are used, the matching ending brace is the first `[1m}[0m' not es‐[m
+[7m Manual page bash(1) line 1652/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       caped by a backslash or within a quoted string, and not within an embed‐[m
+[7m Manual page bash(1) line 1653/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ded arithmetic expansion, command substitution, or parameter expansion.[m
+[7m Manual page bash(1) line 1654/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1655/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[4mparameter[24m}[m
+[7m Manual page bash(1) line 1656/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              The value of [4mparameter[24m is substituted.  The braces  are  required[m
+[7m Manual page bash(1) line 1657/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              when  [4mparameter[24m  is  a  positional  parameter  with more than one[m
+[7m Manual page bash(1) line 1658/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              digit, or when [4mparameter[24m is followed by a character which is  not[m
+[7m Manual page bash(1) line 1659/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              to  be interpreted as part of its name.  The [4mparameter[24m is a shell[m
+[7m Manual page bash(1) line 1660/6591 26% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              parameter as described above [1mPARAMETERS[0m) or  an  array  reference[m
+[7m Manual page bash(1) line 1661/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ([1mArrays[0m).[m
+[7m Manual page bash(1) line 1662/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1663/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       If the first character of [4mparameter[24m is an exclamation point ([1m![0m), and [4mpa‐[24m[m
+[7m Manual page bash(1) line 1664/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mrameter[24m is not a [4mnameref[24m, it introduces a level  of  indirection.   [1mBash[0m[m
+[7m Manual page bash(1) line 1665/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       uses  the value formed by expanding the rest of [4mparameter[24m as the new [4mpa‐[24m[m
+[7m Manual page bash(1) line 1666/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mrameter[24m; this is then expanded and that value is used in the rest of the[m
+[7m Manual page bash(1) line 1667/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       expansion, rather than the expansion of the original [4mparameter[24m.  This is[m
+[7m Manual page bash(1) line 1668/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       known as [4mindirect[24m [4mexpansion[24m.  The value is subject to  tilde  expansion,[m
+[7m Manual page bash(1) line 1669/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       parameter expansion, command substitution, and arithmetic expansion.  If[m
+[7m Manual page bash(1) line 1670/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mparameter[24m is a nameref, this expands to the name of the parameter refer‐[m
+[7m Manual page bash(1) line 1671/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       enced  by  [4mparameter[24m  instead of performing the complete indirect expan‐[m
+[7m Manual page bash(1) line 1672/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       sion.  The exceptions to this are  the  expansions  of  ${[1m![0m[4mprefix[24m[1m*[0m}  and[m
+[7m Manual page bash(1) line 1673/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[1m![0m[4mname[24m[[4m@[24m]}  described  below.   The  exclamation point must immediately[m
+[7m Manual page bash(1) line 1674/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       follow the left brace in order to introduce indirection.[m
+[7m Manual page bash(1) line 1675/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1676/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       In each of the cases below, [4mword[24m is subject to tilde expansion,  parame‐[m
+[7m Manual page bash(1) line 1677/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ter expansion, command substitution, and arithmetic expansion.[m
+[7m Manual page bash(1) line 1678/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1679/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       When  not performing substring expansion, using the forms documented be‐[m
+[7m Manual page bash(1) line 1680/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       low (e.g., [1m:-[0m), [1mbash[0m tests for a parameter that is unset or null.  Omit‐[m
+[7m Manual page bash(1) line 1681/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ting the colon results in a test only for a parameter that is unset.[m
+[7m Manual page bash(1) line 1682/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1683/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[4mparameter[24m[1m:-[0m[4mword[24m}[m
+[7m Manual page bash(1) line 1684/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mUse[0m [1mDefault[0m [1mValues[0m.  If [4mparameter[24m is unset or null, the expansion[m
+[7m Manual page bash(1) line 1685/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              of [4mword[24m is substituted.  Otherwise, the  value  of  [4mparameter[24m  is[m
+[7m Manual page bash(1) line 1686/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              substituted.[m
+[7m Manual page bash(1) line 1687/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[4mparameter[24m[1m:=[0m[4mword[24m}[m
+[7m Manual page bash(1) line 1688/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mAssign[0m [1mDefault[0m [1mValues[0m.  If [4mparameter[24m is unset or null, the expan‐[m
+[7m Manual page bash(1) line 1689/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              sion of [4mword[24m is assigned to [4mparameter[24m.  The value of [4mparameter[24m is[m
+[7m Manual page bash(1) line 1690/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              then  substituted.   Positional parameters and special parameters[m
+[7m Manual page bash(1) line 1691/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              may not be assigned to in this way.[m
+[7m Manual page bash(1) line 1692/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[4mparameter[24m[1m:?[0m[4mword[24m}[m
+[7m Manual page bash(1) line 1693/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mDisplay[0m [1mError[0m [1mif[0m [1mNull[0m [1mor[0m [1mUnset[0m.  If [4mparameter[24m is null  or  unset,[m
+[7m Manual page bash(1) line 1694/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the expansion of [4mword[24m (or a message to that effect if [4mword[24m is not[m
+[7m Manual page bash(1) line 1695/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              present) is written to the standard error and the shell, if it is[m
+[7m Manual page bash(1) line 1696/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              not  interactive,  exits.   Otherwise,  the value of [4mparameter[24m is[m
+[7m Manual page bash(1) line 1697/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              substituted.[m
+[7m Manual page bash(1) line 1698/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[4mparameter[24m[1m:+[0m[4mword[24m}[m
+[7m Manual page bash(1) line 1699/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mUse[0m [1mAlternate[0m [1mValue[0m.  If [4mparameter[24m is null or unset,  nothing  is[m
+[7m Manual page bash(1) line 1700/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              substituted, otherwise the expansion of [4mword[24m is substituted.[m
+[7m Manual page bash(1) line 1701/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[4mparameter[24m[1m:[0m[4moffset[24m}[m
+[7m Manual page bash(1) line 1702/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[4mparameter[24m[1m:[0m[4moffset[24m[1m:[0m[4mlength[24m}[m
+[7m Manual page bash(1) line 1703/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mSubstring[0m  [1mExpansion[0m.   Expands to up to [4mlength[24m characters of the[m
+[7m Manual page bash(1) line 1704/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              value of [4mparameter[24m starting at the character specified by [4moffset[24m.[m
+[7m Manual page bash(1) line 1705/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              If  [4mparameter[24m  is [1m@[0m or [1m*[0m, an indexed array subscripted by [1m@[0m or [1m*[0m,[m
+[7m Manual page bash(1) line 1706/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              or an associative array name, the results differ as described be‐[m
+[7m Manual page bash(1) line 1707/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              low.  If [4mlength[24m is omitted, expands to the substring of the value[m
+[7m Manual page bash(1) line 1708/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              of [4mparameter[24m starting at the character specified  by  [4moffset[24m  and[m
+[7m Manual page bash(1) line 1709/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              extending  to the end of the value.  [4mlength[24m and [4moffset[24m are arith‐[m
+[7m Manual page bash(1) line 1710/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              metic expressions (see [1mARITHMETIC[0m [1mEVALUATION[0m below).[m
+[7m Manual page bash(1) line 1711/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1712/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              If [4moffset[24m evaluates to a number less than zero, the value is used[m
+[7m Manual page bash(1) line 1713/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              as  an  offset in characters from the end of the value of [4mparame‐[24m[m
+[7m Manual page bash(1) line 1714/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4mter[24m.  If [4mlength[24m evaluates to a number less than zero, it  is  in‐[m
+[7m Manual page bash(1) line 1715/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              terpreted as an offset in characters from the end of the value of[m
+[7m Manual page bash(1) line 1716/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4mparameter[24m rather than a number of characters, and  the  expansion[m
+[7m Manual page bash(1) line 1717/6591 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              is  the  characters  between [4moffset[24m and that result.  Note that a[m
+[7m Manual page bash(1) line 1718/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              negative offset must be separated from the colon by at least  one[m
+[7m Manual page bash(1) line 1719/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              space to avoid being confused with the [1m:-[0m expansion.[m
+[7m Manual page bash(1) line 1720/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1721/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              If  [4mparameter[24m  is [1m@[0m or [1m*[0m, the result is [4mlength[24m positional parame‐[m
+[7m Manual page bash(1) line 1722/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ters beginning at [4moffset[24m.  A negative [4moffset[24m is taken relative to[m
+[7m Manual page bash(1) line 1723/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              one  greater than the greatest positional parameter, so an offset[m
+[7m Manual page bash(1) line 1724/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              of -1 evaluates to the last positional parameter.  It is  an  ex‐[m
+[7m Manual page bash(1) line 1725/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              pansion error if [4mlength[24m evaluates to a number less than zero.[m
+[7m Manual page bash(1) line 1726/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1727/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              If  [4mparameter[24m is an indexed array name subscripted by @ or *, the[m
+[7m Manual page bash(1) line 1728/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              result is the [4mlength[24m members of the array beginning with ${[4mparam‐[24m[m
+[7m Manual page bash(1) line 1729/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4meter[24m[[4moffset[24m]}.   A  negative  [4moffset[24m  is  taken  relative  to one[m
+[7m Manual page bash(1) line 1730/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              greater than the maximum index of the specified array.  It is  an[m
+[7m Manual page bash(1) line 1731/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              expansion error if [4mlength[24m evaluates to a number less than zero.[m
+[7m Manual page bash(1) line 1732/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1733/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Substring  expansion applied to an associative array produces un‐[m
+[7m Manual page bash(1) line 1734/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              defined results.[m
+[7m Manual page bash(1) line 1735/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1736/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Substring indexing is zero-based unless the positional parameters[m
+[7m Manual page bash(1) line 1737/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              are  used, in which case the indexing starts at 1 by default.  If[m
+[7m Manual page bash(1) line 1738/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4moffset[24m is 0, and the positional parameters are used, [1m$0[0m  is  pre‐[m
+[7m Manual page bash(1) line 1739/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              fixed to the list.[m
+[7m Manual page bash(1) line 1740/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1741/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[1m![0m[4mprefix[24m[1m*[0m}[m
+[7m Manual page bash(1) line 1742/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[1m![0m[4mprefix[24m[1m@[0m}[m
+[7m Manual page bash(1) line 1743/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mNames[0m  [1mmatching[0m  [1mprefix[0m.  Expands to the names of variables whose[m
+[7m Manual page bash(1) line 1744/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              names begin with [4mprefix[24m, separated by the first character of  the[m
+[7m Manual page bash(1) line 1745/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mIFS[0m  special  variable.  When [4m@[24m is used and the expansion appears[m
+[7m Manual page bash(1) line 1746/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              within double quotes, each variable name expands  to  a  separate[m
+[7m Manual page bash(1) line 1747/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              word.[m
+[7m Manual page bash(1) line 1748/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1749/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[1m![0m[4mname[24m[[4m@[24m]}[m
+[7m Manual page bash(1) line 1750/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[1m![0m[4mname[24m[[4m*[24m]}[m
+[7m Manual page bash(1) line 1751/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mList[0m [1mof[0m [1marray[0m [1mkeys[0m.  If [4mname[24m is an array variable, expands to the[m
+[7m Manual page bash(1) line 1752/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              list of array indices (keys) assigned in [4mname[24m.  If [4mname[24m is not an[m
+[7m Manual page bash(1) line 1753/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              array, expands to 0 if [4mname[24m is set and null otherwise.  When [4m@[24m is[m
+[7m Manual page bash(1) line 1754/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              used and the expansion appears within double quotes, each key ex‐[m
+[7m Manual page bash(1) line 1755/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              pands to a separate word.[m
+[7m Manual page bash(1) line 1756/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1757/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[1m#[0m[4mparameter[24m}[m
+[7m Manual page bash(1) line 1758/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mParameter[0m  [1mlength[0m.   The length in characters of the value of [4mpa‐[24m[m
+[7m Manual page bash(1) line 1759/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4mrameter[24m is substituted.  If [4mparameter[24m is [1m*[0m or [1m@[0m, the  value  sub‐[m
+[7m Manual page bash(1) line 1760/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              stituted is the number of positional parameters.  If [4mparameter[24m is[m
+[7m Manual page bash(1) line 1761/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              an array name subscripted by [1m*[0m or [1m@[0m, the value substituted is the[m
+[7m Manual page bash(1) line 1762/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              number  of elements in the array.  If [4mparameter[24m is an indexed ar‐[m
+[7m Manual page bash(1) line 1763/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ray name subscripted by a negative number, that number is  inter‐[m
+[7m Manual page bash(1) line 1764/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              preted  as  relative to one greater than the maximum index of [4mpa‐[24m[m
+[7m Manual page bash(1) line 1765/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4mrameter[24m, so negative indices count back from the end of  the  ar‐[m
+[7m Manual page bash(1) line 1766/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ray, and an index of -1 references the last element.[m
+[7m Manual page bash(1) line 1767/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1768/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[4mparameter[24m[1m#[0m[4mword[24m}[m
+[7m Manual page bash(1) line 1769/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[4mparameter[24m[1m##[0m[4mword[24m}[m
+[7m Manual page bash(1) line 1770/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mRemove[0m  [1mmatching[0m [1mprefix[0m [1mpattern[0m.  The [4mword[24m is expanded to produce[m
+[7m Manual page bash(1) line 1771/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              a pattern just as in pathname expansion, and matched against  the[m
+[7m Manual page bash(1) line 1772/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              expanded  value of [4mparameter[24m using the rules described under [1mPat‐[0m[m
+[7m Manual page bash(1) line 1773/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mtern[0m [1mMatching[0m below.  If the pattern matches the beginning of the[m
+[7m Manual page bash(1) line 1774/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              value  of  [4mparameter[24m, then the result of the expansion is the ex‐[m
+[7m Manual page bash(1) line 1775/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              panded value of [4mparameter[24m with the shortest matching pattern (the[m
+[7m Manual page bash(1) line 1776/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ``[1m#[0m''  case)  or  the  longest matching pattern (the ``[1m##[0m'' case)[m
+[7m Manual page bash(1) line 1777/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              deleted.  If [4mparameter[24m is [1m@[0m or [1m*[0m, the pattern  removal  operation[m
+[7m Manual page bash(1) line 1778/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              is  applied  to each positional parameter in turn, and the expan‐[m
+[7m Manual page bash(1) line 1779/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              sion is the resultant list.  If [4mparameter[24m is  an  array  variable[m
+[7m Manual page bash(1) line 1780/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              subscripted with [1m@[0m or [1m*[0m, the pattern removal operation is applied[m
+[7m Manual page bash(1) line 1781/6591 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              to each member of the array in turn, and the expansion is the re‐[m
+[7m Manual page bash(1) line 1782/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              sultant list.[m
+[7m Manual page bash(1) line 1783/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1784/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[4mparameter[24m[1m%[0m[4mword[24m}[m
+[7m Manual page bash(1) line 1785/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[4mparameter[24m[1m%%[0m[4mword[24m}[m
+[7m Manual page bash(1) line 1786/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mRemove[0m  [1mmatching[0m [1msuffix[0m [1mpattern[0m.  The [4mword[24m is expanded to produce[m
+[7m Manual page bash(1) line 1787/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              a pattern just as in pathname expansion, and matched against  the[m
+[7m Manual page bash(1) line 1788/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              expanded  value of [4mparameter[24m using the rules described under [1mPat‐[0m[m
+[7m Manual page bash(1) line 1789/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mtern[0m [1mMatching[0m below.  If the pattern matches a  trailing  portion[m
+[7m Manual page bash(1) line 1790/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              of the expanded value of [4mparameter[24m, then the result of the expan‐[m
+[7m Manual page bash(1) line 1791/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              sion is the expanded value of [4mparameter[24m with the shortest  match‐[m
+[7m Manual page bash(1) line 1792/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ing pattern (the ``[1m%[0m'' case) or the longest matching pattern (the[m
+[7m Manual page bash(1) line 1793/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ``[1m%%[0m'' case) deleted.  If [4mparameter[24m is [1m@[0m or [1m*[0m,  the  pattern  re‐[m
+[7m Manual page bash(1) line 1794/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              moval  operation is applied to each positional parameter in turn,[m
+[7m Manual page bash(1) line 1795/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              and the expansion is the resultant list.  If [4mparameter[24m is an  ar‐[m
+[7m Manual page bash(1) line 1796/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ray  variable subscripted with [1m@[0m or [1m*[0m, the pattern removal opera‐[m
+[7m Manual page bash(1) line 1797/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tion is applied to each member of the array in turn, and the  ex‐[m
+[7m Manual page bash(1) line 1798/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              pansion is the resultant list.[m
+[7m Manual page bash(1) line 1799/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1800/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[4mparameter[24m[1m/[0m[4mpattern[24m[1m/[0m[4mstring[24m}[m
+[7m Manual page bash(1) line 1801/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[4mparameter[24m[1m//[0m[4mpattern[24m[1m/[0m[4mstring[24m}[m
+[7m Manual page bash(1) line 1802/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[4mparameter[24m[1m/#[0m[4mpattern[24m[1m/[0m[4mstring[24m}[m
+[7m Manual page bash(1) line 1803/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[4mparameter[24m[1m/%[0m[4mpattern[24m[1m/[0m[4mstring[24m}[m
+[7m Manual page bash(1) line 1804/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mPattern[0m  [1msubstitution[0m.  The [4mpattern[24m is expanded to produce a pat‐[m
+[7m Manual page bash(1) line 1805/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tern just as in pathname expansion.  [4mParameter[24m  is  expanded  and[m
+[7m Manual page bash(1) line 1806/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the  longest  match of [4mpattern[24m against its value is replaced with[m
+[7m Manual page bash(1) line 1807/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4mstring[24m.  [4mstring[24m undergoes tilde expansion, parameter and variable[m
+[7m Manual page bash(1) line 1808/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              expansion,  arithmetic  expansion,  command and process substitu‐[m
+[7m Manual page bash(1) line 1809/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tion, and quote removal.  The match is performed using the  rules[m
+[7m Manual page bash(1) line 1810/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              described under [1mPattern[0m [1mMatching[0m below.  In the first form above,[m
+[7m Manual page bash(1) line 1811/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              only the first match is replaced.  If there are two slashes sepa‐[m
+[7m Manual page bash(1) line 1812/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              rating [4mparameter[24m and [4mpattern[24m (the second form above), all matches[m
+[7m Manual page bash(1) line 1813/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              of [4mpattern[24m are replaced with [4mstring[24m.  If [4mpattern[24m is preceded by [1m#[0m[m
+[7m Manual page bash(1) line 1814/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              (the third form above), it must match at the beginning of the ex‐[m
+[7m Manual page bash(1) line 1815/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              panded value of [4mparameter[24m.  If [4mpattern[24m  is  preceded  by  [1m%[0m  (the[m
+[7m Manual page bash(1) line 1816/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              fourth  form  above),  it  must  match at the end of the expanded[m
+[7m Manual page bash(1) line 1817/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              value of [4mparameter[24m.  If the expansion of [4mstring[24m is null,  matches[m
+[7m Manual page bash(1) line 1818/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              of  [4mpattern[24m  are  deleted.  If [4mstring[24m is null, matches of [4mpattern[24m[m
+[7m Manual page bash(1) line 1819/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              are deleted and the [1m/[0m following [4mpattern[24m may be omitted.[m
+[7m Manual page bash(1) line 1820/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1821/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              If the [1mpatsub_replacement[0m shell option is  enabled  using  [1mshopt[0m,[m
+[7m Manual page bash(1) line 1822/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              any  unquoted  instances  of  [1m&[0m  in  [4mstring[24m are replaced with the[m
+[7m Manual page bash(1) line 1823/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              matching portion of [4mpattern[24m.[m
+[7m Manual page bash(1) line 1824/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1825/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Quoting any part of [4mstring[24m inhibits replacement in the  expansion[m
+[7m Manual page bash(1) line 1826/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              of  the  quoted  portion, including replacement strings stored in[m
+[7m Manual page bash(1) line 1827/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              shell variables.  Backslash will escape [1m&[0m in  [4mstring[24m;  the  back‐[m
+[7m Manual page bash(1) line 1828/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              slash  is  removed in order to permit a literal [1m&[0m in the replace‐[m
+[7m Manual page bash(1) line 1829/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ment string.  Backslash can also be used to escape  a  backslash;[m
+[7m Manual page bash(1) line 1830/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m\\[0m  results  in  a  literal  backslash in the replacement.  Users[m
+[7m Manual page bash(1) line 1831/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              should take care if [4mstring[24m is double-quoted to avoid unwanted in‐[m
+[7m Manual page bash(1) line 1832/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              teractions  between the backslash and double-quoting, since back‐[m
+[7m Manual page bash(1) line 1833/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              slash has special meaning within double quotes.  Pattern  substi‐[m
+[7m Manual page bash(1) line 1834/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tution  performs the check for unquoted [1m&[0m after expanding [4mstring[24m;[m
+[7m Manual page bash(1) line 1835/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              shell programmers should quote any occurrences of [1m&[0m they want  to[m
+[7m Manual page bash(1) line 1836/6591 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              be taken literally in the replacement and ensure any instances of[m
+[7m Manual page bash(1) line 1837/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m&[0m they want to be replaced are unquoted.[m
+[7m Manual page bash(1) line 1838/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1839/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              If the [1mnocasematch[0m shell option is enabled,  the  match  is  per‐[m
+[7m Manual page bash(1) line 1840/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              formed  without  regard to the case of alphabetic characters.  If[m
+[7m Manual page bash(1) line 1841/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4mparameter[24m is [1m@[0m or [1m*[0m, the substitution  operation  is  applied  to[m
+[7m Manual page bash(1) line 1842/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              each  positional  parameter in turn, and the expansion is the re‐[m
+[7m Manual page bash(1) line 1843/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              sultant list.  If [4mparameter[24m is an array variable subscripted with[m
+[7m Manual page bash(1) line 1844/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m@[0m  or  [1m*[0m, the substitution operation is applied to each member of[m
+[7m Manual page bash(1) line 1845/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the array in turn, and the expansion is the resultant list.[m
+[7m Manual page bash(1) line 1846/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1847/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[4mparameter[24m[1m^[0m[4mpattern[24m}[m
+[7m Manual page bash(1) line 1848/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[4mparameter[24m[1m^^[0m[4mpattern[24m}[m
+[7m Manual page bash(1) line 1849/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[4mparameter[24m[1m,[0m[4mpattern[24m}[m
+[7m Manual page bash(1) line 1850/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[4mparameter[24m[1m,,[0m[4mpattern[24m}[m
+[7m Manual page bash(1) line 1851/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mCase[0m [1mmodification[0m.  This expansion modifies the  case  of  alpha‐[m
+[7m Manual page bash(1) line 1852/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              betic  characters  in [4mparameter[24m.  The [4mpattern[24m is expanded to pro‐[m
+[7m Manual page bash(1) line 1853/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              duce a pattern just as in pathname expansion.  Each character  in[m
+[7m Manual page bash(1) line 1854/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the  expanded  value of [4mparameter[24m is tested against [4mpattern[24m, and,[m
+[7m Manual page bash(1) line 1855/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              if it matches the pattern, its case is  converted.   The  pattern[m
+[7m Manual page bash(1) line 1856/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              should not attempt to match more than one character.  The [1m^[0m oper‐[m
+[7m Manual page bash(1) line 1857/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ator converts lowercase letters matching  [4mpattern[24m  to  uppercase;[m
+[7m Manual page bash(1) line 1858/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the  [1m,[0m operator converts matching uppercase letters to lowercase.[m
+[7m Manual page bash(1) line 1859/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              The [1m^^[0m and [1m,,[0m expansions convert each matched  character  in  the[m
+[7m Manual page bash(1) line 1860/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              expanded value; the [1m^[0m and [1m,[0m expansions match and convert only the[m
+[7m Manual page bash(1) line 1861/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              first character in the expanded value.  If [4mpattern[24m is omitted, it[m
+[7m Manual page bash(1) line 1862/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              is treated like a [1m?[0m, which matches every character.  If [4mparameter[24m[m
+[7m Manual page bash(1) line 1863/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              is [1m@[0m or [1m*[0m, the case modification operation is applied to each po‐[m
+[7m Manual page bash(1) line 1864/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              sitional  parameter  in  turn, and the expansion is the resultant[m
+[7m Manual page bash(1) line 1865/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              list.  If [4mparameter[24m is an array variable subscripted with [1m@[0m or [1m*[0m,[m
+[7m Manual page bash(1) line 1866/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the  case modification operation is applied to each member of the[m
+[7m Manual page bash(1) line 1867/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              array in turn, and the expansion is the resultant list.[m
+[7m Manual page bash(1) line 1868/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1869/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ${[4mparameter[24m[1m@[0m[4moperator[24m}[m
+[7m Manual page bash(1) line 1870/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mParameter[0m [1mtransformation[0m.  The expansion is either a  transforma‐[m
+[7m Manual page bash(1) line 1871/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tion of the value of [4mparameter[24m or information about [4mparameter[24m it‐[m
+[7m Manual page bash(1) line 1872/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              self, depending on the value of [4moperator[24m.   Each  [4moperator[24m  is  a[m
+[7m Manual page bash(1) line 1873/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              single letter:[m
+[7m Manual page bash(1) line 1874/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1875/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mU[0m      The  expansion  is a string that is the value of [4mparameter[24m[m
+[7m Manual page bash(1) line 1876/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     with lowercase alphabetic characters converted  to  upper‐[m
+[7m Manual page bash(1) line 1877/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     case.[m
+[7m Manual page bash(1) line 1878/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mu[0m      The  expansion  is a string that is the value of [4mparameter[24m[m
+[7m Manual page bash(1) line 1879/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     with the first character converted to uppercase, if it  is[m
+[7m Manual page bash(1) line 1880/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     alphabetic.[m
+[7m Manual page bash(1) line 1881/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mL[0m      The  expansion  is a string that is the value of [4mparameter[24m[m
+[7m Manual page bash(1) line 1882/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     with uppercase alphabetic characters converted  to  lower‐[m
+[7m Manual page bash(1) line 1883/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     case.[m
+[7m Manual page bash(1) line 1884/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mQ[0m      The  expansion  is a string that is the value of [4mparameter[24m[m
+[7m Manual page bash(1) line 1885/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     quoted in a format that can be reused as input.[m
+[7m Manual page bash(1) line 1886/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mE[0m      The expansion is a string that is the value  of  [4mparameter[24m[m
+[7m Manual page bash(1) line 1887/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     with  backslash  escape  sequences  expanded  as  with the[m
+[7m Manual page bash(1) line 1888/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     [1m$'...'[0m quoting mechanism.[m
+[7m Manual page bash(1) line 1889/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mP[0m      The expansion is a string that is the result of  expanding[m
+[7m Manual page bash(1) line 1890/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     the  value of [4mparameter[24m as if it were a prompt string (see[m
+[7m Manual page bash(1) line 1891/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     [1mPROMPTING[0m below).[m
+[7m Manual page bash(1) line 1892/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mA[0m      The expansion is a string in the  form  of  an  assignment[m
+[7m Manual page bash(1) line 1893/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     statement  or  [1mdeclare[0m  command  that,  if evaluated, will[m
+[7m Manual page bash(1) line 1894/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     recreate [4mparameter[24m with its attributes and value.[m
+[7m Manual page bash(1) line 1895/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mK[0m      Produces a possibly-quoted version of the value of [4mparame‐[24m[m
+[7m Manual page bash(1) line 1896/6591 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     [4mter[24m, except that it prints the values of indexed and asso‐[m
+[7m Manual page bash(1) line 1897/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     ciative arrays as a sequence  of  quoted  key-value  pairs[m
+[7m Manual page bash(1) line 1898/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     (see [1mArrays[0m above).[m
+[7m Manual page bash(1) line 1899/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1ma[0m      The expansion is a string consisting of flag values repre‐[m
+[7m Manual page bash(1) line 1900/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     senting [4mparameter[24m's attributes.[m
+[7m Manual page bash(1) line 1901/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mk[0m      Like the K transformation, but expands the keys and values[m
+[7m Manual page bash(1) line 1902/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     of  indexed and associative arrays to separate words after[m
+[7m Manual page bash(1) line 1903/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     word splitting.[m
+[7m Manual page bash(1) line 1904/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1905/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              If [4mparameter[24m is [1m@[0m or [1m*[0m, the operation is applied  to  each  posi‐[m
+[7m Manual page bash(1) line 1906/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tional  parameter  in  turn,  and  the expansion is the resultant[m
+[7m Manual page bash(1) line 1907/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              list.  If [4mparameter[24m is an array variable subscripted with [1m@[0m or [1m*[0m,[m
+[7m Manual page bash(1) line 1908/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the operation is applied to each member of the array in turn, and[m
+[7m Manual page bash(1) line 1909/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the expansion is the resultant list.[m
+[7m Manual page bash(1) line 1910/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1911/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              The result of the expansion is  subject  to  word  splitting  and[m
+[7m Manual page bash(1) line 1912/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              pathname expansion as described below.[m
+[7m Manual page bash(1) line 1913/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1914/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mCommand[0m [1mSubstitution[0m[m
+[7m Manual page bash(1) line 1915/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mCommand[24m  [4msubstitution[24m allows the output of a command to replace the com‐[m
+[7m Manual page bash(1) line 1916/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       mand name.  There are two forms:[m
+[7m Manual page bash(1) line 1917/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1918/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m$([0m[4mcommand[24m[1m)[0m[m
+[7m Manual page bash(1) line 1919/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       or[m
+[7m Manual page bash(1) line 1920/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m`[0m[4mcommand[24m[1m`[0m[m
+[7m Manual page bash(1) line 1921/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1922/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mBash[0m performs the expansion by executing [4mcommand[24m in a subshell  environ‐[m
+[7m Manual page bash(1) line 1923/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ment  and replacing the command substitution with the standard output of[m
+[7m Manual page bash(1) line 1924/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the command, with any trailing newlines deleted.  Embedded newlines  are[m
+[7m Manual page bash(1) line 1925/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       not deleted, but they may be removed during word splitting.  The command[m
+[7m Manual page bash(1) line 1926/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       substitution [1m$(cat[0m [4mfile[24m[1m)[0m can be replaced by the  equivalent  but  faster[m
+[7m Manual page bash(1) line 1927/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m$(<[0m [4mfile[24m[1m)[0m.[m
+[7m Manual page bash(1) line 1928/6591 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1929/6591 31% (press h for help or 
