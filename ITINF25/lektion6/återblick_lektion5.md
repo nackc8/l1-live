@@ -8,6 +8,6 @@ TERMER
         Fish är ett skal, som har mycket förkonfigurerat
         PowerShell är ett skal...
     Fönstret man läser output från, och skriver i - Terminal / Terminalemulator
-    
+    (läs även igenom termerna för en kommandords delar)
 
 VARIABLER
