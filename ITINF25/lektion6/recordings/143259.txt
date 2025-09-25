@@ -2690,4 +2690,487 @@ lsfil.txt		recordings
 -rw-r--r-- 1 kent kent   0 Sep 25 13:02 indikatorfil
 -rw-r--r-- 1 kent kent   1 Sep 25 13:58 indikatorfil2
 -rw-r--r-- 1 kent kent   4 Sep 25 10:50 namninput_kopia2.txt
--rw-r--r-- 1 kent kent   4 Sep 25 10:50 namninput_ko
+-rw-r--r-- 1 kent kent   4 Sep 25 10:50 namninput_kopia.txt
+-rw-r--r-- 1 kent kent  12 Sep 25 10:28 namninput.txt
+-rwxr-xr-x 1 kent kent  13 Sep 25 15:01 pathname_expansion
+-rw-r--r-- 1 kent kent  35 Sep 25 10:23 radfil.txt
+-rwxr-xr-x 1 kent kent 134 Sep 25 14:05 read1
+-rwxr-xr-x 1 kent kent 191 Sep 25 14:21 read3lines
+-rwxr-xr-x 1 kent kent  84 Sep 25 14:26 readalllines
+-rwxr-xr-x 1 kent kent  20 Sep 25 12:53 sant
+-rw-r--r-- 1 kent kent  16 Sep 25 10:37 stderr_felmeddelande.txt
+[?2004h[94mITINF25/lektion6
+(B[m$ [H[2J[94mITINF25/lektion6
+(B[m$ hisgtory[K[K[K[K[Ktory
+[?2004l   39  ls -l
+   40  chown yellow yellows-fil 
+   41  sudo chown yellow yellows-fil 
+   42  ls -l
+   43  nano yellows-fil 
+   44  ssh ubse
+   45  ssh ubse
+   46  ssh ubse
+   47  exit
+   48  ssh ubse
+   49  exit
+   50  ls
+   51  ssh ubse
+   52  exit
+   53  ls
+   54  ssh ubse
+   55  scp -r ubse:/home/kent ubsekent
+   56  ls
+   57  exit
+   58  exit
+   59  cd Downloads
+   60  rm ZipGrade\ -\ Konverterare\ -\ output.csv 
+   61  ls -tr
+   62  ls -1 *.pdf | wc -l
+   63  ls ~/Dropbox
+   64  cp -r ~/Dropbox/devops24linux{1,2}
+   65  cd ~/Dropbox/devops24linux2/
+   66  rm *.pdf
+   67  rm *~
+   68  rm -rf output/
+   69  mkdir output
+   70  mv ~/Downloads/*.pdf .
+   71  xdg-open .
+   72  . stencylize.sh 
+   73  stencylize 
+   74  for x in *.pdf; do echo $x; done
+   75  for x in *.pdf; do echo stencylize "$x" "$x"; done
+   76  for x in *.pdf; do echo stencylize "$x" "${x##.pdf}"; done
+   77  for x in *.pdf; do echo stencylize "$x" "${x%%.pdf}"; done
+   78  for x in *.pdf; do echo stencylize "$x" stencil.png; done
+   79  for x in *.pdf; do stencylize "$x" stencil.png; done
+   80  cd output/
+   81  tldr zip
+   82  zip -r x.zip *.pdf
+   83  mv x.zip rattning_devops24_linux2_15_sep.zip
+   84  cd bokforing
+   85  ls *faktura*
+   86  xdg-open a52\ -\ faktura\ nackademin\ linux\ 1.pdf 
+   87  cd Downloads
+   88  rm c8-it-ab-faktura-42*
+   89  xdg-open a52\ -\ faktura\ nackademin\ linux\ 1.pdf 
+   90  rm c8-it-ab-faktura-42*
+   91  cd Downloads
+   92  rm *.pdf
+   93  ls ~/.ssh/
+   94  man ssh-keygen 
+   95  man ssh-copy-id
+   96  man ssh-keygen
+   97  man ssh-copy-id
+   98  man ssh-keygen
+   99  cd Documents
+  100  cd nackademin/
+  101  cd linux
+  102  cd linux1
+  103  cd l1-live/
+  104  git push
+  105  git repo view --web
+  106  gh repo view --web
+  107  bin/educator --edit
+  108  git status
+  109  git checkout main
+  110  git pull
+  111  code .
+  112  fc-list : family style file | grep -i -E 'monolisa|fira code|ibm plex mono|droid sans mono'
+  113  fc-match -s "MonoLisa Variable"
+  114  fc-match -s "Monolisa"
+  115  exit
+  116  rm c8-it-ab-faktura-42*
+  117  cd Downloads
+  118  rm *.pdf
+  119  ls ~/.ssh/
+  120  man ssh-keygen 
+  121  man ssh-copy-id
+  122  man ssh-keygen
+  123  bin/educator 
+  124  cp .vscode/settings.json x.json
+  125  bin/educator --edit
+  126  jq -S . file.json > file.json.tmp && mv file.json.tmp file.json
+  127  json_sort_layer1 { jq -S . "$1.json" > "$1".tmp && mv "$1".tmp "$1"; }
+  128  json_sort_layer1() { jq -S . "$1.json" > "$1".tmp && mv "$1".tmp "$1"; }
+  129  chmod+x ~/.bin/json_sort_layer1.bash
+  130  chmod +x ~/.bin/json_sort_layer1.bash
+  131  ~/.bin/link 
+  132  unset json_sort_layer1
+  133  nano ~/.bin/json_sort_layer1.bash
+  134  code ~/.bin/json_sort_layer1.bash
+  135  json_sort_layer1 .profiles/educator_present/dot_vscode/settings.json 
+  136  bin/educator 
+  137  exit
+  138  man 5 sshd_config 
+  139  man 5 ssh_config 
+  140  man scp
+  141  git stash
+  142  ls
+  143  man ssh
+  144  ssh -p 10022 localhost
+  145  cat /etc/os-release 
+  146  ls /home/kent/.ssh/
+  147  less /home/kent/.ssh/known_hosts
+  148  ls
+  149  ls /home/kent/.ssh/
+  150  ssh-keygen 
+  151  ssh-keygen -t ed25519
+  152  ls /home/kent/.ssh/
+  153  cat /home/kent/.ssh/id_ed25519_ubsembr.pub 
+  154  ssh -p 10022 localhost
+  155  ssh -p 10022 localhost
+  156  ssh -p 10022 localhost
+  157  ssh -p 10022 localhost
+  158  ssh -p 10022 localhost
+  159  man ssh-copy-id
+  160  ssh-copy-id -p 10022 -i /home/kent/.ssh/id_ed25519_ubsembr
+  161  ssh-copy-id -p 10022 -i /home/kent/.ssh/id_ed25519_ubsembr localhost
+  162  ssh -p 10022 localhost
+  163  exit
+  164  cd /home/kent/.ssh/
+  165  ls
+  166  less config 
+  167  code config 
+  168  ssh server-kent
+  169  ssh server-kent
+  170  ssh server-kent ls
+  171  ssh server-kent ls -A
+  172  ssh server-kent hostname
+  173  hostname
+  174  ssh server-kent cat /etc/ssh/sshd_config
+  175  ssh server-kent sudo cat /etc/ssh/sshd_config
+  176  code info.sh
+  177  uptime
+  178  chmod a+x info.sh 
+  179  ./info.sh 
+  180  ssh server-kent < info.sh 
+  181  ssh -p 10022 localhost
+  182  id
+  183  ssh -p 10022 kent@localhost
+  184  man man
+  185  man 5 ssh_config
+  186  ssh -p 10022 kent@localhost
+  187  ls /home/kent/.ssh/
+  188  man 5 ssh_config
+  189  man 5 ssh_config
+  190  ls /home/kent/.ssh/id_ed25519_ubsembr 
+  191  code ~/.ssh/config 
+  192  ssh server-kent
+  193  ssh server-kent
+  194  ssh server-kent
+  195  exit
+  196  ls
+  197  man scp
+  198  scp -p 10022 info.sh kent@localhost:
+  199  scp -P 10022 info.sh kent@localhost:
+  200  scp -p 10022 kent@localhost
+  201  ssh -p 10022 kent@localhost
+  202  scp info.sh server-kent:
+  203  scp info.sh server-kent:info2
+  204  ssh server-kent ls
+  205  scp info.sh server-kent:/home/kent/info3
+  206  ssh server-kent ls
+  207  ssh server-kent
+  208  ls
+  209  scp server-kent:/home/kent/superinfo.sh .
+  210  cd /tmp/
+  211  ls
+  212  ls
+  213  cd
+  214  ls
+  215  git clone git@github.com:nackc8/l11-apache-d4-kc8se-1.git
+  216  cd l11-apache-d4-kc8se-1/
+  217  ls
+  218  code .
+  219  man scp
+  220  ls /etc/modprobe.d/blacklist-kvm.conf
+  221  ls /etc/modprobe.d/
+  222  man scp
+  223  ls /etc/modprobe.d/blacklist-kvm.conf
+  224  ls /etc/modprobe.d/
+  225  cd l11-apache-d4-kc8se-1/
+  226  gh repo set-default
+  227  gh repo view --web
+  228  cd ..
+  229  rm -rf l11-apache-d4-kc8se-1/
+  230  gh-repo-create-
+  231  gh-sync-organization 
+  232  echo $MININST1
+  233  echo $BASHPID
+  234  exit
+  235  gh-sync-organization 
+  236  echo $SAL
+  237  echo $MININST1 
+  238  bash 
+  239  echo $BASHPID
+  240  exit
+  241  echo $Y
+  242  echo $BASHPID
+  243  exit
+  244  echo $Y
+  245  exit
+  246  exit
+  247  rm -rf l11-apache-d4-kc8se-1/
+  248  gh-repo-create-
+  249  gh-sync-organization 
+  250  git stash
+  251  pwsh
+  252  man ls
+  253  ls
+  254  touch -h
+  255  ls
+  256  touch -- -h
+  257  ls
+  258  ls -l -h
+  259  man ls
+  260  ls -l
+  261  ls -l -h
+  262  ls -l -- -h
+  263  ls
+  264  ls -1
+  265  ls -l
+  266  ls -t -r
+  267  ls -l -t -r
+  268  touch nyfil
+  269  ls -l -t -r
+  270  ls -ltr
+  271  ls -l -t -r recordings/
+  272  ls -t -l -r recordings/
+  273  ls -t -r recordings/ -l
+  274  ls -l -t -r recordings/
+  275  ls /home/kent/
+  276  ls ~
+  277  SAL=B408
+  278  NUMMER=123
+  279  echo Hej hopp
+  280  echo
+  281  echo Hej hopp jie jie jei jie eij ejie jie ei ejie iej
+  282  echo Vi sitter i sal B408
+  283  echo Vi sitter i sal $SAL
+  284  echo Vi sitter i sal B408
+  285  echo Vi sitter i sal $SAL
+  286  SAL=B200
+  287  echo Vi sitter i sal $SAL
+  288  touch banan_l.jpg banan_s.jpg
+  289  ls
+  290  frukt=banan
+  291  rm $frukt
+  292  rm $frukt_l.jpg
+  293  echo Du har en snabb $BIL .... 
+  294  echo Du har en snabb $BIL .... 
+  295  BIL=Toyota
+  296  echo Du har en snabb $BIL .... 
+  297  BIL=
+  298  echo Du har en snabb $BIL .... 
+  299  ls
+  300  echo $FRUKT
+  301  echo $frukt
+  302  rm ${frukt}
+  303  rm -v ${frukt}_l.jpg ${frukt}_s.jpg
+  304  touch apelsin_l.jpg
+  305  touch apelsin_s.jpg
+  306  frukt=apelsin
+  307  rm -v ${frukt}_l.jpg ${frukt}_s.jpg
+  308  ps -e
+  309  echo PID $$
+  310  ps -e | less
+  311  ls
+  312  env
+  313  printenv
+  314  MININST1="Bra inställning"
+  315  echo $MININST1 
+  316  printenv | less
+  317  export MININST1
+  318  printenv | less
+  319  ls
+  320  echo $SAL
+  321  bash
+  322  echo $BASHPID
+  323  Y=777 bash
+  324  echo $BASHPID
+  325  echo $Y
+  326  Y=Hejsan
+  327  Y=777 bash
+  328  echo $Y
+  329  nano mittskript
+  330  ls
+  331  mittskript
+  332  ./mittskript
+  333  ls -l ./mittskript
+  334  chmod 744 mittskript 
+  335  ls -l ./mittskript
+  336  ./mittskript 
+  337  ln mittskript mittskript.sh
+  338  ./mittskript 
+  339  ./mittskript 
+  340  ./mittskript 
+  341  VAR_A=astuff VAR_B=bstuff ./mittskript
+  342  echo $VAR_A
+  343  VAR_A=hund
+  344  ./mittskript 
+  345  export VAR_A
+  346  ./mittskript 
+  347  ./mittskript 
+  348  VAR_B=katt ./mittskript 
+  349  echo $VAR_A
+  350  echo $VAR_B
+  351  VAR_B=katt ./mittskript 
+  352  VAR_B=katt ./mittskript 
+  353  echo $VAR_A
+  354  VAR_B=katt VAR_A=drake ./mittskript
+  355  echo $VAR_A
+  356  echo $VAR_A
+  357  echo $VAR_B
+  358  ./mittskript 
+  359  export VAR_B=orm
+  360  ./mittskript 
+  361  unset VAR_B
+  362  ./mittskript 
+  363  echo $LANG
+  364  man ls
+  365  LANG_BACKUP=$LANG
+  366  echo $LANG_BACKUP 
+  367  LANG=sv_SE.UTF-8
+  368  printenv | less
+  369  man man
+  370  touch annatskript
+  371  bash annatskript 
+  372  ./annatskript
+  373  bash annatskript 
+  374  1=2
+  375  A=2
+  376  touch fin fil
+  377  ls
+  378  touch {fin fil}
+  379  ls
+  380  touch "fin fil"
+  381  ls
+  382  rm -- fin fil
+  383  ls
+  384  rm -- 'fin fil'
+  385  ls
+  386  echo $BIL
+  387  BIL=Ford
+  388  echo $BIL
+  389  echo Fin bil: $BIL
+  390  BIL=-h
+  391  echo Fin bil: $BIL
+  392  BIL=-n
+  393  echo Fin bil: $BIL
+  394  man echo
+  395  echo Fin bil: $BIL
+  396  echo $BIL Fin bil
+  397  echo -n Fin bil
+  398  echo "$BIL Fin bil"
+  399  echo $BIL
+  400  echo "$BIL"
+  401  echo -- "$BIL"
+  402  echo -- $BIL
+  403  echo "$BIL"
+  404  BIL=hej
+  405  echo "$BIL"
+  406  echo "$BIL jeeiie"
+  407  echo '$BIL jeeiie'
+  408  ls
+  409  touch 'mycket bra fil'
+  410  ls
+  411  rm mycket\ bra\ fil
+  412  ls
+  413  touch 'mycket bra fil'
+  414  ls
+  415  rm mycket\ bra\ fil 
+  416  ls
+  417  sl
+  418  sl
+  419  ls
+  420  puff() { echo DU ANROPADE PUFF; }
+  421  puff
+  422  sl() { echo "[  ]-[  ]-[  ] <-- SL";  }
+  423  sl
+  424  help cd
+  425  builtin
+  426  help builtin
+  427  help builtins
+  428  ls
+  429  mkdir kat
+  430  help mkdir
+  431  cd kat/
+  432  ls
+  433  cd ..
+  434  echo $PATH
+  435  ls bin
+  436  ls ~/bin
+  437  hej
+  438  ssh server-ubuntu
+  439  hej
+  440  command_not_found_handle() { echo "$1" "$2" "$3"; }
+  441  hej
+  442  command_not_found_handle() { echo "Hörru!" "$1" "$2" "$3"; }
+  443  hej
+  444  nano sourceamig
+  445  chmod +x sourceamig 
+  446  ls -l sourceamig 
+  447  chmod +w sourceamig
+  448  ls -l sourceamig 
+  449  ./sourceamig 
+  450  ./sourceamig 
+  451  echo $X
+  452  ./sourceamig 
+  453  echo $X
+  454  source sourceamig 
+  455  echo $X
+  456  help source
+  457  source ~/.bashrc
+  458  ssh server-kent
+  459  echo -e 'Kalle\nLotta\nOve\nMayank'
+  460  echo -e 'Kalle\nLotta\nOve\nMayank' | sort -R
+  461  exit
+  462  cd Downloads
+  463  rm *.pdf
+  464  exit
+  465  cd Documents
+  466  cd nackademin/
+  467  l
+  468  cd linux1/
+  469  cd l1-live/
+  470  git fetch origin/main
+  471  git fetch origin main
+  472  bin/educator --edit
+  473  code .
+  474  git checkout main
+  475  git pull
+  476  help
+  477  enable
+  478  enable -a
+  479  help enable
+  480  help help
+  481  help -s
+  482  man bash
+  483  ssh server-kent
+  484  exit
+  485  git ira
+  486  git rebase origin/main
+  487  git rebase --abort
+  488  git merge main
+  489  git merge origin/main
+  490  git push -f
+  491  gh repo view --web
+  492  less /etc/locale.gen 
+  493  bin/educator 
+  494  exit
+  495  echo -e eiujeoiej oierj oie jeoie joiej eoijeoiejoeijeoije oiej eoijeoej oiejeoijeoie joeij eoijeoiejeo
+  496  exit
+  497  exit
+  498  echo > indikatorfil2
+  499  exit
+  500  X=rulle
+  501  echo $X
+  502  echo ${X}
+  503  echo ${X:2}
+  504  echo ${X:1}
+  505  echo ${X:1:2}
+  506  echo ${#X}
+  507  echo ${X/r/b}
+  508  # byter ut r mot b.
+  509  man bash
+  510  echo $(ls /etc
