@@ -36,3 +36,5 @@ KOMMANDO
     ~ är din hemkatalog
 
 HUR BASH VÄLJER VAD DEN SKA KÖRA
+    Först av:
+    1. 
