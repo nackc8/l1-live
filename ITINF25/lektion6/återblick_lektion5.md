@@ -5,6 +5,6 @@ TERMER
     Det program som kör det man skrivit - Shell / Skal
         Bash är ett skal
         Zsh
-        Fish
+        Fish är ett skal
 
 VARIABLER
