@@ -14,3 +14,4 @@ VARIABLER
     NAMN=INNEHALL sätter en variabel
     Hej $NAMN skriver ut Hej och varibelns innehåll
     DUBLETTINNEHALL=$NAMN
+    En varibel innehåller text
