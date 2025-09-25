@@ -37,4 +37,4 @@ KOMMANDO
 
 HUR BASH VÄLJER VAD DEN SKA KÖRA
     Först av:
-    1. 
+    1. Är det ett alias, som ska ersättas?
