@@ -11,5 +11,5 @@ TERMER
     (läs även igenom termerna för en kommandords delar)
 
 VARIABLER
-    NAMN=INNEHALL
+    NAMN=INNEHALL sätter en variabel
     
