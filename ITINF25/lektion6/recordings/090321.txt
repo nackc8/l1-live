@@ -686,4 +686,77 @@ Type [32mhelp(B[m for instructions on how to use fish
 
 
 [1m[4m[7m-(B[m[7mfalse                                             ([38;2;179;160;109m[3mAlways false[30m(B[m[7m)
-(B[m[1m[4m-(B[mfls      ([38;2;179;160;109m[3mList file in ls -dils format, write to specified file[30m(B[m)[A[A[A
+(B[m[1m[4m-(B[mfls      ([38;2;179;160;109m[3mList file in ls -dils format, write to specified file[30m(B[m)[A[A[A[A[A[A[A[A[58C[14D[34mfind[30m(B[m [36m[4m.[30m(B[m [36m-false[30m(B[m [58C[14Dfind . -executable 
+
+
+
+
+
+[1m[4m[7m-(B[m[7mexecutable                                  ([38;2;179;160;109m[3mFile is executable[30m(B[m[7m)
+(B[m[1m[4m-(B[mfalse                                             ([38;2;179;160;109m[3mAlways false[30m(B[m)[A[A[A[A[A[A[A[63C[19D[34mfind[30m(B[m [36m[4m.[30m(B[m [36m-executable[30m(B[m [63C[19Dfind . -execdir [K
+
+
+
+
+[1m[4m[7m-(B[m[7mexecdir  ([38;2;179;160;109m[3mExecute specified command for each located file, in …[30m(B[m[7m)
+(B[m[1m[4m-(B[mexecutable                                  ([38;2;179;160;109m[3mFile is executable[30m(B[m)[A[A[A[A[A[A[60C[16D[34mfind[30m(B[m [36m[4m.[30m(B[m [36m-execdir[30m(B[m [60Cq[J[61C[36mq[61C[30m(B[m[7m^C[30m(B[m
+[2m⏎(B[m                                                                ⏎ [K[92mkent(B[m@(B[mklad(B[m [32m/s/k/D/n/l/l/I/lektion6(B[m (250925)(B[m> [K[44Ce[45C[38;2;85;85;85mcho and hopp[45C[30m(B[m[91me[38;2;85;85;85mcho and hopp[45C[30m(B[m[91mx[30m(B[m[K[46C[38;2;85;85;85mit[46C[30m(B[m[34mex[38;2;85;85;85mit[46C[30m(B[m[34mi[38;2;85;85;85mt[47C[30m(B[m[91mexi[38;2;85;85;85mt[47C[30m(B[m[91mt[48C[30m(B[m[34mexit[48C[30m(B[m[48C[48C
+[30m(B[m[?2004l]0;exit /s/k/D/n/l/l/I/lektion6[30m(B[m[30m(B[m[?2004l[?2004h[94mITINF25/lektion6
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mITINF25/lektion6
+(B[m$ X=123
+[?2004l[?2004h[94mITINF25/lektion6
+(B[m$ echo $(( ))[C ))X ))[C ))* ))[C ))2 ))[C[C[C
+[?2004l246
+[?2004h[94mITINF25/lektion6
+(B[m$ Y=Hej
+[?2004l[?2004h[94mITINF25/lektion6
+(B[m$ Y=Hej[C[Cecho $(( X * 2 ))[1P[1@Y[H[2J[94mITINF25/lektion6
+(B[m$ echo $(( Y * 2 ))[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l0
+[?2004h[94mITINF25/lektion6
+(B[m$ bc [K
+[?2004lbc 1.07.1
+Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006, 2008, 2012-2017 Free Software Foundation, Inc.
+This is free software with ABSOLUTELY NO WARRANTY.
+For details type `warranty'. 
+[?2004hHej * 2
+[?2004l(standard_in) 1: syntax error
+[?2004h[?2004l
+[?2004h[94mITINF25/lektion6
+(B[m$ [H[2J[94mITINF25/lektion6
+(B[m$ alias cd="echo no way"
+[?2004l[?2004h[94mITINF25/lektion6
+(B[m$ cd
+[?2004lno way
+[?2004h[94mITINF25/lektion6
+(B[m$ \cd ..
+[?2004l[?2004h[94mITINF25 (B[m$ unalias cd
+[?2004l[?2004h[94mITINF25 (B[m$ cd lektion6
+[?2004l[?2004h[94mITINF25/lektion6
+(B[m$ [H[2J[94mITINF25/lektion6
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ echo hej
+[?2004lhej
+[?2004h[94mITINF25/lektion6
+(B[m$ !!
+[?2004lecho hej
+hej
+[?2004h[94mITINF25/lektion6
+(B[m$ !! !!
+[?2004lecho hej echo hej
+hej echo hej
+[?2004h[94mITINF25/lektion6
+(B[m$ echo hej echo hej[K echo hej[C[C[K!! !!
+[?2004lecho hej echo hej echo hej echo hej
+hej echo hej echo hej echo hej
+[?2004h[94mITINF25/lektion6
+(B[m$ [H[2J[94mITINF25/lektion6
+(B[m$ apt update
+[?2004lReading package lists... 0%Reading package lists... 100%Reading package lists... Done
+[1;31mE: [0mCould not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)[0m
+[1;31mE: [0mUnable to lock directory /var/lib/apt/lists/[0m
+[1;33mW: [0mProblem unlinking the file /var/cache/apt/pkgcache.bin - RemoveCaches (13: Permission denied)[0m
+[1;33mW: [0mProblem unlinking the file /var/cache/apt/srcpkgcache.bin - RemoveCaches (13: Permission denied)[0m
+[?2004h[94mITINF25/lektion6
+(B[m$ !!
+[?2004lapt update
+Reading package lists... 0%Reading package lists.
