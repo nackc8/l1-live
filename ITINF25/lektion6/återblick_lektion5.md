@@ -29,7 +29,9 @@ SKRIPT
     #!/usr/bin/env/python - ett till exempel på en shebang
     Behöver execute-rättighet på skriptfilen för att kunna köras separat
     bash skriptnamn - kör filen skriptnamn med bash, då behövs varken shebang eller execute
+
 KOMMANDO
     alias x='find / -iname ' # skapar en kort version, som kan vara smidig att använda
     För att jämnt få en inställning som ett alias, lägg den i ~/.bashrc
+    ~ är din hemkatalog
     
