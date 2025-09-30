@@ -12,3 +12,38 @@ SUBTRACTION -1
 $ echo DIV_INT $(( 10 / 2 ))
 DIV_INT 5
 
+ITINF25/lektion8/2.5 arithmetic expansion
+$ echo PLUS $(( 2 * 3 ))
+ITINF25/lektion8/2.5 arithmetic expansion
+$ echo MULTI $(( 2 * 3 ))
+MULTI 6
+ITINF25/lektion8/2.5 arithmetic expansion
+$ echo SUBTRACTION $(( 2 - 3 ))
+ITINF25/lektion8/2.5 arithmetic expansion
+$ echo SUBTRACTION $(( 2 - 3 ))
+SUBTRACTION -1
+ITINF25/lektion8/2.5 arithmetic expansion
+$ echo DIV_INT $(( 10 / 2 ))
+ITINF25/lektion8/2.5 arithmetic expansion
+$ echo DIV_INT $(( 10 / 2 ))
+DIV_INT 5
+ITINF25/lektion8/2.5 arithmetic expansion
+$ echo DIV_MAYBE_FLOAT $(( 9 / 2 ))
+DIV_MAYBE_FLOAT 4
+ITINF25/lektion8/2.5 arithmetic expansion
+$ echo DIV_MAYBE_FLOAT 9 / 2
+DIV_MAYBE_FLOAT 9 / 2
+ITINF25/lektion8/2.5 arithmetic expansion
+$ echo DIV_MAYBE_FLOAT (( 9 / 2 ))
+bash: syntax error near unexpected token `('
+ITINF25/lektion8/2.5 arithmetic expansion
+$ echo DIV_MAYBE_FLOAT $(( 9 / 2 ))
+DIV_MAYBE_FLOAT 4
+ITINF25/lektion8/2.5 arithmetic expansion
+$ echo DIV_DECIMALS_CHOPPED_OFF $(( 9 / 2 ))
+DIV_DECIMALS_CHOPPED_OFF 4
+ITINF25/lektion8/2.5 arithmetic expansion
+$ echo DIV_DECIMALS_CHOPPED_OFF $(( 5.2 / 2 ))
+bash: 5.2 / 2 : syntax error: invalid arithmetic operator (error token is ".2 / 2 ")
+ITINF25/lektion8/2.5 arithmetic expansion
+
