@@ -1312,4 +1312,48 @@ Standard error rad 2
 [21;1H[K[7m Manual page bash(1) byte 117611 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       string  contained within the braces, and the postscript is then appended[m
 [21;1H[K[7m Manual page bash(1) byte 117529 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       lowed by an optional [4mpostscript[24m.   The  preamble  is  prefixed  to  each[m
 [21;1H[K[7m Manual page bash(1) byte 117528 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       rated  strings  or  a sequence expression between a pair of braces, fol‐[m
-[21;1H
+[21;1H[K[7m Manual page bash(1) byte 117460 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       form of an optional [4mpreamble[24m, followed by either a series of comma-sepa‐[m
+[21;1H[K[7m Manual page bash(1) byte 117380 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       names  generated need not exist.  Patterns to be brace expanded take the[m
+[21;1H[K[7m Manual page bash(1) byte 117296 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       ated.  This mechanism is similar to [4mpathname[24m [4mexpansion[24m,  but  the  file‐[m
+[21;1H[K[7m Manual page bash(1) byte 117212 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [4mBrace[24m  [4mexpansion[24m is a mechanism by which arbitrary strings may be gener‐[m
+[21;1H[K[7m Manual page bash(1) byte 117130 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM   [1m[7mBrace[27m[0m[7m [27m[1m[7mExpansion[27m[0m[m
+[21;1H[K[7m Manual page bash(1) byte 117050 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[21;1H[K[7m Manual page bash(1) byte 116970 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       as explained above (see [1mPARAMETERS[0m).[m
+[21;1H[K[7m Manual page bash(1) byte 116884 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mITINF25/lektion8/2.1 brace_expansion
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ (reverse-i-search)`': c': cd 2.1\ bra[7mc[27me_expansion/[16Ph': e[7mch[27mo $?m': echo '#!/bin/bash' > exempel1 ; [7mchm[27mod +x exempel1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@o': echo '#!/bin/bash' > exempel1 ; [7mchmo[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@d': echo '#!/bin/bash' > exempel1 ; [7mchmod[27m[25P(B[m$ echo '#!/bin/bash' > exempel1 ; chmod
+[?2004l[?2004h[94mITINF25/lektion8/2.1 brace_expansion
+(B[m$ [H[2J[94mITINF25/lektion8/2.1 brace_expansion
+(B[m$ ./exempel1 
+[?2004lx{a}
+[?2004h[94mITINF25/lektion8/2.1 brace_expansion
+(B[m$ ./exempel1 [H[2J[94mITINF25/lektion8/2.1 brace_expansion
+(B[m$ ./exempel1 
+[?2004lxa x
+[?2004h[94mITINF25/lektion8/2.1 brace_expansion
+(B[m$ [H[2J[94mITINF25/lektion8/2.1 brace_expansion
+(B[m$ ./exempel1 
+[?2004lxa xb
+[?2004h[94mITINF25/lektion8/2.1 brace_expansion
+(B[m$ ./exempel1 [H[2J[94mITINF25/lektion8/2.1 brace_expansion
+(B[m$ ./exempel1 
+[?2004lxa xb xc
+[?2004h[94mITINF25/lektion8/2.1 brace_expansion
+(B[m$ ./exempel1 [H[2J[94mITINF25/lektion8/2.1 brace_expansion
+(B[m$ ./exempel1 
+[?2004lxay xby xcy
+[?2004h[94mITINF25/lektion8/2.1 brace_expansion
+(B[m$ ./exempel1 [C[C[K[7mecho x{a,b,c}y[27m[C[Cecho x{a,b,c}y[1P,b,c}yh,b,c}yo,b,c}yp,b,c}yp,b,c}y[C[C[1P,c}yk,c}ya,c}yk,c}ya,c}y[C[C[1P}yb}ya}yk}ya}y[C[C[C[C[C[C[C[C[C[C[H[2J[94mITINF25/lektion8/2.1 brace_expansion
+(B[m$ echo x{hopp,kaka,baka}y
+[?2004lxhoppy xkakay xbakay
+[?2004h[94mITINF25/lektion8/2.1 brace_expansion
+(B[m$ [7mecho x{hopp,kaka,baka}y[27m[C[Cecho x{hopp,kaka,baka}y[H[2J[94mITINF25/lektion8/2.1 brace_expansion
+(B[m$ echo x{hopp,kaka,baka}y[1P}y[1P}y[1P}y[1P}y[C[C
+[?2004lxhoppy xkakay xy
+[?2004h[94mITINF25/lektion8/2.1 brace_expansion
+(B[m$ [H[2J[94mITINF25/lektion8/2.1 brace_expansion
+(B[m$ mkdir nummerfiler
+[?2004l[?2004h[94mITINF25/lektion8/2.1 brace_expansion
+(B[m$ cd nummerfiler/
+[?2004l[?2004h[94mITINF25/lektion8/2.1 brace_expansion/nummerfiler
+(B[m$ [H[2J[94mITINF25/lektion8/2.1 brace_expansion/nummerfiler
+(B[m$ bokf2025 [K.txt
