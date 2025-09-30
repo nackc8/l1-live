@@ -2135,4 +2135,114 @@ Numret 3
 [6;1H       ters preceding the first unquoted slash (or all characters, if there is  no[m
 [7;1H       unquoted  slash)  are considered a [4mtilde-prefix[24m.  If none of the characters[m
 [8;1H       in the tilde-prefix are quoted, the characters in the tilde-prefix  follow‐[m
-[9;1H       ing  the
+[9;1H       ing  the tilde are treated as a possible [4mlogin[24m [4mname[24m.  If this login name is[m
+[10;1H       the null string, the tilde is replaced with the value of the shell  parame‐[m
+[11;1H       ter  [1mHOME[0m.   If [1mHOME[0m is unset, the home directory of the user executing the[m
+[12;1H       shell is substituted instead.  Otherwise, the tilde-prefix is replaced with[m
+[13;1H       the home directory associated with the specified login name.[m
+[14;1H[m
+[15;1H       If the tilde-prefix is a `~+', the value of the shell variable [1mPWD[0m replaces[m
+[16;1H       the tilde-prefix.  If the tilde-prefix is a `~-', the value  of  the  shell[m
+[17;1H       variable [1mOLDPWD[0m, if it is set, is substituted.  If the characters following[m
+[18;1H       the tilde in the tilde-prefix consist of a number [4mN[24m, optionally prefixed by[m
+[19;1H       a `+' or a `-', the tilde-prefix is replaced with the corresponding element[m
+[20;1H       from the directory stack, as it would be displayed by the [1mdirs[0m builtin  in‐[m
+[21;1H...skipping...
+   [1m[7mArithmetic[27m[0m[7m [27m[1m[7mExpansion[27m[0m[m
+       Arithmetic expansion allows the evaluation of an arithmetic expression  and[m
+       the substitution of the result.  The format for arithmetic expansion is:[m
+[m
+              [1m$(([0m[4mexpression[24m[1m))[0m[m
+[m
+       The  old format [1m$[[0m[4mexpression[24m[1m][0m is deprecated and will be removed in upcoming[m
+       versions of bash.[m
+[m
+       The [4mexpression[24m undergoes the same expansions as if it  were  within  double[m
+       quotes, but double quote characters in [4mexpression[24m are not treated specially[m
+       and are removed.  All tokens in the expression undergo parameter and  vari‐[m
+       able  expansion,  command  substitution,  and quote removal.  The result is[m
+       treated as the arithmetic expression to be  evaluated.   Arithmetic  expan‐[m
+       sions may be nested.[m
+[m
+       The  evaluation  is  performed  according  to  the rules listed below under[m
+       [1mARITHMETIC[0m [1mEVALUATION[0m.  If [4mexpression[24m is invalid, [1mbash[0m prints a message in‐[m
+       dicating failure and no substitution occurs.[m
+[m
+[7m Manual page bash(1) line 1904 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mProcess[0m [1mSubstitution[0m[m
+[7m Manual page bash(1) line 1905 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mProcess[24m  [4msubstitution[24m  allows a process's input or output to be referred to[m
+[7m Manual page bash(1) line 1906 (press h for help or q to quit)[27m[K[K/[KAA[KRR[KII[KTT[KHH[KMM[KEE[KTT[KII[KCC[K  [KEE[KVV[KAA[KLL[KUU[KAA[KTT[KII[KOO[KNN[K[1;1H       the substitution of the result.  The format for arithmetic expansion is:[m
+[2;1H[m
+[3;1H              [1m$(([0m[4mexpression[24m[1m))[0m[m
+[4;1H[m
+[5;1H       The  old format [1m$[[0m[4mexpression[24m[1m][0m is deprecated and will be removed in upcoming[m
+[6;1H       versions of bash.[m
+[7;1H[m
+[8;1H       The [4mexpression[24m undergoes the same expansions as if it  were  within  double[m
+[9;1H       quotes, but double quote characters in [4mexpression[24m are not treated specially[m
+[10;1H       and are removed.  All tokens in the expression undergo parameter and  vari‐[m
+[11;1H       able  expansion,  command  substitution,  and quote removal.  The result is[m
+[12;1H       treated as the arithmetic expression to be  evaluated.   Arithmetic  expan‐[m
+[13;1H       sions may be nested.[m
+[14;1H[m
+[15;1H       The  evaluation  is  performed  according  to  the rules listed below under[m
+[16;1H       [1mARITHMETIC[0m [1mEVALUATION[0m.  If [4mexpression[24m is invalid, [1mbash[0m prints a message in‐[m
+[17;1H       dicating failure and no substitution occurs.[m
+[18;1H[m
+[19;1H   [1mProcess[0m [1mSubstitution[0m[m
+[20;1H       [4mProcess[24m  [4msubstitution[24m  allows a process's input or output to be referred to[m
+[21;1H[1;1H       the substitution of the result.  The format for arithmetic expansion is:[m
+[2;1H[m
+[3;1H              [1m$(([0m[4mexpression[24m[1m))[0m[m
+[4;1H[m
+[5;1H       The  old format [1m$[[0m[4mexpression[24m[1m][0m is deprecated and will be removed in upcoming[m
+[6;1H       versions of bash.[m
+[7;1H[m
+[8;1H       The [4mexpression[24m undergoes the same expansions as if it  were  within  double[m
+[9;1H       quotes, but double quote characters in [4mexpression[24m are not treated specially[m
+[10;1H       and are removed.  All tokens in the expression undergo parameter and  vari‐[m
+[11;1H       able  expansion,  command  substitution,  and quote removal.  The result is[m
+[12;1H       treated as the arithmetic expression to be  evaluated.   Arithmetic  expan‐[m
+[13;1H       sions may be nested.[m
+[14;1H[m
+[15;1H       The  evaluation  is  performed  according  to  the rules listed below under[m
+[16;1H       [1m[7mARITHMETIC[27m[0m[7m [27m[1m[7mEVALUATION[27m[0m.  If [4mexpression[24m is invalid, [1mbash[0m prints a message in‐[m
+[17;1H       dicating failure and no substitution occurs.[m
+[18;1H[m
+[19;1H   [1mProcess[0m [1mSubstitution[0m[m
+[20;1H       [4mProcess[24m  [4msubstitution[24m  allows a process's input or output to be referred to[m
+[21;1H       using a filename.  It takes the form of [1m<([0m[4mlist[24m[1m)[0m or  [1m>([0m[4mlist[24m[1m)[0m.   The  process[m
+       [4mlist[24m  is run asynchronously, and its input or output appears as a filename.[m
+       This filename is passed as an argument to the current command as the result[m
+       of  the  expansion.   If the [1m>([0m[4mlist[24m[1m)[0m form is used, writing to the file will[m
+       provide input for [4mlist[24m.  If the [1m<([0m[4mlist[24m[1m)[0m form is used, the file passed as an[m
+       argument should be read to obtain the output of [4mlist[24m.  Process substitution[m
+       is supported on systems that support named pipes  ([4mFIFOs[24m)  or  the  [1m/dev/fd[0m[m
+       method of naming open files.[m
+[m
+       When  available,  process substitution is performed simultaneously with pa‐[m
+       rameter and variable expansion, command substitution, and arithmetic expan‐[m
+       sion.[m
+[m
+   [1mWord[0m [1mSplitting[0m[m
+       The  shell  scans the results of parameter expansion, command substitution,[m
+[7m Manual page bash(1) line 1921 (press h for help or q to quit)[27m[K[K/[K...skipping...
+[1m[7mARITHMETIC[27m[0m[7m [27m[1m[7mEVALUATION[27m[0m[m
+       The shell allows arithmetic expressions to be evaluated, under certain cir‐[m
+       cumstances  (see the [1mlet[0m and [1mdeclare[0m builtin commands, the [1m(([0m compound com‐[m
+       mand, and [1mArithmetic[0m [1mExpansion[0m).  Evaluation is done in  fixed-width  inte‐[m
+       gers  with  no  check  for  overflow,  though  division by 0 is trapped and[m
+       flagged as an error.  The operators and  their  precedence,  associativity,[m
+       and values are the same as in the C language.  The following list of opera‐[m
+       tors is grouped into levels of equal-precedence operators.  The levels  are[m
+       listed in order of decreasing precedence.[m
+[m
+       [4mid[24m[1m++[0m [4mid[24m[1m--[0m[m
+              variable post-increment and post-decrement[m
+       [1m-[0m [1m+[0m    unary minus and plus[m
+       [1m++[0m[4mid[24m [1m--[0m[4mid[24m[m
+              variable pre-increment and pre-decrement[m
+       [1m![0m [1m~[0m    logical and bitwise negation[m
+       [1m**[0m     exponentiation[m
+       [1m*[0m [1m/[0m [1m%[0m  multiplication, division, remainder[m
+       [1m+[0m [1m-[0m    addition, subtraction[m
+       [1m<<[0m [1m>>[0m  left and r
