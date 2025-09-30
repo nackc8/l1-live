@@ -1,7 +1,9 @@
 #!/bin/bash
 
 greet() {
-	echo "Hej, kul att du är här ${@}"
+	for name in "${@}"; do
+		echo "Hej, kul att du är här $name"
+	done
 }
 
 greet Pettsson Martin Kalle
