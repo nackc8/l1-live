@@ -2473,4 +2473,225 @@ Numret 3
        [1m++[0m[4mid[24m [1m--[0m[4mid[24m[m
               variable pre-increment and pre-decrement[m
 [7m Manual page bash(1) line 2467 (press h for help or q to quit)[27m[K[H[2J[H       mand, and [1mArithmetic[0m [1mExpansion[0m).  Evaluation is done in  fixed-width  inte‐[m
-       gers  with  no  check  for  overflow,  though  division by 0 is 
+       gers  with  no  check  for  overflow,  though  division by 0 is trapped and[m
+       flagged as an error.  The operators and  their  precedence,  associativity,[m
+       and values are the same as in the C language.  The following list of opera‐[m
+       tors is grouped into levels of equal-precedence operators.  The levels  are[m
+       listed in order of decreasing precedence.[m
+[m
+       [4mid[24m[1m++[0m [4mid[24m[1m--[0m[m
+              variable post-increment and post-decrement[m
+       [1m-[0m [1m+[0m    unary minus and plus[m
+       [1m++[0m[4mid[24m [1m--[0m[4mid[24m[m
+              variable pre-increment and pre-decrement[m
+       [1m![0m [1m~[0m    logical and bitwise negation[m
+       [1m**[0m     exponentiation[m
+       [1m*[0m [1m/[0m [1m%[0m  multiplication, division, remainder[m
+       [1m+[0m [1m-[0m    addition, subtraction[m
+[7m Manual page bash(1) line 2467 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m<<[0m [1m>>[0m  left and right bitwise shifts[m
+[7m Manual page bash(1) line 2468 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m<=[0m [1m>=[0m [1m<[0m [1m>[0m[m
+[7m Manual page bash(1) line 2469 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              comparison[m
+[7m Manual page bash(1) line 2470 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m==[0m [1m!=[0m  equality and inequality[m
+[7m Manual page bash(1) line 2471 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m&[0m      bitwise AND[m
+[7m Manual page bash(1) line 2472 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m^[0m      bitwise exclusive OR[m
+[7m Manual page bash(1) line 2473 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m|[0m      bitwise OR[m
+[7m Manual page bash(1) line 2474 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m&&[0m     logical AND[m
+[7m Manual page bash(1) line 2475 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m||[0m     logical OR[m
+[7m Manual page bash(1) line 2476 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mexpr[24m[1m?[0m[4mexpr[24m[1m:[0m[4mexpr[24m[m
+[7m Manual page bash(1) line 2477 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              conditional operator[m
+[7m Manual page bash(1) line 2478 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m=[0m [1m*=[0m [1m/=[0m [1m%=[0m [1m+=[0m [1m-=[0m [1m<<=[0m [1m>>=[0m [1m&=[0m [1m^=[0m [1m|=[0m[m
+[7m Manual page bash(1) line 2479 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              assignment[m
+[7m Manual page bash(1) line 2480 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mexpr1[24m [1m,[0m [4mexpr2[24m[m
+[7m Manual page bash(1) line 2481 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              comma[m
+[7m Manual page bash(1) line 2482 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+(B[m$ cp exempel1 exempel1 [K[K2
+[?2004l[?2004h[94mITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+(B[m$ code exempel2 
+[?2004l[?2004h[94mITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+(B[m$ $(( 1 < 2 (([K[K))
+[?2004lbash: 1: command not found
+[?2004h[94mITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+(B[m$ $(( 1 < 2 ))[1@e[1@c[1@h[1@o[1@ 
+[?2004l1
+[?2004h[94mITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+(B[m$ man bash
+[?2004l[?1049h[22;0;0t[?1h=BASH(1)                       General Commands Manual                      BASH(1)[m
+[m
+[1mNAME[0m[m
+       bash - GNU Bourne-Again SHell[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mbash[0m [options] [command_string | file][m
+[m
+[1mCOPYRIGHT[0m[m
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mBash[0m  is  an  [1msh[0m-compatible command language interpreter that executes com‐[m
+       mands read from the standard input or from a file.  [1mBash[0m also  incorporates[m
+[7m Manual page bash(1) line 1 (press h for help or q to quit)[27m[K[K/[KAA[KRR[KII[KTT[KHH[KMM[KEE[K[K[KMM[KEE[KTT[KII[KCC[K__[KEE[KVV[KAA[KLL[KUU[KAA[KTT[KII[KOO[KNN[K[1;1HBASH(1)                       General Commands Manual                      BASH(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       bash - GNU Bourne-Again SHell[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mbash[0m [options] [command_string | file][m
+[8;1H[m
+[9;1H[1mCOPYRIGHT[0m[m
+[10;1H       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.[m
+[11;1H[m
+[12;1H[1mDESCRIPTION[0m[m
+[13;1H       [1mBash[0m  is  an  [1msh[0m-compatible command language interpreter that executes com‐[m
+[14;1H       mands read from the standard input or from a file.  [1mBash[0m also  incorporates[m
+[15;1H[1;1HBASH(1)                       General Commands Manual                      BASH(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       bash - GNU Bourne-Again SHell[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mbash[0m [options] [command_string | file][m
+[8;1H[m
+[9;1H[1mCOPYRIGHT[0m[m
+[10;1H       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.[m
+[11;1H[m
+[12;1H[1mDESCRIPTION[0m[m
+[13;1H       [1mBash[0m  is  an  [1msh[0m-compatible command language interpreter that executes com‐[m
+[14;1H       mands read from the standard input or from a file.  [1mBash[0m also  incorporates[m
+[15;1H[K[7mPattern not found  (press RETURN)[27m[15;1H[K[K/[KAA[KRR[KII[KTT[KHH[KMM[KEE[KII[KCC[K[K[KTT[KII[KCC[K__[KEE[KVV[KAA[KLL[KUU[KAA[KTT[KII[KOO[KNN[K[1;1HBASH(1)                       General Commands Manual                      BASH(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       bash - GNU Bourne-Again SHell[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mbash[0m [options] [command_string | file][m
+[8;1H[m
+[9;1H[1mCOPYRIGHT[0m[m
+[10;1H       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.[m
+[11;1H[m
+[12;1H[1mDESCRIPTION[0m[m
+[13;1H       [1mBash[0m  is  an  [1msh[0m-compatible command language interpreter that executes com‐[m
+[14;1H       mands read from the standard input or from a file.  [1mBash[0m also  incorporates[m
+[15;1H[1;1HBASH(1)                       General Commands Manual                      BASH(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       bash - GNU Bourne-Again SHell[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mbash[0m [options] [command_string | file][m
+[8;1H[m
+[9;1H[1mCOPYRIGHT[0m[m
+[10;1H       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.[m
+[11;1H[m
+[12;1H[1mDESCRIPTION[0m[m
+[13;1H       [1mBash[0m  is  an  [1msh[0m-compatible command language interpreter that executes com‐[m
+[14;1H       mands read from the standard input or from a file.  [1mBash[0m also  incorporates[m
+[15;1H[K[7mPattern not found  (press RETURN)[27m[15;1H[K[K/[KAA[KEE[KRR[KII[KTT[K[K[K[K[KRR[KII[KTT[KHH[K[1;1HBASH(1)                       General Commands Manual                      BASH(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       bash - GNU Bourne-Again SHell[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mbash[0m [options] [command_string | file][m
+[8;1H[m
+[9;1H[1mCOPYRIGHT[0m[m
+[10;1H       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.[m
+[11;1H[m
+[12;1H[1mDESCRIPTION[0m[m
+[13;1H       [1mBash[0m  is  an  [1msh[0m-compatible command language interpreter that executes com‐[m
+[14;1H       mands read from the standard input or from a file.  [1mBash[0m also  incorporates[m
+[15;1H[1;1HBASH(1)                       General Commands Manual                      BASH(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       bash - GNU Bourne-Again SHell[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mbash[0m [options] [command_string | file][m
+[8;1H[m
+[9;1H[1mCOPYRIGHT[0m[m
+[10;1H       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.[m
+[11;1H[m
+[12;1H[1mDESCRIPTION[0m[m
+[13;1H       [1mBash[0m  is  an  [1msh[0m-compatible command language interpreter that executes com‐[m
+[14;1H       mands read from the standard input or from a file.  [1mBash[0m also  incorporates[m
+[15;1H...skipping...
+              under [1m[7mARITH[27m[0m[1mMETIC[0m [1mEVALUATION[0m.  If the value of the expression is non-[m
+              zero, the return status is 0; otherwise the return status is 1.  The[m
+              [4mexpression[24m undergoes the same expansions as if it were within double[m
+              quotes,  but  double  quote characters in [4mexpression[24m are not treated[m
+              specially and are removed.[m
+[m
+       [1m[[[0m [4mexpression[24m [1m]][0m[m
+              Return a status of 0 or 1 depending on the evaluation of the  condi‐[m
+              tional  expression [4mexpression[24m.  Expressions are composed of the pri‐[m
+              maries described below under [1mCONDITIONAL[0m [1mEXPRESSIONS[0m.  The words be‐[m
+              tween  the  [1m[[[0m and [1m]][0m do not undergo word splitting and pathname ex‐[m
+              pansion.  The shell performs tilde expansion, parameter and variable[m
+              expansion,  arithmetic expansion, command substitution, process sub‐[m
+              stitution, and quote removal on those  words  (the  expansions  that[m
+[7m Manual page bash(1) line 345/6395 5% (press h for help or q to quit)[27m[K[K/[K...skipping...
+              rules  described  below under [1m[7mARITH[27m[0m[1mMETIC[0m [1mEVALUATION[0m.  The arithmetic[m
+              expression [4mexpr2[24m is then evaluated repeatedly until it evaluates  to[m
+              zero.   Each  time [4mexpr2[24m evaluates to a non-zero value, [4mlist[24m is exe‐[m
+              cuted and the arithmetic expression [4mexpr3[24m is evaluated.  If any  ex‐[m
+              pression is omitted, it behaves as if it evaluates to 1.  The return[m
+              value is the exit status of the last command in [4mlist[24m  that  is  exe‐[m
+              cuted, or false if any of the expressions is invalid.[m
+[m
+       [1mselect[0m [4mname[24m [ [1min[0m [4mword[24m ] ; [1mdo[0m [4mlist[24m ; [1mdone[0m[m
+              The  list  of  words  following [1min[0m is expanded, generating a list of[m
+              items, and the set of expanded words is printed on the standard  er‐[m
+              ror,  each preceded by a number.  If the [1min[0m [4mword[24m is omitted, the po‐[m
+              sitional parameters are printed (see [1mPARAMETERS[0m below).  [1mselect[0m then[m
+              displays  the  [1mPS3[0m  prompt and reads a line from the standard input.[m
+[7m Manual page bash(1) line 434/6395 7% (press h for help or q to quit)[27m[K[K/[K...skipping...
+              sions (see [1m[7mARITH[27m[0m[1mMETIC[0m [1mEVALUATION[0m below).[m
+[m
+              If [4moffset[24m evaluates to a number less than zero, the value is used as[m
+              an offset in characters from the end of the value of [4mparameter[24m.   If[m
+              [4mlength[24m evaluates to a number less than zero, it is interpreted as an[m
+              offset in characters from the end of the value of  [4mparameter[24m  rather[m
+              than a number of characters, and the expansion is the characters be‐[m
+              tween [4moffset[24m and that result.  Note that a negative offset  must  be[m
+              separated  from  the colon by at least one space to avoid being con‐[m
+              fused with the [1m:-[0m expansion.[m
+[m
+              If [4mparameter[24m is [1m@[0m or [1m*[0m, the result is [4mlength[24m  positional  parameters[m
+              beginning  at  [4moffset[24m.   A  negative [4moffset[24m is taken relative to one[m
+              greater than the greatest positional parameter, so an offset  of  -1[m
+[7m Manual page bash(1) line 1679/6395 28% (press h for help or q to quit)[27m[K[K/[K...skipping...
+       [1m[7mARITH[27m[0m[1mMETIC[0m [1mEVALUATION[0m.  If [4mexpression[24m is invalid, [1mbash[0m prints a message in‐[m
+       dicating failure and no substitution occurs.[m
+[m
+   [1mProcess[0m [1mSubstitution[0m[m
+       [4mProcess[24m  [4msubstitution[24m  allows a process's input or output to be referred to[m
+       using a filename.  It takes the form of [1m<([0m[4mlist[24m[1m)[0m or  [1m>([0m[4mlist[24m[1m)[0m.   The  process[m
+       [4mlist[24m  is run asynchronously, and its input or output appears as a filename.[m
+       This filename is passed as an argument to the current command as the result[m
+       of  the  expansion.   If the [1m>([0m[4mlist[24m[1m)[0m form is used, writing to the file will[m
+       provide input for [4mlist[24m.  If the [1m<([0m[4mlist[24m[1m)[0m form is used, the file passed as an[m
+       argument should be read to obtain the output of [4mlist[24m.  Process substitution[m
+       is supported on systems that support named pipes  ([4mFIFOs[24m)  or  the  [1m/dev/fd[0m[m
+       method of naming open files.[m
+[m
+[7m Manual page bash(1) line 1921/6395 32% (press h for help or q to quit)[27m[K[K/[K...skipping...
+[1m[7mARITH[27m[0m[1mMETIC[0m [1mEVALUATION[0m[m
+       The shell allows arithmetic expressions to be evaluated, under certain cir‐[m
+       cumstances  (see the [1mlet[0m and [1mdeclare[0m builtin commands, the [1m(([0m compound com‐[m
+       mand, and [1mArithmetic[0m [1mExpansion[0m).  Evaluation is done in  fixed-width  inte‐[m
+       gers  with  no  check  for  overflow,  though  division by 0 is trapped and[m
+       flagged as an error.  The operators and  their  precedence,  associativity,[m
+       and values are the same as in the C language.  The following list of opera‐[m
+       tors is grouped into levels of equal-precedence operators.  The levels  are[m
+       listed in order of decreasing precedence.[m
+[m
+       [4mid[24m[1m++[0m [4mid[24m[1m--[0m[m
+              variable post-increment and post-decrement[m
+       [1m-[0m [1m+[0m    unary minus and plus[m
+       [1m++[0m[4mid[24m [1m--[0m[4mid[24m[m
+[7m Manual page bash(1) line 2464/6395 39% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              variable pre-increment and pre-decrement[m
+[7m Manual page bash(1) line 2465/6395 39% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m![0m [1m~[0m    logical and bitwise negation[m
+[7m Manual page bash(1) line 2466/6395 39% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m**[0m     exponentiation[m
+[7m Manual page bash(1) line 2467/6395 39% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m*[0m [1m/[0m [1m%[0m  multiplication, division, remainder[m
+[7m Manual page bash(1) line 2468/6395 39% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m+[0m [1m-[0m    addition, subtraction[m
+[7m Manual page bash(1) line 2469/6395 39% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m<<[0m [1m>>[
