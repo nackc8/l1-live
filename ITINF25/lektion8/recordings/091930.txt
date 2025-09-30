@@ -862,4 +862,53 @@ instruktion2.jpg  instruktion.jpg   vatten.png
 [7m Manual page bash(1) line 2089 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     classes defined in the POSIX standard:[m
 [7m Manual page bash(1) line 2090 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     [1malnum[0m  [1malpha[0m  [1mascii[0m  [1mblank[0m  [1mcntrl[0m  [1mdigit[0m [1mgraph[0m [1mlower[0m [1mprint[0m[m
 [7m Manual page bash(1) line 2091 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     [1mpunct[0m [1mspace[0m [1mupper[0m [1mword[0m [1mxdigit[0m[m
-[7m Manual page bash(1) line 2092 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     A character class matches any character belo
+[7m Manual page bash(1) line 2092 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                     A character class matches any character belonging to  that[m
+[7m Manual page bash(1) line 2093 (press h for help or q to quit)[27m[K[K                     class.   The [1mword[0m character class matches letters, digits,[m
+                     and the character _.[m
+[m
+                     Within [1m[[0m and [1m][0m, an [4mequivalence[24m [4mclass[24m can be specified  us‐[m
+                     ing  the  syntax  [1m[=[0m[4mc[24m[1m=][0m, which matches all characters with[m
+                     the same collation weight (as defined by the  current  lo‐[m
+                     cale) as the character [4mc[24m.[m
+[m
+                     Within  [1m[[0m and [1m][0m, the syntax [1m[.[0m[4msymbol[24m[1m.][0m matches the collat‐[m
+                     ing symbol [4msymbol[24m.[m
+[m
+       If the [1mextglob[0m shell option is enabled  using  the  [1mshopt[0m  builtin,  the[m
+       shell  recognizes  several  extended pattern matching operators.  In the[m
+       following description, a [4mpattern-list[24m is a list of one or more  patterns[m
+       separated by a [1m|[0m.  Composite patterns may be formed using one or more of[m
+       the following sub-patterns:[m
+[7m Manual page bash(1) line 2109 (press h for help or q to quit)[27m[K[K[m
+              [1m?([0m[4mpattern-list[24m[1m)[0m[m
+                     Matches zero or one occurrence of the given patterns[m
+              [1m*([0m[4mpattern-list[24m[1m)[0m[m
+                     Matches zero or more occurrences of the given patterns[m
+              [1m+([0m[4mpattern-list[24m[1m)[0m[m
+                     Matches one or more occurrences of the given patterns[m
+              [1m@([0m[4mpattern-list[24m[1m)[0m[m
+                     Matches one of the given patterns[m
+              [1m!([0m[4mpattern-list[24m[1m)[0m[m
+                     Matches anything except one of the given patterns[m
+[m
+       The[1mextglob[0m option changes the behavior of the parser, since  the  paren‐[m
+       theses are normally treated as operators with syntactic meaning.  To en‐[m
+       sure that extended matching patterns are  parsed  correctly,  make  sure[m
+       that  [1mextglob[0m  is  enabled before parsing constructs containing the pat‐[m
+[7m Manual page bash(1) line 2125 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       the following sub-patterns:[m
+[17;1H[K[7m Manual page bash(1) line 2124 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       separated by a [1m|[0m.  Composite patterns may be formed using one or more of[m
+[17;1H[K[7m Manual page bash(1) line 2123 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       following description, a [4mpattern-list[24m is a list of one or more  patterns[m
+[17;1H[K[7m Manual page bash(1) line 2122 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       shell  recognizes  several  extended pattern matching operators.  In the[m
+[17;1H[K[7m Manual page bash(1) line 2121 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mITINF25/lektion8/aterblick/2.8 pathname expansion
+(B[m$ cp exempel1 exempel1 [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mITINF25/lektion8/aterblick/2.8 pathname expansion
+(B[m$ ls
+[?2004lexempel1	  instruktion3.jpg  sol.png	vind.png
+instruktion2.jpg  instruktion.jpg   vatten.png
+[?2004h[94mITINF25/lektion8/aterblick/2.8 pathname expansion
+(B[m$ touch instruktion{1..20}.jpg
+[?2004l[?2004h[94mITINF25/lektion8/aterblick/2.8 pathname expansion
+(B[m$ [H[2J[94mITINF25/lektion8/aterblick/2.8 pathname expansion
+(B[m$ ls
+[?2004lexempel1	   instruktion16.jpg  instruktion3.jpg	instruktion.jpg
+instruktion10.jpg  instruktion17.jpg  instruktion4.jpg	sol.png
+instruktion11.jpg  instruktion
