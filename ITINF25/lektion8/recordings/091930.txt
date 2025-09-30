@@ -1657,4 +1657,164 @@ Numret 3
 [15;1H       useful features from the [4mKorn[24m and [4mC[24m shells ([1mksh[0m and [1mcsh[0m).[m
 [16;1H[m
 [17;1H       [1mBash[0m  is intended to be a conformant implementation of the Shell and Utili‐[m
-[18;1H       ties portion o
+[18;1H       ties portion of the IEEE POSIX specification (IEEE Standard 1003.1).   [1mBash[0m[m
+[19;1H       can be configured to be POSIX-conformant by default.[m
+[20;1H...skipping...
+       [1m[7mArithmetic[27m[0m[7m [27m[1m[7mExpansion[27m[0m below).  Word splitting and pathname expansion are not[m
+       performed.   Assignment  statements  may  also  appear  as arguments to the[m
+       [1malias[0m, [1mdeclare[0m, [1mtypeset[0m, [1mexport[0m, [1mreadonly[0m, and [1mlocal[0m builtin commands ([4mdec‐[24m[m
+       [4mlaration[24m  commands).   When  in  [4mposix[24m [4mmode[24m, these builtins may appear in a[m
+       command after one or more instances of the [1mcommand[0m builtin and retain these[m
+       assignment statement properties.[m
+[m
+       In  the  context  where  an  assignment statement is assigning a value to a[m
+       shell variable or array index, the += operator can be used to append to  or[m
+       add  to  the variable's previous value.  This includes arguments to builtin[m
+       commands such as [1mdeclare[0m that  accept  assignment  statements  ([4mdeclaration[24m[m
+       commands).   When  += is applied to a variable for which the [1minteger[0m attri‐[m
+       bute has been set, [4mvalue[24m is evaluated as an arithmetic expression and added[m
+       to  the  variable's current value, which is also evaluated.  When += is ap‐[m
+       plied to an array variable using compound assignment  (see  [1mArrays[0m  below),[m
+       the  variable's  value is not unset (as it is when using =), and new values[m
+       are appended to the array beginning at one greater than the array's maximum[m
+       index (for indexed arrays) or added as additional key-value pairs in an as‐[m
+       sociative array.  When applied to a string-valued variable,  [4mvalue[24m  is  ex‐[m
+[7m Manual page bash(1) line 682 (press h for help or q to quit)[27m[K[K/[K...skipping...
+   [1m[7mArithmetic[27m[0m[7m [27m[1m[7mExpansion[27m[0m[m
+       Arithmetic expansion allows the evaluation of an arithmetic expression  and[m
+       the substitution of the result.  The format for arithmetic expansion is:[m
+[m
+              [1m$(([0m[4mexpression[24m[1m))[0m[m
+[m
+       The  old format [1m$[[0m[4mexpression[24m[1m][0m is deprecated and will be removed in upcoming[m
+       versions of bash.[m
+[m
+       The [4mexpression[24m undergoes the same expansions as if it  were  within  double[m
+       quotes, but double quote characters in [4mexpression[24m are not treated specially[m
+       and are removed.  All tokens in the expression undergo parameter and  vari‐[m
+       able  expansion,  command  substitution,  and quote removal.  The result is[m
+       treated as the arithmetic expression to be  evaluated.   Arithmetic  expan‐[m
+       sions may be nested.[m
+[m
+       The  evaluation  is  performed  according  to  the rules listed below under[m
+       [1mARITHMETIC[0m [1mEVALUATION[0m.  If [4mexpression[24m is invalid, [1mbash[0m prints a message in‐[m
+       dicating failure and no substitution occurs.[m
+[7m Manual page bash(1) line 1904 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1905 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mProcess[0m [1mSubstitution[0m[m
+[7m Manual page bash(1) line 1906 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mProcess[24m  [4msubstitution[24m  allows a process's input or output to be referred to[m
+[7m Manual page bash(1) line 1907 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       using a filename.  It takes the form of [1m<([0m[4mlist[24m[1m)[0m or  [1m>([0m[4mlist[24m[1m)[0m.   The  process[m
+[7m Manual page bash(1) line 1908 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mlist[24m  is run asynchronously, and its input or output appears as a filename.[m
+[7m Manual page bash(1) line 1909 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       This filename is passed as an argument to the current command as the result[m
+[7m Manual page bash(1) line 1910 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       of  the  expansion.   If the [1m>([0m[4mlist[24m[1m)[0m form is used, writing to the file will[m
+[7m Manual page bash(1) line 1911 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       provide input for [4mlist[24m.  If the [1m<([0m[4mlist[24m[1m)[0m form is used, the file passed as an[m
+[7m Manual page bash(1) line 1912 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       argument should be read to obtain the output of [4mlist[24m.  Process substitution[m
+[7m Manual page bash(1) line 1913 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       is supported on systems that support named pipes  ([4mFIFOs[24m)  or  the  [1m/dev/fd[0m[m
+[7m Manual page bash(1) line 1914 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       method of naming open files.[m
+[7m Manual page bash(1) line 1915 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1916 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       When  available,  process substitution is performed simultaneously with pa‐[m
+[7m Manual page bash(1) line 1917 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       able  expansion,  command  substitution,  and quote removal.  The result is[m
+[20;1H[K[7m Manual page bash(1) line 1916 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       and are removed.  All tokens in the expression undergo parameter and  vari‐[m
+[20;1H[K[7m Manual page bash(1) line 1915 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       quotes, but double quote characters in [4mexpression[24m are not treated specially[m
+[20;1H[K[7m Manual page bash(1) line 1914 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       The [4mexpression[24m undergoes the same expansions as if it  were  within  double[m
+[20;1H[K[7m Manual page bash(1) line 1913 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page bash(1) line 1912 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       versions of bash.[m
+[20;1H[K[7m Manual page bash(1) line 1911 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       The  old format [1m$[[0m[4mexpression[24m[1m][0m is deprecated and will be removed in upcoming[m
+[20;1H[K[7m Manual page bash(1) line 1910 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page bash(1) line 1909 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              [1m$(([0m[4mexpression[24m[1m))[0m[m
+[20;1H[K[7m Manual page bash(1) line 1908 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page bash(1) line 1907 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       the substitution of the result.  The format for arithmetic expansion is:[m
+[20;1H[K[7m Manual page bash(1) line 1906 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       Arithmetic expansion allows the evaluation of an arithmetic expression  and[m
+[20;1H[K[7m Manual page bash(1) line 1905 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM   [1m[7mArithmetic[27m[0m[7m [27m[1m[7mExpansion[27m[0m[m
+[20;1H[K[7m Manual page bash(1) line 1904 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[20;1H[K[7m Manual page bash(1) line 1903 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       dicating failure and no substitution occurs.[m
+[7m Manual page bash(1) line 1904 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page bash(1) line 1905 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mProcess[0m [1mSubstitution[0m[m
+[7m Manual page bash(1) line 1906 (press h for help or q to quit)[27m[K[K/[KAA[KRR[KII[KTT[KHH[KMM[KEE[KTT[KII[KCC[K  [KEE[KVV[KAA[KLL[KUU[KAA[KTT[KII[KOO[KNN[K[1;1H       the substitution of the result.  The format for arithmetic expansion is:[m
+[2;1H[m
+[3;1H              [1m$(([0m[4mexpression[24m[1m))[0m[m
+[4;1H[m
+[5;1H       The  old format [1m$[[0m[4mexpression[24m[1m][0m is deprecated and will be removed in upcoming[m
+[6;1H       versions of bash.[m
+[7;1H[m
+[8;1H       The [4mexpression[24m undergoes the same expansions as if it  were  within  double[m
+[9;1H       quotes, but double quote characters in [4mexpression[24m are not treated specially[m
+[10;1H       and are removed.  All tokens in the expression undergo parameter and  vari‐[m
+[11;1H       able  expansion,  command  substitution,  and quote removal.  The result is[m
+[12;1H       treated as the arithmetic expression to be  evaluated.   Arithmetic  expan‐[m
+[13;1H       sions may be nested.[m
+[14;1H[m
+[15;1H       The  evaluation  is  performed  according  to  the rules listed below under[m
+[16;1H       [1mARITHMETIC[0m [1mEVALUATION[0m.  If [4mexpression[24m is invalid, [1mbash[0m prints a message in‐[m
+[17;1H       dicating failure and no substitution occurs.[m
+[18;1H[m
+[19;1H   [1mProcess[0m [1mSubstitution[0m[m
+[20;1H[1;1H       the substitution of the result.  The format for arithmetic expansion is:[m
+[2;1H[m
+[3;1H              [1m$(([0m[4mexpression[24m[1m))[0m[m
+[4;1H[m
+[5;1H       The  old format [1m$[[0m[4mexpression[24m[1m][0m is deprecated and will be removed in upcoming[m
+[6;1H       versions of bash.[m
+[7;1H[m
+[8;1H       The [4mexpression[24m undergoes the same expansions as if it  were  within  double[m
+[9;1H       quotes, but double quote characters in [4mexpression[24m are not treated specially[m
+[10;1H       and are removed.  All tokens in the expression undergo parameter and  vari‐[m
+[11;1H       able  expansion,  command  substitution,  and quote removal.  The result is[m
+[12;1H       treated as the arithmetic expression to be  evaluated.   Arithmetic  expan‐[m
+[13;1H       sions may be nested.[m
+[14;1H[m
+[15;1H       The  evaluation  is  performed  according  to  the rules listed below under[m
+[16;1H       [1m[7mARITHMETIC[27m[0m[7m [27m[1m[7mEVALUATION[27m[0m.  If [4mexpression[24m is invalid, [1mbash[0m prints a message in‐[m
+[17;1H       dicating failure and no substitution occurs.[m
+[18;1H[m
+[19;1H   [1mProcess[0m [1mSubstitution[0m[m
+[20;1H       [4mProcess[24m  [4msubstitution[24m  allows a process's input or output to be referred to[m
+       using a filename.  It takes the form of [1m<([0m[4mlist[24m[1m)[0m or  [1m>([0m[4mlist[24m[1m)[0m.   The  process[m
+       [4mlist[24m  is run asynchronously, and its input or output appears as a filename.[m
+       This filename is passed as an argument to the current command as the result[m
+       of  the  expansion.   If the [1m>([0m[4mlist[24m[1m)[0m form is used, writing to the file will[m
+       provide input for [4mlist[24m.  If the [1m<([0m[4mlist[24m[1m)[0m form is used, the file passed as an[m
+       argument should be read to obtain the output of [4mlist[24m.  Process substitution[m
+       is supported on systems that support named pipes  ([4mFIFOs[24m)  or  the  [1m/dev/fd[0m[m
+       method of naming open files.[m
+[m
+       When  available,  process substitution is performed simultaneously with pa‐[m
+       rameter and variable expansion, command substitution, and arithmetic expan‐[m
+       sion.[m
+[m
+   [1mWord[0m [1mSplitting[0m[m
+[7m Manual page bash(1) line 1921 (press h for help or q to quit)[27m[K[K/[K...skipping...
+[1m[7mARITHMETIC[27m[0m[7m [27m[1m[7mEVALUATION[27m[0m[m
+       The shell allows arithmetic expressions to be evaluated, under certain cir‐[m
+       cumstances  (see the [1mlet[0m and [1mdeclare[0m builtin commands, the [1m(([0m compound com‐[m
+       mand, and [1mArithmetic[0m [1mExpansion[0m).  Evaluation is done in  fixed-width  inte‐[m
+       gers  with  no  check  for  overflow,  though  division by 0 is trapped and[m
+       flagged as an error.  The operators and  their  precedence,  associativity,[m
+       and values are the same as in the C language.  The following list of opera‐[m
+       tors is grouped into levels of equal-precedence operators.  The levels  are[m
+       listed in order of decreasing precedence.[m
+[m
+       [4mid[24m[1m++[0m [4mid[24m[1m--[0m[m
+              variable post-increment and post-decrement[m
+       [1m-[0m [1m+[0m    unary minus and plus[m
+       [1m++[0m[4mid[24m [1m--[0m[4mid[24m[m
+              variable pre-increment and pre-decrement[m
+       [1m![0m [1m~[0m    logical and bitwise negation[m
+       [1m**[0m     exponentiation[m
+       [1m*[0m [1m/[0m [1m%[0m  multiplication, division, remainder[m
+       [1m+[0m [1m-[0m    addition, subtraction[m
+[7m Manual page bash(1) line 2464 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m<<[0m [1m>>[0m  left and right bitwise shifts[m
+[7m Manual page bash(1) line 2465 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m<=[0m [1m>=[0m [1m<[0m [1m>[0m[m
+[7m Manual page bash(1) line 2466 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              comparison[m
+[7m Manual page bash(1) line 2467 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m==[0m [1m!=[0m  equality and inequality[m
+[7m Manual page bash(1) line 2468 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m&[0m      bitwise AND[m
+[7m Manual page bash(1) line 2469 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m^[0m      bitwise exclusive OR[m
+[7m Manual page bash(1) line 2470 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m|[0m      bitwise OR[m
+[7m Manual page bash(1) line 2471 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m&&[0m     logical AND[m
+[7m Manual page bash(1) line 2472 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m||[0m     logical OR[m
+[7m Manual page bash(1) line 2473 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mexpr[24m[1m?[0m[4mexpr[24m[1m:[0m[4mexpr[24m[m
+[7m Manual page bash(1) line 2474 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              conditional operator[m
+[7m Manual page bash(1) line 2475 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m=[0m [1m*=[0m [1m/=[0m [1m%=[0m [1m+=[0m [1m-=[0m [1m<<=[0m [1m>>=[0m [1m&=[0m [1m^=[0m [1m|=[0m[m
+[7m Manual page bash(1) line 2476 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              assignment[m
+[7m Manual page bash(1) line 2477 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mexpr1[24m [1m,[0m [4mexpr2[24m[m
+[7m Manual page bash(1) line 2478 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              comma[m
+[7m Manual page bash(1) line 2479 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mITINF25/lektion8/2.1 brace_expansion/realis
