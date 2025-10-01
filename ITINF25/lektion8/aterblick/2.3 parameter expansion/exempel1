@@ -1,0 +1,19 @@
+#!/bin/bash
+
+BIL=Nissan
+
+echo $BIL # blir echo Nissan --> skriver ut på stdout: Nissan
+
+echo ${BIL} # blir echo Nissan --> skriver ut på stdout: Nissan
+
+# Stora bokstäver --> NISSAN
+echo ${BIL^^}
+
+# Längd
+echo Bilmärket ${BIL}s längd är ${#BIL}
+
+# Se tecknen från position 2
+echo Delen blev: ${BIL:2}
+
+# Tre tecken från från position 2
+echo Delen blev: ${BIL:2:3}

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+F="firstname lastname"
+
+# Bugg! Blir två filer, pga word splitting
+rm $F
+# Korrekt!
+rm "$F"
