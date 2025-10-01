@@ -1060,4 +1060,338 @@ enable wait
 [11;1H       [1mless[0m [1m[-[+]aABcCdeEfFgGiIJKLmMnNqQrRsSuUVwWX~][0m[m
 [12;1H            [1m[-b[0m [4mspace[24m[1m][0m [1m[-h[0m [4mlines[24m[1m][0m [1m[-j[0m [4mline[24m[1m][0m [1m[-k[0m [4mkeyfile[24m[1m][0m[m
 [13;1H            [1m[-{oO}[0m [4mlogfile[24m[1m][0m [1m[-p[0m [4mpattern[24m[1m][0m [1m[-P[0m [4mprompt[24m[1m][0m [1m[-t[0m [4mtag[24m[1m][0m[m
-[14;1H            [1m[-T[0m [4mtagsfile[24m[1m][0m [1m[-x[0m [4mtab[24m[1m,...][0m 
+[14;1H            [1m[-T[0m [4mtagsfile[24m[1m][0m [1m[-x[0m [4mtab[24m[1m,...][0m [1m[-y[0m [4mlines[24m[1m][0m [1m[-[z][0m [4mlines[24m[1m][0m[m
+[15;1H            [1m[-#[0m [4mshift[24m[1m][0m [1m[+[+][0m[4mcmd[24m[1m][0m [1m[--][0m [1m[[0m[4mfilename[24m[1m]...[0m[m
+[16;1H[K[7m Manual page less(1) line 1 (press h for help or q to quit)[27m[K[K/[K...skipping...
+              EDITOR  is  defined.   See also the discussion of [7mLESS[27mEDIT under the[m
+              section on PROMPTS below.[m
+[m
+       ! shell-command[m
+              Invokes a shell to run the shell-command given.  A percent sign  (%)[m
+              in the command is replaced by the name of the current file.  A pound[m
+              sign (#) is replaced by the name of the  previously  examined  file.[m
+              "!!" repeats the last shell command.  "!" with no shell command sim‐[m
+              ply invokes a shell.  On Unix systems, the shell is taken  from  the[m
+              environment variable SHELL, or defaults to "sh".  On MS-DOS and OS/2[m
+              systems, the shell is the normal command processor.[m
+[m
+       | <m> shell-command[m
+              <m> represents any mark letter.  Pipes a section of the  input  file[m
+              to  the given shell command.  The section of the file to be piped is[m
+[7m Manual page less(1) line 404 (press h for help or q to quit)[27m[K[K/[K...skipping...
+       Options are also taken from the environment variable "[7mLESS[27m".  For  example,[m
+       to  avoid  typing  "less -options ..." each time [4mless[24m is invoked, you might[m
+       tell [4mcsh[24m:[m
+[m
+       setenv [7mLESS[27m "-options"[m
+[m
+       or if you use [4msh[24m:[m
+[m
+       [7mLESS[27m="-options"; export [7mLESS[27m[m
+[m
+       On MS-DOS, you don't need the quotes, but you should  replace  any  percent[m
+       signs in the options string by double percent signs.[m
+[m
+       The environment variable is parsed before the command line, so command line[m
+       options override the [7mLESS[27m environment variable.  If an  option  appears  in[m
+[7m Manual page less(1) line 443 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mITINF25/lektion9
+(B[m$ [H[2J[94mITINF25/lektion9
+(B[m$ man bash
+[?2004l[?1049h[22;0;0t[?1h=BASH(1)                       General Commands Manual                      BASH(1)[m
+[m
+[1mNAME[0m[m
+       bash - GNU Bourne-Again SHell[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mbash[0m [options] [command_string | file][m
+[m
+[1mCOPYRIGHT[0m[m
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mBash[0m  is  an  [1msh[0m-compatible command language interpreter that executes com‐[m
+       mands read from the standard input or from a file.  [1mBash[0m also  incorporates[m
+       useful features from the [4mKorn[24m and [4mC[24m shells ([1mksh[0m and [1mcsh[0m).[m
+[7m Manual page bash(1) line 1 (press h for help or q to quit)[27m[K[K-[K[7m Manual page bash(1) line 1 (press h for help or q to quit)[27m[K[K/[Kpp[Kaa[Krr[Kaa[Kmm[Kee[Ktt[Kee[Krr[K  [Kee[Kxx[Kpp[Kaa[Knn[Kss[Kii[Koo[Knn[K[1;1HBASH(1)                       General Commands Manual                      BASH(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       bash - GNU Bourne-Again SHell[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mbash[0m [options] [command_string | file][m
+[8;1H[m
+[9;1H[1mCOPYRIGHT[0m[m
+[10;1H       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.[m
+[11;1H[m
+[12;1H[1mDESCRIPTION[0m[m
+[13;1H       [1mBash[0m  is  an  [1msh[0m-compatible command language interpreter that executes com‐[m
+[14;1H       mands read from the standard input or from a file.  [1mBash[0m also  incorporates[m
+[15;1H       useful features from the [4mKorn[24m and [4mC[24m shells ([1mksh[0m and [1mcsh[0m).[m
+[16;1H[1;1HBASH(1)                       General Commands Manual                      BASH(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       bash - GNU Bourne-Again SHell[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mbash[0m [options] [command_string | file][m
+[8;1H[m
+[9;1H[1mCOPYRIGHT[0m[m
+[10;1H       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.[m
+[11;1H[m
+[12;1H[1mDESCRIPTION[0m[m
+[13;1H       [1mBash[0m  is  an  [1msh[0m-compatible command language interpreter that executes com‐[m
+[14;1H       mands read from the standard input or from a file.  [1mBash[0m also  incorporates[m
+[15;1H       useful features from the [4mKorn[24m and [4mC[24m shells ([1mksh[0m and [1mcsh[0m).[m
+[16;1H...skipping...
+       such, and to prevent [7mparameter expansion[27m.[m
+[m
+       Each of the [4mmetacharacters[24m listed above under [1mDEFINITIONS[0m has special mean‐[m
+       ing to the shell and must be quoted if it is to represent itself.[m
+[m
+       When the command history expansion facilities are being used  (see  [1mHISTORY[0m[m
+       [1mEXPANSION[0m  below),  the  [4mhistory[24m  [4mexpansion[24m  character,  usually [1m![0m, must be[m
+       quoted to prevent history expansion.[m
+[m
+       There are three quoting mechanisms: the [4mescape[24m  [4mcharacter[24m,  single  quotes,[m
+       and double quotes.[m
+[m
+       A  non-quoted backslash ([1m\[0m) is the [4mescape[24m [4mcharacter[24m.  It preserves the lit‐[m
+       eral value of the next character that follows, with the exception of  <new‐[m
+       line>.   If  a  [1m\[0m<newline>  pair  appears,  and the backslash is not itself[m
+[7m Manual page bash(1) line 583 (press h for help or q to quit)[27m[K[K/[K...skipping...
+              [7mparameter expansion[27m, command substitution, and arithmetic  expansion[m
+              before  being interpreted as a filename.  [1mPATH[0m is not used to search[m
+              for the resultant filename.[m
+       [1mBASH_XTRACEFD[0m[m
+              If set to an integer corresponding to a valid file descriptor,  [1mbash[0m[m
+              will write the trace output generated when [4mset[24m [4m-x[24m is enabled to that[m
+              file descriptor.  The file descriptor is closed  when  [1mBASH_XTRACEFD[0m[m
+              is  unset  or  assigned a new value.  Unsetting [1mBASH_XTRACEFD[0m or as‐[m
+              signing it the empty string causes the trace output to  be  sent  to[m
+              the standard error.  Note that setting [1mBASH_XTRACEFD[0m to 2 (the stan‐[m
+              dard error file descriptor) and then unsetting it will result in the[m
+              standard error being closed.[m
+       [1mCDPATH[0m The  search path for the [1mcd[0m command.  This is a colon-separated list[m
+              of directories in which the shell looks for destination  directories[m
+              specified by the [1mcd[0m command.  A sample value is ".:~:/usr".[m
+[7m Manual page bash(1) line 1089 (press h for help or q to quit)[27m[K[K/[K...skipping...
+       pression.  To avoid conflicts with [7mparameter expansion[27m, the  string  [1m${[0m  is[m
+       not  considered  eligible for brace expansion, and inhibits brace expansion[m
+       until the closing [1m}[0m.[m
+[m
+       This construct is typically used as shorthand when the common prefix of the[m
+       strings to be generated is longer than in the above example:[m
+[m
+              mkdir /usr/local/src/bash/{old,new,dist,bugs}[m
+       or[m
+              chown root /usr/{ucb/{ex,edit},lib/{ex?.?*,how_ex}}[m
+[m
+       Brace  expansion  introduces  a slight incompatibility with historical ver‐[m
+       sions of [1msh[0m.  [1msh[0m does not treat opening or closing  braces  specially  when[m
+       they  appear as part of a word, and preserves them in the output.  [1mBash[0m re‐[m
+       moves braces from words as a consequence of brace expansion.  For  example,[m
+[7m Manual page bash(1) line 1559 (press h for help or q to quit)[27m[K[K/[K...skipping...
+   [1m[7mParameter[27m[0m[7m [27m[1m[7mExpansion[27m[0m[m
+       The `[1m$[0m' character introduces [7mparameter expansion[27m, command substitution,  or[m
+       arithmetic  expansion.   The parameter name or symbol to be expanded may be[m
+       enclosed in braces, which are optional but serve to protect the variable to[m
+       be  expanded from characters immediately following it which could be inter‐[m
+       preted as part of the name.[m
+[m
+       When braces are used, the matching ending brace is the first  `[1m}[0m'  not  es‐[m
+       caped  by a backslash or within a quoted string, and not within an embedded[m
+       arithmetic expansion, command substitution, or [7mparameter expansion[27m.[m
+[m
+       ${[4mparameter[24m}[m
+              The value of [4mparameter[24m is substituted.  The braces are required when[m
+              [4mparameter[24m  is  a  positional  parameter with more than one digit, or[m
+              when [4mparameter[24m is followed by a character which is not to be  inter‐[m
+[7m Manual page bash(1) line 1614 (press h for help or q to quit)[27m[K[K/[K              preted  as  part of its name.  The [4mparameter[24m is a shell parameter as[m
+[7m Manual page bash(1) line 1615 (press h for help or q to quit)[27m[K[K/[K              described above [1mPARAMETERS[0m) or an array reference ([1mArrays[0m).[m
+[m
+       If the first character of [4mparameter[24m is an exclamation point ([1m![0m), and [4mparam‐[24m[m
+       [4meter[24m is not a [4mnameref[24m, it introduces a level of indirection.  [1mBash[0m uses the[m
+       value formed by expanding the rest of [4mparameter[24m as the new [4mparameter[24m;  this[m
+       is  then  expanded  and  that  value  is used in the rest of the expansion,[m
+       rather than the expansion of the original [4mparameter[24m.  This is known as  [4min‐[24m[m
+       [4mdirect[24m  [4mexpansion[24m.   The value is subject to tilde expansion, parameter ex‐[m
+[7m Manual page bash(1) line 1623 (press h for help or q to quit)[27m[K[K/[K...skipping...
+       The  shell  scans the results of [7mparameter expansion[27m, command substitution,[m
+       and arithmetic expansion that did not occur within double quotes  for  [4mword[24m[m
+       [4msplitting[24m.[m
+[m
+       The  shell  treats each character of [1mIFS[0m as a delimiter, and splits the re‐[m
+       sults of the other expansions into words using these  characters  as  field[m
+       terminators.   If  [1mIFS[0m  is unset, or its value is exactly [1m<space><tab><new‐[0m[m
+       [1mline>[0m, the default, then sequences of [1m<space>[0m, [1m<tab>[0m, and [1m<newline>[0m at  the[m
+       beginning  and  end  of the results of the previous expansions are ignored,[m
+       and any sequence of [1mIFS[0m characters not at the beginning or  end  serves  to[m
+       delimit  words.   If [1mIFS[0m has a value other than the default, then sequences[m
+       of the whitespace characters [1mspace[0m, [1mtab[0m, and [1mnewline[0m are ignored at the be‐[m
+       ginning  and end of the word, as long as the whitespace character is in the[m
+       value of [1mIFS[0m (an [1mIFS[0m whitespace character).  Any character in [1mIFS[0m  that  is[m
+       not  [1mIFS[0m whitespace, along with any adjacent [1mIFS[0m whitespace characters, de‐[m
+[7m Manual page bash(1) line 1940 (press h for help or q to quit)[27m[K[K/[K...skipping...
+       Shell  variables  are allowed as operands; [7mparameter expansion[27m is performed[m
+       before the expression is evaluated.  Within an expression, shell  variables[m
+       may  also  be referenced by name without using the [7mparameter expansion[27m syn‐[m
+       tax.  A shell variable that is null or unset evaluates to 0 when referenced[m
+       by name without using the [7mparameter expansion[27m syntax.  The value of a vari‐[m
+       able is evaluated as an arithmetic expression when  it  is  referenced,  or[m
+       when a variable which has been given the [4minteger[24m attribute using [1mdeclare[0m [1m-i[0m[m
+       is assigned a value.  A null value evaluates to 0.  A shell  variable  need[m
+       not have its [4minteger[24m attribute turned on to be used in an expression.[m
+[m
+       Integer  constants  follow  the  C language definition, without suffixes or[m
+       character constants.  Constants with a leading 0 are interpreted  as  octal[m
+       numbers.   A leading 0x or 0X denotes hexadecimal.  Otherwise, numbers take[m
+       the form [[4mbase#[24m]n, where the optional [4mbase[24m is a decimal  number  between  2[m
+       and  64  representing  the arithmetic base, and [4mn[24m is a number in that base.[m
+[7m Manual page bash(1) line 2499 (press h for help or q to quit)[27m[K[K/[K       If [4mbase#[24m is omitted, then base 10 is used.  When specifying [4mn[24m,  if  a  non-[m
+       digit  is required, the digits greater than 9 are represented by the lower‐[m
+[7m Manual page bash(1) line 2501 (press h for help or q to quit)[27m[K[K/[K       case letters, the uppercase letters, @, and _, in that order.  If  [4mbase[24m  is[m
+       less  than  or equal to 36, lowercase and uppercase letters may be used in‐[m
+[7m Manual page bash(1) line 2503 (press h for help or q to quit)[27m[K[K/[K...skipping...
+              pansion, [7mparameter expansion[27m, command substitution,  arithmetic  ex‐[m
+              pansion, and quote removal before being assigned to the variable.[m
+[m
+       If  no  command  name  results, the variable assignments affect the current[m
+       shell environment.  In the case of such a command (one that  consists  only[m
+       of  assignment statements and redirections), assignment statements are per‐[m
+       formed before redirections.  Otherwise, the variables are added to the  en‐[m
+       vironment of the executed command and do not affect the current shell envi‐[m
+       ronment.  If any of the assignments attempts to assign a value to  a  read‐[m
+       only  variable, an error occurs, and the command exits with a non-zero sta‐[m
+       tus.[m
+[m
+       If no command name results, redirections are performed, but do  not  affect[m
+       the  current  shell environment.  A redirection error causes the command to[m
+       exit with a non-zero status.[m
+[7m Manual page bash(1) line 2649 (press h for help or q to quit)[27m[K[K/[K...skipping...
+       panded via [7mparameter expansion[27m, command substitution, arithmetic expansion,[m
+       and quote removal, subject to the value of the [1mpromptvars[0m shell option (see[m
+       the  description  of the [1mshopt[0m command under [1mSHELL[0m [1mBUILTIN[0m [1mCOMMANDS[0m below).[m
+       This can have unwanted side effects if escaped portions of the  string  ap‐[m
+       pear  within command substitution or contain characters special to word ex‐[m
+       pansion.[m
+[m
+[1mREADLINE[0m[m
+       This is the library that handles reading input when  using  an  interactive[m
+       shell,  unless  the  [1m--noediting[0m option is given at shell invocation.  Line[m
+       editing is also used when using the [1m-e[0m option to the [1mread[0m builtin.  By  de‐[m
+       fault, the line editing commands are similar to those of Emacs.  A vi-style[m
+       line editing interface is also available.  Line editing can be  enabled  at[m
+       any  time using the [1m-o[0m [1memacs[0m or [1m-o[0m [1mvi[0m options to the [1mset[0m builtin (see [1mSHELL[0m[m
+       [1mBUILTIN[0m [1mCOMMANDS[0m below).  To turn off line editing after the shell is  run‐[m
+[7m Manual page bash(1) line 3029 (press h for help or q to quit)[27m[K[K/[K...skipping...
+                      "@" or "*", as an error when performing [7mparameter expansion[27m.[m
+                      If expansion is attempted on an unset variable or parameter,[m
+                      the  shell prints an error message, and, if not interactive,[m
+                      exits with a non-zero status.[m
+              [1m-v[0m      Print shell input lines as they are read.[m
+              [1m-x[0m      After expanding each [4msimple[24m [4mcommand[24m, [1mfor[0m command, [1mcase[0m  com‐[m
+                      mand, [1mselect[0m command, or arithmetic [1mfor[0m command, display the[m
+                      expanded value of [1mPS4[0m, followed by the command and  its  ex‐[m
+                      panded arguments or associated word list.[m
+              [1m-B[0m      The  shell  performs  brace  expansion  (see [1mBrace[0m [1mExpansion[0m[m
+                      above).  This is on by default.[m
+              [1m-C[0m      If set, [1mbash[0m does not overwrite an existing file with the [1m>[0m,[m
+                      [1m>&[0m,  and  [1m<>[0m  redirection operators.  This may be overridden[m
+                      when creating output files by using the redirection operator[m
+                      [1m>|[0m instead of [1m>[0m.[m
+[7m Manual page bash(1) line 5488 (press h for help or q to quit)[27m[K[K/[K...skipping...
+                      pattern, as described under [1m[7mParameter[27m[0m[7m [27m[1m[7mExpansion[27m[0m above.  This[m
+                      option is enabled by default.[m
+[m
+              [1mprogcomp[0m[m
+                      If set, the programmable completion facilities (see [1mProgram‐[0m[m
+                      [1mmable[0m [1mCompletion[0m above) are enabled.  This option is enabled[m
+                      by default.[m
+[m
+              [1mprogcomp_alias[0m[m
+                      If  set, and programmable completion is enabled, [1mbash[0m treats[m
+                      a command name that doesn't have any completions as a possi‐[m
+                      ble  alias and attempts alias expansion. If it has an alias,[m
+                      [1mbash[0m attempts programmable completion using the command word[m
+                      resulting from the expanded alias.[m
+[m
+[7m Manual page bash(1) line 5833 (press h for help or q to quit)[27m[K[K/[K...skipping...
+                      If  set, prompt strings undergo [7mparameter expansion[27m, command[m
+                      substitution, arithmetic expansion, and quote removal  after[m
+                      being expanded as described in [1mPROMPTING[0m above.  This option[m
+                      is enabled by default.[m
+[m
+              [1mrestricted_shell[0m[m
+                      The shell sets this option if it is  started  in  restricted[m
+                      mode  (see  [1mRESTRICTED[0m  [1mSHELL[0m  below).  The value may not be[m
+                      changed.  This is not reset when the startup files are  exe‐[m
+                      cuted, allowing the startup files to discover whether or not[m
+                      a shell is restricted.[m
+[m
+              [1mshift_verbose[0m[m
+                      If set, the [1mshift[0m builtin prints an error message  when  the[m
+                      shift count exceeds the number of positional parameters.[m
+[7m Manual page bash(1) line 5849 (press h for help or q to quit)[27m[K[K/[K[K[7mPattern not found  (press RETURN)[27m[16;1H[K[K/[K[K[7mPattern not found  (press RETURN)[27m[16;1H[K[K[?1l>[?1049l[23;0;0t[?2004h[94mITINF25/lektion9
+(B[m$ man bas[K[K[Kless
+[?2004l[?1049h[22;0;0t[?1h=LESS(1)                       General Commands Manual                      LESS(1)[m
+[m
+[1mNAME[0m[m
+       less - opposite of more[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mless[0m [1m-?[0m[m
+       [1mless[0m [1m--help[0m[m
+       [1mless[0m [1m-V[0m[m
+       [1mless[0m [1m--version[0m[m
+       [1mless[0m [1m[-[+]aABcCdeEfFgGiIJKLmMnNqQrRsSuUVwWX~][0m[m
+            [1m[-b[0m [4mspace[24m[1m][0m [1m[-h[0m [4mlines[24m[1m][0m [1m[-j[0m [4mline[24m[1m][0m [1m[-k[0m [4mkeyfile[24m[1m][0m[m
+            [1m[-{oO}[0m [4mlogfile[24m[1m][0m [1m[-p[0m [4mpattern[24m[1m][0m [1m[-P[0m [4mprompt[24m[1m][0m [1m[-t[0m [4mtag[24m[1m][0m[m
+            [1m[-T[0m [4mtagsfile[24m[1m][0m [1m[-x[0m [4mtab[24m[1m,...][0m [1m[-y[0m [4mlines[24m[1m][0m [1m[-[z][0m [4mlines[24m[1m][0m[m
+            [1m[-#[0m [4mshift[24m[1m][0m [1m[+[+][0m[4mcmd[24m[1m][0m [1m[--][0m [1m[[0m[4mfilename[24m[1m]...[0m[m
+[7m Manual page less(1) line 1 (press h for help or q to quit)[27m[K[K-[K[7m Manual page less(1) line 1 (press h for help or q to quit)[27m[K[K/[K00[Kii[K[K[K++[K[K--[Kii[K[1;1HLESS(1)                       General Commands Manual                      LESS(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       less - opposite of more[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mless[0m [1m-?[0m[m
+[8;1H       [1mless[0m [1m--help[0m[m
+[9;1H       [1mless[0m [1m-V[0m[m
+[10;1H       [1mless[0m [1m--version[0m[m
+[11;1H       [1mless[0m [1m[-[+]aABcCdeEfFgGiIJKLmMnNqQrRsSuUVwWX~][0m[m
+[12;1H            [1m[-b[0m [4mspace[24m[1m][0m [1m[-h[0m [4mlines[24m[1m][0m [1m[-j[0m [4mline[24m[1m][0m [1m[-k[0m [4mkeyfile[24m[1m][0m[m
+[13;1H            [1m[-{oO}[0m [4mlogfile[24m[1m][0m [1m[-p[0m [4mpattern[24m[1m][0m [1m[-P[0m [4mprompt[24m[1m][0m [1m[-t[0m [4mtag[24m[1m][0m[m
+[14;1H            [1m[-T[0m [4mtagsfile[24m[1m][0m [1m[-x[0m [4mtab[24m[1m,...][0m [1m[-y[0m [4mlines[24m[1m][0m [1m[-[z][0m [4mlines[24m[1m][0m[m
+[15;1H            [1m[-#[0m [4mshift[24m[1m][0m [1m[+[+][0m[4mcmd[24m[1m][0m [1m[--][0m [1m[[0m[4mfilename[24m[1m]...[0m[m
+[16;1H[1;1HLESS(1)                       General Commands Manual                      LESS(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       less - opposite of more[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mless[0m [1m-?[0m[m
+[8;1H       [1mless[0m [1m--help[0m[m
+[9;1H       [1mless[0m [1m-V[0m[m
+[10;1H       [1mless[0m [1m--version[0m[m
+[11;1H       [1mless[0m [1m[-[+]aABcCdeEfFgGiIJKLmMnNqQrRsSuUVwWX~][0m[m
+[12;1H            [1m[-b[0m [4mspace[24m[1m][0m [1m[-h[0m [4mlines[24m[1m][0m [1m[-j[0m [4mline[24m[1m][0m [1m[-k[0m [4mkeyfile[24m[1m][0m[m
+[13;1H            [1m[-{oO}[0m [4mlogfile[24m[1m][0m [1m[-p[0m [4mpattern[24m[1m][0m [1m[-P[0m [4mprompt[24m[1m][0m [1m[-t[0m [4mtag[24m[1m][0m[m
+[14;1H            [1m[-T[0m [4mtagsfile[24m[1m][0m [1m[-x[0m [4mtab[24m[1m,...][0m [1m[-y[0m [4mlines[24m[1m][0m [1m[-[z][0m [4mlines[24m[1m][0m[m
+[15;1H            [1m[-#[0m [4mshift[24m[1m][0m [1m[+[+][0m[4mcmd[24m[1m][0m [1m[--][0m [1m[[0m[4mfilename[24m[1m]...[0m[m
+[16;1H...skipping...
+              https://docs.microsoft.com/en-us/windows/console/char[7m-i[27mnfo-str).[m
+[m
+       -e or --quit-at-eof[m
+              Causes [4mless[24m to automatically exit the second time it reaches end-of-[m
+              file.  By default, the only way to exit [4mless[24m is via the "q" command.[m
+[m
+       -E or --QUIT-AT-EOF[m
+              Causes [4mless[24m to automatically exit the first time it reaches  end-of-[m
+              file.[m
+[m
+       -f or --force[m
+              Forces non-regular files to be opened.  (A non-regular file is a di‐[m
+              rectory or a device special file.)  Also suppresses the warning mes‐[m
+              sage  when a binary file is opened.  By default, [4mless[24m will refuse to[m
+              open non-regular files.  Note that some operating systems  will  not[m
+[7m Manual page less(1) line 617 (press h for he
