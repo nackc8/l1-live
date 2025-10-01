@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+# Anta att $1 är den katalog i din hemkatalog för tillfälliga filer
+
+SOKVAG="$1" # Vi kan t.ex. skriva skrot
+
+mkdir "$HOME/$SOKVAG"
+# Sätt filer i den tillfälligt...
+
+# Städa upp
+echo rm -rf "$HOME/$SOKVAG"
