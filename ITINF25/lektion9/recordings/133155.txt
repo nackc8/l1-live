@@ -1079,4 +1079,70 @@ input:x:996:
 [9;1H           Add the user to the supplementary group(s). Use only with the[m
 [10;1H           [1m-G [22moption.[m
 [11;1H[m
-[12;1H       [1m-b[22m, [1m--badname[0m[
+[12;1H       [1m-b[22m, [1m--badname[0m[m
+[13;1H           Allow names that do not conform to standards.[m
+[14;1H[m
+[15;1H       [1m-c[22m, [1m--comment [4m[22mCOMMENT[0m[m
+[16;1H           update the comment field of the user in /etc/passwd, which is[m
+[17;1H           normally modified using the [1mchfn[22m(1) utility.[m
+[18;1H[m
+[19;1H       [1m-d[22m, [1m--home [4m[22mHOME_DIR[0m[m
+[20;1H           The user's new login directory.[m
+[21;1H[1;1H[m
+[2;1H[1mDESCRIPTION[0m[m
+[3;1H       The [1musermod [22mcommand modifies the system account files.[m
+[4;1H[m
+[5;1H[1mOPTIONS[0m[m
+[6;1H       The options which apply to the [1musermod [22mcommand are:[m
+[7;1H[m
+[8;1H       [1m-a[22m, [1m--append[0m[m
+[9;1H           Add the user to the supplementary group(s). Use only with the[m
+[10;1H           [1m[7m-G[27m[1m [22moption.[m
+[11;1H[m
+[12;1H       [1m-b[22m, [1m--badname[0m[m
+[13;1H           Allow names that do not conform to standards.[m
+[14;1H[m
+[15;1H       [1m-c[22m, [1m--comment [4m[22mCOMMENT[0m[m
+[16;1H           update the comment field of the user in /etc/passwd, which is[m
+[17;1H           normally modified using the [1mchfn[22m(1) utility.[m
+[18;1H[m
+[19;1H       [1m-d[22m, [1m--home [4m[22mHOME_DIR[0m[m
+[20;1H           The user's new login directory.[m
+[21;1H[m
+           If the [1m-m [22moption is given, the contents of the current home[m
+           directory will be moved to the new home directory, which is[m
+           created if it does not already exist. If the current home[m
+           directory does not exist the new home directory will not be[m
+           created.[m
+[m
+       [1m-e[22m, [1m--expiredate [4m[22mEXPIRE_DATE[0m[m
+           The date on which the user account will be disabled. The date[m
+[7m Manual page usermod(8) line 18/333 9% (press h for help or q to quit)[27m[K[K/[K...skipping...
+       [1m[7m-G[27m[22m, [1m--groups [4m[22mGROUP1[24m[[4m,GROUP2,...[24m[[4m,GROUPN[24m]]][m
+           A list of supplementary groups which the user is also a member[m
+           of. Each group is separated from the next by a comma, with no[m
+           intervening whitespace. The groups must exist.[m
+[m
+           If the user is currently a member of a group which is not[m
+           listed, the user will be removed from the group. This behaviour[m
+           can be changed via the [1m-a [22moption, which appends the user to the[m
+           current supplementary group list.[m
+[m
+       [1m-l[22m, [1m--login [4m[22mNEW_LOGIN[0m[m
+           The name of the user will be changed from [4mLOGIN[24m to [4mNEW_LOGIN[24m.[m
+           Nothing else is changed. In particular, the user's home[m
+           directory or mail spool should probably be renamed manually to[m
+           reflect the new login name.[m
+[m
+       [1m-L[22m, [1m--lock[0m[m
+           Lock a user's password. This puts a '!' in front of the[m
+           encrypted password, effectively disabling the password. You[m
+           can't use this option with [1m-p [22mor [1m-U[22m.[m
+[7m Manual page usermod(8) line 75/333 28% (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ sudo usermod -a -G games myrslok
+[?2004l[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ grep /et[K[K[Kmyr[Kslok
+[?2004l>^C
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ grep myslok: /etc/group
+[?2004l[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ grep myslok: /etc/group[1@r[H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ grep myrslok: /etc/group
+[?2004l[01;31m[Kmyrslok:[m[Kx:1003:
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ grep myrslok: /etc/group[1P[1P[1P[1P[1P[1P[1P[1@g[1@a[1@m[1@e[1@s
+[?2004l
