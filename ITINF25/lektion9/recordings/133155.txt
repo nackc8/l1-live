@@ -77,4 +77,176 @@ info: Adding new user `gris' to supplemental / extra groups `users' ...
 info: Adding user `gris' to group `users' ...
 [?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ sudo [K[K[K[K[Kgrep -et[K[K[K/etc/passwd[C /etc/passwdg /etc/passwdr /etc/passwdi /etc/passwds /etc/passwd: /etc/passwd
 [?2004l[01;31m[Kgris:[m[Kx:1001:1001:Herr Gris,Top floor,,,Does not eat bacon:/home/[01;31m[Kgris:[m[K/bin/bash
-[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ grep gris: /etc/passwd[C[C
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ grep gris: /etc/passwd[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@s[1@u[1@d[1@o[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[Kshadow
+[?2004lgris:$y$j9T$ePmyrCfX6sXHR49C.8z/j0$RnoKgPfkK2g0GqT25Rw5U5kva0.PZRvU4NGQV6rgdU0:20362:0:99999:7:::
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ sudo su[K[K[K[K[K gris
+[?2004lPassword: 
+[?2004h]0;gris@ubsembr: /home/kent[01;32mgris@ubsembr[00m:[01;34m/home/kent[00m$ id
+[?2004luid=1001(gris) gid=1001(gris) groups=1001(gris),100(users)
+[?2004h]0;gris@ubsembr: /home/kent[01;32mgris@ubsembr[00m:[01;34m/home/kent[00m$ cd
+[?2004l[?2004h]0;gris@ubsembr: ~[01;32mgris@ubsembr[00m:[01;34m~[00m$ [H[2J]0;gris@ubsembr: ~[01;32mgris@ubsembr[00m:[01;34m~[00m$ pwd
+[?2004l/home/gris
+[?2004h]0;gris@ubsembr: ~[01;32mgris@ubsembr[00m:[01;34m~[00m$ exit
+[?2004lexit
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ eit[K[Kxit
+[?2004llogout
+Connection to localhost closed.
+[?2004h[94mITINF25/lektion9
+(B[m$ ssh -p 10022 localhost
+[?2004lWarning: Permanently added '[localhost]:10022' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-84-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Wed Oct  1 11:38:38 AM UTC 2025
+
+  System load:  0.08               Processes:               116
+  Usage of /:   34.8% of 16.07GB   Users logged in:         0
+  Memory usage: 7%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanderat Säkerhetsunderhåll (ESM) för Applications är ej aktiverat.
+
+174 uppdateringar kan verkställas omedelbart.
+1 av dessa uppdateringar är en vanlig säkerhetsuppdatering.
+För att se dessa ytterligare uppdateringar, kör: apt list --upgradable
+
+Aktivera ESM Apps för att få ytterligare framtida säkerhetsuppdateringar.
+Se https://ubuntu.com/esm eller kör: sudo pro status
+
+
+1 updates could not be installed automatically. For more details,
+see /var/log/unattended-upgrades/unattended-upgrades.log
+
+Last login: Wed Oct  1 11:31:58 2025 from 10.0.2.2
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ sudo [K[K[K[K[Kman useradd
+[?2004l[?1049h[22;0;0t[?1h=[4mUSERADD[24m(8)              System Management Commands              [4mUSERADD[24m(8)[m
+[m
+[1mNAME[0m[m
+       useradd - create a new user or update default new user information[m
+[m
+[1mSYNOPSIS[0m[m
+[m
+       [1museradd [22m[[4moptions[24m] [4mLOGIN[0m[m
+[m
+       [1museradd [22m-D[m
+[m
+       [1museradd [22m-D [[4moptions[24m][m
+[m
+[1mDESCRIPTION[0m[m
+       [1museradd [22mis a low level utility for adding users. On Debian,[m
+       administrators should usually use [1madduser[22m(8) instead.[m
+[m
+       When invoked without the [1m-D [22moption, the [1museradd [22mcommand creates a[m
+[7m Manual page useradd(8) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       new user account using the values specified on the command line[m
+[7m Manual page useradd(8) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       plus the default values from the system. Depending on command line[m
+[7m Manual page useradd(8) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       options, the [1museradd [22mcommand will update system files and may also[m
+[7m Manual page useradd(8) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       create the new user's home directory and copy initial files.[m
+[7m Manual page useradd(8) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page useradd(8) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       By default, a group will also be created for the new user (see [1m-g[22m,[m
+[7m Manual page useradd(8) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-N[22m, [1m-U[22m, and [1mUSERGROUPS_ENAB[22m).[m
+[7m Manual page useradd(8) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page useradd(8) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mOPTIONS[0m[m
+[7m Manual page useradd(8) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The options which apply to the [1museradd [22mcommand are:[m
+[7m Manual page useradd(8) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page useradd(8) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--badname[0m[m
+[7m Manual page useradd(8) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Allow names that do not conform to standards.[m
+[7m Manual page useradd(8) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page useradd(8) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-b[22m, [1m--base-dir [4m[22mBASE_DIR[0m[m
+[7m Manual page useradd(8) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           The default base directory for the system if [1m-d [4m[22mHOME_DIR[24m is not[m
+[7m Manual page useradd(8) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           specified.  [4mBASE_DIR[24m is concatenated with the account name to[m
+[7m Manual page useradd(8) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           define the home directory.[m
+[7m Manual page useradd(8) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page useradd(8) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           If this option is not specified, [1museradd [22mwill use the base[m
+[7m Manual page useradd(8) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           directory specified by the [1mHOME [22mvariable in[m
+[7m Manual page useradd(8) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           /etc/default/useradd, or /home by default.[m
+[7m Manual page useradd(8) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page useradd(8) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-c[22m, [1m--comment [4m[22mCOMMENT[0m[m
+[7m Manual page useradd(8) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Any text string. It is generally a short description of the[m
+[7m Manual page useradd(8) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           account, and is currently used as the field for the user's full[m
+[7m Manual page useradd(8) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           name.[m
+[7m Manual page useradd(8) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page useradd(8) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-d[22m, [1m--home-dir [4m[22mHOME_DIR[0m[m
+[7m Manual page useradd(8) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           The new user will be created using [4mHOME_DIR[24m as the value for[m
+[7m Manual page useradd(8) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           the user's login directory. The default is to append the [4mLOGIN[0m[m
+[7m Manual page useradd(8) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           name to [4mBASE_DIR[24m and use that as the login directory name. If[m
+[7m Manual page useradd(8) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           the directory [4mHOME_DIR[24m does not exist, then it will be created[m
+[7m Manual page useradd(8) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           unless the [1m-M [22moption is specified.[m
+[7m Manual page useradd(8) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page useradd(8) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-D[22m, [1m--defaults[0m[m
+[7m Manual page useradd(8) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           See below, the subsection "Changing the default values".[m
+[7m Manual page useradd(8) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page useradd(8) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-e[22m, [1m--expiredate [4m[22mEXPIRE_DATE[0m[m
+[7m Manual page useradd(8) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           The date on which the user account will be disabled. The date[m
+[7m Manual page useradd(8) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           is specified in the format [4mYYYY-MM-DD[24m.[m
+[7m Manual page useradd(8) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page useradd(8) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           If not specified, [1museradd [22mwill use the default expiry date[m
+[7m Manual page useradd(8) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           specified by the [1mEXPIRE [22mvariable in /etc/default/useradd, or an[m
+[7m Manual page useradd(8) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           empty string (no expiry) by default.[m
+[7m Manual page useradd(8) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page useradd(8) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-f[22m, [1m--inactive [4m[22mINACTIVE[0m[m
+[7m Manual page useradd(8) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           defines the number of days after the password exceeded its[m
+[7m Manual page useradd(8) line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           maximum age where the user is expected to replace this[m
+[7m Manual page useradd(8) line 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           password. The value is stored in the shadow password file. An[m
+[7m Manual page useradd(8) line 51 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           input of 0 will disable an expired password with no delay. An[m
+[7m Manual page useradd(8) line 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           input of -1 will blank the respective field in the shadow[m
+[7m Manual page useradd(8) line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           password file. See [1mshadow[22m(5)for more information.[m
+[7m Manual page useradd(8) line 54 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page useradd(8) line 55 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           If not specified, [1museradd [22mwill use the default inactivity[m
+[7m Manual page useradd(8) line 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           period specified by the [1mINACTIVE [22mvariable in[m
+[7m Manual page useradd(8) line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           /etc/default/useradd, or -1 by default.[m
+[7m Manual page useradd(8) line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page useradd(8) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-F[22m, [1m--add-subids-for-system[0m[m
+[7m Manual page useradd(8) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Update /etc/subuid and /etc/subgid even when creating a system[m
+[7m Manual page useradd(8) line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           account with [1m-r [22moption.[m
+[7m Manual page useradd(8) line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page useradd(8) line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-g[22m, [1m--gid [4m[22mGROUP[0m[m
+[7m Manual page useradd(8) line 64 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           The name or the number of the user's primary group. The group[m
+[7m Manual page useradd(8) line 65 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           name must exist. A group number must refer to an already[m
+[7m Manual page useradd(8) line 66 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           existing group.[m
+[7m Manual page useradd(8) line 67 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page useradd(8) line 68 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           If not specified, the behavior of [1museradd [22mwill depend on the[m
+[7m Manual page useradd(8) line 69 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mUSERGROUPS_ENAB [22mvariable in /etc/login.defs. If this variable[m
+[7m Manual page useradd(8) line 70 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           is set to [4myes[24m (or [1m-U/--user-group [22mis specified on the command[m
+[7m Manual page useradd(8) line 71 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           line), a group will be created for the user, with the same name[m
+[7m Manual page useradd(8) line 72 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           as her loginname. If the variable is set to [4mno[24m (or[m
+[7m Manual page useradd(8) line 73 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1m-N/--no-user-group [22mis specified on the command line), useradd[m
+[7m Manual page useradd(8) line 74 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           will set the primary group of the new user to the value[m
+[7m Manual page useradd(8) line 75 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           specified by the [1mGROUP [22mvariable in /etc/default/useradd, or 100[m
+[7m Manual page useradd(8) line 76 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           by default.[m
+[7m Manual page useradd(8) line 77 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page useradd(8) line 78 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-G[22m, [1m--groups [4m[22mGROUP1[24m[[4m,GROUP2,...[24m[[4m,GROUPN[24m]]][m
+[7m Manual page useradd(8) line 79 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           A list of supplementary groups which the user is also a member[m
+[7m Manual page useradd(8) line 80 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           of. Each group is separated from the next by a comma, with no[m
+[7m Manual page useradd(8) line 81 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           intervening whitespace. The groups are subject to the same[m
+[7m Manual page useradd(8) line 82 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           restrictions as the group given with the [1m-g [22moption. The default[m
+[7m Manual page useradd(8) line 83 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           is for the user to belong only to the initial group.[m
+[7m Manual page useradd(8) line 84 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page useradd(8) line 85 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-h[22m, [1m--help[0m[m
+[7m Manual page useradd(8) line 86 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Display help message and exit.[m
+[7m Manual page useradd(8) line 87 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page useradd(8) line 88 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-k[22m, [1m--skel [4m[22mSKEL_DIR[0m[m
+[7m Manual page useradd(8) line 89 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           The skeleton directory, which contains files and directories to[m
+[7m Manual page useradd(8) line 90 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           be copied in the user's home directory, when the home directory[m
+[7m Manual page useradd(8) line 91 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           is created by [1museradd[22m.[m
+[7m Manual page useradd(8) line 92 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page useradd(8) line 93 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           This option is only valid if the [1m-m [22m(or [1m--create-home[22m) option[m
+[7m Manual page useradd(8) line 94 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           is specified.[m
+[7m Manual page useradd(8) line 95 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page useradd(8) line 96 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           If this option is not set, the skeleton directory is defined by[m
+[7m Manual page useradd(8) line 97 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           the [1mSKEL [22mvariable in /etc/default/useradd or, by default,[m
+[7m Manual page useradd(8) line 98 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           /etc/skel.[m
+[7m Manual page useradd(8) line 99 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page useradd(8) line 100 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           If possible, the ACLs and extended attributes are copied.[m
+[7m Manual page useradd(8) line 101 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page useradd(8) line 102 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-K[22m, [1m--key [4m[22mKEY[24m=[4mVALUE[0m[m
+[7m Manual page useradd(8) line 103 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Overrides /etc/login.defs defaults ([1mUID_MIN[22m, [1mUID_MAX[22m, [1mUMASK[22m,[m
+[7m Manual page useradd(8) line 104 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mPASS_MAX_DAYS [22mand others).[m
+[7m Manual page useradd(8) line 105 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
