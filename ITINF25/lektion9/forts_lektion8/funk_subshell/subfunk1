@@ -3,7 +3,7 @@
 # Funktioner som körs i en barn-bash, en subshell, har
 # parenteser istället för måsvingar.
 
-HALSNING=Wilkommen
+# Undantag: Variabler i föräldern kopieras till barnet
 sub_greet() (
     namn1="$1"
     namn2="$2"
@@ -12,6 +12,7 @@ sub_greet() (
     echo "$HALSNING ${namn1}san och ${namn2}san"
     return 1
 )
+HALSNING=Wilkommen
 
 echo "namn1 innan: $namn1"
 
