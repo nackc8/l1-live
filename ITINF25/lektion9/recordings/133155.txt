@@ -1801,4 +1801,65 @@ kent              10.0.2.2         11:38    5:03m  0.00s   ?    sshd: kent
 :[K[K [KESCESC[KOO[KBB[K
 :[K[K [KESCESC[KOO[KBB[K#
 :[K[K [KESCESC[KOO[KBB[K# Enable logging and display of /var/log/faillog login failure info.
-:[K[K [KESCESC[KOO[KBB[K# This option conflicts with the pam
+:[K[K [KESCESC[KOO[KBB[K# This option conflicts with the pam_tally PAM module.
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[KFAILLOG_ENAB            yes
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[K# Enable display of unknown usernames when login failures are recorded.
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[K# WARNING: Unknown usernames may become world readable. 
+:[K[K [KESCESC[KOO[KBB[K# See #290803 and #298773 for details about how this could become a security
+:[K[K [KESCESC[KOO[KBB[K# concern
+:[K[K [KESCESC[KOO[KBB[KLOG_UNKFAIL_ENAB        no
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[K# Enable logging of successful logins
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[KLOG_OK_LOGINS           no
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[K# Enable "syslog" logging of su activity - in addition to sulog file logging :[K[K [KESCESC[KOO[KBB[K.
+:[K[K [KESCESC[KOO[KBB[K# SYSLOG_SG_ENAB does the same for newgrp and sg.
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[KSYSLOG_SU_ENAB          yes
+:[K[K [KESCESC[KOO[KBB[KSYSLOG_SG_ENAB          yes
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[K# If defined, all su activity is logged to this file.
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[K#SULOG_FILE     /var/log/sulog
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[K# If defined, file which maps tty line to TERM environment parameter.
+:[K[K [KESCESC[KOO[KBB[K# Each line of the file is in a format something like "vt100  tty01".
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[K#TTYTYPE_FILE   /etc/ttytype
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[K# If defined, login failures will be logged here in a utmp format
+:[K[K [KESCESC[KOO[KBB[K# last, when invoked as lastb, will read /var/log/btmp, so...
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[KFTMP_FILE       /var/log/btmp
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[K# If defined, the command name to display when running "su -".  For
+:[K[K [KESCESC[KOO[KBB[K# example, if this is defined as "su" then a "ps" will display the
+:[K[K [KESCESC[KOO[KBB[K# command is "-su".  If not defined, then "ps" would display the
+:[K[K [KESCESC[KOO[KBB[K# name of the shell actually being run, e.g. something like "-sh".
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[KSU_NAME         su
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[K# If defined, file which inhibits all the usual chatter during the login
+:[K[K [KESCESC[KOO[KBB[K# sequence.  If a full pathname, then hushed mode will be enabled if the
+:[K[K [KESCESC[KOO[KBB[K# user's name or shell are found in the file.  If not a full pathname, then
+:[K[K [KESCESC[KOO[KBB[K# hushed mode will be enabled if the file exists in the user's home director :[K[K [KESCESC[KOO[KBB[Ky.
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[KHUSHLOGIN_FILE  .hushlogin
+:[K[K [KESCESC[KOO[KBB[K#HUSHLOGIN_FILE /etc/hushlogins
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[K# *REQUIRED*  The default PATH settings, for superuser and normal users.
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCES
