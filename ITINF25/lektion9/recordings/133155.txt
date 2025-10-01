@@ -1186,4 +1186,78 @@ input:x:996:
 [7m Manual page userdel(8) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-r[22m, [1m--remove[0m[m
 [7m Manual page userdel(8) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Files in the user's home directory will be removed along with[m
 [7m Manual page userdel(8) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           the home directory itself and the user's mail spool. Files[m
-[7m Manual page userdel(8) line 20 (press h for help or q to quit)[27m[K[
+[7m Manual page userdel(8) line 20 (press h for help or q to quit)[27m[K[K           located in other file systems will have to be searched for and[m
+           deleted manually.[m
+[m
+           The mail spool is defined by the [1mMAIL_DIR [22mvariable in the[m
+           login.defs file.[m
+[m
+       [1m-R[22m, [1m--root [4m[22mCHROOT_DIR[0m[m
+           Apply changes in the [4mCHROOT_DIR[24m directory and use the[m
+           configuration files from the [4mCHROOT_DIR[24m directory. Only[m
+           absolute paths are supported.[m
+[m
+       [1m-P[22m, [1m--prefix [4m[22mPREFIX_DIR[0m[m
+           Apply changes in the [4mPREFIX_DIR[24m directory and use the[m
+           configuration files from the [4mPREFIX_DIR[24m directory. This option[m
+           does not chroot and is intended for preparing a[m
+           cross-compilation target. Some limitations: NIS and LDAP[m
+           users/groups are not verified. PAM authentication is using the[m
+           host files. No SELINUX support.[m
+[m
+       [1m-Z[22m, [1m--selinux-user[0m[m
+[7m Manual page userdel(8) line 40 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ man groupmod
+[?2004l[?1049h[22;0;0t[?1h=[4mGROUPMOD[24m(8)             System Management Commands             [4mGROUPMOD[24m(8)[m
+[m
+[1mNAME[0m[m
+       groupmod - modify a group definition on the system[m
+[m
+[1mSYNOPSIS[0m[m
+[m
+       [1mgroupmod [22m[[4moptions[24m] [4mGROUP[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       The [1mgroupmod [22mcommand modifies the definition of the specified [4mGROUP[0m[m
+       by modifying the appropriate entry in the group database.[m
+[m
+[1mOPTIONS[0m[m
+       The options which apply to the [1mgroupmod [22mcommand are:[m
+[m
+       [1m-a[22m, [1m--append [4m[22mGID[0m[m
+           If group members are specified with -U, append them to the[m
+           existing member list, rather than replacing it.[m
+[m
+[7m Manual page groupmod(8) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page groupmod(8) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-g[22m, [1m--gid [4m[22mGID[0m[m
+[7m Manual page groupmod(8) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[4mGROUPMOD[24m(8)             System Management Commands             [4mGROUPMOD[24m(8)[m
+[21;1H[K[7m Manual page groupmod(8) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page groupmod(8) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page groupmod(8) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page groupmod(8) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page groupmod(8) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page groupmod(8) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page groupmod(8) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-g[22m, [1m--gid [4m[22mGID[0m[m
+[7m Manual page groupmod(8) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           The group ID of the given [4mGROUP[24m will be changed to [4mGID[24m.[m
+[7m Manual page groupmod(8) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page groupmod(8) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           The value of [4mGID[24m must be a non-negative decimal integer. This[m
+[7m Manual page groupmod(8) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           value must be unique, unless the [1m-o [22moption is used.[m
+[7m Manual page groupmod(8) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page groupmod(8) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Users who use the group as primary group will be updated to[m
+[7m Manual page groupmod(8) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           keep the group as their primary group.[m
+[7m Manual page groupmod(8) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page groupmod(8) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Any files that have the old group ID and must continue to[m
+[7m Manual page groupmod(8) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           belong to [4mGROUP[24m, must have their group ID changed manually.[m
+[7m Manual page groupmod(8) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page groupmod(8) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           No checks will be performed with regard to the [1mGID_MIN[22m,[m
+[7m Manual page groupmod(8) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mGID_MAX[22m, [1mSYS_GID_MIN[22m, or [1mSYS_GID_MAX [22mfrom /etc/login.defs.[m
+[7m Manual page groupmod(8) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page groupmod(8) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-h[22m, [1m--help[0m[m
+[7m Manual page groupmod(8) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Display help message and exit.[m
+[7m Manual page groupmod(8) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page groupmod(8) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-n[22m, [1m--new-name [4m[22mNEW_GROUP[0m[m
+[7m Manual page groupmod(8) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           The name of the group will be changed from [4mGROUP[24m to [4mNEW_GROUP[0m[m
+[7m Manual page groupmod(8) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           name.[m
+[7m Manual page groupmod(8) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page groupmod(8) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-o[22m, [1m--non-unique[0m[m
+[7m Manual page groupmod(8) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           When used with the [1m-g [22moption, allow to change the group [4mGID[24m to[m
+[7m Manual page groupmod(8) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           a non-unique value.[m
+[7m Manual page groupmod(8) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page groupmod(8) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-p[22m, [1m--password [4m[22mPASSWORD[0m[m
+[7m Manual page groupmod(8) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           The encrypted password, as returned by [1mcrypt[22m(3).[m
+[7m Manual page groupmod(8) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page groupmod(8) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mNote: [22mThis option is not recommended because the password (or[m
+[7m Manual page groupmod(8) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           encrypted password) will be visible by users listing the[m
+[7m Manual 
