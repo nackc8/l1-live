@@ -1729,4 +1729,76 @@ kent              10.0.2.2         11:38    5:03m  0.00s   ?    sshd: kent
     717 ?        00:00:00 systemd-logind
     727 ?        00:00:00 udisksd
     748 ?        00:00:00 unattended-upgr
-    808 ?        00:00:00 ModemManage
+    808 ?        00:00:00 ModemManager
+    867 ?        00:00:00 rsyslogd
+    884 ?        00:00:00 cron
+    892 tty1     00:00:00 agetty
+    960 ?        00:00:00 sshd
+    964 ?        00:00:00 psimon
+    966 ?        00:00:00 systemd
+    967 ?        00:00:00 (sd-pam)
+   1122 ?        00:00:00 kworker/R-tls-s
+   1672 ?        00:00:00 upowerd
+   2235 ?        00:00:00 kworker/u6:4-events_unbound
+   2350 ?        00:00:00 kworker/u5:1-flush-252:0
+   2389 ?        00:00:00 kworker/u6:1-events_power_efficient
+   2407 ?        00:00:07 kworker/1:2-events
+   2663 ?        00:00:00 kworker/u5:3-events_unbound
+   2665 ?        00:00:00 sshd
+   2723 ?        00:00:00 sshd
+   2724 pts/0    00:00:00 bash
+   2931 ?        00:00:01 kworker/0:1-events
+   3182 ?        00:00:00 kworker/u5:2-writeback
+   3188 ?        00:00:00 kworker/0:0-cgroup_destroy
+   3272 ?        00:00:00 kworker/u6:0-events_unbound
+   3436 ?        00:00:00 kworker/1:3-events
+   3455 ?        00:00:00 kworker/u6:2-events_power_efficient
+   3540 pts/0    00:00:00 ps
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ ps -e --user kent[1P[1P[C[1P[H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ ps --user kent
+[?2004l    PID TTY          TIME CMD
+    966 ?        00:00:00 systemd
+    967 ?        00:00:00 (sd-pam)
+   2723 ?        00:00:00 sshd
+   2724 pts/0    00:00:00 bash
+   3541 pts/0    00:00:00 ps
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ sudo le[K[K[K[K[K[K[Kless /etc/login.defs [H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ less /etc/login.defs 
+[?2004l[?1049h[22;0;0t[?1h=#
+# /etc/login.defs - Configuration control definitions for the login package.
+#
+# Three items must be defined:  MAIL_DIR, ENV_SUPATH, and ENV_PATH.
+# If unspecified, some arbitrary (and possibly incorrect) value will
+# be assumed.  All other items are optional - if not specified then
+# the described action or option will be inhibited.
+#
+# Comment lines (lines beginning with "#") and blank lines are ignored.
+#
+# Modified for Linux.  --marekm
+
+# REQUIRED for useradd/userdel/usermod
+#   Directory where mailboxes reside, _or_ name of file, relative to the
+#   home directory.  If you _do_ define MAIL_DIR and MAIL_FILE,
+#   MAIL_DIR takes precedence.
+#
+#   Essentially:
+#      - MAIL_DIR defines the location of users mail spool files
+#        (for mbox use) by appending the username to MAIL_DIR as defined
+[7m/etc/login.defs[27m[K[K [KESCESC[KOO[KBB[K#        below.
+:[K[K [KESCESC[KOO[KBB[K#      - MAIL_FILE defines the location of the users mail spool files as the
+:[K[K [KESCESC[KOO[KBB[K#        fully-qualified filename obtained by prepending the user home
+:[K[K [KESCESC[KOO[KBB[K#        directory before $MAIL_FILE
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[K# NOTE: This is no more used for setting up users MAIL environment variable
+:[K[K [KESCESC[KOO[KBB[K#       which is, starting from shadow 4.0.12-1 in Debian, entirely the
+:[K[K [KESCESC[KOO[KBB[K#       job of the pam_mail PAM modules
+:[K[K [KESCESC[KOO[KBB[K#       See default PAM configuration files provided for
+:[K[K [KESCESC[KOO[KBB[K#       login, su, etc.
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[K# This is a temporary situation: setting these variables will soon
+:[K[K [KESCESC[KOO[KBB[K# move to /etc/default/useradd and the variables will then be
+:[K[K [KESCESC[KOO[KBB[K# no more supported
+:[K[K [KESCESC[KOO[KBB[KMAIL_DIR        /var/mail
+:[K[K [KESCESC[KOO[KBB[K#MAIL_FILE      .mail
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[K# Enable logging and display of /var/log/faillog login failure info.
+:[K[K [KESCESC[KOO[KBB[K# This option conflicts with the pam
