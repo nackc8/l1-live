@@ -339,4 +339,106 @@ SISTA RADEN
       -B  the shell will perform brace expansion
       -C  If set, disallow existing regular files to be overwritten
           by redirection of output.
-      -E  If set, the ERR trap is
+      -E  If set, the ERR trap is inherited by shell functions.
+      -H  Enable ! style history substitution.  This flag is on
+          by default when the shell is interactive.
+      -P  If set, do not resolve symbolic links when executing commands
+:[K[K/[K          such as cd which change the current directory.
+      -T  If set, the DEBUG and RETURN traps are inherited by shell function s.
+      --  Assign any remaining arguments to the positional parameters.
+          If there are no remaining arguments, the positional parameters
+          are unset.
+      -   Assign any remaining arguments to the positional parameters.
+          The [7m-x[27m and -v options are turned off.
+:[K[K[?1l>[?1049l[23;0;0t[?2004h[94mITINF25/lektion9/forts_lektion8/funk_subshell
+(B[m$ cd ../she[K[K[K[K[K,[K.
+[?2004l[?2004h[94mITINF25/lektion9/forts_lektion8
+(B[m$ [H[2J[94mITINF25/lektion9/forts_lektion8
+(B[m$ ls
+[?2004lfunk_subshell
+[?2004h[94mITINF25/lektion9/forts_lektion8
+(B[m$ cd ..
+[?2004l[?2004h[94mITINF25/lektion9
+(B[m$ [H[2J[94mITINF25/lektion9
+(B[m$ ls
+[?2004laterblick     fortsattning_imorgon.txt	recordings
+beta_av_todo  forts_lektion8		shell_opts
+[?2004h[94mITINF25/lektion9
+(B[m$ cd shell_opts/
+[?2004l[?2004h[94mITINF25/lektion9/shell_opts
+(B[m$ [H[2J[94mITINF25/lektion9/shell_opts
+(B[m$ ls
+[?2004lbuggy
+[?2004h[94mITINF25/lektion9/shell_opts
+(B[m$ chmod +_[Kx buy[Kggy 
+[?2004l[?2004h[94mITINF25/lektion9/shell_opts
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mITINF25/lektion9/shell_opts
+(B[m$ ./buggy 
+[?2004lNumret är 1
+[?2004h[94mITINF25/lektion9/shell_opts
+(B[m$ ./buggy 
+[?2004l+ X=1
++ echo 'Numret är 1'
+Numret är 1
+[?2004h[94mITINF25/lektion9/shell_opts
+(B[m$ ./buggy [H[2J[94mITINF25/lektion9/shell_opts
+(B[m$ ./buggy 
+[?2004lInnan flaggan - I normalt läge
++ X=1
++ echo 'Numret är 1'
+Numret är 1
+[?2004h[94mITINF25/lektion9/shell_opts
+(B[m$ ./buggy [H[2J[94mITINF25/lektion9/shell_opts
+(B[m$ ./buggy 
+[?2004l1
+2
+3
+4
+[?2004h[94mITINF25/lektion9/shell_opts
+(B[m$ ./buggy [H[2J[94mITINF25/lektion9/shell_opts
+(B[m$ ./buggy 
+[?2004l./buggy: line 5: summa: command not found
+./buggy: line 5: summa: command not found
+./buggy: line 5: summa: command not found
+./buggy: line 5: summa: command not found
+Summa: 0
+[?2004h[94mITINF25/lektion9/shell_opts
+(B[m$ ./buggy [H[2J[94mITINF25/lektion9/shell_opts
+(B[m$ ./buggy 
+[?2004lSumma: 10
+[?2004h[94mITINF25/lektion9/shell_opts
+(B[m$ ./buggy 5[H[2J[94mITINF25/lektion9/shell_opts
+(B[m$ ./buggy 5[C
+[?2004lSumma: 10
+[?2004h[94mITINF25/lektion9/shell_opts
+(B[m$ ./buggy 5[H[2J[94mITINF25/lektion9/shell_opts
+(B[m$ ./buggy 5
+[?2004lSumma: 15
+[?2004h[94mITINF25/lektion9/shell_opts
+(B[m$ ./buggy 5[H[2J[94mITINF25/lektion9/shell_opts
+(B[m$ ./buggy 5
+[?2004lSumma: 10
+[?2004h[94mITINF25/lektion9/shell_opts
+(B[m$ bash
+[?2004l[?2004h
+[1;36mITINF25/lektion9/shell_opts[0m on [1;35m 251001[0m [1;31m[$][0m 
+[1;32m❯[0m source buggy [H[2J
+[1;36mITINF25/lektion9/shell_opts[0m on [1;35m 251001[0m [1;31m[$][0m 
+[1;32m❯[0m source buggy 
+[?2004lbash: ((: raknare < : syntax error: operand expected (error token is "< ")
+Summa: 0
+[?2004h
+[1;36mITINF25/lektion9/shell_opts[0m on [1;35m 251001[0m [1;31m[$][0m 
+[1;32m❯[0m source buggy hwhuwh[K[K[K[K[K[K[K[H[2J
+[1;36mITINF25/lektion9/shell_opts[0m on [1;35m 251001[0m [1;31m[$][0m 
+[1;32m❯[0m source buggy
+[?2004lSumma: 10
+[?2004h
+[1;36mITINF25/lektion9/shell_opts[0m on [1;35m 251001[0m [1;31m[$!][0m 
+[1;32m❯[0m ./[K[K./buggy [H[2J
+[1;36mITINF25/lektion9/shell_opts[0m on [1;35m 251001[0m [1;31m[$!][0m 
+[1;32m❯[0m ./buggy 
+[?2004l./buggy: line 7: ((: raknare < : syntax error: operand expected (error token is "< ")
+Summa: 0
+[?2004h
+[1;36mITINF25/lektion9/shell_opt
