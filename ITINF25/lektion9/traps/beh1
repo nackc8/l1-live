@@ -1,6 +1,6 @@
 #!/bin/bash
 
-trap 'rm namnfil' SIGINT
+trap 'rm namnfil; exit' SIGINT
 
 while true; do
 	read -r -p 'Namn (klar för att avbryta): ' namn
