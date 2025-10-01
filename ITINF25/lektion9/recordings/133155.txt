@@ -2384,4 +2384,107 @@ Defaults        use_pty
 :[K[K [KESCESC[KOO[KBB[K#Defaults:%sudo env_keep += "EDITOR"
 :[K[K [KESCESC[KOO[KBB[K
 :[K[K [KESCESC[KOO[KBB[K# Completely harmless preservation of a user preference.
-:[K[K [KES
+:[K[K [KESCESC[KOO[KBB[K#Defaults:%sudo env_keep += "GREP_COLOR"
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# While you shouldn't normally run git as root, you need to with etckeeper
+:[K[K [KESCESC[KOO[KBB[K#Defaults:%sudo env_keep += "GIT_AUTHOR_* GIT_COMMITTER_*"
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# Per-user preferences; root won't have sensible values for them.
+:[K[K [KESCESC[KOO[KBB[K#Defaults:%sudo env_keep += "EMAIL DEBEMAIL DEBFULLNAME"
+:[K[K
+# "sudo scp" or "sudo rsync" should be able to use your SSH agent.
+#Defaults:%sudo env_keep += "SSH_AGENT_PID SSH_AUTH_SOCK"
+
+# Ditto for GPG agent
+#Defaults:%sudo env_keep += "GPG_AGENT_INFO"
+
+# Host alias specification
+
+# User alias specification
+
+# Cmnd alias specification
+
+# User privilege specification
+root    ALL=(ALL:ALL) ALL
+
+# Members of the admin group may gain root privileges
+%admin ALL=(ALL) ALL
+
+# Allow members of group sudo to execute any command
+:[K[K [KESCESC[KOO[KBB[K%sudo   ALL=(ALL:ALL) ALL
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# See sudoers(5) for more information on "@include" directives:
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K@includedir /etc/sudoers.d
+[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KAA[K[HM# Ditto for GPG agent
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#Defaults:%sudo env_keep += "SSH_AGENT_PID SSH_AUTH_SOCK"
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM# "sudo scp" or "sudo rsync" should be able to use your SSH agent.
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#Defaults:%sudo env_keep += "EMAIL DEBEMAIL DEBFULLNAME"
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM# Per-user preferences; root won't have sensible values for them.
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#Defaults:%sudo env_keep += "GIT_AUTHOR_* GIT_COMMITTER_*"
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM# While you shouldn't normally run git as root, you need to with etckeeper
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#Defaults:%sudo env_keep += "GREP_COLOR"
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM# Completely harmless preservation of a user preference.
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#Defaults:%sudo env_keep += "EDITOR"
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM# different sudoers have their choice of editor respected.
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM# This allows running arbitrary commands, but so does ALL, and it means
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HMroxy"
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#Defaults:%sudo env_keep += "http_proxy https_proxy ftp_proxy all_proxy no_p[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM# equivalent users (group sudo)
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM# This preserves proxy settings from user environments of root
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HMDefaults        use_pty
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM# (#1011624, https://bugs.kde.org/show_bug.cgi?id=452532)
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM# This fixes CVE-2005-4890 and possibly breaks some versions of kdesu
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HMin:/sbin:/bin:/snap/bin"
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HMDefaults        secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/b[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HMDefaults        mail_badpass
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HMDefaults        env_reset
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM# See the man page for details on how to write a sudoers file.
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM# directly modifying this file.
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM# Please consider adding local content in /etc/sudoers.d/ instead of
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM# This file MUST be edited with the 'visudo' command as root.
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KBB[Kroxy"
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# This allows running arbitrary commands, but so does ALL, and it means
+:[K[K [KESCESC[KOO[KBB[K# different sudoers have their choice of editor respected.
+:[K[K [KESCESC[KOO[KBB[K#Defaults:%sudo env_keep += "EDITOR"
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# Completely harmless preservation of a user preference.
+:[K[K [KESCESC[KOO[KBB[K#Defaults:%sudo env_keep += "GREP_COLOR"
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# While you shouldn't normally run git as root, you need to with etckeeper
+:[K[K [KESCESC[KOO[KBB[K#Defaults:%sudo env_keep += "GIT_AUTHOR_* GIT_COMMITTER_*"
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# Per-user preferences; root won't have sensible values for them.
+:[K[K [KESCESC[KOO[KBB[K#Defaults:%sudo env_keep += "EMAIL DEBEMAIL DEBFULLNAME"
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# "sudo scp" or "sudo rsync" should be able to use your SSH agent.
+:[K[K [KESCESC[KOO[KBB[K#Defaults:%sudo env_keep += "SSH_AGENT_PID SSH_AUTH_SOCK"
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# Ditto for GPG agent
+:[K[K [KESCESC[KOO[KBB[K#Defaults:%sudo env_keep += "GPG_AGENT_INFO"
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# Host alias specification
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# User alias specification
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# Cmnd alias specification
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# User privilege specification
+:[K[K [KESCESC[KOO[KBB[Kroot    ALL=(ALL:ALL) ALL
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# Members of the admin group may gain root privileges
+:[K[K [KESCESC[KOO[KBB[K%admin ALL=(ALL) ALL
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K# Allow members of group sudo to execute any command
+:[K[K [KESCESC[KOO[KBB[K%sudo   ALL=(ALL:ALL) ALL
