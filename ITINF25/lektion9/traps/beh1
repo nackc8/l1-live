@@ -1,5 +1,7 @@
 #!/bin/bash
 
+trap 'rm namnfil' SIGINT
+
 while true; do
 	read -r -p 'Namn (klar för att avbryta): ' namn
 	if test "$namn" = "klar"; then
