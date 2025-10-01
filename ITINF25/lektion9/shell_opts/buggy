@@ -1,7 +1,8 @@
 #!/bin/bash
 
 summa=0
-for ((raknare = 1; raknare <= $1; raknare = raknare + 1)); do
+# Bugg! Vi vill ha med numret som anges, men vi har ett för lite
+for ((raknare = 1; raknare < $1; raknare = raknare + 1)); do
 	summa=$((summa + raknare))
 done
 
