@@ -274,4 +274,51 @@ Last login: Wed Oct  1 11:31:58 2025 from 10.0.2.2
 [7m Manual page useradd(8) line 127 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           (which can be defined with the [1m-k [22moption) will be copied to the[m
 [7m Manual page useradd(8) line 128 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           home directory.[m
 [7m Manual page useradd(8) line 129 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page useradd(8) line 130 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           By default, if this option i
+[7m Manual page useradd(8) line 130 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           By default, if this option is not specified and [1mCREATE_HOME [22mis[m
+[7m Manual page useradd(8) line 131 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           not enabled, no home directories are created.[m
+[7m Manual page useradd(8) line 132 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page useradd(8) line 133 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           The directory where the user's home directory is created must[m
+[7m Manual page useradd(8) line 134 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           exist and have proper SELinux context and permissions.[m
+[7m Manual page useradd(8) line 135 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Otherwise the user's home directory cannot be created or[m
+[7m Manual page useradd(8) line 136 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           accessed.[m
+[7m Manual page useradd(8) line 137 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page useradd(8) line 138 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-M[22m, [1m--no-create-home[0m[m
+[7m Manual page useradd(8) line 139 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ user[K[K[K[Ksudo useradd ko
+[?2004l[sudo] password for kent: 
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ (reverse-i-search)`': [Kg': su [7mg[27mrisr': su [7mgr[27mise': sudo [7mgre[27mp gris: /etc/shadow[1@p': sudo [7mgrep[27m[10P]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ sudo grep[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1@k[1@o
+[?2004lko:!:20362:0:99999:7:::
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ su ko
+[?2004lPassword: 
+su: Authentication failure
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ sudi[Ko passwd ko
+[?2004lNew password: 
+Retype new password: 
+passwd: password updated successfully
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ sudo passwd ko ko[Kdo grep ko: /etc/shadow[H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ sudo grep ko: /etc/shadow
+[?2004lko:$y$j9T$jOFb14BNOyXjZQCSr.Cfl/$SLJQWwCIHmsXHMlhBLK8olBx9n5snGaWfq3niEhgzo9:20362:0:99999:7:::
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ su
+[?2004lPassword: 
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ su ko
+[?2004lPassword: 
+$ cd
+sh: 1: cd: can't cd to /home/ko
+$ ls /home
+gris  kent
+$ exit
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ cd /home/
+[?2004l[?2004h]0;kent@ubsembr: /home[01;32mkent@ubsembr[00m:[01;34m/home[00m$ ls -l
+[?2004ltotal 8
+drwxr-x--- 2 gris gris 4096 Oct  1 11:38 [0m[01;34mgris[0m
+drwxr-x--- 6 kent kent 4096 Oct  1 11:39 [01;34mkent[0m
+[?2004h]0;kent@ubsembr: /home[01;32mkent@ubsembr[00m:[01;34m/home[00m$ mkdir[K[K[K[K[Ksudo -i
+[?2004l[?2004h]0;root@ubsembr: ~root@ubsembr:~# cd /home
+[?2004l[?2004h]0;root@ubsembr: /homeroot@ubsembr:/home# [H[2J]0;root@ubsembr: /homeroot@ubsembr:/home# ls
+[?2004l[0m[01;34mgris[0m  [01;34mkent[0m
+[?2004h]0;root@ubsembr: /homeroot@ubsembr:/home# mkdir ko
+[?2004l[?2004h]0;root@ubsembr: /homeroot@ubsembr:/home# ls -l
+[?2004ltotal 12
+drwxr-x--- 2 gris gris 4096 Oct  1 11:38 [0m[01;34mgris[0m
+drwxr-x--- 6 kent kent 4096 Oct  1 11:39 [01;34mkent[0m
+drwxr-xr-x 2 root root 4096 Oct  1 11:42 [01;34mko[0m
+[?2004h]0;root@ubsembr: /homeroot@ubsembr:/home# chmod --reference=gris ko
+[?2004l[?2004h]0;root@ubsembr: /homeroot@ubsembr:/home# chmod --reference=gris ko[C
