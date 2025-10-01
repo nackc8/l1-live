@@ -438,4 +438,549 @@ A star (*) next to a name means that the command is disabled.
  exec [-cl] [-a name] [command [argument>  true
  exit [n]                                  type [-afptP] name [name ...]
  export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgiIlnrtux] name[=value] >
- false                                     ulimit [-SHab
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPRT] [li>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS-2; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg ...]          wait [-fn] [-p var] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS-2; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+[?2004h[94mITINF25/lektion9
+(B[m$ [H[2J[94mITINF25/lektion9
+(B[m$ enable
+[?2004lenable .
+enable :
+enable [
+enable alias
+enable bg
+enable bind
+enable break
+enable builtin
+enable caller
+enable cd
+enable command
+enable compgen
+enable complete
+enable compopt
+enable continue
+enable declare
+enable dirs
+enable disown
+enable echo
+enable enable
+enable eval
+enable exec
+enable exit
+enable export
+enable false
+enable fc
+enable fg
+enable getopts
+enable hash
+enable help
+enable history
+enable jobs
+enable kill
+enable let
+enable local
+enable logout
+enable mapfile
+enable popd
+enable printf
+enable pushd
+enable pwd
+enable read
+enable readarray
+enable readonly
+enable return
+enable set
+enable shift
+enable shopt
+enable source
+enable suspend
+enable test
+enable times
+enable trap
+enable true
+enable type
+enable typeset
+enable ulimit
+enable umask
+enable unalias
+enable unset
+enable wait
+[?2004h[94mITINF25/lektion9
+(B[m$ [H[2J[94mITINF25/lektion9
+(B[m$ history
+[?2004l    7  ./read1 
+    8  ./read1 
+    9  ./read1 
+   10  echo XXX${IFS}XXX
+   11  read x1 x2 x3
+   12  echo $x1
+   13  echo $x2
+   14  echo $x3
+   15  IFS="," read x1 x2
+   16  echo $x1
+   17  echo $x2
+   18  read x1 x2
+   19  echo $x1
+   20  echo $x2
+   21  read x1 x2
+   22  echo $x1
+   23  echo $x2
+   24  read x1 x2
+   25  echo $x1
+   26  echo $x2
+   27  IFS="|" read namn1 namn2 namn3
+   28  echo $namn1 
+   29  IFS="|" read namn1 namn2 namn3
+   30  echo $namn1
+   31  echo $namn2
+   32  echo $namn3
+   33  IFS="," read namn1 namn2 namn3
+   34  echo $namn1
+   35  echo $namn2
+   36  cp read1 read3lines
+   37  code read3lines 
+   38  ./read3lines 
+   39  mv återblick_lektion5.md återblick_lektion5.txt
+   40  ./read3lines 
+   41  ./read3lines 
+   42  ./read3lines 
+   43  ./read3lines 
+   44  ./read3lines 
+   45  ./read3lines 
+   46  cp read3lines readalllines
+   47  code readalllines 
+   48  read < /dev/null 
+   49  echo $?
+   50  read x
+   51  echo $?
+   52  ./readalllines 
+   53  ./readalllines 
+   54  ./readalllines 
+   55  man bash
+   56  cd Dropbox
+   57  cd ..
+   58  ls Documents
+   59  ls bokforing
+   60  cd
+   61  exit
+   62  exit
+   63  ls Documents
+   64  ls bokforing
+   65  cd
+   66  exit
+   67  grep META linux1.md 
+   68  grep 'id:.*id:' linux2.md 
+   69  grep 'id:' linux2.md 
+   70  grep ':\' linux2.md 
+   71  grep ':\\' linux2.md 
+   72  ./addid.sh 
+   73  ./addid.sh linux2.md linux2.mdx
+   74  cp linux2.md{x,}
+   75  code questions_for_date.py 
+   76  code push 
+   77  code ../exam
+   78  nvm
+   79  ./push 
+   80  cd
+   81  exit
+   82  exit
+   83  source /shared/kent/Documents/nackademin/exams/.venv/bin/activate
+   84  grep -B 3 exam:251001 linux2.md 
+   85  grep -B 3 exam:251001 linux2.md | grep ##
+   86  grep -B 3 exam:251001 linux2.md | grep '##'
+   87  grep -B 3 exam:251001 linux2.md | grep 'poäng'
+   88  cd Documents
+   89  cd nackademin/
+   90  cd linux1/
+   91  cd ..
+   92  ls exams/
+   93  cd exams/
+   94  git status
+   95  rm x
+   96  git diff
+   97  git add .
+   98  git commit -m "Improvement Linux 2"
+   99  code .
+  100  cat questions_251001.json 
+  101  cat zipgrade_251001.csv 
+  102  cat zipgrade_251001.csv | xsel
+  103  wget https://github.com/espanso/espanso/releases/latest/download/espanso-debian-wayland-amd64.deb
+  104  sudo apt install ./espanso-debian-wayland-amd64.deb
+  105  sudo setcap "cap_dac_override+p" $(which espanso)
+  106  espanso service register
+  107  espanso start
+  108  Hi there!
+  109  espanso status
+  110  09/27/2025
+  111  nano .config/espanso/match/base.yml 
+  112  git diff
+  113  git add .
+  114  git commit -m "Improvement Linux 2"
+  115  code .
+  116  cat questions_251001.json 
+  117  cat zipgrade_251001.csv 
+  118  cat zipgrade_251001.csv | xsel
+  119  wget https://github.com/espanso/espanso/releases/latest/download/espanso-debian-wayland-amd64.deb
+  120  sudo apt install ./espanso-debian-wayland-amd64.deb
+  121  sudo setcap "cap_dac_override+p" $(which espanso)
+  122  espanso service register
+  123  espanso start
+  124  Hi there!
+  125  espanso status
+  126  09/27/2025
+  127  nano .config/espanso/match/base.yml 
+  128  cd Documents
+  129  cd nackademin/
+  130  cd ..
+  131  cd GitHub
+  132  cd nackc8/
+  133  cd existing/
+  134  echo *redo
+  135  echo *redo*d5
+  136  echo *redo*d5*
+  137  echo *redo*-d5-*
+  138  echo *redo*-d5-* | wc -l
+  139  for x in *redo*-d5-*; do echo "$x"; done | wc-l
+  140  for x in *redo*-d5-*; do echo "$x"; done | wc -l
+  141  for x in *redo*-d5-*; do echo "$x"; done
+  142  for x in *redo*-d5-*; do echo "${x%%l10-redo-d5-}"; done
+  143  for x in *redo*-d5-*; do echo "${x##l10-redo-d5-}"; done
+  144  for x in *redo*-d5-*; do u="${x##l10-redo-d5-}"; done
+  145  for x in *redo*-d5-*; do u="${x##l10-redo-d5-}"; cat $x/mail.txt; done
+  146  for x in *redo*-d5-*; do u="${x##l10-redo-d5-}"; read mail < $x/mail.txt; done
+  147  for x in *redo*-d5-*; do u="${x##l10-redo-d5-}"; read mail < $x/mail.txt; echo $u $mail; done
+  148  for x in *redo*-d5-*; do u="${x##l10-redo-d5-}"; read mail < $x/mail.txt; echo $mail $u; done
+  149  for x in *redo*-d5-*; do u="${x##l10-redo-d5-}"; read mail < $x/mail.txt; echo -e "$mail\t$u"; done
+  150  for x in *redo*-d5-*; do u="${x##l10-redo-d5-}"; read mail < $x/mail.txt; echo -e "$mail\t$u"; done | xsel
+  151  sort x
+  152  sort x | xsel
+  153  rm x
+  154  less x
+  155  for x in *redo*-d5-*; do u="${x##l10-redo-d5-}"; read mail < $x/mail.txt; echo -e "$mail\t$u"; done > x
+  156  cat x | xsel
+  157  cat x | sort
+  158  cat x | sort > y
+  159  for x in *redo*-d5-*; do u="${x##l10-redo-d5-}"; read mail < $x/mail.txt; echo -e "$mail\t$u"; done | sort > x
+  160  cat x
+  161  cat x | grep -v dinadress
+  162  cat x | grep -v dinadress > y
+  163  cat y
+  164  cat y | sel
+  165  cat y | xsel
+  166  rm x y
+  167  gh-sync-organization 
+  168  ls -1d *l11-d4*
+  169  ls -1d *l11-*-d4-*
+  170  ls -1d *l11-*-d4-* | wc -l
+  171  gh-sync-organization 
+  172  cd Documents/nackademin/linux1/l1-live/
+  173  code .
+  174  alias
+  175  vmboxmange vms
+  176  vmboxmage vms
+  177  exit
+  178  git status
+  179  alias
+  180  bash
+  181  ls
+  182  man ls
+  183  ls
+  184  alias ls="ls -Ah"
+  185  ls
+  186  ls -l
+  187  touch .jagedold
+  188  ls
+  189  history
+  190  alias ls="ls -Ah"  
+  191  man ls
+  192  alias echo="echo hej "
+  193  echo God mat
+  194  exit
+  195  cd 2.5\ arithmetic\ expansion/
+  196  ls
+  197  cp ../2.1\ brace_expansion/exempel1 .
+  198  echo PLUS $(( 2 + 3  ))
+  199  echo MULTI $(( 2 * 3 ))
+  200  echo SUBTRACTION $(( 2 - 3 ))
+  201  echo DIV_INT $(( 10 / 2 ))
+  202  echo DIV_MAYBE_FLOAT $(( 9 / 2 ))
+  203  echo DIV_MAYBE_FLOAT 9 / 2
+  204  echo DIV_MAYBE_FLOAT (( 9 / 2 ))
+  205  echo DIV_MAYBE_FLOAT $(( 9 / 2 ))
+  206  echo DIV_DECIMALS_CHOPPED_OFF $(( 9 / 2 ))
+  207  echo DIV_DECIMALS_CHOPPED_OFF $(( 5.2 / 2 ))
+  208  bc
+  209  for a in {a,u,o,å}{b,c,d,e}; do 	echo "$x"; done
+  210  for a in {a,u,o,å}{b,c,d,e}; do 	echo "$a"; done
+  211  man bash
+  212  for ((skostorlek=50; skostorlek > 10 ; skostorlek = skostorlek - 1 )); do 	echo Skostorlek $skostorlek; done
+  213  for ((skostorlek=50; skostorlek >= 10 ; skostorlek = skostorlek - 1 )); do 	echo Skostorlek $skostorlek; done
+  214  for ((skostorlek=50; skostorlek => 10 ; skostorlek = skostorlek - 1 )); do 	echo Skostorlek $skostorlek; done
+  215  cd ../
+  216  ls
+  217  cd strukturer/funktion/
+  218  ls
+  219  chmod +x exempel1 
+  220  ./exempel1 
+  221  ./exempel1 
+  222  ./exempel1 
+  223  ./exempel1 
+  224  ./exempel1 
+  225  ./exempel1 
+  226  ./exempel1 
+  227  ./exempel1 
+  228  ./exempel2
+  229  ./exempel2
+  230  ./exempel3
+  231  len
+  232  source exempel4 
+  233  is_secure_password abc
+  234  is_secure_password abcdefg
+  235  is_secure_password abcdefgh
+  236  is_secure_password hejsanhopp
+  237  source exempel4 
+  238  is_secure_password abcefgh
+  239  echo $?
+  240  is_secure_password abcdefg && echo VAD FINT
+  241  is_secure_password abcdefgh && echo VAD FINT
+  242  source exempel5
+  243  cool Hejsan
+  244  cool Hejsan
+  245  source exempel5
+  246  cool Hejsan
+  247  exit
+  248  ls ~
+  249  echo $HOME
+  250  chmod +x aterblick/2.3\ parameter\ expansion/exempel1 
+  251  aterblick/2.3\ parameter\ expansion/exempel1 
+  252  aterblick/2.3\ parameter\ expansion/exempel1 
+  253  man bash
+  254  aterblick/2.3\ parameter\ expansion/exempel1 
+  255  echo $IWEIWIWI
+  256  echo x $IWEIWIWI y
+  257  aterblick/2.3\ parameter\ expansion/exempel1 
+  258  aterblick/2.3\ parameter\ expansion/exempel1 
+  259  aterblick/2.3\ parameter\ expansion/exempel1 
+  260  cd aterblick/2.4\ command\ substitution/
+  261  ls
+  262  echo '#!/bin/bash' > exempel1 ; chmod +x exempel1
+  263  ./exempel1 
+  264  ./exempel1 
+  265  ./exempel1 
+  266  ./exempel2
+  267  ./exempel2
+  268  cd ../2.7\ word\ splitting/
+  269  ls
+  270  echo '#!/bin/bash' > exempel1 ; chmod +x exempel1
+  271  ls
+  272  touch 'firstname lastname'
+  273  ./exempel1 
+  274  ./exempel2 
+  275  ./exempel3
+  276  ./exempel4
+  277  cd ..
+  278  cd 2.8\ pathname\ expansion/
+  279  ls
+  280  echo '#!/bin/bash' > exempel1 ; chmod +x exempel1
+  281  ls
+  282  touch sol.png
+  283  touch vind.png
+  284  touch vatten.png
+  285  touch instruktion.jpg
+  286  touch instruktion2.jpg
+  287  touch instruktion3.jpg
+  288  ls
+  289  ls
+  290  ls -l sol.png 
+  291  ls -l *.png 
+  292  ls -l **.png 
+  293  ls -l *******************.png 
+  294  ls
+  295  ls *sol.png
+  296  ls
+  297  ls -l ???.png
+  298  ls -l ?*
+  299  ls -l ??*
+  300  ls -l ????*
+  301  ls -l ???????*
+  302  ls -l ????????*
+  303  ls -l
+  304  ls -l ????????*
+  305  man bash
+  306  ls
+  307  touch instruktion{1..20}.jpg
+  308  ls
+  309  ls instruktion[345].jpg
+  310  ls instruktion[!345].jpg
+  311  cd ..
+  312  ls
+  313  cd 3.\ redirections/
+  314  echo '#!/bin/bash' > exempel1 ; chmod +x exempel1
+  315  cd ..
+  316  cd 4.\ pipes/
+  317  echo '#!/bin/bash' > exempel1 ; chmod +x exempel1
+  318  cd ..
+  319  cd 3.\ redirections/
+  320  ls
+  321  code exempel1 
+  322  echo CONTENT 1>stdout1
+  323  ls
+  324  echo CONTENT >stdout2
+  325  echo EN TILL RAD >>stdout1
+  326  grep toyota bilar.txt
+  327  grep toyota bilar.txt 2>stderr1
+  328  touch bilar2.txt
+  329  nano bilar2.txt 
+  330  grep toyota bilar2.txt 2>stderr2
+  331  echo $?
+  332  grep toyota bilar.txt 2>stderr
+  333  echo $?
+  334  cp exempel1 skrivbada
+  335  code skrivbada 
+  336  ./skrivbada 
+  337  ./skrivbada >skrivbada_stdout 2>skrivbada_stderr
+  338  echo $RANDOM $RANDOM $RANDOM $RANDOM
+  339  echo $RANDOM $RANDOM $RANDOM $RANDOM | sort
+  340  man sort
+  341  echo $RANDOM $RANDOM $RANDOM $RANDOM | sort -g
+  342  echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM"
+  343  echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM" | sort
+  344  echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM" | sort -g
+  345  echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM" | sort -g | tail -n 1
+  346  echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM" | sort -g | tail -n 1
+  347  echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM" | sort -g | tail -n 1
+  348  echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM" | sort -g | tail -n 1
+  349  echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM" | sort -g | tail -n 1
+  350  echo hej | grep h
+  351  echo $?
+  352  cd ..
+  353  cd ..
+  354  cd 2.1\ brace_expansion/
+  355  man bash
+  356  echo '#!/bin/bash' > exempel1 ; chmod +x exempel1
+  357  ./exempel1 
+  358  ./exempel1 
+  359  ./exempel1 
+  360  ./exempel1 
+  361  ./exempel1 
+  362  echo x{hopp,kaka,baka}y
+  363  echo x{hopp,kaka,}y
+  364  mkdir nummerfiler
+  365  cd nummerfiler/
+  366  touch bokf20{25,26,27,28,29,30}.txt
+  367  ls
+  368  cd ..
+  369  mkdir nummerfiler2
+  370  cd nummerfiler
+  371  cd ..
+  372  cd nummerfiler2
+  373  touch -v bokf20{25..30}.txt
+  374  echo touch bokf20{25..30}.txt
+  375  cd ..
+  376  ls
+  377  mkdir gator
+  378  cd gator/
+  379  echo mjolnerbacken{1..22}
+  380  echo mjolnerbacken{1..22}{a,b}
+  381  echo "mjolnerbacken "{1..22}{a,b}
+  382  touch "mjolnerbacken "{1..22}{a,b}.txt
+  383  ls
+  384  ls
+  385  ls
+  386  cd ..
+  387  ls
+  388  mkdir realistiska_exempel
+  389  ls
+  390  cd realistiska_exempel/
+  391  ls
+  392  touch 'den har fulen har ett valdigt langt namn som ar jobbigt att skriva.txt'
+  393  ls
+  394  ls
+  395  echo mv "den har fulen{} har ett valdigt langt namn som ar jobbigt att skriva.txt"
+  396  echo mv "den har f"{u,i}"len har ett valdigt langt namn som ar jobbigt att skriva.txt"  
+  397  mv "den har f"{u,i}"len har ett valdigt langt namn som ar jobbigt att skriva.txt"  
+  398  ls
+  399  touch idhuie_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt
+  400  sudo mv idhuie_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt /var/lib/logrotate/
+  401  ls -l /var/lib/logrotate/idhuie_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt 
+  402  mv /var/lib/logrotate/{idhuie,KORREKT}_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt
+  403  sudo mv /var/lib/logrotate/{idhuie,KORREKT}_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt
+  404  ls /var/lib/logrotate/
+  405  sudo rm /var/lib/logrotate/KORREKT_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt 
+  406  echo {0,1}{0,1}{0,1}{0,1}
+  407  echo {0..9}{0..9}
+  408  for x in {0..3}; do echo Numret $x; done
+  409  echo {0..9..2}
+  410  echo {a,b,c,1..4}
+  411  echo {a,b,c,{1..4}}
+  412  man bash
+  413  echo '#!/bin/bash' > exempel1 ; chmod +x exempel1
+  414  man bash
+  415  cp exempel1 exempel2
+  416  code exempel2 
+  417  $(( 1 < 2 ))
+  418  echo $(( 1 < 2 ))
+  419  man bash
+  420  echo $(( 1 <= 2 ))
+  421  echo $?
+  422  echo $(( 2 <= 1 ))
+  423  exit
+  424  qalc
+  425  cd ..
+  426  ls
+  427  mkdir realistiska_exempel
+  428  ls
+  429  cd realistiska_exempel/
+  430  ls
+  431  touch 'den har fulen har ett valdigt langt namn som ar jobbigt att skriva.txt'
+  432  ls
+  433  ls
+  434  echo mv "den har fulen{} har ett valdigt langt namn som ar jobbigt att skriva.txt"
+  435  echo mv "den har f"{u,i}"len har ett valdigt langt namn som ar jobbigt att skriva.txt"  
+  436  mv "den har f"{u,i}"len har ett valdigt langt namn som ar jobbigt att skriva.txt"  
+  437  ls
+  438  touch idhuie_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt
+  439  sudo mv idhuie_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt /var/lib/logrotate/
+  440  ls -l /var/lib/logrotate/idhuie_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt 
+  441  mv /var/lib/logrotate/{idhuie,KORREKT}_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt
+  442  sudo mv /var/lib/logrotate/{idhuie,KORREKT}_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt
+  443  ls /var/lib/logrotate/
+  444  sudo rm /var/lib/logrotate/KORREKT_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt 
+  445  echo {0,1}{0,1}{0,1}{0,1}
+  446  echo {0..9}{0..9}
+  447  for x in {0..3}; do echo Numret $x; done
+  448  echo {0..9..2}
+  449  echo {a,b,c,1..4}
+  450  echo {a,b,c,{1..4}}
+  451  man bash
+  452  echo '#!/bin/bash' > exempel1 ; chmod +x exempel1
+  453  man bash
+  454  cp exempel1 exempel2
+  455  code exempel2 
+  456  $(( 1 < 2 ))
+  457  echo $(( 1 < 2 ))
+  458  man bash
+  459  echo $(( 1 <= 2 ))
+  460  echo $?
+  461  echo $(( 2 <= 1 ))
+  462  qalc
+  463  namn=Hejsan
+  464  echo Vaffff
+  465  echo $namn
+  466  cd /tmp/
+  467  nano skript
+  468  chmod +x skript 
+  469  skript
+  470  sed -i 's#/g#/#g' skript 
+  471  cat skript 
+  472  ./skript 
+  473  ./skript "ett langt argument" tva
+  474  ./skript ett tva
+  475  ./skript åland
+  476  ./skript svensson 
