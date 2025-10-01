@@ -1,0 +1,80 @@
+Script started on 2025-10-01 13:31:55+02:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="76" LINES="19"]
+[?2004h[94mITINF25/lektion9
+(B[m$ (reverse-i-search)`': s': ssh -p 10022 localho[7ms[27mt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs': [7mss[27mh -p 10022 localhost[1@h': [7mssh[27m[23P(B[m$ ssh
+[?2004lWarning: Permanently added '[localhost]:10022' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-84-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Wed Oct  1 11:31:58 AM UTC 2025
+
+  System load:  0.01               Processes:               118
+  Usage of /:   34.8% of 16.07GB   Users logged in:         0
+  Memory usage: 7%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanderat Säkerhetsunderhåll (ESM) för Applications är ej aktiverat.
+
+174 uppdateringar kan verkställas omedelbart.
+1 av dessa uppdateringar är en vanlig säkerhetsuppdatering.
+För att se dessa ytterligare uppdateringar, kör: apt list --upgradable
+
+Aktivera ESM Apps för att få ytterligare framtida säkerhetsuppdateringar.
+Se https://ubuntu.com/esm eller kör: sudo pro status
+
+
+1 updates could not be installed automatically. For more details,
+see /var/log/unattended-upgrades/unattended-upgrades.log
+
+Last login: Wed Oct  1 07:16:16 2025 from 10.0.2.2
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ sudo u[Kadduser gris
+[?2004l[sudo] password for kent: 
+info: Adding user `gris' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `gris' (1001) ...
+info: Adding new user `gris' (1001) with group `gris (1001)' ...
+info: Creating home directory `/home/gris' ...
+info: Copying files from `/etc/skel' ...
+New password: 
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for gris
+Enter the new value, or press ENTER for the default
+	Full Name []: Herr Gris
+	Room Number []: Högsta våningen
+	Work Phone []: 
+	Home Phone []: 
+	Other []: Äter ej bacon
+chfn: room number with non-ASCII characters: 'Högsta våningen'
+chfn: 'Äter ej bacon' contains non-ASCII characters
+Is the information correct? [Y/n] n
+Changing the user information for gris
+Enter the new value, or press ENTER for the default
+	Full Name [Herr Gris]: 
+	Room Number [Högsta våningen]: 
+	Work Phone []: 
+	Home Phone []: 
+	Other [Äter ej bacon]: 
+chfn: room number with non-ASCII characters: 'Högsta våningen'
+chfn: 'Äter ej bacon' contains non-ASCII characters
+Is the information correct? [Y/n] n
+Changing the user information for gris
+Enter the new value, or press ENTER for the default
+	Full Name [Herr Gris]: 
+	Room Number [Högsta våningen]: Hogst     Topp    floor
+	Work Phone []: 
+	Home Phone []: 
+	Other [Äter ej bacon]: Doesn  not eat bacon
+Is the information correct? [Y/n] 
+info: Adding new user `gris' to supplemental / extra groups `users' ...
+info: Adding user `gris' to group `users' ...
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ sudo [K[K[K[K[Kgrep -et[K[K[K/etc/passwd[C /etc/passwdg /etc/passwdr /etc/passwdi /etc/passwds /etc/passwd: /etc/passwd
+[?2004l[01;31m[Kgris:[m[Kx:1001:1001:Herr Gris,Top floor,,,Does not eat bacon:/home/[01;31m[Kgris:[m[K/bin/bash
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ grep gris: /etc/passwd[C[C
