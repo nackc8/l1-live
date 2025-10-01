@@ -1,0 +1,2733 @@
+Script started on 2025-10-01 13:31:55+02:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="76" LINES="19"]
+ITINF25/lektion9
+$ ssssh -p 10022 localhosh': ssh10022 localhos
+Warning: Permanently added '[localhost]:10022' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-84-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Wed Oct  1 11:31:58 AM UTC 2025
+
+  System load:  0.01               Processes:               118
+  Usage of /:   34.8% of 16.07GB   Users logged in:         0
+  Memory usage: 7%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanderat Säkerhetsunderhåll (ESM) för Applications är ej aktiverat.
+
+174 uppdateringar kan verkställas omedelbart.
+1 av dessa uppdateringar är en vanlig säkerhetsuppdatering.
+För att se dessa ytterligare uppdateringar, kör: apt list --upgradable
+
+Aktivera ESM Apps för att få ytterligare framtida säkerhetsuppdateringar.
+Se https://ubuntu.com/esm eller kör: sudo pro status
+
+
+1 updates could not be installed automatically. For more details,
+see /var/log/unattended-upgrades/unattended-upgrades.log
+
+Last login: Wed Oct  1 07:16:16 2025 from 10.0.2.2
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 0;kent@ubsembr: ~
+kent@ubsembr:~$ sudo adduser gris
+[sudo] password for kent: 
+info: Adding user `gris' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `gris' (1001) ...
+info: Adding new user `gris' (1001) with group `gris (1001)' ...
+info: Creating home directory `/home/gris' ...
+info: Copying files from `/etc/skel' ...
+New password: 
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for gris
+Enter the new value, or press ENTER for the default
+	Full Name []: Herr Gris
+	Room Number []: Högsta våningen
+	Work Phone []: 
+	Home Phone []: 
+	Other []: Äter ej bacon
+chfn: room number with non-ASCII characters: 'Högsta våningen'
+chfn: 'Äter ej bacon' contains non-ASCII characters
+Is the information correct? [Y/n] n
+Changing the user information for gris
+Enter the new value, or press ENTER for the default
+	Full Name [Herr Gris]: 
+	Room Number [Högsta våningen]: 
+	Work Phone []: 
+	Home Phone []: 
+	Other [Äter ej bacon]: 
+chfn: room number with non-ASCII characters: 'Högsta våningen'
+chfn: 'Äter ej bacon' contains non-ASCII characters
+Is the information correct? [Y/n] n
+Changing the user information for gris
+Enter the new value, or press ENTER for the default
+	Full Name [Herr Gris]: 
+	Room Number [Högsta våningen]: HogsTopp floor
+	Work Phone []: 
+	Home Phone []: 
+	Other [Äter ej bacon]: Does not eat bacon
+Is the information correct? [Y/n] 
+info: Adding new user `gris' to supplemental / extra groups `users' ...
+info: Adding user `gris' to group `users' ...
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 0;kent@ubsembr: ~
+kent@ubsembr:~$ sudo
+grep -e/etc/pas
+sw /etc/passwg /etc/passwr /etc/passwi /etc/passws /etc/passw: /etc/passw
+gris:x:1001:1001:Herr Gris,Top floor,,,Does not eat bacon:/home/gris:/bin/bash
+0;kent@ubsembr: ~
+sudo ubsembr:~$ grep gris: /etc/passwd
+
+
+
+
+
+
+shadow
+gris:$y$j9T$ePmyrCfX6sXHR49C.8z/j0$RnoKgPfkK2g0GqT25Rw5U5kva0.PZRvU4NGQV6rgdU0:20362:0:99999:7:::
+0;kent@ubsembr: ~
+kent@ubsembr:~$ sudo s gris
+Password: 
+0;gris@ubsembr: /home/kent
+gris@ubsembr:/home/kent$ id
+uid=1001(gris) gid=1001(gris) groups=1001(gris),100(users)
+0;gris@ubsembr: /home/kent
+gris@ubsembr:/home/kent$ cd
+0;gris@ubsembr: ~
+gris@ubsembr:~$ 0;gris@ubsembr: ~
+gris@ubsembr:~$ pwd
+/home/gris
+0;gris@ubsembr: ~
+gris@ubsembr:~$ exit
+exit
+0;kent@ubsembr: ~
+kent@ubsembr:~$ eixit
+logout
+Connection to localhost closed.
+ITINF25/lektion9
+$ ssh -p 10022 localhost
+Warning: Permanently added '[localhost]:10022' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-84-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Wed Oct  1 11:38:38 AM UTC 2025
+
+  System load:  0.08               Processes:               116
+  Usage of /:   34.8% of 16.07GB   Users logged in:         0
+  Memory usage: 7%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanderat Säkerhetsunderhåll (ESM) för Applications är ej aktiverat.
+
+174 uppdateringar kan verkställas omedelbart.
+1 av dessa uppdateringar är en vanlig säkerhetsuppdatering.
+För att se dessa ytterligare uppdateringar, kör: apt list --upgradable
+
+Aktivera ESM Apps för att få ytterligare framtida säkerhetsuppdateringar.
+Se https://ubuntu.com/esm eller kör: sudo pro status
+
+
+1 updates could not be installed automatically. For more details,
+see /var/log/unattended-upgrades/unattended-upgrades.log
+
+Last login: Wed Oct  1 11:31:58 2025 from 10.0.2.2
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 0;kent@ubsembr: ~
+kent@ubsembr:~$ sudo
+
+man useradd
+USERADD(8)              System Management Commands              USERADD(8)
+
+NAME
+       useradd - create a new user or update default new user information
+
+SYNOPSIS
+
+       useradd [options] LOGIN
+
+       useradd -D
+
+       useradd -D [options]
+
+DESCRIPTION
+       useradd is a low level utility for adding users. On Debian,
+       administrators should usually use adduser(8) instead.
+
+       When invoked without the -D option, the useradd command creates a
+       new user account using the values specified on the command line
+       plus the default values from the system. Depending on command line
+       options, the useradd command will update system files and may also
+       create the new user's home directory and copy initial files.
+ ESESCOBpage useradd(8) line 5 (press h for help or q to quit)
+       By default, a group will also be created for the new user (see -g,
+       -N, -U, and USERGROUPS_ENAB).s h for help or q to quit)
+ ESESCOBpage useradd(8) line 8 (press h for help or q to quit)
+OPTIONSBpage useradd(8) line 9 (press h for help or q to quit)
+       The options which apply to the useradd command are:quit)
+ ESESCOBpage useradd(8) line 11 (press h for help or q to quit)
+       --badnameradd(8) line 12 (press h for help or q to quit)
+           Allow names that do not conform to standards.o quit)
+ ESESCOBpage useradd(8) line 14 (press h for help or q to quit)
+       -b, --base-dir BASE_DIR5 (press h for help or q to quit)
+           The default base directory for the system if -d HOME_DIR is not
+           specified.  BASE_DIR is concatenated with the account name to
+           define the home directory.s h for help or q to quit)
+ ESESCOBpage useradd(8) line 19 (press h for help or q to quit)
+           If this option is not specified, useradd will use the base
+           directory specified by the HOME variable in to quit)
+           /etc/default/useradd, or /home by default.q to quit)
+ ESESCOBpage useradd(8) line 23 (press h for help or q to quit)
+       -c, --comment COMMENT 24 (press h for help or q to quit)
+           Any text string. It is generally a short description of the
+           account, and is currently used as the field for the user's full
+           name.radd(8) line 27 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 28 (press h for help or q to quit)
+       -d, --home-dir HOME_DIR9 (press h for help or q to quit)
+           The new user will be created using HOME_DIR as the value for
+           the user's login directory. The default is to append the LOGIN
+           name to BASE_DIR and use that as the login directory name. If
+           the directory HOME_DIR does not exist, then it will be created
+           unless the -M option is specified.help or q to quit)
+ ESESCOBpage useradd(8) line 35 (press h for help or q to quit)
+       -D, --defaults8) line 36 (press h for help or q to quit)
+           See below, the subsection "Changing the default values".
+ ESESCOBpage useradd(8) line 38 (press h for help or q to quit)
+       -e, --expiredate EXPIRE_DATEess h for help or q to quit)
+           The date on which the user account will be disabled. The date
+           is specified in the format YYYY-MM-DD. or q to quit)
+ ESESCOBpage useradd(8) line 42 (press h for help or q to quit)
+           If not specified, useradd will use the default expiry date
+           specified by the EXPIRE variable in /etc/default/useradd, or an
+           empty string (no expiry) by default.lp or q to quit)
+ ESESCOBpage useradd(8) line 46 (press h for help or q to quit)
+       -f, --inactive INACTIVE7 (press h for help or q to quit)
+           defines the number of days after the password exceeded its
+           maximum age where the user is expected to replace this
+           password. The value is stored in the shadow password file. An
+           input of 0 will disable an expired password with no delay. An
+           input of -1 will blank the respective field in the shadow
+           password file. See shadow(5)for more information.it)
+ ESESCOBpage useradd(8) line 54 (press h for help or q to quit)
+           If not specified, useradd will use the default inactivity
+           period specified by the INACTIVE variable into quit)
+           /etc/default/useradd, or -1 by default.or q to quit)
+ ESESCOBpage useradd(8) line 58 (press h for help or q to quit)
+       -F, --add-subids-for-systemress h for help or q to quit)
+           Update /etc/subuid and /etc/subgid even when creating a system
+           account with -r option.ress h for help or q to quit)
+ ESESCOBpage useradd(8) line 62 (press h for help or q to quit)
+       -g, --gid GROUP) line 63 (press h for help or q to quit)
+           The name or the number of the user's primary group. The group
+           name must exist. A group number must refer to an already
+           existing group.ne 66 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 67 (press h for help or q to quit)
+           If not specified, the behavior of useradd will depend on the
+           USERGROUPS_ENAB variable in /etc/login.defs. If this variable
+           is set to yes (or -U/--user-group is specified on the command
+           line), a group will be created for the user, with the same name
+           as her loginname. If the variable is set to no (ort)
+           -N/--no-user-group is specified on the command line), useradd
+           will set the primary group of the new user to the value
+           specified by the GROUP variable in /etc/default/useradd, or 100
+           by default.) line 76 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 77 (press h for help or q to quit)
+       -G, --groups GROUP1[,GROUP2,...[,GROUPN]]] or q to quit)
+           A list of supplementary groups which the user is also a member
+           of. Each group is separated from the next by a comma, with no
+           intervening whitespace. The groups are subject to the same
+           restrictions as the group given with the -g option. The default
+           is for the user to belong only to the initial group.
+ ESESCOBpage useradd(8) line 84 (press h for help or q to quit)
+       -h, --helpadd(8) line 85 (press h for help or q to quit)
+           Display help message and exit.for help or q to quit)
+ ESESCOBpage useradd(8) line 87 (press h for help or q to quit)
+       -k, --skel SKEL_DIRne 88 (press h for help or q to quit)
+           The skeleton directory, which contains files and directories to
+           be copied in the user's home directory, when the home directory
+           is created by useradd.press h for help or q to quit)
+ ESESCOBpage useradd(8) line 92 (press h for help or q to quit)
+           This option is only valid if the -m (or --create-home) option
+           is specified.line 94 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 95 (press h for help or q to quit)
+           If this option is not set, the skeleton directory is defined by
+           the SKEL variable in /etc/default/useradd or, by default,
+           /etc/skel.8) line 98 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 99 (press h for help or q to quit)
+           If possible, the ACLs and extended attributes are copied.
+ ESESCOBpage useradd(8) line 101 (press h for help or q to quit)
+       -K, --key KEY=VALUEne 102 (press h for help or q to quit)
+           Overrides /etc/login.defs defaults (UID_MIN, UID_MAX, UMASK,
+           PASS_MAX_DAYS and others).ss h for help or q to quit)
+ ESESCOBpage useradd(8) line 105 (press h for help or q to quit)
+           Example: -K PASS_MAX_DAYS =-1 can be used when creating an
+           account to turn off password aging. Multiple -K options can be
+           specified, e.g.: -K UID_MIN =100 -K  UID_MAX=499quit)
+ ESESCOBpage useradd(8) line 109 (press h for help or q to quit)
+           For the compatibility with previous Debian's useradd, the -O
+           option is also supported.ess h for help or q to quit)
+ ESESCOBpage useradd(8) line 112 (press h for help or q to quit)
+       -l, --no-log-initline 113 (press h for help or q to quit)
+           Do not add the user to the lastlog and faillog databases.
+ ESESCOBpage useradd(8) line 115 (press h for help or q to quit)
+           By default, the user's entries in the lastlog and faillog
+           databases are reset to avoid reusing the entry from a
+           previously deleted user.ress h for help or q to quit)
+ ESESCOBpage useradd(8) line 119 (press h for help or q to quit)
+           If this option is not specified, useradd will also consult the
+           variable LOG_INIT in the /etc/default/useradd if set to no the
+           user will not be added to the lastlog and faillog databases.
+ ESESCOBpage useradd(8) line 123 (press h for help or q to quit)
+       -m, --create-homeline 124 (press h for help or q to quit)
+           Create the user's home directory if it does not exist. The
+           files and directories contained in the skeleton directory
+           (which can be defined with the -k option) will be copied to the
+           home directory.ne 128 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 129 (press h for help or q to quit)
+           By default, if this option is not specified and CREATE_HOME is
+           not enabled, no home directories are created.to quit)
+ ESESCOBpage useradd(8) line 132 (press h for help or q to quit)
+           The directory where the user's home directory is created must
+           exist and have proper SELinux context and permissions.
+           Otherwise the user's home directory cannot be created or
+           accessed.(8) line 136 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 137 (press h for help or q to quit)
+       -M, --no-create-homee 138 (press h for help or q to quit)
+>0;kent@ubsembr: ~dd(8) line 139 (press h for help or q to quit)
+kent@ubsembr:~$ usesudo useradd ko
+[sudo] password for kent: 
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~)`': g': su grir': su grie': sudo grep gris: /etc/shadop': sudo grep
+kent@ubsembr:~$ sudo greko
+ko:!:20362:0:99999:7:::
+0;kent@ubsembr: ~
+kent@ubsembr:~$ su ko
+Password: 
+su: Authentication failure
+0;kent@ubsembr: ~
+kent@ubsembr:~$ sudo passwd ko
+New password: 
+Retype new password: 
+passwd: password updated successfully
+0;kent@ubsembr: ~
+kent@ubsembr:~$ sudo passwd k kodo grep ko: /etc/shadow0;kent@ubsembr: ~
+kent@ubsembr:~$ sudo grep ko: /etc/shadow
+ko:$y$j9T$jOFb14BNOyXjZQCSr.Cfl/$SLJQWwCIHmsXHMlhBLK8olBx9n5snGaWfq3niEhgzo9:20362:0:99999:7:::
+0;kent@ubsembr: ~
+kent@ubsembr:~$ su
+Password: 
+0;kent@ubsembr: ~
+kent@ubsembr:~$ su ko
+Password: 
+$ cd
+sh: 1: cd: can't cd to /home/ko
+$ ls /home
+gris  kent
+$ exit
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 0;kent@ubsembr: ~
+kent@ubsembr:~$ cd /home/
+0;kent@ubsembr: /home
+kent@ubsembr:/home$ ls -l
+total 8
+drwxr-x--- 2 gris gris 4096 Oct  1 11:38 gris
+drwxr-x--- 6 kent kent 4096 Oct  1 11:39 kent
+0;kent@ubsembr: /home
+kent@ubsembr:/home$ mkdi
+
+
+
+
+
+
+sudo -i
+0;root@ubsembr: ~
+root@ubsembr:~# cd /home
+0;root@ubsembr: /home
+root@ubsembr:/home# 0;root@ubsembr: /home
+root@ubsembr:/home# ls
+gris  kent
+0;root@ubsembr: /home
+root@ubsembr:/home# mkdir ko
+0;root@ubsembr: /home
+root@ubsembr:/home# ls -l
+total 12
+drwxr-x--- 2 gris gris 4096 Oct  1 11:38 gris
+drwxr-x--- 6 kent kent 4096 Oct  1 11:39 kent
+drwxr-xr-x 2 root root 4096 Oct  1 11:42 ko
+0;root@ubsembr: /home
+root@ubsembr:/home# chmod --reference=gris ko
+0;root@ubsembr: /home
+ls -lubsembr:/home# chmod --reference=gris ko
+total 12
+drwxr-x--- 2 gris gris 4096 Oct  1 11:38 gris
+drwxr-x--- 6 kent kent 4096 Oct  1 11:39 kent
+drwxr-x--- 2 root root 4096 Oct  1 11:42 ko
+0;root@ubsembr: /home
+root@ubsembr:/home# chmo
+
+
+
+
+
+
+chowngrown keo:keno ko/
+0;root@ubsembr: /home
+root@ubsembr:/home# 0;root@ubsembr: /home
+root@ubsembr:/home# ls -l
+total 12
+drwxr-x--- 2 gris gris 4096 Oct  1 11:38 gris
+drwxr-x--- 6 kent kent 4096 Oct  1 11:39 kent
+drwxr-x--- 2 ko   ko   4096 Oct  1 11:42 ko
+0;root@ubsembr: /home
+root@ubsembr:/home# exit
+logout
+0;kent@ubsembr: /home
+kent@ubsembr:/home$ 
+0;kent@ubsembr: /home
+kent@ubsembr:/home$ cd
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 0;kent@ubsembr: ~
+kent@ubsembr:~$ ls
+annatskript  info2  info3  info.sh  minkatt  superinfo.sh
+0;kent@ubsembr: ~
+kent@ubsembr:~$ su ko
+Password: 
+$ cd
+$ pwd
+/home/ko
+$ echo $SHELL
+/bin/sh
+$ ls /									
+bin		   home		      mnt   sbin.usr-is-merged	usr
+bin.usr-is-merged  lib		      opt   snap		var
+boot		   lib64	      proc  srv
+cdrom		   lib.usr-is-merged  root  swap.img
+dev		   lost+found	      run   sys
+etc		   media	      sbin  tmp
+$ ^^L^L^L^L^L^L^L
+sh: 5: : not found
+$ bash
+ko@ubsembr:~$ ko@ubsembr:~$ ls ko@ubsembr:~$ ls ko@ubsembr:~$ ls 
+
+
+/
+
+bin/                lib.usr-is-merged/  sbin.usr-is-merged/
+bin.usr-is-merged/  lost+found/         snap/
+boot/               media/              srv/
+cdrom/              mnt/                swap.img
+dev/                opt/                sys/
+etc/                proc/               tmp/
+home/               root/               usr/
+lib/                run/                var/
+lib64/              sbin/               
+ko@ubsembr:~$ ls 
+
+
+
+ko@ubsembr:~$ exit
+exit
+$ lexit
+0;kent@ubsembr: ~
+kent@ubsembr:~$ sudo nano /etc/pass
+wd
+8ist:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin       /etc/passwd                              
+8rc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+8apt:x:42:65534::/nonexistent:/usr/sbin/nologin
+8obody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+8ystemd-network:x:998:998:systemd Network Management:/:/usr/sbin/nologin
+8ystemd-timesync:x:997:997:systemd Time Synchronization:/:/usr/sbin/nologin
+dhcpcd:x:100:65534:DHCP Client Daemon,,,:/usr/lib/dhcpcd:/bin/false
+messagebus:x:101:102::/nonexistent:/usr/sbin/nologin
+systemd-resolve:x:992:992:systemd Resolver:/:/usr/sbin/nologin
+pollinate:x:102:1::/var/cache/pollinate:/bin/false
+polkitd:x:991:991:User for polkitd:/:/usr/sbin/nologin
+syslog:x:103:104::/nonexistent:/usr/sbin/nologin
+uuidd:x:104:105::/run/uuidd:/usr/sbin/nologin
+tcpdump:x:105:107::/nonexistent:/usr/sbin/nologin
+tss:x:106:108:TPM software stack,,,:/var/lib/tpm:/bin/false
+landscape:x:107:109::/var/lib/landscape:/usr/sbin/nologin
+fwupd-refresh:x:989:989:Firmware update daemon:/var/lib/fwupd:/usr/sbin/nol>
+usbmux:x:108:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+kent:x:1000:1000:kent:/home/kent:/bin/bash
+sshd:x:109:65534::/run/sshd:/usr/sbin/nologin
+gris:x:1001:1001:Herr Gris,Top floor,,,Does not eat bacon:/home/gris:/bin/b>
+ko:x:1002:1002::/home/ko:/bin/sh
+>0;kent@ubsembr: ~: /etc/passwd [ Writing... ] [ Wrote 36 lines ]            Y Yes
+kent@ubsembr:~$ su ko
+Password: 
+ko@ubsembr:/home/kent$ echo $BASSHELL
+/bin/bash
+ko@ubsembr:/home/kent$ exit
+exit
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 0;kent@ubsembr: ~
+kent@ubsembr:~$ man useuseradd
+USERADD(8)              System Management Commands              USERADD(8)
+
+NAME
+       useradd - create a new user or update default new user information
+
+SYNOPSIS
+
+       useradd [options] LOGIN
+
+       useradd -D
+
+       useradd -D [options]
+
+DESCRIPTION
+       useradd is a low level utility for adding users. On Debian,
+       administrators should usually use adduser(8) instead.
+
+       When invoked without the -D option, the useradd command creates a
+       new user account using the values specified on the command line
+       plus the default values from the system. Depending on command line
+       options, the useradd command will update system files and may also
+       create the new user's home directory and copy initial files.
+ ESESCOBpage useradd(8) line 5 (press h for help or q to quit)
+       By default, a group will also be created for the new user (see -g,
+       -N, -U, and USERGROUPS_ENAB).s h for help or q to quit)
+ ESESCOBpage useradd(8) line 8 (press h for help or q to quit)
+OPTIONSBpage useradd(8) line 9 (press h for help or q to quit)
+       The options which apply to the useradd command are:quit)
+ ESESCOBpage useradd(8) line 11 (press h for help or q to quit)
+       --badnameradd(8) line 12 (press h for help or q to quit)
+           Allow names that do not conform to standards.o quit)
+ ESESCOBpage useradd(8) line 14 (press h for help or q to quit)
+       -b, --base-dir BASE_DIR5 (press h for help or q to quit)
+           The default base directory for the system if -d HOME_DIR is not
+           specified.  BASE_DIR is concatenated with the account name to
+           define the home directory.s h for help or q to quit)
+ ESESCOBpage useradd(8) line 19 (press h for help or q to quit)
+           If this option is not specified, useradd will use the base
+           directory specified by the HOME variable in to quit)
+           /etc/default/useradd, or /home by default.q to quit)
+ ESESCOBpage useradd(8) line 23 (press h for help or q to quit)
+       -c, --comment COMMENT 24 (press h for help or q to quit)
+           Any text string. It is generally a short description of the
+           account, and is currently used as the field for the user's full
+           name.radd(8) line 27 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 28 (press h for help or q to quit)
+       -d, --home-dir HOME_DIR9 (press h for help or q to quit)
+           The new user will be created using HOME_DIR as the value for
+           the user's login directory. The default is to append the LOGIN
+           name to BASE_DIR and use that as the login directory name. If
+           the directory HOME_DIR does not exist, then it will be created
+           unless the -M option is specified.help or q to quit)
+ ESESCOBpage useradd(8) line 35 (press h for help or q to quit)
+       -D, --defaults8) line 36 (press h for help or q to quit)
+           See below, the subsection "Changing the default values".
+ ESESCOBpage useradd(8) line 38 (press h for help or q to quit)
+       -e, --expiredate EXPIRE_DATEess h for help or q to quit)
+           The date on which the user account will be disabled. The date
+           is specified in the format YYYY-MM-DD. or q to quit)
+ ESESCOBpage useradd(8) line 42 (press h for help or q to quit)
+           If not specified, useradd will use the default expiry date
+           specified by the EXPIRE variable in /etc/default/useradd, or an
+           empty string (no expiry) by default.lp or q to quit)
+ ESESCOBpage useradd(8) line 46 (press h for help or q to quit)
+       -f, --inactive INACTIVE7 (press h for help or q to quit)
+           defines the number of days after the password exceeded its
+           maximum age where the user is expected to replace this
+           password. The value is stored in the shadow password file. An
+           input of 0 will disable an expired password with no delay. An
+           input of -1 will blank the respective field in the shadow
+           password file. See shadow(5)for more information.it)
+ ESESCOBpage useradd(8) line 54 (press h for help or q to quit)
+           If not specified, useradd will use the default inactivity
+           period specified by the INACTIVE variable into quit)
+           /etc/default/useradd, or -1 by default.or q to quit)
+ ESESCOBpage useradd(8) line 58 (press h for help or q to quit)
+       -F, --add-subids-for-systemress h for help or q to quit)
+           Update /etc/subuid and /etc/subgid even when creating a system
+           account with -r option.ress h for help or q to quit)
+ ESESCOBpage useradd(8) line 62 (press h for help or q to quit)
+       -g, --gid GROUP) line 63 (press h for help or q to quit)
+           The name or the number of the user's primary group. The group
+           name must exist. A group number must refer to an already
+           existing group.ne 66 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 67 (press h for help or q to quit)
+           If not specified, the behavior of useradd will depend on the
+           USERGROUPS_ENAB variable in /etc/login.defs. If this variable
+           is set to yes (or -U/--user-group is specified on the command
+           line), a group will be created for the user, with the same name
+           as her loginname. If the variable is set to no (ort)
+           -N/--no-user-group is specified on the command line), useradd
+           will set the primary group of the new user to the value
+           specified by the GROUP variable in /etc/default/useradd, or 100
+           by default.) line 76 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 77 (press h for help or q to quit)
+       -G, --groups GROUP1[,GROUP2,...[,GROUPN]]] or q to quit)
+           A list of supplementary groups which the user is also a member
+           of. Each group is separated from the next by a comma, with no
+           intervening whitespace. The groups are subject to the same
+           restrictions as the group given with the -g option. The default
+           is for the user to belong only to the initial group.
+ ESESCOBpage useradd(8) line 84 (press h for help or q to quit)
+       -h, --helpadd(8) line 85 (press h for help or q to quit)
+           Display help message and exit.for help or q to quit)
+ ESESCOBpage useradd(8) line 87 (press h for help or q to quit)
+       -k, --skel SKEL_DIRne 88 (press h for help or q to quit)
+           The skeleton directory, which contains files and directories to
+           be copied in the user's home directory, when the home directory
+           is created by useradd.press h for help or q to quit)
+ ESESCOBpage useradd(8) line 92 (press h for help or q to quit)
+           This option is only valid if the -m (or --create-home) option
+           is specified.line 94 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 95 (press h for help or q to quit)
+           If this option is not set, the skeleton directory is defined by
+           the SKEL variable in /etc/default/useradd or, by default,
+           /etc/skel.8) line 98 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 99 (press h for help or q to quit)
+           If possible, the ACLs and extended attributes are copied.
+ ESESCOBpage useradd(8) line 101 (press h for help or q to quit)
+       -K, --key KEY=VALUEne 102 (press h for help or q to quit)
+           Overrides /etc/login.defs defaults (UID_MIN, UID_MAX, UMASK,
+           PASS_MAX_DAYS and others).ss h for help or q to quit)
+ ESESCOBpage useradd(8) line 105 (press h for help or q to quit)
+           Example: -K PASS_MAX_DAYS =-1 can be used when creating an
+           account to turn off password aging. Multiple -K options can be
+           specified, e.g.: -K UID_MIN =100 -K  UID_MAX=499quit)
+ ESESCOBpage useradd(8) line 109 (press h for help or q to quit)
+           For the compatibility with previous Debian's useradd, the -O
+           option is also supported.ess h for help or q to quit)
+ ESESCOBpage useradd(8) line 112 (press h for help or q to quit)
+       -l, --no-log-initline 113 (press h for help or q to quit)
+           Do not add the user to the lastlog and faillog databases.
+ ESESCOBpage useradd(8) line 115 (press h for help or q to quit)
+           By default, the user's entries in the lastlog and faillog
+           databases are reset to avoid reusing the entry from a
+           previously deleted user.ress h for help or q to quit)
+ ESESCOBpage useradd(8) line 119 (press h for help or q to quit)
+           If this option is not specified, useradd will also consult the
+           variable LOG_INIT in the /etc/default/useradd if set to no the
+           user will not be added to the lastlog and faillog databases.
+ ESESCOBpage useradd(8) line 123 (press h for help or q to quit)
+       -m, --create-homeline 124 (press h for help or q to quit)
+           Create the user's home directory if it does not exist. The
+           files and directories contained in the skeleton directory
+           (which can be defined with the -k option) will be copied to the
+           home directory.ne 128 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 129 (press h for help or q to quit)
+           By default, if this option is not specified and CREATE_HOME is
+           not enabled, no home directories are created.to quit)
+ ESESCOBpage useradd(8) line 132 (press h for help or q to quit)
+           The directory where the user's home directory is created must
+           exist and have proper SELinux context and permissions.
+           Otherwise the user's home directory cannot be created or
+           accessed.(8) line 136 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 137 (press h for help or q to quit)
+       -M, --no-create-homee 138 (press h for help or q to quit)
+           Do not create the user's home directory, even if the system
+           wide setting from /etc/login.defs (CREATE_HOME) is set to yes.
+ ESESCOBpage useradd(8) line 141 (press h for help or q to quit)
+       -N, --no-user-groupne 142 (press h for help or q to quit)
+M       -m, --create-homeine 143 (press h for help or q to quit)
+MESESCOApage useradd(8) line 142 (press h for help or q to quit)
+M           user will not be added to the lastlog and faillog databases.
+M           variable LOG_INIT in the /etc/default/useradd if set to no the
+M           If this option is not specified, useradd will also consult the
+MESESCOApage useradd(8) line 138 (press h for help or q to quit)
+M           previously deleted user.ess h for help or q to quit)
+M           databases are reset to avoid reusing the entry from a
+M           By default, the user's entries in the lastlog and faillog
+MESESCOApage useradd(8) line 134 (press h for help or q to quit)
+M           Do not add the user to the lastlog and faillog databases.
+M       -l, --no-log-initine 132 (press h for help or q to quit)
+MESESCOApage useradd(8) line 131 (press h for help or q to quit)
+M           option is also supported.ss h for help or q to quit)
+M           For the compatibility with previous Debian's useradd, the -O
+MESESCOApage useradd(8) line 128 (press h for help or q to quit)
+M           specified, e.g.: -K UID_MIN =100 -K  UID_MAX=499uit)
+M           account to turn off password aging. Multiple -K options can be
+M           Example: -K PASS_MAX_DAYS =-1 can be used when creating an
+MESESCOApage useradd(8) line 124 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 123 (press h for help or q to quit)
+       -m, --create-homeline 124 (press h for help or q to quit)
+           Create the user's home directory if it does not exist. The
+           files and directories contained in the skeleton directory
+           (which can be defined with the -k option) will be copied to the
+           home directory.ne 128 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 129 (press h for help or q to quit)
+           By default, if this option is not specified and CREATE_HOME is
+           not enabled, no home directories are created.to quit)
+ ESESCOBpage useradd(8) line 132 (press h for help or q to quit)
+           The directory where the user's home directory is created must
+           exist and have proper SELinux context and permissions.
+           Otherwise the user's home directory cannot be created or
+           accessed.(8) line 136 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 137 (press h for help or q to quit)
+       -M, --no-create-homee 138 (press h for help or q to quit)
+           Do not create the user's home directory, even if the system
+           wide setting from /etc/login.defs (CREATE_HOME) is set to yes.
+ ESESCOBpage useradd(8) line 141 (press h for help or q to quit)
+       -N, --no-user-groupne 142 (press h for help or q to quit)
+           Do not create a group with the same name as the user, but add
+           the user to the group specified by the -g option or by the
+           GROUP variable in /etc/default/useradd. or q to quit)
+ ESESCOBpage useradd(8) line 146 (press h for help or q to quit)
+           The default behavior (if the -g, -N, and -U options are not
+           specified) is defined by the USERGROUPS_ENAB variable in
+           /etc/login.defs.e 149 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 150 (press h for help or q to quit)
+       -o, --non-unique line 151 (press h for help or q to quit)
+           allows the creation of an account with an already existing UID.
+ ESESCOBpage useradd(8) line 153 (press h for help or q to quit)
+           This option is only valid in combination with the -u option. As
+           a user identity serves as key to map between users on one hand
+           and permissions, file ownerships and other aspects that
+           determine the system's behavior on the other hand, more than
+           one login name will access the account of the given UID.
+ ESESCOBpage useradd(8) line 159 (press h for help or q to quit)
+       -p, --password PASSWORD60 (press h for help or q to quit)
+           defines an initial password for the account. PASSWORD is
+           expected to be encrypted, as returned by crypt (3). Within a
+           shell script, this option allows to create efficiently batches
+           of users.(8) line 164 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 165 (press h for help or q to quit)
+           Without this option, the new account will be locked and with no
+           password defined, i.e. a single exclamation mark in the
+           respective field of /etc/shadow. This is a state where the user
+           won't be able to access the account or to define a password
+           himself.d(8) line 170 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 171 (press h for help or q to quit)
+           Note:Avoid this option on the command line because the password
+           (or encrypted password) will be visible by users listing the
+           processes.8) line 174 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 175 (press h for help or q to quit)
+           You should make sure the password respects the system's
+           password policy.e 177 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 178 (press h for help or q to quit)
+       -r, --systemd(8) line 179 (press h for help or q to quit)
+           Create a system account.ress h for help or q to quit)
+ ESESCOBpage useradd(8) line 181 (press h for help or q to quit)
+           System users will be created with no aging information in
+           /etc/shadow, and their numeric identifiers are chosen in the
+           SYS_UID_MIN-SYS_UID_MAX range, defined in /etc/login.defs,
+           instead of UID_MIN-UID_MAX (and their GID counterparts for the
+           creation of groups).6 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 187 (press h for help or q to quit)
+           Note that useradd will not create a home directory for such a
+           user, regardless of the default setting in /etc/login.defs
+           (CREATE_HOME). You have to specify the -m options if you want a
+           home directory for a system account to be created.it)
+ ESESCOBpage useradd(8) line 192 (press h for help or q to quit)
+           Note that this option will not update /etc/subuid and
+           /etc/subgid. You have to specify the -F options if you want to
+           update the files for a system account to be created.)
+ ESESCOBpage useradd(8) line 196 (press h for help or q to quit)
+       -R, --root CHROOT_DIR 197 (press h for help or q to quit)
+           Apply changes in the CHROOT_DIR directory and use the
+           configuration files from the CHROOT_DIR directory. Only
+           absolute paths are supported.h for help or q to quit)
+ ESESCOBpage useradd(8) line 201 (press h for help or q to quit)
+       -P, --prefix PREFIX_DIR02 (press h for help or q to quit)
+           Apply changes to configuration files under the root filesystem
+           found under the directory PREFIX_DIR. This option does not
+           chroot and is intended for preparing a cross-compilation
+           target. Some limitations: NIS and LDAP users/groups are not
+           verified. PAM authentication is using the host files. No
+           SELINUX support.e 208 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 209 (press h for help or q to quit)
+       -s, --shell SHELLline 210 (press h for help or q to quit)
+           sets the path to the user's login shell. Without this option,
+           the system will use the SHELL variable specified int)
+           /etc/default/useradd, or, if that is as well not set, the field
+           for the login shell in /etc/passwd remains empty.uit)
+ ESESCOBpage useradd(8) line 215 (press h for help or q to quit)
+       -u, --uid UID(8) line 216 (press h for help or q to quit)
+           The numerical value of the user's ID. This value must be
+           unique, unless the -o option is used. The value must be
+           non-negative. The default is to use the smallest ID value
+           greater than or equal to UID_MIN and greater than every other
+           user.radd(8) line 221 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 222 (press h for help or q to quit)
+           See also the -r option and the UID_MAX description.t)
+ ESESCOBpage useradd(8) line 224 (press h for help or q to quit)
+       -U, --user-group line 225 (press h for help or q to quit)
+           Create a group with the same name as the user, and add the user
+           to this group.ine 227 (press h for help or q to quit)
+>0;kent@ubsembr: ~dd(8) line 228 (press h for help or q to quit)
+kent@ubsembr:~$ sudo useradd -m -s /bin/bash myrslok
+0;kent@ubsembr: ~
+kent@ubsembr:~$ sudo passwd myrslok 
+New password: 
+Retype new password: 
+Sorry, passwords do not match.
+passwd: Authentication token manipulation error
+passwd: password unchanged
+0;kent@ubsembr: ~
+kent@ubsembr:~$ sudo passwd myrslok 
+New password: 
+Retype new password: 
+passwd: password updated successfully
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 0;kent@ubsembr: ~
+kent@ubsembr:~$ su mysloik
+su: user myslok does not exist or the user entry does not contain all the required fields
+0;kent@ubsembr: ~
+kent@ubsembr:~$ su myslorslo
+
+Password: 
+0;myrslok@ubsembr: /home/kent
+myrslok@ubsembr:/home/kent$ 0;myrslok@ubsembr: /home/kent
+myrslok@ubsembr:/home/kent$ ls
+ls: cannot open directory '.': Permission denied
+0;myrslok@ubsembr: /home/kent
+myrslok@ubsembr:/home/kent$ 
+cd
+0;myrslok@ubsembr: ~
+myrslok@ubsembr:~$ 0;myrslok@ubsembr: ~
+myrslok@ubsembr:~$ pwd
+/home/myrslok
+0;myrslok@ubsembr: ~
+myrslok@ubsembr:~$ ls
+0;myrslok@ubsembr: ~
+myrslok@ubsembr:~$ echo $SHELL
+/bin/bash
+0;myrslok@ubsembr: ~
+myrslok@ubsembr:~$ 
+exit
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 0;kent@ubsembr: ~
+kent@ubsembr:~$ ls /less /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,kent
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+fax:x:21:
+voice:x:22:
+cdrom:x:24:kent
+floppy:x:25:
+tape:x:26:
+sudo:x:27:kent
+audio:x:29:
+dip:x:30:kent
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+shadow:x:42:
+utmp:x:43:
+video:x:44:
+sasl:x:45:
+plugdev:x:46:kent
+staff:x:50:
+games:x:60:
+users:x:100:gris
+nogroup:x:65534:
+systemd-journal:x:999:
+systemd-network:x:998:
+systemd-timesync:x:997:
+input:x:996:
+>0;kent@ubsembr: ~
+kent@ubsembr:~$ man usermod
+USERMOD(8)              System Management Commands              USERMOD(8)
+
+NAME
+       usermod - modify a user account
+
+SYNOPSIS
+
+       usermod [options] LOGIN
+
+DESCRIPTION
+       The usermod command modifies the system account files.
+
+OPTIONS
+       The options which apply to the usermod command are:
+
+       -a, --append
+           Add the user to the supplementary group(s). Use only with the
+           -G option.
+ Manual page usermod(8) line 1 (press h for help or q to quit)...skipping...
+USERMOD(8)              System Management Commands              USERMOD(8)
+
+NAME
+       usermod - modify a user account
+
+SYNOPSIS
+
+       usermod [options] LOGIN
+
+DESCRIPTION
+       The usermod command modifies the system account files.
+
+OPTIONS
+       The options which apply to the usermod command are:
+
+       -a, --append
+           Add the user to the supplementary group(s). Use only with the
+           -G option.
+
+ Manual page usermod(8) line 1 (press h for help or q to quit)...skipping...
+USERMOD(8)              System Management Commands              USERMOD(8)
+
+NAME
+       usermod - modify a user account
+
+SYNOPSIS
+
+       usermod [options] LOGIN
+
+DESCRIPTION
+       The usermod command modifies the system account files.
+
+OPTIONS
+       The options which apply to the usermod command are:
+
+       -a, --append
+           Add the user to the supplementary group(s). Use only with the
+           -G option.
+
+       -b, --badname
+           Allow names that do not conform to standards. quit)
+ ESESCOBpage usermod(8) line 2 (press h for help or q to quit)
+       -c, --comment COMMENT 3 (press h for help or q to quit)
+           update the comment field of the user in /etc/passwd, which is
+           normally modified using the chfn(1) utility.o quit)
+ ESESCOBpage usermod(8) line 6 (press h for help or q to quit)
+       -d, --home HOME_DIRne 7 (press h for help or q to quit)
+           The user's new login directory.r help or q to quit)
+ ESESCOBpage usermod(8) line 9 (press h for help or q to quit)
+           If the -m option is given, the contents of the current home
+           directory will be moved to the new home directory, which is
+           created if it does not already exist. If the current home
+           directory does not exist the new home directory will not be
+           created.d(8) line 14 (press h for help or q to quit)
+ ESESCOBpage usermod(8) line 15 (press h for help or q to quit)
+       -e, --expiredate EXPIRE_DATEess h for help or q to quit)
+           The date on which the user account will be disabled. The date
+           is specified in the format YYYY-MM-DD. Integers as input are
+           interpreted as days after 1970-01-01.p or q to quit)
+ ESESCOBpage usermod(8) line 20 (press h for help or q to quit)
+           An input of -1 or an empty string will blank the account
+           expiration field in the shadow password file. The account will
+           remain available with no date limit.lp or q to quit)
+ ESESCOBpage usermod(8) line 24 (press h for help or q to quit)
+           This option requires a /etc/shadow file. A /etc/shadow entry
+           will be created if there were none.elp or q to quit)
+ ESESCOBpage usermod(8) line 27 (press h for help or q to quit)
+       -f, --inactive INACTIVE8 (press h for help or q to quit)
+           defines the number of days after the password exceeded its
+           maximum age during which the user may still login by
+           immediately replacing the password. This grace period before
+           the account becomes inactive is stored in the shadow password
+           file. An input of 0 will disable an expired password with no
+           delay. An input of -1 will blank the respective field in the
+           shadow password file. See shadow(5) for more information.
+ ESESCOBpage usermod(8) line 36 (press h for help or q to quit)
+           This option requires a /etc/shadow file. A /etc/shadow entry
+           will be created if there were none.elp or q to quit)
+ ESESCOBpage usermod(8) line 39 (press h for help or q to quit)
+       -g, --gid GROUP) line 40 (press h for help or q to quit)
+           The name or numerical ID of the user's new primary group. The
+           group must exist. 42 (press h for help or q to quit)
+ ESESCOBpage usermod(8) line 43 (press h for help or q to quit)
+           Any file from the user's home directory owned by the previous
+           primary group of the user will be owned by this new group.
+ ESESCOBpage usermod(8) line 46 (press h for help or q to quit)
+           The group ownership of files outside of the user's home
+           directory must be fixed manually. help or q to quit)
+ ESESCOBpage usermod(8) line 49 (press h for help or q to quit)
+           The change of the group ownership of files inside of the user's
+           home directory is also not done if the home dir owner uid is
+           different from the current or new user id. This is a safety
+           measure for special home directories such as /.quit)
+ ESESCOBpage usermod(8) line 54 (press h for help or q to quit)
+       -G, --groups GROUP1[,GROUP2,...[,GROUPN]]] or q to quit)
+           A list of supplementary groups which the user is also a member
+           of. Each group is separated from the next by a comma, with no
+           intervening whitespace. The groups must exist. quit)
+ ESESCOBpage usermod(8) line 59 (press h for help or q to quit)
+           If the user is currently a member of a group which is not
+           listed, the user will be removed from the group. This behaviour
+           can be changed via the -a option, which appends the user to the
+           current supplementary group list. help or q to quit)
+ ESESCOBpage usermod(8) line 64 (press h for help or q to quit)
+       -l, --login NEW_LOGIN 65 (press h for help or q to quit)
+           The name of the user will be changed from LOGIN to NEW_LOGIN.
+           Nothing else is changed. In particular, the user's home
+           directory or mail spool should probably be renamed manually to
+           reflect the new login name. h for help or q to quit)
+ ESESCOBpage usermod(8) line 70 (press h for help or q to quit)
+       -L, --lockmod(8) line 71 (press h for help or q to quit)
+           Lock a user's password. This puts a '!' in front of the
+           encrypted password, effectively disabling the password. You
+           can't use this option with -p or -U.lp or q to quit)
+ ESESCOBpage usermod(8) line 75 (press h for help or q to quit)
+           Note: if you wish to lock the account (not only access with a
+           password), you should also set the EXPIRE_DATE to 1.
+ ESESCOBpage usermod(8) line 78 (press h for help or q to quit)
+       -m, --move-home) line 79 (press h for help or q to quit)
+           moves the content of the user's home directory to the new
+           location. If the current home directory does not exist the new
+           home directory will not be created.elp or q to quit)
+ ESESCOBpage usermod(8) line 83 (press h for help or q to quit)
+           This option is only valid in combination with the -d (or
+           --home) option.ne 85 (press h for help or q to quit)
+ ESESCOBpage usermod(8) line 86 (press h for help or q to quit)
+           usermod will try to adapt the ownership of the files and to
+           copy the modes, ACL and extended attributes, but manual changes
+           might be needed afterwards. h for help or q to quit)
+ ESESCOBpage usermod(8) line 90 (press h for help or q to quit)
+       -o, --non-unique line 91 (press h for help or q to quit)
+           allows to change the user ID to a non-unique value.)
+ ESESCOBpage usermod(8) line 93 (press h for help or q to quit)
+           This option is only valid in combination with the -u option. As
+           a user identity serves as key to map between users on one hand
+           and permissions, file ownerships and other aspects that
+           determine the system's behavior on the other hand, more than
+           one login name will access the account of the given UID.
+ ESESCOBpage usermod(8) line 99 (press h for help or q to quit)
+       -p, --password PASSWORD00 (press h for help or q to quit)
+           defines a new password for the user. PASSWORD is expected to be
+           encrypted, as returned by crypt (3).elp or q to quit)
+ ESESCOBpage usermod(8) line 103 (press h for help or q to quit)
+           Note: Avoid this option on the command line because the
+           password (or encrypted password) will be visible by users
+           listing the processes.(press h for help or q to quit)
+ ESESCOBpage usermod(8) line 107 (press h for help or q to quit)
+           The password will be written in the local /etc/passwd or
+           /etc/shadow file. This might differ from the password database
+           configured in your PAM configuration.lp or q to quit)
+ ESESCOBpage usermod(8) line 111 (press h for help or q to quit)
+           You should make sure the password respects the system's
+           password policy.e 113 (press h for help or q to quit)
+ ESESCOBpage usermod(8) line 114 (press h for help or q to quit)
+       -r, --removed(8) line 115 (press h for help or q to quit)
+           Remove the user from named supplementary group(s). Use only
+           with the -G option.17 (press h for help or q to quit)
+ ESESCOBpage usermod(8) line 118 (press h for help or q to quit)
+       -R, --root CHROOT_DIR 119 (press h for help or q to quit)
+           Apply changes in the CHROOT_DIR directory and use the
+           configuration files from the CHROOT_DIR directory. Only
+           absolute paths are supported.h for help or q to quit)
+ ESESCOBpage usermod(8) line 123 (press h for help or q to quit)
+       -P, --prefix PREFIX_DIR24 (press h for help or q to quit)
+           Apply changes within the directory tree starting with
+           PREFIX_DIR and use as well the configuration files located
+           there. This option does not chroot and is intended for
+           preparing a cross-compilation target. Some limitations: NIS and
+           LDAP users/groups are not verified. PAM authentication is using
+           the host files. No SELINUX support.help or q to quit)
+ ESESCOBpage usermod(8) line 131 (press h for help or q to quit)
+       -s, --shell SHELLline 132 (press h for help or q to quit)
+           changes the user's login shell. An empty string for SHELL
+           blanks the field in /etc/passwd and logs the user into the
+           system's default shell.press h for help or q to quit)
+ ESESCOBpage usermod(8) line 136 (press h for help or q to quit)
+       -u, --uid UID(8) line 137 (press h for help or q to quit)
+           The new value of the user's ID.for help or q to quit)
+ ESESCOBpage usermod(8) line 139 (press h for help or q to quit)
+           This value must be unique, unless the -o option is used. The
+           value must be non-negative.s h for help or q to quit)
+ ESESCOBpage usermod(8) line 142 (press h for help or q to quit)
+           The user's mailbox, and any files which the user owns and which
+           are located in the user's home directory will have the file
+           user ID changed automatically. for help or q to quit)
+M           Apply changes within the directory tree starting with
+M       -P, --prefix PREFIX_DIR5 (press h for help or q to quit)
+MESESCOApage usermod(8) line 144 (press h for help or q to quit)
+           The user's mailbox, and any files which the user owns and which
+           are located in the user's home directory will have the file
+           user ID changed automatically. for help or q to quit)
+ ESESCOBpage usermod(8) line 146 (press h for help or q to quit)
+           The ownership of files outside of the user's home directory
+           must be fixed manually.press h for help or q to quit)
+ ESESCOBpage usermod(8) line 149 (press h for help or q to quit)
+           The change of the user ownership of files inside of the user's
+           home directory is also not done if the home dir owner uid is
+           different from the current or new user id. This is a safety
+           measure for special home directories such as /. quit)
+ ESESCOBpage usermod(8) line 154 (press h for help or q to quit)
+           No checks will be performed with regard to the UID_MIN,
+           UID_MAX, SYS_UID_MIN, or SYS_UID_MAX from /etc/login.defs.
+ ESESCOBpage usermod(8) line 157 (press h for help or q to quit)
+       -U, --unlockd(8) line 158 (press h for help or q to quit)
+           Unlock a user's password. This removes the '!' in front of the
+           encrypted password. You can't use this option with -p or -L.
+ ESESCOBpage usermod(8) line 161 (press h for help or q to quit)
+           Note: if you wish to unlock the account (not only access with a
+           password), you should also set the EXPIRE_DATE (for example to
+           99999, or to the EXPIRE value from /etc/default/useradd).
+ ESESCOBpage usermod(8) line 165 (press h for help or q to quit)
+       -v, --add-subuids FIRST-LASTress h for help or q to quit)
+           Add a range of subordinate uids to the user's account.
+ ESESCOBpage usermod(8) line 168 (press h for help or q to quit)
+           This option may be specified multiple times to add multiple
+           ranges to a user's account.s h for help or q to quit)
+ ESESCOBpage usermod(8) line 171 (press h for help or q to quit)
+           No checks will be performed with regard to SUB_UID_MIN,
+           SUB_UID_MAX, or SUB_UID_COUNT from /etc/login.defs.t)
+ ESESCOBpage usermod(8) line 174 (press h for help or q to quit)
+       -V, --del-subuids FIRST-LASTress h for help or q to quit)
+           Remove a range of subordinate uids from the user's account.
+ ESESCOBpage usermod(8) line 177 (press h for help or q to quit)
+           This option may be specified multiple times to remove multiple
+           ranges to a user's account. When both --del-subuids and
+           --add-subuids are specified, the removal of all subordinate uid
+           ranges happens before any subordinate uid range is added.
+ ESESCOBpage usermod(8) line 182 (press h for help or q to quit)
+           password), you should also set the EXPIRE_DATE (for example to
+           99999, or to the EXPIRE value from /etc/default/useradd).
+
+       -v, --add-subuids FIRST-LAST
+           Add a range of subordinate uids to the user's account.
+
+           This option may be specified multiple times to add multiple
+           ranges to a user's account.
+
+           No checks will be performed with regard to SUB_UID_MIN,
+           SUB_UID_MAX, or SUB_UID_COUNT from /etc/login.defs.
+
+       -V, --del-subuids FIRST-LAST
+           Remove a range of subordinate uids from the user's account.
+
+           This option may be specified multiple times to remove multiple
+           ranges to a user's account. When both --del-subuids and
+           --add-subuids are specified, the removal of all subordinate uid
+           ranges happens before any subordinate uid range is added.
+
+           password), you should also set the EXPIRE_DATE (for example to
+           99999, or to the EXPIRE value from /etc/default/useradd).
+
+       -v, --add-subuids FIRST-LAST
+           Add a range of subordinate uids to the user's account.
+
+           This option may be specified multiple times to add multiple
+           ranges to a user's account.
+
+           No checks will be performed with regard to SUB_UID_MIN,
+           SUB_UID_MAX, or SUB_UID_COUNT from /etc/login.defs.
+
+       -V, --del-subuids FIRST-LAST
+           Remove a range of subordinate uids from the user's account.
+
+           This option may be specified multiple times to remove multiple
+           ranges to a user's account. When both --del-subuids and
+           --add-subuids are specified, the removal of all subordinate uid
+           ranges happens before any subordinate uid range is added.
+
+Pattern not found  (press RETURN)
+M           Note: if you wish to unlock the account (not only access with a
+M       -b, --badname8) line 182/333 61% (press h for help or q to quit)
+M
+M           -G option.
+M           Add the user to the supplementary group(s). Use only with the
+M       -a, --append
+M
+M       The options which apply to the usermod command are:
+MOPTIONS
+M
+M       The usermod command modifies the system account files.
+MDESCRIPTION
+M
+M       usermod [options] LOGIN
+M
+MSYNOPSIS
+M
+M       usermod - modify a user account
+MNAME
+M
+MUSERMOD(8)              System Management Commands              USERMOD(8)
+           Allow names that do not conform to standards.or q to quit)
+ ESESCOBpage usermod(8) line 2/333 4% (press h for help or q to quit)
+       -c, --comment COMMENT 3/333 4% (press h for help or q to quit)
+           update the comment field of the user in /etc/passwd, which is
+           normally modified using the chfn(1) utility. or q to quit)
+ ESESCOBpage usermod(8) line 6/333 5% (press h for help or q to quit)
+       -d, --home HOME_DIRne 7/333 5% (press h for help or q to quit)
+           The user's new login directory.ss h for help or q to quit)
+/-Gnual page usermod(8) line 9/333 6% (press h for help or q to quit)
+DESCRIPTION
+       The usermod command modifies the system account files.
+
+OPTIONS
+       The options which apply to the usermod command are:
+
+       -a, --append
+           Add the user to the supplementary group(s). Use only with the
+           -G option.
+
+       -b, --badname
+           Allow names that do not conform to standards.
+
+       -c, --comment COMMENT
+           update the comment field of the user in /etc/passwd, which is
+           normally modified using the chfn(1) utility.
+
+       -d, --home HOME_DIR
+           The user's new login directory.
+
+DESCRIPTION
+       The usermod command modifies the system account files.
+
+OPTIONS
+       The options which apply to the usermod command are:
+
+       -a, --append
+           Add the user to the supplementary group(s). Use only with the
+           -G option.
+
+       -b, --badname
+           Allow names that do not conform to standards.
+
+       -c, --comment COMMENT
+           update the comment field of the user in /etc/passwd, which is
+           normally modified using the chfn(1) utility.
+
+       -d, --home HOME_DIR
+           The user's new login directory.
+
+           If the -m option is given, the contents of the current home
+           directory will be moved to the new home directory, which is
+           created if it does not already exist. If the current home
+           directory does not exist the new home directory will not be
+           created.
+
+       -e, --expiredate EXPIRE_DATE
+           The date on which the user account will be disabled. The date
+...skipping...sermod(8) line 18/333 9% (press h for help or q to quit)
+       -G, --groups GROUP1[,GROUP2,...[,GROUPN]]]
+           A list of supplementary groups which the user is also a member
+           of. Each group is separated from the next by a comma, with no
+           intervening whitespace. The groups must exist.
+
+           If the user is currently a member of a group which is not
+           listed, the user will be removed from the group. This behaviour
+           can be changed via the -a option, which appends the user to the
+           current supplementary group list.
+
+       -l, --login NEW_LOGIN
+           The name of the user will be changed from LOGIN to NEW_LOGIN.
+           Nothing else is changed. In particular, the user's home
+           directory or mail spool should probably be renamed manually to
+           reflect the new login name.
+
+       -L, --lock
+           Lock a user's password. This puts a '!' in front of the
+           encrypted password, effectively disabling the password. You
+           can't use this option with -p or -U.
+>0;kent@ubsembr: ~od(8) line 75/333 28% (press h for help or q to quit)
+kent@ubsembr:~$ sudo usermod -a -G games myrslok
+0;kent@ubsembr: ~
+kent@ubsembr:~$ grep /emyslok
+>^C
+0;kent@ubsembr: ~
+kent@ubsembr:~$ grep myslok: /etc/grou
+p
+0;kent@ubsembr: ~
+kent@ubsembr:~$ grep myslok: /etc/grour0;kent@ubsembr: ~
+kent@ubsembr:~$ grep myrslok: /etc/grou
+myrslok:x:1003:
+0;kent@ubsembr: ~
+kent@ubsembr:~$ grep myrslok: /etc/grougames
+games:x:60:myrslok
+0;kent@ubsembr: ~
+kent@ubsembr:~$ man userdel
+USERDEL(8)              System Management Commands              USERDEL(8)
+
+NAME
+       userdel - delete a user account and related files
+
+SYNOPSIS
+
+       userdel [options] LOGIN
+
+DESCRIPTION
+       userdel is a low level utility for removing users. On Debian,
+       administrators should usually use deluser(8) instead.
+
+       The userdel command modifies the system account files, deleting all
+       entries that refer to the user name LOGIN. The named user must
+       exist.
+
+OPTIONS
+       The options which apply to the userdel command are:
+
+       -f, --forceel(8) line 1 (press h for help or q to quit)
+           This option forces the removal of the user account, even if the
+           user is still logged in. It also forces userdel to remove the
+           user's home directory and mail spool, even if another user uses
+           the same home directory or if the mail spool is not owned by
+           the specified user. If USERGROUPS_ENAB is defined to yes in
+           /etc/login.defs and if a group exists with the same name as the
+           deleted user, then this group will be removed, even if it is
+           still the primary group of another user. q to quit)
+ ESESCOBpage userdel(8) line 10 (press h for help or q to quit)
+           Note: This option is dangerous and may leave your system in an
+           inconsistent state.2 (press h for help or q to quit)
+ ESESCOBpage userdel(8) line 13 (press h for help or q to quit)
+       -h, --helpdel(8) line 14 (press h for help or q to quit)
+           Display help message and exit.for help or q to quit)
+ ESESCOBpage userdel(8) line 16 (press h for help or q to quit)
+       -r, --removel(8) line 17 (press h for help or q to quit)
+           Files in the user's home directory will be removed along with
+           the home directory itself and the user's mail spool. Files
+           located in other file systems will have to be searched for and
+           deleted manually.
+
+           The mail spool is defined by the MAIL_DIR variable in the
+           login.defs file.
+
+       -R, --root CHROOT_DIR
+           Apply changes in the CHROOT_DIR directory and use the
+           configuration files from the CHROOT_DIR directory. Only
+           absolute paths are supported.
+
+       -P, --prefix PREFIX_DIR
+           Apply changes in the PREFIX_DIR directory and use the
+           configuration files from the PREFIX_DIR directory. This option
+           does not chroot and is intended for preparing a
+           cross-compilation target. Some limitations: NIS and LDAP
+           users/groups are not verified. PAM authentication is using the
+           host files. No SELINUX support.
+
+       -Z, --selinux-user
+>0;kent@ubsembr: ~el(8) line 40 (press h for help or q to quit)
+kent@ubsembr:~$ 0;kent@ubsembr: ~
+kent@ubsembr:~$ man groupmod
+GROUPMOD(8)             System Management Commands             GROUPMOD(8)
+
+NAME
+       groupmod - modify a group definition on the system
+
+SYNOPSIS
+
+       groupmod [options] GROUP
+
+DESCRIPTION
+       The groupmod command modifies the definition of the specified GROUP
+       by modifying the appropriate entry in the group database.
+
+OPTIONS
+       The options which apply to the groupmod command are:
+
+       -a, --append GID
+           If group members are specified with -U, append them to the
+           existing member list, rather than replacing it.
+
+ ESESCOApage groupmod(8) line 1 (press h for help or q to quit)
+       -g, --gid GIDd(8) line 1 (press h for help or q to quit)
+MGROUPMOD(8)             System Management Commands             GROUPMOD(8)
+ ESESCOApage groupmod(8) line 1 (press h for help or q to quit)
+ ESESCOApage groupmod(8) line 1 (press h for help or q to quit)
+ ESESCOApage groupmod(8) line 1 (press h for help or q to quit)
+       -g, --gid GIDd(8) line 1 (press h for help or q to quit)
+           The group ID of the given GROUP will be changed to GID.
+ ESESCOBpage groupmod(8) line 3 (press h for help or q to quit)
+           The value of GID must be a non-negative decimal integer. This
+           value must be unique, unless the -o option is used.)
+ ESESCOBpage groupmod(8) line 6 (press h for help or q to quit)
+           Users who use the group as primary group will be updated to
+           keep the group as their primary group. or q to quit)
+ ESESCOBpage groupmod(8) line 9 (press h for help or q to quit)
+           Any files that have the old group ID and must continue to
+           belong to GROUP, must have their group ID changed manually.
+ ESESCOBpage groupmod(8) line 12 (press h for help or q to quit)
+           No checks will be performed with regard to the GID_MIN,
+           GID_MAX, SYS_GID_MIN, or SYS_GID_MAX from /etc/login.defs.
+ ESESCOBpage groupmod(8) line 15 (press h for help or q to quit)
+       -h, --helppmod(8) line 16 (press h for help or q to quit)
+           Display help message and exit. for help or q to quit)
+ ESESCOBpage groupmod(8) line 18 (press h for help or q to quit)
+       -n, --new-name NEW_GROUP9 (press h for help or q to quit)
+           The name of the group will be changed from GROUP to NEW_GROUP
+           name.upmod(8) line 21 (press h for help or q to quit)
+ ESESCOBpage groupmod(8) line 22 (press h for help or q to quit)
+       -o, --non-unique) line 23 (press h for help or q to quit)
+           When used with the -g option, allow to change the group GID to
+           a non-unique value.25 (press h for help or q to quit)
+ ESESCOBpage groupmod(8) line 26 (press h for help or q to quit)
+       -p, --password PASSWORD27 (press h for help or q to quit)
+           The encrypted password, as returned by crypt(3).quit)
+ ESESCOBpage groupmod(8) line 29 (press h for help or q to quit)
+           Note: This option is not recommended because the password (or
+           encrypted password) will be visible by users listing the
+           processes.(8) line 32 (press h for help or q to quit)
+ ESESCOBpage groupmod(8) line 33 (press h for help or q to quit)
+           You should make sure the password respects the system's
+           password policy.ne 35 (press h for help or q to quit)
+ ESESCOBpage groupmod(8) line 36 (press h for help or q to quit)
+       -R, --root CHROOT_DIRe 37 (press h for help or q to quit)
+           Apply changes in the CHROOT_DIR directory and use the
+           configuration files from the CHROOT_DIR directory. Only
+           absolute paths are supported.h for help or q to quit)
+ ESESCOBpage groupmod(8) line 41 (press h for help or q to quit)
+       -P, --prefix PREFIX_DIR42 (press h for help or q to quit)
+           Apply changes in the PREFIX_DIR directory and use the
+           configuration files from the PREFIX_DIR directory. This option
+           does not chroot and is intended for preparing a quit)
+           cross-compilation target. Some limitations: NIS and LDAP
+           users/groups are not verified. PAM authentication is using the
+           host files. No SELINUX support.for help or q to quit)
+ ESESCOBpage groupmod(8) line 49 (press h for help or q to quit)
+       -U, --usersmod(8) line 50 (press h for help or q to quit)
+           A list of usernames to add as members of the group.t)
+ ESESCOBpage groupmod(8) line 52 (press h for help or q to quit)
+           The default behavior (if the -g, -N, and -U options are not
+           specified) is defined by the USERGROUPS_ENAB variable in
+           /etc/login.defs.ne 55 (press h for help or q to quit)
+ ESESCOBpage groupmod(8) line 56 (press h for help or q to quit)
+CONFIGURATIONgroupmod(8) line 57 (press h for help or q to quit)
+       The following configuration variables in /etc/login.defs change the
+       behavior of this tool: 59 (press h for help or q to quit)
+ ESESCOBpage groupmod(8) line 60 (press h for help or q to quit)
+       MAX_MEMBERS_PER_GROUP (number)ss h for help or q to quit)
+           Maximum members per group entry. When the maximum is reached, a
+           new group entry (line) is started in /etc/group (with the same
+M           Apply changes in the PREFIX_DIR directory and use the
+>0;kent@ubsembr: ~mod(8) line 63 (press h for help or q to quit)
+kent@ubsembr:~$ man chage
+CHAGE(1)                       User Commands                      CHAGE(1)
+
+NAME
+       chage - change user password expiry information
+
+SYNOPSIS
+
+       chage [options] LOGIN
+
+DESCRIPTION
+       The chage command changes the number of days between password
+       changes and the date of the last password change. This information
+       is used by the system to determine when a user must change their
+       password.
+
+OPTIONS
+       The options which apply to the chage command are:
+
+       -d, --lastday LAST_DAY
+           Set the number of days since January 1st, 1970 when the
+>0;kent@ubsembr: ~(1) line 1 (press h for help or q to quit)
+0;kent@ubsembr: ~)`': g': man chagr': man groupmoe': grep games: /etc/group': grepmyrslosudo grep ko: /etc/shado
+kent@ubsembr:~$ sudo grekent0;kent@ubsembr: ~
+kent@ubsembr:~$ sudo grep kent: /etc/shado
+[sudo] password for kent: 
+kent:$6$/oB.5Jdbv0X737FZ$.utaVy2Lxd.LxRddCqqV6ROBMaA78pcCTHuFrBSg2Rn/7u2s41JVJGazrCT10iOclqW6MCZJ5WInlJsLTmqzA.:20331:0:99999:7:::
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 
+0;kent@ubsembr: ~
+kent@ubsembr:~$ id
+uid=1000(kent) gid=1000(kent) groups=1000(kent),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),101(lxd)
+0;kent@ubsembr: ~
+kent@ubsembr:~$ isudo grep kent: /etc/shadow
+kent:$6$/oB.5Jdbv0X737FZ$.utaVy2Lxd.LxRddCqqV6ROBMaA78pcCTHuFrBSg2Rn/7u2s41JVJGazrCT10iOclqW6MCZJ5WInlJsLTmqzA.:20331:0:99999:7:::
+0;kent@ubsembr: ~
+kent@ubsembr:~$ man shadow
+SHADOW(5)             File Formats and Configuration             SHADOW(5)
+
+NAME
+       shadow - shadowed password file
+
+DESCRIPTION
+       shadow is a file which contains the password information for the
+       system's accounts and optional aging information.
+
+       This file must not be readable by regular users if password
+       security is to be maintained.
+
+       Each line of this file contains 9 fields, separated by colons
+       (“:”), in the following order:
+
+       login name
+           It must be a valid account name, which exist on the system.
+
+       encrypted password
+           This field may be empty, in which case no passwords are
+>0;kent@ubsembr: ~w(5) line 1 (press h for help or q to quit)
+kent@ubsembr:~$ man shado5shado shado
+
+
+
+man
+man: can't resolve man7/groff_man.7
+MAN(1)                      Manual pager utils                      MAN(1)
+
+NAME
+       man - an interface to the system reference manuals
+
+SYNOPSIS
+       man [man options] [[section] page ...] ...
+       man -k [apropos options] regexp ...
+       man -K [man options] [section] term ...
+       man -f [whatis options] page ...
+       man -l [man options] file ...
+       man -w|-W [man options] page ...
+
+DESCRIPTION
+       man  is the system's manual pager.  Each page argument given to man
+       is normally the name of a program, utility or function.  The manual
+       page associated with each of these arguments is then found and dis‐
+       played.  A section, if provided, will direct man to  look  only  in
+       that section of the manual.  The default action is to search in all
+       of  the  available  sections following a pre-defined order (see DE‐
+       FAULTS), and to show only the first page found, even if page exists
+       in several sections.
+
+       The table below shows the section numbers of the manual followed by
+       the types of pages they contain.
+
+       1   Executable programs or shell commands
+       2   System calls (functions provided by the kernel)
+       3   Library calls (functions within program libraries)
+       4   Special files (usually found in /dev)
+       5   File formats and conventions, e.g. /etc/passwd
+       6   Games
+       7   Miscellaneous (including macro packages and conventions),  e.g.
+           man(7), groff(7), man-pages(7)
+       8   System administration commands (usually only for root)
+       9   Kernel routines [Non standard]
+
+       A manual page consists of several sections.
+
+       Conventional  section  names include NAME, SYNOPSIS, CONFIGURATION,
+>0;kent@ubsembr: ~) line 21 (press h for help or q to quit)
+kent@ubsembr:~$ man 5 shadow0;kent@ubsembr: ~
+kent@ubsembr:~$ man 5 shadow
+SHADOW(5)             File Formats and Configuration             SHADOW(5)
+
+NAME
+       shadow - shadowed password file
+
+DESCRIPTION
+       shadow is a file which contains the password information for the
+       system's accounts and optional aging information.
+
+       This file must not be readable by regular users if password
+       security is to be maintained.
+
+       Each line of this file contains 9 fields, separated by colons
+       (“:”), in the following order:
+
+       login name
+           It must be a valid account name, which exist on the system.
+
+       encrypted password
+           This field may be empty, in which case no passwords are
+           required to authenticate as the specified login name. However,
+           some applications which read the /etc/shadow file may decide
+           not to permit any access at all if the password field is empty.
+
+           A password field which starts with an exclamation mark means
+           that the password is locked. The remaining characters on the
+           line represent the password field before the password was
+           locked.
+
+           Refer to crypt(3) for details on how this string is
+           interpreted.
+
+           If the password field contains some string that is not a valid
+           result of crypt(3), for instance ! or *, the user will not be
+           able to use a unix password to log in (but the user may log in
+           the system by other means).
+
+       date of last password change
+           The date of the last password change, expressed as the number
+           of days since Jan 1, 1970 00:00 UTC.
+ Manual page shadow(5) line 21 (press h for help or q to quit)
+           The value 0 has a special meaning, which is that the user
+           should change her password the next time she will log in the
+           system.
+
+           An empty field means that password aging features are disabled.
+
+       minimum password age
+           The minimum password age is the number of days the user will
+           have to wait before she will be allowed to change her password
+           again.
+
+           An empty field and value 0 mean that there is no minimum
+           password age.
+
+       maximum password age
+           The maximum password age is the number of days after which the
+           user will have to change her password.
+
+           After this number of days is elapsed, the password may still be
+           valid. The user should be asked to change her password the next
+           time she will log in.
+
+           An empty field means that there are no maximum password age, no
+           password warning period, and no password inactivity period (see
+           below).
+
+           If the maximum password age is lower than the minimum password
+           age, the user cannot change her password.
+
+       password warning period
+           The number of days before a password is going to expire (see
+           the maximum password age above) during which the user should be
+           warned.
+
+           An empty field and value 0 mean that there are no password
+           warning period.
+
+       password inactivity period
+           The number of days after a password has expired (see the
+           maximum password age above) during which the password should
+           still be accepted (and the user should update her password
+           during the next login).
+
+           After expiration of the password and this expiration period is
+           elapsed, no login is possible for the user. The user should
+           contact her administrator.
+
+           An empty field means that there are no enforcement of an
+           inactivity period.
+
+       account expiration date
+           The date of expiration of the account, expressed as the number
+           of days since Jan 1, 1970 00:00 UTC.
+
+           Note that an account expiration differs from a password
+           expiration. In case of an account expiration, the user shall
+           not be allowed to login. In case of a password expiration, the
+           user is not allowed to login using her password.
+
+           An empty field means that the account will never expire.
+
+           The value 0 should not be used as it is interpreted as either
+           an account with no expiration, or as an expiration on Jan 1,
+           1970.
+
+       reserved field
+           This field is reserved for future use.
+
+FILES
+       /etc/passwd
+           User account information.
+
+       /etc/shadow
+           Secure user account information.
+
+       /etc/shadow-
+           Backup file for /etc/shadow.
+
+           Note that this file is used by the tools of the shadow
+MESESCOApage shadow(5) line 101 (press h for help or q to quit)
+M           user is not allowed to login using her password.it)
+M           not be allowed to login. In case of a password expiration, the
+M           expiration. In case of an account expiration, the user shall
+M           Note that an account expiration differs from a password
+MESESCOApage shadow(5) line 96 (press h for help or q to quit)
+M           of days since Jan 1, 1970 00:00 UTC. or q to quit)
+M           The date of expiration of the account, expressed as the number
+M       account expiration date(press h for help or q to quit)
+MESESCOApage shadow(5) line 92 (press h for help or q to quit)
+>0;kent@ubsembr: ~w(5) line 91 (press h for help or q to quit)
+kent@ubsembr:~$ w
+ 12:14:01 up  5:03,  1 user,  load average: 0.00, 0.00, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+kent              10.0.2.2         11:38    5:03m  0.00s   ?    sshd: kent 
+0;kent@ubsembr: ~
+kent@ubsembr:~$ who
+kent     pts/0        2025-10-01 11:38 (10.0.2.2)
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 0;kent@ubsembr: ~
+kent@ubsembr:~$ ps
+    PID TTY          TIME CMD
+   2724 pts/0    00:00:00 bash
+   3536 pts/0    00:00:00 ps
+0;kent@ubsembr: ~
+kent@ubsembr:~$ ps -e0;kent@ubsembr: ~
+kent@ubsembr:~$ ps -e
+    PID TTY          TIME CMD
+      1 ?        00:00:00 systemd
+      2 ?        00:00:00 kthreadd
+      3 ?        00:00:00 pool_workqueue_release
+      4 ?        00:00:00 kworker/R-rcu_g
+      5 ?        00:00:00 kworker/R-rcu_p
+      6 ?        00:00:00 kworker/R-slub_
+      7 ?        00:00:00 kworker/R-netns
+     10 ?        00:00:00 kworker/0:0H-kblockd
+     11 ?        00:00:00 kworker/u4:0-ext4-rsv-conversion
+     12 ?        00:00:00 kworker/R-mm_pe
+     13 ?        00:00:00 rcu_tasks_kthread
+     14 ?        00:00:00 rcu_tasks_rude_kthread
+     15 ?        00:00:00 rcu_tasks_trace_kthread
+     16 ?        00:00:00 ksoftirqd/0
+     17 ?        00:00:00 rcu_preempt
+     18 ?        00:00:00 migration/0
+     19 ?        00:00:00 idle_inject/0
+     20 ?        00:00:00 cpuhp/0
+     21 ?        00:00:00 cpuhp/1
+     22 ?        00:00:00 idle_inject/1
+     23 ?        00:00:00 migration/1
+     24 ?        00:00:00 ksoftirqd/1
+     29 ?        00:00:00 kdevtmpfs
+     30 ?        00:00:00 kworker/R-inet_
+     31 ?        00:00:00 kauditd
+     32 ?        00:00:00 khungtaskd
+     33 ?        00:00:00 oom_reaper
+     35 ?        00:00:00 kworker/R-write
+     37 ?        00:00:00 kcompactd0
+     38 ?        00:00:00 ksmd
+     40 ?        00:00:00 khugepaged
+     41 ?        00:00:00 kworker/R-kinte
+     42 ?        00:00:00 kworker/R-kbloc
+     43 ?        00:00:00 kworker/R-blkcg
+     44 ?        00:00:00 irq/9-acpi
+     45 ?        00:00:00 kworker/R-tpm_d
+     46 ?        00:00:00 kworker/R-ata_s
+     47 ?        00:00:00 kworker/R-md
+     48 ?        00:00:00 kworker/R-md_bi
+     49 ?        00:00:00 kworker/R-edac-
+     50 ?        00:00:00 kworker/R-devfr
+     51 ?        00:00:00 watchdogd
+     53 ?        00:00:00 kworker/1:1H-kblockd
+     54 ?        00:00:00 kswapd0
+     55 ?        00:00:00 ecryptfs-kthread
+     56 ?        00:00:00 kworker/R-kthro
+     57 ?        00:00:00 kworker/R-acpi_
+     59 ?        00:00:00 scsi_eh_0
+     60 ?        00:00:00 kworker/R-scsi_
+     61 ?        00:00:00 scsi_eh_1
+     62 ?        00:00:00 kworker/R-scsi_
+     66 ?        00:00:00 kworker/R-mld
+     67 ?        00:00:00 kworker/R-ipv6_
+     68 ?        00:00:00 kworker/0:1H
+     75 ?        00:00:00 kworker/R-kstrp
+     77 ?        00:00:00 kworker/u7:0
+     78 ?        00:00:00 kworker/u8:0
+     79 ?        00:00:00 kworker/u9:0
+     84 ?        00:00:00 kworker/R-crypt
+     95 ?        00:00:00 kworker/R-charg
+    145 ?        00:00:00 scsi_eh_2
+    146 ?        00:00:00 kworker/R-scsi_
+    179 ?        00:00:00 kworker/R-kdmfl
+    208 ?        00:00:00 kworker/R-raid5
+    253 ?        00:00:00 jbd2/dm-0-8
+    254 ?        00:00:00 kworker/R-ext4-
+    323 ?        00:00:00 systemd-journal
+    347 ?        00:00:00 kworker/R-kmpat
+    348 ?        00:00:00 kworker/R-kmpat
+    379 ?        00:00:01 multipathd
+    382 ?        00:00:00 kworker/u4:1
+    387 ?        00:00:00 systemd-udevd
+    400 ?        00:00:00 psimon
+    452 ?        00:00:00 kworker/1:2H-kblockd
+    488 ?        00:00:00 irq/18-vmwgfx
+    490 ?        00:00:00 kworker/R-ttm
+    526 ?        00:00:00 jbd2/sda2-8
+    527 ?        00:00:00 kworker/R-ext4-
+    578 ?        00:00:00 systemd-network
+    598 ?        00:00:00 systemd-resolve
+    601 ?        00:00:00 systemd-timesyn
+    632 ?        00:00:00 kworker/R-cfg80
+    684 ?        00:00:00 dbus-daemon
+    693 ?        00:00:00 polkitd
+    717 ?        00:00:00 systemd-logind
+    727 ?        00:00:00 udisksd
+    748 ?        00:00:00 unattended-upgr
+    808 ?        00:00:00 ModemManager
+    867 ?        00:00:00 rsyslogd
+    884 ?        00:00:00 cron
+    892 tty1     00:00:00 agetty
+    960 ?        00:00:00 sshd
+    964 ?        00:00:00 psimon
+    966 ?        00:00:00 systemd
+    967 ?        00:00:00 (sd-pam)
+   1122 ?        00:00:00 kworker/R-tls-s
+   1672 ?        00:00:00 upowerd
+   2235 ?        00:00:00 kworker/u6:4-flush-252:0
+   2350 ?        00:00:00 kworker/u5:1-flush-252:0
+   2389 ?        00:00:00 kworker/u6:1-events_power_efficient
+   2407 ?        00:00:07 kworker/1:2-mm_percpu_wq
+   2663 ?        00:00:00 kworker/u5:3-flush-252:0
+   2665 ?        00:00:00 sshd
+   2723 ?        00:00:00 sshd
+   2724 pts/0    00:00:00 bash
+   2931 ?        00:00:01 kworker/0:1-mm_percpu_wq
+   3182 ?        00:00:00 kworker/u5:2-writeback
+   3188 ?        00:00:00 kworker/0:0-cgroup_destroy
+   3272 ?        00:00:00 kworker/u6:0-events_unbound
+   3436 ?        00:00:00 kworker/1:3-events
+   3455 ?        00:00:00 kworker/u6:2-events_power_efficient
+   3539 pts/0    00:00:00 ps
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 
+0;kent@ubsembr: ~
+kent@ubsembr:~$ ps - --user kent0;kent@ubsembr: ~
+kent@ubsembr:~$ ps --user kene 
+    PID TTY          TIME CMD
+      1 ?        00:00:00 systemd
+      2 ?        00:00:00 kthreadd
+      3 ?        00:00:00 pool_workqueue_release
+      4 ?        00:00:00 kworker/R-rcu_g
+      5 ?        00:00:00 kworker/R-rcu_p
+      6 ?        00:00:00 kworker/R-slub_
+      7 ?        00:00:00 kworker/R-netns
+     10 ?        00:00:00 kworker/0:0H-kblockd
+     11 ?        00:00:00 kworker/u4:0-ext4-rsv-conversion
+     12 ?        00:00:00 kworker/R-mm_pe
+     13 ?        00:00:00 rcu_tasks_kthread
+     14 ?        00:00:00 rcu_tasks_rude_kthread
+     15 ?        00:00:00 rcu_tasks_trace_kthread
+     16 ?        00:00:00 ksoftirqd/0
+     17 ?        00:00:00 rcu_preempt
+     18 ?        00:00:00 migration/0
+     19 ?        00:00:00 idle_inject/0
+     20 ?        00:00:00 cpuhp/0
+     21 ?        00:00:00 cpuhp/1
+     22 ?        00:00:00 idle_inject/1
+     23 ?        00:00:00 migration/1
+     24 ?        00:00:00 ksoftirqd/1
+     29 ?        00:00:00 kdevtmpfs
+     30 ?        00:00:00 kworker/R-inet_
+     31 ?        00:00:00 kauditd
+     32 ?        00:00:00 khungtaskd
+     33 ?        00:00:00 oom_reaper
+     35 ?        00:00:00 kworker/R-write
+     37 ?        00:00:00 kcompactd0
+     38 ?        00:00:00 ksmd
+     40 ?        00:00:00 khugepaged
+     41 ?        00:00:00 kworker/R-kinte
+     42 ?        00:00:00 kworker/R-kbloc
+     43 ?        00:00:00 kworker/R-blkcg
+     44 ?        00:00:00 irq/9-acpi
+     45 ?        00:00:00 kworker/R-tpm_d
+     46 ?        00:00:00 kworker/R-ata_s
+     47 ?        00:00:00 kworker/R-md
+     48 ?        00:00:00 kworker/R-md_bi
+     49 ?        00:00:00 kworker/R-edac-
+     50 ?        00:00:00 kworker/R-devfr
+     51 ?        00:00:00 watchdogd
+     53 ?        00:00:00 kworker/1:1H-kblockd
+     54 ?        00:00:00 kswapd0
+     55 ?        00:00:00 ecryptfs-kthread
+     56 ?        00:00:00 kworker/R-kthro
+     57 ?        00:00:00 kworker/R-acpi_
+     59 ?        00:00:00 scsi_eh_0
+     60 ?        00:00:00 kworker/R-scsi_
+     61 ?        00:00:00 scsi_eh_1
+     62 ?        00:00:00 kworker/R-scsi_
+     66 ?        00:00:00 kworker/R-mld
+     67 ?        00:00:00 kworker/R-ipv6_
+     68 ?        00:00:00 kworker/0:1H
+     75 ?        00:00:00 kworker/R-kstrp
+     77 ?        00:00:00 kworker/u7:0
+     78 ?        00:00:00 kworker/u8:0
+     79 ?        00:00:00 kworker/u9:0
+     84 ?        00:00:00 kworker/R-crypt
+     95 ?        00:00:00 kworker/R-charg
+    145 ?        00:00:00 scsi_eh_2
+    146 ?        00:00:00 kworker/R-scsi_
+    179 ?        00:00:00 kworker/R-kdmfl
+    208 ?        00:00:00 kworker/R-raid5
+    253 ?        00:00:00 jbd2/dm-0-8
+    254 ?        00:00:00 kworker/R-ext4-
+    323 ?        00:00:00 systemd-journal
+    347 ?        00:00:00 kworker/R-kmpat
+    348 ?        00:00:00 kworker/R-kmpat
+    379 ?        00:00:01 multipathd
+    382 ?        00:00:00 kworker/u4:1
+    387 ?        00:00:00 systemd-udevd
+    400 ?        00:00:00 psimon
+    452 ?        00:00:00 kworker/1:2H-kblockd
+    488 ?        00:00:00 irq/18-vmwgfx
+    490 ?        00:00:00 kworker/R-ttm
+    526 ?        00:00:00 jbd2/sda2-8
+    527 ?        00:00:00 kworker/R-ext4-
+    578 ?        00:00:00 systemd-network
+    598 ?        00:00:00 systemd-resolve
+    601 ?        00:00:00 systemd-timesyn
+    632 ?        00:00:00 kworker/R-cfg80
+    684 ?        00:00:00 dbus-daemon
+    693 ?        00:00:00 polkitd
+    717 ?        00:00:00 systemd-logind
+    727 ?        00:00:00 udisksd
+    748 ?        00:00:00 unattended-upgr
+    808 ?        00:00:00 ModemManager
+    867 ?        00:00:00 rsyslogd
+    884 ?        00:00:00 cron
+    892 tty1     00:00:00 agetty
+    960 ?        00:00:00 sshd
+    964 ?        00:00:00 psimon
+    966 ?        00:00:00 systemd
+    967 ?        00:00:00 (sd-pam)
+   1122 ?        00:00:00 kworker/R-tls-s
+   1672 ?        00:00:00 upowerd
+   2235 ?        00:00:00 kworker/u6:4-events_unbound
+   2350 ?        00:00:00 kworker/u5:1-flush-252:0
+   2389 ?        00:00:00 kworker/u6:1-events_power_efficient
+   2407 ?        00:00:07 kworker/1:2-events
+   2663 ?        00:00:00 kworker/u5:3-events_unbound
+   2665 ?        00:00:00 sshd
+   2723 ?        00:00:00 sshd
+   2724 pts/0    00:00:00 bash
+   2931 ?        00:00:01 kworker/0:1-events
+   3182 ?        00:00:00 kworker/u5:2-writeback
+   3188 ?        00:00:00 kworker/0:0-cgroup_destroy
+   3272 ?        00:00:00 kworker/u6:0-events_unbound
+   3436 ?        00:00:00 kworker/1:3-events
+   3455 ?        00:00:00 kworker/u6:2-events_power_efficient
+   3540 pts/0    00:00:00 ps
+0;kent@ubsembr: ~
+kent@ubsembr:~$ ps -e --user ken0;kent@ubsembr: ~
+kent@ubsembr:~$ ps --user ken
+    PID TTY          TIME CMD
+    966 ?        00:00:00 systemd
+    967 ?        00:00:00 (sd-pam)
+   2723 ?        00:00:00 sshd
+   2724 pts/0    00:00:00 bash
+   3541 pts/0    00:00:00 ps
+0;kent@ubsembr: ~
+kent@ubsembr:~$ sudo l
+
+
+less /etc/login.defs 0;kent@ubsembr: ~
+kent@ubsembr:~$ less /etc/login.defs 
+#
+# /etc/login.defs - Configuration control definitions for the login package.
+#
+# Three items must be defined:  MAIL_DIR, ENV_SUPATH, and ENV_PATH.
+# If unspecified, some arbitrary (and possibly incorrect) value will
+# be assumed.  All other items are optional - if not specified then
+# the described action or option will be inhibited.
+#
+# Comment lines (lines beginning with "#") and blank lines are ignored.
+#
+# Modified for Linux.  --marekm
+
+# REQUIRED for useradd/userdel/usermod
+#   Directory where mailboxes reside, _or_ name of file, relative to the
+#   home directory.  If you _do_ define MAIL_DIR and MAIL_FILE,
+#   MAIL_DIR takes precedence.
+#
+#   Essentially:
+#      - MAIL_DIR defines the location of users mail spool files
+#        (for mbox use) by appending the username to MAIL_DIR as defined
+#        below.
+#      - MAIL_FILE defines the location of the users mail spool files as the
+#        fully-qualified filename obtained by prepending the user home
+#        directory before $MAIL_FILE
+#ESESCOB
+# NOTE: This is no more used for setting up users MAIL environment variable
+#       which is, starting from shadow 4.0.12-1 in Debian, entirely the
+#       job of the pam_mail PAM modules
+#       See default PAM configuration files provided for
+#       login, su, etc.
+#ESESCOB
+# This is a temporary situation: setting these variables will soon
+# move to /etc/default/useradd and the variables will then be
+# no more supported
+MAIL_DIR        /var/mail
+#MAIL_FILE      .mail
+ ESESCOB
+#ESESCOB
+# Enable logging and display of /var/log/faillog login failure info.
+# This option conflicts with the pam_tally PAM module.
+#ESESCOB
+FAILLOG_ENAB            yes
+ ESESCOB
+#ESESCOB
+# Enable display of unknown usernames when login failures are recorded.
+#ESESCOB
+# WARNING: Unknown usernames may become world readable. 
+# See #290803 and #298773 for details about how this could become a security
+# concern
+LOG_UNKFAIL_ENAB        no
+ ESESCOB
+#ESESCOB
+# Enable logging of successful logins
+#ESESCOB
+LOG_OK_LOGINS           no
+ ESESCOB
+#ESESCOB
+.ESESCOB "syslog" logging of su activity - in addition to sulog file logging:
+# SYSLOG_SG_ENAB does the same for newgrp and sg.
+#ESESCOB
+SYSLOG_SU_ENAB          yes
+SYSLOG_SG_ENAB          yes
+ ESESCOB
+#ESESCOB
+# If defined, all su activity is logged to this file.
+#ESESCOB
+#SULOG_FILE     /var/log/sulog
+ ESESCOB
+#ESESCOB
+# If defined, file which maps tty line to TERM environment parameter.
+# Each line of the file is in a format something like "vt100  tty01".
+#ESESCOB
+#TTYTYPE_FILE   /etc/ttytype
+ ESESCOB
+#ESESCOB
+# If defined, login failures will be logged here in a utmp format
+# last, when invoked as lastb, will read /var/log/btmp, so...
+#ESESCOB
+FTMP_FILE       /var/log/btmp
+ ESESCOB
+#ESESCOB
+# If defined, the command name to display when running "su -".  For
+# example, if this is defined as "su" then a "ps" will display the
+# command is "-su".  If not defined, then "ps" would display the
+# name of the shell actually being run, e.g. something like "-sh".
+#ESESCOB
+SU_NAME         su
+ ESESCOB
+#ESESCOB
+# If defined, file which inhibits all the usual chatter during the login
+# sequence.  If a full pathname, then hushed mode will be enabled if the
+# user's name or shell are found in the file.  If not a full pathname, then
+y.SESCOB mode will be enabled if the file exists in the user's home director:
+#ESESCOB
+HUSHLOGIN_FILE  .hushlogin
+#HUSHLOGIN_FILE /etc/hushlogins
+ ESESCOB
+#ESESCOB
+# *REQUIRED*  The default PATH settings, for superuser and normal users.
+#ESESCOB
+# (they are minimal, add the rest in the shell startup files)
+:/binCOBTH      PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:
+sESESCOB        PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/game:
+ ESESCOB
+#ESESCOB
+# Terminal permissions
+#ESESCOB
+#       TTYGROUP        Login tty will be assigned this group ownership.
+#       TTYPERM         Login tty will be set to this permission.
+#ESESCOB
+# If you have a "write" program which is "setgid" to a special group
+# which owns the terminals, define TTYGROUP to the group number and
+# TTYPERM to 0620.  Otherwise leave TTYGROUP commented out and assign
+# TTYPERM to either 622 or 600.
+#ESESCOB
+# In Debian /usr/bin/bsd-write or similar programs are setgid tty
+# However, the default and recommended value for TTYPERM is still 0600
+# to not allow anyone to write to anyone else console or terminal
+ ESESCOB
+# Users can still allow other people to write them by issuing 
+# the "mesg y" command.
+ ESESCOB
+TTYGROUP        tty
+TTYPERM         0600
+ ESESCOB
+#ESESCOB
+# Login configuration initializations:
+#ESESCOB
+#       ERASECHAR       Terminal ERASE character ('\010' = backspace).
+#       KILLCHAR        Terminal KILL character ('\025' = CTRL/U).
+#       UMASK           Default "umask" value.
+#
+# The ERASECHAR and KILLCHAR are used only on System V machines.
+# 
+# UMASK is the default umask value for pam_umask and is used by
+# useradd and newusers to set the mode of the new home directories.
+# 022 is the "historical" value in Debian for UMASK
+# 027, or even 077, could be considered better for privacy
+# There is no One True Answer here : each sysadmin must make up his/her
+# mind.
+#
+# If USERGROUPS_ENAB is set to "yes", that will modify this UMASK default value
+# for private user groups, i. e. the uid is the same as gid, and username is
+# the same as the primary group name: for these, the user permissions will be
+# used as group permissions, e. g. 022 will become 002.
+#
+# Prefix these values with "0" to get octal, "0x" to get hexadecimal.
+#
+ERASECHAR       0177
+KILLCHAR        025
+UMASK           022
+
+# HOME_MODE is used by useradd(8) and newusers(8) to set the mode for new
+# home directories.
+# If HOME_MODE is not set, the value of UMASK is used to create the mode.
+HOME_MODE       0750
+
+#
+# Password aging controls:
+#
+#       PASS_MAX_DAYS   Maximum number of days a password may be used.
+#       PASS_MIN_DAYS   Minimum number of days allowed between password changes.
+#       PASS_WARN_AGE   Number of days warning given before a password expires.
+#
+PASS_MAX_DAYS   99999
+PASS_MIN_DAYS   0
+PASS_WARN_AGE   7
+ ESESCOB
+#ESESCOB
+# Min/max values for automatic uid selection in useradd
+#ESESCOB
+UID_MIN                  1000
+UID_MAX                 60000
+# System accounts
+#SYS_UID_MIN              100
+#SYS_UID_MAX              999
+# Extra per user uids
+SUB_UID_MIN                100000
+SUB_UID_MAX             600100000
+SUB_UID_COUNT               65536
+
+#
+# Min/max values for automatic gid selection in groupadd
+#
+GID_MIN                  1000
+GID_MAX                 60000
+# System accounts
+#SYS_GID_MIN              100
+#SYS_GID_MAX              999
+# Extra per user group ids
+SUB_GID_MIN                100000
+SUB_GID_MAX             600100000
+SUB_GID_COUNT               65536
+
+#
+# Max number of login retries if password is bad. This will most likely be
+M#SYS_UID_MAX              999
+M#SYS_UID_MIN              100
+M# System accounts
+MUID_MAX                 60000
+MUID_MIN                  1000
+M#SESCOA
+M# Min/max values for automatic uid selection in useradd
+M#SESCOA
+MESESCOA
+MPASS_WARN_AGE   7
+MPASS_MIN_DAYS   0
+MPASS_MAX_DAYS   99999
+M#SESCOA
+Mes.SCOA
+Mges.COA PASS_WARN_AGE   Number of days warning given before a password expir
+M#       PASS_MAX_DAYS   Maximum number of days a password may be used.d chan
+M#SESCOA
+SUB_UID_MIN                100000
+SUB_UID_MAX             600100000
+SUB_UID_COUNT               65536
+ ESESCOB
+#ESESCOB
+# Min/max values for automatic gid selection in groupadd
+#ESESCOB
+GID_MIN                  1000
+GID_MAX                 60000
+# System accounts
+#SYS_GID_MIN              100
+#SYS_GID_MAX              999
+# Extra per user group ids
+SUB_GID_MIN                100000
+SUB_GID_MAX             600100000
+SUB_GID_COUNT               65536
+ ESESCOB
+#ESESCOB
+# Max number of login retries if password is bad. This will most likely be
+# overriden by PAM, since the default pam_unix module has it's own built
+# in of 3 retries. However, this is a safe fallback in case you are using
+# an authentication module that does not enforce PAM_MAXTRIES.
+#ESESCOB
+LOGIN_RETRIES           5
+ ESESCOB
+#ESESCOB
+# Max time in seconds for login
+#ESESCOB
+LOGIN_TIMEOUT           60
+ ESESCOB
+>0;kent@ubsembr: ~
+kent@ubsembr:~$ 
+sudo -i
+0;root@ubsembr: ~
+root@ubsembr:~# cd /etc/skel/
+0;root@ubsembr: /etc/skel
+root@ubsembr:/etc/skel# ls
+0;root@ubsembr: /etc/skel
+root@ubsembr:/etc/skel# ls -a
+.  ..  .bash_logout  .bashrc  .profile
+0;root@ubsembr: /etc/skel
+root@ubsembr:/etc/skel# nano .bashrc 
+8hopt -s histappendtory file, don't overwrite itth space in the history.c)shrc                                
+8 for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+8ISTSIZE=1000
+8ISTFILESIZE=2000
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# If set, the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+#shopt -s globstar
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+# set a fancy prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+xterm-color|*-256color) color_prompt=yes;;
+esac
+
+# uncomment for a colored prompt, if the terminal has the capability; turned
+# off by default to not distract the user: the focus in a terminal window
+# should be on the output of commands, not on the prompt
+#force_color_prompt=yes
+
+if [ -n "$force_color_prompt" ]; then
+if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+ # We have color support; assume it's compliant with Ecma-48
+ # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+ # a case would tend to support setf rather than setaf.)
+color_prompt=yes
+else
+color_prompt=
+fi
+fi
+
+if [ "$color_prompt" = yes ]; then
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]>
+else
+PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+unset color_prompt force_color_prompt
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+;;
+*)
+;;
+esac
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(>
+alias ls='ls --color=auto'
+ #alias dir='dir --color=auto'
+ #alias vdir='vdir --color=auto'
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+fi
+
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=>
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal ||>
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.bash_aliases ]; then
+. ~/.bash_aliases
+fi
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+if [ -f /usr/share/bash-completion/bash_completion ]; then
+. /usr/share/bash-completion/bash_completion
+elif [ -f /etc/bash_completion ]; then
+. /etc/bash_completion
+fi
+fi
+*
+PS1="""Prompt >>> 
+>0;root@ubsembr: /etc/skelc    [ Writing... ] [ Wrote 119 lines ]            Y Yes
+root@ubsembr:/etc/skel# exirt
+logout
+0;kent@ubsembr: ~
+kent@ubsembr:~$ usosudo useradd -m -s /bin/bash giraff
+0;kent@ubsembr: ~
+kent@ubsembr:~$ passwd gir
+afsudo 
+
+
+
+
+
+
+New password: 
+Retype new password: 
+passwd: password updated successfully
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 0;kent@ubsembr: ~
+kent@ubsembr:~$ su giraff
+Password: 
+Prompt Wed Oct 01 >> ls -a
+ls: cannot open directory '.': Permission denied
+Prompt Wed Oct 01 >> cd
+Prompt Wed Oct 01 >> ls -a
+.  ..  .bash_logout  .bashrc  .profile
+Prompt Wed Oct 01 >> less .bashrc 
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
+
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
+.bashrc
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# If set, the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+#shopt -s globstar
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+# set a fancy prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+    xterm-color|*-256color) color_prompt=yes;;
+esac
+
+# uncomment for a colored prompt, if the terminal has the capability; turned
+# off by default to not distract the user: the focus in a terminal window
+# should be on the output of commands, not on the prompt
+#force_color_prompt=yes
+
+if [ -n "$force_color_prompt" ]; then
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
+    else
+        color_prompt=
+    fi
+fi
+
+if [ "$color_prompt" = yes ]; then
+\[\033[01;34m\]\w\[\033[00m\]\$ 'n_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]::
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+unset color_prompt force_color_prompt
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
+*)
+    ;;
+esac
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+PS1="Prompt \d >> "
+(END)
+(END)
+>Prompt Wed Oct 01 >> less .bashrc
+nano
+8hopt -s histappendtory file, don't overwrite itth space in the history.c)shrc                                
+8 for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+8ISTSIZE=1000
+HISTFILESIZE=2000
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# If set, the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+#shopt -s globstar
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+# set a fancy prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+xterm-color|*-256color) color_prompt=yes;;
+esac
+
+# uncomment for a colored prompt, if the terminal has the capability; turned
+# off by default to not distract the user: the focus in a terminal window
+# should be on the output of commands, not on the prompt
+#force_color_prompt=yes
+
+if [ -n "$force_color_prompt" ]; then
+if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+ # We have color support; assume it's compliant with Ecma-48
+ # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+ # a case would tend to support setf rather than setaf.)
+color_prompt=yes
+else
+color_prompt=
+fi
+fi
+
+if [ "$color_prompt" = yes ]; then
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]>
+else
+PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+unset color_prompt force_color_prompt
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+;;
+*)
+;;
+esac
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(>
+alias ls='ls --color=auto'
+ #alias dir='dir --color=auto'
+ #alias vdir='vdir --color=auto'
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+fi
+
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=>
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal ||>
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.bash_aliases ]; then
+. ~/.bash_aliases
+fi
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+if [ -f /usr/share/bash-completion/bash_completion ]; then
+. /usr/share/bash-completion/bash_completion
+elif [ -f /etc/bash_completion ]; then
+. /etc/bash_completion
+fi
+fi
+
+PS1="Prompt \d >> "
+>Prompt Wed Oct 01 >> sopurc   [ Writing... ] [ Wrote 119 lines ]            Y Yes
+tessourc
+. .bashrc 
+ubsembr Prompt Wed Oct 01 >> 
+ubsembr Prompt Wed Oct 01 >> 
+ubsembr Prompt Wed Oct 01 >> ubsembr Prompt Wed Oct 01 >> exit
+exit
+0;kent@ubsembr: ~
+kent@ubsembr:~$ sudo -i
+0;root@ubsembr: ~
+root@ubsembr:~# less /etc/sudoer
+s
+#
+# This file MUST be edited with the 'visudo' command as root.
+#
+# Please consider adding local content in /etc/sudoers.d/ instead of
+# directly modifying this file.
+#
+# See the man page for details on how to write a sudoers file.
+#
+Defaults        env_reset
+Defaults        mail_badpass
+Defaults        secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
+
+# This fixes CVE-2005-4890 and possibly breaks some versions of kdesu
+# (#1011624, https://bugs.kde.org/show_bug.cgi?id=452532)
+Defaults        use_pty
+
+# This preserves proxy settings from user environments of root
+# equivalent users (group sudo)
+roxy"COBs:%sudo env_keep += "http_proxy https_proxy ftp_proxy all_proxy no_p/etc/sudoers
+ ESESCOB
+# This allows running arbitrary commands, but so does ALL, and it means
+# different sudoers have their choice of editor respected.
+#Defaults:%sudo env_keep += "EDITOR"
+ ESESCOB
+# Completely harmless preservation of a user preference.
+#Defaults:%sudo env_keep += "GREP_COLOR"
+ ESESCOB
+# While you shouldn't normally run git as root, you need to with etckeeper
+#Defaults:%sudo env_keep += "GIT_AUTHOR_* GIT_COMMITTER_*"
+ ESESCOB
+# Per-user preferences; root won't have sensible values for them.
+#Defaults:%sudo env_keep += "EMAIL DEBEMAIL DEBFULLNAME"
+:
+# "sudo scp" or "sudo rsync" should be able to use your SSH agent.
+#Defaults:%sudo env_keep += "SSH_AGENT_PID SSH_AUTH_SOCK"
+
+# Ditto for GPG agent
+#Defaults:%sudo env_keep += "GPG_AGENT_INFO"
+
+# Host alias specification
+
+# User alias specification
+
+# Cmnd alias specification
+
+# User privilege specification
+root    ALL=(ALL:ALL) ALL
+
+# Members of the admin group may gain root privileges
+%admin ALL=(ALL) ALL
+
+# Allow members of group sudo to execute any command
+%sudo   ALL=(ALL:ALL) ALL
+ ESESCOB
+# See sudoers(5) for more information on "@include" directives:
+ ESESCOB
+@includedir /etc/sudoers.d
+ ESESCOB
+ ESESCOB
+M# Ditto for GPG agent
+MESESCOA
+M#Defaults:%sudo env_keep += "SSH_AGENT_PID SSH_AUTH_SOCK"
+M# "sudo scp" or "sudo rsync" should be able to use your SSH agent.
+MESESCOA
+M#Defaults:%sudo env_keep += "EMAIL DEBEMAIL DEBFULLNAME"
+M# Per-user preferences; root won't have sensible values for them.
+MESESCOA
+M#Defaults:%sudo env_keep += "GIT_AUTHOR_* GIT_COMMITTER_*"
+M# While you shouldn't normally run git as root, you need to with etckeeper
+MESESCOA
+M#Defaults:%sudo env_keep += "GREP_COLOR"
+M# Completely harmless preservation of a user preference.
+MESESCOA
+M#Defaults:%sudo env_keep += "EDITOR"
+M# different sudoers have their choice of editor respected.
+M# This allows running arbitrary commands, but so does ALL, and it means
+MESESCOA
+Mroxy"OA
+M# equivalent users (group sudo)tp_proxy https_proxy ftp_proxy all_proxy no_p
+M# This preserves proxy settings from user environments of root
+MESESCOA
+MDefaults        use_pty
+M# (#1011624, https://bugs.kde.org/show_bug.cgi?id=452532)
+M# This fixes CVE-2005-4890 and possibly breaks some versions of kdesu
+MESESCOA
+Min:/sbin:/bin:/snap/bin"
+MDefaults        mail_badpass"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/b
+MDefaults        env_reset
+M#SESCOA
+M# See the man page for details on how to write a sudoers file.
+M#SESCOA
+M# directly modifying this file.
+M# Please consider adding local content in /etc/sudoers.d/ instead of
+M#SESCOA
+M# This file MUST be edited with the 'visudo' command as root.
+M#SESCOA
+ ESESCOA
+roxy"COB
+ ESESCOB
+# This allows running arbitrary commands, but so does ALL, and it means
+# different sudoers have their choice of editor respected.
+#Defaults:%sudo env_keep += "EDITOR"
+ ESESCOB
+# Completely harmless preservation of a user preference.
+#Defaults:%sudo env_keep += "GREP_COLOR"
+ ESESCOB
+# While you shouldn't normally run git as root, you need to with etckeeper
+#Defaults:%sudo env_keep += "GIT_AUTHOR_* GIT_COMMITTER_*"
+ ESESCOB
+# Per-user preferences; root won't have sensible values for them.
+#Defaults:%sudo env_keep += "EMAIL DEBEMAIL DEBFULLNAME"
+ ESESCOB
+# "sudo scp" or "sudo rsync" should be able to use your SSH agent.
+#Defaults:%sudo env_keep += "SSH_AGENT_PID SSH_AUTH_SOCK"
+ ESESCOB
+# Ditto for GPG agent
+#Defaults:%sudo env_keep += "GPG_AGENT_INFO"
+ ESESCOB
+# Host alias specification
+ ESESCOB
+# User alias specification
+ ESESCOB
+# Cmnd alias specification
+ ESESCOB
+# User privilege specification
+root    ALL=(ALL:ALL) ALL
+ ESESCOB
+# Members of the admin group may gain root privileges
+%admin ALL=(ALL) ALL
+ ESESCOB
+# Allow members of group sudo to execute any command
+%sudo   ALL=(ALL:ALL) ALL
+ ESESCOB
+# See sudoers(5) for more information on "@include" directives:
+ ESESCOB
+@includedir /etc/sudoers.d
+ ESESCOB
+ ESESCOB
+>0;root@ubsembr: ~
+root@ubsembr:~# visudo 
+8 This preserves proxy settings from user environments of rootsr/sbin:/usr/># This fixes CVE-2005-4890 and possibly breaks some versions of kdesu
+M equivalent users (group sudo)
+# equivalent users (group sudo)
+#Defaults:%sudo env_keep += "http_proxy https_proxy ftp_proxy all_proxy no_>
+
+# This allows running arbitrary commands, but so does ALL, and it means
+# different sudoers have their choice of editor respected.
+#Defaults:%sudo env_keep += "EDITOR"
+
+# Completely harmless preservation of a user preference.
+#Defaults:%sudo env_keep += "GREP_COLOR"
+
+# While you shouldn't normally run git as root, you need to with etckeeper
+#Defaults:%sudo env_keep += "GIT_AUTHOR_* GIT_COMMITTER_*"
+
+# Per-user preferences; root won't have sensible values for them.
+#Defaults:%sudo env_keep += "EMAIL DEBEMAIL DEBFULLNAME"
+
+# "sudo scp" or "sudo rsync" should be able to use your SSH agent.
+#Defaults:%sudo env_keep += "SSH_AGENT_PID SSH_AUTH_SOCK"
+
+# Ditto for GPG agent
+#Defaults:%sudo env_keep += "GPG_AGENT_INFO"
+
+# Host alias specification
+
+# User alias specification
+
+# Cmnd alias specification
+
+# User privilege specification
+root    ALL=(ALL:ALL) ALL
+
+# Members of the admin group may gain root privileges
+%admin ALL=(ALL) ALL
+
+# Allow members of group sudo to execute any command
+%sudo   ALL=(ALL:ALL) ALL
+
+# See sudoers(5) for more information on "@include" directives:
+
+@includedir /etc/sudoers.d
+>/etc/sudoers:45:13: syntax errortmp [ Writing... ] [ Wrote 57 lines ]       Y Yes
+oeiujhiuheiu
+            ^
+What now? ^Cvisudo exiting due to signal: Interrupt
+0;root@ubsembr: ~
+root@ubsembr:~# visudovisudo
+
+logout
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 
+logout
+Connection to localhost closed.
+ITINF25/lektion9
+$ 
+exit
+
+Script done on 2025-10-01 14:46:43+02:00 [COMMAND_EXIT_CODE="2"]
