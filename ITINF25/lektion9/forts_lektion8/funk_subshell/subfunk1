@@ -1,8 +1,13 @@
+#!/bin/bash
+
+# Funktioner som körs i en barn-bash, en subshell, har
+# parenteser istället för måsvingar.
+
 HALSNING=Wilkommen
-greet() {
+sub_greet() (
     namn1="$1"
     namn2="$2"
     echo "$HALSNING ${namn1}san och ${namn2}san"
     echo "$HALSNING $namn1""san"" och $namn2""san"
     return 1
-}
+)
