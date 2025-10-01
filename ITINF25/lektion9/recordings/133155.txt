@@ -683,4 +683,253 @@ $ ls  exit
 [7m Manual page useradd(8) line 225 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-U[22m, [1m--user-group[0m[m
 [7m Manual page useradd(8) line 226 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Create a group with the same name as the user, and add the user[m
 [7m Manual page useradd(8) line 227 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           to this group.[m
-[7m Manual page useradd(8) line 228 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ sudo useradd -m -s /bin
+[7m Manual page useradd(8) line 228 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ sudo useradd -m -s /bin/bash myrslok
+[?2004l[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ sudo passwd myrslok 
+[?2004lNew password: 
+Retype new password: 
+Sorry, passwords do not match.
+passwd: Authentication token manipulation error
+passwd: password unchanged
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ sudo passwd myrslok 
+[?2004lNew password: 
+Retype new password: 
+passwd: password updated successfully
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ su mysloik[K[Kk
+[?2004lsu: user myslok does not exist or the user entry does not contain all the required fields
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ su myslokrslok[C[C[C[C
+[?2004lPassword: 
+[?2004h]0;myrslok@ubsembr: /home/kent[01;32mmyrslok@ubsembr[00m:[01;34m/home/kent[00m$ [H[2J]0;myrslok@ubsembr: /home/kent[01;32mmyrslok@ubsembr[00m:[01;34m/home/kent[00m$ ls
+[?2004lls: cannot open directory '.': Permission denied
+[?2004h]0;myrslok@ubsembr: /home/kent[01;32mmyrslok@ubsembr[00m:[01;34m/home/kent[00m$ l[Kcd
+[?2004l[?2004h]0;myrslok@ubsembr: ~[01;32mmyrslok@ubsembr[00m:[01;34m~[00m$ [H[2J]0;myrslok@ubsembr: ~[01;32mmyrslok@ubsembr[00m:[01;34m~[00m$ pwd
+[?2004l/home/myrslok
+[?2004h]0;myrslok@ubsembr: ~[01;32mmyrslok@ubsembr[00m:[01;34m~[00m$ ls
+[?2004l[?2004h]0;myrslok@ubsembr: ~[01;32mmyrslok@ubsembr[00m:[01;34m~[00m$ echo $SHELL
+[?2004l/bin/bash
+[?2004h]0;myrslok@ubsembr: ~[01;32mmyrslok@ubsembr[00m:[01;34m~[00m$ [?2004l
+exit
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ d[K[H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ ls /e[K[K[K[K[Kless /etc/group
+[?2004l[?1049h[22;0;0t[?1h=root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,kent
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+fax:x:21:
+voice:x:22:
+cdrom:x:24:kent
+[7m/etc/group[27m[K[K [KESCESC[KOO[KBB[Kfloppy:x:25:
+:[K[K [KESCESC[KOO[KBB[Ktape:x:26:
+:[K[K [KESCESC[KOO[KBB[Ksudo:x:27:kent
+:[K[K [KESCESC[KOO[KBB[Kaudio:x:29:
+:[K[K [KESCESC[KOO[KBB[Kdip:x:30:kent
+:[K[K [KESCESC[KOO[KBB[Kwww-data:x:33:
+:[K[Kbackup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+shadow:x:42:
+utmp:x:43:
+video:x:44:
+sasl:x:45:
+plugdev:x:46:kent
+staff:x:50:
+games:x:60:
+users:x:100:gris
+nogroup:x:65534:
+systemd-journal:x:999:
+systemd-network:x:998:
+systemd-timesync:x:997:
+input:x:996:
+:[K[K[?1l>[?1049l[23;0;0t[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ man usermod
+[?2004l[?1049h[22;0;0t[?1h=[4mUSERMOD[24m(8)              System Management Commands              [4mUSERMOD[24m(8)[m
+[m
+[1mNAME[0m[m
+       usermod - modify a user account[m
+[m
+[1mSYNOPSIS[0m[m
+[m
+       [1musermod [22m[[4moptions[24m] [4mLOGIN[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       The [1musermod [22mcommand modifies the system account files.[m
+[m
+[1mOPTIONS[0m[m
+       The options which apply to the [1musermod [22mcommand are:[m
+[m
+       [1m-a[22m, [1m--append[0m[m
+           Add the user to the supplementary group(s). Use only with the[m
+           [1m-G [22moption.[m
+[7m Manual page usermod(8) line 1 (press h for help or q to quit)[27m[K...skipping...
+[4mUSERMOD[24m(8)              System Management Commands              [4mUSERMOD[24m(8)[m
+[m
+[1mNAME[0m[m
+       usermod - modify a user account[m
+[m
+[1mSYNOPSIS[0m[m
+[m
+       [1musermod [22m[[4moptions[24m] [4mLOGIN[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       The [1musermod [22mcommand modifies the system account files.[m
+[m
+[1mOPTIONS[0m[m
+       The options which apply to the [1musermod [22mcommand are:[m
+[m
+       [1m-a[22m, [1m--append[0m[m
+           Add the user to the supplementary group(s). Use only with the[m
+           [1m-G [22moption.[m
+[m
+[7m Manual page usermod(8) line 1 (press h for help or q to quit)[27m[K...skipping...
+[4mUSERMOD[24m(8)              System Management Commands              [4mUSERMOD[24m(8)[m
+[m
+[1mNAME[0m[m
+       usermod - modify a user account[m
+[m
+[1mSYNOPSIS[0m[m
+[m
+       [1musermod [22m[[4moptions[24m] [4mLOGIN[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       The [1musermod [22mcommand modifies the system account files.[m
+[m
+[1mOPTIONS[0m[m
+       The options which apply to the [1musermod [22mcommand are:[m
+[m
+       [1m-a[22m, [1m--append[0m[m
+           Add the user to the supplementary group(s). Use only with the[m
+           [1m-G [22moption.[m
+[m
+       [1m-b[22m, [1m--badname[0m[m
+[7m Manual page usermod(8) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Allow names that do not conform to standards.[m
+[7m Manual page usermod(8) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-c[22m, [1m--comment [4m[22mCOMMENT[0m[m
+[7m Manual page usermod(8) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           update the comment field of the user in /etc/passwd, which is[m
+[7m Manual page usermod(8) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           normally modified using the [1mchfn[22m(1) utility.[m
+[7m Manual page usermod(8) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-d[22m, [1m--home [4m[22mHOME_DIR[0m[m
+[7m Manual page usermod(8) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           The user's new login directory.[m
+[7m Manual page usermod(8) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           If the [1m-m [22moption is given, the contents of the current home[m
+[7m Manual page usermod(8) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           directory will be moved to the new home directory, which is[m
+[7m Manual page usermod(8) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           created if it does not already exist. If the current home[m
+[7m Manual page usermod(8) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           directory does not exist the new home directory will not be[m
+[7m Manual page usermod(8) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           created.[m
+[7m Manual page usermod(8) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-e[22m, [1m--expiredate [4m[22mEXPIRE_DATE[0m[m
+[7m Manual page usermod(8) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           The date on which the user account will be disabled. The date[m
+[7m Manual page usermod(8) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           is specified in the format [4mYYYY-MM-DD[24m. Integers as input are[m
+[7m Manual page usermod(8) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           interpreted as days after 1970-01-01.[m
+[7m Manual page usermod(8) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           An input of -1 or an empty string will blank the account[m
+[7m Manual page usermod(8) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           expiration field in the shadow password file. The account will[m
+[7m Manual page usermod(8) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           remain available with no date limit.[m
+[7m Manual page usermod(8) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           This option requires a /etc/shadow file. A /etc/shadow entry[m
+[7m Manual page usermod(8) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           will be created if there were none.[m
+[7m Manual page usermod(8) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-f[22m, [1m--inactive [4m[22mINACTIVE[0m[m
+[7m Manual page usermod(8) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           defines the number of days after the password exceeded its[m
+[7m Manual page usermod(8) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           maximum age during which the user may still login by[m
+[7m Manual page usermod(8) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           immediately replacing the password. This grace period before[m
+[7m Manual page usermod(8) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           the account becomes inactive is stored in the shadow password[m
+[7m Manual page usermod(8) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           file. An input of 0 will disable an expired password with no[m
+[7m Manual page usermod(8) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           delay. An input of -1 will blank the respective field in the[m
+[7m Manual page usermod(8) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           shadow password file. See [1mshadow[22m(5) for more information.[m
+[7m Manual page usermod(8) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           This option requires a /etc/shadow file. A /etc/shadow entry[m
+[7m Manual page usermod(8) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           will be created if there were none.[m
+[7m Manual page usermod(8) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-g[22m, [1m--gid [4m[22mGROUP[0m[m
+[7m Manual page usermod(8) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           The name or numerical ID of the user's new primary group. The[m
+[7m Manual page usermod(8) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           group must exist.[m
+[7m Manual page usermod(8) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Any file from the user's home directory owned by the previous[m
+[7m Manual page usermod(8) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           primary group of the user will be owned by this new group.[m
+[7m Manual page usermod(8) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           The group ownership of files outside of the user's home[m
+[7m Manual page usermod(8) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           directory must be fixed manually.[m
+[7m Manual page usermod(8) line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           The change of the group ownership of files inside of the user's[m
+[7m Manual page usermod(8) line 51 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           home directory is also not done if the home dir owner uid is[m
+[7m Manual page usermod(8) line 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           different from the current or new user id. This is a safety[m
+[7m Manual page usermod(8) line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           measure for special home directories such as /.[m
+[7m Manual page usermod(8) line 54 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 55 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-G[22m, [1m--groups [4m[22mGROUP1[24m[[4m,GROUP2,...[24m[[4m,GROUPN[24m]]][m
+[7m Manual page usermod(8) line 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           A list of supplementary groups which the user is also a member[m
+[7m Manual page usermod(8) line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           of. Each group is separated from the next by a comma, with no[m
+[7m Manual page usermod(8) line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           intervening whitespace. The groups must exist.[m
+[7m Manual page usermod(8) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           If the user is currently a member of a group which is not[m
+[7m Manual page usermod(8) line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           listed, the user will be removed from the group. This behaviour[m
+[7m Manual page usermod(8) line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           can be changed via the [1m-a [22moption, which appends the user to the[m
+[7m Manual page usermod(8) line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           current supplementary group list.[m
+[7m Manual page usermod(8) line 64 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 65 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-l[22m, [1m--login [4m[22mNEW_LOGIN[0m[m
+[7m Manual page usermod(8) line 66 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           The name of the user will be changed from [4mLOGIN[24m to [4mNEW_LOGIN[24m.[m
+[7m Manual page usermod(8) line 67 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Nothing else is changed. In particular, the user's home[m
+[7m Manual page usermod(8) line 68 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           directory or mail spool should probably be renamed manually to[m
+[7m Manual page usermod(8) line 69 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           reflect the new login name.[m
+[7m Manual page usermod(8) line 70 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 71 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-L[22m, [1m--lock[0m[m
+[7m Manual page usermod(8) line 72 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Lock a user's password. This puts a '!' in front of the[m
+[7m Manual page usermod(8) line 73 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           encrypted password, effectively disabling the password. You[m
+[7m Manual page usermod(8) line 74 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           can't use this option with [1m-p [22mor [1m-U[22m.[m
+[7m Manual page usermod(8) line 75 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 76 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Note: if you wish to lock the account (not only access with a[m
+[7m Manual page usermod(8) line 77 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           password), you should also set the [4mEXPIRE_DATE[24m to [4m1[24m.[m
+[7m Manual page usermod(8) line 78 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 79 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-m[22m, [1m--move-home[0m[m
+[7m Manual page usermod(8) line 80 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           moves the content of the user's home directory to the new[m
+[7m Manual page usermod(8) line 81 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           location. If the current home directory does not exist the new[m
+[7m Manual page usermod(8) line 82 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           home directory will not be created.[m
+[7m Manual page usermod(8) line 83 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 84 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           This option is only valid in combination with the [1m-d [22m(or[m
+[7m Manual page usermod(8) line 85 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1m--home[22m) option.[m
+[7m Manual page usermod(8) line 86 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 87 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1musermod [22mwill try to adapt the ownership of the files and to[m
+[7m Manual page usermod(8) line 88 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           copy the modes, ACL and extended attributes, but manual changes[m
+[7m Manual page usermod(8) line 89 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           might be needed afterwards.[m
+[7m Manual page usermod(8) line 90 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 91 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-o[22m, [1m--non-unique[0m[m
+[7m Manual page usermod(8) line 92 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           allows to change the user ID to a non-unique value.[m
+[7m Manual page usermod(8) line 93 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 94 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           This option is only valid in combination with the [1m-u [22moption. As[m
+[7m Manual page usermod(8) line 95 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           a user identity serves as key to map between users on one hand[m
+[7m Manual page usermod(8) line 96 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           and permissions, file ownerships and other aspects that[m
+[7m Manual page usermod(8) line 97 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           determine the system's behavior on the other hand, more than[m
+[7m Manual page usermod(8) line 98 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           one login name will access the account of the given UID.[m
+[7m Manual page usermod(8) line 99 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 100 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-p[22m, [1m--password [4m[22mPASSWORD[0m[m
+[7m Manual page usermod(8) line 101 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           defines a new password for the user. PASSWORD is expected to be[m
+[7m Manual page usermod(8) line 102 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           encrypted, as returned by [1mcrypt [22m(3).[m
+[7m Manual page usermod(8) line 103 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 104 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mNote: [22mAvoid this option on the command line because the[m
+[7m Manual page usermod(8) line 105 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           password (or encrypted password) will be visible by users[m
+[7m Manual page usermod(8) line 106 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           listing the processes.[m
+[7m Manual page usermod(8) line 107 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 108 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           The password will be written in the local /etc/passwd or[m
+[7m Manual page usermod(8) line 109 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           /etc/shadow file. This might differ from the password database[m
+[7m Manual page usermod(8) line 110 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           configured in your PAM configuration.[m
+[7m Manual page usermod(8) line 111 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 112 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           You should make sure the password respects the system's[m
+[7m Manual page usermod(8) line 113 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           password policy.[m
+[7m Manual page usermod(8) line 114 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 115 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-r[22m, [1m--remove[0m[m
+[7m Manual page usermod(8) line 116 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Remove the user from named supplementary group(s). Use only[m
+[7m Manual page usermod(8) line 117 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           with the [1m-G [22moption.[m
+[7m Manual page usermod(8) line 118 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page usermod(8) line 119 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-R[22m, [1m--root [4m[22mCHROOT_DIR[0m[m
+[7m Manual page usermod(8) line 120 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Apply changes in the [4mCHROOT_DIR[24m directory and use the[m
+[7m Manual page usermod(8) line 121 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           configuration files from the [4mCHROOT_DIR[24m directory. Only[m
+[7m Manual page usermod(8) line 122 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           absolute paths
