@@ -1480,4 +1480,160 @@ kent:$6$/oB.5Jdbv0X737FZ$.utaVy2Lxd.LxRddCqqV6ROBMaA78pcCTHuFrBSg2Rn/7u2s41JVJGa
            The date of expiration of the account, expressed as the number[m
            of days since Jan 1, 1970 00:00 UTC.[m
 [m
-           Note that an account expiration diffe
+           Note that an account expiration differs from a password[m
+           expiration. In case of an account expiration, the user shall[m
+           not be allowed to login. In case of a password expiration, the[m
+           user is not allowed to login using her password.[m
+[m
+[7m Manual page shadow(5) line 81 (press h for help or q to quit)[27m[K[K           An empty field means that the account will never expire.[m
+[m
+           The value 0 should not be used as it is interpreted as either[m
+           an account with no expiration, or as an expiration on Jan 1,[m
+           1970.[m
+[m
+       [1mreserved field[0m[m
+           This field is reserved for future use.[m
+[m
+[1mFILES[0m[m
+       /etc/passwd[m
+           User account information.[m
+[m
+       /etc/shadow[m
+           Secure user account information.[m
+[m
+       /etc/shadow-[m
+           Backup file for /etc/shadow.[m
+[m
+           Note that this file is used by the tools of the shadow[m
+[7m Manual page shadow(5) line 101 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[21;1H[K[7m Manual page shadow(5) line 100 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           user is not allowed to login using her password.[m
+[21;1H[K[7m Manual page shadow(5) line 99 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           not be allowed to login. In case of a password expiration, the[m
+[21;1H[K[7m Manual page shadow(5) line 98 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           expiration. In case of an account expiration, the user shall[m
+[21;1H[K[7m Manual page shadow(5) line 97 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           Note that an account expiration differs from a password[m
+[21;1H[K[7m Manual page shadow(5) line 96 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[21;1H[K[7m Manual page shadow(5) line 95 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           of days since Jan 1, 1970 00:00 UTC.[m
+[21;1H[K[7m Manual page shadow(5) line 94 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           The date of expiration of the account, expressed as the number[m
+[21;1H[K[7m Manual page shadow(5) line 93 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1maccount expiration date[0m[m
+[21;1H[K[7m Manual page shadow(5) line 92 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[21;1H[K[7m Manual page shadow(5) line 91 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ w
+[?2004l 12:14:01 up  5:03,  1 user,  load average: 0.00, 0.00, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+kent              10.0.2.2         11:38    5:03m  0.00s   ?    sshd: kent 
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ who
+[?2004lkent     pts/0        2025-10-01 11:38 (10.0.2.2)
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ [H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ ps
+[?2004l    PID TTY          TIME CMD
+   2724 pts/0    00:00:00 bash
+   3536 pts/0    00:00:00 ps
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ ps -e[H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ ps -e
+[?2004l    PID TTY          TIME CMD
+      1 ?        00:00:00 systemd
+      2 ?        00:00:00 kthreadd
+      3 ?        00:00:00 pool_workqueue_release
+      4 ?        00:00:00 kworker/R-rcu_g
+      5 ?        00:00:00 kworker/R-rcu_p
+      6 ?        00:00:00 kworker/R-slub_
+      7 ?        00:00:00 kworker/R-netns
+     10 ?        00:00:00 kworker/0:0H-kblockd
+     11 ?        00:00:00 kworker/u4:0-ext4-rsv-conversion
+     12 ?        00:00:00 kworker/R-mm_pe
+     13 ?        00:00:00 rcu_tasks_kthread
+     14 ?        00:00:00 rcu_tasks_rude_kthread
+     15 ?        00:00:00 rcu_tasks_trace_kthread
+     16 ?        00:00:00 ksoftirqd/0
+     17 ?        00:00:00 rcu_preempt
+     18 ?        00:00:00 migration/0
+     19 ?        00:00:00 idle_inject/0
+     20 ?        00:00:00 cpuhp/0
+     21 ?        00:00:00 cpuhp/1
+     22 ?        00:00:00 idle_inject/1
+     23 ?        00:00:00 migration/1
+     24 ?        00:00:00 ksoftirqd/1
+     29 ?        00:00:00 kdevtmpfs
+     30 ?        00:00:00 kworker/R-inet_
+     31 ?        00:00:00 kauditd
+     32 ?        00:00:00 khungtaskd
+     33 ?        00:00:00 oom_reaper
+     35 ?        00:00:00 kworker/R-write
+     37 ?        00:00:00 kcompactd0
+     38 ?        00:00:00 ksmd
+     40 ?        00:00:00 khugepaged
+     41 ?        00:00:00 kworker/R-kinte
+     42 ?        00:00:00 kworker/R-kbloc
+     43 ?        00:00:00 kworker/R-blkcg
+     44 ?        00:00:00 irq/9-acpi
+     45 ?        00:00:00 kworker/R-tpm_d
+     46 ?        00:00:00 kworker/R-ata_s
+     47 ?        00:00:00 kworker/R-md
+     48 ?        00:00:00 kworker/R-md_bi
+     49 ?        00:00:00 kworker/R-edac-
+     50 ?        00:00:00 kworker/R-devfr
+     51 ?        00:00:00 watchdogd
+     53 ?        00:00:00 kworker/1:1H-kblockd
+     54 ?        00:00:00 kswapd0
+     55 ?        00:00:00 ecryptfs-kthread
+     56 ?        00:00:00 kworker/R-kthro
+     57 ?        00:00:00 kworker/R-acpi_
+     59 ?        00:00:00 scsi_eh_0
+     60 ?        00:00:00 kworker/R-scsi_
+     61 ?        00:00:00 scsi_eh_1
+     62 ?        00:00:00 kworker/R-scsi_
+     66 ?        00:00:00 kworker/R-mld
+     67 ?        00:00:00 kworker/R-ipv6_
+     68 ?        00:00:00 kworker/0:1H
+     75 ?        00:00:00 kworker/R-kstrp
+     77 ?        00:00:00 kworker/u7:0
+     78 ?        00:00:00 kworker/u8:0
+     79 ?        00:00:00 kworker/u9:0
+     84 ?        00:00:00 kworker/R-crypt
+     95 ?        00:00:00 kworker/R-charg
+    145 ?        00:00:00 scsi_eh_2
+    146 ?        00:00:00 kworker/R-scsi_
+    179 ?        00:00:00 kworker/R-kdmfl
+    208 ?        00:00:00 kworker/R-raid5
+    253 ?        00:00:00 jbd2/dm-0-8
+    254 ?        00:00:00 kworker/R-ext4-
+    323 ?        00:00:00 systemd-journal
+    347 ?        00:00:00 kworker/R-kmpat
+    348 ?        00:00:00 kworker/R-kmpat
+    379 ?        00:00:01 multipathd
+    382 ?        00:00:00 kworker/u4:1
+    387 ?        00:00:00 systemd-udevd
+    400 ?        00:00:00 psimon
+    452 ?        00:00:00 kworker/1:2H-kblockd
+    488 ?        00:00:00 irq/18-vmwgfx
+    490 ?        00:00:00 kworker/R-ttm
+    526 ?        00:00:00 jbd2/sda2-8
+    527 ?        00:00:00 kworker/R-ext4-
+    578 ?        00:00:00 systemd-network
+    598 ?        00:00:00 systemd-resolve
+    601 ?        00:00:00 systemd-timesyn
+    632 ?        00:00:00 kworker/R-cfg80
+    684 ?        00:00:00 dbus-daemon
+    693 ?        00:00:00 polkitd
+    717 ?        00:00:00 systemd-logind
+    727 ?        00:00:00 udisksd
+    748 ?        00:00:00 unattended-upgr
+    808 ?        00:00:00 ModemManager
+    867 ?        00:00:00 rsyslogd
+    884 ?        00:00:00 cron
+    892 tty1     00:00:00 agetty
+    960 ?        00:00:00 sshd
+    964 ?        00:00:00 psimon
+    966 ?        00:00:00 systemd
+    967 ?        00:00:00 (sd-pam)
+   1122 ?        00:00:00 kworker/R-tls-s
+   1672 ?        00:00:00 upowerd
+   2235 ?        00:00:00 kworker/u6:4-flush-252:0
+   2350 ?        00:00:00 kworker/u5:1-flush-252:0
+   2389 ?        00:00:00 kworker/u6:1-events_power_efficient
+   2407 ?        00:00:07 kworker/1:2-mm_percpu_wq
+   2663 ?        00:00:00 kworker/u5:3-flush-252:0
+   2665 ?        00:00:00 sshd
+   2723 ?        00:00:00 sshd
+   2724 pts/0    00:00:00 bash
+   2931 ?        00:00:01 kworker/0:1-mm_percpu_wq
+   3182 ?        00:00:00 kworker/u5:2-writeback
+   3188 ?        00:00:00 kworker/0:0-cgroup_destroy
+   3272 ?        00:00:00 kworker/u6:0-events_unbound
+   3436 ?     
