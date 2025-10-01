@@ -1933,4 +1933,72 @@ HOME_MODE       0750
 :[K[K [KESCESC[KOO[KBB[K#
 :[K[K [KESCESC[KOO[KBB[K# Min/max values for automatic uid selection in useradd
 :[K[K [KESCESC[KOO[KBB[K#
-:[K[K [KESCESC[KOO[KBB[KUID_MIN              
+:[K[K [KESCESC[KOO[KBB[KUID_MIN                  1000
+:[K[K [KESCESC[KOO[KBB[KUID_MAX                 60000
+:[K[K [KESCESC[KOO[KBB[K# System accounts
+:[K[K [KESCESC[KOO[KBB[K#SYS_UID_MIN              100
+:[K[K [KESCESC[KOO[KBB[K#SYS_UID_MAX              999
+:[K[K# Extra per user uids
+SUB_UID_MIN                100000
+SUB_UID_MAX             600100000
+SUB_UID_COUNT               65536
+
+#
+# Min/max values for automatic gid selection in groupadd
+#
+GID_MIN                  1000
+GID_MAX                 60000
+# System accounts
+#SYS_GID_MIN              100
+#SYS_GID_MAX              999
+# Extra per user group ids
+SUB_GID_MIN                100000
+SUB_GID_MAX             600100000
+SUB_GID_COUNT               65536
+
+#
+# Max number of login retries if password is bad. This will most likely be
+:[K[K [KESCESC[KOO[KAA[K[HM#SYS_UID_MAX              999
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#SYS_UID_MIN              100
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM# System accounts
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HMUID_MAX                 60000
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HMUID_MIN                  1000
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM# Min/max values for automatic uid selection in useradd
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HMPASS_WARN_AGE   7
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HMPASS_MIN_DAYS   0
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HMPASS_MAX_DAYS   99999
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HMes.
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#       PASS_WARN_AGE   Number of days warning given before a password expir[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HMges.
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#       PASS_MIN_DAYS   Minimum number of days allowed between password chan[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#       PASS_MAX_DAYS   Maximum number of days a password may be used.
+[21;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#
+[21;1H[K:[K[K [KESCESC[KOO[KBB[KSUB_UID_MIN                100000
+:[K[K [KESCESC[KOO[KBB[KSUB_UID_MAX             600100000
+:[K[K [KESCESC[KOO[KBB[KSUB_UID_COUNT               65536
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[K# Min/max values for automatic gid selection in groupadd
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[KGID_MIN                  1000
+:[K[K [KESCESC[KOO[KBB[KGID_MAX                 60000
+:[K[K [KESCESC[KOO[KBB[K# System accounts
+:[K[K [KESCESC[KOO[KBB[K#SYS_GID_MIN              100
+:[K[K [KESCESC[KOO[KBB[K#SYS_GID_MAX              999
+:[K[K [KESCESC[KOO[KBB[K# Extra per user group ids
+:[K[K [KESCESC[KOO[KBB[KSUB_GID_MIN                100000
+:[K[K [KESCESC[KOO[KBB[KSUB_GID_MAX             600100000
+:[K[K [KESCESC[KOO[KBB[KSUB_GID_COUNT               65536
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[K# Max number of login retries if password is bad. This will most likely be
+:[K[K [KESCESC[KOO[KBB[K# overriden by PAM, since the default pam_unix module has it's own built
+:[K[K [KESCESC[KOO[KBB[K# in of 3 retries. However, this is a safe fallback in case you are using
+:[K[K [KESCESC[KOO[KBB[K# an authentication module that does not enforce PAM_MAXTRIES.
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [KESCESC[KOO[KBB[KLOGIN_RETRIES           5
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K#
+:[K[K [K
