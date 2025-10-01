@@ -267,4 +267,76 @@ SISTA RADEN
       -   Assign any remaining arguments to the positional parameters.
           The -x and -v options are turned off.
     
-    Using + r
+    Using + rather than - causes these flags to be turned off.  The
+    flags can also be used upon invocation of the shell.  The current
+    set of flags may be found in $-.  The remaining n ARGs are positional
+    parameters and are assigned, in order, to $1, $2, .. $n.  If no
+    ARGs are given, all shell variables are printed.
+    
+    Exit Status:
+    Returns success unless an invalid option is given.
+[?2004h[94mITINF25/lektion9/forts_lektion8/funk_subshell
+(B[m$ help set | less[H[2J[94mITINF25/lektion9/forts_lektion8/funk_subshell
+(B[m$ help set | less
+[?2004l[?1049h[22;0;0t[?1h=set: set [-abefhkmnptuvxBCEHPT] [-o option-name] [--] [-] [arg ...]
+    Set or unset values of shell options and positional parameters.
+    
+    Change the value of shell attributes and positional parameters, or
+    display the names and values of shell variables.
+    
+    Options:
+      -a  Mark variables which are modified or created for export.
+      -b  Notify of job termination immediately.
+      -e  Exit immediately if a command exits with a non-zero status.
+      -f  Disable file name generation (globbing).
+      -h  Remember the location of commands as they are looked up.
+      -k  All assignment arguments are placed in the environment for a
+          command, not just those that precede the command name.
+      -m  Job control is enabled.
+      -n  Read commands but do not execute them.
+:[K[K/[K--[Kxx[K[1;1Hset: set [-abefhkmnptuvxBCEHPT] [-o option-name] [--] [-] [arg ...]
+[2;1H    Set or unset values of shell options and positional parameters.
+[3;1H    
+[4;1H    Change the value of shell attributes and positional parameters, or
+[5;1H    display the names and values of shell variables.
+[6;1H    
+[7;1H    Options:
+[8;1H      -a  Mark variables which are modified or created for export.
+[9;1H      -b  Notify of job termination immediately.
+[10;1H      -e  Exit immediately if a command exits with a non-zero status.
+[11;1H      -f  Disable file name generation (globbing).
+[12;1H      -h  Remember the location of commands as they are looked up.
+[13;1H      -k  All assignment arguments are placed in the environment for a
+[14;1H          command, not just those that precede the command name.
+[15;1H      -m  Job control is enabled.
+[16;1H      -n  Read commands but do not execute them.
+[17;1H[1;1Hset: set [-abefhkmnptuvxBCEHPT] [-o option-name] [--] [-] [arg ...]
+[2;1H    Set or unset values of shell options and positional parameters.
+[3;1H    
+[4;1H    Change the value of shell attributes and positional parameters, or
+[5;1H    display the names and values of shell variables.
+[6;1H    
+[7;1H    Options:
+[8;1H      -a  Mark variables which are modified or created for export.
+[9;1H      -b  Notify of job termination immediately.
+[10;1H      -e  Exit immediately if a command exits with a non-zero status.
+[11;1H      -f  Disable file name generation (globbing).
+[12;1H      -h  Remember the location of commands as they are looked up.
+[13;1H      -k  All assignment arguments are placed in the environment for a
+[14;1H          command, not just those that precede the command name.
+[15;1H      -m  Job control is enabled.
+[16;1H      -n  Read commands but do not execute them.
+[17;1H...skipping...
+              xtrace       same as [7m-x[27m
+      -p  Turned on whenever the real and effective user ids do not match.
+          Disables processing of the $ENV file and importing of shell
+          functions.  Turning this option off causes the effective uid and
+          gid to be set to the real uid and gid.
+      -t  Exit after reading and executing one command.
+      -u  Treat unset variables as an error when substituting.
+      -v  Print shell input lines as they are read.
+      [7m-x[27m  Print commands and their arguments as they are executed.
+      -B  the shell will perform brace expansion
+      -C  If set, disallow existing regular files to be overwritten
+          by redirection of output.
+      -E  If set, the ERR trap is
