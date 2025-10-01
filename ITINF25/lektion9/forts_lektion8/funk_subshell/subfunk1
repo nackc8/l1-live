@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Funktioner som körs i en barn-bash, en subshell, har
+# parenteser istället för måsvingar.
+
+# Undantag: Variabler i föräldern kopieras till barnet
+HALSNING=Wilkommen
+sub_greet() (
+    namn1="$1"
+    namn2="$2"
+    echo "namn1 inne: $namn1"
+
+    echo "$HALSNING ${namn1}san och ${namn2}san"
+    return 1
+)
+
+echo "namn1 innan: $namn1"
+
+sub_greet Molle Peter
+
+echo "namn1 efter: $namn1"
+
+echo SISTA RADEN
