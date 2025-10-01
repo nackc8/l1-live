@@ -1286,4 +1286,49 @@ input:x:996:
 [7m Manual page groupmod(8) line 55 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           /etc/login.defs.[m
 [7m Manual page groupmod(8) line 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
 [7m Manual page groupmod(8) line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mCONFIGURATION[0m[m
-[7m Manual page gr
+[7m Manual page groupmod(8) line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The following configuration variables in /etc/login.defs change the[m
+[7m Manual page groupmod(8) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       behavior of this tool:[m
+[7m Manual page groupmod(8) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page groupmod(8) line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mMAX_MEMBERS_PER_GROUP [22m(number)[m
+[7m Manual page groupmod(8) line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Maximum members per group entry. When the maximum is reached, a[m
+[7m Manual page groupmod(8) line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           new group entry (line) is started in /etc/group (with the same[m
+[7m Manual page groupmod(8) line 64 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           Apply changes in the [4mPREFIX_DIR[24m directory and use the[m
+[21;1H[K[7m Manual page groupmod(8) line 63 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ man chage
+[?2004l[?1049h[22;0;0t[?1h=[4mCHAGE[24m(1)                       User Commands                      [4mCHAGE[24m(1)[m
+[m
+[1mNAME[0m[m
+       chage - change user password expiry information[m
+[m
+[1mSYNOPSIS[0m[m
+[m
+       [1mchage [22m[[4moptions[24m] [4mLOGIN[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       The [1mchage [22mcommand changes the number of days between password[m
+       changes and the date of the last password change. This information[m
+       is used by the system to determine when a user must change their[m
+       password.[m
+[m
+[1mOPTIONS[0m[m
+       The options which apply to the [1mchage [22mcommand are:[m
+[m
+       [1m-d[22m, [1m--lastday [4m[22mLAST_DAY[0m[m
+           Set the number of days since January 1st, 1970 when the[m
+[7m Manual page chage(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ (reverse-i-search)`': [Kg': man cha[7mg[27mer': man [7mgr[27moupmode': [7mgre[27mp games: /etc/group[1@p': [7mgrep[27m[C[C[C[C[C[2@myrslok[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[C[C[Ksudo [7mgrep[27m ko: /etc/shadow[10P]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ sudo grep[C[C[C[C[C[C[C[1P[1P[1@k[1@e[1@n[1@t[H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ sudo grep kent: /etc/shadow
+[?2004l[sudo] password for kent: 
+kent:$6$/oB.5Jdbv0X737FZ$.utaVy2Lxd.LxRddCqqV6ROBMaA78pcCTHuFrBSg2Rn/7u2s41JVJGazrCT10iOclqW6MCZJ5WInlJsLTmqzA.:20331:0:99999:7:::
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ z[K[H[2J]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ id
+[?2004luid=1000(kent) gid=1000(kent) groups=1000(kent),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),101(lxd)
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ idsudo grep kent: /etc/shadow
+[?2004lkent:$6$/oB.5Jdbv0X737FZ$.utaVy2Lxd.LxRddCqqV6ROBMaA78pcCTHuFrBSg2Rn/7u2s41JVJGazrCT10iOclqW6MCZJ5WInlJsLTmqzA.:20331:0:99999:7:::
+[?2004h]0;kent@ubsembr: ~[01;32mkent@ubsembr[00m:[01;34m~[00m$ man shadow
+[?2004l[?1049h[22;0;0t[?1h=[4mSHADOW[24m(5)             File Formats and Configuration             [4mSHADOW[24m(5)[m
+[m
+[1mNAME[0m[m
+       shadow - shadowed password file[m
+[m
+[1mDESCRIPTION[0m[m
+       shadow is a file which contains the password information for the[m
+       system's accounts and optional aging information.[m
+[m
+       This file must not be rea
