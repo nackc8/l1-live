@@ -1,0 +1,3193 @@
+Script started on 2025-09-30 09:19:30+02:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="82" LINES="13"]
+ITINF25/lektion8
+$ ITINF25/lektion8
+$ ls �~
+ bin	     Downloads			        Pictures      Videos
+ bokforing   Dropbox			        Public	     'VirtualBox VMs'
+ Desktop     espanso-debian-wayland-amd64.deb   Screenshots
+ Documents   Music			        Templates
+ITINF25/lektion8
+$ ITINF25/lektion8
+$ ls beaver
+
+
+echo ¤$HOME
+/home/kent
+ITINF25/lektion8
+$ chmod _+x ex
+e
+2.3
+aterblick/2.3\ parameter\ expansion/exempel1+x
+ITINF25/lektion8
+$ chmod +x aterblick/2.3\ parameter\ expansion/exempel1
+ITINF25/lektion8
+$ aterblick/2.3\ parameter\ expansion/exempel1
+Nissan
+Nissan
+aterblick/2.3 parameter expansion/exempel1: line 10: ${^^BIL}: bad substitution
+ITINF25/lektion8
+$ aterblick/2.3\ parameter\ expansion/exempel1 ITINF25/lektion8
+$ aterblick/2.3\ parameter\ expansion/exempel1 
+Nissan
+Nissan
+NISSAN
+ITINF25/lektion8
+$ ITINF25/lektion8
+$ man bash
+BASH(1)                     General Commands Manual                     BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash is an sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash  also  incorpo‐
+       rates useful features from the Korn and C shells (ksh and csh).
+
+BASH(1)                     General Commands Manual                     BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash is an sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash  also  incorpo‐
+       rates useful features from the Korn and C shells (ksh and csh).
+
+BASH(1)                     General Commands Manual                     BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash is an sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash  also  incorpo‐
+       rates useful features from the Korn and C shells (ksh and csh).
+
+...skipping...
+   Parameter Expansion
+       The `$' character introduces parameter expansion, command  substitution,
+       or  arithmetic  expansion.   The parameter name or symbol to be expanded
+       may be enclosed in braces, which are optional but serve to  protect  the
+       variable  to  be expanded from characters immediately following it which
+       could be interpreted as part of the name.
+
+       When braces are used, the matching ending brace is the first `}' not es‐
+       caped by a backslash or within a quoted string, and not within an embed‐
+       ded arithmetic expansion, command substitution, or parameter expansion.
+
+       ${parameter}
+              The value of parameter is substituted.  The braces  are  required
+              when  parameter  is  a  positional  parameter  with more than one
+              digit, or when parameter is followed by a character which is  not
+              to  be interpreted as part of its name.  The parameter is a shell
+              parameter as described above PARAMETERS) or  an  array  reference
+              (Arrays).ne 1665 (press h for help or q to quit)
+ ESESCOBpage bash(1) line 1666 (press h for help or q to quit)
+       If the first character of parameter is an exclamation point (!), and pa‐
+       rameter is not a nameref, it introduces a level  of  indirection.   Bash
+       uses  the value formed by expanding the rest of parameter as the new pa‐
+       rameter; this is then expanded and that value is used in the rest of the
+       expansion, rather than the expansion of the original parameter.  This is
+       known as indirect expansion.  The value is subject to  tilde  expansion,
+       parameter expansion, command substitution, and arithmetic expansion.  If
+       parameter is a nameref, this expands to the name of the parameter refer‐
+       enced  by  parameter  instead of performing the complete indirect expan‐
+       sion.  The exceptions to this are  the  expansions  of  ${!prefix*}  and
+       ${!name[@]}  described  below.   The  exclamation point must immediately
+       follow the left brace in order to introduce indirection.
+ ESESCOBpage bash(1) line 1679 (press h for help or q to quit)
+       In each of the cases below, word is subject to tilde expansion,  parame‐
+       ter expansion, command substitution, and arithmetic expansion.
+ ESESCOBpage bash(1) line 1682 (press h for help or q to quit)
+       When  not performing substring expansion, using the forms documented be‐
+       low (e.g., :-), bash tests for a parameter that is unset or null.  Omit‐
+       ting the colon results in a test only for a parameter that is unset.
+ ESESCOBpage bash(1) line 1686 (press h for help or q to quit)
+       ${parameter:-word} 1687 (press h for help or q to quit)
+              Use Default Values.  If parameter is unset or null, the expansion
+              of word is substituted.  Otherwise, the  value  of  parameter  is
+              substituted.1690 (press h for help or q to quit)
+       ${parameter:=word} 1691 (press h for help or q to quit)
+              Assign Default Values.  If parameter is unset or null, the expan‐
+              sion of word is assigned to parameter.  The value of parameter is
+              then  substituted.   Positional parameters and special parameters
+              may not be assigned to in this way.or q to quit)
+       ${parameter:?word} 1696 (press h for help or q to quit)
+              Display Error if Null or Unset.  If parameter is null  or  unset,
+              the expansion of word (or a message to that effect if word is not
+              present) is written to the standard error and the shell, if it is
+              not  interactive,  exits.   Otherwise,  the value of parameter is
+              substituted.1701 (press h for help or q to quit)
+       ${parameter:+word} 1702 (press h for help or q to quit)
+              Use Alternate Value.  If parameter is null or unset,  nothing  is
+              substituted, otherwise the expansion of word is substituted.
+       ${parameter:offset}1705 (press h for help or q to quit)
+       ${parameter:offset:length}ress h for help or q to quit)
+M              substituted.707 (press h for help or q to quit)
+M              of word is substituted.  Otherwise, the  value  of  parameter  is
+M              Use Default Values.  If parameter is unset or null, the expansion
+M       ${parameter:-word}1704 (press h for help or q to quit)
+MESESCOApage bash(1) line 1703 (press h for help or q to quit)
+       ${parameter:+word} 1702 (press h for help or q to quit)
+              Use Alternate Value.  If parameter is null or unset,  nothing  is
+              substituted, otherwise the expansion of word is substituted.
+       ${parameter:offset}1705 (press h for help or q to quit)
+       ${parameter:offset:length}ress h for help or q to quit)
+              Substring  Expansion.   Expands to up to length characters of the
+              value of parameter starting at the character specified by offset.
+              If  parameter  is @ or *, an indexed array subscripted by @ or *,
+              or an associative array name, the results differ as described be‐
+              low.  If length is omitted, expands to the substring of the value
+              of parameter starting at the character specified  by  offset  and
+              extending  to the end of the value.  length and offset are arith‐
+              metic expressions (see ARITHMETIC EVALUATION below).
+ ESESCOBpage bash(1) line 1715 (press h for help or q to quit)
+              If offset evaluates to a number less than zero, the value is used
+              as  an  offset in characters from the end of the value of parame‐
+M              substituted.718 (press h for help or q to quit)
+M              not  interactive,  exits.   Otherwise,  the value of parameter is
+              If offset evaluates to a number less than zero, the value is used
+              as  an  offset in characters from the end of the value of parame‐
+              ter.  If length evaluates to a number less than zero, it  is  in‐
+              terpreted as an offset in characters from the end of the value of
+              parameter rather than a number of characters, and  the  expansion
+              is  the  characters  between offset and that result.  Note that a
+              negative offset must be separated from the colon by at least  one
+              space to avoid being confused with the :- expansion.
+ ESESCOBpage bash(1) line 1724 (press h for help or q to quit)
+              If  parameter  is @ or *, the result is length positional parame‐
+              ters beginning at offset.  A negative offset is taken relative to
+              one  greater than the greatest positional parameter, so an offset
+              of -1 evaluates to the last positional parameter.  It is  an  ex‐
+              pansion error if length evaluates to a number less than zero.
+ ESESCOBpage bash(1) line 1730 (press h for help or q to quit)
+              If  parameter is an indexed array name subscripted by @ or *, the
+              result is the length members of the array beginning with ${param‐
+              eter[offset]}.   A  negative  offset  is  taken  relative  to one
+              greater than the maximum index of the specified array.  It is  an
+              expansion error if length evaluates to a number less than zero.
+ ESESCOBpage bash(1) line 1736 (press h for help or q to quit)
+              Substring  expansion applied to an associative array produces un‐
+              defined results. (press h for help or q to quit)
+ ESESCOBpage bash(1) line 1739 (press h for help or q to quit)
+              Substring indexing is zero-based unless the positional parameters
+              are  used, in which case the indexing starts at 1 by default.  If
+              offset is 0, and the positional parameters are used, $0  is  pre‐
+              fixed to the list.press h for help or q to quit)
+ ESESCOBpage bash(1) line 1744 (press h for help or q to quit)
+       ${!prefix*}1) line 1745 (press h for help or q to quit)
+       ${!prefix@}1) line 1746 (press h for help or q to quit)
+              Names  matching  prefix.  Expands to the names of variables whose
+              names begin with prefix, separated by the first character of  the
+              IFS  special  variable.  When @ is used and the expansion appears
+              within double quotes, each variable name expands  to  a  separate
+              word.) line 1751 (press h for help or q to quit)
+ ESESCOBpage bash(1) line 1752 (press h for help or q to quit)
+       ${!name[@]}1) line 1753 (press h for help or q to quit)
+       ${!name[*]}1) line 1754 (press h for help or q to quit)
+              List of array keys.  If name is an array variable, expands to the
+              list of array indices (keys) assigned in name.  If name is not an
+              array, expands to 0 if name is set and null otherwise.  When @ is
+              used and the expansion appears within double quotes, each key ex‐
+              pands to a separate word. for help or q to quit)
+ ESESCOBpage bash(1) line 1760 (press h for help or q to quit)
+       ${#parameter} line 1761 (press h for help or q to quit)
+              Parameter  length.   The length in characters of the value of pa‐
+              rameter is substituted.  If parameter is * or @, the  value  sub‐
+              stituted is the number of positional parameters.  If parameter is
+              an array name subscripted by * or @, the value substituted is the
+              number  of elements in the array.  If parameter is an indexed ar‐
+              ray name subscripted by a negative number, that number is  inter‐
+              preted  as  relative to one greater than the maximum index of pa‐
+              rameter, so negative indices count back from the end of  the  ar‐
+              ray, and an index of -1 references the last element.
+ ESESCOBpage bash(1) line 1771 (press h for help or q to quit)
+       ${parameter#word}e 1772 (press h for help or q to quit)
+       ${parameter##word} 1773 (press h for help or q to quit)
+              Remove  matching prefix pattern.  The word is expanded to produce
+              a pattern just as in pathname expansion, and matched against  the
+              expanded  value of parameter using the rules described under Pat‐
+              tern Matching below.  If the pattern matches the beginning of the
+              value  of  parameter, then the result of the expansion is the ex‐
+              panded value of parameter with the shortest matching pattern (the
+              ``#''  case)  or  the  longest matching pattern (the ``##'' case)
+              deleted.  If parameter is @ or *, the pattern  removal  operation
+              is  applied  to each positional parameter in turn, and the expan‐
+              sion is the resultant list.  If parameter is  an  array  variable
+              subscripted with @ or *, the pattern removal operation is applied
+              to each member of the array in turn, and the expansion is the re‐
+              sultant list.786 (press h for help or q to quit)
+ ESESCOBpage bash(1) line 1787 (press h for help or q to quit)
+       ${parameter%word}e 1788 (press h for help or q to quit)
+       ${parameter%%word} 1789 (press h for help or q to quit)
+              Remove  matching suffix pattern.  The word is expanded to produce
+              a pattern just as in pathname expansion, and matched against  the
+              expanded  value of parameter using the rules described under Pat‐
+              tern Matching below.  If the pattern matches a  trailing  portion
+              of the expanded value of parameter, then the result of the expan‐
+              sion is the expanded value of parameter with the shortest  match‐
+              ing pattern (the ``%'' case) or the longest matching pattern (the
+              ``%%'' case) deleted.  If parameter is @ or *,  the  pattern  re‐
+              moval  operation is applied to each positional parameter in turn,
+              and the expansion is the resultant list.  If parameter is an  ar‐
+              ray  variable subscripted with @ or *, the pattern removal opera‐
+              tion is applied to each member of the array in turn, and the  ex‐
+              pansion is the resultant list.help or q to quit)
+ ESESCOBpage bash(1) line 1803 (press h for help or q to quit)
+       ${parameter/pattern/string}ess h for help or q to quit)
+       ${parameter//pattern/string}ss h for help or q to quit)
+       ${parameter/#pattern/string}ss h for help or q to quit)
+       ${parameter/%pattern/string}ss h for help or q to quit)
+              Pattern  substitution.  The pattern is expanded to produce a pat‐
+              tern just as in pathname expansion.  Parameter  is  expanded  and
+              the  longest  match of pattern against its value is replaced with
+              string.  string undergoes tilde expansion, parameter and variable
+              expansion,  arithmetic  expansion,  command and process substitu‐
+              tion, and quote removal.  The match is performed using the  rules
+              described under Pattern Matching below.  In the first form above,
+              only the first match is replaced.  If there are two slashes sepa‐
+              rating parameter and pattern (the second form above), all matches
+              of pattern are replaced with string.  If pattern is preceded by #
+              (the third form above), it must match at the beginning of the ex‐
+              panded value of parameter.  If pattern  is  preceded  by  %  (the
+              fourth  form  above),  it  must  match at the end of the expanded
+              value of parameter.  If the expansion of string is null,  matches
+              of  pattern  are  deleted.  If string is null, matches of pattern
+              are deleted and the / following pattern may be omitted.
+ ESESCOBpage bash(1) line 1824 (press h for help or q to quit)
+M              Pattern  substitution.  The pattern is expanded to produce a pat‐
+M       ${parameter/%pattern/string}s h for help or q to quit)
+M       ${parameter/#pattern/string}s h for help or q to quit)
+M       ${parameter//pattern/string}s h for help or q to quit)
+M       ${parameter/pattern/string}ss h for help or q to quit)
+MESESCOApage bash(1) line 1820 (press h for help or q to quit)
+M              pansion is the resultant list.elp or q to quit)
+M              tion is applied to each member of the array in turn, and the  ex‐
+              of pattern are replaced with string.  If pattern is preceded by #
+              (the third form above), it must match at the beginning of the ex‐
+              panded value of parameter.  If pattern  is  preceded  by  %  (the
+              fourth  form  above),  it  must  match at the end of the expanded
+              value of parameter.  If the expansion of string is null,  matches
+              of  pattern  are  deleted.  If string is null, matches of pattern
+              are deleted and the / following pattern may be omitted.
+ ESESCOBpage bash(1) line 1824 (press h for help or q to quit)
+              If the patsub_replacement shell option is  enabled  using  shopt,
+              any  unquoted  instances  of  &  in  string are replaced with the
+              matching portion of pattern.r help or q to quit)
+ ESESCOBpage bash(1) line 1828 (press h for help or q to quit)
+              Quoting any part of string inhibits replacement in the  expansion
+              of  the  quoted  portion, including replacement strings stored in
+              shell variables.  Backslash will escape & in  string;  the  back‐
+              slash  is  removed in order to permit a literal & in the replace‐
+              ment string.  Backslash can also be used to escape  a  backslash;
+              \\  results  in  a  literal  backslash in the replacement.  Users
+              should take care if string is double-quoted to avoid unwanted in‐
+              teractions  between the backslash and double-quoting, since back‐
+              slash has special meaning within double quotes.  Pattern  substi‐
+              tution  performs the check for unquoted & after expanding string;
+              shell programmers should quote any occurrences of & they want  to
+              be taken literally in the replacement and ensure any instances of
+              & they want to be replaced are unquoted.to quit)
+ ESESCOBpage bash(1) line 1842 (press h for help or q to quit)
+              If the nocasematch shell option is enabled,  the  match  is  per‐
+              formed  without  regard to the case of alphabetic characters.  If
+              parameter is @ or *, the substitution  operation  is  applied  to
+              each  positional  parameter in turn, and the expansion is the re‐
+              sultant list.  If parameter is an array variable subscripted with
+              @  or  *, the substitution operation is applied to each member of
+              the array in turn, and the expansion is the resultant list.
+ ESESCOBpage bash(1) line 1850 (press h for help or q to quit)
+       ${parameter^pattern}851 (press h for help or q to quit)
+       ${parameter^^pattern}52 (press h for help or q to quit)
+       ${parameter,pattern}853 (press h for help or q to quit)
+       ${parameter,,pattern}54 (press h for help or q to quit)
+              Case modification.  This expansion modifies the  case  of  alpha‐
+              betic  characters  in parameter.  The pattern is expanded to pro‐
+              duce a pattern just as in pathname expansion.  Each character  in
+              the  expanded  value of parameter is tested against pattern, and,
+              if it matches the pattern, its case is  converted.   The  pattern
+              should not attempt to match more than one character.  The ^ oper‐
+              ator converts lowercase letters matching  pattern  to  uppercase;
+              the  , operator converts matching uppercase letters to lowercase.
+              The ^^ and ,, expansions convert each matched  character  in  the
+              expanded value; the ^ and , expansions match and convert only the
+              first character in the expanded value.  If pattern is omitted, it
+              is treated like a ?, which matches every character.  If parameter
+MESESCOApage bash(1) line 1867 (press h for help or q to quit)
+M              the array in turn, and the expansion is the resultant list.
+M              @  or  *, the substitution operation is applied to each member of
+M              sultant list.  If parameter is an array variable subscripted with
+              The ^^ and ,, expansions convert each matched  character  in  the
+              expanded value; the ^ and , expansions match and convert only the
+              first character in the expanded value.  If pattern is omitted, it
+              is treated like a ?, which matches every character.  If parameter
+              is @ or *, the case modification operation is applied to each po‐
+              sitional  parameter  in  turn, and the expansion is the resultant
+              list.  If parameter is an array variable subscripted with @ or *,
+              the  case modification operation is applied to each member of the
+              array in turn, and the expansion is the resultant list.
+ ESESCOBpage bash(1) line 1872 (press h for help or q to quit)
+M              betic  characters  in parameter.  The pattern is expanded to pro‐
+M              Case modification.  This expansion modifies the  case  of  alpha‐
+M       ${parameter,,pattern}1 (press h for help or q to quit)
+M       ${parameter,pattern}70 (press h for help or q to quit)
+M       ${parameter^^pattern}9 (press h for help or q to quit)
+M       ${parameter^pattern}68 (press h for help or q to quit)
+MESESCOApage bash(1) line 1867 (press h for help or q to quit)
+M              the array in turn, and the expansion is the resultant list.
+ Manual page bash(1) line 1865 (press h for help or q to quit)              the array in turn, and the expansion is the resultant list.
+
+       ${parameter^pattern}
+       ${parameter^^pattern}
+       ${parameter,pattern}
+       ${parameter,,pattern}
+              Case modification.  This expansion modifies the  case  of  alpha‐
+              betic  characters  in parameter.  The pattern is expanded to pro‐
+              duce a pattern just as in pathname expansion.  Each character  in
+              the  expanded  value of parameter is tested against pattern, and,
+              if it matches the pattern, its case is  converted.   The  pattern
+              should not attempt to match more than one character.  The ^ oper‐
+              ator converts lowercase letters matching  pattern  to  uppercase;
+              the  , operator converts matching uppercase letters to lowercase.
+              The ^^ and ,, expansions convert each matched  character  in  the
+ Manual page bash(1) line 1865 (press h for help or q to quit)              the array in turn, and the expansion is the resultant list.
+
+       ${parameter^pattern}
+       ${parameter^^pattern}
+       ${parameter,pattern}
+       ${parameter,,pattern}
+              Case modification.  This expansion modifies the  case  of  alpha‐
+              betic  characters  in parameter.  The pattern is expanded to pro‐
+              duce a pattern just as in pathname expansion.  Each character  in
+              the  expanded  value of parameter is tested against pattern, and,
+              if it matches the pattern, its case is  converted.   The  pattern
+              should not attempt to match more than one character.  The ^ oper‐
+              ator converts lowercase letters matching  pattern  to  uppercase;
+              the  , operator converts matching uppercase letters to lowercase.
+ Manual page bash(1) line 1865 (press h for help or q to quit)              the array in turn, and the expansion is the resultant list.
+
+       ${parameter^pattern}
+       ${parameter^^pattern}
+       ${parameter,pattern}
+       ${parameter,,pattern}
+              Case modification.  This expansion modifies the  case  of  alpha‐
+              betic  characters  in parameter.  The pattern is expanded to pro‐
+              duce a pattern just as in pathname expansion.  Each character  in
+              the  expanded  value of parameter is tested against pattern, and,
+              if it matches the pattern, its case is  converted.   The  pattern
+              should not attempt to match more than one character.  The ^ oper‐
+              ator converts lowercase letters matching  pattern  to  uppercase;
+ Manual page bash(1) line 1865 (press h for help or q to quit)              the array in turn, and the expansion is the resultant list.
+
+       ${parameter^pattern}
+       ${parameter^^pattern}
+       ${parameter,pattern}
+       ${parameter,,pattern}
+              Case modification.  This expansion modifies the  case  of  alpha‐
+              betic  characters  in parameter.  The pattern is expanded to pro‐
+              duce a pattern just as in pathname expansion.  Each character  in
+              the  expanded  value of parameter is tested against pattern, and,
+              if it matches the pattern, its case is  converted.   The  pattern
+              should not attempt to match more than one character.  The ^ oper‐
+ Manual page bash(1) line 1865 (press h for help or q to quit)              the array in turn, and the expansion is the resultant list.
+
+       ${parameter^pattern}
+       ${parameter^^pattern}
+       ${parameter,pattern}
+       ${parameter,,pattern}
+              Case modification.  This expansion modifies the  case  of  alpha‐
+              betic  characters  in parameter.  The pattern is expanded to pro‐
+              duce a pattern just as in pathname expansion.  Each character  in
+              the  expanded  value of parameter is tested against pattern, and,
+              if it matches the pattern, its case is  converted.   The  pattern
+              should not attempt to match more than one character.  The ^ oper‐
+              ator converts lowercase letters matching  pattern  to  uppercase;
+              the  , operator converts matching uppercase letters to lowercase.
+              The ^^ and ,, expansions convert each matched  character  in  the
+              expanded value; the ^ and , expansions match and convert only the
+              first character in the expanded value.  If pattern is omitted, it
+              is treated like a ?, which matches every character.  If parameter
+              is @ or *, the case modification operation is applied to each po‐
+              sitional  parameter  in  turn, and the expansion is the resultant
+              list.  If parameter is an array variable subscripted with @ or *,
+              the  case modification operation is applied to each member of the
+              array in turn, and the expansion is the resultant list.
+ ESESCOBpage bash(1) line 1877 (press h for help or q to quit)
+       ${parameter@operator}78 (press h for help or q to quit)
+              Parameter transformation.  The expansion is either a  transforma‐
+              tion of the value of parameter or information about parameter it‐
+              self, depending on the value of operator.   Each  operator  is  a
+M              first character in the expanded value.  If pattern is omitted, it
+M              expanded value; the ^ and , expansions match and convert only the
+M              The ^^ and ,, expansions convert each matched  character  in  the
+M              the  , operator converts matching uppercase letters to lowercase.
+M              ator converts lowercase letters matching  pattern  to  uppercase;
+M              should not attempt to match more than one character.  The ^ oper‐
+M              if it matches the pattern, its case is  converted.   The  pattern
+M              the  expanded  value of parameter is tested against pattern, and,
+M              duce a pattern just as in pathname expansion.  Each character  in
+M              betic  characters  in parameter.  The pattern is expanded to pro‐
+M              Case modification.  This expansion modifies the  case  of  alpha‐
+M       ${parameter,,pattern}1 (press h for help or q to quit)
+M       ${parameter,pattern}70 (press h for help or q to quit)
+M       ${parameter^^pattern}9 (press h for help or q to quit)
+M       ${parameter^pattern}68 (press h for help or q to quit)
+MESESCOApage bash(1) line 1867 (press h for help or q to quit)
+M              the array in turn, and the expansion is the resultant list.
+M              @  or  *, the substitution operation is applied to each member of
+M              sultant list.  If parameter is an array variable subscripted with
+M              each  positional  parameter in turn, and the expansion is the re‐
+M              parameter is @ or *, the substitution  operation  is  applied  to
+M              formed  without  regard to the case of alphabetic characters.  If
+M              If the nocasematch shell option is enabled,  the  match  is  per‐
+MESESCOApage bash(1) line 1859 (press h for help or q to quit)
+M              & they want to be replaced are unquoted.o quit)
+M              be taken literally in the replacement and ensure any instances of
+M              shell programmers should quote any occurrences of & they want  to
+M              tution  performs the check for unquoted & after expanding string;
+M              slash has special meaning within double quotes.  Pattern  substi‐
+M              teractions  between the backslash and double-quoting, since back‐
+M              should take care if string is double-quoted to avoid unwanted in‐
+M              \\  results  in  a  literal  backslash in the replacement.  Users
+M              ment string.  Backslash can also be used to escape  a  backslash;
+M              slash  is  removed in order to permit a literal & in the replace‐
+M              shell variables.  Backslash will escape & in  string;  the  back‐
+M              of  the  quoted  portion, including replacement strings stored in
+M              Quoting any part of string inhibits replacement in the  expansion
+>ITINF25/lektion8(1) line 1845 (press h for help or q to quit)
+$ man bashITINF25/lektion8
+aterblick/2.3\ parameter\ expansion/exempel1 
+Nissan
+Nissan
+NISSAN
+Bilmärket Nissans längd är 6
+ITINF25/lektion8
+$ ITINF25/lektion8
+$ echo IWEIWIW$IWEIWIW
+
+
+
+
+
+
+
+ITINF25/lektion8
+$ echo $IWEIWIWI x 
+x y
+ITINF25/lektion8
+aterblick/2.3\ parameter\ expansion/exempel1 ITINF25/lektion8
+$ aterblick/2.3\ parameter\ expansion/exempel1 
+Nissan
+Nissan
+NISSAN
+Bilmärket Nissans längd är 6
+Delen blev: san
+ITINF25/lektion8
+$ aterblick/2.3\ parameter\ expansion/exempel1 ITINF25/lektion8
+$ aterblick/2.3\ parameter\ expansion/exempel1 
+Nissan
+Nissan
+NISSAN
+Bilmärket Nissans längd är 6
+Delen blev: ssan
+ITINF25/lektion8
+$ aterblick/2.3\ parameter\ expansion/exempel1 ITINF25/lektion8
+$ aterblick/2.3\ parameter\ expansion/exempel1 
+Nissan
+Nissan
+NISSAN
+Bilmärket Nissans längd är 6
+Delen blev: ssan
+Delen blev: ssa
+ITINF25/lektion8
+$ cd aterblick/2.4\ command\ substitution/
+ITINF25/lektion8/aterblick/2.4 command substitution
+$ ITINF25/lektion8/aterblick/2.4 command substitution
+$ ls
+ITINF25/lektion8/aterblick/2.4 command substitution
+$ c
+touch exempel1 ; chmod +x exempel
+
+
+
+echo'#~!/bin/bash
+
+
+
+
+
+
+
+
+ITINF25/lektion8/aterblick/2.4 command substitution
+$ ./exempel1 ITINF25/lektion8/aterblick/2.4 command substitution
+$ ./exempel1 
+hej
+ITINF25/lektion8/aterblick/2.4 command substitution
+$ 
+./exempel1 ITINF25/lektion8/aterblick/2.4 command substitution
+$ ./exempel1 
+hej
+Filer i ETC: adduser.conf adjtime aliases alsa alternatives anacrontab apache2 apg.conf apparmor apparmor.d appstream.conf apt avahi bash.bashrc bash_completion bash_completion.d bindresvport.blacklist binfmt.d bluetooth bogofilter.cf ca-certificates ca-certificates.conf ca-certificates.conf.dpkg-old catdocrc chatscripts chromium cni console-setup containerd containers cracklib cron.d cron.daily cron.hourly cron.monthly crontab cron.weekly cron.yearly cryptsetup-initramfs crypttab cups cupshelpers dbus-1 dconf debconf.conf debian_version debsig debuginfod default deluser.conf dhcp dictionaries-common discover.conf.d discover-modprobe.conf docker dpkg dput.cf e2scrub.conf elinks emacs email-addresses environment environment.d ethertypes exim4 exports firefox-esr fish fonts fstab fstab.bak fuse.conf fwupd gai.conf gconf gdb gdm3 geoclue ghostscript gimp glvnd gnome gnome-chess GNUstep gprofng.rc groff group group- grub.d gshadow gshadow- gss gtk-2.0 gtk-3.0 host.conf hostname hosts hosts.allow hosts.deny idmapd.conf ifplugd igfx_user_feature_next.txt igfx_user_feature.txt ImageMagick-6 init.d initramfs-tools inputrc insserv.conf.d ipp-usb iproute2 issue issue.net java java-17-openjdk kernel kernel-img.conf keyutils ldap ld.so.cache ld.so.conf ld.so.conf.d libao.conf libaudit.conf libblockdev libguestfs-tools.conf libibverbs.d libnl-3 libpaper.d libreoffice libvirt lightdm lighttpd locale.alias locale.gen localtime logcheck login.defs logrotate.conf logrotate.d lvm lynx machine-id magic magic.mime mailcap mailcap.order mailname mail.rc manpath.config maven mdadm mdevctl.d mime.types mke2fs.conf ModemManager modprobe.d modules modules-load.d motd mtab mtools.conf mysql nanorc netconfig network NetworkManager networks nfs.conf nfs.conf.d nftables.conf nsswitch.conf ODBCDataSources odbc.ini odbcinst.ini openal openni2 opt os-release PackageKit pam.conf pam.d papersize passwd passwd- perl pki plymouth polkit-1 popularity-contest.conf ppp printcap profile profile.d protocols pulse python3 python3.11 qemu-ifdown qemu-ifup rc0.d rc1.d rc2.d rc3.d rc4.d rc5.d rc6.d rcS.d reportbug.conf request-key.conf request-key.d resolv.conf rmt rpc runit rygel.conf sane.d sasl2 security selinux sensors3.conf sensors.d services sgml shadow shadow- shells signon-ui skel smartd.conf smartmontools snmp speech-dispatcher ssh ssl subgid subgid- subuid subuid- sudo.conf sudoers sudoers.d sudo_logsrvd.conf sv swtpm-localca.conf swtpm-localca.options swtpm_setup.conf sysctl.conf sysctl.d sysstat systemd terminfo texmf timezone timidity tmpfiles.d ucf.conf udev udisks2 ufw updatedb.conf update-motd.d UPower usb_modeswitch.conf usb_modeswitch.d vbox vdpau_wrapper.cfg vim virt-builder vulkan w3m wgetrc wpa_supplicant X11 xattr.conf xdg xfce4 xml zsh
+ITINF25/lektion8/aterblick/2.4 command substitution
+$ ./exempel1 ITINF25/lektion8/aterblick/2.4 command substitution
+$ ./exempel1 
+hej
+Filer med a i ETC: adduser.conf adjtime aliases alsa alternatives anacrontab apache2 apg.conf apparmor apparmor.d appstream.conf apt avahi bash.bashrc bash_completion bash_completion.d bindresvport.blacklist ca-certificates ca-certificates.conf ca-certificates.conf.dpkg-old catdocrc chatscripts containerd containers cracklib cron.daily crontab cron.yearly cryptsetup-initramfs crypttab debian_version default dictionaries-common emacs email-addresses fstab fstab.bak gai.conf gshadow gshadow- hostname hosts.allow idmapd.conf igfx_user_feature_next.txt igfx_user_feature.txt ImageMagick-6 initramfs-tools java java-17-openjdk ldap ld.so.cache libao.conf libaudit.conf libpaper.d locale.alias locale.gen localtime logrotate.conf logrotate.d machine-id magic magic.mime mailcap mailcap.order mailname mail.rc manpath.config maven mdadm ModemManager modules-load.d mtab nanorc NetworkManager nftables.conf ODBCDataSources openal os-release PackageKit pam.conf pam.d papersize passwd passwd- popularity-contest.conf printcap sane.d sasl2 shadow shadow- smartd.conf smartmontools speech-dispatcher swtpm-localca.conf swtpm-localca.options sysstat updatedb.conf update-motd.d vdpau_wrapper.cfg vulkan wpa_supplicant xattr.conf
+ITINF25/lektion8/aterblick/2.4 command substitution
+$ ./exempel1 ITINF25/lektion8/aterblick/2.4 command substitution
+$ ./exempel12
+Skriv ett kommando och tryck ENTER:
+echo
+ITINF25/lektion8/aterblick/2.4 command substitution
+$ ./exempel2ITINF25/lektion8/aterblick/2.4 command substitution
+$ ./exempel2
+Skriv ett kommando och tryck ENTER:
+ls
+Kommandot ls finns på platsen /usr/bin/ls
+ITINF25/lektion8/aterblick/2.4 command substitution
+$ cd ../2.7\ word\ splitting/ITINF25/lektion8/aterblick/2.4 command substitution
+$ cd ../2.7\ word\ splitting/
+ITINF25/lektion8/aterblick/2.7 word splitting
+$ ITINF25/lektion8/aterblick/2.7 word splitting
+$ ls
+ITINF25/lektion8/aterblick/2.7 word splitting
+$ echo '#!/bin/bash' >': echo '#!/bin/bash' > exempel1 ; chmod +x exempel
+ITINF25/lektion8/aterblick/2.7 word splitting
+$ ITINF25/lektion8/aterblick/2.7 word splitting
+$ ls
+exempel1
+ITINF25/lektion8/aterblick/2.7 word splitting
+$ touch 'firstname lastnmname'
+ITINF25/lektion8/aterblick/2.7 word splitting
+$ ./exempel1 ITINF25/lektion8/aterblick/2.7 word splitting
+$ ./exempel1 
+rm: cannot remove 'firstname': No such file or directory
+rm: cannot remove 'lastname': No such file or directory
+ITINF25/lektion8/aterblick/2.7 word splitting
+$ ITINF25/lektion8/aterblick/2.7 word splitting
+$ ./ex
+empel2 
+total 8
+-rwxr-xr-x 1 kent kent 106 Sep 30 09:52  exempel1
+-rwxr-xr-x 1 kent kent  41 Sep 30 09:54  exempel2
+-rw-r--r-- 1 kent kent   0 Sep 30 09:50 'firstname lastname'
+ITINF25/lektion8/aterblick/2.7 word splitting
+$ ./exempel23ITINF25/lektion8/aterblick/2.7 word splitting
+$ ./exempel3
+./exempel3: line 9: ls -l: command not found
+ITINF25/lektion8/aterblick/2.7 word splitting
+$ ./exempel4ITINF25/lektion8/aterblick/2.7 word splitting
+$ ./exempel4
+total 16
+-rwxr-xr-x 1 kent kent 106 Sep 30 09:55  exempel1
+-rwxr-xr-x 1 kent kent  41 Sep 30 09:54  exempel2
+-rwxr-xr-x 1 kent kent 168 Sep 30 09:58  exempel3
+-rwxr-xr-x 1 kent kent 115 Sep 30 09:58  exempel4
+-rw-r--r-- 1 kent kent   0 Sep 30 09:50 'firstname lastname'
+ITINF25/lektion8/aterblick/2.7 word splitting
+$ cd ..
+ITINF25/lektion8/aterblick
+$ cd 2.8\ pathname\ expansion/
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ echo '#!/bin/bash' > exempel1 ; chmomod/bin/bash' > exempel1 ; chmod +x exempel
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls
+exempel1
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ touch sol.png
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ touch sol.png
+
+touch sol.pn.pn.pn.pnv.pni.pnn.pnd.pn
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ touch vind.pn.pn.pn.pna.pnt.pnt.pne.pnn.pn
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ touch vatten.pnjp.jp.jp.jp.jp.jp.jpi.jpn.jps.jpt.jpr.jpu.jpk.jpt.jpi.jpo.jpn.jp
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ touch instruktion.jp2.jp
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ touch instruktion2.jp.jp3.jp
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls
+exempel1	  instruktion3.jpg  sol.png	vind.png
+instruktion2.jpg  instruktion.jpg   vatten.png
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls
+exempel1	  instruktion3.jpg  sol.png	vind.png
+instruktion2.jpg  instruktion.jpg   vatten.png
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls +-l sol.png 
+-rw-r--r-- 1 kent kent 0 Sep 30 10:13 sol.png
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls -l sol.png*ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls -l *.png
+
+
+-rw-r--r-- 1 kent kent 0 Sep 30 10:13 sol.png
+-rw-r--r-- 1 kent kent 0 Sep 30 10:13 vatten.png
+-rw-r--r-- 1 kent kent 0 Sep 30 10:13 vind.png
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls -l *.pngITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls -l **.png
+-rw-r--r-- 1 kent kent 0 Sep 30 10:13 sol.png
+-rw-r--r-- 1 kent kent 0 Sep 30 10:13 vatten.png
+-rw-r--r-- 1 kent kent 0 Sep 30 10:13 vind.png
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls -l **.png
+
+
+
+
+
+
+
+-rw-r--r-- 1 kent kent 0 Sep 30 10:13 sol.png
+-rw-r--r-- 1 kent kent 0 Sep 30 10:13 vatten.png
+-rw-r--r-- 1 kent kent 0 Sep 30 10:13 vind.png
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls
+exempel1	  instruktion3.jpg  sol.png	vind.png
+instruktion2.jpg  instruktion.jpg   vatten.png
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls *sol.pngITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls *sol.png
+sol.png
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls
+exempel1	  instruktion3.jpg  sol.png	vind.png
+instruktion2.jpg  instruktion.jpg   vatten.png
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls +l-l ???.pngITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls -l ???.png
+-rw-r--r-- 1 kent kent 0 Sep 30 10:13 sol.png
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls -l ???.pn*ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls -l ?*
+-rwxr-xr-x 1 kent kent 149 Sep 30 10:18 exempel1
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 instruktion2.jpg
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 instruktion3.jpg
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 instruktion.jpg
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 sol.png
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 vatten.png
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 vind.png
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls -l ?*ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls -l ??
+
+-rwxr-xr-x 1 kent kent 149 Sep 30 10:18 exempel1
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 instruktion2.jpg
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 instruktion3.jpg
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 instruktion.jpg
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 sol.png
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 vatten.png
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 vind.png
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls -l ????ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls -l ????
+
+
+-rwxr-xr-x 1 kent kent 149 Sep 30 10:18 exempel1
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 instruktion2.jpg
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 instruktion3.jpg
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 instruktion.jpg
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 sol.png
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 vatten.png
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 vind.png
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls -l ???????ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls -l ???????
+-rwxr-xr-x 1 kent kent 149 Sep 30 10:18 exempel1
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 instruktion2.jpg
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 instruktion3.jpg
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 instruktion.jpg
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 sol.png
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 vatten.png
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 vind.png
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls -l ????????ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls -l ????????
+-rwxr-xr-x 1 kent kent 149 Sep 30 10:18 exempel1
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 instruktion2.jpg
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 instruktion3.jpg
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 instruktion.jpg
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 vatten.png
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 vind.png
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls -l
+total 4
+-rwxr-xr-x 1 kent kent 149 Sep 30 10:18 exempel1
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 instruktion2.jpg
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 instruktion3.jpg
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 instruktion.jpg
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 sol.png
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 vatten.png
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 vind.png
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls -l ????????*
+-rwxr-xr-x 1 kent kent 149 Sep 30 10:18 exempel1
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 instruktion2.jpg
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 instruktion3.jpg
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 instruktion.jpg
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 vatten.png
+-rw-r--r-- 1 kent kent   0 Sep 30 10:13 vind.png
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ [!
+$ ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ man bash
+BASH(1)                     General Commands Manual                     BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash is an sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash  also  incorpo‐
+       rates useful features from the Korn and C shells (ksh and csh).
+
+BASH(1)                     General Commands Manual                     BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash is an sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash  also  incorpo‐
+       rates useful features from the Korn and C shells (ksh and csh).
+
+BASH(1)                     General Commands Manual                     BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash is an sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash  also  incorpo‐
+       rates useful features from the Korn and C shells (ksh and csh).
+
+...skipping...
+   Pathname Expansion
+       After word splitting, unless the -f option has been set, bash scans each
+       word for the characters *, ?, and [.  If one  of  these  characters  ap‐
+       pears,  and  is  not quoted, then the word is regarded as a pattern, and
+       replaced with an alphabetically sorted list of  filenames  matching  the
+       pattern  (see  Pattern  Matching  below).   If no matching filenames are
+       found, and the shell option nullglob is not enabled, the  word  is  left
+       unchanged.  If the nullglob option is set, and no matches are found, the
+       word is removed.  If the failglob shell option is set,  and  no  matches
+       are  found, an error message is printed and the command is not executed.
+       If the shell option nocaseglob is enabled, the match is performed  with‐
+       out  regard  to the case of alphabetic characters.  Note that when using
+       range expressions like [a-z] (see below), letters of the other case  may
+       be  included, depending on the setting of LC_COLLATE.  When a pattern is
+       used for pathname expansion, the character ``.''  at the start of a name
+       or  immediately following a slash must be matched explicitly, unless the
+       shell option dotglob is set.  In order to match the filenames ``.''  and
+       ``..'', the pattern must begin with ``.'' (for example, ``.?''), even if
+       dotglob is set.  If the globskipdots shell option is enabled, the  file‐
+       names  ``.''   and ``..''  are never matched, even if the pattern begins
+       with a ``.''.  When not matching pathnames, the ``.''  character is  not
+       treated  specially.   When matching a pathname, the slash character must
+       always be matched explicitly by a slash in the  pattern,  but  in  other
+       matching  contexts  it  can be matched by a special pattern character as
+       described below under Pattern Matching.  See the  description  of  shopt
+       below  under SHELL BUILTIN COMMANDS for a description of the nocaseglob,
+       nullglob, globskipdots, failglob, and dotglob shell options.
+ ESESCOBpage bash(1) line 2039 (press h for help or q to quit)
+       The GLOBIGNORE shell variable may be used to restrict the  set  of  file
+       names matching a pattern.  If GLOBIGNORE is set, each matching file name
+       that also matches one of the patterns in GLOBIGNORE is removed from  the
+       list  of matches.  If the nocaseglob option is set, the matching against
+       the patterns in GLOBIGNORE is performed without  regard  to  case.   The
+       filenames  ``.''   and ``..''  are always ignored when GLOBIGNORE is set
+       and not null.  However, setting GLOBIGNORE to a non-null value  has  the
+       effect  of enabling the dotglob shell option, so all other filenames be‐
+       ginning with a ``.''  will match.  To get the old behavior  of  ignoring
+       filenames  beginning  with  a ``.'', make ``.*''  one of the patterns in
+       GLOBIGNORE.  The dotglob option is disabled when  GLOBIGNORE  is  unset.
+       The pattern matching honors the setting of the extglob shell option.
+ ESESCOBpage bash(1) line 2052 (press h for help or q to quit)
+       Pattern Matchingne 2053 (press h for help or q to quit)
+ ESESCOBpage bash(1) line 2054 (press h for help or q to quit)
+       Any  character that appears in a pattern, other than the special pattern
+       characters described below, matches itself.  The NUL character  may  not
+       occur  in  a  pattern.  A backslash escapes the following character; the
+       escaping backslash is discarded  when  matching.   The  special  pattern
+       characters must be quoted if they are to be matched literally.
+ ESESCOBpage bash(1) line 2060 (press h for help or q to quit)
+       The special pattern characters have the following meanings:
+ ESESCOBpage bash(1) line 2062 (press h for help or q to quit)
+              *      Matches  any  string, including the null string.  When the
+                     globstar shell option is enabled, and * is used in a path‐
+                     name  expansion  context, two adjacent *s used as a single
+                     pattern will match all files and zero or more  directories
+                     and  subdirectories.   If followed by a /, two adjacent *s
+                     will match only directories and subdirectories.
+              ?      Matches any single character.r q to quit)
+              [...]  Matches any one of the enclosed  characters.   A  pair  of
+                     characters  separated  by a hyphen denotes a range expres‐
+                     sion; any character that falls between those  two  charac‐
+                     ters,  inclusive, using the current locale's collating se‐
+                     quence and character set, is matched.  If the first  char‐
+                     acter  following  the  [ is a !  or a ^ then any character
+                     not enclosed is matched.  The sorting order of  characters
+                     in  range  expressions, and the characters included in the
+M       The special pattern characters have the following meanings:
+MESESCOApage bash(1) line 2077 (press h for help or q to quit)
+                     not enclosed is matched.  The sorting order of  characters
+                     in  range  expressions, and the characters included in the
+                     range, are determined by the current locale and the values
+                     of  the  LC_COLLATE or LC_ALL shell variables, if set.  To
+                     obtain the traditional  interpretation  of  range  expres‐
+                     sions,  where  [a-d] is equivalent to [abcd], set value of
+                     the LC_ALL shell variable to C, or  enable  the  globasci‐
+                     iranges  shell option.  A - may be matched by including it
+                     as the first or last character in the set.   A  ]  may  be
+                     matched by including it as the first character in the set.
+ ESESCOBpage bash(1) line 2086 (press h for help or q to quit)
+M              [...]  Matches any one of the enclosed  characters.   A  pair  of
+M              ?      Matches any single character. q to quit)
+M                     will match only directories and subdirectories.
+                     as the first or last character in the set.   A  ]  may  be
+                     matched by including it as the first character in the set.
+ ESESCOBpage bash(1) line 2086 (press h for help or q to quit)
+                     Within  [  and ], character classes can be specified using
+                     the syntax [:class:], where class is one of the  following
+                     classes defined in the POSIX standard:it)
+                     alnum  alpha  ascii  blank  cntrl  digit graph lower print
+                     punct space upper word xdigitr q to quit)
+                     A character class matches any character belonging to  that
+                     class.   The word character class matches letters, digits,
+                     and the character _.
+
+                     Within [ and ], an equivalence class can be specified  us‐
+                     ing  the  syntax  [=c=], which matches all characters with
+                     the same collation weight (as defined by the  current  lo‐
+                     cale) as the character c.
+
+                     Within  [ and ], the syntax [.symbol.] matches the collat‐
+                     ing symbol symbol.
+
+       If the extglob shell option is enabled  using  the  shopt  builtin,  the
+       shell  recognizes  several  extended pattern matching operators.  In the
+       following description, a pattern-list is a list of one or more  patterns
+       separated by a |.  Composite patterns may be formed using one or more of
+       the following sub-patterns:
+ Manual page bash(1) line 2109 (press h for help or q to quit)
+              ?(pattern-list)
+                     Matches zero or one occurrence of the given patterns
+              *(pattern-list)
+                     Matches zero or more occurrences of the given patterns
+              +(pattern-list)
+                     Matches one or more occurrences of the given patterns
+              @(pattern-list)
+                     Matches one of the given patterns
+              !(pattern-list)
+                     Matches anything except one of the given patterns
+
+       Theextglob option changes the behavior of the parser, since  the  paren‐
+       theses are normally treated as operators with syntactic meaning.  To en‐
+       sure that extended matching patterns are  parsed  correctly,  make  sure
+       that  extglob  is  enabled before parsing constructs containing the pat‐
+M       the following sub-patterns:ss h for help or q to quit)
+M       separated by a |.  Composite patterns may be formed using one or more of
+M       following description, a pattern-list is a list of one or more  patterns
+M       shell  recognizes  several  extended pattern matching operators.  In the
+>ITINF25/lektion8/aterblick/2.8 pathname expansionr q to quit)
+$ cp exempel1 exempel1
+
+
+
+$ ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls
+exempel1	  instruktion3.jpg  sol.png	vind.png
+instruktion2.jpg  instruktion.jpg   vatten.png
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ touch instruktion{1..20}.jpg
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls
+exempel1	   instruktion16.jpg  instruktion3.jpg	instruktion.jpg
+instruktion10.jpg  instruktion17.jpg  instruktion4.jpg	sol.png
+instruktion11.jpg  instruktion18.jpg  instruktion5.jpg	vatten.png
+instruktion12.jpg  instruktion19.jpg  instruktion6.jpg	vind.png
+instruktion13.jpg  instruktion1.jpg   instruktion7.jpg
+instruktion14.jpg  instruktion20.jpg  instruktion8.jpg
+instruktion15.jpg  instruktion2.jpg   instruktion9.jpg
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls in
+struktion
+
+instruktion10.jpg  instruktion16.jpg  instruktion2.jpg   instruktion8.jpg
+instruktion11.jpg  instruktion17.jpg  instruktion3.jpg   instruktion9.jpg
+instruktion12.jpg  instruktion18.jpg  instruktion4.jpg   instruktion.jpg
+instruktion13.jpg  instruktion19.jpg  instruktion5.jpg   
+instruktion14.jpg  instruktion1.jpg   instruktion6.jpg   
+instruktion15.jpg  instruktion20.jpg  instruktion7.jpg   
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls instruktion[345].jpg
+instruktion3.jpg  instruktion4.jpg  instruktion5.jpg
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls instruktion[345].jpITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ls instruktion[345].jp!345].jp
+
+
+
+
+
+
+
+
+instruktion1.jpg  instruktion6.jpg  instruktion8.jpg
+instruktion2.jpg  instruktion7.jpg  instruktion9.jpg
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ 
+ITINF25/lektion8/aterblick/2.8 pathname expansion
+$ cd ..
+ITINF25/lektion8/aterblick
+$ ITINF25/lektion8/aterblick
+$ ls
+'1. alias'		   '2.4 command substitution'  '3. redirections'
+'2.2 tilde'		   '2.7 word splitting'        '4. pipes'
+'2.3 parameter expansion'  '2.8 pathname expansion'
+ITINF25/lektion8/aterblick
+$ cd 3.\ redirections/
+ITINF25/lektion8/aterblick/3. redirections
+$ ITINF25/lektion8/aterblick/3. redirections
+(reverse-i-search)`'::': wget https://github.com/espanso/espanso/releases/latest/download/espanso-debian-wayland-amd64.deb^C
+
+ITINF25/lektion8/aterblick/3. redirections
+$ ITINF25/lektion8/aterblick/3. redirections
+$ echo '#!/bin/bash' > exempel1 ; chmomodonsh': touch instruktion{1..20}.jpm': echo '#!/bin/bash' > exempel1 ; chmod +x exempel
+ITINF25/lektion8/aterblick/3. redirections
+$ cd ..
+ITINF25/lektion8/aterblick
+$ cd 4.\ pipes/
+ITINF25/lektion8/aterblick/4. pipes
+echo '#!/bin/bash' > exempel1 ; chmod +x exempel1
+ITINF25/lektion8/aterblick/4. pipes
+$ cd ..
+ITINF25/lektion8/aterblick
+$ ITINF25/lektion8/aterblick
+$ cd 3.\ redirections/
+ITINF25/lektion8/aterblick/3. redirections
+$ ITINF25/lektion8/aterblick/3. redirections
+$ ls
+exempel1
+ITINF25/lektion8/aterblick/3. redirections
+$ 
+code exempel1 
+ITINF25/lektion8/aterblick/3. redirections
+$ ITINF25/lektion8/aterblick/3. redirections
+$ echo CONTENT 1>stdout1
+ITINF25/lektion8/aterblick/3. redirections
+$ ls
+exempel1  stdout1
+ITINF25/lektion8/aterblick/3. redirections
+$ lecho CONTENT 1>stdout
+
+
+
+
+
+>stdoutITINF25/lektion8/aterblick/3. redirections
+$ echo CONTENT >stdout
+ITINF25/lektion8/aterblick/3. redirections
+lsecho CONTENT 1>stdout1  ^C
+ITINF25/lektion8/aterblick/3. redirections
+$ echo EN TILL RAD >>stdout1
+
+echo EN TILL RAD >>stdout1
+
+ITINF25/lektion8/aterblick/3. redirections
+$ ITINF25/lektion8/aterblick/3. redirections
+$ gterep htoyota bilar.txt
+grep: bilar.txt: No such file or directory
+ITINF25/lektion8/aterblick/3. redirections
+$ grep toyota bilar.txt 2>stderr1
+
+grep toyota bilar.txt 2>stderr1
+
+ITINF25/lektion8/aterblick/3. redirections
+$ touch vilbilar2.txt
+ITINF25/lektion8/aterblick/3. redirections
+$ nano bilar2.txt 
+>ITINF25/lektion8/aterblick/3. redirections... ] [ Wrote 6 lines ]                 Y Yes                          
+$ grep toyota bilar.txt 2>stderr1
+grep toyota bilar.txt 2>stderrITINF25/lektion8/aterblick/3. redirections
+$ grep toyota bilar.txt 2>stderr2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+toyota
+ITINF25/lektion8/aterblick/3. redirections
+echo $?toyota bilar2.txt 2>stderr2
+0
+ITINF25/lektion8/aterblick/3. redirections
+grep toyota bilar2.txt 2>stderr
+
+
+
+
+
+ITINF25/lektion8/aterblick/3. redirections
+$ grep toyota bilar.txt 2>stderr
+ITINF25/lektion8/aterblick/3. redirections
+echo $?toyota bilar.txt 2>stderr
+2
+ITINF25/lektion8/aterblick/3. redirections
+$ cpe ex
+empel1 skrivbada
+ITINF25/lektion8/aterblick/3. redirections
+$ code skrivbada 
+ITINF25/lektion8/aterblick/3. redirections
+$ ./ITINF25/lektion8/aterblick/3. redirections
+$ ./skrivbada ITINF25/lektion8/aterblick/3. redirections
+$ ./skrivbada 
+Standard output rad 1
+Standard error rad 1
+Standard output rad 2
+Standard error rad 2
+ITINF25/lektion8/aterblick/3. redirections
+$ ./skrivbada >skrivbada_stdout 2>skrivbada_stderrITINF25/lektion8/aterblick/3. redirections
+$ ./skrivbada >skrivbada_stdout 2>skrivbada_stderr
+ITINF25/lektion8/aterblick/3. redirections
+$ ITINF25/lektion8/aterblick/3. redirections
+$ echo ¤$RANDOM $RANDOM $RANDOM $RANDOM
+26842 4271 14036 25754
+ITINF25/lektion8/aterblick/3. redirections
+$ echo $RANDOM $RANDOM $RANDOM $RANDO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+b | sortITINF25/lektion8/aterblick/3. redirections
+$ echo $RANDOM $RANDOM $RANDOM $RANDOM | sort
+11873 29225 27043 12997
+ITINF25/lektion8/aterblick/3. redirections
+$ man sort
+SORT(1)                          User Commands                          SORT(1)
+
+NAME
+       sort - sort lines of text files
+
+SYNOPSIS
+       sort [OPTION]... [FILE]...
+       sort [OPTION]... --files0-from=F
+
+DESCRIPTION
+       Write sorted concatenation of all FILE(s) to standard output.
+
+       With no FILE, or when FILE is -, read standard input.
+
+       Mandatory arguments to long options are mandatory for short options too.
+       Ordering options:
+
+       -b, --ignore-leading-blanks
+              ignore leading blanks
+
+       -d, --dictionary-order
+              consider only blanks and alphanumeric characters
+
+       -f, --ignore-case
+              fold lower case to upper case characters
+
+       -g, --general-numeric-sort
+              compare according to general numerical value
+ ESESCOBpage sort(1) line 15 (press h for help or q to quit)
+       -i, --ignore-nonprintingress h for help or q to quit)
+>ITINF25/lektion8/aterblick/3. redirectionselp or q to quit)
+echo $RANDOM $RANDOM $RANDOM $RANDOM | -gITINF25/lektion8/aterblick/3. redirections
+$ echo $RANDOM $RANDOM $RANDOM $RANDOM | sort -g
+30913 25075 6203 11972
+ITINF25/lektion8/aterblick/3. redirections
+$ echo $RANDOM $RANDOM $RANDOM $RANDOM | sort -"
+
+
+-e\n\n$RANDOM\$RANDOMn$RANDOM
+
+11485
+19374
+24414
+202
+ITINF25/lektion8/aterblick/3. redirections
+$ echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM" | sortITINF25/lektion8/aterblick/3. redirections
+$ echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM" | sort
+11780
+20279
+8356
+9658
+ITINF25/lektion8/aterblick/3. redirections
+$ echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM" | sort -gITINF25/lektion8/aterblick/3. redirections
+$ echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM" | sort -g
+701
+13834
+16491
+23857
+ITINF25/lektion8/aterblick/3. redirections
+$ echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM" | sort -g | tail -n 1ITINF25/lektion8/aterblick/3. redirections
+$ echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM" | sort -g | tail -n 1
+29291
+ITINF25/lektion8/aterblick/3. redirections
+$ echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM" | sort -g | tail -n 1
+23778
+ITINF25/lektion8/aterblick/3. redirections
+$ echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM" | sort -g | tail -n 1
+25713
+ITINF25/lektion8/aterblick/3. redirections
+$ echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM" | sort -g | tail -n 1
+31484
+ITINF25/lektion8/aterblick/3. redirections
+$ ITINF25/lektion8/aterblick/3. redirections
+$ echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM" | sort -g | tail -n 1
+27306
+ITINF25/lektion8/aterblick/3. redirections
+$ ITINF25/lektion8/aterblick/3. redirections
+$ echo hej | grep h
+hej
+ITINF25/lektion8/aterblick/3. redirections
+$ echo $?
+0
+ITINF25/lektion8/aterblick/3. redirections
+$ ITINF25/lektion8/aterblick/3. redirections
+$ cd ..
+ITINF25/lektion8/aterblick
+$ cd ..
+ITINF25/lektion8
+$ cd 2.1\ brace_expansion/
+ITINF25/lektion8/2.1 brace_expansion
+$ ITINF25/lektion8/2.1 brace_expansion
+$ ITINF25/lektion8/2.1 brace_expansion
+$ man bash
+BASH(1)                     General Commands Manual                     BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash is an sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash  also  incorpo‐
+       rates useful features from the Korn and C shells (ksh and csh).
+
+       Bash  is  intended  to  be  a conformant implementation of the Shell and
+       Utilities  portion  of  the  IEEE  POSIX  specification  (IEEE  Standard
+       1003.1).  Bash can be configured to be POSIX-conformant by default.
+
+BASH(1)                     General Commands Manual                     BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash is an sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash  also  incorpo‐
+       rates useful features from the Korn and C shells (ksh and csh).
+
+       Bash  is  intended  to  be  a conformant implementation of the Shell and
+       Utilities  portion  of  the  IEEE  POSIX  specification  (IEEE  Standard
+       1003.1).  Bash can be configured to be POSIX-conformant by default.
+
+BASH(1)                     General Commands Manual                     BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash is an sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash  also  incorpo‐
+       rates useful features from the Korn and C shells (ksh and csh).
+
+       Bash  is  intended  to  be  a conformant implementation of the Shell and
+       Utilities  portion  of  the  IEEE  POSIX  specification  (IEEE  Standard
+       1003.1).  Bash can be configured to be POSIX-conformant by default.
+
+...skipping...
+   Brace Expansion
+       Brace  expansion is a mechanism by which arbitrary strings may be gener‐
+       ated.  This mechanism is similar to pathname expansion,  but  the  file‐
+       names  generated need not exist.  Patterns to be brace expanded take the
+       form of an optional preamble, followed by either a series of comma-sepa‐
+       rated  strings  or  a sequence expression between a pair of braces, fol‐
+       lowed by an optional postscript.   The  preamble  is  prefixed  to  each
+       string  contained within the braces, and the postscript is then appended
+       to each resulting string, expanding left to right.
+
+       Brace expansions may be nested.  The results of each expanded string are
+       not  sorted;  left  to right order is preserved.  For example, a{d,c,b}e
+       expands into `ade ace abe'.
+
+       A sequence expression takes the form {x..y[..incr]}, where x and  y  are
+       either  integers  or single letters, and incr, an optional increment, is
+       an integer.  When integers are supplied, the expression expands to  each
+       number  between  x  and y, inclusive.  Supplied integers may be prefixed
+       with 0 to force each term to have the same width.  When either  x  or  y
+       begins  with  a zero, the shell attempts to force all generated terms to
+       contain the same number of digits, zero-padding where  necessary.   When
+       letters  are  supplied, the expression expands to each character lexico‐
+       graphically between x and y, inclusive,  using  the  default  C  locale.
+       Note  that  both  x  and y must be of the same type (integer or letter).
+       When the increment is supplied, it is used  as  the  difference  between
+       each term.  The default increment is 1 or -1 as appropriate.
+ ESESCOBpage bash(1) byte 117528 (press h for help or q to quit)
+       Brace  expansion is performed before any other expansions, and any char‐
+       acters special to other expansions are preserved in the result.   It  is
+       strictly  textual.   Bash does not apply any syntactic interpretation to
+       the context of the expansion or the text between the braces.
+ ESESCOBpage bash(1) byte 117847 (press h for help or q to quit)
+       A correctly-formed brace expansion must  contain  unquoted  opening  and
+       closing  braces, and at least one unquoted comma or a valid sequence ex‐
+       pression.  Any incorrectly formed brace expansion is left unchanged.   A
+       {  or  ,  may be quoted with a backslash to prevent its being considered
+       part of a brace expression.  To avoid conflicts  with  parameter  expan‐
+       sion,  the string ${ is not considered eligible for brace expansion, and
+       inhibits brace expansion until the closing }.r q to quit)
+ ESESCOBpage bash(1) byte 118395 (press h for help or q to quit)
+       This construct is typically used as shorthand when the common prefix  of
+       the strings to be generated is longer than in the above example:
+ ESESCOBpage bash(1) byte 118548 (press h for help or q to quit)
+              mkdir /usr/local/src/bash/{old,new,dist,bugs}quit)
+       orage bash(1) byte 118609 (press h for help or q to quit)
+              chown root /usr/{ucb/{ex,edit},lib/{ex?.?*,how_ex}}
+ ESESCOBpage bash(1) byte 118685 (press h for help or q to quit)
+       Brace expansion introduces a slight incompatibility with historical ver‐
+       sions of sh.  sh does not treat opening or closing braces specially when
+       they  appear  as part of a word, and preserves them in the output.  Bash
+       removes braces from words as a consequence of brace expansion.  For  ex‐
+       ample, a word entered to sh as file{1,2} appears identically in the out‐
+       put.  The same word is output as file1 file2 after  expansion  by  bash.
+       If  strict  compatibility with sh is desired, start bash with the +B op‐
+       tion or disable brace expansion with the +B option to  the  set  command
+       (see SHELL BUILTIN COMMANDS below).for help or q to quit)
+ ESESCOBpage bash(1) byte 119509 (press h for help or q to quit)
+   Tilde Expansion1) byte 119510 (press h for help or q to quit)
+       If  a  word  begins  with  an unquoted tilde character (`~'), all of the
+       characters preceding the first unquoted slash  (or  all  characters,  if
+       there  is  no unquoted slash) are considered a tilde-prefix.  If none of
+       the characters in the tilde-prefix are quoted,  the  characters  in  the
+       tilde-prefix  following  the tilde are treated as a possible login name.
+       If this login name is the null string, the tilde is  replaced  with  the
+       value of the shell parameter HOME.  If HOME is unset, the home directory
+       of the user executing the shell is substituted instead.  Otherwise,  the
+       tilde-prefix  is  replaced  with  the home directory associated with the
+       specified login name.0337 (press h for help or q to quit)
+ ESESCOBpage bash(1) byte 120366 (press h for help or q to quit)
+       If the tilde-prefix is a `~+', the value of the shell variable  PWD  re‐
+       places  the  tilde-prefix.   If the tilde-prefix is a `~-', the value of
+       the shell variable OLDPWD, if it is set, is substituted.  If the charac‐
+       ters  following the tilde in the tilde-prefix consist of a number N, op‐
+       tionally prefixed by a `+' or a `-', the tilde-prefix is  replaced  with
+       the  corresponding element from the directory stack, as it would be dis‐
+       played by the dirs builtin invoked with the tilde-prefix as an argument.
+M       (see SHELL BUILTIN COMMANDS below).or help or q to quit)
+M       tion or disable brace expansion with the +B option to  the  set  command
+M       If  strict  compatibility with sh is desired, start bash with the +B op‐
+M       put.  The same word is output as file1 file2 after  expansion  by  bash.
+M       ample, a word entered to sh as file{1,2} appears identically in the out‐
+M       removes braces from words as a consequence of brace expansion.  For  ex‐
+M       they  appear  as part of a word, and preserves them in the output.  Bash
+M       sions of sh.  sh does not treat opening or closing braces specially when
+M       Brace expansion introduces a slight incompatibility with historical ver‐
+MESESCOApage bash(1) byte 120337 (press h for help or q to quit)
+M              chown root /usr/{ucb/{ex,edit},lib/{ex?.?*,how_ex}}
+M       orge bash(1) byte 120177 (press h for help or q to quit)
+M              mkdir /usr/local/src/bash/{old,new,dist,bugs}uit)
+MESESCOApage bash(1) byte 120001 (press h for help or q to quit)
+M       the strings to be generated is longer than in the above example:
+M       This construct is typically used as shorthand when the common prefix  of
+MESESCOApage bash(1) byte 119719 (press h for help or q to quit)
+M       inhibits brace expansion until the closing }. q to quit)
+M       sion,  the string ${ is not considered eligible for brace expansion, and
+M       part of a brace expression.  To avoid conflicts  with  parameter  expan‐
+M       {  or  ,  may be quoted with a backslash to prevent its being considered
+M       pression.  Any incorrectly formed brace expansion is left unchanged.   A
+M       closing  braces, and at least one unquoted comma or a valid sequence ex‐
+M       A correctly-formed brace expansion must  contain  unquoted  opening  and
+MESESCOApage bash(1) byte 119130 (press h for help or q to quit)
+M       the context of the expansion or the text between the braces.
+M       strictly  textual.   Bash does not apply any syntactic interpretation to
+M       acters special to other expansions are preserved in the result.   It  is
+M       Brace  expansion is performed before any other expansions, and any char‐
+MESESCOApage bash(1) byte 118686 (press h for help or q to quit)
+M       each term.  The default increment is 1 or -1 as appropriate.
+M       When the increment is supplied, it is used  as  the  difference  between
+M       Note  that  both  x  and y must be of the same type (integer or letter).
+M       graphically between x and y, inclusive,  using  the  default  C  locale.
+M       letters  are  supplied, the expression expands to each character lexico‐
+M       contain the same number of digits, zero-padding where  necessary.   When
+M       begins  with  a zero, the shell attempts to force all generated terms to
+M       with 0 to force each term to have the same width.  When either  x  or  y
+M       number  between  x  and y, inclusive.  Supplied integers may be prefixed
+M       an integer.  When integers are supplied, the expression expands to  each
+M       either  integers  or single letters, and incr, an optional increment, is
+M       A sequence expression takes the form {x..y[..incr]}, where x and  y  are
+MESESCOApage bash(1) byte 118010 (press h for help or q to quit)
+M       expands into `ade ace abe'.ress h for help or q to quit)
+M       not  sorted;  left  to right order is preserved.  For example, a{d,c,b}e
+M       Brace expansions may be nested.  The results of each expanded string are
+MESESCOApage bash(1) byte 117779 (press h for help or q to quit)
+M       to each resulting string, expanding left to right. quit)
+M       string  contained within the braces, and the postscript is then appended
+M       lowed by an optional postscript.   The  preamble  is  prefixed  to  each
+M       rated  strings  or  a sequence expression between a pair of braces, fol‐
+M       form of an optional preamble, followed by either a series of comma-sepa‐
+M       names  generated need not exist.  Patterns to be brace expanded take the
+M       ated.  This mechanism is similar to pathname expansion,  but  the  file‐
+M       Brace  expansion is a mechanism by which arbitrary strings may be gener‐
+M   Brace Expansion) byte 117130 (press h for help or q to quit)
+MESESCOApage bash(1) byte 117050 (press h for help or q to quit)
+M       as explained above (see PARAMETERS).r help or q to quit)
+>ITINF25/lektion8/2.1 brace_expansionss h for help or q to quit)
+$ echo '#!/bin/bash' > exempel1 ; chmomodpansionh': echo $m': echo '#!/bin/bash' > exempel1 ; chmod +x exempel
+ITINF25/lektion8/2.1 brace_expansion
+$ ITINF25/lektion8/2.1 brace_expansion
+$ ./exempel1 
+x{a}
+ITINF25/lektion8/2.1 brace_expansion
+$ ./exempel1 ITINF25/lektion8/2.1 brace_expansion
+$ ./exempel1 
+xa x
+ITINF25/lektion8/2.1 brace_expansion
+$ ITINF25/lektion8/2.1 brace_expansion
+$ ./exempel1 
+xa xb
+ITINF25/lektion8/2.1 brace_expansion
+$ ./exempel1 ITINF25/lektion8/2.1 brace_expansion
+$ ./exempel1 
+xa xb xc
+ITINF25/lektion8/2.1 brace_expansion
+$ ./exempel1 ITINF25/lektion8/2.1 brace_expansion
+$ ./exempel1 
+xay xby xcy
+ITINF25/lektion8/2.1 brace_expansion
+echo x{a,b,c}y
+echo x{a,b,c},b,c}h,b,c}o,b,c}p,b,c}p,b,c},c}k,c}a,c}k,c}a,c}}b}a}k}a}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ITINF25/lektion8/2.1 brace_expansion
+$ echo x{hopp,kaka,baka}y
+xhoppy xkakay xbakay
+ITINF25/lektion8/2.1 brace_expansion
+$ echo x{hopp,kaka,baka}y
+echo x{hopp,kaka,baka}yITINF25/lektion8/2.1 brace_expansion
+$ echo x{hopp,kaka,baka}}}}}
+
+xhoppy xkakay xy
+ITINF25/lektion8/2.1 brace_expansion
+$ ITINF25/lektion8/2.1 brace_expansion
+$ mkdir nummerfiler
+ITINF25/lektion8/2.1 brace_expansion
+$ cd nummerfiler/
+ITINF25/lektion8/2.1 brace_expansion/nummerfiler
+$ ITINF25/lektion8/2.1 brace_expansion/nummerfiler
+$ bokf2025.tx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tbokf2025.txobokf2025.txubokf2025.txcbokf2025.txhbokf2025.tx bokf2025.tx{5.tx}.tx,}.tx6}.tx,}.tx7}.tx,}.tx8}.tx,}.tx9}.tx{5,6,7,8,9}.tx25,6,7,8,9}.tx26,7,8,9}.tx27,8,9}.tx28,9}.tx29}.tx,}.tx3}.tx0}.tx
+
+
+
+
+
+
+
+
+
+
+ITINF25/lektion8/2.1 brace_expansion/nummerfiler
+$ ls
+bokf2025.txt  bokf2027.txt  bokf2029.txt
+bokf2026.txt  bokf2028.txt  bokf2030.txt
+ITINF25/lektion8/2.1 brace_expansion/nummerfiler
+$ cd ..
+ITINF25/lektion8/2.1 brace_expansion
+$ mkdir nummerfiler2
+ITINF25/lektion8/2.1 brace_expansion
+$ cd nu
+mmerfiler
+ITINF25/lektion8/2.1 brace_expansion/nummerfiler
+(reverse-i-search)`':r': cd nummerfilero': git commit -m "Improvement Linux 2
+failed reverse-i-search)`rou': git commit -m "Impr
+t
+reverse-i-search)`ro': cd Dropbo': cd Dropbo
+
+o': touch indikatorfi^Cv återblick_lektion5.md återblick_lektion5.txt
+ITINF25/lektion8/2.1 brace_expansion/nummerfiler
+$ ITINF25/lektion8/2.1 brace_expansion/nummerfiler
+$ cd ..
+ITINF25/lektion8/2.1 brace_expansion
+$ cd nu
+mmerfiler2
+ITINF25/lektion8/2.1 brace_expansion/nummerfiler2
+ITINF25/lektion8/2.1 brace_expansion/nummerfiler2,29,30}.txt
+$ touch bokf20{25,26,27,28,29,30}.tx
+
+
+
+
+
+
+
+
+
+
+
+30}.tx30}.tx30}.tx30}.tx30}.tx30}.tx30}.tx30}.tx30}.tx30}.tx30}.tx30}.tx30}.tx.30}.tx.30}.tx
+-bokf20{25..30}.txvbokf20{25..30}.tx bokf20{25..30}.tx
+
+
+
+
+
+
+
+
+
+touch: invalid option -- 'v'
+Try 'touch --help' for more information.
+ITINF25/lektion8/2.1 brace_expansion/nummerfiler2
+$ touch -v bokf20{25..30}.txbokf20{25..30}.txbokf20{25..30}.txbokf20{25..30}.tx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+echo 
+touch bokf2025.txt bokf2026.txt bokf2027.txt bokf2028.txt bokf2029.txt bokf2030.txt
+ITINF25/lektion8/2.1 brace_expansion/nummerfiler2
+$ cd ..
+ITINF25/lektion8/2.1 brace_expansion
+$ ITINF25/lektion8/2.1 brace_expansion
+$ ls
+exempel1  nummerfiler  nummerfiler2
+ITINF25/lektion8/2.1 brace_expansion
+$ mkdir gator
+ITINF25/lektion8/2.1 brace_expansion
+$ cd fgator/
+ITINF25/lektion8/2.1 brace_expansion/gator
+$ ITINF25/lektion8/2.1 brace_expansion/gator
+$ gygygygy
+
+mjolnerbacken
+
+
+
+
+
+echo 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1..22}
+mjolnerbacken1 mjolnerbacken2 mjolnerbacken3 mjolnerbacken4 mjolnerbacken5 mjolnerbacken6 mjolnerbacken7 mjolnerbacken8 mjolnerbacken9 mjolnerbacken10 mjolnerbacken11 mjolnerbacken12 mjolnerbacken13 mjolnerbacken14 mjolnerbacken15 mjolnerbacken16 mjolnerbacken17 mjolnerbacken18 mjolnerbacken19 mjolnerbacken20 mjolnerbacken21 mjolnerbacken22
+ITINF25/lektion8/2.1 brace_expansion/gator
+$ echo mjolnerbacken{1..22}ITINF25/lektion8/2.1 brace_expansion/gator
+$ echo mjolnerbacken{1..22}{a,b}
+mjolnerbacken1a mjolnerbacken1b mjolnerbacken2a mjolnerbacken2b mjolnerbacken3a mjolnerbacken3b mjolnerbacken4a mjolnerbacken4b mjolnerbacken5a mjolnerbacken5b mjolnerbacken6a mjolnerbacken6b mjolnerbacken7a mjolnerbacken7b mjolnerbacken8a mjolnerbacken8b mjolnerbacken9a mjolnerbacken9b mjolnerbacken10a mjolnerbacken10b mjolnerbacken11a mjolnerbacken11b mjolnerbacken12a mjolnerbacken12b mjolnerbacken13a mjolnerbacken13b mjolnerbacken14a mjolnerbacken14b mjolnerbacken15a mjolnerbacken15b mjolnerbacken16a mjolnerbacken16b mjolnerbacken17a mjolnerbacken17b mjolnerbacken18a mjolnerbacken18b mjolnerbacken19a mjolnerbacken19b mjolnerbacken20a mjolnerbacken20b mjolnerbacken21a mjolnerbacken21b mjolnerbacken22a mjolnerbacken22b
+ITINF25/lektion8/2.1 brace_expansion/gator
+$ echo mjolnerbacken{1..22}{a,b mjolnerbacken{1..22}{a,b mjolnerbacken{1..22}{a,b mjolnerbacken{1..22}{a,b mjolnerbacken{1..22}{a,b
+t mjolnerbacken{1..22}{a,bo mjolnerbacken{1..22}{a,bu mjolnerbacken{1..22}{a,bc mjolnerbacken{1..22}{a,bh mjolnerbacken{1..22}{a,bITINF25/lektion8/2.1 brace_expansion/gator
+$ touch mjolnerbacken{1..22}{a,b"a,b a,b",b"b b"b,ba,ba,b"mjolnerbacken{1..22}{a,b"{1..22}{a,b "{1..22}{a,b
+
+
+
+
+
+
+echo
+mjolnerbacken 1a mjolnerbacken 1b mjolnerbacken 2a mjolnerbacken 2b mjolnerbacken 3a mjolnerbacken 3b mjolnerbacken 4a mjolnerbacken 4b mjolnerbacken 5a mjolnerbacken 5b mjolnerbacken 6a mjolnerbacken 6b mjolnerbacken 7a mjolnerbacken 7b mjolnerbacken 8a mjolnerbacken 8b mjolnerbacken 9a mjolnerbacken 9b mjolnerbacken 10a mjolnerbacken 10b mjolnerbacken 11a mjolnerbacken 11b mjolnerbacken 12a mjolnerbacken 12b mjolnerbacken 13a mjolnerbacken 13b mjolnerbacken 14a mjolnerbacken 14b mjolnerbacken 15a mjolnerbacken 15b mjolnerbacken 16a mjolnerbacken 16b mjolnerbacken 17a mjolnerbacken 17b mjolnerbacken 18a mjolnerbacken 18b mjolnerbacken 19a mjolnerbacken 19b mjolnerbacken 20a mjolnerbacken 20b mjolnerbacken 21a mjolnerbacken 21b mjolnerbacken 22a mjolnerbacken 22b
+ITINF25/lektion8/2.1 brace_expansion/gator
+$ echo "mjolnerbacken "{1..22}{a,b}ITINF25/lektion8/2.1 brace_expansion/gator
+$ echo "mjolnerbacken "{1..22}{a,b}.tx
+touch
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ITINF25/lektion8/2.1 brace_expansion/gator
+$ ITINF25/lektion8/2.1 brace_expansion/gator
+$ ls
+'mjolnerbacken 10a.txt'  'mjolnerbacken 17b.txt'  'mjolnerbacken 3a.txt'
+'mjolnerbacken 10b.txt'  'mjolnerbacken 18a.txt'  'mjolnerbacken 3b.txt'
+'mjolnerbacken 11a.txt'  'mjolnerbacken 18b.txt'  'mjolnerbacken 4a.txt'
+'mjolnerbacken 11b.txt'  'mjolnerbacken 19a.txt'  'mjolnerbacken 4b.txt'
+'mjolnerbacken 12a.txt'  'mjolnerbacken 19b.txt'  'mjolnerbacken 5a.txt'
+'mjolnerbacken 12b.txt'  'mjolnerbacken 1a.txt'   'mjolnerbacken 5b.txt'
+'mjolnerbacken 13a.txt'  'mjolnerbacken 1b.txt'   'mjolnerbacken 6a.txt'
+'mjolnerbacken 13b.txt'  'mjolnerbacken 20a.txt'  'mjolnerbacken 6b.txt'
+'mjolnerbacken 14a.txt'  'mjolnerbacken 20b.txt'  'mjolnerbacken 7a.txt'
+'mjolnerbacken 14b.txt'  'mjolnerbacken 21a.txt'  'mjolnerbacken 7b.txt'
+'mjolnerbacken 15a.txt'  'mjolnerbacken 21b.txt'  'mjolnerbacken 8a.txt'
+'mjolnerbacken 15b.txt'  'mjolnerbacken 22a.txt'  'mjolnerbacken 8b.txt'
+'mjolnerbacken 16a.txt'  'mjolnerbacken 22b.txt'  'mjolnerbacken 9a.txt'
+'mjolnerbacken 16b.txt'  'mjolnerbacken 2a.txt'   'mjolnerbacken 9b.txt'
+'mjolnerbacken 17a.txt'  'mjolnerbacken 2b.txt'
+ITINF25/lektion8/2.1 brace_expansion/gator
+$ ITINF25/lektion8/2.1 brace_expansion/gator
+lsltouch "mjolnerbacken "{1..22}{a,b}.txt
+ls
+'mjolnerbacken 10a.txt'  'mjolnerbacken 17b.txt'  'mjolnerbacken 3a.txt'
+'mjolnerbacken 10b.txt'  'mjolnerbacken 18a.txt'  'mjolnerbacken 3b.txt'
+'mjolnerbacken 11a.txt'  'mjolnerbacken 18b.txt'  'mjolnerbacken 4a.txt'
+'mjolnerbacken 11b.txt'  'mjolnerbacken 19a.txt'  'mjolnerbacken 4b.txt'
+'mjolnerbacken 12a.txt'  'mjolnerbacken 19b.txt'  'mjolnerbacken 5a.txt'
+'mjolnerbacken 12b.txt'  'mjolnerbacken 1a.txt'   'mjolnerbacken 5b.txt'
+'mjolnerbacken 13a.txt'  'mjolnerbacken 1b.txt'   'mjolnerbacken 6a.txt'
+'mjolnerbacken 13b.txt'  'mjolnerbacken 20a.txt'  'mjolnerbacken 6b.txt'
+'mjolnerbacken 14a.txt'  'mjolnerbacken 20b.txt'  'mjolnerbacken 7a.txt'
+'mjolnerbacken 14b.txt'  'mjolnerbacken 21a.txt'  'mjolnerbacken 7b.txt'
+'mjolnerbacken 15a.txt'  'mjolnerbacken 21b.txt'  'mjolnerbacken 8a.txt'
+'mjolnerbacken 15b.txt'  'mjolnerbacken 22a.txt'  'mjolnerbacken 8b.txt'
+'mjolnerbacken 16a.txt'  'mjolnerbacken 22b.txt'  'mjolnerbacken 9a.txt'
+'mjolnerbacken 16b.txt'  'mjolnerbacken 2a.txt'   'mjolnerbacken 9b.txt'
+'mjolnerbacken 17a.txt'  'mjolnerbacken 2b.txt'
+ITINF25/lektion8/2.1 brace_expansion/gator
+$ touch mjolnerbacken 17a.txt
+mjolnerbacken 17a.txtITINF25/lektion8/2.1 brace_expansion/gator
+$ touch mjolnerbacken 17a.tx
+
+
+
+
+
+
+
+
+
+'
+
+
+
+
+
+
+\ 17a.txt
+
+
+
+
+^C
+ITINF25/lektion8/2.1 brace_expansion/gator
+$ ITINF25/lektion8/2.1 brace_expansion/gator
+$ ls
+'mjolnerbacken 10a.txt'  'mjolnerbacken 17b.txt'  'mjolnerbacken 3a.txt'
+'mjolnerbacken 10b.txt'  'mjolnerbacken 18a.txt'  'mjolnerbacken 3b.txt'
+'mjolnerbacken 11a.txt'  'mjolnerbacken 18b.txt'  'mjolnerbacken 4a.txt'
+'mjolnerbacken 11b.txt'  'mjolnerbacken 19a.txt'  'mjolnerbacken 4b.txt'
+'mjolnerbacken 12a.txt'  'mjolnerbacken 19b.txt'  'mjolnerbacken 5a.txt'
+'mjolnerbacken 12b.txt'  'mjolnerbacken 1a.txt'   'mjolnerbacken 5b.txt'
+'mjolnerbacken 13a.txt'  'mjolnerbacken 1b.txt'   'mjolnerbacken 6a.txt'
+'mjolnerbacken 13b.txt'  'mjolnerbacken 20a.txt'  'mjolnerbacken 6b.txt'
+'mjolnerbacken 14a.txt'  'mjolnerbacken 20b.txt'  'mjolnerbacken 7a.txt'
+'mjolnerbacken 14b.txt'  'mjolnerbacken 21a.txt'  'mjolnerbacken 7b.txt'
+'mjolnerbacken 15a.txt'  'mjolnerbacken 21b.txt'  'mjolnerbacken 8a.txt'
+'mjolnerbacken 15b.txt'  'mjolnerbacken 22a.txt'  'mjolnerbacken 8b.txt'
+'mjolnerbacken 16a.txt'  'mjolnerbacken 22b.txt'  'mjolnerbacken 9a.txt'
+'mjolnerbacken 16b.txt'  'mjolnerbacken 2a.txt'   'mjolnerbacken 9b.txt'
+'mjolnerbacken 17a.txt'  'mjolnerbacken 2b.txt'
+ITINF25/lektion8/2.1 brace_expansion/gator
+u': touch "mjolnerbacken "{1..22}{a,b}.txtken "{1..22}{a,b}.txt
+ilar2.txtinstruktion{1..20}.jp^Cch bokf20{25..30}.txc': echo touch': echo touchtouch -bokf20{25,26,27,28,29,30}.txt
+ITINF25/lektion8/2.1 brace_expansion/gator
+$ touch "mjsearch)`':m': touch "mjolnerbacken "{1..22}{a,b}.txj': touch "mjo': touch "mjo
+
+
+
+
+    ^C
+ITINF25/lektion8/2.1 brace_expansion/gator
+$ cd ..
+ITINF25/lektion8/2.1 brace_expansion
+$ ITINF25/lektion8/2.1 brace_expansion
+$ ls
+exempel1  gator  nummerfiler  nummerfiler2
+ITINF25/lektion8/2.1 brace_expansion
+$ mkdir rerealistiska_exempel
+ITINF25/lektion8/2.1 brace_expansion
+$ ITINF25/lektion8/2.1 brace_expansion
+$ ls
+exempel1  gator  nummerfiler  nummerfiler2  realistiska_exempel
+ITINF25/lektion8/2.1 brace_expansion
+$ cd realistiska_exempel/
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ ls
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ touch 'den har fulen har ett valdigt langt namn som ar jobbigt att skriva.txt'
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ ls
+'den har fulen har ett valdigt langt namn som ar jobbigt att skriva.txt'
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ mv 'den har fulen har ett valdigt langt namn som ar jobbigt att skriva.txt' 'den har fulen har ett valdigt langt namn som ar jobbigt att skriva.txt'i^C
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ ls
+'den har fulen har ett valdigt langt namn som ar jobbigt att skriva.txt'
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ mv fran til"den har fulen har ett valdigt langt namn som ar jobbigt att skriva.txt"
+
+
+{
+
+
+
+
+echo ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ echo mv "den har fulen{} har ett valdigt langt namn som ar jobbigt att skriva.txt
+mv den har fulen{} har ett valdigt langt namn som ar jobbigt att skriva.txt
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ ,}"len har ett valdigt langt namn som ar jobbigt att skriva.txt"i}"len har ett valdigt langt namn som ar jobbigt att skriva.txt"gt att skriva.txt" 
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+mv den har fulen har ett valdigt langt namn som ar jobbigt att skriva.txt den har filen har ett valdigt langt namn som ar jobbigt att skriva.txt
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ touch 'den har fulen har ett valdigt langt namn som ar jobbigt att skriva.txt' som ar jobbigt att skriva.txt" o': touch 'den har fulen har ett valdigt langt namn som ar jobbigt att skriva.txt'u': touch 'den har fulen har ett valdigt langt namn som ar jobbigtc': touch 'den har fulen har ett valdigt langt namn som ar jobbigh': touch 'den har fulen har ett valdigt langt namn som ar jobbi
+^C
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ echo mv "den har f"{u,i}"len har ett valdigt langt namn som ar jobbigt att skriva.txt"  ulen{} har ett valdigt langt namn som ar jobbigt att skriva.txt"
+$ mv "den har f"{u,i}"len har ett valdigt langt namn som ar jobbigt att skriva.txt" mv "den har f"{u,i}"len har ett valdigt langt namn som ar jobbigt att skriva.txt"  
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ mv "den har f"{u,i}"len har ett valdigt langt namn som ar jobbigt att skriva.txt"   
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ ls
+'den har filen har ett valdigt langt namn som ar jobbigt att skriva.txt'
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ cp 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+e
+touch idhuie?
+_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ sudop mv idhuie_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt /etcvar/
+
+backups/ lib/     lock/    mail/    run/     tmp/     
+cache/   local/   log/     opt/     spool/   
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ sudo mv idhuie_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt /var/opt/
+
+
+
+
+
+lib/
+
+AccountsService/       geoclue/               private/
+alsa/                  ghostscript/           python/
+apache2/               git/                   realmd/
+app-info/              grub/                  saned/
+apt/                   ieee-data/             sgml-base/
+aspell/                ispell/                shells.state
+avahi-autoipd/         libreoffice/           smartmontools/
+blueman/               libuuid/               snmp/
+bluetooth/             libvirt/               sudo/
+boltd/                 libxml-sax-perl/       swcatalog/
+ca-certificates-java/  lightdm/               swtpm/
+cni/                   logrotate/             swtpm-localca/
+colord/                machines/              synaptic/
+containerd/            man-db/                systemd/
+containers/            misc/                  tailscale/
+dbus/                  msttcorefonts/         tex-common/
+dhcp/                  NetworkManager/        texmf/
+dictionaries-common/   nfs/                   tpm/
+docker/                os-prober/             ucf/
+dpkg/                  PackageKit/            udisks2/
+emacsen-common/        pam/                   upower/
+exim4/                 plocate/               usb_modeswitch/
+flatpak/               plymouth/              usbutils/
+fwupd/                 polkit-1/              vim/
+gconf/                 popularity-contest/    xfonts/
+gdm3/                  portables/             xkb/
+gems/                  power-profiles-daemon/ xml-core/
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ sudo mv idhuie_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt /var/lib/logrotate/ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ sudo mv idhuie_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt /var/lib/logrotate/status 
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ sudo mv idhuie_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt /var/lib/logrotate/ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ sudo mv idhuie_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt /var/lib/logrotate/
+[sudo] password for kent: 
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ ls -l /var/lib/logrotate/idhuie_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ ls -l /var/lib/logrotate/idhuie_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt 
+-rw-r--r-- 1 kent kent 0 Sep 30 13:04 /var/lib/logrotate/idhuie_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ ls -l /var/lib/logrotate/idhuie_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt
+
+
+mv
+
+
+
+{idhuie_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.tx}_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.tx,}_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txK}_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txO}_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txR}_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txR}_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txE}_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txK}_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txT}_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.tx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+mv: cannot move '/var/lib/logrotate/idhuie_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt' to '/var/lib/logrotate/KORREKT_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt': Permission denied
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+sudo !!ar/lib/logrotate/{idhuie,KORREKT}_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt
+sudo mv /var/lib/logrotate/{idhuie,KORREKT}_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ ls /var/lib/logrotate/ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ ls /var/lib/logrotate/
+KORREKT_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt  status
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ ls /var/lib/logrotate/Ko
+ORREKT_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txtsudorm
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ echo {0,1}{0,1}{0,1}{0,1}}
+0000 0001 0010 0011 0100 0101 0110 0111 1000 1001 1010 1011 1100 1101 1110 1111
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ echo {0,1}{0,1}{0,1}{0,1..9}{0..9}
+00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ for x inn ^ {0..3}; do echo Numret $x; done
+Numret 0
+Numret 1
+Numret 2
+Numret 3
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ echo {0..9./.2}
+
+0 2 4 6 8
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ echo {a,b,c,e1..4}
+a b c 1..4
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ echo {a,b,c,1..4{1..4
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ echo {a,b,c,{1..4}}
+a b c 1 2 3 4
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ man bash
+BASH(1)                       General Commands Manual                      BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash  is  an  sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash also  incorporates
+       useful features from the Korn and C shells (ksh and csh).
+
+       Bash  is intended to be a conformant implementation of the Shell and Utili‐
+       ties portion of the IEEE POSIX specification (IEEE Standard 1003.1).   Bash
+       can be configured to be POSIX-conformant by default.
+BASH(1)                       General Commands Manual                      BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash  is  an  sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash also  incorporates
+       useful features from the Korn and C shells (ksh and csh).
+
+       Bash  is intended to be a conformant implementation of the Shell and Utili‐
+       ties portion of the IEEE POSIX specification (IEEE Standard 1003.1).   Bash
+       can be configured to be POSIX-conformant by default.
+BASH(1)                       General Commands Manual                      BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash  is  an  sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash also  incorporates
+       useful features from the Korn and C shells (ksh and csh).
+
+       Bash  is intended to be a conformant implementation of the Shell and Utili‐
+       ties portion of the IEEE POSIX specification (IEEE Standard 1003.1).   Bash
+       can be configured to be POSIX-conformant by default.
+...skipping...
+       Arithmetic Expansion below).  Word splitting and pathname expansion are not
+       performed.   Assignment  statements  may  also  appear  as arguments to the
+       alias, declare, typeset, export, readonly, and local builtin commands (dec‐
+       laration  commands).   When  in  posix mode, these builtins may appear in a
+       command after one or more instances of the command builtin and retain these
+       assignment statement properties.
+
+       In  the  context  where  an  assignment statement is assigning a value to a
+       shell variable or array index, the += operator can be used to append to  or
+       add  to  the variable's previous value.  This includes arguments to builtin
+       commands such as declare that  accept  assignment  statements  (declaration
+       commands).   When  += is applied to a variable for which the integer attri‐
+       bute has been set, value is evaluated as an arithmetic expression and added
+       to  the  variable's current value, which is also evaluated.  When += is ap‐
+       plied to an array variable using compound assignment  (see  Arrays  below),
+       the  variable's  value is not unset (as it is when using =), and new values
+       are appended to the array beginning at one greater than the array's maximum
+       index (for indexed arrays) or added as additional key-value pairs in an as‐
+       sociative array.  When applied to a string-valued variable,  value  is  ex‐
+...skipping...ash(1) line 682 (press h for help or q to quit)
+   Arithmetic Expansion
+       Arithmetic expansion allows the evaluation of an arithmetic expression  and
+       the substitution of the result.  The format for arithmetic expansion is:
+
+              $((expression))
+
+       The  old format $[expression] is deprecated and will be removed in upcoming
+       versions of bash.
+
+       The expression undergoes the same expansions as if it  were  within  double
+       quotes, but double quote characters in expression are not treated specially
+       and are removed.  All tokens in the expression undergo parameter and  vari‐
+       able  expansion,  command  substitution,  and quote removal.  The result is
+       treated as the arithmetic expression to be  evaluated.   Arithmetic  expan‐
+       sions may be nested.
+
+       The  evaluation  is  performed  according  to  the rules listed below under
+       ARITHMETIC EVALUATION.  If expression is invalid, bash prints a message in‐
+       dicating failure and no substitution occurs.
+ ESESCOBpage bash(1) line 1904 (press h for help or q to quit)
+   Process Substitutionne 1905 (press h for help or q to quit)
+       Process  substitution  allows a process's input or output to be referred to
+       using a filename.  It takes the form of <(list) or  >(list).   The  process
+       list  is run asynchronously, and its input or output appears as a filename.
+       This filename is passed as an argument to the current command as the result
+       of  the  expansion.   If the >(list) form is used, writing to the file will
+       provide input for list.  If the <(list) form is used, the file passed as an
+       argument should be read to obtain the output of list.  Process substitution
+       is supported on systems that support named pipes  (FIFOs)  or  the  /dev/fd
+       method of naming open files.ss h for help or q to quit)
+ ESESCOBpage bash(1) line 1915 (press h for help or q to quit)
+       When  available,  process substitution is performed simultaneously with pa‐
+M       able  expansion,  command  substitution,  and quote removal.  The result is
+M       and are removed.  All tokens in the expression undergo parameter and  vari‐
+M       quotes, but double quote characters in expression are not treated specially
+M       The expression undergoes the same expansions as if it  were  within  double
+MESESCOApage bash(1) line 1913 (press h for help or q to quit)
+M       versions of bash. 1912 (press h for help or q to quit)
+M       The  old format $[expression] is deprecated and will be removed in upcoming
+MESESCOApage bash(1) line 1910 (press h for help or q to quit)
+M              $((expression)) (press h for help or q to quit)
+MESESCOApage bash(1) line 1908 (press h for help or q to quit)
+M       the substitution of the result.  The format for arithmetic expansion is:
+M       Arithmetic expansion allows the evaluation of an arithmetic expression  and
+M   Arithmetic Expansione 1905 (press h for help or q to quit)
+MESESCOApage bash(1) line 1904 (press h for help or q to quit)
+       dicating failure and no substitution occurs. q to quit)
+ ESESCOBpage bash(1) line 1904 (press h for help or q to quit)
+   Process Substitutionne 1905 (press h for help or q to quit)
+       the substitution of the result.  The format for arithmetic expansion is:
+
+              $((expression))
+
+       The  old format $[expression] is deprecated and will be removed in upcoming
+       versions of bash.
+
+       The expression undergoes the same expansions as if it  were  within  double
+       quotes, but double quote characters in expression are not treated specially
+       and are removed.  All tokens in the expression undergo parameter and  vari‐
+       able  expansion,  command  substitution,  and quote removal.  The result is
+       treated as the arithmetic expression to be  evaluated.   Arithmetic  expan‐
+       sions may be nested.
+
+       The  evaluation  is  performed  according  to  the rules listed below under
+       ARITHMETIC EVALUATION.  If expression is invalid, bash prints a message in‐
+       dicating failure and no substitution occurs.
+
+   Process Substitution
+       the substitution of the result.  The format for arithmetic expansion is:
+
+              $((expression))
+
+       The  old format $[expression] is deprecated and will be removed in upcoming
+       versions of bash.
+
+       The expression undergoes the same expansions as if it  were  within  double
+       quotes, but double quote characters in expression are not treated specially
+       and are removed.  All tokens in the expression undergo parameter and  vari‐
+       able  expansion,  command  substitution,  and quote removal.  The result is
+       treated as the arithmetic expression to be  evaluated.   Arithmetic  expan‐
+       sions may be nested.
+
+       The  evaluation  is  performed  according  to  the rules listed below under
+       ARITHMETIC EVALUATION.  If expression is invalid, bash prints a message in‐
+       dicating failure and no substitution occurs.
+
+   Process Substitution
+       Process  substitution  allows a process's input or output to be referred to
+       using a filename.  It takes the form of <(list) or  >(list).   The  process
+       list  is run asynchronously, and its input or output appears as a filename.
+       This filename is passed as an argument to the current command as the result
+       of  the  expansion.   If the >(list) form is used, writing to the file will
+       provide input for list.  If the <(list) form is used, the file passed as an
+       argument should be read to obtain the output of list.  Process substitution
+       is supported on systems that support named pipes  (FIFOs)  or  the  /dev/fd
+       method of naming open files.
+
+       When  available,  process substitution is performed simultaneously with pa‐
+       rameter and variable expansion, command substitution, and arithmetic expan‐
+       sion.
+
+   Word Splitting
+...skipping...ash(1) line 1921 (press h for help or q to quit)
+ARITHMETIC EVALUATION
+       The shell allows arithmetic expressions to be evaluated, under certain cir‐
+       cumstances  (see the let and declare builtin commands, the (( compound com‐
+       mand, and Arithmetic Expansion).  Evaluation is done in  fixed-width  inte‐
+       gers  with  no  check  for  overflow,  though  division by 0 is trapped and
+       flagged as an error.  The operators and  their  precedence,  associativity,
+       and values are the same as in the C language.  The following list of opera‐
+       tors is grouped into levels of equal-precedence operators.  The levels  are
+       listed in order of decreasing precedence.
+
+       id++ id--
+              variable post-increment and post-decrement
+       - +    unary minus and plus
+       ++id --id
+              variable pre-increment and pre-decrement
+       ! ~    logical and bitwise negation
+       **     exponentiation
+       * / %  multiplication, division, remainder
+       + -    addition, subtraction
+       << >>  left and right bitwise shifts help or q to quit)
+       <= >= < >h(1) line 2465 (press h for help or q to quit)
+              comparisone 2466 (press h for help or q to quit)
+       == !=  equality and inequality h for help or q to quit)
+       &      bitwise AND 2468 (press h for help or q to quit)
+       ^      bitwise exclusive ORess h for help or q to quit)
+       |      bitwise ORe 2470 (press h for help or q to quit)
+       &&     logical AND 2471 (press h for help or q to quit)
+       ||     logical ORe 2472 (press h for help or q to quit)
+       expr?expr:exprline 2473 (press h for help or q to quit)
+              conditional operatoress h for help or q to quit)
+       = *= /= %= += -= <<= >>= &= ^= |=for help or q to quit)
+              assignmente 2476 (press h for help or q to quit)
+       expr1 , expr2 line 2477 (press h for help or q to quit)
+              comma) line 2478 (press h for help or q to quit)
+>ITINF25/lektion8/2.1 brace_expansion/realistiska_exempelquit)
+$ echo '#!/bin/bash' > exempel1 ; chmomod4}h': echo {a,b,c,{1..4}m': echo '#!/bin/bash' > exempel1 ; chmod +x exempel
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ man bash
+BASH(1)                       General Commands Manual                      BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash  is  an  sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash also  incorporates
+       useful features from the Korn and C shells (ksh and csh).
+
+       Bash  is intended to be a conformant implementation of the Shell and Utili‐
+       ties portion of the IEEE POSIX specification (IEEE Standard 1003.1).   Bash
+       can be configured to be POSIX-conformant by default.
+
+BASH(1)                       General Commands Manual                      BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash  is  an  sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash also  incorporates
+       useful features from the Korn and C shells (ksh and csh).
+
+       Bash  is intended to be a conformant implementation of the Shell and Utili‐
+       ties portion of the IEEE POSIX specification (IEEE Standard 1003.1).   Bash
+       can be configured to be POSIX-conformant by default.
+
+BASH(1)                       General Commands Manual                      BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash  is  an  sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash also  incorporates
+       useful features from the Korn and C shells (ksh and csh).
+
+       Bash  is intended to be a conformant implementation of the Shell and Utili‐
+       ties portion of the IEEE POSIX specification (IEEE Standard 1003.1).   Bash
+       can be configured to be POSIX-conformant by default.
+
+...skipping...
+       EXPANSION section.
+
+       When bash is invoked as an interactive login shell, or as a non-interactive
+       shell  with  the  --login option, it first reads and executes commands from
+       the file /etc/profile, if that file exists.  After reading  that  file,  it
+       looks  for  ~/.bash_profile,  ~/.bash_login, and ~/.profile, in that order,
+       and reads and executes commands from the first one that exists and is read‐
+       able.   The --noprofile option may be used when the shell is started to in‐
+       hibit this behavior.
+
+       When an interactive login shell exits, or a non-interactive login shell ex‐
+       ecutes  the exit builtin command, bash reads and executes commands from the
+       file ~/.bash_logout, if it exists.
+
+       When an interactive shell that is not a login shell is started, bash  reads
+       and  executes  commands from /etc/bash.bashrc and ~/.bashrc, if these files
+       exist.  This may be inhibited by using the  --norc  option.   The  --rcfile
+       file  option will force bash to read and execute commands from file instead
+       of /etc/bash.bashrc and ~/.bashrc.
+
+...skipping...ash(1) line 139 (press h for help or q to quit)
+       EXPANSION  below),  the  history  expansion  character,  usually !, must be
+       quoted to prevent history expansion.
+
+       There are three quoting mechanisms: the escape  character,  single  quotes,
+       and double quotes.
+
+       A  non-quoted backslash (\) is the escape character.  It preserves the lit‐
+       eral value of the next character that follows, with the exception of  <new‐
+       line>.   If  a  \<newline>  pair  appears,  and the backslash is not itself
+       quoted, the \<newline> is treated as a line continuation (that  is,  it  is
+       removed from the input stream and effectively ignored).
+
+       Enclosing  characters  in single quotes preserves the literal value of each
+       character within the quotes.  A single quote may not occur  between  single
+       quotes, even when preceded by a backslash.
+
+       Enclosing  characters  in  double quotes preserves the literal value of all
+       characters within the quotes, with the exception of $, `, \, and, when his‐
+       tory  expansion  is enabled, !.  When the shell is in posix mode, the ! has
+       no special meaning within double quotes, even when history expansion is en‐
+...skipping...ash(1) line 589 (press h for help or q to quit)
+       stitution,  arithmetic  expansion, and quote removal (see EXPANSION below).
+       If the variable has its integer attribute set, then value is  evaluated  as
+       an  arithmetic  expression  even if the $((...)) expansion is not used (see
+       Arithmetic Expansion below).  Word splitting and pathname expansion are not
+       performed.   Assignment  statements  may  also  appear  as arguments to the
+       alias, declare, typeset, export, readonly, and local builtin commands (dec‐
+       laration  commands).   When  in  posix mode, these builtins may appear in a
+       command after one or more instances of the command builtin and retain these
+       assignment statement properties.
+
+       In  the  context  where  an  assignment statement is assigning a value to a
+       shell variable or array index, the += operator can be used to append to  or
+       add  to  the variable's previous value.  This includes arguments to builtin
+       commands such as declare that  accept  assignment  statements  (declaration
+       commands).   When  += is applied to a variable for which the integer attri‐
+       bute has been set, value is evaluated as an arithmetic expression and added
+       to  the  variable's current value, which is also evaluated.  When += is ap‐
+       plied to an array variable using compound assignment  (see  Arrays  below),
+       the  variable's  value is not unset (as it is when using =), and new values
+       are appended to the array beginning at one greater than the array's maximum
+...skipping...ash(1) line 679 (press h for help or q to quit)
+       panded, it must be enclosed in braces (see EXPANSION below).
+
+   Special Parameters
+       The shell treats several parameters specially.  These parameters  may  only
+       be referenced; assignment to them is not allowed.
+       *      Expands  to  the positional parameters, starting from one.  When the
+              expansion is not within double quotes, each positional parameter ex‐
+              pands  to a separate word.  In contexts where it is performed, those
+              words are subject to further word splitting and pathname  expansion.
+              When the expansion occurs within double quotes, it expands to a sin‐
+              gle word with the value of each parameter  separated  by  the  first
+              character  of the IFS special variable.  That is, "$*" is equivalent
+              to "$1c$2c...", where c is the first character of the value  of  the
+              IFS variable.  If IFS is unset, the parameters are separated by spa‐
+              ces.  If IFS is null, the parameters are joined without  intervening
+              separators.
+       @      Expands  to  the  positional parameters, starting from one.  In con‐
+              texts where word splitting is performed,  this  expands  each  posi‐
+              tional  parameter  to  a separate word; if not within double quotes,
+              these words are subject to word splitting.  In contexts  where  word
+...skipping...ash(1) line 737 (press h for help or q to quit)
+              enization (see HISTORY EXPANSION below).  The first character is the
+              history  expansion  character, the character which signals the start
+              of a history expansion, normally `!'.  The second character  is  the
+              quick substitution character, which is used as shorthand for re-run‐
+              ning the previous command entered, substituting one string  for  an‐
+              other in the command.  The default is `^'.  The optional third char‐
+              acter is the character which indicates that  the  remainder  of  the
+              line  is a comment when found as the first character of a word, nor‐
+              mally `#'.  The history comment character causes  history  substitu‐
+              tion to be skipped for the remaining words on the line.  It does not
+              necessarily cause the shell parser to treat the rest of the line  as
+              a comment.
+
+   Arrays
+       Bash provides one-dimensional indexed and associative array variables.  Any
+       variable may be used as an indexed array; the declare builtin will  explic‐
+       itly  declare an array.  There is no maximum limit on the size of an array,
+       nor any requirement that members be indexed or assigned contiguously.   In‐
+       dexed  arrays  are  referenced using integers (including arithmetic expres‐
+       sions) and are zero-based; associative arrays are  referenced  using  arbi‐
+...skipping...ash(1) line 1380 (press h for help or q to quit)
+       EXPANSION.  When assigning to indexed arrays, if the optional brackets  and
+       subscript  are  supplied, that index is assigned to; otherwise the index of
+       the element assigned is the last index assigned to by  the  statement  plus
+       one.  Indexing starts at zero.
+
+       When  assigning to an associative array, the words in a compound assignment
+       may be either assignment statements, for which the subscript  is  required,
+       or  a  list  of words that is interpreted as a sequence of alternating keys
+       and values: name=( key1 value1 key2 value2 ...).  These are treated identi‐
+       cally  to  name=(  [key1]=value1 [key2]=value2 ...).  The first word in the
+       list determines how the remaining words are interpreted; all assignments in
+       a  list must be of the same type.  When using key/value pairs, the keys may
+       not be missing or empty; a final missing value is treated  like  the  empty
+       string.
+
+       This syntax is also accepted by the declare builtin.  Individual array ele‐
+       ments may be assigned to using the name[subscript]=value syntax  introduced
+       above.   When  assigning  to  an indexed array, if name is subscripted by a
+       negative number, that number is interpreted as relative to one greater than
+       the  maximum  index of name, so negative indices count back from the end of
+...skipping...ash(1) line 1419 (press h for help or q to quit)
+EXPANSION
+       Expansion is performed on the command line after it  has  been  split  into
+       words.   There  are  seven  kinds  of expansion performed: brace expansion,
+       tilde expansion, parameter and variable  expansion,  command  substitution,
+       arithmetic expansion, word splitting, and pathname expansion.
+
+       The order of expansions is: brace expansion; tilde expansion, parameter and
+       variable expansion, arithmetic expansion, and command substitution (done in
+       a left-to-right fashion); word splitting; and pathname expansion.
+
+       On systems that can support it, there is an additional expansion available:
+       process substitution.  This is performed at the same time as tilde, parame‐
+       ter, variable, and arithmetic expansion and command substitution.
+
+       After these expansions are performed, quote characters present in the orig‐
+       inal word are removed unless they have been quoted  themselves  (quote  re‐
+       moval).
+
+       Only  brace  expansion, word splitting, and pathname expansion can increase
+       the number of words of the expansion; other expansions expand a single word
+       to  a  single word.  The only exceptions to this are the expansions of "$@"
+       and "${name[@]}", and, in most cases, $* and ${name[*]} as explained  above
+       (see PARAMETERS).e 1501 (press h for help or q to quit)
+ ESESCOBpage bash(1) line 1502 (press h for help or q to quit)
+   Brace Expansion1) line 1503 (press h for help or q to quit)
+       Brace expansion is a mechanism by which arbitrary strings may be generated.
+       This mechanism is similar to pathname expansion, but the  filenames  gener‐
+       ated need not exist.  Patterns to be brace expanded take the form of an op‐
+       tional preamble, followed by either a series of comma-separated strings  or
+       a  sequence  expression  between  a pair of braces, followed by an optional
+       postscript.  The preamble is prefixed to each string contained  within  the
+       braces,  and  the postscript is then appended to each resulting string, ex‐
+       panding left to right.1 (press h for help or q to quit)
+ ESESCOBpage bash(1) line 1512 (press h for help or q to quit)
+       Brace expansions may be nested.  The results of each  expanded  string  are
+       not  sorted;  left to right order is preserved.  For example, a{d,c,b}e ex‐
+       pands into `ade ace abe'.press h for help or q to quit)
+ ESESCOBpage bash(1) line 1516 (press h for help or q to quit)
+       A sequence expression takes the form {x..y[..incr]}, where x and y are  ei‐
+       ther integers or single letters, and incr, an optional increment, is an in‐
+       teger.  When integers are supplied, the expression expands to  each  number
+       between  x  and  y, inclusive.  Supplied integers may be prefixed with 0 to
+       force each term to have the same width.  When either x or y begins  with  a
+       zero,  the  shell attempts to force all generated terms to contain the same
+       number of digits, zero-padding where necessary.  When letters are supplied,
+       the expression expands to each character lexicographically between x and y,
+       inclusive, using the default C locale.  Note that both x and y must  be  of
+       the  same  type (integer or letter).  When the increment is supplied, it is
+       used as the difference between each term.  The default increment is 1 or -1
+       as appropriate.ine 1528 (press h for help or q to quit)
+ ESESCOBpage bash(1) line 1529 (press h for help or q to quit)
+       Brace  expansion  is performed before any other expansions, and any charac‐
+       ters special to other expansions  are  preserved  in  the  result.   It  is
+       strictly  textual.  Bash does not apply any syntactic interpretation to the
+       context of the expansion or the text between the braces.
+ ESESCOBpage bash(1) line 1534 (press h for help or q to quit)
+       A correctly-formed brace expansion must contain unquoted opening and  clos‐
+       ing braces, and at least one unquoted comma or a valid sequence expression.
+       Any incorrectly formed brace expansion is left unchanged.  A { or , may  be
+       quoted with a backslash to prevent its being considered part of a brace ex‐
+       pression.  To avoid conflicts with parameter expansion, the  string  ${  is
+       not  considered  eligible for brace expansion, and inhibits brace expansion
+       until the closing }.541 (press h for help or q to quit)
+ ESESCOBpage bash(1) line 1542 (press h for help or q to quit)
+       This construct is typically used as shorthand when the common prefix of the
+       strings to be generated is longer than in the above example:
+ ESESCOBpage bash(1) line 1545 (press h for help or q to quit)
+              mkdir /usr/local/src/bash/{old,new,dist,bugs}it)
+       orage bash(1) line 1547 (press h for help or q to quit)
+              chown root /usr/{ucb/{ex,edit},lib/{ex?.?*,how_ex}}
+ ESESCOBpage bash(1) line 1549 (press h for help or q to quit)
+       Brace  expansion  introduces  a slight incompatibility with historical ver‐
+       sions of sh.  sh does not treat opening or closing  braces  specially  when
+       they  appear as part of a word, and preserves them in the output.  Bash re‐
+       moves braces from words as a consequence of brace expansion.  For  example,
+       a  word  entered to sh as file{1,2} appears identically in the output.  The
+       same word is output as file1 file2 after expansion by bash.  If strict com‐
+       patibility  with  sh  is  desired, start bash with the +B option or disable
+       brace expansion with the +B option to the set command  (see  SHELL  BUILTIN
+       COMMANDS below).ne 1558 (press h for help or q to quit)
+ ESESCOBpage bash(1) line 1559 (press h for help or q to quit)
+   Tilde Expansion1) line 1560 (press h for help or q to quit)
+       If a word begins with an unquoted tilde character (`~'), all of the charac‐
+       ters preceding the first unquoted slash (or all characters, if there is  no
+       unquoted  slash)  are considered a tilde-prefix.  If none of the characters
+       in the tilde-prefix are quoted, the characters in the tilde-prefix  follow‐
+       ing  the tilde are treated as a possible login name.  If this login name is
+       the null string, the tilde is replaced with the value of the shell  parame‐
+       ter  HOME.   If HOME is unset, the home directory of the user executing the
+       shell is substituted instead.  Otherwise, the tilde-prefix is replaced with
+       the home directory associated with the specified login name.
+ ESESCOBpage bash(1) line 1570 (press h for help or q to quit)
+       If the tilde-prefix is a `~+', the value of the shell variable PWD replaces
+       the tilde-prefix.  If the tilde-prefix is a `~-', the value  of  the  shell
+       variable OLDPWD, if it is set, is substituted.  If the characters following
+       the tilde in the tilde-prefix consist of a number N, optionally prefixed by
+       a `+' or a `-', the tilde-prefix is replaced with the corresponding element
+       from the directory stack, as it would be displayed by the dirs builtin  in‐
+       brace expansion with the +B option to the set command  (see  SHELL  BUILTIN
+       COMMANDS below).
+
+   Tilde Expansion
+       If a word begins with an unquoted tilde character (`~'), all of the charac‐
+       ters preceding the first unquoted slash (or all characters, if there is  no
+       unquoted  slash)  are considered a tilde-prefix.  If none of the characters
+       in the tilde-prefix are quoted, the characters in the tilde-prefix  follow‐
+       ing  the tilde are treated as a possible login name.  If this login name is
+       the null string, the tilde is replaced with the value of the shell  parame‐
+       ter  HOME.   If HOME is unset, the home directory of the user executing the
+       shell is substituted instead.  Otherwise, the tilde-prefix is replaced with
+       the home directory associated with the specified login name.
+
+       If the tilde-prefix is a `~+', the value of the shell variable PWD replaces
+       the tilde-prefix.  If the tilde-prefix is a `~-', the value  of  the  shell
+       variable OLDPWD, if it is set, is substituted.  If the characters following
+       the tilde in the tilde-prefix consist of a number N, optionally prefixed by
+       a `+' or a `-', the tilde-prefix is replaced with the corresponding element
+       from the directory stack, as it would be displayed by the dirs builtin  in‐
+       brace expansion with the +B option to the set command  (see  SHELL  BUILTIN
+       COMMANDS below).
+
+   Tilde Expansion
+       If a word begins with an unquoted tilde character (`~'), all of the charac‐
+       ters preceding the first unquoted slash (or all characters, if there is  no
+       unquoted  slash)  are considered a tilde-prefix.  If none of the characters
+       in the tilde-prefix are quoted, the characters in the tilde-prefix  follow‐
+       ing  the tilde are treated as a possible login name.  If this login name is
+       the null string, the tilde is replaced with the value of the shell  parame‐
+       ter  HOME.   If HOME is unset, the home directory of the user executing the
+       shell is substituted instead.  Otherwise, the tilde-prefix is replaced with
+       the home directory associated with the specified login name.
+
+       If the tilde-prefix is a `~+', the value of the shell variable PWD replaces
+       the tilde-prefix.  If the tilde-prefix is a `~-', the value  of  the  shell
+       variable OLDPWD, if it is set, is substituted.  If the characters following
+       the tilde in the tilde-prefix consist of a number N, optionally prefixed by
+       a `+' or a `-', the tilde-prefix is replaced with the corresponding element
+       from the directory stack, as it would be displayed by the dirs builtin  in‐
+...skipping...
+   Arithmetic Expansion
+       Arithmetic expansion allows the evaluation of an arithmetic expression  and
+       the substitution of the result.  The format for arithmetic expansion is:
+
+              $((expression))
+
+       The  old format $[expression] is deprecated and will be removed in upcoming
+       versions of bash.
+
+       The expression undergoes the same expansions as if it  were  within  double
+       quotes, but double quote characters in expression are not treated specially
+       and are removed.  All tokens in the expression undergo parameter and  vari‐
+       able  expansion,  command  substitution,  and quote removal.  The result is
+       treated as the arithmetic expression to be  evaluated.   Arithmetic  expan‐
+       sions may be nested.
+
+       The  evaluation  is  performed  according  to  the rules listed below under
+       ARITHMETIC EVALUATION.  If expression is invalid, bash prints a message in‐
+       dicating failure and no substitution occurs.
+
+   Process Substitutionne 1904 (press h for help or q to quit)
+       Process  substitution  allows a process's input or output to be referred to
+       the substitution of the result.  The format for arithmetic expansion is:
+
+              $((expression))
+
+       The  old format $[expression] is deprecated and will be removed in upcoming
+       versions of bash.
+
+       The expression undergoes the same expansions as if it  were  within  double
+       quotes, but double quote characters in expression are not treated specially
+       and are removed.  All tokens in the expression undergo parameter and  vari‐
+       able  expansion,  command  substitution,  and quote removal.  The result is
+       treated as the arithmetic expression to be  evaluated.   Arithmetic  expan‐
+       sions may be nested.
+
+       The  evaluation  is  performed  according  to  the rules listed below under
+       ARITHMETIC EVALUATION.  If expression is invalid, bash prints a message in‐
+       dicating failure and no substitution occurs.
+
+   Process Substitution
+       Process  substitution  allows a process's input or output to be referred to
+       the substitution of the result.  The format for arithmetic expansion is:
+
+              $((expression))
+
+       The  old format $[expression] is deprecated and will be removed in upcoming
+       versions of bash.
+
+       The expression undergoes the same expansions as if it  were  within  double
+       quotes, but double quote characters in expression are not treated specially
+       and are removed.  All tokens in the expression undergo parameter and  vari‐
+       able  expansion,  command  substitution,  and quote removal.  The result is
+       treated as the arithmetic expression to be  evaluated.   Arithmetic  expan‐
+       sions may be nested.
+
+       The  evaluation  is  performed  according  to  the rules listed below under
+       ARITHMETIC EVALUATION.  If expression is invalid, bash prints a message in‐
+       dicating failure and no substitution occurs.
+
+   Process Substitution
+       Process  substitution  allows a process's input or output to be referred to
+       using a filename.  It takes the form of <(list) or  >(list).   The  process
+       list  is run asynchronously, and its input or output appears as a filename.
+       This filename is passed as an argument to the current command as the result
+       of  the  expansion.   If the >(list) form is used, writing to the file will
+       provide input for list.  If the <(list) form is used, the file passed as an
+       argument should be read to obtain the output of list.  Process substitution
+       is supported on systems that support named pipes  (FIFOs)  or  the  /dev/fd
+       method of naming open files.
+
+       When  available,  process substitution is performed simultaneously with pa‐
+       rameter and variable expansion, command substitution, and arithmetic expan‐
+       sion.
+
+   Word Splitting
+       The  shell  scans the results of parameter expansion, command substitution,
+...skipping...ash(1) line 1921 (press h for help or q to quit)
+ARITHMETIC EVALUATION
+       The shell allows arithmetic expressions to be evaluated, under certain cir‐
+       cumstances  (see the let and declare builtin commands, the (( compound com‐
+       mand, and Arithmetic Expansion).  Evaluation is done in  fixed-width  inte‐
+       gers  with  no  check  for  overflow,  though  division by 0 is trapped and
+       flagged as an error.  The operators and  their  precedence,  associativity,
+       and values are the same as in the C language.  The following list of opera‐
+       tors is grouped into levels of equal-precedence operators.  The levels  are
+       listed in order of decreasing precedence.
+
+       id++ id--
+              variable post-increment and post-decrement
+       - +    unary minus and plus
+       ++id --id
+              variable pre-increment and pre-decrement
+       ! ~    logical and bitwise negation
+       **     exponentiation
+       * / %  multiplication, division, remainder
+       + -    addition, subtraction
+       << >>  left and right bitwise shifts
+       <= >= < >h(1) line 2464 (press h for help or q to quit)
+              comparisone 2465 (press h for help or q to quit)
+       == !=  equality and inequality h for help or q to quit)
+       &      bitwise AND 2467 (press h for help or q to quit)
+       ^      bitwise exclusive ORess h for help or q to quit)
+       |      bitwise ORe 2469 (press h for help or q to quit)
+       &&     logical AND 2470 (press h for help or q to quit)
+       ||     logical ORe 2471 (press h for help or q to quit)
+       expr?expr:exprline 2472 (press h for help or q to quit)
+              conditional operatoress h for help or q to quit)
+       = *= /= %= += -= <<= >>= &= ^= |=for help or q to quit)
+              assignmente 2475 (press h for help or q to quit)
+       expr1 , expr2 line 2476 (press h for help or q to quit)
+M       - +    unary minus and plusss h for help or q to quit)
+M              variable post-increment and post-decrementquit)
+M       id++ id--(1) line 2475 (press h for help or q to quit)
+MESESCOApage bash(1) line 2474 (press h for help or q to quit)
+M       listed in order of decreasing precedence.or q to quit)
+M       tors is grouped into levels of equal-precedence operators.  The levels  are
+M       and values are the same as in the C language.  The following list of opera‐
+M       flagged as an error.  The operators and  their  precedence,  associativity,
+M       gers  with  no  check  for  overflow,  though  division by 0 is trapped and
+M       mand, and Arithmetic Expansion).  Evaluation is done in  fixed-width  inte‐
+M       cumstances  (see the let and declare builtin commands, the (( compound com‐
+M       The shell allows arithmetic expressions to be evaluated, under certain cir‐
+MARITHMETIC EVALUATIONine 2465 (press h for help or q to quit)
+MESESCOApage bash(1) line 2464 (press h for help or q to quit)
+M       cations.  By default, no limit is imposed on the number of recursive calls.
+       + -    addition, subtractionss h for help or q to quit)
+       << >>  left and right bitwise shifts help or q to quit)
+       <= >= < >h(1) line 2464 (press h for help or q to quit)
+              comparisone 2465 (press h for help or q to quit)
+M       The shell allows arithmetic expressions to be evaluated, under certain cir‐
+MARITHMETIC EVALUATIONine 2465 (press h for help or q to quit)
+MESESCOApage bash(1) line 2464 (press h for help or q to quit)
+       << >>  left and right bitwise shifts help or q to quit)
+       <= >= < >h(1) line 2464 (press h for help or q to quit)
+              comparisone 2465 (press h for help or q to quit)
+       == !=  equality and inequality h for help or q to quit)
+ Manual page bash(1) line 2467 (press h for help or q to quit)       mand, and Arithmetic Expansion).  Evaluation is done in  fixed-width  inte‐
+       gers  with  no  check  for  overflow,  though  division by 0 is trapped and
+       flagged as an error.  The operators and  their  precedence,  associativity,
+       and values are the same as in the C language.  The following list of opera‐
+       tors is grouped into levels of equal-precedence operators.  The levels  are
+       listed in order of decreasing precedence.
+
+       id++ id--
+              variable post-increment and post-decrement
+       - +    unary minus and plus
+       ++id --id
+              variable pre-increment and pre-decrement
+       ! ~    logical and bitwise negation
+       **     exponentiation
+       * / %  multiplication, division, remainder
+       + -    addition, subtraction
+       << >>  left and right bitwise shifts
+       <= >= < >
+              comparison
+ Manual page bash(1) line 2467 (press h for help or q to quit)       mand, and Arithmetic Expansion).  Evaluation is done in  fixed-width  inte‐
+       gers  with  no  check  for  overflow,  though  division by 0 is trapped and
+       flagged as an error.  The operators and  their  precedence,  associativity,
+       and values are the same as in the C language.  The following list of opera‐
+       tors is grouped into levels of equal-precedence operators.  The levels  are
+       listed in order of decreasing precedence.
+
+       id++ id--
+              variable post-increment and post-decrement
+       - +    unary minus and plus
+       ++id --id
+              variable pre-increment and pre-decrement
+       ! ~    logical and bitwise negation
+       **     exponentiation
+       * / %  multiplication, division, remainder
+       + -    addition, subtraction
+       << >>  left and right bitwise shifts
+       <= >= < >
+ Manual page bash(1) line 2467 (press h for help or q to quit)       mand, and Arithmetic Expansion).  Evaluation is done in  fixed-width  inte‐
+       gers  with  no  check  for  overflow,  though  division by 0 is trapped and
+       flagged as an error.  The operators and  their  precedence,  associativity,
+       and values are the same as in the C language.  The following list of opera‐
+       tors is grouped into levels of equal-precedence operators.  The levels  are
+       listed in order of decreasing precedence.
+
+       id++ id--
+              variable post-increment and post-decrement
+       - +    unary minus and plus
+       ++id --id
+              variable pre-increment and pre-decrement
+       ! ~    logical and bitwise negation
+       **     exponentiation
+       * / %  multiplication, division, remainder
+       + -    addition, subtraction
+       << >>  left and right bitwise shifts
+ Manual page bash(1) line 2467 (press h for help or q to quit)       mand, and Arithmetic Expansion).  Evaluation is done in  fixed-width  inte‐
+       gers  with  no  check  for  overflow,  though  division by 0 is trapped and
+       flagged as an error.  The operators and  their  precedence,  associativity,
+       and values are the same as in the C language.  The following list of opera‐
+       tors is grouped into levels of equal-precedence operators.  The levels  are
+       listed in order of decreasing precedence.
+
+       id++ id--
+              variable post-increment and post-decrement
+       - +    unary minus and plus
+       ++id --id
+              variable pre-increment and pre-decrement
+       ! ~    logical and bitwise negation
+       **     exponentiation
+       * / %  multiplication, division, remainder
+       + -    addition, subtraction
+ Manual page bash(1) line 2467 (press h for help or q to quit)       mand, and Arithmetic Expansion).  Evaluation is done in  fixed-width  inte‐
+       gers  with  no  check  for  overflow,  though  division by 0 is trapped and
+       flagged as an error.  The operators and  their  precedence,  associativity,
+       and values are the same as in the C language.  The following list of opera‐
+       tors is grouped into levels of equal-precedence operators.  The levels  are
+       listed in order of decreasing precedence.
+
+       id++ id--
+              variable post-increment and post-decrement
+       - +    unary minus and plus
+       ++id --id
+              variable pre-increment and pre-decrement
+       ! ~    logical and bitwise negation
+       **     exponentiation
+       * / %  multiplication, division, remainder
+ Manual page bash(1) line 2467 (press h for help or q to quit)       mand, and Arithmetic Expansion).  Evaluation is done in  fixed-width  inte‐
+       gers  with  no  check  for  overflow,  though  division by 0 is trapped and
+       flagged as an error.  The operators and  their  precedence,  associativity,
+       and values are the same as in the C language.  The following list of opera‐
+       tors is grouped into levels of equal-precedence operators.  The levels  are
+       listed in order of decreasing precedence.
+
+       id++ id--
+              variable post-increment and post-decrement
+       - +    unary minus and plus
+       ++id --id
+              variable pre-increment and pre-decrement
+       ! ~    logical and bitwise negation
+       **     exponentiation
+ Manual page bash(1) line 2467 (press h for help or q to quit)       mand, and Arithmetic Expansion).  Evaluation is done in  fixed-width  inte‐
+       gers  with  no  check  for  overflow,  though  division by 0 is trapped and
+       flagged as an error.  The operators and  their  precedence,  associativity,
+       and values are the same as in the C language.  The following list of opera‐
+       tors is grouped into levels of equal-precedence operators.  The levels  are
+       listed in order of decreasing precedence.
+
+       id++ id--
+              variable post-increment and post-decrement
+       - +    unary minus and plus
+       ++id --id
+              variable pre-increment and pre-decrement
+       ! ~    logical and bitwise negation
+ Manual page bash(1) line 2467 (press h for help or q to quit)       mand, and Arithmetic Expansion).  Evaluation is done in  fixed-width  inte‐
+       gers  with  no  check  for  overflow,  though  division by 0 is trapped and
+       flagged as an error.  The operators and  their  precedence,  associativity,
+       and values are the same as in the C language.  The following list of opera‐
+       tors is grouped into levels of equal-precedence operators.  The levels  are
+       listed in order of decreasing precedence.
+
+       id++ id--
+              variable post-increment and post-decrement
+       - +    unary minus and plus
+       ++id --id
+              variable pre-increment and pre-decrement
+ Manual page bash(1) line 2467 (press h for help or q to quit)       mand, and Arithmetic Expansion).  Evaluation is done in  fixed-width  inte‐
+       gers  with  no  check  for  overflow,  though  division by 0 is trapped and
+       flagged as an error.  The operators and  their  precedence,  associativity,
+       and values are the same as in the C language.  The following list of opera‐
+       tors is grouped into levels of equal-precedence operators.  The levels  are
+       listed in order of decreasing precedence.
+
+       id++ id--
+              variable post-increment and post-decrement
+       - +    unary minus and plus
+       ++id --id
+ Manual page bash(1) line 2467 (press h for help or q to quit)       mand, and Arithmetic Expansion).  Evaluation is done in  fixed-width  inte‐
+       gers  with  no  check  for  overflow,  though  division by 0 is trapped and
+       flagged as an error.  The operators and  their  precedence,  associativity,
+       and values are the same as in the C language.  The following list of opera‐
+       tors is grouped into levels of equal-precedence operators.  The levels  are
+       listed in order of decreasing precedence.
+
+       id++ id--
+              variable post-increment and post-decrement
+       - +    unary minus and plus
+ Manual page bash(1) line 2467 (press h for help or q to quit)       mand, and Arithmetic Expansion).  Evaluation is done in  fixed-width  inte‐
+       gers  with  no  check  for  overflow,  though  division by 0 is trapped and
+       flagged as an error.  The operators and  their  precedence,  associativity,
+       and values are the same as in the C language.  The following list of opera‐
+       tors is grouped into levels of equal-precedence operators.  The levels  are
+       listed in order of decreasing precedence.
+
+       id++ id--
+              variable post-increment and post-decrement
+ Manual page bash(1) line 2467 (press h for help or q to quit)       mand, and Arithmetic Expansion).  Evaluation is done in  fixed-width  inte‐
+       gers  with  no  check  for  overflow,  though  division by 0 is trapped and
+       flagged as an error.  The operators and  their  precedence,  associativity,
+       and values are the same as in the C language.  The following list of opera‐
+       tors is grouped into levels of equal-precedence operators.  The levels  are
+       listed in order of decreasing precedence.
+
+       id++ id--
+              variable post-increment and post-decrement
+       - +    unary minus and plus
+ Manual page bash(1) line 2467 (press h for help or q to quit)       mand, and Arithmetic Expansion).  Evaluation is done in  fixed-width  inte‐
+       gers  with  no  check  for  overflow,  though  division by 0 is trapped and
+       flagged as an error.  The operators and  their  precedence,  associativity,
+       and values are the same as in the C language.  The following list of opera‐
+       tors is grouped into levels of equal-precedence operators.  The levels  are
+       listed in order of decreasing precedence.
+
+       id++ id--
+              variable post-increment and post-decrement
+       - +    unary minus and plus
+       ++id --id
+ Manual page bash(1) line 2467 (press h for help or q to quit)       mand, and Arithmetic Expansion).  Evaluation is done in  fixed-width  inte‐
+       gers  with  no  check  for  overflow,  though  division by 0 is trapped and
+       flagged as an error.  The operators and  their  precedence,  associativity,
+       and values are the same as in the C language.  The following list of opera‐
+       tors is grouped into levels of equal-precedence operators.  The levels  are
+       listed in order of decreasing precedence.
+
+       id++ id--
+              variable post-increment and post-decrement
+       - +    unary minus and plus
+       ++id --id
+              variable pre-increment and pre-decrement
+ Manual page bash(1) line 2467 (press h for help or q to quit)       mand, and Arithmetic Expansion).  Evaluation is done in  fixed-width  inte‐
+       gers  with  no  check  for  overflow,  though  division by 0 is trapped and
+       flagged as an error.  The operators and  their  precedence,  associativity,
+       and values are the same as in the C language.  The following list of opera‐
+       tors is grouped into levels of equal-precedence operators.  The levels  are
+       listed in order of decreasing precedence.
+
+       id++ id--
+              variable post-increment and post-decrement
+       - +    unary minus and plus
+       ++id --id
+              variable pre-increment and pre-decrement
+       ! ~    logical and bitwise negation
+       **     exponentiation
+       * / %  multiplication, division, remainder
+       + -    addition, subtraction
+       << >>  left and right bitwise shifts help or q to quit)
+       <= >= < >h(1) line 2468 (press h for help or q to quit)
+              comparisone 2469 (press h for help or q to quit)
+       == !=  equality and inequality h for help or q to quit)
+       &      bitwise AND 2471 (press h for help or q to quit)
+       ^      bitwise exclusive ORess h for help or q to quit)
+       |      bitwise ORe 2473 (press h for help or q to quit)
+       &&     logical AND 2474 (press h for help or q to quit)
+       ||     logical ORe 2475 (press h for help or q to quit)
+       expr?expr:exprline 2476 (press h for help or q to quit)
+              conditional operatoress h for help or q to quit)
+       = *= /= %= += -= <<= >>= &= ^= |=for help or q to quit)
+              assignmente 2479 (press h for help or q to quit)
+       expr1 , expr2 line 2480 (press h for help or q to quit)
+              comma) line 2481 (press h for help or q to quit)
+>ITINF25/lektion8/2.1 brace_expansion/realistiska_exempelquit)
+$ cp exempel1 exempel12
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ code ex
+empel2 
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ $(( 1 < 2 ())
+bash: 1: command not found
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ $(( 1 < 2 )
+
+
+
+echo 
+1
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ man bash
+BASH(1)                       General Commands Manual                      BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash  is  an  sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash also  incorporates
+BASH(1)                       General Commands Manual                      BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash  is  an  sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash also  incorporates
+BASH(1)                       General Commands Manual                      BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash  is  an  sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash also  incorporates
+BASH(1)                       General Commands Manual                      BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash  is  an  sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash also  incorporates
+BASH(1)                       General Commands Manual                      BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash  is  an  sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash also  incorporates
+BASH(1)                       General Commands Manual                      BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash  is  an  sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash also  incorporates
+BASH(1)                       General Commands Manual                      BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash  is  an  sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash also  incorporates
+...skipping...
+              under ARITHMETIC EVALUATION.  If the value of the expression is non-
+              zero, the return status is 0; otherwise the return status is 1.  The
+              expression undergoes the same expansions as if it were within double
+              quotes,  but  double  quote characters in expression are not treated
+              specially and are removed.
+
+       [[ expression ]]
+              Return a status of 0 or 1 depending on the evaluation of the  condi‐
+              tional  expression expression.  Expressions are composed of the pri‐
+              maries described below under CONDITIONAL EXPRESSIONS.  The words be‐
+              tween  the  [[ and ]] do not undergo word splitting and pathname ex‐
+              pansion.  The shell performs tilde expansion, parameter and variable
+              expansion,  arithmetic expansion, command substitution, process sub‐
+              stitution, and quote removal on those  words  (the  expansions  that
+...skipping...ash(1) line 345/6395 5% (press h for help or q to quit)
+              rules  described  below under ARITHMETIC EVALUATION.  The arithmetic
+              expression expr2 is then evaluated repeatedly until it evaluates  to
+              zero.   Each  time expr2 evaluates to a non-zero value, list is exe‐
+              cuted and the arithmetic expression expr3 is evaluated.  If any  ex‐
+              pression is omitted, it behaves as if it evaluates to 1.  The return
+              value is the exit status of the last command in list  that  is  exe‐
+              cuted, or false if any of the expressions is invalid.
+
+       select name [ in word ] ; do list ; done
+              The  list  of  words  following in is expanded, generating a list of
+              items, and the set of expanded words is printed on the standard  er‐
+              ror,  each preceded by a number.  If the in word is omitted, the po‐
+              sitional parameters are printed (see PARAMETERS below).  select then
+              displays  the  PS3  prompt and reads a line from the standard input.
+...skipping...ash(1) line 434/6395 7% (press h for help or q to quit)
+              sions (see ARITHMETIC EVALUATION below).
+
+              If offset evaluates to a number less than zero, the value is used as
+              an offset in characters from the end of the value of parameter.   If
+              length evaluates to a number less than zero, it is interpreted as an
+              offset in characters from the end of the value of  parameter  rather
+              than a number of characters, and the expansion is the characters be‐
+              tween offset and that result.  Note that a negative offset  must  be
+              separated  from  the colon by at least one space to avoid being con‐
+              fused with the :- expansion.
+
+              If parameter is @ or *, the result is length  positional  parameters
+              beginning  at  offset.   A  negative offset is taken relative to one
+              greater than the greatest positional parameter, so an offset  of  -1
+...skipping...ash(1) line 1679/6395 28% (press h for help or q to quit)
+       ARITHMETIC EVALUATION.  If expression is invalid, bash prints a message in‐
+       dicating failure and no substitution occurs.
+
+   Process Substitution
+       Process  substitution  allows a process's input or output to be referred to
+       using a filename.  It takes the form of <(list) or  >(list).   The  process
+       list  is run asynchronously, and its input or output appears as a filename.
+       This filename is passed as an argument to the current command as the result
+       of  the  expansion.   If the >(list) form is used, writing to the file will
+       provide input for list.  If the <(list) form is used, the file passed as an
+       argument should be read to obtain the output of list.  Process substitution
+       is supported on systems that support named pipes  (FIFOs)  or  the  /dev/fd
+       method of naming open files.
+
+...skipping...ash(1) line 1921/6395 32% (press h for help or q to quit)
+ARITHMETIC EVALUATION
+       The shell allows arithmetic expressions to be evaluated, under certain cir‐
+       cumstances  (see the let and declare builtin commands, the (( compound com‐
+       mand, and Arithmetic Expansion).  Evaluation is done in  fixed-width  inte‐
+       gers  with  no  check  for  overflow,  though  division by 0 is trapped and
+       flagged as an error.  The operators and  their  precedence,  associativity,
+       and values are the same as in the C language.  The following list of opera‐
+       tors is grouped into levels of equal-precedence operators.  The levels  are
+       listed in order of decreasing precedence.
+
+       id++ id--
+              variable post-increment and post-decrement
+       - +    unary minus and plus
+       ++id --id
+              variable pre-increment and pre-decrementelp or q to quit)
+       ! ~    logical and bitwise negationress h for help or q to quit)
+       **     exponentiation66/6395 39% (press h for help or q to quit)
+       * / %  multiplication, division, remainderfor help or q to quit)
+       + -    addition, subtraction 39% (press h for help or q to quit)
+       << >>  left and right bitwise shiftsess h for help or q to quit)
+       <= >= < >h(1) line 2470/6395 39% (press h for help or q to quit)
+              comparisone 2471/6395 39% (press h for help or q to quit)
+       == !=  equality and inequality9% (press h for help or q to quit)
+       &      bitwise AND 2473/6395 39% (press h for help or q to quit)
+       ^      bitwise exclusive OR5 39% (press h for help or q to quit)
+       |      bitwise ORe 2475/6395 39% (press h for help or q to quit)
+       &&     logical AND 2476/6395 39% (press h for help or q to quit)
+>ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel or q to quit)
+echo $(( 1 < 2 )=ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ echo $(( 1 <= 2 )
+1
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+echo $?$(( 1 <= 2 ))
+0
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ echo $(( 1 <= 2 )2 )1 )
+
+
+0
+ITINF25/lektion8/2.1 brace_expansion/realistiska_exempel
+$ exit
+exit
+
+Script done on 2025-09-30 16:04:52+02:00 [COMMAND_EXIT_CODE="0"]
