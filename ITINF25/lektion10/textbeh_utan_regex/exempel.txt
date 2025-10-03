@@ -23,5 +23,9 @@ uniq
     Kan ta bort hela identiska rader som ligger i följd
 cut
     Läser från en fil, eller stdin - skriver ut till stdout
-
+    Klarar bara av filer där exakt ETT tecken skiljer kolumnerna (fälten)
+    Exempel:
+        echo -e 'namn,telenr\nMolle,070123456' | cut -d, -f2
 tr
+    Läser från en fil, eller stdin - skriver ut till stdout
+    
