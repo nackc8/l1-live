@@ -1,3 +1,5 @@
 #!/bin/bash
 
-awk '/@[^@]+[.][^.@]/  { print $1 }' ../../extext/email.csv
+awk '
+/@[^@]+[.][^.@]/  { print $1 }
+' ../../extext/email.csv
