@@ -1,5 +1,6 @@
 #!/bin/bash
 
 awk '
+BEGIN { print "Tjohej" }
 /@[^@]+[.][^.@]/  { print $1 }
 ' ../../extext/email.csv
