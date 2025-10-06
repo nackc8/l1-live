@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Använda variabln NF för variabelt antal fält. Det kan vara bra
-# för att t.ex. skriva ut sista fältet.
+# Få ut näst sista, genom beräkningen NF - 1
 
 awk -F ';' '{ print $(NF - 1) }' ../../extext/variabelt_antal_falt.csv
