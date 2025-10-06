@@ -11,4 +11,4 @@ awk '/example/  { print $1 }' ../../extext/email.spaces
 # Vi lägger till ett reguljärt uttryck som vårt villkor, bara rader som
 # innehåller @ något . domän
 
-awk '/@[^@]+.com/  { print $1 }' ../../extext/email.spaces
+awk '/@[^@]+[.]com/  { print $1 }' ../../extext/email.spaces
