@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Se träffens hela rad - det är standardbeteendet så vi behöver ingen särskilt option för det
+# Se bara själva träffen från varje rad
 
 # Träff på det mesta. Motsvarar iteration 0.3
 # cat ../../extext/richard.txt | grep -E '(^| )[0-9]{4}'
 
 # Träff på det mesta. Motsvarar iteration 0.4
-cat ../../extext/richard.txt | grep -E '(^|[- ])[0-9]{4}'
+cat ../../extext/richard.txt | grep -E -o '(^|[- ])[0-9]{4}'
