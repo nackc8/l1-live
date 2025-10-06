@@ -2,4 +2,8 @@
 
 # sed - stream editor Vänd på strängar av längd 6 så att hejsan -> sanhej
 
-sed -E 's/([^ .,]{6})([^ .,]+)([ .,]+)/\2/g' ../../extext/linux.txt
+# Samma sak
+# sed -E 's/([^ .,]{6})([^ .,]+)([ .,]+)/\1\2\3/g' ../../extext/linux.txt
+
+# Samma sak
+sed -E 's/[^ .,]{1,3}/YYYYYY/g' ../../extext/linux.txt
