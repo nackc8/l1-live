@@ -1,5 +1,6 @@
 #!/bin/bash
 
-# awk
+# Vi sätter FS först, till semikolon, och kan få ut fälten när de
+# separeras så.
 
-sed -E 's/Stallman/Stallis/g' ../../extext/richard.txt
+awk '/@[^@]+[.][^.@]/  { print $1 }' ../../extext/email.csv

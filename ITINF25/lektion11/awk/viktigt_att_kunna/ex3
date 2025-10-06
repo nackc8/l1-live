@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Vi sätter FS först, till semikolon, och kan få ut fälten när de
+# separeras så.
+
 awk '
 BEGIN { FS=";" }
 /@[^@]+[.][^.@]/  { print $1 }
