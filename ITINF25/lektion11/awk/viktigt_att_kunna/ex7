@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Få ut näst sista, genom beräkningen NF - 1
+
+awk -F ';' '{ print $(NF - 1),$0 }' ../../extext/variabelt_antal_falt.csv
