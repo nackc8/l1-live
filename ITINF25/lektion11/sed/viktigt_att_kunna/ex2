@@ -5,4 +5,8 @@
 # s/före_regex/utbyte/g
 # /g för att byta ut alla förekomster på raden
 
-sed -E 's/that/THAAAAT/g' ../../extext/richard.txt
+# Byt alla that på varje rad
+# sed -E 's/that/THAAAAT/g' ../../extext/richard.txt
+
+# Byt endast den första
+sed -E 's/that/THAAAAT/' ../../extext/richard.txt
