@@ -3,6 +3,6 @@
 # Få ut näst sista, genom beräkningen NF - 1
 
 awk -F ';' '
-BEGIN { OFS="XXXXXXXX" }
+BEGIN { OFS="," }
 { print $(NF - 1),$0 }
 ' ../../extext/variabelt_antal_falt.csv
