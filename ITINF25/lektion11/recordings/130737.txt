@@ -1,0 +1,86 @@
+Script started on 2025-10-06 13:07:37+02:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="71" LINES="13"]
+[?2004h[94mITINF25/lektion11
+(B[m$ [H[2J[94mITINF25/lektion11
+(B[m$ ls
+[?2004lawk  basic_vs_ext_re.txt  extext  grep	recordings  sed
+[?2004h[94mITINF25/lektion11
+(B[m$ ls extext/
+[?2004lemail.csv  linux.txt  richard.txt
+[?2004h[94mITINF25/lektion11
+(B[m$ code extext/email.csv [H[2J[94mITINF25/lektion11
+(B[m$ code extext/email.csv 
+[?2004l[?2004h[94mITINF25/lektion11
+(B[m$ awk [H[2J[94mITINF25/lektion11
+(B[m$ awk em[K[Kextext/[K[K[K[K[K[K[K[K[K[K[Kcd[K[Kls
+[?2004lawk  basic_vs_ext_re.txt  extext  grep	recordings  sed
+[?2004h[94mITINF25/lektion11
+(B[m$ cd awk/
+[?2004l[?2004h[94mITINF25/lektion11/awk
+(B[m$ [H[2J[94mITINF25/lektion11/awk
+(B[m$ ls
+[?2004lviktigt_att_kunna
+[?2004h[94mITINF25/lektion11/awk
+(B[m$ cd viktigt_att_kunna/
+[?2004l[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ [H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ls
+[?2004lex1  ex2  ex3  ex4
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ [H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ code ex1 
+[?2004l[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk ..-.[K[K.[K.[K/../extext/
+email.csv    linux.txt    richard.txt  
+[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk ../../extext/email.csv [H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk ../../extext/email.csv 
+[?2004lawk: cmd. line:1: ../../extext/email.csv
+awk: cmd. line:1: ^ syntax error
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk ../../extext/email.csv [C[1@ [1@'[1@'[C[C[C[C[H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk '' ../../extext/email.csv [C[C[C[C[C[C[C[C
+[?2004l[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk '' ../../extext/email.csv [1@{[1@}[1@ [C[1@ [C[C[1@ [C[1P[C[C[1@ [1@p[1@r[1@i[1@n[1@t[C[C[1@ [1@$[1@`[1@1[1P[1P[1@1[C[1P[C[C[C[C[C[C[15P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[15@'{ print $1 }' [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lLogin
+laura@example.com;2070;Laura;Grey
+craig@example.com;4081;Craig;Johnson
+mary@example.com;9346;Mary;Jenkins
+jamie@example.com;5079;Jamie;Smith
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk '{ print $1 }' ../../extext/email.csv [H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk '{ print $1 }' ../../extext/email.csv [K[K[K[Kspaces 
+[?2004lLogin_email
+laura@example.com
+craig@example.com
+mary@example.com
+jamie@example.com
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk '{ print $1 }' ../../extext/email.spaces [H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk '{ print $1 }' ../../extext/email.spaces 
+[?2004lLogin_email
+laura@example.com
+craig@example.com
+mary@example.com
+jamie@example.com
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk '{ print $1 }' ../../extext/email.spaces [H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk '{ print $1 }' ../../extext/email.spaces 
+[?2004lLogin_email
+laura@example.com
+craig@example.com
+mary@example.com
+jamie@example.com
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./[K[K[H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ls
+[?2004lex1  ex2  ex3  ex4
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex2[H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex2
+[?2004llaura@example.com
+craig@example.com
+mary@example.com
+jamie@example.com
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex2[H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B

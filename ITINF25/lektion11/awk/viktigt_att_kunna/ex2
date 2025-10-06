@@ -4,6 +4,11 @@
 # Man kan komma åt första fältet med $1, andra med $2, ...
 
 # Vi lägger till ett reguljärt uttryck som vårt villkor, bara rader som
-# innehåller @ något . domän
+# innehåller ordet example behandlas.
 
 awk '/example/  { print $1 }' ../../extext/email.spaces
+
+# Vi lägger till ett reguljärt uttryck som vårt villkor, bara rader som
+# innehåller @ något . domän
+
+awk '/@[^@]+.com/  { print $1 }' ../../extext/email.spaces
