@@ -4,8 +4,8 @@
 
 # Byt ut det första ordet som börjar med sS till delordet efter första bokstaven
 # Stallman -> tallman
-sed -E 's/[Ss]([^, .]+)/\1/' ../../extext/richard.txt
+# sed -E 's/[Ss]([^, .]+)/\1/' ../../extext/richard.txt
 
-# Byt ut det första ordet som börjar med sS till delordet efter första bokstaven
-# Stallman -> tallman
-sed -E 's/[Ss]([^, .]+)/\1/' ../../extext/richard.txt
+# Byt ut ALLA ord som börjar med sS till delordet efter första bokstaven
+# Stallman Snok -> tallman nok
+sed -E 's/[Ss]([^, .]+)/\1/g' ../../extext/richard.txt
