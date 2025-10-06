@@ -4,4 +4,4 @@
 
 # grep för alla rader med short options, optioner med ett tecken, så inte --version men -v
 
-man ls | grep -E -- '^ +-[a-zA-Z]'
+man ls | grep -E -A 1 -- '^ +-[a-zA-Z]'
