@@ -1,5 +1,9 @@
 #!/bin/bash
 
-# awk
+# awk Delar automatiskt upp fälten efter mellanslag (eller tab)
+# Man kan komma åt första fältet med $1, andra med $2, ...
 
-sed -E 's/Stallman/Stallis/g' ../../extext/richard.txt
+# Vi lägger till ett reguljärt uttryck som vårt villkor, bara rader som
+# innehåller @ något . domän
+
+awk '  { print $1 }' ../../extext/email.spaces
