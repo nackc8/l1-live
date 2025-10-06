@@ -1687,4 +1687,92 @@ In 1989, he co-founded the League for Programming Freedom. Since the mid-1990s, 
               [1m[7m-o[27m[0m ([1m-[0m[1m[7m-o[27m[0m[1mnly-matching[0m) is specified, print the offset of the matching part itself.[m
 [m
 [7m Manual page grep(1) line 114 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h[94mITINF25/lektion11/grep/viktigt_att_kunna
-(B[m$ ec
+(B[m$ echo "alfa beta alfa"
+[?2004lalfa beta alfa
+[?2004h[94mITINF25/lektion11/grep/viktigt_att_kunna
+(B[m$ echo "alfa beta alfa" | grep -o alfa[H[2J[94mITINF25/lektion11/grep/viktigt_att_kunna
+(B[m$ echo "alfa beta alfa" | grep -o alfa
+[?2004lalfa
+alfa
+[?2004h[94mITINF25/lektion11/grep/viktigt_att_kunna
+(B[m$ ls[K[Krm *.txt
+[?2004l[?2004h[94mITINF25/lektion11/grep/viktigt_att_kunna
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mITINF25/lektion11/grep/viktigt_att_kunna
+(B[m$ man ls
+[?2004l[?1049h[22;0;0t[?1h=LS(1)                                      User Commands                                      LS(1)[m
+[m
+[1mNAME[0m[m
+       ls - list directory contents[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       List information about the FILEs (the current directory by default).  Sort entries alphabet‐[m
+       ically if none of [1m-cftuvSUX[0m nor [1m--sort[0m is specified.[m
+[m
+       Mandatory arguments to long options are mandatory for short options too.[m
+[7m Manual page ls(1) line 1 (press h for help or q to quit)[27m[K[K[m
+       [1m-a[0m, [1m--all[0m[m
+              do not ignore entries starting with .[m
+[m
+       [1m-A[0m, [1m--almost-all[0m[m
+              do not list implied . and ..[m
+[m
+       [1m--author[0m[m
+              with [1m-l[0m, print the author of each file[m
+[m
+       [1m-b[0m, [1m--escape[0m[m
+              print C-style escapes for nongraphic characters[m
+[m
+[7m Manual page ls(1) line 14 (press h for help or q to quit)[27m[K[K       [1m--block-size[0m=[4mSIZE[24m[m
+              with [1m-l[0m, scale sizes by SIZE when printing them;  e.g.,  '--block-size=M';  see  SIZE[m
+              format below[m
+[m
+       [1m-B[0m, [1m--ignore-backups[0m[m
+              do not list implied entries ending with ~[m
+[m
+       [1m-c[0m     with [1m-lt[0m: sort by, and show, ctime (time of last modification of file status informa‐[m
+              tion); with [1m-l[0m: show ctime and sort by name; otherwise: sort by ctime, newest first[m
+[m
+       [1m-C[0m     list entries by columns[m
+[m
+       [1m--color[0m[=[4mWHEN[24m][m
+[7m Manual page ls(1) line 27 (press h for help or q to quit)[27m[K[K              color the output WHEN; more info below[m
+[m
+       [1m-d[0m, [1m--directory[0m[m
+              list directories themselves, not their contents[m
+[m
+       [1m-D[0m, [1m--dired[0m[m
+              generate output designed for Emacs' dired mode[m
+[m
+       [1m-f[0m     list all entries in directory order[m
+[m
+       [1m-F[0m, [1m--classify[0m[=[4mWHEN[24m][m
+              append indicator (one of */=>@|) to entries WHEN[m
+[m
+[7m Manual page ls(1) line 40 (press h for help or q to quit)[27m[K[K       [1m--file-type[0m[m
+              likewise, except do not append '*'[m
+[m
+       [1m--format[0m=[4mWORD[24m[m
+              across [1m-x[0m, commas [1m-m[0m, horizontal [1m-x[0m, long [1m-l[0m, single-column [1m-1[0m, verbose [1m-l[0m,  vertical[m
+              [1m-C[0m[m
+[m
+       [1m--full-time[0m[m
+              like [1m-l[0m [1m--time-style[0m=[4mfull-iso[24m[m
+[m
+       [1m-g[0m     like [1m-l[0m, but do not list owner[m
+[m
+       [1m--group-directories-first[0m[m
+[7m Manual page ls(1) line 53 (press h for help or q to quit)[27m[K[K              group directories before files; can be augmented with a [1m--sort[0m option, but any use of[m
+              [1m--sort[0m=[4mnone[24m ([1m-U[0m) disables grouping[m
+[m
+       [1m-G[0m, [1m--no-group[0m[m
+              in a long listing, don't print group names[m
+[m
+       [1m-h[0m, [1m--human-readable[0m[m
+              with [1m-l[0m and [1m-s[0m, print sizes like 1K 234M 2G etc.[m
+[m
+       [1m--si[0m   likewise, but use powers of 1000 not 1024[m
+[m
+ 
