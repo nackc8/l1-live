@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Använda variabln NF för variabelt antal fält. Det kan vara bra
+# för att t.ex. skriva ut sista fältet.
+
+# Dollar betyder att nu kommer det ett kolumnnummer (/fält) och NR
+# innehåller siffran för sista kolumnen.
+
+awk -F ';' '{ print $NF }' ../../extext/variabelt_antal_falt.csv

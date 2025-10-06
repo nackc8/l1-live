@@ -1,0 +1,245 @@
+Script started on 2025-10-06 13:07:37+02:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="71" LINES="13"]
+[?2004h[94mITINF25/lektion11
+(B[m$ [H[2J[94mITINF25/lektion11
+(B[m$ ls
+[?2004lawk  basic_vs_ext_re.txt  extext  grep	recordings  sed
+[?2004h[94mITINF25/lektion11
+(B[m$ ls extext/
+[?2004lemail.csv  linux.txt  richard.txt
+[?2004h[94mITINF25/lektion11
+(B[m$ code extext/email.csv [H[2J[94mITINF25/lektion11
+(B[m$ code extext/email.csv 
+[?2004l[?2004h[94mITINF25/lektion11
+(B[m$ awk [H[2J[94mITINF25/lektion11
+(B[m$ awk em[K[Kextext/[K[K[K[K[K[K[K[K[K[K[Kcd[K[Kls
+[?2004lawk  basic_vs_ext_re.txt  extext  grep	recordings  sed
+[?2004h[94mITINF25/lektion11
+(B[m$ cd awk/
+[?2004l[?2004h[94mITINF25/lektion11/awk
+(B[m$ [H[2J[94mITINF25/lektion11/awk
+(B[m$ ls
+[?2004lviktigt_att_kunna
+[?2004h[94mITINF25/lektion11/awk
+(B[m$ cd viktigt_att_kunna/
+[?2004l[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ [H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ls
+[?2004lex1  ex2  ex3  ex4
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ [H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ code ex1 
+[?2004l[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk ..-.[K[K.[K.[K/../extext/
+email.csv    linux.txt    richard.txt  
+[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk ../../extext/email.csv [H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk ../../extext/email.csv 
+[?2004lawk: cmd. line:1: ../../extext/email.csv
+awk: cmd. line:1: ^ syntax error
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk ../../extext/email.csv [C[1@ [1@'[1@'[C[C[C[C[H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk '' ../../extext/email.csv [C[C[C[C[C[C[C[C
+[?2004l[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk '' ../../extext/email.csv [1@{[1@}[1@ [C[1@ [C[C[1@ [C[1P[C[C[1@ [1@p[1@r[1@i[1@n[1@t[C[C[1@ [1@$[1@`[1@1[1P[1P[1@1[C[1P[C[C[C[C[C[C[15P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[15@'{ print $1 }' [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lLogin
+laura@example.com;2070;Laura;Grey
+craig@example.com;4081;Craig;Johnson
+mary@example.com;9346;Mary;Jenkins
+jamie@example.com;5079;Jamie;Smith
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk '{ print $1 }' ../../extext/email.csv [H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk '{ print $1 }' ../../extext/email.csv [K[K[K[Kspaces 
+[?2004lLogin_email
+laura@example.com
+craig@example.com
+mary@example.com
+jamie@example.com
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk '{ print $1 }' ../../extext/email.spaces [H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk '{ print $1 }' ../../extext/email.spaces 
+[?2004lLogin_email
+laura@example.com
+craig@example.com
+mary@example.com
+jamie@example.com
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk '{ print $1 }' ../../extext/email.spaces [H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk '{ print $1 }' ../../extext/email.spaces 
+[?2004lLogin_email
+laura@example.com
+craig@example.com
+mary@example.com
+jamie@example.com
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./[K[K[H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ls
+[?2004lex1  ex2  ex3  ex4
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex2[H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex2
+[?2004llaura@example.com
+craig@example.com
+mary@example.com
+jamie@example.com
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex2[H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex2
+[?2004llaura@example.com
+craig@example.com
+mary@example.com
+jamie@example.com
+laura@example.com
+craig@example.com
+mary@example.com
+jamie@example.com
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex2[H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex2
+[?2004llaura@example.com
+craig@example.com
+mary@example.com
+jamie@example.com
+laura@example.com
+craig@example.com
+mary@example.com
+jamie@example.com
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex2[H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex2
+[?2004llaura@example.com
+craig@example.com
+mary@example.com
+jamie@example.com
+laura@example.com
+craig@example.com
+mary@example.com
+jamie@example.com
+rullee@nackademin.se
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ .-[K[K,.[K[K.-e[K[K/ex3[H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex3
+[?2004llaura@example.com;2070;Laura;Grey
+craig@example.com;4081;Craig;Johnson
+mary@example.com;9346;Mary;Jenkins
+jamie@example.com;5079;Jamie;Smith
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex3[H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex3
+[?2004llaura@example.com;2070;Laura;Grey
+craig@example.com;4081;Craig;Johnson
+mary@example.com;9346;Mary;Jenkins
+jamie@example.com;5079;Jamie;Smith
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex3[H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex3
+[?2004lTjohej
+laura@example.com;2070;Laura;Grey
+craig@example.com;4081;Craig;Johnson
+mary@example.com;9346;Mary;Jenkins
+jamie@example.com;5079;Jamie;Smith
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex3[H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex3
+[?2004llaura@example.com
+craig@example.com
+mary@example.com
+jamie@example.com
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex3[K4[H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex4
+[?2004llaura@example.com
+craig@example.com
+mary@example.com
+jamie@example.com
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ [H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ (reverse-i-search)`': [46@a': awk '{ print $1 }' ../../extext/email.sp[7ma[27mces[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@w': [7maw[27mk '{ print $1 }' ../../extext/email.spa[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@k': [7mawk[27m[23P(B[m$ awk[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[Kvariabelt_antal_falt.csv 
+[?2004lmolle;molle@example.com
+kitty;katt;kitty@mjau.se
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk '{ print $1 }' ../../extext/variabelt_antal_falt.csv [H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk '{ print $1 }' ../../extext/variabelt_antal_falt.csv 
+[?2004lmolle;molle@example.com
+kitty;katt;kitty@mjau.se
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ awk '{ print $1 }' ../../extext/variabelt_antal_falt.csv [C[C[K./ex5 [H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex5 
+[?2004lmolle
+kitty
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex5 [H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex5 
+[?2004l1
+2
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex5 [H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex5 
+[?2004l2
+3
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex5 [H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex5 
+[?2004l2molle;molle@example.com
+3kitty;katt;kitty@mjau.se
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex5 [H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex5 
+[?2004lmolle@example.com
+kitty@mjau.se
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex5 [H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex5 
+[?2004lmolle@example.com
+kitty@mjau.se
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex5 [H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex5 
+[?2004lmolle
+katt
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex5 [H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex5 [K[K5[K6[K7
+[?2004lmolle molle;molle@example.com
+katt kitty;katt;kitty@mjau.se
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex7
+[?2004lmolleXXXXXXXXmolle;molle@example.com
+kattXXXXXXXXkitty;katt;kitty@mjau.se
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex7[H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex7
+[?2004lmolle,molle;molle@example.com
+katt,kitty;katt;kitty@mjau.se
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex7[H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex7
+[?2004lmollemolle@example.com
+kittykattkitty@mjau.se
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex7[H[2J[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex7
+[?2004lmolle,molle@example.com,
+kitty,katt,kitty@mjau.se
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ ./ex7
+[?2004lmolle_molle@example.com_
+kitty_katt_kitty@mjau.se
+[?2004h[94mITINF25/lektion11/awk/viktigt_att_kunna
+(B[m$ cd ../behover_inte_kunna/
+[?2004l[?2004h[94mITINF25/lektion11/awk/behover_inte_kunna
+(B[m$ [H[2J[94mITINF25/lektion11/awk/behover_inte_kunna
+(B[m$ chmod _[K+x ex1 
+[?2004l[?2004h[94mITINF25/lektion11/awk/behover_inte_kunna
+(B[m$ [H[2J[94mITINF25/lektion11/awk/behover_inte_kunna
+(B[m$ ./ex1 [K[K[K[K[K[Ktouch nummer
+[?2004l[?2004h[94mITINF25/lektion11/awk/behover_inte_kunna
+(B[m$ code nummer 
+[?2004l[?2004h[94mITINF25/lektion11/awk/behover_inte_kunna
+(B[m$ ./num[K[K[K[K[K./ex1 [H[2J[94mITINF25/lektion11/awk/behover_inte_kunna
+(B[m$ ./ex1 
+[?2004l11
+[?2004h[94mITINF25/lektion11/awk/behover_inte_kunna
+(B[m$ [K(B[m$ [?2004l
+exit
+
+Script done on 2025-10-06 16:01:47+02:00 [COMMAND_EXIT_CODE="0"]

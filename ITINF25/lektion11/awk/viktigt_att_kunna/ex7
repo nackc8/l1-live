@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Skriv ut tre fält, vi konverterar separatorn semlikolon
+# till komma i utskriften. Det görs genom att sätta variabeln
+# OFS.
+
+awk -F ';' '
+BEGIN { OFS="," }
+{ print $1,$2,$3 }
+' ../../extext/variabelt_antal_falt.csv

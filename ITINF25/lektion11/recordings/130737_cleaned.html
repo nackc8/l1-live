@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style type="text/css">
+pre {
+  font-family:Courier New;
+  font-size:10pt;
+}
+
+.af_line {
+  color: gray;
+  text-decoration: none;
+}
+
+</style>
+<title>130737.txt</title>
+</head>
+<body>
+<pre>Script started on 2025-10-06 13:07:37+02:00 [TERM=&quot;xterm-256color&quot; TTY=&quot;/dev/pts/3&quot; COLUMNS=&quot;71&quot; LINES=&quot;13&quot;]
+<span style="color:#5c5cff;">ITINF25/lektion11
+<span style="color:#5c5cff;">5c5cff;">ITINF25/lektion11
+</span>$ ls
+awk  basic_vs_ext_re.txt  extext  grep	recordings  sed
+<span style="color:#5c5cff;">ITINF25/lektion11
+</span>$ ls extext/
+email.csv  linux.txt  richard.txt
+<span style="color:#5c5cff;">ITINF25/lektion11
+</span>$ code extext/
+<span style="color:#5c5cff;">#5c5cff;">ITINF25/lektion11
+</span>$ code extext/email.csv 
+<span style="color:#5c5cff;">ITINF25/lektion11
+<span style="color:#5c5cff;">or:#5c5cff;">ITINF25/lektion11
+</span>$ awk em
+extext
+
+
+
+
+
+
+cls
+awk  basic_vs_ext_re.txt  extext  grep	recordings  sed
+<span style="color:#5c5cff;">ITINF25/lektion11
+</span>$ cd awk/
+<span style="color:#5c5cff;">ITINF25/lektion11/awk
+<span style="color:#5c5cff;">5c5cff;">ITINF25/lektion11/awk
+</span>$ ls
+viktigt_att_kunna
+<span style="color:#5c5cff;">ITINF25/lektion11/awk
+</span>$ cd viktigt_att_kunna/
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;">5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ ls
+ex1  ex2  ex3  ex4
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;">5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ code ex
+1 
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ awk ..-/../extext/
+
+email.csv    linux.txt    richard.txt  
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;">il.csv <span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ awk ../../extext/email.csv 
+awk: cmd. line:1: ../../extext/email.csv
+awk: cmd. line:1: ^ syntax error
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;">il.csv&apos;<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ awk &apos;&apos; ../../extext/email.csv
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+&apos;{ print $1 }&apos;  ../../extext/email.csv{print$`1
+Login
+laura&#64;example.com;2070;Laura;Grey
+craig&#64;example.com;4081;Craig;Johnson
+mary&#64;example.com;9346;Mary;Jenkins
+jamie&#64;example.com;5079;Jamie;Smith
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;"> }&apos; ../../extext/email.csv <span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ awk &apos;{ print $1 }&apos; ../../extext/email.csvspaces 
+Login_email
+laura&#64;example.com
+craig&#64;example.com
+mary&#64;example.com
+jamie&#64;example.com
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;"> }&apos; ../../extext/email.spaces <span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ awk &apos;{ print $1 }&apos; ../../extext/email.spaces 
+Login_email
+laura&#64;example.com
+craig&#64;example.com
+mary&#64;example.com
+jamie&#64;example.com
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;"> }&apos; ../../extext/email.spaces <span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ awk &apos;{ print $1 }&apos; ../../extext/email.spaces 
+Login_email
+laura&#64;example.com
+craig&#64;example.com
+mary&#64;example.com
+jamie&#64;example.com
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ .
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ ls
+ex1  ex2  ex3  ex4
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;">lor:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ ./ex2
+laura&#64;example.com
+craig&#64;example.com
+mary&#64;example.com
+jamie&#64;example.com
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;">lor:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ ./ex2
+laura&#64;example.com
+craig&#64;example.com
+mary&#64;example.com
+jamie&#64;example.com
+laura&#64;example.com
+craig&#64;example.com
+mary&#64;example.com
+jamie&#64;example.com
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;">lor:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ ./ex2
+laura&#64;example.com
+craig&#64;example.com
+mary&#64;example.com
+jamie&#64;example.com
+laura&#64;example.com
+craig&#64;example.com
+mary&#64;example.com
+jamie&#64;example.com
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;">lor:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ ./ex2
+laura&#64;example.com
+craig&#64;example.com
+mary&#64;example.com
+jamie&#64;example.com
+laura&#64;example.com
+craig&#64;example.com
+mary&#64;example.com
+jamie&#64;example.com
+rullee&#64;nackademin.se
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;">"color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ ./ex3
+laura&#64;example.com;2070;Laura;Grey
+craig&#64;example.com;4081;Craig;Johnson
+mary&#64;example.com;9346;Mary;Jenkins
+jamie&#64;example.com;5079;Jamie;Smith
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;">lor:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ ./ex3
+laura&#64;example.com;2070;Laura;Grey
+craig&#64;example.com;4081;Craig;Johnson
+mary&#64;example.com;9346;Mary;Jenkins
+jamie&#64;example.com;5079;Jamie;Smith
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;">lor:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ ./ex3
+Tjohej
+laura&#64;example.com;2070;Laura;Grey
+craig&#64;example.com;4081;Craig;Johnson
+mary&#64;example.com;9346;Mary;Jenkins
+jamie&#64;example.com;5079;Jamie;Smith
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;">lor:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ ./ex3
+laura&#64;example.com
+craig&#64;example.com
+mary&#64;example.com
+jamie&#64;example.com
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;">lor:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ ./ex4
+laura&#64;example.com
+craig&#64;example.com
+mary&#64;example.com
+jamie&#64;example.com
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;">5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#000000;background-color:#000000;"></span>$ awspan><span style="color:#000000;background-color:#000000;">awk</span><span style="color:#000000;background-color:#000000;"> &apos;{ print $1 }&apos; ../../extext/email.spa
+
+
+
+
+
+variabelt_antal_falt.csv 
+molle;molle&#64;example.com
+kitty;katt;kitty&#64;mjau.se
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;"> }&apos; ../../extext/variabelt_antal_falt.csv <span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ awk &apos;{ print $1 }&apos; ../../extext/variabelt_antal_falt.csv 
+molle;molle&#64;example.com
+kitty;katt;kitty&#64;mjau.se
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+./exan>$ awk &apos;{ print $1 }&apos; ../../extext/variabelt_antal_falt.csv 
+<span style="color:#5c5cff;">">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ ./ex5 
+molle
+kitty
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;">olor:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ ./ex5 
+1
+2
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;">olor:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ ./ex5 
+2
+3
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;">olor:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ ./ex5 
+2molle;molle&#64;example.com
+3kitty;katt;kitty&#64;mjau.se
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;">olor:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ ./ex5 
+molle&#64;example.com
+kitty&#64;mjau.se
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;">olor:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ ./ex5 
+molle&#64;example.com
+kitty&#64;mjau.se
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;">olor:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ ./ex5 
+molle
+katt
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;">olor:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ ./ex57
+molle molle;molle&#64;example.com
+katt kitty;katt;kitty&#64;mjau.se
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ ./ex7
+molleXXXXXXXXmolle;molle&#64;example.com
+kattXXXXXXXXkitty;katt;kitty&#64;mjau.se
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;">lor:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ ./ex7
+molle,molle;molle&#64;example.com
+katt,kitty;katt;kitty&#64;mjau.se
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;">lor:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ ./ex7
+mollemolle&#64;example.com
+kittykattkitty&#64;mjau.se
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+<span style="color:#5c5cff;">lor:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ ./ex7
+molle,molle&#64;example.com,
+kitty,katt,kitty&#64;mjau.se
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ ./ex7
+molle_molle&#64;example.com_
+kitty_katt_kitty&#64;mjau.se
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/viktigt_att_kunna
+</span>$ cd ../behover_inte_kunna/
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/behover_inte_kunna
+<span style="color:#5c5cff;">5c5cff;">ITINF25/lektion11/awk/behover_inte_kunna
+</span>$ chmod +x ex1 
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/behover_inte_kunna
+<span style="color:#5c5cff;">5c5cff;">ITINF25/lektion11/awk/behover_inte_kunna
+</span>$ ./ex1
+
+
+
+touch nummer
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/behover_inte_kunna
+</span>$ code nummer 
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/behover_inte_kunna
+</span>$ ./nu
+m
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="color:#5c5cff;">cff;">ITINF25/lektion11/awk/behover_inte_kunna
+</span>$ ./ex1 
+11
+<span style="color:#5c5cff;">ITINF25/lektion11/awk/behover_inte_kunna
+$ span>$ 
+exit
+
+Script done on 2025-10-06 16:01:47+02:00 [COMMAND_EXIT_CODE=&quot;0&quot;]
+</pre>
+</body>
+</html>
+<!--HTML generated by ansifilter 2.18, http://www.andre-simon.de/-->

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# awk Delar automatiskt upp fälten efter mellanslag (eller tab)
+# Man kan komma åt första fältet med $1, andra med $2, ...
+
+# Vi lägger till ett reguljärt uttryck som vårt villkor, bara rader som
+# innehåller ordet example behandlas.
+
+awk '/example/  { print $1 }' ../../extext/email.spaces
+
+# Vi lägger till ett reguljärt uttryck som vårt villkor, bara rader som
+# innehåller @ följt av något annat, följt av en punkt och sist domändelen.
+
+awk '/@[^@]+[.][^.@]/  { print $1 }' ../../extext/email.spaces
