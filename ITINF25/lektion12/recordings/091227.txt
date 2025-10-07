@@ -425,4 +425,106 @@ done )
        is  generally safe though non-portable to use the GNU option [1m-files0-from[0m[m
        to pass arbitrary starting points to [1mfind[0m.[m
 [7m Manual page find(1) line 40 (press h for help or q to quit)[27m[K[K[m
-       -P 
+       -P     Never follow symbolic links.  This is the default behaviour.  When[m
+              [1mfind[0m examines or prints information about files, and the file is a[m
+              symbolic link, the information used shall be taken from the  prop‐[m
+              erties of the symbolic link itself.[m
+[m
+       -L     Follow  symbolic  links.  When [1mfind[0m examines or prints information[m
+              about files, the information used shall be taken from the  proper‐[m
+              ties  of  the file to which the link points, not from the link it‐[m
+              self (unless it is a broken symbolic link or [1mfind[0m is unable to ex‐[m
+              amine  the file to which the link points).  Use of this option im‐[m
+              plies [1m-noleaf[0m.  If you later use the [1m-P[0m option, [1m-noleaf[0m will still[m
+              be  in  effect.   If [1m-L[0m is in effect and [1mfind[0m discovers a symbolic[m
+[7m Manual page find(1) line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       to pass arbitrary starting points to [1mfind[0m.[m
+[14;1H[K[7m Manual page find(1) line 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              be  in  effect.   If [1m-L[0m is in effect and [1mfind[0m discovers a symbolic[m
+[7m Manual page find(1) line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              link to a subdirectory during its search, the subdirectory pointed[m
+[7m Manual page find(1) line 54 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              to by the symbolic link will be searched.[m
+[7m Manual page find(1) line 55 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page find(1) line 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              When  the  [1m-L[0m option is in effect, the [1m-type[0m predicate will always[m
+[7m Manual page find(1) line 57 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t
+[1]+  Stopped                 man find
+[?2004h[94mITINF25/lektion12
+(B[m$ find d.[K[K. -L
+[?2004lfind: unknown predicate `-L'
+[?2004h[94mITINF25/lektion12
+(B[m$ find . -L[K[K[K[K-L .
+[?2004l.
+./recordings
+./recordings/091227_timing.txt
+./recordings/091227.txt
+./barnut
+./bashbg
+./bashbg/info.txt
+[?2004h[94mITINF25/lektion12
+(B[m$ [H[2J[94mITINF25/lektion12
+(B[m$ find -L .
+[?2004l.
+./recordings
+./recordings/091227_timing.txt
+./recordings/091227.txt
+./barnut
+./bashbg
+./bashbg/info.txt
+[?2004h[94mITINF25/lektion12
+(B[m$ find -L .
+[?2004l.
+./recordings
+./recordings/091227_timing.txt
+./recordings/091227.txt
+./barnut
+./bashbg
+./bashbg/info.txt
+[?2004h[94mITINF25/lektion12
+(B[m$ [H[2J[94mITINF25/lektion12
+(B[m$ find -L .
+[?2004l.
+./recordings
+./recordings/091227_timing.txt
+./recordings/091227.txt
+./barnut
+./bashbg
+./bashbg/info.txt
+[?2004h[94mITINF25/lektion12
+(B[m$ jos[Kbs
+[?2004l[1]+  Stopped                 man find
+[?2004h[94mITINF25/lektion12
+(B[m$ fg %1[H[2J[94mITINF25/lektion12
+(B[m$ fg %1
+[?2004lman find
+[?1049h[22;0;0t[?1h=[H[2J[H              erties of the symbolic link itself.[m
+[m
+       -L     Follow  symbolic  links.  When [1mfind[0m examines or prints information[m
+              about files, the information used shall be taken from the  proper‐[m
+              ties  of  the file to which the link points, not from the link it‐[m
+              self (unless it is a broken symbolic link or [1mfind[0m is unable to ex‐[m
+              amine  the file to which the link points).  Use of this option im‐[m
+              plies [1m-noleaf[0m.  If you later use the [1m-P[0m option, [1m-noleaf[0m will still[m
+              be  in  effect.   If [1m-L[0m is in effect and [1mfind[0m discovers a symbolic[m
+              link to a subdirectory during its search, the subdirectory pointed[m
+              to by the symbolic link will be searched.[m
+[m
+              When  the  [1m-L[0m option is in effect, the [1m-type[0m predicate will always[m
+[7m Manual page find(1) line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              match against the type of the file that a symbolic link points  to[m
+[7m Manual page find(1) line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              rather  than the link itself (unless the symbolic link is broken).[m
+[7m Manual page find(1) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page find(1) line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              erties of the symbolic link itself.[m
+[14;1H[K[7m Manual page find(1) line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              match against the type of the file that a symbolic link points  to[m
+[7m Manual page find(1) line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              rather  than the link itself (unless the symbolic link is broken).[m
+[7m Manual page find(1) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Actions that can cause symbolic links to become broken while  [1mfind[0m[m
+[7m Manual page find(1) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              is  executing (for example [1m-delete[0m) can give rise to confusing be‐[m
+[7m Manual page find(1) line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              haviour.  Using [1m-L[0m causes the [1m-lname[0m and [1m-ilname[0m predicates always[m
+[7m Manual page find(1) line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              to return false.[m
+[7m Manual page find(1) line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page find(1) line 64 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       -H     Do  not follow symbolic links, except while processing the command[m
+[7m Manual page find(1) line 65 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              line arguments.  When [1mfind[0m examines or  prints  information  about[m
+[7m Manual page find(1) line 66 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              files,  the information used shall be taken from the properties of[m
+[7m Manual page find(1) line 67 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the symbolic link itself.  The only exception to this behaviour is[m
+[7m Manual page find(1) line 68 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              when  a file specified on the command line is a symbolic link, and[m
+[7m Manual page find(1) line 69 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the link can be resolved.  For  that  situation,  the  information[m
+[7m Manual page find(1) line 70 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              used  is taken from whatever the link points to (that is, the link[m
+[7m Manual page find(1) line 71 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              is followed).  The information about the link itself is used as  a[m
+[7m Manual page find(1) line 72 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              fallback if the file pointed to by the symbolic link cannot be ex‐[m
+[7m Manual page find(1) line 73 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              amined.  If [1m-H[0m is in effect and one of the paths specified on  the[m
+[7m Manual page find(1) line 74 (press h for help or q to qui
