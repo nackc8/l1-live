@@ -1,0 +1,40 @@
+# Bash jobbkontroll
+
+sleep 5 &    - Sov i fem sekunder i bakgrunden
+
+( sleep 5; echo Fem; sleep 5; echo Tio ) &   - Kör flera kommandon i en barnprocess
+
+Om vi även vill dirigera om utmatningen till en fil:
+
+( sleep 5; echo Fem; sleep 5; echo Tio ) >barnut &
+
+Eller finare skrivet, i ett skript:
+
+(
+    sleep 5
+    echo Fem
+    sleep 5
+    echo Tio
+) >barnut &
+
+
+Anledningar att använda underprocesser med ( ):
+    - Man vill inte att variabler etc ändrade i en del kod, påverkar resten
+    - Man vill ta en del av koden och köra i bakgrunden
+
+Fork bomb - dissektion
+
+:(){ :|:& };:
+
+FUNKTIONSNAMN(){ FUNKTIONSNAMN|FUNKTIONSNAMN& };FUNKTIONSNAMN
+
+Steg vid körning, den dubblar sig:
+
+    FUNKTION_KÖRS1
+        FUNKTION_KÖRS2
+            FUNKTION_KÖRS21
+            FUNKTION_KÖRS22
+        FUNKTION_KÖRS3
+            FUNKTION_KÖRS31
+            FUNKTION_KÖRS32
+
