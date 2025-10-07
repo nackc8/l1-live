@@ -90,6 +90,7 @@ if [[ (! -e $___date_dir) || -z $___class || -z $___lession_number ]]; then
 		ask --validate "$___lession_number_validation_re" --default "$___def_lession_number" \
 			"Ange lektion ($___def_lession_number) "
 	)"
+	___lession_number=$(printf %02d "$___lession_number")
 
 	cat <<-EOF >"$___root/.state"
 		___class='$___class'
