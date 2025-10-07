@@ -1486,4 +1486,131 @@ done )
 [7m Manual page ps(1) line 125 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              together with the [1ma[0m option.[m
 [7m Manual page ps(1) line 126 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
 [7m Manual page ps(1) line 127 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mPROCESS[0m [1mSELECTION[0m [1mBY[0m [1mLIST[0m[m
-[7m Manual page ps(1) line 128 (press 
+[7m Manual page ps(1) line 128 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       These options accept a single argument in the form of a blank-separated[m
+[7m Manual page ps(1) line 129 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       or comma-separated list.  They can be used multiple times.  For example:[m
+[7m Manual page ps(1) line 130 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mps[0m [1m-p[0m [1m"1[0m [1m2"[0m [1m-p[0m [1m3,4[0m[m
+[7m Manual page ps(1) line 131 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 132 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       -[4m123[24m   Identical to [1m--pid[0m [4m123[24m.[m
+[7m Manual page ps(1) line 133 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 134 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m123[24m    Identical to [1m--pid[0m [4m123[24m.[m
+[7m Manual page ps(1) line 135 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 136 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-C[0m [4mcmdlist[24m[m
+[7m Manual page ps(1) line 137 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by command name.  This selects the processes whose[m
+[7m Manual page ps(1) line 138 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              executable name is given in [4mcmdlist[24m.  NOTE: The command name is[m
+[7m Manual page ps(1) line 139 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              not the same as the command line. Previous versions of procps and[m
+[7m Manual page ps(1) line 140 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the kernel truncated this command name to 15 characters. This[m
+[7m Manual page ps(1) line 141 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              limitation is no longer present in both. If you depended on[m
+[7m Manual page ps(1) line 142 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              matching only 15 characters, you may no longer get a match.[m
+[7m Manual page ps(1) line 143 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 144 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-G[0m [4mgrplist[24m[m
+[7m Manual page ps(1) line 145 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by real group ID (RGID) or name.  This selects the[m
+[7m Manual page ps(1) line 146 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              processes whose real group name or ID is in the [4mgrplist[24m list.  The[m
+[7m Manual page ps(1) line 147 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              real group ID identifies the group of the user who created the[m
+[7m Manual page ps(1) line 148 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              process, see [4mgetgid[24m(2).[m
+[7m Manual page ps(1) line 149 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 150 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-g[0m [4mgrplist[24m[m
+[7m Manual page ps(1) line 151 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by session OR by effective group name.  Selection by[m
+[7m Manual page ps(1) line 152 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              session is specified by many standards, but selection by effective[m
+[7m Manual page ps(1) line 153 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              group is the logical behavior that several other operating systems[m
+[7m Manual page ps(1) line 154 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              use.  This [1mps[0m will select by session when the list is completely[m
+[7m Manual page ps(1) line 155 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              numeric (as sessions are).  Group ID numbers will work only when[m
+[7m Manual page ps(1) line 156 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              some group names are also specified.  See the [1m-s[0m and [1m--group[0m[m
+[7m Manual page ps(1) line 157 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              options.[m
+[7m Manual page ps(1) line 158 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 159 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--Group[0m [4mgrplist[24m[m
+[7m Manual page ps(1) line 160 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by real group ID (RGID) or name.  Identical to [1m-G[0m.[m
+[7m Manual page ps(1) line 161 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 162 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--group[0m [4mgrplist[24m[m
+[7m Manual page ps(1) line 163 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by effective group ID (EGID) or name.  This selects the[m
+[7m Manual page ps(1) line 164 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              processes whose effective group name or ID is in [4mgrplist[24m.  The[m
+[7m Manual page ps(1) line 165 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              effective group ID describes the group whose file access[m
+[7m Manual page ps(1) line 166 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              permissions are used by the process (see [4mgetegid[24m(2)).  The [1m-g[0m[m
+[7m Manual page ps(1) line 167 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              option is often an alternative to [1m--group[0m.[m
+[7m Manual page ps(1) line 168 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 169 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mp[0m [4mpidlist[24m[m
+[7m Manual page ps(1) line 170 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by process ID.  Identical to [1m-p[0m and [1m--pid[0m.[m
+[7m Manual page ps(1) line 171 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 172 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-p[0m [4mpidlist[24m[m
+[7m Manual page ps(1) line 173 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by PID.  This selects the processes whose process ID[m
+[7m Manual page ps(1) line 174 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              numbers appear in [4mpidlist[24m.  Identical to [1mp[0m and [1m--pid[0m.[m
+[7m Manual page ps(1) line 175 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 176 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--pid[0m [4mpidlist[24m[m
+[7m Manual page ps(1) line 177 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by process ID.  Identical to [1m-p[0m and [1mp[0m.[m
+[7m Manual page ps(1) line 178 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 179 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--ppid[0m [4mpidlist[24m[m
+[7m Manual page ps(1) line 180 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by parent process ID.  This selects the processes with a[m
+[7m Manual page ps(1) line 181 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              parent process ID in [4mpidlist[24m.  That is, it selects processes that[m
+[7m Manual page ps(1) line 182 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              are children of those listed in [4mpidlist[24m.[m
+[7m Manual page ps(1) line 183 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 184 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              Select by process ID.  Identical to [1m-p[0m and [1m--pid[0m.[m
+[14;1H[K[7m Manual page ps(1) line 183 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mp[0m [4mpidlist[24m[m
+[14;1H[K[7m Manual page ps(1) line 182 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page ps(1) line 181 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              option is often an alternative to [1m--group[0m.[m
+[14;1H[K[7m Manual page ps(1) line 180 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by parent process ID.  This selects the processes with a[m
+[7m Manual page ps(1) line 181 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              parent process ID in [4mpidlist[24m.  That is, it selects processes that[m
+[7m Manual page ps(1) line 182 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              are children of those listed in [4mpidlist[24m.[m
+[7m Manual page ps(1) line 183 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 184 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mq[0m [4mpidlist[24m[m
+[7m Manual page ps(1) line 185 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by process ID (quick mode).  Identical to [1m-q[0m and[m
+[7m Manual page ps(1) line 186 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m--quick-pid[0m.[m
+[7m Manual page ps(1) line 187 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 188 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-q[0m [4mpidlist[24m[m
+[7m Manual page ps(1) line 189 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by PID (quick mode).  This selects the processes whose[m
+[7m Manual page ps(1) line 190 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              process ID numbers appear in [4mpidlist[24m.  With this option [1mps[0m reads[m
+[7m Manual page ps(1) line 191 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the necessary info only for the pids listed in the [4mpidlist[24m and[m
+[7m Manual page ps(1) line 192 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              doesn't apply additional filtering rules. The order of pids is[m
+[7m Manual page ps(1) line 193 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              unsorted and preserved. No additional selection options, sorting[m
+[7m Manual page ps(1) line 194 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              and forest type listings are allowed in this mode.  Identical to [1mq[0m[m
+[7m Manual page ps(1) line 195 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              and [1m--quick-pid[0m.[m
+[7m Manual page ps(1) line 196 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 197 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--quick-pid[0m [4mpidlist[24m[m
+[7m Manual page ps(1) line 198 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by process ID (quick mode).  Identical to [1m-q[0m and [1mq[0m.[m
+[7m Manual page ps(1) line 199 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 200 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-s[0m [4msesslist[24m[m
+[7m Manual page ps(1) line 201 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by session ID.  This selects the processes with a session[m
+[7m Manual page ps(1) line 202 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ID specified in [4msesslist[24m.[m
+[7m Manual page ps(1) line 203 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 204 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--sid[0m [4msesslist[24m[m
+[7m Manual page ps(1) line 205 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by session ID.  Identical to [1m-s[0m.[m
+[7m Manual page ps(1) line 206 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 207 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mt[0m [4mttylist[24m[m
+[7m Manual page ps(1) line 208 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by tty.  Nearly identical to [1m-t[0m and [1m--tty[0m, but can also be[m
+[7m Manual page ps(1) line 209 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              used with an empty [4mttylist[24m to indicate the terminal associated[m
+[7m Manual page ps(1) line 210 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              with [1mps[0m.  Using the [1mT[0m option is considered cleaner than using [1mt[0m[m
+[7m Manual page ps(1) line 211 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              with an empty [4mttylist[24m.[m
+[7m Manual page ps(1) line 212 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 213 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-t[0m [4mttylist[24m[m
+[7m Manual page ps(1) line 214 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by tty.  This selects the processes associated with the[m
+[7m Manual page ps(1) line 215 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              terminals given in [4mttylist[24m.  Terminals (ttys, or screens for text[m
+[7m Manual page ps(1) line 216 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              output) can be specified in several forms: /dev/ttyS1, ttyS1, S1.[m
+[7m Manual page ps(1) line 217 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              A plain "-" may be used to select processes not attached to any[m
+[7m Manual page ps(1) line 218 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              terminal.[m
+[7m Manual page ps(1) line 219 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 220 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--tty[0m [4mttylist[24m[m
+[7m Manual page ps(1) line 221 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by terminal.  Identical to [1m-t[0m and [1mt[0m.[m
+[7m Manual page ps(1) line 222 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 223 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mU[0m [4muserlist[24m[m
+[7m Manual page ps(1) line 224 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by effective user ID (EUID) or name.  This selects the[m
+[7m Manual page ps(1) line 225 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              processes whose effective user name or ID is in [4muserlist[24m.  The[m
+[7m Manual page ps(1) line 226 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              effective user ID describes the user whose file access permissions[m
+[7m Manual page ps(1) line 227 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              are used by the process (see [4mgeteuid[24m(2)).  Identical to [1m-u[0m and[m
+[7m Manual page ps(1) line 228 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m--user[0m.[m
+[7m Manual page ps(1) line 229 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 230 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-U[0m [4muserlist[24m[m
+[7m Manual page ps(1) line 231 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by real user ID (RUID) or name.  It selects the processes[m
+[7m Manual page ps(1) line 232 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              whose real user name or ID is in the [4muserlist[24m list.  The real user[m
+[7m Manual page ps(1) line 233 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ID identifies the user who created the process, see [4mgetuid[24m(2).[m
+[7m Manual page ps(1) line 234 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 235 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-u[0m [4muserlist[24m[m
+[7m Manual page ps(1) line 236 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by effective user ID (EUID) or name.  This selects the[m
+[7m Manual page ps(1) line 237 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              processes whose effective user name or ID is in [4muserlist[24m.[m
+[7m Manual page ps(1) line 238 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 239 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              The effective user ID describes the user whose file access[m
+[7m Manual page ps(1) line 240 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              permissions are used by the process (see [4mgeteuid[24m(2)).  Identical[m
+[7m Manual page ps(1) line 241 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              to [1mU[0m and [1m--user[0m.[m
+[7m Manual page ps(1) line 242 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 243 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--User[0m [4muserlist[24m[m
+[7m Manual page ps(1) line 244 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Select by real user ID (RUID) or name.  Identical to [1m-U[0m.[m
+[7m Manual page ps(1) line 245 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ps(1) line 246 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--user[0m [4muserlist[24m[m
+[7m Manual page ps(1) line 247 (press h for help or q to quit)[27m[K[K [KESC
