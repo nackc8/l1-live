@@ -367,4 +367,62 @@ done ) &
 [?2004l[?2004h[94mITINF25/lektion12
 (B[m$ kill 56000[K7
 [?2004l[2]+  Terminated              ( while true; do
-    echo PID $
+    echo PID $BASHPID; sleep 15;
+done )
+[?2004h[94mITINF25/lektion12
+(B[m$ [H[2J[94mITINF25/lektion12
+(B[m$  [Kman info[K[K[K[Kfind
+[?2004l[?1049h[22;0;0t[?1h=FIND(1)                      General Commands Manual                     FIND(1)[m
+[m
+[1mNAME[0m[m
+       find - search for files in a directory hierarchy[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mfind[0m [-H] [-L] [-P] [-D debugopts] [-Olevel] [starting-point...] [expres‐[m
+       sion][m
+[m
+[1mDESCRIPTION[0m[m
+       This manual page documents the GNU version of [1mfind[0m.   GNU  [1mfind[0m  searches[m
+       the  directory tree rooted at each given starting-point by evaluating the[m
+       given expression from left to right, according to the rules of precedence[m
+[7m Manual page find(1) line 1 (press h for help or q to quit)[27m[K[K       (see  section  OPERATORS), until the outcome is known (the left hand side[m
+       is false for [4mand[24m operations, true for [4mor[24m), at which point [1mfind[0m  moves  on[m
+       to  the  next  file  name.  If no starting-point is specified, `.' is as‐[m
+       sumed.[m
+[m
+       If you are using [1mfind[0m in an environment where security is important  (for[m
+       example  if  you  are using it to search directories that are writable by[m
+       other users), you should read the `Security  Considerations'  chapter  of[m
+       the findutils documentation, which is called [1mFinding[0m [1mFiles[0m and comes with[m
+       findutils.  That document also includes a lot more detail and  discussion[m
+       than  this manual page, so you may find it a more useful source of infor‐[m
+       mation.[m
+[m
+[7m Manual page find(1) line 14 (press h for help or q to quit)[27m[K[K[1mOPTIONS[0m[m
+       The [1m-H[0m, [1m-L[0m and [1m-P[0m options control the treatment of symbolic links.   Com‐[m
+       mand-line arguments following these are taken to be names of files or di‐[m
+       rectories to be examined, up to the first argument that begins with  `-',[m
+       or  the  argument  `(' or `!'.  That argument and any following arguments[m
+       are taken to be the expression describing what is to be searched for.  If[m
+       no  paths  are given, the current directory is used.  If no expression is[m
+       given, the expression [1m-print[0m is used (but you  should  probably  consider[m
+       using [1m-print0[0m instead, anyway).[m
+[m
+       This manual page talks about `options' within the expression list.  These[m
+       options control the behaviour of [1mfind[0m but are specified immediately after[m
+       the  last  path name.  The five `real' options [1m-H[0m, [1m-L[0m, [1m-P[0m, [1m-D[0m and [1m-O[0m must[m
+[7m Manual page find(1) line 27 (press h for help or q to quit)[27m[K[K       appear before the first path name, if at all.  A  double  dash  [1m--[0m  could[m
+       theoretically  be used to signal that any remaining arguments are not op‐[m
+       tions, but this does not really work due to the way [1mfind[0m  determines  the[m
+       end of the following path arguments: it does that by reading until an ex‐[m
+       pression argument comes (which also starts with a `-').  Now, if  a  path[m
+       argument  would  start with a `-', then [1mfind[0m would treat it as expression[m
+       argument instead.  Thus, to ensure that all start  points  are  taken  as[m
+       such,  and  especially  to prevent that wildcard patterns expanded by the[m
+       calling shell are not mistakenly treated as expression arguments,  it  is[m
+       generally  safer  to  prefix  wildcards or dubious path names with either[m
+       `./' or to use absolute path names starting with '/'.  Alternatively,  it[m
+       is  generally safe though non-portable to use the GNU option [1m-files0-from[0m[m
+       to pass arbitrary starting points to [1mfind[0m.[m
+[7m Manual page find(1) line 40 (press h for help or q to quit)[27m[K[K[m
+       -P 
