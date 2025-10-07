@@ -527,4 +527,72 @@ done )
 [7m Manual page find(1) line 71 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              is followed).  The information about the link itself is used as  a[m
 [7m Manual page find(1) line 72 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              fallback if the file pointed to by the symbolic link cannot be ex‐[m
 [7m Manual page find(1) line 73 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              amined.  If [1m-H[0m is in effect and one of the paths specified on  the[m
-[7m Manual page find(1) line 74 (press h for help or q to qui
+[7m Manual page find(1) line 74 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              command  line  is  a symbolic link to a directory, the contents of[m
+[7m Manual page find(1) line 75 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              that directory will be  examined  (though  of  course  [1m-maxdepth[0m [1m0[0m[m
+[7m Manual page find(1) line 76 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              would prevent this).[m
+[7m Manual page find(1) line 77 (press h for help or q to quit)[27m[K
+[1]+  Stopped                 man find
+[K[?1l>[?1049l[23;0;0t[?2004h[94mITINF25/lektion12
+(B[m$ fg %1[C[C[1Pjobs[C[Cfind -L . -iname ''*'.'t'x't'[C
+[?2004l./recordings/091227_timing.txt
+./recordings/091227.txt
+./bashbg/info.txt
+[?2004h[94mITINF25/lektion12
+(B[m$ jobs
+[?2004l[1]+  Stopped                 man find
+[?2004h[94mITINF25/lektion12
+(B[m$ kill %1 
+[?2004l[1]+  Terminated              man find
+[?2004h[94mITINF25/lektion12
+(B[m$ [H[2J[94mITINF25/lektion12
+(B[m$ ps
+[?2004l    PID TTY          TIME CMD
+   8833 pts/3    00:00:00 bash_noprofile_
+   8834 pts/3    00:00:00 bash
+  64500 pts/3    00:00:00 ps
+[?2004h[94mITINF25/lektion12
+(B[m$ [H[2J[94mITINF25/lektion12
+(B[m$ man ps
+[?2004l[?1049h[22;0;0t[?1h=PS(1)                             User Commands                            PS(1)[m
+[m
+[1mNAME[0m[m
+       ps - report a snapshot of the current processes.[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mps[0m [[4moptions[24m][m
+[m
+[1mDESCRIPTION[0m[m
+       [1mps[0m displays information about a selection of the active processes.  If[m
+       you want a repetitive update of the selection and the displayed[m
+       information, use [1mtop[0m instead.[m
+[m
+[7m Manual page ps(1) line 1 (press h for help or q to quit)[27m[K[K       This version of [1mps[0m accepts several kinds of options:[m
+[m
+       1   UNIX options, which may be grouped and must be preceded by a dash.[m
+       2   BSD options, which may be grouped and must not be used with a dash.[m
+       3   GNU long options, which are preceded by two dashes.[m
+[m
+       Options of different types may be freely mixed, but conflicts can appear.[m
+       There are some synonymous options, which are functionally identical, due[m
+       to the many standards and [1mps[0m implementations that this [1mps[0m is compatible[m
+       with.[m
+[m
+       Note that [1mps[0m [1m-aux[0m is distinct from [1mps[0m [1maux[0m.  The POSIX and UNIX standards[m
+       require that [1mps[0m [1m-aux[0m print all processes owned by a user named [4mx[24m, as well[m
+[7m Manual page ps(1) line 14 (press h for help or q to quit)[27m[K[K       as printing all processes that would be selected by the [1m-a[0m option.  If[m
+       the user named [4mx[24m does not exist, this [1mps[0m may interpret the command as[m
+       [1mps[0m [1maux[0m instead and print a warning.  This behavior is intended to aid in[m
+       transitioning old scripts and habits.  It is fragile, subject to change,[m
+       and thus should not be relied upon.[m
+[m
+       By default, [1mps[0m selects all processes with the same effective user ID[m
+       (euid=EUID) as the current user and associated with the same terminal as[m
+       the invoker.  It displays the process ID (pid=PID), the terminal[m
+       associated with the process (tname=TTY), the cumulated CPU time in[m
+       [DD-]hh:mm:ss format (time=TIME), and the executable name (ucmd=CMD).[m
+       Output is unsorted by default.[m
+[m
+[7m Manual page ps(1) line 27 (press h for help or q to quit)[27m[K[K       The use of BSD-style options will add process state (stat=STAT) to the[m
+       default display and show the command args (args=COMMAND) instead of the[m
+       executable name.  You can override this with the [1mPS_FORMAT[0m environment[m
+       variable. The use of BSD-style options will also change the p
