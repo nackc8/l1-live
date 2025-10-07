@@ -4571,4 +4571,165 @@ cpuid level	: 32
 wp		: yes
 flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
 vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause
-bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs e
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi
+bogomips	: 4992.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+[?2004h[94mITINF25/lektion12
+(B[m$ [H[2J[94mITINF25/lektion12
+(B[m$ man kill
+[?2004l[?1049h[22;0;0t[?1h=KILL(1)                           User Commands                          KILL(1)[m
+[m
+[1mNAME[0m[m
+       kill - send a signal to a process[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mkill[0m [options] <pid> [...][m
+[m
+[1mDESCRIPTION[0m[m
+       The default signal for kill is TERM.  Use [1m-l[0m or [1m-L[0m to list available sig‐[m
+       nals.  Particularly useful signals include HUP, INT,  KILL,  STOP,  CONT,[m
+       and 0.  Alternate signals may be specified in three ways: [1m-9[0m, [1m-SIGKILL[0m or[m
+       [1m-KILL[0m.  Negative PID values may be used to choose whole  process  groups;[m
+[7m Manual page kill(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       see the PGID column in ps command output.  A PID of [1m-1[0m is special; it in‐[m
+[7m Manual page kill(1) line 2 (press h for help or q to quit)[27m[K[K       dicates all processes except the kill process itself and init.[m
+[m
+[1mOPTIONS[0m[m
+       [1m<pid>[0m [1m[...][0m[m
+              Send signal to every <pid> listed.[m
+[m
+       [1m-<signal>[0m[m
+       [1m-s[0m [1m<signal>[0m[m
+       [1m--signal[0m [1m<signal>[0m[m
+              Specify the [1msignal[0m to be sent.  The signal can be specified by us‐[m
+              ing  name or number.  The behavior of signals is explained in [1msig‐[0m[m
+              [1mnal[0m(7) manual page.[m
+[m
+[7m Manual page kill(1) line 15 (press h for help or q to quit)[27m[K[K       [1m-q[0m, [1m--queue[0m [4mvalue[24m[m
+              Use [1msigqueue(3)[0m rather than [1mkill(2)[0m and the value argument is used[m
+              to specify an integer to be sent with the signal. If the receiving[m
+              process has installed a handler for this signal using the  SA_SIG‐[m
+              INFO  flag  to  [1msigaction(2)[0m, then it can obtain this data via the[m
+              si_value field of the siginfo_t structure.[m
+[m
+       [1m-l[0m, [1m--list[0m [[4msignal[24m][m
+              List signal names.  This option has optional argument, which  will[m
+              convert signal number to signal name, or other way round.[m
+[m
+       [1m-L[0m, [1m--table[0m[m
+              List signal names in a nice table.[m
+[7m Manual page kill(1) line 28 (press h for help or q to quit)[27m[K[K[m
+       [1mNOTES[0m  Your  shell  (command  line  interpreter) may have a built-in kill[m
+              command.  You may need  to  run  the  command  described  here  as[m
+              /bin/kill to solve the conflict.[m
+[m
+[1mEXAMPLES[0m[m
+       [1mkill[0m [1m-9[0m [1m-1[0m[m
+              Kill all processes you can kill.[m
+[m
+       [1mkill[0m [1m-l[0m [1m11[0m[m
+              Translate number 11 into a signal name.[m
+[m
+       [1mkill[0m [1m-L[0m[m
+[7m Manual page kill(1) line 41 (press h for help or q to quit)[27m[K[K              List the available signal choices in a nice table.[m
+[m
+       [1mkill[0m [1m123[0m [1m543[0m [1m2341[0m [1m3453[0m[m
+              Send the default signal, SIGTERM, to all those processes.[m
+[m
+[1mSEE[0m [1mALSO[0m[m
+       [1mkill[0m(2),    [1mkillall[0m(1),    [1mnice[0m(1),   [1mpkill[0m(1),   [1mrenice[0m(1),   [1msignal[0m(7),[m
+       [1msigqueue[0m(3), [1mskill[0m(1)[m
+[m
+[1mSTANDARDS[0m[m
+       This command meets appropriate standards. The [1m-L[0m flag is Linux-specific.[m
+[m
+[1mAUTHOR[0m[m
+[7m Manual page kill(1) line 54 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mkill[0m [1m-L[0m[m
+[14;1H[K[7m Manual page kill(1) line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page kill(1) line 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              Translate number 11 into a signal name.[m
+[14;1H[K[7m Manual page kill(1) line 51 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mkill[0m [1m-l[0m [1m11[0m[m
+[14;1H[K[7m Manual page kill(1) line 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page kill(1) line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              Kill all processes you can kill.[m
+[14;1H[K[7m Manual page kill(1) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mkill[0m [1m-9[0m [1m-1[0m[m
+[14;1H[K[7m Manual page kill(1) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mEXAMPLES[0m[m
+[14;1H[K[7m Manual page kill(1) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page kill(1) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              /bin/kill to solve the conflict.[m
+[14;1H[K[7m Manual page kill(1) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              command.  You may need  to  run  the  command  described  here  as[m
+[14;1H[K[7m Manual page kill(1) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mNOTES[0m  Your  shell  (command  line  interpreter) may have a built-in kill[m
+[14;1H[K[7m Manual page kill(1) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page kill(1) line 41 (press h for help or q to quit)[27m[K[K              List the available signal choices in a nice table.[m
+[m
+       [1mkill[0m [1m123[0m [1m543[0m [1m2341[0m [1m3453[0m[m
+              Send the default signal, SIGTERM, to all those processes.[m
+[m
+[1mSEE[0m [1mALSO[0m[m
+       [1mkill[0m(2),    [1mkillall[0m(1),    [1mnice[0m(1),   [1mpkill[0m(1),   [1mrenice[0m(1),   [1msignal[0m(7),[m
+       [1msigqueue[0m(3), [1mskill[0m(1)[m
+[m
+[1mSTANDARDS[0m[m
+       This command meets appropriate standards. The [1m-L[0m flag is Linux-specific.[m
+[m
+[1mAUTHOR[0m[m
+[7m Manual page kill(1) line 54 (press h for help or q to quit)[27m[K[K       Albert Cahalan ⟨albert@users.sf.net⟩ wrote kill in 1999 to replace a  bs‐[m
+       dutils  one  that  was not standards compliant.  The util-linux one might[m
+       also work correctly.[m
+[m
+[1mREPORTING[0m [1mBUGS[0m[m
+       Please send bug reports to ⟨procps@freelists.org⟩[m
+[m
+procps-ng                          2021-05-18                            KILL(1)[m
+[7m Manual page kill(1) line 62/74 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page kill(1) line 62/74 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1msigqueue[0m(3), [1mskill[0m(1)[m
+[14;1H[K[7m Manual page kill(1) line 61/74 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mkill[0m(2),    [1mkillall[0m(1),    [1mnice[0m(1),   [1mpkill[0m(1),   [1mrenice[0m(1),   [1msignal[0m(7),[m
+[14;1H[K[7m Manual page kill(1) line 60/74 98% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mSEE[0m [1mALSO[0m[m
+[14;1H[K[7m Manual page kill(1) line 59/74 96% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page kill(1) line 58/74 95% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              Send the default signal, SIGTERM, to all those processes.[m
+[14;1H[K[7m Manual page kill(1) line 57/74 95% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mkill[0m [1m123[0m [1m543[0m [1m2341[0m [1m3453[0m[m
+[14;1H[K[7m Manual page kill(1) line 56/74 94% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page kill(1) line 55/74 91% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              List the available signal choices in a nice table.[m
+[14;1H[K[7m Manual page kill(1) line 54/74 89% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mkill[0m [1m-L[0m[m
+[14;1H[K[7m Manual page kill(1) line 53/74 88% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page kill(1) line 52/74 88% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              Translate number 11 into a signal name.[m
+[14;1H[K[7m Manual page kill(1) line 51/74 86% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mkill[0m [1m-l[0m [1m11[0m[m
+[14;1H[K[7m Manual page kill(1) line 50/74 85% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page kill(1) line 49/74 85% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              Kill all processes you can kill.[m
+[14;1H[K[7m Manual page kill(1) line 48/74 83% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mkill[0m [1m-9[0m [1m-1[0m[m
+[14;1H[K[7m Manual page kill(1) line 47/74 79% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mEXAMPLES[0m[m
+[14;1H[K[7m Manual page kill(1) line 46/74 78% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page kill(1) line 45/74 78% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              /bin/kill to solve the conflict.[m
+[14;1H[K[7m Manual page kill(1) line 44/74 76% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              command.  You may need  to  run  the  command  described  here  as[m
+[14;1H[K[7m Manual page kill(1) line 43/74 74% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mNOTES[0m  Your  shell  (command  line  interpreter) may have a built-in kill[m
+[14;1H[K[7m Manual page kill(1) line 42/74 74% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page kill(1) line 41/74 72% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              List signal names in a nice table.[m
+[14;1H[K[7m Manual page kill(1) line 40/74 72% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-L[0m, [1m--table[0m[m
+[14;1H[K[7m Manual page kill(1) line 39/74 72% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page kill(1) line 38/74 70% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              convert signal number to signal name, or other way round.[m
+[14;1H[K[7m Manual page kill(1) line 37/74 69% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              List signal names.  This option has optional argument, which  will[m
+[14;1H[K[7m Manual page kill(1) line 36/74 69% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-l[0m, [1m--list[0m [[4msignal[24m][m
+[14;1H[K[7m Manual page kill(1) line 35/74 68% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page kill(1) line 34/74 67% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              si_value field of the siginfo_t structure.[m
+[14;1H[K[7m Manual page kill(1) line 33/74 66% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              INFO  flag  to  [1msigaction(2)[0m, then it can obtain this data via the[m
+[14;1H[K[7m Manual page kill(1) line 32/74 66% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              process has installed a handler for this signal using the  SA_SIG‐[m
+[14;1H[K[7m Manual page kill(1) line 31/74 64% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              to specify an integer to be sent with the signal. If the receiving[m
+[14;1H[K[7m Manual page kill(1) line 30/74 62% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              Use [1msigqueue(3)[0m rather than [1mkill(2)[0m and the value argument is used[m
+[14;1H[K[7m Manual page kill(1) line 29/74 59% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-q[0m, [1m--queue[0m [4mvalue[24m[m
+[14;1H[K[7m Manual page kill(1) line 28/74 59% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page kill(1) line 27/74 58% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              [1mnal[0m(7) manual page.[m
+[14;1H[K[7m Manual page kill(1) line 26/74 57% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              ing  name or number.  The behavior of signals is explained in [1msig‐[0m[m
+[14;1H[K[7m Manual page kill(1) line 25/74 57% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              Specify the [1msignal[0m to be sent.  The signal can be specified by us‐[m
+[14;1H[K[7m Manual page kill(1) line 24/74 55% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m--signal[0m [1m<signal>[0m[m
+[14;1H[K[7m Manual page kill(1) line 23/74 52% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-s[0m [1m<signal>[0m[m
+[14;1H[K[7m Manual page kill(1) line 22/74 51% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-<signal>[0m[m
+[14;1H[K[7m Manual page kill(1) line 21/74 51% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page kill(1) line 20/74 49% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              Send signal to every <pid> listed.[m
+[14;1H[K[7m Manual page kill(1) line 19/74 46% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m<pid>[0m [1m[...][0m[m
+[14;1H[K[7m Manual page kill(1) line 18/74 43% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mOPTIONS[0m[m
+[14;1H[K[7m Manual page kill(1) line 17/74 41% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page kill(1) line 16/74 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       dicates all processes except the kill process itself and init.[m
+[14;1H[K[7m Manual page kill(1) line 15/74 36% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       see the PGID column in ps command output.  A PID of [1m-1[0m is special; it in‐[m
+[14;1H[K[7m Manual page kill(1) line 14/74 36% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-KILL[0m.  Negative PID values may be used to choose whole  process  groups;[m
+[14;1H[K[7m Manual page kill(1) line 13/74 35% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       and 0.  Alternate signals may be specified in three ways: [1m-9[0m, [1m-SIGKILL[0m or[m
+[14;1H[K[7m Manual page kill(1) line 12/74 32% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       nals.  Particularly useful signals include HUP, INT,  KILL,  STOP,  CONT,[m
+[14;1H[K[7m Manual page kill(
