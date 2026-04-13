@@ -19,37 +19,14 @@
     "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 80
   },
-  "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff"
-  },
-  "[shellscript]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  "[python]": { "editor.defaultFormatter": "charliermarsh.ruff" },
+  "[shellscript]": { "editor.defaultFormatter": "foxundermoon.shell-format" },
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[yaml]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
   "AREPL.skipLandingPage": true,
-  "auto-run-command.rules": [
-    {
-      "command": "workbench.action.toggleScreencastMode",
-      "condition": "hasFile: .ignored-enable-screencast"
-    },
-    {
-      "command": [
-        "workbench.action.toggleFullScreen",
-        "workbench.debug.viewlet.action.removeAllBreakpoints",
-        "github.copilot.toggleCopilot"
-      ],
-      "condition": "always"
-    }
-  ],
-  "breadcrumbs.enabled": true,
+  "breadcrumbs.enabled": false,
   "debug.console.fontSize": 14,
   "editor.acceptSuggestionOnEnter": "off",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
@@ -70,17 +47,23 @@
   "explorer.excludeGitIgnore": true,
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
-  "files.exclude": {
-    "**/ignored*": false,
-    ".*": true,
-    ".shared": true
-  },
+  "files.exclude": { "**/ignored*": false, ".shared": true, ".*": true },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "git.openRepositoryInParentFolders": "never",
+  // --- Anti-AI / Copilot / Chat ---
+  "chat.disableAIFeatures": true,
+  "github.copilot.enable": {
+    "*": false
+  },
+  "github.copilot.inlineSuggest.enable": false,
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "github.copilot.editor.enableAutoCompletions": false,
+  "github.copilot.editor.enableSuggestions": false,
+  // -------------------------------
   "json.format.enable": false,
   "scm.inputFontFamily": "editor",
   "screencastMode.keyboardOptions": {
@@ -91,7 +74,6 @@
   "screencastMode.mouseIndicatorSize": 60,
   "screencastMode.verticalOffset": 10,
   "terminal.integrated.defaultProfile.linux": "BashPresentation",
-  "terminal.integrated.fontFamily": "'IBM Plex Mono', 'Droid Sans Mono', 'monospace', monospace",
   "terminal.integrated.fontSize": 17,
   "terminal.integrated.fontWeight": "600",
   "terminal.integrated.minimumContrastRatio": 7,
@@ -101,10 +83,8 @@
       "path": "bash"
     }
   },
-  "terminal.integrated.suggest.quickSuggestions": {
-    "arguments": "off"
-  },
-  "window.zoomLevel": 4,
+  "terminal.integrated.suggest.quickSuggestions": false,
+  "window.zoomLevel": 2,
   "window.zoomPerWindow": false,
   "workbench.activityBar.location": "hidden",
   "workbench.colorCustomizations": {
