@@ -1,0 +1,670 @@
+/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS25/lektion1
+recordings
+DEVOPS25/lektion1
+$ ls
+recordings
+DEVOPS25/lektion1
+$ touch greeting
+DEVOPS25/lektion1
+$ ls
+greeting  recordings
+DEVOPS25/lektion1
+$ pwd
+/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS25/lektion1
+DEVOPS25/lektion1
+$ DEVOPS25/lektion1
+$ clear
+DEVOPS25/lektion1
+$ DEVOPS25/lektion1
+$ ls -i
+93724782 greeting  93724720 recordings
+DEVOPS25/lektion1
+$ ls greeting-i
+93724782 greeting
+DEVOPS25/lektion1
+$ ls -i greeting
+93724782 greeting  93724720 recordings
+DEVOPS25/lektion1
+$ DEVOPS25/lektion1
+$ stat rgreeting 
+  File: greeting
+  Size: 0         	Blocks: 0          IO Block: 4096   regular empty file
+Device: 253,1	Inode: 93724782    Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1000/    kent)   Gid: ( 1000/    kent)
+Access: 2026-04-14 14:06:21.001059346 +0200
+Modify: 2026-04-14 14:06:21.001059346 +0200
+Change: 2026-04-14 14:06:21.001059346 +0200
+ Birth: 2026-04-14 14:06:21.001059346 +0200
+DEVOPS25/lektion1
+$ DEVOPS25/lektion1
+$ ls
+greeting  recordings
+DEVOPS25/lektion1
+$ ln
+DEVOPS25/lektion1
+$ man ln
+LN(1)                             User Commands                            LN(1)
+
+NAME
+       ln - make links between files
+
+SYNOPSIS
+       ln [OPTION]... [-T] TARGET LINK_NAME
+       ln [OPTION]... TARGET
+       ln [OPTION]... TARGET... DIRECTORY
+       ln [OPTION]... -t DIRECTORY TARGET...
+
+DESCRIPTION
+       In the 1st form, create a link to TARGET with the name LINK_NAME.  In the
+       2nd form, create a link to TARGET in the current directory.  In  the  3rd
+       and  4th  forms,  create  links to each TARGET in DIRECTORY.  Create hard
+       links by default, symbolic links with --symbolic.  By default, each  des‐
+       tination (name of new link) should not already exist.  When creating hard
+       links, each TARGET must exist.  Symbolic links can hold  arbitrary  text;
+       if later resolved, a relative link is interpreted in relation to its par‐
+       ent directory.ne 6 (press h for help or q to quit)
+ ESESCOBpage ln(1) line 7 (press h for help or q to quit)
+       Mandatory arguments to long options are mandatory for short options too.
+ ESESCOBpage ln(1) line 9 (press h for help or q to quit)
+       --backup[=CONTROL]0 (press h for help or q to quit)
+              make a backup of each existing destination file
+ ESESCOBpage ln(1) line 12 (press h for help or q to quit)
+       -b     like --backup but does not accept an argument
+ ESESCOBpage ln(1) line 14 (press h for help or q to quit)
+       -d, -F, --directory (press h for help or q to quit)
+              allow the superuser to attempt to  hard  link  directories  (note:
+              will  probably fail due to system restrictions, even for the supe‐
+              ruser)ine 18 (press h for help or q to quit)
+ ESESCOBpage ln(1) line 19 (press h for help or q to quit)
+       -f, --force line 20 (press h for help or q to quit)
+              remove existing destination files q to quit)
+ ESESCOBpage ln(1) line 22 (press h for help or q to quit)
+       -i, --interactive23 (press h for help or q to quit)
+              prompt whether to remove destinationso quit)
+ ESESCOBpage ln(1) line 25 (press h for help or q to quit)
+       -L, --logicaline 26 (press h for help or q to quit)
+              dereference TARGETs that are symbolic links)
+ ESESCOBpage ln(1) line 28 (press h for help or q to quit)
+       -n, --no-dereference(press h for help or q to quit)
+              treat LINK_NAME as a normal file if it is a symbolic link to a di‐
+M              allow the superuser to attempt to  hard  link  directories  (note:
+M       -d, -F, --directory(press h for help or q to quit)
+MESESCOApage ln(1) line 29 (press h for help or q to quit)
+M       -b     like --backup but does not accept an argument
+MESESCOApage ln(1) line 27 (press h for help or q to quit)
+M              make a backup of each existing destination file
+M       --backup[=CONTROL] (press h for help or q to quit)
+MESESCOApage ln(1) line 24 (press h for help or q to quit)
+M       Mandatory arguments to long options are mandatory for short options too.
+MESESCOApage ln(1) line 22 (press h for help or q to quit)
+M       ent directory.e 21 (press h for help or q to quit)
+       -f, --force line 20 (press h for help or q to quit)
+              remove existing destination files q to quit)
+ ESESCOBpage ln(1) line 22 (press h for help or q to quit)
+       -i, --interactive23 (press h for help or q to quit)
+              prompt whether to remove destinationso quit)
+ ESESCOBpage ln(1) line 25 (press h for help or q to quit)
+       -L, --logicaline 26 (press h for help or q to quit)
+              dereference TARGETs that are symbolic links)
+ ESESCOBpage ln(1) line 28 (press h for help or q to quit)
+       -n, --no-dereference(press h for help or q to quit)
+              treat LINK_NAME as a normal file if it is a symbolic link to a di‐
+              rectoryne 31 (press h for help or q to quit)
+ ESESCOBpage ln(1) line 32 (press h for help or q to quit)
+       -P, --physicalne 33 (press h for help or q to quit)
+              make hard links directly to symbolic linkst)
+ ESESCOBpage ln(1) line 35 (press h for help or q to quit)
+       -r, --relativene 36 (press h for help or q to quit)
+              with -s, create links relative to link location
+ ESESCOBpage ln(1) line 38 (press h for help or q to quit)
+       -s, --symbolicne 39 (press h for help or q to quit)
+              make symbolic links instead of hard linksit)
+ ESESCOBpage ln(1) line 41 (press h for help or q to quit)
+       -S, --suffix=SUFFIX (press h for help or q to quit)
+              override the usual backup suffixr q to quit)
+ ESESCOBpage ln(1) line 44 (press h for help or q to quit)
+       -t, --target-directory=DIRECTORY help or q to quit)
+              specify the DIRECTORY in which to create the links
+ ESESCOBpage ln(1) line 47 (press h for help or q to quit)
+       -T, --no-target-directorys h for help or q to quit)
+              treat LINK_NAME as a normal file alwaysquit)
+ ESESCOBpage ln(1) line 50 (press h for help or q to quit)
+       -v, --verboseine 51 (press h for help or q to quit)
+              print name of each linked file or q to quit)
+ ESESCOBpage ln(1) line 53 (press h for help or q to quit)
+       --help display this help and exithelp or q to quit)
+ ESESCOBpage ln(1) line 55 (press h for help or q to quit)
+       --version1) line 56 (press h for help or q to quit)
+              output version information and exit to quit)
+ ESESCOBpage ln(1) line 58 (press h for help or q to quit)
+       The  backup suffix is '~', unless set with --suffix or SIMPLE_BACKUP_SUF‐
+       FIX.  The version control method may be selected via the --backup  option
+       or  through  the VERSION_CONTROL environment variable.  Here are the val‐
+       ues:e ln(1) line 62 (press h for help or q to quit)
+M       -T, --no-target-directory h for help or q to quit)
+       ues:e ln(1) line 62 (press h for help or q to quit)
+ ESESCOBpage ln(1) line 63 (press h for help or q to quit)
+       none, off1) line 64 (press h for help or q to quit)
+              never make backups (even if --backup is given)
+ ESESCOBpage ln(1) line 66 (press h for help or q to quit)
+       numbered, t line 67 (press h for help or q to quit)
+              make numbered backups for help or q to quit)
+ ESESCOBpage ln(1) line 69 (press h for help or q to quit)
+       existing, niline 70 (press h for help or q to quit)
+              numbered if numbered backups exist, simple otherwise
+ ESESCOBpage ln(1) line 72 (press h for help or q to quit)
+       simple, neverine 73 (press h for help or q to quit)
+              always make simple backupshelp or q to quit)
+ ESESCOBpage ln(1) line 75 (press h for help or q to quit)
+       Using -s ignores -L and -P.  Otherwise, the last  option  specified  con‐
+       trols behavior when a TARGET is a symbolic link, defaulting to -P.
+ ESESCOBpage ln(1) line 78 (press h for help or q to quit)
+AUTHOROBpage ln(1) line 79 (press h for help or q to quit)
+       Written by Mike Parker and David MacKenzie.to quit)
+ ESESCOBpage ln(1) line 81 (press h for help or q to quit)
+REPORTING BUGSn(1) line 82 (press h for help or q to quit)
+       GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+       Report any translation bugs to <https://translationproject.org/team/>
+ ESESCOBpage ln(1) line 85 (press h for help or q to quit)
+COPYRIGHTage ln(1) line 86 (press h for help or q to quit)
+       Copyright  © 2022 Free Software Foundation, Inc.  License GPLv3+: GNU GPL
+       version 3 or later <https://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There
+       is NO WARRANTY, to the extent permitted by law.uit)
+ ESESCOBpage ln(1) line 91 (press h for help or q to quit)
+SEE ALSOpage ln(1) line 92 (press h for help or q to quit)
+       link(2), symlink(2) (press h for help or q to quit)
+ ESESCOBpage ln(1) line 94 (press h for help or q to quit)
+M       Written by Mike Parker and David MacKenzie.o quit)
+ ESESCOBpage ln(1) line 94 (press h for help or q to quit)
+       Full documentation <https://www.gnu.org/software/coreutils/ln>
+       or available locally via: info '(coreutils) ln invocation'
+ ESESCOBpage ln(1) line 97 (press h for help or q to quit)
+GNU coreutils 9.1                September 2022                            LN(1)
+ ESESCOBpage ln(1) line 99 (press h for help or q to quit)
+M       Report any translation bugs to <https://translationproject.org/team/>
+M       GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+MREPORTING BUGS(1) line 97/112 98% (press h for help or q to quit)
+MESESCOApage ln(1) line 96/112 97% (press h for help or q to quit)
+M       Written by Mike Parker and David MacKenzie.p or q to quit)
+MAUTHORApage ln(1) line 94/112 95% (press h for help or q to quit)
+MESESCOApage ln(1) line 93/112 94% (press h for help or q to quit)
+M       trols behavior when a TARGET is a symbolic link, defaulting to -P.
+M       Using -s ignores -L and -P.  Otherwise, the last  option  specified  con‐
+MESESCOApage ln(1) line 90/112 93% (press h for help or q to quit)
+M              always make simple backups h for help or q to quit)
+M       simple, neverne 88/112 90% (press h for help or q to quit)
+MESESCOApage ln(1) line 87/112 88% (press h for help or q to quit)
+M              numbered if numbered backups exist, simple otherwise
+M       existing, nilne 85/112 87% (press h for help or q to quit)
+MESESCOApage ln(1) line 84/112 86% (press h for help or q to quit)
+M              make numbered backupspress h for help or q to quit)
+M       numbered, tline 82/112 83% (press h for help or q to quit)
+MESESCOApage ln(1) line 81/112 83% (press h for help or q to quit)
+M              never make backups (even if --backup is given)quit)
+M       none, off) line 79/112 82% (press h for help or q to quit)
+MESESCOApage ln(1) line 78/112 82% (press h for help or q to quit)
+M       ues: ln(1) line 77/112 80% (press h for help or q to quit)
+M       or  through  the VERSION_CONTROL environment variable.  Here are the val‐
+M       FIX.  The version control method may be selected via the --backup  option
+M       The  backup suffix is '~', unless set with --suffix or SIMPLE_BACKUP_SUF‐
+MESESCOApage ln(1) line 73/112 77% (press h for help or q to quit)
+M              output version information and exitlp or q to quit)
+M       --version) line 71/112 75% (press h for help or q to quit)
+MESESCOApage ln(1) line 70/112 75% (press h for help or q to quit)
+M       --help display this help and exit h for help or q to quit)
+MESESCOApage ln(1) line 68/112 74% (press h for help or q to quit)
+M              print name of each linked fileor help or q to quit)
+>DEVOPS25/lektion1 line 66/112 74% (press h for help or q to quit)
+$ ls
+greeting  recordings
+DEVOPS25/lektion1
+$ ln greeting he
+
+
+
+
+
+
+DEVOPS25/lektion1
+$ ls
+greeting  hej  recordings
+DEVOPS25/lektion1
+$ DEVOPS25/lektion1
+$ ls -i
+93724782 greeting  93724782 hej  93724720 recordings
+DEVOPS25/lektion1
+$ stat greeting 
+  File: greeting
+  Size: 0         	Blocks: 0          IO Block: 4096   regular empty file
+Device: 253,1	Inode: 93724782    Links: 2
+Access: (0644/-rw-r--r--)  Uid: ( 1000/    kent)   Gid: ( 1000/    kent)
+Access: 2026-04-14 14:06:21.001059346 +0200
+Modify: 2026-04-14 14:06:21.001059346 +0200
+Change: 2026-04-14 14:15:07.900807239 +0200
+ Birth: 2026-04-14 14:06:21.001059346 +0200
+DEVOPS25/lektion1
+$ qDEVOPS25/lektion1
+$ qls
+greeting  hej  recordings
+DEVOPS25/lektion1
+$ ln hej GrEeeTiNg
+DEVOPS25/lektion1
+$ DEVOPS25/lektion1
+$ ls
+GrEeTiNg  greeting  hej  recordings
+DEVOPS25/lektion1
+$ ln greeting Greeting
+DEVOPS25/lektion1
+$ DEVOPS25/lektion1
+$ ls
+GrEeTiNg  Greeting  greeting  hej  recordings
+DEVOPS25/lektion1
+$ ls -i
+93724782 GrEeTiNg  93724782 greeting  93724720 recordings
+93724782 Greeting  93724782 hej
+DEVOPS25/lektion1
+$ stat greeting DEVOPS25/lektion1
+$ stat greeting 
+  File: greeting
+  Size: 0         	Blocks: 0          IO Block: 4096   regular empty file
+Device: 253,1	Inode: 93724782    Links: 4
+Access: (0644/-rw-r--r--)  Uid: ( 1000/    kent)   Gid: ( 1000/    kent)
+Access: 2026-04-14 14:06:21.001059346 +0200
+Modify: 2026-04-14 14:06:21.001059346 +0200
+Change: 2026-04-14 14:17:45.644245667 +0200
+ Birth: 2026-04-14 14:06:21.001059346 +0200
+DEVOPS25/lektion1
+$ DEVOPS25/lektion1
+$ ls -i
+93724782 GrEeTiNg  93724782 greeting  93724720 recordings
+93724782 Greeting  93724782 hej
+DEVOPS25/lektion1
+$ nano GrEeTiNg 
+>DEVOPS25/lektion1: GrEeTiNg [ Writing... ] [ Wrote 2 lines ]                       Y Yes                       S  
+$ cat hej 
+HOWDY
+
+DEVOPS25/lektion1
+$ rm GreetingEeTiNg hej 
+DEVOPS25/lektion1
+$ DEVOPS25/lektion1
+$ ls -i
+93724782 Greeting  93724782 greeting  93724720 recordings
+DEVOPS25/lektion1
+$ cat Greetingeeting 
+HOWDY
+
+DEVOPS25/lektion1
+$ rm Greeting 
+DEVOPS25/lektion1
+$ DEVOPS25/lektion1
+$ man cat
+CAT(1)                            User Commands                           CAT(1)
+
+NAME
+       cat - concatenate files and print on the standard output
+
+SYNOPSIS
+       cat [OPTION]... [FILE]...
+
+DESCRIPTION
+       Concatenate FILE(s) to standard output.
+
+       With no FILE, or when FILE is -, read standard input.
+
+       -A, --show-all
+>DEVOPS25/lektion1) line 1 (press h for help or q to quit)
+$ 
+DEVOPS25/lektion1
+$ ls
+greeting  recordings
+DEVOPS25/lektion1
+$ ln -
+man ls
+LS(1)                             User Commands                            LS(1)
+
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List  information  about  the  FILEs  (the current directory by default).
+       Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -a, --all1) line 1 (press h for help or q to quit)
+              do not ignore entries starting with . quit)
+ ESESCOBpage ls(1) line 3 (press h for help or q to quit)
+       -A, --almost-all 4 (press h for help or q to quit)
+              do not list implied . and ..p or q to quit)
+ ESESCOBpage ls(1) line 6 (press h for help or q to quit)
+       --author(1) line 7 (press h for help or q to quit)
+              with -l, print the author of each filequit)
+ ESESCOBpage ls(1) line 9 (press h for help or q to quit)
+       -b, --escapeline 10 (press h for help or q to quit)
+              print C-style escapes for nongraphic characters
+ ESESCOBpage ls(1) line 12 (press h for help or q to quit)
+       --block-size=SIZE13 (press h for help or q to quit)
+              with  -l,  scale  sizes  by  SIZE  when   printing   them;   e.g.,
+              '--block-size=M'; see SIZE format belowquit)
+ ESESCOBpage ls(1) line 16 (press h for help or q to quit)
+       -B, --ignore-backups(press h for help or q to quit)
+              do not list implied entries ending with ~it)
+ ESESCOBpage ls(1) line 19 (press h for help or q to quit)
+       -c     with  -lt:  sort by, and show, ctime (time of last modification of
+              file status information); with -l: show ctime and  sort  by  name;
+              otherwise: sort by ctime, newest first quit)
+ ESESCOBpage ls(1) line 23 (press h for help or q to quit)
+       -C     list entries by columnsor help or q to quit)
+ ESESCOBpage ls(1) line 25 (press h for help or q to quit)
+       --color[=WHEN]ne 26 (press h for help or q to quit)
+              color the output WHEN; more info below quit)
+ ESESCOBpage ls(1) line 28 (press h for help or q to quit)
+       -d, --directorye 29 (press h for help or q to quit)
+              list directories themselves, not their contents
+ ESESCOBpage ls(1) line 31 (press h for help or q to quit)
+       -D, --dired line 32 (press h for help or q to quit)
+              generate output designed for Emacs' dired mode
+ ESESCOBpage ls(1) line 34 (press h for help or q to quit)
+       -f     list all entries in directory order to quit)
+ ESESCOBpage ls(1) line 36 (press h for help or q to quit)
+       -F, --classify[=WHEN]press h for help or q to quit)
+              append indicator (one of */=>@|) to entries WHEN
+ ESESCOBpage ls(1) line 39 (press h for help or q to quit)
+       --file-type line 40 (press h for help or q to quit)
+              likewise, except do not append '*'q to quit)
+ ESESCOBpage ls(1) line 42 (press h for help or q to quit)
+       --format=WORDine 43 (press h for help or q to quit)
+              across  -x,  commas  -m, horizontal -x, long -l, single-column -1,
+              verbose -l, vertical -Cor help or q to quit)
+ ESESCOBpage ls(1) line 46 (press h for help or q to quit)
+       --full-time line 47 (press h for help or q to quit)
+              like -l --time-style=full-isop or q to quit)
+ ESESCOBpage ls(1) line 49 (press h for help or q to quit)
+       -g     like -l, but do not list owner or q to quit)
+ ESESCOBpage ls(1) line 51 (press h for help or q to quit)
+       --group-directories-firsts h for help or q to quit)
+              group directories before files; can be augmented with a --sort op‐
+              tion, but any use of --sort=none (-U) disables grouping
+ ESESCOBpage ls(1) line 55 (press h for help or q to quit)
+       -G, --no-groupne 56 (press h for help or q to quit)
+              in a long listing, don't print group namest)
+ ESESCOBpage ls(1) line 58 (press h for help or q to quit)
+       -h, --human-readable(press h for help or q to quit)
+              with -l and -s, print sizes like 1K 234M 2G etc.
+ ESESCOBpage ls(1) line 61 (press h for help or q to quit)
+       --si   likewise, but use powers of 1000 not 1024it)
+ ESESCOBpage ls(1) line 63 (press h for help or q to quit)
+       -H, --dereference-command-lineor help or q to quit)
+              follow symbolic links listed on the command line
+ ESESCOBpage ls(1) line 66 (press h for help or q to quit)
+       --dereference-command-line-symlink-to-dirq to quit)
+              follow each command line symbolic link that points to a directory
+ ESESCOBpage ls(1) line 69 (press h for help or q to quit)
+       --hide=PATTERNne 70 (press h for help or q to quit)
+              do  not list implied entries matching shell PATTERN (overridden by
+              -a or -A) 72 (press h for help or q to quit)
+ ESESCOBpage ls(1) line 73 (press h for help or q to quit)
+       --hyperlink[=WHEN]4 (press h for help or q to quit)
+              hyperlink file names WHEN help or q to quit)
+ ESESCOBpage ls(1) line 76 (press h for help or q to quit)
+       --indicator-style=WORDress h for help or q to quit)
+              append indicator with style WORD to entry names:  none  (default),
+              slash (-p), file-type (--file-type), classify (-F)
+ ESESCOBpage ls(1) line 80 (press h for help or q to quit)
+       -i, --inode line 81 (press h for help or q to quit)
+              print the index number of each file to quit)
+ ESESCOBpage ls(1) line 83 (press h for help or q to quit)
+       -I, --ignore=PATTERN(press h for help or q to quit)
+              do not list implied entries matching shell PATTERN
+ ESESCOBpage ls(1) line 86 (press h for help or q to quit)
+       -k, --kibibytese 87 (press h for help or q to quit)
+>DEVOPS25/lektion1 line 88 (press h for help or q to quit)
+$ man lnDEVOPS25/lektion1
+$ man ln
+LN(1)                             User Commands                            LN(1)
+
+NAME
+       ln - make links between files
+
+SYNOPSIS
+       ln [OPTION]... [-T] TARGET LINK_NAME
+       ln [OPTION]... TARGET
+       ln [OPTION]... TARGET... DIRECTORY
+       ln [OPTION]... -t DIRECTORY TARGET...
+
+DESCRIPTION
+       In the 1st form, create a link to TARGET with the name LINK_NAME.  In the
+       2nd form, create a link to TARGET in the current directory.  In  the  3rd
+       and  4th  forms,  create  links to each TARGET in DIRECTORY.  Create hard
+       links by default, symbolic links with --symbolic.  By default, each  des‐
+       tination (name of new link) should not already exist.  When creating hard
+       links, each TARGET must exist.  Symbolic links can hold  arbitrary  text;
+       if later resolved, a relative link is interpreted in relation to its par‐
+       ent directory.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       --backup[=CONTROL]
+              make a backup of each existing destination file
+
+       -b     like --backup but does not accept an argument
+
+       -d, -F, --directory (press h for help or q to quit)
+              allow the superuser to attempt to  hard  link  directories  (note:
+              will  probably fail due to system restrictions, even for the supe‐
+              ruser)
+
+       -f, --force
+              remove existing destination files
+
+       -i, --interactive
+              prompt whether to remove destinations
+
+       -L, --logical
+              dereference TARGETs that are symbolic links
+
+       -n, --no-dereference(press h for help or q to quit)
+              treat LINK_NAME as a normal file if it is a symbolic link to a di‐
+              rectory
+
+       -P, --physical
+              make hard links directly to symbolic links
+
+       -r, --relative
+              with -s, create links relative to link location
+
+       -s, --symbolic
+              make symbolic links instead of hard links
+
+       -S, --suffix=SUFFIX
+>DEVOPS25/lektion1 line 43 (press h for help or q to quit)
+$ DEVOPS25/lektion1
+$ ls
+greeting  recordings
+DEVOPS25/lektion1
+$ ln -s greeting cowboy
+DEVOPS25/lektion1
+$ ls -i 
+93724784 cowboy  93724782 greeting  93724720 recordings
+DEVOPS25/lektion1
+$ DEVOPS25/lektion1
+$ ls
+cowboy  greeting  recordings
+DEVOPS25/lektion1
+$ nano cowboy 
+>DEVOPS25/lektion1: cowboy [ Writing... ] [ Wrote 3 lines ]                         Y Yes                       S  
+$ cat greeting 
+HOWDY!!!!!
+
+
+DEVOPS25/lektion1
+$ cat vocowboy DEVOPS25/lektion1
+$ cat cowboy 
+HOWDY!!!!!
+
+
+DEVOPS25/lektion1
+$ DEVOPS25/lektion1
+$ 
+man lcat
+CAT(1)                            User Commands                           CAT(1)
+
+NAME
+       cat - concatenate files and print on the standard output
+
+SYNOPSIS
+       cat [OPTION]... [FILE]...
+
+DESCRIPTION
+       Concatenate FILE(s) to standard output.
+
+       With no FILE, or when FILE is -, read standard input.
+
+       -A, --show-all
+CAT(1)                            User Commands                           CAT(1)
+
+NAME
+       cat - concatenate files and print on the standard output
+
+SYNOPSIS
+       cat [OPTION]... [FILE]...
+
+DESCRIPTION
+       Concatenate FILE(s) to standard output.
+
+       With no FILE, or when FILE is -, read standard input.
+
+       -A, --show-all
+CAT(1)                            User Commands                           CAT(1)
+
+NAME
+       cat - concatenate files and print on the standard output
+
+SYNOPSIS
+       cat [OPTION]... [FILE]...
+
+DESCRIPTION
+       Concatenate FILE(s) to standard output.
+
+       With no FILE, or when FILE is -, read standard input.
+
+       -A, --show-all
+>DEVOPS25/lektion1 (press RETURN)
+$ ls
+cowboy  greeting  recordings
+DEVOPS25/lektion1
+$ rm cowboy
+
+
+
+stat greeting 
+  File: greeting
+  Size: 13        	Blocks: 8          IO Block: 4096   regular file
+Device: 253,1	Inode: 93724782    Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1000/    kent)   Gid: ( 1000/    kent)
+Access: 2026-04-14 14:24:25.968892893 +0200
+Modify: 2026-04-14 14:24:23.024829586 +0200
+Change: 2026-04-14 14:24:23.024829586 +0200
+ Birth: 2026-04-14 14:06:21.001059346 +0200
+DEVOPS25/lektion1
+$ DEVOPS25/lektion1
+$ ls
+cowboy  greeting  recordings
+DEVOPS25/lektion1
+$ rm greeting 
+DEVOPS25/lektion1
+$ ls
+cowboy  recordings
+DEVOPS25/lektion1
+$ act c
+cat cowboy DEVOPS25/lektion1
+$ cat cowboy 
+cat: cowboy: No such file or directory
+DEVOPS25/lektion1
+$ ls -l
+total 4
+lrwxrwxrwx 1 kent kent    8 14 apr 14.22 cowboy -> greeting
+drwxr-xr-x 2 kent kent 4096 14 apr 14.06 recordings
+DEVOPS25/lektion1
+$ nano cowboy 
+>DEVOPS25/lektion1: cowboy [ Writing... ] [ Wrote 2 lines ]                         Y Yes     S  
+$ ls -l
+total 8
+lrwxrwxrwx 1 kent kent    8 14 apr 14.22 cowboy -> greeting
+-rw-r--r-- 1 kent kent    5 14 apr 14.26 greeting
+drwxr-xr-x 2 kent kent 4096 14 apr 14.06 recordings
+DEVOPS25/lektion1
+$ nano cowbogreetin
+
+ls -o
+total 8
+lrwxrwxrwx 1 kent    8 14 apr 14.22 cowboy -> greeting
+-rw-r--r-- 1 kent    5 14 apr 14.26 greeting
+drwxr-xr-x 2 kent 4096 14 apr 14.06 recordings
+DEVOPS25/lektion1
+$ ls -i
+93724784 cowboy  93724786 greeting  93724720 recordings
+DEVOPS25/lektion1
+$ DEVOPS25/lektion1
+$ ls -l
+total 8
+lrwxrwxrwx 1 kent kent    8 14 apr 14.22 cowboy -> greeting
+-rw-r--r-- 1 kent kent    5 14 apr 14.26 greeting
+drwxr-xr-x 2 kent kent 4096 14 apr 14.06 recordings
+DEVOPS25/lektion1
+$ mkdir katalog
+DEVOPS25/lektion1
+$ DEVOPS25/lektion1
+$ ls
+cowboy  greeting  katalog  recordings
+DEVOPS25/lektion1
+$ ls katalog/
+DEVOPS25/lektion1
+$ ln katalog/ vaff
+ln: katalog/: hard link not allowed for directory
+DEVOPS25/lektion1
+$ ln katalog/ vaf-s 
+DEVOPS25/lektion1
+$ DEVOPS25/lektion1
+$ ls
+cowboy  greeting  katalog  recordings  vaff
+DEVOPS25/lektion1
+$ ls -lDEVOPS25/lektion1
+$ ls -l
+total 12
+lrwxrwxrwx 1 kent kent    8 14 apr 14.22 cowboy -> greeting
+-rw-r--r-- 1 kent kent    5 14 apr 14.26 greeting
+drwxr-xr-x 2 kent kent 4096 14 apr 14.28 katalog
+drwxr-xr-x 2 kent kent 4096 14 apr 14.06 recordings
+lrwxrwxrwx 1 kent kent    8 14 apr 14.29 vaff -> katalog/
+DEVOPS25/lektion1
+$ rm vaff
+DEVOPS25/lektion1
+ls -lDEVOPS25/lektion1
+$ ls -l
+total 12
+lrwxrwxrwx 1 kent kent    8 14 apr 14.22 cowboy -> greeting
+-rw-r--r-- 1 kent kent    5 14 apr 14.26 greeting
+drwxr-xr-x 2 kent kent 4096 14 apr 14.28 katalog
+drwxr-xr-x 2 kent kent 4096 14 apr 14.06 recordings
+DEVOPS25/lektion1
+$ mv cowboy cowboygirl
+DEVOPS25/lektion1
+$ ls -l
+total 12
+lrwxrwxrwx 1 kent kent    8 14 apr 14.22 cowgirl -> greeting
+-rw-r--r-- 1 kent kent    5 14 apr 14.26 greeting
+drwxr-xr-x 2 kent kent 4096 14 apr 14.28 katalog
+drwxr-xr-x 2 kent kent 4096 14 apr 14.06 recordings
+DEVOPS25/lektion1
+$ DEVOPS25/lektion1
+$ 
+
+DEVOPS25/lektion1
+$ exit
+exit

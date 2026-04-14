@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style type="text/css">
+pre {
+  font-family:Courier New;
+  font-size:10pt;
+}
+
+.af_line {
+  color: gray;
+  text-decoration: none;
+}
+
+</style>
+<title>Source file</title>
+</head>
+<body>
+<pre>/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS25/lektion1
+greeting  <span style="font-weight:bold;color:#5c5cff;">katalog</span>  <span style="font-weight:bold;color:#5c5cff;">ranch</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ ls
+greeting  <span style="font-weight:bold;color:#5c5cff;">katalog</span>  <span style="font-weight:bold;color:#5c5cff;">ranch</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ touch .hemligt
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion1
+</span>$ ls
+greeting  <span style="font-weight:bold;color:#5c5cff;">katalog</span>  <span style="font-weight:bold;color:#5c5cff;">ranch</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ ls -l
+total 16
+-rw-r--r-- 1 kent kent    5 14 apr 14.26 greeting
+drwxr-xr-x 2 kent kent 4096 14 apr 14.28 <span style="font-weight:bold;color:#5c5cff;">katalog</span>
+drwxr-xr-x 2 kent kent 4096 14 apr 14.43 <span style="font-weight:bold;color:#5c5cff;">ranch</span>
+drwxr-xr-x 2 kent kent 4096 14 apr 14.58 <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+<span style="color:#5c5cff;">"color:#5c5cff;">DEVOPS25/lektion1
+</span>$ ls -l -A
+total 16
+-rw-r--r-- 1 kent kent    0 14 apr 14.59 .hemligt
+-rw-r--r-- 1 kent kent    5 14 apr 14.26 greeting
+drwxr-xr-x 2 kent kent 4096 14 apr 14.28 <span style="font-weight:bold;color:#5c5cff;">katalog</span>
+drwxr-xr-x 2 kent kent 4096 14 apr 14.43 <span style="font-weight:bold;color:#5c5cff;">ranch</span>
+drwxr-xr-x 2 kent kent 4096 14 apr 14.58 <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ ls -l -
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ ls -lA
+total 16
+-rw-r--r-- 1 kent kent    0 14 apr 14.59 .hemligt
+-rw-r--r-- 1 kent kent    5 14 apr 14.26 greeting
+drwxr-xr-x 2 kent kent 4096 14 apr 14.28 <span style="font-weight:bold;color:#5c5cff;">katalog</span>
+drwxr-xr-x 2 kent kent 4096 14 apr 14.43 <span style="font-weight:bold;color:#5c5cff;">ranch</span>
+drwxr-xr-x 2 kent kent 4096 14 apr 14.58 <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ ls -l --R-lA-R
+.:
+greeting  <span style="font-weight:bold;color:#5c5cff;">katalog</span>  <span style="font-weight:bold;color:#5c5cff;">ranch</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+
+./katalog:
+
+./ranch:
+<span style="font-weight:bold;color:#00ffff;">cowgirl</span>
+
+./recordings:
+134230.cast  134457.html  134559.txt   140612.cast  144255.html
+134230.html  134457.txt   135157.cast  140612.html  144255.txt
+134230.txt   134559.cast  135157.html  140612.txt   145839.cast
+134457.cast  134559.html  135157.txt   144255.cast
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+<span style="color:#5c5cff;">color:#5c5cff;">DEVOPS25/lektion1
+</span>$ ls -RAl
+.:
+total 16
+-rw-r--r-- 1 kent kent    0 14 apr 14.59 .hemligt
+-rw-r--r-- 1 kent kent    5 14 apr 14.26 greeting
+drwxr-xr-x 2 kent kent 4096 14 apr 14.28 <span style="font-weight:bold;color:#5c5cff;">katalog</span>
+drwxr-xr-x 2 kent kent 4096 14 apr 14.43 <span style="font-weight:bold;color:#5c5cff;">ranch</span>
+drwxr-xr-x 2 kent kent 4096 14 apr 14.58 <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+
+./katalog:
+total 0
+
+./ranch:
+total 0
+lrwxrwxrwx 1 kent kent 8 14 apr 14.22 <span style="font-weight:bold;color:#00ffff;">cowgirl</span> -&gt; greeting
+
+./recordings:
+total 472
+-rw-r--r-- 1 kent kent   3244 14 apr 13.44 134230.cast
+-rw-r--r-- 1 kent kent   2078 14 apr 13.44 134230.html
+-rw-r--r-- 1 kent kent   1098 14 apr 13.44 134230.txt
+-rw-r--r-- 1 kent kent   2791 14 apr 13.51 134457.cast
+-rw-r--r-- 1 kent kent   1106 14 apr 13.51 134457.html
+-rw-r--r-- 1 kent kent    270 14 apr 13.51 134457.txt
+-rw-r--r-- 1 kent kent   4914 14 apr 13.51 134559.cast
+-rw-r--r-- 1 kent kent   3837 14 apr 13.51 134559.html
+-rw-r--r-- 1 kent kent    753 14 apr 13.51 134559.txt
+-rw-r--r-- 1 kent kent  16419 14 apr 13.54 135157.cast
+-rw-r--r-- 1 kent kent  12466 14 apr 13.54 135157.html
+-rw-r--r-- 1 kent kent   4032 14 apr 13.54 135157.txt
+-rw-r--r-- 1 kent kent 114069 14 apr 14.32 140612.cast
+-rw-r--r-- 1 kent kent  71253 14 apr 14.32 140612.html
+-rw-r--r-- 1 kent kent  26985 14 apr 14.32 140612.txt
+-rw-r--r-- 1 kent kent  71461 14 apr 14.58 144255.cast
+-rw-r--r-- 1 kent kent  68852 14 apr 14.58 144255.html
+-rw-r--r-- 1 kent kent  22319 14 apr 14.58 144255.txt
+-rw-r--r-- 1 kent kent   5443 14 apr 15.00 145839.cast
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion1
+</span>$ ls
+greeting  <span style="font-weight:bold;color:#5c5cff;">katalog</span>  <span style="font-weight:bold;color:#5c5cff;">ranch</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ ls -l
+total 16
+-rw-r--r-- 1 kent kent    5 14 apr 14.26 greeting
+drwxr-xr-x 2 kent kent 4096 14 apr 14.28 <span style="font-weight:bold;color:#5c5cff;">katalog</span>
+drwxr-xr-x 2 kent kent 4096 14 apr 14.43 <span style="font-weight:bold;color:#5c5cff;">ranch</span>
+drwxr-xr-x 2 kent kent 4096 14 apr 14.58 <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion1
+</span>$ ls
+greeting  <span style="font-weight:bold;color:#5c5cff;">katalog</span>  <span style="font-weight:bold;color:#5c5cff;">ranch</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+<span style="color:#5c5cff;">pan style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ nano bilmarken.txt
+<span style="color:#5c5cff;">f;">DEVOPS25/lektion1 Wrote 3 lines ]                  Y Yes                       bilmarken.txt                              S  
+</span>$ nano bilmarken.txt
+<span style="color:#5c5cff;">f;">DEVOPS25/lektion1 Wrote 3 lines ]                  Y Yes                       S  
+</span>$ ls
+bilmarken.txt  greeting  <span style="font-weight:bold;color:#5c5cff;">katalog</span>  <span style="font-weight:bold;color:#5c5cff;">ranch</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ 
+
+nano bilmarken.txt
+<span style="color:#5c5cff;">f;">DEVOPS25/lektion1 Wrote 3 lines ]                   Y Yes                      S  
+</span>$ nano bilmarken.txt
+<span style="color:#5c5cff;">f;">DEVOPS25/lektion1 Wrote 4 lines ]                  Y Yes                       S  
+<span style="color:#5c5cff;">pan style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ nano bilmarken.txt
+<span style="color:#5c5cff;">f;">DEVOPS25/lektion1 Wrote 5 lines ]                  Y Yesting... ] [ Wrote 5 lines ]^O Write Out ^W Where Is  ^K Cut       ^T Execute   ^C LocationX Exit      ^R Read File ^\ Replace   ^U Paste     ^J Justify   ^/ Go To Line
+</span>$ nano bilmarken.txt
+*MMMMMM^R Read File ^\ Replace   ^U Paste     ^J Justify   ^/ Go To Linemarken.txt                              S  
+
+
+<span style="color:#5c5cff;">f;">DEVOPS25/lektion1 Wrote 27 lines ]                 Y Yes>Fer</span>arriPaste     ^J Justify   ^/ Go To Line
+<span style="color:#5c5cff;">e="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ seq 1 1000 &gt;langfil
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ less langfil 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+<span style="color:#ffff00;background-color:#000000;">15SESCOB
+<span style="color:#ffff00;background-color:#000000;">16SESCOB
+<span style="color:#ffff00;background-color:#000000;">17SESCOB
+<span style="color:#ffff00;background-color:#000000;">18SESCOB
+<span style="color:#ffff00;background-color:#000000;">19SESCOB
+<span style="color:#ffff00;background-color:#000000;">20SESCOB
+<span style="color:#ffff00;background-color:#000000;">21SESCOB
+<span style="color:#ffff00;background-color:#000000;">22SESCOB
+<span style="color:#ffff00;background-color:#000000;">23SESCOB
+<span style="color:#ffff00;background-color:#000000;">24SESCOB
+<span style="color:#ffff00;background-color:#000000;">25SESCOB
+<span style="color:#ffff00;background-color:#000000;">26SESCOB
+<span style="color:#ffff00;background-color:#000000;">27SESCOB
+<span style="color:#ffff00;background-color:#000000;">28SESCOB
+<span style="color:#ffff00;background-color:#000000;">29SESCOB
+<span style="color:#ffff00;background-color:#000000;">30SESCOB
+<span style="color:#ffff00;background-color:#000000;">31SESCOB
+<span style="color:#ffff00;background-color:#000000;">32SESCOB
+<span style="color:#ffff00;background-color:#000000;">M18ESCOA
+<span style="color:#ffff00;background-color:#000000;">M17ESCOA
+<span style="color:#ffff00;background-color:#000000;">M16ESCOA
+<span style="color:#ffff00;background-color:#000000;">M15ESCOA
+<span style="color:#ffff00;background-color:#000000;">M14ESCOA
+<span style="color:#ffff00;background-color:#000000;">M13ESCOA
+<span style="color:#ffff00;background-color:#000000;">M12ESCOA
+<span style="color:#ffff00;background-color:#000000;">M11ESCOA
+<span style="color:#ffff00;background-color:#000000;">M10ESCOA
+<span style="color:#ffff00;background-color:#000000;">M9SESCOA
+<span style="color:#ffff00;background-color:#000000;">M8SESCOA
+<span style="color:#ffff00;background-color:#000000;">M7SESCOA
+<span style="color:#ffff00;background-color:#000000;">M6SESCOA
+<span style="color:#ffff00;background-color:#000000;">M5SESCOA
+<span style="color:#ffff00;background-color:#000000;">M4SESCOA
+<span style="color:#ffff00;background-color:#000000;">M3SESCOA
+<span style="color:#ffff00;background-color:#000000;">17SESCOB
+<span style="color:#ffff00;background-color:#000000;">18SESCOB
+<span style="color:#ffff00;background-color:#000000;">19SESCOB
+<span style="color:#ffff00;background-color:#000000;">20SESCOB
+<span style="color:#ffff00;background-color:#000000;">21SESCOB
+<span style="color:#ffff00;background-color:#000000;">22SESCOB
+<span style="color:#ffff00;background-color:#000000;">23SESCOB
+<span style="color:#ffff00;background-color:#000000;">24SESCOB
+<span style="color:#ffff00;background-color:#000000;">25SESCOB
+<span style="color:#ffff00;background-color:#000000;">26SESCOB
+<span style="color:#ffff00;background-color:#000000;">27SESCOB
+<span style="color:#ffff00;background-color:#000000;">28SESCOB
+<span style="color:#ffff00;background-color:#000000;">29SESCOB
+<span style="color:#ffff00;background-color:#000000;">30SESCOB
+<span style="color:#ffff00;background-color:#000000;">31SESCOB
+<span style="color:#ffff00;background-color:#000000;">32SESCOB
+<span style="color:#ffff00;background-color:#000000;">33SESCOB
+<span style="color:#ffff00;background-color:#000000;">34SESCOB
+<span style="color:#ffff00;background-color:#000000;">35SESCOB
+<span style="color:#ffff00;background-color:#000000;">36SESCOB
+<span style="color:#ffff00;background-color:#000000;">37SESCOB
+<span style="color:#ffff00;background-color:#000000;">38SESCOB
+<span style="color:#ffff00;background-color:#000000;">39SESCOB
+<span style="color:#ffff00;background-color:#000000;">40SESCOB
+<span style="color:#ffff00;background-color:#000000;">41SESCOB
+<span style="color:#ffff00;background-color:#000000;">42SESCOB
+<span style="color:#ffff00;background-color:#000000;">43SESCOB
+<span style="color:#ffff00;background-color:#000000;">44SESCOB
+<span style="color:#ffff00;background-color:#000000;">M30ESCOA
+<span style="color:#ffff00;background-color:#000000;">44SESCOB
+<span style="color:#ffff00;background-color:#000000;">M30ESCOA
+<span style="color:#ffff00;background-color:#000000;">M29ESCOA
+<span style="color:#ffff00;background-color:#000000;">M28ESCOA
+<span style="color:#ffff00;background-color:#000000;">M27ESCOA
+<span style="color:#ffff00;background-color:#000000;">M26ESCOA
+<span style="color:#ffff00;background-color:#000000;">M25ESCOA
+<span style="color:#ffff00;background-color:#000000;">M24ESCOA
+<span style="color:#ffff00;background-color:#000000;">M23ESCOA
+<span style="color:#ffff00;background-color:#000000;">M22ESCOA
+<span style="color:#ffff00;background-color:#000000;">M21ESCOA
+<span style="color:#ffff00;background-color:#000000;">M20ESCOA
+<span style="color:#ffff00;background-color:#000000;">M19ESCOA
+<span style="color:#ffff00;background-color:#000000;">M18ESCOA
+<span style="color:#ffff00;background-color:#000000;">M17ESCOA
+<span style="color:#ffff00;background-color:#000000;">M16ESCOA
+<span style="color:#ffff00;background-color:#000000;">M15ESCOA
+<span style="color:#ffff00;background-color:#000000;">M14ESCOA
+<span style="color:#ffff00;background-color:#000000;">M13ESCOA
+<span style="color:#ffff00;background-color:#000000;">M12ESCOA
+<span style="color:#ffff00;background-color:#000000;">M11ESCOA
+<span style="color:#ffff00;background-color:#000000;">M10ESCOA
+<span style="color:#ffff00;background-color:#000000;">M9SESCOA
+<span style="color:#ffff00;background-color:#000000;">M8SESCOA
+<span style="color:#ffff00;background-color:#000000;">M7SESCOA
+<span style="color:#ffff00;background-color:#000000;">21SESCOB
+<span style="color:#ffff00;background-color:#000000;">8333
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+...skipping...
+</span><span style="color:#000000;background-color:#ffff00;">333</span><span style="color:#ffff00;background-color:#000000;">
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+<span style="color:#ffff00;background-color:#000000;">333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+</span><span style="color:#000000;background-color:#ffff00;">33</span><span style="color:#ffff00;background-color:#000000;">3
+</span><span style="color:#000000;background-color:#ffff00;">33</span><span style="color:#ffff00;background-color:#000000;">4
+</span><span style="color:#000000;background-color:#ffff00;">33</span><span style="color:#ffff00;background-color:#000000;">5
+</span><span style="color:#000000;background-color:#ffff00;">33</span><span style="color:#ffff00;background-color:#000000;">6
+</span><span style="color:#000000;background-color:#ffff00;">33</span><span style="color:#ffff00;background-color:#000000;">7
+</span><span style="color:#000000;background-color:#ffff00;">33</span><span style="color:#ffff00;background-color:#000000;">8
+</span><span style="color:#000000;background-color:#ffff00;">33</span><span style="color:#ffff00;background-color:#000000;">9
+340
+341
+342
+343
+344
+345
+346
+<span style="color:#ffff00;background-color:#000000;">347
+<span style="color:#ffff00;background-color:#000000;">348
+<span style="color:#ffff00;background-color:#000000;">349
+<span style="color:#ffff00;background-color:#000000;">350
+<span style="color:#ffff00;background-color:#000000;">351
+<span style="color:#ffff00;background-color:#000000;">352
+<span style="color:#ffff00;background-color:#000000;">...skipping...
+4</span><span style="color:#000000;background-color:#ffff00;">33</span><span style="color:#ffff00;background-color:#000000;">
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+<span style="color:#ffff00;background-color:#000000;">...skipping...
+5</span><span style="color:#000000;background-color:#ffff00;">33</span><span style="color:#ffff00;background-color:#000000;">
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+<span style="color:#ffff00;background-color:#000000;">...skipping...
+6</span><span style="color:#000000;background-color:#ffff00;">33</span><span style="color:#ffff00;background-color:#000000;">
+634
+635
+636
+637
+638
+639
+640
+641
+642
+643
+644
+645
+646
+<span style="color:#ffff00;background-color:#000000;">...skipping...
+7</span><span style="color:#000000;background-color:#ffff00;">33</span><span style="color:#ffff00;background-color:#000000;">
+734
+735
+736
+737
+738
+739
+740
+741
+742
+743
+744
+745
+746
+<span style="color:#ffff00;background-color:#000000;">...skipping...
+8</span><span style="color:#000000;background-color:#ffff00;">33</span><span style="color:#ffff00;background-color:#000000;">
+834
+835
+836
+837
+838
+839
+840
+841
+842
+843
+844
+845
+846
+<span style="color:#ffff00;background-color:#000000;">...skipping...
+9</span><span style="color:#000000;background-color:#ffff00;">33</span><span style="color:#ffff00;background-color:#000000;">
+934
+935
+936
+937
+938
+939
+940
+941
+942
+943
+944
+945
+946
+<span style="color:#ffff00;background-color:#000000;">M932SCOAspan style="color:#000000;background-color:#ffff00;">Pattern not found  (press RETURN)</span><span style="color:#ffff00;background-color:#000000;">
+<span style="color:#ffff00;background-color:#000000;">M931SCOA
+<span style="color:#ffff00;background-color:#000000;">M930SCOA
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS25/lektion1
+</span>$ more langfil 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+<span style="color:#000000;background-color:#000000;">15More--(0%)</span><span style="color:#000000;background-color:#000000;">
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+<span style="color:#000000;background-color:#000000;">2900;">--More--(1%)</span><span style="color:#000000;background-color:#000000;">
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+<span style="color:#000000;background-color:#000000;">4300;">--More--(3%)</span><span style="color:#000000;background-color:#000000;">
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+<span style="color:#000000;background-color:#000000;">5700;">--More--(4%)</span><span style="color:#000000;background-color:#000000;">
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+<span style="color:#000000;background-color:#000000;">7100;">--More--(5%)</span><span style="color:#000000;background-color:#000000;">
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+<span style="color:#000000;background-color:#000000;">8500;">--More--(6%)</span><span style="color:#000000;background-color:#000000;">
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+<span style="color:#000000;background-color:#000000;">9900;">--More--(7%)</span><span style="color:#000000;background-color:#000000;">
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+<span style="color:#000000;background-color:#000000;">1130;">--More--(8%)</span><span style="color:#000000;background-color:#000000;">
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+<span style="color:#000000;background-color:#000000;">1270;">--More--(10%)</span><span style="color:#000000;background-color:#000000;">
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+<span style="color:#000000;background-color:#000000;">1410;">--More--(11%)</span><span style="color:#000000;background-color:#000000;">
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+<span style="color:#000000;background-color:#000000;">1550;">--More--(13%)</span><span style="color:#000000;background-color:#000000;">
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+<span style="color:#000000;background-color:#000000;">1690;">--More--(14%)</span><span style="color:#000000;background-color:#000000;">
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+<span style="color:#000000;background-color:#000000;">1830;">--More--(15%)</span><span style="color:#000000;background-color:#000000;">
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+<span style="color:#000000;background-color:#000000;">1970;">--More--(17%)</span><span style="color:#000000;background-color:#000000;">
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+<span style="color:#000000;background-color:#000000;">2110;">--More--(18%)</span><span style="color:#000000;background-color:#000000;">
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+<span style="color:#000000;background-color:#000000;">2250;">--More--(20%)</span><span style="color:#000000;background-color:#000000;">
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+<span style="color:#000000;background-color:#000000;">2390;">--More--(21%)</span><span style="color:#000000;background-color:#000000;">
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+<span style="color:#000000;background-color:#000000;">2530;">--More--(23%)</span><span style="color:#000000;background-color:#000000;">
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+<span style="color:#000000;background-color:#000000;">2670;">--More--(24%)</span><span style="color:#000000;background-color:#000000;">
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+<span style="color:#000000;background-color:#000000;">2810;">--More--(25%)</span><span style="color:#000000;background-color:#000000;">
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+<span style="color:#000000;background-color:#000000;">2950;">--More--(27%)</span><span style="color:#000000;background-color:#000000;">
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+<span style="color:#000000;background-color:#000000;">3090;">--More--(28%)</span><span style="color:#000000;background-color:#000000;">
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+<span style="color:#000000;background-color:#000000;">3230;">--More--(30%)</span><span style="color:#000000;background-color:#000000;">
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+<span style="color:#000000;background-color:#000000;">...back 1 page-(31%)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+<span style="color:#000000;background-color:#000000;">...back 1 page-(30%)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+<span style="color:#000000;background-color:#000000;">...back 1 page-(28%)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+<span style="color:#000000;background-color:#000000;">...back 1 page-(27%)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+<span style="color:#000000;background-color:#000000;">...back 1 page-(25%)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+<span style="color:#000000;background-color:#000000;">...back 1 page-(24%)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+<span style="color:#000000;background-color:#000000;">...back 1 page-(22%)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+<span style="color:#000000;background-color:#000000;">...back 1 page-(20%)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+<span style="color:#000000;background-color:#000000;">...back 1 page-(19%)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+<span style="color:#000000;background-color:#000000;">/330;">--More--(17%)</span><span style="color:#000000;background-color:#000000;">
+...skipping
+<span style="color:#000000;background-color:#000000;">231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+<span style="color:#000000;background-color:#000000;">...back 1 page-(22%)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+<span style="color:#000000;background-color:#000000;">2290;">--More--(20%)</span><span style="color:#000000;background-color:#000000;">
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+<span style="color:#000000;background-color:#000000;">2430;">--More--(22%)</span><span style="color:#000000;background-color:#000000;">
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+<span style="color:#000000;background-color:#000000;">/330;">--More--(23%)</span><span style="color:#000000;background-color:#000000;">
+...skipping
+<span style="color:#000000;background-color:#000000;">328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+<span style="color:#000000;background-color:#000000;">...back 1 page-(32%)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+<span style="color:#000000;background-color:#000000;">...back 1 page-(30%)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+<span style="color:#000000;background-color:#000000;">3110;">--More--(29%)</span><span style="color:#000000;background-color:#000000;">
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+<span style="color:#000000;background-color:#000000;">/333;">--More--(30%)</span><span style="color:#000000;background-color:#000000;">
+...skipping
+<span style="color:#000000;background-color:#000000;">331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+<span style="color:#000000;background-color:#000000;">...back 1 page-(32%)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+<span style="color:#000000;background-color:#000000;">...back 1 page-(30%)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+<span style="color:#5c5cff;background-color:#000000;"></span><span style="color:#5c5cff;background-color:#000000;">DEVOPS25/lektion1;">
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion1
+</span>$ man more
+MORE(1)                           User Commands                          MORE(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       more - file perusal filter for crt viewing
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">more</span> [options] <span style="text-decoration:underline;">file</span> ...
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">more</span> is a filter for paging through text one screenful at a time. This
+       version is especially primitive. Users should realize that <span style="font-weight:bold;color:#7f7f7f;">less</span>(1)
+       provides <span style="font-weight:bold;color:#7f7f7f;">more</span>(1) emulation plus extensive enhancements.
+
+<span style="font-weight:bold;color:#7f7f7f;">OPTIONS</span>
+<span style="color:#000000;background-color:#000000;">       Options are also taken from the environment variable </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">MORE</span> (make sure to
+<span style="color:#000000;background-color:#000000;">       precede them with a dash (</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-</span>)) but command-line options will override
+<span style="color:#000000;background-color:#000000;">       those.</span> line 3 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage more(1) line 4 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-d</span>, <span style="font-weight:bold;color:#7f7f7f;">--silent</span>
+<span style="color:#000000;background-color:#000000;">           Prompt with &quot;[Press space to continue, &apos;q&apos; to quit.]&quot;, and display</span>color:#000000;">
+<span style="color:#000000;background-color:#000000;">           &quot;[Press &apos;h&apos; for instructions.]&quot; instead of ringing the bell when an</span>olor:#000000;">
+<span style="color:#000000;background-color:#000000;">           illegal key is pressed.</span>help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage more(1) line 9 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-l</span>, <span style="font-weight:bold;color:#7f7f7f;">--logical</span>
+<span style="color:#000000;background-color:#000000;">           Do not pause after any line containing a </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">^L</span> (form feed).
+<span style="color:#000000;background-color:#000000;"></span>Bpage more(1) line 12 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-e</span>, <span style="font-weight:bold;color:#7f7f7f;">--exit-on-eof</span>
+<span style="color:#000000;background-color:#000000;">           Exit on End-Of-File, enabled by default if not executed on terminal.</span>#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage more(1) line 15 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-f</span>, <span style="font-weight:bold;color:#7f7f7f;">--no-pause</span>
+<span style="color:#000000;background-color:#000000;">           Count logical lines, rather than screen lines (i.e., long lines are</span>:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">           not folded).</span>press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage more(1) line 19 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-p</span>, <span style="font-weight:bold;color:#7f7f7f;">--print-over</span>
+<span style="color:#000000;background-color:#000000;">           Do not scroll. Instead, clear the whole screen and then display the</span>:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">           text. Notice that this option is switched on automatically if the</span>or:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">           executable is named </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">page</span>.
+<span style="color:#000000;background-color:#000000;"></span>Bpage more(1) line 24 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-c</span>, <span style="font-weight:bold;color:#7f7f7f;">--clean-print</span>
+<span style="color:#000000;background-color:#000000;">           Do not scroll. Instead, paint each screen from the top, clearing the</span>#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">           remainder of each line as it is displayed.</span></span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage more(1) line 28 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-s</span>, <span style="font-weight:bold;color:#7f7f7f;">--squeeze</span>
+<span style="color:#000000;background-color:#000000;">           Squeeze multiple blank lines into one.</span>uit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage more(1) line 31 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-u</span>, <span style="font-weight:bold;color:#7f7f7f;">--plain</span>
+<span style="color:#000000;background-color:#000000;">           Suppress underlining. This option is silently ignored as backwards</span>r:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">           compatibility.</span>ess h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span> page more(1) line 35 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       <span style="font-weight:bold;color:#7f7f7f;">-n</span>, <span style="font-weight:bold;color:#7f7f7f;">--lines</span> <span style="text-decoration:underline;">number</span>
+           Specify the <span style="text-decoration:underline;">number</span> of lines per screenful. The <span style="text-decoration:underline;">number</span> argument is a
+           positive decimal integer. The <span style="font-weight:bold;color:#7f7f7f;">--lines</span> option shall override any
+           values obtained from any other source, such as number of lines
+           reported by terminal.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-</span><span style="text-decoration:underline;">number</span>
+           A numeric option means the same as <span style="font-weight:bold;color:#7f7f7f;">--lines</span> option argument.
+
+       <span style="font-weight:bold;color:#7f7f7f;">+</span><span style="text-decoration:underline;">number</span>
+           Start displaying each file at line <span style="text-decoration:underline;">number</span>.
+
+       <span style="font-weight:bold;color:#7f7f7f;">+</span>/<span style="text-decoration:underline;">string</span>
+<span style="color:#000000;background-color:#000000;">           The </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">string</span><span style="color:#000000;background-color:#000000;"> to be searched in each file before starting to display it.</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">-h</span>, <span style="font-weight:bold;color:#7f7f7f;">--help</span>
+           Display help text and exit.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-V</span>, <span style="font-weight:bold;color:#7f7f7f;">--version</span>
+           Print version and exit.
+
+<span style="font-weight:bold;color:#7f7f7f;">COMMANDS</span>
+       Interactive commands for <span style="font-weight:bold;color:#7f7f7f;">more</span> are based on <span style="font-weight:bold;color:#7f7f7f;">vi</span>(1). Some commands may be
+       preceded by a decimal number, called k in the descriptions below. In the
+       following descriptions, <span style="font-weight:bold;color:#7f7f7f;">^X</span> means <span style="font-weight:bold;color:#7f7f7f;">control-X</span>.
+
+       <span style="font-weight:bold;color:#7f7f7f;">h</span> or <span style="font-weight:bold;color:#7f7f7f;">?</span>
+<span style="color:#000000;background-color:#000000;">           Help; display a summary of these commands. If you forget all other</span>r:#000000;background-color:#000000;">
+           commands, remember this one.
+
+       <span style="font-weight:bold;color:#7f7f7f;">SPACE</span>
+           Display next k lines of text. Defaults to current screen size.
+
+       <span style="font-weight:bold;color:#7f7f7f;">z</span>
+           Display next k lines of text. Defaults to current screen size.
+           Argument becomes new default.
+
+       <span style="font-weight:bold;color:#7f7f7f;">RETURN</span>
+           Display next k lines of text. Defaults to 1. Argument becomes new
+           default.
+
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">d</span> or <span style="font-weight:bold;color:#7f7f7f;">^D</span>
+<span style="color:#000000;background-color:#000000;">           Scroll k lines. Default is current scroll size, initially 11.</span>"color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">           Argument becomes new default.</span>or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage more(1) line 80 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">q</span> or <span style="font-weight:bold;color:#7f7f7f;">Q</span> or <span style="font-weight:bold;color:#7f7f7f;">INTERRUPT</span>
+<span style="color:#000000;background-color:#000000;">           Exit.</span>ne 82 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage more(1) line 83 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">s</span>;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">           Skip forward k lines of text. Defaults to 1.</span>span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage more(1) line 86 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">f</span>;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">           Skip forward k screenfuls of text. Defaults to 1.</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage more(1) line 89 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">b</span> or <span style="font-weight:bold;color:#7f7f7f;">^B</span>
+<span style="color:#000000;background-color:#000000;">           Skip backwards k screenfuls of text. Defaults to 1. Only works with</span>:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">           files, not pipes.</span> h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage more(1) line 93 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&apos;</span>ground-color:#000000;">
+<span style="color:#000000;background-color:#000000;">           Go to the place where the last search started.</span>an><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage more(1) line 96 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">=</span>;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">           Display current line number.</span> or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage more(1) line 99 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">/pattern</span>round-color:#000000;">
+<span style="color:#000000;background-color:#000000;">           Search for kth occurrence of regular expression. Defaults to 1.</span>color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage more(1) line 102 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">n</span>0;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">           Search for kth occurrence of last regular expression. Defaults to 1.</span>:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage more(1) line 105 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">!command</span> or <span style="font-weight:bold;color:#7f7f7f;">:!command</span>
+<span style="color:#000000;background-color:#000000;">           Execute </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">command</span><span style="color:#000000;background-color:#000000;"> in a subshell.</span>
+<span style="color:#000000;background-color:#000000;"></span>Bpage more(1) line 108 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">           Go to the place where the last search started.</span>pan><span style="color:#000000;background-color:#000000;">
+
+       <span style="font-weight:bold;color:#7f7f7f;">=</span>
+           Display current line number.
+
+       <span style="font-weight:bold;color:#7f7f7f;">/pattern</span>
+           Search for kth occurrence of regular expression. Defaults to 1.
+
+       <span style="font-weight:bold;color:#7f7f7f;">n</span>
+           Search for kth occurrence of last regular expression. Defaults to 1.
+
+       <span style="font-weight:bold;color:#7f7f7f;">!command</span> or <span style="font-weight:bold;color:#7f7f7f;">:!command</span>
+           Execute <span style="text-decoration:underline;">command</span> in a subshell.
+
+           Go to the place where the last <span style="color:#000000;background-color:#000000;">search</span><span style="color:#000000;background-color:#000000;"> started.</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">=</span>
+           Display current line number.
+
+       <span style="font-weight:bold;color:#7f7f7f;">/pattern</span>
+           <span style="color:#000000;background-color:#000000;">Search</span><span style="color:#000000;background-color:#000000;"> for kth occurrence of regular expression. Defaults to 1.</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">n</span>
+           <span style="color:#000000;background-color:#000000;">Search</span><span style="color:#000000;background-color:#000000;"> for kth occurrence of last regular expression. Defaults to 1.</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">!command</span> or <span style="font-weight:bold;color:#7f7f7f;">:!command</span>
+           Execute <span style="text-decoration:underline;">command</span> in a subshell.
+
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS25/lektion1style="color:#000000;background-color:#000000;">
+</span>$ seq 1 10 &gt;minifil
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ ls
+bilmarken.txt  greeting  <span style="font-weight:bold;color:#5c5cff;">katalog</span>  langfil  minifil  <span style="font-weight:bold;color:#5c5cff;">ranch</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ cat minifil 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ less minifil 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS25/lektion1
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion1
+</span>$ sudo apt update  ^C
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ sudo apt install tree ^C
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+<span style="color:#5c5cff;">or:#5c5cff;">DEVOPS25/lektion1
+</span>$ tree
+.
+├── bilmarken.txt
+├── greeting
+├── katalog
+├── langfil
+├── minifil
+├── ranch
+│   └── cowgirl -&gt; greeting
+└── recordings
+    ├── 134230.cast
+    ├── 134230.html
+    ├── 134230.txt
+    ├── 134457.cast
+    ├── 134457.html
+    ├── 134457.txt
+    ├── 134559.cast
+    ├── 134559.html
+    ├── 134559.txt
+    ├── 135157.cast
+    ├── 135157.html
+    ├── 135157.txt
+    ├── 140612.cast
+    ├── 140612.html
+    ├── 140612.txt
+    ├── 144255.cast
+    ├── 144255.html
+    ├── 144255.txt
+    └── 145839.cast
+
+4 directories, 24 files
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion1
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion1
+</span>$ ls
+bilmarken.txt  greeting  <span style="font-weight:bold;color:#5c5cff;">katalog</span>  langfil  minifil  <span style="font-weight:bold;color:#5c5cff;">ranch</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ mkdir minikatalog
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ cp mi
+nifil mini
+katalog/
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ ls
+bilmarken.txt  greeting  <span style="font-weight:bold;color:#5c5cff;">katalog</span>  langfil  minifil  <span style="font-weight:bold;color:#5c5cff;">minikatalog</span>  <span style="font-weight:bold;color:#5c5cff;">ranch</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ ls mini
+
+minifil      minikatalog/ 
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ ls mini
+minifil      minikatalog/ 
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ ls minikatalog/
+minifil
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion1
+</span>$ ls
+bilmarken.txt  greeting  <span style="font-weight:bold;color:#5c5cff;">katalog</span>  langfil  minifil  <span style="font-weight:bold;color:#5c5cff;">minikatalog</span>  <span style="font-weight:bold;color:#5c5cff;">ranch</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ cp mini
+ifil mini
+fil2
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ ls
+bilmarken.txt  <span style="font-weight:bold;color:#5c5cff;">katalog</span>  minifil   <span style="font-weight:bold;color:#5c5cff;">minikatalog</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+greeting       langfil  minifil2  <span style="font-weight:bold;color:#5c5cff;">ranch</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion1
+</span>$ ls
+bilmarken.txt  <span style="font-weight:bold;color:#5c5cff;">katalog</span>  minifil   <span style="font-weight:bold;color:#5c5cff;">minikatalog</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+greeting       langfil  minifil2  <span style="font-weight:bold;color:#5c5cff;">ranch</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ mv mi
+nid
+f
+il2 battre_nam
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ ls
+battre_namn    greeting  langfil  <span style="font-weight:bold;color:#5c5cff;">minikatalog</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+bilmarken.txt  <span style="font-weight:bold;color:#5c5cff;">katalog</span>   minifil  <span style="font-weight:bold;color:#5c5cff;">ranch</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion1
+</span>$ ls
+battre_namn    greeting  langfil  <span style="font-weight:bold;color:#5c5cff;">minikatalog</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+bilmarken.txt  <span style="font-weight:bold;color:#5c5cff;">katalog</span>   minifil  <span style="font-weight:bold;color:#5c5cff;">ranch</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ mv battre_namn min
+ikj
+atalog/
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ ls min
+ikatalog/
+battre_namn  minifil
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ mv min
+ikatalog/battre_namn .
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion1
+</span>$ ls
+battre_namn    greeting  langfil  <span style="font-weight:bold;color:#5c5cff;">minikatalog</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+bilmarken.txt  <span style="font-weight:bold;color:#5c5cff;">katalog</span>   minifil  <span style="font-weight:bold;color:#5c5cff;">ranch</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ mv battre_namn mi
+nikatalogsisisisnytt_nam
+
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion1
+</span>$ ls
+bilmarken.txt  greeting  <span style="font-weight:bold;color:#5c5cff;">katalog</span>  langfil  minifil  <span style="font-weight:bold;color:#5c5cff;">minikatalog</span>  <span style="font-weight:bold;color:#5c5cff;">ranch</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ ls minikatalog/
+minifil  nytt_namn
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ mv langfil langkatalog/
+mv: cannot move &apos;langfil&apos; to &apos;langkatalog/&apos;: Not a directory
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion1
+</span>$ ls
+bilmarken.txt  greeting  <span style="font-weight:bold;color:#5c5cff;">katalog</span>  langfil  minifil  <span style="font-weight:bold;color:#5c5cff;">minikatalog</span>  <span style="font-weight:bold;color:#5c5cff;">ranch</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ mkdirtocucuch sefcrcrets
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion1
+</span>$ ls
+bilmarken.txt  <span style="font-weight:bold;color:#5c5cff;">katalog</span>  minifil      <span style="font-weight:bold;color:#5c5cff;">ranch</span>       secrets
+greeting       langfil  <span style="font-weight:bold;color:#5c5cff;">minikatalog</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ mv greeting secrets 
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ mv secrets gre
+et
+ing
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ otuchtouch secerets
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion1
+</span>$ ls -l
+total 32
+-rw-r--r-- 1 kent kent   54 14 apr 15.05 bilmarken.txt
+-rw-r--r-- 1 kent kent    5 14 apr 14.26 greeting
+drwxr-xr-x 2 kent kent 4096 14 apr 14.28 <span style="font-weight:bold;color:#5c5cff;">katalog</span>
+-rw-r--r-- 1 kent kent 3893 14 apr 15.06 langfil
+-rw-r--r-- 1 kent kent   21 14 apr 15.08 minifil
+drwxr-xr-x 2 kent kent 4096 14 apr 15.14 <span style="font-weight:bold;color:#5c5cff;">minikatalog</span>
+drwxr-xr-x 2 kent kent 4096 14 apr 14.43 <span style="font-weight:bold;color:#5c5cff;">ranch</span>
+drwxr-xr-x 2 kent kent 4096 14 apr 14.58 <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+-rw-r--r-- 1 kent kent    0 14 apr 15.15 secrets
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+<span style="color:#5c5cff;">s/<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ mv langfil secrets/
+mv: cannot stat &apos;secrets/&apos;: Not a directory
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ mv langfil secrets
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ mv
+
+pwd
+/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS25/lektion1
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ git branch
+  250415
+  250416
+  250417
+  250423
+  250424
+  250425
+  250428
+  250429
+  250430
+  250505
+  250506
+  250508
+  250509
+  250513
+  250515
+  250516
+  250516v2
+  250516v3
+  250829
+  250916
+  250917
+  250918
+  250922
+  250924
+  250925
+  250930
+  251001
+  251001-fixed
+  251001-modded
+  251003
+  251006
+  251007
+  251008
+* <span style="color:#00cd00;">260414</span>
+  fix--use-ibm-plex-mono-in-terminal
+  main
+  structure-files
+  zeropad
+<span style="color:#000000;background-color:#000000;">(END)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS25/lektion1le="color:#000000;background-color:#000000;">
+</span>$ git push
+ssh: Could not resolve hostname github.com: Name or service not known
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ git push
+^C
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ git push
+To github.com:nackc8/l1-live.git
+ <span style="color:#cd0000;">! [rejected]       </span> 260414 -&gt; 260414 (non-fast-forward)
+<span style="color:#cd0000;">error: failed to push some refs to &apos;github.com:nackc8/l1-live.git&apos;
+</span><span style="color:#cdcd00;">hint: Updates were rejected because the tip of your current branch is behind</span>
+<span style="color:#cdcd00;">hint: its remote counterpart. Integrate the remote changes (e.g.</span>
+<span style="color:#cdcd00;">hint: &apos;git pull ...&apos;) before pushing again.</span>
+<span style="color:#cdcd00;">hint: See the &apos;Note about fast-forwards&apos; in &apos;git push --help&apos; for details.</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ git push -f
+Enumerating objects: 499, done.
+Counting objects: 100% (499/499), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (461/461), done.
+Writing objects: 100% (493/493), 115.47 KiB | 1010.00 KiB/s, done.
+Total 493 (delta 264), reused 3 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (264/264), completed with 4 local objects.
+To github.com:nackc8/l1-live.git
+ + 448206e...179d6ff 260414 -&gt; 260414 (forced update)
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ girt branch
+  250415
+  250416
+  250417
+  250423
+  250424
+  250425
+  250428
+  250429
+  250430
+  250505
+  250506
+  250508
+  250509
+  250513
+  250515
+  250516
+  250516v2
+  250516v3
+  250829
+  250916
+  250917
+  250918
+  250922
+  250924
+  250925
+  250930
+  251001
+  251001-fixed
+  251001-modded
+  251003
+  251006
+  251007
+  251008
+* <span style="color:#00cd00;">260414</span>
+  fix--use-ibm-plex-mono-in-terminal
+  main
+  structure-files
+  zeropad
+<span style="color:#000000;background-color:#000000;">(END)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS25/lektion1le="color:#000000;background-color:#000000;">
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion1
+</span>$ ls
+bilmarken.txt  greeting  <span style="font-weight:bold;color:#5c5cff;">katalog</span>  minifil  <span style="font-weight:bold;color:#5c5cff;">minikatalog</span>  <span style="font-weight:bold;color:#5c5cff;">ranch</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>  secrets
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ gh repo view --web
+11;?\Opening https://github.com/nackc8/l1-live in your browser.
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ 
+(process:115970): Gtk-WARNING **: 15:42:57.020: Unknown key gtk-modules in /home/kent/.config/gtk-4.0/settings.ini
+[116044:116044:0414/154257.098191:ERROR:ui/ozone/platform/wayland/gpu/wayland_surface_factory.cc:252] &apos;--ozone-platform=wayland&apos; is not compatible with Vulkan. Consider switching to &apos;--ozone-platform=x11&apos; or disabling Vulkan
+Created TensorFlow Lite XNNPACK delegate for CPU.
+[115970:116012:0414/154257.401727:ERROR:crypto/nss_util.cc:377] After loading Root Certs, loaded==false: NSS error code: -8018
+[115970:115970:0414/154258.152517:ERROR:components/policy/core/common/cloud/cloud_policy_service.cc:189] [policy_type=google/chrome/user] Failed to fetch policy: Client error: 6
+[115970:116016:0414/154259.617681:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[115970:116016:0414/154322.679886:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[115970:116016:0414/154417.092070:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[115970:116016:0414/154604.035729:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[115970:116016:0414/154845.674638:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[115970:116016:0414/155547.498943:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ 
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ 
+exit
+</pre>
+</body>
+</html>
+<!--HTML generated by ansifilter 2.18, http://www.andre-simon.de/-->
