@@ -11,6 +11,7 @@ inode
     Datastruktur som representerar allt i en fil UTOM dess data
     Den har en pekare till dess "datablock"
 hård länk
+    Skapas med ln malfilen lankfilen
     En fil som pekar på samma inode
     Alla hårda länkar är jämlika
     Alla enskilda filer är en slags ensamma hårda länkar (Links: 1)
@@ -22,3 +23,7 @@ kataloger och antal hårda länkar
     från . inne i katalogen.
     En katalog som har en underkatalog: Har en extra länk, eftersom .. i
     underkatalogen pekar på katalogen också.
+
+mjuk länk
+    Skapas med ln -s malfilen lankfilen
+    
