@@ -1,0 +1,600 @@
+/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS25/lektion3
+recordings
+DEVOPS25/lektion3
+$ ssh ubse
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-110-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Fri Apr 17 09:08:04 AM UTC 2026
+
+  System load:  0.0                Processes:               111
+  Usage of /:   19.9% of 23.40GB   Users logged in:         0
+  Memory usage: 9%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+162 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Fri Apr 17 08:43:02 2026 from 10.0.2.2
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+kent@ubse:~$ id
+uid=1000(kent) gid=1000(kent) groups=1000(kent),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),101(lxd)
+0;kent@ubse: ~
+kent@ubse:~$ adduser
+fatal: Only root may add a user or group to the system.
+0;kent@ubse: ~
+kent@ubse:~$ addusergreen
+fatal: Only root may add a user or group to the system.
+0;kent@ubse: ~
+kent@ubse:~$ adduser greesudo 
+[sudo] password for kent: 
+info: Adding user `green' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `green' (1001) ...
+info: Adding new user `green' (1001) with group `green (1001)' ...
+info: Creating home directory `/home/green' ...
+info: Copying files from `/etc/skel' ...
+New password: 
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for green
+Enter the new value, or press ENTER for the default
+	Full Name []: 
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] 
+info: Adding new user `green' to supplemental / extra groups `users' ...
+info: Adding user `green' to group `users' ...
+0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+kent@ubse:~$ addgroup
+fatal: Only root may add a user or group to the system.
+0;kent@ubse: ~
+kent@ubse:~$ !
+e!c!h!o! !
+echo addgroup
+addgroup
+0;kent@ubse: ~
+kent@ubse:~$ echo addgrouecho !!
+echo echo addgroup
+echo addgroup
+0;kent@ubse: ~
+echo !!se:~$ echo echo addgrouaddgrouecho addgroup
+echo echo echo addgroup
+echo echo addgroup
+0;kent@ubse: ~
+kent@ubse:~$ echo !!
+echo echo echo echo addgroup
+echo echo echo addgroup
+0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+kent@ubse:~$ addgroup marketing
+fatal: Only root may add a user or group to the system.
+0;kent@ubse: ~
+kent@ubse:~$ sudo !
+sudo addgroup marketing
+info: Selecting GID from range 1000 to 59999 ...
+info: Adding group `marketing' (GID 1002) ...
+0;kent@ubse: ~
+kent@ubse:~$ usermod --append -G mzarketing gree--append
+
+
+
+
+
+
+usermod: Permission denied.
+usermod: cannot lock /etc/passwd; try again later.
+0;kent@ubse: ~
+kent@ubse:~$ sudo !!
+sudo usermod --append -G marketing green
+0;kent@ubse: ~
+kent@ubse:~$ id green
+uid=1001(green) gid=1001(green) groups=1001(green),100(users),1002(marketing)
+0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+kent@ubse:~$ man delus
+er
+DELUSER(8)           System Manager's Manual          DELUSER(8)
+
+NAME
+       deluser,  delgroup - remove a user or group from the sys‐
+       tem
+
+SYNOPSIS
+       deluser [--backup] [--backup-suffix str]
+               [--backup-to dir] [--conf file] [--debug]
+               [--remove-all-files] [--remove-home] [--quiet]
+               [--verbose] [--stdoutmsglevel prio]
+               [--stderrmsglevel prio] [--logmsglevel prio] user
+
+       deluser [--system] [--backup] [--backup-suffix str]
+               [--backup-to dir] [--conf file] [--debug]
+               [--remove-all-files] [--remove-home] [--quiet]
+               [--verbose] [--stdoutmsglevel prio]
+               [--stderrmsglevel prio] [--logmsglevel prio] user
+
+       deluser --group [--conf file] [--debug] [--only-if-empty]
+               [--quiet] [--verbose] [--stdoutmsglevel prio]
+               [--stderrmsglevel prio] [--logmsglevel prio]
+               group
+       delgroup [--system] [--conf file] [--debug]
+                [--only-if-empty] [--quiet] [--verbose]
+                [--stdoutmsglevel prio] [--stderrmsglevel prio]
+                [--logmsglevel prio] group
+
+       deluser [--conf file] [--debug] [--quiet] [--verbose]
+               [--stdoutmsglevel prio] [--stderrmsglevel prio]
+               [--logmsglevel prio] user group
+
+       deluser --help
+
+       deluser --versionline 18 (press h for help or q to quit)
+
+DESCRIPTION
+       deluser and delgroup remove users  and  groups  from  the
+       system  according  to command line options and configura‐
+       tion  information  in  /etc/deluser.conf   and   /etc/ad‐
+       duser.conf.
+
+       They  are  friendlier  front  ends  to  the  userdel  and
+       groupdel programs, removing the home directory as  option
+       or  even  all files on the system owned by the user to be
+       removed, running a custom script, and other features.
+
+       For a full list and explanations of all options, see  the
+       OPTIONS section.
+
+       deluser and delgroup can be run in one of three modes:
+ Manual page deluser(8) line 35 (press h for help or q to quit)
+   Remove a user
+       If  called  with  one non-option argument and without the
+       --group option, deluser will remove a non-system user.
+
+       By default, deluser will remove the user without removing
+       the home directory, the mail spool or any other files  on
+       the  system  owned by the user.  Removing the home direc‐
+       tory and mail spool  can  be  achieved  using  the  --re‐
+       move-home option.
+
+       The   --remove-all-files  option removes all files on the
+       system owned by the user.  Note that if you activate both
+       options --remove-home will have no additional effect  be‐
+       cause  all  files  including  the home directory and mail
+       spool are already covered by the  --remove-all-files  op‐
+       tion.
+ Manual page deluser(8) line 52 (press h for help or q to quit)
+       If  you want to backup all files before deleting them you
+       can activate the --backup option which will create a file
+       username.tar(.gz|.bz2) in the directory specified by  the
+       --backup-to option.
+
+       By   default,  the  backup  archive  is  compressed  with
+       gzip(1).  To change this, the --backup-suffix option  can
+       be  set  to  any  suffix supported by tar --auto-compress
+       (e.g. .gz, .bz2, .xz).
+
+       deluser will refuse to remove the root account.
+
+       If the --system option is given on the command line,  the
+       delete operation is actually executed only if the user is
+       a  system  user.   This avoids accidentally deleting non-
+       system users.  Additionally, if the user does not  exist,
+       no  error  value  is returned.  Debian package maintainer
+       scripts may use this  flag  to  remove  system  users  or
+       groups  while ignoring the case where the removal already
+       occurred.
+
+   Remove a group
+       If deluser is called with the --group   option,  or  del‐
+       group  is  called,  a group will be removed.  The primary
+       group of an existing user cannot be removed.  If the  op‐
+       tion --only-if-empty is given, the group won't be removed
+       if it has any members left.
+
+       The  --system  option  adds the same functionality as for
+       users, respectively.
+
+   Remove a user from a specific group
+       If called with two non-option arguments, deluser will re‐
+       move a user from a specific group.for help or q to quit)
+
+OPTIONS
+       Different modes of deluser allow different  options.   If
+       no valid modes are listed for a option, it is accepted in
+       all modes.
+
+       Short versions for certain options may exist for histori‐
+       cal  reasons.   They are going to stay supported, but are
+       removed from the documentation.  Users are advised to mi‐
+       grate to the long version of options.
+
+       --backup
+              Backup all files contained in the userhome and the
+              mailspool file to a file named username.tar.bz2 or
+              username.tar.gz.  Valid  Modes:  deluser,  deluser
+              --system,
+ Manual page deluser(8) line 103 (press h for help or q to quit)
+       --backup-suffix str
+              Select  compression algorithm for a home directory
+              backup.  Can be set to any  suffix  recognized  by
+              tar  --auto-compress.   Defaults  to  .gz.   Valid
+              Modes: deluser, deluser --system,
+
+       --backup-to dir
+              Place the backup files not in the  current  direc‐
+              tory  but  in  dir.  This implicitly sets --backup
+              also.  (defaulting to the current  working  direc‐
+              tory).  Valid Modes: deluser, deluser --system,
+
+       --conf file
+              Use    file   instead   of   the   default   files
+              /etc/deluser.conf and /etc/adduser.conf.  Multiple
+              --conf options may be given.
+/remove page deluser(8) line 120 (press h for help or q to quit)
+       --backup-suffix str
+              Select  compression algorithm for a home directory
+              backup.  Can be set to any  suffix  recognized  by
+              tar  --auto-compress.   Defaults  to  .gz.   Valid
+              Modes: deluser, deluser --system,
+
+       --backup-to dir
+              Place the backup files not in the  current  direc‐
+              tory  but  in  dir.  This implicitly sets --backup
+              also.  (defaulting to the current  working  direc‐
+              tory).  Valid Modes: deluser, deluser --system,
+
+       --conf file
+              Use    file   instead   of   the   default   files
+              /etc/deluser.conf and /etc/adduser.conf.  Multiple
+              --conf options may be given.
+
+       --backup-suffix str
+              Select  compression algorithm for a home directory
+              backup.  Can be set to any  suffix  recognized  by
+              tar  --auto-compress.   Defaults  to  .gz.   Valid
+              Modes: deluser, deluser --system,
+
+       --backup-to dir
+              Place the backup files not in the  current  direc‐
+              tory  but  in  dir.  This implicitly sets --backup
+              also.  (defaulting to the current  working  direc‐
+              tory).  Valid Modes: deluser, deluser --system,
+
+       --conf file
+              Use    file   instead   of   the   default   files
+              /etc/deluser.conf and /etc/adduser.conf.  Multiple
+              --conf options may be given.
+...skipping...
+              Remove a group.  This is the default action if the
+              program  is  invoked  as  delgroup.   Valid  Mode:
+              deluser.
+
+       --help Display brief instructions.
+
+       --only-if-empty
+              Only  remove if no members are left.  Valid Modes:
+              deluser --group, delgroup,
+
+       --quiet
+              Synonymous to --stdoutmsglevel=warn. Deprecated.
+
+       --remove-all-files
+              Remove all files from the  system  owned  by  this
+              user.  Note: --remove-home does not have an effect
+              any more.  If --backup is specified, the files are
+              deleted  after having performed the backup.  Valid
+              Modes: deluser, deluser --system,
+
+       --remove-home
+              Remove the home directory  of  the  user  and  its
+              mailspool.   If  --backup  is specified, the files
+              are deleted after  having  performed  the  backup.
+              Valid Modes: deluser, deluser --system, q to quit)
+
+       --system
+              Only  delete if user/group is a system user/group.
+              If the user does not exist, no error value is  re‐
+              turned.  Valid Modes: deluser, deluser --system,
+MESESCOAuser(8) line 155/219 80% (press h for help or q to quit)
+M              Synonymous to --stdoutmsglevel=warn. Deprecated.)
+M       --quiet line 153/219 78% (press h for help or q to quit)
+MESESCOAuser(8) line 152/219 78% (press h for help or q to quit)
+       --system line 151/219 77% (press h for help or q to quit)
+              Only  delete if user/group is a system user/group.
+              If the user does not exist, no error value is  re‐
+              turned.  Valid Modes: deluser, deluser --system,t)
+>0;kent@ubse: ~ line 155/219 80% (press h for help or q to quit)
+kent@ubse:~$ userdel  ^C
+0;kent@ubse: ~
+kent@ubse:~$ userdfdel
+Usage: userdel [options] LOGIN
+
+Options:
+  -f, --force                   force some actions that would fail otherwise
+                                e.g. removal of user still logged in
+                                or files, even if not owned by the user
+  -h, --help                    display this help message and exit
+  -r, --remove                  remove home directory and mail spool
+  -R, --root CHROOT_DIR         directory to chroot into
+  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files
+      --extrausers              Use the extra users database
+  -Z, --selinux-user            remove any SELinux user mapping for the user
+
+0;kent@ubse: ~
+kent@ubse:~$ useradd
+Usage: useradd [options] LOGIN
+       useradd -D
+       useradd -D [options]
+
+Options:
+      --badname                 do not check for bad names
+  -b, --base-dir BASE_DIR       base directory for the home directory of the
+                                new account
+      --btrfs-subvolume-home    use BTRFS subvolume for home directory
+  -c, --comment COMMENT         GECOS field of the new account
+  -d, --home-dir HOME_DIR       home directory of the new account
+  -D, --defaults                print or change default useradd configuration
+  -e, --expiredate EXPIRE_DATE  expiration date of the new account
+  -f, --inactive INACTIVE       password inactivity period of the new account
+  -F, --add-subids-for-system   add entries to sub[ud]id even when adding a system user
+  -g, --gid GROUP               name or ID of the primary group of the new
+                                account
+  -G, --groups GROUPS           list of supplementary groups of the new
+                                account
+  -h, --help                    display this help message and exit
+  -k, --skel SKEL_DIR           use this alternative skeleton directory
+  -K, --key KEY=VALUE           override /etc/login.defs defaults
+  -l, --no-log-init             do not add the user to the lastlog and
+                                faillog databases
+  -m, --create-home             create the user's home directory
+  -M, --no-create-home          do not create the user's home directory
+  -N, --no-user-group           do not create a group with the same name as
+                                the user
+  -o, --non-unique              allow to create users with duplicate
+                                (non-unique) UID
+  -p, --password PASSWORD       encrypted password of the new account
+  -r, --system                  create a system account
+  -R, --root CHROOT_DIR         directory to chroot into
+  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files
+  -s, --shell SHELL             login shell of the new account
+  -u, --uid UID                 user ID of the new account
+  -U, --user-group              create a group with the same name as the user
+  -Z, --selinux-user SEUSER     use a specific SEUSER for the SELinux user mapping
+      --extrausers              Use the extra users database
+
+0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+kent@ubse:~$ userdel ;
+Usage: userdel [options] LOGIN
+
+Options:
+  -f, --force                   force some actions that would fail otherwise
+                                e.g. removal of user still logged in
+                                or files, even if not owned by the user
+  -h, --help                    display this help message and exit
+  -r, --remove                  remove home directory and mail spool
+  -R, --root CHROOT_DIR         directory to chroot into
+  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files
+      --extrausers              Use the extra users database
+  -Z, --selinux-user            remove any SELinux user mapping for the user
+
+0;kent@ubse: ~
+kent@ubse:~$ deluse
+
+
+
+
+
+0;kent@ubse: ~
+kent@ubse:~$ ls +-l
+total 0
+0;kent@ubse: ~
+kent@ubse:~$ touch sallad.txt
+0;kent@ubse: ~
+kent@ubse:~$ ls 0-l
+total 0
+-rw-rw-r-- 1 kent kent 0 Apr 17 09:44 sallad.txt
+0;kent@ubse: ~
+kent@ubse:~$ chown green>
+{g
+�:green sallad.txt 
+chown: changing ownership of 'sallad.txt': Operation not permitted
+0;kent@ubse: ~
+kent@ubse:~$  
+sudo !!
+sudo chown green:green sallad.txt 
+[sudo] password for kent: 
+Sorry, try again.
+[sudo] password for kent: 
+0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+kent@ubse:~$ ls -l
+total 0
+-rw-rw-r-- 1 green green 0 Apr 17 09:44 sallad.txt
+0;kent@ubse: ~
+kent@ubse:~$ sudo -u green -i
+0;green@ubse: ~
+green@ubse:~$ ow
+pwd
+/home/green
+0;green@ubse: ~
+green@ubse:~$ cd /home/kent/
+-bash: cd: /home/kent/: Permission denied
+0;green@ubse: ~
+green@ubse:~$ ls -la /jp,jhome/kent
+ls: cannot open directory '/home/kent': Permission denied
+0;green@ubse: ~
+green@ubse:~$ ls -la /home/ken
+total 20
+drwxr-x--- 2 green green 4096 Apr 17 09:08 .
+drwxr-xr-x 4 root  root  4096 Apr 17 09:08 ..
+-rw-r--r-- 1 green green  220 Apr 17 09:08 .bash_logout
+-rw-r--r-- 1 green green 3771 Apr 17 09:08 .bashrc
+-rw-r--r-- 1 green green  807 Apr 17 09:08 .profile
+0;green@ubse: ~
+green@ubse:~$ ls -la /0;green@ubse: ~
+green@ubse:~$ ls -la /
+total 2097244
+drwxr-xr-x  23 root root       4096 Apr 17 08:32 .
+drwxr-xr-x  23 root root       4096 Apr 17 08:32 ..
+lrwxrwxrwx   1 root root          7 Apr 22  2024 bin -> usr/bin
+drwxr-xr-x   2 root root       4096 Feb 26  2024 bin.usr-is-merged
+drwxr-xr-x   4 root root       4096 Apr 17 08:36 boot
+dr-xr-xr-x   2 root root       4096 Apr 23  2024 cdrom
+drwxr-xr-x  19 root root       4060 Apr 17 08:43 dev
+drwxr-xr-x 108 root root       4096 Apr 17 09:16 etc
+drwxr-xr-x   4 root root       4096 Apr 17 09:08 home
+lrwxrwxrwx   1 root root          7 Apr 22  2024 lib -> usr/lib
+drwxr-xr-x   2 root root       4096 Feb 26  2024 lib.usr-is-merged
+lrwxrwxrwx   1 root root          9 Apr 22  2024 lib64 -> usr/lib64
+drwx------   2 root root      16384 Apr 17 08:30 lost+found
+drwxr-xr-x   2 root root       4096 Apr 23  2024 media
+drwxr-xr-x   2 root root       4096 Apr 23  2024 mnt
+drwxr-xr-x   2 root root       4096 Apr 23  2024 opt
+dr-xr-xr-x 177 root root          0 Apr 17 08:40 proc
+drwx------   3 root root       4096 Apr 23  2024 root
+drwxr-xr-x  28 root root        860 Apr 17 09:43 run
+lrwxrwxrwx   1 root root          8 Apr 22  2024 sbin -> usr/sbin
+drwxr-xr-x   2 root root       4096 Apr  3  2024 sbin.usr-is-merged
+drwxr-xr-x   2 root root       4096 Apr 17 08:40 snap
+drwxr-xr-x   2 root root       4096 Apr 23  2024 srv
+-rw-------   1 root root 2147483648 Apr 17 08:32 swap.img
+dr-xr-xr-x  13 root root          0 Apr 17 08:40 sys
+drwxrwxrwt  13 root root       4096 Apr 17 09:48 tmp
+drwxr-xr-x  12 root root       4096 Apr 23  2024 usr
+drwxr-xr-x  13 root root       4096 Apr 17 08:39 var
+0;green@ubse: ~
+green@ubse:~$ cd /home
+0;green@ubse: /home
+green@ubse:/home$ ;s
+ls kent
+ls: cannot open directory 'kent': Permission denied
+0;green@ubse: /home
+green@ubse:/home$ 0;green@ubse: /home
+green@ubse:/home$ ls kent
+ls: cannot open directory 'kent': Permission denied
+0;green@ubse: /home
+green@ubse:/home$ ls -l 
+total 8
+drwxr-x--- 2 green green 4096 Apr 17 09:08 green
+drwxr-x--- 4 kent  kent  4096 Apr 17 09:44 kent
+0;green@ubse: /home
+green@ubse:/home$ chown kent:green kent/
+chown: changing ownership of 'kent/': Operation not permitted
+0;green@ubse: /home
+green@ubse:/home$ sudo !!
+sudo chown kent:green kent/
+[sudo] password for green: 
+green is not in the sudoers file.
+0;green@ubse: /home
+green@ubse:/home$ id
+uid=1001(green) gid=1001(green) groups=1001(green),100(users),1002(marketing)
+0;green@ubse: /home
+green@ubse:/home$ exit
+logout
+0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+kent@ubse:~$ ls
+sallad.txt
+0;kent@ubse: ~
+kent@ubse:~$ cd /home/
+0;kent@ubse: /home
+kent@ubse:/home$ 0;kent@ubse: /home
+kent@ubse:/home$ ls
+green  kent
+0;kent@ubse: /home
+kent@ubse:/home$ ls -l0;kent@ubse: /home
+kent@ubse:/home$ ls -l
+total 8
+drwxr-x--- 2 green green 4096 Apr 17 09:57 green
+drwxr-x--- 4 kent  kent  4096 Apr 17 09:44 kent
+0;kent@ubse: /home
+kent@ubse:/home$ chown kent:green kent/
+chown: changing ownership of 'kent/': Operation not permitted
+0;kent@ubse: /home
+kent@ubse:/home$ sudo !!
+sudo chown kent:green kent/
+0;kent@ubse: /home
+kent@ubse:/home$ ls -l0;kent@ubse: /home
+kent@ubse:/home$ ls -l
+total 8
+drwxr-x--- 2 green green 4096 Apr 17 09:57 green
+drwxr-x--- 4 kent  green 4096 Apr 17 09:44 kent
+0;kent@ubse: /home
+kent@ubse:/home$ sudo !-u green -i
+0;green@ubse: ~
+green@ubse:~$ cd /home
+0;green@ubse: /home
+green@ubse:/home$ ls
+green  kent
+0;green@ubse: /home
+green@ubse:/home$ ls -l
+total 8
+drwxr-x--- 2 green green 4096 Apr 17 09:57 green
+drwxr-x--- 4 kent  green 4096 Apr 17 09:44 kent
+0;green@ubse: /home
+green@ubse:/home$ ce kd kent/
+
+0;green@ubse: /home/kent
+green@ubse:/home/kent$ 0;green@ubse: /home/kent
+green@ubse:/home/kent$ ls
+sallad.txt
+0;green@ubse: /home/kent
+green@ubse:/home/kent$ ls -l
+total 0
+-rw-rw-r-- 1 green green 0 Apr 17 09:44 sallad.txt
+0;green@ubse: /home/kent
+green@ubse:/home/kent$ ls -la
+total 36
+drwxr-x--- 4 kent  green 4096 Apr 17 09:44 .
+drwxr-xr-x 4 root  root  4096 Apr 17 09:08 ..
+-rw------- 1 kent  kent     5 Apr 17 08:40 .bash_history
+-rw-r--r-- 1 kent  kent   220 Mar 31  2024 .bash_logout
+-rw-r--r-- 1 kent  kent  3771 Mar 31  2024 .bashrc
+drwx------ 2 kent  kent  4096 Apr 17 08:40 .cache
+-rw------- 1 kent  kent    36 Apr 17 09:19 .lesshst
+-rw-r--r-- 1 kent  kent   807 Mar 31  2024 .profile
+drwx------ 2 kent  kent  4096 Apr 17 08:40 .ssh
+-rw-r--r-- 1 kent  kent     0 Apr 17 09:08 .sudo_as_admin_successful
+-rw-rw-r-- 1 green green    0 Apr 17 09:44 sallad.txt
+0;green@ubse: /home/kent
+green@ubse:/home/kent$ 0;green@ubse: /home/kent
+green@ubse:/home/kent$ c
+cat sallad.txt 
+0;green@ubse: /home/kent
+green@ubse:/home/kent$ nano sallad.txt 
+>0;green@ubse: /home/kentd.txt [ Writing... ] [ Wrote 5 lines ]    Y Yestxt                          
+green@ubse:/home/kent$ cat sallad.txt 0;green@ubse: /home/kent
+green@ubse:/home/kent$ cat sallad.txt 
+Grönkål
+Ättika
+Spenat
+Ost
+
+0;green@ubse: /home/kent
+green@ubse:/home/kent$ exit
+logout
+0;kent@ubse: /home
+kent@ubse:/home$ eixxit
+logout
+Connection to localhost closed.
+DEVOPS25/lektion3
+$ exit
+exit
