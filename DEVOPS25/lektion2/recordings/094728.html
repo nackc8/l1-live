@@ -1,0 +1,3499 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style type="text/css">
+pre {
+  font-family:Courier New;
+  font-size:10pt;
+}
+
+.af_line {
+  color: gray;
+  text-decoration: none;
+}
+
+</style>
+<title>Source file</title>
+</head>
+<body>
+<pre>/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS25/lektion2
+<span style="font-weight:bold;color:#5c5cff;">recap-lektion1</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion2
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion2
+</span>$ ls
+<span style="font-weight:bold;color:#5c5cff;">recap-lektion1</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion2
+</span>$ cd re
+
+<span style="color:#5c5cff;">DEVOPS25/lektion2
+</span>$ mkdir lektion1-forts
+<span style="color:#5c5cff;">DEVOPS25/lektion2
+</span>$ cd lektion1-forts/
+<span style="color:#5c5cff;">DEVOPS25/lektion2/lektion1-forts
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion2/lektion1-forts
+</span>$ ls
+<span style="color:#5c5cff;">DEVOPS25/lektion2/lektion1-forts
+</span>$ mkdir kat_medfil
+<span style="color:#5c5cff;">DEVOPS25/lektion2/lektion1-forts
+</span>$ mkdir kat_medfifififitom
+<span style="color:#5c5cff;">DEVOPS25/lektion2/lektion1-forts
+</span>$ touch ka
+t_medfil/�{1..10hej.txt
+<span style="color:#5c5cff;">DEVOPS25/lektion2/lektion1-forts
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion2/lektion1-forts
+</span>$ tree ka
+t_medfil/
+kat_medfil/
+├── 10hej.txt
+├── 1hej.txt
+├── 2hej.txt
+├── 3hej.txt
+├── 4hej.txt
+├── 5hej.txt
+├── 6hej.txt
+├── 7hej.txt
+├── 8hej.txt
+└── 9hej.txt
+
+1 directory, 10 files
+<span style="color:#5c5cff;">DEVOPS25/lektion2/lektion1-forts
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion2/lektion1-forts
+$ tree>$ tree
+.
+├── kat_medfil
+│   ├── 10hej.txt
+│   ├── 1hej.txt
+│   ├── 2hej.txt
+│   ├── 3hej.txt
+│   ├── 4hej.txt
+│   ├── 5hej.txt
+│   ├── 6hej.txt
+│   ├── 7hej.txt
+│   ├── 8hej.txt
+│   └── 9hej.txt
+└── kat_tom
+
+3 directories, 10 files
+<span style="color:#5c5cff;">DEVOPS25/lektion2/lektion1-forts
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion2/lektion1-forts
+</span>$ ls
+<span style="font-weight:bold;color:#5c5cff;">kat_medfil</span>  <span style="font-weight:bold;color:#5c5cff;">kat_tom</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion2/lektion1-forts
+</span>$ cp ka
+t_medfil/ ka
+t_medfil_kopia/
+cp: -r not specified; omitting directory &apos;kat_medfil/&apos;
+<span style="color:#5c5cff;">DEVOPS25/lektion2/lektion1-forts
+</span>$ cp kat_medfil/ kat_medfil_kopia/
+cp ka
+t_tom/ ka
+t_tom_kopia
+cp: -r not specified; omitting directory &apos;kat_tom/&apos;
+<span style="color:#5c5cff;">DEVOPS25/lektion2/lektion1-forts
+</span>$ cp -r ka
+t_tom/ ka
+t_tomtom2
+<span style="color:#5c5cff;">DEVOPS25/lektion2/lektion1-forts
+</span>$ ls
+<span style="font-weight:bold;color:#5c5cff;">kat_medfil</span>  <span style="font-weight:bold;color:#5c5cff;">kat_tom</span>  <span style="font-weight:bold;color:#5c5cff;">kat_tom2</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion2/lektion1-forts
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion2/lektion1-forts
+</span>$ tree -L
+
+
+
+mnman tree
+TREE(1)                      General Commands Manual                     TREE(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       tree - list contents of directories in a tree-like format.
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">tree</span> [<span style="font-weight:bold;color:#7f7f7f;">-acdfghilnpqrstuvxACDFJQNSUX</span>] [<span style="font-weight:bold;color:#7f7f7f;">-L</span> <span style="text-decoration:underline;">level</span> [<span style="font-weight:bold;color:#7f7f7f;">-R</span>]] [<span style="font-weight:bold;color:#7f7f7f;">-H</span> <span style="text-decoration:underline;">baseHREF</span>] [<span style="font-weight:bold;color:#7f7f7f;">-T</span> <span style="text-decoration:underline;">ti‐</span>
+       <span style="text-decoration:underline;">tle</span>] [<span style="font-weight:bold;color:#7f7f7f;">-o</span>  <span style="text-decoration:underline;">filename</span>]  [<span style="font-weight:bold;color:#7f7f7f;">-P</span>  <span style="text-decoration:underline;">pattern</span>]  [<span style="font-weight:bold;color:#7f7f7f;">-I</span>  <span style="text-decoration:underline;">pattern</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--gitignore</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--git‐</span>
+       <span style="font-weight:bold;color:#7f7f7f;">file</span>[<span style="font-weight:bold;color:#7f7f7f;">=</span>]<span style="text-decoration:underline;">file</span>]   [<span style="font-weight:bold;color:#7f7f7f;">--matchdirs</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--metafirst</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--ignore-case</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--nolinks</span>]
+       [<span style="font-weight:bold;color:#7f7f7f;">--hintro</span>[<span style="font-weight:bold;color:#7f7f7f;">=</span>]<span style="text-decoration:underline;">file</span>] [<span style="font-weight:bold;color:#7f7f7f;">--houtro</span>[<span style="font-weight:bold;color:#7f7f7f;">=</span>]<span style="text-decoration:underline;">file</span>] [<span style="font-weight:bold;color:#7f7f7f;">--inodes</span>] [<span style="font-weight:bold;color:#7f7f7f;">--device</span>] [<span style="font-weight:bold;color:#7f7f7f;">--sort</span>[<span style="font-weight:bold;color:#7f7f7f;">=</span>]<span style="text-decoration:underline;">name</span>]
+       [<span style="font-weight:bold;color:#7f7f7f;">--dirsfirst</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--filesfirst</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--filelimit</span>  <span style="text-decoration:underline;">#</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--si</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--du</span>] [<span style="font-weight:bold;color:#7f7f7f;">--prune</span>]
+       [<span style="font-weight:bold;color:#7f7f7f;">--charset[=]X]</span> <span style="font-weight:bold;color:#7f7f7f;">[--timefmt[=]</span><span style="text-decoration:underline;">format</span><span style="font-weight:bold;color:#7f7f7f;">]</span>  <span style="font-weight:bold;color:#7f7f7f;">[--fromfile]</span>  <span style="font-weight:bold;color:#7f7f7f;">[--fflinks]</span>  <span style="font-weight:bold;color:#7f7f7f;">[--info]</span>
+       <span style="font-weight:bold;color:#7f7f7f;">[--infofile[=]</span><span style="text-decoration:underline;">file</span><span style="font-weight:bold;color:#7f7f7f;">]</span>  <span style="font-weight:bold;color:#7f7f7f;">[--noreport]</span>  <span style="font-weight:bold;color:#7f7f7f;">[--version]</span>  <span style="font-weight:bold;color:#7f7f7f;">[--help]</span>  <span style="font-weight:bold;color:#7f7f7f;">[--]</span> <span style="font-weight:bold;color:#7f7f7f;">[</span><span style="text-decoration:underline;">directory</span>
+       <span style="font-weight:bold;color:#7f7f7f;">...]</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="text-decoration:underline;">Tree</span> is a recursive directory listing program that produces a  depth  in‐
+<span style="color:#000000;background-color:#000000;">TREE(1)                      General Commands Manual                     TREE(1)</span>00000;background-color:#000000;">
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       tree - list contents of directories in a tree-like format.
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">tree</span> [<span style="font-weight:bold;color:#7f7f7f;">-acdfghilnpqrstuvxACDFJQNSUX</span>] [<span style="font-weight:bold;color:#7f7f7f;">-L</span> <span style="text-decoration:underline;">level</span> [<span style="font-weight:bold;color:#7f7f7f;">-R</span>]] [<span style="font-weight:bold;color:#7f7f7f;">-H</span> <span style="text-decoration:underline;">baseHREF</span>] [<span style="font-weight:bold;color:#7f7f7f;">-T</span> <span style="text-decoration:underline;">ti‐</span>
+       <span style="text-decoration:underline;">tle</span>] [<span style="font-weight:bold;color:#7f7f7f;">-o</span>  <span style="text-decoration:underline;">filename</span>]  [<span style="font-weight:bold;color:#7f7f7f;">-P</span>  <span style="text-decoration:underline;">pattern</span>]  [<span style="font-weight:bold;color:#7f7f7f;">-I</span>  <span style="text-decoration:underline;">pattern</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--gitignore</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--git‐</span>
+       <span style="font-weight:bold;color:#7f7f7f;">file</span>[<span style="font-weight:bold;color:#7f7f7f;">=</span>]<span style="text-decoration:underline;">file</span>]   [<span style="font-weight:bold;color:#7f7f7f;">--matchdirs</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--metafirst</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--ignore-case</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--nolinks</span>]
+       [<span style="font-weight:bold;color:#7f7f7f;">--hintro</span>[<span style="font-weight:bold;color:#7f7f7f;">=</span>]<span style="text-decoration:underline;">file</span>] [<span style="font-weight:bold;color:#7f7f7f;">--houtro</span>[<span style="font-weight:bold;color:#7f7f7f;">=</span>]<span style="text-decoration:underline;">file</span>] [<span style="font-weight:bold;color:#7f7f7f;">--inodes</span>] [<span style="font-weight:bold;color:#7f7f7f;">--device</span>] [<span style="font-weight:bold;color:#7f7f7f;">--sort</span>[<span style="font-weight:bold;color:#7f7f7f;">=</span>]<span style="text-decoration:underline;">name</span>]
+       [<span style="font-weight:bold;color:#7f7f7f;">--dirsfirst</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--filesfirst</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--filelimit</span>  <span style="text-decoration:underline;">#</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--si</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--du</span>] [<span style="font-weight:bold;color:#7f7f7f;">--prune</span>]
+       [<span style="font-weight:bold;color:#7f7f7f;">--charset[=]X]</span> <span style="font-weight:bold;color:#7f7f7f;">[--timefmt[=]</span><span style="text-decoration:underline;">format</span><span style="font-weight:bold;color:#7f7f7f;">]</span>  <span style="font-weight:bold;color:#7f7f7f;">[--fromfile]</span>  <span style="font-weight:bold;color:#7f7f7f;">[--fflinks]</span>  <span style="font-weight:bold;color:#7f7f7f;">[--info]</span>
+       <span style="font-weight:bold;color:#7f7f7f;">[--infofile[=]</span><span style="text-decoration:underline;">file</span><span style="font-weight:bold;color:#7f7f7f;">]</span>  <span style="font-weight:bold;color:#7f7f7f;">[--noreport]</span>  <span style="font-weight:bold;color:#7f7f7f;">[--version]</span>  <span style="font-weight:bold;color:#7f7f7f;">[--help]</span>  <span style="font-weight:bold;color:#7f7f7f;">[--]</span> <span style="font-weight:bold;color:#7f7f7f;">[</span><span style="text-decoration:underline;">directory</span>
+       <span style="font-weight:bold;color:#7f7f7f;">...]</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="text-decoration:underline;">Tree</span> is a recursive directory listing program that produces a  depth  in‐
+TREE(1)                      General Commands Manual                     TREE(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       tree - list contents of directories in a tree-like format.
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">tree</span> [<span style="font-weight:bold;color:#7f7f7f;">-acdfghilnpqrstuvxACDFJQNSUX</span>] [<span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-L</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> <span style="text-decoration:underline;">level</span> [<span style="font-weight:bold;color:#7f7f7f;">-R</span>]] [<span style="font-weight:bold;color:#7f7f7f;">-H</span> <span style="text-decoration:underline;">baseHREF</span>] [<span style="font-weight:bold;color:#7f7f7f;">-T</span> <span style="text-decoration:underline;">ti‐</span>
+       <span style="text-decoration:underline;">tle</span>] [<span style="font-weight:bold;color:#7f7f7f;">-o</span>  <span style="text-decoration:underline;">filename</span>]  [<span style="font-weight:bold;color:#7f7f7f;">-P</span>  <span style="text-decoration:underline;">pattern</span>]  [<span style="font-weight:bold;color:#7f7f7f;">-I</span>  <span style="text-decoration:underline;">pattern</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--gitignore</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--git‐</span>
+       <span style="font-weight:bold;color:#7f7f7f;">file</span>[<span style="font-weight:bold;color:#7f7f7f;">=</span>]<span style="text-decoration:underline;">file</span>]   [<span style="font-weight:bold;color:#7f7f7f;">--matchdirs</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--metafirst</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--ignore-case</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--nolinks</span>]
+       [<span style="font-weight:bold;color:#7f7f7f;">--hintro</span>[<span style="font-weight:bold;color:#7f7f7f;">=</span>]<span style="text-decoration:underline;">file</span>] [<span style="font-weight:bold;color:#7f7f7f;">--houtro</span>[<span style="font-weight:bold;color:#7f7f7f;">=</span>]<span style="text-decoration:underline;">file</span>] [<span style="font-weight:bold;color:#7f7f7f;">--inodes</span>] [<span style="font-weight:bold;color:#7f7f7f;">--device</span>] [<span style="font-weight:bold;color:#7f7f7f;">--sort</span>[<span style="font-weight:bold;color:#7f7f7f;">=</span>]<span style="text-decoration:underline;">name</span>]
+       [<span style="font-weight:bold;color:#7f7f7f;">--dirsfirst</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--filesfirst</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--filelimit</span>  <span style="text-decoration:underline;">#</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--si</span>]  [<span style="font-weight:bold;color:#7f7f7f;">--du</span>] [<span style="font-weight:bold;color:#7f7f7f;">--prune</span>]
+       [<span style="font-weight:bold;color:#7f7f7f;">--charset[=]X]</span> <span style="font-weight:bold;color:#7f7f7f;">[--timefmt[=]</span><span style="text-decoration:underline;">format</span><span style="font-weight:bold;color:#7f7f7f;">]</span>  <span style="font-weight:bold;color:#7f7f7f;">[--fromfile]</span>  <span style="font-weight:bold;color:#7f7f7f;">[--fflinks]</span>  <span style="font-weight:bold;color:#7f7f7f;">[--info]</span>
+       <span style="font-weight:bold;color:#7f7f7f;">[--infofile[=]</span><span style="text-decoration:underline;">file</span><span style="font-weight:bold;color:#7f7f7f;">]</span>  <span style="font-weight:bold;color:#7f7f7f;">[--noreport]</span>  <span style="font-weight:bold;color:#7f7f7f;">[--version]</span>  <span style="font-weight:bold;color:#7f7f7f;">[--help]</span>  <span style="font-weight:bold;color:#7f7f7f;">[--]</span> <span style="font-weight:bold;color:#7f7f7f;">[</span><span style="text-decoration:underline;">directory</span>
+       <span style="font-weight:bold;color:#7f7f7f;">...]</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="text-decoration:underline;">Tree</span> is a recursive directory listing program that produces a  depth  in‐
+       dented  listing of files, which is colorized ala <span style="text-decoration:underline;">dircolors</span> if the <span style="font-weight:bold;color:#7f7f7f;">LS_COL‐</span>
+       <span style="font-weight:bold;color:#7f7f7f;">ORS</span> environment variable is set and output is to tty.  With no arguments,
+       <span style="text-decoration:underline;">tree</span>  lists the files in the current directory.  When directory arguments
+       are given, <span style="text-decoration:underline;">tree</span> lists all the files and/or directories found in the given
+       directories  each in turn.  Upon completion of listing all files/directo‐
+       ries found, <span style="text-decoration:underline;">tree</span> returns the total number  of  files  and/or  directories
+<span style="color:#000000;background-color:#000000;">...skipping...ree(1) line 7 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-L</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> <span style="text-decoration:underline;">level</span>
+              Max display depth of the directory tree.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-R</span>     Recursively cross down the tree each <span style="text-decoration:underline;">level</span> directories (see <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-L</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> op‐
+              tion), and at each level outputting to a  file  named  <span style="font-weight:bold;color:#7f7f7f;">00Tree.html</span>
+              (ala <span style="font-weight:bold;color:#7f7f7f;">-o</span>).
+
+       <span style="font-weight:bold;color:#7f7f7f;">-P</span> <span style="text-decoration:underline;">pattern</span>
+              List  only  those files that match the wild-card <span style="text-decoration:underline;">pattern</span>.  You may
+              have multiple -P options. Note: you must use the <span style="text-decoration:underline;">-a</span> option to also
+              consider those files beginning with a dot `.&apos; for matching.  Valid
+              wildcard operators are `*&apos; (any zero  or  more  characters),  `**`
+              (any  zero  or  more characters as well as null /&apos;s, i.e. /**/ may
+              match a single /), `?&apos; (any single character), `[...]&apos; (any single
+              character listed between brackets (optional - (dash) for character
+              range may be used: ex: [A-Z]), and `[^...]&apos; (any single  character
+              not  listed  in  brackets) and `|&apos; separates alternate patterns. A
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS25/lektion2/lektion1-fortskground-color:#000000;">
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion2/lektion1-forts
+</span>$ tree /etc/
+/etc/
+├── adduser.conf
+├── adjtime
+├── aliases
+├── alsa
+│   └── conf.d
+│       ├── 10-rate-lav.conf -&gt; /usr/share/alsa/alsa.conf.d/10-rate-lav.conf
+│       ├── 10-samplerate.conf -&gt; /usr/share/alsa/alsa.conf.d/10-samplerate.conf
+│       ├── 10-speexrate.conf -&gt; /usr/share/alsa/alsa.conf.d/10-speexrate.conf
+│       ├── 50-arcam-av-ctl.conf -&gt; /usr/share/alsa/alsa.conf.d/50-arcam-av-ctl.conf
+│       ├── 50-jack.conf -&gt; /usr/share/alsa/alsa.conf.d/50-jack.conf
+│       ├── 50-oss.conf -&gt; /usr/share/alsa/alsa.conf.d/50-oss.conf
+│       ├── 50-pipewire.conf -&gt; /usr/share/alsa/alsa.conf.d/50-pipewire.conf
+│       ├── 50-pulseaudio.conf -&gt; /usr/share/alsa/alsa.conf.d/50-pulseaudio.conf
+│       ├── 60-a52-encoder.conf -&gt; /usr/share/alsa/alsa.conf.d/60-a52-encoder.conf
+│       ├── 60-speex.conf -&gt; /usr/share/alsa/alsa.conf.d/60-speex.conf
+│       ├── 60-upmix.conf -&gt; /usr/share/alsa/alsa.conf.d/60-upmix.conf
+│       ├── 60-vdownmix.conf -&gt; /usr/share/alsa/alsa.conf.d/60-vdownmix.conf
+│       ├── 98-usb-stream.conf -&gt; /usr/share/alsa/alsa.conf.d/98-usb-stream.conf
+│       ├── 99-pipewire-default.conf -&gt; /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf
+│       └── 99-pulseaudio-default.conf.example
+├── alternatives
+│   ├── aclocal -&gt; /usr/bin/aclocal-1.16
+│   ├── aclocal.1.gz -&gt; /usr/share/man/man1/aclocal-1.16.1.gz
+│   ├── animate -&gt; /usr/bin/animate-im6.q16
+│   ├── animate.1.gz -&gt; /usr/share/man/man1/animate-im6.q16.1.gz
+│   ├── animate-im6 -&gt; /usr/bin/animate-im6.q16
+│   ├── animate-im6.1.gz -&gt; /usr/share/man/man1/animate-im6.q16.1.gz
+│   ├── arptables -&gt; /usr/sbin/arptables-nft
+│   ├── arptables-restore -&gt; /usr/sbin/arptables-nft-restore
+│   ├── arptables-save -&gt; /usr/sbin/arptables-nft-save
+│   ├── automake -&gt; /usr/bin/automake-1.16
+│   ├── automake.1.gz -&gt; /usr/share/man/man1/automake-1.16.1.gz
+│   ├── awk -&gt; /usr/bin/gawk
+│   ├── awk.1.gz -&gt; /usr/share/man/man1/gawk.1.gz
+│   ├── bf_compact -&gt; /usr/bin/bf_compact-bdb
+│   ├── bf_copy -&gt; /usr/bin/bf_copy-bdb
+│   ├── bf_tar -&gt; /usr/bin/bf_tar-bdb
+│   ├── bibtex -&gt; /usr/bin/bibtex.original
+│   ├── bibtex.1.gz -&gt; /usr/share/man/man1/bibtex.original.1.gz
+│   ├── bogofilter -&gt; /usr/bin/bogofilter-bdb
+│   ├── bogolexer -&gt; /usr/bin/bogolexer-bdb
+│   ├── bogotune -&gt; /usr/bin/bogotune-bdb
+│   ├── bogoupgrade -&gt; /usr/bin/bogoupgrade-bdb
+│   ├── bogoutil -&gt; /usr/bin/bogoutil-bdb
+│   ├── brave-browser -&gt; /usr/bin/brave-browser-stable
+│   ├── builtins.7.gz -&gt; /usr/share/man/man7/bash-builtins.7.gz
+│   ├── c++ -&gt; /usr/bin/g++
+│   ├── c89 -&gt; /usr/bin/c89-gcc
+│   ├── c89.1.gz -&gt; /usr/share/man/man1/c89-gcc.1.gz
+│   ├── c99 -&gt; /usr/bin/c99-gcc
+│   ├── c99.1.gz -&gt; /usr/share/man/man1/c99-gcc.1.gz
+│   ├── cc -&gt; /usr/bin/gcc
+│   ├── compare -&gt; /usr/bin/compare-im6.q16
+│   ├── compare.1.gz -&gt; /usr/share/man/man1/compare-im6.q16.1.gz
+│   ├── compare-im6 -&gt; /usr/bin/compare-im6.q16
+│   ├── compare-im6.1.gz -&gt; /usr/share/man/man1/compare-im6.q16.1.gz
+│   ├── composite -&gt; /usr/bin/composite-im6.q16
+│   ├── composite.1.gz -&gt; /usr/share/man/man1/composite-im6.q16.1.gz
+│   ├── composite-im6 -&gt; /usr/bin/composite-im6.q16
+│   ├── composite-im6.1.gz -&gt; /usr/share/man/man1/composite-im6.q16.1.gz
+│   ├── conjure -&gt; /usr/bin/conjure-im6.q16
+│   ├── conjure.1.gz -&gt; /usr/share/man/man1/conjure-im6.q16.1.gz
+│   ├── conjure-im6 -&gt; /usr/bin/conjure-im6.q16
+│   ├── conjure-im6.1.gz -&gt; /usr/share/man/man1/conjure-im6.q16.1.gz
+│   ├── convert -&gt; /usr/bin/convert-im6.q16
+│   ├── convert.1.gz -&gt; /usr/share/man/man1/convert-im6.q16.1.gz
+│   ├── convert-im6 -&gt; /usr/bin/convert-im6.q16
+│   ├── convert-im6.1.gz -&gt; /usr/share/man/man1/convert-im6.q16.1.gz
+│   ├── cpp -&gt; /usr/bin/cpp
+│   ├── default-GM.sf2 -&gt; /usr/share/sounds/sf2/TimGM6mb.sf2
+│   ├── default-GM.sf3 -&gt; /usr/share/sounds/sf2/TimGM6mb.sf2
+│   ├── desktop-background -&gt; /usr/share/desktop-base/active-theme/wallpaper/contents/images/1920x1080.svg
+│   ├── desktop-background.xml -&gt; /usr/share/desktop-base/active-theme/wallpaper/gnome-background.xml
+│   ├── desktop-grub -&gt; /usr/share/desktop-base/active-theme/grub/grub-4x3.png
+│   ├── desktop-grub.sh -&gt; /usr/share/desktop-base/active-theme/grub/grub_background.sh
+│   ├── desktop-lockscreen.xml -&gt; /usr/share/desktop-base/active-theme/lockscreen/gnome-background.xml
+│   ├── desktop-login-background -&gt; /usr/share/desktop-base/active-theme/login/background.svg
+│   ├── desktop-plasma5-wallpaper -&gt; /usr/share/desktop-base/active-theme/wallpaper
+│   ├── desktop-theme -&gt; /usr/share/desktop-base/emerald-theme
+│   ├── display -&gt; /usr/bin/display-im6.q16
+│   ├── display.1.gz -&gt; /usr/share/man/man1/display-im6.q16.1.gz
+│   ├── display-im6 -&gt; /usr/bin/display-im6.q16
+│   ├── display-im6.1.gz -&gt; /usr/share/man/man1/display-im6.q16.1.gz
+│   ├── ebtables -&gt; /usr/sbin/ebtables-nft
+│   ├── ebtables-restore -&gt; /usr/sbin/ebtables-nft-restore
+│   ├── ebtables-save -&gt; /usr/sbin/ebtables-nft-save
+│   ├── editor -&gt; /bin/nano
+│   ├── editor.1.gz -&gt; /usr/share/man/man1/nano.1.gz
+│   ├── emblem-vendor-128 -&gt; /usr/share/icons/desktop-base/128x128/emblems/emblem-debian.png
+│   ├── emblem-vendor-256 -&gt; /usr/share/icons/desktop-base/256x256/emblems/emblem-debian.png
+│   ├── emblem-vendor-64 -&gt; /usr/share/icons/desktop-base/64x64/emblems/emblem-debian.png
+│   ├── emblem-vendor-scalable -&gt; /usr/share/icons/desktop-base/scalable/emblems/emblem-debian.svg
+│   ├── emblem-vendor-symbolic-128 -&gt; /usr/share/icons/desktop-base/128x128/emblems/emblem-debian-symbolic.png
+│   ├── emblem-vendor-symbolic-256 -&gt; /usr/share/icons/desktop-base/256x256/emblems/emblem-debian-symbolic.png
+│   ├── emblem-vendor-symbolic-64 -&gt; /usr/share/icons/desktop-base/64x64/emblems/emblem-debian-symbolic.png
+│   ├── emblem-vendor-symbolic-scalable -&gt; /usr/share/icons/desktop-base/scalable/emblems/emblem-debian-symbolic.svg
+│   ├── emblem-vendor-white-128 -&gt; /usr/share/icons/desktop-base/128x128/emblems/emblem-debian-white.png
+│   ├── emblem-vendor-white-256 -&gt; /usr/share/icons/desktop-base/256x256/emblems/emblem-debian-white.png
+│   ├── emblem-vendor-white-64 -&gt; /usr/share/icons/desktop-base/64x64/emblems/emblem-debian-white.png
+│   ├── emblem-vendor-white-scalable -&gt; /usr/share/icons/desktop-base/scalable/emblems/emblem-debian-white.svg
+│   ├── ex -&gt; /usr/bin/vim.basic
+│   ├── ex.1.gz -&gt; /usr/share/man/man1/vim.1.gz
+│   ├── ex.da.1.gz -&gt; /usr/share/man/da/man1/vim.1.gz
+│   ├── ex.de.1.gz -&gt; /usr/share/man/de/man1/vim.1.gz
+│   ├── ex.fr.1.gz -&gt; /usr/share/man/fr/man1/vim.1.gz
+│   ├── ex.it.1.gz -&gt; /usr/share/man/it/man1/vim.1.gz
+│   ├── ex.ja.1.gz -&gt; /usr/share/man/ja/man1/vim.1.gz
+│   ├── ex.pl.1.gz -&gt; /usr/share/man/pl/man1/vim.1.gz
+│   ├── ex.ru.1.gz -&gt; /usr/share/man/ru/man1/vim.1.gz
+│   ├── ex.tr.1.gz -&gt; /usr/share/man/tr/man1/vim.1.gz
+│   ├── faked.1.gz -&gt; /usr/share/man/man1/faked-sysv.1.gz
+│   ├── faked.es.1.gz -&gt; /usr/share/man/es/man1/faked-sysv.1.gz
+│   ├── faked.fr.1.gz -&gt; /usr/share/man/fr/man1/faked-sysv.1.gz
+│   ├── faked.sv.1.gz -&gt; /usr/share/man/sv/man1/faked-sysv.1.gz
+│   ├── fakeroot -&gt; /usr/bin/fakeroot-sysv
+│   ├── fakeroot.1.gz -&gt; /usr/share/man/man1/fakeroot-sysv.1.gz
+│   ├── fakeroot.es.1.gz -&gt; /usr/share/man/es/man1/fakeroot-sysv.1.gz
+│   ├── fakeroot.fr.1.gz -&gt; /usr/share/man/fr/man1/fakeroot-sysv.1.gz
+│   ├── fakeroot.sv.1.gz -&gt; /usr/share/man/sv/man1/fakeroot-sysv.1.gz
+│   ├── figlet -&gt; /usr/bin/figlet-figlet
+│   ├── figlet.6.gz -&gt; /usr/share/man/man6/figlet-figlet.6.gz
+│   ├── gdm-smartcard -&gt; /etc/pam.d/gdm-smartcard-sssd-exclusive
+│   ├── gnome-text-editor -&gt; /usr/bin/gedit
+│   ├── gnome-text-editor.1.gz -&gt; /usr/share/man/man1/gedit.1.gz
+│   ├── gnome-www-browser -&gt; /usr/bin/brave-browser-stable
+│   ├── google-chrome -&gt; /usr/bin/google-chrome-stable
+│   ├── gstreamer-codec-install -&gt; /usr/libexec/pk-gstreamer-install
+│   ├── identify -&gt; /usr/bin/identify-im6.q16
+│   ├── identify.1.gz -&gt; /usr/share/man/man1/identify-im6.q16.1.gz
+│   ├── identify-im6 -&gt; /usr/bin/identify-im6.q16
+│   ├── identify-im6.1.gz -&gt; /usr/share/man/man1/identify-im6.q16.1.gz
+│   ├── import -&gt; /usr/bin/import-im6.q16
+│   ├── import.1.gz -&gt; /usr/share/man/man1/import-im6.q16.1.gz
+│   ├── import-im6 -&gt; /usr/bin/import-im6.q16
+│   ├── import-im6.1.gz -&gt; /usr/share/man/man1/import-im6.q16.1.gz
+│   ├── infobrowser -&gt; /usr/bin/info
+│   ├── infobrowser.1.gz -&gt; /usr/share/man/man1/info.1.gz
+│   ├── iotop -&gt; /usr/sbin/iotop-py
+│   ├── iotop.8.gz -&gt; /usr/share/man/man8/iotop-py.8.gz
+│   ├── ip6tables -&gt; /usr/sbin/ip6tables-nft
+│   ├── ip6tables-restore -&gt; /usr/sbin/ip6tables-nft-restore
+│   ├── ip6tables-save -&gt; /usr/sbin/ip6tables-nft-save
+│   ├── iptables -&gt; /usr/sbin/iptables-nft
+│   ├── iptables-restore -&gt; /usr/sbin/iptables-nft-restore
+│   ├── iptables-save -&gt; /usr/sbin/iptables-nft-save
+│   ├── jar -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/jar
+│   ├── jar.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/jar.1
+│   ├── jarsigner -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/jarsigner
+│   ├── jarsigner.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/jarsigner.1
+│   ├── java -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/java
+│   ├── java.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/java.1
+│   ├── javac -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/javac
+│   ├── javac.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/javac.1
+│   ├── javadoc -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/javadoc
+│   ├── javadoc.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/javadoc.1
+│   ├── java_jdk_23_oracle -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64
+│   ├── javap -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/javap
+│   ├── javap.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/javap.1
+│   ├── jcmd -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/jcmd
+│   ├── jcmd.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/jcmd.1
+│   ├── jconsole -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/jconsole
+│   ├── jconsole.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/jconsole.1
+│   ├── jdb -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/jdb
+│   ├── jdb.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/jdb.1
+│   ├── jdeprscan -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/jdeprscan
+│   ├── jdeprscan.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/jdeprscan.1
+│   ├── jdeps -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/jdeps
+│   ├── jdeps.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/jdeps.1
+│   ├── jexec -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/lib/jexec
+│   ├── jexec-binfmt -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/lib/jar.binfmt
+│   ├── jfr -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/jfr
+│   ├── jfr.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/jfr.1
+│   ├── jhsdb -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/jhsdb
+│   ├── jhsdb.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/jhsdb.1
+│   ├── jimage -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/jimage
+│   ├── jinfo -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/jinfo
+│   ├── jinfo.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/jinfo.1
+│   ├── jlink -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/jlink
+│   ├── jlink.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/jlink.1
+│   ├── jmap -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/jmap
+│   ├── jmap.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/jmap.1
+│   ├── jmod -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/jmod
+│   ├── jmod.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/jmod.1
+│   ├── jpackage -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/jpackage
+│   ├── jpackage.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/jpackage.1
+│   ├── jps -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/jps
+│   ├── jps.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/jps.1
+│   ├── jrunscript -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/jrunscript
+│   ├── jrunscript.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/jrunscript.1
+│   ├── jshell -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/jshell
+│   ├── jshell.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/jshell.1
+│   ├── jspawnhelper -&gt; /usr/lib/jvm/temurin-25-jdk-amd64/lib/jspawnhelper
+│   ├── jstack -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/jstack
+│   ├── jstack.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/jstack.1
+│   ├── jstat -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/jstat
+│   ├── jstat.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/jstat.1
+│   ├── jstatd -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/jstatd
+│   ├── jstatd.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/jstatd.1
+│   ├── jwebserver -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/jwebserver
+│   ├── jwebserver.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/jwebserver.1
+│   ├── keytool -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/keytool
+│   ├── keytool.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/keytool.1
+│   ├── lft -&gt; /usr/bin/lft.db
+│   ├── lft.1.gz -&gt; /usr/share/man/man1/lft.db.1.gz
+│   ├── libblas.so.3-x86_64-linux-gnu -&gt; /usr/lib/x86_64-linux-gnu/blas/libblas.so.3
+│   ├── liblapack.so.3-x86_64-linux-gnu -&gt; /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3
+│   ├── lightdm-greeter -&gt; /usr/share/xgreeters/lightdm-gtk-greeter.desktop
+│   ├── locate -&gt; /usr/bin/plocate
+│   ├── locate.1.gz -&gt; /usr/share/man/man1/plocate.1.gz
+│   ├── lzcat -&gt; /usr/bin/xzcat
+│   ├── lzcat.1.gz -&gt; /usr/share/man/man1/xzcat.1.gz
+│   ├── lzcmp -&gt; /usr/bin/xzcmp
+│   ├── lzcmp.1.gz -&gt; /usr/share/man/man1/xzcmp.1.gz
+│   ├── lzdiff -&gt; /usr/bin/xzdiff
+│   ├── lzdiff.1.gz -&gt; /usr/share/man/man1/xzdiff.1.gz
+│   ├── lzegrep -&gt; /usr/bin/xzegrep
+│   ├── lzegrep.1.gz -&gt; /usr/share/man/man1/xzegrep.1.gz
+│   ├── lzfgrep -&gt; /usr/bin/xzfgrep
+│   ├── lzfgrep.1.gz -&gt; /usr/share/man/man1/xzfgrep.1.gz
+│   ├── lzgrep -&gt; /usr/bin/xzgrep
+│   ├── lzgrep.1.gz -&gt; /usr/share/man/man1/xzgrep.1.gz
+│   ├── lzless -&gt; /usr/bin/xzless
+│   ├── lzless.1.gz -&gt; /usr/share/man/man1/xzless.1.gz
+│   ├── lzma -&gt; /usr/bin/xz
+│   ├── lzma.1.gz -&gt; /usr/share/man/man1/xz.1.gz
+│   ├── lzmore -&gt; /usr/bin/xzmore
+│   ├── lzmore.1.gz -&gt; /usr/share/man/man1/xzmore.1.gz
+│   ├── mail -&gt; /usr/bin/bsd-mailx
+│   ├── Mail -&gt; /usr/bin/bsd-mailx
+│   ├── mail.1.gz -&gt; /usr/share/man/man1/bsd-mailx.1.gz
+│   ├── Mail.1.gz -&gt; /usr/share/man/man1/bsd-mailx.1.gz
+│   ├── mailx -&gt; /usr/bin/bsd-mailx
+│   ├── mailx.1.gz -&gt; /usr/share/man/man1/bsd-mailx.1.gz
+│   ├── mogrify -&gt; /usr/bin/mogrify-im6.q16
+│   ├── mogrify.1.gz -&gt; /usr/share/man/man1/mogrify-im6.q16.1.gz
+│   ├── mogrify-im6 -&gt; /usr/bin/mogrify-im6.q16
+│   ├── mogrify-im6.1.gz -&gt; /usr/share/man/man1/mogrify-im6.q16.1.gz
+│   ├── montage -&gt; /usr/bin/montage-im6.q16
+│   ├── montage.1.gz -&gt; /usr/share/man/man1/montage-im6.q16.1.gz
+│   ├── montage-im6 -&gt; /usr/bin/montage-im6.q16
+│   ├── montage-im6.1.gz -&gt; /usr/share/man/man1/montage-im6.q16.1.gz
+│   ├── mt -&gt; /bin/mt-gnu
+│   ├── mt.1.gz -&gt; /usr/share/man/man1/mt-gnu.1.gz
+│   ├── mvn -&gt; /usr/share/maven/bin/mvn
+│   ├── mvn.1.gz -&gt; /usr/share/maven/man/mvn.1.gz
+│   ├── mvnDebug -&gt; /usr/share/maven/bin/mvnDebug
+│   ├── mvnDebug.1.gz -&gt; /usr/share/maven/man/mvnDebug.1.gz
+│   ├── my.cnf -&gt; /etc/mysql/mariadb.cnf
+│   ├── nawk -&gt; /usr/bin/gawk
+│   ├── nawk.1.gz -&gt; /usr/share/man/man1/gawk.1.gz
+│   ├── nc -&gt; /bin/nc.openbsd
+│   ├── nc.1.gz -&gt; /usr/share/man/man1/nc_openbsd.1.gz
+│   ├── netcat -&gt; /bin/nc.openbsd
+│   ├── netcat.1.gz -&gt; /usr/share/man/man1/nc_openbsd.1.gz
+│   ├── open -&gt; /usr/bin/xdg-open
+│   ├── open.1.gz -&gt; /usr/share/man/man1/xdg-open.1.gz
+│   ├── pager -&gt; /usr/bin/less
+│   ├── pager.1.gz -&gt; /usr/share/man/man1/less.1.gz
+│   ├── pdftk -&gt; /usr/bin/pdftk.pdftk-java
+│   ├── pdftkman -&gt; /usr/share/man/man1/pdftk.pdftk-java.1.gz
+│   ├── pico -&gt; /bin/nano
+│   ├── pico.1.gz -&gt; /usr/share/man/man1/nano.1.gz
+│   ├── pinentry -&gt; /usr/bin/pinentry-gnome3
+│   ├── pinentry.1.gz -&gt; /usr/share/man/man1/pinentry-gnome3.1.gz
+│   ├── pinentry-x11 -&gt; /usr/bin/pinentry-gnome3
+│   ├── pinentry-x11.1.gz -&gt; /usr/share/man/man1/pinentry-gnome3.1.gz
+│   ├── prolog -&gt; /usr/bin/swipl
+│   ├── prolog.1.gz -&gt; /usr/share/man/man1/swipl.1.gz
+│   ├── pybabel -&gt; /usr/bin/pybabel-python3
+│   ├── README
+│   ├── regulatory.db -&gt; /lib/firmware/regulatory.db-debian
+│   ├── regulatory.db.p7s -&gt; /lib/firmware/regulatory.db.p7s-debian
+│   ├── rmiregistry -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/rmiregistry
+│   ├── rmiregistry.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/rmiregistry.1
+│   ├── rmt -&gt; /usr/sbin/rmt-tar
+│   ├── rmt.8.gz -&gt; /usr/share/man/man8/rmt-tar.8.gz
+│   ├── rview -&gt; /usr/bin/vim.basic
+│   ├── rvim -&gt; /usr/bin/vim.basic
+│   ├── sar -&gt; /usr/bin/sar.sysstat
+│   ├── sar.1.gz -&gt; /usr/share/man/man1/sar.sysstat.1.gz
+│   ├── serialver -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/bin/serialver
+│   ├── serialver.1 -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64/man/man1/serialver.1
+│   ├── ssh-askpass -&gt; /usr/bin/ksshaskpass
+│   ├── ssh-askpass.1.gz -&gt; /usr/share/man/man1/ksshaskpass.1.gz
+│   ├── start-here-16.png -&gt; /usr/share/icons/gnome/16x16/places/debian-swirl.png
+│   ├── start-here-22.png -&gt; /usr/share/icons/gnome/22x22/places/debian-swirl.png
+│   ├── start-here-24.png -&gt; /usr/share/icons/gnome/24x24/places/debian-swirl.png
+│   ├── start-here-256.png -&gt; /usr/share/icons/gnome/256x256/places/debian-swirl.png
+│   ├── start-here-32.png -&gt; /usr/share/icons/gnome/32x32/places/debian-swirl.png
+│   ├── start-here-48.png -&gt; /usr/share/icons/gnome/48x48/places/debian-swirl.png
+│   ├── start-here.svg -&gt; /usr/share/icons/gnome/scalable/places/debian-swirl.svg
+│   ├── stream -&gt; /usr/bin/stream-im6.q16
+│   ├── stream.1.gz -&gt; /usr/share/man/man1/stream-im6.q16.1.gz
+│   ├── stream-im6 -&gt; /usr/bin/stream-im6.q16
+│   ├── stream-im6.1.gz -&gt; /usr/share/man/man1/stream-im6.q16.1.gz
+│   ├── tcptraceroute -&gt; /usr/sbin/tcptraceroute.db
+│   ├── tcptraceroute.8.gz -&gt; /usr/share/man/man8/tcptraceroute.db.8.gz
+│   ├── telnet -&gt; /usr/bin/inetutils-telnet
+│   ├── telnet.1.gz -&gt; /usr/share/man/man1/inetutils-telnet.1.gz
+│   ├── tldr -&gt; /usr/bin/tldr-hs
+│   ├── tldr.1.gz -&gt; /usr/share/man/man1/tldr-hs.1.gz
+│   ├── traceproto -&gt; /usr/bin/traceproto.db
+│   ├── traceproto.1.gz -&gt; /usr/share/man/man1/traceproto.db.1.gz
+│   ├── traceroute -&gt; /usr/bin/traceroute.db
+│   ├── traceroute.1.gz -&gt; /usr/share/man/man1/traceroute.db.1.gz
+│   ├── traceroute6 -&gt; /usr/bin/traceroute6.db
+│   ├── traceroute6.1.gz -&gt; /usr/share/man/man1/traceroute6.db.1.gz
+│   ├── traceroute.sbin -&gt; /usr/bin/traceroute.db
+│   ├── unlzma -&gt; /usr/bin/unxz
+│   ├── unlzma.1.gz -&gt; /usr/share/man/man1/unxz.1.gz
+│   ├── updatedb -&gt; /usr/sbin/updatedb.plocate
+│   ├── updatedb.8.gz -&gt; /usr/share/man/man8/updatedb.plocate.8.gz
+│   ├── vendor-logos -&gt; /usr/share/desktop-base/debian-logos
+│   ├── vi -&gt; /usr/bin/vim.basic
+│   ├── vi.1.gz -&gt; /usr/share/man/man1/vim.1.gz
+│   ├── vi.da.1.gz -&gt; /usr/share/man/da/man1/vim.1.gz
+│   ├── vi.de.1.gz -&gt; /usr/share/man/de/man1/vim.1.gz
+│   ├── view -&gt; /usr/bin/vim.basic
+│   ├── view.1.gz -&gt; /usr/share/man/man1/vim.1.gz
+│   ├── view.da.1.gz -&gt; /usr/share/man/da/man1/vim.1.gz
+│   ├── view.de.1.gz -&gt; /usr/share/man/de/man1/vim.1.gz
+│   ├── view.fr.1.gz -&gt; /usr/share/man/fr/man1/vim.1.gz
+│   ├── view.it.1.gz -&gt; /usr/share/man/it/man1/vim.1.gz
+│   ├── view.ja.1.gz -&gt; /usr/share/man/ja/man1/vim.1.gz
+│   ├── view.pl.1.gz -&gt; /usr/share/man/pl/man1/vim.1.gz
+│   ├── view.ru.1.gz -&gt; /usr/share/man/ru/man1/vim.1.gz
+│   ├── view.tr.1.gz -&gt; /usr/share/man/tr/man1/vim.1.gz
+│   ├── vi.fr.1.gz -&gt; /usr/share/man/fr/man1/vim.1.gz
+│   ├── vi.it.1.gz -&gt; /usr/share/man/it/man1/vim.1.gz
+│   ├── vi.ja.1.gz -&gt; /usr/share/man/ja/man1/vim.1.gz
+│   ├── vim -&gt; /usr/bin/vim.basic
+│   ├── vimdiff -&gt; /usr/bin/vim.basic
+│   ├── vi.pl.1.gz -&gt; /usr/share/man/pl/man1/vim.1.gz
+│   ├── vi.ru.1.gz -&gt; /usr/share/man/ru/man1/vim.1.gz
+│   ├── vi.tr.1.gz -&gt; /usr/share/man/tr/man1/vim.1.gz
+│   ├── vncviewer -&gt; /usr/bin/xtigervncviewer
+│   ├── vncviewer.1.gz -&gt; /usr/share/man/man1/xtigervncviewer.1.gz
+│   ├── which -&gt; /usr/bin/which.debianutils
+│   ├── which.1.gz -&gt; /usr/share/man/man1/which.debianutils.1.gz
+│   ├── which.de1.gz -&gt; /usr/share/man/de/man1/which.debianutils.1.gz
+│   ├── which.es1.gz -&gt; /usr/share/man/es/man1/which.debianutils.1.gz
+│   ├── which.fr1.gz -&gt; /usr/share/man/fr/man1/which.debianutils.1.gz
+│   ├── which.it1.gz -&gt; /usr/share/man/it/man1/which.debianutils.1.gz
+│   ├── which.ja1.gz -&gt; /usr/share/man/ja/man1/which.debianutils.1.gz
+│   ├── which.pl1.gz -&gt; /usr/share/man/pl/man1/which.debianutils.1.gz
+│   ├── which.sl1.gz -&gt; /usr/share/man/sl/man1/which.debianutils.1.gz
+│   ├── www-browser -&gt; /usr/bin/lynx
+│   ├── www-browser.1.gz -&gt; /usr/share/man/man1/lynx.1.gz
+│   ├── x-cursor-theme -&gt; /etc/X11/cursors/breeze_cursors.theme
+│   ├── xdvi.bin -&gt; /usr/bin/xdvi-xaw
+│   ├── x-session-manager -&gt; /usr/bin/startxfce4
+│   ├── x-session-manager.1.gz -&gt; /usr/share/man/man1/startxfce4.1.gz
+│   ├── x-terminal-emulator -&gt; /usr/bin/gnome-terminal.wrapper
+│   ├── x-terminal-emulator.1.gz -&gt; /usr/share/man/man1/gnome-terminal.1.gz
+│   ├── xvncviewer -&gt; /usr/bin/xtigervncviewer
+│   ├── xvncviewer.1.gz -&gt; /usr/share/man/man1/xtigervncviewer.1.gz
+│   ├── x-window-manager -&gt; /usr/bin/xfwm4
+│   ├── x-window-manager.1.gz -&gt; /usr/share/man/man1/xfwm4.1.gz
+│   └── x-www-browser -&gt; /usr/bin/brave-browser-stable
+├── anacrontab
+├── apache2
+│   ├── conf-available
+│   │   └── javascript-common.conf
+│   └── mods-available
+│       ├── dnssd.conf
+│       └── dnssd.load
+├── apg.conf
+├── apparmor
+│   └── parser.conf
+├── apparmor.d
+│   ├── abi
+│   │   ├── 3.0
+│   │   ├── kernel-5.4-outoftree-network
+│   │   └── kernel-5.4-vanilla
+│   ├── abstractions
+│   │   ├── apache2-common
+│   │   ├── apparmor_api
+│   │   │   ├── change_profile
+│   │   │   ├── examine
+│   │   │   ├── find_mountpoint
+│   │   │   ├── introspect
+│   │   │   └── is_enabled
+│   │   ├── aspell
+│   │   ├── audio
+│   │   ├── authentication
+│   │   ├── base
+│   │   ├── bash
+│   │   ├── consoles
+│   │   ├── crypto
+│   │   ├── cups-client
+│   │   ├── dbus
+│   │   ├── dbus-accessibility
+│   │   ├── dbus-accessibility-strict
+│   │   ├── dbus-network-manager-strict
+│   │   ├── dbus-session
+│   │   ├── dbus-session-strict
+│   │   ├── dbus-strict
+│   │   ├── dconf
+│   │   ├── dovecot-common
+│   │   ├── dri-common
+│   │   ├── dri-enumerate
+│   │   ├── enchant
+│   │   ├── evince
+│   │   ├── exo-open
+│   │   ├── fcitx
+│   │   ├── fcitx-strict
+│   │   ├── fonts
+│   │   ├── freedesktop.org
+│   │   ├── gio-open
+│   │   ├── gnome
+│   │   ├── gnupg
+│   │   ├── gtk
+│   │   ├── gvfs-open
+│   │   ├── hosts_access
+│   │   ├── ibus
+│   │   ├── kde
+│   │   ├── kde-globals-write
+│   │   ├── kde-icon-cache-write
+│   │   ├── kde-language-write
+│   │   ├── kde-open5
+│   │   ├── kerberosclient
+│   │   ├── ldapclient
+│   │   ├── libpam-systemd
+│   │   ├── libvirt-lxc
+│   │   ├── libvirt-qemu
+│   │   ├── lightdm
+│   │   ├── lightdm_chromium-browser
+│   │   ├── likewise
+│   │   ├── mdns
+│   │   ├── mesa
+│   │   ├── mir
+│   │   ├── mozc
+│   │   ├── mysql
+│   │   ├── nameservice
+│   │   ├── nis
+│   │   ├── nss-systemd
+│   │   ├── nvidia
+│   │   ├── opencl
+│   │   ├── opencl-common
+│   │   ├── opencl-intel
+│   │   ├── opencl-mesa
+│   │   ├── opencl-nvidia
+│   │   ├── opencl-pocl
+│   │   ├── openssl
+│   │   ├── orbit2
+│   │   ├── p11-kit
+│   │   ├── perl
+│   │   ├── php
+│   │   ├── php5
+│   │   ├── php-worker
+│   │   ├── postfix-common
+│   │   ├── private-files
+│   │   ├── private-files-strict
+│   │   ├── python
+│   │   ├── qt5
+│   │   ├── qt5-compose-cache-write
+│   │   ├── qt5-settings-write
+│   │   ├── recent-documents-write
+│   │   ├── ruby
+│   │   ├── samba
+│   │   ├── samba-rpcd
+│   │   ├── smbpass
+│   │   ├── snap_browsers
+│   │   ├── ssl_certs
+│   │   ├── ssl_keys
+│   │   ├── svn-repositories
+│   │   ├── tor
+│   │   ├── ubuntu-bittorrent-clients
+│   │   ├── ubuntu-browsers
+│   │   ├── ubuntu-browsers.d
+│   │   │   ├── chromium-browser
+│   │   │   ├── java
+│   │   │   ├── kde
+│   │   │   ├── mailto
+│   │   │   ├── multimedia
+│   │   │   ├── plugins-common
+│   │   │   ├── productivity
+│   │   │   ├── text-editors
+│   │   │   ├── ubuntu-integration
+│   │   │   ├── ubuntu-integration-xul
+│   │   │   └── user-files
+│   │   ├── ubuntu-console-browsers
+│   │   ├── ubuntu-console-email
+│   │   ├── ubuntu-email
+│   │   ├── ubuntu-feed-readers
+│   │   ├── ubuntu-gnome-terminal
+│   │   ├── ubuntu-helpers
+│   │   ├── ubuntu-konsole
+│   │   ├── ubuntu-media-players
+│   │   ├── ubuntu-unity7-base
+│   │   ├── ubuntu-unity7-launcher
+│   │   ├── ubuntu-unity7-messaging
+│   │   ├── ubuntu-xterm
+│   │   ├── user-download
+│   │   ├── user-mail
+│   │   ├── user-manpages
+│   │   ├── user-tmp
+│   │   ├── user-write
+│   │   ├── video
+│   │   ├── vulkan
+│   │   ├── wayland
+│   │   ├── web-data
+│   │   ├── winbind
+│   │   ├── wutmp
+│   │   ├── X
+│   │   ├── xad
+│   │   ├── xdg-desktop
+│   │   └── xdg-open
+│   ├── disable
+│   ├── force-complain
+│   ├── libvirt
+│   │   ├── libvirt-135ed88f-226f-4669-97ba-c51dc3d3d137
+│   │   ├── libvirt-15e8aef8-0035-497b-80fe-8a0fde0a4437
+│   │   ├── libvirt-1dc2f437-ecc8-4065-843c-62785e76e915
+│   │   ├── libvirt-26e3a461-005c-4f19-b6e4-64e408afdeea
+│   │   ├── libvirt-29255fec-3cac-4956-a517-4bb07bfca0f9
+│   │   ├── libvirt-29b3cbd1-9dca-48f2-baae-0a1f16dbe10d
+│   │   ├── libvirt-29b3cbd1-9dca-48f2-baae-0a1f16dbe10d.files
+│   │   ├── libvirt-2ac4cea6-8d9c-4231-9816-20fec2803cb9
+│   │   ├── libvirt-2e8b46dc-850c-47b8-ab90-5ac3818c750b
+│   │   ├── libvirt-2f1fdb7b-f0c6-4274-81a8-6a4d83dc2ac5
+│   │   ├── libvirt-3ba3d9f8-2dce-4960-bb92-59e303fba5c3
+│   │   ├── libvirt-50c01ac5-f4c0-4dcf-afa0-9e6a85ea58d1
+│   │   ├── libvirt-523579f3-8116-4495-9624-8acb4f9c2084
+│   │   ├── libvirt-53d9aa5c-b8f1-4b9a-be92-fba50552bb9a
+│   │   ├── libvirt-5e40b7ae-020e-4378-8d6a-7ff1a1a5b853
+│   │   ├── libvirt-5e40b7ae-020e-4378-8d6a-7ff1a1a5b853.files
+│   │   ├── libvirt-79ad18f4-0e09-4e66-a90b-f904b211873f
+│   │   ├── libvirt-961c8317-cb2a-4de8-b783-402e762156d8
+│   │   ├── libvirt-9dd731ff-6552-4c47-aac2-6cb987679322
+│   │   ├── libvirt-9dd731ff-6552-4c47-aac2-6cb987679322.files
+│   │   ├── libvirt-a62fbdce-7127-4545-b220-28174909aad6
+│   │   ├── libvirt-aa534739-5ebe-4293-872b-9e38e044d67b
+│   │   ├── libvirt-b82fc8be-7586-4fa0-8b2b-70ee2df841c2
+│   │   ├── libvirt-c6f1c2ed-aabe-4553-b1fc-67114d120c85
+│   │   ├── libvirt-c6f1c2ed-aabe-4553-b1fc-67114d120c85.files
+│   │   ├── libvirt-c9544184-736b-40ed-ace6-ecbd30994197
+│   │   ├── libvirt-cb14b404-df9a-477a-9a8f-bc469c0a6819
+│   │   ├── libvirt-d7e99a68-b004-4b97-96cf-d6f61215d6ae
+│   │   ├── libvirt-ef04d3b0-d384-4e6e-94b0-c76b09a1eb80
+│   │   ├── libvirt-ef04d3b0-d384-4e6e-94b0-c76b09a1eb80.files
+│   │   ├── libvirt-f30b832e-0052-4fb7-8cbc-2a2109c2f79d
+│   │   ├── TEMPLATE.lxc
+│   │   └── TEMPLATE.qemu
+│   ├── lightdm-guest-session
+│   ├── local
+│   │   ├── abstractions
+│   │   │   ├── libvirt-lxc
+│   │   │   └── libvirt-qemu
+│   │   ├── lsb_release
+│   │   ├── mariadbd_akonadi
+│   │   ├── mysqld_akonadi
+│   │   ├── nvidia_modprobe
+│   │   ├── postgresql_akonadi
+│   │   ├── README
+│   │   ├── sbin.dhclient
+│   │   ├── system_tor
+│   │   ├── torbrowser.Browser.firefox
+│   │   ├── torbrowser.Tor.tor
+│   │   ├── usr.bin.akonadiserver
+│   │   ├── usr.bin.evince
+│   │   ├── usr.bin.man
+│   │   ├── usr.lib.libreoffice.program.oosplash
+│   │   ├── usr.lib.libreoffice.program.senddoc
+│   │   ├── usr.lib.libreoffice.program.soffice.bin
+│   │   ├── usr.lib.libreoffice.program.xpdfimport
+│   │   ├── usr.lib.libvirt.virt-aa-helper
+│   │   ├── usr.sbin.cups-browsed
+│   │   ├── usr.sbin.cupsd
+│   │   └── usr.sbin.libvirtd
+│   ├── lsb_release
+│   ├── mariadbd_akonadi
+│   ├── mysqld_akonadi
+│   ├── nvidia_modprobe
+│   ├── postgresql_akonadi
+│   ├── sbin.dhclient
+│   ├── system_tor
+│   ├── torbrowser.Browser.firefox
+│   ├── torbrowser.Tor.tor
+│   ├── tunables
+│   │   ├── alias
+│   │   ├── apparmorfs
+│   │   ├── dovecot
+│   │   ├── etc
+│   │   ├── global
+│   │   ├── home
+│   │   ├── home.d
+│   │   │   ├── site.local
+│   │   │   └── ubuntu
+│   │   ├── kernelvars
+│   │   ├── multiarch
+│   │   ├── multiarch.d
+│   │   │   └── site.local
+│   │   ├── proc
+│   │   ├── run
+│   │   ├── securityfs
+│   │   ├── share
+│   │   ├── sys
+│   │   ├── torbrowser
+│   │   ├── xdg-user-dirs
+│   │   └── xdg-user-dirs.d
+│   │       └── site.local
+│   ├── usr.bin.akonadiserver
+│   ├── usr.bin.evince
+│   ├── usr.bin.man
+│   ├── usr.lib.libreoffice.program.oosplash
+│   ├── usr.lib.libreoffice.program.senddoc
+│   ├── usr.lib.libreoffice.program.soffice.bin
+│   ├── usr.lib.libreoffice.program.xpdfimport
+│   ├── usr.lib.libvirt.virt-aa-helper
+│   ├── usr.sbin.cups-browsed
+│   ├── usr.sbin.cupsd
+│   └── usr.sbin.libvirtd
+├── appstream.conf
+├── apt
+│   ├── apt.conf.d
+│   │   ├── 00aptitude
+│   │   ├── 00CDMountPoint
+│   │   ├── 00trustcdrom
+│   │   ├── 01autoremove
+│   │   ├── 20listchanges
+│   │   ├── 20packagekit
+│   │   ├── 50appstream
+│   │   ├── 50apt-file.conf
+│   │   ├── 60icons
+│   │   ├── 60icons-hidpi
+│   │   ├── 60icons-large
+│   │   ├── 60icons-large-hidpi
+│   │   ├── 70debconf
+│   │   └── 99synaptic
+│   ├── auth.conf.d
+│   ├── keyrings
+│   │   ├── docker.asc
+│   │   ├── dropbox.asc
+│   │   ├── githubcli-archive-keyring.gpg
+│   │   ├── kopia-keyring.gpg
+│   │   ├── linux_signing_key.pub
+│   │   └── microsoft-archive-keyring.gpg
+│   ├── listchanges.conf
+│   ├── listchanges.conf.d
+│   ├── preferences.d
+│   ├── sources.list
+│   ├── sources.list~
+│   ├── sources.list.d
+│   │   ├── adoptium.list
+│   │   ├── bookworm-backports.list
+│   │   ├── brave-browser-release.list
+│   │   ├── docker.list
+│   │   ├── github-cli.list
+│   │   ├── google-chrome.list
+│   │   ├── google-chrome.list.save
+│   │   ├── google-chrome.sources
+│   │   ├── kopia.list
+│   │   ├── microsoft-prod.list
+│   │   ├── tailscale.list
+│   │   ├── virtualbox.list
+│   │   └── vscode.sources
+│   ├── sources.list.save
+│   └── trusted.gpg.d
+│       ├── debian-archive-bookworm-automatic.asc
+│       ├── debian-archive-bookworm-security-automatic.asc
+│       ├── debian-archive-bookworm-stable.asc
+│       ├── debian-archive-bullseye-automatic.asc
+│       ├── debian-archive-bullseye-security-automatic.asc
+│       ├── debian-archive-bullseye-stable.asc
+│       ├── debian-archive-trixie-automatic.asc
+│       ├── debian-archive-trixie-security-automatic.asc
+│       ├── debian-archive-trixie-stable.asc
+│       ├── google-chrome.gpg
+│       └── tuxedo.asc
+├── avahi
+│   ├── avahi-autoipd.action
+│   ├── avahi-daemon.conf
+│   ├── hosts
+│   └── services
+├── bash.bashrc
+├── bash_completion
+├── bash_completion.d
+│   └── git-prompt
+├── bindresvport.blacklist
+├── binfmt.d
+├── bluetooth
+│   ├── input.conf
+│   ├── main.conf
+│   └── network.conf
+├── bogofilter.cf
+├── ca-certificates
+│   └── update.d
+│       ├── adoptium-cacerts
+│       └── jks-keystore
+├── ca-certificates.conf
+├── ca-certificates.conf.dpkg-old
+├── catdocrc
+├── chatscripts
+│   ├── gprs
+│   ├── pap
+│   └── provider
+├── chromium
+│   └── native-messaging-hosts
+│       ├── org.gnome.browser_connector.json
+│       ├── org.gnome.chrome_gnome_shell.json
+│       └── org.kde.plasma.browser_integration.json
+├── cni
+│   └── net.d
+│       ├── 87-podman-bridge.conflist
+│       └── cni.lock
+├── console-setup
+│   ├── cached_Lat15-Fixed16.psf.gz
+│   ├── cached_setup_font.sh
+│   ├── cached_setup_keyboard.sh
+│   ├── cached_setup_terminal.sh
+│   ├── cached_UTF-8_del.kmap.gz
+│   ├── compose.ARMSCII-8.inc
+│   ├── compose.CP1251.inc
+│   ├── compose.CP1255.inc
+│   ├── compose.CP1256.inc
+│   ├── compose.GEORGIAN-ACADEMY.inc
+│   ├── compose.GEORGIAN-PS.inc
+│   ├── compose.IBM1133.inc
+│   ├── compose.ISIRI-3342.inc
+│   ├── compose.ISO-8859-10.inc
+│   ├── compose.ISO-8859-11.inc
+│   ├── compose.ISO-8859-13.inc
+│   ├── compose.ISO-8859-14.inc
+│   ├── compose.ISO-8859-15.inc
+│   ├── compose.ISO-8859-16.inc
+│   ├── compose.ISO-8859-1.inc
+│   ├── compose.ISO-8859-2.inc
+│   ├── compose.ISO-8859-3.inc
+│   ├── compose.ISO-8859-4.inc
+│   ├── compose.ISO-8859-5.inc
+│   ├── compose.ISO-8859-6.inc
+│   ├── compose.ISO-8859-7.inc
+│   ├── compose.ISO-8859-8.inc
+│   ├── compose.ISO-8859-9.inc
+│   ├── compose.KOI8-R.inc
+│   ├── compose.KOI8-U.inc
+│   ├── compose.TIS-620.inc
+│   ├── compose.VISCII.inc
+│   └── remap.inc
+├── containerd
+│   └── config.toml
+├── containers
+│   ├── libpod.conf
+│   ├── networks  [error opening dir]
+│   ├── policy.json
+│   ├── registries.conf
+│   └── registries.conf.d
+│       └── shortnames.conf
+├── cracklib
+│   └── cracklib.conf
+├── cron.d
+│   ├── anacron
+│   ├── e2scrub_all
+│   ├── mdadm
+│   ├── popularity-contest
+│   └── sysstat
+├── cron.daily
+│   ├── 0anacron
+│   ├── apt-compat
+│   ├── brave-browser -&gt; /opt/brave.com/brave/cron/brave-browser
+│   ├── dpkg
+│   ├── exim4-base
+│   ├── google-chrome -&gt; /opt/google/chrome/cron/google-chrome
+│   ├── logrotate
+│   ├── man-db
+│   ├── mdadm
+│   ├── plocate
+│   ├── popularity-contest
+│   └── sysstat
+├── cron.hourly
+├── cron.monthly
+│   └── 0anacron
+├── crontab
+├── cron.weekly
+│   ├── 0anacron
+│   ├── man-db
+│   └── tor
+├── cron.yearly
+├── cryptsetup-initramfs
+│   └── conf-hook
+├── crypttab
+├── cups
+│   ├── cups-browsed.conf
+│   ├── cupsd.conf
+│   ├── cups-files.conf
+│   ├── interfaces
+│   ├── ppd
+│   ├── printers.conf
+│   ├── printers.conf.O
+│   ├── raw.convs
+│   ├── raw.types
+│   ├── snmp.conf
+│   ├── ssl  [error opening dir]
+│   ├── subscriptions.conf
+│   └── subscriptions.conf.O
+├── cupshelpers
+│   └── preferreddrivers.xml
+├── dbus-1
+│   ├── session.d
+│   └── system.d
+│       ├── bluetooth.conf
+│       ├── com.redhat.NewPrinterNotification.conf
+│       ├── com.redhat.PrinterDriversInstaller.conf
+│       ├── com.ubuntu.SoftwareProperties.conf
+│       ├── net.hadess.SensorProxy.conf
+│       ├── org.freedesktop.DisplayManager.conf
+│       ├── org.freedesktop.GeoClue2.Agent.conf
+│       ├── org.freedesktop.GeoClue2.conf
+│       ├── org.freedesktop.ModemManager1.conf
+│       ├── org.freedesktop.PackageKit.conf
+│       ├── org.freedesktop.realmd.conf
+│       ├── org.opensuse.CupsPkHelper.Mechanism.conf
+│       ├── org.rpm.conf
+│       └── wpa_supplicant.conf
+├── dconf
+│   ├── db
+│   │   ├── ibus
+│   │   └── ibus.d
+│   │       └── 00-upstream-settings
+│   └── profile
+│       └── ibus
+├── debconf.conf
+├── debian_version
+├── debsig
+│   └── policies
+│       └── EB3E94ADBE1229CF
+│           └── microsoft.pol
+├── debuginfod
+│   └── elfutils.urls
+├── default
+│   ├── adoptium-ca-certificates
+│   ├── anacron
+│   ├── avahi-daemon
+│   ├── bluetooth
+│   ├── brave-browser
+│   ├── bridge-utils
+│   ├── cacerts
+│   ├── console-setup
+│   ├── cron
+│   ├── cryptdisks
+│   ├── dbus
+│   ├── docker
+│   ├── exim4
+│   ├── gdomap
+│   ├── google-chrome
+│   ├── grub
+│   ├── grub.d
+│   │   ├── init-select.cfg
+│   │   └── resolution.cfg
+│   ├── hwclock
+│   ├── im-config
+│   ├── intel-microcode
+│   ├── keyboard
+│   ├── libvirtd
+│   ├── libvirt-guests
+│   ├── locale
+│   ├── mdadm
+│   ├── networking
+│   ├── nfs-common
+│   ├── nfs-kernel-server
+│   ├── nss
+│   ├── rpcbind
+│   ├── rsync
+│   ├── saned
+│   ├── smartmontools
+│   ├── ssh
+│   ├── sysstat
+│   ├── tailscaled
+│   ├── tor
+│   ├── useradd
+│   ├── virtlockd
+│   └── virtlogd
+├── deluser.conf
+├── dhcp
+│   ├── debug
+│   ├── dhclient.conf
+│   ├── dhclient-enter-hooks.d
+│   │   ├── avahi-autoipd
+│   │   └── debug -&gt; ../debug
+│   └── dhclient-exit-hooks.d
+│       ├── debug -&gt; ../debug
+│       ├── rfc3442-classless-routes
+│       ├── timesyncd
+│       └── zzz_avahi-autoipd
+├── dictionaries-common
+│   ├── default.aff -&gt; /usr/lib/ispell/american.aff
+│   ├── default.hash -&gt; /usr/lib/ispell/american.hash
+│   ├── ispell-default -&gt; /var/cache/dictionaries-common/ispell-default
+│   └── words -&gt; /usr/share/dict/american-english
+├── discover.conf.d
+│   └── 00discover
+├── discover-modprobe.conf
+├── docker
+├── dpkg
+│   ├── dpkg.cfg
+│   ├── dpkg.cfg.d
+│   ├── origins
+│   │   ├── debian
+│   │   └── default -&gt; debian
+│   ├── shlibs.default
+│   └── shlibs.override
+├── dput.cf
+├── e2scrub.conf
+├── elinks
+├── emacs
+│   └── site-start.d
+│       ├── 50autoconf.el
+│       ├── 50dictionaries-common.el
+│       └── 50figlet.el
+├── email-addresses
+├── environment
+├── environment.d
+│   ├── 90atk-adaptor.conf
+│   ├── 90qt-a11y.conf
+│   └── 90qtwebengine-dictionaries-path.conf
+├── ethertypes
+├── exim4
+│   ├── conf.d
+│   │   ├── acl
+│   │   │   ├── 00_exim4-config_header
+│   │   │   ├── 20_exim4-config_local_deny_exceptions
+│   │   │   ├── 30_exim4-config_check_mail
+│   │   │   ├── 30_exim4-config_check_rcpt
+│   │   │   └── 40_exim4-config_check_data
+│   │   ├── auth
+│   │   │   ├── 00_exim4-config_header
+│   │   │   └── 30_exim4-config_examples
+│   │   ├── main
+│   │   │   ├── 01_exim4-config_listmacrosdefs
+│   │   │   ├── 02_exim4-config_options
+│   │   │   ├── 03_exim4-config_tlsoptions
+│   │   │   └── 90_exim4-config_log_selector
+│   │   ├── retry
+│   │   │   ├── 00_exim4-config_header
+│   │   │   └── 30_exim4-config
+│   │   ├── rewrite
+│   │   │   ├── 00_exim4-config_header
+│   │   │   └── 31_exim4-config_rewriting
+│   │   ├── router
+│   │   │   ├── 00_exim4-config_header
+│   │   │   ├── 100_exim4-config_domain_literal
+│   │   │   ├── 150_exim4-config_hubbed_hosts
+│   │   │   ├── 200_exim4-config_primary
+│   │   │   ├── 300_exim4-config_real_local
+│   │   │   ├── 400_exim4-config_system_aliases
+│   │   │   ├── 500_exim4-config_hubuser
+│   │   │   ├── 600_exim4-config_userforward
+│   │   │   ├── 700_exim4-config_procmail
+│   │   │   ├── 800_exim4-config_maildrop
+│   │   │   ├── 850_exim4-config_lowuid
+│   │   │   ├── 900_exim4-config_local_user
+│   │   │   └── mmm_mail4root
+│   │   └── transport
+│   │       ├── 00_exim4-config_header
+│   │       ├── 10_exim4-config_transport-macros
+│   │       ├── 30_exim4-config_address_file
+│   │       ├── 30_exim4-config_address_pipe
+│   │       ├── 30_exim4-config_address_reply
+│   │       ├── 30_exim4-config_maildir_home
+│   │       ├── 30_exim4-config_maildrop_pipe
+│   │       ├── 30_exim4-config_mail_spool
+│   │       ├── 30_exim4-config_procmail_pipe
+│   │       ├── 30_exim4-config_remote_smtp
+│   │       ├── 30_exim4-config_remote_smtp_smarthost
+│   │       └── 35_exim4-config_address_directory
+│   ├── exim4.conf.template
+│   ├── passwd.client
+│   └── update-exim4.conf.conf
+├── exports
+├── firefox-esr
+│   └── firefox-esr.js
+├── fish
+│   ├── completions
+│   ├── conf.d
+│   ├── config.fish
+│   └── functions
+├── fonts
+│   ├── conf.avail
+│   │   ├── 20-unhint-small-dejavu-lgc-sans.conf
+│   │   ├── 20-unhint-small-dejavu-lgc-sans-mono.conf
+│   │   ├── 20-unhint-small-dejavu-lgc-serif.conf
+│   │   ├── 20-unhint-small-dejavu-sans.conf
+│   │   ├── 20-unhint-small-dejavu-sans-mono.conf
+│   │   ├── 20-unhint-small-dejavu-serif.conf
+│   │   ├── 30-droid-noto.conf
+│   │   ├── 30-droid-noto-mono.conf
+│   │   ├── 57-dejavu-sans.conf
+│   │   ├── 57-dejavu-sans-mono.conf
+│   │   ├── 57-dejavu-serif.conf
+│   │   ├── 58-dejavu-lgc-sans.conf
+│   │   ├── 58-dejavu-lgc-sans-mono.conf
+│   │   ├── 58-dejavu-lgc-serif.conf
+│   │   ├── 65-droid-sans-fallback.conf
+│   │   ├── 65-fonts-lmodern.conf
+│   │   ├── 65-fonts-texgyre.conf
+│   │   └── 65-fonts-texgyre-math.conf
+│   ├── conf.d
+│   │   ├── 10-hinting-slight.conf -&gt; /usr/share/fontconfig/conf.avail/10-hinting-slight.conf
+│   │   ├── 10-scale-bitmap-fonts.conf -&gt; /usr/share/fontconfig/conf.avail/10-scale-bitmap-fonts.conf
+│   │   ├── 10-unhinted.conf -&gt; /usr/share/fontconfig/conf.avail/10-unhinted.conf
+│   │   ├── 10-yes-antialias.conf -&gt; /usr/share/fontconfig/conf.avail/10-yes-antialias.conf
+│   │   ├── 11-lcdfilter-default.conf -&gt; /usr/share/fontconfig/conf.avail/11-lcdfilter-default.conf
+│   │   ├── 20-unhint-small-dejavu-lgc-sans.conf -&gt; ../conf.avail/20-unhint-small-dejavu-lgc-sans.conf
+│   │   ├── 20-unhint-small-dejavu-lgc-sans-mono.conf -&gt; ../conf.avail/20-unhint-small-dejavu-lgc-sans-mono.conf
+│   │   ├── 20-unhint-small-dejavu-lgc-serif.conf -&gt; ../conf.avail/20-unhint-small-dejavu-lgc-serif.conf
+│   │   ├── 20-unhint-small-dejavu-sans.conf -&gt; ../conf.avail/20-unhint-small-dejavu-sans.conf
+│   │   ├── 20-unhint-small-dejavu-sans-mono.conf -&gt; ../conf.avail/20-unhint-small-dejavu-sans-mono.conf
+│   │   ├── 20-unhint-small-dejavu-serif.conf -&gt; ../conf.avail/20-unhint-small-dejavu-serif.conf
+│   │   ├── 20-unhint-small-vera.conf -&gt; /usr/share/fontconfig/conf.avail/20-unhint-small-vera.conf
+│   │   ├── 30-metric-aliases.conf -&gt; /usr/share/fontconfig/conf.avail/30-metric-aliases.conf
+│   │   ├── 30-opensymbol.conf -&gt; /usr/share/fontconfig/conf.avail/30-opensymbol.conf
+│   │   ├── 40-nonlatin.conf -&gt; /usr/share/fontconfig/conf.avail/40-nonlatin.conf
+│   │   ├── 45-generic.conf -&gt; /usr/share/fontconfig/conf.avail/45-generic.conf
+│   │   ├── 45-Hack.conf -&gt; /usr/share/fontconfig/conf.avail/45-Hack.conf
+│   │   ├── 45-latin.conf -&gt; /usr/share/fontconfig/conf.avail/45-latin.conf
+│   │   ├── 48-spacing.conf -&gt; /usr/share/fontconfig/conf.avail/48-spacing.conf
+│   │   ├── 49-sansserif.conf -&gt; /usr/share/fontconfig/conf.avail/49-sansserif.conf
+│   │   ├── 50-user.conf -&gt; /usr/share/fontconfig/conf.avail/50-user.conf
+│   │   ├── 51-local.conf -&gt; /usr/share/fontconfig/conf.avail/51-local.conf
+│   │   ├── 57-dejavu-sans.conf -&gt; ../conf.avail/57-dejavu-sans.conf
+│   │   ├── 57-dejavu-sans-mono.conf -&gt; ../conf.avail/57-dejavu-sans-mono.conf
+│   │   ├── 57-dejavu-serif.conf -&gt; ../conf.avail/57-dejavu-serif.conf
+│   │   ├── 58-dejavu-lgc-sans.conf -&gt; ../conf.avail/58-dejavu-lgc-sans.conf
+│   │   ├── 58-dejavu-lgc-sans-mono.conf -&gt; ../conf.avail/58-dejavu-lgc-sans-mono.conf
+│   │   ├── 58-dejavu-lgc-serif.conf -&gt; ../conf.avail/58-dejavu-lgc-serif.conf
+│   │   ├── 60-generic.conf -&gt; /usr/share/fontconfig/conf.avail/60-generic.conf
+│   │   ├── 60-latin.conf -&gt; /usr/share/fontconfig/conf.avail/60-latin.conf
+│   │   ├── 61-urw-bookman.conf -&gt; /usr/share/fontconfig/conf.avail/urw-bookman.conf
+│   │   ├── 61-urw-c059.conf -&gt; /usr/share/fontconfig/conf.avail/urw-c059.conf
+│   │   ├── 61-urw-d050000l.conf -&gt; /usr/share/fontconfig/conf.avail/urw-d050000l.conf
+│   │   ├── 61-urw-fallback-backwards.conf -&gt; /usr/share/fontconfig/conf.avail/urw-fallback-backwards.conf
+│   │   ├── 61-urw-fallback-generics.conf -&gt; /usr/share/fontconfig/conf.avail/urw-fallback-generics.conf
+│   │   ├── 61-urw-gothic.conf -&gt; /usr/share/fontconfig/conf.avail/urw-gothic.conf
+│   │   ├── 61-urw-nimbus-mono-ps.conf -&gt; /usr/share/fontconfig/conf.avail/urw-nimbus-mono-ps.conf
+│   │   ├── 61-urw-nimbus-roman.conf -&gt; /usr/share/fontconfig/conf.avail/urw-nimbus-roman.conf
+│   │   ├── 61-urw-nimbus-sans.conf -&gt; /usr/share/fontconfig/conf.avail/urw-nimbus-sans.conf
+│   │   ├── 61-urw-p052.conf -&gt; /usr/share/fontconfig/conf.avail/urw-p052.conf
+│   │   ├── 61-urw-standard-symbols-ps.conf -&gt; /usr/share/fontconfig/conf.avail/urw-standard-symbols-ps.conf
+│   │   ├── 61-urw-z003.conf -&gt; /usr/share/fontconfig/conf.avail/urw-z003.conf
+│   │   ├── 65-fonts-lmodern.conf -&gt; ../conf.avail/65-fonts-lmodern.conf
+│   │   ├── 65-fonts-persian.conf -&gt; /usr/share/fontconfig/conf.avail/65-fonts-persian.conf
+│   │   ├── 65-fonts-texgyre.conf -&gt; ../conf.avail/65-fonts-texgyre.conf
+│   │   ├── 65-fonts-texgyre-math.conf -&gt; ../conf.avail/65-fonts-texgyre-math.conf
+│   │   ├── 65-nonlatin.conf -&gt; /usr/share/fontconfig/conf.avail/65-nonlatin.conf
+│   │   ├── 69-unifont.conf -&gt; /usr/share/fontconfig/conf.avail/69-unifont.conf
+│   │   ├── 70-fonts-noto-cjk.conf -&gt; /usr/share/fontconfig/conf.avail/70-fonts-noto-cjk.conf
+│   │   ├── 70-yes-bitmaps.conf -&gt; /usr/share/fontconfig/conf.avail/70-yes-bitmaps.conf
+│   │   ├── 80-delicious.conf -&gt; /usr/share/fontconfig/conf.avail/80-delicious.conf
+│   │   ├── 90-synthetic.conf -&gt; /usr/share/fontconfig/conf.avail/90-synthetic.conf
+│   │   └── README
+│   └── fonts.conf
+├── fstab
+├── fstab.bak
+├── fuse.conf
+├── fwupd
+│   ├── bios-settings.d
+│   │   └── README.md
+│   ├── daemon.conf
+│   ├── msr.conf
+│   ├── redfish.conf
+│   ├── remotes.d
+│   │   ├── dell-esrt.conf
+│   │   ├── lvfs.conf
+│   │   ├── lvfs-testing.conf
+│   │   ├── vendor.conf
+│   │   └── vendor-directory.conf
+│   ├── thunderbolt.conf
+│   └── uefi_capsule.conf
+├── gai.conf
+├── gconf
+│   ├── 2
+│   │   ├── evoldap.conf
+│   │   └── path
+│   ├── gconf.xml.defaults
+│   └── gconf.xml.mandatory
+├── gdb
+│   ├── gdbinit
+│   └── gdbinit.d
+├── gdm3
+│   ├── daemon.conf
+│   ├── greeter.dconf-defaults
+│   ├── Init
+│   │   └── Default
+│   ├── PostLogin
+│   │   └── Default.sample
+│   ├── PostSession
+│   │   └── Default
+│   ├── PreSession
+│   │   └── Default
+│   └── Xsession
+├── geoclue
+│   └── geoclue.conf
+├── ghostscript
+│   ├── cidfmap.d
+│   │   ├── 90gs-cjk-resource-cns1.conf
+│   │   ├── 90gs-cjk-resource-gb1.conf
+│   │   ├── 90gs-cjk-resource-japan1.conf
+│   │   ├── 90gs-cjk-resource-japan2.conf
+│   │   └── 90gs-cjk-resource-korea1.conf
+│   └── fontmap.d
+│       └── 10fonts-urw-base35.conf
+├── gimp
+│   └── 2.0
+│       ├── controllerrc
+│       ├── gimprc
+│       ├── gtkrc
+│       ├── menurc
+│       ├── sessionrc
+│       ├── templaterc
+│       ├── toolrc
+│       └── unitrc
+├── glvnd
+│   └── egl_vendor.d
+├── gnome
+│   └── menus.blacklist
+├── gnome-chess
+│   └── engines.conf
+├── GNUstep
+│   ├── gdomap_probes
+│   └── GNUstep.conf
+├── gprofng.rc
+├── groff
+│   ├── man.local
+│   └── mdoc.local
+├── group
+├── group-
+├── grub.d
+│   ├── 00_header
+│   ├── 05_debian_theme
+│   ├── 10_linux
+│   ├── 20_linux_xen
+│   ├── 30_os-prober
+│   ├── 30_uefi-firmware
+│   ├── 35_fwupd
+│   ├── 40_custom
+│   ├── 41_custom
+│   └── README
+├── gshadow
+├── gshadow-
+├── gss
+│   └── mech.d
+├── gtk-2.0
+│   └── im-multipress.conf
+├── gtk-3.0
+│   └── im-multipress.conf
+├── host.conf
+├── hostname
+├── hosts
+├── hosts.allow
+├── hosts.deny
+├── idmapd.conf
+├── ifplugd
+│   └── action.d
+│       └── action_wpa -&gt; ../../wpa_supplicant/action_wpa.sh
+├── igfx_user_feature_next.txt
+├── igfx_user_feature.txt
+├── ImageMagick-6
+│   ├── coder.xml
+│   ├── colors.xml
+│   ├── delegates.xml
+│   ├── log.xml
+│   ├── magic.xml
+│   ├── mime.xml
+│   ├── policy.xml
+│   ├── quantization-table.xml
+│   ├── thresholds.xml
+│   ├── type-apple.xml
+│   ├── type-dejavu.xml
+│   ├── type-ghostscript.xml
+│   ├── type-urw-base35.xml
+│   ├── type-windows.xml
+│   └── type.xml
+├── init.d
+│   ├── alsa-utils
+│   ├── anacron
+│   ├── apparmor
+│   ├── bluetooth
+│   ├── console-setup.sh
+│   ├── cron
+│   ├── cryptdisks
+│   ├── cryptdisks-early
+│   ├── cups
+│   ├── cups-browsed
+│   ├── dbus
+│   ├── docker
+│   ├── exim4
+│   ├── gdm3
+│   ├── gdomap
+│   ├── hwclock.sh
+│   ├── keyboard-setup.sh
+│   ├── kmod
+│   ├── lightdm
+│   ├── mdadm
+│   ├── mdadm-waitidle
+│   ├── networking
+│   ├── nfs-common
+│   ├── nfs-kernel-server
+│   ├── plymouth
+│   ├── plymouth-log
+│   ├── procps
+│   ├── rpcbind
+│   ├── rsync
+│   ├── saned
+│   ├── smartmontools
+│   ├── speech-dispatcher
+│   ├── ssh
+│   ├── sudo
+│   ├── sysstat
+│   ├── tor
+│   ├── udev
+│   ├── uuidd
+│   └── x11-common
+├── initramfs-tools
+│   ├── conf.d
+│   │   └── resume
+│   ├── hooks
+│   ├── initramfs.conf
+│   ├── modules
+│   ├── scripts
+│   │   ├── init-bottom
+│   │   ├── init-premount
+│   │   ├── init-top
+│   │   ├── local-bottom
+│   │   ├── local-premount
+│   │   ├── local-top
+│   │   │   └── led-init
+│   │   ├── nfs-bottom
+│   │   ├── nfs-premount
+│   │   ├── nfs-top
+│   │   └── panic
+│   └── update-initramfs.conf
+├── inputrc
+├── insserv.conf.d
+│   ├── gdm3
+│   └── rpcbind
+├── ipp-usb
+│   └── ipp-usb.conf
+├── iproute2
+│   ├── bpf_pinning
+│   ├── ematch_map
+│   ├── group
+│   ├── nl_protos
+│   ├── rt_dsfield
+│   ├── rt_protos
+│   ├── rt_protos.d
+│   │   └── README
+│   ├── rt_realms
+│   ├── rt_scopes
+│   ├── rt_tables
+│   └── rt_tables.d
+│       └── README
+├── issue
+├── issue.net
+├── java
+│   └── security
+│       └── security.d
+│           └── 2000-org.bouncycastle.jce.provider.BouncyCastleProvider
+├── java-17-openjdk
+│   ├── accessibility.properties
+│   ├── jfr
+│   │   ├── default.jfc
+│   │   └── profile.jfc
+│   ├── jvm-amd64.cfg
+│   ├── logging.properties
+│   ├── management
+│   │   ├── jmxremote.access
+│   │   └── management.properties
+│   ├── net.properties
+│   ├── psfontj2d.properties
+│   ├── psfont.properties.ja
+│   ├── security
+│   │   ├── blocked.certs
+│   │   ├── default.policy
+│   │   ├── java.policy
+│   │   ├── java.security
+│   │   ├── nss.cfg
+│   │   ├── policy
+│   │   │   ├── limited
+│   │   │   │   ├── default_local.policy
+│   │   │   │   ├── default_US_export.policy
+│   │   │   │   └── exempt_local.policy
+│   │   │   ├── README.txt
+│   │   │   └── unlimited
+│   │   │       ├── default_local.policy
+│   │   │       └── default_US_export.policy
+│   │   └── public_suffix_list.dat
+│   ├── sound.properties
+│   └── swing.properties
+├── kernel
+│   ├── install.d
+│   ├── postinst.d
+│   │   ├── initramfs-tools
+│   │   └── zz-update-grub
+│   ├── postrm.d
+│   │   ├── initramfs-tools
+│   │   └── zz-update-grub
+│   └── preinst.d
+│       └── intel-microcode
+├── kernel-img.conf
+├── keyutils
+├── ldap
+│   └── ldap.conf
+├── ld.so.cache
+├── ld.so.conf
+├── ld.so.conf.d
+│   ├── fakeroot-x86_64-linux-gnu.conf
+│   ├── i386-linux-gnu.conf
+│   ├── libc.conf
+│   ├── x86_64-linux-gnu.conf
+│   └── zz_i386-biarch-compat.conf
+├── libao.conf
+├── libaudit.conf
+├── libblockdev
+│   └── conf.d
+│       └── 00-default.cfg
+├── libguestfs-tools.conf
+├── libibverbs.d
+│   ├── bnxt_re.driver
+│   ├── cxgb4.driver
+│   ├── efa.driver
+│   ├── erdma.driver
+│   ├── hfi1verbs.driver
+│   ├── hns.driver
+│   ├── ipathverbs.driver
+│   ├── irdma.driver
+│   ├── mana.driver
+│   ├── mlx4.driver
+│   ├── mlx5.driver
+│   ├── mthca.driver
+│   ├── ocrdma.driver
+│   ├── qedr.driver
+│   ├── rxe.driver
+│   ├── siw.driver
+│   └── vmw_pvrdma.driver
+├── libnl-3
+│   ├── classid
+│   └── pktloc
+├── libpaper.d
+│   └── texlive-base
+├── libreoffice
+│   ├── psprint.conf
+│   ├── registry
+│   │   ├── calc.xcd
+│   │   ├── draw.xcd
+│   │   ├── gnome.xcd
+│   │   ├── graphicfilter.xcd
+│   │   ├── impress.xcd
+│   │   ├── Langpack-en-US.xcd
+│   │   ├── Langpack-sv.xcd
+│   │   ├── lingucomponent.xcd
+│   │   ├── main.xcd
+│   │   ├── math.xcd
+│   │   ├── ogltrans.xcd
+│   │   ├── oo-ad-ldap.xcd.sample -&gt; /usr/share/doc/libreoffice-common/examples/oo-ad-ldap.xcd.sample
+│   │   ├── oo-ldap.xcd.sample -&gt; /usr/share/doc/libreoffice-common/examples/oo-ldap.xcd.sample
+│   │   ├── pdfimport.xcd
+│   │   ├── pyuno.xcd
+│   │   ├── res
+│   │   │   ├── fcfg_langpack_en-US.xcd
+│   │   │   ├── fcfg_langpack_sv.xcd
+│   │   │   └── registry_sv.xcd
+│   │   ├── writer.xcd
+│   │   └── xsltfilter.xcd
+│   ├── sofficerc
+│   └── soffice.sh
+├── libvirt
+│   ├── hooks
+│   ├── libvirt-admin.conf
+│   ├── libvirt.conf
+│   ├── libvirtd.conf
+│   ├── libxl.conf
+│   ├── libxl-lockd.conf
+│   ├── libxl-sanlock.conf
+│   ├── lxc.conf
+│   ├── nwfilter
+│   │   ├── allow-arp.xml
+│   │   ├── allow-dhcp-server.xml
+│   │   ├── allow-dhcpv6-server.xml
+│   │   ├── allow-dhcpv6.xml
+│   │   ├── allow-dhcp.xml
+│   │   ├── allow-incoming-ipv4.xml
+│   │   ├── allow-incoming-ipv6.xml
+│   │   ├── allow-ipv4.xml
+│   │   ├── allow-ipv6.xml
+│   │   ├── clean-traffic-gateway.xml
+│   │   ├── clean-traffic.xml
+│   │   ├── no-arp-ip-spoofing.xml
+│   │   ├── no-arp-mac-spoofing.xml
+│   │   ├── no-arp-spoofing.xml
+│   │   ├── no-ip-multicast.xml
+│   │   ├── no-ip-spoofing.xml
+│   │   ├── no-ipv6-multicast.xml
+│   │   ├── no-ipv6-spoofing.xml
+│   │   ├── no-mac-broadcast.xml
+│   │   ├── no-mac-spoofing.xml
+│   │   ├── no-other-l2-traffic.xml
+│   │   ├── no-other-rarp-traffic.xml
+│   │   ├── qemu-announce-self-rarp.xml
+│   │   └── qemu-announce-self.xml
+│   ├── qemu
+│   │   ├── archlinux.xml
+│   │   ├── autostart
+│   │   └── networks
+│   │       ├── autostart
+│   │       │   └── default.xml -&gt; /etc/libvirt/qemu/networks/default.xml
+│   │       └── default.xml
+│   ├── qemu.conf
+│   ├── qemu-lockd.conf
+│   ├── qemu-sanlock.conf
+│   ├── secrets  [error opening dir]
+│   ├── storage
+│   │   ├── autostart
+│   │   │   ├── default.xml -&gt; /etc/libvirt/storage/default.xml
+│   │   │   ├── iso.xml -&gt; /etc/libvirt/storage/iso.xml
+│   │   │   ├── pool.xml -&gt; /etc/libvirt/storage/pool.xml
+│   │   │   ├── shared_vms.xml -&gt; /etc/libvirt/storage/shared_vms.xml
+│   │   │   └── win11-iso.xml -&gt; /etc/libvirt/storage/win11-iso.xml
+│   │   ├── default.xml
+│   │   ├── Downloads.xml
+│   │   ├── iso.xml
+│   │   ├── pool.xml
+│   │   ├── shared_vms.xml
+│   │   └── win11-iso.xml
+│   ├── virtlockd.conf
+│   └── virtlogd.conf
+├── lightdm
+│   ├── keys.conf
+│   ├── lightdm.conf
+│   ├── lightdm-gtk-greeter.conf
+│   └── users.conf
+├── lighttpd
+│   ├── conf-available
+│   │   └── 90-javascript-alias.conf
+│   └── conf-enabled
+│       └── 90-javascript-alias.conf -&gt; ../conf-available/90-javascript-alias.conf
+├── locale.alias
+├── locale.gen
+├── localtime -&gt; ../usr/share/zoneinfo/Europe/Stockholm
+├── logcheck
+│   ├── ignore.d.paranoid
+│   │   └── cracklib-runtime
+│   ├── ignore.d.server
+│   │   ├── gpg-agent
+│   │   └── mdadm
+│   └── violations.d
+│       └── mdadm
+├── login.defs
+├── logrotate.conf
+├── logrotate.d
+│   ├── alternatives
+│   ├── apt
+│   ├── bootlog
+│   ├── btmp
+│   ├── cups-daemon
+│   ├── dpkg
+│   ├── exim4-base
+│   ├── exim4-paniclog
+│   ├── libvirtd
+│   ├── libvirtd.libxl
+│   ├── libvirtd.lxc
+│   ├── libvirtd.qemu
+│   ├── ppp
+│   ├── sane-utils
+│   ├── speech-dispatcher
+│   ├── tor
+│   └── wtmp
+├── lvm
+│   ├── lvm.conf
+│   ├── lvmlocal.conf
+│   └── profile
+│       ├── cache-mq.profile
+│       ├── cache-smq.profile
+│       ├── command_profile_template.profile
+│       ├── lvmdbusd.profile
+│       ├── metadata_profile_template.profile
+│       ├── thin-generic.profile
+│       ├── thin-performance.profile
+│       └── vdo-small.profile
+├── lynx
+│   ├── lynx.cfg
+│   └── lynx.lss
+├── machine-id
+├── magic
+├── magic.mime
+├── mailcap
+├── mailcap.order
+├── mailname
+├── mail.rc
+├── manpath.config
+├── maven
+│   ├── logging
+│   │   └── simplelogger.properties
+│   ├── m2.conf
+│   ├── settings.xml
+│   └── toolchains.xml
+├── mdadm
+│   └── mdadm.conf
+├── mdevctl.d
+│   └── scripts.d
+│       ├── callouts
+│       └── notifiers
+├── mime.types
+├── mke2fs.conf
+├── ModemManager
+│   ├── connection.d
+│   └── fcc-unlock.d
+├── modprobe.d
+│   ├── intel-microcode-blacklist.conf
+│   ├── kvm-nested.conf
+│   └── mdadm.conf
+├── modules
+├── modules-load.d
+│   ├── cups-filters.conf
+│   └── modules.conf -&gt; ../modules
+├── motd
+├── mtab -&gt; ../proc/self/mounts
+├── mtools.conf
+├── mysql
+│   ├── conf.d
+│   │   ├── mysql.cnf
+│   │   └── mysqldump.cnf
+│   ├── mariadb.cnf
+│   ├── mariadb.conf.d
+│   ├── my.cnf -&gt; /etc/alternatives/my.cnf
+│   └── my.cnf.fallback
+├── nanorc
+├── netconfig
+├── network
+│   ├── if-down.d
+│   │   ├── avahi-autoipd
+│   │   ├── bridge -&gt; /lib/bridge-utils/ifupdown.sh
+│   │   ├── resolved
+│   │   └── wpasupplicant -&gt; ../../wpa_supplicant/ifupdown.sh
+│   ├── if-post-down.d
+│   │   ├── bridge -&gt; /lib/bridge-utils/ifupdown.sh
+│   │   ├── wireless-tools
+│   │   └── wpasupplicant -&gt; ../../wpa_supplicant/ifupdown.sh
+│   ├── if-pre-up.d
+│   │   ├── bridge -&gt; /lib/bridge-utils/ifupdown.sh
+│   │   ├── wireless-tools
+│   │   └── wpasupplicant -&gt; ../../wpa_supplicant/ifupdown.sh
+│   ├── if-up.d
+│   │   ├── avahi-autoipd
+│   │   ├── resolved
+│   │   └── wpasupplicant -&gt; ../../wpa_supplicant/ifupdown.sh
+│   ├── interfaces
+│   └── interfaces.d
+├── NetworkManager
+│   ├── conf.d
+│   ├── dispatcher.d
+│   │   ├── 01-ifupdown
+│   │   ├── no-wait.d
+│   │   ├── pre-down.d
+│   │   └── pre-up.d
+│   ├── dnsmasq.d
+│   ├── dnsmasq-shared.d
+│   ├── NetworkManager.conf
+│   └── system-connections
+│       ├── BW Gustaf Wasa.nmconnection
+│       ├── c8.nmconnection
+│       ├── CS-Guest.nmconnection
+│       ├── farm
+│       ├── farm2g.nmconnection
+│       ├── Kent.nmconnection
+│       ├── Nackademin.nmconnection
+│       ├── NackademinStudent.nmconnection
+│       ├── Qualityguest.nmconnection
+│       ├── scandic_easy.nmconnection
+│       └── Tele2_895BB6.nmconnection
+├── networks
+├── nfs.conf
+├── nfs.conf.d
+├── nftables.conf
+├── nsswitch.conf
+├── ODBCDataSources
+├── odbc.ini
+├── odbcinst.ini
+├── openal
+│   └── alsoft.conf
+├── openni2
+│   └── OpenNI.ini
+├── opt
+│   └── chrome
+│       └── native-messaging-hosts
+│           ├── org.gnome.browser_connector.json -&gt; /usr/share/gnome-browser-connector/org.gnome.browser_connector.json
+│           ├── org.gnome.chrome_gnome_shell.json -&gt; /usr/share/gnome-browser-connector/org.gnome.chrome_gnome_shell.json
+│           └── org.kde.plasma.browser_integration.json -&gt; /usr/share/plasma-browser-integration/org.kde.plasma.browser_integration.json
+├── os-release -&gt; ../usr/lib/os-release
+├── PackageKit
+│   ├── PackageKit.conf
+│   └── Vendor.conf
+├── pam.conf
+├── pam.d
+│   ├── chfn
+│   ├── chpasswd
+│   ├── chsh
+│   ├── common-account
+│   ├── common-auth
+│   ├── common-password
+│   ├── common-session
+│   ├── common-session-noninteractive
+│   ├── cron
+│   ├── cups
+│   ├── gdm-autologin
+│   ├── gdm-fingerprint
+│   ├── gdm-launch-environment
+│   ├── gdm-password
+│   ├── gdm-smartcard -&gt; /etc/alternatives/gdm-smartcard
+│   ├── gdm-smartcard-pkcs11-exclusive
+│   ├── gdm-smartcard-sssd-exclusive
+│   ├── gdm-smartcard-sssd-or-password
+│   ├── lightdm
+│   ├── lightdm-autologin
+│   ├── lightdm-greeter
+│   ├── login
+│   ├── newusers
+│   ├── other
+│   ├── passwd
+│   ├── ppp
+│   ├── runuser
+│   ├── runuser-l
+│   ├── sshd
+│   ├── su
+│   ├── sudo
+│   ├── sudo-i
+│   └── su-l
+├── papersize
+├── passwd
+├── passwd-
+├── perl
+│   ├── Net
+│   │   └── libnet.cfg
+│   └── XML
+│       └── SAX
+│           └── ParserDetails.ini
+├── pki
+│   ├── fwupd
+│   │   ├── GPG-KEY-Linux-Foundation-Firmware
+│   │   ├── GPG-KEY-Linux-Vendor-Firmware-Service
+│   │   └── LVFS-CA.pem
+│   └── fwupd-metadata
+│       ├── GPG-KEY-Linux-Foundation-Metadata
+│       ├── GPG-KEY-Linux-Vendor-Firmware-Service
+│       └── LVFS-CA.pem
+├── plymouth
+│   └── plymouthd.conf
+├── polkit-1
+│   ├── localauthority  [error opening dir]
+│   ├── localauthority.conf.d
+│   └── rules.d  [error opening dir]
+├── popularity-contest.conf
+├── ppp
+│   ├── chap-secrets
+│   ├── ip-down
+│   ├── ip-down.d
+│   │   └── 0000usepeerdns
+│   ├── ip-pre-up
+│   ├── ip-pre-up.d
+│   ├── ip-up
+│   ├── ip-up.d
+│   │   ├── 0000usepeerdns
+│   │   └── exim4
+│   ├── ipv6-down
+│   ├── ipv6-down.d
+│   ├── ipv6-up
+│   ├── ipv6-up.d
+│   ├── options
+│   ├── pap-secrets
+│   └── peers
+│       └── provider
+├── printcap -&gt; /run/cups/printcap
+├── profile
+├── profile.d
+│   ├── bash_completion.sh
+│   ├── dotnet-cli-tools-bin-path.sh
+│   ├── flatpak.sh
+│   ├── gawk.csh
+│   ├── gawk.sh
+│   ├── gnome-session_gnomerc.sh
+│   ├── im-config_wayland.sh
+│   ├── vte-2.91.sh
+│   └── vte.csh
+├── protocols
+├── pulse
+│   ├── client.conf
+│   └── client.conf.d
+├── python3
+│   └── debian_config
+├── python3.11
+│   └── sitecustomize.py
+├── qemu-ifdown
+├── qemu-ifup
+├── rc0.d
+│   ├── K01alsa-utils -&gt; ../init.d/alsa-utils
+│   ├── K01bluetooth -&gt; ../init.d/bluetooth
+│   ├── K01cryptdisks -&gt; ../init.d/cryptdisks
+│   ├── K01cryptdisks-early -&gt; ../init.d/cryptdisks-early
+│   ├── K01cups-browsed -&gt; ../init.d/cups-browsed
+│   ├── K01docker -&gt; ../init.d/docker
+│   ├── K01exim4 -&gt; ../init.d/exim4
+│   ├── K01gdm3 -&gt; ../init.d/gdm3
+│   ├── K01gdomap -&gt; ../init.d/gdomap
+│   ├── K01hwclock.sh -&gt; ../init.d/hwclock.sh
+│   ├── K01lightdm -&gt; ../init.d/lightdm
+│   ├── K01mdadm -&gt; ../init.d/mdadm
+│   ├── K01mdadm-waitidle -&gt; ../init.d/mdadm-waitidle
+│   ├── K01networking -&gt; ../init.d/networking
+│   ├── K01nfs-common -&gt; ../init.d/nfs-common
+│   ├── K01nfs-kernel-server -&gt; ../init.d/nfs-kernel-server
+│   ├── K01plymouth -&gt; ../init.d/plymouth
+│   ├── K01rpcbind -&gt; ../init.d/rpcbind
+│   ├── K01saned -&gt; ../init.d/saned
+│   ├── K01smartmontools -&gt; ../init.d/smartmontools
+│   ├── K01speech-dispatcher -&gt; ../init.d/speech-dispatcher
+│   ├── K01tor -&gt; ../init.d/tor
+│   ├── K01udev -&gt; ../init.d/udev
+│   └── K01uuidd -&gt; ../init.d/uuidd
+├── rc1.d
+│   ├── K01alsa-utils -&gt; ../init.d/alsa-utils
+│   ├── K01bluetooth -&gt; ../init.d/bluetooth
+│   ├── K01cups -&gt; ../init.d/cups
+│   ├── K01cups-browsed -&gt; ../init.d/cups-browsed
+│   ├── K01docker -&gt; ../init.d/docker
+│   ├── K01exim4 -&gt; ../init.d/exim4
+│   ├── K01gdm3 -&gt; ../init.d/gdm3
+│   ├── K01gdomap -&gt; ../init.d/gdomap
+│   ├── K01lightdm -&gt; ../init.d/lightdm
+│   ├── K01mdadm -&gt; ../init.d/mdadm
+│   ├── K01nfs-common -&gt; ../init.d/nfs-common
+│   ├── K01nfs-kernel-server -&gt; ../init.d/nfs-kernel-server
+│   ├── K01saned -&gt; ../init.d/saned
+│   ├── K01smartmontools -&gt; ../init.d/smartmontools
+│   ├── K01speech-dispatcher -&gt; ../init.d/speech-dispatcher
+│   ├── K01tor -&gt; ../init.d/tor
+│   └── K01uuidd -&gt; ../init.d/uuidd
+├── rc2.d
+│   ├── K01gdomap -&gt; ../init.d/gdomap
+│   ├── K01speech-dispatcher -&gt; ../init.d/speech-dispatcher
+│   ├── K01sysstat -&gt; ../init.d/sysstat
+│   ├── S01anacron -&gt; ../init.d/anacron
+│   ├── S01bluetooth -&gt; ../init.d/bluetooth
+│   ├── S01console-setup.sh -&gt; ../init.d/console-setup.sh
+│   ├── S01cron -&gt; ../init.d/cron
+│   ├── S01cups -&gt; ../init.d/cups
+│   ├── S01cups-browsed -&gt; ../init.d/cups-browsed
+│   ├── S01dbus -&gt; ../init.d/dbus
+│   ├── S01docker -&gt; ../init.d/docker
+│   ├── S01exim4 -&gt; ../init.d/exim4
+│   ├── S01gdm3 -&gt; ../init.d/gdm3
+│   ├── S01lightdm -&gt; ../init.d/lightdm
+│   ├── S01mdadm -&gt; ../init.d/mdadm
+│   ├── S01nfs-kernel-server -&gt; ../init.d/nfs-kernel-server
+│   ├── S01plymouth -&gt; ../init.d/plymouth
+│   ├── S01rsync -&gt; ../init.d/rsync
+│   ├── S01saned -&gt; ../init.d/saned
+│   ├── S01smartmontools -&gt; ../init.d/smartmontools
+│   ├── S01ssh -&gt; ../init.d/ssh
+│   ├── S01sudo -&gt; ../init.d/sudo
+│   ├── S01tor -&gt; ../init.d/tor
+│   └── S01uuidd -&gt; ../init.d/uuidd
+├── rc3.d
+│   ├── K01gdomap -&gt; ../init.d/gdomap
+│   ├── K01speech-dispatcher -&gt; ../init.d/speech-dispatcher
+│   ├── K01sysstat -&gt; ../init.d/sysstat
+│   ├── S01anacron -&gt; ../init.d/anacron
+│   ├── S01bluetooth -&gt; ../init.d/bluetooth
+│   ├── S01console-setup.sh -&gt; ../init.d/console-setup.sh
+│   ├── S01cron -&gt; ../init.d/cron
+│   ├── S01cups -&gt; ../init.d/cups
+│   ├── S01cups-browsed -&gt; ../init.d/cups-browsed
+│   ├── S01dbus -&gt; ../init.d/dbus
+│   ├── S01docker -&gt; ../init.d/docker
+│   ├── S01exim4 -&gt; ../init.d/exim4
+│   ├── S01gdm3 -&gt; ../init.d/gdm3
+│   ├── S01lightdm -&gt; ../init.d/lightdm
+│   ├── S01mdadm -&gt; ../init.d/mdadm
+│   ├── S01nfs-kernel-server -&gt; ../init.d/nfs-kernel-server
+│   ├── S01plymouth -&gt; ../init.d/plymouth
+│   ├── S01rsync -&gt; ../init.d/rsync
+│   ├── S01saned -&gt; ../init.d/saned
+│   ├── S01smartmontools -&gt; ../init.d/smartmontools
+│   ├── S01ssh -&gt; ../init.d/ssh
+│   ├── S01sudo -&gt; ../init.d/sudo
+│   ├── S01tor -&gt; ../init.d/tor
+│   └── S01uuidd -&gt; ../init.d/uuidd
+├── rc4.d
+│   ├── K01gdomap -&gt; ../init.d/gdomap
+│   ├── K01speech-dispatcher -&gt; ../init.d/speech-dispatcher
+│   ├── K01sysstat -&gt; ../init.d/sysstat
+│   ├── S01anacron -&gt; ../init.d/anacron
+│   ├── S01bluetooth -&gt; ../init.d/bluetooth
+│   ├── S01console-setup.sh -&gt; ../init.d/console-setup.sh
+│   ├── S01cron -&gt; ../init.d/cron
+│   ├── S01cups -&gt; ../init.d/cups
+│   ├── S01cups-browsed -&gt; ../init.d/cups-browsed
+│   ├── S01dbus -&gt; ../init.d/dbus
+│   ├── S01docker -&gt; ../init.d/docker
+│   ├── S01exim4 -&gt; ../init.d/exim4
+│   ├── S01gdm3 -&gt; ../init.d/gdm3
+│   ├── S01lightdm -&gt; ../init.d/lightdm
+│   ├── S01mdadm -&gt; ../init.d/mdadm
+│   ├── S01nfs-kernel-server -&gt; ../init.d/nfs-kernel-server
+│   ├── S01plymouth -&gt; ../init.d/plymouth
+│   ├── S01rsync -&gt; ../init.d/rsync
+│   ├── S01saned -&gt; ../init.d/saned
+│   ├── S01smartmontools -&gt; ../init.d/smartmontools
+│   ├── S01ssh -&gt; ../init.d/ssh
+│   ├── S01sudo -&gt; ../init.d/sudo
+│   ├── S01tor -&gt; ../init.d/tor
+│   └── S01uuidd -&gt; ../init.d/uuidd
+├── rc5.d
+│   ├── K01gdomap -&gt; ../init.d/gdomap
+│   ├── K01speech-dispatcher -&gt; ../init.d/speech-dispatcher
+│   ├── K01sysstat -&gt; ../init.d/sysstat
+│   ├── S01anacron -&gt; ../init.d/anacron
+│   ├── S01bluetooth -&gt; ../init.d/bluetooth
+│   ├── S01console-setup.sh -&gt; ../init.d/console-setup.sh
+│   ├── S01cron -&gt; ../init.d/cron
+│   ├── S01cups -&gt; ../init.d/cups
+│   ├── S01cups-browsed -&gt; ../init.d/cups-browsed
+│   ├── S01dbus -&gt; ../init.d/dbus
+│   ├── S01docker -&gt; ../init.d/docker
+│   ├── S01exim4 -&gt; ../init.d/exim4
+│   ├── S01gdm3 -&gt; ../init.d/gdm3
+│   ├── S01lightdm -&gt; ../init.d/lightdm
+│   ├── S01mdadm -&gt; ../init.d/mdadm
+│   ├── S01nfs-kernel-server -&gt; ../init.d/nfs-kernel-server
+│   ├── S01plymouth -&gt; ../init.d/plymouth
+│   ├── S01rsync -&gt; ../init.d/rsync
+│   ├── S01saned -&gt; ../init.d/saned
+│   ├── S01smartmontools -&gt; ../init.d/smartmontools
+│   ├── S01ssh -&gt; ../init.d/ssh
+│   ├── S01sudo -&gt; ../init.d/sudo
+│   ├── S01tor -&gt; ../init.d/tor
+│   └── S01uuidd -&gt; ../init.d/uuidd
+├── rc6.d
+│   ├── K01alsa-utils -&gt; ../init.d/alsa-utils
+│   ├── K01bluetooth -&gt; ../init.d/bluetooth
+│   ├── K01cryptdisks -&gt; ../init.d/cryptdisks
+│   ├── K01cryptdisks-early -&gt; ../init.d/cryptdisks-early
+│   ├── K01cups-browsed -&gt; ../init.d/cups-browsed
+│   ├── K01docker -&gt; ../init.d/docker
+│   ├── K01exim4 -&gt; ../init.d/exim4
+│   ├── K01gdm3 -&gt; ../init.d/gdm3
+│   ├── K01gdomap -&gt; ../init.d/gdomap
+│   ├── K01hwclock.sh -&gt; ../init.d/hwclock.sh
+│   ├── K01lightdm -&gt; ../init.d/lightdm
+│   ├── K01mdadm -&gt; ../init.d/mdadm
+│   ├── K01mdadm-waitidle -&gt; ../init.d/mdadm-waitidle
+│   ├── K01networking -&gt; ../init.d/networking
+│   ├── K01nfs-common -&gt; ../init.d/nfs-common
+│   ├── K01nfs-kernel-server -&gt; ../init.d/nfs-kernel-server
+│   ├── K01plymouth -&gt; ../init.d/plymouth
+│   ├── K01rpcbind -&gt; ../init.d/rpcbind
+│   ├── K01saned -&gt; ../init.d/saned
+│   ├── K01smartmontools -&gt; ../init.d/smartmontools
+│   ├── K01speech-dispatcher -&gt; ../init.d/speech-dispatcher
+│   ├── K01tor -&gt; ../init.d/tor
+│   ├── K01udev -&gt; ../init.d/udev
+│   └── K01uuidd -&gt; ../init.d/uuidd
+├── rcS.d
+│   ├── S01alsa-utils -&gt; ../init.d/alsa-utils
+│   ├── S01apparmor -&gt; ../init.d/apparmor
+│   ├── S01cryptdisks -&gt; ../init.d/cryptdisks
+│   ├── S01cryptdisks-early -&gt; ../init.d/cryptdisks-early
+│   ├── S01hwclock.sh -&gt; ../init.d/hwclock.sh
+│   ├── S01keyboard-setup.sh -&gt; ../init.d/keyboard-setup.sh
+│   ├── S01kmod -&gt; ../init.d/kmod
+│   ├── S01networking -&gt; ../init.d/networking
+│   ├── S01nfs-common -&gt; ../init.d/nfs-common
+│   ├── S01plymouth-log -&gt; ../init.d/plymouth-log
+│   ├── S01procps -&gt; ../init.d/procps
+│   ├── S01rpcbind -&gt; ../init.d/rpcbind
+│   ├── S01udev -&gt; ../init.d/udev
+│   └── S01x11-common -&gt; ../init.d/x11-common
+├── reportbug.conf
+├── request-key.conf
+├── request-key.d
+│   └── id_resolver.conf
+├── resolv.conf
+├── rmt -&gt; /usr/sbin/rmt
+├── rpc
+├── runit
+│   └── runsvdir
+│       └── default
+│           ├── ssh -&gt; /etc/sv/ssh
+│           └── tor -&gt; /etc/sv/tor
+├── rygel.conf
+├── sane.d
+│   ├── abaton.conf
+│   ├── agfafocus.conf
+│   ├── airscan.conf
+│   ├── apple.conf
+│   ├── artec.conf
+│   ├── artec_eplus48u.conf
+│   ├── avision.conf
+│   ├── bh.conf
+│   ├── canon630u.conf
+│   ├── canon.conf
+│   ├── canon_dr.conf
+│   ├── canon_lide70.conf
+│   ├── canon_pp.conf
+│   ├── cardscan.conf
+│   ├── coolscan2.conf
+│   ├── coolscan3.conf
+│   ├── coolscan.conf
+│   ├── dc210.conf
+│   ├── dc240.conf
+│   ├── dc25.conf
+│   ├── dell1600n_net.conf
+│   ├── dll.conf
+│   ├── dll.d
+│   │   └── airscan
+│   ├── dmc.conf
+│   ├── epjitsu.conf
+│   ├── epson2.conf
+│   ├── epson.conf
+│   ├── epsonds.conf
+│   ├── escl.conf
+│   ├── fujitsu.conf
+│   ├── genesys.conf
+│   ├── gphoto2.conf
+│   ├── gt68xx.conf
+│   ├── hp3900.conf
+│   ├── hp4200.conf
+│   ├── hp5400.conf
+│   ├── hp.conf
+│   ├── hpsj5s.conf
+│   ├── hs2p.conf
+│   ├── ibm.conf
+│   ├── kodakaio.conf
+│   ├── kodak.conf
+│   ├── kvs1025.conf
+│   ├── leo.conf
+│   ├── lexmark.conf
+│   ├── ma1509.conf
+│   ├── magicolor.conf
+│   ├── matsushita.conf
+│   ├── microtek2.conf
+│   ├── microtek.conf
+│   ├── mustek.conf
+│   ├── mustek_pp.conf
+│   ├── mustek_usb.conf
+│   ├── nec.conf
+│   ├── net.conf
+│   ├── p5.conf
+│   ├── pie.conf
+│   ├── pieusb.conf
+│   ├── pixma.conf
+│   ├── plustek.conf
+│   ├── plustek_pp.conf
+│   ├── qcam.conf
+│   ├── ricoh.conf
+│   ├── rts8891.conf
+│   ├── s9036.conf
+│   ├── saned.conf
+│   ├── sceptre.conf
+│   ├── sharp.conf
+│   ├── sm3840.conf
+│   ├── snapscan.conf
+│   ├── sp15c.conf
+│   ├── st400.conf
+│   ├── stv680.conf
+│   ├── tamarack.conf
+│   ├── teco1.conf
+│   ├── teco2.conf
+│   ├── teco3.conf
+│   ├── test.conf
+│   ├── u12.conf
+│   ├── umax1220u.conf
+│   ├── umax.conf
+│   ├── umax_pp.conf
+│   └── xerox_mfp.conf
+├── sasl2
+│   └── libvirt.conf
+├── security
+│   ├── access.conf
+│   ├── faillock.conf
+│   ├── group.conf
+│   ├── limits.conf
+│   ├── limits.d
+│   │   └── 95-pipewire.conf
+│   ├── namespace.conf
+│   ├── namespace.d
+│   ├── namespace.init
+│   ├── opasswd
+│   ├── pam_env.conf
+│   ├── pwquality.conf
+│   ├── sepermit.conf
+│   └── time.conf
+├── selinux
+│   └── semanage.conf
+├── sensors3.conf
+├── sensors.d
+├── services
+├── sgml
+│   ├── catalog -&gt; /var/lib/sgml-base/supercatalog
+│   ├── docbook-xml
+│   │   ├── 4.0
+│   │   │   └── dbgenent.ent
+│   │   ├── 4.1.2
+│   │   │   └── dbgenent.mod
+│   │   ├── 4.2
+│   │   │   └── dbgenent.mod
+│   │   ├── 4.3
+│   │   │   └── dbgenent.mod
+│   │   ├── 4.4
+│   │   │   └── dbgenent.mod
+│   │   └── 4.5
+│   │       └── dbgenent.mod
+│   ├── docbook-xml.cat
+│   ├── sgml-data.cat
+│   └── xml-core.cat
+├── shadow
+├── shadow-
+├── shells
+├── signon-ui
+│   └── webkit-options.d
+│       ├── accounts.google.com.conf
+│       ├── api.twitter.com.conf
+│       ├── identi.ca.conf
+│       └── www.facebook.com.conf
+├── skel
+├── smartd.conf
+├── smartmontools
+│   ├── run.d
+│   │   └── 10mail
+│   └── smartd_warning.d
+├── snmp
+│   └── snmp.conf
+├── speech-dispatcher
+│   ├── clients
+│   │   └── emacs.conf
+│   ├── modules
+│   │   ├── cicero.conf
+│   │   ├── dtk-generic.conf
+│   │   ├── epos-generic.conf
+│   │   ├── espeak.conf
+│   │   ├── espeak-mbrola-generic.conf
+│   │   ├── espeak-ng.conf
+│   │   ├── espeak-ng-mbrola.conf
+│   │   ├── espeak-ng-mbrola-generic.conf
+│   │   ├── festival.conf
+│   │   ├── flite.conf
+│   │   ├── llia_phon-generic.conf
+│   │   ├── mary-generic.conf
+│   │   ├── mimic3-generic.conf
+│   │   └── swift-generic.conf
+│   └── speechd.conf
+├── ssh
+│   ├── moduli
+│   ├── ssh_config
+│   ├── ssh_config.bak
+│   ├── ssh_config.d
+│   ├── sshd_config
+│   ├── sshd_config.d
+│   ├── ssh_host_ecdsa_key
+│   ├── ssh_host_ecdsa_key.pub
+│   ├── ssh_host_ed25519_key
+│   ├── ssh_host_ed25519_key.pub
+│   ├── ssh_host_rsa_key
+│   └── ssh_host_rsa_key.pub
+├── ssl
+│   ├── certs
+│   │   ├── 002c0b4f.0 -&gt; GlobalSign_Root_R46.pem
+│   │   ├── 02265526.0 -&gt; Entrust_Root_Certification_Authority_-_G2.pem
+│   │   ├── 062cdee6.0 -&gt; GlobalSign_Root_CA_-_R3.pem
+│   │   ├── 064e0aa9.0 -&gt; QuoVadis_Root_CA_2_G3.pem
+│   │   ├── 06dc52d5.0 -&gt; SSL.com_EV_Root_Certification_Authority_RSA_R2.pem
+│   │   ├── 08063a00.0 -&gt; Security_Communication_RootCA3.pem
+│   │   ├── 09789157.0 -&gt; Starfield_Services_Root_Certificate_Authority_-_G2.pem
+│   │   ├── 0a775a30.0 -&gt; GTS_Root_R3.pem
+│   │   ├── 0b1b94ef.0 -&gt; CFCA_EV_ROOT.pem
+│   │   ├── 0b9bc432.0 -&gt; ISRG_Root_X2.pem
+│   │   ├── 0bf05006.0 -&gt; SSL.com_Root_Certification_Authority_ECC.pem
+│   │   ├── 0f5dc4f3.0 -&gt; UCA_Extended_Validation_Root.pem
+│   │   ├── 0f6fa695.0 -&gt; GDCA_TrustAUTH_R5_ROOT.pem
+│   │   ├── 1001acf7.0 -&gt; GTS_Root_R1.pem
+│   │   ├── 106f3e4d.0 -&gt; Entrust_Root_Certification_Authority_-_EC1.pem
+│   │   ├── 14bc7599.0 -&gt; emSign_ECC_Root_CA_-_G3.pem
+│   │   ├── 18856ac4.0 -&gt; SecureSign_RootCA11.pem
+│   │   ├── 1d3472b9.0 -&gt; GlobalSign_ECC_Root_CA_-_R5.pem
+│   │   ├── 1e08bfd1.0 -&gt; IdenTrust_Public_Sector_Root_CA_1.pem
+│   │   ├── 1e09d511.0 -&gt; T-TeleSec_GlobalRoot_Class_2.pem
+│   │   ├── 244b5494.0 -&gt; DigiCert_High_Assurance_EV_Root_CA.pem
+│   │   ├── 2923b3f9.0 -&gt; emSign_Root_CA_-_G1.pem
+│   │   ├── 2ae6433e.0 -&gt; CA_Disig_Root_R2.pem
+│   │   ├── 2b349938.0 -&gt; AffirmTrust_Commercial.pem
+│   │   ├── 32888f65.0 -&gt; Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem
+│   │   ├── 3513523f.0 -&gt; DigiCert_Global_Root_CA.pem
+│   │   ├── 3bde41ac.0 -&gt; Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
+│   │   ├── 3bde41ac.1 -&gt; Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068_2.pem
+│   │   ├── 3e44d2f7.0 -&gt; TrustCor_RootCert_CA-2.pem
+│   │   ├── 3e45d192.0 -&gt; Hongkong_Post_Root_CA_1.pem
+│   │   ├── 3fb36b73.0 -&gt; NAVER_Global_Root_Certification_Authority.pem
+│   │   ├── 40193066.0 -&gt; Certum_Trusted_Network_CA_2.pem
+│   │   ├── 4042bcee.0 -&gt; ISRG_Root_X1.pem
+│   │   ├── 40547a79.0 -&gt; COMODO_Certification_Authority.pem
+│   │   ├── 406c9bb1.0 -&gt; emSign_Root_CA_-_C1.pem
+│   │   ├── 48bec511.0 -&gt; Certum_Trusted_Network_CA.pem
+│   │   ├── 4b718d9b.0 -&gt; emSign_ECC_Root_CA_-_C3.pem
+│   │   ├── 4bfab552.0 -&gt; Starfield_Root_Certificate_Authority_-_G2.pem
+│   │   ├── 4f316efb.0 -&gt; SwissSign_Gold_CA_-_G2.pem
+│   │   ├── 5273a94c.0 -&gt; E-Tugra_Certification_Authority.pem
+│   │   ├── 5443e9e3.0 -&gt; T-TeleSec_GlobalRoot_Class_3.pem
+│   │   ├── 54657681.0 -&gt; Buypass_Class_2_Root_CA.pem
+│   │   ├── 57bcb2da.0 -&gt; SwissSign_Silver_CA_-_G2.pem
+│   │   ├── 5860aaa6.0 -&gt; Security_Communication_ECC_RootCA1.pem
+│   │   ├── 5931b5bc.0 -&gt; D-TRUST_EV_Root_CA_1_2020.pem
+│   │   ├── 5a7722fb.0 -&gt; E-Tugra_Global_Root_CA_ECC_v3.pem
+│   │   ├── 5ad8a5d6.0 -&gt; GlobalSign_Root_CA.pem
+│   │   ├── 5cd81ad7.0 -&gt; TeliaSonera_Root_CA_v1.pem
+│   │   ├── 5d3033c5.0 -&gt; TrustCor_RootCert_CA-1.pem
+│   │   ├── 5e98733a.0 -&gt; Entrust_Root_Certification_Authority_-_G4.pem
+│   │   ├── 5f15c80c.0 -&gt; TWCA_Global_Root_CA.pem
+│   │   ├── 5f618aec.0 -&gt; certSIGN_Root_CA_G2.pem
+│   │   ├── 607986c7.0 -&gt; DigiCert_Global_Root_G2.pem
+│   │   ├── 626dceaf.0 -&gt; GTS_Root_R2.pem
+│   │   ├── 653b494a.0 -&gt; Baltimore_CyberTrust_Root.pem
+│   │   ├── 66445960.0 -&gt; E-Tugra_Global_Root_CA_RSA_v3.pem
+│   │   ├── 68dd7389.0 -&gt; Hongkong_Post_Root_CA_3.pem
+│   │   ├── 6b99d060.0 -&gt; Entrust_Root_Certification_Authority.pem
+│   │   ├── 6d41d539.0 -&gt; Amazon_Root_CA_2.pem
+│   │   ├── 6fa5da56.0 -&gt; SSL.com_Root_Certification_Authority_RSA.pem
+│   │   ├── 706f604c.0 -&gt; XRamp_Global_CA_Root.pem
+│   │   ├── 749e9e03.0 -&gt; QuoVadis_Root_CA_1_G3.pem
+│   │   ├── 75d1b2ed.0 -&gt; DigiCert_Trusted_Root_G4.pem
+│   │   ├── 76faf6c0.0 -&gt; QuoVadis_Root_CA_3.pem
+│   │   ├── 7719f463.0 -&gt; Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem
+│   │   ├── 773e07ad.0 -&gt; OISTE_WISeKey_Global_Root_GC_CA.pem
+│   │   ├── 7a3adc42.0 -&gt; vTrus_Root_CA.pem
+│   │   ├── 7a780d93.0 -&gt; Certainly_Root_R1.pem
+│   │   ├── 7aaf71c0.0 -&gt; TrustCor_ECA-1.pem
+│   │   ├── 7f3d5d1d.0 -&gt; DigiCert_Assured_ID_Root_G3.pem
+│   │   ├── 8160b96c.0 -&gt; Microsec_e-Szigno_Root_CA_2009.pem
+│   │   ├── 82d350f7.0 -&gt; ssl-cert-snakeoil.pem
+│   │   ├── 8508e720.0 -&gt; Certainly_Root_E1.pem
+│   │   ├── 8cb5ee0f.0 -&gt; Amazon_Root_CA_3.pem
+│   │   ├── 8d86cdd1.0 -&gt; certSIGN_ROOT_CA.pem
+│   │   ├── 8d89cda1.0 -&gt; Microsoft_ECC_Root_Certificate_Authority_2017.pem
+│   │   ├── 8f103249.0 -&gt; Telia_Root_CA_v2.pem
+│   │   ├── 9046744a.0 -&gt; Sectigo_Public_Server_Authentication_Root_R46.pem
+│   │   ├── 90c5a3c8.0 -&gt; HiPKI_Root_CA_-_G1.pem
+│   │   ├── 930ac5d2.0 -&gt; Actalis_Authentication_Root_CA.pem
+│   │   ├── 93bc0acc.0 -&gt; AffirmTrust_Networking.pem
+│   │   ├── 9482e63a.0 -&gt; Certum_EC-384_CA.pem
+│   │   ├── 9846683b.0 -&gt; DigiCert_TLS_ECC_P384_Root_G5.pem
+│   │   ├── 988a38cb.0 -&gt; NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem
+│   │   ├── 9b5697b0.0 -&gt; Trustwave_Global_ECC_P256_Certification_Authority.pem
+│   │   ├── 9c8dfbd4.0 -&gt; AffirmTrust_Premium_ECC.pem
+│   │   ├── 9d04f354.0 -&gt; DigiCert_Assured_ID_Root_G2.pem
+│   │   ├── 9ef4a08a.0 -&gt; D-TRUST_BR_Root_CA_1_2020.pem
+│   │   ├── 9f727ac7.0 -&gt; HARICA_TLS_RSA_Root_CA_2021.pem
+│   │   ├── a3418fda.0 -&gt; GTS_Root_R4.pem
+│   │   ├── a94d09e5.0 -&gt; ACCVRAIZ1.pem
+│   │   ├── ACCVRAIZ1.pem -&gt; /usr/share/ca-certificates/mozilla/ACCVRAIZ1.crt
+│   │   ├── AC_RAIZ_FNMT-RCM.pem -&gt; /usr/share/ca-certificates/mozilla/AC_RAIZ_FNMT-RCM.crt
+│   │   ├── AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.pem -&gt; /usr/share/ca-certificates/mozilla/AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.crt
+│   │   ├── Actalis_Authentication_Root_CA.pem -&gt; /usr/share/ca-certificates/mozilla/Actalis_Authentication_Root_CA.crt
+│   │   ├── adoptium
+│   │   │   └── cacerts
+│   │   ├── aee5f10d.0 -&gt; Entrust.net_Premium_2048_Secure_Server_CA.pem
+│   │   ├── AffirmTrust_Commercial.pem -&gt; /usr/share/ca-certificates/mozilla/AffirmTrust_Commercial.crt
+│   │   ├── AffirmTrust_Networking.pem -&gt; /usr/share/ca-certificates/mozilla/AffirmTrust_Networking.crt
+│   │   ├── AffirmTrust_Premium_ECC.pem -&gt; /usr/share/ca-certificates/mozilla/AffirmTrust_Premium_ECC.crt
+│   │   ├── AffirmTrust_Premium.pem -&gt; /usr/share/ca-certificates/mozilla/AffirmTrust_Premium.crt
+│   │   ├── Amazon_Root_CA_1.pem -&gt; /usr/share/ca-certificates/mozilla/Amazon_Root_CA_1.crt
+│   │   ├── Amazon_Root_CA_2.pem -&gt; /usr/share/ca-certificates/mozilla/Amazon_Root_CA_2.crt
+│   │   ├── Amazon_Root_CA_3.pem -&gt; /usr/share/ca-certificates/mozilla/Amazon_Root_CA_3.crt
+│   │   ├── Amazon_Root_CA_4.pem -&gt; /usr/share/ca-certificates/mozilla/Amazon_Root_CA_4.crt
+│   │   ├── ANF_Secure_Server_Root_CA.pem -&gt; /usr/share/ca-certificates/mozilla/ANF_Secure_Server_Root_CA.crt
+│   │   ├── Atos_TrustedRoot_2011.pem -&gt; /usr/share/ca-certificates/mozilla/Atos_TrustedRoot_2011.crt
+│   │   ├── Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068_2.pem -&gt; /usr/share/ca-certificates/mozilla/Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068_2.crt
+│   │   ├── Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem -&gt; /usr/share/ca-certificates/mozilla/Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.crt
+│   │   ├── b0e59380.0 -&gt; GlobalSign_ECC_Root_CA_-_R4.pem
+│   │   ├── b1159c4c.0 -&gt; DigiCert_Assured_ID_Root_CA.pem
+│   │   ├── b433981b.0 -&gt; ANF_Secure_Server_Root_CA.pem
+│   │   ├── b66938e9.0 -&gt; Secure_Global_CA.pem
+│   │   ├── b727005e.0 -&gt; AffirmTrust_Premium.pem
+│   │   ├── b7a5b843.0 -&gt; TWCA_Root_Certification_Authority.pem
+│   │   ├── b81b93f0.0 -&gt; AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.pem
+│   │   ├── Baltimore_CyberTrust_Root.pem -&gt; /usr/share/ca-certificates/mozilla/Baltimore_CyberTrust_Root.crt
+│   │   ├── bf53fb88.0 -&gt; Microsoft_RSA_Root_Certificate_Authority_2017.pem
+│   │   ├── Buypass_Class_2_Root_CA.pem -&gt; /usr/share/ca-certificates/mozilla/Buypass_Class_2_Root_CA.crt
+│   │   ├── Buypass_Class_3_Root_CA.pem -&gt; /usr/share/ca-certificates/mozilla/Buypass_Class_3_Root_CA.crt
+│   │   ├── c01eb047.0 -&gt; UCA_Global_G2_Root.pem
+│   │   ├── c28a8a30.0 -&gt; D-TRUST_Root_Class_3_CA_2_2009.pem
+│   │   ├── ca6e4ad9.0 -&gt; ePKI_Root_Certification_Authority.pem
+│   │   ├── ca-certificates.crt
+│   │   ├── CA_Disig_Root_R2.pem -&gt; /usr/share/ca-certificates/mozilla/CA_Disig_Root_R2.crt
+│   │   ├── cbf06781.0 -&gt; Go_Daddy_Root_Certificate_Authority_-_G2.pem
+│   │   ├── cc450945.0 -&gt; Izenpe.com.pem
+│   │   ├── cd58d51e.0 -&gt; Security_Communication_RootCA2.pem
+│   │   ├── cd8c0d63.0 -&gt; AC_RAIZ_FNMT-RCM.pem
+│   │   ├── ce5e74ef.0 -&gt; Amazon_Root_CA_1.pem
+│   │   ├── Certainly_Root_E1.pem -&gt; /usr/share/ca-certificates/mozilla/Certainly_Root_E1.crt
+│   │   ├── Certainly_Root_R1.pem -&gt; /usr/share/ca-certificates/mozilla/Certainly_Root_R1.crt
+│   │   ├── Certigna.pem -&gt; /usr/share/ca-certificates/mozilla/Certigna.crt
+│   │   ├── Certigna_Root_CA.pem -&gt; /usr/share/ca-certificates/mozilla/Certigna_Root_CA.crt
+│   │   ├── certSIGN_Root_CA_G2.pem -&gt; /usr/share/ca-certificates/mozilla/certSIGN_Root_CA_G2.crt
+│   │   ├── certSIGN_ROOT_CA.pem -&gt; /usr/share/ca-certificates/mozilla/certSIGN_ROOT_CA.crt
+│   │   ├── Certum_EC-384_CA.pem -&gt; /usr/share/ca-certificates/mozilla/Certum_EC-384_CA.crt
+│   │   ├── Certum_Trusted_Network_CA_2.pem -&gt; /usr/share/ca-certificates/mozilla/Certum_Trusted_Network_CA_2.crt
+│   │   ├── Certum_Trusted_Network_CA.pem -&gt; /usr/share/ca-certificates/mozilla/Certum_Trusted_Network_CA.crt
+│   │   ├── Certum_Trusted_Root_CA.pem -&gt; /usr/share/ca-certificates/mozilla/Certum_Trusted_Root_CA.crt
+│   │   ├── CFCA_EV_ROOT.pem -&gt; /usr/share/ca-certificates/mozilla/CFCA_EV_ROOT.crt
+│   │   ├── Comodo_AAA_Services_root.pem -&gt; /usr/share/ca-certificates/mozilla/Comodo_AAA_Services_root.crt
+│   │   ├── COMODO_Certification_Authority.pem -&gt; /usr/share/ca-certificates/mozilla/COMODO_Certification_Authority.crt
+│   │   ├── COMODO_ECC_Certification_Authority.pem -&gt; /usr/share/ca-certificates/mozilla/COMODO_ECC_Certification_Authority.crt
+│   │   ├── COMODO_RSA_Certification_Authority.pem -&gt; /usr/share/ca-certificates/mozilla/COMODO_RSA_Certification_Authority.crt
+│   │   ├── d4dae3dd.0 -&gt; D-TRUST_Root_Class_3_CA_2_EV_2009.pem
+│   │   ├── d52c538d.0 -&gt; DigiCert_TLS_RSA4096_Root_G5.pem
+│   │   ├── d6325660.0 -&gt; COMODO_RSA_Certification_Authority.pem
+│   │   ├── d7e8dc79.0 -&gt; QuoVadis_Root_CA_2.pem
+│   │   ├── d887a5bb.0 -&gt; Trustwave_Global_ECC_P384_Certification_Authority.pem
+│   │   ├── da0cfd1d.0 -&gt; Sectigo_Public_Server_Authentication_Root_E46.pem
+│   │   ├── dc4d6a89.0 -&gt; GlobalSign_Root_CA_-_R6.pem
+│   │   ├── dd8e9d41.0 -&gt; DigiCert_Global_Root_G3.pem
+│   │   ├── de6d66f3.0 -&gt; Amazon_Root_CA_4.pem
+│   │   ├── DigiCert_Assured_ID_Root_CA.pem -&gt; /usr/share/ca-certificates/mozilla/DigiCert_Assured_ID_Root_CA.crt
+│   │   ├── DigiCert_Assured_ID_Root_G2.pem -&gt; /usr/share/ca-certificates/mozilla/DigiCert_Assured_ID_Root_G2.crt
+│   │   ├── DigiCert_Assured_ID_Root_G3.pem -&gt; /usr/share/ca-certificates/mozilla/DigiCert_Assured_ID_Root_G3.crt
+│   │   ├── DigiCert_Global_Root_CA.pem -&gt; /usr/share/ca-certificates/mozilla/DigiCert_Global_Root_CA.crt
+│   │   ├── DigiCert_Global_Root_G2.pem -&gt; /usr/share/ca-certificates/mozilla/DigiCert_Global_Root_G2.crt
+│   │   ├── DigiCert_Global_Root_G3.pem -&gt; /usr/share/ca-certificates/mozilla/DigiCert_Global_Root_G3.crt
+│   │   ├── DigiCert_High_Assurance_EV_Root_CA.pem -&gt; /usr/share/ca-certificates/mozilla/DigiCert_High_Assurance_EV_Root_CA.crt
+│   │   ├── DigiCert_TLS_ECC_P384_Root_G5.pem -&gt; /usr/share/ca-certificates/mozilla/DigiCert_TLS_ECC_P384_Root_G5.crt
+│   │   ├── DigiCert_TLS_RSA4096_Root_G5.pem -&gt; /usr/share/ca-certificates/mozilla/DigiCert_TLS_RSA4096_Root_G5.crt
+│   │   ├── DigiCert_Trusted_Root_G4.pem -&gt; /usr/share/ca-certificates/mozilla/DigiCert_Trusted_Root_G4.crt
+│   │   ├── D-TRUST_BR_Root_CA_1_2020.pem -&gt; /usr/share/ca-certificates/mozilla/D-TRUST_BR_Root_CA_1_2020.crt
+│   │   ├── D-TRUST_EV_Root_CA_1_2020.pem -&gt; /usr/share/ca-certificates/mozilla/D-TRUST_EV_Root_CA_1_2020.crt
+│   │   ├── D-TRUST_Root_Class_3_CA_2_2009.pem -&gt; /usr/share/ca-certificates/mozilla/D-TRUST_Root_Class_3_CA_2_2009.crt
+│   │   ├── D-TRUST_Root_Class_3_CA_2_EV_2009.pem -&gt; /usr/share/ca-certificates/mozilla/D-TRUST_Root_Class_3_CA_2_EV_2009.crt
+│   │   ├── e113c810.0 -&gt; Certigna.pem
+│   │   ├── e18bfb83.0 -&gt; QuoVadis_Root_CA_3_G3.pem
+│   │   ├── e35234b1.0 -&gt; Certum_Trusted_Root_CA.pem
+│   │   ├── e36a6752.0 -&gt; Atos_TrustedRoot_2011.pem
+│   │   ├── e73d606e.0 -&gt; OISTE_WISeKey_Global_Root_GB_CA.pem
+│   │   ├── e868b802.0 -&gt; e-Szigno_Root_CA_2017.pem
+│   │   ├── e8de2f56.0 -&gt; Buypass_Class_3_Root_CA.pem
+│   │   ├── ecccd8db.0 -&gt; HARICA_TLS_ECC_Root_CA_2021.pem
+│   │   ├── ed858448.0 -&gt; vTrus_ECC_Root_CA.pem
+│   │   ├── ee64a828.0 -&gt; Comodo_AAA_Services_root.pem
+│   │   ├── eed8c118.0 -&gt; COMODO_ECC_Certification_Authority.pem
+│   │   ├── ef954a4e.0 -&gt; IdenTrust_Commercial_Root_CA_1.pem
+│   │   ├── emSign_ECC_Root_CA_-_C3.pem -&gt; /usr/share/ca-certificates/mozilla/emSign_ECC_Root_CA_-_C3.crt
+│   │   ├── emSign_ECC_Root_CA_-_G3.pem -&gt; /usr/share/ca-certificates/mozilla/emSign_ECC_Root_CA_-_G3.crt
+│   │   ├── emSign_Root_CA_-_C1.pem -&gt; /usr/share/ca-certificates/mozilla/emSign_Root_CA_-_C1.crt
+│   │   ├── emSign_Root_CA_-_G1.pem -&gt; /usr/share/ca-certificates/mozilla/emSign_Root_CA_-_G1.crt
+│   │   ├── Entrust.net_Premium_2048_Secure_Server_CA.pem -&gt; /usr/share/ca-certificates/mozilla/Entrust.net_Premium_2048_Secure_Server_CA.crt
+│   │   ├── Entrust_Root_Certification_Authority_-_EC1.pem -&gt; /usr/share/ca-certificates/mozilla/Entrust_Root_Certification_Authority_-_EC1.crt
+│   │   ├── Entrust_Root_Certification_Authority_-_G2.pem -&gt; /usr/share/ca-certificates/mozilla/Entrust_Root_Certification_Authority_-_G2.crt
+│   │   ├── Entrust_Root_Certification_Authority_-_G4.pem -&gt; /usr/share/ca-certificates/mozilla/Entrust_Root_Certification_Authority_-_G4.crt
+│   │   ├── Entrust_Root_Certification_Authority.pem -&gt; /usr/share/ca-certificates/mozilla/Entrust_Root_Certification_Authority.crt
+│   │   ├── ePKI_Root_Certification_Authority.pem -&gt; /usr/share/ca-certificates/mozilla/ePKI_Root_Certification_Authority.crt
+│   │   ├── e-Szigno_Root_CA_2017.pem -&gt; /usr/share/ca-certificates/mozilla/e-Szigno_Root_CA_2017.crt
+│   │   ├── E-Tugra_Certification_Authority.pem -&gt; /usr/share/ca-certificates/mozilla/E-Tugra_Certification_Authority.crt
+│   │   ├── E-Tugra_Global_Root_CA_ECC_v3.pem -&gt; /usr/share/ca-certificates/mozilla/E-Tugra_Global_Root_CA_ECC_v3.crt
+│   │   ├── E-Tugra_Global_Root_CA_RSA_v3.pem -&gt; /usr/share/ca-certificates/mozilla/E-Tugra_Global_Root_CA_RSA_v3.crt
+│   │   ├── f081611a.0 -&gt; Go_Daddy_Class_2_CA.pem
+│   │   ├── f0c70a8d.0 -&gt; SSL.com_EV_Root_Certification_Authority_ECC.pem
+│   │   ├── f249de83.0 -&gt; Trustwave_Global_Certification_Authority.pem
+│   │   ├── f30dd6ad.0 -&gt; USERTrust_ECC_Certification_Authority.pem
+│   │   ├── f3377b1b.0 -&gt; Security_Communication_Root_CA.pem
+│   │   ├── f387163d.0 -&gt; Starfield_Class_2_CA.pem
+│   │   ├── f39fc864.0 -&gt; SecureTrust_CA.pem
+│   │   ├── f51bb24c.0 -&gt; Certigna_Root_CA.pem
+│   │   ├── fa5da96b.0 -&gt; GLOBALTRUST_2020.pem
+│   │   ├── fc5a8f99.0 -&gt; USERTrust_RSA_Certification_Authority.pem
+│   │   ├── fd64f3fc.0 -&gt; TunTrust_Root_CA.pem
+│   │   ├── fe8a2cd8.0 -&gt; SZAFIR_ROOT_CA2.pem
+│   │   ├── feffd413.0 -&gt; GlobalSign_Root_E46.pem
+│   │   ├── ff34af3f.0 -&gt; TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem
+│   │   ├── GDCA_TrustAUTH_R5_ROOT.pem -&gt; /usr/share/ca-certificates/mozilla/GDCA_TrustAUTH_R5_ROOT.crt
+│   │   ├── GlobalSign_ECC_Root_CA_-_R4.pem -&gt; /usr/share/ca-certificates/mozilla/GlobalSign_ECC_Root_CA_-_R4.crt
+│   │   ├── GlobalSign_ECC_Root_CA_-_R5.pem -&gt; /usr/share/ca-certificates/mozilla/GlobalSign_ECC_Root_CA_-_R5.crt
+│   │   ├── GlobalSign_Root_CA.pem -&gt; /usr/share/ca-certificates/mozilla/GlobalSign_Root_CA.crt
+│   │   ├── GlobalSign_Root_CA_-_R3.pem -&gt; /usr/share/ca-certificates/mozilla/GlobalSign_Root_CA_-_R3.crt
+│   │   ├── GlobalSign_Root_CA_-_R6.pem -&gt; /usr/share/ca-certificates/mozilla/GlobalSign_Root_CA_-_R6.crt
+│   │   ├── GlobalSign_Root_E46.pem -&gt; /usr/share/ca-certificates/mozilla/GlobalSign_Root_E46.crt
+│   │   ├── GlobalSign_Root_R46.pem -&gt; /usr/share/ca-certificates/mozilla/GlobalSign_Root_R46.crt
+│   │   ├── GLOBALTRUST_2020.pem -&gt; /usr/share/ca-certificates/mozilla/GLOBALTRUST_2020.crt
+│   │   ├── Go_Daddy_Class_2_CA.pem -&gt; /usr/share/ca-certificates/mozilla/Go_Daddy_Class_2_CA.crt
+│   │   ├── Go_Daddy_Root_Certificate_Authority_-_G2.pem -&gt; /usr/share/ca-certificates/mozilla/Go_Daddy_Root_Certificate_Authority_-_G2.crt
+│   │   ├── GTS_Root_R1.pem -&gt; /usr/share/ca-certificates/mozilla/GTS_Root_R1.crt
+│   │   ├── GTS_Root_R2.pem -&gt; /usr/share/ca-certificates/mozilla/GTS_Root_R2.crt
+│   │   ├── GTS_Root_R3.pem -&gt; /usr/share/ca-certificates/mozilla/GTS_Root_R3.crt
+│   │   ├── GTS_Root_R4.pem -&gt; /usr/share/ca-certificates/mozilla/GTS_Root_R4.crt
+│   │   ├── HARICA_TLS_ECC_Root_CA_2021.pem -&gt; /usr/share/ca-certificates/mozilla/HARICA_TLS_ECC_Root_CA_2021.crt
+│   │   ├── HARICA_TLS_RSA_Root_CA_2021.pem -&gt; /usr/share/ca-certificates/mozilla/HARICA_TLS_RSA_Root_CA_2021.crt
+│   │   ├── Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem -&gt; /usr/share/ca-certificates/mozilla/Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.crt
+│   │   ├── Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem -&gt; /usr/share/ca-certificates/mozilla/Hellenic_Academic_and_Research_Institutions_RootCA_2015.crt
+│   │   ├── HiPKI_Root_CA_-_G1.pem -&gt; /usr/share/ca-certificates/mozilla/HiPKI_Root_CA_-_G1.crt
+│   │   ├── Hongkong_Post_Root_CA_1.pem -&gt; /usr/share/ca-certificates/mozilla/Hongkong_Post_Root_CA_1.crt
+│   │   ├── Hongkong_Post_Root_CA_3.pem -&gt; /usr/share/ca-certificates/mozilla/Hongkong_Post_Root_CA_3.crt
+│   │   ├── IdenTrust_Commercial_Root_CA_1.pem -&gt; /usr/share/ca-certificates/mozilla/IdenTrust_Commercial_Root_CA_1.crt
+│   │   ├── IdenTrust_Public_Sector_Root_CA_1.pem -&gt; /usr/share/ca-certificates/mozilla/IdenTrust_Public_Sector_Root_CA_1.crt
+│   │   ├── ISRG_Root_X1.pem -&gt; /usr/share/ca-certificates/mozilla/ISRG_Root_X1.crt
+│   │   ├── ISRG_Root_X2.pem -&gt; /usr/share/ca-certificates/mozilla/ISRG_Root_X2.crt
+│   │   ├── Izenpe.com.pem -&gt; /usr/share/ca-certificates/mozilla/Izenpe.com.crt
+│   │   ├── java
+│   │   │   └── cacerts
+│   │   ├── Microsec_e-Szigno_Root_CA_2009.pem -&gt; /usr/share/ca-certificates/mozilla/Microsec_e-Szigno_Root_CA_2009.crt
+│   │   ├── Microsoft_ECC_Root_Certificate_Authority_2017.pem -&gt; /usr/share/ca-certificates/mozilla/Microsoft_ECC_Root_Certificate_Authority_2017.crt
+│   │   ├── Microsoft_RSA_Root_Certificate_Authority_2017.pem -&gt; /usr/share/ca-certificates/mozilla/Microsoft_RSA_Root_Certificate_Authority_2017.crt
+│   │   ├── NAVER_Global_Root_Certification_Authority.pem -&gt; /usr/share/ca-certificates/mozilla/NAVER_Global_Root_Certification_Authority.crt
+│   │   ├── NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem -&gt; /usr/share/ca-certificates/mozilla/NetLock_Arany_=Class_Gold=_Főtanúsítvány.crt
+│   │   ├── OISTE_WISeKey_Global_Root_GB_CA.pem -&gt; /usr/share/ca-certificates/mozilla/OISTE_WISeKey_Global_Root_GB_CA.crt
+│   │   ├── OISTE_WISeKey_Global_Root_GC_CA.pem -&gt; /usr/share/ca-certificates/mozilla/OISTE_WISeKey_Global_Root_GC_CA.crt
+│   │   ├── QuoVadis_Root_CA_1_G3.pem -&gt; /usr/share/ca-certificates/mozilla/QuoVadis_Root_CA_1_G3.crt
+│   │   ├── QuoVadis_Root_CA_2_G3.pem -&gt; /usr/share/ca-certificates/mozilla/QuoVadis_Root_CA_2_G3.crt
+│   │   ├── QuoVadis_Root_CA_2.pem -&gt; /usr/share/ca-certificates/mozilla/QuoVadis_Root_CA_2.crt
+│   │   ├── QuoVadis_Root_CA_3_G3.pem -&gt; /usr/share/ca-certificates/mozilla/QuoVadis_Root_CA_3_G3.crt
+│   │   ├── QuoVadis_Root_CA_3.pem -&gt; /usr/share/ca-certificates/mozilla/QuoVadis_Root_CA_3.crt
+│   │   ├── Sectigo_Public_Server_Authentication_Root_E46.pem -&gt; /usr/share/ca-certificates/mozilla/Sectigo_Public_Server_Authentication_Root_E46.crt
+│   │   ├── Sectigo_Public_Server_Authentication_Root_R46.pem -&gt; /usr/share/ca-certificates/mozilla/Sectigo_Public_Server_Authentication_Root_R46.crt
+│   │   ├── Secure_Global_CA.pem -&gt; /usr/share/ca-certificates/mozilla/Secure_Global_CA.crt
+│   │   ├── SecureSign_RootCA11.pem -&gt; /usr/share/ca-certificates/mozilla/SecureSign_RootCA11.crt
+│   │   ├── SecureTrust_CA.pem -&gt; /usr/share/ca-certificates/mozilla/SecureTrust_CA.crt
+│   │   ├── Security_Communication_ECC_RootCA1.pem -&gt; /usr/share/ca-certificates/mozilla/Security_Communication_ECC_RootCA1.crt
+│   │   ├── Security_Communication_RootCA2.pem -&gt; /usr/share/ca-certificates/mozilla/Security_Communication_RootCA2.crt
+│   │   ├── Security_Communication_RootCA3.pem -&gt; /usr/share/ca-certificates/mozilla/Security_Communication_RootCA3.crt
+│   │   ├── Security_Communication_Root_CA.pem -&gt; /usr/share/ca-certificates/mozilla/Security_Communication_Root_CA.crt
+│   │   ├── ssl-cert-snakeoil.pem
+│   │   ├── SSL.com_EV_Root_Certification_Authority_ECC.pem -&gt; /usr/share/ca-certificates/mozilla/SSL.com_EV_Root_Certification_Authority_ECC.crt
+│   │   ├── SSL.com_EV_Root_Certification_Authority_RSA_R2.pem -&gt; /usr/share/ca-certificates/mozilla/SSL.com_EV_Root_Certification_Authority_RSA_R2.crt
+│   │   ├── SSL.com_Root_Certification_Authority_ECC.pem -&gt; /usr/share/ca-certificates/mozilla/SSL.com_Root_Certification_Authority_ECC.crt
+│   │   ├── SSL.com_Root_Certification_Authority_RSA.pem -&gt; /usr/share/ca-certificates/mozilla/SSL.com_Root_Certification_Authority_RSA.crt
+│   │   ├── Starfield_Class_2_CA.pem -&gt; /usr/share/ca-certificates/mozilla/Starfield_Class_2_CA.crt
+│   │   ├── Starfield_Root_Certificate_Authority_-_G2.pem -&gt; /usr/share/ca-certificates/mozilla/Starfield_Root_Certificate_Authority_-_G2.crt
+│   │   ├── Starfield_Services_Root_Certificate_Authority_-_G2.pem -&gt; /usr/share/ca-certificates/mozilla/Starfield_Services_Root_Certificate_Authority_-_G2.crt
+│   │   ├── SwissSign_Gold_CA_-_G2.pem -&gt; /usr/share/ca-certificates/mozilla/SwissSign_Gold_CA_-_G2.crt
+│   │   ├── SwissSign_Silver_CA_-_G2.pem -&gt; /usr/share/ca-certificates/mozilla/SwissSign_Silver_CA_-_G2.crt
+│   │   ├── SZAFIR_ROOT_CA2.pem -&gt; /usr/share/ca-certificates/mozilla/SZAFIR_ROOT_CA2.crt
+│   │   ├── Telia_Root_CA_v2.pem -&gt; /usr/share/ca-certificates/mozilla/Telia_Root_CA_v2.crt
+│   │   ├── TeliaSonera_Root_CA_v1.pem -&gt; /usr/share/ca-certificates/mozilla/TeliaSonera_Root_CA_v1.crt
+│   │   ├── TrustCor_ECA-1.pem -&gt; /usr/share/ca-certificates/mozilla/TrustCor_ECA-1.crt
+│   │   ├── TrustCor_RootCert_CA-1.pem -&gt; /usr/share/ca-certificates/mozilla/TrustCor_RootCert_CA-1.crt
+│   │   ├── TrustCor_RootCert_CA-2.pem -&gt; /usr/share/ca-certificates/mozilla/TrustCor_RootCert_CA-2.crt
+│   │   ├── Trustwave_Global_Certification_Authority.pem -&gt; /usr/share/ca-certificates/mozilla/Trustwave_Global_Certification_Authority.crt
+│   │   ├── Trustwave_Global_ECC_P256_Certification_Authority.pem -&gt; /usr/share/ca-certificates/mozilla/Trustwave_Global_ECC_P256_Certification_Authority.crt
+│   │   ├── Trustwave_Global_ECC_P384_Certification_Authority.pem -&gt; /usr/share/ca-certificates/mozilla/Trustwave_Global_ECC_P384_Certification_Authority.crt
+│   │   ├── T-TeleSec_GlobalRoot_Class_2.pem -&gt; /usr/share/ca-certificates/mozilla/T-TeleSec_GlobalRoot_Class_2.crt
+│   │   ├── T-TeleSec_GlobalRoot_Class_3.pem -&gt; /usr/share/ca-certificates/mozilla/T-TeleSec_GlobalRoot_Class_3.crt
+│   │   ├── TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem -&gt; /usr/share/ca-certificates/mozilla/TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.crt
+│   │   ├── TunTrust_Root_CA.pem -&gt; /usr/share/ca-certificates/mozilla/TunTrust_Root_CA.crt
+│   │   ├── TWCA_Global_Root_CA.pem -&gt; /usr/share/ca-certificates/mozilla/TWCA_Global_Root_CA.crt
+│   │   ├── TWCA_Root_Certification_Authority.pem -&gt; /usr/share/ca-certificates/mozilla/TWCA_Root_Certification_Authority.crt
+│   │   ├── UCA_Extended_Validation_Root.pem -&gt; /usr/share/ca-certificates/mozilla/UCA_Extended_Validation_Root.crt
+│   │   ├── UCA_Global_G2_Root.pem -&gt; /usr/share/ca-certificates/mozilla/UCA_Global_G2_Root.crt
+│   │   ├── USERTrust_ECC_Certification_Authority.pem -&gt; /usr/share/ca-certificates/mozilla/USERTrust_ECC_Certification_Authority.crt
+│   │   ├── USERTrust_RSA_Certification_Authority.pem -&gt; /usr/share/ca-certificates/mozilla/USERTrust_RSA_Certification_Authority.crt
+│   │   ├── vTrus_ECC_Root_CA.pem -&gt; /usr/share/ca-certificates/mozilla/vTrus_ECC_Root_CA.crt
+│   │   ├── vTrus_Root_CA.pem -&gt; /usr/share/ca-certificates/mozilla/vTrus_Root_CA.crt
+│   │   └── XRamp_Global_CA_Root.pem -&gt; /usr/share/ca-certificates/mozilla/XRamp_Global_CA_Root.crt
+│   ├── openssl.cnf
+│   └── private  [error opening dir]
+├── subgid
+├── subgid-
+├── subuid
+├── subuid-
+├── sudo.conf
+├── sudoers
+├── sudoers.d
+│   ├── kdesu-sudoers
+│   ├── README
+│   └── timeout
+├── sudo_logsrvd.conf
+├── sv
+│   ├── ssh
+│   │   ├── finish
+│   │   ├── log
+│   │   │   └── run
+│   │   └── run
+│   └── tor
+│       ├── log
+│       │   └── run
+│       └── run
+├── swtpm-localca.conf
+├── swtpm-localca.options
+├── swtpm_setup.conf
+├── sysctl.conf
+├── sysctl.d
+│   ├── 30-brave.conf
+│   ├── 99-sysctl.conf -&gt; ../sysctl.conf
+│   └── README.sysctl
+├── sysstat
+│   ├── sysstat
+│   └── sysstat.ioconf
+├── systemd
+│   ├── journald.conf
+│   ├── logind.conf
+│   ├── network
+│   ├── networkd.conf
+│   ├── pstore.conf
+│   ├── sleep.conf
+│   ├── system
+│   │   ├── basic.target.wants
+│   │   │   └── low-memory-monitor.service -&gt; /lib/systemd/system/low-memory-monitor.service
+│   │   ├── bluetooth.target.wants
+│   │   │   └── bluetooth.service -&gt; /lib/systemd/system/bluetooth.service
+│   │   ├── dbus-fi.w1.wpa_supplicant1.service -&gt; /lib/systemd/system/wpa_supplicant.service
+│   │   ├── dbus-org.bluez.service -&gt; /lib/systemd/system/bluetooth.service
+│   │   ├── dbus-org.freedesktop.Avahi.service -&gt; /lib/systemd/system/avahi-daemon.service
+│   │   ├── dbus-org.freedesktop.ModemManager1.service -&gt; /lib/systemd/system/ModemManager.service
+│   │   ├── dbus-org.freedesktop.nm-dispatcher.service -&gt; /lib/systemd/system/NetworkManager-dispatcher.service
+│   │   ├── dbus-org.freedesktop.timesync1.service -&gt; /lib/systemd/system/systemd-timesyncd.service
+│   │   ├── default.target.wants
+│   │   │   ├── podman-auto-update.service -&gt; /lib/systemd/system/podman-auto-update.service
+│   │   │   ├── podman-restart.service -&gt; /lib/systemd/system/podman-restart.service
+│   │   │   └── podman.service -&gt; /lib/systemd/system/podman.service
+│   │   ├── display-manager.service -&gt; /lib/systemd/system/gdm3.service
+│   │   ├── getty.target.wants
+│   │   │   └── getty&#64;tty1.service -&gt; /lib/systemd/system/getty&#64;.service
+│   │   ├── graphical.target.wants
+│   │   │   ├── accounts-daemon.service -&gt; /lib/systemd/system/accounts-daemon.service
+│   │   │   ├── power-profiles-daemon.service -&gt; /lib/systemd/system/power-profiles-daemon.service
+│   │   │   ├── switcheroo-control.service -&gt; /lib/systemd/system/switcheroo-control.service
+│   │   │   └── udisks2.service -&gt; /lib/systemd/system/udisks2.service
+│   │   ├── multi-user.target.wants
+│   │   │   ├── anacron.service -&gt; /lib/systemd/system/anacron.service
+│   │   │   ├── avahi-daemon.service -&gt; /lib/systemd/system/avahi-daemon.service
+│   │   │   ├── blueman-mechanism.service -&gt; /lib/systemd/system/blueman-mechanism.service
+│   │   │   ├── console-setup.service -&gt; /lib/systemd/system/console-setup.service
+│   │   │   ├── containerd.service -&gt; /lib/systemd/system/containerd.service
+│   │   │   ├── cron.service -&gt; /lib/systemd/system/cron.service
+│   │   │   ├── cups-browsed.service -&gt; /lib/systemd/system/cups-browsed.service
+│   │   │   ├── cups.path -&gt; /lib/systemd/system/cups.path
+│   │   │   ├── cups.service -&gt; /lib/systemd/system/cups.service
+│   │   │   ├── docker.service -&gt; /lib/systemd/system/docker.service
+│   │   │   ├── e2scrub_reap.service -&gt; /lib/systemd/system/e2scrub_reap.service
+│   │   │   ├── libvirtd.service -&gt; /lib/systemd/system/libvirtd.service
+│   │   │   ├── libvirt-guests.service -&gt; /lib/systemd/system/libvirt-guests.service
+│   │   │   ├── machines.target -&gt; /lib/systemd/system/machines.target
+│   │   │   ├── ModemManager.service -&gt; /lib/systemd/system/ModemManager.service
+│   │   │   ├── networking.service -&gt; /lib/systemd/system/networking.service
+│   │   │   ├── NetworkManager.service -&gt; /lib/systemd/system/NetworkManager.service
+│   │   │   ├── nfs-client.target -&gt; /lib/systemd/system/nfs-client.target
+│   │   │   ├── nfs-server.service -&gt; /lib/systemd/system/nfs-server.service
+│   │   │   ├── remote-fs.target -&gt; /lib/systemd/system/remote-fs.target
+│   │   │   ├── rpcbind.service -&gt; /lib/systemd/system/rpcbind.service
+│   │   │   ├── smartmontools.service -&gt; /lib/systemd/system/smartmontools.service
+│   │   │   ├── ssh.service -&gt; /lib/systemd/system/ssh.service
+│   │   │   ├── tailscaled.service -&gt; /lib/systemd/system/tailscaled.service
+│   │   │   ├── tor.service -&gt; /lib/systemd/system/tor.service
+│   │   │   ├── vboxautostart-service.service -&gt; /lib/systemd/system/vboxautostart-service.service
+│   │   │   ├── vboxballoonctrl-service.service -&gt; /lib/systemd/system/vboxballoonctrl-service.service
+│   │   │   ├── vboxdrv.service -&gt; /lib/systemd/system/vboxdrv.service
+│   │   │   ├── vboxweb-service.service -&gt; /lib/systemd/system/vboxweb-service.service
+│   │   │   └── wpa_supplicant.service -&gt; /lib/systemd/system/wpa_supplicant.service
+│   │   ├── network-online.target.wants
+│   │   │   ├── networking.service -&gt; /lib/systemd/system/networking.service
+│   │   │   └── NetworkManager-wait-online.service -&gt; /lib/systemd/system/NetworkManager-wait-online.service
+│   │   ├── nfs-client.target.wants
+│   │   │   └── nfs-blkmap.service -&gt; /lib/systemd/system/nfs-blkmap.service
+│   │   ├── printer.target.wants
+│   │   │   └── cups.service -&gt; /lib/systemd/system/cups.service
+│   │   ├── remote-fs.target.wants
+│   │   │   └── nfs-client.target -&gt; /lib/systemd/system/nfs-client.target
+│   │   ├── smartd.service -&gt; /lib/systemd/system/smartmontools.service
+│   │   ├── sockets.target.wants
+│   │   │   ├── avahi-daemon.socket -&gt; /lib/systemd/system/avahi-daemon.socket
+│   │   │   ├── cups.socket -&gt; /lib/systemd/system/cups.socket
+│   │   │   ├── dm-event.socket -&gt; /lib/systemd/system/dm-event.socket
+│   │   │   ├── docker.socket -&gt; /lib/systemd/system/docker.socket
+│   │   │   ├── libvirtd-admin.socket -&gt; /lib/systemd/system/libvirtd-admin.socket
+│   │   │   ├── libvirtd-ro.socket -&gt; /lib/systemd/system/libvirtd-ro.socket
+│   │   │   ├── libvirtd.socket -&gt; /lib/systemd/system/libvirtd.socket
+│   │   │   ├── podman.socket -&gt; /lib/systemd/system/podman.socket
+│   │   │   ├── rpcbind.socket -&gt; /lib/systemd/system/rpcbind.socket
+│   │   │   ├── uuidd.socket -&gt; /lib/systemd/system/uuidd.socket
+│   │   │   ├── virtlockd-admin.socket -&gt; /lib/systemd/system/virtlockd-admin.socket
+│   │   │   ├── virtlockd.socket -&gt; /lib/systemd/system/virtlockd.socket
+│   │   │   ├── virtlogd-admin.socket -&gt; /lib/systemd/system/virtlogd-admin.socket
+│   │   │   └── virtlogd.socket -&gt; /lib/systemd/system/virtlogd.socket
+│   │   ├── sshd.service -&gt; /lib/systemd/system/ssh.service
+│   │   ├── sysinit.target.wants
+│   │   │   ├── apparmor.service -&gt; /lib/systemd/system/apparmor.service
+│   │   │   ├── blk-availability.service -&gt; /lib/systemd/system/blk-availability.service
+│   │   │   ├── keyboard-setup.service -&gt; /lib/systemd/system/keyboard-setup.service
+│   │   │   ├── lvm2-lvmpolld.socket -&gt; /lib/systemd/system/lvm2-lvmpolld.socket
+│   │   │   ├── lvm2-monitor.service -&gt; /lib/systemd/system/lvm2-monitor.service
+│   │   │   ├── mdadm-shutdown.service -&gt; /lib/systemd/system/mdadm-shutdown.service
+│   │   │   ├── systemd-pstore.service -&gt; /lib/systemd/system/systemd-pstore.service
+│   │   │   └── systemd-timesyncd.service -&gt; /lib/systemd/system/systemd-timesyncd.service
+│   │   ├── systemd-coredump&#64;.service.wants
+│   │   │   └── drkonqi-coredump-processor&#64;.service -&gt; /lib/systemd/system/drkonqi-coredump-processor&#64;.service
+│   │   └── timers.target.wants
+│   │       ├── anacron.timer -&gt; /lib/systemd/system/anacron.timer
+│   │       ├── apt-daily.timer -&gt; /lib/systemd/system/apt-daily.timer
+│   │       ├── apt-daily-upgrade.timer -&gt; /lib/systemd/system/apt-daily-upgrade.timer
+│   │       ├── dpkg-db-backup.timer -&gt; /lib/systemd/system/dpkg-db-backup.timer
+│   │       ├── e2scrub_all.timer -&gt; /lib/systemd/system/e2scrub_all.timer
+│   │       ├── exim4-base.timer -&gt; /lib/systemd/system/exim4-base.timer
+│   │       ├── fstrim.timer -&gt; /lib/systemd/system/fstrim.timer
+│   │       ├── fwupd-refresh.timer -&gt; /lib/systemd/system/fwupd-refresh.timer
+│   │       ├── logrotate.timer -&gt; /lib/systemd/system/logrotate.timer
+│   │       ├── man-db.timer -&gt; /lib/systemd/system/man-db.timer
+│   │       ├── plocate-updatedb.timer -&gt; /lib/systemd/system/plocate-updatedb.timer
+│   │       └── podman-auto-update.timer -&gt; /lib/systemd/system/podman-auto-update.timer
+│   ├── system.conf
+│   ├── timesyncd.conf
+│   ├── user
+│   │   ├── dbus-org.bluez.obex.service -&gt; /usr/lib/systemd/user/obex.service
+│   │   ├── default.target.wants
+│   │   │   ├── drkonqi-coredump-cleanup.service -&gt; /usr/lib/systemd/user/drkonqi-coredump-cleanup.service
+│   │   │   ├── pipewire-pulse.service -&gt; /usr/lib/systemd/user/pipewire-pulse.service
+│   │   │   ├── pipewire.service -&gt; /usr/lib/systemd/user/pipewire.service
+│   │   │   └── tracker-extract-3.service -&gt; /usr/lib/systemd/user/tracker-extract-3.service
+│   │   ├── gnome-session.target.wants
+│   │   │   ├── org.freedesktop.IBus.session.GNOME.service -&gt; /usr/lib/systemd/user/org.freedesktop.IBus.session.GNOME.service
+│   │   │   └── tracker-miner-fs-3.service -&gt; /usr/lib/systemd/user/tracker-miner-fs-3.service
+│   │   ├── graphical-session-pre.target.wants
+│   │   │   ├── gcr-ssh-agent.service -&gt; /usr/lib/systemd/user/gcr-ssh-agent.service
+│   │   │   ├── gnome-keyring-daemon.service -&gt; /usr/lib/systemd/user/gnome-keyring-daemon.service
+│   │   │   └── xdg-desktop-portal-rewrite-launchers.service -&gt; /usr/lib/systemd/user/xdg-desktop-portal-rewrite-launchers.service
+│   │   ├── graphical-session.target.wants
+│   │   │   └── kde-baloo.service -&gt; /usr/lib/systemd/user/kde-baloo.service
+│   │   ├── pipewire.service.wants
+│   │   │   └── wireplumber.service -&gt; /usr/lib/systemd/user/wireplumber.service
+│   │   ├── plasma-core.target.wants
+│   │   │   ├── plasma-ksmserver.service -&gt; /usr/lib/systemd/user/plasma-ksmserver.service
+│   │   │   └── plasma-plasmashell.service -&gt; /usr/lib/systemd/user/plasma-plasmashell.service
+│   │   ├── plasma-workspace.service -&gt; /usr/lib/systemd/user/plasma-kcminit.service
+│   │   ├── sockets.target.wants
+│   │   │   ├── dirmngr.socket -&gt; /usr/lib/systemd/user/dirmngr.socket
+│   │   │   ├── drkonqi-coredump-launcher.socket -&gt; /usr/lib/systemd/user/drkonqi-coredump-launcher.socket
+│   │   │   ├── gcr-ssh-agent.socket -&gt; /usr/lib/systemd/user/gcr-ssh-agent.socket
+│   │   │   ├── gnome-keyring-daemon.socket -&gt; /usr/lib/systemd/user/gnome-keyring-daemon.socket
+│   │   │   ├── gpg-agent-browser.socket -&gt; /usr/lib/systemd/user/gpg-agent-browser.socket
+│   │   │   ├── gpg-agent-extra.socket -&gt; /usr/lib/systemd/user/gpg-agent-extra.socket
+│   │   │   ├── gpg-agent.socket -&gt; /usr/lib/systemd/user/gpg-agent.socket
+│   │   │   ├── gpg-agent-ssh.socket -&gt; /usr/lib/systemd/user/gpg-agent-ssh.socket
+│   │   │   ├── pipewire-pulse.socket -&gt; /usr/lib/systemd/user/pipewire-pulse.socket
+│   │   │   ├── pipewire.socket -&gt; /usr/lib/systemd/user/pipewire.socket
+│   │   │   └── pk-debconf-helper.socket -&gt; /usr/lib/systemd/user/pk-debconf-helper.socket
+│   │   └── timers.target.wants
+│   │       └── drkonqi-coredump-cleanup.timer -&gt; /usr/lib/systemd/user/drkonqi-coredump-cleanup.timer
+│   └── user.conf
+├── terminfo
+│   └── README
+├── texmf
+│   ├── dvipdfmx
+│   ├── dvips
+│   │   └── config
+│   ├── tex
+│   │   └── generic
+│   │       └── config
+│   ├── texdoctk
+│   │   └── texdocrc.defaults
+│   ├── texmf.d
+│   │   └── 00debian.cnf
+│   └── web2c
+│       ├── mktex.cnf
+│       └── texmf.cnf
+├── timezone
+├── timidity
+│   └── timgm6mb.cfg
+├── tmpfiles.d
+├── tor
+│   ├── torrc
+│   └── torsocks.conf
+├── ts.conf
+├── ucf.conf
+├── udev
+│   ├── hwdb.d
+│   ├── rules.d
+│   │   └── 60-vboxdrv.rules
+│   └── udev.conf
+├── udisks2
+│   ├── mount_options.conf.example
+│   └── udisks2.conf
+├── ufw
+│   └── applications.d
+│       ├── cups
+│       └── openssh-server
+├── updatedb.conf
+├── update-motd.d
+│   ├── 10-uname
+│   └── 85-fwupd
+├── UPower
+│   └── UPower.conf
+├── usb_modeswitch.conf
+├── usb_modeswitch.d
+├── vbox
+├── vdpau_wrapper.cfg
+├── vim
+│   ├── vimrc
+│   └── vimrc.tiny
+├── virt-builder
+│   └── repos.d
+│       ├── libguestfs.conf
+│       ├── libguestfs.gpg
+│       ├── opensuse.conf
+│       └── opensuse.gpg
+├── vulkan
+│   ├── explicit_layer.d
+│   ├── icd.d
+│   └── implicit_layer.d
+├── w3m
+│   ├── config
+│   └── mailcap
+├── wgetrc
+├── wpa_supplicant
+│   ├── action_wpa.sh
+│   ├── functions.sh
+│   └── ifupdown.sh
+├── X11
+│   ├── app-defaults
+│   │   ├── Bitmap
+│   │   ├── Bitmap-color
+│   │   ├── Bitmap-nocase
+│   │   ├── Clock-color
+│   │   ├── Editres
+│   │   ├── Editres-color
+│   │   ├── KOI8RXTerm
+│   │   ├── KOI8RXTerm-color
+│   │   ├── SshAskpass
+│   │   ├── UXTerm
+│   │   ├── UXTerm-color
+│   │   ├── Viewres
+│   │   ├── Viewres-color
+│   │   ├── XCalc
+│   │   ├── XCalc-color
+│   │   ├── XClipboard
+│   │   ├── XClock
+│   │   ├── XClock-color
+│   │   ├── XConsole
+│   │   ├── Xditview
+│   │   ├── Xditview-chrtr
+│   │   ├── Xedit
+│   │   ├── Xedit-color
+│   │   ├── Xfd
+│   │   ├── XFontSel
+│   │   ├── Xgc
+│   │   ├── Xgc-color
+│   │   ├── XLoad
+│   │   ├── XLogo
+│   │   ├── XLogo-color
+│   │   ├── Xmag
+│   │   ├── Xman
+│   │   ├── Xmessage
+│   │   ├── Xmessage-color
+│   │   ├── XMore
+│   │   ├── XSm
+│   │   ├── XTerm
+│   │   ├── XTerm-color
+│   │   └── Xvidtune
+│   ├── cursors
+│   │   ├── breeze_cursors.theme
+│   │   └── Breeze_Snow.theme
+│   ├── default-display-manager
+│   ├── fonts
+│   │   ├── 100dpi
+│   │   │   └── xfonts-100dpi.alias
+│   │   ├── 75dpi
+│   │   │   └── xfonts-75dpi.alias
+│   │   ├── misc
+│   │   │   └── xfonts-base.alias
+│   │   └── Type1
+│   │       ├── fonts-urw-base35.alias
+│   │       ├── fonts-urw-base35.scale
+│   │       ├── lmodern.scale
+│   │       ├── tex-gyre.scale
+│   │       └── xfonts-scalable.scale
+│   ├── rgb.txt
+│   ├── xinit
+│   │   ├── xinitrc
+│   │   ├── xinputrc
+│   │   └── xserverrc
+│   ├── xkb
+│   ├── xorg.conf.d
+│   │   └── 40-libinput.conf
+│   ├── Xreset
+│   ├── Xreset.d
+│   │   └── README
+│   ├── Xresources
+│   │   └── x11-common
+│   ├── Xsession
+│   ├── Xsession.d
+│   │   ├── 20dbus_xdg-runtime
+│   │   ├── 20flatpak
+│   │   ├── 20vdpau-va-gl
+│   │   ├── 20x11-common_process-args
+│   │   ├── 30x11-common_xresources
+│   │   ├── 35x11-common_xhost-local
+│   │   ├── 40x11-common_xsessionrc
+│   │   ├── 50x11-common_determine-startup
+│   │   ├── 55gnome-session_gnomerc
+│   │   ├── 55xfce4-session
+│   │   ├── 70im-config_launch
+│   │   ├── 90atk-adaptor
+│   │   ├── 90gpg-agent
+│   │   ├── 90qt-a11y
+│   │   ├── 90x11-common_ssh-agent
+│   │   ├── 90xbrlapi
+│   │   └── 99x11-common_start
+│   ├── Xsession.options
+│   ├── xsm
+│   │   └── system.xsm
+│   ├── XvMCConfig
+│   └── Xwrapper.config
+├── xattr.conf
+├── xdg
+│   ├── accept-languages.codes
+│   ├── akonadi
+│   │   ├── mysql-global.conf
+│   │   └── mysql-global-mobile.conf
+│   ├── arkrc
+│   ├── autostart
+│   │   ├── at-spi-dbus-bus.desktop
+│   │   ├── baloo_file.desktop
+│   │   ├── blueman.desktop
+│   │   ├── geoclue-demo-agent.desktop
+│   │   ├── gmenudbusmenuproxy.desktop
+│   │   ├── gnome-initial-setup-copy-worker.desktop
+│   │   ├── gnome-initial-setup-first-login.desktop
+│   │   ├── gnome-keyring-pkcs11.desktop
+│   │   ├── gnome-keyring-secrets.desktop
+│   │   ├── gnome-keyring-ssh.desktop
+│   │   ├── gnome-shell-overrides-migration.desktop
+│   │   ├── im-launch.desktop
+│   │   ├── kaccess.desktop
+│   │   ├── klipper.desktop
+│   │   ├── konqy_preload.desktop
+│   │   ├── kup-daemon.desktop
+│   │   ├── light-locker.desktop
+│   │   ├── nm-applet.desktop
+│   │   ├── orca-autostart.desktop
+│   │   ├── org.gnome.Evolution-alarm-notify.desktop
+│   │   ├── org.gnome.SettingsDaemon.A11ySettings.desktop
+│   │   ├── org.gnome.SettingsDaemon.Color.desktop
+│   │   ├── org.gnome.SettingsDaemon.Datetime.desktop
+│   │   ├── org.gnome.SettingsDaemon.DiskUtilityNotify.desktop
+│   │   ├── org.gnome.SettingsDaemon.Housekeeping.desktop
+│   │   ├── org.gnome.SettingsDaemon.Keyboard.desktop
+│   │   ├── org.gnome.SettingsDaemon.MediaKeys.desktop
+│   │   ├── org.gnome.SettingsDaemon.Power.desktop
+│   │   ├── org.gnome.SettingsDaemon.PrintNotifications.desktop
+│   │   ├── org.gnome.SettingsDaemon.Rfkill.desktop
+│   │   ├── org.gnome.SettingsDaemon.ScreensaverProxy.desktop
+│   │   ├── org.gnome.SettingsDaemon.Sharing.desktop
+│   │   ├── org.gnome.SettingsDaemon.Smartcard.desktop
+│   │   ├── org.gnome.SettingsDaemon.Sound.desktop
+│   │   ├── org.gnome.SettingsDaemon.UsbProtection.desktop
+│   │   ├── org.gnome.SettingsDaemon.Wacom.desktop
+│   │   ├── org.gnome.SettingsDaemon.Wwan.desktop
+│   │   ├── org.gnome.SettingsDaemon.XSettings.desktop
+│   │   ├── org.gnome.Software.desktop
+│   │   ├── org.kde.discover.notifier.desktop
+│   │   ├── org.kde.kalendarac.desktop
+│   │   ├── org.kde.plasmashell.desktop
+│   │   ├── pam_kwallet_init.desktop
+│   │   ├── polkit-kde-authentication-agent-1.desktop
+│   │   ├── powerdevil.desktop
+│   │   ├── solaar.desktop
+│   │   ├── tracker-miner-fs-3.desktop
+│   │   ├── user-dirs-update-gtk.desktop
+│   │   ├── xdg-user-dirs.desktop
+│   │   ├── xdg-user-dirs-kde.desktop
+│   │   ├── xembedsniproxy.desktop
+│   │   ├── xfce4-notifyd.desktop
+│   │   ├── xfsettingsd.desktop
+│   │   ├── xiccd.desktop
+│   │   └── xscreensaver.desktop
+│   ├── colors
+│   │   ├── 40.colors
+│   │   ├── Oxygen.colors
+│   │   ├── Rainbow.colors
+│   │   ├── Royal.colors
+│   │   └── Web.colors
+│   ├── dragonplayerrc
+│   ├── kcm-about-distrorc
+│   ├── kdebug.areas
+│   ├── kdebugrc
+│   ├── khtmlrc
+│   ├── kickoffrc
+│   ├── kio_isorc
+│   ├── kmail.antispamrc
+│   ├── kmail.antivirusrc
+│   ├── konqsidebartngrc
+│   ├── kritarc
+│   ├── kshorturifilterrc
+│   ├── ksslcalist
+│   ├── libkleopatrarc
+│   ├── menus
+│   │   ├── gnome-applications.menu
+│   │   ├── kf5-applications.menu
+│   │   ├── kinfocenter.menu
+│   │   ├── xfce-applications.menu
+│   │   └── xfce-settings-manager.menu
+│   ├── plasmanotifyrc
+│   ├── plasma-workspace
+│   │   └── env
+│   │       └── env.sh
+│   ├── systemd
+│   │   └── user -&gt; ../../systemd/user
+│   ├── taskmanagerrulesrc
+│   ├── Thunar
+│   │   └── uca.xml
+│   ├── tumbler
+│   │   └── tumbler.rc
+│   ├── ui
+│   │   └── ui_standards.rc
+│   ├── user-dirs.conf
+│   ├── user-dirs.defaults
+│   ├── xfce4
+│   │   ├── helpers.rc
+│   │   ├── panel
+│   │   │   └── default.xml
+│   │   ├── xfconf
+│   │   │   └── xfce-perchannel-xml
+│   │   │       ├── thunar-volman.xml
+│   │   │       ├── xfce4-keyboard-shortcuts.xml
+│   │   │       ├── xfce4-session.xml
+│   │   │       └── xsettings.xml
+│   │   ├── Xft.xrdb
+│   │   └── xinitrc
+│   └── Xwayland-session.d
+│       ├── 00-at-spi
+│       ├── 00-xrdb
+│       └── 10-ibus-x11
+├── xfce4
+│   └── defaults.list
+├── xml
+│   ├── catalog
+│   ├── catalog.old
+│   ├── docbook-xml.xml
+│   ├── docbook-xml.xml.old
+│   ├── docbook-xsl.xml
+│   ├── docbook-xsl.xml.old
+│   ├── polkitd.xml
+│   ├── polkitd.xml.old
+│   ├── resolver
+│   │   └── CatalogManager.properties
+│   ├── sgml-data.xml
+│   ├── sgml-data.xml.old
+│   ├── xml-core.xml
+│   └── xml-core.xml.old
+└── zsh
+    ├── newuser.zshrc.recommended
+    ├── zlogin
+    ├── zlogout
+    ├── zprofile
+    ├── zshenv
+    └── zshrc
+
+423 directories, 2425 files
+<span style="color:#5c5cff;">DEVOPS25/lektion2/lektion1-forts
+<span style="color:#5c5cff;">d /etc /etc2 /etc<span style="color:#5c5cff;">DEVOPS25/lektion2/lektion1-forts
+</span>$ tree -d 2 /etc
+2  [error opening dir]
+/etc/
+├── alsa
+│   └── conf.d
+├── alternatives
+│   ├── desktop-plasma5-wallpaper -&gt; /usr/share/desktop-base/active-theme/wallpaper
+│   ├── desktop-theme -&gt; /usr/share/desktop-base/emerald-theme
+│   ├── java_jdk_23_oracle -&gt; /usr/lib/jvm/jdk-23.0.1-oracle-x64
+│   └── vendor-logos -&gt; /usr/share/desktop-base/debian-logos
+├── apache2
+│   ├── conf-available
+│   └── mods-available
+├── apparmor
+├── apparmor.d
+│   ├── abi
+│   ├── abstractions
+│   │   ├── apparmor_api
+│   │   └── ubuntu-browsers.d
+│   ├── disable
+│   ├── force-complain
+│   ├── libvirt
+│   ├── local
+│   │   └── abstractions
+│   └── tunables
+│       ├── home.d
+│       ├── multiarch.d
+│       └── xdg-user-dirs.d
+├── apt
+│   ├── apt.conf.d
+│   ├── auth.conf.d
+│   ├── keyrings
+│   ├── listchanges.conf.d
+│   ├── preferences.d
+│   ├── sources.list.d
+│   └── trusted.gpg.d
+├── avahi
+│   └── services
+├── bash_completion.d
+├── binfmt.d
+├── bluetooth
+├── ca-certificates
+│   └── update.d
+├── chatscripts
+├── chromium
+│   └── native-messaging-hosts
+├── cni
+│   └── net.d
+├── console-setup
+├── containerd
+├── containers
+│   ├── networks  [error opening dir]
+│   └── registries.conf.d
+├── cracklib
+├── cron.d
+├── cron.daily
+├── cron.hourly
+├── cron.monthly
+├── cron.weekly
+├── cron.yearly
+├── cryptsetup-initramfs
+├── cups
+│   ├── interfaces
+│   ├── ppd
+│   └── ssl  [error opening dir]
+├── cupshelpers
+├── dbus-1
+│   ├── session.d
+│   └── system.d
+├── dconf
+│   ├── db
+│   │   └── ibus.d
+│   └── profile
+├── debsig
+│   └── policies
+│       └── EB3E94ADBE1229CF
+├── debuginfod
+├── default
+│   └── grub.d
+├── dhcp
+│   ├── dhclient-enter-hooks.d
+│   └── dhclient-exit-hooks.d
+├── dictionaries-common
+├── discover.conf.d
+├── docker
+├── dpkg
+│   ├── dpkg.cfg.d
+│   └── origins
+├── elinks
+├── emacs
+│   └── site-start.d
+├── environment.d
+├── exim4
+│   └── conf.d
+│       ├── acl
+│       ├── auth
+│       ├── main
+│       ├── retry
+│       ├── rewrite
+│       ├── router
+│       └── transport
+├── firefox-esr
+├── fish
+│   ├── completions
+│   ├── conf.d
+│   └── functions
+├── fonts
+│   ├── conf.avail
+│   └── conf.d
+├── fwupd
+│   ├── bios-settings.d
+│   └── remotes.d
+├── gconf
+│   ├── 2
+│   ├── gconf.xml.defaults
+│   └── gconf.xml.mandatory
+├── gdb
+│   └── gdbinit.d
+├── gdm3
+│   ├── Init
+│   ├── PostLogin
+│   ├── PostSession
+│   └── PreSession
+├── geoclue
+├── ghostscript
+│   ├── cidfmap.d
+│   └── fontmap.d
+├── gimp
+│   └── 2.0
+├── glvnd
+│   └── egl_vendor.d
+├── gnome
+├── gnome-chess
+├── GNUstep
+├── groff
+├── grub.d
+├── gss
+│   └── mech.d
+├── gtk-2.0
+├── gtk-3.0
+├── ifplugd
+│   └── action.d
+├── ImageMagick-6
+├── init.d
+├── initramfs-tools
+│   ├── conf.d
+│   ├── hooks
+│   └── scripts
+│       ├── init-bottom
+│       ├── init-premount
+│       ├── init-top
+│       ├── local-bottom
+│       ├── local-premount
+│       ├── local-top
+│       ├── nfs-bottom
+│       ├── nfs-premount
+│       ├── nfs-top
+│       └── panic
+├── insserv.conf.d
+├── ipp-usb
+├── iproute2
+│   ├── rt_protos.d
+│   └── rt_tables.d
+├── java
+│   └── security
+│       └── security.d
+├── java-17-openjdk
+│   ├── jfr
+│   ├── management
+│   └── security
+│       └── policy
+│           ├── limited
+│           └── unlimited
+├── kernel
+│   ├── install.d
+│   ├── postinst.d
+│   ├── postrm.d
+│   └── preinst.d
+├── keyutils
+├── ldap
+├── ld.so.conf.d
+├── libblockdev
+│   └── conf.d
+├── libibverbs.d
+├── libnl-3
+├── libpaper.d
+├── libreoffice
+│   └── registry
+│       └── res
+├── libvirt
+│   ├── hooks
+│   ├── nwfilter
+│   ├── qemu
+│   │   ├── autostart
+│   │   └── networks
+│   │       └── autostart
+│   ├── secrets  [error opening dir]
+│   └── storage
+│       └── autostart
+├── lightdm
+├── lighttpd
+│   ├── conf-available
+│   └── conf-enabled
+├── logcheck
+│   ├── ignore.d.paranoid
+│   ├── ignore.d.server
+│   └── violations.d
+├── logrotate.d
+├── lvm
+│   └── profile
+├── lynx
+├── maven
+│   └── logging
+├── mdadm
+├── mdevctl.d
+│   └── scripts.d
+│       ├── callouts
+│       └── notifiers
+├── ModemManager
+│   ├── connection.d
+│   └── fcc-unlock.d
+├── modprobe.d
+├── modules-load.d
+├── mysql
+│   ├── conf.d
+│   └── mariadb.conf.d
+├── network
+│   ├── if-down.d
+│   ├── if-post-down.d
+│   ├── if-pre-up.d
+│   ├── if-up.d
+│   └── interfaces.d
+├── NetworkManager
+│   ├── conf.d
+│   ├── dispatcher.d
+│   │   ├── no-wait.d
+│   │   ├── pre-down.d
+│   │   └── pre-up.d
+│   ├── dnsmasq.d
+│   ├── dnsmasq-shared.d
+│   └── system-connections
+├── nfs.conf.d
+├── ODBCDataSources
+├── openal
+├── openni2
+├── opt
+│   └── chrome
+│       └── native-messaging-hosts
+├── PackageKit
+├── pam.d
+├── perl
+│   ├── Net
+│   └── XML
+│       └── SAX
+├── pki
+│   ├── fwupd
+│   └── fwupd-metadata
+├── plymouth
+├── polkit-1
+│   ├── localauthority  [error opening dir]
+│   ├── localauthority.conf.d
+│   └── rules.d  [error opening dir]
+├── ppp
+│   ├── ip-down.d
+│   ├── ip-pre-up.d
+│   ├── ip-up.d
+│   ├── ipv6-down.d
+│   ├── ipv6-up.d
+│   └── peers
+├── profile.d
+├── pulse
+│   └── client.conf.d
+├── python3
+├── python3.11
+├── rc0.d
+├── rc1.d
+├── rc2.d
+├── rc3.d
+├── rc4.d
+├── rc5.d
+├── rc6.d
+├── rcS.d
+├── request-key.d
+├── runit
+│   └── runsvdir
+│       └── default
+│           ├── ssh -&gt; /etc/sv/ssh
+│           └── tor -&gt; /etc/sv/tor
+├── sane.d
+│   └── dll.d
+├── sasl2
+├── security
+│   ├── limits.d
+│   └── namespace.d
+├── selinux
+├── sensors.d
+├── sgml
+│   └── docbook-xml
+│       ├── 4.0
+│       ├── 4.1.2
+│       ├── 4.2
+│       ├── 4.3
+│       ├── 4.4
+│       └── 4.5
+├── signon-ui
+│   └── webkit-options.d
+├── skel
+├── smartmontools
+│   ├── run.d
+│   └── smartd_warning.d
+├── snmp
+├── speech-dispatcher
+│   ├── clients
+│   └── modules
+├── ssh
+│   ├── ssh_config.d
+│   └── sshd_config.d
+├── ssl
+│   ├── certs
+│   │   ├── adoptium
+│   │   └── java
+│   └── private  [error opening dir]
+├── sudoers.d
+├── sv
+│   ├── ssh
+│   │   └── log
+│   └── tor
+│       └── log
+├── sysctl.d
+├── sysstat
+├── systemd
+│   ├── network
+│   ├── system
+│   │   ├── basic.target.wants
+│   │   ├── bluetooth.target.wants
+│   │   ├── default.target.wants
+│   │   ├── getty.target.wants
+│   │   ├── graphical.target.wants
+│   │   ├── multi-user.target.wants
+│   │   ├── network-online.target.wants
+│   │   ├── nfs-client.target.wants
+│   │   ├── printer.target.wants
+│   │   ├── remote-fs.target.wants
+│   │   ├── sockets.target.wants
+│   │   ├── sysinit.target.wants
+│   │   ├── systemd-coredump&#64;.service.wants
+│   │   └── timers.target.wants
+│   └── user
+│       ├── default.target.wants
+│       ├── gnome-session.target.wants
+│       ├── graphical-session-pre.target.wants
+│       ├── graphical-session.target.wants
+│       ├── pipewire.service.wants
+│       ├── plasma-core.target.wants
+│       ├── sockets.target.wants
+│       └── timers.target.wants
+├── terminfo
+├── texmf
+│   ├── dvipdfmx
+│   ├── dvips
+│   │   └── config
+│   ├── tex
+│   │   └── generic
+│   │       └── config
+│   ├── texdoctk
+│   ├── texmf.d
+│   └── web2c
+├── timidity
+├── tmpfiles.d
+├── tor
+├── udev
+│   ├── hwdb.d
+│   └── rules.d
+├── udisks2
+├── ufw
+│   └── applications.d
+├── update-motd.d
+├── UPower
+├── usb_modeswitch.d
+├── vbox
+├── vim
+├── virt-builder
+│   └── repos.d
+├── vulkan
+│   ├── explicit_layer.d
+│   ├── icd.d
+│   └── implicit_layer.d
+├── w3m
+├── wpa_supplicant
+├── X11
+│   ├── app-defaults
+│   ├── cursors
+│   ├── fonts
+│   │   ├── 100dpi
+│   │   ├── 75dpi
+│   │   ├── misc
+│   │   └── Type1
+│   ├── xinit
+│   ├── xkb
+│   ├── xorg.conf.d
+│   ├── Xreset.d
+│   ├── Xresources
+│   ├── Xsession.d
+│   └── xsm
+├── xdg
+│   ├── akonadi
+│   ├── autostart
+│   ├── colors
+│   ├── menus
+│   ├── plasma-workspace
+│   │   └── env
+│   ├── systemd
+│   │   └── user -&gt; ../../systemd/user
+│   ├── Thunar
+│   ├── tumbler
+│   ├── ui
+│   ├── xfce4
+│   │   ├── panel
+│   │   └── xfconf
+│   │       └── xfce-perchannel-xml
+│   └── Xwayland-session.d
+├── xfce4
+├── xml
+│   └── resolver
+└── zsh
+
+423 directories
+<span style="color:#5c5cff;">DEVOPS25/lektion2/lektion1-forts
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion2/lektion1-forts
+</span>$ ls 
+kat_
+
+kat_medfil/ kat_tom/    kat_tom2/   
+<span style="color:#5c5cff;">DEVOPS25/lektion2/lektion1-forts
+</span>$ ls kat_medfil/
+1hej.txt  3hej.txt  5hej.txt  7hej.txt  9hej.txt
+2hej.txt  4hej.txt  6hej.txt  8hej.txt  10hej.txt
+<span style="color:#5c5cff;">DEVOPS25/lektion2/lektion1-forts
+</span>$ rm mka
+t_medfil/[5-9]*
+<span style="color:#5c5cff;">DEVOPS25/lektion2/lektion1-forts
+</span>$ ls ka
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion2/lektion1-forts
+</span>$ ls kat_medfil/
+1hej.txt  2hej.txt  3hej.txt  4hej.txt  10hej.txt
+<span style="color:#5c5cff;">DEVOPS25/lektion2/lektion1-forts
+</span>$ rm k
+at_medfil/10hej.txt 
+<span style="color:#5c5cff;">DEVOPS25/lektion2/lektion1-forts
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion2/lektion1-forts
+</span>$ ls
+<span style="font-weight:bold;color:#5c5cff;">kat_medfil</span>  <span style="font-weight:bold;color:#5c5cff;">kat_tom</span>  <span style="font-weight:bold;color:#5c5cff;">kat_tom2</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion2/lektion1-forts
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion2/lektion1-forts
+</span>$ ls
+<span style="font-weight:bold;color:#5c5cff;">kat_medfil</span>  <span style="font-weight:bold;color:#5c5cff;">kat_tom</span>  <span style="font-weight:bold;color:#5c5cff;">kat_tom2</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion2/lektion1-forts
+</span>$ exit
+exit
+</pre>
+</body>
+</html>
+<!--HTML generated by ansifilter 2.18, http://www.andre-simon.de/-->

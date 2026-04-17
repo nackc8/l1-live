@@ -1,0 +1,2076 @@
+/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS25/lektion3
+recordings
+DEVOPS25/lektion3
+$ DEVOPS25/lektion3
+$ ls /home
+kent
+DEVOPS25/lektion3
+$ ls /root
+ls: cannot open directory '/root': Permission denied
+DEVOPS25/lektion3
+$ sudo ls /root
+[sudo] password for kent: 
+DEVOPS25/lektion3
+$ sudo ls /roo /roo- /rooa /roo
+.			 .bashrc   .local	     .sudo_as_admin_successful
+..			 .cache    .profile	     .synaptic
+.bash_history		 .config   .selected_editor  .wget-hsts
+.bash_history-79727.tmp  .lesshst  .ssh
+DEVOPS25/lektion3
+$ DEVOPS25/lektion3
+$ id
+uid=1000(kent) gid=1000(kent) groups=1000(kent),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),100(users),104(kvm),106(netdev),112(bluetooth),114(lpadmin),117(scanner),123(vboxusers),127(libvirt),994(docker),64055(libvirt-qemu)
+DEVOPS25/lektion3
+$ DEVOPS25/lektion3
+$ luse
+
+ls -la
+total 12
+drwxr-xr-x 3 kent kent 4096 17 apr 09.14 .
+drwxr-xr-x 6 kent kent 4096 17 apr 09.14 ..
+drwxr-xr-x 2 kent kent 4096 17 apr 09.14 recordings
+DEVOPS25/lektion3
+$ -
+help ls
+bash: help: no help topics match `ls'.  Try `help help' or `man -k ls' or `info ls'.
+DEVOPS25/lektion3
+$ 
+help helpDEVOPS25/lektion3
+$ help help
+help: help [-dms] [pattern ...]
+    Display information about builtin commands.
+    
+    Displays brief summaries of builtin commands.  If PATTERN is
+    specified, gives detailed help on all commands matching PATTERN,
+    otherwise the list of help topics is printed.
+    
+    Options:
+      -d	output short description for each topic
+      -m	display usage in pseudo-manpage format
+      -s	output only a short usage synopsis for each topic matching
+    		PATTERN
+    
+    Arguments:
+      PATTERN	Pattern specifying a help topic
+    
+    Exit Status:
+    Returns success unless PATTERN is not found or an invalid option is given.
+DEVOPS25/lektion3
+$ help lsDEVOPS25/lektion3
+$ help ls
+bash: help: no help topics match `ls'.  Try `help help' or `man -k ls' or `info ls'.
+DEVOPS25/lektion3
+$ help
+GNU bash, version 5.2.15(1)-release (x86_64-pc-linux-gnu)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                      history [-c] [-d offset] [n] o>
+ (( expression ))                  if COMMANDS; then COMMANDS; [ >
+ . filename [arguments]            jobs [-lnprs] [jobspec ...] or>
+ :                                 kill [-s sigspec | -n signum |>
+ [ arg... ]                        let arg [arg ...]
+ [[ expression ]]                  local [option] name[=value] .>
+ alias [-p] [name[=value] ... ]    logout [n]
+ bg [job_spec ...]                 mapfile [-d delim] [-n count] >
+ bind [-lpsvPSVX] [-m keymap] [->  popd [-n] [+N | -N]
+ break [n]                         printf [-v var] format [argume>
+ builtin [shell-builtin [arg ...>  pushd [-n] [+N | -N | dir]
+ caller [expr]                     pwd [-LP]
+ case WORD in [PATTERN [| PATTER>  read [-ers] [-a array] [-d del>
+ cd [-L|[-P [-e]] [-@]] [dir]      readarray [-d delim] [-n count>
+ command [-pVv] command [arg ...>  readonly [-aAf] [name[=value] >
+ compgen [-abcdefgjksuv] [-o opt>  return [n]
+ complete [-abcdefgjksuv] [-pr] >  select NAME [in WORDS ... ;] d>
+ compopt [-o|+o option] [-DEI] [>  set [-abefhkmnptuvxBCEHPT] [-o>
+ continue [n]                      shift [n]
+ coproc [NAME] command [redirect>  shopt [-pqsu] [-o] [optname ..>
+ declare [-aAfFgiIlnrtux] [name[>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]            suspend [-f]
+ disown [-h] [-ar] [jobspec ... >  test [expr]
+ echo [-neE] [arg ...]             time [-p] pipeline
+ enable [-a] [-dnps] [-f filenam>  times
+ eval [arg ...]                    trap [-lp] [[arg] signal_spec >
+ exec [-cl] [-a name] [command [>  true
+ exit [n]                          type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...]>  typeset [-aAfFgiIlnrtux] name[>
+ false                             ulimit [-SHabcdefiklmnpqrstuvx>
+ fc [-e ename] [-lnr] [first] [l>  umask [-p] [-S] [mode]
+ fg [job_spec]                     unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do C>  unset [-f] [-v] [-n] [name ..>
+ for (( exp1; exp2; exp3 )); do >  until COMMANDS; do COMMANDS-2;>
+ function name { COMMANDS ; } or>  variables - Names and meanings>
+ getopts optstring name [arg ...>  wait [-fn] [-p var] [id ...]
+ hash [-lr] [-p pathname] [-dt] >  while COMMANDS; do COMMANDS-2;>
+ help [-dms] [pattern ...]         { COMMANDS ; }
+DEVOPS25/lektion3
+$ DEVOPS25/lektion3
+$ man ls
+LS(1)                      User Commands                     LS(1)
+
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List  information about the FILEs (the current directory by
+       default).  Sort entries alphabetically if none of -cftuvSUX
+       nor --sort is specified.
+
+       Mandatory arguments to long options are mandatory for short
+ Manual page ls(1) line 1 (press h for help or q to quit)...skipping...
+LS(1)                      User Commands                     LS(1)
+
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List  information about the FILEs (the current directory by
+       default).  Sort entries alphabetically if none of -cftuvSUX
+       nor --sort is specified.
+
+       Mandatory arguments to long options are mandatory for short
+       options too.
+
+       -a, --all
+LS(1)                      User Commands                     LS(1)
+
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List  information about the FILEs (the current directory by
+       default).  Sort entries alphabetically if none of -cftuvSUX
+       nor --sort is specified.
+
+       Mandatory arguments to long options are mandatory for short
+       options too.
+
+       -a, --all
+LS(1)                      User Commands                     LS(1)
+
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List  information about the FILEs (the current directory by
+       default).  Sort entries alphabetically if none of -cftuvSUX
+       nor --sort is specified.
+
+       Mandatory arguments to long options are mandatory for short
+       options too.
+
+       -a, --all
+...skipping...
+              with -l, print the author of each file
+
+       -b, --escape
+              print C-style escapes for nongraphic characters
+
+       --block-size=SIZE
+              with -l, scale sizes by  SIZE  when  printing  them;
+              e.g., '--block-size=M'; see SIZE format below
+
+       -B, --ignore-backups
+              do not list implied entries ending with ~
+
+       -c     with  -lt:  sort  by,  and show, ctime (time of last
+              modification of file status information);  with  -l:
+              show  ctime  and  sort  by  name; otherwise: sort by
+              ctime, newest first
+
+       -C     list entries by columnsor help or q to quit)
+
+       --color[=WHEN]
+              color the output WHEN; more info below
+
+       -d, --directory
+              list directories themselves, not their contents
+
+       -D, --dired
+              generate output designed for Emacs' dired mode
+
+       -f     list all entries in directory order
+/Manual page ls(1) line 36 (press h for help or q to quit)
+...skipping...s(1) line 37 (press h for help or q to quit)
+              across -x, commas -m, horizontal -x, long  -l,  sin‐
+              gle-column -1, verbose -l, vertical -C
+
+       --full-time
+              like -l --time-style=full-iso
+
+       -g     like -l, but do not list owner
+
+       --group-directories-first
+              group  directories  before  files;  can be augmented
+              with a --sort option, but  any  use  of  --sort=none
+              (-U) disables grouping
+
+       -G, --no-group
+              in a long listing, don't print group names
+
+       -h, --human-readable
+              with -l and -s, print sizes like 1K 234M 2G etc.
+/Manual page ls(1) line 62 (press h for help or q to quit)
+       --si   likewise, but use powers of 1000 not 1024
+
+       -H, --dereference-command-lineor help or q to quit)
+              follow symbolic links listed on the command line
+/Manual page ls(1) line 67 (press h for help or q to quit)
+       --dereference-command-line-symlink-to-dir
+              follow  each  command line symbolic link that points
+              to a directory
+
+       --hide=PATTERN
+              do not list implied entries matching  shell  PATTERN
+              (overridden by -a or -A)
+
+       --hyperlink[=WHEN]
+              hyperlink file names WHEN
+/Manual page ls(1) line 78 (press h for help or q to quit)
+       --indicator-style=WORD
+              append  indicator  with  style  WORD to entry names:
+              none (default), slash (-p), file-type (--file-type),
+              classify (-F)(press h for help or q to quit)
+
+       -i, --inode
+...skipping...1) line 85/260 39% (press h for help or q to quit)
+       -l     use a long listing format
+
+       -L, --dereference
+              when showing file information for a  symbolic  link,
+              show  information  for  the file the link references
+              rather than for the link itself
+
+       -m     fill width with a comma separated list of entries
+
+       -n, --numeric-uid-gid
+              like -l, but list numeric user and group IDs
+
+       -N, --literal
+              print entry names without quoting
+
+       -o     like -l, but do not list group information
+
+MESESCOAe ls(1) line 111/260 48% (press h for help or q to quit)
+M              used only with -s and per directory totalso quit)
+M              default  to  1024-byte blocks for file system usage;
+M       -k, --kibibytes8/260 48% (press h for help or q to quit)
+MESESCOAe ls(1) line 107/260 47% (press h for help or q to quit)
+M              do not list implied entries matching shell PATTERN
+M       -I, --ignore=PATTERN 47% (press h for help or q to quit)
+MESESCOAe ls(1) line 104/260 46% (press h for help or q to quit)
+M              print the index number of each file or q to quit)
+M       -i, --inodee 102/260 45% (press h for help or q to quit)
+MESESCOAe ls(1) line 101/260 45% (press h for help or q to quit)
+M              classify (-F) 45% (press h for help or q to quit)
+M              none (default), slash (-p), file-type (--file-type),
+M              append  indicator  with  style  WORD to entry names:
+M       --indicator-style=WORD3% (press h for help or q to quit)
+MESESCOAge ls(1) line 96/260 42% (press h for help or q to quit)
+M              hyperlink file names WHENh for help or q to quit)
+M       --hyperlink[=WHEN]60 42% (press h for help or q to quit)
+MESESCOAge ls(1) line 93/260 42% (press h for help or q to quit)
+M              (overridden by -a or -A) h for help or q to quit)
+M              do not list implied entries matching  shell  PATTERN
+M       --hide=PATTERN90/260 40% (press h for help or q to quit)
+MESESCOAge ls(1) line 89/260 40% (press h for help or q to quit)
+M              to a directory40% (press h for help or q to quit)
+M              follow  each  command line symbolic link that points
+M       --dereference-command-line-symlink-to-dirp or q to quit)
+MESESCOAge ls(1) line 85/260 39% (press h for help or q to quit)
+M              follow symbolic links listed on the command line)
+M       -H, --dereference-command-lines h for help or q to quit)
+MESESCOAge ls(1) line 82/260 38% (press h for help or q to quit)
+M       --si   likewise, but use powers of 1000 not 1024to quit)
+MESESCOAge ls(1) line 80/260 36% (press h for help or q to quit)
+M              with -l and -s, print sizes like 1K 234M 2G etc.)
+M       -h, --human-readable 36% (press h for help or q to quit)
+MESESCOAge ls(1) line 77/260 35% (press h for help or q to quit)
+M              in a long listing, don't print group nameso quit)
+M       -G, --no-group75/260 35% (press h for help or q to quit)
+MESESCOAge ls(1) line 74/260 34% (press h for help or q to quit)
+M              (-U) disables groupingss h for help or q to quit)
+M              with a --sort option, but  any  use  of  --sort=none
+M       -a, --allline 71/260 33% (press h for help or q to quit)
+M
+M       options too.
+M       Mandatory arguments to long options are mandatory for short
+M
+M       nor --sort is specified.
+M       default).  Sort entries alphabetically if none of -cftuvSUX
+M       List  information about the FILEs (the current directory by
+MDESCRIPTION
+M
+M       ls [OPTION]... [FILE]...
+MSYNOPSIS
+M
+M       ls - list directory contents
+MNAME
+M
+MLS(1)                      User Commands                     LS(1)
+...skipping...s(1) line 1/260 5% (press h for help or q to quit)
+
+COPYRIGHT
+       Copyright © 2022 Free Software  Foundation,  Inc.   License
+       GPLv3+:  GNU  GPL  version  3 or later <https://gnu.org/li‐
+       censes/gpl.html>.
+       This is free software: you are free to  change  and  redis‐
+       tribute  it.  There is NO WARRANTY, to the extent permitted
+       by law.
+
+SEE ALSO
+       dircolors(1)
+
+       Full   documentation    <https://www.gnu.org/software/core‐
+       utils/ls>
+       or available locally via: info '(coreutils) ls invocation'
+
+GNU coreutils 9.1         September 2022                     LS(1)
+M       -a, --alle 244/260 (END) (press h for help or q to quit)
+M
+M       options too.
+M       Mandatory arguments to long options are mandatory for short
+M
+M       nor --sort is specified.
+M       default).  Sort entries alphabetically if none of -cftuvSUX
+M       List  information about the FILEs (the current directory by
+MDESCRIPTION
+M
+M       ls [OPTION]... [FILE]...
+MSYNOPSIS
+M
+M       ls - list directory contents
+MNAME
+M
+MLS(1)                      User Commands                     LS(1)
+              do not ignore entries starting with .or q to quit)
+...skipping...s(1) line 2/260 6% (press h for help or q to quit)
+
+COPYRIGHT
+       Copyright © 2022 Free Software  Foundation,  Inc.   License
+       GPLv3+:  GNU  GPL  version  3 or later <https://gnu.org/li‐
+       censes/gpl.html>.
+       This is free software: you are free to  change  and  redis‐
+       tribute  it.  There is NO WARRANTY, to the extent permitted
+       by law.
+
+SEE ALSO
+       dircolors(1)
+
+       Full   documentation    <https://www.gnu.org/software/core‐
+       utils/ls>
+       or available locally via: info '(coreutils) ls invocation'
+
+GNU coreutils 9.1         September 2022                     LS(1)
+M       -a, --alle 244/260 (END) (press h for help or q to quit)
+M
+M       options too.
+M       Mandatory arguments to long options are mandatory for short
+M
+M       nor --sort is specified.
+M       default).  Sort entries alphabetically if none of -cftuvSUX
+M       List  information about the FILEs (the current directory by
+MDESCRIPTION
+M
+M       ls [OPTION]... [FILE]...
+MSYNOPSIS
+M
+M       ls - list directory contents
+MNAME
+M
+MLS(1)                      User Commands                     LS(1)
+...skipping...s(1) line 1/260 5% (press h for help or q to quit)
+
+COPYRIGHT
+       Copyright © 2022 Free Software  Foundation,  Inc.   License
+       GPLv3+:  GNU  GPL  version  3 or later <https://gnu.org/li‐
+       censes/gpl.html>.
+       This is free software: you are free to  change  and  redis‐
+       tribute  it.  There is NO WARRANTY, to the extent permitted
+       by law.
+
+SEE ALSO
+       dircolors(1)
+
+       Full   documentation    <https://www.gnu.org/software/core‐
+       utils/ls>
+       or available locally via: info '(coreutils) ls invocation'
+
+GNU coreutils 9.1         September 2022                     LS(1)
+M       ject.org/team/>260 (END) (press h for help or q to quit)
+M       Report  any  translation  bugs  to <https://translationpro‐
+M       ware/coreutils/>/260 99% (press h for help or q to quit)
+M       GNU  coreutils  online   help:   <https://www.gnu.org/soft‐
+MREPORTING BUGS line 240/260 99% (press h for help or q to quit)
+MESESCOAe ls(1) line 239/260 98% (press h for help or q to quit)
+M       Written by Richard M. Stallman and David MacKenzie.quit)
+MAUTHORAe ls(1) line 237/260 98% (press h for help or q to quit)
+MESESCOAe ls(1) line 236/260 97% (press h for help or q to quit)
+M              argument).260 97% (press h for help or q to quit)
+M       2      if serious trouble (e.g., cannot access command-line
+MESESCOAe ls(1) line 233/260 96% (press h for help or q to quit)
+M              tory),232/260 96% (press h for help or q to quit)
+M       1      if minor problems  (e.g.,  cannot  access  subdirec‐
+MESESCOAe ls(1) line 230/260 95% (press h for help or q to quit)
+M       0      if OK,229/260 94% (press h for help or q to quit)
+M   Exit status:line 228/260 94% (press h for help or q to quit)
+MESESCOAe ls(1) line 227/260 94% (press h for help or q to quit)
+M       the settings.  Use the dircolors(1) command to set it.t)
+M       a  terminal.  The LS_COLORS environment variable can change
+M       emits color codes only when standard output is connected to
+M       default  and  with  --color=never.   With  --color=auto, ls
+M       Using color to distinguish file types is disabled  both  by
+MESESCOAe ls(1) line 221/260 92% (press h for help or q to quit)
+M       'auto' or 'never'.60 91% (press h for help or q to quit)
+M       The  WHEN  argument  defaults  to  'always' and can also be
+MESESCOAe ls(1) line 218/260 91% (press h for help or q to quit)
+M       sets the default style to use.s h for help or q to quit)
+M       the POSIX locale.  Also the TIME_STYLE environment variable
+M       TIME_STYLE prefixed with 'posix-' takes effect only outside
+M       to  non-recent  files  and   FORMAT2   to   recent   files.
+M       If  FORMAT is FORMAT1<newline>FORMAT2, then FORMAT1 applies
+M       cale, or +FORMAT.  FORMAT is interpreted like  in  date(1).
+M       The TIME_STYLE argument can be full-iso, long-iso, iso, lo‐
+MESESCOAe ls(1) line 210/260 89% (press h for help or q to quit)
+M       be used, too: KiB=K, MiB=M, and so on.help or q to quit)
+M       1024) or KB,MB,... (powers of 1000).  Binary  prefixes  can
+M       10K  is  10*1024).   Units  are  K,M,G,T,P,E,Z,Y (powers of
+M       The SIZE argument is an integer and optional unit (example:
+MESESCOAe ls(1) line 205/260 86% (press h for help or q to quit)
+M              output version information and exit or q to quit)
+M       --versionine 203/260 85% (press h for help or q to quit)
+MESESCOAe ls(1) line 202/260 85% (press h for help or q to quit)
+M       --help display this help and exit for help or q to quit)
+MESESCOAe ls(1) line 200/260 84% (press h for help or q to quit)
+M       -1     list one file per liness h for help or q to quit)
+MESESCOAe ls(1) line 198/260 83% (press h for help or q to quit)
+M       --zero end each output line with NUL, not newlineo quit)
+MESESCOAe ls(1) line 196/260 82% (press h for help or q to quit)
+M              print any security context of each fileq to quit)
+M       -Z, --context194/260 80% (press h for help or q to quit)
+MESESCOAe ls(1) line 193/260 80% (press h for help or q to quit)
+M       -X     sort alphabetically by entry extension q to quit)
+MESESCOAe ls(1) line 191/260 79% (press h for help or q to quit)
+M       -x     list entries by lines instead of by columns quit)
+MESESCOAe ls(1) line 189/260 78% (press h for help or q to quit)
+M              set output width to COLS.  0 means no limit quit)
+M       -w, --width=COLS/260 77% (press h for help or q to quit)
+MESESCOAe ls(1) line 186/260 77% (press h for help or q to quit)
+       --versionline 185/260 76% (press h for help or q to quit)
+              output version information and exitp or q to quit)
+ ESESCOBe ls(1) line 187/260 77% (press h for help or q to quit)
+       The SIZE argument is an integer and optional unit (example:
+       10K  is  10*1024).   Units  are  K,M,G,T,P,E,Z,Y (powers of
+       1024) or KB,MB,... (powers of 1000).  Binary  prefixes  can
+       be used, too: KiB=K, MiB=M, and so on. help or q to quit)
+ ESESCOBe ls(1) line 192/260 80% (press h for help or q to quit)
+       The TIME_STYLE argument can be full-iso, long-iso, iso, lo‐
+       cale, or +FORMAT.  FORMAT is interpreted like  in  date(1).
+       If  FORMAT is FORMAT1<newline>FORMAT2, then FORMAT1 applies
+       to  non-recent  files  and   FORMAT2   to   recent   files.
+       TIME_STYLE prefixed with 'posix-' takes effect only outside
+       the POSIX locale.  Also the TIME_STYLE environment variable
+       sets the default style to use.ss h for help or q to quit)
+ ESESCOBe ls(1) line 200/260 84% (press h for help or q to quit)
+       The  WHEN  argument  defaults  to  'always' and can also be
+       'auto' or 'never'.260 85% (press h for help or q to quit)
+ ESESCOBe ls(1) line 203/260 85% (press h for help or q to quit)
+       Using color to distinguish file types is disabled  both  by
+       default  and  with  --color=never.   With  --color=auto, ls
+       emits color codes only when standard output is connected to
+       a  terminal.  The LS_COLORS environment variable can change
+       the settings.  Use the dircolors(1) command to set it.it)
+ ESESCOBe ls(1) line 209/260 89% (press h for help or q to quit)
+   Exit status: line 210/260 89% (press h for help or q to quit)
+       0      if OK, 211/260 89% (press h for help or q to quit)
+ ESESCOBe ls(1) line 212/260 89% (press h for help or q to quit)
+       1      if minor problems  (e.g.,  cannot  access  subdirec‐
+              tory), 214/260 90% (press h for help or q to quit)
+ ESESCOBe ls(1) line 215/260 90% (press h for help or q to quit)
+M       the POSIX locale.  Also the TIME_STYLE environment variable
+ ESESCOBe ls(1) line 215/260 90% (press h for help or q to quit)
+M       the POSIX locale.  Also the TIME_STYLE environment variable
+M       TIME_STYLE prefixed with 'posix-' takes effect only outside
+M       to  non-recent  files  and   FORMAT2   to   recent   files.
+M       If  FORMAT is FORMAT1<newline>FORMAT2, then FORMAT1 applies
+M       cale, or +FORMAT.  FORMAT is interpreted like  in  date(1).
+M       The TIME_STYLE argument can be full-iso, long-iso, iso, lo‐
+MESESCOAe ls(1) line 210/260 89% (press h for help or q to quit)
+M       be used, too: KiB=K, MiB=M, and so on.help or q to quit)
+M       1024) or KB,MB,... (powers of 1000).  Binary  prefixes  can
+M       10K  is  10*1024).   Units  are  K,M,G,T,P,E,Z,Y (powers of
+M       The SIZE argument is an integer and optional unit (example:
+MESESCOAe ls(1) line 205/260 86% (press h for help or q to quit)
+M              output version information and exit or q to quit)
+M       --versionine 203/260 85% (press h for help or q to quit)
+MESESCOAe ls(1) line 202/260 85% (press h for help or q to quit)
+M       --help display this help and exit for help or q to quit)
+MESESCOAe ls(1) line 200/260 84% (press h for help or q to quit)
+M       -1     list one file per liness h for help or q to quit)
+MESESCOAe ls(1) line 198/260 83% (press h for help or q to quit)
+M       --zero end each output line with NUL, not newlineo quit)
+MESESCOAe ls(1) line 196/260 82% (press h for help or q to quit)
+M              print any security context of each fileq to quit)
+M       -Z, --context194/260 80% (press h for help or q to quit)
+MESESCOAe ls(1) line 193/260 80% (press h for help or q to quit)
+M       -X     sort alphabetically by entry extension q to quit)
+MESESCOAe ls(1) line 191/260 79% (press h for help or q to quit)
+M       -x     list entries by lines instead of by columns quit)
+MESESCOAe ls(1) line 189/260 78% (press h for help or q to quit)
+M              set output width to COLS.  0 means no limit quit)
+M       -w, --width=COLS/260 77% (press h for help or q to quit)
+MESESCOAe ls(1) line 186/260 77% (press h for help or q to quit)
+M       -v     natural sort of (version) numbers within textuit)
+MESESCOAe ls(1) line 184/260 76% (press h for help or q to quit)
+M       -U     do not sort; list entries in directory orderquit)
+MESESCOAe ls(1) line 182/260 76% (press h for help or q to quit)
+M              by access time, newest firstor help or q to quit)
+M              show  access  time and sort by name; otherwise: sort
+M       -u     with -lt: sort by, and show, access time;  with  -l:
+MESESCOAe ls(1) line 178/260 75% (press h for help or q to quit)
+M              assume tab stops at each COLS instead of 8o quit)
+M       -T, --tabsize=COLS60 74% (press h for help or q to quit)
+MESESCOAe ls(1) line 175/260 74% (press h for help or q to quit)
+M       -t     sort by time, newest first; see --time q to quit)
+MESESCOAe ls(1) line 173/260 73% (press h for help or q to quit)
+M              time/date format with -l; see TIME_STYLE belowit)
+M       --time-style=TIME_STYLE% (press h for help or q to quit)
+MESESCOAe ls(1) line 170/260 72% (press h for help or q to quit)
+M              --sort=time, sort by WORD (newest first) to quit)
+M              with  -l,  WORD  determines which time to show; with
+MESESCOAe ls(1) line 167/260 71% (press h for help or q to quit)
+M              (-c): ctime, status; birth time: birth, creation;
+M              cess time (-u):  atime,  access,  use;  change  time
+M              change  the default of using modification times; ac‐
+M       --time=WORDe 163/260 70% (press h for help or q to quit)
+MESESCOAe ls(1) line 162/260 69% (press h for help or q to quit)
+M              time (-t), version (-v), extension (-X), widthit)
+M              sort by WORD instead of name: none (-U), size  (-S),
+M       --sort=WORDe 159/260 68% (press h for help or q to quit)
+MESESCOAe ls(1) line 158/260 67% (press h for help or q to quit)
+M       -S     sort by file size, largest firstelp or q to quit)
+MESESCOAe ls(1) line 156/260 67% (press h for help or q to quit)
+M              print the allocated size of each file, in blocks)
+M       -s, --sizene 154/260 66% (press h for help or q to quit)
+       --time-style=TIME_STYLE5% (press h for help or q to quit)
+              time/date format with -l; see TIME_STYLE belowuit)
+>DEVOPS25/lektion3ne 155/260 67% (press h for help or q to quit)
+$ man ls
+LS(1)                     User Commands                    LS(1)
+
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List  information  about the FILEs (the current directory
+       by default).  Sort entries alphabetically if none of -cf‐
+       tuvSUX nor --sort is specified.
+
+       Mandatory  arguments  to  long  options are mandatory for
+       short options too.
+
+       -a, --all
+LS(1)                     User Commands                    LS(1)
+
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List  information  about the FILEs (the current directory
+       by default).  Sort entries alphabetically if none of -cf‐
+       tuvSUX nor --sort is specified.
+
+       Mandatory  arguments  to  long  options are mandatory for
+       short options too.
+
+       -a, --all
+LS(1)                     User Commands                    LS(1)
+
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List  information  about the FILEs (the current directory
+       by default).  Sort entries alphabetically if none of -cf‐
+       tuvSUX nor --sort is specified.
+
+       Mandatory  arguments  to  long  options are mandatory for
+       short options too.
+
+       -a, --all
+...skipping...
+       -C     list entries by columns
+
+       --color[=WHEN]
+              color the output WHEN; more info below
+
+       -d, --directory
+              list directories themselves, not their contents
+
+       -D, --dired
+              generate output designed for Emacs' dired mode
+
+       -f     list all entries in directory order
+
+       -F, --classify[=WHEN]
+              append indicator (one of */=>@|) to entries WHEN
+
+       --file-type
+...skipping...s(1) line 41 (press h for help or q to quit)
+              gle-column -1, verbose -l, vertical -C
+
+       --full-time
+              like -l --time-style=full-iso
+
+       -g     like -l, but do not list owner
+
+       --group-directories-first
+              group  directories  before files; can be augmented
+              with a --sort option, but any use  of  --sort=none
+              (-U) disables grouping
+
+       -G, --no-group
+              in a long listing, don't print group names
+
+       -h, --human-readable
+              with -l and -s, print sizes like 1K 234M 2G etc.
+...skipping...s(1) line 62 (press h for help or q to quit)
+       -x     list entries by lines instead of by columns
+
+       -X     sort alphabetically by entry extension
+
+       -Z, --context
+              print any security context of each file
+
+       --zero end each output line with NUL, not newline
+
+       -1     list one file per line
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       The  SIZE argument is an integer and optional unit (exam‐
+M       -a, --alline 190/263 78% (press h for help or q to quit)
+M
+M       short options too.
+M       Mandatory  arguments  to  long  options are mandatory for
+M
+M       tuvSUX nor --sort is specified.
+M       by default).  Sort entries alphabetically if none of -cf‐
+M       List  information  about the FILEs (the current directory
+MDESCRIPTION
+M
+M       ls [OPTION]... [FILE]...
+MSYNOPSIS
+M
+M       ls - list directory contents
+MNAME
+M
+MLS(1)                     User Commands                    LS(1)
+LS(1)                     User Commands                    LS(1)
+
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List  information  about the FILEs (the current directory
+       by default).  Sort entries alphabetically if none of -cf‐
+       tuvSUX nor --sort is specified.
+
+       Mandatory  arguments  to  long  options are mandatory for
+       short options too.
+
+       -a, --all
+LS(1)                     User Commands                    LS(1)
+
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List  information  about the FILEs (the current directory
+       by default).  Sort entries alphabetically if none of -cf‐
+       tuvSUX nor --sort is specified.
+
+       Mandatory  arguments  to  long  options are mandatory for
+       short options too.
+
+       -a, --all
+              do not ignore entries starting with .
+
+       -A, --almost-all
+              do not list implied . and ..
+
+       --author
+              with -l, print the author of each file
+
+       -b, --escape
+...skipping...(1) line 10/263 8% (press h for help or q to quit)
+              e.g., '--block-size=M'; see SIZE format below
+
+       -B, --ignore-backups
+              do not list implied entries ending with ~
+
+       -c     with  -lt:  sort by, and show, ctime (time of last
+              modification of file status information); with -l:
+              show  ctime  and  sort by name; otherwise: sort by
+              ctime, newest first
+
+       -C     list entries by columns
+
+       --color[=WHEN]
+              color the output WHEN; more info below
+
+       -d, --directory
+              list directories themselves, not their contents
+/nual page ls(1) line 31/263 16% (press h for help or q to quit)
+       -D, --dired
+              generate output designed for Emacs' dired mode
+
+       -f     list all entries in directory order
+
+...skipping...1) line 37/263 18% (press h for help or q to quit)
+       --format=WORD
+              across -x, commas -m, horizontal -x, long -l, sin‐
+              gle-column -1, verbose -l, vertical -C
+
+       --full-time
+              like -l --time-style=full-iso
+
+       -g     like -l, but do not list owner
+
+       --group-directories-first
+              group  directories  before files; can be augmented
+              with a --sort option, but any use  of  --sort=none
+              (-U) disables grouping
+
+       -G, --no-group
+              in a long listing, don't print group names
+
+...skipping...1) line 60/263 27% (press h for help or q to quit)
+       -l     use a long listing format
+
+       -L, --dereference
+              when showing file information for a symbolic link,
+              show  information for the file the link references
+              rather than for the link itself
+
+       -m     fill width with a comma separated list of entries
+
+       -n, --numeric-uid-gid
+              like -l, but list numeric user and group IDs
+
+       -N, --literal
+              print entry names without quoting
+
+       -o     like -l, but do not list group information
+
+       -p, --indicator-style=slashpress h for help or q to quit)
+              append / indicator to directories
+
+       -q, --hide-control-chars% (press h for help or q to quit)
+              print ? instead of nongraphic charactersq to quit)
+
+       --show-control-chars
+              show nongraphic characters as-is (the default, un‐
+              less program is 'ls' and output is a terminal)
+
+       -Q, --quote-name
+              enclose entry names in double quotes
+
+       --quoting-style=WORD
+              use  quoting  style WORD for entry names: literal,
+...skipping...) line 126/263 55% (press h for help or q to quit)
+              time/date format with -l; see TIME_STYLE below
+
+       -t     sort by time, newest first; see --time
+
+       -T, --tabsize=COLS
+              assume tab stops at each COLS instead of 8
+
+       -u     with -lt: sort by, and show, access time; with -l:
+              show access time and sort by name; otherwise: sort
+              by access time, newest first
+
+       -U     do not sort; list entries in directory order
+
+       -v     natural sort of (version) numbers within text
+
+       -w, --width=COLS
+              set output width to COLS.  0 means no limit
+M       --time-style=TIME_STYLE% (press h for help or q to quit)
+MESESCOAe ls(1) line 171/263 72% (press h for help or q to quit)
+M              --sort=time, sort by WORD (newest first) to quit)
+M              with -l, WORD determines which time to show;  with
+       -v     natural sort of (version) numbers within textquit)
+
+       -w, --width=COLS
+              set output width to COLS.  0 means no limit
+...skipping...) line 172/263 73% (press h for help or q to quit)
+              output version information and exit
+
+       The  SIZE argument is an integer and optional unit (exam‐
+       ple: 10K is 10*1024).  Units are K,M,G,T,P,E,Z,Y  (powers
+       of  1024) or KB,MB,... (powers of 1000).  Binary prefixes
+       can be used, too: KiB=K, MiB=M, and so on.
+
+       The TIME_STYLE argument can be full-iso,  long-iso,  iso,
+       locale,  or  +FORMAT.   FORMAT  is  interpreted  like  in
+       date(1).  If FORMAT is FORMAT1<newline>FORMAT2, then FOR‐
+       MAT1  applies  to  non-recent files and FORMAT2 to recent
+       files.  TIME_STYLE prefixed with  'posix-'  takes  effect
+       only outside the POSIX locale.  Also the TIME_STYLE envi‐
+       ronment variable sets the default style to use.
+
+       The WHEN argument defaults to 'always' and  can  also  be
+       'auto' or 'never'.
+/ual page ls(1) line 204/263 85% (press h for help or q to quit)
+       Using color to distinguish file types is disabled both by
+       default and with --color=never.   With  --color=auto,  ls
+       emits  color codes only when standard output is connected
+       to a terminal.  The LS_COLORS  environment  variable  can
+       change the settings.  Use the dircolors(1) command to set
+       it.
+
+   Exit status: line 212/263 89% (press h for help or q to quit)
+       0      if OK, 213/263 89% (press h for help or q to quit)
+M       -a, --all  (press RETURN)(press h for help or q to quit)
+M
+M       short options too.
+M       Mandatory  arguments  to  long  options are mandatory for
+M
+M       tuvSUX nor --sort is specified.
+M       by default).  Sort entries alphabetically if none of -cf‐
+M       List  information  about the FILEs (the current directory
+MDESCRIPTION
+M
+M       ls [OPTION]... [FILE]...
+MSYNOPSIS
+M
+M       ls - list directory contents
+MNAME
+M
+MLS(1)                     User Commands                    LS(1)
+              do not ignore entries starting with .or q to quit)
+ ESESCOBpage ls(1) line 2/263 6% (press h for help or q to quit)
+       -A, --almost-all 3/263 6% (press h for help or q to quit)
+              do not list implied . and ..for help or q to quit)
+ ESESCOBpage ls(1) line 5/263 7% (press h for help or q to quit)
+       --author(1) line 6/263 7% (press h for help or q to quit)
+              with -l, print the author of each filer q to quit)
+ ESESCOBpage ls(1) line 8/263 8% (press h for help or q to quit)
+       -b, --escapeline 9/263 8% (press h for help or q to quit)
+              print C-style escapes for nongraphic charactersit)
+ ESESCOBage ls(1) line 11/263 9% (press h for help or q to quit)
+       --block-size=SIZE2/263 9% (press h for help or q to quit)
+              with -l, scale sizes by SIZE when  printing  them;
+              e.g., '--block-size=M'; see SIZE format belowquit)
+M       Mandatory  arguments  to  long  options are mandatory for
+MESESCOAge ls(1) line 14/263 10% (press h for help or q to quit)
+M       tuvSUX nor --sort is specified. h for help or q to quit)
+M       by default).  Sort entries alphabetically if none of -cf‐
+M       List  information  about the FILEs (the current directory
+MDESCRIPTIONls(1) line 10/263 8% (press h for help or q to quit)
+MESESCOApage ls(1) line 9/263 8% (press h for help or q to quit)
+ ESESCOBpage ls(1) line 8/263 8% (press h for help or q to quit)
+MESESCOApage ls(1) line 9/263 8% (press h for help or q to quit)
+M       ls [OPTION]... [FILE]... (press h for help or q to quit)
+MSYNOPSISage ls(1) line 7/263 7% (press h for help or q to quit)
+MESESCOApage ls(1) line 6/263 7% (press h for help or q to quit)
+M       ls - list directory contentsess h for help or q to quit)
+MNAMECOApage ls(1) line 4/263 6% (press h for help or q to quit)
+MESESCOApage ls(1) line 3/263 6% (press h for help or q to quit)
+MLS(1)                     User Commands                    LS(1)
+ ESESCOApage ls(1) line 1/263 5% (press h for help or q to quit)
+>DEVOPS25/lektion3 line 1/263 5% (press h for help or q to quit)
+$ DEVOPS25/lektion3
+$ man tree
+TREE(1)              General Commands Manual             TREE(1)
+
+NAME
+       tree  -  list contents of directories in a tree-like for‐
+       mat.
+
+SYNOPSIS
+       tree [-acdfghilnpqrstuvxACDFJQNSUX] [-L level  [-R]]  [-H
+       baseHREF]  [-T title] [-o filename] [-P pattern] [-I pat‐
+       tern]  [--gitignore]   [--gitfile[=]file]   [--matchdirs]
+       [--metafirst]    [--ignore-case]    [--nolinks]   [--hin‐
+       tro[=]file]   [--houtro[=]file]   [--inodes]   [--device]
+       [--sort[=]name] [--dirsfirst] [--filesfirst] [--filelimit
+       #]    [--si]     [--du]     [--prune]     [--charset[=]X]
+       [--timefmt[=]format]  [--fromfile]  [--fflinks]  [--info]
+       [--infofile[=]file]  [--noreport]  [--version]   [--help]
+       [--] [directory ...]
+ ESESCOBpage tree(1) line 1 (press h for help or q to quit)
+DESCRIPTIONe tree(1) line 2 (press h for help or q to quit)
+       Tree  is  a recursive directory listing program that pro‐
+       duces a depth indented listing of files,  which  is  col‐
+M       tree  -  list contents of directories in a tree-like for‐
+       duces a depth indented listing of files,  which  is  col‐
+M       tree  -  list contents of directories in a tree-like for‐
+MNAMECOApage tree(1) line 4 (press h for help or q to quit)
+MESESCOApage tree(1) line 3 (press h for help or q to quit)
+MTREE(1)              General Commands Manual             TREE(1)
+ ESESCOApage tree(1) line 1 (press h for help or q to quit)
+ ESESCOApage tree(1) line 1 (press h for help or q to quit)
+>DEVOPS25/lektion31) line 1 (press h for help or q to quit)
+$ manm  tree
+TREE(1)              General Commands Manual             TREE(1)
+
+NAME
+       tree  -  list contents of directories in a tree-like for‐
+       mat.
+
+SYNOPSIS
+       tree [-acdfghilnpqrstuvxACDFJQNSUX] [-L level  [-R]]  [-H
+       baseHREF]  [-T title] [-o filename] [-P pattern] [-I pat‐
+       tern]  [--gitignore]   [--gitfile[=]file]   [--matchdirs]
+       [--metafirst]    [--ignore-case]    [--nolinks]   [--hin‐
+       tro[=]file]   [--houtro[=]file]   [--inodes]   [--device]
+       [--sort[=]name] [--dirsfirst] [--filesfirst] [--filelimit
+       #]    [--si]     [--du]     [--prune]     [--charset[=]X]
+       [--timefmt[=]format]  [--fromfile]  [--fflinks]  [--info]
+       [--infofile[=]file]  [--noreport]  [--version]   [--help]
+       [--] [directory ...]
+ ESESCOBpage tree(1) line 1 (press h for help or q to quit)
+DESCRIPTIONe tree(1) line 2 (press h for help or q to quit)
+       Tree  is  a recursive directory listing program that pro‐
+>DEVOPS25/lektion31) line 4 (press h for help or q to quit)
+$ man tree
+TREE(1)              General Commands Manual             TREE(1)
+
+NAME
+       tree  -  list contents of directories in a tree-like for‐
+       mat.
+
+SYNOPSIS
+       tree [-acdfghilnpqrstuvxACDFJQNSUX] [-L level  [-R]]  [-H
+       baseHREF]  [-T title] [-o filename] [-P pattern] [-I pat‐
+       tern]  [--gitignore]   [--gitfile[=]file]   [--matchdirs]
+       [--metafirst]    [--ignore-case]    [--nolinks]   [--hin‐
+       tro[=]file]   [--houtro[=]file]   [--inodes]   [--device]
+       [--sort[=]name] [--dirsfirst] [--filesfirst] [--filelimit
+       #]    [--si]     [--du]     [--prune]     [--charset[=]X]
+       [--timefmt[=]format]  [--fromfile]  [--fflinks]  [--info]
+       [--infofile[=]file]  [--noreport]  [--version]   [--help]
+       [--] [directory ...]
+ ESESCOBpage tree(1) line 1 (press h for help or q to quit)
+DESCRIPTIONe tree(1) line 2 (press h for help or q to quit)
+>DEVOPS25/lektion31) line 3 (press h for help or q to quit)
+$ sudo idDEVOPS25/lektion3
+$ sudo i
+
+
+
+
+id
+uid=1000(kent) gid=1000(kent) groups=1000(kent),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),100(users),104(kvm),106(netdev),112(bluetooth),114(lpadmin),117(scanner),123(vboxusers),127(libvirt),994(docker),64055(libvirt-qemu)
+DEVOPS25/lektion3
+$ sudo id
+uid=0(root) gid=0(root) groups=0(root),123(vboxusers)
+DEVOPS25/lektion3
+$ DEVOPS25/lektion3
+$ id
+uid=1000(kent) gid=1000(kent) groups=1000(kent),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),100(users),104(kvm),106(netdev),112(bluetooth),114(lpadmin),117(scanner),123(vboxusers),127(libvirt),994(docker),64055(libvirt-qemu)
+DEVOPS25/lektion3
+$ usd
+
+sudo -iDEVOPS25/lektion3
+$ sudo -i
+root@klad:~# id
+uid=0(root) gid=0(root) groups=0(root),123(vboxusers)
+root@klad:~# pwd
+/root
+root@klad:~# ls
+root@klad:~# nano MittLivSomRoot
+>root@klad:~# ls +: MittLivSomRoot [ Writing... ] [ Wrote 2 lines ]Y Yes        
+root@klad:~# ls
+MittLivSomRoot
+root@klad:~# ls -l
+total 4
+-rw-r--r-- 1 root root 9 17 apr 10.09 MittLivSomRoot
+root@klad:~# 
+root@klad:~# cat MittLivSomRoot 
+Är bra
+
+root@klad:~# nano MittLivSomRoot 
+>root@klad:~# root@klad:~# exit  ^U Paste     ^J Justify    MittLivSomRoot                        
+logout
+DEVOPS25/lektion3
+$ mnan usermod 
+USERMOD(8)         System Management Commands         USERMOD(8)
+
+NAME
+       usermod - modify a user account
+
+SYNOPSIS
+       usermod [options] LOGIN
+
+DESCRIPTION
+       The usermod command modifies the system account files.
+
+OPTIONS
+       The options which apply to the usermod command are:
+
+       -a, --append
+           Add the user to the supplementary group(s). Use only
+           with the -G option.
+ ESESCOBpage usermod(8) line 1 (press h for help or q to quit)
+       -b, --badname(8) line 2 (press h for help or q to quit)
+           Allow names that do not conform to standards. quit)
+ ESESCOBpage usermod(8) line 4 (press h for help or q to quit)
+       -c, --comment COMMENT 5 (press h for help or q to quit)
+           update the comment field of the user in /etc/passwd,
+           which is normally modified using the chfn(1) utility.
+ ESESCOBpage usermod(8) line 8 (press h for help or q to quit)
+       -d, --home HOME_DIRne 9 (press h for help or q to quit)
+           The user's new login directory.or help or q to quit)
+ ESESCOBpage usermod(8) line 11 (press h for help or q to quit)
+           If the -m option is given, the contents of the quit)
+       The options which apply to the usermod command are:quit)
+
+       -a, --append
+           Add the user to the supplementary group(s). Use only
+           with the -G option.
+
+       -b, --badname
+           Allow names that do not conform to standards.
+
+       -c, --comment COMMENT
+           update the comment field of the user in /etc/passwd,
+           which is normally modified using the chfn(1) utility.
+
+       -d, --home HOME_DIR
+           The user's new login directory.
+
+           If the -m option is given, the contents of the
+       The options which apply to the usermod command are:
+
+       -a, --append
+           Add the user to the supplementary group(s). Use only
+           with the -G option.
+
+       -b, --badname
+           Allow names that do not conform to standards.
+
+       -c, --comment COMMENT
+           update the comment field of the user in /etc/passwd,
+           which is normally modified using the chfn(1) utility.
+
+       -d, --home HOME_DIR
+           The user's new login directory.
+
+           If the -m option is given, the contents of the
+MOPTIONSnot found  (press RETURN)
+M
+M       The usermod command modifies the system account files.
+MDESCRIPTION
+M
+M       usermod [options] LOGIN
+MSYNOPSIS
+M
+M       usermod - modify a user account
+MNAME
+M
+MUSERMOD(8)         System Management Commands         USERMOD(8)
+USERMOD(8)         System Management Commands         USERMOD(8)
+
+NAME
+       usermod - modify a user account
+
+SYNOPSIS
+       usermod [options] LOGIN
+
+DESCRIPTION
+       The usermod command modifies the system account files.
+
+OPTIONS
+       The options which apply to the usermod command are:
+
+       -a, --append
+           Add the user to the supplementary group(s). Use only
+           with the -G option.
+USERMOD(8)         System Management Commands         USERMOD(8)
+
+NAME
+       usermod - modify a user account
+
+SYNOPSIS
+       usermod [options] LOGIN
+
+DESCRIPTION
+       The usermod command modifies the system account files.
+
+OPTIONS
+       The options which apply to the usermod command are:
+
+       -a, --append
+           Add the user to the supplementary group(s). Use only
+           with the -G option.
+>DEVOPS25/lektion3 (press RETURN)
+$ man userdel
+USERDEL(8)         System Management Commands         USERDEL(8)
+
+NAME
+       userdel - delete a user account and related files
+
+SYNOPSIS
+       userdel [options] LOGIN
+
+DESCRIPTION
+       userdel is a low level utility for removing users. On
+       Debian, administrators should usually use deluser(8)
+       instead.
+
+       The userdel command modifies the system account files,
+       deleting all entries that refer to the user name LOGIN.
+       The named user must exist.
+
+USERDEL(8)         System Management Commands         USERDEL(8)
+
+NAME
+       userdel - delete a user account and related files
+
+SYNOPSIS
+       userdel [options] LOGIN
+
+DESCRIPTION
+       userdel is a low level utility for removing users. On
+       Debian, administrators should usually use deluser(8)
+       instead.
+
+       The userdel command modifies the system account files,
+       deleting all entries that refer to the user name LOGIN.
+       The named user must exist.
+
+USERDEL(8)         System Management Commands         USERDEL(8)
+
+NAME
+       userdel - delete a user account and related files
+
+SYNOPSIS
+       userdel [options] LOGIN
+
+DESCRIPTION
+       userdel is a low level utility for removing users. On
+       Debian, administrators should usually use deluser(8)
+       instead.
+
+       The userdel command modifies the system account files,
+       deleting all entries that refer to the user name LOGIN.
+       The named user must exist.
+
+OPTIONS userdel(8) line 1/224 7% (press h for help or q to quit)
+       The options which apply to the userdel command are:
+
+       -f, --force
+           This option forces the removal of the user account,
+           even if the user is still logged in. It also forces
+           userdel to remove the user's home directory and mail
+           spool, even if another user uses the same home
+           directory or if the mail spool is not owned by the
+           specified user. If USERGROUPS_ENAB is defined to yes
+           in /etc/login.defs and if a group exists with the
+           same name as the deleted user, then this group will
+           be removed, even if it is still the primary group of
+           another user.
+
+           Note: This option is dangerous and may leave your
+           system in an inconsistent state.
+ page userdel(8) line 18/224 17% (press h for help or q to quit)
+       -h, --help
+           Display help message and exit.
+
+       -r, --remove
+           Files in the user's home directory will be removed
+           along with the home directory itself and the user's
+           mail spool. Files located in other file systems will
+           have to be searched for and deleted manually.
+
+           The mail spool is defined by the MAIL_DIR variable in
+           the login.defs file.
+
+       -R, --root CHROOT_DIR
+           Apply changes in the CHROOT_DIR directory and use the
+           configuration files from the CHROOT_DIR directory.
+           Only absolute paths are supported.
+ page userdel(8) line 35/224 25% (press h for help or q to quit)
+       -P, --prefix PREFIX_DIR
+           Apply changes in the PREFIX_DIR directory and use the
+           configuration files from the PREFIX_DIR directory.
+           This option does not chroot and is intended for
+           preparing a cross-compilation target. Some
+           limitations: NIS and LDAP users/groups are not
+           verified. PAM authentication is using the host files.
+           No SELINUX support.
+
+       -Z, --selinux-user
+           Remove any SELinux user mapping for the user's login.
+
+CONFIGURATION
+       The following configuration variables in /etc/login.defs
+       change the behavior of this tool:
+
+/home userdel(8) line 52/224 34% (press h for help or q to quit)
+       -P, --prefix PREFIX_DIR
+           Apply changes in the PREFIX_DIR directory and use the
+           configuration files from the PREFIX_DIR directory.
+           This option does not chroot and is intended for
+           preparing a cross-compilation target. Some
+           limitations: NIS and LDAP users/groups are not
+           verified. PAM authentication is using the host files.
+           No SELINUX support.
+
+       -Z, --selinux-user
+           Remove any SELinux user mapping for the user's login.
+
+CONFIGURATION
+       The following configuration variables in /etc/login.defs
+       change the behavior of this tool:
+
+
+       -P, --prefix PREFIX_DIR
+           Apply changes in the PREFIX_DIR directory and use the
+           configuration files from the PREFIX_DIR directory.
+           This option does not chroot and is intended for
+           preparing a cross-compilation target. Some
+           limitations: NIS and LDAP users/groups are not
+           verified. PAM authentication is using the host files.
+           No SELINUX support.
+
+       -Z, --selinux-user
+           Remove any SELinux user mapping for the user's login.
+
+CONFIGURATION
+       The following configuration variables in /etc/login.defs
+       change the behavior of this tool:
+
+...skipping...
+           relatively to their home directory.
+
+       The MAIL_DIR and MAIL_FILE variables are used by useradd,
+       usermod, and userdel to create, move, or delete the
+       user's mail spool.
+
+       MAX_MEMBERS_PER_GROUP (number)
+           Maximum members per group entry. When the maximum is
+           reached, a new group entry (line) is started in
+           /etc/group (with the same name, same password, and
+           same GID).
+
+           The default value is 0, meaning that there are no
+           limits in the number of members in a group.
+
+           This feature (split group) permits to limit the
+           length of lines in the group file. This is useful to
+...skipping...8) line 79/224 49% (press h for help or q to quit)
+           can't remove home directory
+
+CAVEATS
+       userdel will not allow you to remove an account if there
+       are running processes which belong to this account. In
+       that case, you may have to kill those processes or lock
+       the user's password or account and remove the account
+       later. The -f option can force the deletion of this
+       account.
+
+       You should manually check all file systems to ensure that
+       no files remain owned by this user.
+
+       You may not remove any NIS attributes on a NIS client.
+       This must be performed on the NIS server.
+
+       If USERGROUPS_ENAB is defined to yes in /etc/login.defs,
+M       12t found  (press RETURN)(press h for help or q to quit)
+MESESCOArdel(8) line 194/224 90% (press h for help or q to quit)
+M           can't update group fileress h for help or q to quit)
+M       10el(8) line 192/224 89% (press h for help or q to quit)
+MESESCOArdel(8) line 191/224 89% (press h for help or q to quit)
+M           user currently logged iness h for help or q to quit)
+M       8del(8) line 189/224 88% (press h for help or q to quit)
+MESESCOArdel(8) line 188/224 87% (press h for help or q to quit)
+M           specified user doesn't existh for help or q to quit)
+M       6del(8) line 186/224 87% (press h for help or q to quit)
+MESESCOArdel(8) line 185/224 86% (press h for help or q to quit)
+M           invalid command syntaxpress h for help or q to quit)
+M       2del(8) line 183/224 85% (press h for help or q to quit)
+MESESCOArdel(8) line 182/224 84% (press h for help or q to quit)
+M           can't update password files h for help or q to quit)
+M       1del(8) line 180/224 83% (press h for help or q to quit)
+MESESCOArdel(8) line 179/224 83% (press h for help or q to quit)
+M           successe 178/224 83% (press h for help or q to quit)
+M       0del(8) line 177/224 83% (press h for help or q to quit)
+MESESCOArdel(8) line 176/224 83% (press h for help or q to quit)
+M       The userdel command exits with the following values:uit)
+MEXIT VALUES(8) line 174/224 82% (press h for help or q to quit)
+MESESCOArdel(8) line 173/224 82% (press h for help or q to quit)
+M           Per user subordinate user IDs.for help or q to quit)
+M       /etc/subuide 171/224 82% (press h for help or q to quit)
+MESESCOArdel(8) line 170/224 82% (press h for help or q to quit)
+M           Per user subordinate group IDs.or help or q to quit)
+M       /etc/subgide 168/224 81% (press h for help or q to quit)
+MESESCOArdel(8) line 167/224 81% (press h for help or q to quit)
+M           script exits non-zero then execution will terminate.
+M           userdel-post.d will execute after user deletion. If a
+M           will be executed prior to any user deletion.to quit)
+M           userdel and SUBJECT with the username.  userdel-pre.d
+M           environment variable ACTION will be populated witht)
+M           Run-part files to execute during user deletion. The)
+M       /etc/shadow-maint/userdel-post.d/*for help or q to quit)
+Mage userdel(8) line 159/224 80% (press h for help or q to quit)
+M       The named user must exist.
+M       deleting all entries that refer to the user name LOGIN.
+M       The userdel command modifies the system account files,
+M
+M       instead.
+M       Debian, administrators should usually use deluser(8)
+M       userdel is a low level utility for removing users. On
+MDESCRIPTION
+M
+M       userdel [options] LOGIN
+MSYNOPSIS
+M
+M       userdel - delete a user account and related files
+MNAME
+M
+MUSERDEL(8)         System Management Commands         USERDEL(8)
+USERDEL(8)         System Management Commands         USERDEL(8)
+
+NAME
+       userdel - delete a user account and related files
+
+SYNOPSIS
+       userdel [options] LOGIN
+
+DESCRIPTION
+       userdel is a low level utility for removing users. On
+       Debian, administrators should usually use deluser(8)
+       instead.
+
+       The userdel command modifies the system account files,
+       deleting all entries that refer to the user name LOGIN.
+       The named user must exist.
+
+USERDEL(8)         System Management Commands         USERDEL(8)
+
+NAME
+       userdel - delete a user account and related files
+
+SYNOPSIS
+       userdel [options] LOGIN
+
+DESCRIPTION
+       userdel is a low level utility for removing users. On
+       Debian, administrators should usually use deluser(8)
+       instead.
+
+       The userdel command modifies the system account files,
+       deleting all entries that refer to the user name LOGIN.
+       The named user must exist.
+
+...skipping...
+           userdel to remove the user's home directory and mail
+           spool, even if another user uses the same home
+           directory or if the mail spool is not owned by the
+           specified user. If USERGROUPS_ENAB is defined to yes
+           in /etc/login.defs and if a group exists with the
+           same name as the deleted user, then this group will
+           be removed, even if it is still the primary group of
+           another user.
+
+           Note: This option is dangerous and may leave your
+           system in an inconsistent state.
+
+       -h, --help
+           Display help message and exit.
+
+       -r, --remove
+           Files in the user's home directory will be removed
+M           even if the user is still logged in. It also forces)
+M           This option forces the removal of the user account,)
+M       -f, --forcene 22/224 18% (press h for help or q to quit)
+MESESCOAerdel(8) line 21/224 18% (press h for help or q to quit)
+M       The options which apply to the userdel command are:quit)
+       -h, --helpline 19/224 17% (press h for help or q to quit)
+           Display help message and exit. for help or q to quit)
+ ESESCOBerdel(8) line 21/224 18% (press h for help or q to quit)
+       -r, --removene 22/224 18% (press h for help or q to quit)
+           Files in the user's home directory will be removedit)
+           along with the home directory itself and the user'st)
+           mail spool. Files located in other file systems will)
+           have to be searched for and deleted manually.to quit)
+ ESESCOBerdel(8) line 27/224 21% (press h for help or q to quit)
+           The mail spool is defined by the MAIL_DIR variable in
+           the login.defs file.% (press h for help or q to quit)
+ ESESCOBerdel(8) line 30/224 22% (press h for help or q to quit)
+       -R, --root CHROOT_DIR 22% (press h for help or q to quit)
+           Apply changes in the CHROOT_DIR directory and use the
+           configuration files from the CHROOT_DIR directory.it)
+           Only absolute paths are supported. help or q to quit)
+ ESESCOBerdel(8) line 35/224 25% (press h for help or q to quit)
+       -P, --prefix PREFIX_DIR5% (press h for help or q to quit)
+ page userdel(8) line 37/224 26% (press h for help or q to quit)           Display help message and exit.
+
+       -r, --remove
+           Files in the user's home directory will be removed
+           along with the home directory itself and the user's
+           mail spool. Files located in other file systems will
+           have to be searched for and deleted manually.
+
+           The mail spool is defined by the MAIL_DIR variable in
+           the login.defs file.
+
+       -R, --root CHROOT_DIR
+           Apply changes in the CHROOT_DIR directory and use the
+           configuration files from the CHROOT_DIR directory.
+           Only absolute paths are supported.
+
+       -P, --prefix PREFIX_DIR
+           Apply changes in the PREFIX_DIR directory and use the
+           configuration files from the PREFIX_DIR directory.
+ page userdel(8) line 37/224 28% (press h for help or q to quit)           Display help message and exit.
+
+       -r, --remove
+           Files in the user's home directory will be removed
+           along with the home directory itself and the user's
+           mail spool. Files located in other file systems will
+           have to be searched for and deleted manually.
+
+           The mail spool is defined by the MAIL_DIR variable in
+           the login.defs file.
+
+       -R, --root CHROOT_DIR
+           Apply changes in the CHROOT_DIR directory and use the
+           configuration files from the CHROOT_DIR directory.
+           Only absolute paths are supported.
+
+       -P, --prefix PREFIX_DIR
+>DEVOPS25/lektion3ine 37/224 26% (press h for help or q to quit)
+$ man ls
+LS(1)                     User Commands                    LS(1)
+
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List  information  about the FILEs (the current directory
+       by default).  Sort entries alphabetically if none of -cf‐
+       tuvSUX nor --sort is specified.
+
+       Mandatory  arguments  to  long  options are mandatory for
+       short options too.
+
+       -a, --all
+              do not ignore entries starting with . quit)
+ ESESCOBpage ls(1) line 2 (press h for help or q to quit)
+       -A, --almost-all 3 (press h for help or q to quit)
+              do not list implied . and ..p or q to quit)
+ ESESCOBpage ls(1) line 5 (press h for help or q to quit)
+       --author(1) line 6 (press h for help or q to quit)
+              with -l, print the author of each filequit)
+ ESESCOBpage ls(1) line 8 (press h for help or q to quit)
+       -b, --escapeline 9 (press h for help or q to quit)
+              print C-style escapes for nongraphic characters
+ ESESCOBpage ls(1) line 11 (press h for help or q to quit)
+       --block-size=SIZE12 (press h for help or q to quit)
+              with -l, scale sizes by SIZE when  printing  them;
+              e.g., '--block-size=M'; see SIZE format below
+ ESESCOBpage ls(1) line 15 (press h for help or q to quit)
+       -B, --ignore-backups(press h for help or q to quit)
+              do not list implied entries ending with ~it)
+ ESESCOBpage ls(1) line 18 (press h for help or q to quit)
+       -c     with  -lt:  sort by, and show, ctime (time of last
+              modification of file status information); with -l:
+M       -A, --almost-all21 (press h for help or q to quit)
+MESESCOApage ls(1) line 20 (press h for help or q to quit)
+M              do not ignore entries starting with . quit)
+M       -a, --all) line 18 (press h for help or q to quit)
+MESESCOApage ls(1) line 17 (press h for help or q to quit)
+M       short options too. (press h for help or q to quit)
+M       Mandatory  arguments  to  long  options are mandatory for
+MESESCOApage ls(1) line 14 (press h for help or q to quit)
+M       tuvSUX nor --sort is specified. help or q to quit)
+M       by default).  Sort entries alphabetically if none of -cf‐
+M       List  information  about the FILEs (the current directory
+MDESCRIPTION ls(1) line 10 (press h for help or q to quit)
+MESESCOApage ls(1) line 9 (press h for help or q to quit)
+M       ls [OPTION]... [FILE]... h for help or q to quit)
+MSYNOPSISage ls(1) line 7 (press h for help or q to quit)
+MESESCOApage ls(1) line 6 (press h for help or q to quit)
+M       ls - list directory contentsor help or q to quit)
+MNAMECOApage ls(1) line 4 (press h for help or q to quit)
+MESESCOApage ls(1) line 3 (press h for help or q to quit)
+MLS(1)                     User Commands                    LS(1)
+ ESESCOApage ls(1) line 1 (press h for help or q to quit)
+              do not ignore entries starting with . quit)
+
+       -A, --almost-all
+              do not list implied . and ..
+
+       --author
+              with -l, print the author of each file
+
+       -b, --escape
+              print C-style escapes for nongraphic characters
+
+       --block-size=SIZE
+              with -l, scale sizes by SIZE when  printing  them;
+              e.g., '--block-size=M'; see SIZE format below
+
+       -B, --ignore-backups
+              do not list implied entries ending with ~
+ Manual page ls(1) line 18 (press h for help or q to quit)
+       -c     with  -lt:  sort by, and show, ctime (time of last
+              modification of file status information); with -l:
+              show  ctime  and  sort by name; otherwise: sort by
+              ctime, newest first
+
+       -C     list entries by columns
+
+       --color[=WHEN]
+              color the output WHEN; more info below
+
+       -d, --directory
+              list directories themselves, not their contents
+
+       -D, --dired
+              generate output designed for Emacs' dired mode
+
+       -f     list all entries in directory order to quit)
+
+       -F, --classify[=WHEN]
+              append indicator (one of */=>@|) to entries WHEN
+
+       --file-type
+              likewise, except do not append '*'
+
+       --format=WORD
+              across -x, commas -m, horizontal -x, long -l, sin‐
+              gle-column -1, verbose -l, vertical -C
+
+       --full-time
+              like -l --time-style=full-iso
+
+       -g     like -l, but do not list owner
+
+       --group-directories-firsts h for help or q to quit)
+              group  directories  before files; can be augmented
+              with a --sort option, but any use  of  --sort=none
+              (-U) disables grouping
+
+       -G, --no-group
+              in a long listing, don't print group names
+
+       -h, --human-readable
+              with -l and -s, print sizes like 1K 234M 2G etc.
+
+       --si   likewise, but use powers of 1000 not 1024
+
+       -H, --dereference-command-line
+              follow symbolic links listed on the command line
+
+       --dereference-command-line-symlink-to-dir
+              follow each command line symbolic link that points
+              to a directory
+
+       --hide=PATTERN
+              do not list implied entries matching shell PATTERN
+              (overridden by -a or -A)
+
+       --hyperlink[=WHEN]
+              hyperlink file names WHEN
+
+       --indicator-style=WORD
+              append  indicator  with style WORD to entry names:
+              none    (default),    slash    (-p),     file-type
+              (--file-type), classify (-F)
+
+       -i, --inode
+              print the index number of each file
+ Manual page ls(1) line 86 (press h for help or q to quit)
+       -I, --ignore=PATTERN
+              do not list implied entries matching shell PATTERN
+
+       -k, --kibibytes
+              default to 1024-byte blocks for file system usage;
+              used only with -s and per directory totals
+
+       -l     use a long listing format
+
+       -L, --dereference
+              when showing file information for a symbolic link,
+              show  information for the file the link references
+              rather than for the link itself
+
+       -m     fill width with a comma separated list of entries
+
+       -n, --numeric-uid-gid(press h for help or q to quit)
+              like -l, but list numeric user and group IDs
+
+       -N, --literal
+              print entry names without quoting
+
+       -o     like -l, but do not list group information
+
+       -p, --indicator-style=slash
+              append / indicator to directories
+
+       -q, --hide-control-chars
+              print ? instead of nongraphic characters
+
+       --show-control-chars
+              show nongraphic characters as-is (the default, un‐
+              less program is 'ls' and output is a terminal)
+ Manual page ls(1) line 120 (press h for help or q to quit)
+       -Q, --quote-name
+              enclose entry names in double quotes
+
+       --quoting-style=WORD
+              use  quoting  style WORD for entry names: literal,
+              locale,   shell,    shell-always,    shell-escape,
+              shell-escape-always,  c,  escape  (overrides QUOT‐
+              ING_STYLE environment variable)
+
+       -r, --reverse
+              reverse order while sorting
+
+       -R, --recursive
+              list subdirectories recursively
+
+       -s, --size
+              print the allocated size of each file, in blocks
+
+       -S     sort by file size, largest first
+
+       --sort=WORD
+              sort by WORD instead  of  name:  none  (-U),  size
+              (-S),  time  (-t),  version  (-v), extension (-X),
+              width
+
+       --time=WORD
+              change the default of  using  modification  times;
+              access  time (-u): atime, access, use; change time
+              (-c): ctime, status; birth time: birth, creation;
+
+              with -l, WORD determines which time to show;  with
+              --sort=time, sort by WORD (newest first)
+
+       --time-style=TIME_STYLEress h for help or q to quit)
+              time/date format with -l; see TIME_STYLE below
+
+       -t     sort by time, newest first; see --time
+
+       -T, --tabsize=COLS
+              assume tab stops at each COLS instead of 8
+
+       -u     with -lt: sort by, and show, access time; with -l:
+              show access time and sort by name; otherwise: sort
+              by access time, newest first
+
+       -U     do not sort; list entries in directory order
+
+       -v     natural sort of (version) numbers within text
+
+       -w, --width=COLS
+              set output width to COLS.  0 means no limitt)
+
+       -x     list entries by lines instead of by columns
+
+       -X     sort alphabetically by entry extension
+
+       -Z, --context
+              print any security context of each file
+
+       --zero end each output line with NUL, not newline
+
+       -1     list one file per line
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+ Manual page ls(1) line 188 (press h for help or q to quit)
+       The  SIZE argument is an integer and optional unit (exam‐
+       ple: 10K is 10*1024).  Units are K,M,G,T,P,E,Z,Y  (powers
+       of  1024) or KB,MB,... (powers of 1000).  Binary prefixes
+       can be used, too: KiB=K, MiB=M, and so on.
+
+       The TIME_STYLE argument can be full-iso,  long-iso,  iso,
+       locale,  or  +FORMAT.   FORMAT  is  interpreted  like  in
+       date(1).  If FORMAT is FORMAT1<newline>FORMAT2, then FOR‐
+       MAT1  applies  to  non-recent files and FORMAT2 to recent
+       files.  TIME_STYLE prefixed with  'posix-'  takes  effect
+       only outside the POSIX locale.  Also the TIME_STYLE envi‐
+       ronment variable sets the default style to use.
+
+       The WHEN argument defaults to 'always' and  can  also  be
+       'auto' or 'never'.
+
+M              output version information and exit to quit)
+M       --version) line 204 (press h for help or q to quit)
+MESESCOApage ls(1) line 203 (press h for help or q to quit)
+M       --help display this help and exithelp or q to quit)
+ ESESCOBpage ls(1) line 201 (press h for help or q to quit)
+       The WHEN argument defaults to 'always' and  can  also  be
+       'auto' or 'never'.03 (press h for help or q to quit)
+ ESESCOBpage ls(1) line 204 (press h for help or q to quit)
+       Using color to distinguish file types is disabled both by
+       default and with --color=never.   With  --color=auto,  ls
+       emits  color codes only when standard output is connected
+       to a terminal.  The LS_COLORS  environment  variable  can
+       change the settings.  Use the dircolors(1) command to set
+       it.ge ls(1) line 210 (press h for help or q to quit)
+ ESESCOBpage ls(1) line 211 (press h for help or q to quit)
+   Exit status:(1) line 212 (press h for help or q to quit)
+       0      if OK,ine 213 (press h for help or q to quit)
+ ESESCOBpage ls(1) line 214 (press h for help or q to quit)
+       1      if minor problems (e.g., cannot  access  subdirec‐
+              tory),ine 216 (press h for help or q to quit)
+ ESESCOBpage ls(1) line 217 (press h for help or q to quit)
+       2      if  serious  trouble  (e.g.,  cannot  access  com‐
+              mand-line argument). h for help or q to quit)
+ ESESCOBpage ls(1) line 220 (press h for help or q to quit)
+AUTHOROBpage ls(1) line 221 (press h for help or q to quit)
+       Written by Richard M. Stallman and David MacKenzie.)
+ ESESCOBpage ls(1) line 223 (press h for help or q to quit)
+REPORTING BUGSs(1) line 224 (press h for help or q to quit)
+       GNU  coreutils  online  help:  <https://www.gnu.org/soft‐
+       ware/coreutils/> 226 (press h for help or q to quit)
+       Report  any  translation bugs to <https://translationpro‐
+       ject.org/team/>e 228 (press h for help or q to quit)
+ ESESCOBpage ls(1) line 229 (press h for help or q to quit)
+COPYRIGHTage ls(1) line 230 (press h for help or q to quit)
+       Copyright © 2022 Free Software Foundation, Inc.   License
+       GPLv3+:  GNU  GPL version 3 or later <https://gnu.org/li‐
+       censes/gpl.html>.233 (press h for help or q to quit)
+       This is free software: you are free to change and  redis‐
+       tribute  it.  There is NO WARRANTY, to the extent permit‐
+       ted by law. line 236 (press h for help or q to quit)
+ ESESCOBpage ls(1) line 237 (press h for help or q to quit)
+SEE ALSOpage ls(1) line 238 (press h for help or q to quit)
+       dircolors(1)line 239 (press h for help or q to quit)
+ ESESCOBpage ls(1) line 240 (press h for help or q to quit)
+       Full  documentation   <https://www.gnu.org/software/core‐
+       utils/ls>1) line 242 (press h for help or q to quit)
+       or  available  locally  via: info '(coreutils) ls invoca‐
+       tion' ls(1) line 244 (press h for help or q to quit)
+ ESESCOBpage ls(1) line 245 (press h for help or q to quit)
+GNU coreutils 9.1        September 2022                    LS(1)
+ ESESCOBpage ls(1) line 247 (press h for help or q to quit)
+MESESCOAls(1) line 247/263 (END) (press h for help or q to quit)
+M       ject.org/team/>6/263 99% (press h for help or q to quit)
+M       Report  any  translation bugs to <https://translationpro‐
+M       ware/coreutils/>/263 99% (press h for help or q to quit)
+>DEVOPS25/lektion3ne 243/263 99% (press h for help or q to quit)
+$ man l5l l
+No manual entry for ls in section 5
+DEVOPS25/lektion3
+$ man 5 llsDEVOPS25/lektion3
+$ man ls
+LS(1)                     User Commands                    LS(1)
+
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List  information  about the FILEs (the current directory
+       by default).  Sort entries alphabetically if none of -cf‐
+       tuvSUX nor --sort is specified.
+
+       Mandatory  arguments  to  long  options are mandatory for
+       short options too.
+
+       -a, --all
+              do not ignore entries starting with . quit)
+
+       -A, --almost-all
+              do not list implied . and ..
+
+       --author
+              with -l, print the author of each file
+
+       -b, --escape
+              print C-style escapes for nongraphic characters
+
+       --block-size=SIZE
+              with -l, scale sizes by SIZE when  printing  them;
+              e.g., '--block-size=M'; see SIZE format below
+
+       -B, --ignore-backups
+              do not list implied entries ending with ~
+ Manual page ls(1) line 18 (press h for help or q to quit)
+       -c     with  -lt:  sort by, and show, ctime (time of last
+              modification of file status information); with -l:
+              show  ctime  and  sort by name; otherwise: sort by
+              ctime, newest first
+
+       -C     list entries by columns
+
+       --color[=WHEN]
+              color the output WHEN; more info below
+
+       -d, --directory
+              list directories themselves, not their contents
+
+       -D, --dired
+              generate output designed for Emacs' dired mode
+
+       -f     list all entries in directory order to quit)
+
+       -F, --classify[=WHEN]
+              append indicator (one of */=>@|) to entries WHEN
+
+       --file-type
+              likewise, except do not append '*'
+
+       --format=WORD
+              across -x, commas -m, horizontal -x, long -l, sin‐
+              gle-column -1, verbose -l, vertical -C
+
+       --full-time
+              like -l --time-style=full-iso
+
+       -g     like -l, but do not list owner
+
+       --group-directories-firsts h for help or q to quit)
+              group  directories  before files; can be augmented
+              with a --sort option, but any use  of  --sort=none
+              (-U) disables grouping
+
+       -G, --no-group
+              in a long listing, don't print group names
+
+       -h, --human-readable
+              with -l and -s, print sizes like 1K 234M 2G etc.
+
+       --si   likewise, but use powers of 1000 not 1024
+
+       -H, --dereference-command-line
+              follow symbolic links listed on the command line
+
+       --dereference-command-line-symlink-to-dir
+              follow each command line symbolic link that points
+              to a directory
+
+       --hide=PATTERN
+              do not list implied entries matching shell PATTERN
+              (overridden by -a or -A)
+
+       --hyperlink[=WHEN]
+              hyperlink file names WHEN
+
+       --indicator-style=WORD
+              append  indicator  with style WORD to entry names:
+              none    (default),    slash    (-p),     file-type
+              (--file-type), classify (-F)
+
+       -i, --inode
+              print the index number of each file
+ Manual page ls(1) line 86 (press h for help or q to quit)
+       -I, --ignore=PATTERN
+              do not list implied entries matching shell PATTERN
+
+       -k, --kibibytes
+              default to 1024-byte blocks for file system usage;
+              used only with -s and per directory totals
+
+       -l     use a long listing format
+
+       -L, --dereference
+              when showing file information for a symbolic link,
+              show  information for the file the link references
+              rather than for the link itself
+
+       -m     fill width with a comma separated list of entries
+
+       -n, --numeric-uid-gid(press h for help or q to quit)
+              like -l, but list numeric user and group IDs
+
+       -N, --literal
+              print entry names without quoting
+
+       -o     like -l, but do not list group information
+
+       -p, --indicator-style=slash
+              append / indicator to directories
+
+       -q, --hide-control-chars
+              print ? instead of nongraphic characters
+
+       --show-control-chars
+              show nongraphic characters as-is (the default, un‐
+              less program is 'ls' and output is a terminal)
+ Manual page ls(1) line 120 (press h for help or q to quit)
+       -Q, --quote-name
+              enclose entry names in double quotes
+
+       --quoting-style=WORD
+              use  quoting  style WORD for entry names: literal,
+              locale,   shell,    shell-always,    shell-escape,
+              shell-escape-always,  c,  escape  (overrides QUOT‐
+              ING_STYLE environment variable)
+
+       -r, --reverse
+              reverse order while sorting
+
+       -R, --recursive
+              list subdirectories recursively
+
+       -s, --size
+              print the allocated size of each file, in blocks
+
+       -S     sort by file size, largest first
+
+       --sort=WORD
+              sort by WORD instead  of  name:  none  (-U),  size
+              (-S),  time  (-t),  version  (-v), extension (-X),
+              width
+
+       --time=WORD
+              change the default of  using  modification  times;
+              access  time (-u): atime, access, use; change time
+              (-c): ctime, status; birth time: birth, creation;
+
+              with -l, WORD determines which time to show;  with
+              --sort=time, sort by WORD (newest first)
+
+       --time-style=TIME_STYLEress h for help or q to quit)
+              time/date format with -l; see TIME_STYLE below
+
+       -t     sort by time, newest first; see --time
+
+       -T, --tabsize=COLS
+              assume tab stops at each COLS instead of 8
+
+       -u     with -lt: sort by, and show, access time; with -l:
+              show access time and sort by name; otherwise: sort
+              by access time, newest first
+
+       -U     do not sort; list entries in directory order
+
+       -v     natural sort of (version) numbers within text
+
+       -w, --width=COLS
+              set output width to COLS.  0 means no limitt)
+
+       -x     list entries by lines instead of by columns
+
+       -X     sort alphabetically by entry extension
+
+       -Z, --context
+              print any security context of each file
+
+       --zero end each output line with NUL, not newline
+
+       -1     list one file per line
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+ Manual page ls(1) line 188 (press h for help or q to quit)
+       The  SIZE argument is an integer and optional unit (exam‐
+       ple: 10K is 10*1024).  Units are K,M,G,T,P,E,Z,Y  (powers
+       of  1024) or KB,MB,... (powers of 1000).  Binary prefixes
+       can be used, too: KiB=K, MiB=M, and so on.
+
+       The TIME_STYLE argument can be full-iso,  long-iso,  iso,
+       locale,  or  +FORMAT.   FORMAT  is  interpreted  like  in
+       date(1).  If FORMAT is FORMAT1<newline>FORMAT2, then FOR‐
+       MAT1  applies  to  non-recent files and FORMAT2 to recent
+       files.  TIME_STYLE prefixed with  'posix-'  takes  effect
+       only outside the POSIX locale.  Also the TIME_STYLE envi‐
+       ronment variable sets the default style to use.
+
+       The WHEN argument defaults to 'always' and  can  also  be
+       'auto' or 'never'.
+
+       Using color to distinguish file types is disabled both by
+       default and with --color=never.   With  --color=auto,  ls
+       emits  color codes only when standard output is connected
+       to a terminal.  The LS_COLORS  environment  variable  can
+       change the settings.  Use the dircolors(1) command to set
+       it.
+
+   Exit status:
+       0      if OK,
+
+       1      if minor problems (e.g., cannot  access  subdirec‐
+              tory),
+
+       2      if  serious  trouble  (e.g.,  cannot  access  com‐
+              mand-line argument).
+
+AUTHOR
+       Written by Richard M. Stallman and David MacKenzie.)
+
+REPORTING BUGS
+       GNU  coreutils  online  help:  <https://www.gnu.org/soft‐
+       ware/coreutils/>
+       Report  any  translation bugs to <https://translationpro‐
+       ject.org/team/>
+
+COPYRIGHT
+       Copyright © 2022 Free Software Foundation, Inc.   License
+       GPLv3+:  GNU  GPL version 3 or later <https://gnu.org/li‐
+       censes/gpl.html>.
+       This is free software: you are free to change and  redis‐
+       tribute  it.  There is NO WARRANTY, to the extent permit‐
+       ted by law.
+
+SEE ALSO
+       dircolors(1)line 239 (press h for help or q to quit)
+
+       Full  documentation   <https://www.gnu.org/software/core‐
+       utils/ls>
+       or  available  locally  via: info '(coreutils) ls invoca‐
+       tion'
+
+GNU coreutils 9.1        September 2022                    LS(1)
+al page ls(1) line 247/263 (END) (press h for help or q to quit)
+>DEVOPS25/lektion3 247/263 (END) (press h for help or q to quit)
+$ DEVOPS25/lektion3
+$ ls
+recordings
+DEVOPS25/lektion3
+$ exit
+exit
