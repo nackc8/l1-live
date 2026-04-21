@@ -1,0 +1,583 @@
+/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS25/lektion5
+recordings
+DEVOPS25/lektion5
+$ DEVOPS25/lektion5
+$ ssh -p 10022 kent@ipellernamlocalhost
+Warning: Permanently added '[localhost]:10022' (ED25519) to the list of known hosts.
+kent@localhost's password: 
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-110-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue Apr 21 08:56:38 AM UTC 2026
+
+  System load:  0.0                Processes:               112
+  Usage of /:   19.0% of 24.44GB   Users logged in:         1
+  Memory usage: 12%                IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+163 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+0;kent@ubse2: ~
+kent@ubse2:~$ 0;kent@ubse2: ~
+kent@ubse2:~$ exi
+
+
+
+
+
+
+exit
+logout
+Connection to localhost closed.
+DEVOPS25/lektion5
+$ ssh-ke
+ygen rs-t ed25519  ^C
+DEVOPS25/lektion5
+$ DEVOPS25/lektion5
+$ man ssgh-keygen 
+SSH-KEYGEN(1)             BSD General Commands Manual             SSH-KEYGEN(1)
+
+NAME
+     ssh-keygen — OpenSSH authentication key utility
+
+SYNOPSIS
+     ssh-keygen [-q] [-a rounds] [-b bits] [-C comment] [-f output_keyfile]
+                [-m format] [-N new_passphrase] [-O option]
+                [-t dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa]
+                [-w provider] [-Z cipher]
+     ssh-keygen -p [-a rounds] [-f keyfile] [-m format] [-N new_passphrase]
+                [-P old_passphrase] [-Z cipher]
+     ssh-keygen -i [-f input_keyfile] [-m key_format]
+     ssh-keygen -e [-f input_keyfile] [-m key_format]
+     ssh-keygen -y [-f input_keyfile]
+     ssh-keygen -c [-a rounds] [-C comment] [-f keyfile] [-P passphrase]
+     ssh-keygen -l [-v] [-E fingerprint_hash] [-f input_keyfile]
+     ssh-keygen -B [-f input_keyfile]
+     ssh-keygen -D pkcs11) line 1 (press h for help or q to quit)
+     ssh-keygen -F hostname [-lv] [-f known_hosts_file]q to quit)
+     ssh-keygen -H [-f known_hosts_file] h for help or q to quit)
+     ssh-keygen -K [-a rounds] [-w provider]or help or q to quit)
+     ssh-keygen -R hostname [-f known_hosts_file]lp or q to quit)
+     ssh-keygen -r hostname [-g] [-f input_keyfile] or q to quit)
+     ssh-keygen -M generate [-O option] output_file or q to quit)
+     ssh-keygen -M screen [-f input_file] [-O option] output_file
+M                [-m format] [-N new_passphrase] [-O option]quit)
+M     ssh-keygen [-q] [-a rounds] [-b bits] [-C comment] [-f output_keyfile]
+MSYNOPSISage ssh-keygen(1) line 7 (press h for help or q to quit)
+MESESCOApage ssh-keygen(1) line 6 (press h for help or q to quit)
+M     ssh-keygen — OpenSSH authentication key utilityq to quit)
+     ssh-keygen — OpenSSH authentication key utility q to quit)
+
+SYNOPSIS
+     ssh-keygen [-q] [-a rounds] [-b bits] [-C comment] [-f output_keyfile]
+                [-m format] [-N new_passphrase] [-O option]
+                [-t dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa]
+                [-w provider] [-Z cipher]
+     ssh-keygen -p [-a rounds] [-f keyfile] [-m format] [-N new_passphrase]
+                [-P old_passphrase] [-Z cipher]
+     ssh-keygen -i [-f input_keyfile] [-m key_format]
+     ssh-keygen -e [-f input_keyfile] [-m key_format]
+     ssh-keygen -y [-f input_keyfile]
+     ssh-keygen -c [-a rounds] [-C comment] [-f keyfile] [-P passphrase]
+     ssh-keygen -l [-v] [-E fingerprint_hash] [-f input_keyfile]
+     ssh-keygen -B [-f input_keyfile]
+     ssh-keygen -D pkcs11
+     ssh-keygen -F hostname [-lv] [-f known_hosts_file]
+     ssh-keygen -H [-f known_hosts_file]
+     ssh-keygen — OpenSSH authentication key utility
+
+SYNOPSIS
+     ssh-keygen [-q] [-a rounds] [-b bits] [-C comment] [-f output_keyfile]
+                [-m format] [-N new_passphrase] [-O option]
+                [-t dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa]
+                [-w provider] [-Z cipher]
+     ssh-keygen -p [-a rounds] [-f keyfile] [-m format] [-N new_passphrase]
+                [-P old_passphrase] [-Z cipher]
+     ssh-keygen -i [-f input_keyfile] [-m key_format]
+     ssh-keygen -e [-f input_keyfile] [-m key_format]
+     ssh-keygen -y [-f input_keyfile]
+     ssh-keygen -c [-a rounds] [-C comment] [-f keyfile] [-P passphrase]
+     ssh-keygen -l [-v] [-E fingerprint_hash] [-f input_keyfile]
+     ssh-keygen -B [-f input_keyfile]
+     ssh-keygen -D pkcs11
+     ssh-keygen -F hostname [-lv] [-f known_hosts_file]
+     ssh-keygen -H [-f known_hosts_file]
+     ssh-keygen -K [-a rounds] [-w provider]
+     ssh-keygen -R hostname [-f known_hosts_file]
+     ssh-keygen -r hostname [-g] [-f input_keyfile]
+     ssh-keygen -M generate [-O option] output_file
+     ssh-keygen -M screen [-f input_file] [-O option] output_file
+...skipping...sh-keygen(1) line 9 (press h for help or q to quit)
+     The type of key to be generated is specified with the -t option.  If in‐
+     voked without any arguments, ssh-keygen will generate an RSA key.
+
+     ssh-keygen is also used to generate groups for use in Diffie-Hellman group
+     exchange (DH-GEX).  See the MODULI GENERATION section for details.
+
+     Finally, ssh-keygen can be used to generate and update Key Revocation
+     Lists, and to test whether given keys have been revoked by one.  See the
+     KEY REVOCATION LISTS section for details.
+
+     Normally each user wishing to use SSH with public key authentication runs
+     this once to create the authentication key in ~/.ssh/id_dsa,
+     ~/.ssh/id_ecdsa, ~/.ssh/id_ecdsa_sk, ~/.ssh/id_ed25519,
+     ~/.ssh/id_ed25519_sk or ~/.ssh/id_rsa.  Additionally, the system adminis‐
+     trator may use this to generate host keys.
+
+     Normally this program generates the key and asks for a file in which to
+     store the private key.  The public key is stored in a file with the same
+...skipping...sh-keygen(1) line 47 (press h for help or q to quit)
+             verify-time=timestamp
+                     Specifies a time to use when validating signatures instead
+                     of the current time.  The time may be specified as a date
+                     or time in the YYYYMMDD[Z] or in YYYYMMDDHHMM[SS][Z] for‐
+                     mats.  Dates and times will be interpreted in the current
+                     system time zone unless suffixed with a Z character, which
+                     causes them to be interpreted in the UTC time zone.
+
+             The -O option may be specified multiple times.
+
+     -P passphrase
+             Provides the (old) passphrase.
+
+     -p      Requests changing the passphrase of a private key file instead of
+             creating a new private key.  The program will prompt for the file
+             containing the private key, for the old passphrase, and twice for
+             the new passphrase.
+
+...skipping...sh-keygen(1) line 265 (press h for help or q to quit)
+     -t dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa
+             Specifies the type of key to create.  The possible values are
+             “dsa”, “ecdsa”, “ecdsa-sk”, “ed25519”, “ed25519-sk”, or “rsa”.
+
+             This flag may also be used to specify the desired signature type
+             when signing certificates using an RSA CA key.  The available RSA
+             signature variants are “ssh-rsa” (SHA1 signatures, not recom‐
+             mended), “rsa-sha2-256”, and “rsa-sha2-512” (the default).
+
+     -U      When used in combination with -s or -Y sign, this option indicates
+             that a CA key resides in a ssh-agent(1).  See the CERTIFICATES
+             section for more information.
+
+     -u      Update a KRL.  When specified with -k, keys listed via the command
+             line are added to the existing KRL rather than a new KRL being
+             created.
+
+     -V validity_interval
+>DEVOPS25/lektion5eygen(1) line 305 (press h for help or q to quit)
+$ ssh-ke
+ygen -t ed2551
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/kent/.ssh/id_rsa): ^C
+DEVOPS25/lektion5
+$ ssh-keygen -t ed25519DEVOPS25/lektion5
+$ ssh-keygen -t ed25519
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/kent/.ssh/id_ed25519): ^C
+DEVOPS25/lektion5
+$ ls /home/ken/home/kent~/.ssh
+config                      id_ed25519_github_personal.pub  known_hosts.old
+id_ed25519                  id_ed25519_ubsembr              known_hosts_private
+id_ed25519.pub              id_ed25519_ubsembr.pub
+id_ed25519_github_personal  known_hosts
+DEVOPS25/lektion5
+$ rm ~/.ssh/id
+_ed25519_ubs
+embr ~/.ssh/id
+_ed25519_ub
+sembr.pub 
+DEVOPS25/lektion5
+ls ~/.sshsh/id_ed25519_ubsembr ~/.ssh/id_ed25519_ubsembr.pub 
+config          id_ed25519_github_personal      known_hosts.old
+id_ed25519      id_ed25519_github_personal.pub  known_hosts_private
+id_ed25519.pub  known_hosts
+DEVOPS25/lektion5
+$ DEVOPS25/lektion5
+ssh-keygen -t ed25519ubsembr ~/.ssh/id_ed25519_ubsembr.pub 
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/kent/.ssh/id_ed25519): jisji/home/kent/.ssh/id25519_ubse2^[[D^[[D^[[D^[[_ed256519
+/home/kent/.ssh/id_ed25519 already exists.
+Overwrite (y/n)? n
+DEVOPS25/lektion5
+$ ssh-keygen -t ed25519
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/kent/.ssh/id_ed25519): /home/kent/.ssh/id_ed25519_ubse2
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/kent/.ssh/id_ed25519_ubse2
+Your public key has been saved in /home/kent/.ssh/id_ed25519_ubse2.pub
+The key fingerprint is:
+SHA256:h6RQhzazqML98LbclsEvyXR8gYs6xdlW0a8M4nedSFs kent@klad
+The key's randomart image is:
++--[ED25519 256]--+
+|      ...   .    |
+|     .=.   . .   |
+|    .o +. . . .  |
+|    ...o + + . E |
+|. ..  + S = = * .|
+|...o   O O o * o |
+| .  + = B o .    |
+|    .*.* .       |
+|    .o+..        |
++----[SHA256]-----+
+DEVOPS25/lektion5
+$ mkdir punkt_ssh
+DEVOPS25/lektion5
+$ DEVOPS25/lektion5
+$ ls
+punkt_ssh  recordings
+DEVOPS25/lektion5
+$ cp ~/.ssh/ed
+id
+_ed25519
+
+id_ed25519                      id_ed25519.pub
+id_ed25519_github_personal      id_ed25519_ubse2
+id_ed25519_github_personal.pub  id_ed25519_ubse2.pub
+DEVOPS25/lektion5
+$ cp ~/.ssh/id_ed25519_us
+bs
+e2 ~/.ssh/id
+_ed25519_us
+bs
+e2.pub punkt_ssh-v
+'/home/kent/.ssh/id_ed25519_ubse2' -> 'punkt_ssh/id_ed25519_ubse2'
+'/home/kent/.ssh/id_ed25519_ubse2.pub' -> 'punkt_ssh/id_ed25519_ubse2.pub'
+DEVOPS25/lektion5
+$ DEVOPS25/lektion5
+$ ls
+punkt_ssh  recordings
+DEVOPS25/lektion5
+$ cd punkt_ssh/
+DEVOPS25/lektion5/punkt_ssh
+$ DEVOPS25/lektion5/punkt_ssh
+$ ls
+id_ed25519_ubse2  id_ed25519_ubse2.pub
+DEVOPS25/lektion5/punkt_ssh
+$ less id
+_ed25519_ubse2
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABB7xBF25D
+TAMwQI52WgA8gXAAAAEAAAAAEAAAAzAAAAC3NzaC1lZDI1NTE5AAAAIFAJnsVHPzhAl1Z0
+r/MeStM82Fp09j25n0aAvsp/3HbaAAAAkM1c6Oeb8ycEW+7xbsITMiWqsXqy0EIZMOgF1K
+t2eEgcr/cRWNsda/GBJvoKt5BDH/cJpJS71VTzswP0gv1UnwaGFvjsq4cvPmHYi4QLvpKf
+YvmklQrs8euRyTETPIiJfqJIJUAvzN8IehfZx+mSgEuHvG8Zbm+dvHaiharUt2DEttVRjj
+bNlesDTPXMMk33Bw==
+-----END OPENSSH PRIVATE KEY-----
+>DEVOPS25/lektion5/punkt_ssh
+$ less id_ed25519_ubse2.pub 
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFAJnsVHPzhAl1Z0r/MeStM82Fp09j25n0aAvsp/3Hba kent@klad
+>DEVOPS25/lektion5/punkt_ssh
+$ which ssh-copy-id 
+/usr/bin/ssh-copy-id
+DEVOPS25/lektion5/punkt_ssh
+$ code /usr/bin/ssh-copy-id
+/usr/bin/ssh-copy-id
+DEVOPS25/lektion5/punkt_ssh
+$ DEVOPS25/lektion5/punkt_ssh
+$ ls
+id_ed25519_ubse2  id_ed25519_ubse2.pub
+DEVOPS25/lektion5/punkt_ssh
+$ ssh-copy-idman 
+SSH-COPY-ID(1)              BSD General Commands Manual             SSH-COPY-ID(1)
+
+NAME
+     ssh-copy-id — use locally available keys to authorise logins on a remote ma‐
+     chine
+
+SYNOPSIS
+     ssh-copy-id [-f] [-n] [-s] [-i [identity_file]] [-p port] [-o ssh_option]
+                 [user@]hostname
+     ssh-copy-id -h | -?
+
+DESCRIPTION
+     ssh-copy-id is a script that uses ssh(1) to log into a remote machine (pre‐
+     sumably using a login password, so password authentication should be enabled,
+     unless you've done some clever use of multiple identities).  It assembles a
+     list of one or more fingerprints (as described below) and tries to log in
+     with each key, to see if any of them are already installed (of course, if you
+     are not using ssh-agent(1) this may result in you being repeatedly prompted
+MSSH-COPY-ID(1)              BSD General Commands Manual             SSH-COPY-ID(1)
+ ESESCOApage ssh-copy-id(1) line 1 (press h for help or q to quit)
+SSH-COPY-ID(1)              BSD General Commands Manual             SSH-COPY-ID(1)
+
+NAME
+     ssh-copy-id — use locally available keys to authorise logins on a remote ma‐
+     chine
+
+SYNOPSIS
+     ssh-copy-id [-f] [-n] [-s] [-i [identity_file]] [-p port] [-o ssh_option]
+                 [user@]hostname
+     ssh-copy-id -h | -?
+
+DESCRIPTION
+     ssh-copy-id is a script that uses ssh(1) to log into a remote machine (pre‐
+     sumably using a login password, so password authentication should be enabled,
+     unless you've done some clever use of multiple identities).  It assembles a
+     list of one or more fingerprints (as described below) and tries to log in
+     with each key, to see if any of them are already installed (of course, if you
+SSH-COPY-ID(1)              BSD General Commands Manual             SSH-COPY-ID(1)
+
+NAME
+     ssh-copy-id — use locally available keys to authorise logins on a remote ma‐
+     chine
+
+SYNOPSIS
+     ssh-copy-id [-f] [-n] [-s] [-i [identity_file]] [-p port] [-o ssh_option]
+                 [user@]hostname
+     ssh-copy-id -h | -?
+
+DESCRIPTION
+     ssh-copy-id is a script that uses ssh(1) to log into a remote machine (pre‐
+     sumably using a login password, so password authentication should be enabled,
+     unless you've done some clever use of multiple identities).  It assembles a
+     list of one or more fingerprints (as described below) and tries to log in
+     with each key, to see if any of them are already installed (of course, if you
+     are not using ssh-agent(1) this may result in you being repeatedly prompted
+     for pass-phrases).  It then assembles a list of those that failed to log in,
+     and using ssh, enables logins with those keys on the remote server.  By de‐
+     fault it adds the keys by appending them to the remote user'sto quit)
+     ~/.ssh/authorized_keys (creating the file, and directory, if necessary).  It
+     is also capable of detecting if the remote system is a NetScreen, and using
+     its ‘set ssh pka-dsa key ...’ command instead.
+/Manual page ssh-copy-id(1) line 8/115 23% (press h for help or q to quit)
+     The options are as follows:
+/Manual page ssh-copy-id(1) line 10/115 23% (press h for help or q to quit)
+     -i identity_file
+             Use only the key(s) contained in identity_file (rather than looking
+             for identities via ssh-add(1) or in the default_ID_file).  If the
+             filename does not end in .pub this is added.  If the filename is
+             omitted, the default_ID_file is used.
+
+             Note that this can be used to ensure that the keys copied have the
+             comment one prefers and/or extra options applied, by ensuring that
+             the key file has these set as preferred before the copy is attempted.
+
+     -f      Forced mode: doesn't check if the keys are present on the remote
+             server.  This means that it does not need the private key.  Of
+             course, this can result in more than one copy of the key being in‐
+             stalled on the remote system.
+
+     -n      do a dry-run.  Instead of installing keys on the remote system simply
+             prints the key(s) that would have been installed.
+...skipping...sh-copy-id(1) line 28/115 40% (press h for help or q to quit)
+     Default behaviour without -i, is to check if ‘ssh-add -L’ provides any out‐
+     put, and if so those keys are used.  Note that this results in the comment on
+     the key being the filename that was given to ssh-add(1) when the key was
+     loaded into your ssh-agent(1) rather than the comment contained in that file,
+     which is a bit of a shame.  Otherwise, if ssh-add(1) provides no keys con‐
+     tents of the default_ID_file will be used.
+
+     The default_ID_file is the most recent file that matches: ~/.ssh/id*.pub,
+     (excluding those that match ~/.ssh/*-cert.pub) so if you create a key that is
+     not the one you want ssh-copy-id to use, just use touch(1) on your preferred
+     key's .pub file to reinstate it as the most recent.
+
+EXAMPLES
+     If you have already installed keys from one system on a lot of remote hosts,
+     and you then create a new key, on a new client machine, say, it can be diffi‐
+     cult to keep track of which systems on which you've installed the new key.
+     One way of dealing with this is to load both the new key and old key(s) into
+     your ssh-agent(1).  Load the new key first, without the -c option, then load
+     one or more old keys into the agent, possibly by ssh-ing to the client ma‐
+     chine that has that old key, using the -A option to allow agent forwarding:
+
+           user@newclient$ ssh-add
+           user@newclient$ ssh -A old.client
+           user@oldl$ ssh-add -c
+           ... prompt for pass-phrase ...
+           user@old$ logoff
+           user@newclient$ ssh someserver8% (press h for help or q to quit)
+
+     now, if the new key is installed on the server, you'll be allowed in un‐
+     prompted, whereas if you only have the old key(s) enabled, you'll be asked
+     for confirmation, which is your cue to log back out and run
+
+           user@newclient$ ssh-copy-id -i someserver
+
+     The reason you might want to specify the -i option in this case is to ensure
+     that the comment on the installed key is the one from the .pub file, rather
+     than just the filename that was loaded into your agent.  It also ensures that
+     only the id you intended is installed, rather than all the keys that you have
+     in your ssh-agent(1).  Of course, you can specify another id, or use the con‐
+     tents of the ssh-agent(1) as you prefer.
+
+     Having mentioned ssh-add(1)'s -c option, you might consider using this when‐
+     ever using agent forwarding to avoid your key being hijacked, but it is much
+     better to instead use ssh(1)'s ProxyCommand and -W option, to bounce through
+     remote servers while always doing direct end-to-end authentication. This way
+     the middle hop(s) don't get access to your ssh-agent(1).  A web search for
+     ‘ssh proxycommand nc’ should prove enlightening (N.B. the modern approach is
+     to use the -W option, rather than nc(1)).
+
+SEE ALSOpage ssh-copy-id(1) line 95/115 98% (press h for help or q to quit)
+     ssh(1), ssh-agent(1), sshd(8)
+MESESCOAnot found  (press RETURN)97/115 99% (press h for help or q to quit)
+M           user@newclient$ ssh-copy-id -i someserverfor help or q to quit)
+MESESCOApage ssh-copy-id(1) line 95/115 98% (press h for help or q to quit)
+M     for confirmation, which is your cue to log back out and runq to quit)
+M     prompted, whereas if you only have the old key(s) enabled, you'll be asked
+M     now, if the new key is installed on the server, you'll be allowed in un‐
+MESESCOApage ssh-copy-id(1) line 91/115 95% (press h for help or q to quit)
+M           user@newclient$ ssh someserver% (press h for help or q to quit)
+M           user@old$ logoffline 89/115 92% (press h for help or q to quit)
+M           ... prompt for pass-phrase ...% (press h for help or q to quit)
+M           user@oldl$ ssh-add -c87/115 89% (press h for help or q to quit)
+M           user@newclient$ ssh -A old.clientpress h for help or q to quit)
+M           user@newclient$ ssh-add/115 89% (press h for help or q to quit)
+MESESCOApage ssh-copy-id(1) line 84/115 88% (press h for help or q to quit)
+M     chine that has that old key, using the -A option to allow agent forwarding:
+M     one or more old keys into the agent, possibly by ssh-ing to the client ma‐
+M     your ssh-agent(1).  Load the new key first, without the -c option, then load
+M     One way of dealing with this is to load both the new key and old key(s) into
+M     cult to keep track of which systems on which you've installed the new key.
+M     and you then create a new key, on a new client machine, say, it can be diffi‐
+M     If you have already installed keys from one system on a lot of remote hosts,
+MEXAMPLESage ssh-copy-id(1) line 76/115 81% (press h for help or q to quit)
+MESESCOApage ssh-copy-id(1) line 75/115 80% (press h for help or q to quit)
+M     key's .pub file to reinstate it as the most recent.help or q to quit)
+M     not the one you want ssh-copy-id to use, just use touch(1) on your preferred
+M     (excluding those that match ~/.ssh/*-cert.pub) so if you create a key that is
+M     The default_ID_file is the most recent file that matches: ~/.ssh/id*.pub,
+MESESCOApage ssh-copy-id(1) line 70/115 77% (press h for help or q to quit)
+M     tents of the default_ID_file will be used.ss h for help or q to quit)
+M     which is a bit of a shame.  Otherwise, if ssh-add(1) provides no keys con‐
+M     loaded into your ssh-agent(1) rather than the comment contained in that file,
+M     the key being the filename that was given to ssh-add(1) when the key was
+M     put, and if so those keys are used.  Note that this results in the comment on
+M     Default behaviour without -i, is to check if ‘ssh-add -L’ provides any out‐
+MESESCOApage ssh-copy-id(1) line 63/115 72% (press h for help or q to quit)
+M             ssh_config(5).line 62/115 70% (press h for help or q to quit)
+M             better to use (per-host) settings in ssh(1)'s configuration file:
+M             Rather than specifying these as command line options, it is often
+MESESCOApage ssh-copy-id(1) line 59/115 67% (press h for help or q to quit)
+M             respectively. line 58/115 66% (press h for help or q to quit)
+M             their argument, to allow one to set the port or other ssh(1) options,
+M             These two options are simply passed through untouched, along with
+M     -p port, -o ssh_optionline 55/115 64% (press h for help or q to quit)
+MESESCOApage ssh-copy-id(1) line 54/115 62% (press h for help or q to quit)
+M     -h, -?  Print Usage summary53/115 60% (press h for help or q to quit)
+MESESCOApage ssh-copy-id(1) line 52/115 60% (press h for help or q to quit)
+M             tions on commands which can be used on the remote side. quit)
+M             uploaded with sftp.  This option is useful if the server has restric‐
+M             ~/.ssh/authorized_keys file will be downloaded, modified locally and
+M             mands on the remote side.  With this option the user'so quit)
+M     -s      SFTP mode: usually the public keys are installed by executing com‐
+MESESCOApage ssh-copy-id(1) line 46/115 53% (press h for help or q to quit)
+M             prints the key(s) that would have been installed.r q to quit)
+M     -n      do a dry-run.  Instead of installing keys on the remote system simply
+MESESCOApage ssh-copy-id(1) line 43/115 51% (press h for help or q to quit)
+M             stalled on the remote system. (press h for help or q to quit)
+M             course, this can result in more than one copy of the key being in‐
+M             server.  This means that it does not need the private key.  Of
+M     -f      Forced mode: doesn't check if the keys are present on the remote
+MESESCOApage ssh-copy-id(1) line 38/115 48% (press h for help or q to quit)
+M             the key file has these set as preferred before the copy is attempted.
+M             comment one prefers and/or extra options applied, by ensuring that
+M             Note that this can be used to ensure that the keys copied have the
+MESESCOApage ssh-copy-id(1) line 34/115 46% (press h for help or q to quit)
+M             omitted, the default_ID_file is used.h for help or q to quit)
+M             filename does not end in .pub this is added.  If the filename is
+M             for identities via ssh-add(1) or in the default_ID_file).  If the
+M             Use only the key(s) contained in identity_file (rather than looking
+M     -i identity_fileid(1) line 29/115 40% (press h for help or q to quit)
+MESESCOApage ssh-copy-id(1) line 28/115 40% (press h for help or q to quit)
+M     The options are as follows:27/115 39% (press h for help or q to quit)
+MESESCOApage ssh-copy-id(1) line 26/115 37% (press h for help or q to quit)
+M     its ‘set ssh pka-dsa key ...’ command instead. help or q to quit)
+M     is also capable of detecting if the remote system is a NetScreen, and using
+M     ~/.ssh/authorized_keys (creating the file, and directory, if necessary).  It
+>DEVOPS25/lektion5/punkt_sshline 22/115 35% (press h for help or q to quit)
+$ ls ~/.ssh/
+config                      id_ed25519_github_personal.pub  known_hosts.old
+id_ed25519                  id_ed25519_ubse2                known_hosts_private
+id_ed25519.pub              id_ed25519_ubse2.pub
+id_ed25519_github_personal  known_hosts
+DEVOPS25/lektion5/punkt_ssh
+$ ssh-copy-id -i id_ed25519_ubse2
+id_ed25519_ubse2 -p 10022 adminstrkent@localhostDEVOPS25/lektion5/punkt_ssh
+$ ssh-copy-id -i id_ed25519_ubse2 -p 10022 kent@localhost
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "id_ed25519_ubse2.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+Warning: Permanently added '[localhost]:10022' (ED25519) to the list of known hosts.
+kent@localhost's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh -p '10022' 'kent@localhost'"
+and check to make sure that only the key(s) you wanted were added.
+
+DEVOPS25/lektion5/punkt_ssh
+$ ssh -p '10022' 'kent@localhost'
+ssh -p '10022' 'kent@localhost'DEVOPS25/lektion5/punkt_ssh
+$ ssh -p '10022' 'kent@localhost
+
+
+
+
+
+
+
+
+
+
+
+kent@localhos kent@localhos
+
+
+
+Warning: Permanently added '[localhost]:10022' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-110-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue Apr 21 09:24:58 AM UTC 2026
+
+  System load:  0.04               Processes:               116
+  Usage of /:   19.0% of 24.44GB   Users logged in:         1
+  Memory usage: 10%                IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+163 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Tue Apr 21 08:56:38 2026 from 10.0.2.2
+0;kent@ubse2: ~
+kent@ubse2:~$ 0;kent@ubse2: ~
+kent@ubse2:~$ ls ~/.ssh/
+authorized_keys
+0;kent@ubse2: ~
+kent@ubse2:~$ exit
+logout
+Connection to localhost closed.
+DEVOPS25/lektion5/punkt_ssh
+$ ls ~/.ssh/DEVOPS25/lektion5/punkt_ssh
+$ ls ~/.ssh/
+config                      id_ed25519_github_personal.pub  known_hosts.old
+id_ed25519                  id_ed25519_ubse2                known_hosts_private
+id_ed25519.pub              id_ed25519_ubse2.pub
+id_ed25519_github_personal  known_hosts
+DEVOPS25/lektion5/punkt_ssh
+$ exit
+exit
