@@ -1,0 +1,298 @@
+/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS25/lektion6
+arkiv      bashargs3  minusminus  pyargs-hej.py
+bashargs1  frukt      mittskript  recordings
+bashargs2  hej        pyargs.py
+DEVOPS25/lektion6
+$ DEVOPS25/lektion6
+$ ls
+arkiv      bashargs3  minusminus  pyargs-hej.py
+bashargs1  frukt      mittskript  recordings
+bashargs2  hej        pyargs.py
+DEVOPS25/lektion6
+$ mkdir
+
+
+
+DEVOPS25/lektion6
+$ manm mkdir
+MKDIR(1)                  User Commands                 MKDIR(1)
+
+NAME
+       mkdir - make directories
+
+SYNOPSIS
+       mkdir [OPTION]... DIRECTORY...
+
+DESCRIPTION
+       Create the DIRECTORY(ies), if they do not already exist.
+>DEVOPS25/lektion6(1) line 1 (press h for help or q to quit)
+$ mkdir min katalog
+DEVOPS25/lektion6
+$ ls
+arkiv      bashargs3  katalog     mittskript     recordings
+bashargs1  frukt      min         pyargs.py
+bashargs2  hej        minusminus  pyargs-hej.py
+DEVOPS25/lektion6
+$ mkdir min katalog"DEVOPS25/lektion6
+$ mkdir "min katalog
+DEVOPS25/lektion6
+$ ls
+ arkiv       frukt     minusminus     pyargs-hej.py
+ bashargs1   hej      'min katalog'   recordings
+ bashargs2   katalog   mittskript
+ bashargs3   min       pyargs.py
+DEVOPS25/lektion6
+$  ls min katalogDEVOPS25/lektion6
+$  ls min katalog
+katalog:
+
+min:
+DEVOPS25/lektion6
+$ mkdir "min katalog
+lsDEVOPS25/lektion6
+$ ls "min katalog
+DEVOPS25/lektion6
+$ touch "min katalog/fil"
+DEVOPS25/lektion6
+ls "min katalog"DEVOPS25/lektion6
+$ ls "min katalog"
+fil
+DEVOPS25/lektion6
+$ ls "min katalog'
+fil
+DEVOPS25/lektion6
+$ ls 'min katalog
+
+
+
+min\ katalog/fil
+
+
+
+l
+DEVOPS25/lektion6
+$ ls 'min katalog'
+fil
+DEVOPS25/lektion6
+$ ls 'min katalog"
+fil
+DEVOPS25/lektion6
+$ ls "min katalog\ katalo
+
+
+
+
+
+
+
+
+
+fil
+DEVOPS25/lektion6
+$ DEVOPS25/lektion6
+$ KATTDJUR=lodjur
+DEVOPS25/lektion6
+$ mkdir $KATTDJUR
+DEVOPS25/lektion6
+$ ls
+ arkiv       bashargs3   katalog   minusminus     pyargs.py
+ bashargs1   frukt       lodjur   'min katalog'   pyargs-hej.py
+ bashargs2   hej         min       mittskript     recordings
+DEVOPS25/lektion6
+$ DEVOPS25/lektion6
+KATTDJUR=lodjupanter
+DEVOPS25/lektion6
+mkdir $KATTDJUR"$KATTDJUR
+
+
+
+
+DEVOPS25/lektion6
+$ ls
+ arkiv       frukt     min            panter
+ bashargs1   hej       minusminus     pyargs.py
+ bashargs2   katalog  'min katalog'   pyargs-hej.py
+ bashargs3   lodjur    mittskript     recordings
+DEVOPS25/lektion6
+$ DEVOPS25/lektion6
+KATTDJUR=pante"pantespantervpanterapanterrpantertpanter panter
+
+
+
+
+
+
+DEVOPS25/lektion6
+$ eccmkdir $KATTDJU- $KATTDJUv $KATTDJU $KATTDJU $KATTDJU $KATTDJU- $KATTDJUv $KATTDJU
+
+
+
+
+
+
+mkdir: created directory 'svart'
+mkdir: cannot create directory ‘panter’: File exists
+DEVOPS25/lektion6
+$ DEVOPS25/lektion6
+$ mkdir -=v gul panter
+mkdir: created directory 'gul'
+mkdir: cannot create directory ‘panter’: File exists
+DEVOPS25/lektion6
+$ mkdir -v gul panter"
+mkdir: created directory 'gul panter'
+DEVOPS25/lektion6
+$ DEVOPS25/lektion6
+$ mkdir '$KATTDJUR'
+DEVOPS25/lektion6
+$ ls
+ arkiv       gul           min            pyargs.py
+ bashargs1  'gul panter'   minusminus     pyargs-hej.py
+ bashargs2   hej          'min katalog'   recordings
+ bashargs3   katalog       mittskript     svart
+ frukt       lodjur        panter        '$KATTDJUR'
+DEVOPS25/lektion6
+$ DEVOPS25/lektion6
+$ alias
+alias ls='ls -v --color=auto'
+DEVOPS25/lektion6
+$ l
+unalias
+
+
+
+DEVOPS25/lektion6
+$ ls
+ arkiv       gul           min            pyargs.py
+ bashargs1  'gul panter'   minusminus     pyargs-hej.py
+ bashargs2   hej          'min katalog'   recordings
+ bashargs3   katalog       mittskript     svart
+ frukt       lodjur        panter        '$KATTDJUR'
+DEVOPS25/lektion6
+$ unalias ls
+DEVOPS25/lektion6
+$ DEVOPS25/lektion6
+$ ls
+'$KATTDJUR'   frukt	    lodjur	   panter
+ arkiv	      gul	    min		   pyargs-hej.py
+ bashargs1   'gul panter'  'min katalog'   pyargs.py
+ bashargs2    hej	    minusminus	   recordings
+ bashargs3    katalog	    mittskript	   svart
+DEVOPS25/lektion6
+$ DEVOPS25/lektion6
+$ alias
+DEVOPS25/lektion6
+$ ls
+'$KATTDJUR'   frukt	    lodjur	   panter
+ arkiv	      gul	    min		   pyargs-hej.py
+ bashargs1   'gul panter'  'min katalog'   pyargs.py
+ bashargs2    hej	    minusminus	   recordings
+ bashargs3    katalog	    mittskript	   svart
+DEVOPS25/lektion6
+$ DEVOPS25/lektion6
+$ ls
+'$KATTDJUR'   frukt	    lodjur	   panter
+ arkiv	      gul	    min		   pyargs-hej.py
+ bashargs1   'gul panter'  'min katalog'   pyargs.py
+ bashargs2    hej	    minusminus	   recordings
+ bashargs3    katalog	    mittskript	   svart
+DEVOPS25/lektion6
+$ DEVOPS25/lektion6
+$ nano bok
+>DEVOPS25/lektion6: bok   [ Writing... ] [ Wrote 4 lines ]         Y Yes     S  
+$ rm bok 
+DEVOPS25/lektion6
+$ DEVOPS25/lektion6
+$ nano bokvars
+>DEVOPS25/lektion6: bokvars [ Writing... ] [ Wrote 2 lines ]       Y Yes     S  
+$ bash bokvars 
+DEVOPS25/lektion6
+$ echo $BOK
+
+DEVOPS25/lektion6
+$ code bokvars 
+DEVOPS25/lektion6
+bash bokvars DEVOPS25/lektion6
+$ bash bokvars 
+DEVOPS25/lektion6
+echo $BOKkvars 
+
+DEVOPS25/lektion6
+$ h
+source bokvars DEVOPS25/lektion6
+$ source bokvars 
+DEVOPS25/lektion6
+$ BOK="albert och stdio"
+BOK="albert och stdio"
+
+
+
+
+
+
+
+
+echo $BOK
+albert och stdio
+DEVOPS25/lektion6
+source bokvars DEVOPS25/lektion6
+$ source bokvars 
+BOKVARS KORS
+DEVOPS25/lektion6
+$ echo $BOK
+albert och stdio
+DEVOPS25/lektion6
+$ unset BOK
+DEVOPS25/lektion6
+echo $BOKDEVOPS25/lektion6
+$ echo $BOK
+
+DEVOPS25/lektion6
+$ bash bokvars 
+BOKVARS KORS
+DEVOPS25/lektion6
+$ DEVOPS25/lektion6
+$ source bokvars 
+BOKVARS KORS
+DEVOPS25/lektion6
+echo $BOKbokvars 
+albert och stdio
+DEVOPS25/lektion6
+$ ls 
+
+$KATTDJUR/     frukt/         min/           pyargs.py
+arkiv/         gul/           min katalog/   recordings/
+bashargs1      gul panter/    minusminus/    svart/
+bashargs2      hej            mittskript     
+bashargs3      katalog/       panter/        
+bokvars        lodjur/        pyargs-hej.py  
+DEVOPS25/lektion6
+$ ls
+DEVOPS25/lektion6
+$ ls
+'$KATTDJUR'   bokvars	    katalog	   mittskript	   svart
+ arkiv	      frukt	    lodjur	   panter
+ bashargs1    gul	    min		   pyargs-hej.py
+ bashargs2   'gul panter'  'min katalog'   pyargs.py
+ bashargs3    hej	    minusminus	   recordings
+DEVOPS25/lektion6
+$ source
+
+
+
+
+
+DEVOPS25/lektion6
+$ . bokvars 
+BOKVARS KORS
+DEVOPS25/lektion6
+$ spoupuource bokvars 
+BOKVARS KORS
+DEVOPS25/lektion6
+$ # samma!
+DEVOPS25/lektion6
+$ DEVOPS25/lektion6
+$ PS1=HEJSAN "
+
+DEVOPS25/lektion6
+$ 
+exit
