@@ -1,4 +1,4 @@
 import sys
 
-for arg, index in enumerate(sys.argv):
+for index, arg in enumerate(sys.argv):
     print(f"Arg {index}: {arg}")
