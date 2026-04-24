@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style type="text/css">
+pre {
+  font-family:Courier New;
+  font-size:10pt;
+}
+
+.af_line {
+  color: gray;
+  text-decoration: none;
+}
+
+</style>
+<title>Source file</title>
+</head>
+<body>
+<pre>/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS25/lektion7
+<span style="font-weight:bold;color:#00ff00;">col_comma</span>     <span style="font-weight:bold;color:#00ff00;">loophejgrupp</span>      <span style="font-weight:bold;color:#5c5cff;">param_exp</span>   svensson
+<span style="font-weight:bold;color:#00ff00;">col_comma_v2</span>  lsdir             <span style="font-weight:bold;color:#00ff00;">read1</span>       <span style="font-weight:bold;color:#5c5cff;">wordsplitting</span>
+<span style="font-weight:bold;color:#00ff00;">col_spaces</span>    member.csv        <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="font-weight:bold;color:#00ff00;">loophej</span>       member_space.txt  saker.txt
+<span style="font-weight:bold;color:#00ff00;">loophej2</span>      <span style="font-weight:bold;color:#5c5cff;">omdir</span>             stina
+<span style="color:#5c5cff;">DEVOPS25/lektion7
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion7
+</span>$ ls
+<span style="font-weight:bold;color:#00ff00;">col_comma</span>     <span style="font-weight:bold;color:#00ff00;">loophejgrupp</span>      <span style="font-weight:bold;color:#5c5cff;">param_exp</span>   svensson
+<span style="font-weight:bold;color:#00ff00;">col_comma_v2</span>  lsdir             <span style="font-weight:bold;color:#00ff00;">read1</span>       <span style="font-weight:bold;color:#5c5cff;">wordsplitting</span>
+<span style="font-weight:bold;color:#00ff00;">col_spaces</span>    member.csv        <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="font-weight:bold;color:#00ff00;">loophej</span>       member_space.txt  saker.txt
+<span style="font-weight:bold;color:#00ff00;">loophej2</span>      <span style="font-weight:bold;color:#5c5cff;">omdir</span>             stina
+<span style="color:#5c5cff;">DEVOPS25/lektion7
+</span>$ mkdir pathexp
+<span style="color:#5c5cff;">DEVOPS25/lektion7
+</span>$ cd p
+a
+thexp/
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ ls
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ echotouch bild{1..10}.png
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ ls
+bild1.png  bild3.png  bild5.png  bild7.png  bild9.png
+bild2.png  bild4.png  bild6.png  bild8.png  bild10.png
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ touch bild{1..10}.pn{1..10}.pn{1..10}.pn{1..10}.pn{1..10}.pnp{1..10}.pnh{1..10}.pno{1..10}.pnt{1..10}.pno{1..10}.pn
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ ls
+bild1.png  bild5.png  bild9.png   photo3.png  photo7.png
+bild2.png  bild6.png  bild10.png  photo4.png  photo8.png
+bild3.png  bild7.png  photo1.png  photo5.png  photo9.png
+bild4.png  bild8.png  photo2.png  photo6.png  photo10.png
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ touch photo{1..10}.pn{1..10}.pn{1..10}.pn{1..10}.pn{1..10}.pn{1..10}.pnb{1..10}.pno{1..10}.pno{1..10}.pnk{1..10}.pns{1..10}.pntxt
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ ls
+bild1.png  bild7.png   books3.txt  books9.txt   photo5.png
+bild2.png  bild8.png   books4.txt  books10.txt  photo6.png
+bild3.png  bild9.png   books5.txt  photo1.png   photo7.png
+bild4.png  bild10.png  books6.txt  photo2.png   photo8.png
+bild5.png  books1.txt  books7.txt  photo3.png   photo9.png
+bild6.png  books2.txt  books8.txt  photo4.png   photo10.png
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ man bash
+BASH(1)              General Commands Manual             BASH(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       bash - GNU Bourne-Again SHell
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">bash</span> [options] [command_string | file]
+
+<span style="font-weight:bold;color:#7f7f7f;">COPYRIGHT</span>
+       Bash  is  Copyright  (C)  1989-2022  by the Free Software
+       Foundation, Inc.
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash</span> is an  <span style="font-weight:bold;color:#7f7f7f;">sh</span>-compatible  command  language  interpreter
+<span style="color:#000000;background-color:#000000;">BASH(1)              General Commands Manual             BASH(1)</span> style="color:#000000;background-color:#000000;">
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       bash - GNU Bourne-Again SHell
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">bash</span> [options] [command_string | file]
+
+<span style="font-weight:bold;color:#7f7f7f;">COPYRIGHT</span>
+       Bash  is  Copyright  (C)  1989-2022  by the Free Software
+       Foundation, Inc.
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash</span> is an  <span style="font-weight:bold;color:#7f7f7f;">sh</span>-compatible  command  language  interpreter
+BASH(1)              General Commands Manual             BASH(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       bash - GNU Bourne-Again SHell
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">bash</span> [options] [command_string | file]
+
+<span style="font-weight:bold;color:#7f7f7f;">COPYRIGHT</span>
+       Bash  is  Copyright  (C)  1989-2022  by the Free Software
+       Foundation, Inc.
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash</span> is an  <span style="font-weight:bold;color:#7f7f7f;">sh</span>-compatible  command  language  interpreter
+...skipping...
+              splitting and <span style="color:#000000;background-color:#000000;">pathname expansion</span><span style="color:#000000;background-color:#000000;">.  The shell  per‐</span>
+              forms  tilde expansion, parameter and variable ex‐
+              pansion, arithmetic expansion,  command  substitu‐
+              tion,  process  substitution, and quote removal on
+              those words (the expansions that  would  occur  if
+              the words were enclosed in double quotes).  Condi‐
+              tional operators such as <span style="font-weight:bold;color:#7f7f7f;">-f</span> must be unquoted to be
+              recognized as primaries.
+
+              When used with <span style="font-weight:bold;color:#7f7f7f;">[[</span>, the <span style="font-weight:bold;color:#7f7f7f;">&lt;</span> and <span style="font-weight:bold;color:#7f7f7f;">&gt;</span> operators sort lex‐
+              icographically using the current locale.
+
+       See the description of the <span style="text-decoration:underline;">test</span> builtin command  (section
+       SHELL BUILTIN COMMANDS below) for the handling of parame‐
+<span style="color:#000000;background-color:#000000;">...skipping...ash(1) line 432 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+              and </span><span style="color:#000000;background-color:#000000;">pathname expansion</span><span style="color:#000000;background-color:#000000;">.  When the expansion occurs</span>
+              within  double quotes, it expands to a single word
+              with the value of each parameter separated by  the
+              first character of the <span style="font-weight:bold;color:#7f7f7f;">IFS</span> special variable.  That
+              is, &quot;<span style="font-weight:bold;color:#7f7f7f;">$*</span>&quot; is equivalent to &quot;<span style="font-weight:bold;color:#7f7f7f;">$1</span><span style="text-decoration:underline;">c</span><span style="font-weight:bold;color:#7f7f7f;">$2</span><span style="text-decoration:underline;">c</span><span style="font-weight:bold;color:#7f7f7f;">...</span>&quot;, where <span style="text-decoration:underline;">c</span>  is
+              the  first character of the value of the <span style="font-weight:bold;color:#7f7f7f;">IFS</span> vari‐
+              able.  If <span style="font-weight:bold;color:#7f7f7f;">IFS</span> is unset, the parameters  are  sepa‐
+              rated  by  spaces.  If <span style="font-weight:bold;color:#7f7f7f;">IFS</span> is null, the parameters
+              are joined without intervening separators.
+       <span style="font-weight:bold;color:#7f7f7f;">&#64;</span>      Expands to  the  positional  parameters,  starting
+              from  one.   In  contexts  where word splitting is
+              performed, this expands each positional  parameter
+              to  a  separate word; if not within double quotes,
+              these words are subject  to  word  splitting.   In
+<span style="color:#000000;background-color:#000000;">...skipping...ash(1) line 925 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+              within </span><span style="color:#000000;background-color:#000000;">pathname expansion</span><span style="color:#000000;background-color:#000000;"> and pattern matching.</span>
+       <span style="font-weight:bold;color:#7f7f7f;">LC_CTYPE</span>
+              This  variable  determines  the  interpretation of
+              characters and the behavior of  character  classes
+              within <span style="color:#000000;background-color:#000000;">pathname expansion</span><span style="color:#000000;background-color:#000000;"> and pattern matching.</span>
+       <span style="font-weight:bold;color:#7f7f7f;">LC_MESSAGES</span>
+              This variable determines the locale used to trans‐
+              late double-quoted strings preceded by a <span style="font-weight:bold;color:#7f7f7f;">$</span>.
+       <span style="font-weight:bold;color:#7f7f7f;">LC_NUMERIC</span>
+              This variable determines the locale category  used
+              for number formatting.
+       <span style="font-weight:bold;color:#7f7f7f;">LC_TIME</span>
+              This  variable determines the locale category used
+              for data and time formatting.
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">LINES</span>  Used by the <span style="font-weight:bold;color:#7f7f7f;">select</span> compound command  to  determine
+              the  column  length  for printing selection lists.
+              Automatically set if the  <span style="font-weight:bold;color:#7f7f7f;">checkwinsize</span>  option  is
+              enabled or in an interactive shell upon receipt of
+<span style="color:#000000;background-color:#000000;">...skipping...ash(1) line 1576 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       conflicts  with </span><span style="color:#000000;background-color:#000000;">pathname expansion</span><span style="color:#000000;background-color:#000000;">.  If </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">subscript</span><span style="color:#000000;background-color:#000000;"> is </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&#64;</span> or
+       <span style="font-weight:bold;color:#7f7f7f;">*</span>, the word expands to all members of <span style="text-decoration:underline;">name</span>.   These  sub‐
+       scripts  differ  only when the word appears within double
+       quotes.  If the word is double-quoted, ${<span style="text-decoration:underline;">name</span>[*]} expands
+       to a single word with the value of each array member sep‐
+       arated by the first character of the  <span style="font-weight:bold;color:#7f7f7f;">IFS</span>  special  vari‐
+       able,  and  ${<span style="text-decoration:underline;">name</span>[&#64;]}  expands each element of <span style="text-decoration:underline;">name</span> to a
+       separate  word.   When  there  are  no   array   members,
+       ${<span style="text-decoration:underline;">name</span>[&#64;]}  expands to nothing.  If the double-quoted ex‐
+       pansion occurs within a word, the expansion of the  first
+       parameter is joined with the beginning part of the origi‐
+       nal word, and the expansion  of  the  last  parameter  is
+       joined  with the last part of the original word.  This is
+       analogous to the expansion of the  special  parameters  <span style="font-weight:bold;color:#7f7f7f;">*</span>
+<span style="color:#000000;background-color:#000000;">...skipping...ash(1) line 1830 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       subject  to </span><span style="color:#000000;background-color:#000000;">pathname expansion</span><span style="color:#000000;background-color:#000000;">.  If </span><span style="color:#000000;background-color:#000000;">pathname expansion</span><span style="color:#000000;background-color:#000000;"> is</span>
+       not desired, the argument should be quoted.
+
+       The <span style="font-weight:bold;color:#7f7f7f;">declare</span>, <span style="font-weight:bold;color:#7f7f7f;">local</span>, and <span style="font-weight:bold;color:#7f7f7f;">readonly</span> builtins each  accept  a
+       <span style="font-weight:bold;color:#7f7f7f;">-a</span>  option to specify an indexed array and a <span style="font-weight:bold;color:#7f7f7f;">-A</span> option to
+       specify an associative array.  If both options  are  sup‐
+       plied,  <span style="font-weight:bold;color:#7f7f7f;">-A</span>  takes precedence.  The <span style="font-weight:bold;color:#7f7f7f;">read</span> builtin accepts a
+       <span style="font-weight:bold;color:#7f7f7f;">-a</span> option to assign a list of words read from  the  stan‐
+       dard  input  to  an  array.  The <span style="font-weight:bold;color:#7f7f7f;">set</span> and <span style="font-weight:bold;color:#7f7f7f;">declare</span> builtins
+       display array values in a way  that  allows  them  to  be
+       reused as assignments.
+
+<span style="font-weight:bold;color:#7f7f7f;">EXPANSION</span>
+       Expansion  is  performed on the command line after it has
+<span style="color:#000000;background-color:#000000;">...skipping...ash(1) line 1886 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">metic</span><span style="color:#000000;background-color:#000000;"> </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">expansion</span><span style="color:#000000;background-color:#000000;">, </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">word</span><span style="color:#000000;background-color:#000000;"> </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">splitting</span><span style="color:#000000;background-color:#000000;">, and </span><span style="text-decoration:underline;color:#000000;background-color:#000000;"></span><span style="text-decoration:underline;color:#000000;background-color:#000000;">pathname</span><span style="text-decoration:underline;color:#000000;background-color:#000000;"></span><span style="color:#000000;background-color:#000000;"></span><span style="color:#000000;background-color:#000000;"> </span><span style="color:#000000;background-color:#000000;"></span><span style="text-decoration:underline;color:#000000;background-color:#000000;"></span><span style="text-decoration:underline;color:#000000;background-color:#000000;">expansion</span><span style="text-decoration:underline;color:#000000;background-color:#000000;"></span><span style="color:#000000;background-color:#000000;">.</span>
+
+       The order of expansions is: brace expansion; tilde expan‐
+       sion, parameter and variable expansion, arithmetic expan‐
+       sion,  and  command substitution (done in a left-to-right
+       fashion); word splitting; and <span style="color:#000000;background-color:#000000;">pathname expansion</span><span style="color:#000000;background-color:#000000;">.</span>
+
+       On systems that can support it, there  is  an  additional
+       expansion  available: <span style="text-decoration:underline;">process</span> <span style="text-decoration:underline;">substitution</span>.  This is per‐
+       formed at the same time as  tilde,  parameter,  variable,
+       and arithmetic expansion and command substitution.
+
+       After  these  expansions  are performed, quote characters
+       present in the original word are removed unless they have
+<span style="color:#000000;background-color:#000000;">       been quoted themselves (</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">quote</span><span style="color:#000000;background-color:#000000;"> </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">removal</span><span style="color:#000000;background-color:#000000;">).</span>
+
+       Only brace expansion, word splitting, and pathname expan‐
+       sion can increase the number of words of  the  expansion;
+       other  expansions  expand a single word to a single word.
+<span style="color:#000000;background-color:#000000;">...skipping...ash(1) line 1908 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+              in </span><span style="color:#000000;background-color:#000000;">pathname expansion</span><span style="color:#000000;background-color:#000000;">.  Each character in the  ex‐</span>
+              panded  value  of <span style="text-decoration:underline;">parameter</span> is tested against <span style="text-decoration:underline;">pat‐</span>
+              <span style="text-decoration:underline;">tern</span>, and, if it matches the pattern, its case  is
+              converted.   The  pattern  should  not  attempt to
+              match more than one  character.   The  <span style="font-weight:bold;color:#7f7f7f;">^</span>  operator
+              converts lowercase letters matching <span style="text-decoration:underline;">pattern</span> to up‐
+              percase; the <span style="font-weight:bold;color:#7f7f7f;">,</span> operator converts  matching  upper‐
+              case  letters  to lowercase.  The <span style="font-weight:bold;color:#7f7f7f;">^^</span> and <span style="font-weight:bold;color:#7f7f7f;">,,</span> expan‐
+              sions convert each matched character  in  the  ex‐
+              panded  value;  the  <span style="font-weight:bold;color:#7f7f7f;">^</span>  and <span style="font-weight:bold;color:#7f7f7f;">,</span> expansions match and
+              convert only the first character in  the  expanded
+              value.   If <span style="text-decoration:underline;">pattern</span> is omitted, it is treated like
+              a <span style="font-weight:bold;color:#7f7f7f;">?</span>, which matches every character.  If  <span style="text-decoration:underline;">parameter</span>
+              is  <span style="font-weight:bold;color:#7f7f7f;">&#64;</span> or <span style="font-weight:bold;color:#7f7f7f;">*</span>, the case modification operation is ap‐
+<span style="color:#000000;background-color:#000000;">...skipping...ash(1) line 2295 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+              splitting  and </span><span style="color:#000000;background-color:#000000;">pathname expansion</span><span style="color:#000000;background-color:#000000;"> as described be‐</span>
+              low.
+
+   <span style="font-weight:bold;color:#7f7f7f;">Command</span> <span style="font-weight:bold;color:#7f7f7f;">Substitution</span>
+       <span style="text-decoration:underline;">Command</span> <span style="text-decoration:underline;">substitution</span> allows the output of  a  command  to
+       replace the command name.  There are two forms:
+
+              <span style="font-weight:bold;color:#7f7f7f;">$(</span><span style="text-decoration:underline;">command</span><span style="font-weight:bold;color:#7f7f7f;">)</span>
+       or
+              <span style="font-weight:bold;color:#7f7f7f;">`</span><span style="text-decoration:underline;">command</span><span style="font-weight:bold;color:#7f7f7f;">`</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">Bash</span>  performs  the  expansion  by executing <span style="text-decoration:underline;">command</span> in a
+       subshell environment and replacing the command  substitu‐
+       tion  with  the  standard output of the command, with any
+<span style="color:#000000;background-color:#000000;">...skipping...ash(1) line 2368 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       splitting and </span><span style="color:#000000;background-color:#000000;">pathname expansion</span><span style="color:#000000;background-color:#000000;"> are not performed on the</span>
+       results.
+
+   <span style="font-weight:bold;color:#7f7f7f;">Arithmetic</span> <span style="font-weight:bold;color:#7f7f7f;">Expansion</span>
+       Arithmetic  expansion  allows the evaluation of an arith‐
+       metic expression and the substitution of the result.  The
+       format for arithmetic expansion is:
+
+              <span style="font-weight:bold;color:#7f7f7f;">$((</span><span style="text-decoration:underline;">expression</span><span style="font-weight:bold;color:#7f7f7f;">))</span>
+
+       The  old  format  <span style="font-weight:bold;color:#7f7f7f;">$[</span><span style="text-decoration:underline;">expression</span><span style="font-weight:bold;color:#7f7f7f;">]</span> is deprecated and will be
+       removed in upcoming versions of bash.
+
+       The <span style="text-decoration:underline;">expression</span> undergoes the same  expansions  as  if  it
+<span style="color:#000000;background-color:#000000;">...skipping...ash(1) line 2400 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+   </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">Pathname</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="color:#000000;background-color:#000000;"> </span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">Expansion</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span>
+       After word splitting, unless the <span style="font-weight:bold;color:#7f7f7f;">-f</span> option has been  set,
+       <span style="font-weight:bold;color:#7f7f7f;">bash</span>  scans each word for the characters <span style="font-weight:bold;color:#7f7f7f;">*</span>, <span style="font-weight:bold;color:#7f7f7f;">?</span>, and <span style="font-weight:bold;color:#7f7f7f;">[</span>.  If
+       one of these characters appears, and is not quoted,  then
+       the  word  is regarded as a <span style="text-decoration:underline;">pattern</span>, and replaced with an
+       alphabetically sorted list of filenames matching the pat‐
+       tern  (see <span style="font-weight:bold;color:#7f7f7f;">Pattern</span> <span style="font-weight:bold;color:#7f7f7f;">Matching</span> below).  If no matching file‐
+       names are found, and the shell option <span style="font-weight:bold;color:#7f7f7f;">nullglob</span> is not en‐
+       abled,  the  word is left unchanged.  If the <span style="font-weight:bold;color:#7f7f7f;">nullglob</span> op‐
+       tion is set, and no matches are found, the  word  is  re‐
+       moved.   If  the  <span style="font-weight:bold;color:#7f7f7f;">failglob</span>  shell  option  is set, and no
+       matches are found, an error message is  printed  and  the
+       command  is not executed.  If the shell option <span style="font-weight:bold;color:#7f7f7f;">nocaseglob</span>
+       is enabled, the match is performed without regard to  the
+<span style="color:#000000;background-color:#000000;">       case  of  alphabetic  characters.   Note  that when using</span>pan style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       range expressions like [a-z] (see below), letters of  the</span>pan style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       other  case  may be included, depending on the setting of</span>pan style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">LC_COLLATE.</span>  When a pattern is used for  pathname  expan‐
+<span style="color:#000000;background-color:#000000;">       sion,  the character </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">``.&apos;&apos;</span>  at the start of a name or im‐
+<span style="color:#000000;background-color:#000000;">       mediately following a slash must be  matched  explicitly,</span>pan style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       unless  the  shell  option  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">dotglob</span>  is set.  In order to
+<span style="color:#000000;background-color:#000000;">       match the filenames </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">``.&apos;&apos;</span>  and <span style="font-weight:bold;color:#7f7f7f;">``..&apos;&apos;</span>, the  pattern  must
+<span style="color:#000000;background-color:#000000;">       begin  with  ``.&apos;&apos; (for example, ``.?&apos;&apos;), even if </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">dotglob</span>
+<span style="color:#000000;background-color:#000000;">       is set.  If the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">globskipdots</span> shell option is enabled, the
+<span style="color:#000000;background-color:#000000;">       filenames  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">``.&apos;&apos;</span>   and <span style="font-weight:bold;color:#7f7f7f;">``..&apos;&apos;</span>  are never matched, even if
+<span style="color:#000000;background-color:#000000;">       the pattern begins with a </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">``.&apos;&apos;</span>.  When not matching path‐
+<span style="color:#000000;background-color:#000000;">       names,  the  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">``.&apos;&apos;</span>   character  is not treated specially.
+<span style="color:#000000;background-color:#000000;">       When matching a pathname, the slash character must always</span>pan style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       be  matched  explicitly by a slash in the pattern, but in</span>pan style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       other matching contexts it can be matched  by  a  special</span>pan style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       pattern character as described below under </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Pattern</span> <span style="font-weight:bold;color:#7f7f7f;">Match‐</span>
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ing</span>.  See the description  of  <span style="font-weight:bold;color:#7f7f7f;">shopt</span>  below  under  <span style="font-weight:bold;color:#7f7f7f;">SHELL</span>
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">BUILTIN</span>  <span style="font-weight:bold;color:#7f7f7f;">COMMANDS</span>  for  a  description of the <span style="font-weight:bold;color:#7f7f7f;">nocaseglob</span>,
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">nullglob</span>, <span style="font-weight:bold;color:#7f7f7f;">globskipdots</span>, <span style="font-weight:bold;color:#7f7f7f;">failglob</span>, and <span style="font-weight:bold;color:#7f7f7f;">dotglob</span>  shell  op‐
+<span style="color:#000000;background-color:#000000;">       tions.</span> line 2501 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage bash(1) line 2502 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       The </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">GLOBIGNORE</span> shell variable may be used to restrict the
+<span style="color:#000000;background-color:#000000;">       set of file names matching a </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">pattern</span><span style="color:#000000;background-color:#000000;">.  If  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">GLOBIGNORE</span>  is
+<span style="color:#000000;background-color:#000000;">       set, each matching file name that also matches one of the</span>pan style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       patterns in  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">GLOBIGNORE</span>  is  removed  from  the  list  of
+<span style="color:#000000;background-color:#000000;">       matches.   If  the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">nocaseglob</span> option is set, the matching
+<span style="color:#000000;background-color:#000000;">       against the patterns in </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">GLOBIGNORE</span> is  performed  without
+<span style="color:#000000;background-color:#000000;">       regard to case.  The filenames </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">``.&apos;&apos;</span>  and <span style="font-weight:bold;color:#7f7f7f;">``..&apos;&apos;</span>  are al‐
+<span style="color:#000000;background-color:#000000;">       ways ignored when </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">GLOBIGNORE</span> is set and not  null.   How‐
+<span style="color:#000000;background-color:#000000;">       ever,  setting </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">GLOBIGNORE</span> to a non-null value has the ef‐
+<span style="color:#000000;background-color:#000000;">       fect of enabling the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">dotglob</span> shell option, so  all  other
+<span style="color:#000000;background-color:#000000;">       filenames beginning with a </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">``.&apos;&apos;</span>  will match.  To get the
+<span style="color:#000000;background-color:#000000;">       old behavior  of  ignoring  filenames  beginning  with  a</span>pan style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">``.&apos;&apos;</span>,  make  <span style="font-weight:bold;color:#7f7f7f;">``.*&apos;&apos;</span>   one of the patterns in <span style="font-weight:bold;color:#7f7f7f;">GLOBIGNORE</span>.
+<span style="color:#000000;background-color:#000000;">M       tions.</span>line 2516 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">nullglob</span>, <span style="font-weight:bold;color:#7f7f7f;">globskipdots</span>, <span style="font-weight:bold;color:#7f7f7f;">failglob</span>, and <span style="font-weight:bold;color:#7f7f7f;">dotglob</span>  shell  op‐
+<span style="color:#000000;background-color:#000000;">M       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">BUILTIN</span>  <span style="font-weight:bold;color:#7f7f7f;">COMMANDS</span>  for  a  description of the <span style="font-weight:bold;color:#7f7f7f;">nocaseglob</span>,
+<span style="color:#000000;background-color:#000000;">M       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ing</span>.  See the description  of  <span style="font-weight:bold;color:#7f7f7f;">shopt</span>  below  under  <span style="font-weight:bold;color:#7f7f7f;">SHELL</span>
+<span style="color:#000000;background-color:#000000;">M       pattern character as described below under </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Pattern</span> <span style="font-weight:bold;color:#7f7f7f;">Match‐</span>
+<span style="color:#000000;background-color:#000000;">M       other matching contexts it can be matched  by  a  special</span>an style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M       be  matched  explicitly by a slash in the pattern, but in</span>an style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M       When matching a pathname, the slash character must always</span>an style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M       names,  the  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">``.&apos;&apos;</span>   character  is not treated specially.
+<span style="color:#000000;background-color:#000000;">M       the pattern begins with a </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">``.&apos;&apos;</span>.  When not matching path‐
+<span style="color:#000000;background-color:#000000;">M       filenames  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">``.&apos;&apos;</span>   and <span style="font-weight:bold;color:#7f7f7f;">``..&apos;&apos;</span>  are never matched, even if
+<span style="color:#000000;background-color:#000000;">M       is set.  If the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">globskipdots</span> shell option is enabled, the
+<span style="color:#000000;background-color:#000000;">M       begin  with  ``.&apos;&apos; (for example, ``.?&apos;&apos;), even if </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">dotglob</span>
+<span style="color:#000000;background-color:#000000;">M       match the filenames </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">``.&apos;&apos;</span>  and <span style="font-weight:bold;color:#7f7f7f;">``..&apos;&apos;</span>, the  pattern  must
+<span style="color:#000000;background-color:#000000;">M       unless  the  shell  option  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">dotglob</span>  is set.  In order to
+<span style="color:#000000;background-color:#000000;">M       mediately following a slash must be  matched  explicitly,</span>an style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M       sion,  the character </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">``.&apos;&apos;</span>  at the start of a name or im‐
+<span style="color:#000000;background-color:#000000;">M       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">LC_COLLATE.</span>  When a pattern is used for  pathname  expan‐
+<span style="color:#000000;background-color:#000000;">M       other  case  may be included, depending on the setting of</span>an style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M       range expressions like [a-z] (see below), letters of  the</span>an style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M       case  of  alphabetic  characters.   Note  that when using</span>an style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M       is enabled, the match is performed without regard to  the</span>an style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M       command  is not executed.  If the shell option </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">nocaseglob</span>
+<span style="color:#000000;background-color:#000000;">M       matches are found, an error message is  printed  and  the</span>an style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M       moved.   If  the  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">failglob</span>  shell  option  is set, and no
+<span style="color:#000000;background-color:#000000;">M       tion is set, and no matches are found, the  word  is  re‐</span> style="color:#000000;background-color:#000000;">
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS25/lektion7/pathexp00000;background-color:#000000;">
+</span>$ ls
+bild1.png  bild7.png   books3.txt  books9.txt   photo5.png
+bild2.png  bild8.png   books4.txt  books10.txt  photo6.png
+bild3.png  bild9.png   books5.txt  photo1.png   photo7.png
+bild4.png  bild10.png  books6.txt  photo2.png   photo8.png
+bild5.png  books1.txt  books7.txt  photo3.png   photo9.png
+bild6.png  books2.txt  books8.txt  photo4.png   photo10.png
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+<span style="color:#5c5cff;">e="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ echo bild*
+bild10.png bild1.png bild2.png bild3.png bild4.png bild5.png bild6.png bild7.png bild8.png bild9.png
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ echo bild
+<span style="color:#5c5cff;">">DEVOPS25/lektion7/pathexp
+</span>$ echo b*
+bild10.png bild1.png bild2.png bild3.png bild4.png bild5.png bild6.png bild7.png bild8.png bild9.png books10.txt books1.txt books2.txt books3.txt books4.txt books5.txt books6.txt books7.txt books8.txt books9.txt
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ echo b.tx
+
+
+
+
+
+
+
+
+
+books10.txt books1.txt books2.txt books3.txt books4.txt books5.txt books6.txt books7.txt books8.txt books9.txt
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ echo b*.tx?.tx.tx
+
+ls
+bild1.png  bild7.png   books3.txt  books9.txt   photo5.png
+bild2.png  bild8.png   books4.txt  books10.txt  photo6.png
+bild3.png  bild9.png   books5.txt  photo1.png   photo7.png
+bild4.png  bild10.png  books6.txt  photo2.png   photo8.png
+bild5.png  books1.txt  books7.txt  photo3.png   photo9.png
+bild6.png  books2.txt  books8.txt  photo4.png   photo10.png
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ echo bild?.png
+bild1.png bild2.png bild3.png bild4.png bild5.png bild6.png bild7.png bild8.png bild9.png
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+<span style="color:#5c5cff;">:#5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ ls
+bild1.png  bild7.png   books3.txt  books9.txt   photo5.png
+bild2.png  bild8.png   books4.txt  books10.txt  photo6.png
+bild3.png  bild9.png   books5.txt  photo1.png   photo7.png
+bild4.png  bild10.png  books6.txt  photo2.png   photo8.png
+bild5.png  books1.txt  books7.txt  photo3.png   photo9.png
+bild6.png  books2.txt  books8.txt  photo4.png   photo10.png
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ echo bild?.pn.pn[.pn].pn2].pn3].pn4].pn
+
+bild2.png bild3.png bild4.png
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ echo bild[234].pn_[234].pn[234].pn
+
+
+
+
+
+
+
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ echo bild[234].pn[234].pn[234].pn[234].pn[234].pn*[234].pn
+
+
+
+
+
+
+
+
+
+
+
+
+
+*.pn
+
+bild2.png bild3.png bild4.png photo2.png photo3.png photo4.png
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ touch bi
+ld2_33.png
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+*[234]*.pn.pn.pn[234].pngng
+bild2_33.png bild2.png bild3.png bild4.png photo2.png photo3.png photo4.png
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ echo *[234].pn*.pn
+bild2_33.png bild2.png bild3.png bild4.png photo2.png photo3.png photo4.png
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ 
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ ls
+bild1.png     bild7.png   books4.txt   photo1.png  photo8.png
+bild2.png     bild8.png   books5.txt   photo2.png  photo9.png
+bild2_33.png  bild9.png   books6.txt   photo3.png  photo10.png
+bild3.png     bild10.png  books7.txt   photo4.png
+bild4.png     books1.txt  books8.txt   photo5.png
+bild5.png     books2.txt  books9.txt   photo6.png
+bild6.png     books3.txt  books10.txt  photo7.png
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ mv bi
+ld2
+_33.png bi
+ld2_33.pngbackup
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion7/pathexp
+echo *[234]*.pn.png3.png bild2_backup.png 
+bild2.png bild3.png bild4.png photo2.png photo3.png photo4.png
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+echo *[234]*.pngbild2_backup.png 
+bild2_backup.png bild2.png bild3.png bild4.png photo2.png photo3.png photo4.png
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ ls
+bild1.png         bild8.png   books6.txt   photo4.png
+bild2.png         bild9.png   books7.txt   photo5.png
+bild2_backup.png  bild10.png  books8.txt   photo6.png
+bild3.png         books1.txt  books9.txt   photo7.png
+bild4.png         books2.txt  books10.txt  photo8.png
+bild5.png         books3.txt  photo1.png   photo9.png
+bild6.png         books4.txt  photo2.png   photo10.png
+bild7.png         books5.txt  photo3.png
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ mkdir backups
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ mv *backup*.pmng backups/
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ ls backups/
+bild2_backup.png
+<span style="color:#5c5cff;">DEVOPS25/lektion7/pathexp
+</span>$ 
+exit
+</pre>
+</body>
+</html>
+<!--HTML generated by ansifilter 2.18, http://www.andre-simon.de/-->
