@@ -8,7 +8,7 @@
 
 if [ "$#" -ne 1 ]; then
 	echo "ERROR: Pass exactly one FILE" >&2
-	exit 
+	exit 1 # Allt utom 0 = fel
 fi
 
 echo antal args: $#
