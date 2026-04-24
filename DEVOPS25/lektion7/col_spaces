@@ -2,7 +2,7 @@
 
 #!/bin/bash
 
-while read -r cola colb colc
-	echo "$cola"
+while read -r cola colb colc; do
+	echo "ca:$cola" "cb:$colb" "cc:$colc"
 	sleep 1
-} <member_space.txt
+done <member_space.txt
