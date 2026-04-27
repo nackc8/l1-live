@@ -1,0 +1,4025 @@
+/home/kent/Documents/l1-live/DEVOPS25/lektion7
+recordings
+DEVOPS25/lektion7
+$ ssh ubse
+Welcome to Ubuntu 26.04 LTS (GNU/Linux 7.0.0-14-generic x86_64)
+
+ * Documentation:  https://docs.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon Apr 27 08:21:27 AM UTC 2026
+
+  System load:  0.01               Processes:               153
+  Usage of /:   40.9% of 13.67GB   Users logged in:         0
+  Memory usage: 7%                 IPv4 address for enp1s0: 192.168.122.131
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon Apr 27 08:20:23 2026 from 192.168.122.1
+3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+kent@ubse:~$ adduser
+3008;start=ab6a4be6-e71b-4a9b-996a-784ca388275c;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\fatal: Only root may add a user or group to the system.
+3008;end=ab6a4be6-e71b-4a9b-996a-784ca388275c;exit=failure;status=54\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ sudo !!
+sudo adduser
+3008;start=80a75f27-f2ba-4d17-b2f7-320778ebb1a4;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\[sudo: authenticate] Password: 
+fatal: Only one or two names allowed.
+3008;end=80a75f27-f2ba-4d17-b2f7-320778ebb1a4;exit=failure;status=51\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ sudo adduser green
+3008;start=fa6227bc-18bc-4f8f-be2d-da8b524cb80a;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\New password: 
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for green
+Enter the new value, or press ENTER for the default
+	Full Name []: Göran Persson
+	Room Number []: 12
+	Work Phone []: 022211811
+	Home Phone []: 
+	Other []: Laktosintolerant
+chfn: name with non-ASCII characters: 'Göran Persson'
+Is the information correct? [Y/n] 
+3008;end=fa6227bc-18bc-4f8f-be2d-da8b524cb80a;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+less -e/etc/pasdo adduser green
+swd
+root:x:0:0:root:/root:/bin/bash8e9-f80c927ee877;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\=
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+...skipping...
+dhcpcd:x:997:997:DHCP Client Daemon:/usr/lib/dhcpcd:/bin/false
+messagebus:x:996:996:System Message Bus:/nonexistent:/usr/sbin/nologin
+systemd-resolve:x:990:990:systemd Resolver:/:/usr/sbin/nologin
+_chrony:x:989:989:Chrony Daemon:/var/lib/chrony:/usr/sbin/nologin
+usbmux:x:100:46:usbmux daemon:/var/lib/usbmux:/usr/sbin/nologin
+pollinate:x:101:1::/var/cache/pollinate:/bin/false
+polkitd:x:988:988:User for polkitd:/:/usr/sbin/nologin
+syslog:x:102:103::/nonexistent:/usr/sbin/nologin
+uuidd:x:103:104::/run/uuidd:/usr/sbin/nologin
+tcpdump:x:986:986:tcpdump:/nonexistent:/usr/sbin/nologin
+tss:x:985:985:tss user for tpm2:/:/usr/sbin/nologin
+landscape:x:104:106::/var/lib/landscape:/usr/sbin/nologin
+fwupd-refresh:x:984:984:Firmware update daemon:/var/lib/fwupd:/usr/sbin/nologin
+kent:x:1000:1000:Kent Larsson:/home/kent:/bin/bash
+sshd:x:983:65534:sshd user:/run/sshd:/usr/sbin/nologin
+green:x:1001:1001:Göran Persson,12,022211811,,Laktosintolerant:/home/green:/bin/bash
+>3008;end=16064f44-2324-459f-b8e9-f80c927ee877;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ su green
+3008;start=899d54d9-3e43-490e-8cf1-92b05dbb69b5;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\Password: 
+3008;start=236eb58b0c484e228b69ffcd9d958546;user=kent;hostname=ubse;machineid=99989d8765784683978eb13428149c42;bootid=d931ba01ba684e269234e474d333f75b;pid=2788;pidfdid=5397;comm=su;targetuser=green;type=session\0;green@ubse: /home/kent
+green@ubse:/home/kent$ pwd
+/home/kent
+0;green@ubse: /home/kent
+green@ubse:/home/kent$ cd
+0;green@ubse: ~
+green@ubse:~$ pwd
+/home/green
+0;green@ubse: ~
+green@ubse:~$ cd ~/Documents
+bash: cd: /home/green/Documents: No such file or directory
+0;green@ubse: ~
+green@ubse:~$ 0;green@ubse: ~
+green@ubse:~$ ls
+0;green@ubse: ~
+green@ubse:~$ ls -a
+.  ..  .bash_logout  .bashrc  .profile
+0;green@ubse: ~
+green@ubse:~$ 
+0;green@ubse: ~
+green@ubse:~$ exi
+
+0;green@ubse: ~
+green@ubse:~$ 
+exit
+3008;end=236eb58b0c484e228b69ffcd9d958546\3008;end=899d54d9-3e43-490e-8cf1-92b05dbb69b5;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+kent@ubse:~$ man adduser
+ADDUSER(8)                 System Manager's Manual                ADDUSER(8)8eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\=
+
+NAME
+       adduser, addgroup - add or manipulate users or groups
+
+SYNOPSIS
+       adduser [--add-extra-groups] [--allow-all-names] [--allow-bad-names]
+               [--comment comment] [--conf file] [--debug]
+               [--disabled-login] [--disabled-password] [--encrypt-home]
+               [--firstgid id] [--firstuid id] [--gid id] [--home dir]
+               [--ingroup group] [--lastgid id] [--lastuid id]
+               [--no-create-home] [--shell shell] [--quiet] [--uid id]
+               [--verbose] [--stdoutmsglevel prio] [--stderrmsglevel prio]
+               [--logmsglevel prio] user
+
+       adduser --system [--comment comment] [--conf file] [--debug]
+               [--gid id] [--group] [--home dir] [--ingroup group]
+               [--no-create-home] [--shell shell] [--uid id] [--quiet]
+ Manual page adduser(8) line 1 (press h for help or q to quit)...skipping...
+ADDUSER(8)                 System Manager's Manual                ADDUSER(8)
+
+NAME
+       adduser, addgroup - add or manipulate users or groups
+
+SYNOPSIS
+       adduser [--add-extra-groups] [--allow-all-names] [--allow-bad-names]
+               [--comment comment] [--conf file] [--debug]
+               [--disabled-login] [--disabled-password] [--encrypt-home]
+               [--firstgid id] [--firstuid id] [--gid id] [--home dir]
+               [--ingroup group] [--lastgid id] [--lastuid id]
+               [--no-create-home] [--shell shell] [--quiet] [--uid id]
+               [--verbose] [--stdoutmsglevel prio] [--stderrmsglevel prio]
+               [--logmsglevel prio] user
+
+       adduser --system [--comment comment] [--conf file] [--debug]
+               [--gid id] [--group] [--home dir] [--ingroup group]
+               [--no-create-home] [--shell shell] [--uid id] [--quiet]
+               [--verbose] [--stdoutmsglevel prio] [--stderrmsglevel prio]
+ Manual page adduser(8) line 1 (press h for help or q to quit)...skipping...
+ADDUSER(8)                 System Manager's Manual                ADDUSER(8)
+
+NAME
+       adduser, addgroup - add or manipulate users or groups
+
+SYNOPSIS
+       adduser [--add-extra-groups] [--allow-all-names] [--allow-bad-names]
+               [--comment comment] [--conf file] [--debug]
+               [--disabled-login] [--disabled-password] [--encrypt-home]
+               [--firstgid id] [--firstuid id] [--gid id] [--home dir]
+               [--ingroup group] [--lastgid id] [--lastuid id]
+               [--no-create-home] [--shell shell] [--quiet] [--uid id]
+               [--verbose] [--stdoutmsglevel prio] [--stderrmsglevel prio]
+               [--logmsglevel prio] user
+
+       adduser --system [--comment comment] [--conf file] [--debug]
+               [--gid id] [--group] [--home dir] [--ingroup group]
+               [--no-create-home] [--shell shell] [--uid id] [--quiet]
+               [--verbose] [--stdoutmsglevel prio] [--stderrmsglevel prio]
+               [--logmsglevel prio] user
+ Manual page adduser(8) line 1 (press h for help or q to quit)...skipping...
+ADDUSER(8)                 System Manager's Manual                ADDUSER(8)
+
+NAME
+       adduser, addgroup - add or manipulate users or groups
+
+SYNOPSIS
+       adduser [--add-extra-groups] [--allow-all-names] [--allow-bad-names]
+               [--comment comment] [--conf file] [--debug]
+               [--disabled-login] [--disabled-password] [--encrypt-home]
+               [--firstgid id] [--firstuid id] [--gid id] [--home dir]
+               [--ingroup group] [--lastgid id] [--lastuid id]
+               [--no-create-home] [--shell shell] [--quiet] [--uid id]
+               [--verbose] [--stdoutmsglevel prio] [--stderrmsglevel prio]
+               [--logmsglevel prio] user
+
+       adduser --system [--comment comment] [--conf file] [--debug]
+               [--gid id] [--group] [--home dir] [--ingroup group]
+               [--no-create-home] [--shell shell] [--uid id] [--quiet]
+               [--verbose] [--stdoutmsglevel prio] [--stderrmsglevel prio]
+               [--logmsglevel prio] user
+
+       adduser --group [--conf file] [--debug] [--firstgid id] [--gid ID]
+               [--lastgid id] [--quiet] [--verbose] [--stdoutmsglevel prio]
+               [--stderrmsglevel prio] [--logmsglevel prio] group
+ ESESCOBpage adduser(8) line 2 (press h for help or q to quit)
+       addgroup [--conf file] [--debug] [--firstgid id] [--gid ID]
+                [--lastgid id] [--quiet] [--verbose] [--stdoutmsglevel prio]
+                [--stderrmsglevel prio] [--logmsglevel prio] group
+ ESESCOBpage adduser(8) line 6 (press h for help or q to quit)
+       addgroup --system [--gid id] [--conf file] [--quiet] [--verbose]
+                [--stdoutmsglevel prio] [--stderrmsglevel prio]
+                [--logmsglevel prio] groupr help or q to quit)
+ ESESCOBpage adduser(8) line 10 (press h for help or q to quit)
+       adduser [--conf file] [--debug] [--quiet] [--verbose]it)
+               [--stdoutmsglevel prio] [--stderrmsglevel prio])
+               [--logmsglevel prio] user groupelp or q to quit)
+ ESESCOBpage adduser(8) line 14 (press h for help or q to quit)
+       adduser --help8) line 15 (press h for help or q to quit)
+ ESESCOBpage adduser(8) line 16 (press h for help or q to quit)
+       adduser --versionline 17 (press h for help or q to quit)
+ ESESCOBpage adduser(8) line 18 (press h for help or q to quit)
+DESCRIPTIONe adduser(8) line 19 (press h for help or q to quit)
+       adduser  and addgroup add users and groups to the system according to
+       command  line  options  and  configuration  information  in  /etc/ad‐
+       duser.conf.  They are more Debian specific front ends to the useradd,
+       groupadd  and usermod programs, which are more distribution agnostic.
+       adduser and addgroup by default choose Debian policy  conformant  UID
+       and  GID values, create a home directory with skeletal configuration,
+       run a custom script, and have other features. q to quit)
+ ESESCOBpage adduser(8) line 27 (press h for help or q to quit)
+       adduser and addgroup are intended as a policy layer, making it easier
+       for package maintainers and local administrators to create local sys‐
+       tem accounts in the way Debian expects them to be created, taking the
+       burden to adapt to the probably  changing  specifications  of  Debian
+       policy.   adduser  --system takes special attention on just needing a
+       single call in the package maintainer scripts without any conditional
+       wrappers, error suppression or other scaffolding.o quit)
+ ESESCOBpage adduser(8) line 35 (press h for help or q to quit)
+       adduser honors the distinction between dynamically  allocated  system
+       users and groups and dynamically allocated user accounts that is doc‐
+       umented in Debian Policy, Chapter 9.2.2.lp or q to quit)
+ ESESCOBpage adduser(8) line 39 (press h for help or q to quit)
+       For a full list and explanations of all options, see the OPTIONS sec‐
+       tion. adduser(8) line 41 (press h for help or q to quit)
+ ESESCOBpage adduser(8) line 42 (press h for help or q to quit)
+       adduser and addgroup can be run in one of five modes:it)
+ ESESCOBpage adduser(8) line 44 (press h for help or q to quit)
+   Add a regular (non-system) userress h for help or q to quit)
+       If  called  with  one non-option argument and without the --system or
+       --group options, adduser will add a regular user, that means a dynam‐
+       ically allocated user account in the sense of Debian Policy.  This is
+       commonly referred to in adduser as a non-system user.it)
+ ESESCOBpage adduser(8) line 50 (press h for help or q to quit)
+       adduser will choose the first available UID from the range  specified
+       by  FIRST_UID  and LAST_UID in the configuration file.  The range may
+       be overridden with the --firstuid and  --lastuid  options.   Finally,
+       the UID can be set fully manually with the --uid option.
+ ESESCOBpage adduser(8) line 55 (press h for help or q to quit)
+       By  default,  each  user is given a corresponding group with the same
+       name.  This is commonly called Usergroups and allows  group  writable
+       directories  to be easily maintained by placing the appropriate users
+       in the new group, setting the set-group-ID bit in the directory,  and
+       ensuring that all users use a umask of 002.or q to quit)
+ ESESCOBpage adduser(8) line 61 (press h for help or q to quit)
+       For a usergroup, adduser will choose the first available GID from the
+       range  specified by FIRST_GID and LAST_GID in the configuration file.
+       The range may be overridden with the  --firstgid  and  --lastgid  op‐
+       tions.  Finally, the GID can be set fully manually with the --gid op‐
+       tion. adduser(8) line 66 (press h for help or q to quit)
+ ESESCOBpage adduser(8) line 67 (press h for help or q to quit)
+       The interaction between USERS_GID, USERS_GROUP, and USERGROUPS is ex‐
+       plained in detail in adduser.conf(5). help or q to quit)
+ ESESCOBpage adduser(8) line 70 (press h for help or q to quit)
+       The  new user's primary group can also be overridden from the command
+       line with the --gid or --ingroup options to set the group  by  id  or
+       name,  respectively.  Also, users can be added to one or more supple‐
+MESESCOApage adduser(8) line 74 (press h for help or q to quit)
+M       commonly referred to in adduser as a non-system user.t)
+M       ically allocated user account in the sense of Debian Policy.  This is
+M       --group options, adduser will add a regular user, that means a dynam‐
+M       If  called  with  one non-option argument and without the --system or
+M   Add a regular (non-system) useress h for help or q to quit)
+MESESCOApage adduser(8) line 68 (press h for help or q to quit)
+M       adduser and addgroup can be run in one of five modes:t)
+MESESCOApage adduser(8) line 66 (press h for help or q to quit)
+M       tion.adduser(8) line 65 (press h for help or q to quit)
+M       For a full list and explanations of all options, see the OPTIONS sec‐
+MESESCOApage adduser(8) line 63 (press h for help or q to quit)
+>3008;end=0fb1d575-f0b7-4410-bf35-d5226eaeed71;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ ls /hoe
+me/
+3008;start=a59724d7-dfc5-4ebd-847b-f584a8f4a2d6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\green  kent
+3008;end=a59724d7-dfc5-4ebd-847b-f584a8f4a2d6;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+kent@ubse:~$ useradd --ghelp
+3008;start=75f7b73e-f23b-4163-9750-4d7af28a81dc;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\Usage: useradd [options] LOGIN
+       useradd -D
+       useradd -D [options]
+
+Options:
+      --badname                 do not check for bad names (DEPRECATED)
+  -b, --base-dir BASE_DIR       base directory for the home directory of the
+                                new account
+      --btrfs-subvolume-home    use BTRFS subvolume for home directory
+  -c, --comment COMMENT         GECOS field of the new account
+  -d, --home-dir HOME_DIR       home directory of the new account
+  -D, --defaults                print or change default useradd configuration
+  -e, --expiredate EXPIRE_DATE  expiration date of the new account
+  -f, --inactive INACTIVE       password inactivity period of the new account
+  -F, --add-subids-for-system   add entries to sub[ud]id even when adding a system user
+  -g, --gid GROUP               name or ID of the primary group of the new
+                                account
+  -G, --groups GROUPS           list of supplementary groups of the new
+                                account
+  -h, --help                    display this help message and exit
+  -k, --skel SKEL_DIR           use this alternative skeleton directory
+  -K, --key KEY=VALUE           override /etc/login.defs defaults
+  -m, --create-home             create the user's home directory
+  -M, --no-create-home          do not create the user's home directory
+  -N, --no-user-group           do not create a group with the same name as
+                                the user
+  -o, --non-unique              allow to create users with duplicate
+                                (non-unique) UID
+  -p, --password PASSWORD       encrypted password of the new account
+  -r, --system                  create a system account
+  -R, --root CHROOT_DIR         directory to chroot into
+  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files
+  -s, --shell SHELL             login shell of the new account
+  -u, --uid UID                 user ID of the new account
+  -U, --user-group              create a group with the same name as the user
+  -Z, --selinux-user SEUSER     use a specific SEUSER for the SELinux user mapping
+      --selinux-range SERANGE   use a specific MLS range for the SELinux user mapping
+      --extrausers              Use the extra users database
+
+3008;end=75f7b73e-f23b-4163-9750-4d7af28a81dc;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ q0;kent@ubse: ~
+kent@ubse:~$ user
+add yellow
+3008;start=e18f8b5d-ee76-4c33-a463-c922d01148f2;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\useradd: Permission denied.
+useradd: cannot lock /etc/passwd; try again later.
+3008;end=e18f8b5d-ee76-4c33-a463-c922d01148f2;exit=failure;status=1\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ sudo !!
+sudo useradd yellow
+3008;start=50e91b74-3b21-463d-95c7-ba07698f03f7;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\3008;end=50e91b74-3b21-463d-95c7-ba07698f03f7;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+0;kent@ubse: ~rch)`': p': useradd --helpa': less /etc/passws': less /etc/pass': less /etc/pass
+kent@ubse:~$ less /etc/pas
+root:x:0:0:root:/root:/bin/bashe04-848c883e7db8;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\=
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:998:998:systemd Network Management:/:/usr/sbin/nologin
+dhcpcd:x:997:997:DHCP Client Daemon:/usr/lib/dhcpcd:/bin/false
+messagebus:x:996:996:System Message Bus:/nonexistent:/usr/sbin/nologin
+systemd-resolve:x:990:990:systemd Resolver:/:/usr/sbin/nologin
+_chrony:x:989:989:Chrony Daemon:/var/lib/chrony:/usr/sbin/nologin
+...skipping...
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:998:998:systemd Network Management:/:/usr/sbin/nologin
+dhcpcd:x:997:997:DHCP Client Daemon:/usr/lib/dhcpcd:/bin/false
+messagebus:x:996:996:System Message Bus:/nonexistent:/usr/sbin/nologin
+systemd-resolve:x:990:990:systemd Resolver:/:/usr/sbin/nologin
+_chrony:x:989:989:Chrony Daemon:/var/lib/chrony:/usr/sbin/nologin
+usbmux:x:100:46:usbmux daemon:/var/lib/usbmux:/usr/sbin/nologin
+pollinate:x:101:1::/var/cache/pollinate:/bin/false
+polkitd:x:988:988:User for polkitd:/:/usr/sbin/nologin
+syslog:x:102:103::/nonexistent:/usr/sbin/nologin
+uuidd:x:103:104::/run/uuidd:/usr/sbin/nologin
+tcpdump:x:986:986:tcpdump:/nonexistent:/usr/sbin/nologin
+tss:x:985:985:tss user for tpm2:/:/usr/sbin/nologin
+landscape:x:104:106::/var/lib/landscape:/usr/sbin/nologin
+fwupd-refresh:x:984:984:Firmware update daemon:/var/lib/fwupd:/usr/sbin/nologin
+kent:x:1000:1000:Kent Larsson:/home/kent:/bin/bash
+sshd:x:983:65534:sshd user:/run/sshd:/usr/sbin/nologin
+green:x:1001:1001:Göran Persson,12,022211811,,Laktosintolerant:/home/green:/bin/bash
+yellow:x:1002:1002::/home/yellow:/bin/sh
+>3008;end=a52d1b79-efd4-4aa8-be04-848c883e7db8;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ less /etc/passwgssha
+dow
+3008;start=aeafa811-1a62-4bd5-bf19-17fbe79a038b;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\/etc/shadow: Permission denied
+3008;end=aeafa811-1a62-4bd5-bf19-17fbe79a038b;exit=failure;status=1\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ sudo !!
+sudo less /etc/shadow
+root:*:20563:0:99999:7:::45c6-b526-4c2a53fcbd83;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\=
+daemon:*:20563:0:99999:7:::
+bin:*:20563:0:99999:7:::
+sys:*:20563:0:99999:7:::
+sync:*:20563:0:99999:7:::
+games:*:20563:0:99999:7:::
+man:*:20563:0:99999:7:::
+lp:*:20563:0:99999:7:::
+mail:*:20563:0:99999:7:::
+news:*:20563:0:99999:7:::
+uucp:*:20563:0:99999:7:::
+proxy:*:20563:0:99999:7:::
+www-data:*:20563:0:99999:7:::
+backup:*:20563:0:99999:7:::
+list:*:20563:0:99999:7:::
+irc:*:20563:0:99999:7:::
+_apt:*:20563:0:99999:7:::
+nobody:*:20563:0:99999:7:::
+systemd-network:!*:20563:::::1:
+dhcpcd:!*:20563:::::1:
+messagebus:!*:20563::::::
+systemd-resolve:!*:20563:::::1:
+_chrony:!*:20563::::::
+...skipping...
+irc:*:20563:0:99999:7:::
+_apt:*:20563:0:99999:7:::
+nobody:*:20563:0:99999:7:::
+systemd-network:!*:20563:::::1:
+dhcpcd:!*:20563:::::1:
+messagebus:!*:20563::::::
+systemd-resolve:!*:20563:::::1:
+_chrony:!*:20563::::::
+usbmux:!:20563::::::
+pollinate:!:20563::::::
+polkitd:!*:20563::::::
+syslog:!:20563::::::
+uuidd:!:20563::::::
+tcpdump:!*:20563:::::1:
+tss:!*:20563::::::
+landscape:!:20563::::::
+fwupd-refresh:!*:20563::::::
+kent:$6$oFGVJZLo5nAwxNqs$Hb5AvXgXiThGiciqrJ8QDRHA68h1m.e5n5mH.USh3LwXJF.U4D7DIS6m7T7hDeYZERHv071lT29ZVkVDeU5nk.:20569:0:99999:7:::
+sshd:!*:20569::::::
+green:$y$j9T$lfF6EaLsOozTrpYgpmgh/0$EwJbo1yXDPrYbwnQmL.Lk/mzzFtQpdBAyvwd51fT55A:20570:0:99999:7:::
+yellow:!:20570:0:99999:7:::
+>3008;end=83f1cb23-f227-45c6-b526-4c2a53fcbd83;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+kent@ubse:~$ su yellow
+3008;start=537bc349-6407-4df9-83b1-aabf94015e1e;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\Password: 
+su: Authentication failure
+3008;end=537bc349-6407-4df9-83b1-aabf94015e1e;exit=failure;status=1\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ ls /home/
+3008;start=5c7a984e-6d64-4b23-98ff-e1d9619efac1;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\green  kent
+3008;end=5c7a984e-6d64-4b23-98ff-e1d9619efac1;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ mpasswd
+
+
+
+
+which 
+3008;start=baf3a92c-e586-4d48-952c-9eb5942db35e;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\/usr/bin/passwd
+3008;end=baf3a92c-e586-4d48-952c-9eb5942db35e;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ ls -l /usr/bin/passwd
+/usr/bin/passwd
+3008;start=832dcebc-54bc-4a71-abbe-57217852db82;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\-rwsr-xr-x 1 root root 93640 Feb  2 20:45 /usr/bin/passwd
+3008;end=832dcebc-54bc-4a71-abbe-57217852db82;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ man passw
+d0;kent@ubse: ~
+kent@ubse:~$ man passwd
+PASSWD(1)                       User Commands                      PASSWD(1)8eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\=
+
+NAME
+       passwd - change user password
+
+SYNOPSIS
+
+       passwd [options] [LOGIN]
+
+DESCRIPTION
+       The passwd command changes passwords for user accounts. A normal user
+       may only change the password for their own account, while the
+       superuser may change the password for any account.  passwd also
+       changes the account or associated password validity period.
+
+   Password Changes
+       The user is first prompted for their old password, if one is present.
+       This password is then encrypted and compared against the stored
+       password. The user has only one chance to enter the correct password.
+       The superuser is permitted to bypass this step so that forgotten
+       passwords may be changed.
+
+       After the password has been entered, password aging information is
+>3008;end=5179adb5-deea-4cf6-bba9-f45a2b20aad6;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ passwd yellow
+3008;start=77bcc814-fd7e-4506-94be-4a818e325963;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\passwd: You may not view or modify password information for yellow.
+3008;end=77bcc814-fd7e-4506-94be-4a818e325963;exit=failure;status=1\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ sudo !!
+sudo passwd yellow
+3008;start=72cffc36-315b-40fb-a2ed-b76ff05b70bd;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\New password: 
+Retype new password: 
+passwd: password updated successfully
+3008;end=72cffc36-315b-40fb-a2ed-b76ff05b70bd;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+0;kent@ubse: ~rch)`': s': sudo passwd yelloh': sudo less /etc/shaa': sudo less /etc/shad': sudo less /etc/shado': sudo less /etc/shado
+kent@ubse:~$ sudo less /etc/shad
+root:*:20563:0:99999:7:::4cb4-ba1f-05edd8c2ef78;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\=
+daemon:*:20563:0:99999:7:::
+bin:*:20563:0:99999:7:::
+sys:*:20563:0:99999:7:::
+sync:*:20563:0:99999:7:::
+games:*:20563:0:99999:7:::
+man:*:20563:0:99999:7:::
+lp:*:20563:0:99999:7:::
+mail:*:20563:0:99999:7:::
+news:*:20563:0:99999:7:::
+uucp:*:20563:0:99999:7:::
+proxy:*:20563:0:99999:7:::
+www-data:*:20563:0:99999:7:::
+backup:*:20563:0:99999:7:::
+list:*:20563:0:99999:7:::
+irc:*:20563:0:99999:7:::
+_apt:*:20563:0:99999:7:::
+nobody:*:20563:0:99999:7:::
+systemd-network:!*:20563:::::1:
+dhcpcd:!*:20563:::::1:
+messagebus:!*:20563::::::
+systemd-resolve:!*:20563:::::1:
+_chrony:!*:20563::::::
+...skipping...
+_apt:*:20563:0:99999:7:::
+nobody:*:20563:0:99999:7:::
+systemd-network:!*:20563:::::1:
+dhcpcd:!*:20563:::::1:
+messagebus:!*:20563::::::
+systemd-resolve:!*:20563:::::1:
+_chrony:!*:20563::::::
+usbmux:!:20563::::::
+pollinate:!:20563::::::
+polkitd:!*:20563::::::
+syslog:!:20563::::::
+uuidd:!:20563::::::
+tcpdump:!*:20563:::::1:
+tss:!*:20563::::::
+landscape:!:20563::::::
+fwupd-refresh:!*:20563::::::
+kent:$6$oFGVJZLo5nAwxNqs$Hb5AvXgXiThGiciqrJ8QDRHA68h1m.e5n5mH.USh3LwXJF.U4D7DIS6m7T7hDeYZERHv071lT29ZVkVDeU5nk.:20569:0:99999:7:::
+sshd:!*:20569::::::
+green:$y$j9T$lfF6EaLsOozTrpYgpmgh/0$EwJbo1yXDPrYbwnQmL.Lk/mzzFtQpdBAyvwd51fT55A:20570:0:99999:7:::
+yellow:$y$j9T$WXn0iCejPWn1k7JkZHT06/$aVwTot2lSZOnITecAPjW/mxx1ppeVQ1YZkV0hS35rBC:20570:0:99999:7:::
+>3008;end=6d78ccc4-abb9-4cb4-ba1f-05edd8c2ef78;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+kent@ubse:~$ su yellow
+3008;start=c05b52bb-e9d5-4b29-83ed-4aa236b42d82;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\Password: 
+3008;start=d7900196e8554e689bfb69ce5938db10;user=kent;hostname=ubse;machineid=99989d8765784683978eb13428149c42;bootid=d931ba01ba684e269234e474d333f75b;pid=3048;pidfdid=5542;comm=su;targetuser=yellow;type=session\$ pwd
+/home/kent
+$ cd
+sh: 2: cd: can't cd to /home/yellow
+$ od
+^C
+$ id
+uid=1002(yellow) gid=1002(yellow) groups=1002(yellow)
+$ ech o $0
+sh
+$ which sh
+/usr/bin/sh
+$ ls -l /us/usr/bin/sh
+lrwxrwxrwx 1 root root 4 Feb  2 20:26 /usr/bin/sh -> dash
+$ man dash
+DASH(1)                    General Commands Manual                   DASH(1)
+
+NAME
+       dash — command interpreter (shell)
+
+SYNOPSIS
+       dash   [-aCefnuvxIimqVEbp]   [+aCefnuvxIimqVEbp]   [-o   option_name]
+            [+o option_name] [command_file [argument ...]]
+       dash  -c  [-aCefnuvxIimqVEbp]  [+aCefnuvxIimqVEbp]  [-o  option_name]
+            [+o option_name] command_string [command_name [argument ...]]
+       dash  -s  [-aCefnuvxIimqVEbp]  [+aCefnuvxIimqVEbp]  [-o  option_name]
+            [+o option_name] [argument ...]
+
+DESCRIPTION
+       dash is the standard command interpreter for the system.  The current
+       version of dash is in the process of being changed  to  conform  with
+       the POSIX 1003.2 and 1003.2a specifications for the shell.  This ver‐
+       sion  has many features which make it appear similar in some respects
+       to the Korn shell, but it is not a Korn  shell  clone  (see  ksh(1)).
+       Only  features  designated  by POSIX, plus a few Berkeley extensions,
+       are being incorporated into this shell.  This man  page  is  not  in‐
+       tended to be a tutorial or a complete specification of the shell.
+
+ ESESCOApage dash(1) line 1 (press h for help or q to quit)
+>$ ^ual page dash(1) line 1 (press h for help or q to quit)
+$ ls /usr/bin			^C
+$ ^[[A^[[A^[[A^[[A^[[A^[[A^[[A^C
+$ bash
+yellow@ubse:/home/kent$ yellow@ubse:/home/kent$ ls /etc/
+
+Display all 198 possibilities? (y or n)
+adduser.conf                       multipath/
+alternatives/                      multipath.conf
+apparmor/                          nanorc
+apparmor.d/                        needrestart/
+apport/                            netconfig
+apt/                               netplan/
+bash.bashrc                        network/
+bash_completion                    networkd-dispatcher/
+bash_completion.d/                 networks
+bindresvport.blacklist             newt/
+binfmt.d/                          nftables.conf
+ca-certificates/                   nsswitch.conf
+ca-certificates.conf               opt/
+chrony/                            os-release
+cloud/                             overlayroot.conf
+console-setup/                     PackageKit/
+credstore/                         pam.conf
+credstore.encrypted/               pam.d/
+cron.d/                            passwd
+cron.daily/                        passwd-
+cron.hourly/                       perl/
+cron.monthly/                      pki/
+crontab                            plymouth/
+cron.weekly/                       pm/
+cron.yearly/                       polkit-1/
+crypttab                           pollinate/
+dbus-1/                            ppp/
+debconf.conf                       profile
+debian_version                     profile.d/
+debuginfod/                        protocols
+default/                           .pwd.lock
+deluser.conf                       python3/
+depmod.d/                          python3.14/
+dhcp/                              rc0.d/
+dhcpcd.conf                        rc1.d/
+dpkg/                              rc2.d/
+dracut.conf                        rc3.d/
+dracut.conf.d/                     rc4.d/
+e2scrub.conf                       rc5.d/
+environment                        rc6.d/
+ethertypes                         rcS.d/
+fstab                              resolv.conf
+fuse.conf                          .resolv.conf.systemd-resolved.bak
+fwupd/                             rmt
+gai.conf                           rpc
+gnutls/                            rsyslog.conf
+yellow@ubse:/home/kent$ ls /etc/
+
+
+
+
+exit
+exit
+$ exit
+3008;end=d7900196e8554e689bfb69ce5938db10\3008;end=c05b52bb-e9d5-4b29-83ed-4aa236b42d82;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ 
+0;kent@ubse: ~
+kent@ubse:~$ ls /home/
+3008;start=c5c690e4-92b6-4e95-b860-ebc52e845708;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\green  kent
+3008;end=c5c690e4-92b6-4e95-b860-ebc52e845708;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ sudo mkdir /home/yellow
+3008;start=b60cee82-420b-41f0-93f0-965728029ec3;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\3008;end=b60cee82-420b-41f0-93f0-965728029ec3;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ ls -l /hpo
+ome/
+3008;start=1b340830-81ea-42f4-8947-06c7888663c9;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\total 12
+drwxr-x--- 2 green green 4096 Apr 27 08:25 green
+drwxr-x--- 6 kent  kent  4096 Apr 27 08:31 kent
+drwxr-xr-x 2 root  root  4096 Apr 27 08:37 yellow
+3008;end=1b340830-81ea-42f4-8947-06c7888663c9;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ sudo chmod --reference=/hoe
+me/green/ /ho
+me
+/ye
+
+;llow
+3008;start=130643f5-11a9-4cce-873b-68c9fbd0d382;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\3008;end=130643f5-11a9-4cce-873b-68c9fbd0d382;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ ls -l /hpo
+ome/
+3008;start=764e28db-7b0e-4dcc-ae0b-8887b2a4fb3e;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\total 12
+drwxr-x--- 2 green green 4096 Apr 27 08:25 green
+drwxr-x--- 6 kent  kent  4096 Apr 27 08:31 kent
+drwxr-x--- 2 root  root  4096 Apr 27 08:37 yellow
+3008;end=764e28db-7b0e-4dcc-ae0b-8887b2a4fb3e;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ chown
+
+
+
+sudo chown -yel;low:yellow
+
+ /home/yellow/
+3008;start=b29d23ed-9e61-4a6a-9c62-77c564600e97;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\3008;end=b29d23ed-9e61-4a6a-9c62-77c564600e97;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+aent@ubse:~$ ls -l /home/green/
+3008;start=8c6507f4-1c3b-4572-b4b7-6f38030c9a27;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\ls: cannot open directory '/home/green/': Permission denied
+3008;end=8c6507f4-1c3b-4572-b4b7-6f38030c9a27;exit=failure;status=2\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+sudpo bse:~$ ls -la /home/green/
+3008;start=a01dbb2d-ebe2-4b7f-a597-fdc16c65455f;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\total 24
+drwxr-x--- 2 green green 4096 Apr 27 08:25 .
+drwxr-xr-x 5 root  root  4096 Apr 27 08:37 ..
+-rw------- 1 green green   35 Apr 27 08:25 .bash_history
+-rw-r--r-- 1 green green  220 Apr 27 08:21 .bash_logout
+-rw-r--r-- 1 green green 3771 Apr 27 08:21 .bashrc
+-rw-r--r-- 1 green green  807 Apr 27 08:21 .profile
+3008;end=a01dbb2d-ebe2-4b7f-a597-fdc16c65455f;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ sudo ls -la /home/greenyellow/
+3008;start=0d73cafc-fa16-4179-ad1e-b961c03b8432;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\total 8
+drwxr-x--- 2 yellow yellow 4096 Apr 27 08:37 .
+drwxr-xr-x 5 root   root   4096 Apr 27 08:37 ..
+3008;end=0d73cafc-fa16-4179-ad1e-b961c03b8432;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+kent@ubse:~$ id
+3008;start=d9503bbb-8fa2-466f-948c-594ade99436f;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\uid=1000(kent) gid=1000(kent) groups=1000(kent),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),100(users),101(lxd)
+3008;end=d9503bbb-8fa2-466f-948c-594ade99436f;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ id yellow
+3008;start=7236ba2c-191e-415a-866c-c5a17d63c196;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\uid=1002(yellow) gid=1002(yellow) groups=1002(yellow)
+3008;end=7236ba2c-191e-415a-866c-c5a17d63c196;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ id yellogreen
+3008;start=c122b83b-20a1-4f8e-85be-16fdeb934bcb;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\uid=1001(green) gid=1001(green) groups=1001(green),100(users)
+3008;end=c122b83b-20a1-4f8e-85be-16fdeb934bcb;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+kent@ubse:~$ useradd
+
+
+man useradd 
+USERADD(8)               System Management Commands               USERADD(8)8eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\=
+
+NAME
+       useradd - create a new user or update default new user information
+
+SYNOPSIS
+
+       useradd [options] LOGIN
+
+       useradd -D
+
+       useradd -D [options]
+
+DESCRIPTION
+       useradd is a low level utility for adding users. On Debian,
+       administrators should usually use adduser(8) instead.
+
+       When invoked without the -D option, the useradd command creates a new
+       user account using the values specified on the command line plus the
+       default values from the system. Depending on command line options,
+       the useradd command will update system files and may also create the
+       new user's home directory and copy initial files.
+
+       By default, a group will also be created for the new user (see -g,
+       -N, -U, and USERGROUPS_ENAB).
+
+OPTIONS
+       The options which apply to the useradd command are:
+
+       --badname
+           Allow names that do not conform to standards.
+
+       -b, --base-dir BASE_DIR
+           The default base directory for the system if -d HOME_DIR is not
+           specified.  BASE_DIR is concatenated with the account name to
+           define the home directory.
+
+           If this option is not specified, useradd will use the base
+           directory specified by the HOME variable in /etc/default/useradd,
+           or /home by default.
+
+       -c, --comment COMMENT
+           Any text string. It is generally a short description of the
+           account, and is currently used as the field for the user's full
+           name.
+
+       -d, --home-dir HOME_DIR4 (press h for help or q to quit)
+           The new user will be created using HOME_DIR as the value for the
+           user's login directory. The default is to append the LOGIN name
+           to BASE_DIR and use that as the login directory name. If the
+           directory HOME_DIR does not exist, then it will be created unless
+           the -M option is specified.
+
+       -D, --defaults
+           See below, the subsection "Changing the default values".
+
+       -e, --expiredate EXPIRE_DATE
+           The date on which the user account will be disabled. The date is
+           specified in the format YYYY-MM-DD.
+
+           If not specified, useradd will use the default expiry date
+           specified by the EXPIRE variable in /etc/default/useradd, or an
+           empty string (no expiry) by default.
+
+       -f, --inactive INACTIVE
+           defines the number of days after the password exceeded its
+           maximum age where the user is expected to replace this password.
+           The value is stored in the shadow password file. An input of 0
+           will disable an expired password with no delay. An input of -1
+           will blank the respective field in the shadow password file. See
+           shadow(5)for more information.
+
+           If not specified, useradd will use the default inactivity period
+           specified by the INACTIVE variable in /etc/default/useradd, or -1
+           by default.
+
+       -F, --add-subids-for-system
+           Update /etc/subuid and /etc/subgid even when creating a system
+           account with -r option.
+
+       -g, --gid GROUP
+           The name or the number of the user's primary group. The group
+           name must exist. A group number must refer to an already existing
+           group.
+
+           If not specified, the behavior of useradd will depend on the
+           USERGROUPS_ENAB variable in /etc/login.defs. If this variable is
+           set to yes (or -U/--user-group is specified on the command line),
+           a group will be created for the user, with the same name as the
+           loginname. If the variable is set to no (or -N/--no-user-group is
+           specified on the command line), useradd will set the primary
+           group of the new user to the value specified by the GROUP
+           variable in /etc/default/useradd, or 100 by default.
+
+       -G, --groups GROUP1[,GROUP2,...[,GROUPN]]]
+           A list of supplementary groups which the user is also a member
+           of. Each group is separated from the next by a comma, with no
+           intervening whitespace. The groups are subject to the same
+           restrictions as the group given with the -g option. The default
+           is for the user to belong only to the initial group. In addition
+           to passing in the -G flag, you can add the option GROUPS to the
+           file /etc/default/useradd which in turn will add all users to
+           those supplementary groups.
+
+       -h, --help
+           Display help message and exit.
+
+       -k, --skel SKEL_DIR
+           The skeleton directory, which contains files and directories to
+           be copied in the user's home directory, when the home directory
+           is created by useradd.
+
+           This option is only valid if the -m (or --create-home) option is
+           specified.
+
+           If this option is not set, the skeleton directory is defined by
+           the SKEL variable in /etc/default/useradd or, by default,
+           /etc/skel.8) line 95 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 96 (press h for help or q to quit)
+           Absolute symlinks that link back to the skel directory will have
+           the /etc/skel prefix replaced with the user's home directory.
+ ESESCOBpage useradd(8) line 99 (press h for help or q to quit)
+           If possible, the ACLs and extended attributes are copied.
+ ESESCOBpage useradd(8) line 101 (press h for help or q to quit)
+       -K, --key KEY=VALUEne 102 (press h for help or q to quit)
+           Overrides /etc/login.defs defaults (UID_MIN, UID_MAX, UMASK,
+           PASS_MAX_DAYS and others).ss h for help or q to quit)
+>Manual page useradd(8) line 105 (press h for help or q to quit)
+[1]+  Stopped                    man useradd
+3008;end=a0cc2a69-8d52-4d96-9ca9-92d4c8220051;exit=failure;status=148;signal=SIGTSTP\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ ls /etc/skel/0;kent@ubse: ~
+kent@ubse:~$ ls /etc/skel/
+3008;start=abce4897-a45f-48ee-9685-0559339ce652;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\3008;end=abce4897-a45f-48ee-9685-0559339ce652;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ ls /etc/skel-a
+3008;start=bb1dd913-ef58-4314-84d2-cc5afcd9c76f;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\.  ..  .bash_logout  .bashrc  .profile
+3008;end=bb1dd913-ef58-4314-84d2-cc5afcd9c76f;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ fg
+3008;start=7833b0f7-e8dc-4cc5-93b7-294dfee7ebf0;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\man useradd
+       -h, --help
+           Display help message and exit.
+
+       -k, --skel SKEL_DIR
+           The skeleton directory, which contains files and directories to
+           be copied in the user's home directory, when the home directory
+           is created by useradd.
+
+           This option is only valid if the -m (or --create-home) option is
+           specified.
+
+           If this option is not set, the skeleton directory is defined by
+           the SKEL variable in /etc/default/useradd or, by default,
+           /etc/skel.
+
+           Absolute symlinks that link back to the skel directory will have
+           the /etc/skel prefix replaced with the user's home directory.
+
+           If possible, the ACLs and extended attributes are copied.
+
+       -K, --key KEY=VALUE
+           Overrides /etc/login.defs defaults (UID_MIN, UID_MAX, UMASK,
+           PASS_MAX_DAYS and others).
+ ESESCOBpage useradd(8) line 105 (press h for help or q to quit)
+           Example: -K PASS_MAX_DAYS =-1 can be used when creating an
+           account to turn off password aging. Multiple -K options can be
+           specified, e.g.: -K UID_MIN =100 -K  UID_MAX=499quit)
+ ESESCOBpage useradd(8) line 109 (press h for help or q to quit)
+       -l, --no-log-initline 110 (press h for help or q to quit)
+           Do not add the user to the lastlog and faillog databases.
+ ESESCOBpage useradd(8) line 112 (press h for help or q to quit)
+           By default, the user's entries in the lastlog and faillog
+           databases are reset to avoid reusing the entry from a previously
+           deleted user.line 115 (press h for help or q to quit)
+ ESESCOBpage useradd(8) line 116 (press h for help or q to quit)
+           If this option is not specified, useradd will also consult the
+           variable LOG_INIT in the /etc/default/useradd if set to no the
+           user will not be added to the lastlog and faillog databases.
+ ESESCOBpage useradd(8) line 120 (press h for help or q to quit)
+       -m, --create-homeline 121 (press h for help or q to quit)
+           Create the user's home directory if it does not exist. The files
+           and directories contained in the skeleton directory (which can be
+           defined with the -k option) will be copied to the home directory.
+ ESESCOBpage useradd(8) line 125 (press h for help or q to quit)
+           By default, if this option is not specified and CREATE_HOME is
+           not enabled, no home directories are created.to quit)
+ ESESCOBpage useradd(8) line 128 (press h for help or q to quit)
+           The directory where the user's home directory is created must
+           exist and have proper SELinux context and permissions. Otherwise
+           the user's home directory cannot be created or accessed.
+ ESESCOBpage useradd(8) line 132 (press h for help or q to quit)
+       -M, --no-create-homee 133 (press h for help or q to quit)
+           Do not create the user's home directory, even if the system wide
+           setting from /etc/login.defs (CREATE_HOME) is set to yes.
+ ESESCOBpage useradd(8) line 136 (press h for help or q to quit)
+       -N, --no-user-groupne 137 (press h for help or q to quit)
+           Do not create a group with the same name as the user, but add the
+           user to the group specified by the -g option or by the GROUP
+           variable in /etc/default/useradd.r help or q to quit)
+ ESESCOBpage useradd(8) line 141 (press h for help or q to quit)
+           The default behavior (if the -g, -N, and -U options are not
+           specified) is defined by the USERGROUPS_ENAB variable in
+           /etc/login.defs.e 144 (press h for help or q to quit)
+
+       -o, --non-unique
+           allows the creation of an account with an already existing UID.
+
+           This option is only valid in combination with the -u option. As a
+           user identity serves as key to map between users on one hand and
+           permissions, file ownerships and other aspects that determine the
+           system's behavior on the other hand, more than one login name
+           will access the account of the given UID.
+
+       -p, --password PASSWORD
+           defines an initial password for the account. PASSWORD is expected
+           to be encrypted, as returned by crypt (3). Within a shell script,
+           this option allows to create efficiently batches of users.
+
+           Without this option, the new account will be locked and with no
+           password defined, i.e. a single exclamation mark in the
+           respective field of /etc/shadow. This is a state where the user
+           won't be able to access the account or to define a password
+           himself.
+
+           Note:Avoid this option on the command line because the password
+           (or encrypted password) will be visible by users listing the
+           processes.
+
+           You should make sure the password respects the system's password
+           policy.
+
+       -r, --system
+           Create a system account.
+
+           System users will be created with no aging information in
+           /etc/shadow, and their numeric identifiers are chosen in the
+           SYS_UID_MIN-SYS_UID_MAX range, defined in /etc/login.defs,
+           instead of UID_MIN-UID_MAX (and their GID counterparts for the
+           creation of groups).
+
+           Note that useradd will not create a home directory for such a
+           user, regardless of the default setting in /etc/login.defs
+           (CREATE_HOME). You have to specify the -m options if you want a
+           home directory for a system account to be created.
+
+           Note that this option will not update /etc/subuid and
+           /etc/subgid. You have to specify the -F options if you want to
+           update the files for a system account to be created.
+ Manual page useradd(8) line 190 (press h for help or q to quit)
+       -R, --root CHROOT_DIR
+           Apply changes in the CHROOT_DIR directory and use the
+           configuration files from the CHROOT_DIR directory. Only absolute
+           paths are supported.
+
+       -P, --prefix PREFIX_DIR
+           Apply changes to configuration files under the root filesystem
+           found under the directory PREFIX_DIR. This option does not chroot
+           and is intended for preparing a cross-compilation target. Some
+           limitations: NIS and LDAP users/groups are not verified. PAM
+           authentication is using the host files. No SELINUX support.
+
+       -s, --shell SHELL
+           sets the path to the user's login shell. Without this option, the
+           system will use the SHELL variable specified in
+           /etc/default/useradd, or, if that is as well not set, the field
+           for the login shell in /etc/passwd remains empty.
+
+       -u, --uid UID
+           The numerical value of the user's ID. This value must be unique,
+           unless the -o option is used. The value must be non-negative. The
+           default is to use the smallest ID value greater than or equal to
+           UID_MIN and greater than every other user. q to quit)
+
+           See also the -r option and the UID_MAX description.
+
+       -U, --user-group
+           Create a group with the same name as the user, and add the user
+           to this group.
+
+           The default behavior (if the -g, -N, and -U options are not
+           specified) is defined by the USERGROUPS_ENAB variable in
+           /etc/login.defs.
+
+       -Z, --selinux-user SEUSER
+           defines the SELinux user for the new account. Without this
+           option, SELinux uses the default user. Note that the shadow
+           system doesn't store the selinux-user, it uses semanage(8) for
+           that.
+
+       --selinux-range SERANGE
+           defines the SELinux MLS range for the new account. Without this
+           option, SELinux uses the default range. Note that the shadow
+           system doesn't store the selinux-range, it uses semanage(8) for
+           that.
+ Manual page useradd(8) line 236 (press h for help or q to quit)
+           This option is only valid if the -Z (or --selinux-user) option is
+           specified.
+
+   Changing the default values
+       When invoked with only the -D option, useradd will display the
+       current default values. When invoked with -D plus other options,
+       useradd will update the default values for the specified options.
+       Valid default-changing options are:
+
+       -b, --base-dir BASE_DIR
+           sets the path prefix for a new user's home directory. The user's
+           name will be affixed to the end of BASE_DIR to form the new
+           user's home directory name, if the -d option is not used when
+           creating a new account.
+
+           This option sets the HOME variable in /etc/default/useradd.
+
+       -e, --expiredate EXPIRE_DATE
+           sets the date on which newly created user accounts are disabled.
+
+           This option sets the EXPIRE variable in /etc/default/useradd.
+
+       -f, --inactive INACTIVE59 (press h for help or q to quit)
+           defines the number of days after the password exceeded its
+           maximum age where the user is expected to replace this password.
+           See shadow(5)for more information.
+
+           This option sets the INACTIVE variable in /etc/default/useradd.
+
+       -g, --gid GROUP
+           sets the default primary group for newly created users, accepting
+           group names or a numerical group ID. The named group must exist,
+           and the GID must have an existing entry.
+
+           This option sets the GROUP variable in /etc/default/useradd.
+
+       -s, --shell SHELL
+           defines the default login shell for new users.
+
+           This option sets the SHELL variable in /etc/default/useradd.
+
+NOTES
+       The system administrator is responsible for placing the default user
+       files in the /etc/skel/ directory (or any other skeleton directory
+       specified in /etc/default/useradd or on the command line).
+>3008;end=7833b0f7-e8dc-4cc5-93b7-294dfee7ebf0;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ sudo useradd -m -s /bi
+n/bash piunnk
+3008;start=7e414c6f-b9d4-4639-91c9-a98b93d8fdbb;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\3008;end=7e414c6f-b9d4-4639-91c9-a98b93d8fdbb;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ ls /home/
+3008;start=cb09a2d8-2f10-4a5e-a2d1-7dfd46840d58;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\green  kent  pink  yellow
+3008;end=cb09a2d8-2f10-4a5e-a2d1-7dfd46840d58;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ ls /home-l
+3008;start=c6fb84a2-e5bd-43dd-90f2-5814462a8a08;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\total 16
+drwxr-x--- 2 green  green  4096 Apr 27 08:25 green
+drwxr-x--- 6 kent   kent   4096 Apr 27 08:46 kent
+drwxr-x--- 2 pink   pink   4096 Apr 27 08:46 pink
+drwxr-x--- 2 yellow yellow 4096 Apr 27 08:37 yellow
+3008;end=c6fb84a2-e5bd-43dd-90f2-5814462a8a08;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ ls --la /hp
+ome/pink/0;kent@ubse: ~
+kent@ubse:~$ ls -la /home/pink/
+3008;start=6852d261-05e3-4cb2-89dc-8cd128101485;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\ls: cannot open directory '/home/pink/': Permission denied
+3008;end=6852d261-05e3-4cb2-89dc-8cd128101485;exit=failure;status=2\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+sudpo bse:~$ ls -la /home/pink/
+3008;start=58aa70d9-7642-41be-aae4-58790004d549;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\total 20
+drwxr-x--- 2 pink pink 4096 Apr 27 08:46 .
+drwxr-xr-x 6 root root 4096 Apr 27 08:46 ..
+-rw-r--r-- 1 pink pink  220 Feb 13 12:16 .bash_logout
+-rw-r--r-- 1 pink pink 3771 Feb 13 12:16 .bashrc
+-rw-r--r-- 1 pink pink  807 Feb 13 12:16 .profile
+3008;end=58aa70d9-7642-41be-aae4-58790004d549;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ sudo passwd pink
+3008;start=ca6aa8df-c687-4d55-9ac5-0b1a8d5c17ae;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\New password: 
+Retype new password: 
+passwd: password updated successfully
+3008;end=ca6aa8df-c687-4d55-9ac5-0b1a8d5c17ae;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ su pink
+3008;start=71c91fdf-90c7-4346-b90a-88e503706ab6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\Password: 
+3008;start=24337832220b4c8b8aabe291a250d437;user=kent;hostname=ubse;machineid=99989d8765784683978eb13428149c42;bootid=d931ba01ba684e269234e474d333f75b;pid=3409;pidfdid=5747;comm=su;targetuser=pink;type=session\0;pink@ubse: /home/kent
+pink@ubse:/home/kent$ 0;pink@ubse: /home/kent
+pink@ubse:/home/kent$ cd $HOME
+0;pink@ubse: ~
+pink@ubse:~$ echo $HO
+ME
+/home/pink
+0;pink@ubse: ~
+pink@ubse:~$ ls -a
+.  ..  .bash_logout  .bashrc  .profile
+0;pink@ubse: ~
+pink@ubse:~$ 
+exit
+3008;end=24337832220b4c8b8aabe291a250d437\3008;end=71c91fdf-90c7-4346-b90a-88e503706ab6;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ man usermod
+USERMOD(8)               System Management Commands               USERMOD(8)8eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\=
+
+NAME
+       usermod - modify a user account
+
+SYNOPSIS
+
+       usermod [options] LOGIN
+
+DESCRIPTION
+       The usermod command modifies the system account files.
+
+OPTIONS
+       The options which apply to the usermod command are:
+
+       -a, --append
+           Add the user to the supplementary group(s). Use only with the -G
+           option.
+
+       -b, --badname
+           Allow names that do not conform to standards.
+
+       -c, --comment COMMENT
+           update the comment field of the user in /etc/passwd, which is
+           normally modified using the chfn(1) utility.o quit)
+ ESESCOBpage usermod(8) line 3 (press h for help or q to quit)
+       -d, --home HOME_DIRne 4 (press h for help or q to quit)
+           The user's new login directory.r help or q to quit)
+ ESESCOBpage usermod(8) line 6 (press h for help or q to quit)
+           If the -m option is given, the contents of the current home
+           directory will be moved to the new home directory, which is
+           created if it does not already exist. If the current home
+           directory does not exist the new home directory will not be
+           created.d(8) line 11 (press h for help or q to quit)
+ ESESCOBpage usermod(8) line 12 (press h for help or q to quit)
+       -e, --expiredate EXPIRE_DATEess h for help or q to quit)
+           The date on which the user account will be disabled. The date is
+           specified in the format YYYY-MM-DD. Integers as input are
+           interpreted as days after 1970-01-01.p or q to quit)
+ ESESCOBpage usermod(8) line 17 (press h for help or q to quit)
+           An input of -1 or an empty string will blank the account
+           expiration field in the shadow password file. The account will
+           remain available with no date limit.lp or q to quit)
+ ESESCOBpage usermod(8) line 21 (press h for help or q to quit)
+           This option requires a /etc/shadow file. A /etc/shadow entry will
+           be created if there were none.for help or q to quit)
+ ESESCOBpage usermod(8) line 24 (press h for help or q to quit)
+       -f, --inactive INACTIVE5 (press h for help or q to quit)
+           defines the number of days after the password exceeded its
+           maximum age during which the user may still login by immediately
+           replacing the password. This grace period before the account
+           becomes inactive is stored in the shadow password file. An input
+           of 0 will disable an expired password with no delay. An input of
+           -1 will blank the respective field in the shadow password file.
+           See shadow(5) for more information.elp or q to quit)
+ ESESCOBpage usermod(8) line 33 (press h for help or q to quit)
+           This option requires a /etc/shadow file. A /etc/shadow entry will
+           be created if there were none.for help or q to quit)
+ ESESCOBpage usermod(8) line 36 (press h for help or q to quit)
+       -g, --gid GROUP) line 37 (press h for help or q to quit)
+           The name or numerical ID of the user's new primary group. The
+           group must exist. 39 (press h for help or q to quit)
+ ESESCOBpage usermod(8) line 40 (press h for help or q to quit)
+           Any file from the user's home directory owned by the previous
+           primary group of the user will be owned by this new group.
+ ESESCOBpage usermod(8) line 43 (press h for help or q to quit)
+           The group ownership of files outside of the user's home directory
+           must be fixed manually.ress h for help or q to quit)
+
+           The change of the group ownership of files inside of the user's
+           home directory is also not done if the home dir owner uid is
+           different from the current or new user id. This is a safety
+           measure for special home directories such as /.
+
+       -G, --groups GROUP1[,GROUP2,...[,GROUPN]]]
+           A list of supplementary groups which the user is also a member
+           of. Each group is separated from the next by a comma, with no
+           intervening whitespace. The groups must exist.
+
+           If the user is currently a member of a group which is not listed,
+           the user will be removed from the group. This behaviour can be
+           changed via the -a option, which appends the user to the current
+           supplementary group list.
+
+       -l, --login NEW_LOGIN
+           The name of the user will be changed from LOGIN to NEW_LOGIN.
+           Nothing else is changed. In particular, the user's home directory
+           or mail spool should probably be renamed manually to reflect the
+           new login name.
+
+       -L, --lockmod(8) line 68 (press h for help or q to quit)
+           Lock a user's password. This puts a '!' in front of the encrypted
+           password, effectively disabling the password. You can't use this
+           option with -p or -U.
+
+           Note: if you wish to lock the account (not only access with a
+           password), you should also set the EXPIRE_DATE to 1.
+
+       -m, --move-home
+           moves the content of the user's home directory to the new
+           location. If the current home directory does not exist the new
+           home directory will not be created.
+
+           This option is only valid in combination with the -d (or --home)
+           option.
+
+           usermod will try to adapt the ownership of the files and to copy
+           the modes, ACL and extended attributes, but manual changes might
+           be needed afterwards.
+
+       -o, --non-unique
+           allows to change the user ID to a non-unique value.
+
+           This option is only valid in combination with the -u option. As a
+           user identity serves as key to map between users on one hand and
+           permissions, file ownerships and other aspects that determine the
+           system's behavior on the other hand, more than one login name
+           will access the account of the given UID.
+
+       -p, --password PASSWORD
+           defines a new password for the user. PASSWORD is expected to be
+           encrypted, as returned by crypt (3).
+
+           Note: Avoid this option on the command line because the password
+           (or encrypted password) will be visible by users listing the
+           processes.
+
+           The password will be written in the local /etc/passwd or
+           /etc/shadow file. This might differ from the password database
+           configured in your PAM configuration.
+
+           You should make sure the password respects the system's password
+           policy.
+
+       -r, --remove
+           Remove the user from named supplementary group(s). Use only with
+           the -G option.ine 114 (press h for help or q to quit)
+
+       -R, --root CHROOT_DIR
+           Apply changes in the CHROOT_DIR directory and use the
+           configuration files from the CHROOT_DIR directory. Only absolute
+           paths are supported.
+
+       -P, --prefix PREFIX_DIR
+           Apply changes within the directory tree starting with PREFIX_DIR
+           and use as well the configuration files located there. This
+           option does not chroot and is intended for preparing a
+           cross-compilation target. Some limitations: NIS and LDAP
+           users/groups are not verified. PAM authentication is using the
+           host files. No SELINUX support.
+
+       -s, --shell SHELL
+           changes the user's login shell. An empty string for SHELL blanks
+           the field in /etc/passwd and logs the user into the system's
+           default shell.
+
+       -u, --uid UID
+           The new value of the user's ID.
+
+>3008;end=601da897-fb87-46c7-8e00-eaf1f289a5a8;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+kent@ubse:~$ sudo apt install feish
+Installing:                     09-2cfad63a1e6e;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\
+  fish
+
+Installing dependencies:
+  bzip2  fish-common  libpcre2-32-0  lynx  lynx-common  mailcap  xsel
+
+Suggested packages:
+  bzip2-doc  doc-base
+
+Summary:
+  Upgrading: 0, Installing: 8, Removing: 0, Not Upgrading: 0
+  Download size: 10.2 MB
+  Space needed: 49.5 MB / 7890 MB available
+
+Continue? [Y/n] 
+Get:1 http://se.archive.ubuntu.com/ubuntu resolute/main amd64 bzip2 amd64 1.0.8-6build2 [34.3 kB]
+Get:2 http://se.archive.ubuntu.com/ubuntu resolute/universe amd64 fish-common all 4.2.1-3.2 [1784 kB]
+Get:3 http://se.archive.ubuntu.com/ubuntu resolute/main amd64 libpcre2-32-0 amd64 10.46-1build1 [227 kB]
+Get:5 http://se.archive.ubuntu.com/ubuntu resolute/universe amd64 lynx-common all 2.9.2-2 [1005 kB]
+Get:6 http://se.archive.ubuntu.com/ubuntu resolute/main amd64 mailcap all 3.75ubuntu1 [24.7 kB]
+Get:7 http://se.archive.ubuntu.com/ubuntu resolute/universe amd64 xsel amd64 1.2.1-1build1 [20.5 kB]
+Get:8 http://se.archive.ubuntu.com/ubuntu resolute/universe amd64 lynx amd64 2.9.2-2 [723 kB]
+Get:4 http://saimei.ftp.acc.umu.se/ubuntu resolute/universe amd64 fish amd64 4.2.1-3.2 [6374 kB]
+Fetched 10.2 MB in 1s (11.8 MB/s)        
+
+Selecting previously unselected package bzip2.
+(Reading database ... 98772 files and directories currently installed.)
+Preparing to unpack .../0-bzip2_1.0.8-6build2_amd64.deb ...
+Progress: [  0%] [                                                       ] 87Progress: [  3%] [█▋                                                     ] 8Unpacking bzip2 (1.0.8-6build2) ...
+Progress: [  6%] [███▎                                                   ] 8Selecting previously unselected package fish-common.
+Preparing to unpack .../1-fish-common_4.2.1-3.2_all.deb ...
+Progress: [  9%] [█████                                                  ] 8Unpacking fish-common (4.2.1-3.2) ...
+Progress: [ 12%] [██████▋                                                ] 8Selecting previously unselected package libpcre2-32-0:amd64.
+Preparing to unpack .../2-libpcre2-32-0_10.46-1build1_amd64.deb ...
+Progress: [ 15%] [████████▎                                              ] 8Unpacking libpcre2-32-0:amd64 (10.46-1build1) ...
+Progress: [ 18%] [██████████                                             ] 8Selecting previously unselected package fish.
+Preparing to unpack .../3-fish_4.2.1-3.2_amd64.deb ...
+Progress: [ 21%] [███████████▋                                           ] 8Unpacking fish (4.2.1-3.2) ...
+Progress: [ 24%] [█████████████▎                                         ] 8Selecting previously unselected package lynx-common.
+Preparing to unpack .../4-lynx-common_2.9.2-2_all.deb ...
+Progress: [ 27%] [███████████████                                        ] 8Unpacking lynx-common (2.9.2-2) ...
+Progress: [ 30%] [████████████████▋                                      ] 8Selecting previously unselected package mailcap.
+Preparing to unpack .../5-mailcap_3.75ubuntu1_all.deb ...
+Progress: [ 33%] [██████████████████▎                                    ] 8Unpacking mailcap (3.75ubuntu1) ...
+Progress: [ 36%] [████████████████████                                   ] 8Selecting previously unselected package xsel.
+Preparing to unpack .../6-xsel_1.2.1-1build1_amd64.deb ...
+Progress: [ 39%] [█████████████████████▋                                 ] 8Unpacking xsel (1.2.1-1build1) ...
+Progress: [ 42%] [███████████████████████▎                               ] 8Selecting previously unselected package lynx.
+Preparing to unpack .../7-lynx_2.9.2-2_amd64.deb ...
+Progress: [ 45%] [█████████████████████████                              ] 8Unpacking lynx (2.9.2-2) ...
+Progress: [ 48%] [██████████████████████████▋                            ] 8Setting up xsel (1.2.1-1build1) ...
+Progress: [ 52%] [████████████████████████████▎                          ] 87Progress: [ 55%] [██████████████████████████████                         ] 8Setting up bzip2 (1.0.8-6build2) ...
+Progress: [ 58%] [███████████████████████████████▋                       ] 87Progress: [ 61%] [█████████████████████████████████▎                     ] 8Setting up libpcre2-32-0:amd64 (10.46-1build1) ...
+Progress: [ 64%] [███████████████████████████████████                    ] 87Progress: [ 67%] [████████████████████████████████████▋                  ] 8Setting up lynx-common (2.9.2-2) ...
+Progress: [ 70%] [██████████████████████████████████████▎                ] 87Progress: [ 73%] [████████████████████████████████████████               ] 8Setting up lynx (2.9.2-2) ...
+Progress: [ 76%] [█████████████████████████████████████████▋             ] 8update-alternatives: using /usr/bin/lynx to provide /usr/bin/www-browser (www-browser) in auto mode
+Progress: [ 79%] [███████████████████████████████████████████▎           ] 8Setting up fish-common (4.2.1-3.2) ...
+Progress: [ 82%] [█████████████████████████████████████████████          ] 87Progress: [ 85%] [██████████████████████████████████████████████▋        ] 8Setting up mailcap (3.75ubuntu1) ...
+Progress: [ 88%] [████████████████████████████████████████████████▎      ] 87Progress: [ 91%] [██████████████████████████████████████████████████     ] 8Setting up fish (4.2.1-3.2) ...
+Progress: [ 94%] [███████████████████████████████████████████████████▋   ] 87Progress: [ 97%] [█████████████████████████████████████████████████████▎ ] 8Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2) ...
+
+Scanning processes...                                                        
+Scanning linux images...                                                     
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+3008;end=7fae5d8a-f655-4209-b909-2cfad63a1e6e;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+kent@ubse:~$ usermod --shell /bin
+/fis
+
+
+
+
+
+bash 
+
+
+
+
+
+
+which fish
+3008;start=883ff976-7d8d-4ca3-b1de-6e7f590e71d0;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\/usr/bin/fish
+3008;end=883ff976-7d8d-4ca3-b1de-6e7f590e71d0;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ usermod -s sdo 
+$(which fish) yellow 
+3008;start=4a8bc892-afa9-43e2-b4ad-e4c9682c298c;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\3008;end=4a8bc892-afa9-43e2-b4ad-e4c9682c298c;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ su yellow
+3008;start=5056d159-0d17-4fdb-a663-f06442b62991;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\Password: 
+3008;start=13818e7dddc94b2ca864fb1360888c84;user=kent;hostname=ubse;machineid=99989d8765784683978eb13428149c42;bootid=d931ba01ba684e269234e474d333f75b;pid=3737;pidfdid=5940;comm=su;targetuser=yellow;type=session\Unable to open the current working directory: Permission denied
+
+Type help for instructions on how to use fish
+7;file://ubse/home/kent
+0;[ubse] /h/kent
+
+133;C;cmdline_url=cd
+0;[ubse] cd /h/kent
+7;file://ubse/home/yellow
+133;D;0
+0;[ubse] ~                                                                     
+
+133;C;cmdline_url=pwd
+0;[ubse] pwd ~
+/home/yellow
+133;D;0
+0;[ubse] ~                                                                     
+
+133;C;cmdline_url=echo%20%240
+0;[ubse] echo $0 ~
+
+133;D;0
+0;[ubse] ~                                                                     
+
+0;[ubse] ~                                                                     
+
+-1                                           (List one entry per line)
+-A  --almost-all                         (Show hidden except . and ..)
+-a  --all                                                (Show hidden)
+-B  --ignore-backups                      (Ignore files ending with ~)
+-b  --escape                (Octal escapes for non-graphic characters)
+-C                                         (Force multi-column output)
+-c                             (Sort by changed time, (-l) show ctime)
+-D  --dired                                    (Generate dired output)
+…and 48 more rows
+--block-size                                          (Set block size)
+--color  --color=                                         (Use colors)
+--dereference-command-line-symlink-to-dir                             
+--format                                                 (List format)
+--full-time                               (Long format, full-iso time)
+--group-directories-first             (Group directories before files)
+--help                                         (Display help and exit)
+--hide  (Do not list implied entries matching specified shell pattern)
+--lcontext                                  (Display security context)
+--quoting-style                                 (Select quoting style)
+--scontext               (Display only security context and file name)
+--show-control-chars            (Non-graphic characters printed as-is)
+--si                            (Human readable sizes, powers of 1000)
+--sort                                                 (Sort criteria)
+--time                                                (Show time type)
+--time-style                                       (Select time style)
+--version                                   (Display version and exit)
+ls --version  of 56
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--time-style                                       (Select time style)
+ls --time-style full-iso                    (Display version and exit)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--time                                                (Show time type)
+ls --time access                                   (Select time style)
+
+
+
+
+
+
+
+
+
+
+
+
+
+--sort                                                 (Sort criteria)
+ls --sort access                                      (Show time type)
+
+
+
+
+
+
+
+
+
+
+
+
+--si                            (Human readable sizes, powers of 1000)
+ls --si                                                (Sort criteria)
+
+
+
+
+
+
+
+
+
+
+
+--show-control-chars            (Non-graphic characters printed as-is)
+ls --show-control-chars         (Human readable sizes, powers of 1000)
+
+
+
+
+
+
+
+
+
+
+--scontext               (Display only security context and file name)
+ls --scontext -chars            (Non-graphic characters printed as-is)
+
+
+
+
+
+
+
+
+
+--quoting-style                                 (Select quoting style)
+ls --quoting-style c     (Display only security context and file name)
+
+
+
+
+
+
+
+
+--lcontext                                  (Display security context)
+ls --lcontext e                                 (Select quoting style)
+
+
+
+
+
+
+
+--hide  (Do not list implied entries matching specified shell pattern)
+ls --hide                                   (Display security context)
+
+
+
+
+
+
+--help                                         (Display help and exit)
+ls --help o not list implied entries matching specified shell pattern)
+
+
+
+
+
+--group-directories-first             (Group directories before files)
+ls --group-directories-first                   (Display help and exit)
+
+
+
+
+--full-time                               (Long format, full-iso time)
+ls --full-time ries-first             (Group directories before files)
+
+
+
+--format                                                 (List format)
+ls --format across                        (Long format, full-iso time)
+
+
+--dereference-command-line-symlink-to-dir                             
+ls --dereference-command-line-symlink-to-dir             (List format)
+
+--color  --color=                                         (Use colors)
+ls --color ce-command-line-symlink-to-dir                             
+
+--color  --color=                                         (Use colors)
+ls --dereference-command-line-symlink-to-dir                          
+
+
+--dereference-command-line-symlink-to-dir                             
+ls --format across                                       (List format)
+
+
+
+--format                                                 (List format)
+ls --full-time                            (Long format, full-iso time)
+
+
+
+
+--full-time                               (Long format, full-iso time)
+ls --group-directories-first          (Group directories before files)
+
+
+
+
+
+--group-directories-first             (Group directories before files)
+ls --help                                      (Display help and exit)
+
+
+
+
+
+
+--help                                         (Display help and exit)
+ls --hide o not list implied entries matching specified shell pattern)
+
+
+
+
+
+
+
+--hide  (Do not list implied entries matching specified shell pattern)
+ls --lcontext                               (Display security context)
+
+
+
+
+
+
+
+
+--lcontext                                  (Display security context)
+ls --quoting-style c                            (Select quoting style)
+
+
+
+
+
+
+
+
+
+--quoting-style                                 (Select quoting style)
+ls --scontext            (Display only security context and file name)
+
+
+
+
+
+
+
+
+
+
+--scontext               (Display only security context and file name)
+ls --show-control-chars         (Non-graphic characters printed as-is)
+
+
+
+
+
+
+
+
+
+
+
+--show-control-chars            (Non-graphic characters printed as-is)
+ls --si                         (Human readable sizes, powers of 1000)
+
+
+
+
+
+
+
+
+
+
+
+
+--si                            (Human readable sizes, powers of 1000)
+ls --sort access                                       (Sort criteria)
+
+
+
+
+
+
+
+
+
+
+
+
+
+--sort                                                 (Sort criteria)
+ls --time access                                      (Show time type)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--time                                                (Show time type)
+ls --time-style full-iso                           (Select time style)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--time-style                                       (Select time style)
+ls --version                                (Display version and exit)
+-1                                           (List one entry per line)
+-A  --almost-all                         (Show hidden except . and ..)
+-a  --all                                                (Show hidden)
+-B  --ignore-backups                      (Ignore files ending with ~)
+-b  --escape                (Octal escapes for non-graphic characters)
+-C                                         (Force multi-column output)
+-c                             (Sort by changed time, (-l) show ctime)
+-D  --dired                                    (Generate dired output)
+-d  --directory                  (List directories, not their content)
+-F  --classify                    (Append filetype indicator (*/=>@|))
+-f                                       (Unsorted output, enables -a)
+-G  --no-group                         (Don't print group information)
+-H  -L  --dereference  --dereference-command-line    (Follow symlinks)
+-h  --human-readable                            (Human readable sizes)
+-I  --ignore                           (Skip entries matching pattern)
+-i  --inode                              (Print inode number of files)
+-k                                              (Set blocksize to 1kB)
+ls -1 7 of 56
+-1                                           (List one entry per line)
+ls -A almost-all                         (Show hidden except . and ..)
+
+-A  --almost-all                         (Show hidden except . and ..)
+ls -a all                                                (Show hidden)
+
+
+-a  --all                                                (Show hidden)
+ls -B ignore-backups                      (Ignore files ending with ~)
+
+
+
+-B  --ignore-backups                      (Ignore files ending with ~)
+ls -b escape                (Octal escapes for non-graphic characters)
+
+
+
+
+-b  --escape                (Octal escapes for non-graphic characters)
+ls -C                                      (Force multi-column output)
+
+
+
+
+-b  --escape                (Octal escapes for non-graphic characters)
+ls -b                                      (Force multi-column output)
+
+
+
+-B  --ignore-backups                      (Ignore files ending with ~)
+ls -B escape                (Octal escapes for non-graphic characters)
+
+
+
+-B  --ignore-backups                      (Ignore files ending with ~)
+ls -b escape                (Octal escapes for non-graphic characters)
+
+
+
+
+-b  --escape                (Octal escapes for non-graphic characters)
+ls -C                                      (Force multi-column output)
+
+
+
+
+
+-C                                         (Force multi-column output)
+ls -c                          (Sort by changed time, (-l) show ctime)
+
+
+
+
+
+
+-c                             (Sort by changed time, (-l) show ctime)
+ls -D dired                                    (Generate dired output)
+
+
+
+
+
+
+-c                             (Sort by changed time, (-l) show ctime)
+ls -c dired                                    (Generate dired output)
+
+
+
+
+
+-C                                         (Force multi-column output)
+ls -C                          (Sort by changed time, (-l) show ctime)
+
+
+
+
+-b  --escape                (Octal escapes for non-graphic characters)
+ls -b                                      (Force multi-column output)
+
+
+
+-B  --ignore-backups                      (Ignore files ending with ~)
+ls -B escape                (Octal escapes for non-graphic characters)
+
+
+
+-B  --ignore-backups                      (Ignore files ending with ~)
+ls -b escape                (Octal escapes for non-graphic characters)
+
+
+
+
+-b  --escape                (Octal escapes for non-graphic characters)
+ls -C                                      (Force multi-column output)
+
+
+
+
+
+-C                                         (Force multi-column output)
+ls -c                          (Sort by changed time, (-l) show ctime)
+
+
+
+
+
+
+-c                             (Sort by changed time, (-l) show ctime)
+ls -D dired                                    (Generate dired output)
+
+
+
+
+
+
+
+-D  --dired                                    (Generate dired output)
+ls -d directory                  (List directories, not their content)
+
+
+
+
+
+
+
+
+-d  --directory                  (List directories, not their content)
+ls -F classify                    (Append filetype indicator (*/=>@|))
+
+
+
+
+
+
+
+
+
+-F  --classify                    (Append filetype indicator (*/=>@|))
+ls -f                                    (Unsorted output, enables -a)
+
+
+
+
+
+
+
+
+
+
+-f                                       (Unsorted output, enables -a)
+ls -G no-group                         (Don't print group information)
+
+
+
+
+
+
+
+
+
+
+
+-G  --no-group                         (Don't print group information)
+ls -H   --dereference  --dereference-command-line    (Follow symlinks)
+
+
+
+
+
+
+
+
+
+
+
+
+-H  -L  --dereference  --dereference-command-line    (Follow symlinks)
+1  -h human-readable                            (Human readable sizes)
+133;C;cmdline_url=ls%20-h%20-a
+0;[ubse] ls -h -a ~
+./  ../  .cache/  .config/  .local/
+133;D;0
+0;[ubse] ~                                                                     
+
+133;C;cmdline_url=ls%20-h%20-al
+0;[ubse] ls -h -al ~
+total 20K
+drwxr-x--- 5 yellow yellow 4.0K Apr 27 08:51 ./
+drwxr-xr-x 6 root   root   4.0K Apr 27 08:46 ../
+drwx------ 3 yellow yellow 4.0K Apr 27 08:51 .cache/
+drwx------ 3 yellow yellow 4.0K Apr 27 08:51 .config/
+drwx------ 3 yellow yellow 4.0K Apr 27 08:51 .local/
+133;D;0
+0;[ubse] ~                                                                     
+
+133;C;cmdline_url=ls%20-al
+0;[ubse] ls -al ~
+total 20
+drwxr-x--- 5 yellow yellow 4096 Apr 27 08:51 ./
+drwxr-xr-x 6 root   root   4096 Apr 27 08:46 ../
+drwx------ 3 yellow yellow 4096 Apr 27 08:51 .cache/
+drwx------ 3 yellow yellow 4096 Apr 27 08:51 .config/
+drwx------ 3 yellow yellow 4096 Apr 27 08:51 .local/
+133;D;0
+0;[ubse] ~                                                                     
+
+!                                (Negate exit status of job)
+3cpio                                              (command)
+:                               (Return a successful result)
+aa-enabled                                         (command)
+aa-exec                                            (command)
+aa-features-abi                                    (command)
+aa-load                                            (command)
+aa-remove-unknown                                  (command)
+…and 1825 more rows
+
+
+
+
+
+
+
+
+aa-status                                          (command)
+aa-teardown                                        (command)
+abbr                                                        
+accessdb                                           (command)
+acpidbg                                            (command)
+addgnupghome                                       (command)
+addgroup                                      (command link)
+addpart                                            (command)
+addr2line                                     (command link)
+rows 1 to 17 of 1833
+!                                (Negate exit status of job)
+!                                (Negate exit status of job)
+3cpio                                              (command)
+
+3cpio                                              (command)
+:                               (Return a successful result)
+
+
+:                               (Return a successful result)
+aa-enabled                                         (command)
+
+
+
+aa-enabled                                         (command)
+aa-exec                                            (command)
+
+
+
+
+aa-exec                                            (command)
+aa-features-abi                                    (command)
+
+
+
+
+
+aa-features-abi                                    (command)
+aa-load                                            (command)
+
+
+
+
+
+
+aa-load                                            (command)
+aa-remove-unknown                                  (command)
+
+
+
+
+
+
+
+aa-remove-unknown                                  (command)
+aa-status                                          (command)
+
+
+
+
+
+
+
+
+aa-status                                          (command)
+aa-teardown                                        (command)
+
+
+
+
+
+
+
+
+
+aa-teardown                                        (command)
+abbr                                                        
+
+
+
+
+
+
+
+
+
+
+abbr                                                        
+accessdb                                           (command)
+
+
+
+
+
+
+
+
+
+
+
+accessdb                                           (command)
+acpidbg                                            (command)
+
+
+
+
+
+
+
+
+
+
+
+
+acpidbg                                            (command)
+addgnupghome                                       (command)
+
+
+
+
+
+
+
+
+
+
+
+
+
+addgnupghome                                       (command)
+addgroup                                      (command link)
+
+
+
+
+
+
+
+
+
+
+
+
+
+addgnupghome                                       (command)
+addgnupghome                                  (command link)
+
+
+
+
+
+
+
+
+
+
+
+
+acpidbg                                            (command)
+acpidbg home                                       (command)
+
+
+
+
+
+
+
+
+
+
+
+accessdb                                           (command)
+accessdb                                           (command)
+
+
+
+
+
+
+
+
+
+
+abbr                                                        
+abbr sdb                                           (command)
+
+
+
+
+
+
+
+
+
+aa-teardown                                        (command)
+aa-teardown                                                 
+
+
+
+
+
+
+
+
+aa-status                                          (command)
+aa-status n                                        (command)
+
+
+
+
+
+
+
+aa-remove-unknown                                  (command)
+aa-remove-unknown                                  (command)
+
+
+
+
+
+
+aa-load                                            (command)
+aa-load e-unknown                                  (command)
+
+
+
+
+
+aa-features-abi                                    (command)
+aa-features-abi                                    (command)
+
+
+
+
+aa-exec                                            (command)
+aa-exec res-abi                                    (command)
+
+
+
+
+aa-exec                                            (command)
+aa-features-abi                                    (command)
+
+
+
+
+
+aa-features-abi                                    (command)
+aa-load                                            (command)
+
+
+
+
+
+
+aa-load                                            (command)
+aa-remove-unknown                                  (command)
+
+
+
+
+
+
+
+aa-remove-unknown                                  (command)
+aa-status                                          (command)
+
+
+
+
+
+
+
+
+aa-status                                          (command)
+aa-teardown                                        (command)
+
+
+
+
+
+
+
+
+
+aa-teardown                                        (command)
+abbr                                                        
+
+
+
+
+
+
+
+
+
+
+abbr                                                        
+accessdb                                           (command)
+
+
+
+
+
+
+
+
+
+
+
+accessdb                                           (command)
+acpidbg                                            (command)
+
+
+
+
+
+
+
+
+
+
+
+
+acpidbg                                            (command)
+addgnupghome                                       (command)
+
+
+
+
+
+
+
+
+
+
+
+
+
+addgnupghome                                       (command)
+addgroup                                      (command link)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+addgroup                                      (command link)
+addpart                                            (command)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+addpart                                            (command)
+addr2line                                     (command link)
+3cpio                                              (command)
+:                               (Return a successful result)
+aa-enabled                                         (command)
+aa-exec                                            (command)
+aa-features-abi                                    (command)
+aa-load                                            (command)
+aa-remove-unknown                                  (command)
+aa-status                                          (command)
+aa-teardown                                        (command)
+abbr                                                        
+accessdb                                           (command)
+acpidbg                                            (command)
+addgnupghome                                       (command)
+addgroup                                      (command link)
+addpart                                            (command)
+addr2line                                     (command link)
+user                                            (command)
+adduser of 1833
+:                               (Return a successful result)
+aa-enabled                                         (command)
+aa-exec                                            (command)
+aa-features-abi                                    (command)
+aa-load                                            (command)
+aa-remove-unknown                                  (command)
+aa-status                                          (command)
+aa-teardown                                        (command)
+abbr                                                        
+accessdb                                           (command)
+acpidbg                                            (command)
+addgnupghome                                       (command)
+addgroup                                      (command link)
+addpart                                            (command)
+addr2line                                     (command link)
+adduser                                            (command)
+-apt-repository                                 (command)
+add-apt-repository 
+aa-enabled                                         (command)
+aa-exec                                            (command)
+aa-features-abi                                    (command)
+aa-load                                            (command)
+aa-remove-unknown                                  (command)
+aa-status                                          (command)
+aa-teardown                                        (command)
+abbr                                                        
+accessdb                                           (command)
+acpidbg                                            (command)
+addgnupghome                                       (command)
+addgroup                                      (command link)
+addpart                                            (command)
+addr2line                                     (command link)
+adduser                                            (command)
+add-apt-repository                                 (command)
+shell                                          (command)
+add-shell  1833
+aa-exec                                            (command)
+aa-features-abi                                    (command)
+aa-load                                            (command)
+aa-remove-unknown                                  (command)
+aa-status                                          (command)
+aa-teardown                                        (command)
+abbr                                                        
+accessdb                                           (command)
+acpidbg                                            (command)
+addgnupghome                                       (command)
+addgroup                                      (command link)
+addpart                                            (command)
+addr2line                                     (command link)
+adduser                                            (command)
+add-apt-repository                                 (command)
+add-shell                                          (command)
+getty                                             (command)
+agetty  of 1833
+aa-features-abi                                    (command)
+aa-load                                            (command)
+aa-remove-unknown                                  (command)
+aa-status                                          (command)
+aa-teardown                                        (command)
+abbr                                                        
+accessdb                                           (command)
+acpidbg                                            (command)
+addgnupghome                                       (command)
+addgroup                                      (command link)
+addpart                                            (command)
+addr2line                                     (command link)
+adduser                                            (command)
+add-apt-repository                                 (command)
+add-shell                                          (command)
+agetty                                             (command)
+lias                                                       
+alias 2 of 1833
+aa-load                                            (command)
+aa-remove-unknown                                  (command)
+aa-status                                          (command)
+aa-teardown                                        (command)
+abbr                                                        
+accessdb                                           (command)
+acpidbg                                            (command)
+addgnupghome                                       (command)
+addgroup                                      (command link)
+addpart                                            (command)
+addr2line                                     (command link)
+adduser                                            (command)
+add-apt-repository                                 (command)
+add-shell                                          (command)
+agetty                                             (command)
+alias                                                       
+nd                  (Run command if last command succeeded)
+and  23 of 1833
+aa-remove-unknown                                  (command)
+aa-status                                          (command)
+aa-teardown                                        (command)
+abbr                                                        
+accessdb                                           (command)
+acpidbg                                            (command)
+addgnupghome                                       (command)
+addgroup                                      (command link)
+addpart                                            (command)
+addr2line                                     (command link)
+adduser                                            (command)
+add-apt-repository                                 (command)
+add-shell                                          (command)
+agetty                                             (command)
+alias                                                       
+and                  (Run command if last command succeeded)
+pparmor_parser                                    (command)
+apparmor_parser 
+aa-status                                          (command)
+aa-teardown                                        (command)
+abbr                                                        
+accessdb                                           (command)
+acpidbg                                            (command)
+addgnupghome                                       (command)
+addgroup                                      (command link)
+addpart                                            (command)
+addr2line                                     (command link)
+adduser                                            (command)
+add-apt-repository                                 (command)
+add-shell                                          (command)
+agetty                                             (command)
+alias                                                       
+and                  (Run command if last command succeeded)
+apparmor_parser                                    (command)
+status                               (command link)
+apparmor_status 
+aa-teardown                                        (command)
+abbr                                                        
+accessdb                                           (command)
+acpidbg                                            (command)
+addgnupghome                                       (command)
+addgroup                                      (command link)
+addpart                                            (command)
+addr2line                                     (command link)
+adduser                                            (command)
+add-apt-repository                                 (command)
+add-shell                                          (command)
+agetty                                             (command)
+alias                                                       
+and                  (Run command if last command succeeded)
+apparmor_parser                                    (command)
+apparmor_status                               (command link)
+lygnupgdefaults                                 (command)
+applygnupgdefaults 
+abbr                                                        
+accessdb                                           (command)
+acpidbg                                            (command)
+addgnupghome                                       (command)
+addgroup                                      (command link)
+addpart                                            (command)
+addr2line                                     (command link)
+adduser                                            (command)
+add-apt-repository                                 (command)
+add-shell                                          (command)
+agetty                                             (command)
+alias                                                       
+and                  (Run command if last command succeeded)
+apparmor_parser                                    (command)
+apparmor_status                               (command link)
+applygnupgdefaults                                 (command)
+ort-bug                                         (command)
+apport-bug 1833
+accessdb                                           (command)
+acpidbg                                            (command)
+addgnupghome                                       (command)
+addgroup                                      (command link)
+addpart                                            (command)
+addr2line                                     (command link)
+adduser                                            (command)
+add-apt-repository                                 (command)
+add-shell                                          (command)
+agetty                                             (command)
+alias                                                       
+and                  (Run command if last command succeeded)
+apparmor_parser                                    (command)
+apparmor_status                               (command link)
+applygnupgdefaults                                 (command)
+apport-bug                                         (command)
+cli                                         (command)
+apport-cli 1833
+acpidbg                                            (command)
+addgnupghome                                       (command)
+addgroup                                      (command link)
+addpart                                            (command)
+addr2line                                     (command link)
+adduser                                            (command)
+add-apt-repository                                 (command)
+add-shell                                          (command)
+agetty                                             (command)
+alias                                                       
+and                  (Run command if last command succeeded)
+apparmor_parser                                    (command)
+apparmor_status                               (command link)
+applygnupgdefaults                                 (command)
+apport-bug                                         (command)
+apport-cli                                         (command)
+ollect                                (command link)
+apport-collect 
+addgnupghome                                       (command)
+addgroup                                      (command link)
+addpart                                            (command)
+addr2line                                     (command link)
+adduser                                            (command)
+add-apt-repository                                 (command)
+add-shell                                          (command)
+agetty                                             (command)
+alias                                                       
+and                  (Run command if last command succeeded)
+apparmor_parser                                    (command)
+apparmor_status                               (command link)
+applygnupgdefaults                                 (command)
+apport-bug                                         (command)
+apport-cli                                         (command)
+apport-collect                                (command link)
+unpack                                      (command)
+apport-unpack 3
+addgroup                                      (command link)
+addpart                                            (command)
+addr2line                                     (command link)
+adduser                                            (command)
+add-apt-repository                                 (command)
+add-shell                                          (command)
+agetty                                             (command)
+alias                                                       
+and                  (Run command if last command succeeded)
+apparmor_parser                                    (command)
+apparmor_status                               (command link)
+applygnupgdefaults                                 (command)
+apport-bug                                         (command)
+apport-cli                                         (command)
+apport-collect                                (command link)
+apport-unpack                                      (command)
+streamcli                                       (command)
+appstreamcli 33
+addpart                                            (command)
+addr2line                                     (command link)
+adduser                                            (command)
+add-apt-repository                                 (command)
+add-shell                                          (command)
+agetty                                             (command)
+alias                                                       
+and                  (Run command if last command succeeded)
+apparmor_parser                                    (command)
+apparmor_status                               (command link)
+applygnupgdefaults                                 (command)
+apport-bug                                         (command)
+apport-cli                                         (command)
+apport-collect                                (command link)
+apport-unpack                                      (command)
+appstreamcli                                       (command)
+ropos                                       (command link)
+apropos of 1833
+addr2line                                     (command link)
+adduser                                            (command)
+add-apt-repository                                 (command)
+add-shell                                          (command)
+agetty                                             (command)
+alias                                                       
+and                  (Run command if last command succeeded)
+apparmor_parser                                    (command)
+apparmor_status                               (command link)
+applygnupgdefaults                                 (command)
+apport-bug                                         (command)
+apport-cli                                         (command)
+apport-collect                                (command link)
+apport-unpack                                      (command)
+appstreamcli                                       (command)
+apropos                                       (command link)
+t                                                (command)
+apt  33 of 1833
+adduser                                            (command)
+add-apt-repository                                 (command)
+add-shell                                          (command)
+agetty                                             (command)
+alias                                                       
+and                  (Run command if last command succeeded)
+apparmor_parser                                    (command)
+apparmor_status                               (command link)
+applygnupgdefaults                                 (command)
+apport-bug                                         (command)
+apport-cli                                         (command)
+apport-collect                                (command link)
+apport-unpack                                      (command)
+appstreamcli                                       (command)
+apropos                                       (command link)
+apt                                                (command)
+-add-repository                            (command link)
+apt-add-repository 
+add-apt-repository                                 (command)
+add-shell                                          (command)
+agetty                                             (command)
+alias                                                       
+and                  (Run command if last command succeeded)
+apparmor_parser                                    (command)
+apparmor_status                               (command link)
+applygnupgdefaults                                 (command)
+apport-bug                                         (command)
+apport-cli                                         (command)
+apport-collect                                (command link)
+apport-unpack                                      (command)
+appstreamcli                                       (command)
+apropos                                       (command link)
+apt                                                (command)
+apt-add-repository                            (command link)
+cache                                          (command)
+apt-cache  1833
+add-shell                                          (command)
+agetty                                             (command)
+alias                                                       
+and                  (Run command if last command succeeded)
+apparmor_parser                                    (command)
+apparmor_status                               (command link)
+applygnupgdefaults                                 (command)
+apport-bug                                         (command)
+apport-cli                                         (command)
+apport-collect                                (command link)
+apport-unpack                                      (command)
+appstreamcli                                       (command)
+apropos                                       (command link)
+apt                                                (command)
+apt-add-repository                            (command link)
+apt-cache                                          (command)
+drom                                          (command)
+apt-cdrom f 1833
+agetty                                             (command)
+alias                                                       
+and                  (Run command if last command succeeded)
+apparmor_parser                                    (command)
+apparmor_status                               (command link)
+applygnupgdefaults                                 (command)
+apport-bug                                         (command)
+apport-cli                                         (command)
+apport-collect                                (command link)
+apport-unpack                                      (command)
+appstreamcli                                       (command)
+apropos                                       (command link)
+apt                                                (command)
+apt-add-repository                            (command link)
+apt-cache                                          (command)
+apt-cdrom                                          (command)
+onfig                                         (command)
+apt-config 1833
+alias                                                       
+and                  (Run command if last command succeeded)
+apparmor_parser                                    (command)
+apparmor_status                               (command link)
+applygnupgdefaults                                 (command)
+apport-bug                                         (command)
+apport-cli                                         (command)
+apport-collect                                (command link)
+apport-unpack                                      (command)
+appstreamcli                                       (command)
+apropos                                       (command link)
+apt                                                (command)
+apt-add-repository                            (command link)
+apt-cache                                          (command)
+apt-cdrom                                          (command)
+apt-config                                         (command)
+get                                            (command)
+apt-get of 1833
+and                  (Run command if last command succeeded)
+apparmor_parser                                    (command)
+apparmor_status                               (command link)
+applygnupgdefaults                                 (command)
+apport-bug                                         (command)
+apport-cli                                         (command)
+apport-collect                                (command link)
+apport-unpack                                      (command)
+appstreamcli                                       (command)
+apropos                                       (command link)
+apt                                                (command)
+apt-add-repository                            (command link)
+apt-cache                                          (command)
+apt-cdrom                                          (command)
+apt-config                                         (command)
+apt-get                                            (command)
+mark                                           (command)
+apt-mark f 1833
+apparmor_parser                                    (command)
+apparmor_status                               (command link)
+applygnupgdefaults                                 (command)
+apport-bug                                         (command)
+apport-cli                                         (command)
+apport-collect                                (command link)
+apport-unpack                                      (command)
+appstreamcli                                       (command)
+apropos                                       (command link)
+apt                                                (command)
+apt-add-repository                            (command link)
+apt-cache                                          (command)
+apt-cdrom                                          (command)
+apt-config                                         (command)
+apt-get                                            (command)
+apt-mark                                           (command)
+r                                            (command link)
+ar o 40 of 1833
+apparmor_status                               (command link)
+applygnupgdefaults                                 (command)
+apport-bug                                         (command)
+apport-cli                                         (command)
+apport-collect                                (command link)
+apport-unpack                                      (command)
+appstreamcli                                       (command)
+apropos                                       (command link)
+apt                                                (command)
+apt-add-repository                            (command link)
+apt-cache                                          (command)
+apt-cdrom                                          (command)
+apt-config                                         (command)
+apt-get                                            (command)
+apt-mark                                           (command)
+ar                                            (command link)
+ch                                          (command link)
+arch 41 of 1833
+applygnupgdefaults                                 (command)
+apport-bug                                         (command)
+apport-cli                                         (command)
+apport-collect                                (command link)
+apport-unpack                                      (command)
+appstreamcli                                       (command)
+apropos                                       (command link)
+apt                                                (command)
+apt-add-repository                            (command link)
+apt-cache                                          (command)
+apt-cdrom                                          (command)
+apt-config                                         (command)
+apt-get                                            (command)
+apt-mark                                           (command)
+ar                                            (command link)
+arch                                          (command link)
+gdist-bpfcc                                      (command)
+argdist-bpfcc 3
+apport-bug                                         (command)
+apport-cli                                         (command)
+apport-collect                                (command link)
+apport-unpack                                      (command)
+appstreamcli                                       (command)
+apropos                                       (command link)
+apt                                                (command)
+apt-add-repository                            (command link)
+apt-cache                                          (command)
+apt-cdrom                                          (command)
+apt-config                                         (command)
+apt-get                                            (command)
+apt-mark                                           (command)
+ar                                            (command link)
+arch                                          (command link)
+argdist-bpfcc                                      (command)
+parse                      (Parse options in fish script)
+argparse f 1833
+apport-cli                                         (command)
+apport-collect                                (command link)
+apport-unpack                                      (command)
+appstreamcli                                       (command)
+apropos                                       (command link)
+apt                                                (command)
+apt-add-repository                            (command link)
+apt-cache                                          (command)
+apt-cdrom                                          (command)
+apt-config                                         (command)
+apt-get                                            (command)
+apt-mark                                           (command)
+ar                                            (command link)
+arch                                          (command link)
+argdist-bpfcc                                      (command)
+argparse                      (Parse options in fish script)
+pd                                               (command)
+arpd 44 of 1833
+apport-collect                                (command link)
+apport-unpack                                      (command)
+appstreamcli                                       (command)
+apropos                                       (command link)
+apt                                                (command)
+apt-add-repository                            (command link)
+apt-cache                                          (command)
+apt-cdrom                                          (command)
+apt-config                                         (command)
+apt-get                                            (command)
+apt-mark                                           (command)
+ar                                            (command link)
+arch                                          (command link)
+argdist-bpfcc                                      (command)
+argparse                      (Parse options in fish script)
+arpd                                               (command)
+tables                                     (command link)
+arptables  1833
+apport-unpack                                      (command)
+appstreamcli                                       (command)
+apropos                                       (command link)
+apt                                                (command)
+apt-add-repository                            (command link)
+apt-cache                                          (command)
+apt-cdrom                                          (command)
+apt-config                                         (command)
+apt-get                                            (command)
+apt-mark                                           (command)
+ar                                            (command link)
+arch                                          (command link)
+argdist-bpfcc                                      (command)
+argparse                      (Parse options in fish script)
+arpd                                               (command)
+arptables                                     (command link)
+-nft                                 (command link)
+arptables-nft 33
+appstreamcli                                       (command)
+apropos                                       (command link)
+apt                                                (command)
+apt-add-repository                            (command link)
+apt-cache                                          (command)
+apt-cdrom                                          (command)
+apt-config                                         (command)
+apt-get                                            (command)
+apt-mark                                           (command)
+ar                                            (command link)
+arch                                          (command link)
+argdist-bpfcc                                      (command)
+argparse                      (Parse options in fish script)
+arpd                                               (command)
+arptables                                     (command link)
+arptables-nft                                 (command link)
+-restore                         (command link)
+arptables-nft-restore 
+apropos                                       (command link)
+apt                                                (command)
+apt-add-repository                            (command link)
+apt-cache                                          (command)
+apt-cdrom                                          (command)
+apt-config                                         (command)
+apt-get                                            (command)
+apt-mark                                           (command)
+ar                                            (command link)
+arch                                          (command link)
+argdist-bpfcc                                      (command)
+argparse                      (Parse options in fish script)
+arpd                                               (command)
+arptables                                     (command link)
+arptables-nft                                 (command link)
+arptables-nft-restore                         (command link)
+save                            (command link)
+arptables-nft-save 
+apt                                                (command)
+apt-add-repository                            (command link)
+apt-cache                                          (command)
+apt-cdrom                                          (command)
+apt-config                                         (command)
+apt-get                                            (command)
+apt-mark                                           (command)
+ar                                            (command link)
+arch                                          (command link)
+argdist-bpfcc                                      (command)
+argparse                      (Parse options in fish script)
+arpd                                               (command)
+arptables                                     (command link)
+arptables-nft                                 (command link)
+arptables-nft-restore                         (command link)
+arptables-nft-save                            (command link)
+restore                             (command link)
+arptables-restore 
+apt-add-repository                            (command link)
+apt-cache                                          (command)
+apt-cdrom                                          (command)
+apt-config                                         (command)
+apt-get                                            (command)
+apt-mark                                           (command)
+ar                                            (command link)
+arch                                          (command link)
+argdist-bpfcc                                      (command)
+argparse                      (Parse options in fish script)
+arpd                                               (command)
+arptables                                     (command link)
+arptables-nft                                 (command link)
+arptables-nft-restore                         (command link)
+arptables-nft-save                            (command link)
+arptables-restore                             (command link)
+save                                (command link)
+arptables-save 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+arptables-restore                             (command link)
+arptables-restore                             (command link)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+arptables-nft-save                            (command link)
+arptables-nft-save                            (command link)
+
+
+
+
+
+
+
+
+
+
+
+
+
+arptables-nft-restore                         (command link)
+arptables-nft-restore                         (command link)
+
+
+
+
+
+
+
+
+
+
+
+
+arptables-nft                                 (command link)
+arptables-nft restore                         (command link)
+
+
+
+
+
+
+
+
+
+
+
+arptables                                     (command link)
+arptables nft                                 (command link)
+
+
+
+
+
+
+
+
+
+
+arpd                                               (command)
+arpd bles                                     (command link)
+
+
+
+
+
+
+
+
+
+argparse                      (Parse options in fish script)
+argparse                                           (command)
+
+
+
+
+
+
+
+
+argdist-bpfcc                                      (command)
+argdist-bpfcc                 (Parse options in fish script)
+
+
+
+
+
+
+
+arch                                          (command link)
+arch st-bpfcc                                      (command)
+
+
+
+
+
+
+ar                                            (command link)
+ar h                                          (command link)
+
+
+
+
+
+apt-mark                                           (command)
+apt-mark                                      (command link)
+
+
+
+
+apt-get                                            (command)
+apt-get                                            (command)
+
+
+
+apt-config                                         (command)
+apt-config                                         (command)
+
+
+apt-cdrom                                          (command)
+apt-cdrom                                          (command)
+
+apt-cache                                          (command)
+apt-cache                                          (command)
+apt-add-repository                            (command link)
+apt-add-repository                                 (command)
+                                                (command)
+apt-add-repository                            (command link)
+apt-cache                                          (command)
+apt-cdrom                                          (command)
+apt-config                                         (command)
+apt-get                                            (command)
+apt-mark                                           (command)
+ar                                            (command link)
+arch                                          (command link)
+argdist-bpfcc                                      (command)
+argparse                      (Parse options in fish script)
+arpd                                               (command)
+arptables                                     (command link)
+arptables-nft                                 (command link)
+arptables-nft-restore                         (command link)
+arptables-nft-save                            (command link)
+arptables-restore                             (command link)
+apt  49 of 1833
+ropos                                       (command link)
+apt                                                (command)
+apt-add-repository                            (command link)
+apt-cache                                          (command)
+apt-cdrom                                          (command)
+apt-config                                         (command)
+apt-get                                            (command)
+apt-mark                                           (command)
+ar                                            (command link)
+arch                                          (command link)
+argdist-bpfcc                                      (command)
+argparse                      (Parse options in fish script)
+arpd                                               (command)
+arptables                                     (command link)
+arptables-nft                                 (command link)
+arptables-nft-restore                         (command link)
+arptables-nft-save                            (command link)
+apropos of 1833
+pstreamcli                                       (command)
+apropos                                       (command link)
+apt                                                (command)
+apt-add-repository                            (command link)
+apt-cache                                          (command)
+apt-cdrom                                          (command)
+apt-config                                         (command)
+apt-get                                            (command)
+apt-mark                                           (command)
+ar                                            (command link)
+arch                                          (command link)
+argdist-bpfcc                                      (command)
+argparse                      (Parse options in fish script)
+arpd                                               (command)
+arptables                                     (command link)
+arptables-nft                                 (command link)
+arptables-nft-restore                         (command link)
+appstreamcli 33
+ort-unpack                                      (command)
+appstreamcli                                       (command)
+apropos                                       (command link)
+apt                                                (command)
+apt-add-repository                            (command link)
+apt-cache                                          (command)
+apt-cdrom                                          (command)
+apt-config                                         (command)
+apt-get                                            (command)
+apt-mark                                           (command)
+ar                                            (command link)
+arch                                          (command link)
+argdist-bpfcc                                      (command)
+argparse                      (Parse options in fish script)
+arpd                                               (command)
+arptables                                     (command link)
+arptables-nft                                 (command link)
+apport-unpack 3
+collect                                (command link)
+apport-unpack                                      (command)
+appstreamcli                                       (command)
+apropos                                       (command link)
+apt                                                (command)
+apt-add-repository                            (command link)
+apt-cache                                          (command)
+apt-cdrom                                          (command)
+apt-config                                         (command)
+apt-get                                            (command)
+apt-mark                                           (command)
+ar                                            (command link)
+arch                                          (command link)
+argdist-bpfcc                                      (command)
+argparse                      (Parse options in fish script)
+arpd                                               (command)
+arptables                                     (command link)
+apport-collect 3
+li                                         (command)
+apport-collect                                (command link)
+apport-unpack                                      (command)
+appstreamcli                                       (command)
+apropos                                       (command link)
+apt                                                (command)
+apt-add-repository                            (command link)
+apt-cache                                          (command)
+apt-cdrom                                          (command)
+apt-config                                         (command)
+apt-get                                            (command)
+apt-mark                                           (command)
+ar                                            (command link)
+arch                                          (command link)
+argdist-bpfcc                                      (command)
+argparse                      (Parse options in fish script)
+arpd                                               (command)
+lpport-cli 1833
+3008;end=13818e7dddc94b2ca864fb1360888c84\3008;end=5056d159-0d17-4fdb-a663-f06442b62991;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ userde
+
+
+
+man userdel0;kent@ubse: ~
+kent@ubse:~$ man userdel
+USERDEL(8)               System Management Commands               USERDEL(8)8eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\=
+
+NAME
+       userdel - delete a user account and related files
+
+SYNOPSIS
+
+       userdel [options] LOGIN
+
+DESCRIPTION
+       userdel is a low level utility for removing users. On Debian,
+       administrators should usually use deluser(8) instead.
+
+       The userdel command modifies the system account files, deleting all
+       entries that refer to the user name LOGIN. The named user must exist.
+
+OPTIONS
+       The options which apply to the userdel command are:
+ Manual page userdel(8) line 1 (press h for help or q to quit)
+       -f, --force
+           This option forces the removal of the user account and any other
+           requested actions, skipping any safety checks.
+
+           Note: This option is dangerous and may leave your system in an
+           inconsistent state.
+
+       -h, --help
+           Display help message and exit.
+
+       -r, --remove
+           Files in the user's home directory will be removed along with the
+           home directory itself and the user's mail spool. Files located in
+           other file systems will have to be searched for and deleted
+           manually.
+
+           The mail spool is defined by the MAIL_DIR variable in the
+           login.defs file.e 19 (press h for help or q to quit)
+ ESESCOBpage userdel(8) line 20 (press h for help or q to quit)
+       -R, --root CHROOT_DIR 21 (press h for help or q to quit)
+           Apply changes in the CHROOT_DIR directory and use the
+           configuration files from the CHROOT_DIR directory. Only absolute
+           paths are supported. (press h for help or q to quit)
+ ESESCOBpage userdel(8) line 25 (press h for help or q to quit)
+       -P, --prefix PREFIX_DIR6 (press h for help or q to quit)
+           Apply changes in the PREFIX_DIR directory and use the
+           configuration files from the PREFIX_DIR directory. This option
+           does not chroot and is intended for preparing a cross-compilation
+           target. Some limitations: NIS and LDAP users/groups are not
+           verified. PAM authentication is using the host files. No SELINUX
+           support.l(8) line 32 (press h for help or q to quit)
+ ESESCOBpage userdel(8) line 33 (press h for help or q to quit)
+       -Z, --selinux-userine 34 (press h for help or q to quit)
+           Remove any SELinux user mapping for the user's login.
+ ESESCOBpage userdel(8) line 36 (press h for help or q to quit)
+CONFIGURATIONuserdel(8) line 37 (press h for help or q to quit)
+       The following configuration variables in /etc/login.defs change the
+       behavior of this tool:39 (press h for help or q to quit)
+ ESESCOBpage userdel(8) line 40 (press h for help or q to quit)
+>3008;end=70473d60-2844-4f7f-a72c-9062dc557315;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ userde
+
+
+
+
+
+
+sdo 
+
+
+
+
+ green
+3008;start=e7499546-7d4b-4931-9211-098b1db19bd8;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\3008;end=e7499546-7d4b-4931-9211-098b1db19bd8;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ ls /home/
+3008;start=99039b39-89bc-4e60-85f7-3f7c76f3625f;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\green  kent  pink  yellow
+3008;end=99039b39-89bc-4e60-85f7-3f7c76f3625f;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ sudo rm /home/green
+
+
+
+
+
+
+-r
+3008;start=571b60a4-0f9f-424f-8083-291bb598ad67;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\3008;end=571b60a4-0f9f-424f-8083-291bb598ad67;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ ls /home/
+3008;start=aac5dd70-dce9-4ccd-997a-b6bc72ec4cb1;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\kent  pink  yellow
+3008;end=aac5dd70-dce9-4ccd-997a-b6bc72ec4cb1;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+0;kent@ubse: ~rch)`': p': sudo apt install fisa': sudo passwd pins': sudo pass': sudo passw': sudo passwd': sudo passwdyelloman passwdls -l /usr/binwhich passwdless /etc/passwdcat /etc/passwd | awk -F ':' '{ print $1; }
+kent@ubse:~$ cat /etc/passwnologin^C
+3008;end=3bd5608b-c6fe-4329-9c61-5a7018d61ea6;exit=failure;status=130;signal=SIGINT\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ less /etc/pass
+wd
+root:x:0:0:root:/root:/bin/bash538-4a857b8ff9d9;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\=
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+...skipping...
+dhcpcd:x:997:997:DHCP Client Daemon:/usr/lib/dhcpcd:/bin/false
+messagebus:x:996:996:System Message Bus:/nonexistent:/usr/sbin/nologin
+systemd-resolve:x:990:990:systemd Resolver:/:/usr/sbin/nologin
+_chrony:x:989:989:Chrony Daemon:/var/lib/chrony:/usr/sbin/nologin
+usbmux:x:100:46:usbmux daemon:/var/lib/usbmux:/usr/sbin/nologin
+pollinate:x:101:1::/var/cache/pollinate:/bin/false
+polkitd:x:988:988:User for polkitd:/:/usr/sbin/nologin
+syslog:x:102:103::/nonexistent:/usr/sbin/nologin
+uuidd:x:103:104::/run/uuidd:/usr/sbin/nologin
+tcpdump:x:986:986:tcpdump:/nonexistent:/usr/sbin/nologin
+tss:x:985:985:tss user for tpm2:/:/usr/sbin/nologin
+landscape:x:104:106::/var/lib/landscape:/usr/sbin/nologin
+fwupd-refresh:x:984:984:Firmware update daemon:/var/lib/fwupd:/usr/sbin/nologin
+kent:x:1000:1000:Kent Larsson:/home/kent:/bin/bash
+sshd:x:983:65534:sshd user:/run/sshd:/usr/sbin/nologin
+yellow:x:1002:1002::/home/yellow:/usr/bin/fish
+pink:x:1003:1003::/home/pink:/bin/bash
+>3008;end=866b8129-f614-4cbf-a538-4a857b8ff9d9;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ man useraa
+dd
+USERADD(8)               System Management Commands               USERADD(8)8eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\=
+
+NAME
+       useradd - create a new user or update default new user information
+
+SYNOPSIS
+
+       useradd [options] LOGIN
+
+       useradd -D
+
+       useradd -D [options]
+
+DESCRIPTION
+       useradd is a low level utility for adding users. On Debian,
+       administrators should usually use adduser(8) instead.
+
+       When invoked without the -D option, the useradd command creates a new
+USERADD(8)               System Management Commands               USERADD(8)
+
+NAME
+       useradd - create a new user or update default new user information
+
+SYNOPSIS
+
+       useradd [options] LOGIN
+
+       useradd -D
+
+       useradd -D [options]
+
+DESCRIPTION
+       useradd is a low level utility for adding users. On Debian,
+       administrators should usually use adduser(8) instead.
+
+       When invoked without the -D option, the useradd command creates a new
+USERADD(8)               System Management Commands               USERADD(8)
+
+NAME
+       useradd - create a new user or update default new user information
+
+SYNOPSIS
+
+       useradd [options] LOGIN
+
+       useradd -D
+
+       useradd -D [options]
+
+DESCRIPTION
+       useradd is a low level utility for adding users. On Debian,
+       administrators should usually use adduser(8) instead.
+
+       When invoked without the -D option, the useradd command creates a new
+...skipping...
+           defines the number of days after the password exceeded its
+           maximum age where the user is expected to replace this password.
+           The value is stored in the shadow password file. An input of 0
+           will disable an expired password with no delay. An input of -1
+           will blank the respective field in the shadow password file. See
+           shadow(5)for more information.
+
+           If not specified, useradd will use the default inactivity period
+           specified by the INACTIVE variable in /etc/default/useradd, or -1
+           by default.
+
+       -F, --add-subids-for-system
+           Update /etc/subuid and /etc/subgid even when creating a system
+           account with -r option.
+
+       -g, --gid GROUP
+           The name or the number of the user's primary group. The group
+           name must exist. A group number must refer to an already existing
+           group.add(8) line 66 (press h for help or q to quit)
+/Manual page useradd(8) line 67 (press h for help or q to quit)
+           If not specified, the behavior of useradd will depend on the
+           USERGROUPS_ENAB variable in /etc/login.defs. If this variable is
+...skipping...seradd(8) line 70 (press h for help or q to quit)
+           account to turn off password aging. Multiple -K options can be
+           specified, e.g.: -K UID_MIN =100 -K  UID_MAX=499
+
+       -l, --no-log-init
+           Do not add the user to the lastlog and faillog databases.
+
+           By default, the user's entries in the lastlog and faillog
+           databases are reset to avoid reusing the entry from a previously
+           deleted user.
+
+           If this option is not specified, useradd will also consult the
+           variable LOG_INIT in the /etc/default/useradd if set to no the
+           user will not be added to the lastlog and faillog databases.
+
+       -m, --create-home
+           Create the user's home directory if it does not exist. The files
+           and directories contained in the skeleton directory (which can be
+           defined with the -k option) will be copied to the home directory.
+...skipping...seradd(8) line 130 (press h for help or q to quit)
+       -p, --password PASSWORD
+           defines an initial password for the account. PASSWORD is expected
+           to be encrypted, as returned by crypt (3). Within a shell script,
+           this option allows to create efficiently batches of users.
+
+           Without this option, the new account will be locked and with no
+           password defined, i.e. a single exclamation mark in the
+           respective field of /etc/shadow. This is a state where the user
+           won't be able to access the account or to define a password
+           himself.
+
+           Note:Avoid this option on the command line because the password
+           (or encrypted password) will be visible by users listing the
+           processes.
+
+           You should make sure the password respects the system's password
+           policy.
+
+       -r, --systemd(8) line 178 (press h for help or q to quit)
+           Create a system account.ress h for help or q to quit)
+ ESESCOBpage useradd(8) line 180 (press h for help or q to quit)
+           System users will be created with no aging information in
+>3008;end=a36d105d-d204-4209-a192-dfc1a9607a56;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ less /etc/log
+
+logcheck/       login.defs      logrotate.conf  logrotate.d/
+0;kent@ubse: ~
+kent@ubse:~$ less /etc/login.defs 0;kent@ubse: ~
+kent@ubse:~$ less /etc/login.defs 
+#008;start=26013de2-9f31-4fdb-8900-fec29d227668;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\=
+# /etc/login.defs - Configuration control definitions for the shadow package.
+#
+
+# REQUIRED for useradd/userdel/usermod
+#   Directory where mailboxes reside, _or_ name of file, relative to the
+#   home directory.  If you _do_ define MAIL_DIR and MAIL_FILE,
+#   MAIL_DIR takes precedence.
+#
+#   Essentially:
+#      - MAIL_DIR defines the location of users mail spool files
+#        (for mbox use) by appending the username to MAIL_DIR as defined
+#        below.
+#      - MAIL_FILE defines the location of the users mail spool files as the
+#        fully-qualified filename obtained by prepending the user home
+#        directory before $MAIL_FILE
+#
+# NOTE: This is no more used for setting up users MAIL environment variable
+/etc/login.defs...skipping...
+#
+# /etc/login.defs - Configuration control definitions for the shadow package.
+#
+
+# REQUIRED for useradd/userdel/usermod
+#   Directory where mailboxes reside, _or_ name of file, relative to the
+#   home directory.  If you _do_ define MAIL_DIR and MAIL_FILE,
+#   MAIL_DIR takes precedence.
+#
+#   Essentially:
+#      - MAIL_DIR defines the location of users mail spool files
+#        (for mbox use) by appending the username to MAIL_DIR as defined
+#        below.
+#      - MAIL_FILE defines the location of the users mail spool files as the
+#        fully-qualified filename obtained by prepending the user home
+#        directory before $MAIL_FILE
+#
+# NOTE: This is no more used for setting up users MAIL environment variable
+#       which is, starting from shadow 4.0.12-1 in Debian, entirely the
+:...skipping...
+#
+# /etc/login.defs - Configuration control definitions for the shadow package.
+#
+
+# REQUIRED for useradd/userdel/usermod
+#   Directory where mailboxes reside, _or_ name of file, relative to the
+#   home directory.  If you _do_ define MAIL_DIR and MAIL_FILE,
+#   MAIL_DIR takes precedence.
+#
+#   Essentially:
+#      - MAIL_DIR defines the location of users mail spool files
+#        (for mbox use) by appending the username to MAIL_DIR as defined
+#        below.
+#      - MAIL_FILE defines the location of the users mail spool files as the
+#        fully-qualified filename obtained by prepending the user home
+#        directory before $MAIL_FILE
+#
+# NOTE: This is no more used for setting up users MAIL environment variable
+#       which is, starting from shadow 4.0.12-1 in Debian, entirely the
+#       job of the pam_mail PAM modules
+:...skipping...
+#
+# /etc/login.defs - Configuration control definitions for the shadow package.
+#
+
+# REQUIRED for useradd/userdel/usermod
+#   Directory where mailboxes reside, _or_ name of file, relative to the
+#   home directory.  If you _do_ define MAIL_DIR and MAIL_FILE,
+#   MAIL_DIR takes precedence.
+#
+#   Essentially:
+#      - MAIL_DIR defines the location of users mail spool files
+#        (for mbox use) by appending the username to MAIL_DIR as defined
+#        below.
+#      - MAIL_FILE defines the location of the users mail spool files as the
+#        fully-qualified filename obtained by prepending the user home
+#        directory before $MAIL_FILE
+#
+# NOTE: This is no more used for setting up users MAIL environment variable
+#       which is, starting from shadow 4.0.12-1 in Debian, entirely the
+#       job of the pam_mail PAM modules
+#       See default PAM configuration files provided for
+#       login, su, etc.
+#
+# This is a temporary situation: setting these variables will soon
+# move to /etc/default/useradd and the variables will then be
+# no more supported
+MAIL_DIR        /var/mail
+#MAIL_FILE      .mail
+
+#
+# Enable display of unknown usernames when login(1) failures are recorded.
+#
+# WARNING: Unknown usernames may become world readable.
+# See #290803 and #298773 for details about how this could become a security
+# concern
+LOG_UNKFAIL_ENAB        no
+
+#
+# Enable logging of successful logins
+#
+LOG_OK_LOGINS           no
+
+#
+# If defined, file which maps tty line to TERM environment parameter.
+# Each line of the file is in a format similar to "vt100  tty01".
+#
+#TTYTYPE_FILE   /etc/ttytype
+
+#
+# If defined, file which inhibits all the usual chatter during the login
+# sequence.  If a full pathname, then hushed mode will be enabled if the
+# user's name or shell are found in the file.  If not a full pathname, then
+# hushed mode will be enabled if the file exists in the user's home directory.
+#
+HUSHLOGIN_FILE  .hushlogin
+#HUSHLOGIN_FILE /etc/hushlogins
+
+#
+# *REQUIRED*  The default PATH settings, for superuser and normal users.
+#
+# (they are minimal, add the rest in the shell startup files)
+ENV_SUPATH      PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ENV_PATH        PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+
+#
+# Terminal permissions for terminals after login(1).
+# These settings are ignored for remote and other logins.
+#
+#       TTYGROUP        Login tty will be assigned this group ownership.
+#       TTYPERM         Login tty will be set to this permission.
+#
+#TTYGROUP       tty
+TTYPERM         0600
+
+#
+# Login configuration initializations:
+#
+#       ERASECHAR       Terminal ERASE character ('\010' = backspace).
+#       KILLCHAR        Terminal KILL character ('\025' = CTRL/U).
+#
+# The ERASECHAR and KILLCHAR are used only on System V machines.
+#
+ERASECHAR       0177
+KILLCHAR        025
+
+# HOME_MODE is used by useradd(8) and newusers(8) to set the mode for new
+# home directories.
+HOME_MODE       0750
+
+#
+# Password aging controls:
+#
+#       PASS_MAX_DAYS   Maximum number of days a password may be used.
+#       PASS_MIN_DAYS   Minimum number of days allowed between password changes.
+#       PASS_WARN_AGE   Number of days warning given before a password expires.
+#
+PASS_MAX_DAYS   99999
+PASS_MIN_DAYS   0
+PASS_WARN_AGE   7
+
+#
+# Min/max values for automatic uid selection in useradd(8)
+#
+UID_MIN                  1000
+UID_MAX                 60000
+# System accounts
+#SYS_UID_MIN              101
+#SYS_UID_MAX              999
+# Extra per user uids
+SUB_UID_MIN                100000
+SUB_UID_MAX             600100000
+SUB_UID_COUNT               65536
+ ESESCOB
+#ESESCOB
+# Min/max values for automatic gid selection in groupadd(8)
+#ESESCOB
+GID_MIN                  1000
+GID_MAX                 60000
+# System accounts
+#SYS_GID_MIN              101
+#SYS_GID_MAX              999
+# Extra per user group ids
+MPASS_WARN_AGE   7
+MPASS_MIN_DAYS   0
+MPASS_MAX_DAYS   99999
+M#SESCOA
+Ms.ESCOA
+Mes.SCOA PASS_WARN_AGE   Number of days warning given before a password expire
+#
+GID_MIN                  1000
+GID_MAX                 60000
+# System accounts
+#SYS_GID_MIN              101
+#SYS_GID_MAX              999
+# Extra per user group ids
+SUB_GID_MIN                100000
+SUB_GID_MAX             600100000
+SUB_GID_COUNT               65536
+
+#
+# Max number of login(1) retries if password is bad
+# This will most likely be overriden by PAM, since the default pam_unix module
+# has it's own built in of 3 retries. However, this is a safe fallback in case
+# you are using an authentication module that does not enforce PAM_MAXTRIES.
+#
+LOGIN_RETRIES           5
+
+#
+# Max time in seconds for login(1)
+#
+LOGIN_TIMEOUT           60
+
+#
+# Which fields may be changed by regular users using chfn(1) - use
+# any combination of letters "frwh" (full name, room number, work
+# phone, home phone).  If not defined, no changes are allowed.
+# For backward compatibility, "yes" = "rwh" and "no" = "frwh".
+#
+CHFN_RESTRICT           rwh
+
+#
+# If set to MD5, MD5-based algorithm will be used for encrypting password
+# If set to SHA256, SHA256-based algorithm will be used for encrypting password
+# If set to SHA512, SHA512-based algorithm will be used for encrypting password
+# If set to BCRYPT, BCRYPT-based algorithm will be used for encrypting password
+# If set to YESCRYPT, YESCRYPT-based algorithm will be used for encrypting password
+# If set to DES, DES-based algorithm will be used for encrypting password (default)
+# MD5 and DES should not be used for new hashes, see crypt(5) for recommendations.
+# Overrides the MD5_CRYPT_ENAB option
+#
+# Note: It is recommended to use a value consistent with
+# the PAM modules configuration.
+#
+ENCRYPT_METHOD YESCRYPT
+
+#
+# Should login be allowed if we can't cd to the home directory?
+# Default is no.
+#
+DEFAULT_HOME    yes
+
+#
+# The pwck(8) utility emits a warning for any system account with a home
+# directory that does not exist.  Some system accounts intentionally do
+# not have a home directory.  Such accounts may have this string as
+# their home directory in /etc/passwd to avoid a spurious warning.
+#
+NONEXISTENT     /nonexistent
+
+#
+# If defined, this command is run when removing a user.
+# It should remove any at/cron/print jobs etc. owned by
+# the user to be removed (passed as the first argument).
+#
+#USERDEL_CMD    /usr/sbin/userdel_local
+
+#
+# If set to yes, userdel(8) will remove the user's group if it contains no more
+# members, and useradd(8) will create by default a group with the name of the
+# user.
+#
+# Other former uses of this variable are not used in PAM environments, such as
+# Debian.
+#
+USERGROUPS_ENAB yes
+(END)
+(END)
+>3008;end=26013de2-9f31-4fdb-8900-fec29d227668;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ sudo nano /etc/sudo
+ers
+3008;start=dec3bc9b-61c3-4b49-b82e-03e39f4823d2;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\==
+#Defaults:%sudo env_keep += "http_proxy https_proxy ftp_proxy all_proxy no_p># This fixes CVE-2005-4890 and possibly breaks some versions of kdesu
+# This allows running arbitrary commands, but so does ALL, and it means
+# different sudoers have their choice of editor respected.
+#Defaults:%sudo env_keep += "EDITOR"
+
+# Completely harmless preservation of a user preference.
+#Defaults:%sudo env_keep += "GREP_COLOR"
+
+# While you shouldn't normally run git as root, you need to with etckeeper
+#Defaults:%sudo env_keep += "GIT_AUTHOR_* GIT_COMMITTER_*"
+
+# Per-user preferences; root won't have sensible values for them.
+#Defaults:%sudo env_keep += "EMAIL DEBEMAIL DEBFULLNAME"
+
+# "sudo scp" or "sudo rsync" should be able to use your SSH agent.
+#Defaults:%sudo env_keep += "SSH_AGENT_PID SSH_AUTH_SOCK"
+
+# Ditto for GPG agent
+#Defaults:%sudo env_keep += "GPG_AGENT_INFO"
+
+# Host alias specification
+
+# User alias specification
+
+# Cmnd alias specification
+
+# User privilege specification
+root    ALL=(ALL:ALL) ALL
+
+# Members of the admin group may gain root privileges
+%admin ALL=(ALL) ALL
+
+# Allow members of group sudo to execute any command
+%sudo   ALL=(ALL:ALL) ALL
+
+# See sudoers(5) for more information on "@include" directives:
+
+@includedir /etc/sudoers.d
+>3008;end=dec3bc9b-61c3-4b49-b82e-03e39f4823d2;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ sudpoo vis
+ud
+
+
+#Defaults:%sudo env_keep += "http_proxy https_proxy ftp_proxy all_proxy no_p># This fixes CVE-2005-4890 and possibly breaks some versions of kdesue474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\==[ Reading... ][ Read 57 lines ]  GNU nano 8.7.1            /tmp/sudoers-EK5WMg/sudoers                      
+# This allows running arbitrary commands, but so does ALL, and it means
+# different sudoers have their choice of editor respected.
+#Defaults:%sudo env_keep += "EDITOR"
+
+# Completely harmless preservation of a user preference.
+#Defaults:%sudo env_keep += "GREP_COLOR"
+
+# While you shouldn't normally run git as root, you need to with etckeeper
+#Defaults:%sudo env_keep += "GIT_AUTHOR_* GIT_COMMITTER_*"
+
+# Per-user preferences; root won't have sensible values for them.
+#Defaults:%sudo env_keep += "EMAIL DEBEMAIL DEBFULLNAME"
+
+#Defaults:%sudo env_keep += "GPG_AGENT_INFO"SH_AUTH_SOCK"SH agent.
+
+# Host alias specification
+
+# Cmnd alias specification
+
+# User privilege specification
+root    ALL=(ALL:ALL) ALL
+%admin ALL=(ALL) ALLin group may gain root privileges
+%sudo   ALL=(ALL:ALL) ALLsudo to execute any command
+
+# See sudoers(5) for more information on "@include" directives:
+
+@includedir /etc/sudoers.d
+>visudo: /tmp/sudoers-EK5WMg/sudoers unchanged
+3008;end=731d033a-8de9-4502-ba17-62bdb40c6551;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ sudo visudo
+#Defaults:%sudo env_keep += "http_proxy https_proxy ftp_proxy all_proxy no_p>8 This fixes CVE-2005-4890 and possibly breaks some versions of kdesue474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\==[ Reading... ][ Read 57 lines ]  GNU nano 8.7.1            /tmp/sudoers-y4pahu/sudoers                      
+# This allows running arbitrary commands, but so does ALL, and it means
+# different sudoers have their choice of editor respected.
+#Defaults:%sudo env_keep += "EDITOR"
+
+>visudo: /tmp/sudoers-y4pahu/sudoers unchangedreference.
+3008;end=f5c48d4f-8014-4a52-87dc-e6ebe815ad21;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ sudoed
+it /etc/
+ssh/
+shsh
+d
+_config
+>sudo: /etc/ssh/sshd_config unchangedwith names that sort earlier takecalsce.# For options that accept multiple values, like 'Port', subsequent definitio># are appended to the configuration.ommand;cwd=/home/kent\==[ Reading... ][ Read 145 lines ]  GNU nano 8.7.1         /tmp/sudoers-NruY5E/0/sshd_config                   
+3008;end=6b28ca25-236a-47b1-9d5a-cb88bac83aec;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ sudo nano
+
+echo $ED
+
+ITOR
+3008;start=ee7d15fe-b86a-4b04-a875-9b53039201e0;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\
+3008;end=ee7d15fe-b86a-4b04-a875-9b53039201e0;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+kent@ubse:~$ man sudoedit
+SUDO(8)                            sudo-rs                           SUDO(8)8eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=command;cwd=/home/kent\=
+
+NAME
+       sudo, sudoedit - execute a command as another user
+
+SYNOPSIS
+       sudo -h | -K | -k | -V
+       sudo  [-u  user]  [-g  group]  [-D  directory]  [-BbknS]  [-i  |  -s]
+       [VAR=value] [<command>]
+       sudo -v [-BknS] [-u user] [-g group]
+       sudo -l [-BknS] [-U user] [-u user] [-g group] [command [arg ...]]
+       sudo -e [-BknS] [-u user] [-g group] file ...
+       sudoedit [-BknS] [-u user] [-g group] file ...
+
+DESCRIPTION
+       sudo allows a user that is permitted to do so to execute a command as
+       another user (for example root).  Permissions are specified by a  se‐
+       curity policy specified in /etc/sudoers (see sudoers(5)).
+
+       Sudo-rs is a safety oriented and memory safe re-implementation of the
+       original sudo implementation by Todd Miller.
+
+       When  a  command is run, a session record is stored for that specific
+       session allowing users to run additional commands without  having  to
+       re-authenticate.  The timeout for session records can be specified in
+       the policy.dit(8) line 3 (press h for help or q to quit)
+ ESESCOBpage sudoedit(8) line 4 (press h for help or q to quit)
+       Some  care  is taken to pass signals received by sudo-rs to the child
+       process, even if that process runs in its own pseudo terminal.
+ ESESCOBpage sudoedit(8) line 7 (press h for help or q to quit)
+       On systems where sudo is the  primary  method  of  gaining  superuser
+       privileges, it is imperative to avoid syntax errors in the /etc/sudo‐
+       ers  file.   Changes  to this file should be made using the visudo(8)
+       utility which will ensure that no syntax errors are introduced.
+ ESESCOBpage sudoedit(8) line 12 (press h for help or q to quit)
+OPTIONSBpage sudoedit(8) line 13 (press h for help or q to quit)
+       -A, --askpasst(8) line 14 (press h for help or q to quit)
+              Normally, if sudo requires a password, it will  read  it  from
+              the user’s terminal.  If the -A (askpass) option is specified,
+              a  (possibly graphical) helper program is executed to read the
+              user’s password and output the password to the  standard  out‐
+              put.   If  the  SUDO_ASKPASS  environment  variable is set, it
+              specifies the path to the helper program.  If no askpass  pro‐
+M       Sudo-rs is a safety oriented and memory safe re-implementation of the
+MESESCOApage sudoedit(8) line 20 (press h for help or q to quit)
+M       curity policy specified in /etc/sudoers (see sudoers(5)).
+M       another user (for example root).  Permissions are specified by a  se‐
+M       sudo allows a user that is permitted to do so to execute a command as
+MDESCRIPTION sudoedit(8) line 16 (press h for help or q to quit)
+MESESCOApage sudoedit(8) line 15 (press h for help or q to quit)
+       -A, --askpasst(8) line 14 (press h for help or q to quit)
+              Normally, if sudo requires a password, it will  read  it  from
+              the user’s terminal.  If the -A (askpass) option is specified,
+              a  (possibly graphical) helper program is executed to read the
+              user’s password and output the password to the  standard  out‐
+              put.   If  the  SUDO_ASKPASS  environment  variable is set, it
+              specifies the path to the helper program.  If no askpass  pro‐
+              gram is available, sudo will exit with an error.
+
+       -B, --bell
+              Ring  the  bell as part of the password prompt when a terminal
+              is present.
+
+       -b, --background
+              Run the given command in the background.  It is  not  possible
+              to  use  shell  job control to manipulate background processes
+              started by sudo-rs.  Most interactive commands  will  fail  to
+              work properly in background mode.
+
+       -D directory, --chdir=directory
+              Run the command in the specified directory instead of the cur‐
+              rent working directory.  The security policy may return an er‐
+              ror  if  the  user does not have the permission to specify the
+              working directory.
+ Manual page sudoedit(8) line 38 (press h for help or q to quit)
+       -g group, --group=group
+              Use this group as the primary group instead of using the  pri‐
+              mary  group  specified in the password database for the target
+              user.
+
+       -h, --help
+              Show a help message.
+
+       -i, --login
+              Run the shell specified by the target user’s password database
+              entry as a login shell.  This means  that  login-specific  re‐
+              source files such as .profile, .bash_profile or .login will be
+              read by the shell.  If a command is specified, it is passed to
+              the shell using the -c option.
+
+       -K, --remove-timestamp
+              Removes  every  cached session record for the user, regardless
+              of where the command is executed.  The next  time  sudo-rs  is
+              run, authentication will take place if the policy requires it.
+              No password is required to run this command.
+
+       -k, --reset-timestamp
+              When  used  without  a command, invalidates the user’s session
+              record for the current session.  The next time sudo-rs is run,
+              authentication will take place if the policy requires it.
+
+              When used in conjunction with a command or an option that  may
+              require  a  password, this option will cause sudo-rs to ignore
+              the user’s session record.  As a result,  authentication  will
+              take  place  if the policy requires it.  When used in conjunc‐
+              tion with  a  command  no  invalidation  of  existing  session
+              records will take place.
+
+       -n, --non-interactive
+              Avoid  prompting the user for input of any kind.  If any input
+              is required for the command to run, sudo-rs  will  display  an
+              error message and exit.
+
+       p, --prompt=prompt
+              Use  a  custom  authentication prompt with optional escape se‐
+              quences.  The following percent  (‘%’)  escape  sequences  are
+              supported:
+
+                      %H  expanded to the local host name
+
+                      %h  expanded to the local host name without the domain name
+
+                      %p  expanded to the name of the user whose password is being requested
+                          (this respects the rootpw, targetpw flags)
+
+                      %U  expanded to the login name of the user the command will be run as
+                          (defaults to root unless the -u option is also specified)
+
+                      %u  expanded to the invoking user's login name
+
+                      %%  two consecutive ‘%’ characters are collapsed into a single ‘%’ character
+
+              The  custom prompt will override the default prompt or the one
+              specified by the SUDO_PROMPT environment variable.  No  prompt
+              will suppress the prompt provided by PAM, unless the requested
+              prompt is empty ("")
+
+       -S, --stdin
+              Read from standard input instead of using the terminal device.
+
+       -s, --shell
+              Run the shell specified by the SHELL environment variable.  If
+              no  shell  was  specified,  the shell from the user’s password
+              database entry will be used instead.  If a command  is  speci‐
+              fied, it is passed to the shell using the -c option.
+
+       --preserve-env=list
+              Indicates  to  the security policy that the user wishes to add
+              the comma-separated list of  environment  variables  to  those
+              preserved  from  the  user’s environment.  The security policy
+              may return an error if the user does not  have  permission  to
+              preserve the environment.  This option may be specified multi‐
+              ple times.
+
+       -e, --edit, sudoedit
+              Edit  one or more files instead of running a command.  In lieu
+              of a path name, the string “sudoedit” is used when  consulting
+              the security policy.  If the user is authorized by the policy,
+              the following steps are taken:
+
+              1. Temporary  copies  are  made of the files to be edited with
+                 the owner set to the invoking user.or q to quit)
+
+              2. The editor specified by the policy is run to edit the  tem‐
+                 porary files.  The sudoers policy uses the SUDO_EDITOR, VI‐
+                 SUAL  and EDITOR environment variables (in that order).  If
+                 none of SUDO_EDITOR, VISUAL or EDITOR are  set,  the  first
+                 program listed in the editor sudoers(5) option is used.
+
+              3. If  they  have  been modified, the content of the temporary
+                 files is copied back to the  originals  and  the  temporary
+                 versions are removed.
+
+              To help prevent the editing of unauthorized files, the follow‐
+              ing restrictions are enforced (unless the user is root):
+
+              • Symbolic links may not be edited.
+
+              • If any component of the path leading to the file is writable
+                by the invoking user, the file may not be edited.
+
+              • Users are never allowed to edit device special files.
+
+              If the specified file does not exist, it will be created.  Un‐
+M              1. Temporary  copies  are  made of the files to be edited with
+MESESCOApage sudoedit(8) line 147 (press h for help or q to quit)
+M              the following steps are taken:r help or q to quit)
+M              the security policy.  If the user is authorized by the policy,
+M              of a path name, the string “sudoedit” is used when  consulting
+M              Edit  one or more files instead of running a command.  In lieu
+M       -e, --edit, sudoedite 142 (press h for help or q to quit)
+MESESCOApage sudoedit(8) line 141 (press h for help or q to quit)
+M              ple times.line 140 (press h for help or q to quit)
+ ESESCOBpage sudoedit(8) line 139 (press h for help or q to quit)
+              • Symbolic links may not be edited. or q to quit)
+>3008;end=112ba290-6721-40f1-9b9a-0be199b57bfe;exit=success\3008;start=0b9d09c5-06c7-44e5-8e31-6c5562b7abc6;machineid=99989d8765784683978eb13428149c42;user=kent;hostname=ubse;bootid=d931ba01-ba68-4e26-9234-e474d333f75b;pid=00000000000000002633;type=shell;cwd=/home/kent\0;kent@ubse: ~
+kent@ubse:~$ eEDITO
+
+logout
+Connection to 192.168.122.131 closed.
+DEVOPS25/lektion7
+$ 
+exit
