@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style type="text/css">
+pre {
+  font-family:Courier New;
+  font-size:10pt;
+}
+
+.af_line {
+  color: gray;
+  text-decoration: none;
+}
+
+</style>
+<title>091534.txt</title>
+</head>
+<body>
+<pre>Script started on 2025-05-13 09:15:34+02:00 [TERM=&quot;xterm-256color&quot; TTY=&quot;/dev/pts/4&quot; COLUMNS=&quot;70&quot; LINES=&quot;20&quot;]
+<span style="color:#5c5cff;">DEVOPS24/lektion15
+</span>$ top
+=top - 09:15:36 up  1:07,  1 user,  load average: 2.73, 1.74, 1.10
+Tasks:<span style="font-weight:bold;color:#7f7f7f;"> 1450 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   6 </span>running,<span style="font-weight:bold;color:#7f7f7f;"> 1444 </span>sleeping,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>stopped,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>zombie
+%Cpu(s):<span style="font-weight:bold;color:#7f7f7f;"> 16.0 </span>us,<span style="font-weight:bold;color:#7f7f7f;"> 36.0 </span>sy,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>ni,<span style="font-weight:bold;color:#7f7f7f;"> 48.0 </span>id,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>wa,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>hi,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>si
+MiB Mem :<span style="font-weight:bold;color:#7f7f7f;">  15695.7 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5995.9 </span>free,<span style="font-weight:bold;color:#7f7f7f;">   7330.4 </span>used,<span style="font-weight:bold;color:#7f7f7f;">   3471.3 </span>buff/
+MiB Swap:<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>free,<span style="font-weight:bold;color:#7f7f7f;">      0.0 </span>used.<span style="font-weight:bold;color:#7f7f7f;">   8365.2 </span>avail
+
+<span style="color:#000000;background-color:#000000;">    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM </span>
+  32232 kent      20   0   10540   5256   1244 S  52.9   0.0 
+  32147 kent      20   0   10540   5252   1244 S  47.1   0.0 
+  32012 kent      20   0   10536   5248   1244 S  35.3   0.0 
+  30938 kent      20   0    7340   3780   3040 S  29.4   0.0 
+<span style="font-weight:bold;color:#7f7f7f;">  32325 kent      20   0   10540   5260   1244 R  29.4   0.0 </span>
+   1434 root      20   0 1320764 111244  23236 S  17.6   0.7 
+  31818 kent      20   0   10536   5244   1244 S  11.8   0.0 
+<span style="font-weight:bold;color:#7f7f7f;">   3409 kent      20   0 1917592 115280  61084 R   5.9   0.7 </span>
+   6841 kent      20   0   33.1g 155956 104212 S   5.9   1.0 
+   6887 kent      20   0 1163.4g 277496 106052 S   5.9   1.7 
+<span style="font-weight:bold;color:#7f7f7f;">  32032 kent      20   0   12512   6112   3172 R   5.9   0.0 </span>
+<span style="font-weight:bold;color:#7f7f7f;">  32386 kent      20   0   12408   5752   2972 R   5.9   0.0 </span>
+      1 root      20   0  168848  13328   9136 S   0.0   0.1 top - 09:15:39 up  1:07,  1 user,  load average: 2.73, 1.74, 1.10
+Tasks:<span style="font-weight:bold;color:#7f7f7f;"> 1507 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3 </span>running,<span style="font-weight:bold;color:#7f7f7f;"> 1504 </span>sleeping,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>stopped,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>zombie
+%Cpu(s):<span style="font-weight:bold;color:#7f7f7f;">  2.8 </span>us,<span style="font-weight:bold;color:#7f7f7f;"> 21.5 </span>sy,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>ni,<span style="font-weight:bold;color:#7f7f7f;"> 75.5 </span>id,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>wa,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>hi,<span style="font-weight:bold;color:#7f7f7f;">  0.2 </span>si
+MiB Mem :<span style="font-weight:bold;color:#7f7f7f;">  15695.7 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5782.2 </span>free,<span style="font-weight:bold;color:#7f7f7f;">   7544.3 </span>used,<span style="font-weight:bold;color:#7f7f7f;">   3464.1 </span>buff/
+MiB Swap:<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>free,<span style="font-weight:bold;color:#7f7f7f;">      0.0 </span>used.<span style="font-weight:bold;color:#7f7f7f;">   8151.4 </span>avail
+
+
+   6841 kent      20   0   33.0g 155888 104320 S   7.6   1.0 
+   6887 kent      20   0 1163.4g 278404 106140 S   5.3   1.7 
+   3409 kent      20   0 1917592 115280  61084 S   5.0   0.7 
+   3691 kent      20   0 6071084 290300 129252 S   4.6   1.8 
+   1434 root      20   0 1320764 111244  23236 S   4.3   0.7 
+   7836 kent      20   0 1161.5g 120308  74424 S   3.3   0.7 
+  32763 kent      20   0   10568   5316   1244 S   3.3   0.0 
+  33846 kent      20   0   10724   5368   1244 S   3.3   0.0 
+  33977 kent      20   0   10724   5368   1244 S   3.3   0.0 
+  34494 kent      20   0   10732   5384   1244 S   3.3   0.0 
+  34880 kent      20   0   10736   5392   1244 S   3.3   0.0 
+  34978 kent      20   0   10744   5408   1244 S   3.3   0.0 
+  34980 kent      20   0   10744   5408   1244 S   3.3   0.0 top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks:<span style="font-weight:bold;color:#7f7f7f;"> 1567 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   2 </span>running,<span style="font-weight:bold;color:#7f7f7f;"> 1565 </span>sleeping,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>stopped,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>zombie
+%Cpu(s):<span style="font-weight:bold;color:#7f7f7f;">  2.4 </span>us,<span style="font-weight:bold;color:#7f7f7f;"> 19.2 </span>sy,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>ni,<span style="font-weight:bold;color:#7f7f7f;"> 78.3 </span>id,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>wa,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>hi,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>si
+MiB Mem :<span style="font-weight:bold;color:#7f7f7f;">  15695.7 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5583.9 </span>free,<span style="font-weight:bold;color:#7f7f7f;">   7737.3 </span>used,<span style="font-weight:bold;color:#7f7f7f;">   3471.0 </span>buff/
+MiB Swap:<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>free,<span style="font-weight:bold;color:#7f7f7f;">      0.0 </span>used.<span style="font-weight:bold;color:#7f7f7f;">   7958.4 </span>avail
+
+
+   6887 kent      20   0 1163.4g 279456 106188 S   9.0   1.7 
+   6841 kent      20   0   33.0g 155836 104348 S   7.0   1.0 
+   3409 kent      20   0 1917592 115280  61084 S   5.3   0.7 
+   3691 kent      20   0 6071148 290236 129252 S   5.0   1.8 
+  35058 kent      20   0   10796   5512   1244 S   3.7   0.0 
+  35075 kent      20   0   10800   5528   1244 S   3.7   0.0 
+  35078 kent      20   0   10804   5536   1244 S   3.7   0.0 
+  35092 kent      20   0   10812   5548   1244 S   3.7   0.0 
+  35116 kent      20   0   10820   5564   1244 S   3.7   0.0 
+  35121 kent      20   0   10824   5572   1244 S   3.7   0.0 
+  35148 kent      20   0   10828   5588   1244 S   3.7   0.0 
+  35151 kent      20   0   10828   5532   1188 S   3.7   0.0 
+  35152 kent      20   0   10832   5588   1244 S   3.7   0.0 top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks:<span style="font-weight:bold;color:#7f7f7f;"> 1569 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   4 </span>running,<span style="font-weight:bold;color:#7f7f7f;"> 1565 </span>sleeping,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>stopped,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>zombie
+%Cpu(s):<span style="font-weight:bold;color:#7f7f7f;">  5.8 </span>us,<span style="font-weight:bold;color:#7f7f7f;"> 19.2 </span>sy,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>ni,<span style="font-weight:bold;color:#7f7f7f;"> 75.0 </span>id,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>wa,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>hi,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>si,
+MiB Mem :<span style="font-weight:bold;color:#7f7f7f;">  15695.7 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5527.2 </span>free,<span style="font-weight:bold;color:#7f7f7f;">   7794.0 </span>used,<span style="font-weight:bold;color:#7f7f7f;">   3500.2 </span>buff/c
+MiB Swap:<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>free,<span style="font-weight:bold;color:#7f7f7f;">      0.0 </span>used.<span style="font-weight:bold;color:#7f7f7f;">   7901.7 </span>avail 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+  35203 kent      20   0   10988   5648   1244 S  40.7   0.0   0:00.11 
+  35201 kent      20   0   10988   5612   1216 S  37.0   0.0   0:00.10 
+  35193 kent      20   0   10984   5640   1244 S  33.3   0.0   0:00.09 
+<span style="font-weight:bold;color:#7f7f7f;">  35205 kent      20   0   10988   5648   1244 R  33.3   0.0   0:00.09 </span>
+<span style="font-weight:bold;color:#7f7f7f;">   6887 kent      20   0 1163.4g 282560 106212 R  25.9   1.8   0:50.30 </span>
+  35192 kent      20   0   10984   5636   1244 S  25.9   0.0   0:00.09 
+   6841 kent      20   0   33.1g 155836 104348 S  14.8   1.0   0:52.00 
+<span style="font-weight:bold;color:#7f7f7f;">  35207 kent      20   0   10992   5648   1244 R  11.1   0.0   0:00.03 </span>
+   3409 kent      20   0 1917592 115280  61084 S   7.4   0.7   1:26.70 
+   3691 kent      20   0 6071148 290236 129252 S   7.4   1.8   1:29.50 
+  35190 kent      20   0   10984   5632   1244 S   7.4   0.0   0:00.09 
+   6787 kent      20   0 1161.7g 207156 144956 S   3.7   1.3   0:09.28 
+   7813 kent      20   0 1163.1g 496876  84088 S   3.7   3.1   0:12.44 top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks:<span style="font-weight:bold;color:#7f7f7f;"> 1569 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5 </span>running,<span style="font-weight:bold;color:#7f7f7f;"> 1564 </span>sleeping,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>stopped,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>zombie
+%Cpu(s):<span style="font-weight:bold;color:#7f7f7f;"> 11.1 </span>us,<span style="font-weight:bold;color:#7f7f7f;"> 33.3 </span>sy,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>ni,<span style="font-weight:bold;color:#7f7f7f;"> 55.6 </span>id,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>wa,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>hi,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>si,
+MiB Mem :<span style="font-weight:bold;color:#7f7f7f;">  15695.7 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5516.5 </span>free,<span style="font-weight:bold;color:#7f7f7f;">   7804.6 </span>used,<span style="font-weight:bold;color:#7f7f7f;">   3508.5 </span>buff/c
+MiB Swap:<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>free,<span style="font-weight:bold;color:#7f7f7f;">      0.0 </span>used.<span style="font-weight:bold;color:#7f7f7f;">   7891.1 </span>avail 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+<span style="font-weight:bold;color:#7f7f7f;">   6887 kent      20   0 1163.4g 283072 106216 R 100.0   1.8   0:50.32 </span>
+<span style="font-weight:bold;color:#7f7f7f;">  32032 kent      20   0   12832   6372   3172 R 100.0   0.0   0:00.09 </span>
+<span style="font-weight:bold;color:#7f7f7f;">  35205 kent      20   0   10988   5648   1244 R 100.0   0.0   0:00.11 </span>
+<span style="font-weight:bold;color:#7f7f7f;">  35207 kent      20   0   10992   5648   1244 R 100.0   0.0   0:00.05 </span>
+   6841 kent      20   0   33.1g 155836 104348 S  50.0   1.0   0:52.01 
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      9 root      20   0       0      0      0 I   0.0   0.0   0:02.43 top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks:<span style="font-weight:bold;color:#7f7f7f;"> 1570 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   4 </span>running,<span style="font-weight:bold;color:#7f7f7f;"> 1566 </span>sleeping,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>stopped,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>zombie
+%Cpu(s):<span style="font-weight:bold;color:#7f7f7f;"> 23.8 </span>us,<span style="font-weight:bold;color:#7f7f7f;"> 28.6 </span>sy,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>ni,<span style="font-weight:bold;color:#7f7f7f;"> 47.6 </span>id,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>wa,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>hi,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>si,<span style="font-weight:bold;color:#7f7f7f;"> </span>
+MiB Mem :<span style="font-weight:bold;color:#7f7f7f;">  15695.7 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5502.0 </span>free,<span style="font-weight:bold;color:#7f7f7f;">   7819.2 </span>used,<span style="font-weight:bold;color:#7f7f7f;">   3518.5 </span>buff/ca
+MiB Swap:<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>free,<span style="font-weight:bold;color:#7f7f7f;">      0.0 </span>used.<span style="font-weight:bold;color:#7f7f7f;">   7876.5 </span>avail M
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+   6787 kent      20   0 1161.7g 207156 144956 S 200.0   1.3   0:09.29 
+<span style="font-weight:bold;color:#7f7f7f;">   6887 kent      20   0 1163.4g 283844 106216 R 200.0   1.8   0:50.33 </span>
+<span style="font-weight:bold;color:#7f7f7f;">  32032 kent      20   0   12832   6372   3172 R 100.0   0.0   0:00.10 </span>
+<span style="font-weight:bold;color:#7f7f7f;">  35207 kent      20   0   10992   5648   1244 R 100.0   0.0   0:00.06 </span>
+<span style="font-weight:bold;color:#7f7f7f;">  35209 kent      20   0   10992   5656   1244 R 100.0   0.0   0:00.01 </span>
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      9 root      20   0       0      0      0 I   0.0   0.0   0:02.43 top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks:<span style="font-weight:bold;color:#7f7f7f;"> 1570 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   4 </span>running,<span style="font-weight:bold;color:#7f7f7f;"> 1566 </span>sleeping,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>stopped,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>zombie
+%Cpu(s):<span style="font-weight:bold;color:#7f7f7f;"> 11.8 </span>us,<span style="font-weight:bold;color:#7f7f7f;"> 29.4 </span>sy,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>ni,<span style="font-weight:bold;color:#7f7f7f;"> 58.8 </span>id,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>wa,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>hi,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>si,<span style="font-weight:bold;color:#7f7f7f;">  </span>
+MiB Mem :<span style="font-weight:bold;color:#7f7f7f;">  15695.7 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5490.1 </span>free,<span style="font-weight:bold;color:#7f7f7f;">   7831.0 </span>used,<span style="font-weight:bold;color:#7f7f7f;">   3528.5 </span>buff/cac
+MiB Swap:<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>free,<span style="font-weight:bold;color:#7f7f7f;">      0.0 </span>used.<span style="font-weight:bold;color:#7f7f7f;">   7864.6 </span>avail Me
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+   6841 kent      20   0   33.1g 155836 104348 S 100.0   1.0   0:52.03 
+<span style="font-weight:bold;color:#7f7f7f;">   6887 kent      20   0 1163.4g 282672 106220 R 100.0   1.8   0:50.35 </span>
+<span style="font-weight:bold;color:#7f7f7f;">  32032 kent      20   0   12832   6372   3172 R 100.0   0.0   0:00.12 </span>
+<span style="font-weight:bold;color:#7f7f7f;">  35207 kent      20   0   10992   5648   1244 R 100.0   0.0   0:00.08 </span>
+   7836 kent      20   0 1161.5g 120864  74424 S  50.0   0.8   0:04.89 
+<span style="font-weight:bold;color:#7f7f7f;">  35209 kent      20   0   10992   5656   1244 R  50.0   0.0   0:00.02 </span>
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks:<span style="font-weight:bold;color:#7f7f7f;"> 1570 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5 </span>running,<span style="font-weight:bold;color:#7f7f7f;"> 1565 </span>sleeping,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>stopped,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>zombie
+%Cpu(s):<span style="font-weight:bold;color:#7f7f7f;"> 33.3 </span>us,<span style="font-weight:bold;color:#7f7f7f;"> 28.6 </span>sy,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>ni,<span style="font-weight:bold;color:#7f7f7f;"> 38.1 </span>id,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>wa,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>hi,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>si,<span style="font-weight:bold;color:#7f7f7f;">  0</span>
+MiB Mem :<span style="font-weight:bold;color:#7f7f7f;">  15695.7 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5481.5 </span>free,<span style="font-weight:bold;color:#7f7f7f;">   7839.7 </span>used,<span style="font-weight:bold;color:#7f7f7f;">   3533.3 </span>buff/cach
+MiB Swap:<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>free,<span style="font-weight:bold;color:#7f7f7f;">      0.0 </span>used.<span style="font-weight:bold;color:#7f7f7f;">   7856.0 </span>avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+<span style="font-weight:bold;color:#7f7f7f;">   6887 kent      20   0 1163.4g 283084 106224 R 400.0   1.8   0:50.37 </span>
+<span style="font-weight:bold;color:#7f7f7f;">  32032 kent      20   0   12832   6372   3172 R 100.0   0.0   0:00.14 </span>
+<span style="font-weight:bold;color:#7f7f7f;">  35207 kent      20   0   10992   5648   1244 R 100.0   0.0   0:00.10 </span>
+<span style="font-weight:bold;color:#7f7f7f;">  35209 kent      20   0   10992   5656   1244 R 100.0   0.0   0:00.04 </span>
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      9 root      20   0       0      0      0 I   0.0   0.0   0:02.43 
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks:<span style="font-weight:bold;color:#7f7f7f;"> 1571 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   6 </span>running,<span style="font-weight:bold;color:#7f7f7f;"> 1565 </span>sleeping,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>stopped,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>zombie
+%Cpu(s):<span style="font-weight:bold;color:#7f7f7f;"> 68.0 </span>us,<span style="font-weight:bold;color:#7f7f7f;"> 20.0 </span>sy,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>ni,<span style="font-weight:bold;color:#7f7f7f;"> 12.0 </span>id,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>wa,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>hi,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>si,<span style="font-weight:bold;color:#7f7f7f;">  0.</span>
+MiB Mem :<span style="font-weight:bold;color:#7f7f7f;">  15695.7 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5476.1 </span>free,<span style="font-weight:bold;color:#7f7f7f;">   7845.1 </span>used,<span style="font-weight:bold;color:#7f7f7f;">   3534.8 </span>buff/cache
+MiB Swap:<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>free,<span style="font-weight:bold;color:#7f7f7f;">      0.0 </span>used.<span style="font-weight:bold;color:#7f7f7f;">   7850.6 </span>avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+<span style="font-weight:bold;color:#7f7f7f;">   6887 kent      20   0 1163.4g 284060 106228 R 550.0   1.8   0:50.48 </span>
+<span style="font-weight:bold;color:#7f7f7f;">  32032 kent      20   0   12832   6372   3172 R 100.0   0.0   0:00.16 </span>
+<span style="font-weight:bold;color:#7f7f7f;">  35209 kent      20   0   10992   5656   1244 R 100.0   0.0   0:00.06 </span>
+<span style="font-weight:bold;color:#7f7f7f;">   7836 kent      20   0 1161.5g 120744  74424 R  50.0   0.8   0:04.90 </span>
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      9 root      20   0       0      0      0 I   0.0   0.0   0:02.43 
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks:<span style="font-weight:bold;color:#7f7f7f;"> 1571 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   6 </span>running,<span style="font-weight:bold;color:#7f7f7f;"> 1565 </span>sleeping,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>stopped,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>zombie
+%Cpu(s):<span style="font-weight:bold;color:#7f7f7f;"> 21.1 </span>us,<span style="font-weight:bold;color:#7f7f7f;"> 21.1 </span>sy,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>ni,<span style="font-weight:bold;color:#7f7f7f;"> 57.9 </span>id,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>wa,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>hi,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>si,<span style="font-weight:bold;color:#7f7f7f;">  0.0</span>
+MiB Mem :<span style="font-weight:bold;color:#7f7f7f;">  15695.7 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5476.1 </span>free,<span style="font-weight:bold;color:#7f7f7f;">   7845.1 </span>used,<span style="font-weight:bold;color:#7f7f7f;">   3534.8 </span>buff/cache 
+MiB Swap:<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>free,<span style="font-weight:bold;color:#7f7f7f;">      0.0 </span>used.<span style="font-weight:bold;color:#7f7f7f;">   7850.6 </span>avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+<span style="font-weight:bold;color:#7f7f7f;">   6887 kent      20   0 1163.4g 284844 106228 R 450.0   1.8   0:50.57 </span>
+<span style="font-weight:bold;color:#7f7f7f;">  35211 kent      20   0   10996   5656   1244 R 100.0   0.0   0:00.02 </span>
+     50 root      rt   0       0      0      0 S  50.0   0.0   0:00.35 
+<span style="font-weight:bold;color:#7f7f7f;">   3409 kent      20   0 1917592 115280  61084 R  50.0   0.7   1:26.71 </span>
+   6841 kent      20   0   33.1g 155968 104388 S  50.0   1.0   0:52.04 
+   7836 kent      20   0 1161.5g 120928  74424 S  50.0   0.8   0:04.91 
+<span style="font-weight:bold;color:#7f7f7f;">  32032 kent      20   0   12832   6372   3172 R  50.0   0.0   0:00.17 </span>
+<span style="font-weight:bold;color:#7f7f7f;">  35209 kent      20   0   10992   5656   1244 R  50.0   0.0   0:00.07 </span>
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks:<span style="font-weight:bold;color:#7f7f7f;"> 1572 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5 </span>running,<span style="font-weight:bold;color:#7f7f7f;"> 1567 </span>sleeping,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>stopped,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>zombie
+%Cpu(s):<span style="font-weight:bold;color:#7f7f7f;"> 20.0 </span>us,<span style="font-weight:bold;color:#7f7f7f;"> 23.3 </span>sy,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>ni,<span style="font-weight:bold;color:#7f7f7f;"> 56.7 </span>id,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>wa,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>hi,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>si,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>
+MiB Mem :<span style="font-weight:bold;color:#7f7f7f;">  15695.7 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5471.6 </span>free,<span style="font-weight:bold;color:#7f7f7f;">   7849.5 </span>used,<span style="font-weight:bold;color:#7f7f7f;">   3535.1 </span>buff/cache  
+MiB Swap:<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>free,<span style="font-weight:bold;color:#7f7f7f;">      0.0 </span>used.<span style="font-weight:bold;color:#7f7f7f;">   7846.2 </span>avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+<span style="font-weight:bold;color:#7f7f7f;">   6887 kent      20   0 1163.4g 285264 106228 R 100.0   1.8   0:50.60 </span>
+<span style="font-weight:bold;color:#7f7f7f;">  32032 kent      20   0   12832   6372   3172 R  66.7   0.0   0:00.19 </span>
+  35209 kent      20   0   10992   5656   1244 S  66.7   0.0   0:00.09 
+<span style="font-weight:bold;color:#7f7f7f;">  35211 kent      20   0   10996   5656   1244 R  66.7   0.0   0:00.04 </span>
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      9 root      20   0       0      0      0 I   0.0   0.0   0:02.43 
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks:<span style="font-weight:bold;color:#7f7f7f;"> 1572 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5 </span>running,<span style="font-weight:bold;color:#7f7f7f;"> 1567 </span>sleeping,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>stopped,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>zombie
+%Cpu(s):<span style="font-weight:bold;color:#7f7f7f;"> 34.6 </span>us,<span style="font-weight:bold;color:#7f7f7f;"> 26.9 </span>sy,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>ni,<span style="font-weight:bold;color:#7f7f7f;"> 38.5 </span>id,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>wa,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>hi,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>si,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>
+MiB Mem :<span style="font-weight:bold;color:#7f7f7f;">  15695.7 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5471.6 </span>free,<span style="font-weight:bold;color:#7f7f7f;">   7849.5 </span>used,<span style="font-weight:bold;color:#7f7f7f;">   3535.1 </span>buff/cache  
+MiB Swap:<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>free,<span style="font-weight:bold;color:#7f7f7f;">      0.0 </span>used.<span style="font-weight:bold;color:#7f7f7f;">   7846.2 </span>avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+<span style="font-weight:bold;color:#7f7f7f;">   6887 kent      20   0 1163.4g 283172 106236 R  1000   1.8   0:50.65 </span>
+<span style="font-weight:bold;color:#7f7f7f;">  32032 kent      20   0   12832   6372   3172 R 100.0   0.0   0:00.21 </span>
+<span style="font-weight:bold;color:#7f7f7f;">  35211 kent      20   0   10996   5656   1244 R 100.0   0.0   0:00.06 </span>
+<span style="font-weight:bold;color:#7f7f7f;">  35212 kent      20   0   10996   5664   1244 R 100.0   0.0   0:00.02 </span>
+   6787 kent      20   0 1161.7g 207136 144956 S 200.0   1.3   0:09.30 
+   6841 kent      20   0   33.1g 155968 104388 S 200.0   1.0   0:52.05 
+   7813 kent      20   0 1163.1g 496884  84088 S 200.0   3.1   0:12.45 
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks:<span style="font-weight:bold;color:#7f7f7f;"> 1572 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   6 </span>running,<span style="font-weight:bold;color:#7f7f7f;"> 1566 </span>sleeping,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>stopped,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>zombie
+%Cpu(s):<span style="font-weight:bold;color:#7f7f7f;"> 13.3 </span>us,<span style="font-weight:bold;color:#7f7f7f;"> 20.0 </span>sy,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>ni,<span style="font-weight:bold;color:#7f7f7f;"> 66.7 </span>id,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>wa,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>hi,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>si,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>s
+MiB Mem :<span style="font-weight:bold;color:#7f7f7f;">  15695.7 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5471.6 </span>free,<span style="font-weight:bold;color:#7f7f7f;">   7849.5 </span>used,<span style="font-weight:bold;color:#7f7f7f;">   3535.1 </span>buff/cache   
+MiB Swap:<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>free,<span style="font-weight:bold;color:#7f7f7f;">      0.0 </span>used.<span style="font-weight:bold;color:#7f7f7f;">   7846.2 </span>avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+<span style="font-weight:bold;color:#7f7f7f;">   6887 kent      20   0 1163.4g 283548 106236 R 150.0   1.8   0:50.68 </span>
+     20 root      rt   0       0      0      0 S  50.0   0.0   0:00.19 
+     55 root      rt   0       0      0      0 S  50.0   0.0   0:00.40 
+   7836 kent      20   0 1161.5g 120904  74424 S  50.0   0.8   0:04.92 
+<span style="font-weight:bold;color:#7f7f7f;">  32032 kent      20   0   12832   6372   3172 R  50.0   0.0   0:00.22 </span>
+  35211 kent      20   0   10996   5656   1244 S  50.0   0.0   0:00.07 
+<span style="font-weight:bold;color:#7f7f7f;">  35212 kent      20   0   10996   5664   1244 R  50.0   0.0   0:00.03 </span>
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks:<span style="font-weight:bold;color:#7f7f7f;"> 1573 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   6 </span>running,<span style="font-weight:bold;color:#7f7f7f;"> 1567 </span>sleeping,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>stopped,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>zombie
+%Cpu(s):<span style="font-weight:bold;color:#7f7f7f;"> 20.0 </span>us,<span style="font-weight:bold;color:#7f7f7f;"> 22.9 </span>sy,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>ni,<span style="font-weight:bold;color:#7f7f7f;"> 57.1 </span>id,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>wa,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>hi,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>si,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>st
+MiB Mem :<span style="font-weight:bold;color:#7f7f7f;">  15695.7 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5439.7 </span>free,<span style="font-weight:bold;color:#7f7f7f;">   7881.5 </span>used,<span style="font-weight:bold;color:#7f7f7f;">   3567.8 </span>buff/cache    
+MiB Swap:<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>free,<span style="font-weight:bold;color:#7f7f7f;">      0.0 </span>used.<span style="font-weight:bold;color:#7f7f7f;">   7814.2 </span>avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND 
+<span style="font-weight:bold;color:#7f7f7f;">  35212 kent      20   0   10996   5664   1244 R 100.0   0.0   0:00.06 bash    </span>
+<span style="font-weight:bold;color:#7f7f7f;">   6887 kent      20   0 1163.4g 282684 106236 R  66.7   1.8   0:50.70 code    </span>
+<span style="font-weight:bold;color:#7f7f7f;">  35215 kent      20   0   10996   5664   1244 R  66.7   0.0   0:00.02 bash    </span>
+<span style="font-weight:bold;color:#7f7f7f;">   6841 kent      20   0   33.1g 155968 104388 R  33.3   1.0   0:52.06 code    </span>
+<span style="font-weight:bold;color:#7f7f7f;">  32032 kent      20   0   12832   6372   3172 R  33.3   0.0   0:00.23 top     </span>
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 systemd 
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthrea+ 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp  
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_pa+ 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_f+ 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns   
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworke+ 
+      9 root      20   0       0      0      0 I   0.0   0.0   0:02.43 kworke+ top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks:<span style="font-weight:bold;color:#7f7f7f;"> 1573 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3 </span>running,<span style="font-weight:bold;color:#7f7f7f;"> 1570 </span>sleeping,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>stopped,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>zombie
+%Cpu(s):<span style="font-weight:bold;color:#7f7f7f;"> 15.0 </span>us,<span style="font-weight:bold;color:#7f7f7f;"> 30.0 </span>sy,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>ni,<span style="font-weight:bold;color:#7f7f7f;"> 55.0 </span>id,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>wa,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>hi,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>si,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>st
+MiB Mem :<span style="font-weight:bold;color:#7f7f7f;">  15695.7 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5439.7 </span>free,<span style="font-weight:bold;color:#7f7f7f;">   7881.5 </span>used,<span style="font-weight:bold;color:#7f7f7f;">   3567.8 </span>buff/cache    
+MiB Swap:<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>free,<span style="font-weight:bold;color:#7f7f7f;">      0.0 </span>used.<span style="font-weight:bold;color:#7f7f7f;">   7814.2 </span>avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND 
+   6887 kent      20   0 1163.4g 282360 106240 S 600.0   1.8   0:50.73 code    
+<span style="font-weight:bold;color:#7f7f7f;">  32032 kent      20   0   12832   6372   3172 R 100.0   0.0   0:00.25 top     </span>
+<span style="font-weight:bold;color:#7f7f7f;">  35212 kent      20   0   10996   5664   1244 R 100.0   0.0   0:00.08 bash    </span>
+   3691 kent      20   0 6071148 290236 129252 S 200.0   1.8   1:29.51 gnome-+ 
+   6841 kent      20   0   33.1g 155968 104388 S 200.0   1.0   0:52.07 code    
+<span style="font-weight:bold;color:#7f7f7f;">  35215 kent      20   0   10996   5664   1244 R 100.0   0.0   0:00.03 bash    </span>
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 systemd 
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthrea+ 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp  
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_pa+ 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_f+ 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns   
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworke+ top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks:<span style="font-weight:bold;color:#7f7f7f;"> 1574 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   4 </span>running,<span style="font-weight:bold;color:#7f7f7f;"> 1570 </span>sleeping,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>stopped,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>zombie
+%Cpu(s):<span style="font-weight:bold;color:#7f7f7f;"> 15.0 </span>us,<span style="font-weight:bold;color:#7f7f7f;"> 22.5 </span>sy,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>ni,<span style="font-weight:bold;color:#7f7f7f;"> 62.5 </span>id,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>wa,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>hi,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>si,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>st 
+MiB Mem :<span style="font-weight:bold;color:#7f7f7f;">  15695.7 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5402.8 </span>free,<span style="font-weight:bold;color:#7f7f7f;">   7918.4 </span>used,<span style="font-weight:bold;color:#7f7f7f;">   3598.1 </span>buff/cache     
+MiB Swap:<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>free,<span style="font-weight:bold;color:#7f7f7f;">      0.0 </span>used.<span style="font-weight:bold;color:#7f7f7f;">   7777.3 </span>avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  
+<span style="font-weight:bold;color:#7f7f7f;">  35215 kent      20   0   10996   5664   1244 R 100.0   0.0   0:00.07 bash     </span>
+   6887 kent      20   0 1163.4g 282832 106256 S  75.0   1.8   0:50.76 code     
+<span style="font-weight:bold;color:#7f7f7f;">  32032 kent      20   0   12832   6372   3172 R  50.0   0.0   0:00.27 top      </span>
+<span style="font-weight:bold;color:#7f7f7f;">  35217 kent      20   0   11000   5664   1244 R  50.0   0.0   0:00.02 bash     </span>
+   3409 kent      20   0 1917592 115280  61084 S  25.0   0.7   1:26.72 Xorg     
+   6787 kent      20   0 1161.7g 207136 144956 S  25.0   1.3   0:09.31 code     
+<span style="font-weight:bold;color:#7f7f7f;">   6841 kent      20   0   33.2g 155968 104388 R  25.0   1.0   0:52.08 code     </span>
+  35212 kent      20   0   10996   5664   1244 S  25.0   0.0   0:00.09 bash     
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 systemd  
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp   
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par+ 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_fl+ top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks:<span style="font-weight:bold;color:#7f7f7f;"> 1574 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3 </span>running,<span style="font-weight:bold;color:#7f7f7f;"> 1571 </span>sleeping,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>stopped,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>zombie
+%Cpu(s):<span style="font-weight:bold;color:#7f7f7f;">  5.9 </span>us,<span style="font-weight:bold;color:#7f7f7f;"> 23.5 </span>sy,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>ni,<span style="font-weight:bold;color:#7f7f7f;"> 70.6 </span>id,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>wa,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>hi,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>si,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>st 
+MiB Mem :<span style="font-weight:bold;color:#7f7f7f;">  15695.7 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5402.8 </span>free,<span style="font-weight:bold;color:#7f7f7f;">   7918.4 </span>used,<span style="font-weight:bold;color:#7f7f7f;">   3598.1 </span>buff/cache     
+MiB Swap:<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>free,<span style="font-weight:bold;color:#7f7f7f;">      0.0 </span>used.<span style="font-weight:bold;color:#7f7f7f;">   7777.3 </span>avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  
+   6887 kent      20   0 1163.4g 283000 106256 S 200.0   1.8   0:50.77 code     
+<span style="font-weight:bold;color:#7f7f7f;">  32032 kent      20   0   12832   6372   3172 R 100.0   0.0   0:00.28 top      </span>
+<span style="font-weight:bold;color:#7f7f7f;">  35215 kent      20   0   10996   5664   1244 R 100.0   0.0   0:00.08 bash     </span>
+<span style="font-weight:bold;color:#7f7f7f;">  35217 kent      20   0   11000   5664   1244 R 100.0   0.0   0:00.03 bash     </span>
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 systemd  
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp   
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par+ 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_fl+ 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns    
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+ 
+      9 root      20   0       0      0      0 I   0.0   0.0   0:02.43 kworker+ 
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_perc+ top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks:<span style="font-weight:bold;color:#7f7f7f;"> 1575 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5 </span>running,<span style="font-weight:bold;color:#7f7f7f;"> 1570 </span>sleeping,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>stopped,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>zombie
+%Cpu(s):<span style="font-weight:bold;color:#7f7f7f;"> 11.4 </span>us,<span style="font-weight:bold;color:#7f7f7f;"> 21.5 </span>sy,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>ni,<span style="font-weight:bold;color:#7f7f7f;"> 67.1 </span>id,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>wa,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>hi,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>si,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>st 
+MiB Mem :<span style="font-weight:bold;color:#7f7f7f;">  15695.7 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5394.4 </span>free,<span style="font-weight:bold;color:#7f7f7f;">   7926.7 </span>used,<span style="font-weight:bold;color:#7f7f7f;">   3600.2 </span>buff/cache     
+MiB Swap:<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>free,<span style="font-weight:bold;color:#7f7f7f;">      0.0 </span>used.<span style="font-weight:bold;color:#7f7f7f;">   7768.9 </span>avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND   
+<span style="font-weight:bold;color:#7f7f7f;">  35217 kent      20   0   11000   5664   1244 R 100.0   0.0   0:00.10 bash      </span>
+<span style="font-weight:bold;color:#7f7f7f;">   6887 kent      20   0 1163.4g 283552 106264 R  85.7   1.8   0:50.83 code      </span>
+<span style="font-weight:bold;color:#7f7f7f;">  35219 kent      20   0   11000   5672   1244 R  57.1   0.0   0:00.04 bash      </span>
+  35215 kent      20   0   10996   5664   1244 S  42.9   0.0   0:00.11 bash      
+   6841 kent      20   0   33.2g 155976 104380 S  28.6   1.0   0:52.10 code      
+<span style="font-weight:bold;color:#7f7f7f;">  32032 kent      20   0   12832   6372   3172 R  28.6   0.0   0:00.30 top       </span>
+   3409 kent      20   0 1917592 115280  61084 S  14.3   0.7   1:26.73 Xorg      
+   6255 kent      20   0 2306296 667404 604748 S  14.3   4.2   1:06.56 VBoxHead+ 
+   7813 kent      20   0 1163.1g 496860  84088 S  14.3   3.1   0:12.46 code      
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 systemd   
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd  
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp    
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_+ top - 09:15:42 up  1:07,  1 user,  load average: 2.99, 1.81, 1.13
+Tasks:<span style="font-weight:bold;color:#7f7f7f;"> 1575 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3 </span>running,<span style="font-weight:bold;color:#7f7f7f;"> 1572 </span>sleeping,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>stopped,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>zombie
+%Cpu(s):<span style="font-weight:bold;color:#7f7f7f;"> 20.0 </span>us,<span style="font-weight:bold;color:#7f7f7f;"> 20.0 </span>sy,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>ni,<span style="font-weight:bold;color:#7f7f7f;"> 60.0 </span>id,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>wa,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>hi,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>si,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>st 
+MiB Mem :<span style="font-weight:bold;color:#7f7f7f;">  15695.7 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5394.4 </span>free,<span style="font-weight:bold;color:#7f7f7f;">   7926.7 </span>used,<span style="font-weight:bold;color:#7f7f7f;">   3600.2 </span>buff/cache     
+MiB Swap:<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>free,<span style="font-weight:bold;color:#7f7f7f;">      0.0 </span>used.<span style="font-weight:bold;color:#7f7f7f;">   7768.9 </span>avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND   
+   6787 kent      20   0 1161.7g 207028 144956 S 200.0   1.3   0:09.32 code      
+   6887 kent      20   0 1163.4g 283872 106268 S 200.0   1.8   0:50.84 code      
+<span style="font-weight:bold;color:#7f7f7f;">  32032 kent      20   0   12832   6372   3172 R 100.0   0.0   0:00.31 top       </span>
+<span style="font-weight:bold;color:#7f7f7f;">  35217 kent      20   0   11000   5664   1244 R 100.0   0.0   0:00.11 bash      </span>
+<span style="font-weight:bold;color:#7f7f7f;">  35219 kent      20   0   11000   5672   1244 R 100.0   0.0   0:00.05 bash      </span>
+      1 root      20   0  168848  13328   9136 S   0.0   0.1   0:01.18 systemd   
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd  
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp    
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_+ 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_flu+ 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns     
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/+ 
+      9 root      20   0       0      0      0 I   0.0   0.0   0:02.43 kworker/+ top - 09:15:45 up  1:07,  1 user,  load average: 2.99, 1.83, 1.14
+Tasks:<span style="font-weight:bold;color:#7f7f7f;"> 1627 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   4 </span>running,<span style="font-weight:bold;color:#7f7f7f;"> 1623 </span>sleeping,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>stopped,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>zombie
+%Cpu(s):<span style="font-weight:bold;color:#7f7f7f;">  3.6 </span>us,<span style="font-weight:bold;color:#7f7f7f;"> 19.0 </span>sy,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>ni,<span style="font-weight:bold;color:#7f7f7f;"> 77.3 </span>id,<span style="font-weight:bold;color:#7f7f7f;">  0.1 </span>wa,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>hi,<span style="font-weight:bold;color:#7f7f7f;">  0.1 </span>si,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>st 
+MiB Mem :<span style="font-weight:bold;color:#7f7f7f;">  15695.7 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5287.3 </span>free,<span style="font-weight:bold;color:#7f7f7f;">   8033.6 </span>used,<span style="font-weight:bold;color:#7f7f7f;">   3525.7 </span>buff/cache     
+MiB Swap:<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>free,<span style="font-weight:bold;color:#7f7f7f;">      0.0 </span>used.<span style="font-weight:bold;color:#7f7f7f;">   7662.0 </span>avail Mem 
+
+
+   6887 kent      20   0 1163.4g 277532 106200 S  19.2   1.7   0:51.42 code      
+   6841 kent      20   0   33.1g 156076 104356 S   7.6   1.0   0:52.33 code      
+   3409 kent      20   0 1917656 115280  61084 S   6.3   0.7   1:26.92 Xorg      
+   3691 kent      20   0 6071084 290244 129252 S   5.3   1.8   1:29.67 gnome-sh+ 
+   6787 kent      20   0 1161.7g 206088 144956 S   4.6   1.3   0:09.46 code      
+  35220 kent      20   0   11000   5672   1244 S   4.0   0.0   0:00.12 bash      
+  35224 kent      20   0   11004   5680   1244 S   4.0   0.0   0:00.12 bash      
+  35249 kent      20   0   11016   5700   1244 S   4.0   0.0   0:00.12 bash      
+  35269 kent      20   0   11024   5724   1244 S   4.0   0.0   0:00.12 bash      
+  35271 kent      20   0   11024   5724   1244 S   4.0   0.0   0:00.12 bash      
+  35278 kent      20   0   11032   5732   1244 S   4.0   0.0   0:00.12 bash      
+  35280 kent      20   0   11032   5676   1180 S   4.0   0.0   0:00.12 bash      
+  35290 kent      20   0   11040   5752   1244 S   4.0   0.0   0:00.12 bash      top - 09:15:48 up  1:07,  1 user,  load average: 2.99, 1.83, 1.14
+Tasks:<span style="font-weight:bold;color:#7f7f7f;"> 1677 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5 </span>running,<span style="font-weight:bold;color:#7f7f7f;"> 1672 </span>sleeping,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>stopped,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>zombie
+%Cpu(s):<span style="font-weight:bold;color:#7f7f7f;">  2.7 </span>us,<span style="font-weight:bold;color:#7f7f7f;"> 19.1 </span>sy,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>ni,<span style="font-weight:bold;color:#7f7f7f;"> 78.2 </span>id,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>wa,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>hi,<span style="font-weight:bold;color:#7f7f7f;">  0.1 </span>si,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>st 
+MiB Mem :<span style="font-weight:bold;color:#7f7f7f;">  15695.7 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   5110.6 </span>free,<span style="font-weight:bold;color:#7f7f7f;">   8210.1 </span>used,<span style="font-weight:bold;color:#7f7f7f;">   3514.7 </span>buff/cache     
+MiB Swap:<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>free,<span style="font-weight:bold;color:#7f7f7f;">      0.0 </span>used.<span style="font-weight:bold;color:#7f7f7f;">   7485.6 </span>avail Mem 
+
+
+   6887 kent      20   0 1163.4g 276772 106200 S  10.3   1.7   0:51.73 code      
+   6841 kent      20   0   33.1g 156000 104356 S   7.0   1.0   0:52.54 code      
+<span style="font-weight:bold;color:#7f7f7f;">   3409 kent      20   0 1917656 115280  61084 R   6.3   0.7   1:27.11 Xorg      </span>
+<span style="font-weight:bold;color:#7f7f7f;">   3691 kent      20   0 6071084 290244 129252 R   5.0   1.8   1:29.82 gnome-sh+ </span>
+  35387 kent      20   0   11084   5848   1244 S   4.3   0.0   0:00.13 bash      
+  35419 kent      20   0   11232   5884   1244 S   4.3   0.0   0:00.13 bash      
+  35421 kent      20   0   11232   5784   1144 S   4.3   0.0   0:00.13 bash      
+  35422 kent      20   0   11236   5864   1220 S   4.3   0.0   0:00.13 bash      
+  35435 kent      20   0   11236   5892   1244 S   4.3   0.0   0:00.13 bash      
+  35444 kent      20   0   11240   5864   1204 S   4.3   0.0   0:00.13 bash      
+  35466 kent      20   0   11248   5840   1168 S   4.3   0.0   0:00.13 bash      
+  35469 kent      20   0   11248   5920   1244 S   4.3   0.0   0:00.13 bash      
+  35471 kent      20   0   11252   5920   1240 S   4.3   0.0   0:00.13 bash      top - 09:15:51 up  1:07,  1 user,  load average: 2.91, 1.83, 1.15
+Tasks:<span style="font-weight:bold;color:#7f7f7f;"> 1723 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3 </span>running,<span style="font-weight:bold;color:#7f7f7f;"> 1720 </span>sleeping,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>stopped,<span style="font-weight:bold;color:#7f7f7f;">   0 </span>zombie
+%Cpu(s):<span style="font-weight:bold;color:#7f7f7f;">  2.5 </span>us,<span style="font-weight:bold;color:#7f7f7f;"> 19.6 </span>sy,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>ni,<span style="font-weight:bold;color:#7f7f7f;"> 77.7 </span>id,<span style="font-weight:bold;color:#7f7f7f;">  0.1 </span>wa,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>hi,<span style="font-weight:bold;color:#7f7f7f;">  0.1 </span>si,<span style="font-weight:bold;color:#7f7f7f;">  0.0 </span>st 
+MiB Mem :<span style="font-weight:bold;color:#7f7f7f;">  15695.7 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   4998.8 </span>free,<span style="font-weight:bold;color:#7f7f7f;">   8321.1 </span>used,<span style="font-weight:bold;color:#7f7f7f;">   3452.6 </span>buff/cache     
+MiB Swap:<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>total,<span style="font-weight:bold;color:#7f7f7f;">   3000.0 </span>free,<span style="font-weight:bold;color:#7f7f7f;">      0.0 </span>used.<span style="font-weight:bold;color:#7f7f7f;">   7374.6 </span>avail Mem 
+
+
+   6887 kent      20   0 1163.4g 280376 106216 S  10.6   1.7   0:52.05 code      
+   6841 kent      20   0   33.0g 156020 104364 S   7.3   1.0   0:52.76 code      
+   3409 kent      20   0 1917656 115280  61084 S   5.6   0.7   1:27.28 Xorg      
+   7813 kent      20   0 1163.1g 496316  84088 S   5.0   3.1   0:12.69 code      
+   3691 kent      20   0 6071084 290244 129252 S   4.6   1.8   1:29.96 gnome-sh+ 
+  35547 kent      20   0   11292   6012   1244 S   4.6   0.0   0:00.14 bash      
+  35549 kent      20   0   11296   6012   1244 S   4.6   0.0   0:00.14 bash      
+  35559 kent      20   0   11300   6028   1244 S   4.6   0.0   0:00.14 bash      
+  35565 kent      20   0   11304   6036   1244 S   4.6   0.0   0:00.14 bash      
+  35582 kent      20   0   11312   6048   1244 S   4.6   0.0   0:00.14 bash      
+  35599 kent      20   0   11320   6064   1244 S   4.6   0.0   0:00.14 bash      
+  35638 kent      20   0   11332   6092   1244 S   4.6   0.0   0:00.14 bash      
+  35644 kent      20   0   11332   6096   1244 S   4.6   0.0   0:00.14 bash      &gt;
+<span style="color:#5c5cff;">DEVOPS24/lektion15
+</span>$ 
+
+</pre>
+</body>
+</html>
+<!--HTML generated by ansifilter 2.18, http://www.andre-simon.de/-->

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Avbryt med Ctrl + Z, följt av kill -9 %1
+
+trap 'echo Nej du; sleep 2' SIGINT
+
+while true; do
+	echo Köp xyz
+	sleep 1
+done

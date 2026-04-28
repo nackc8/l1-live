@@ -1,0 +1,3804 @@
+Script started on 2025-10-01 08:54:43+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="85" LINES="12"]
+ITINF25/lektion9
+$ ITINF25/lektion9
+$ git status
+On branch 251001
+Your branch is up to date with 'origin/251001'.
+
+nothing to commit, working tree clean
+ITINF25/lektion9
+$ ITINF25/lektion9
+$ touch fortsattning_imorgon.txt
+ITINF25/lektion9
+$ code fortsattning_imorgon.txt 
+ITINF25/lektion9
+$ ITINF25/lektion9
+$ aman bash
+BASH(1)                       General Commands Manual                      BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash  is  an  sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash also  incorporates
+       useful features from the Korn and C shells (ksh and csh).
+BASH(1)                       General Commands Manual                      BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash  is  an  sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash also  incorporates
+       useful features from the Korn and C shells (ksh and csh).
+BASH(1)                       General Commands Manual                      BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash  is  an  sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash also  incorporates
+       useful features from the Korn and C shells (ksh and csh).
+...skipping...
+                 builtin (see SHELL BUILTIN COMMANDS below).  If  shopt_option  is
+                 present,  -O  sets  the  value  of that option; +O unsets it.  If
+                 shopt_option is not supplied, the names and values of  the  shell
+                 options accepted by shopt are printed on the standard output.  If
+                 the invocation option is +O, the output is displayed in a  format
+                 that may be reused as input.
+       --        A  -- signals the end of options and disables further option pro‐
+                 cessing.  Any arguments after the -- are treated as filenames and
+                 arguments.  An argument of - is equivalent to --.
+
+       Bash  also  interprets  a number of multi-character options.  These options
+       must appear on the command line before the single-character options  to  be
+       recognized.
+
+       --debugger
+...skipping...ash(1) line 50 (press h for help or q to quit)
+       mand (see declare below in SHELL BUILTIN COMMANDS).
+
+       A  parameter  is set if it has been assigned a value.  The null string is a
+       valid value.  Once a variable is set, it may be unset only by using the un‐
+       set builtin command (see SHELL BUILTIN COMMANDS below).
+
+       A variable may be assigned to by a statement of the form
+
+              name=[value]
+
+       If  value is not given, the variable is assigned the null string.  All val‐
+       ues undergo tilde expansion, parameter and variable expansion, command sub‐
+       stitution,  arithmetic  expansion, and quote removal (see EXPANSION below).
+       If the variable has its integer attribute set, then value is  evaluated  as
+       an  arithmetic  expression  even if the $((...)) expansion is not used (see
+       Arithmetic Expansion below).  Word splitting and pathname expansion are not
+       performed.   Assignment  statements  may  also  appear  as arguments to the
+       alias, declare, typeset, export, readonly, and local builtin commands (dec‐
+       laration  commands).   When  in  posix mode, these builtins may appear in a
+...skipping...ash(1) line 671 (press h for help or q to quit)
+              mand  (see  SHELL BUILTIN COMMANDS below).  The options appearing in
+              BASHOPTS are those reported as on by shopt.  If this variable is  in
+              the  environment  when bash starts up, each shell option in the list
+              will be enabled before reading any startup files.  This variable  is
+              read-only.
+       BASHPID
+              Expands to the process ID of the current bash process.  This differs
+              from $$ under certain circumstances, such as subshells that  do  not
+              require  bash  to be re-initialized.  Assignments to BASHPID have no
+              effect.  If BASHPID is unset, it loses its special properties,  even
+              if it is subsequently reset.
+       BASH_ALIASES
+              An associative array variable whose members correspond to the inter‐
+              nal list of aliases as maintained by the  alias  builtin.   Elements
+              added to this array appear in the alias list; however, unsetting ar‐
+...skipping...ash(1) line 799 (press h for help or q to quit)
+              builtin command (see SHELL BUILTIN COMMANDS below).
+       OPTIND The  index  of  the  next  argument  to  be processed by the getopts
+              builtin command (see SHELL BUILTIN COMMANDS below).
+       OSTYPE Automatically set to a string that describes the operating system on
+              which bash is executing.  The default is system-dependent.
+       PIPESTATUS
+              An  array variable (see Arrays below) containing a list of exit sta‐
+              tus values from the processes in  the  most-recently-executed  fore‐
+              ground pipeline (which may contain only a single command).
+       PPID   The process ID of the shell's parent.  This variable is readonly.
+       PWD    The current working directory as set by the cd command.
+       RANDOM Each time this parameter is referenced, it expands to a random inte‐
+              ger between 0 and 32767.  Assigning a value  to  RANDOM  initializes
+              (seeds)  the  sequence  of  random  numbers.  If RANDOM is unset, it
+              loses its special properties, even if it is subsequently reset.
+       READLINE_ARGUMENTe 1007 (press h for help or q to quit)
+              Any numeric argument given to a readline command  that  was  defined
+              using  "bind  -x" (see SHELL BUILTIN COMMANDS below) when it was in‐
+              voked.
+       READLINE_LINE
+              The contents of the readline line buffer, for  use  with  "bind  -x"
+              (see SHELL BUILTIN COMMANDS below).
+       READLINE_MARK
+              The  position  of  the  mark (saved insertion point) in the readline
+              line buffer, for use with "bind -x" (see SHELL BUILTIN COMMANDS  be‐
+              low).   The  characters between the insertion point and the mark are
+              often called the region.
+       READLINE_POINT
+              The position of the insertion point in the readline line buffer, for
+              use with "bind -x" (see SHELL BUILTIN COMMANDS below).
+       REPLY  Set  to  the  line of input read by the read builtin command when no
+              arguments are supplied.
+       SECONDSash(1) line 1024 (press h for help or q to quit)
+              Each time this parameter is referenced, it expands to the number  of
+              seconds  since shell invocation.  If a value is assigned to SECONDS,
+              the value returned upon subsequent references is the number of  sec‐
+              onds  since  the  assignment plus the value assigned.  The number of
+              seconds at shell invocation and the current time are  always  deter‐
+              mined  by  querying the system clock.  If SECONDS is unset, it loses
+              its special properties, even if it is subsequently reset.
+       SHELLOPTS
+              A colon-separated list of enabled shell options.  Each word  in  the
+              list  is  a valid argument for the -o option to the set builtin com‐
+              mand (see SHELL BUILTIN COMMANDS below).  The options  appearing  in
+              SHELLOPTS  are  those reported as on by set -o.  If this variable is
+              in the environment when bash starts up, each  shell  option  in  the
+              list  will  be enabled before reading any startup files.  This vari‐
+              able is read-only.
+       SHLVL  Incremented by one each time an instance of bash is started.
+       SRANDOM
+              This variable expands to a 32-bit pseudo-random number each time  it
+              is  referenced. The random number generator is not linear on systems
+              that support /dev/urandom or arc4random, so each returned number has
+              no relationship to the numbers preceding it.  The random number gen‐
+              erator cannot be seeded, so assignments to this variable have no ef‐
+              fect.  If SRANDOM is unset, it loses its special properties, even if
+              it is subsequently reset.
+       UID    Expands to the user ID of the current  user,  initialized  at  shell
+...skipping...ash(1) line 1050 (press h for help or q to quit)
+              getopts  builtin command (see SHELL BUILTIN COMMANDS below).  OPTERR
+              is initialized to 1 each time the shell is invoked or a shell script
+              is executed.
+       PATH   The  search  path for commands.  It is a colon-separated list of di‐
+              rectories in which the shell looks for commands (see COMMAND  EXECU‐
+              TION  below).   A  zero-length (null) directory name in the value of
+              PATH indicates the current directory.  A null directory name may ap‐
+              pear  as  two  adjacent  colons, or as an initial or trailing colon.
+              The default path is system-dependent, and is set by the  administra‐
+              tor who installs bash.  A common value is ``/usr/local/bin:/usr/lo‐
+              cal/sbin:/usr/bin:/usr/sbin:/bin:/sbin''.
+       POSIXLY_CORRECT
+              If this variable is in the environment when bash starts,  the  shell
+              enters  posix  mode  before  reading  the  startup  files, as if the
+              --posix invocation option had been supplied.  If it is set while the
+...skipping...ash(1) line 1281 (press h for help or q to quit)
+       clare an indexed array, use declare -a name (see SHELL BUILTIN COMMANDS be‐
+       low).  declare -a name[subscript] is also accepted; the  subscript  is  ig‐
+       nored.
+
+       Associative arrays are created using declare -A name.
+
+       Attributes  may  be  specified  for an array variable using the declare and
+       readonly builtins.  Each attribute applies to all members of an array.
+
+       Arrays are assigned to using compound assignments of the form  name=(value1
+       ...  valuen),  where each value may be of the form [subscript]=string.  In‐
+       dexed array assignments do not require anything but string.  Each value  in
+       the  list  is expanded using all the shell expansions described below under
+       EXPANSION.  When assigning to indexed arrays, if the optional brackets  and
+       subscript  are  supplied, that index is assigned to; otherwise the index of
+...skipping...ash(1) line 1406 (press h for help or q to quit)
+       under SHELL BUILTIN COMMANDS below).
+
+       The rules concerning the definition and use of aliases are somewhat confus‐
+       ing.  Bash always reads at least one complete line of input, and all  lines
+       that  make  up  a compound command, before executing any of the commands on
+       that line or the compound command.  Aliases are expanded when a command  is
+       read, not when it is executed.  Therefore, an alias definition appearing on
+       the same line as another command does not take effect until the  next  line
+       of input is read.  The commands following the alias definition on that line
+       are not affected by the new alias.  This behavior is  also  an  issue  when
+       functions are executed.  Aliases are expanded when a function definition is
+       read, not when the function is executed, because a function  definition  is
+       itself  a command.  As a consequence, aliases defined in a function are not
+       available until after that function is executed.  To be  safe,  always  put
+       alias definitions on a separate line, and do not use alias in compound com‐
+...skipping...ash(1) line 2356 (press h for help or q to quit)
+       (see  the  description of the trap builtin under SHELL BUILTIN COMMANDS be‐
+       low) are not inherited unless the function has been given the trace  attri‐
+       bute (see the description of the declare builtin below) or the -o functrace
+       shell option has been enabled with the set builtin (in which case all func‐
+       tions  inherit  the DEBUG and RETURN traps), and the ERR trap is not inher‐
+       ited unless the -o errtrace shell option has been enabled.
+
+       Variables local to the function may be declared with the local builtin com‐
+       mand  (local variables).  Ordinarily, variables and their values are shared
+       between the function and its caller.  If a variable is declared local,  the
+       variable's  visible  scope  is restricted to that function and its children
+       (including the functions it calls).
+
+       In the following description, the current scope is a  currently-  executing
+       function.   Previous  scopes  consist  of that function's caller and so on,
+...skipping...ash(1) line 2389 (press h for help or q to quit)
+       der SHELL BUILTIN COMMANDS) are retained by the child.
+
+       If the program is a file beginning with #!, the remainder of the first line
+       specifies an interpreter for the program.  The shell executes the specified
+       interpreter  on operating systems that do not handle this executable format
+       themselves.  The arguments to the interpreter consist of a single  optional
+       argument  following  the interpreter name on the first line of the program,
+       followed by the name of the program, followed by the command arguments,  if
+       any.
+
+COMMAND EXECUTION ENVIRONMENT
+       The shell has an execution environment, which consists of the following:
+
+       •      open  files  inherited  by  the  shell at invocation, as modified by
+              redirections supplied to the exec builtin
+...skipping...ash(1) line 2705 (press h for help or q to quit)
+       the  description  of the shopt command under SHELL BUILTIN COMMANDS below).
+       This can have unwanted side effects if escaped portions of the  string  ap‐
+       pear  within command substitution or contain characters special to word ex‐
+       pansion.
+
+READLINE
+       This is the library that handles reading input when  using  an  interactive
+       shell,  unless  the  --noediting option is given at shell invocation.  Line
+       editing is also used when using the -e option to the read builtin.  By  de‐
+       fault, the line editing commands are similar to those of Emacs.  A vi-style
+       line editing interface is also available.  Line editing can be  enabled  at
+       any  time using the -o emacs or -o vi options to the set builtin (see SHELL
+       BUILTIN COMMANDS below).  To turn off line editing after the shell is  run‐
+       ning, use the +o emacs or +o vi options to the set builtin.
+
+...skipping...ash(1) line 3031 (press h for help or q to quit)
+       or using the bind builtin command (see SHELL BUILTIN COMMANDS below).
+
+       Except where noted, readline variables can take the values On or Off (with‐
+       out  regard  to  case).   Unrecognized  variable names are ignored.  When a
+       variable value is read, empty or null values, "on" (case-insensitive),  and
+       "1"  are  equivalent  to  On.  All other values are equivalent to Off.  The
+       variables and their default values are:
+
+       active-region-start-color
+              A string variable that controls the text color and  background  when
+              displaying the text in the active region (see the description of en‐
+              able-active-region below).  This string must not take up any  physi‐
+              cal character positions on the display, so it should consist only of
+              terminal escape sequences.  It is output to the terminal before dis‐
+              playing  the  text  in the active region.  This variable is reset to
+...skipping...ash(1) line 3169 (press h for help or q to quit)
+       builtin (see SHELL BUILTIN COMMANDS below), the programmable completion fa‐
+       cilities are invoked.
+
+       First, the command name is identified.  If the command word  is  the  empty
+       string  (completion attempted at the beginning of an empty line), any comp‐
+       spec defined with the -E option to complete is used.   If  a  compspec  has
+       been defined for that command, the compspec is used to generate the list of
+       possible completions for the word.  If the command word is a full pathname,
+       a  compspec for the full pathname is searched for first.  If no compspec is
+       found for the full pathname, an attempt is made to find a compspec for  the
+       portion  following  the  final slash.  If those searches do not result in a
+       compspec, any compspec defined with the -D option to complete  is  used  as
+       the  default.   If there is no default compspec, bash attempts alias expan‐
+       sion on the command word as a final resort, and attempts to find a compspec
+       for the command word from any successful expansion.
+...skipping...ash(1) line 3983 (press h for help or q to quit)
+       The builtin command fc (see SHELL BUILTIN COMMANDS below) may  be  used  to
+       list  or  edit  and  re-execute a portion of the history list.  The history
+       builtin may be used to display or modify the history  list  and  manipulate
+       the  history  file.   When  using command-line editing, search commands are
+       available in each editing mode that provide access to the history list.
+
+       The shell allows control over which commands are saved on the history list.
+       The  HISTCONTROL  and HISTIGNORE variables may be set to cause the shell to
+       save only a subset of the commands entered.  The cmdhist shell  option,  if
+       enabled, causes the shell to attempt to save each line of a multi-line com‐
+       mand in the same history entry, adding semicolons where necessary  to  pre‐
+       serve  syntactic correctness.  The lithist shell option causes the shell to
+       save the command with embedded newlines instead of semicolons.  See the de‐
+       scription  of  the shopt builtin below under SHELL BUILTIN COMMANDS for in‐
+       formation on setting and unsetting shell options.
+/Manual page bash(1) line 4137 (press h for help or q to quit)
+HISTORY EXPANSION
+       The shell supports a history expansion feature that is similar to the  his‐
+       tory  expansion  in  csh.   This section describes what syntax features are
+       available.  This feature is enabled by default for interactive shells,  and
+       can  be  disabled using the +H option to the set builtin command (see SHELL
+       BUILTIN COMMANDS below).  Non-interactive shells do not perform history ex‐
+       pansion by default.
+
+       History  expansions  introduce  words  from the history list into the input
+       stream, making it easy to repeat commands, insert the arguments to a previ‐
+       ous command into the current input line, or fix errors in previous commands
+       quickly.
+...skipping...ash(1) line 4150 (press h for help or q to quit)
+SHELL BUILTIN COMMANDS
+       Unless otherwise noted, each builtin command documented in this section  as
+       accepting  options  preceded  by - accepts -- to signify the end of the op‐
+       tions.  The :, true, false, and test/[ builtins do not accept  options  and
+       do not treat -- specially.  The exit, logout, return, break, continue, let,
+       and shift builtins accept and process arguments beginning  with  -  without
+       requiring  --.   Other builtins that accept arguments but are not specified
+       as accepting options interpret arguments beginning with -  as  invalid  op‐
+       tions and require -- to prevent this interpretation.
+       : [arguments]
+              No  effect;  the command does nothing beyond expanding arguments and
+              performing any specified redirections.  The return status is zero.
+
+        .  filename [arguments]
+       source filename [arguments]
+              Read and execute commands from filename in the current  shell  envi‐
+              ronment and return the exit status of the last command executed from
+              filename.  If filename does not contain a slash, filenames  in  PATH
+              are  used  to  find  the directory containing filename, but filename
+              does not need to be executable.  The file searched for in PATH  need
+              not  be executable.  When bash is not in posix mode, it searches the
+              current directory if no file is found in PATH.   If  the  sourcepath
+              option  to  the shopt builtin command is turned off, the PATH is not
+              searched.  If any arguments are supplied, they become the positional
+              parameters  when filename is executed.  Otherwise the positional pa‐
+              rameters are unchanged.  If the -T option is enabled, . inherits any
+              trap  on DEBUG; if it is not, any DEBUG trap string is saved and re‐
+              stored around the call to ., and . unsets the DEBUG  trap  while  it
+              executes.   If -T is not set, and the sourced file changes the DEBUG
+              trap, the new value is retained when . completes.  The return status
+              is  the status of the last command exited within the script (0 if no
+              commands are executed), and false if filename is not found or cannot
+              be read.ine 4308 (press h for help or q to quit)
+ ESESCOBpage bash(1) line 4309 (press h for help or q to quit)
+       alias [-p] [name[=value] ...]s h for help or q to quit)
+              Alias  with  no  arguments  or with the -p option prints the list of
+              aliases in the form alias name=value on standard output.  When argu‐
+              ments are supplied, an alias is defined for each name whose value is
+              given.  A trailing space in value causes the next word to be checked
+              for alias substitution when the alias is expanded.  For each name in
+              the argument list for which no value is supplied, the name and value
+              of  the alias is printed.  Alias returns true unless a name is given
+              for which no alias has been defined.r q to quit)
+ ESESCOBpage bash(1) line 4319 (press h for help or q to quit)
+       bg [jobspec ...]ne 4320 (press h for help or q to quit)
+              Resume each suspended job jobspec in the background, as  if  it  had
+              been  started with &.  If jobspec is not present, the shell's notion
+              of the current job is used.  bg jobspec returns 0  unless  run  when
+              job  control  is disabled or, when run with job control enabled, any
+              specified jobspec was not found or was started without job control.
+ ESESCOBpage bash(1) line 4326 (press h for help or q to quit)
+       bind [-m keymap] [-lpsvPSVX]ss h for help or q to quit)
+       bind [-m keymap] [-q function] [-u function] [-r keyseq]
+       bind [-m keymap] -f filenamess h for help or q to quit)
+       bind [-m keymap] -x keyseq:shell-commandp or q to quit)
+       bind [-m keymap] keyseq:function-namehelp or q to quit)
+       bind [-m keymap] keyseq:readline-commandp or q to quit)
+       bind readline-command-lineress h for help or q to quit)
+              Display current readline key and function bindings, bind a  key  se‐
+              quence  to a readline function or macro, or set a readline variable.
+              Each non-option argument is a command as it would appear in a  read‐
+              line  initialization file such as .inputrc, but each binding or com‐
+              mand must be passed  as  a  separate  argument;  e.g.,  '"\C-x\C-r":
+              re-read-init-file'.   Options, if supplied, have the following mean‐
+              ings:) line 4340 (press h for help or q to quit)
+              -m keymapne 4341 (press h for help or q to quit)
+                     Use keymap as the keymap to be  affected  by  the  subsequent
+                     bindings.  Acceptable keymap names are emacs, emacs-standard,
+                     emacs-meta, emacs-ctlx, vi, vi-move, vi-command,  and  vi-in‐
+M       bind [-m keymap] -f filenames h for help or q to quit)
+>ITINF25/lektion9(1) line 4344 (press h for help or q to quit)
+$ hekllp -sITINF25/lektion9
+$ help -s
+GNU bash, version 5.2.15(1)-release (x86_64-pc-linux-gnu)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LP]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-d delim] [-n count] [-O or>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DEI] [>  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DEI] [name ...>  set [-abefhkmnptuvxBCEHPT] [-o option->
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgiIlnrtux] [name[=value] >  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgiIlnrtux] name[=value] >
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPRT] [li>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS-2; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg ...]          wait [-fn] [-p var] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS-2; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+ITINF25/lektion9
+$ ITINF25/lektion9
+$ enable
+enable .
+enable :
+enable [
+enable alias
+enable bg
+enable bind
+enable break
+enable builtin
+enable caller
+enable cd
+enable command
+enable compgen
+enable complete
+enable compopt
+enable continue
+enable declare
+enable dirs
+enable disown
+enable echo
+enable enable
+enable eval
+enable exec
+enable exit
+enable export
+enable false
+enable fc
+enable fg
+enable getopts
+enable hash
+enable help
+enable history
+enable jobs
+enable kill
+enable let
+enable local
+enable logout
+enable mapfile
+enable popd
+enable printf
+enable pushd
+enable pwd
+enable read
+enable readarray
+enable readonly
+enable return
+enable set
+enable shift
+enable shopt
+enable source
+enable suspend
+enable test
+enable times
+enable trap
+enable true
+enable type
+enable typeset
+enable ulimit
+enable umask
+enable unalias
+enable unset
+enable wait
+ITINF25/lektion9
+$ ITINF25/lektion9
+$ history
+    7  ./read1 
+    8  ./read1 
+    9  ./read1 
+   10  echo XXX${IFS}XXX
+   11  read x1 x2 x3
+   12  echo $x1
+   13  echo $x2
+   14  echo $x3
+   15  IFS="," read x1 x2
+   16  echo $x1
+   17  echo $x2
+   18  read x1 x2
+   19  echo $x1
+   20  echo $x2
+   21  read x1 x2
+   22  echo $x1
+   23  echo $x2
+   24  read x1 x2
+   25  echo $x1
+   26  echo $x2
+   27  IFS="|" read namn1 namn2 namn3
+   28  echo $namn1 
+   29  IFS="|" read namn1 namn2 namn3
+   30  echo $namn1
+   31  echo $namn2
+   32  echo $namn3
+   33  IFS="," read namn1 namn2 namn3
+   34  echo $namn1
+   35  echo $namn2
+   36  cp read1 read3lines
+   37  code read3lines 
+   38  ./read3lines 
+   39  mv återblick_lektion5.md återblick_lektion5.txt
+   40  ./read3lines 
+   41  ./read3lines 
+   42  ./read3lines 
+   43  ./read3lines 
+   44  ./read3lines 
+   45  ./read3lines 
+   46  cp read3lines readalllines
+   47  code readalllines 
+   48  read < /dev/null 
+   49  echo $?
+   50  read x
+   51  echo $?
+   52  ./readalllines 
+   53  ./readalllines 
+   54  ./readalllines 
+   55  man bash
+   56  cd Dropbox
+   57  cd ..
+   58  ls Documents
+   59  ls bokforing
+   60  cd
+   61  exit
+   62  exit
+   63  ls Documents
+   64  ls bokforing
+   65  cd
+   66  exit
+   67  grep META linux1.md 
+   68  grep 'id:.*id:' linux2.md 
+   69  grep 'id:' linux2.md 
+   70  grep ':\' linux2.md 
+   71  grep ':\\' linux2.md 
+   72  ./addid.sh 
+   73  ./addid.sh linux2.md linux2.mdx
+   74  cp linux2.md{x,}
+   75  code questions_for_date.py 
+   76  code push 
+   77  code ../exam
+   78  nvm
+   79  ./push 
+   80  cd
+   81  exit
+   82  exit
+   83  source /shared/kent/Documents/nackademin/exams/.venv/bin/activate
+   84  grep -B 3 exam:251001 linux2.md 
+   85  grep -B 3 exam:251001 linux2.md | grep ##
+   86  grep -B 3 exam:251001 linux2.md | grep '##'
+   87  grep -B 3 exam:251001 linux2.md | grep 'poäng'
+   88  cd Documents
+   89  cd nackademin/
+   90  cd linux1/
+   91  cd ..
+   92  ls exams/
+   93  cd exams/
+   94  git status
+   95  rm x
+   96  git diff
+   97  git add .
+   98  git commit -m "Improvement Linux 2"
+   99  code .
+  100  cat questions_251001.json 
+  101  cat zipgrade_251001.csv 
+  102  cat zipgrade_251001.csv | xsel
+  103  wget https://github.com/espanso/espanso/releases/latest/download/espanso-debian-wayland-amd64.deb
+  104  sudo apt install ./espanso-debian-wayland-amd64.deb
+  105  sudo setcap "cap_dac_override+p" $(which espanso)
+  106  espanso service register
+  107  espanso start
+  108  Hi there!
+  109  espanso status
+  110  09/27/2025
+  111  nano .config/espanso/match/base.yml 
+  112  git diff
+  113  git add .
+  114  git commit -m "Improvement Linux 2"
+  115  code .
+  116  cat questions_251001.json 
+  117  cat zipgrade_251001.csv 
+  118  cat zipgrade_251001.csv | xsel
+  119  wget https://github.com/espanso/espanso/releases/latest/download/espanso-debian-wayland-amd64.deb
+  120  sudo apt install ./espanso-debian-wayland-amd64.deb
+  121  sudo setcap "cap_dac_override+p" $(which espanso)
+  122  espanso service register
+  123  espanso start
+  124  Hi there!
+  125  espanso status
+  126  09/27/2025
+  127  nano .config/espanso/match/base.yml 
+  128  cd Documents
+  129  cd nackademin/
+  130  cd ..
+  131  cd GitHub
+  132  cd nackc8/
+  133  cd existing/
+  134  echo *redo
+  135  echo *redo*d5
+  136  echo *redo*d5*
+  137  echo *redo*-d5-*
+  138  echo *redo*-d5-* | wc -l
+  139  for x in *redo*-d5-*; do echo "$x"; done | wc-l
+  140  for x in *redo*-d5-*; do echo "$x"; done | wc -l
+  141  for x in *redo*-d5-*; do echo "$x"; done
+  142  for x in *redo*-d5-*; do echo "${x%%l10-redo-d5-}"; done
+  143  for x in *redo*-d5-*; do echo "${x##l10-redo-d5-}"; done
+  144  for x in *redo*-d5-*; do u="${x##l10-redo-d5-}"; done
+  145  for x in *redo*-d5-*; do u="${x##l10-redo-d5-}"; cat $x/mail.txt; done
+  146  for x in *redo*-d5-*; do u="${x##l10-redo-d5-}"; read mail < $x/mail.txt; done
+  147  for x in *redo*-d5-*; do u="${x##l10-redo-d5-}"; read mail < $x/mail.txt; echo $u $mail; done
+  148  for x in *redo*-d5-*; do u="${x##l10-redo-d5-}"; read mail < $x/mail.txt; echo $mail $u; done
+  149  for x in *redo*-d5-*; do u="${x##l10-redo-d5-}"; read mail < $x/mail.txt; echo -e "$mail\t$u"; done
+  150  for x in *redo*-d5-*; do u="${x##l10-redo-d5-}"; read mail < $x/mail.txt; echo -e "$mail\t$u"; done | xsel
+  151  sort x
+  152  sort x | xsel
+  153  rm x
+  154  less x
+  155  for x in *redo*-d5-*; do u="${x##l10-redo-d5-}"; read mail < $x/mail.txt; echo -e "$mail\t$u"; done > x
+  156  cat x | xsel
+  157  cat x | sort
+  158  cat x | sort > y
+  159  for x in *redo*-d5-*; do u="${x##l10-redo-d5-}"; read mail < $x/mail.txt; echo -e "$mail\t$u"; done | sort > x
+  160  cat x
+  161  cat x | grep -v dinadress
+  162  cat x | grep -v dinadress > y
+  163  cat y
+  164  cat y | sel
+  165  cat y | xsel
+  166  rm x y
+  167  gh-sync-organization 
+  168  ls -1d *l11-d4*
+  169  ls -1d *l11-*-d4-*
+  170  ls -1d *l11-*-d4-* | wc -l
+  171  gh-sync-organization 
+  172  cd Documents/nackademin/linux1/l1-live/
+  173  code .
+  174  alias
+  175  vmboxmange vms
+  176  vmboxmage vms
+  177  exit
+  178  git status
+  179  alias
+  180  bash
+  181  ls
+  182  man ls
+  183  ls
+  184  alias ls="ls -Ah"
+  185  ls
+  186  ls -l
+  187  touch .jagedold
+  188  ls
+  189  history
+  190  alias ls="ls -Ah"  
+  191  man ls
+  192  alias echo="echo hej "
+  193  echo God mat
+  194  exit
+  195  cd 2.5\ arithmetic\ expansion/
+  196  ls
+  197  cp ../2.1\ brace_expansion/exempel1 .
+  198  echo PLUS $(( 2 + 3  ))
+  199  echo MULTI $(( 2 * 3 ))
+  200  echo SUBTRACTION $(( 2 - 3 ))
+  201  echo DIV_INT $(( 10 / 2 ))
+  202  echo DIV_MAYBE_FLOAT $(( 9 / 2 ))
+  203  echo DIV_MAYBE_FLOAT 9 / 2
+  204  echo DIV_MAYBE_FLOAT (( 9 / 2 ))
+  205  echo DIV_MAYBE_FLOAT $(( 9 / 2 ))
+  206  echo DIV_DECIMALS_CHOPPED_OFF $(( 9 / 2 ))
+  207  echo DIV_DECIMALS_CHOPPED_OFF $(( 5.2 / 2 ))
+  208  bc
+  209  for a in {a,u,o,å}{b,c,d,e}; do 	echo "$x"; done
+  210  for a in {a,u,o,å}{b,c,d,e}; do 	echo "$a"; done
+  211  man bash
+  212  for ((skostorlek=50; skostorlek > 10 ; skostorlek = skostorlek - 1 )); do 	echo Skostorlek $skostorlek; done
+  213  for ((skostorlek=50; skostorlek >= 10 ; skostorlek = skostorlek - 1 )); do 	echo Skostorlek $skostorlek; done
+  214  for ((skostorlek=50; skostorlek => 10 ; skostorlek = skostorlek - 1 )); do 	echo Skostorlek $skostorlek; done
+  215  cd ../
+  216  ls
+  217  cd strukturer/funktion/
+  218  ls
+  219  chmod +x exempel1 
+  220  ./exempel1 
+  221  ./exempel1 
+  222  ./exempel1 
+  223  ./exempel1 
+  224  ./exempel1 
+  225  ./exempel1 
+  226  ./exempel1 
+  227  ./exempel1 
+  228  ./exempel2
+  229  ./exempel2
+  230  ./exempel3
+  231  len
+  232  source exempel4 
+  233  is_secure_password abc
+  234  is_secure_password abcdefg
+  235  is_secure_password abcdefgh
+  236  is_secure_password hejsanhopp
+  237  source exempel4 
+  238  is_secure_password abcefgh
+  239  echo $?
+  240  is_secure_password abcdefg && echo VAD FINT
+  241  is_secure_password abcdefgh && echo VAD FINT
+  242  source exempel5
+  243  cool Hejsan
+  244  cool Hejsan
+  245  source exempel5
+  246  cool Hejsan
+  247  exit
+  248  ls ~
+  249  echo $HOME
+  250  chmod +x aterblick/2.3\ parameter\ expansion/exempel1 
+  251  aterblick/2.3\ parameter\ expansion/exempel1 
+  252  aterblick/2.3\ parameter\ expansion/exempel1 
+  253  man bash
+  254  aterblick/2.3\ parameter\ expansion/exempel1 
+  255  echo $IWEIWIWI
+  256  echo x $IWEIWIWI y
+  257  aterblick/2.3\ parameter\ expansion/exempel1 
+  258  aterblick/2.3\ parameter\ expansion/exempel1 
+  259  aterblick/2.3\ parameter\ expansion/exempel1 
+  260  cd aterblick/2.4\ command\ substitution/
+  261  ls
+  262  echo '#!/bin/bash' > exempel1 ; chmod +x exempel1
+  263  ./exempel1 
+  264  ./exempel1 
+  265  ./exempel1 
+  266  ./exempel2
+  267  ./exempel2
+  268  cd ../2.7\ word\ splitting/
+  269  ls
+  270  echo '#!/bin/bash' > exempel1 ; chmod +x exempel1
+  271  ls
+  272  touch 'firstname lastname'
+  273  ./exempel1 
+  274  ./exempel2 
+  275  ./exempel3
+  276  ./exempel4
+  277  cd ..
+  278  cd 2.8\ pathname\ expansion/
+  279  ls
+  280  echo '#!/bin/bash' > exempel1 ; chmod +x exempel1
+  281  ls
+  282  touch sol.png
+  283  touch vind.png
+  284  touch vatten.png
+  285  touch instruktion.jpg
+  286  touch instruktion2.jpg
+  287  touch instruktion3.jpg
+  288  ls
+  289  ls
+  290  ls -l sol.png 
+  291  ls -l *.png 
+  292  ls -l **.png 
+  293  ls -l *******************.png 
+  294  ls
+  295  ls *sol.png
+  296  ls
+  297  ls -l ???.png
+  298  ls -l ?*
+  299  ls -l ??*
+  300  ls -l ????*
+  301  ls -l ???????*
+  302  ls -l ????????*
+  303  ls -l
+  304  ls -l ????????*
+  305  man bash
+  306  ls
+  307  touch instruktion{1..20}.jpg
+  308  ls
+  309  ls instruktion[345].jpg
+  310  ls instruktion[!345].jpg
+  311  cd ..
+  312  ls
+  313  cd 3.\ redirections/
+  314  echo '#!/bin/bash' > exempel1 ; chmod +x exempel1
+  315  cd ..
+  316  cd 4.\ pipes/
+  317  echo '#!/bin/bash' > exempel1 ; chmod +x exempel1
+  318  cd ..
+  319  cd 3.\ redirections/
+  320  ls
+  321  code exempel1 
+  322  echo CONTENT 1>stdout1
+  323  ls
+  324  echo CONTENT >stdout2
+  325  echo EN TILL RAD >>stdout1
+  326  grep toyota bilar.txt
+  327  grep toyota bilar.txt 2>stderr1
+  328  touch bilar2.txt
+  329  nano bilar2.txt 
+  330  grep toyota bilar2.txt 2>stderr2
+  331  echo $?
+  332  grep toyota bilar.txt 2>stderr
+  333  echo $?
+  334  cp exempel1 skrivbada
+  335  code skrivbada 
+  336  ./skrivbada 
+  337  ./skrivbada >skrivbada_stdout 2>skrivbada_stderr
+  338  echo $RANDOM $RANDOM $RANDOM $RANDOM
+  339  echo $RANDOM $RANDOM $RANDOM $RANDOM | sort
+  340  man sort
+  341  echo $RANDOM $RANDOM $RANDOM $RANDOM | sort -g
+  342  echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM"
+  343  echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM" | sort
+  344  echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM" | sort -g
+  345  echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM" | sort -g | tail -n 1
+  346  echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM" | sort -g | tail -n 1
+  347  echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM" | sort -g | tail -n 1
+  348  echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM" | sort -g | tail -n 1
+  349  echo -e "$RANDOM\n$RANDOM\n$RANDOM\n$RANDOM" | sort -g | tail -n 1
+  350  echo hej | grep h
+  351  echo $?
+  352  cd ..
+  353  cd ..
+  354  cd 2.1\ brace_expansion/
+  355  man bash
+  356  echo '#!/bin/bash' > exempel1 ; chmod +x exempel1
+  357  ./exempel1 
+  358  ./exempel1 
+  359  ./exempel1 
+  360  ./exempel1 
+  361  ./exempel1 
+  362  echo x{hopp,kaka,baka}y
+  363  echo x{hopp,kaka,}y
+  364  mkdir nummerfiler
+  365  cd nummerfiler/
+  366  touch bokf20{25,26,27,28,29,30}.txt
+  367  ls
+  368  cd ..
+  369  mkdir nummerfiler2
+  370  cd nummerfiler
+  371  cd ..
+  372  cd nummerfiler2
+  373  touch -v bokf20{25..30}.txt
+  374  echo touch bokf20{25..30}.txt
+  375  cd ..
+  376  ls
+  377  mkdir gator
+  378  cd gator/
+  379  echo mjolnerbacken{1..22}
+  380  echo mjolnerbacken{1..22}{a,b}
+  381  echo "mjolnerbacken "{1..22}{a,b}
+  382  touch "mjolnerbacken "{1..22}{a,b}.txt
+  383  ls
+  384  ls
+  385  ls
+  386  cd ..
+  387  ls
+  388  mkdir realistiska_exempel
+  389  ls
+  390  cd realistiska_exempel/
+  391  ls
+  392  touch 'den har fulen har ett valdigt langt namn som ar jobbigt att skriva.txt'
+  393  ls
+  394  ls
+  395  echo mv "den har fulen{} har ett valdigt langt namn som ar jobbigt att skriva.txt"
+  396  echo mv "den har f"{u,i}"len har ett valdigt langt namn som ar jobbigt att skriva.txt"  
+  397  mv "den har f"{u,i}"len har ett valdigt langt namn som ar jobbigt att skriva.txt"  
+  398  ls
+  399  touch idhuie_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt
+  400  sudo mv idhuie_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt /var/lib/logrotate/
+  401  ls -l /var/lib/logrotate/idhuie_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt 
+  402  mv /var/lib/logrotate/{idhuie,KORREKT}_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt
+  403  sudo mv /var/lib/logrotate/{idhuie,KORREKT}_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt
+  404  ls /var/lib/logrotate/
+  405  sudo rm /var/lib/logrotate/KORREKT_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt 
+  406  echo {0,1}{0,1}{0,1}{0,1}
+  407  echo {0..9}{0..9}
+  408  for x in {0..3}; do echo Numret $x; done
+  409  echo {0..9..2}
+  410  echo {a,b,c,1..4}
+  411  echo {a,b,c,{1..4}}
+  412  man bash
+  413  echo '#!/bin/bash' > exempel1 ; chmod +x exempel1
+  414  man bash
+  415  cp exempel1 exempel2
+  416  code exempel2 
+  417  $(( 1 < 2 ))
+  418  echo $(( 1 < 2 ))
+  419  man bash
+  420  echo $(( 1 <= 2 ))
+  421  echo $?
+  422  echo $(( 2 <= 1 ))
+  423  exit
+  424  qalc
+  425  cd ..
+  426  ls
+  427  mkdir realistiska_exempel
+  428  ls
+  429  cd realistiska_exempel/
+  430  ls
+  431  touch 'den har fulen har ett valdigt langt namn som ar jobbigt att skriva.txt'
+  432  ls
+  433  ls
+  434  echo mv "den har fulen{} har ett valdigt langt namn som ar jobbigt att skriva.txt"
+  435  echo mv "den har f"{u,i}"len har ett valdigt langt namn som ar jobbigt att skriva.txt"  
+  436  mv "den har f"{u,i}"len har ett valdigt langt namn som ar jobbigt att skriva.txt"  
+  437  ls
+  438  touch idhuie_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt
+  439  sudo mv idhuie_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt /var/lib/logrotate/
+  440  ls -l /var/lib/logrotate/idhuie_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt 
+  441  mv /var/lib/logrotate/{idhuie,KORREKT}_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt
+  442  sudo mv /var/lib/logrotate/{idhuie,KORREKT}_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt
+  443  ls /var/lib/logrotate/
+  444  sudo rm /var/lib/logrotate/KORREKT_iuehiuehe_suhsiuhs_iujeoieu_xiuhiuxh.txt 
+  445  echo {0,1}{0,1}{0,1}{0,1}
+  446  echo {0..9}{0..9}
+  447  for x in {0..3}; do echo Numret $x; done
+  448  echo {0..9..2}
+  449  echo {a,b,c,1..4}
+  450  echo {a,b,c,{1..4}}
+  451  man bash
+  452  echo '#!/bin/bash' > exempel1 ; chmod +x exempel1
+  453  man bash
+  454  cp exempel1 exempel2
+  455  code exempel2 
+  456  $(( 1 < 2 ))
+  457  echo $(( 1 < 2 ))
+  458  man bash
+  459  echo $(( 1 <= 2 ))
+  460  echo $?
+  461  echo $(( 2 <= 1 ))
+  462  qalc
+  463  namn=Hejsan
+  464  echo Vaffff
+  465  echo $namn
+  466  cd /tmp/
+  467  nano skript
+  468  chmod +x skript 
+  469  skript
+  470  sed -i 's#/g#/#g' skript 
+  471  cat skript 
+  472  ./skript 
+  473  ./skript "ett langt argument" tva
+  474  ./skript ett tva
+  475  ./skript åland
+  476  ./skript svensson larsson degerfeltsson
+  477  nano skript 
+  478  rm skript 
+  479  exit
+  480  exit
+  481  rm espanso-debian-wayland-amd64.deb 
+  482  exit
+  483  exit
+  484  rm espanso-debian-wayland-amd64.deb 
+  485  exit
+  486  gh-sync-organization 
+  487  mancp
+  488  man cp
+  489  echo hej | cp - boo
+  490  echo hej | cp boo
+  491  base64
+  492  echo hej | base64
+  493  base64 -d aGVqCg==
+  494  echo aGVqCg== | base64 -d
+  495  tar
+  496  echo hej | tar -f x.tar
+  497  tldr tar
+  498  echo hej | tar x.tar
+  499  echo hej | tar - x.tar
+  500  git status
+  501  touch fortsattning_imorgon.txt
+  502  code fortsattning_imorgon.txt 
+  503  man bash
+  504  help -s
+  505  enable
+  506  history
+ITINF25/lektion9
+$ ITINF25/lektion9
+$ man less
+LESS(1)                       General Commands Manual                      LESS(1)
+
+NAME
+       less - opposite of more
+
+SYNOPSIS
+       less -?
+       less --help
+       less -V
+       less --version
+       less [-[+]aABcCdeEfFgGiIJKLmMnNqQrRsSuUVwWX~]
+            [-b space] [-h lines] [-j line] [-k keyfile]
+            [-{oO} logfile] [-p pattern] [-P prompt] [-t tag]
+            [-T tagsfile] [-x tab,...] [-y lines] [-[z] lines]
+            [-# shift] [+[+]cmd] [--] [filename]...
+LESS(1)                       General Commands Manual                      LESS(1)
+
+NAME
+       less - opposite of more
+
+SYNOPSIS
+       less -?
+       less --help
+       less -V
+       less --version
+       less [-[+]aABcCdeEfFgGiIJKLmMnNqQrRsSuUVwWX~]
+            [-b space] [-h lines] [-j line] [-k keyfile]
+            [-{oO} logfile] [-p pattern] [-P prompt] [-t tag]
+            [-T tagsfile] [-x tab,...] [-y lines] [-[z] lines]
+            [-# shift] [+[+]cmd] [--] [filename]...
+LESS(1)                       General Commands Manual                      LESS(1)
+
+NAME
+       less - opposite of more
+
+SYNOPSIS
+       less -?
+       less --help
+       less -V
+       less --version
+       less [-[+]aABcCdeEfFgGiIJKLmMnNqQrRsSuUVwWX~]
+            [-b space] [-h lines] [-j line] [-k keyfile]
+            [-{oO} logfile] [-p pattern] [-P prompt] [-t tag]
+            [-T tagsfile] [-x tab,...] [-y lines] [-[z] lines]
+            [-# shift] [+[+]cmd] [--] [filename]...
+...skipping...ess(1) line 1 (press h for help or q to quit)
+              EDITOR  is  defined.   See also the discussion of LESSEDIT under the
+              section on PROMPTS below.
+
+       ! shell-command
+              Invokes a shell to run the shell-command given.  A percent sign  (%)
+              in the command is replaced by the name of the current file.  A pound
+              sign (#) is replaced by the name of the  previously  examined  file.
+              "!!" repeats the last shell command.  "!" with no shell command sim‐
+              ply invokes a shell.  On Unix systems, the shell is taken  from  the
+              environment variable SHELL, or defaults to "sh".  On MS-DOS and OS/2
+              systems, the shell is the normal command processor.
+
+       | <m> shell-command
+              <m> represents any mark letter.  Pipes a section of the  input  file
+              to  the given shell command.  The section of the file to be piped is
+...skipping...ess(1) line 404 (press h for help or q to quit)
+       Options are also taken from the environment variable "LESS".  For  example,
+       to  avoid  typing  "less -options ..." each time less is invoked, you might
+       tell csh:
+
+       setenv LESS "-options"
+
+       or if you use sh:
+
+       LESS="-options"; export LESS
+
+       On MS-DOS, you don't need the quotes, but you should  replace  any  percent
+       signs in the options string by double percent signs.
+
+       The environment variable is parsed before the command line, so command line
+       options override the LESS environment variable.  If an  option  appears  in
+>ITINF25/lektion9(1) line 443 (press h for help or q to quit)
+$ ITINF25/lektion9
+$ man bash
+BASH(1)                       General Commands Manual                      BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash  is  an  sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash also  incorporates
+       useful features from the Korn and C shells (ksh and csh).
+BASH(1)                       General Commands Manual                      BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash  is  an  sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash also  incorporates
+       useful features from the Korn and C shells (ksh and csh).
+BASH(1)                       General Commands Manual                      BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash  is  an  sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash also  incorporates
+       useful features from the Korn and C shells (ksh and csh).
+...skipping...
+       such, and to prevent parameter expansion.
+
+       Each of the metacharacters listed above under DEFINITIONS has special mean‐
+       ing to the shell and must be quoted if it is to represent itself.
+
+       When the command history expansion facilities are being used  (see  HISTORY
+       EXPANSION  below),  the  history  expansion  character,  usually !, must be
+       quoted to prevent history expansion.
+
+       There are three quoting mechanisms: the escape  character,  single  quotes,
+       and double quotes.
+
+       A  non-quoted backslash (\) is the escape character.  It preserves the lit‐
+       eral value of the next character that follows, with the exception of  <new‐
+       line>.   If  a  \<newline>  pair  appears,  and the backslash is not itself
+...skipping...ash(1) line 583 (press h for help or q to quit)
+              parameter expansion, command substitution, and arithmetic  expansion
+              before  being interpreted as a filename.  PATH is not used to search
+              for the resultant filename.
+       BASH_XTRACEFD
+              If set to an integer corresponding to a valid file descriptor,  bash
+              will write the trace output generated when set -x is enabled to that
+              file descriptor.  The file descriptor is closed  when  BASH_XTRACEFD
+              is  unset  or  assigned a new value.  Unsetting BASH_XTRACEFD or as‐
+              signing it the empty string causes the trace output to  be  sent  to
+              the standard error.  Note that setting BASH_XTRACEFD to 2 (the stan‐
+              dard error file descriptor) and then unsetting it will result in the
+              standard error being closed.
+       CDPATH The  search path for the cd command.  This is a colon-separated list
+              of directories in which the shell looks for destination  directories
+              specified by the cd command.  A sample value is ".:~:/usr".
+...skipping...ash(1) line 1089 (press h for help or q to quit)
+       pression.  To avoid conflicts with parameter expansion, the  string  ${  is
+       not  considered  eligible for brace expansion, and inhibits brace expansion
+       until the closing }.
+
+       This construct is typically used as shorthand when the common prefix of the
+       strings to be generated is longer than in the above example:
+
+              mkdir /usr/local/src/bash/{old,new,dist,bugs}
+       or
+              chown root /usr/{ucb/{ex,edit},lib/{ex?.?*,how_ex}}
+
+       Brace  expansion  introduces  a slight incompatibility with historical ver‐
+       sions of sh.  sh does not treat opening or closing  braces  specially  when
+       they  appear as part of a word, and preserves them in the output.  Bash re‐
+       moves braces from words as a consequence of brace expansion.  For  example,
+...skipping...ash(1) line 1559 (press h for help or q to quit)
+   Parameter Expansion
+       The `$' character introduces parameter expansion, command substitution,  or
+       arithmetic  expansion.   The parameter name or symbol to be expanded may be
+       enclosed in braces, which are optional but serve to protect the variable to
+       be  expanded from characters immediately following it which could be inter‐
+       preted as part of the name.
+
+       When braces are used, the matching ending brace is the first  `}'  not  es‐
+       caped  by a backslash or within a quoted string, and not within an embedded
+       arithmetic expansion, command substitution, or parameter expansion.
+
+       ${parameter}
+              The value of parameter is substituted.  The braces are required when
+              parameter  is  a  positional  parameter with more than one digit, or
+              when parameter is followed by a character which is not to be  inter‐
+              preted  as  part of its name.  The parameter is a shell parameter as
+              described above PARAMETERS) or an array reference (Arrays).
+
+       If the first character of parameter is an exclamation point (!), and param‐
+       eter is not a nameref, it introduces a level of indirection.  Bash uses the
+       value formed by expanding the rest of parameter as the new parameter;  this
+       is  then  expanded  and  that  value  is used in the rest of the expansion,
+       rather than the expansion of the original parameter.  This is known as  in‐
+       direct  expansion.   The value is subject to tilde expansion, parameter ex‐
+...skipping...ash(1) line 1623 (press h for help or q to quit)
+       The  shell  scans the results of parameter expansion, command substitution,
+       and arithmetic expansion that did not occur within double quotes  for  word
+       splitting.
+
+       The  shell  treats each character of IFS as a delimiter, and splits the re‐
+       sults of the other expansions into words using these  characters  as  field
+       terminators.   If  IFS  is unset, or its value is exactly <space><tab><new‐
+       line>, the default, then sequences of <space>, <tab>, and <newline> at  the
+       beginning  and  end  of the results of the previous expansions are ignored,
+       and any sequence of IFS characters not at the beginning or  end  serves  to
+       delimit  words.   If IFS has a value other than the default, then sequences
+       of the whitespace characters space, tab, and newline are ignored at the be‐
+       ginning  and end of the word, as long as the whitespace character is in the
+       value of IFS (an IFS whitespace character).  Any character in IFS  that  is
+       not  IFS whitespace, along with any adjacent IFS whitespace characters, de‐
+...skipping...ash(1) line 1940 (press h for help or q to quit)
+       Shell  variables  are allowed as operands; parameter expansion is performed
+       before the expression is evaluated.  Within an expression, shell  variables
+       may  also  be referenced by name without using the parameter expansion syn‐
+       tax.  A shell variable that is null or unset evaluates to 0 when referenced
+       by name without using the parameter expansion syntax.  The value of a vari‐
+       able is evaluated as an arithmetic expression when  it  is  referenced,  or
+       when a variable which has been given the integer attribute using declare -i
+       is assigned a value.  A null value evaluates to 0.  A shell  variable  need
+       not have its integer attribute turned on to be used in an expression.
+
+       Integer  constants  follow  the  C language definition, without suffixes or
+       character constants.  Constants with a leading 0 are interpreted  as  octal
+       numbers.   A leading 0x or 0X denotes hexadecimal.  Otherwise, numbers take
+       the form [base#]n, where the optional base is a decimal  number  between  2
+       and  64  representing  the arithmetic base, and n is a number in that base.
+       If base# is omitted, then base 10 is used.  When specifying n,  if  a  non-
+       digit  is required, the digits greater than 9 are represented by the lower‐
+       case letters, the uppercase letters, @, and _, in that order.  If  base  is
+       less  than  or equal to 36, lowercase and uppercase letters may be used in‐
+...skipping...ash(1) line 2503 (press h for help or q to quit)
+              pansion, parameter expansion, command substitution,  arithmetic  ex‐
+              pansion, and quote removal before being assigned to the variable.
+
+       If  no  command  name  results, the variable assignments affect the current
+       shell environment.  In the case of such a command (one that  consists  only
+       of  assignment statements and redirections), assignment statements are per‐
+       formed before redirections.  Otherwise, the variables are added to the  en‐
+       vironment of the executed command and do not affect the current shell envi‐
+       ronment.  If any of the assignments attempts to assign a value to  a  read‐
+       only  variable, an error occurs, and the command exits with a non-zero sta‐
+       tus.
+
+       If no command name results, redirections are performed, but do  not  affect
+       the  current  shell environment.  A redirection error causes the command to
+       exit with a non-zero status.
+...skipping...ash(1) line 2649 (press h for help or q to quit)
+       panded via parameter expansion, command substitution, arithmetic expansion,
+       and quote removal, subject to the value of the promptvars shell option (see
+       the  description  of the shopt command under SHELL BUILTIN COMMANDS below).
+       This can have unwanted side effects if escaped portions of the  string  ap‐
+       pear  within command substitution or contain characters special to word ex‐
+       pansion.
+
+READLINE
+       This is the library that handles reading input when  using  an  interactive
+       shell,  unless  the  --noediting option is given at shell invocation.  Line
+       editing is also used when using the -e option to the read builtin.  By  de‐
+       fault, the line editing commands are similar to those of Emacs.  A vi-style
+       line editing interface is also available.  Line editing can be  enabled  at
+       any  time using the -o emacs or -o vi options to the set builtin (see SHELL
+       BUILTIN COMMANDS below).  To turn off line editing after the shell is  run‐
+...skipping...ash(1) line 3029 (press h for help or q to quit)
+                      "@" or "*", as an error when performing parameter expansion.
+                      If expansion is attempted on an unset variable or parameter,
+                      the  shell prints an error message, and, if not interactive,
+                      exits with a non-zero status.
+              -v      Print shell input lines as they are read.
+              -x      After expanding each simple command, for command, case  com‐
+                      mand, select command, or arithmetic for command, display the
+                      expanded value of PS4, followed by the command and  its  ex‐
+                      panded arguments or associated word list.
+              -B      The  shell  performs  brace  expansion  (see Brace Expansion
+                      above).  This is on by default.
+              -C      If set, bash does not overwrite an existing file with the >,
+                      >&,  and  <>  redirection operators.  This may be overridden
+                      when creating output files by using the redirection operator
+                      >| instead of >.
+...skipping...ash(1) line 5488 (press h for help or q to quit)
+                      pattern, as described under Parameter Expansion above.  This
+                      option is enabled by default.
+
+              progcomp
+                      If set, the programmable completion facilities (see Program‐
+                      mable Completion above) are enabled.  This option is enabled
+                      by default.
+
+              progcomp_alias
+                      If  set, and programmable completion is enabled, bash treats
+                      a command name that doesn't have any completions as a possi‐
+                      ble  alias and attempts alias expansion. If it has an alias,
+                      bash attempts programmable completion using the command word
+                      resulting from the expanded alias.
+
+...skipping...ash(1) line 5833 (press h for help or q to quit)
+                      If  set, prompt strings undergo parameter expansion, command
+                      substitution, arithmetic expansion, and quote removal  after
+                      being expanded as described in PROMPTING above.  This option
+                      is enabled by default.
+
+              restricted_shell
+                      The shell sets this option if it is  started  in  restricted
+                      mode  (see  RESTRICTED  SHELL  below).  The value may not be
+                      changed.  This is not reset when the startup files are  exe‐
+                      cuted, allowing the startup files to discover whether or not
+                      a shell is restricted.
+
+              shift_verbose
+                      If set, the shift builtin prints an error message  when  the
+                      shift count exceeds the number of positional parameters.
+>ITINF25/lektion9  (press RETURN)ress h for help or q to quit)
+$ man baless
+LESS(1)                       General Commands Manual                      LESS(1)
+
+NAME
+       less - opposite of more
+
+SYNOPSIS
+       less -?
+       less --help
+       less -V
+       less --version
+       less [-[+]aABcCdeEfFgGiIJKLmMnNqQrRsSuUVwWX~]
+            [-b space] [-h lines] [-j line] [-k keyfile]
+            [-{oO} logfile] [-p pattern] [-P prompt] [-t tag]
+            [-T tagsfile] [-x tab,...] [-y lines] [-[z] lines]
+            [-# shift] [+[+]cmd] [--] [filename]...
+LESS(1)                       General Commands Manual                      LESS(1)
+
+NAME
+       less - opposite of more
+
+SYNOPSIS
+       less -?
+       less --help
+       less -V
+       less --version
+       less [-[+]aABcCdeEfFgGiIJKLmMnNqQrRsSuUVwWX~]
+            [-b space] [-h lines] [-j line] [-k keyfile]
+            [-{oO} logfile] [-p pattern] [-P prompt] [-t tag]
+            [-T tagsfile] [-x tab,...] [-y lines] [-[z] lines]
+            [-# shift] [+[+]cmd] [--] [filename]...
+LESS(1)                       General Commands Manual                      LESS(1)
+
+NAME
+       less - opposite of more
+
+SYNOPSIS
+       less -?
+       less --help
+       less -V
+       less --version
+       less [-[+]aABcCdeEfFgGiIJKLmMnNqQrRsSuUVwWX~]
+            [-b space] [-h lines] [-j line] [-k keyfile]
+            [-{oO} logfile] [-p pattern] [-P prompt] [-t tag]
+            [-T tagsfile] [-x tab,...] [-y lines] [-[z] lines]
+            [-# shift] [+[+]cmd] [--] [filename]...
+...skipping...
+              https://docs.microsoft.com/en-us/windows/console/char-info-str).
+
+       -e or --quit-at-eof
+              Causes less to automatically exit the second time it reaches end-of-
+              file.  By default, the only way to exit less is via the "q" command.
+
+       -E or --QUIT-AT-EOF
+              Causes less to automatically exit the first time it reaches  end-of-
+              file.
+
+       -f or --force
+              Forces non-regular files to be opened.  (A non-regular file is a di‐
+              rectory or a device special file.)  Also suppresses the warning mes‐
+              sage  when a binary file is opened.  By default, less will refuse to
+              open non-regular files.  Note that some operating systems  will  not
+...skipping...ess(1) line 617 (press h for help or q to quit)
+       -F or --quit-if-one-screen
+              Causes  less  to  automatically  exit if the entire file can be dis‐
+              played on the first screen.
+
+       -g or --hilite-search
+              Normally, less will highlight  ALL  strings  which  match  the  last
+              search  command.   The  -g option changes this behavior to highlight
+              only the particular string which was found by the last  search  com‐
+              mand.  This can cause less to run somewhat faster than the default.
+
+       -G or --HILITE-SEARCH
+              The -G option suppresses all highlighting of strings found by search
+              commands.
+
+       -hn or --max-back-scroll=n
+...skipping...ess(1) line 634 (press h for help or q to quit)
+       -i or --ignore-case
+              Causes searches to ignore case; that is, uppercase and lowercase are
+              considered identical.  This option is ignored if any uppercase  let‐
+              ters appear in the search pattern; in other words, if a pattern con‐
+              tains uppercase letters, then that search does not ignore case.
+
+       -I or --IGNORE-CASE
+              Like -i, but searches ignore case even if the pattern  contains  up‐
+              percase letters.
+
+       -jn or --jump-target=n
+              Specifies  a line on the screen where the "target" line is to be po‐
+              sitioned.  The target line is the line specified by any  command  to
+              search for a pattern, jump to a line number, jump to a file percent‐
+              age or jump to a tag.  The screen line may be specified by a number:
+>ITINF25/lektion9(1) line 654 (press h for help or q to quit)
+$ echo �$LESS
+
+ITINF25/lektion9
+$ ITINF25/lektion9
+$ ssh -p 1000222 localhost
+Warning: Permanently added '[localhost]:10022' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-84-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Wed Oct  1 07:16:15 AM UTC 2025
+
+  System load:  0.08               Processes:               121
+  Usage of /:   34.8% of 16.07GB   Users logged in:         0
+  Memory usage: 6%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+174 updates can be applied immediately.
+1 of these updates is a standard security update.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+1 updates could not be installed automatically. For more details,
+see /var/log/unattended-upgrades/unattended-upgrades.log
+
+Last login: Thu Sep 25 07:48:29 2025 from 10.0.2.2
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 0;kent@ubsembr: ~
+kent@ubsembr:~$ man bash
+BASH(1)                       General Commands Manual                      BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash  is  an  sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash also  incorporates
+       useful features from the Korn and C shells (ksh and csh).
+>0;kent@ubsembr: ~1) line 1 (press h for help or q to quit)
+kent@ubsembr:~$ 0;kent@ubsembr: ~
+kent@ubsembr:~$ LANG=sv_SE.UTF-8
+0;kent@ubsembr: ~
+kent@ubsembr:~$ LANG=sv_SE.UTF-man bash
+man: can't set the locale; make sure $LC_* and $LANG are correct
+BASH(1)                       General Commands Manual                      BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash  is  an  sh-compatible command language interpreter that executes com-
+       mands read from the standard input or from a file.  Bash also  incorporates
+       useful features from the Korn and C shells (ksh and csh).
+ ESESCOBpage bash(1) line 1 (press h for help or q to quit)
+       Bash  is intended to be a conformant implementation of the Shell and Utili-
+       ties portion of the IEEE POSIX specification (IEEE Standard 1003.1).   Bash
+       can be configured to be POSIX-conformant by default.
+>0;kent@ubsembr: ~1) line 5 (press h for help or q to quit)
+0;kent@ubsembr: ~udoedit 
+0;kent@ubsembr: ~udoedit 
+0;kent@ubsembr: ~udoedit 
+kent@ubsembr:~$ sudoedit /etc/locale.gen
+[sudo] password for kent: 
+# ak_GH UTF-88UTF-8ed to rerun locale-gen./i18n/SUPPORTED. If you changedden  
+# am_ET UTF-8
+# an_ES ISO-8859-15
+# an_ES.UTF-8 UTF-8
+# anp_IN UTF-8
+# ar_AE ISO-8859-6
+# ar_AE.UTF-8 UTF-8
+# ar_BH ISO-8859-6
+# ar_BH.UTF-8 UTF-8
+# ar_DZ ISO-8859-6
+# ar_DZ.UTF-8 UTF-8
+# ar_EG ISO-8859-6
+# ar_EG.UTF-8 UTF-8
+# ar_IN UTF-8
+# ar_IQ ISO-8859-6
+# ar_IQ.UTF-8 UTF-8
+# ar_JO ISO-8859-6
+# ar_JO.UTF-8 UTF-8
+# ar_KW ISO-8859-6
+# ar_KW.UTF-8 UTF-8
+# ar_LB ISO-8859-6
+# ar_LB.UTF-8 UTF-8
+# ar_LY ISO-8859-6
+# ar_LY.UTF-8 UTF-8
+# ar_MA ISO-8859-6
+# ar_MA.UTF-8 UTF-8
+# ar_OM ISO-8859-6
+# ar_OM.UTF-8 UTF-8
+# ar_QA ISO-8859-6
+# ar_QA.UTF-8 UTF-8
+# ar_SA ISO-8859-6
+# ar_SA.UTF-8 UTF-8
+# ar_SD ISO-8859-6
+# ar_SD.UTF-8 UTF-8
+# ar_SS UTF-8
+# ar_SY ISO-8859-6
+# ar_SY.UTF-8 UTF-8
+# ar_TN ISO-8859-6
+# ar_TN.UTF-8 UTF-8
+# ar_YE ISO-8859-6
+# ar_YE.UTF-8 UTF-8
+# as_IN UTF-8
+# ast_ES ISO-8859-15
+# ast_ES.UTF-8 UTF-8
+# ayc_PE UTF-8
+# az_AZ UTF-8
+# az_IR UTF-8
+# be_BY CP1251
+# be_BY.UTF-8 UTF-8
+# be_BY@latin UTF-8
+# bem_ZM UTF-8
+# ber_DZ UTF-8
+# ber_MA UTF-8
+# bg_BG CP1251
+# bg_BG.UTF-8 UTF-8
+# bhb_IN.UTF-8 UTF-8
+# bho_IN UTF-8
+# bho_NP UTF-8
+# bi_VU UTF-8
+# bn_BD UTF-8
+# bn_IN UTF-8
+# bo_CN UTF-8
+# bo_IN UTF-8
+# br_FR ISO-8859-1
+# br_FR.UTF-8 UTF-8
+# br_FR@euro ISO-8859-15
+# brx_IN UTF-8
+# bs_BA ISO-8859-2
+# bs_BA.UTF-8 UTF-8
+# byn_ER UTF-8
+# ca_AD ISO-8859-15
+# ca_AD.UTF-8 UTF-8
+# ca_ES ISO-8859-1
+# ca_ES.UTF-8 UTF-8
+# ca_ES@euro ISO-8859-15
+# ca_ES@valencia UTF-8
+# ca_FR ISO-8859-15
+# ca_FR.UTF-8 UTF-8
+# ca_IT ISO-8859-15
+# ca_IT.UTF-8 UTF-8
+# ce_RU UTF-8
+# chr_US UTF-8
+# ckb_IQ UTF-8
+# cmn_TW UTF-8
+# crh_RU UTF-8
+# crh_UA UTF-8
+# cs_CZ ISO-8859-2
+# cs_CZ.UTF-8 UTF-8
+# csb_PL UTF-8
+# cv_RU UTF-8
+# cy_GB ISO-8859-14
+# cy_GB.UTF-8 UTF-8
+# da_DK ISO-8859-1
+# da_DK.UTF-8 UTF-8
+# de_AT ISO-8859-1
+# de_AT.UTF-8 UTF-8
+# de_AT@euro ISO-8859-15
+# de_BE ISO-8859-1
+# de_BE.UTF-8 UTF-8
+# de_BE@euro ISO-8859-15
+# de_CH ISO-8859-1
+# de_CH.UTF-8 UTF-8
+# de_DE ISO-8859-1
+# de_DE.UTF-8 UTF-8
+# de_DE@euro ISO-8859-15
+# de_IT ISO-8859-1
+# de_IT.UTF-8 UTF-8
+# de_LI.UTF-8 UTF-8
+# de_LU ISO-8859-1
+# de_LU.UTF-8 UTF-8
+# de_LU@euro ISO-8859-15
+# doi_IN UTF-8
+# dsb_DE UTF-8
+# dv_MV UTF-8
+# dz_BT UTF-8
+# el_CY ISO-8859-7
+# el_CY.UTF-8 UTF-8
+# el_GR ISO-8859-7
+# el_GR.UTF-8 UTF-8
+# el_GR@euro ISO-8859-7
+# en_AG UTF-8
+# en_AU ISO-8859-1
+# en_AU.UTF-8 UTF-8
+# en_BW ISO-8859-1
+# en_BW.UTF-8 UTF-8
+# en_CA ISO-8859-1
+# en_CA.UTF-8 UTF-8
+# en_DK ISO-8859-1
+# en_DK.ISO-8859-15 ISO-8859-15
+# en_DK.UTF-8 UTF-8
+# en_GB ISO-8859-1
+# en_GB.ISO-8859-15 ISO-8859-15
+# en_GB.UTF-8 UTF-8
+# en_HK ISO-8859-1
+# en_HK.UTF-8 UTF-8
+# en_IE ISO-8859-1
+# en_IE.UTF-8 UTF-8
+# en_IE@euro ISO-8859-15
+# en_IL UTF-8
+# en_IN UTF-8
+# en_NG UTF-8
+# en_NZ ISO-8859-1
+M# de_LU ISO-8859-1859-15
+# en_BW ISO-8859-1
+# en_BW.UTF-8 UTF-8
+# en_CA ISO-8859-1
+# en_CA.UTF-8 UTF-8
+# en_DK ISO-8859-1
+# en_DK.ISO-8859-15 ISO-8859-15
+# en_DK.UTF-8 UTF-8
+# en_GB ISO-8859-1
+# en_GB.ISO-8859-15 ISO-8859-15
+# en_GB.UTF-8 UTF-8
+# en_HK ISO-8859-1
+# en_HK.UTF-8 UTF-8
+# en_IE ISO-8859-1
+# en_IE.UTF-8 UTF-8
+# en_IE@euro ISO-8859-15
+# en_IL UTF-8
+# en_IN UTF-8
+# en_NG UTF-8
+# en_NZ ISO-8859-1
+# en_NZ.UTF-8 UTF-8
+# en_PH ISO-8859-1
+# en_PH.UTF-8 UTF-8
+# en_SC.UTF-8 UTF-8
+# en_SG ISO-8859-1
+# en_SG.UTF-8 UTF-8
+# en_US ISO-8859-1
+# en_US.ISO-8859-15 ISO-8859-15
+en_US.UTF-8 UTF-8
+# en_ZA ISO-8859-1
+# en_ZA.UTF-8 UTF-8
+# en_ZM UTF-8
+# en_ZW ISO-8859-1
+>0;kent@ubsembr: ~: /var/tmp/locales4oYJn90.gen [ Writing... ] [ Wrote 515 lines ]\ Replace    ^U Paste      ^J Justify    ^/ Go To Linessy_ER UTF-8st_ZA ISO-8859-1st_ZA.UTF-8 UTF-8su_IDsv_FI ISO-8859-1sv_FI.UTF-8 UTF-8sv_FI@euro ISO-8859-15sv_SEsv_SE
+kent@ubsembr:~$ locale-gen
+rm: cannot remove '/usr/lib/locale/locale-archive': Permission denied
+Generating locales (this might take a while)...
+  en_US.UTF-8...cannot open locale archive "/usr/lib/locale/locale-archive": Permission denied
+ done
+  sv_SE.UTF-8...cannot open locale archive "/usr/lib/locale/locale-archive": Permission denied
+ done
+Generation complete.
+0;kent@ubsembr: ~
+kent@ubsembr:~$ sudo !!
+sudo locale-gen
+Generating locales (this might take a while)...
+  en_US.UTF-8... done
+  sv_SE.UTF-8... done
+Generation complete.
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 0;kent@ubsembr: ~
+kent@ubsembr:~$ echo $LANG
+sv_SE.UTF-8
+0;kent@ubsembr: ~
+kent@ubsembr:~$ man bash
+BASH(1)                       General Commands Manual                      BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash  is  an  sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash also  incorporates
+       useful features from the Korn and C shells (ksh and csh).
+
+       Bash  is intended to be a conformant implementation of the Shell and Utili‐
+       ties portion of the IEEE POSIX specification (IEEE Standard 1003.1).   Bash
+>0;kent@ubsembr: ~1) line 1 (press h for help or q to quit)
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+kent@ubsembr:~$ bash
+0;kent@ubsembr: ~
+kent@ubsembr:~$ man bash
+BASH(1)                       General Commands Manual                      BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+>0;kent@ubsembr: ~1) line 1 (press h for help or q to quit)
+kent@ubsembr:~$ man bas
+
+
+LANG=sv_SE.UTF-8 
+BASH(1)                       General Commands Manual                      BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHTage bash(1) line 1 (press h for help or q to quit)
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+ ESESCOBpage bash(1) line 3 (press h for help or q to quit)
+DESCRIPTIONe bash(1) line 4 (press h for help or q to quit)
+       Bash  is  an  sh-compatible command language interpreter that executes com‐
+       mands read from the standard input or from a file.  Bash also  incorporates
+       useful features from the Korn and C shells (ksh and csh).
+ ESESCOBpage bash(1) line 8 (press h for help or q to quit)
+       Bash  is intended to be a conformant implementation of the Shell and Utili‐
+       ties portion of the IEEE POSIX specification (IEEE Standard 1003.1).   Bash
+       can be configured to be POSIX-conformant by default.)
+ ESESCOBpage bash(1) line 12 (press h for help or q to quit)
+>0;kent@ubsembr: ~1) line 13 (press h for help or q to quit)
+kent@ubsembr:~$ 0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+kent@ubsembr:~$ ls /susr/share
+applications         gnupg                   pam-configs
+apport               groff                   pastebin.d
+appstream            grub                    perl
+awk                  grub-gfxpayload-lists   perl5
+base-files           hwdata                  pixmaps
+base-passwd          i18n                    pkgconfig
+bash-completion      icons                   plymouth
+binfmts              ieee-data               polkit-1
+bpfcc-tools          info                    profile
+bug                  info.dir                profile.md5sums
+byobu                initramfs-tools         publicsuffix
+ca-certificates      installed-tests         python3
+cmake                iptables                python-apt
+common-licenses      iso-codes               python-babel-localedata
+consolefonts         java                    readline
+console-setup        keyrings                rsync
+consoletrans         landscape               rsyslog
+cryptsetup           libc-bin                screen
+dbus-1               libdrm                  secureboot
+debconf              libgcrypt20             sensible-utils
+debhelper            licenses                sgml
+debianutils          lintian                 sgml-base
+dhcpcd               locale                  snapd
+dict                 locales                 staff-group-for-usr-local
+distro-info          lxd-installer           systemd
+doc                  man                     tabset
+doc-base             man-db                  tcltk
+dot.bashrc           maven-repo              terminfo
+dot.profile          mdadm                   ubuntu-drivers-common
+dot.profile.md5sums  menu                    ubuntu-release-upgrader
+dpkg                 metainfo                ucf
+emacs                mime                    ufw
+figlet               misc                    unattended-upgrades
+file                 ModemManager            update-notifier
+finalrd              motd                    usb_modeswitch
+fish                 nano                    util-linux
+fontconfig           needrestart             vim
+fonts                netplan                 X11
+fwupd                networks                xfsprogs
+gcc                  openssh                 xml
+gdb                  open-vm-tools           xml-core
+gettext              os-prober               zoneinfo
+git-core             package-data-downloads  zsh
+gitweb               PackageKit
+glib-2.0             pam
+0;kent@ubsembr: ~
+kent@ubsembr:~$ ls /usr/share/manpages
+ls: cannot access '/usr/share/manpages': No such file or directory
+0;kent@ubsembr: ~
+kent@ubsembr:~$ ls /usr/share/manpage*0;kent@ubsembr: ~
+kent@ubsembr:~$ ls /usr/share/man*
+/usr/share/man:
+cs  de.UTF-8  fr  id  ja.UTF-8  man2  man5  man8  pl     ro  sr  uk
+da  es        hr  it  ko        man3  man6  man9  pt     ru  sv  zh_CN
+de  fi        hu  ja  man1      man4  man7  nl    pt_BR  sl  tr  zh_TW
+
+/usr/share/man-db:
+chconfig
+0;kent@ubsembr: ~
+kent@ubsembr:~$ ls /usr/share/man/sv
+man1  man3  man5  man8
+0;kent@ubsembr: ~
+kent@ubsembr:~$ ls /usr/share/man/sv/man10;kent@ubsembr: ~
+kent@ubsembr:~$ ls /usr/share/man/sv/man1
+apropos.1.gz                  kill.1.gz        pslog.1.gz
+chage.1.gz                    killall.1.gz     pstree.1.gz
+chsh.1.gz                     lexgrog.1.gz     pwdx.1.gz
+dpkg.1.gz                     man.1.gz         sg.1.gz
+dpkg-deb.1.gz                 manconv.1.gz     skill.1.gz
+dpkg-divert.1.gz              manpath.1.gz     slabtop.1.gz
+dpkg-maintscript-helper.1.gz  man-recode.1.gz  tload.1.gz
+dpkg-query.1.gz               newgrp.1.gz      top.1.gz
+dpkg-realpath.1.gz            passwd.1.gz      update-alternatives.1.gz
+dpkg-split.1.gz               peekfd.1.gz      uptime.1.gz
+dpkg-statoverride.1.gz        pgrep.1.gz       w.1.gz
+dpkg-trigger.1.gz             pidof.1.gz       watch.1.gz
+expiry.1.gz                   pmap.1.gz        whatis.1.gz
+free.1.gz                     prtstat.1.gz     zsoelim.1.gz
+fuser.1.gz                    ps.1.gz
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 0;kent@ubsembr: ~
+kent@ubsembr:~$ man to
+
+
+
+
+echo $LANG
+sv_SE.UTF-8
+0;kent@ubsembr: ~
+kent@ubsembr:~$ man top
+TOP(1)                           Användarkommandon                          TOP(1)
+
+NAMN
+       top — visa Linuxprocesser
+
+SYNOPSIS
+       top [flaggor]
+
+BESKRIVNING
+       Programmet  top visar en dynamisk vy av det körande systemet i realtid. Det
+       kan visa sammanfattande  information  om  systemet  liksom  en  lista  över
+       processer  eller trådar som för närvarande hanteras av Linuxkärnan. Typerna
+       av sammanfattande systeminformation som visas och  typerna,  ordningen  och
+       storleken     på    informationen    som    visas    för    processer    är
+       användarkonfigurerbart  och  den   konfigurationen   kan   bevaras   mellan
+       omstarter.1) line 2 (press h for help or q to quit)
+ ESESCOBpage top(1) line 3 (press h for help or q to quit)
+       Programmet  ger  ett  begränsat interaktivt gränssnitt för processhantering
+       såväl som ett mycket mer omfattande gränssnitt för personlig  konfiguration
+        —   omfattande  dess  funktion  i  alla  avseenden.  Och medan top rereras
+       genomgående i detta dokument står det dig fritt att kalla programmet vad du
+       vill. Det nya namnet, möjligen  ett  alias,  kan  sedan  avspeglas  i  tops
+       fönster och anvädas när man läser och skriver en konfigurationsfil.
+ ESESCOBpage top(1) line 10 (press h for help or q to quit)
+ÖVERSIKTage top(1) line 11 (press h for help or q to quit)
+   Dokumentation(1) line 12 (press h for help or q to quit)
+       Återstående innehållsförteckninglp or q to quit)
+ ESESCOBpage top(1) line 14 (press h for help or q to quit)
+           ÖVERSIKTline 15 (press h for help or q to quit)
+              Funktionne 16 (press h for help or q to quit)
+              Linux minnestyperess h for help or q to quit)
+           1. KOMMANDORADSflaggors h for help or q to quit)
+           2. SAMMANFATTNINGSvisning for help or q to quit)
+              a. UPPETID och LASTgenomsnittlp or q to quit)
+              b. UPPGIFTER och CPU-tillstånd or q to quit)
+              c. MINNESanvändning h for help or q to quit)
+           3. FÄLT-/Kolumnvisning h for help or q to quit)
+              a. BESKRIVNINGAR av fältr help or q to quit)
+              b. HANTERING av fälth for help or q to quit)
+           4. INTERAKTIVA kommandonh for help or q to quit)
+M   Dokumentation1) line 27 (press h for help or q to quit)
+>0;kent@ubsembr: ~) line 26 (press h for help or q to quit)
+kent@ubsembr:~$ apt search bash0;kent@ubsembr: ~
+kent@ubsembr:~$ apt search bash
+Sorterar… Färdig
+Fulltextsökning… Färdig
+abs-guide/noble 10-4 all
+  The Advanced Bash-Scripting Guide
+
+acr/noble 2.1.2-1 all
+  autoconf like tool
+
+android-androresolvd/noble 1.3-1build1 amd64
+  Daemon to transfer Android DNS property to resolv.conf
+
+apparix/noble 11-062-1 amd64
+  console-based bookmark tool for fast file system navigation
+
+auxilium/noble 0.0.9 all
+  tool for parse args in many shell (bash, ksh, zsh)
+
+awesome-extra/noble 2023010601 all
+  additional modules for awesome
+
+backup-manager/noble 0.7.14-1.3 all
+  command-line backup tool
+
+bash/noble,now 5.2.21-2ubuntu4 amd64 [installerat]
+  GNU Bourne Again SHell
+
+bash-argsparse/noble 1.8.22.ga05fe6d-4 all
+  High level argument parsing library for bash
+
+bash-builtins/noble 5.2.21-2ubuntu4 amd64
+  Bash loadable builtins - headers & examples
+
+bash-completion/noble,now 1:2.11-8 all [installerat,automatiskt]
+  programmable completion for the bash shell
+
+bash-doc/noble 5.2.21-2ubuntu4 all
+  Documentation and examples for the GNU Bourne Again SHell
+
+bash-static/noble 5.2.21-2ubuntu4 amd64
+  GNU Bourne Again SHell (static version)
+
+bashtop/noble 0.9.25-1 all
+  Resource monitor that shows usage and stats
+
+bats/noble 1.10.0-1 all
+  bash automated testing system
+
+bd/noble 1.03-3 all
+  quickly go back to a specific parent directory in bash
+
+biabam/noble 0.9.7-8 all
+  bash attachment mailer
+
+bkt/noble 0.6.1-2 amd64
+  CLI and Rust library for caching subprocess invocations
+
+bleachbit/noble 4.6.0-3 all
+  delete unnecessary files from the system
+
+bpytop/noble 1.0.68-2 all
+  Resource monitor that shows usage and stats
+
+btop/noble 1.3.0-1 amd64
+  Modern and colorful command line resource monitor that shows usage and stats
+
+checksec/noble 2.6.0-2 all
+  Bash script to test executable properties
+
+cht.sh/noble 0.0~git20220418.571377f-2 all
+  Cht is the only cheat sheet you need
+
+command-not-found/noble,now 23.04.0 all [installerat,automatiskt]
+  Suggest installation of packages in interactive bash sessions
+
+cronic/noble 3-2.1 all
+  Bash script for wrapping cron jobs to prevent excess email sending
+
+csh/noble 20230828-1 amd64
+  Shell with C-like syntax
+
+dash/noble,now 0.5.12-6ubuntu5 amd64 [installerat]
+  POSIX-compliant shell
+
+ddd/noble 1:3.3.12-5.4build2 amd64
+  Data Display Debugger, a graphical debugger frontend
+
+ddgr/noble 2.2-1 all
+  DuckDuckGo from the terminal
+
+dehydrated/noble 0.7.0-3 all
+  ACME client implemented in Bash
+
+devscripts/noble 2.23.7 all
+  scripts to make the life of a Debian Package maintainer easier
+
+direnv/noble-updates,noble-security 2.32.1-2ubuntu0.24.04.3 amd64
+  Utility to set directory specific environment variables
+
+elpa-bash-completion/noble 3.1.0-2 all
+  add programmable bash completion to Emacs shell-mode
+
+elpa-yasnippet-snippets/noble 1.0+58.ge6ec9f1-1 all
+  Andrea Crotti's official YASnippet snippets
+
+env2/noble 1.1.0-4 all
+  convert environment variables between scripting languages
+
+erfs/noble 1.4-1 all
+  Client to use a free encrypted cloud based network file system
+
+extrace/noble 0.7-2 amd64
+  trace exec() calls system-wide
+
+fenrir/noble-updates 1.9.8-1ubuntu0.1 all
+  Userland console (TTY) screen reader written in python
+
+firebuild/noble 0.8.2-1 amd64
+  Automatic build accelerator cache
+
+firehol/noble 3.1.7+ds-3 all
+  easy to use but powerful iptables stateful firewall (program)
+
+firehol-common/noble 3.1.7+ds-3 all
+  easy to use but powerful traffic suite (common library)
+
+firehol-doc/noble 3.1.7+ds-3 all
+  easy to use but powerful iptables stateful firewall (docs)
+
+firehol-tools/noble 3.1.7+ds-3 all
+  easy to use but powerful traffic suite (extra tools)
+
+firehol-tools-doc/noble 3.1.7+ds-3 all
+  easy to use but powerful traffic suite (extra tools docs)
+
+fireqos/noble 3.1.7+ds-3 all
+  easy to use but powerful traffic shaping tool (program)
+
+fireqos-doc/noble 3.1.7+ds-3 all
+  easy to use but powerful traffic shaping tool (docs)
+
+fonts-powerline/noble 2.8.3-5 all
+  prompt and statusline utility (symbols font)
+
+funcoeszz/noble 21.1-1 all
+  script with 170+ useful mini applications
+
+fzf/noble-updates,noble-security 0.44.1-1ubuntu0.3 amd64
+  general-purpose command-line fuzzy finder
+
+global/noble 6.6.11-1 amd64
+  Source code search and browse tools
+
+golang-github-bmatcuk-doublestar-dev/noble 4.6.1-1 all
+  support for double star matches in golang's path.Match and filepath.Glob
+
+golang-github-cosiner-argv-dev/noble 0.1.0-3 all
+  Argv allows splitting a command line string into an arguments slice
+
+golang-github-drone-envsubst-dev/noble 1.0.3-3 all
+  Go library for performing Bash-style parameter expansion
+
+golang-github-posener-complete-dev/noble 1.2.3-2 all
+  bash completion written in go
+
+golang-mvdan-sh-dev/noble 3.8.0-1 all
+  shell parser, formatter, and interpreter (library)
+
+googler/noble 4.3.13-1 all
+  Power tool to Google (Web & News) and Google Site Search from the terminal
+
+gradle-completion/noble 1.3.1-1.1 all
+  Bash and Zsh completion support for Gradle
+
+grub-coreboot/noble-updates 2.12-1ubuntu7.3 amd64
+  GRand Unified Bootloader, version 2 (Coreboot version)
+
+grub-coreboot-bin/noble-updates 2.12-1ubuntu7.3 amd64
+  GRand Unified Bootloader, version 2 (Coreboot modules)
+
+grub-efi-amd64/noble-updates 2.12-1ubuntu7.3 amd64
+  GRand Unified Bootloader, version 2 (EFI-AMD64 version)
+
+grub-efi-amd64-bin/noble-updates 2.12-1ubuntu7.3 amd64
+  GRand Unified Bootloader, version 2 (EFI-AMD64 modules)
+
+grub-efi-amd64-signed/noble-updates 1.202.5+2.12-1ubuntu7.3 amd64
+  GRand Unified Bootloader, version 2 (EFI-AMD64 version, signed)
+
+grub-efi-ia32/noble-updates 2.12-1ubuntu7.3 amd64
+  GRand Unified Bootloader, version 2 (EFI-IA32 version)
+
+grub-efi-ia32-bin/noble-updates 2.12-1ubuntu7.3 amd64
+  GRand Unified Bootloader, version 2 (EFI-IA32 modules)
+
+grub-ieee1275/noble-updates 2.12-1ubuntu7.3 amd64
+  GRand Unified Bootloader, version 2 (Open Firmware version)
+
+grub-ieee1275-bin/noble-updates 2.12-1ubuntu7.3 amd64
+  GRand Unified Bootloader, version 2 (Open Firmware modules)
+
+grub-pc/noble-updates,now 2.12-1ubuntu7.3 amd64 [installerat]
+  GRand Unified Bootloader, version 2 (PC/BIOS version)
+
+grub-pc-bin/noble-updates,now 2.12-1ubuntu7.3 amd64 [installerat,automatiskt]
+  GRand Unified Bootloader, version 2 (PC/BIOS modules)
+
+grub-xen/noble-updates 2.12-1ubuntu7.3 amd64
+  GRand Unified Bootloader, version 2 (Xen version)
+
+grub-xen-bin/noble-updates 2.12-1ubuntu7.3 amd64
+  GRand Unified Bootloader, version 2 (Xen modules)
+
+grub-xen-host/noble-updates 2.12-1ubuntu7.3 amd64
+  GRand Unified Bootloader, version 2 (Xen host version)
+
+guilt/noble 0.36-3 all
+  quilt for git; similar to Mercurial queues
+
+haproxy-cmd/noble 0.0.3 all
+  command line utility to control backends of haproxy
+
+hexec/noble 0.2.1-4 amd64
+  Command line tool to hook into exec calls
+
+hstr/noble 3.1+ds-1build2 amd64
+  Suggest box like shell history completion
+
+hub/noble-updates,noble-security 2.14.2~ds1-1ubuntu3.2 amd64
+  make git easier with GitHub
+
+i3lock-fancy/noble 0.0~git20160228.0.0fcb933-3 amd64
+  i3lock custom wrapper script
+
+imgp/noble 2.9-1 all
+  Superfast batch image resizer and rotator
+
+jed/noble 1:0.99.20~pre.180+dfsg-2 amd64
+  editor for programmers (textmode version)
+
+jedit/noble 5.5.0+dfsg-2 all
+  Plugin-based editor for programmers
+
+jello/noble 1.6.0-1 all
+  Filter for JSON and JSON Lines data with Python syntax
+
+kdesdk-scripts/noble 4:23.08.5-0ubuntu1 all
+  scripts and data files for development
+
+keychain/noble 2.8.5-4 all
+  key manager for OpenSSH
+
+kubetail/noble 1.6.18-1 all
+  Aggregate logs from multiple Kubernetes pods into one stream
+
+ledit/noble 2.04-7build5 amd64
+  line editor for interactive programs
+
+libbash/noble 0.9.11-3 all
+  bash dynamic-like shared libraries
+
+libbash-doc/noble 0.9.11-3 all
+  bash dynamic-like shared libraries - documentation
+
+libdbix-profile-perl/noble 1.0-7 all
+  DBI query profiler
+
+libenv-ps1-perl/noble 0.06-4 all
+  prompt string formatter
+
+libfirebuild0/noble 0.8.2-1 amd64
+  Automatic build accelerator cache - shared library
+
+libfungw-cli1/noble 1.2.1-3build5 amd64
+  Scripting support for fungw: external languages (bash)
+
+libgetopt-complete-perl/noble 0.26-4 all
+  programmable shell completion for Perl apps
+
+libhoneysql-clojure/noble 2.4.962+really2.3.911-1 all
+  library for mapping Clojure data structures to SQL
+
+libjline2-java/noble 2.14.6-5 all
+  console input handling in Java
+
+libjline3-java/noble 3.3.1-3ubuntu1 all
+  Console input handling library
+
+libjs-prettify/noble 2015.12.04+dfsg-1.1 all
+  syntax highlighting of source code snippets in an html page
+
+libjs-xterm/noble 5.3.0-2 all
+  terminal front-end component for the browser - browser library
+
+libledit-ocaml-dev/noble 2.04-7build5 amd64
+  OCaml line editor library
+
+libmartchus-c++utilities-dev/noble 5.24.5-1.1build1 amd64
+  useful C++ classes and routines used by Martchus' applications (headers)
+
+libmartchus-c++utilities5t64/noble 5.24.5-1.1build1 amd64
+  useful C++ classes and routines used by Martchus' applications
+
+libshell-posix-select-perl/noble 0.09-1 all
+  POSIX Shell's "select" loop for Perl
+
+libt3highlight-dev/noble 0.5.0-1 amd64
+  Development files for libt3highlight
+
+libt3highlight2/noble 0.5.0-1 amd64
+  Syntax highlighting library
+
+licensecheck/noble 3.3.9-1ubuntu1 all
+  simple license checker for source files
+
+licenseutils/noble 0.0.9-7build4 amd64
+  Put copyright and license notices at the head of source code files
+
+liquidprompt/noble 2.1.2-1 all
+  adaptative prompt for bash & zsh
+
+megadown/noble 0~20180705+git83c53dd-1.1 all
+  Script for downloading files from mega.nz and megacrypter
+
+mina/noble 0.3.7-1.1 all
+  deployer and server automation tool
+
+mkalias/noble 1.0.10-4 all
+  Bash alias management to facilitate alias creation
+
+mpc/noble 0.35-1build1 amd64
+  command-line tool to interface MPD
+
+mussh/noble 1.0-1.1 all
+  MUltihost SSH Wrapper
+
+mytharchive/noble 2:34.0+fixes.20240210.e3e165a1-0ubuntu6 amd64
+  create and burn DVD's from MythTV - binary file
+
+netdata-plugins-bash/noble 1.43.2-1build2 all
+  real-time performance monitoring (bash plugins)
+
+node-bash/noble 0.0.1-5 all
+  Utilities for using bash from node.js
+
+node-bash-color/noble 0.0.4-2 all
+  wrap strings in color codes for pretty printing in bash
+
+node-bash-match/noble 1.0.2-3 all
+  Node module to match strings using bash
+
+node-brace-expansion/noble 2.0.1+~1.1.0-1 all
+  Brace expansion as known from sh/bash for Node.js
+
+node-braces/noble 3.0.2+~3.0.1-1 all
+  Fast, comprehensive, bash-like brace expansion implemented in JS
+
+node-expand-tilde/noble 2.0.2+~cs2.0.3-2 all
+  Bash-like tilde expansion for node.js
+
+node-extglob/noble 3.0.0-4 all
+  Extended glob support for JavaScript
+
+node-shelljs/noble 0.8.5+~cs0.8.10-2 all
+  Portable Unix shell commands for Node.js
+
+node-xterm/noble 5.3.0-2 all
+  terminal front-end component for the browser - NodeJS modules
+
+node-yargs/noble 16.2.0+~16.0.4-7 all
+  command line parser for nodejs
+
+oem-sutton-bash-meta/noble-updates 24.04~ubuntu1 all
+  hardware support for Lenovo ThinkStation P5
+
+oidc-agent-desktop/noble 4.2.6-1.1build3 all
+  oidc-agent desktop integration
+
+ondir/noble 0.2.3+git0.55279f03-1build1 amd64
+  Automate tasks specific to certain directories in the shell
+
+pal/noble 0.4.3-9build2 amd64
+  command-line calendar program that can keep track of events
+
+pct-scanner-scripts/noble 0.0.4-3ubuntu2 all
+  scan and create merged DjVu and PDF documents for archiving
+
+pd-lyonpotpourri/noble 3.0.1-4build1 amd64
+  potpourri of Pd objects for synthesizing with audio
+
+perlbrew/noble 0.98-1 all
+  script to manage perl installations in your $HOME
+
+pidgin-plugin-pack/noble 2.8.0-1build3 amd64
+  Collection of Pidgin plugins
+
+piu-piu/noble 1.0-1.1 all
+  Horizontal scroller game in bash for cli.
+
+pk4/noble-updates,noble-security 5ubuntu0.24.04.3 amd64
+  make available the Debian source package producing the specified package
+
+pluginhook/noble-updates,noble-security 0~20150216.0~a320158-2.1ubuntu0.24.04.3 amd64
+  simple plugin system for Bash programs
+
+powerline/noble 2.8.3-5 amd64
+  prompt and statusline utility
+
+powerline-doc/noble 2.8.3-5 all
+  prompt and statusline utility (documentation)
+
+powerline-gitstatus/noble 1.3.2-1 all
+  Powerline Git segment
+
+px/noble 3.3.1-1 all
+  ps and top for human beings
+
+python-bashate-doc/noble 2.1.0-3 all
+  bash script style guide checker - doc
+
+python3-argcomplete/noble-updates 3.1.4-1ubuntu0.1 all
+  bash tab completion for argparse (for Python 3)
+
+python3-bashate/noble 2.1.0-3 all
+  bash script style guide checker - Python 3.x
+
+python3-braceexpand/noble 0.1.7-3 all
+  Bash-style brace expansion for Python
+
+python3-bracex/noble 2.2.1-2 all
+  brace expanding library (à la Bash) for Python (Python 3)
+
+python3-colcon-bash/noble 0.5.0-1 all
+  collective construction meta build tool - bash extension
+
+python3-dcos/noble 0.2.0-7 all
+  DCOS Common Modules - Python 3.x
+
+python3-dpath/noble 2.1.6-2 all
+  filesystem-like pathing and searching for dictionaries
+
+python3-fire/noble 0.5.0-3 all
+  automatically generate CLIs from absolutely any Python object
+
+python3-pako/noble 0.3.1-2 all
+  Universal package manager library (Python 3)
+
+python3-powerline/noble 2.8.3-5 all
+  prompt and statusline utility (Python 3.x module)
+
+python3-powerline-gitstatus/noble 1.3.2-1 all
+  Powerline Git segment for Python (3.x)
+
+python3-sphinx-prompt/noble 1.8.0-3 all
+  Sphinx directive for formatting interactive prompts
+
+python3-wcmatch/noble-updates 8.4-2ubuntu0.1 all
+  Wildcard File Name matching library (Python 3)
+
+redfishtool/noble 1.1.5-1 all
+  redfish command-line client
+
+rlwrap/noble 0.46.1-1build2 amd64
+  readline feature command line wrapper
+
+runoverssh/noble 3.0.3-2 all
+  POSIX-compliant shell script for running shell commands and scripts over SSH
+
+sash/noble 3.8-5 amd64
+  Stand-alone shell
+
+screenfetch/noble 3.9.1+20210523-2 all
+  Bash Screenshot Information Tool
+
+sendemail/noble 1.56-5.2 all
+  lightweight, command line SMTP email client
+
+shfmt/noble 3.8.0-1 amd64
+  format shell programs
+
+shove/noble 0.8.4-2 all
+  test tool for shell scripts with TAP outputs
+
+spacefm/noble 1.0.6-7build3 amd64
+  Multi-panel tabbed file manager
+
+ssshtest/noble 0.0+git20220105.0d6df3d-1 all
+  stupid simple (ba)sh testing
+
+stlcmd/noble 1.1-1build1 amd64
+  Suite of commands for generating, inspecting and manipulating STL files
+
+sugar-terminal-activity/noble 47-2 all
+  Sugar Learning Platform - terminal emulation activity
+
+switchsh/noble 0~20070801-4build1 amd64
+  bind-mount bash as /bin/sh
+
+syslogout/noble 0.3.10 all
+  Modularized system wide shell logout mechanism
+
+sysprofile/noble 0.3.10 all
+  Modularized system wide shell configuration mechanism
+
+t3highlight/noble 0.5.0-1 amd64
+  Command-line syntax highligher
+
+texlive-extra-utils/noble 2023.20240207-1 all
+  TeX Live: TeX auxiliary programs
+
+texlive-latex-extra/noble 2023.20240207-1 all
+  TeX Live: LaTeX additional packages
+
+thefuck/noble 3.29-0.3ubuntu1 all
+  spelling corrector of console commands
+
+txt2regex/noble 0.9-5 all
+  A Regular Expression "wizard", all written with bash2 builtins
+
+undistract-me/noble 0.1.0+git20130402+3a9144bc1f-1.1 all
+  Notifies user when long-running terminal commands complete via libnotify
+
+wait-for-it/noble 0.0~git20180723-1 all
+  script that will wait on the availability of a host and TCP port
+
+websocketd/noble-updates,noble-security 0.4.1-1ubuntu0.24.04.3 amd64
+  Turn any program that uses STDIN/STDOUT into a WebSocket server
+
+xjed/noble 1:0.99.20~pre.180+dfsg-2 amd64
+  editor for programmers (x11 version)
+
+xonsh/noble 0.14.4+dfsg-1 all
+  Python-powered, cross-platform, Unix-gazing shell
+
+xonsh-doc/noble 0.14.4+dfsg-1 all
+  Python-powered, cross-platform, Unix-gazing shell (documentation)
+
+yash/noble 2.55-2 amd64
+  yet another shell
+
+ynew/noble 1.5-1build2 all
+  Open a named yakuake tab and runs a script in it
+
+z80asm/noble 1.8-2 amd64
+  assembler for the Zilog Z80 microprocessor
+
+zx/noble 7.1.1+~cs6.7.23-3 all
+  tool to launch modern Javascript scripts
+
+0;kent@ubsembr: ~
+kent@ubsembr:~$ apt search bash | grep man0;kent@ubsembr: ~
+kent@ubsembr:~$ apt search bash | grep man
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+  tool for parse args in many shell (bash, ksh, zsh)
+backup-manager/noble 0.7.14-1.3 all
+  command-line backup tool
+  Modern and colorful command line resource monitor that shows usage and stats
+command-not-found/noble,now 23.04.0 all [installerat,automatiskt]
+  general-purpose command-line fuzzy finder
+  Argv allows splitting a command line string into an arguments slice
+  command line utility to control backends of haproxy
+  Command line tool to hook into exec calls
+  key manager for OpenSSH
+  Bash alias management to facilitate alias creation
+  command-line tool to interface MPD
+  real-time performance monitoring (bash plugins)
+  Portable Unix shell commands for Node.js
+  command line parser for nodejs
+  command-line calendar program that can keep track of events
+  script to manage perl installations in your $HOME
+  ps and top for human beings
+  Universal package manager library (Python 3)
+  redfish command-line client
+  readline feature command line wrapper
+  POSIX-compliant shell script for running shell commands and scripts over SSH
+  lightweight, command line SMTP email client
+  Multi-panel tabbed file manager
+  Suite of commands for generating, inspecting and manipulating STL files
+  Command-line syntax highligher
+  spelling corrector of console commands
+  Notifies user when long-running terminal commands complete via libnotify
+0;kent@ubsembr: ~
+kent@ubsembr:~$ sudo apt install ma
+
+
+
+
+
+0;kent@ubsembr: ~
+kent@ubsembr:~$ asudo apt install manpafeges/-sv
+Läser paketlistor… Färdig
+Bygger beroendeträd… Färdig
+Läser tillståndsinformation… Färdig
+Följande NYA paket kommer att installeras:
+  manpages-sv
+0 att uppgradera, 1 att nyinstallera, 0 att ta bort och 169 att inte uppgradera.
+Behöver hämta 382 kB arkiv.
+Efter denna åtgärd kommer ytterligare 916 kB utrymme användas på disken.
+Läs:1 http://se.archive.ubuntu.com/ubuntu noble/universe amd64 manpages-sv all 4.21.0-2 [382 kB]
+Hämtade 382 kB på 0s (967 kB/s)   
+
+Väljer tidigare ej valt paket manpages-sv.
+(Läser databasen ... 122172 filer och kataloger installerade.)
+Förbereder att packa upp .../manpages-sv_4.21.0-2_all.deb ...
+Förlopp: [  0%] [................................................................] 87Förlopp: [ 20%] [############....................................................] 8Packar upp manpages-sv (4.21.0-2) ...
+Förlopp: [ 40%] [#########################.......................................] 8Ställer in manpages-sv (4.21.0-2) ...
+Förlopp: [ 60%] [######################################..........................] 87Förlopp: [ 80%] [###################################################.............] 8Hanterar utlösare för man-db (2.12.0-4build2) ...
+
+Scanning processes...                                                                
+Scanning linux images...                                                             
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+0;kent@ubsembr: ~
+apt search bash | grep maman toecho $LANls /usr/share/man/sv/man10;kent@ubsembr: ~
+kent@ubsembr:~$ ls /usr/share/man/sv/man1
+'[.1.gz'                        grub-kbdcomp.1.gz           ptx.1.gz
+ apropos.1.gz                   grub-menulst2cfg.1.gz       pwd.1.gz
+ b2sum.1.gz                     grub-mkfont.1.gz            pwdx.1.gz
+ base32.1.gz                    grub-mkimage.1.gz           readlink.1.gz
+ base64.1.gz                    grub-mklayout.1.gz          realpath.1.gz
+ basename.1.gz                  grub-mknetdir.1.gz          rgrep.1.gz
+ basenc.1.gz                    grub-mkpasswd-pbkdf2.1.gz   rm.1.gz
+ bison.1.gz                     grub-mkrelpath.1.gz         rmdir.1.gz
+ cat.1.gz                       grub-mkrescue.1.gz          runcon.1.gz
+ chage.1.gz                     grub-mkstandalone.1.gz      sdiff.1.gz
+ chcon.1.gz                     grub-mount.1.gz             sed.1.gz
+ chgrp.1.gz                     grub-render-label.1.gz      seq.1.gz
+ chmod.1.gz                     grub-script-check.1.gz      sg.1.gz
+ chown.1.gz                     grub-syslinux2cfg.1.gz      sha1sum.1.gz
+ chsh.1.gz                      head.1.gz                   sha224sum.1.gz
+ cksum.1.gz                     hostid.1.gz                 sha256sum.1.gz
+ cmp.1.gz                       id.1.gz                     sha384sum.1.gz
+ comm.1.gz                      install.1.gz                sha512sum.1.gz
+ cp.1.gz                        intro.1.gz                  shred.1.gz
+ cpio.1.gz                      join.1.gz                   shuf.1.gz
+ csplit.1.gz                    kill.1.gz                   skill.1.gz
+ cut.1.gz                       killall.1.gz                slabtop.1.gz
+ date.1.gz                      lex.1.gz                    sleep.1.gz
+ dd.1.gz                        lexgrog.1.gz                sort.1.gz
+ df.1.gz                        link.1.gz                   split.1.gz
+ diff.1.gz                      ln.1.gz                     stat.1.gz
+ diff3.1.gz                     logname.1.gz                stdbuf.1.gz
+ dir.1.gz                       ls.1.gz                     stty.1.gz
+ dircolors.1.gz                 man.1.gz                    sum.1.gz
+ dirname.1.gz                   manconv.1.gz                sync.1.gz
+ dpkg.1.gz                      manpath.1.gz                tac.1.gz
+ dpkg-deb.1.gz                  man-recode.1.gz             tail.1.gz
+ dpkg-divert.1.gz               md5sum.1.gz                 tee.1.gz
+ dpkg-maintscript-helper.1.gz   md5sum.textutils.1.gz       test.1.gz
+ dpkg-query.1.gz                mkdir.1.gz                  timeout.1.gz
+ dpkg-realpath.1.gz             mkfifo.1.gz                 tload.1.gz
+ dpkg-split.1.gz                mknod.1.gz                  top.1.gz
+ dpkg-statoverride.1.gz         mktemp.1.gz                 touch.1.gz
+ dpkg-trigger.1.gz              mv.1.gz                     tr.1.gz
+ du.1.gz                        newgrp.1.gz                 true.1.gz
+ echo.1.gz                      nice.1.gz                   truncate.1.gz
+ egrep.1.gz                     nl.1.gz                     tsort.1.gz
+ env.1.gz                       nohup.1.gz                  tty.1.gz
+ expand.1.gz                    nproc.1.gz                  uname.1.gz
+ expiry.1.gz                    numfmt.1.gz                 unexpand.1.gz
+ expr.1.gz                      od.1.gz                     uniq.1.gz
+ factor.1.gz                    passwd.1.gz                 unlink.1.gz
+ false.1.gz                     paste.1.gz                  update-alternatives.1.gz
+ fgrep.1.gz                     pathchk.1.gz                uptime.1.gz
+ flex++.1.gz                    peekfd.1.gz                 users.1.gz
+ flex.1.gz                      pgrep.1.gz                  vdir.1.gz
+ fmt.1.gz                       pidof.1.gz                  w.1.gz
+ fold.1.gz                      pinky.1.gz                  watch.1.gz
+ free.1.gz                      pmap.1.gz                   wc.1.gz
+ fuser.1.gz                     pr.1.gz                     wdiff.1.gz
+ grep.1.gz                      printenv.1.gz               whatis.1.gz
+ grub-editenv.1.gz              printf.1.gz                 who.1.gz
+ grub-emu.1.gz                  prtstat.1.gz                whoami.1.gz
+ grub-file.1.gz                 ps.1.gz                     yes.1.gz
+ grub-fstest.1.gz               pslog.1.gz                  zsoelim.1.gz
+ grub-glue-efi.1.gz             pstree.1.gz
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 0;kent@ubsembr: ~
+kent@ubsembr:~$ man top
+TOP(1)                           Användarkommandon                          TOP(1)
+
+NAMN
+       top — visa Linuxprocesser
+
+SYNOPSIS
+       top [flaggor]
+
+BESKRIVNING
+       Programmet  top visar en dynamisk vy av det körande systemet i realtid. Det
+       kan visa sammanfattande  information  om  systemet  liksom  en  lista  över
+       processer  eller trådar som för närvarande hanteras av Linuxkärnan. Typerna
+       av sammanfattande systeminformation som visas och  typerna,  ordningen  och
+       storleken     på    informationen    som    visas    för    processer    är
+>0;kent@ubsembr: ~) line 1 (press h for help or q to quit)
+kent@ubsembr:~$ LANG=en_US.UTF-8 tomtoatonto to
+
+TOP(1)                             User Commands                            TOP(1)
+
+NAME
+       top - display Linux processes
+
+SYNOPSIS
+       top [options]
+
+DESCRIPTION
+       The  top program provides a dynamic real-time view of a running system.  It
+       can display system summary information as well as a list  of  processes  or
+       threads  currently  being managed by the Linux kernel.  The types of system
+       summary information shown and the types,  order  and  size  of  information
+       displayed  for  processes  are all user configurable and that configuration
+>0;kent@ubsembr: ~) line 1 (press h for help or q to quit)
+kent@ubsembr:~$ 0;kent@ubsembr: ~
+kent@ubsembr:~$ echo hej                    hopp
+hej hopp
+0;kent@ubsembr: ~
+kent@ubsembr:~$ echo heiuheiu83 83838
+heiuheiu83 83838
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 0;kent@ubsembr: ~
+kent@ubsembr:~$ NUMMER=1
+0;kent@ubsembr: ~
+kent@ubsembr:~$ .
+source funk1
+bash: funk1: No such file or directory
+0;kent@ubsembr: ~
+kent@ubsembr:~$ source funk1
+
+
+
+
+
+
+
+
+
+
+
+
+cd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 
+
+
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 0;kent@ubsembr: ~
+kent@ubsembr:~$ less -/etc/pass
+wd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:998:998:systemd Network Management:/:/usr/sbin/nologin
+systemd-timesync:x:997:997:systemd Time Synchronization:/:/usr/sbin/nologin
+dhcpcd:x:100:65534:DHCP Client Daemon,,,:/usr/lib/dhcpcd:/bin/false
+messagebus:x:101:102::/nonexistent:/usr/sbin/nologin
+systemd-resolve:x:992:992:systemd Resolver:/:/usr/sbin/nologin
+pollinate:x:102:1::/var/cache/pollinate:/bin/false
+polkitd:x:991:991:User for polkitd:/:/usr/sbin/nologin
+syslog:x:103:104::/nonexistent:/usr/sbin/nologin
+uuidd:x:104:105::/run/uuidd:/usr/sbin/nologin
+tcpdump:x:105:107::/nonexistent:/usr/sbin/nologin
+tss:x:106:108:TPM software stack,,,:/var/lib/tpm:/bin/false
+landscape:x:107:109::/var/lib/landscape:/usr/sbin/nologin
+fwupd-refresh:x:989:989:Firmware update daemon:/var/lib/fwupd:/usr/sbin/nologin
+usbmux:x:108:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+kent:x:1000:1000:kent:/home/kent:/bin/bash
+sshd:x:109:65534::/run/sshd:/usr/sbin/nologin
+(END)
+(END)
+Mlist:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+Mbackup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+Mwww-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+Mproxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+Muucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+Mnews:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+Mmail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+Mlp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+Mman:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+Mgames:x:5:60:games:/usr/games:/usr/sbin/nologin
+Msync:x:4:65534:sync:/bin:/bin/sync
+Msys:x:3:3:sys:/dev:/usr/sbin/nologin
+Mbin:x:2:2:bin:/bin:/usr/sbin/nologin
+Mdaemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+Mroot:x:0:0:root:/root:/bin/bash
+ ESESCOA
+>0;kent@ubsembr: ~
+kent@ubsembr:~$ less /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:998:998:systemd Network Management:/:/usr/sbin/nologin
+systemd-timesync:x:997:997:systemd Time Synchronization:/:/usr/sbin/nologin
+>0;kent@ubsembr: ~
+kent@ubsembr:~$ cat /etc/pas
+swd | cut -d: -f1
+root
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+_apt
+nobody
+systemd-network
+systemd-timesync
+dhcpcd
+messagebus
+systemd-resolve
+pollinate
+polkitd
+syslog
+uuidd
+tcpdump
+tss
+landscape
+fwupd-refresh
+usbmux
+kent
+sshd
+0;kent@ubsembr: ~
+kent@ubsembr:~$ cat /etc/passwd | cut -d: -f10;kent@ubsembr: ~
+kent@ubsembr:~$ cat /etc/passwd | cut -d: -f1 | sort
+_apt
+backup
+bin
+daemon
+dhcpcd
+fwupd-refresh
+games
+irc
+kent
+landscape
+list
+lp
+mail
+man
+messagebus
+news
+nobody
+polkitd
+pollinate
+proxy
+root
+sshd
+sync
+sys
+syslog
+systemd-network
+systemd-resolve
+systemd-timesync
+tcpdump
+tss
+usbmux
+uucp
+uuidd
+www-data
+0;kent@ubsembr: ~
+kent@ubsembr:~$ cat /etc/passwd | cut -d: -f1 | sort |0;kent@ubsembr: ~
+kent@ubsembr:~$ cat /etc/passwd | cut -d: -f1 | sort | less
+_apt
+backup
+bin
+daemon
+dhcpcd
+fwupd-refresh
+games
+irc
+kent
+landscape
+list
+lp
+mail
+man
+messagebus
+news
+nobody
+polkitd
+pollinate
+proxy
+ ESESCOA
+rootSCOB
+sshdSCOB
+syncSCOB
+sysESCOB
+syslogOB
+systemd-network
+systemd-resolve
+systemd-timesync
+tcpdumpB
+tssESCOB
+usbmuxOB
+uucpSCOB
+uuiddCOB
+www-data
+ ESESCOB
+MmanSCOA
+MmailCOA
+MlpESCOA
+MlistCOA
+Mlandscape
+MkentCOA
+MircSCOA
+MgamesOA
+Mfwupd-refresh
+MdhcpcdA
+MdaemonA
+MbinSCOA
+MbackupA
+M_aptCOA
+ ESESCOA
+ ESESCOA
+rootSCOB
+sshdSCOB
+syncSCOB
+sysESCOB
+syslogOB
+systemd-network
+systemd-resolve
+systemd-timesync
+tcpdumpB
+tssESCOB
+usbmuxOB
+uucpSCOB
+uuiddCOB
+www-data
+ ESESCOB
+MmanSCOA
+MmailCOA
+MlpESCOA
+MlistCOA
+Mlandscape
+MkentCOA
+MircSCOA
+MgamesOA
+Mfwupd-refresh
+MdhcpcdA
+MdaemonA
+MbinSCOA
+MbackupA
+M_aptCOA
+ ESESCOA
+>0;kent@ubsembr: ~
+kent@ubsembr:~$ less /etc/pas
+sw
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:998:998:systemd Network Management:/:/usr/sbin/nologin
+systemd-timesync:x:997:997:systemd Time Synchronization:/:/usr/sbin/nologin
+>0;kent@ubsembr: ~
+kent@ubsembr:~$ 0;kent@ubsembr: ~
+kent@ubsembr:~$ 
+nano /etc/pass
+w
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==[ Directory '/etc' is not writable ]
+8apt:x:42:65534::/nonexistent:/usr/sbin/nologinr/sbin/nologintc/passwd                              
+8obody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+>0;kent@ubsembr: ~fer?                                                        Y Yes
+kent@ubsembr:~$ nano /etc/passwshad
+ow0;kent@ubsembr: ~
+kent@ubsembr:~$ nano /etc/shadow
+==[ Directory '/etc' is not writable ]
+>0;kent@ubsembr: ~e   ^\ Replace     ^U Paste^J Justifyano 7.2                     New Buffer                               
+kent@ubsembr:~$ nano /etc/shado /etc/shado /etc/shado /etc/shado /etc/shadoc /etc/shadoa /etc/shadot /etc/shado
+cat: /etc/shadow: Permission denied
+0;kent@ubsembr: ~
+kent@ubsembr:~$ sudo
+
+
+
+
+ls -l /etc/sh
+adow
+-rw-r----- 1 root shadow 966 sep 22 08:52 /etc/shadow
+0;kent@ubsembr: ~
+kent@ubsembr:~$ ls -l /etc/shadopas
+swd
+-rw-r--r-- 1 root root 1777 sep 22 08:52 /etc/passwd
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 0;kent@ubsembr: ~
+kent@ubsembr:~$ sudo less /etc/sha
+dow
+[sudo] password for kent: 
+root:*:19836:0:99999:7:::
+daemon:*:19836:0:99999:7:::
+bin:*:19836:0:99999:7:::
+sys:*:19836:0:99999:7:::
+sync:*:19836:0:99999:7:::
+games:*:19836:0:99999:7:::
+man:*:19836:0:99999:7:::
+lp:*:19836:0:99999:7:::
+mail:*:19836:0:99999:7:::
+news:*:19836:0:99999:7:::
+uucp:*:19836:0:99999:7:::
+proxy:*:19836:0:99999:7:::
+www-data:*:19836:0:99999:7:::
+backup:*:19836:0:99999:7:::
+list:*:19836:0:99999:7:::
+irc:*:19836:0:99999:7:::
+_apt:*:19836:0:99999:7:::
+nobody:*:19836:0:99999:7:::
+systemd-network:!*:19836::::::
+systemd-timesync:!*:19836::::::
+dhcpcd:!:19836::::::
+messagebus:!:19836::::::
+systemd-resolve:!*:19836::::::
+pollinate:!:19836::::::
+polkitd:!*:19836::::::
+syslog:!:19836::::::
+uuidd:!:19836::::::
+tcpdump:!:19836::::::
+tss:!:19836::::::
+landscape:!:19836::::::
+fwupd-refresh:!*:19836::::::
+usbmux:!:20331::::::
+VJGazrCT10iOclqW6MCZJ5WInlJsLTmqzA.:20331:0:99999:7:::pcCTHuFrBSg2Rn/7u2s41J:
+sshd:!:20353::::::
+ ESESCOB
+ ESESCOB
+Mlist:*:19836:0:99999:7:::
+Mbackup:*:19836:0:99999:7:::
+Mwww-data:*:19836:0:99999:7:::
+Mproxy:*:19836:0:99999:7:::
+Muucp:*:19836:0:99999:7:::
+Mnews:*:19836:0:99999:7:::
+Mmail:*:19836:0:99999:7:::
+Mlp:*:19836:0:99999:7:::
+Mman:*:19836:0:99999:7:::
+Mgames:*:19836:0:99999:7:::
+Msync:*:19836:0:99999:7:::
+Msys:*:19836:0:99999:7:::
+Mbin:*:19836:0:99999:7:::
+Mdaemon:*:19836:0:99999:7:::
+Mroot:*:19836:0:99999:7:::
+ ESESCOA
+ ESESCOA
+dhcpcd:!:19836::::::
+messagebus:!:19836::::::
+systemd-resolve:!*:19836::::::
+pollinate:!:19836::::::
+polkitd:!*:19836::::::
+syslog:!:19836::::::
+uuidd:!:19836::::::
+tcpdump:!:19836::::::
+tss:!:19836::::::
+landscape:!:19836::::::
+fwupd-refresh:!*:19836::::::
+usbmux:!:20331::::::
+VJGazrCT10iOclqW6MCZJ5WInlJsLTmqzA.:20331:0:99999:7:::pcCTHuFrBSg2Rn/7u2s41J:
+sshd:!:20353::::::
+Mlist:*:19836:0:99999:7:::
+Mbackup:*:19836:0:99999:7:::
+Mwww-data:*:19836:0:99999:7:::
+Mproxy:*:19836:0:99999:7:::
+Muucp:*:19836:0:99999:7:::
+Mnews:*:19836:0:99999:7:::
+Mmail:*:19836:0:99999:7:::
+Mlp:*:19836:0:99999:7:::
+Mman:*:19836:0:99999:7:::
+Mgames:*:19836:0:99999:7:::
+Msync:*:19836:0:99999:7:::
+Msys:*:19836:0:99999:7:::
+Mbin:*:19836:0:99999:7:::
+Mdaemon:*:19836:0:99999:7:::
+Mroot:*:19836:0:99999:7:::
+ ESESCOA
+ ESESCOA
+:root:*:19836:0:99999:7:::
+daemon:*:19836:0:99999:7:::
+bin:*:19836:0:99999:7:::
+sys:*:19836:0:99999:7:::
+sync:*:19836:0:99999:7:::
+games:*:19836:0:99999:7:::
+man:*:19836:0:99999:7:::
+lp:*:19836:0:99999:7:::
+mail:*:19836:0:99999:7:::
+news:*:19836:0:99999:7:::
+uucp:*:19836:0:99999:7:::
+proxy:*:19836:0:99999:7:::
+www-data:*:19836:0:99999:7:::
+backup:*:19836:0:99999:7:::
+list:*:19836:0:99999:7:::
+irc:*:19836:0:99999:7:::
+_apt:*:19836:0:99999:7:::
+nobody:*:19836:0:99999:7:::
+systemd-network:!*:19836::::::
+:root:*:19836:0:99999:7:::
+daemon:*:19836:0:99999:7:::
+bin:*:19836:0:99999:7:::
+sys:*:19836:0:99999:7:::
+sync:*:19836:0:99999:7:::
+games:*:19836:0:99999:7:::
+man:*:19836:0:99999:7:::
+lp:*:19836:0:99999:7:::
+mail:*:19836:0:99999:7:::
+news:*:19836:0:99999:7:::
+uucp:*:19836:0:99999:7:::
+proxy:*:19836:0:99999:7:::
+www-data:*:19836:0:99999:7:::
+backup:*:19836:0:99999:7:::
+list:*:19836:0:99999:7:::
+irc:*:19836:0:99999:7:::
+:root:*:19836:0:99999:7:::
+daemon:*:19836:0:99999:7:::
+bin:*:19836:0:99999:7:::
+sys:*:19836:0:99999:7:::
+sync:*:19836:0:99999:7:::
+games:*:19836:0:99999:7:::
+man:*:19836:0:99999:7:::
+lp:*:19836:0:99999:7:::
+mail:*:19836:0:99999:7:::
+news:*:19836:0:99999:7:::
+uucp:*:19836:0:99999:7:::
+proxy:*:19836:0:99999:7:::
+www-data:*:19836:0:99999:7:::
+backup:*:19836:0:99999:7:::
+list:*:19836:0:99999:7:::
+:root:*:19836:0:99999:7:::
+daemon:*:19836:0:99999:7:::
+bin:*:19836:0:99999:7:::
+sys:*:19836:0:99999:7:::
+sync:*:19836:0:99999:7:::
+games:*:19836:0:99999:7:::
+man:*:19836:0:99999:7:::
+lp:*:19836:0:99999:7:::
+mail:*:19836:0:99999:7:::
+news:*:19836:0:99999:7:::
+uucp:*:19836:0:99999:7:::
+proxy:*:19836:0:99999:7:::
+www-data:*:19836:0:99999:7:::
+backup:*:19836:0:99999:7:::
+:root:*:19836:0:99999:7:::
+daemon:*:19836:0:99999:7:::
+bin:*:19836:0:99999:7:::
+sys:*:19836:0:99999:7:::
+sync:*:19836:0:99999:7:::
+games:*:19836:0:99999:7:::
+man:*:19836:0:99999:7:::
+lp:*:19836:0:99999:7:::
+mail:*:19836:0:99999:7:::
+news:*:19836:0:99999:7:::
+uucp:*:19836:0:99999:7:::
+proxy:*:19836:0:99999:7:::
+www-data:*:19836:0:99999:7:::
+:root:*:19836:0:99999:7:::
+daemon:*:19836:0:99999:7:::
+bin:*:19836:0:99999:7:::
+sys:*:19836:0:99999:7:::
+sync:*:19836:0:99999:7:::
+games:*:19836:0:99999:7:::
+man:*:19836:0:99999:7:::
+lp:*:19836:0:99999:7:::
+mail:*:19836:0:99999:7:::
+news:*:19836:0:99999:7:::
+uucp:*:19836:0:99999:7:::
+proxy:*:19836:0:99999:7:::
+:root:*:19836:0:99999:7:::
+daemon:*:19836:0:99999:7:::
+bin:*:19836:0:99999:7:::
+sys:*:19836:0:99999:7:::
+sync:*:19836:0:99999:7:::
+games:*:19836:0:99999:7:::
+man:*:19836:0:99999:7:::
+lp:*:19836:0:99999:7:::
+mail:*:19836:0:99999:7:::
+news:*:19836:0:99999:7:::
+uucp:*:19836:0:99999:7:::
+:root:*:19836:0:99999:7:::
+daemon:*:19836:0:99999:7:::
+bin:*:19836:0:99999:7:::
+sys:*:19836:0:99999:7:::
+sync:*:19836:0:99999:7:::
+games:*:19836:0:99999:7:::
+man:*:19836:0:99999:7:::
+lp:*:19836:0:99999:7:::
+mail:*:19836:0:99999:7:::
+news:*:19836:0:99999:7:::
+uucp:*:19836:0:99999:7:::
+proxy:*:19836:0:99999:7:::
+:root:*:19836:0:99999:7:::
+daemon:*:19836:0:99999:7:::
+bin:*:19836:0:99999:7:::
+sys:*:19836:0:99999:7:::
+sync:*:19836:0:99999:7:::
+games:*:19836:0:99999:7:::
+man:*:19836:0:99999:7:::
+lp:*:19836:0:99999:7:::
+mail:*:19836:0:99999:7:::
+news:*:19836:0:99999:7:::
+uucp:*:19836:0:99999:7:::
+proxy:*:19836:0:99999:7:::
+www-data:*:19836:0:99999:7:::
+:root:*:19836:0:99999:7:::
+daemon:*:19836:0:99999:7:::
+bin:*:19836:0:99999:7:::
+sys:*:19836:0:99999:7:::
+sync:*:19836:0:99999:7:::
+games:*:19836:0:99999:7:::
+man:*:19836:0:99999:7:::
+lp:*:19836:0:99999:7:::
+mail:*:19836:0:99999:7:::
+news:*:19836:0:99999:7:::
+uucp:*:19836:0:99999:7:::
+proxy:*:19836:0:99999:7:::
+www-data:*:19836:0:99999:7:::
+backup:*:19836:0:99999:7:::
+:root:*:19836:0:99999:7:::
+daemon:*:19836:0:99999:7:::
+bin:*:19836:0:99999:7:::
+sys:*:19836:0:99999:7:::
+sync:*:19836:0:99999:7:::
+games:*:19836:0:99999:7:::
+man:*:19836:0:99999:7:::
+lp:*:19836:0:99999:7:::
+mail:*:19836:0:99999:7:::
+news:*:19836:0:99999:7:::
+uucp:*:19836:0:99999:7:::
+proxy:*:19836:0:99999:7:::
+www-data:*:19836:0:99999:7:::
+backup:*:19836:0:99999:7:::
+list:*:19836:0:99999:7:::
+:root:*:19836:0:99999:7:::
+daemon:*:19836:0:99999:7:::
+bin:*:19836:0:99999:7:::
+sys:*:19836:0:99999:7:::
+sync:*:19836:0:99999:7:::
+games:*:19836:0:99999:7:::
+man:*:19836:0:99999:7:::
+lp:*:19836:0:99999:7:::
+mail:*:19836:0:99999:7:::
+news:*:19836:0:99999:7:::
+uucp:*:19836:0:99999:7:::
+proxy:*:19836:0:99999:7:::
+www-data:*:19836:0:99999:7:::
+backup:*:19836:0:99999:7:::
+list:*:19836:0:99999:7:::
+irc:*:19836:0:99999:7:::
+:root:*:19836:0:99999:7:::
+daemon:*:19836:0:99999:7:::
+bin:*:19836:0:99999:7:::
+sys:*:19836:0:99999:7:::
+sync:*:19836:0:99999:7:::
+games:*:19836:0:99999:7:::
+man:*:19836:0:99999:7:::
+lp:*:19836:0:99999:7:::
+mail:*:19836:0:99999:7:::
+news:*:19836:0:99999:7:::
+uucp:*:19836:0:99999:7:::
+proxy:*:19836:0:99999:7:::
+www-data:*:19836:0:99999:7:::
+backup:*:19836:0:99999:7:::
+list:*:19836:0:99999:7:::
+irc:*:19836:0:99999:7:::
+_apt:*:19836:0:99999:7:::
+:root:*:19836:0:99999:7:::
+daemon:*:19836:0:99999:7:::
+bin:*:19836:0:99999:7:::
+sys:*:19836:0:99999:7:::
+sync:*:19836:0:99999:7:::
+games:*:19836:0:99999:7:::
+man:*:19836:0:99999:7:::
+lp:*:19836:0:99999:7:::
+mail:*:19836:0:99999:7:::
+news:*:19836:0:99999:7:::
+uucp:*:19836:0:99999:7:::
+proxy:*:19836:0:99999:7:::
+www-data:*:19836:0:99999:7:::
+backup:*:19836:0:99999:7:::
+list:*:19836:0:99999:7:::
+irc:*:19836:0:99999:7:::
+_apt:*:19836:0:99999:7:::
+nobody:*:19836:0:99999:7:::
+ ESESCOA
+systemd-network:!*:19836::::::
+systemd-timesync:!*:19836::::::
+dhcpcd:!:19836::::::
+messagebus:!:19836::::::
+systemd-resolve:!*:19836::::::
+pollinate:!:19836::::::
+polkitd:!*:19836::::::
+syslog:!:19836::::::
+uuidd:!:19836::::::
+tcpdump:!:19836::::::
+tss:!:19836::::::
+landscape:!:19836::::::
+fwupd-refresh:!*:19836::::::
+usbmux:!:20331::::::
+VJGazrCT10iOclqW6MCZJ5WInlJsLTmqzA.:20331:0:99999:7:::pcCTHuFrBSg2Rn/7u2s41J:
+sshd:!:20353::::::
+ ESESCOB
+>0;kent@ubsembr: ~
+sudo less /etc/shadowless /etc/shadow
+[sudo] password for kent: 
+root:*:19836:0:99999:7:::
+daemon:*:19836:0:99999:7:::
+bin:*:19836:0:99999:7:::
+sys:*:19836:0:99999:7:::
+sync:*:19836:0:99999:7:::
+games:*:19836:0:99999:7:::
+man:*:19836:0:99999:7:::
+lp:*:19836:0:99999:7:::
+mail:*:19836:0:99999:7:::
+news:*:19836:0:99999:7:::
+uucp:*:19836:0:99999:7:::
+proxy:*:19836:0:99999:7:::
+www-data:*:19836:0:99999:7:::
+backup:*:19836:0:99999:7:::
+list:*:19836:0:99999:7:::
+irc:*:19836:0:99999:7:::
+_apt:*:19836:0:99999:7:::
+nobody:*:19836:0:99999:7:::
+systemd-network:!*:19836::::::
+systemd-timesync:!*:19836::::::
+dhcpcd:!:19836::::::
+messagebus:!:19836::::::
+systemd-resolve:!*:19836::::::
+pollinate:!:19836::::::
+polkitd:!*:19836::::::
+syslog:!:19836::::::
+uuidd:!:19836::::::
+tcpdump:!:19836::::::
+tss:!:19836::::::
+landscape:!:19836::::::
+fwupd-refresh:!*:19836::::::
+usbmux:!:20331::::::
+kent:$6$/oB.5Jdbv0X737FZ$.utaVy2Lxd.LxRddCqqV6ROBMaA78pcCTHuFrBSg2Rn/7u2s41JVJGazrCT10iOclqW6MCZJ5WInlJsLTmqzA.:20331:0:99999:7:::
+sshd:!:20353::::::
+>0;kent@ubsembr: ~
+kent@ubsembr:~$ 0;kent@ubsembr: ~
+kent@ubsembr:~$ less /etc/grou
+p
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,kent
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+fax:x:21:
+voice:x:22:
+cdrom:x:24:kent
+floppy:x:25:
+tape:x:26:
+sudo:x:27:kent
+audio:x:29:
+dip:x:30:kent
+www-data:x:33:
+Mtty:x:5:
+Madm:x:4:syslog,kent
+Msys:x:3:
+Mbin:x:2:
+Mdaemon:x:1:
+Mroot:x:0:
+floppy:x:25:
+tape:x:26:
+sudo:x:27:kent
+audio:x:29:
+dip:x:30:kent
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+shadow:x:42:
+utmp:x:43:
+video:x:44:
+sasl:x:45:
+plugdev:x:46:kent
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:999:
+systemd-network:x:998:
+systemd-timesync:x:997:
+input:x:996:
+sgx:x:995:
+kvm:x:994:
+render:x:993:
+lxd:x:101:kent
+messagebus:x:102:
+systemd-resolve:x:992:
+_ssh:x:103:
+polkitd:x:991:
+crontab:x:990:
+syslog:x:104:
+uuidd:x:105:
+rdma:x:106:
+tcpdump:x:107:
+tss:x:108:
+landscape:x:109:
+fwupd-refresh:x:989:
+kent:x:1000:
+ ESESCOB
+>0;kent@ubsembr: ~
+kent@ubsembr:~$ ;ls -l /etrcc/gr
+oup
+-rw-r--r-- 1 root root 794 aug 31 19:12 /etc/group
+0;kent@ubsembr: ~
+kent@ubsembr:~$ sudols -l /etc/gs
+h
+adow
+-rw-r----- 1 root shadow 671 aug 31 19:12 /etc/gshadow
+0;kent@ubsembr: ~
+kent@ubsembr:~$ sudo less /etc/gsha
+dow
+root:*::
+daemon:*::
+bin:*::
+sys:*::
+adm:*::syslog,kent
+tty:*::
+disk:*::
+lp:*::
+mail:*::
+news:*::
+uucp:*::
+man:*::
+proxy:*::
+kmem:*::
+dialout:*::
+fax:*::
+voice:*::
+cdrom:*::kent
+ ESESCOAadow
+floppy:*::
+tape:*::
+sudo:*::kent
+audio:*::
+dip:*::kent
+www-data:*::
+backup:*::
+operator:*::
+list:*::
+irc:*::B
+src:*::B
+shadow:*::
+utmp:*::
+video:*::
+sasl:*::
+plugdev:*::kent
+staff:*::
+games:*::
+users:*::
+nogroup:*::
+systemd-journal:!*::
+systemd-network:!*::
+systemd-timesync:!*::
+input:!*::
+sgx:!*::
+kvm:!*::
+render:!*::
+lxd:!::kent
+messagebus:!::
+systemd-resolve:!*::
+_ssh:!::
+polkitd:!*::
+crontab:!*::
+syslog:!::
+uuidd:!::
+rdma:!::
+tcpdump:!::
+tss:!::B
+landscape:!::
+fwupd-refresh:!*::
+kent:!::
+ ESESCOB
+ ESESCOB
+Msystemd-timesync:!*::
+Msystemd-network:!*::
+Msystemd-journal:!*::
+Mnogroup:*::
+Musers:*::
+Mgames:*::
+Mstaff:*::
+Mplugdev:*::kent
+Msasl:*::
+Mvideo:*::
+Mutmp:*::
+Mshadow:*::
+Msrc:*::
+Mirc:*::
+Mlist:*::
+Moperator:*::
+Mbackup:*::
+Mwww-data:*::
+Mdip:*::kent
+Maudio:*::
+Msudo:*::kent
+Mtape:*::
+Mfloppy:*::
+Mcdrom:*::kent
+Mvoice:*::
+Mfax:*::
+Mdialout:*::
+Mkmem:*::
+Mproxy:*::
+Mman:*::
+Muucp:*::
+Mnews:*::
+Mmail:*::
+Mlp:*::A
+Mdisk:*::
+Mtty:*::
+Madm:*::syslog,kent
+>0;kent@ubsembr: ~
+kent@ubsembr:~$ sudo less /etc/gshadosh
+adow0;kent@ubsembr: ~
+kent@ubsembr:~$ sudo less /etc/shadow
+root:*:19836:0:99999:7:::
+daemon:*:19836:0:99999:7:::
+bin:*:19836:0:99999:7:::
+sys:*:19836:0:99999:7:::
+sync:*:19836:0:99999:7:::
+games:*:19836:0:99999:7:::
+man:*:19836:0:99999:7:::
+lp:*:19836:0:99999:7:::
+mail:*:19836:0:99999:7:::
+news:*:19836:0:99999:7:::
+uucp:*:19836:0:99999:7:::
+proxy:*:19836:0:99999:7:::
+www-data:*:19836:0:99999:7:::
+backup:*:19836:0:99999:7:::
+list:*:19836:0:99999:7:::
+irc:*:19836:0:99999:7:::
+_apt:*:19836:0:99999:7:::
+nobody:*:19836:0:99999:7:::
+systemd-network:!*:19836::::::
+systemd-timesync:!*:19836::::::
+dhcpcd:!:19836::::::
+messagebus:!:19836::::::
+systemd-resolve:!*:19836::::::
+pollinate:!:19836::::::
+polkitd:!*:19836::::::
+syslog:!:19836::::::
+uuidd:!:19836::::::
+tcpdump:!:19836::::::
+tss:!:19836::::::
+landscape:!:19836::::::
+fwupd-refresh:!*:19836::::::
+usbmux:!:20331::::::
+VJGazrCT10iOclqW6MCZJ5WInlJsLTmqzA.:20331:0:99999:7:::pcCTHuFrBSg2Rn/7u2s41J:
+sshd:!:20353::::::
+ ESESCOB
+M_apt:*:19836:0:99999:7:::
+Mirc:*:19836:0:99999:7:::
+Mlist:*:19836:0:99999:7:::
+Mbackup:*:19836:0:99999:7:::
+Mwww-data:*:19836:0:99999:7:::
+Mproxy:*:19836:0:99999:7:::
+Muucp:*:19836:0:99999:7:::
+Mnews:*:19836:0:99999:7:::
+Mmail:*:19836:0:99999:7:::
+Mlp:*:19836:0:99999:7:::
+Mman:*:19836:0:99999:7:::
+Mgames:*:19836:0:99999:7:::
+Msync:*:19836:0:99999:7:::
+Msys:*:19836:0:99999:7:::
+Mbin:*:19836:0:99999:7:::
+Mdaemon:*:19836:0:99999:7:::
+Mroot:*:19836:0:99999:7:::
+ ESESCOA
+ ESESCOA
+ ESESCOA
+>0;kent@ubsembr: ~
+kent@ubsembr:~$ sudo less /etc/shadow
+root:*:19836:0:99999:7:::
+daemon:*:19836:0:99999:7:::
+bin:*:19836:0:99999:7:::
+sys:*:19836:0:99999:7:::
+sync:*:19836:0:99999:7:::
+games:*:19836:0:99999:7:::
+man:*:19836:0:99999:7:::
+lp:*:19836:0:99999:7:::
+mail:*:19836:0:99999:7:::
+news:*:19836:0:99999:7:::
+uucp:*:19836:0:99999:7:::
+proxy:*:19836:0:99999:7:::
+www-data:*:19836:0:99999:7:::
+backup:*:19836:0:99999:7:::
+list:*:19836:0:99999:7:::
+irc:*:19836:0:99999:7:::
+_apt:*:19836:0:99999:7:::
+nobody:*:19836:0:99999:7:::
+ ESESCOAdow
+>0;kent@ubsembr: ~
+kent@ubsembr:~$ sudo less /etc/shadopass
+wd0;kent@ubsembr: ~
+kent@ubsembr:~$ sudo less /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:998:998:systemd Network Management:/:/usr/sbin/nologin
+systemd-timesync:x:997:997:systemd Time Synchronization:/:/usr/sbin/nologin
+dhcpcd:x:100:65534:DHCP Client Daemon,,,:/usr/lib/dhcpcd:/bin/false
+messagebus:x:101:102::/nonexistent:/usr/sbin/nologin
+systemd-resolve:x:992:992:systemd Resolver:/:/usr/sbin/nologin
+pollinate:x:102:1::/var/cache/pollinate:/bin/false
+polkitd:x:991:991:User for polkitd:/:/usr/sbin/nologin
+syslog:x:103:104::/nonexistent:/usr/sbin/nologin
+uuidd:x:104:105::/run/uuidd:/usr/sbin/nologin
+tcpdump:x:105:107::/nonexistent:/usr/sbin/nologin
+tss:x:106:108:TPM software stack,,,:/var/lib/tpm:/bin/false
+landscape:x:107:109::/var/lib/landscape:/usr/sbin/nologin
+ginESCOBfresh:x:989:989:Firmware update daemon:/var/lib/fwupd:/usr/sbin/nolo:
+usbmux:x:108:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+kent:x:1000:1000:kent:/home/kent:/bin/bash
+sshd:x:109:65534::/run/sshd:/usr/sbin/nologin
+ ESESCOB
+ ESESCOB
+>0;kent@ubsembr: ~
+0;kent@ubsembr: ~)`': c': sudo less /etc/passwu': cat /etc/passwd | cut -d: -f1 | sort | lest': cat /etc/passwd | cut
+kent@ubsembr:~$ cat /etc/passwd | cu-7
+_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+dhcpcd:x:100:65534:DHCP Client Daemon,,,:/usr/lib/dhcpcd:/bin/false
+fwupd-refresh:x:989:989:Firmware update daemon:/var/lib/fwupd:/usr/sbin/nologin
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+kent:x:1000:1000:kent:/home/kent:/bin/bash
+landscape:x:107:109::/var/lib/landscape:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+messagebus:x:101:102::/nonexistent:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+ ESESCOA
+>0;kent@ubsembr: ~
+kent@ubsembr:~$ nologi
+
+
+nologin
+This account is currently not available.
+0;kent@ubsembr: ~
+kent@ubsembr:~$ nologicat /etc/passwd | cut -d: -f1-7 | sort | less
+_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+dhcpcd:x:100:65534:DHCP Client Daemon,,,:/usr/lib/dhcpcd:/bin/false
+fwupd-refresh:x:989:989:Firmware update daemon:/var/lib/fwupd:/usr/sbin/nologin
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+kent:x:1000:1000:kent:/home/kent:/bin/bash
+landscape:x:107:109::/var/lib/landscape:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+messagebus:x:101:102::/nonexistent:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+ ESESCOA
+polkitd:x:991:991:User for polkitd:/:/usr/sbin/nologin
+pollinate:x:102:1::/var/cache/pollinate:/bin/false
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+root:x:0:0:root:/root:/bin/bash
+sshd:x:109:65534::/run/sshd:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+syslog:x:103:104::/nonexistent:/usr/sbin/nologin
+systemd-network:x:998:998:systemd Network Management:/:/usr/sbin/nologin
+systemd-resolve:x:992:992:systemd Resolver:/:/usr/sbin/nologin
+systemd-timesync:x:997:997:systemd Time Synchronization:/:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+tcpdump:x:105:107::/nonexistent:/usr/sbin/nologin
+tss:x:106:108:TPM software stack,,,:/var/lib/tpm:/bin/false
+usbmux:x:108:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+>0;kent@ubsembr: ~
+kent@ubsembr:~$ false
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 
+exit
+0;kent@ubsembr: ~
+kent@ubsembr:~$ 
+logout
+Connection to localhost closed.
+ITINF25/lektion9
+$ 
+exit
+
+Script done on 2025-10-01 13:31:53+02:00 [COMMAND_EXIT_CODE="1"]

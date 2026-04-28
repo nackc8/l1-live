@@ -1,0 +1,22 @@
+
+Basic Regular Expressions
+    trupp\|Lars
+        Trupp eller Lars
+Extended Regular Expressions
+    trupp|Lars
+        Trupp eller Lars
+
+grep -E
+    grep -E trupp|Lars wiki.txt
+        Ger oss rader med trupp eller Lars i texten
+    grep -Ev trupp|Lars wiki.txt
+        Ger oss rader som INTE innehåller en match mot regexp
+    grep -E '( |^)[aA][a-zA-Z]( |$)' wiki.txt
+        Ger oss rader som innehåller ord av längd två som börjar på a eller A
+    grep -Ei '( |^)a[a-z]( |$)' wiki.txt
+        Samma som ovan, men -i betyder valfritt stor och liten bokstav
+    grep -Eio '( |^)a[a-z]( |$)' wiki.txt
+        Som ovan, men ger bara tillbaka matchningarna, en per rad
+    grep -Eio '( |^)a[a-z]( |$)' wiki.txt | sort | uniq -c
+        Ger oss en lista som räknar antal olika träffar
+

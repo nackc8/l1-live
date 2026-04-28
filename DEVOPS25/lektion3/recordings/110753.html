@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style type="text/css">
+pre {
+  font-family:Courier New;
+  font-size:10pt;
+}
+
+.af_line {
+  color: gray;
+  text-decoration: none;
+}
+
+</style>
+<title>Source file</title>
+</head>
+<body>
+<pre>/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS25/lektion3
+<span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion3
+</span>$ ssh ubse
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-110-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Fri Apr 17 09:08:04 AM UTC 2026
+
+  System load:  0.0                Processes:               111
+  Usage of /:   19.9% of 23.40GB   Users logged in:         0
+  Memory usage: 9%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+162 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Fri Apr 17 08:43:02 2026 from 10.0.2.2
+To run a command as administrator (user &quot;root&quot;), use &quot;sudo &lt;command&gt;&quot;.
+See &quot;man sudo_root&quot; for details.
+
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ id
+uid=1000(kent) gid=1000(kent) groups=1000(kent),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),101(lxd)
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ adduser
+fatal: Only root may add a user or group to the system.
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ addusergreen
+fatal: Only root may add a user or group to the system.
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ adduser greesudo 
+[sudo] password for kent: 
+info: Adding user `green&apos; ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `green&apos; (1001) ...
+info: Adding new user `green&apos; (1001) with group `green (1001)&apos; ...
+info: Creating home directory `/home/green&apos; ...
+info: Copying files from `/etc/skel&apos; ...
+New password: 
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for green
+Enter the new value, or press ENTER for the default
+	Full Name []: 
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] 
+info: Adding new user `green&apos; to supplemental / extra groups `users&apos; ...
+info: Adding user `green&apos; to group `users&apos; ...
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ addgroup
+fatal: Only root may add a user or group to the system.
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ !
+e!c!h!o! !
+echo addgroup
+addgroup
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ echo addgrouecho !!
+echo echo addgroup
+echo addgroup
+0;kent&#64;ubse: ~
+echo !!tyle="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ echo echo addgrouaddgrouecho addgroup
+echo echo echo addgroup
+echo echo addgroup
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ echo !!
+echo echo echo echo addgroup
+echo echo echo addgroup
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ addgroup marketing
+fatal: Only root may add a user or group to the system.
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ sudo !
+sudo addgroup marketing
+info: Selecting GID from range 1000 to 59999 ...
+info: Adding group `marketing&apos; (GID 1002) ...
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ usermod --append -G mzarketing gree--append
+
+
+
+
+
+
+usermod: Permission denied.
+usermod: cannot lock /etc/passwd; try again later.
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ sudo !!
+sudo usermod --append -G marketing green
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ id green
+uid=1001(green) gid=1001(green) groups=1001(green),100(users),1002(marketing)
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ man delus
+er
+<span style="text-decoration:underline;">DELUSER</span>(8)           System Manager&apos;s Manual          <span style="text-decoration:underline;">DELUSER</span>(8)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       deluser,  delgroup - remove a user or group from the sys‐
+       tem
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">deluser </span><span style="color:#7f7f7f;">[</span><span style="font-weight:bold;color:#7f7f7f;">--backup</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--backup-suffix </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">str</span><span style="color:#7f7f7f;">]</span>
+               [<span style="font-weight:bold;color:#7f7f7f;">--backup-to </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">dir</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--conf </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">file</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--debug</span><span style="color:#7f7f7f;">]</span>
+               [<span style="font-weight:bold;color:#7f7f7f;">--remove-all-files</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--remove-home</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--quiet</span><span style="color:#7f7f7f;">]</span>
+               [<span style="font-weight:bold;color:#7f7f7f;">--verbose</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--stdoutmsglevel </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">prio</span><span style="color:#7f7f7f;">]</span>
+               [<span style="font-weight:bold;color:#7f7f7f;">--stderrmsglevel </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">prio</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--logmsglevel </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">prio</span><span style="color:#7f7f7f;">] </span><span style="font-weight:bold;color:#7f7f7f;">user</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">deluser </span><span style="color:#7f7f7f;">[</span><span style="font-weight:bold;color:#7f7f7f;">--system</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--backup</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--backup-suffix </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">str</span><span style="color:#7f7f7f;">]</span>
+               [<span style="font-weight:bold;color:#7f7f7f;">--backup-to </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">dir</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--conf </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">file</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--debug</span><span style="color:#7f7f7f;">]</span>
+               [<span style="font-weight:bold;color:#7f7f7f;">--remove-all-files</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--remove-home</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--quiet</span><span style="color:#7f7f7f;">]</span>
+               [<span style="font-weight:bold;color:#7f7f7f;">--verbose</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--stdoutmsglevel </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">prio</span><span style="color:#7f7f7f;">]</span>
+<span style="color:#000000;background-color:#000000;">               [</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--stderrmsglevel </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">prio</span><span style="color:#7f7f7f;background-color:#000000;">] [</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--logmsglevel </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">prio</span><span style="color:#7f7f7f;background-color:#000000;">] </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">user</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">deluser --group </span><span style="color:#7f7f7f;">[</span><span style="font-weight:bold;color:#7f7f7f;">--conf </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">file</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--debug</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--only-if-empty</span><span style="color:#7f7f7f;">]</span>
+               [<span style="font-weight:bold;color:#7f7f7f;">--quiet</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--verbose</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--stdoutmsglevel </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">prio</span><span style="color:#7f7f7f;">]</span>
+               [<span style="font-weight:bold;color:#7f7f7f;">--stderrmsglevel </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">prio</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--logmsglevel </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">prio</span><span style="color:#7f7f7f;">]</span>
+               <span style="font-weight:bold;color:#7f7f7f;">group</span>
+       <span style="font-weight:bold;color:#7f7f7f;">delgroup </span><span style="color:#7f7f7f;">[</span><span style="font-weight:bold;color:#7f7f7f;">--system</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--conf </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">file</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--debug</span><span style="color:#7f7f7f;">]</span>
+                [<span style="font-weight:bold;color:#7f7f7f;">--only-if-empty</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--quiet</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--verbose</span><span style="color:#7f7f7f;">]</span>
+                [<span style="font-weight:bold;color:#7f7f7f;">--stdoutmsglevel </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">prio</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--stderrmsglevel </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">prio</span><span style="color:#7f7f7f;">]</span>
+                [<span style="font-weight:bold;color:#7f7f7f;">--logmsglevel </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">prio</span><span style="color:#7f7f7f;">] </span><span style="font-weight:bold;color:#7f7f7f;">group</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">deluser </span><span style="color:#7f7f7f;">[</span><span style="font-weight:bold;color:#7f7f7f;">--conf </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">file</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--debug</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--quiet</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--verbose</span><span style="color:#7f7f7f;">]</span>
+               [<span style="font-weight:bold;color:#7f7f7f;">--stdoutmsglevel </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">prio</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">--stderrmsglevel </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">prio</span><span style="color:#7f7f7f;">]</span>
+               [<span style="font-weight:bold;color:#7f7f7f;">--logmsglevel </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">prio</span><span style="color:#7f7f7f;">] </span><span style="font-weight:bold;color:#7f7f7f;">user group</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">deluser --help</span>
+
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">deluser --version</span>olor:#000000;">
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">deluser </span><span style="color:#7f7f7f;">and </span><span style="font-weight:bold;color:#7f7f7f;">delgroup </span><span style="color:#7f7f7f;">remove users  and  groups  from  the</span>
+       system  according  to command line options and configura‐
+       tion  information  in  <span style="text-decoration:underline;">/etc/deluser.conf</span>   and   <span style="text-decoration:underline;">/etc/ad‐</span>
+       <span style="text-decoration:underline;">duser.conf</span>.
+
+       They  are  friendlier  front  ends  to  the  <span style="font-weight:bold;color:#7f7f7f;">userdel  </span><span style="color:#7f7f7f;">and</span>
+       <span style="font-weight:bold;color:#7f7f7f;">groupdel </span><span style="color:#7f7f7f;">programs, removing the home directory as  option</span>
+       or  even  all files on the system owned by the user to be
+       removed, running a custom script, and other features.
+
+       For a full list and explanations of all options, see  the
+       OPTIONS section.
+
+       <span style="font-weight:bold;color:#7f7f7f;">deluser </span><span style="color:#7f7f7f;">and </span><span style="font-weight:bold;color:#7f7f7f;">delgroup </span><span style="color:#7f7f7f;">can be run in one of three modes:</span>
+<span style="color:#000000;background-color:#000000;"></span> page deluser(8) line 35 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+   <span style="font-weight:bold;color:#7f7f7f;">Remove a user</span>
+       If  called  with  one non-option argument and without the
+       <span style="font-weight:bold;color:#7f7f7f;">--group </span><span style="color:#7f7f7f;">option, </span><span style="font-weight:bold;color:#7f7f7f;">deluser </span><span style="color:#7f7f7f;">will remove a non-system user.</span>
+
+       By default, <span style="font-weight:bold;color:#7f7f7f;">deluser </span><span style="color:#7f7f7f;">will remove the user without removing</span>
+       the home directory, the mail spool or any other files  on
+       the  system  owned by the user.  Removing the home direc‐
+       tory and mail spool  can  be  achieved  using  the  <span style="font-weight:bold;color:#7f7f7f;">--re‐</span>
+       <span style="font-weight:bold;color:#7f7f7f;">move-home </span><span style="color:#7f7f7f;">option.</span>
+
+       The   <span style="font-weight:bold;color:#7f7f7f;">--remove-all-files  </span><span style="color:#7f7f7f;">option removes all files on the</span>
+       system owned by the user.  Note that if you activate both
+       options <span style="font-weight:bold;color:#7f7f7f;">--remove-home </span><span style="color:#7f7f7f;">will have no additional effect  be‐</span>
+       cause  all  files  including  the home directory and mail
+       spool are already covered by the  <span style="font-weight:bold;color:#7f7f7f;">--remove-all-files  </span><span style="color:#7f7f7f;">op‐</span>
+       tion.
+<span style="color:#000000;background-color:#000000;"></span> page deluser(8) line 52 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       If  you want to backup all files before deleting them you
+       can activate the <span style="font-weight:bold;color:#7f7f7f;">--backup </span><span style="color:#7f7f7f;">option which will create a file</span>
+       <span style="text-decoration:underline;">username.tar(.gz|.bz2)</span> in the directory specified by  the
+       <span style="font-weight:bold;color:#7f7f7f;">--backup-to </span><span style="color:#7f7f7f;">option.</span>
+
+       By   default,  the  backup  archive  is  compressed  with
+       <span style="font-weight:bold;color:#7f7f7f;">gzip</span><span style="color:#7f7f7f;">(1).  To change this, the </span><span style="font-weight:bold;color:#7f7f7f;">--backup-suffix </span><span style="color:#7f7f7f;">option  can</span>
+       be  set  to  any  suffix supported by <span style="font-weight:bold;color:#7f7f7f;">tar --auto-compress</span>
+       (e.g. .gz, .bz2, .xz).
+
+       <span style="font-weight:bold;color:#7f7f7f;">deluser </span><span style="color:#7f7f7f;">will refuse to remove the root account.</span>
+
+       If the <span style="font-weight:bold;color:#7f7f7f;">--system </span><span style="color:#7f7f7f;">option is given on the command line,  the</span>
+       delete operation is actually executed only if the user is
+       a  system  user.   This avoids accidentally deleting non-
+       system users.  Additionally, if the user does not  exist,
+<span style="color:#000000;background-color:#000000;">       no  error  value  is returned.  Debian package maintainer</span>span style="color:#000000;background-color:#000000;">
+       scripts may use this  flag  to  remove  system  users  or
+       groups  while ignoring the case where the removal already
+       occurred.
+
+   <span style="font-weight:bold;color:#7f7f7f;">Remove a group</span>
+       If <span style="font-weight:bold;color:#7f7f7f;">deluser </span><span style="color:#7f7f7f;">is called with the </span><span style="font-weight:bold;color:#7f7f7f;">--group   </span><span style="color:#7f7f7f;">option,  or  </span><span style="font-weight:bold;color:#7f7f7f;">del‐</span>
+       <span style="font-weight:bold;color:#7f7f7f;">group  </span><span style="color:#7f7f7f;">is  called,  a group will be removed.  The primary</span>
+       group of an existing user cannot be removed.  If the  op‐
+       tion <span style="font-weight:bold;color:#7f7f7f;">--only-if-empty </span><span style="color:#7f7f7f;">is given, the group won&apos;t be removed</span>
+       if it has any members left.
+
+       The  <span style="font-weight:bold;color:#7f7f7f;">--system  </span><span style="color:#7f7f7f;">option  adds the same functionality as for</span>
+       users, respectively.
+
+   <span style="font-weight:bold;color:#7f7f7f;">Remove a user from a specific group</span>
+       If called with two non-option arguments, <span style="font-weight:bold;color:#7f7f7f;">deluser </span><span style="color:#7f7f7f;">will re‐</span>
+<span style="color:#000000;background-color:#000000;">       move a user from a specific group.</span>p or q to quit)</span><span style="color:#000000;background-color:#000000;">
+
+<span style="font-weight:bold;color:#7f7f7f;">OPTIONS</span>
+       Different modes of <span style="font-weight:bold;color:#7f7f7f;">deluser </span><span style="color:#7f7f7f;">allow different  options.   If</span>
+       no valid modes are listed for a option, it is accepted in
+       all modes.
+
+       Short versions for certain options may exist for histori‐
+       cal  reasons.   They are going to stay supported, but are
+       removed from the documentation.  Users are advised to mi‐
+       grate to the long version of options.
+
+       <span style="font-weight:bold;color:#7f7f7f;">--backup</span>
+              Backup all files contained in the userhome and the
+              mailspool file to a file named <span style="text-decoration:underline;">username.tar.bz2</span> or
+              <span style="text-decoration:underline;">username.tar.gz</span>.  Valid  Modes:  <span style="font-weight:bold;color:#7f7f7f;">deluser</span><span style="color:#7f7f7f;">,  </span><span style="font-weight:bold;color:#7f7f7f;">deluser</span>
+              <span style="font-weight:bold;color:#7f7f7f;">--system</span><span style="color:#7f7f7f;">,</span>
+<span style="color:#000000;background-color:#000000;"></span> page deluser(8) line 103 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       <span style="font-weight:bold;color:#7f7f7f;">--backup-suffix </span><span style="color:#7f7f7f;">str</span>
+              Select  compression algorithm for a home directory
+              backup.  Can be set to any  suffix  recognized  by
+              <span style="font-weight:bold;color:#7f7f7f;">tar  --auto-compress</span><span style="color:#7f7f7f;">.   Defaults  to  </span><span style="text-decoration:underline;color:#7f7f7f;">.gz</span><span style="color:#7f7f7f;">.   Valid</span>
+              Modes: <span style="font-weight:bold;color:#7f7f7f;">deluser</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">deluser --system</span><span style="color:#7f7f7f;">,</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">--backup-to </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">dir</span>
+              Place the backup files not in the  current  direc‐
+              tory  but  in  <span style="text-decoration:underline;">dir</span>.  This implicitly sets <span style="font-weight:bold;color:#7f7f7f;">--backup</span>
+              also.  (defaulting to the current  working  direc‐
+              tory).  Valid Modes: <span style="font-weight:bold;color:#7f7f7f;">deluser</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">deluser --system</span><span style="color:#7f7f7f;">,</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">--conf </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">file</span>
+              Use    <span style="text-decoration:underline;">file</span>   instead   of   the   default   files
+              <span style="text-decoration:underline;">/etc/deluser.conf</span> and <span style="text-decoration:underline;">/etc/adduser.conf</span>.  Multiple
+              --conf options may be given.
+<span style="color:#000000;background-color:#000000;"></span> page deluser(8) line 120 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       <span style="font-weight:bold;color:#7f7f7f;">--backup-suffix </span><span style="color:#7f7f7f;">str</span>
+              Select  compression algorithm for a home directory
+              backup.  Can be set to any  suffix  recognized  by
+              <span style="font-weight:bold;color:#7f7f7f;">tar  --auto-compress</span><span style="color:#7f7f7f;">.   Defaults  to  </span><span style="text-decoration:underline;color:#7f7f7f;">.gz</span><span style="color:#7f7f7f;">.   Valid</span>
+              Modes: <span style="font-weight:bold;color:#7f7f7f;">deluser</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">deluser --system</span><span style="color:#7f7f7f;">,</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">--backup-to </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">dir</span>
+              Place the backup files not in the  current  direc‐
+              tory  but  in  <span style="text-decoration:underline;">dir</span>.  This implicitly sets <span style="font-weight:bold;color:#7f7f7f;">--backup</span>
+              also.  (defaulting to the current  working  direc‐
+              tory).  Valid Modes: <span style="font-weight:bold;color:#7f7f7f;">deluser</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">deluser --system</span><span style="color:#7f7f7f;">,</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">--conf </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">file</span>
+              Use    <span style="text-decoration:underline;">file</span>   instead   of   the   default   files
+              <span style="text-decoration:underline;">/etc/deluser.conf</span> and <span style="text-decoration:underline;">/etc/adduser.conf</span>.  Multiple
+              --conf options may be given.
+
+       <span style="font-weight:bold;color:#7f7f7f;">--backup-suffix </span><span style="color:#7f7f7f;">str</span>
+              Select  compression algorithm for a home directory
+              backup.  Can be set to any  suffix  recognized  by
+              <span style="font-weight:bold;color:#7f7f7f;">tar  --auto-compress</span><span style="color:#7f7f7f;">.   Defaults  to  </span><span style="text-decoration:underline;color:#7f7f7f;">.gz</span><span style="color:#7f7f7f;">.   Valid</span>
+              Modes: <span style="font-weight:bold;color:#7f7f7f;">deluser</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">deluser --system</span><span style="color:#7f7f7f;">,</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">--backup-to </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">dir</span>
+              Place the backup files not in the  current  direc‐
+              tory  but  in  <span style="text-decoration:underline;">dir</span>.  This implicitly sets <span style="font-weight:bold;color:#7f7f7f;">--backup</span>
+              also.  (defaulting to the current  working  direc‐
+              tory).  Valid Modes: <span style="font-weight:bold;color:#7f7f7f;">deluser</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">deluser --system</span><span style="color:#7f7f7f;">,</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">--conf </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">file</span>
+              Use    <span style="text-decoration:underline;">file</span>   instead   of   the   default   files
+              <span style="text-decoration:underline;">/etc/deluser.conf</span> and <span style="text-decoration:underline;">/etc/adduser.conf</span>.  Multiple
+              --conf options may be given.
+...skipping...
+              <span style="color:#000000;background-color:#000000;">Remove</span><span style="color:#000000;background-color:#000000;"> a group.  This is the default action if the</span>
+              program  is  invoked  as  <span style="text-decoration:underline;">delgroup</span>.   Valid  Mode:
+              <span style="font-weight:bold;color:#7f7f7f;">deluser</span><span style="color:#7f7f7f;">.</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">--help </span><span style="color:#7f7f7f;">Display brief instructions.</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">--only-if-empty</span>
+              Only  <span style="color:#000000;background-color:#000000;">remove</span><span style="color:#000000;background-color:#000000;"> if no members are left.  Valid Modes:</span>
+              <span style="font-weight:bold;color:#7f7f7f;">deluser --group</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">delgroup</span><span style="color:#7f7f7f;">,</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">--quiet</span>
+              Synonymous to --stdoutmsglevel=warn. Deprecated.
+
+       <span style="font-weight:bold;color:#7f7f7f;">--</span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">remove</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-all-files</span>
+              <span style="color:#000000;background-color:#000000;">Remove</span><span style="color:#000000;background-color:#000000;"> all files from the  system  owned  by  this</span>
+              user.  Note: --<span style="color:#000000;background-color:#000000;">remove</span><span style="color:#000000;background-color:#000000;">-home does not have an effect</span>
+              any more.  If <span style="font-weight:bold;color:#7f7f7f;">--backup </span><span style="color:#7f7f7f;">is specified, the files are</span>
+<span style="color:#000000;background-color:#000000;">              deleted  after having performed the backup.  Valid</span><span style="color:#000000;background-color:#000000;">
+              Modes: <span style="font-weight:bold;color:#7f7f7f;">deluser</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">deluser --system</span><span style="color:#7f7f7f;">,</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">--</span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">remove</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-home</span>
+              <span style="color:#000000;background-color:#000000;">Remove</span><span style="color:#000000;background-color:#000000;"> the home directory  of  the  user  and  its</span>
+              mailspool.   If  <span style="font-weight:bold;color:#7f7f7f;">--backup  </span><span style="color:#7f7f7f;">is specified, the files</span>
+              are deleted after  having  performed  the  backup.
+<span style="color:#000000;background-color:#000000;">              Valid Modes: </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">deluser</span><span style="color:#7f7f7f;background-color:#000000;">, </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">deluser --system</span><span style="color:#7f7f7f;background-color:#000000;">,</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">--system</span>
+              Only  delete if user/group is a system user/group.
+              If the user does not exist, no error value is  re‐
+              turned.  Valid Modes: <span style="font-weight:bold;color:#7f7f7f;">deluser</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">deluser --system</span><span style="color:#7f7f7f;">,</span>
+<span style="color:#000000;background-color:#000000;">M</span>user(8) line 155/219 80% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M              Synonymous to --stdoutmsglevel=warn. Deprecated.</span>><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--quiet</span>ckground-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M</span>user(8) line 152/219 78% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--system</span>ckground-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              Only  delete if user/group is a system user/group.</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              If the user does not exist, no error value is  re‐</span>pan style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              turned.  Valid Modes: </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">deluser</span><span style="color:#7f7f7f;background-color:#000000;">, </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">deluser --system</span><span style="color:#7f7f7f;background-color:#000000;">,</span>
+<span style="color:#000000;background-color:#000000;">&gt;0;kent&#64;ubse: ~55/219 80% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+</span><span style="font-weight:bold;color:#00ff00;background-color:#000000;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ userdel  ^C
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ userdfdel
+Usage: userdel [options] LOGIN
+
+Options:
+  -f, --force                   force some actions that would fail otherwise
+                                e.g. removal of user still logged in
+                                or files, even if not owned by the user
+  -h, --help                    display this help message and exit
+  -r, --remove                  remove home directory and mail spool
+  -R, --root CHROOT_DIR         directory to chroot into
+  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files
+      --extrausers              Use the extra users database
+  -Z, --selinux-user            remove any SELinux user mapping for the user
+
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ useradd
+Usage: useradd [options] LOGIN
+       useradd -D
+       useradd -D [options]
+
+Options:
+      --badname                 do not check for bad names
+  -b, --base-dir BASE_DIR       base directory for the home directory of the
+                                new account
+      --btrfs-subvolume-home    use BTRFS subvolume for home directory
+  -c, --comment COMMENT         GECOS field of the new account
+  -d, --home-dir HOME_DIR       home directory of the new account
+  -D, --defaults                print or change default useradd configuration
+  -e, --expiredate EXPIRE_DATE  expiration date of the new account
+  -f, --inactive INACTIVE       password inactivity period of the new account
+  -F, --add-subids-for-system   add entries to sub[ud]id even when adding a system user
+  -g, --gid GROUP               name or ID of the primary group of the new
+                                account
+  -G, --groups GROUPS           list of supplementary groups of the new
+                                account
+  -h, --help                    display this help message and exit
+  -k, --skel SKEL_DIR           use this alternative skeleton directory
+  -K, --key KEY=VALUE           override /etc/login.defs defaults
+  -l, --no-log-init             do not add the user to the lastlog and
+                                faillog databases
+  -m, --create-home             create the user&apos;s home directory
+  -M, --no-create-home          do not create the user&apos;s home directory
+  -N, --no-user-group           do not create a group with the same name as
+                                the user
+  -o, --non-unique              allow to create users with duplicate
+                                (non-unique) UID
+  -p, --password PASSWORD       encrypted password of the new account
+  -r, --system                  create a system account
+  -R, --root CHROOT_DIR         directory to chroot into
+  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files
+  -s, --shell SHELL             login shell of the new account
+  -u, --uid UID                 user ID of the new account
+  -U, --user-group              create a group with the same name as the user
+  -Z, --selinux-user SEUSER     use a specific SEUSER for the SELinux user mapping
+      --extrausers              Use the extra users database
+
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ userdel ;
+Usage: userdel [options] LOGIN
+
+Options:
+  -f, --force                   force some actions that would fail otherwise
+                                e.g. removal of user still logged in
+                                or files, even if not owned by the user
+  -h, --help                    display this help message and exit
+  -r, --remove                  remove home directory and mail spool
+  -R, --root CHROOT_DIR         directory to chroot into
+  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files
+      --extrausers              Use the extra users database
+  -Z, --selinux-user            remove any SELinux user mapping for the user
+
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ deluse
+
+
+
+
+
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls +-l
+total 0
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ touch sallad.txt
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls 0-l
+total 0
+-rw-rw-r-- 1 kent kent 0 Apr 17 09:44 sallad.txt
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ chown green&gt;
+{g
+�:green sallad.txt 
+chown: changing ownership of &apos;sallad.txt&apos;: Operation not permitted
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$  
+sudo !!
+sudo chown green:green sallad.txt 
+[sudo] password for kent: 
+Sorry, try again.
+[sudo] password for kent: 
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls -l
+total 0
+-rw-rw-r-- 1 green green 0 Apr 17 09:44 sallad.txt
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ sudo -u green -i
+0;green&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ow
+pwd
+/home/green
+0;green&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ cd /home/kent/
+-bash: cd: /home/kent/: Permission denied
+0;green&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls -la /jp,jhome/kent
+ls: cannot open directory &apos;/home/kent&apos;: Permission denied
+0;green&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls -la /home/ken
+total 20
+drwxr-x--- 2 green green 4096 Apr 17 09:08 <span style="font-weight:bold;color:#5c5cff;">.</span>
+drwxr-xr-x 4 root  root  4096 Apr 17 09:08 <span style="font-weight:bold;color:#5c5cff;">..</span>
+-rw-r--r-- 1 green green  220 Apr 17 09:08 .bash_logout
+-rw-r--r-- 1 green green 3771 Apr 17 09:08 .bashrc
+-rw-r--r-- 1 green green  807 Apr 17 09:08 .profile
+0;green&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls -la /0;green&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls -la /
+total 2097244
+drwxr-xr-x  23 root root       4096 Apr 17 08:32 <span style="font-weight:bold;color:#5c5cff;">.</span>
+drwxr-xr-x  23 root root       4096 Apr 17 08:32 <span style="font-weight:bold;color:#5c5cff;">..</span>
+lrwxrwxrwx   1 root root          7 Apr 22  2024 <span style="font-weight:bold;color:#00ffff;">bin</span> -&gt; <span style="font-weight:bold;color:#5c5cff;">usr/bin</span>
+drwxr-xr-x   2 root root       4096 Feb 26  2024 <span style="font-weight:bold;color:#5c5cff;">bin.usr-is-merged</span>
+drwxr-xr-x   4 root root       4096 Apr 17 08:36 <span style="font-weight:bold;color:#5c5cff;">boot</span>
+dr-xr-xr-x   2 root root       4096 Apr 23  2024 <span style="font-weight:bold;color:#5c5cff;">cdrom</span>
+drwxr-xr-x  19 root root       4060 Apr 17 08:43 <span style="font-weight:bold;color:#5c5cff;">dev</span>
+drwxr-xr-x 108 root root       4096 Apr 17 09:16 <span style="font-weight:bold;color:#5c5cff;">etc</span>
+drwxr-xr-x   4 root root       4096 Apr 17 09:08 <span style="font-weight:bold;color:#5c5cff;">home</span>
+lrwxrwxrwx   1 root root          7 Apr 22  2024 <span style="font-weight:bold;color:#00ffff;">lib</span> -&gt; <span style="font-weight:bold;color:#5c5cff;">usr/lib</span>
+drwxr-xr-x   2 root root       4096 Feb 26  2024 <span style="font-weight:bold;color:#5c5cff;">lib.usr-is-merged</span>
+lrwxrwxrwx   1 root root          9 Apr 22  2024 <span style="font-weight:bold;color:#00ffff;">lib64</span> -&gt; <span style="font-weight:bold;color:#5c5cff;">usr/lib64</span>
+drwx------   2 root root      16384 Apr 17 08:30 <span style="font-weight:bold;color:#5c5cff;">lost+found</span>
+drwxr-xr-x   2 root root       4096 Apr 23  2024 <span style="font-weight:bold;color:#5c5cff;">media</span>
+drwxr-xr-x   2 root root       4096 Apr 23  2024 <span style="font-weight:bold;color:#5c5cff;">mnt</span>
+drwxr-xr-x   2 root root       4096 Apr 23  2024 <span style="font-weight:bold;color:#5c5cff;">opt</span>
+dr-xr-xr-x 177 root root          0 Apr 17 08:40 <span style="font-weight:bold;color:#5c5cff;">proc</span>
+drwx------   3 root root       4096 Apr 23  2024 <span style="font-weight:bold;color:#5c5cff;">root</span>
+drwxr-xr-x  28 root root        860 Apr 17 09:43 <span style="font-weight:bold;color:#5c5cff;">run</span>
+lrwxrwxrwx   1 root root          8 Apr 22  2024 <span style="font-weight:bold;color:#00ffff;">sbin</span> -&gt; <span style="font-weight:bold;color:#5c5cff;">usr/sbin</span>
+drwxr-xr-x   2 root root       4096 Apr  3  2024 <span style="font-weight:bold;color:#5c5cff;">sbin.usr-is-merged</span>
+drwxr-xr-x   2 root root       4096 Apr 17 08:40 <span style="font-weight:bold;color:#5c5cff;">snap</span>
+drwxr-xr-x   2 root root       4096 Apr 23  2024 <span style="font-weight:bold;color:#5c5cff;">srv</span>
+-rw-------   1 root root 2147483648 Apr 17 08:32 swap.img
+dr-xr-xr-x  13 root root          0 Apr 17 08:40 <span style="font-weight:bold;color:#5c5cff;">sys</span>
+drwxrwxrwt  13 root root       4096 Apr 17 09:48 <span style="color:#000000;background-color:#00cd00;">tmp</span>
+drwxr-xr-x  12 root root       4096 Apr 23  2024 <span style="font-weight:bold;color:#5c5cff;">usr</span>
+drwxr-xr-x  13 root root       4096 Apr 17 08:39 <span style="font-weight:bold;color:#5c5cff;">var</span>
+0;green&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ cd /home
+0;green&#64;ubse: /home
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home</span>$ ;s
+ls kent
+ls: cannot open directory &apos;kent&apos;: Permission denied
+0;green&#64;ubse: /home
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home</span>$ 0;green&#64;ubse: /home
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home</span>$ ls kent
+ls: cannot open directory &apos;kent&apos;: Permission denied
+0;green&#64;ubse: /home
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home</span>$ ls -l 
+total 8
+drwxr-x--- 2 green green 4096 Apr 17 09:08 <span style="font-weight:bold;color:#5c5cff;">green</span>
+drwxr-x--- 4 kent  kent  4096 Apr 17 09:44 <span style="font-weight:bold;color:#5c5cff;">kent</span>
+0;green&#64;ubse: /home
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home</span>$ chown kent:green kent/
+chown: changing ownership of &apos;kent/&apos;: Operation not permitted
+0;green&#64;ubse: /home
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home</span>$ sudo !!
+sudo chown kent:green kent/
+[sudo] password for green: 
+green is not in the sudoers file.
+0;green&#64;ubse: /home
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home</span>$ id
+uid=1001(green) gid=1001(green) groups=1001(green),100(users),1002(marketing)
+0;green&#64;ubse: /home
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home</span>$ exit
+logout
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls
+sallad.txt
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ cd /home/
+0;kent&#64;ubse: /home
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home</span>$ 0;kent&#64;ubse: /home
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home</span>$ ls
+<span style="font-weight:bold;color:#5c5cff;">green</span>  <span style="font-weight:bold;color:#5c5cff;">kent</span>
+0;kent&#64;ubse: /home
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home</span>$ ls -l0;kent&#64;ubse: /home
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home</span>$ ls -l
+total 8
+drwxr-x--- 2 green green 4096 Apr 17 09:57 <span style="font-weight:bold;color:#5c5cff;">green</span>
+drwxr-x--- 4 kent  kent  4096 Apr 17 09:44 <span style="font-weight:bold;color:#5c5cff;">kent</span>
+0;kent&#64;ubse: /home
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home</span>$ chown kent:green kent/
+chown: changing ownership of &apos;kent/&apos;: Operation not permitted
+0;kent&#64;ubse: /home
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home</span>$ sudo !!
+sudo chown kent:green kent/
+0;kent&#64;ubse: /home
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home</span>$ ls -l0;kent&#64;ubse: /home
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home</span>$ ls -l
+total 8
+drwxr-x--- 2 green green 4096 Apr 17 09:57 <span style="font-weight:bold;color:#5c5cff;">green</span>
+drwxr-x--- 4 kent  green 4096 Apr 17 09:44 <span style="font-weight:bold;color:#5c5cff;">kent</span>
+0;kent&#64;ubse: /home
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home</span>$ sudo !-u green -i
+0;green&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ cd /home
+0;green&#64;ubse: /home
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home</span>$ ls
+<span style="font-weight:bold;color:#5c5cff;">green</span>  <span style="font-weight:bold;color:#5c5cff;">kent</span>
+0;green&#64;ubse: /home
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home</span>$ ls -l
+total 8
+drwxr-x--- 2 green green 4096 Apr 17 09:57 <span style="font-weight:bold;color:#5c5cff;">green</span>
+drwxr-x--- 4 kent  green 4096 Apr 17 09:44 <span style="font-weight:bold;color:#5c5cff;">kent</span>
+0;green&#64;ubse: /home
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home</span>$ ce kd kent/
+
+0;green&#64;ubse: /home/kent
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home/kent</span>$ 0;green&#64;ubse: /home/kent
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home/kent</span>$ ls
+sallad.txt
+0;green&#64;ubse: /home/kent
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home/kent</span>$ ls -l
+total 0
+-rw-rw-r-- 1 green green 0 Apr 17 09:44 sallad.txt
+0;green&#64;ubse: /home/kent
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home/kent</span>$ ls -la
+total 36
+drwxr-x--- 4 kent  green 4096 Apr 17 09:44 <span style="font-weight:bold;color:#5c5cff;">.</span>
+drwxr-xr-x 4 root  root  4096 Apr 17 09:08 <span style="font-weight:bold;color:#5c5cff;">..</span>
+-rw------- 1 kent  kent     5 Apr 17 08:40 .bash_history
+-rw-r--r-- 1 kent  kent   220 Mar 31  2024 .bash_logout
+-rw-r--r-- 1 kent  kent  3771 Mar 31  2024 .bashrc
+drwx------ 2 kent  kent  4096 Apr 17 08:40 <span style="font-weight:bold;color:#5c5cff;">.cache</span>
+-rw------- 1 kent  kent    36 Apr 17 09:19 .lesshst
+-rw-r--r-- 1 kent  kent   807 Mar 31  2024 .profile
+drwx------ 2 kent  kent  4096 Apr 17 08:40 <span style="font-weight:bold;color:#5c5cff;">.ssh</span>
+-rw-r--r-- 1 kent  kent     0 Apr 17 09:08 .sudo_as_admin_successful
+-rw-rw-r-- 1 green green    0 Apr 17 09:44 sallad.txt
+0;green&#64;ubse: /home/kent
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home/kent</span>$ 0;green&#64;ubse: /home/kent
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home/kent</span>$ c
+cat sallad.txt 
+0;green&#64;ubse: /home/kent
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home/kent</span>$ nano sallad.txt 
+&gt;0;green&#64;ubse: /home/kent Writing... ] [ Wrote 5 lines ]    Y Yes-weight:bold;color:#ffffff;"></span><span style="font-weight:bold;color:#ffffff;background-color:#cd0000;">[ Directory &apos;.&apos; is not writable ]</span><span style="color:#cd0000;background-color:#000000;">  GNU nano 7.2                sallad.txt                          </span>
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home/kent</span>$ cat sallad.txt 0;green&#64;ubse: /home/kent
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home/kent</span>$ cat sallad.txt 
+Grönkål
+Ättika
+Spenat
+Ost
+
+0;green&#64;ubse: /home/kent
+<span style="font-weight:bold;color:#00ff00;">green&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home/kent</span>$ exit
+logout
+0;kent&#64;ubse: /home
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">/home</span>$ eixxit
+logout
+Connection to localhost closed.
+<span style="color:#5c5cff;">DEVOPS25/lektion3
+$ exit>$ 
+exit
+</pre>
+</body>
+</html>
+<!--HTML generated by ansifilter 2.18, http://www.andre-simon.de/-->

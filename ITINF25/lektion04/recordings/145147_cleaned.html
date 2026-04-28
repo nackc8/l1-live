@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style type="text/css">
+pre {
+  font-family:Courier New;
+  font-size:10pt;
+}
+
+.af_line {
+  color: gray;
+  text-decoration: none;
+}
+
+</style>
+<title>145147.txt</title>
+</head>
+<body>
+<pre>Script started on 2025-09-22 14:51:47+02:00 [TERM=&quot;xterm-256color&quot; TTY=&quot;/dev/pts/3&quot; COLUMNS=&quot;65&quot; LINES=&quot;13&quot;]
+<span style="color:#5c5cff;">ITINF25/lektion4
+<span style="color:#5c5cff;">5c5cff;">ITINF25/lektion4
+</span>$ ls
+config	info.sh  recordings  ssh_hardening.txt
+<span style="color:#5c5cff;">ITINF25/lektion4
+</span>$ cp info.sh userv3eer-kent/jdjids
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="color:#5c5cff;">ITINF25/lektion4
+</span>$ man scp
+SCP(1)            BSD General Commands Manual            SCP(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+     <span style="font-weight:bold;color:#7f7f7f;">scp</span> — OpenSSH secure file copy
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+     <span style="font-weight:bold;color:#7f7f7f;">scp</span> [<span style="font-weight:bold;color:#7f7f7f;">-346ABCOpqRrsTv</span>] [<span style="font-weight:bold;color:#7f7f7f;">-c</span> <span style="text-decoration:underline;">cipher</span>] [<span style="font-weight:bold;color:#7f7f7f;">-D</span> <span style="text-decoration:underline;">sftp_server_path</span>]
+         [<span style="font-weight:bold;color:#7f7f7f;">-F</span> <span style="text-decoration:underline;">ssh_config</span>] [<span style="font-weight:bold;color:#7f7f7f;">-i</span> <span style="text-decoration:underline;">identity_file</span>] [<span style="font-weight:bold;color:#7f7f7f;">-J</span> <span style="text-decoration:underline;">destination</span>]
+         [<span style="font-weight:bold;color:#7f7f7f;">-l</span> <span style="text-decoration:underline;">limit</span>] [<span style="font-weight:bold;color:#7f7f7f;">-o</span> <span style="text-decoration:underline;">ssh_option</span>] [<span style="font-weight:bold;color:#7f7f7f;">-P</span> <span style="text-decoration:underline;">port</span>] [<span style="font-weight:bold;color:#7f7f7f;">-S</span> <span style="text-decoration:underline;">program</span>]
+         [<span style="font-weight:bold;color:#7f7f7f;">-X</span> <span style="text-decoration:underline;">sftp_option</span>] <span style="text-decoration:underline;">source</span> <span style="text-decoration:underline;">...</span> <span style="text-decoration:underline;">target</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">ITINF25/lektion4or:#000000;background-color:#000000;">
+</span>$ scp -p 10022 info.sh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+kent&#64;localhost:
+Warning: Permanently added &apos;localhost&apos; (ED25519) to the list of known hosts.
+kent&#64;localhost&apos;s password: 
+Permission denied, please try again.
+kent&#64;localhost&apos;s password: 
+<span style="color:#5c5cff;">ITINF25/lektion4
+<span style="color:#5c5cff;"> kent&#64;localhost:<span style="color:#5c5cff;">ITINF25/lektion4
+</span>$ scp -p 10022 info.sh kent&#64;localhostP
+
+
+
+
+
+
+
+Warning: Permanently added &apos;[localhost]:10022&apos; (ED25519) to the list of known hosts.
+info.sh                        100%   40   136.5KB/s   00:00    
+<span style="color:#5c5cff;">ITINF25/lektion4
+<span style="color:#5c5cff;"> kent&#64;localhostkent&#64;localhoskent&#64;localhoskent&#64;localhoskent&#64;localhoskent&#64;localhoskent&#64;localhoskent&#64;localhoskent&#64;localhosp<span style="color:#5c5cff;">ITINF25/lektion4
+</span>$ scp -p 10022 kent&#64;localhos
+cp: cannot stat &apos;10022&apos;: No such file or directory
+<span style="color:#5c5cff;">ITINF25/lektion4
+</span>$ scp -p 10022 kent&#64;localhosssh
+Warning: Permanently added &apos;[localhost]:10022&apos; (ED25519) to the list of known hosts.
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-79-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon Sep 22 12:54:59 PM UTC 2025
+
+  System load:  0.0                Processes:               118
+  Usage of /:   34.6% of 16.07GB   Users logged in:         1
+  Memory usage: 12%                IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+175 updates can be applied immediately.
+1 of these updates is a standard security update.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+1 updates could not be installed automatically. For more details,
+see /var/log/unattended-upgrades/unattended-upgrades.log
+
+*** System restart required ***
+Last login: Mon Sep 22 12:42:51 2025 from 10.0.2.2
+0;kent&#64;ubsembr: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubsembr</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 0;kent&#64;ubsembr: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubsembr</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ pwd
+/home/kent
+0;kent&#64;ubsembr: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubsembr</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls
+<span style="font-weight:bold;color:#00ff00;">info.sh</span>
+0;kent&#64;ubsembr: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubsembr</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls -l
+total 4
+-rwxr-xr-x 1 kent kent 40 Sep 22 12:54 <span style="font-weight:bold;color:#00ff00;">info.sh</span>
+0;kent&#64;ubsembr: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubsembr</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ eixxit
+logout
+Connection to localhost closed.
+<span style="color:#5c5cff;">ITINF25/lektion4
+<span style="color:#5c5cff;">5c5cff;">ITINF25/lektion4
+P 10022 info.sh kent&#64;localhostalhost
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+server-kent
+
+info.sh                        100%   40   148.3KB/s   00:00    
+<span style="color:#5c5cff;">ITINF25/lektion4
+</span>$ scp info.sh server-kent:info2.s
+info.sh                        100%   40   189.8KB/s   00:00    
+<span style="color:#5c5cff;">ITINF25/lektion4
+</span>$ ssh ser
+ver-kent ls
+info2
+info.sh
+<span style="color:#5c5cff;">ITINF25/lektion4
+cp info.sh server-kent:info/infohinfooinfominfoeinfokinfoeinfoinfoinfo/infokinfoeinfoninfotinfo/info
+
+
+
+
+
+<span style="color:#5c5cff;">>ITINF25/lektion4
+</span>$ scp info.sh server-kent:/home/kent/info3
+info.sh                        100%   40    72.6KB/s   00:00    
+<span style="color:#5c5cff;">ITINF25/lektion4
+sh server-kent ls.sh server-kent:/home/kent/info3
+info2
+info3
+info.sh
+<span style="color:#5c5cff;">ITINF25/lektion4
+<span style="color:#5c5cff;">5c5cff;">ITINF25/lektion4
+</span>$ ssh server-kent ls
+<span style="color:#000000;background-color:#000000;"></span>$ sscolor:#000000;background-color:#000000;">s</span><span style="color:#000000;background-color:#000000;">s&apos;: </span><span style="color:#000000;background-color:#000000;">ss</span><span style="color:#000000;background-color:#000000;">h server-kent lh&apos;: </span><span style="color:#000000;background-color:#000000;">ssh</span><span style="color:#000000;background-color:#000000;">
+
+
+
+
+
+
+
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-79-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon Sep 22 12:59:41 PM UTC 2025
+
+  System load:  0.0                Processes:               120
+  Usage of /:   34.6% of 16.07GB   Users logged in:         1
+  Memory usage: 11%                IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+175 updates can be applied immediately.
+1 of these updates is a standard security update.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+1 updates could not be installed automatically. For more details,
+see /var/log/unattended-upgrades/unattended-upgrades.log
+
+*** System restart required ***
+Last login: Mon Sep 22 12:55:21 2025 from 10.0.2.2
+0;kent&#64;ubsembr: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubsembr</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ cp uin
+inf
+o.sh supweerinfo.sh
+0;kent&#64;ubsembr: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubsembr</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ nano superinfo.sh 
+&gt;0;kent&#64;ubsembr: ~info.sh [ Writing... ] [ Wrote 5 lines ] Y Yesf7f;"></span><span style="font-weight:bold;color:#ff0000;">$uptime</span><span style="color:#00cd00;">$(</span>uptime
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubsembr</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 0;kent&#64;ubsembr: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubsembr</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ sudo apt install figlet
+[sudo] password for kent: 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  figlet
+0 upgraded, 1 newly installed, 0 to remove and 169 not upgraded.
+Need to get 133 kB of archives.
+After this operation, 752 kB of additional disk space will be used.
+Get:1 http://se.archive.ubuntu.com/ubuntu noble/universe amd64 figlet amd64 2.2.5-3 [133 kB]
+Fetched 133 kB in 0s (348 kB/s)0% [Working]</span>          </span><span style="color:#cdcd00;">
+
+Selecting previously unselected package figlet.
+(Reading database ... 122068 files and directories currently installed.)
+Preparing to unpack .../figlet_2.2.5-3_amd64.deb ...
+<span style="background-color:#00cd00;"></span><span style="color:#000000;background-color:#00cd00;">Progress: [  0%]</span> [...........................................] 87<span style="background-color:#00cd00;"></span><span style="color:#000000;background-color:#00cd00;">Progress: [ 20%]</span> [########...................................] 8Unpacking figlet (2.2.5-3) ...
+<span style="background-color:#00cd00;"></span><span style="color:#000000;background-color:#00cd00;">Progress: [ 40%]</span> [#################..........................] 8Setting up figlet (2.2.5-3) ...
+<span style="background-color:#00cd00;"></span><span style="color:#000000;background-color:#00cd00;">Progress: [ 60%]</span> [#########################..................] 8update-alternatives: using /usr/bin/figlet-figlet to provide /usr/bin/figlet (figlet) in auto mode
+<span style="background-color:#00cd00;"></span><span style="color:#000000;background-color:#00cd00;">Progress: [ 80%]</span> [##################################.........] 8Processing triggers for man-db (2.12.0-4build2) ...
+
+Scanning processes...                                            
+Scanning linux images...                                         
+
+Pending kernel upgrade!
+Running kernel version:
+  6.8.0-79-generic
+Diagnostics:
+  The currently running kernel version is not the expected
+kernel version 6.8.0-83-generic.
+
+Restarting the system to load the new kernel will not be handled
+automatically, so you should consider rebooting.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on
+ this host.
+0;kent&#64;ubsembr: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubsembr</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 0;kent&#64;ubsembr: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubsembr</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ./superinfo.sh 
+ _ _____   ___   ___    _  ___                  _  _    _  ___     ____  
+/ |___ /_ / _ \ / _ \ _/ |/ _ \   _   _ _ __   | || | _/ |/ _ \   |___ \ 
+| | |_ (_) | | | | | (_) | (_) | | | | | &apos;_ \  | || |(_) | | | |    __) |
+| |___) || |_| | |_| |_| |\__, | | |_| | |_) | |__   _|| | |_| |   / __/ 
+|_|____(_)\___/ \___/(_)_|  /_/   \__,_| .__/     |_|(_)_|\___( ) |_____|
+                                       |_|                    |/         
+                             _                 _ 
+ _   _ ___  ___ _ __ ___    | | ___   __ _  __| |
+| | | / __|/ _ \ &apos;__/ __|   | |/ _ \ / _` |/ _` |
+| |_| \__ \  __/ |  \__ \_  | | (_) | (_| | (_| |
+ \__,_|___/\___|_|  |___( ) |_|\___/ \__,_|\__,_|
+                        |/                       
+                                           ___   ___   ___   
+  __ ___   _____ _ __ __ _  __ _  ___ _   / _ \ / _ \ / _ \  
+ / _` \ \ / / _ \ &apos;__/ _` |/ _` |/ _ (_) | | | | | | | | | | 
+| (_| |\ V /  __/ | | (_| | (_| |  __/_  | |_| | |_| | |_| | 
+ \__,_| \_/ \___|_|  \__,_|\__, |\___(_)  \___(_)___/ \___( )
+                           |___/                          |/ 
+  ___   ___   ___      ___   ___   ___  
+ / _ \ / _ \ / _ \    / _ \ / _ \ / _ \ 
+| | | | | | | | | |  | | | | | | | | | |
+| |_| | |_| | |_| |  | |_| | |_| | |_| |
+ \___(_)___/ \___( )  \___(_)___/ \___/ 
+                 |/                     
+ubsembr
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: enp0s3: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:0a:a1:3f brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 metric 100 brd 10.0.2.255 scope global dynamic enp0s3
+       valid_lft 71375sec preferred_lft 71375sec
+    inet6 fe80::a00:27ff:fe0a:a13f/64 scope link 
+       valid_lft forever preferred_lft forever
+0;kent&#64;ubsembr: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubsembr</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 
+0;kent&#64;ubsembr: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubsembr</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 0;kent&#64;ubsembr: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubsembr</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ difiglet Hej
+ _   _       _ 
+| | | | ___ (_)
+| |_| |/ _ \| |
+|  _  |  __/| |
+|_| |_|\___|/ |
+          |__/ 
+0;kent&#64;ubsembr: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubsembr</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ exit
+logout
+Connection to localhost closed.
+<span style="color:#5c5cff;">ITINF25/lektion4
+<span style="color:#5c5cff;">5c5cff;">ITINF25/lektion4
+</span>$ ls
+config	info.sh  recordings  ssh_hardening.txt
+<span style="color:#5c5cff;">ITINF25/lektion4
+<span style="color:#00cd00;background-color:#000000;"></span>$ scppan><span style="color:#000000;background-color:#00cd00;">scp</span><span style="color:#00cd00;background-color:#000000;"> info.sh server-kent:/home/kent/info3 info.sh server-kent:/home/kent/info3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+superinfo.s
+
+
+
+
+
+
+
+
+
+.sserver-kent:/home/kent/superinfo.sserver-kent:/home/kent/superinfo.server-kent:/home/kent/superinfo.sserver-kent:/home/kent/superinfo.sserver-kent:/home/kent/superinfo.sserver-kent:/home/kent/superinfo.sserver-kent:/home/kent/superinfo.sserver-kent:/home/kent/superinfo.s
+
+
+
+
+
+
+
+
+
+ .
+superinfo.sh                   100%   50    57.7KB/s   00:00    
+<span style="color:#5c5cff;">ITINF25/lektion4
+<span style="color:#5c5cff;">"color:#5c5cff;">ITINF25/lektion4
+</span>$ cd /tmp/
+<span style="color:#5c5cff;">/tmp </span>$ ls
+remote-file-71752ccfe2464e99
+systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-bluetooth.service-xNqsgb
+systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-bolt.service-FgSo0x
+systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-colord.service-UdZszd
+systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-fwupd.service-37RphU
+systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-geoclue.service-XvSqWT
+systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-low-memory-monitor.service-t8J5K4
+systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-ModemManager.service-skil2R
+systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-power-profiles-daemon.service-QrPLCX
+systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-switcheroo-control.service-3E3bqZ
+systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-systemd-logind.service-Kqdom9
+systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-systemd-timesyncd.service-RDWckO
+systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-upower.service-1XJAR4
+tracker-extract-3-files.1000
+tracker-extract-3-files.113
+VSLiveshareLogs
+<span style="color:#5c5cff;">/tmp </span>$ <span style="color:#5c5cff;">/tmp </span>$ ls
+remote-file-71752ccfe2464e99
+systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-bluetooth.service-xNqsgb
+systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-bolt.service-FgSo0x
+systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-colord.service-UdZszd
+systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-fwupd.service-37RphU
+systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-geoclue.service-XvSqWT
+systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-low-memory-monitor.service-t8J5K4
+systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-ModemManager.service-skil2R
+systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-power-profiles-daemon.service-QrPLCX
+systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-switcheroo-control.service-3E3bqZ
+systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-systemd-logind.service-Kqdom9
+systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-systemd-timesyncd.service-RDWckO
+systemd-private-cfbb7ed4e54c47ea9494bf02e2cd6e08-upower.service-1XJAR4
+tracker-extract-3-files.1000
+tracker-extract-3-files.113
+VSLiveshareLogs
+<span style="color:#5c5cff;">/tmp </span>$ <span style="color:#5c5cff;">/tmp </span>$ cd
+<span style="color:#5c5cff;">~ </span>$ <span style="color:#5c5cff;">~ </span>$ ls
+ bin	     Downloads	 Public       &apos;VirtualBox VMs&apos;
+ bokforing   Dropbox	 Screenshots
+ Desktop     Music	 Templates
+ Documents   Pictures	 Videos
+<span style="color:#5c5cff;">~ </span>$ <span style="color:#5c5cff;">~ </span>$ git clone <span style="color:#000000;background-color:#000000;">git&#64;github.com:nackc8/l11-apache-d4-kc8se-1.git</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">git&#64;github.com:nackc8/l11-apache-d4-kc8se-1.git
+<span style="color:#000000;background-color:#000000;">Cloning into &apos;l11-apache-d4-kc8se-1&apos;...
+remote: Enumerating objects: 10, done.
+<span style="color:#000000;background-color:#000000;">remote: Counting objects: 100% (3/3), done.
+<span style="color:#000000;background-color:#000000;">remote: Compressing objects: 100% (3/3), done.
+remote: Total 10 (delta 0), reused 0 (delta 0), pack-reused 7 (from 2)
+<span style="color:#000000;background-color:#000000;">Receiving objects: 100% (10/10), 5.37 KiB | 5.37 MiB/s, done.
+</span><span style="color:#5c5cff;background-color:#000000;">~ </span>$ cd l11-apache-d4-kc8se-1/
+<span style="color:#5c5cff;"></span>$ <span style="color:#5c5cff;"></span>$ ls
+index.html  installation.md  README.md
+<span style="color:#5c5cff;"></span>$ code .
+<span style="color:#5c5cff;"></span>$ 
+exit
+
+Script done on 2025-09-22 15:15:46+02:00 [COMMAND_EXIT_CODE=&quot;0&quot;]
+</pre>
+</body>
+</html>
+<!--HTML generated by ansifilter 2.18, http://www.andre-simon.de/-->

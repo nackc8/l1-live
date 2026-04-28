@@ -1,0 +1,12 @@
+# Lite förberedda kommandon
+
+
+
+backup_find() {
+    local start=${1}
+    local pattern=${2}
+
+    local SKIP="-path /proc -o -path /sys -o -path /dev -o -path /run -o -path /tmp -o -path /var/tmp -o -path /snap"
+
+    find -H "$start" \( $SKIP \) -prune -o -type f -name "$pattern" -print
+}

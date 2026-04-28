@@ -1,0 +1,226 @@
+Script started on 2025-04-15 12:59:14+02:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="138" LINES="16"]
+DEVOPS24/lektion1
+$ DEVOPS24/lektion1
+$ mkdir ln
+DEVOPS24/lektion1
+$ cd ln/
+DEVOPS24/lektion1/ln
+$ DEVOPS24/lektion1/ln
+$ ls
+DEVOPS24/lektion1/ln
+$ touch fil
+DEVOPS24/lektion1/ln
+$ stat fil DEVOPS24/lektion1/ln
+$ stat fil 
+  File: fil
+  Size: 8         	Blocks: 8          IO Block: 4096   regular file
+Device: 253,1	Inode: 95297612    Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1000/    kent)   Gid: ( 1000/    kent)
+Access: 2025-04-15 13:00:01.548910037 +0200
+Modify: 2025-04-15 13:00:01.516911459 +0200
+Change: 2025-04-15 13:00:01.516911459 +0200
+ Birth: 2025-04-15 12:59:47.677536656 +0200
+DEVOPS24/lektion1/ln
+$ DEVOPS24/lektion1/ln
+$ ls
+fil
+DEVOPS24/lektion1/ln
+$ ln cfil hardlink
+DEVOPS24/lektion1/ln
+$ stat fil
+  File: fil
+  Size: 8         	Blocks: 8          IO Block: 4096   regular file
+Device: 253,1	Inode: 95297612    Links: 2
+Access: (0644/-rw-r--r--)  Uid: ( 1000/    kent)   Gid: ( 1000/    kent)
+Access: 2025-04-15 13:00:01.548910037 +0200
+Modify: 2025-04-15 13:00:01.516911459 +0200
+Change: 2025-04-15 13:01:03.926340083 +0200
+ Birth: 2025-04-15 12:59:47.677536656 +0200
+DEVOPS24/lektion1/ln
+$ DEVOPS24/lektion1/ln
+$ ls
+fil  hardlink
+DEVOPS24/lektion1/ln
+$ rm fil 
+DEVOPS24/lektion1/ln
+lsstat fil
+stat: cannot statx 'fil': No such file or directory
+DEVOPS24/lektion1/ln
+$ stat fih
+ hardlink 
+  File: hardlink
+  Size: 8         	Blocks: 8          IO Block: 4096   regular file
+Device: 253,1	Inode: 95297612    Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1000/    kent)   Gid: ( 1000/    kent)
+Access: 2025-04-15 13:00:01.548910037 +0200
+Modify: 2025-04-15 13:00:01.516911459 +0200
+Change: 2025-04-15 13:01:29.721388263 +0200
+ Birth: 2025-04-15 12:59:47.677536656 +0200
+DEVOPS24/lektion1/ln
+$ DEVOPS24/lektion1/ln
+$ ls
+hardlink
+DEVOPS24/lektion1/ln
+$ rm hardlink 
+DEVOPS24/lektion1/ln
+$ DEVOPS24/lektion1/ln
+$ DEVOPS24/lektion1/ln
+$ ls
+DEVOPS24/lektion1/ln
+$ nano movilegood.txt
+>DEVOPS24/lektion1/lnood.txt [ Writing... ] [ Wrote 4 lines ]                          Y Yes        
+$ ln -s good.txt bad.txt
+DEVOPS24/lektion1/ln
+$ ls +-i
+95297615 bad.txt  95297616 good.txt
+DEVOPS24/lektion1/ln
+$ rls -l
+total 4
+lrwxrwxrwx 1 kent kent  8 Apr 15 13:03 bad.txt -> good.txt
+-rw-r--r-- 1 kent kent 14 Apr 15 13:03 good.txt
+DEVOPS24/lektion1/ln
+$ rm good.txt 
+DEVOPS24/lektion1/ln
+ls -lgood.txt 
+total 0
+lrwxrwxrwx 1 kent kent 8 Apr 15 13:03 bad.txt -> good.txt
+DEVOPS24/lektion1/ln
+$ cat bad.txt 
+cat: bad.txt: No such file or directory
+DEVOPS24/lektion1/ln
+$ cat bad.txt 
+Tillbaka!
+DEVOPS24/lektion1/ln
+$ ls
+bad.txt  good.txt
+DEVOPS24/lektion1/ln
+$ cart bad.txtt bad.txt 
+Tillbaka!
+DEVOPS24/lektion1/ln
+$ rm good.txt 
+DEVOPS24/lektion1/ln
+$ ls +-รถl
+total 0
+lrwxrwxrwx 1 kent kent 8 Apr 15 13:03 bad.txt -> good.txt
+DEVOPS24/lektion1/ln
+$ cat bad.txt
+cat: bad.txt: No such file or directory
+DEVOPS24/lektion1/ln
+$ ls
+bad.txt
+DEVOPS24/lektion1/ln
+$ nano bad.txt 
+>DEVOPS24/lektion1/lnad.txt [ Writing... ] [ Wrote 1 line ]                            Y Yes        
+$ ls
+bad.txt  good.txt
+DEVOPS24/lektion1/ln
+$ ls +-l
+total 4
+lrwxrwxrwx 1 kent kent 8 Apr 15 13:03 bad.txt -> good.txt
+-rw-r--r-- 1 kent kent 4 Apr 15 13:07 good.txt
+DEVOPS24/lektion1/ln
+$ DEVOPS24/lektion1/ln
+$ ls /
+bin   home	      lib64	  opt		   run	   swapfile  var
+boot  initrd.img      lost+found  persistent-data  sbin    sys	     vmlinuz
+dev   initrd.img.old  media	  proc		   shared  tmp	     vmlinuz.old
+etc   lib	      mnt	  root		   srv	   usr
+DEVOPS24/lektion1/ln
+$ DEVOPS24/lektion1/ln
+$ ls ย~/
+ Android		 Desktop     Music	   shared_desktop
+ AndroidStudioProjects	 Documents   Pictures	   Templates
+ bin			 Downloads   Public	   Videos
+ bokforing		 Dropbox     Screenshots  'VirtualBox VMs'
+DEVOPS24/lektion1/ln
+$ ls ~ ~- ~A ~
+ .android		 .flutter		      .profile.bak
+ Android		 .gitconfig		      .pub-cache
+ AndroidStudioProjects	 .gitconfig_github_c8	      Public
+ .andstudio		 .gitconfig_github_nackc8     .python_history
+ .ansible		 .gitconfig_github_personal   .redhat
+ .backups		 .gnome			      .rest-client
+ .bash_history		 .gnupg			      Screenshots
+ .bash_logout		 .gradle		      .selected_editor
+ .bashrc		 .grsync		      shared_desktop
+ .bashrc.d		 .gtkrc-2.0		      .shellcheckrc
+ .bin			 .guestfish		      .ssh
+ bin			 .ICEauthority		      .sshubse
+ bokforing		 .java			      .sudo_as_admin_successful
+ .cache			 .lemminx		      .swt
+ .clasprc.json		 .lesshst		      Templates
+ .config		 .local			      .unison
+ .dartServer		 .m2			      .vagrant
+ .dart-tool		 .mozilla		      Videos
+ Desktop		 Music			      .viminfo
+ .docker		 .node_repl_history	     'VirtualBox VMs'
+ Documents		 .npm			      .vscode
+ .dotnet		 .nvm			      .vscode-server
+ Downloads		 .openjfx		      .w3m
+ .dropbox		 .packages		      .wget-hsts
+ Dropbox		 .pandoc		      .wine
+ .elinks		 Pictures		      .xinputrc
+ .face			 .pki			      .zoom
+ .face.icon		 .profile
+DEVOPS24/lektion1/ln
+$ DEVOPS24/lektion1/ln
+$ ls -a
+.  ..  bad.txt	good.txt
+DEVOPS24/lektion1/ln
+$ ls -i
+95297611 .  95297585 ..  95297615 bad.txt  95297618 good.txt
+DEVOPS24/lektion1/ln
+$ stat /home/
+
+
+
+
+
+
+
+pwd
+/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion1/ln
+DEVOPS24/lektion1/ln
+$ stat /shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion1/ln
+/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion1/ln
+  File: /shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion1/ln
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 253,1	Inode: 95297611    Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/    kent)   Gid: ( 1000/    kent)
+Access: 2025-04-15 13:07:11.997457229 +0200
+Modify: 2025-04-15 13:07:10.753473605 +0200
+Change: 2025-04-15 13:07:10.753473605 +0200
+ Birth: 2025-04-15 12:59:41.605817590 +0200
+DEVOPS24/lektion1/ln
+pwdls -aihared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion1/ln
+95297611 .  95297585 ..  95297615 bad.txt  95297618 good.txt
+DEVOPS24/lektion1/ln
+stat /shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion1/l
+  File: /shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion1
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 253,1	Inode: 95297585    Links: 4
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/    kent)   Gid: ( 1000/    kent)
+Access: 2025-04-15 12:59:42.389781085 +0200
+Modify: 2025-04-15 12:59:41.605817590 +0200
+Change: 2025-04-15 12:59:41.605817590 +0200
+ Birth: 2025-04-15 12:59:14.563119599 +0200
+DEVOPS24/lektion1/ln
+$ DEVOPS24/lektion1/ln
+$ pwd
+/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion1/ln
+DEVOPS24/lektion1/ln
+$ cd .
+DEVOPS24/lektion1/ln
+$ cd .
+DEVOPS24/lektion1/ln
+pwdd .
+/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion1/ln
+DEVOPS24/lektion1/ln
+$ c
+bash: c: command not found
+DEVOPS24/lektion1/ln
+$ cd ..
+DEVOPS24/lektion1
+$ pwd
+/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion1
+

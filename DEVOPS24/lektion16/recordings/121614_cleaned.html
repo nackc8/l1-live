@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style type="text/css">
+pre {
+  font-family:Courier New;
+  font-size:10pt;
+}
+
+.af_line {
+  color: gray;
+  text-decoration: none;
+}
+
+</style>
+<title>121614.txt</title>
+</head>
+<body>
+<pre>Script started on 2025-05-15 12:16:14+02:00 [TERM=&quot;xterm-256color&quot; TTY=&quot;/dev/pts/3&quot; COLUMNS=&quot;165&quot; LINES=&quot;28&quot;]
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+</span>$ <span style="color:#000000;background-color:#000000;">backup_find() {</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span><span style="color:#000000;background-color:#000000;">    SKIP=&quot;\( -path /proc -o -path /sys -o -path /dev -o -path /run \</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span><span style="color:#000000;background-color:#000000;">            -o -path /tmp -o -path /var/tmp -o -path /snap \)&quot;</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span><span style="color:#000000;background-color:#000000;">    sudo find -L &quot;${1:-/}&quot; -xdev $SKIP -prune -o -type f &quot;$&#64;&quot;</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span><span style="color:#000000;background-color:#000000;">}</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>$ backup_find() {
+...
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+</span>$ backup
+_find -namtype /&quot;.abackupme
+
+
+[sudo] password for kent: 
+find: paths must precede expression: `\(&apos;
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+backup_find &quot;.backupme/&quot;.backupme &quot;.backupme
+find: paths must precede expression: `\(&apos;
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+...
+<span style="color:#5c5cff;">            -o -path /tmp -o -path /var/tmp -o -path /snap \)&quot;;     sudo find -L &quot;${1:-/}&quot; -xdev $SKIP -prune -o -type f &quot;$&#64;&quot;; 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="color:#5c5cff;"></span><span style="color:#5c5cff;">DEVOPS24/lektion16
+</span>$ backup_find() {     SKIP=&quot;\( -path /proc -o -path /sys -o -path /dev -o -path /run \
+ / &quot;.backupme&quot;p -o -path /var/tmp -o -path /snap \)&quot;;     sudo find -L &quot;$1&quot; -xdev $SKIP -prune -o -type f &quot;$2&quot;; }
+.backupm
+find: paths must precede expression: `\(&apos;
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+</span>$ backup_find / .backupme
+find: paths must precede expression: `\(&apos;
+...
+            -o -path /tmp -o -path /var/tmp -o -path /snap \)&quot;;     sudo find -L &quot;$1&quot; -xdev $SKIP -prune -o -type f &quot;$2&quot;; }
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+</span>$ backup_find() {     SKIP=&quot;\( -path /proc -o -path /sys -o -path /dev -o -path /run \
+ / .backupme-o -path /tmp -o -path /var/tmp -o -path /snap \)&quot;;     sudo find -L &quot;$1&quot; -xdev $SKIP -prune -o -type f &quot;$2&quot;; }
+
+find: paths must precede expression: `\(&apos;
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+</span>$ <span style="color:#000000;background-color:#000000;">backup_find () {</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span><span style="color:#000000;background-color:#000000;">    # starting directory (defaults to / if omitted)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span><span style="color:#000000;background-color:#000000;">    local start=${1:-/}</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span><span style="color:#000000;background-color:#000000;">    # filename pattern (defaults to * if omitted)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span><span style="color:#000000;background-color:#000000;">    local pattern=${2:-&apos;*&apos;}</span><span style="color:#000000;background-color:#000000;">
+...
+<span style="color:#5c5cff;background-color:#000000;"></span><span style="color:#5c5cff;background-color:#000000;">DEVOPS24/lektion16
+</span>$ backup_find () {
+    local start=${1:-/}
+    local pattern=${2:-&apos;*&apos;}; 
+    local SKIP=&quot;-path /proc -o -path /sys -o -path /dev -o -path /run \
+                -o -path /tmp -o -path /var/tmp -o -path /snap&quot;;      sudo find -L &quot;$start&quot; -xdev         \( $SKIP \) -prune -o         -type f -name &quot;$pattern&quot; -print; }/ .backupme
+...
+find: File system loop detected; ‘/var/lib/docker/overlay2/l/IY5MCBIA3ICOSHUOQNWBSI4BUZ/usr/bin/X11’ is part of the same file system loop as ‘/var/lib/docker/overlay2/l/IY5MCBIA3ICOSHUOQNWBSI4BUZ/usr/bin’.
+find: File system loop detected; ‘/var/lib/docker/overlay2/bb8d28f2fc968b841086125296b9b74026a833504df09da57decc9e79dea3229/diff/usr/bin/X11’ is part of the same file system loop as ‘/var/lib/docker/overlay2/bb8d28f2fc968b841086125296b9b74026a833504df09da57decc9e79dea3229/diff/usr/bin’.
+find: File system loop detected; ‘/bin/X11’ is part of the same file system loop as ‘/bin’.
+find: File system loop detected; ‘/usr/bin/X11’ is part of the same file system loop as ‘/usr/bin’.
+find: File system loop detected; ‘/home/kent/.var/app/com.usebottles.bottles/data/bottles/bottles/Paint.NET/dosdevices/z:’ is part of the same file system loop as ‘/’.
+...
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+ls testk backup_find / .backupme
+at
+1  2  3  a  brafil  dalignej
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+...
+find: File system loop detected; ‘/var/lib/docker/overlay2/bb8d28f2fc968b841086125296b9b74026a833504df09da57decc9e79dea3229/diff/usr/bin/X11’ is part of the same file system loop as ‘/var/lib/docker/overlay2/bb8d28f2fc968b841086125296b9b74026a833504df09da57decc9e79dea3229/diff/usr/bin’.
+find: File system loop detected; ‘/bin/X11’ is part of the same file system loop as ‘/bin’.
+find: File system loop detected; ‘/usr/bin/X11’ is part of the same file system loop as ‘/usr/bin’.
+find: File system loop detected; ‘/home/kent/.var/app/com.usebottles.bottles/data/bottles/bottles/Paint.NET/dosdevices/z:’ is part of the same file system loop as ‘/’.
+...
+<span style="color:#5c5cff;">5cff;">DEVOPS24/lektion16
+</span>$ unset back
+upm_find
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+backup_find / .backupm() {
+    local start=${1:-/}
+    local pattern=${2:-&apos;*&apos;}; 
+    local SKIP=&quot;-path /proc -o -path /sys -o -path /dev -o -path /run \
+<span style="color:#5c5cff;"> -o -path /var/tmp -o -path /snap&quot;;      sudo find -L &quot;$start&quot; -xdev         \( $SKIP \) -prune -o         -type f -name &quot;$pattern&quot; -print; }<span style="color:#5c5cff;">DEVOPS24/lektion16
+</span>$ backup_find () {
+    local start=${1:-/}
+    local pattern=${2:-&apos;*&apos;}; 
+    local SKIP=&quot;-path /proc -o -path /sys -o -path /dev -o -path /run \
+                -o -path /tmp -o -path /var/tmp -o -path /snap&quot;;      sudo find -L &quot;$start&quot; -xdev         \( $SKIP \) -prune -o         -type f -name &quot;$pattern&quot; -print; }
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+</span>$ backup_find () {     local start=${1:-/};     local pattern=${2:-&apos;*&apos;};      local SKIP=&quot;-path /proc -o -path /sys -o -path /dev -o -path /run \
+                -o -path /tmp -o -path /var/tmp -o -path /snap&quot;;      sudo find -L &quot;$start&quot; -xdev         \( $SKIP \) -prune -o         -type f -name &quot;$pattern&quot; -print; }unset backup_find
+
+ls testkatd / .backupme
+1  2  3  a  brafil  dalignej
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+backup_find () {     local start=${1:-/};     local pattern=${2:-&apos;*&apos;};      local SKIP=&quot;-path /proc -o -path /sys -o -path /dev -o -path /run \
+                -o -path /tmp -o -path /var/tmp -o -path /snap&quot;;      sudo find -L &quot;$start&quot; -xdev         \( $SKIP \) -prune -o         -type f -name &quot;$pattern&quot; -print; }unset backup_find
+
+backup_find / .backupme
+find: File system loop detected; ‘/var/lib/docker/overlay2/l/IY5MCBIA3ICOSHUOQNWBSI4BUZ/usr/bin/X11’ is part of the same file system loop as ‘/var/lib/docker/overlay2/l/IY5MCBIA3ICOSHUOQNWBSI4BUZ/usr/bin’.
+find: File system loop detected; ‘/var/lib/docker/overlay2/bb8d28f2fc968b841086125296b9b74026a833504df09da57decc9e79dea3229/diff/usr/bin/X11’ is part of the same file system loop as ‘/var/lib/docker/overlay2/bb8d28f2fc968b841086125296b9b74026a833504df09da57decc9e79dea3229/diff/usr/bin’.
+find: File system loop detected; ‘/bin/X11’ is part of the same file system loop as ‘/bin’.
+find: File system loop detected; ‘/usr/bin/X11’ is part of the same file system loop as ‘/usr/bin’.
+find: File system loop detected; ‘/home/kent/.var/app/com.usebottles.bottles/data/bottles/bottles/Paint.NET/dosdevices/z:’ is part of the same file system loop as ‘/’.
+...
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+</span>$ backup
+<span style="color:#5c5cff;">cff;">DEVOPS24/lektion16
+</span>$ backup_find 
+/vmlinuz
+/var/backups/dpkg.arch.0
+/var/backups/alternatives.tar.5.gz
+/var/backups/dpkg.diversions.4.gz
+/var/backups/apt.extended_states.6.gz
+...
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+<span style="color:#000000;background-color:#000000;">backup_find /home &quot;.backupme&quot;^Ce&quot;</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#5c5cff;background-color:#000000;">0000;">DEVOPS24/lektion16
+</span>$ ^C
+...
+find: File system loop detected; ‘/home/kent/.var/app/com.usebottles.bottles/data/bottles/bottles/Paint.NET/dosdevices/z:/var/lib/docker/overlay2/bb8d28f2fc968b841086125296b9b74026a833504df09da57decc9e79dea3229/diff/usr/bin/X11’ is part of the same file system loop as ‘/home/kent/.var/app/com.usebottles.bottles/data/bottles/bottles/Paint.NET/dosdevices/z:/var/lib/docker/overlay2/bb8d28f2fc968b841086125296b9b74026a833504df09da57decc9e79dea3229/diff/usr/bin’.
+find: File system loop detected; ‘/home/kent/.var/app/com.usebottles.bottles/data/bottles/bottles/Paint.NET/dosdevices/z:/bin/X11’ is part of the same file system loop as ‘/home/kent/.var/app/com.usebottles.bottles/data/bottles/bottles/Paint.NET/dosdevices/z:/bin’.
+find: File system loop detected; ‘/home/kent/.var/app/com.usebottles.bottles/data/bottles/bottles/Paint.NET/dosdevices/z:/usr/bin/X11’ is part of the same file system loop as ‘/home/kent/.var/app/com.usebottles.bottles/data/bottles/bottles/Paint.NET/dosdevices/z:/usr/bin’.
+find: File system loop detected; ‘/home/kent/.var/app/com.usebottles.bottles/data/bottles/bottles/Paint.NET/dosdevices/z:/home’ is part of the same file system loop as ‘/home’.
+...
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+</span>$ backup_find /home &quot;.backupme &quot;.backupme &quot;.backupme &quot;.backupme &quot;.backupme &quot;.backupmet &quot;.backupmee &quot;.backupmes &quot;.backupmet &quot;.backupmek &quot;.backupme
+at &quot;.backupme
+testkat/.backupme
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+...
+backupme         backupme.config  
+<span style="color:#5c5cff;">5cff;">DEVOPS24/lektion16
+</span>$ unset backupm_find
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+</span>$ <span style="color:#000000;background-color:#000000;">backup_find () {</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span><span style="color:#000000;background-color:#000000;">    local start=${1:-/}</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span><span style="color:#000000;background-color:#000000;">    local pattern=${2:-&apos;*&apos;}</span><span style="color:#000000;background-color:#000000;">
+
+<span style="color:#000000;background-color:#000000;"></span><span style="color:#000000;background-color:#000000;">    local SKIP=&quot;-path /proc -o -path /sys -o -path /dev -o -path /run \</span><span style="color:#000000;background-color:#000000;">
+...
+<span style="color:#5c5cff;background-color:#000000;"></span><span style="color:#5c5cff;background-color:#000000;">DEVOPS24/lektion16
+</span>$ back
+up_find / .backupme
+/
+/vmlinuz
+/srv
+/lost+found
+/var
+...
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+</span>$ backup_find / .backupm() {     local start=${1:-/};     local pattern=${2:-&apos;*&apos;};      local SKIP=&quot;-path /proc -o -path /sys -o -path /dev -o -path /run \
+                -o -path /tmp -o -path /var/tmp -o -path /snap&quot;;      sudo find -H &quot;$start&quot; \          # &lt;- H instead of L
+        \( $SKIP \) -prune -o         -type f -name &quot;$pattern&quot; -print; }^C
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+</span>$ backup_find / .backupm() {     local start=${1:-/};     local pattern=${2:-&apos;*&apos;};      local SKIP=&quot;-path /proc -o -path /sys -o -path /dev -o -path /run \
+                -o -path /tmp -o -path /var/tmp -o -path /snap&quot;;      sudo find -H &quot;$start&quot; \          # &lt;- H instead of L
+/ .backupme$SKIP \) -prune -o         -type f -name &quot;$pattern&quot; -print; }
+
+
+/
+/vmlinuz
+/srv
+/lost+found
+/var
+...
+find: ‘/run/user/1000/doc’: Permission denied
+/run/user/1000/doc
+/run/user/1000/gnome-shell
+/run/user/1000/gnome-shell/runtime-state-LE.:0
+/run/user/1000/ICEauthority
+...
+find: ‘/run/user/1000/gvfs’: Permission denied
+/run/user/1000/gvfs
+/run/user/1000/gvfsd
+/run/user/1000/dbus-1
+/run/user/1000/dbus-1/services
+...
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+</span>$ ^C
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+</span>$ ^C
+...
+/vmlinuz
+/srv
+/lost+found
+/var
+...
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+</span>$ bash f 
+ .backupme
+/
+/vmlinuz
+/srv
+/lost+found
+/var
+...
+find: ‘/run/user/1000/doc’: Permission denied
+/run/user/1000/doc
+/run/user/1000/gnome-shell
+/run/user/1000/gnome-shell/runtime-state-LE.:0
+/run/user/1000/ICEauthority
+...
+find: ‘/run/user/1000/gvfs’: Permission denied
+/run/user/1000/gvfs
+/run/user/1000/gvfsd
+/run/user/1000/dbus-1
+/run/user/1000/dbus-1/services
+...
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+</span>$ bash f / .backupme  ^C
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+</span>$ cat x
+
+...
+    local start=${1:-/}
+    local pattern=${2:-&apos;*&apos;}
+
+    local SKIP=&quot;-path /proc -o -path /sys -o -path /dev -o -path /run \
+                -o -path /tmp -o -path /var/tmp -o -path /snap&quot;
+
+    sudo find -H &quot;$start&quot; \          # &lt;- H instead of L
+        \( $SKIP \) -prune -o \
+        -type f -name &quot;$pattern&quot; -print
+}
+
+backup_find &quot;$&#64;&quot;
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+bash f / .backupme   ^C
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+</span>$ code f
+...
+/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion16/testkat/.backupme
+<span style="color:#5c5cff;">DEVOPS24/lektion16
+</span>$ 
+exit
+
+Script done on 2025-05-15 12:29:11+02:00 [COMMAND_EXIT_CODE=&quot;0&quot;]
+</pre>
+</body>
+</html>
+<!--HTML generated by ansifilter 2.18, http://www.andre-simon.de/-->

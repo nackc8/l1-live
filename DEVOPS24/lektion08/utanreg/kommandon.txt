@@ -1,0 +1,46 @@
+cat
+head
+    head wiki.txt
+        10 första
+    head -n3 wiki.txt
+        3 första
+    head -n -5 wiki.txt
+        Skriver den ut från start, men slutar när det är 5 rader kvar
+tail
+    tail wiki.txt
+        10 sista
+    tail -n 3 wiki.txt
+        3 sista
+    tail -n +5 wiki.txt
+sort
+    sort wiki.txt
+        Sortat enligt default
+    sort -n wiki-radnr.txt
+        Sorterat enligt numret först på raden
+uniq
+    uniq fil.txt
+        Tar den bort intilligande dublettrader
+    sort wiki-dublett.txt | uniq
+        Tar bort dubletter
+    sort wiki-dublett.txt | uniq -d
+        Visar dubletter
+    sort wiki-dublett.txt | uniq -c
+        Visar antal förekomster
+cut
+    echo 'Ett Tva Tre' | cut -d' ' -f3
+        Skriver ut tredje kolumnen, med mellanslag separator
+    echo 'Ett Tva Tre' | cut -d' ' -f1,3
+        Visar upp fält 1 och 3
+    echo -e 'Ett\tTva\tTre' | cut -f2
+        Visar upp fält två, inget -d behövs då tab är standard
+tr
+    Notera! tr fungerar bara med tecken som tar upp en byte
+    i storlek. Dit hör inte åäö i UTF-8 encoding.
+
+    echo "$PATH" | tr ':' $'\n'
+        Byter ut : i PATH mot nyradstecken
+    echo 'närheten av Göteborg mellan' | tr 'nh' 'ui'
+        Byt alla n mot u, och alla h mot i
+        Svenska tecken funkar inte.
+    echo 'närheten av Göteborg mellan' | tr -d am
+        Tar bort alla a och alla m

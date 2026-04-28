@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Vi sätter -F till semikolon först, och kan då få ut fälten när de
+# separeras så. Alternativ till att sätta variabeln FS.
+
+# Noteriung! awk använder INTE variabeln IFS
+
+awk -F ';' '/@[^@]+[.][^.@]/  { print $1 }' ../../extext/email.csv

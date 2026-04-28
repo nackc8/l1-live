@@ -1,0 +1,245 @@
+Script started on 2025-05-15 12:16:14+02:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="165" LINES="28"]
+DEVOPS24/lektion16
+$ backup_find() {
+    SKIP="\( -path /proc -o -path /sys -o -path /dev -o -path /run \
+            -o -path /tmp -o -path /var/tmp -o -path /snap \)"
+    sudo find -L "${1:-/}" -xdev $SKIP -prune -o -type f "$@"
+}
+$ backup_find() {
+...
+DEVOPS24/lektion16
+$ backup
+_find -namtype /".abackupme
+
+
+[sudo] password for kent: 
+find: paths must precede expression: `\('
+DEVOPS24/lektion16
+backup_find ".backupme/".backupme ".backupme
+find: paths must precede expression: `\('
+DEVOPS24/lektion16
+...
+            -o -path /tmp -o -path /var/tmp -o -path /snap \)";     sudo find -L "${1:-/}" -xdev $SKIP -prune -o -type f "$@"; 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+DEVOPS24/lektion16
+$ backup_find() {     SKIP="\( -path /proc -o -path /sys -o -path /dev -o -path /run \
+ / ".backupme" -path /tmp -o -path /var/tmp -o -path /snap \)";     sudo find -L "$1" -xdev $SKIP -prune -o -type f "$2"; }
+.backupm
+find: paths must precede expression: `\('
+DEVOPS24/lektion16
+$ backup_find / .backupme
+find: paths must precede expression: `\('
+...
+            -o -path /tmp -o -path /var/tmp -o -path /snap \)";     sudo find -L "$1" -xdev $SKIP -prune -o -type f "$2"; }
+DEVOPS24/lektion16
+$ backup_find() {     SKIP="\( -path /proc -o -path /sys -o -path /dev -o -path /run \
+ / .backupme-o -path /tmp -o -path /var/tmp -o -path /snap \)";     sudo find -L "$1" -xdev $SKIP -prune -o -type f "$2"; }
+
+find: paths must precede expression: `\('
+DEVOPS24/lektion16
+$ backup_find () {
+    # starting directory (defaults to / if omitted)
+    local start=${1:-/}
+    # filename pattern (defaults to * if omitted)
+    local pattern=${2:-'*'}
+...
+DEVOPS24/lektion16
+$ backup_find () {
+    local start=${1:-/}
+    local pattern=${2:-'*'}; 
+    local SKIP="-path /proc -o -path /sys -o -path /dev -o -path /run \
+                -o -path /tmp -o -path /var/tmp -o -path /snap";      sudo find -L "$start" -xdev         \( $SKIP \) -prune -o         -type f -name "$pattern" -print; }/ .backupme
+...
+find: File system loop detected; ‘/var/lib/docker/overlay2/l/IY5MCBIA3ICOSHUOQNWBSI4BUZ/usr/bin/X11’ is part of the same file system loop as ‘/var/lib/docker/overlay2/l/IY5MCBIA3ICOSHUOQNWBSI4BUZ/usr/bin’.
+find: File system loop detected; ‘/var/lib/docker/overlay2/bb8d28f2fc968b841086125296b9b74026a833504df09da57decc9e79dea3229/diff/usr/bin/X11’ is part of the same file system loop as ‘/var/lib/docker/overlay2/bb8d28f2fc968b841086125296b9b74026a833504df09da57decc9e79dea3229/diff/usr/bin’.
+find: File system loop detected; ‘/bin/X11’ is part of the same file system loop as ‘/bin’.
+find: File system loop detected; ‘/usr/bin/X11’ is part of the same file system loop as ‘/usr/bin’.
+find: File system loop detected; ‘/home/kent/.var/app/com.usebottles.bottles/data/bottles/bottles/Paint.NET/dosdevices/z:’ is part of the same file system loop as ‘/’.
+...
+DEVOPS24/lektion16
+ls testk_find / .backupme
+at
+1  2  3  a  brafil  dalignej
+DEVOPS24/lektion16
+...
+find: File system loop detected; ‘/var/lib/docker/overlay2/bb8d28f2fc968b841086125296b9b74026a833504df09da57decc9e79dea3229/diff/usr/bin/X11’ is part of the same file system loop as ‘/var/lib/docker/overlay2/bb8d28f2fc968b841086125296b9b74026a833504df09da57decc9e79dea3229/diff/usr/bin’.
+find: File system loop detected; ‘/bin/X11’ is part of the same file system loop as ‘/bin’.
+find: File system loop detected; ‘/usr/bin/X11’ is part of the same file system loop as ‘/usr/bin’.
+find: File system loop detected; ‘/home/kent/.var/app/com.usebottles.bottles/data/bottles/bottles/Paint.NET/dosdevices/z:’ is part of the same file system loop as ‘/’.
+...
+DEVOPS24/lektion16
+$ unset back
+upm_find
+DEVOPS24/lektion16
+backup_find / .backupm() {
+    local start=${1:-/}
+    local pattern=${2:-'*'}; 
+    local SKIP="-path /proc -o -path /sys -o -path /dev -o -path /run \
+                -o -path /tmp -o -path /var/tmp -o -path /snap";      sudo find -L "$start" -xdev         \( $SKIP \) -prune -o         -type f -name "$pattern" -print; }DEVOPS24/lektion16
+$ backup_find () {
+    local start=${1:-/}
+    local pattern=${2:-'*'}; 
+    local SKIP="-path /proc -o -path /sys -o -path /dev -o -path /run \
+                -o -path /tmp -o -path /var/tmp -o -path /snap";      sudo find -L "$start" -xdev         \( $SKIP \) -prune -o         -type f -name "$pattern" -print; }
+DEVOPS24/lektion16
+$ backup_find () {     local start=${1:-/};     local pattern=${2:-'*'};      local SKIP="-path /proc -o -path /sys -o -path /dev -o -path /run \
+                -o -path /tmp -o -path /var/tmp -o -path /snap";      sudo find -L "$start" -xdev         \( $SKIP \) -prune -o         -type f -name "$pattern" -print; }unset backup_find
+
+ls testkatd / .backupme
+1  2  3  a  brafil  dalignej
+DEVOPS24/lektion16
+backup_find () {     local start=${1:-/};     local pattern=${2:-'*'};      local SKIP="-path /proc -o -path /sys -o -path /dev -o -path /run \
+                -o -path /tmp -o -path /var/tmp -o -path /snap";      sudo find -L "$start" -xdev         \( $SKIP \) -prune -o         -type f -name "$pattern" -print; }unset backup_find
+
+backup_find / .backupme
+find: File system loop detected; ‘/var/lib/docker/overlay2/l/IY5MCBIA3ICOSHUOQNWBSI4BUZ/usr/bin/X11’ is part of the same file system loop as ‘/var/lib/docker/overlay2/l/IY5MCBIA3ICOSHUOQNWBSI4BUZ/usr/bin’.
+find: File system loop detected; ‘/var/lib/docker/overlay2/bb8d28f2fc968b841086125296b9b74026a833504df09da57decc9e79dea3229/diff/usr/bin/X11’ is part of the same file system loop as ‘/var/lib/docker/overlay2/bb8d28f2fc968b841086125296b9b74026a833504df09da57decc9e79dea3229/diff/usr/bin’.
+find: File system loop detected; ‘/bin/X11’ is part of the same file system loop as ‘/bin’.
+find: File system loop detected; ‘/usr/bin/X11’ is part of the same file system loop as ‘/usr/bin’.
+find: File system loop detected; ‘/home/kent/.var/app/com.usebottles.bottles/data/bottles/bottles/Paint.NET/dosdevices/z:’ is part of the same file system loop as ‘/’.
+...
+DEVOPS24/lektion16
+$ backup
+_find DEVOPS24/lektion16
+$ backup_find 
+/vmlinuz
+/var/backups/dpkg.arch.0
+/var/backups/alternatives.tar.5.gz
+/var/backups/dpkg.diversions.4.gz
+/var/backups/apt.extended_states.6.gz
+...
+DEVOPS24/lektion16
+backup_find /home ".backupme"^C
+DEVOPS24/lektion16
+$ ^C
+...
+find: File system loop detected; ‘/home/kent/.var/app/com.usebottles.bottles/data/bottles/bottles/Paint.NET/dosdevices/z:/var/lib/docker/overlay2/bb8d28f2fc968b841086125296b9b74026a833504df09da57decc9e79dea3229/diff/usr/bin/X11’ is part of the same file system loop as ‘/home/kent/.var/app/com.usebottles.bottles/data/bottles/bottles/Paint.NET/dosdevices/z:/var/lib/docker/overlay2/bb8d28f2fc968b841086125296b9b74026a833504df09da57decc9e79dea3229/diff/usr/bin’.
+find: File system loop detected; ‘/home/kent/.var/app/com.usebottles.bottles/data/bottles/bottles/Paint.NET/dosdevices/z:/bin/X11’ is part of the same file system loop as ‘/home/kent/.var/app/com.usebottles.bottles/data/bottles/bottles/Paint.NET/dosdevices/z:/bin’.
+find: File system loop detected; ‘/home/kent/.var/app/com.usebottles.bottles/data/bottles/bottles/Paint.NET/dosdevices/z:/usr/bin/X11’ is part of the same file system loop as ‘/home/kent/.var/app/com.usebottles.bottles/data/bottles/bottles/Paint.NET/dosdevices/z:/usr/bin’.
+find: File system loop detected; ‘/home/kent/.var/app/com.usebottles.bottles/data/bottles/bottles/Paint.NET/dosdevices/z:/home’ is part of the same file system loop as ‘/home’.
+...
+DEVOPS24/lektion16
+$ backup_find /home ".backupme ".backupme ".backupme ".backupme ".backupme ".backupmet ".backupmee ".backupmes ".backupmet ".backupmek ".backupme
+at ".backupme
+testkat/.backupme
+DEVOPS24/lektion16
+...
+backupme         backupme.config  
+DEVOPS24/lektion16
+$ unset backupm_find
+DEVOPS24/lektion16
+$ backup_find () {
+    local start=${1:-/}
+    local pattern=${2:-'*'}
+
+    local SKIP="-path /proc -o -path /sys -o -path /dev -o -path /run \
+...
+DEVOPS24/lektion16
+$ back
+up_find / .backupme
+/
+/vmlinuz
+/srv
+/lost+found
+/var
+...
+DEVOPS24/lektion16
+$ backup_find / .backupm() {     local start=${1:-/};     local pattern=${2:-'*'};      local SKIP="-path /proc -o -path /sys -o -path /dev -o -path /run \
+                -o -path /tmp -o -path /var/tmp -o -path /snap";      sudo find -H "$start" \          # <- H instead of L
+        \( $SKIP \) -prune -o         -type f -name "$pattern" -print; }^C
+DEVOPS24/lektion16
+$ backup_find / .backupm() {     local start=${1:-/};     local pattern=${2:-'*'};      local SKIP="-path /proc -o -path /sys -o -path /dev -o -path /run \
+                -o -path /tmp -o -path /var/tmp -o -path /snap";      sudo find -H "$start" \          # <- H instead of L
+/ .backupme$SKIP \) -prune -o         -type f -name "$pattern" -print; }
+
+
+/
+/vmlinuz
+/srv
+/lost+found
+/var
+...
+find: ‘/run/user/1000/doc’: Permission denied
+/run/user/1000/doc
+/run/user/1000/gnome-shell
+/run/user/1000/gnome-shell/runtime-state-LE.:0
+/run/user/1000/ICEauthority
+...
+find: ‘/run/user/1000/gvfs’: Permission denied
+/run/user/1000/gvfs
+/run/user/1000/gvfsd
+/run/user/1000/dbus-1
+/run/user/1000/dbus-1/services
+...
+DEVOPS24/lektion16
+$ ^C
+DEVOPS24/lektion16
+$ ^C
+...
+/vmlinuz
+/srv
+/lost+found
+/var
+...
+DEVOPS24/lektion16
+$ bash f 
+ .backupme
+/
+/vmlinuz
+/srv
+/lost+found
+/var
+...
+find: ‘/run/user/1000/doc’: Permission denied
+/run/user/1000/doc
+/run/user/1000/gnome-shell
+/run/user/1000/gnome-shell/runtime-state-LE.:0
+/run/user/1000/ICEauthority
+...
+find: ‘/run/user/1000/gvfs’: Permission denied
+/run/user/1000/gvfs
+/run/user/1000/gvfsd
+/run/user/1000/dbus-1
+/run/user/1000/dbus-1/services
+...
+DEVOPS24/lektion16
+$ bash f / .backupme  ^C
+DEVOPS24/lektion16
+$ cat x
+
+...
+    local start=${1:-/}
+    local pattern=${2:-'*'}
+
+    local SKIP="-path /proc -o -path /sys -o -path /dev -o -path /run \
+                -o -path /tmp -o -path /var/tmp -o -path /snap"
+
+    sudo find -H "$start" \          # <- H instead of L
+        \( $SKIP \) -prune -o \
+        -type f -name "$pattern" -print
+}
+
+backup_find "$@"
+DEVOPS24/lektion16
+bash f / .backupme   ^C
+DEVOPS24/lektion16
+$ code f
+...
+/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion16/testkat/.backupme
+DEVOPS24/lektion16
+$ 
+exit
+
+Script done on 2025-05-15 12:29:11+02:00 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,285 @@
+Script started on 2025-05-13 11:09:29+02:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="81" LINES="23"]
+DEVOPS24/lektion15
+$ ssh ubse
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-59-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue May 13 09:09:32 AM UTC 2025
+
+  System load:  0.05               Processes:               116
+  Usage of /:   18.8% of 38.04GB   Users logged in:         0
+  Memory usage: 3%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+173 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Tue May 13 08:27:04 2025 from 10.0.2.2
+0;user@ubse: ~
+user@ubse:~$ soudo -i0;user@ubse: ~
+user@ubse:~$ sudo -i
+[sudo] password for user: 
+0;root@ubse: ~
+root@ubse:~# 0;root@ubse: ~
+root@ubse:~# ls
+0;root@ubse: ~
+root@ubse:~# lsblk0;root@ubse: ~
+root@ubse:~# lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part 
+sr0     11:0    1 1024M  0 rom  
+0;root@ubse: ~
+root@ubse:~# umoun
+
+
+
+
+
+lsblmount /minnyapartition/ /dev/sdb1
+mount: /dev/sdb1: /minnyapartition is not a block device.
+       dmesg(1) may have more information after failed mount system call.
+0;root@ubse: ~
+root@ubse:~# mount /minnyapartition/ /dev/sdb/dev/sdbdev/sdb/dev/sdb/dev/sdb/dev/sdb/dev/sdb/dev/sdb/dev/sdb/dev/sdb/dev/sdb/dev/sdb/dev/sdb/dev/sdb/dev/sdb/dev/sdb/dev/sdb/dev/sdbdev/sdb
+
+
+
+
+
+
+ /minnyapartition/
+0;root@ubse: ~
+root@ubse:~# lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part /minnyapartition
+sr0     11:0    1 1024M  0 rom  
+0;root@ubse: ~
+root@ubse:~# 0;root@ubse: ~
+root@ubse:~# mount
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+udev on /dev type devtmpfs (rw,nosuid,relatime,size=2915196k,nr_inodes=728799,mode=755,inode64)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,noexec,relatime,size=590656k,mode=755,inode64)
+efivarfs on /sys/firmware/efi/efivars type efivarfs (rw,nosuid,nodev,noexec,relatime)
+/dev/sda2 on / type ext4 (rw,relatime)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,inode64)
+tmpfs on /run/lock type tmpfs (rw,nosuid,nodev,noexec,relatime,size=5120k,inode64)
+cgroup2 on /sys/fs/cgroup type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot)
+pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime)
+bpf on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime,mode=700)
+systemd-1 on /proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=32,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=4364)
+hugetlbfs on /dev/hugepages type hugetlbfs (rw,nosuid,nodev,relatime,pagesize=2M)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+debugfs on /sys/kernel/debug type debugfs (rw,nosuid,nodev,noexec,relatime)
+tracefs on /sys/kernel/tracing type tracefs (rw,nosuid,nodev,noexec,relatime)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,nosuid,nodev,noexec,relatime)
+configfs on /sys/kernel/config type configfs (rw,nosuid,nodev,noexec,relatime)
+/dev/sda1 on /boot/efi type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,size=590652k,nr_inodes=147663,mode=700,uid=1000,gid=1000,inode64)
+/dev/sdb1 on /minnyapartition type ext4 (rw,relatime)
+0;root@ubse: ~
+root@ubse:~# 0;root@ubse: ~
+root@ubse:~# mounlsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part /minnyapartition
+sr0     11:0    1 1024M  0 rom  
+0;root@ubse: ~
+root@ubse:~# lsblmounlsblumoun
+
+
+
+
+
+nano /etc/fstab
+0;root@ubse: ~
+root@ubse:~# nano /etc/fstab 
+>0;root@ubse: ~ite: /etc/fstab   [ Writing... ] [ Wrote 14 lines ]                Y Yesk/by-uuid/5a3d085e-b6e7-424e-9279-f4bf82c53f8f8/5a3d085e-b6e7-424e-9279-f4bf82c53f8
+root@ubse:~# lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part /minnyapartition
+sr0     11:0    1 1024M  0 rom  
+0;root@ubse: ~
+root@ubse:~# grep /etc/fstabminnya
+/dev/sdb1       /minnyapartition ext4 defaults 0 2
+0;root@ubse: ~
+root@ubse:~# umount /,oim
+minnyapartition 
+0;root@ubse: ~
+lsblkminnya /etc/fstabinnyapartition 
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part 
+sr0     11:0    1 1024M  0 rom  
+0;root@ubse: ~
+root@ubse:~# 0;root@ubse: ~
+0;root@ubse: ~rch)`': m': umount /minnyapartitioo': umount /u': umoun': umount': umountmount /dev/sdb1 /minnyapartition/
+root@ubse:~# moun
+
+
+
+
+
+
+  # gtidigare ^C
+0;root@ubse: ~
+0;root@ubse: ~rch)`': g': grep minnya /etc/fstar': gre': grep': grep
+root@ubse:~# gre
+/dev/sdb1       /minnyapartition ext4 defaults 0 2
+0;root@ubse: ~
+root@ubse:~# mount /minnyapartition
+/minnyapartition
+mount: (hint) your fstab has been modified, but systemd still uses
+       the old version; use 'systemctl daemon-reload' to reload.
+0;root@ubse: ~
+root@ubse:~# syste
+mctl dae
+mon-reload 
+0;root@ubse: ~
+mount /minnyapartition daemon-reload 
+mount: /minnyapartition: /dev/sdb1 already mounted on /minnyapartition.
+       dmesg(1) may have more information after failed mount system call.
+0;root@ubse: ~
+root@ubse:~# lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part /minnyapartition
+sr0     11:0    1 1024M  0 rom  
+0;root@ubse: ~
+root@ubse:~# 0;root@ubse: ~
+root@ubse:~# ls ./minnyapartition/
+hejsan  lost+found
+0;root@ubse: ~
+0;root@ubse: ~rch)`': m': ls /minnyapartitiono': mount /minnyapartitiou': moun': mount': mountumount /minnyapartition
+root@ubse:~# umoun
+
+
+
+
+
+
+ ^C
+0;root@ubse: ~
+root@ubse:~# umount /minnyapartition 
+0;root@ubse: ~
+root@ubse:~# lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part 
+sr0     11:0    1 1024M  0 rom  
+0;root@ubse: ~
+root@ubse:~# moun
+0;root@ubse: ~
+root@ubse:~# grep -'-='-a'-a-'-a-'-a '-a
+
+
+
+
+man mount | 
+troff:<standard input>:46: warning [p 1, 3.2i]: cannot break line
+       mount -a [-fFnrsvw] [-t fstype] [-O optlist]
+       exception is --all, in this case already mounted filesystems are
+       ignored (see --all below for more details).
+          mount -a [-t type] [-O optlist]
+       -a, --all
+           --all. This means that all duplicated fstab entries will be
+           filesystems before mount -a is executed, or keep /proc and /sys at
+           The option --all is possible to use for remount operation too. In
+           Note that it is a bad practice to use mount -a for fstab checking.
+           (Used in conjunction with -a.) Fork off a new incarnation of mount
+           Limit the set of filesystems to which the -a option applies. In
+           without -a. For example, the command
+           mount -a -O no_netdev
+           mount -a -t ext2 -O  _netdev
+           This behavior is the default for --all; otherwise, it depends on
+           mount --all --target-prefix /chroot -o X-mount.mkdir
+           The prefix no can be meaningful with the -a option. For example,
+           mount -a -t nomsdos,smbfs
+           Can be mounted with the -a option.
+           Can only be mounted explicitly (i.e., the -a option will not cause
+           mount allows the use of --all to remount all already mounted
+           mount --all -o remount,ro -t vfat
+           X-appname.option.
+           Enable bulk-read. VFS read-ahead is disabled because it slows down
+           The command mount -a returns 0 (all succeeded), 32 (all failed), or
+0;root@ubse: ~
+root@ubse:~# 0;root@ubse: ~
+root@ubse:~# mount 
+
+
+
+lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part 
+sr0     11:0    1 1024M  0 rom  
+0;root@ubse: ~
+root@ubse:~# mount /-a
+0;root@ubse: ~
+root@ubse:~# mount -lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part /minnyapartition
+sr0     11:0    1 1024M  0 rom  
+0;root@ubse: ~
+root@ubse:~# 0;root@ubse: ~
+root@ubse:~# reboot
+
+Broadcast message from root@ubse on pts/1 (Tue 2025-05-13 09:23:32 UTC):
+
+The system will reboot now!
+
+0;root@ubse: ~
+root@ubse:~# Connection to localhost closed by remote host.
+Connection to localhost closed.
+DEVOPS24/lektion15
+$ 
+exit
+
+Script done on 2025-05-13 11:23:38+02:00 [COMMAND_EXIT_CODE="255"]

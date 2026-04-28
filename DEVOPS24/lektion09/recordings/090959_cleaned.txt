@@ -1,0 +1,728 @@
+Script started on 2025-04-30 09:10:04+02:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="70" LINES="10"]
+DEVOPS24/lektion9
+$ DEVOPS24/lektion9
+$ grep De wiki.txt 
+De hårt trängda dansk-norska trupperna tog
+DEVOPS24/lektion9
+$ grep De wiki.txtDEVOPS24/lektion9
+$ grep De wiki.txtatt
+Hannibalsfejden i augusti 1645. För att
+DEVOPS24/lektion9
+$ grep att wiki.txt DEVOPS24/lektion9
+$ grep att wiki.txt 
+Hannibalsfejden i augusti 1645. För att
+först spärrade vägen vid Ranängen att söder
+sig tillbaka över älven att till Hisingen vid
+DEVOPS24/lektion9
+$ grep . DEVOPS24/lektion9
+$ grep . wiki.txt 
+Slaget vid Ranängen (eller Slaget
+vid Randängen) var ett fältslag i
+närheten av Göteborg mellan dansk-norska
+och svenska trupper under slutskedet av
+Hannibalsfejden i augusti 1645. För att
+kunna belägra Göteborg hade en dansk-norsk
+armé under befäl av Hannibal Sehested gått
+över Göta älv och närmade sig staden, då
+svenska trupper under befäl av Lars Kagg
+först spärrade vägen vid Ranängen att söder
+om Säveån, och därefter gick till motanfall.
+De hårt trängda dansk-norska trupperna tog
+sig tillbaka över älven att till Hisingen vid
+Lärje, och ytterligare strider uppstod med
+de förföljande svenskarna framförallt vid
+höjderna sydväst om Bohus fästning.
+DEVOPS24/lektion9
+$ grep . wiki.txt DEVOPS24/lektion9
+$ grep . wiki.txt\
+
+
+
+
+
+
+
+
+
+Slaget vid Ranängen (eller Slaget
+vid Randängen) var ett fältslag i
+närheten av Göteborg mellan dansk-norska
+och svenska trupper under slutskedet av
+Hannibalsfejden i augusti 1645. För att
+kunna belägra Göteborg hade en dansk-norsk
+armé under befäl av Hannibal Sehested gått
+över Göta älv och närmade sig staden, då
+svenska trupper under befäl av Lars Kagg
+först spärrade vägen vid Ranängen att söder
+om Säveån, och därefter gick till motanfall.
+De hårt trängda dansk-norska trupperna tog
+sig tillbaka över älven att till Hisingen vid
+Lärje, och ytterligare strider uppstod med
+de förföljande svenskarna framförallt vid
+höjderna sydväst om Bohus fästning.
+DEVOPS24/lektion9
+$ grep \. wiki.txtDEVOPS24/lektion9
+$ grep . wiki.txt'-E 
+Hannibalsfejden i augusti 1645. För att
+om Säveån, och därefter gick till motanfall.
+höjderna sydväst om Bohus fästning.
+DEVOPS24/lektion9
+$ DEVOPS24/lektion9
+$ grep trupp|Lars wiki.txt
+bash: Lars: command not found
+^C
+DEVOPS24/lektion9
+$ grep trupp|Lars wiki.txt''DEVOPS24/lektion9
+$ grep 'trupp|Lars' wiki.txt
+
+
+
+
+
+DEVOPS24/lektion9
+$ grep 'trupp|Lars' wiki.txt\DEVOPS24/lektion9
+$ grep 'trupp\|Lars' wiki.txt
+och svenska trupper under slutskedet av
+svenska trupper under befäl av Lars Kagg
+De hårt trängda dansk-norska trupperna tog
+DEVOPS24/lektion9
+$ grep 'trupp\|Lars' wiki.txt-E DEVOPS24/lektion9
+$ grep -E 'trupp|Lars' wiki.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+och svenska trupper under slutskedet av
+svenska trupper under befäl av Lars Kagg
+De hårt trängda dansk-norska trupperna tog
+DEVOPS24/lektion9
+$ grep -E 'trupp|Lars' wiki.tx\DEVOPS24/lektion9
+$ grep -E 'trupp\|Lars' wiki.tx
+DEVOPS24/lektion9
+$ grep -E 'trupp\|Lars' wiki.txDEVOPS24/lektion9
+$ grep 'trupp\|Lars' wiki.tx
+och svenska trupper under slutskedet av
+svenska trupper under befäl av Lars Kagg
+De hårt trängda dansk-norska trupperna tog
+DEVOPS24/lektion9
+$ grep 'trupp\|Lars' wiki.tx
+DEVOPS24/lektion9
+$ DEVOPS24/lektion9
+\-E ep 'trupp|Lars' wiki.txt
+
+
+
+
+
+
+
+
+
+och svenska trupper under slutskedet av
+svenska trupper under befäl av Lars Kagg
+De hårt trängda dansk-norska trupperna tog
+DEVOPS24/lektion9
+$ DEVOPS24/lektion9
+$ alias grep='grep -E'
+DEVOPS24/lektion9
+grep -E 'trupp|Lars' wiki.tx
+och svenska trupper under slutskedet av
+svenska trupper under befäl av Lars Kagg
+De hårt trängda dansk-norska trupperna tog
+DEVOPS24/lektion9
+$ u
+unalias grepDEVOPS24/lektion9
+$ unalias grep
+DEVOPS24/lektion9
+$ DEVOPS24/lektion9
+$ egrep
+
+
+
+
+
+grep -
+
+
+
+
+
+-
+egrep
+
+
+$ DEVOPS24/lektion9
+$ man grep
+GREP(1)                     User Commands                    GREP(1)
+
+NAME
+       grep, egrep, fgrep, rgrep - print lines that match patterns
+
+SYNOPSIS
+       grep [OPTION...] PATTERNS [FILE...]
+       grep [OPTION...] -e PATTERNS ... [FILE...]
+       grep [OPTION...] -f PATTERN_FILE ... [FILE...]
+
+DESCRIPTION
+       grep  searches for PATTERNS in each FILE.  PATTERNS is one or
+       more patterns  separated  by  newline  characters,  and  grep
+       prints  each line that matches a pattern.  Typically PATTERNS
+       should be quoted when grep is used in a shell command.
+
+       A FILE of “-” stands for  standard  input.   If  no  FILE  is
+       given,  recursive searches examine the working directory, and
+       nonrecursive searches read standard input.
+
+       Debian also includes the variant programs  egrep,  fgrep  and
+       rgrep.   These programs are the same as grep -E, grep -F, and
+       grep -r,  respectively.   These   variants   are   deprecated
+       upstream, but Debian provides for backward compatibility. For
+       portability reasons, it is recommended to avoid  the  variant
+       programs, and use grep with the related option instead.
+
+OPTIONS
+   Generic Program Informationpress h for help or q to quit)
+       --help Output a usage message and exit.
+
+       -V, --version
+              Output the version number of grep and exit.
+
+   Pattern Syntax
+       -E, --extended-regexp
+              Interpret  PATTERNS  as  extended  regular expressions
+              (EREs, see below).
+
+       -F, --fixed-strings
+              Interpret  PATTERNS  as  fixed  strings,  not  regular
+              expressions.
+ ESESCOBpage grep(1) line 29 (press h for help or q to quit)
+       -G, --basic-regexp 30 (press h for help or q to quit)
+              Interpret PATTERNS as basic regular expressions (BREs,
+              see below).  This is the default.or q to quit)
+ ESESCOBpage grep(1) line 33 (press h for help or q to quit)
+       -P, --perl-regexpe 34 (press h for help or q to quit)
+              Interpret   PATTERNS   as   Perl-compatible    regular
+              expressions (PCREs).  This option is experimental when
+              combined with the -z (--null-data) option, and grep -P
+              may warn of unimplemented features. q to quit)
+ ESESCOBpage grep(1) line 39 (press h for help or q to quit)
+   Matching Control) line 40 (press h for help or q to quit)
+       -e PATTERNS, --regexp=PATTERNS for help or q to quit)
+              Use  PATTERNS as the patterns.  If this option is used
+              multiple times or is combined  with  the  -f  (--file)
+              option,  search  for  all patterns given.  This option
+              can be used to protect a pattern beginning with “-”.
+ ESESCOBpage grep(1) line 46 (press h for help or q to quit)
+       -f FILE, --file=FILE7 (press h for help or q to quit)
+              Obtain patterns from FILE,  one  per  line.   If  this
+              option  is used multiple times or is combined with the
+              -e (--regexp) option, search for all  patterns  given.
+              The  empty  file contains zero patterns, and therefore
+              matches nothing.press h for help or q to quit)
+ ESESCOBpage grep(1) line 53 (press h for help or q to quit)
+       -i, --ignore-casee 54 (press h for help or q to quit)
+              Ignore case distinctions in patterns and  input  data,
+              so that characters that differ only in case match each
+              other. line 57 (press h for help or q to quit)
+ ESESCOBpage grep(1) line 58 (press h for help or q to quit)
+       --no-ignore-casene 59 (press h for help or q to quit)
+              Do not ignore case distinctions in patterns and  input
+              data.  This is the default.  This option is useful for
+              passing to shell  scripts  that  already  use  -i,  to
+              cancel  its  effects  because the two options override
+              each other. 64 (press h for help or q to quit)
+ ESESCOBpage grep(1) line 65 (press h for help or q to quit)
+       -v, --invert-match 66 (press h for help or q to quit)
+              Invert the sense of matching, to  select  non-matching
+              lines. line 68 (press h for help or q to quit)
+ ESESCOBpage grep(1) line 69 (press h for help or q to quit)
+       -w, --word-regexpe 70 (press h for help or q to quit)
+              Select  only  those lines containing matches that form
+              whole words.  The test is that the matching  substring
+              must  either  be  at  the  beginning  of  the line, or
+              preceded  by   a   non-word   constituent   character.
+              Similarly, it must be either at the end of the line or
+              followed by a non-word constituent  character.   Word-
+              constituent  characters  are  letters, digits, and the
+              underscore.  This option has no effect if -x  is  also
+              specified.e 79 (press h for help or q to quit)
+ ESESCOBpage grep(1) line 80 (press h for help or q to quit)
+       -x, --line-regexpe 81 (press h for help or q to quit)
+M              Invert the sense of matching, to  select  non-matching
+M       -v, --invert-match81 (press h for help or q to quit)
+MESESCOApage grep(1) line 80 (press h for help or q to quit)
+M              each other.79 (press h for help or q to quit)
+>DEVOPS24/lektion91) line 78 (press h for help or q to quit)
+$ DEVOPS24/lektion9
+$ grep -Ev trupp|Lars wiki.txt
+grep -Ev trupp|Lars wiki.txt
+bash: Lars: command not found
+^C
+DEVOPS24/lektion9
+$ grep -Ev trupp|Lars wiki.tx'' wiki.txDEVOPS24/lektion9
+$ grep -Ev 'trupp|Lars' wiki.tx
+Slaget vid Ranängen (eller Slaget
+vid Randängen) var ett fältslag i
+närheten av Göteborg mellan dansk-norska
+Hannibalsfejden i augusti 1645. För att
+kunna belägra Göteborg hade en dansk-norsk
+armé under befäl av Hannibal Sehested gått
+över Göta älv och närmade sig staden, då
+först spärrade vägen vid Ranängen att söder
+om Säveån, och därefter gick till motanfall.
+sig tillbaka över älven att till Hisingen vid
+Lärje, och ytterligare strider uppstod med
+de förföljande svenskarna framförallt vid
+höjderna sydväst om Bohus fästning.
+DEVOPS24/lektion9
+$ DEVOPS24/lektion9
+grep -Ev 'trupp|Lars' wiki.tx wiki.tx wiki.tx wiki.tx wiki.tx wiki.tx wiki.tx wiki.tx wiki.tx wiki.tx wiki.tx wiki.txä wiki.tx wiki.tx' wiki.txa{2[aA[a-zA-{2 
+
+
+
+
+
+
+
+
+Slaget vid Ranängen (eller Slaget
+vid Randängen) var ett fältslag i
+kunna belägra Göteborg hade en dansk-norsk
+över Göta älv och närmade sig staden, då
+om Säveån, och därefter gick till motanfall.
+De hårt trängda dansk-norska trupperna tog
+Lärje, och ytterligare strider uppstod med
+de förföljande svenskarna framförallt vid
+höjderna sydväst om Bohus fästning.
+DEVOPS24/lektion9
+$ DEVOPS24/lektion9
+$ grep -Ev ' [aA][a-zA-Z]' wiki.tx
+Slaget vid Ranängen (eller Slaget
+vid Randängen) var ett fältslag i
+kunna belägra Göteborg hade en dansk-norsk
+över Göta älv och närmade sig staden, då
+om Säveån, och därefter gick till motanfall.
+De hårt trängda dansk-norska trupperna tog
+Lärje, och ytterligare strider uppstod med
+de förföljande svenskarna framförallt vid
+höjderna sydväst om Bohus fästning.
+DEVOPS24/lektion9
+$ DEVOPS24/lektion9
+$ grep -Ev ' [aA][a-zA-Z]' wiki.tx 
+
+
+
+
+
+
+Slaget vid Ranängen (eller Slaget
+vid Randängen) var ett fältslag i
+och svenska trupper under slutskedet av
+Hannibalsfejden i augusti 1645. För att
+kunna belägra Göteborg hade en dansk-norsk
+över Göta älv och närmade sig staden, då
+först spärrade vägen vid Ranängen att söder
+om Säveån, och därefter gick till motanfall.
+De hårt trängda dansk-norska trupperna tog
+sig tillbaka över älven att till Hisingen vid
+Lärje, och ytterligare strider uppstod med
+de förföljande svenskarna framförallt vid
+höjderna sydväst om Bohus fästning.
+DEVOPS24/lektion9
+$ grep -Ev ' [aA][a-zA-Z] ' wiki.txDEVOPS24/lektion9
+$ grep -E ' [aA][a-zA-Z] ' wiki.tx
+närheten av Göteborg mellan dansk-norska
+av armé under befäl av Hannibal Sehested gått
+svenska trupper under befäl av Lars Kagg
+DEVOPS24/lektion9
+$ grep -E ' [aA][a-zA-Z] ' wiki.txDEVOPS24/lektion9
+$ grep -E ' [aA][a-zA-Z] ' wiki.tx
+
+
+
+
+
+
+
+
+
+DEVOPS24/lektion9
+$ grep -E ' [aA][a-zA-Z] ' wiki.txt
+ av 
+DEVOPS24/lektion9
+grep -E ' [aA][a-zA-Z] ' wiki.tx^Ct
+DEVOPS24/lektion9
+$ DEVOPS24/lektion9
+$ nano wiki.txt 
+>DEVOPS24/lektion9: wiki.txt [ Writing... ] [ Wrote 4 lines ]          Y Yes                          
+$ DEVOPS24/lektion9
+$ code wiki.txt 
+DEVOPS24/lektion9
+grep -E ' [aA][a-zA-Z] ' wiki.txtDEVOPS24/lektion9
+$ grep -E ' [aA][a-zA-Z] ' wiki.txt
+DEVOPS24/lektion9
+$ nano wiki.txt 
+>DEVOPS24/lektion9: wiki.txt [ Writing... ] [ Wrote 4 lines ]          Y Yes                          
+grep -E ' [aA][a-zA-Z] ' wiki.txtDEVOPS24/lektion9
+$ grep -E ' [aA][a-zA-Z] ' wiki.txt
+ av 
+DEVOPS24/lektion9
+$ grep -E ' [aA][a-zA-Z] ' wiki.tx( ^
+
+
+
+
+
+
+
+
+av 
+ av 
+DEVOPS24/lektion9
+$ grep -E '( |^)[aA][a-zA-Z] ' wiki.tx(|$
+
+
+
+
+DEVOPS24/lektion9
+$ grep -E '( |^)[aA][a-zA-Z]( |$)' wiki.txt
+av
+ av
+av 
+ av 
+DEVOPS24/lektion9
+$ grep -E '( |^)[aA][a-zA-Z]( |$)' wiki.tx()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ \
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DEVOPS24/lektion9
+$ grep -E '( |^)[aA][a-zA-Z]( |$)' wiki.txt
+av
+ av
+av 
+ av 
+DEVOPS24/lektion9
+$ DEVOPS24/lektion9
+$ cat testfall-grep.txt 
+av
+ av
+av 
+ av 
+DEVOPS24/lektion9
+$ cat testfall-grep.txt >> wiki2.txt 
+DEVOPS24/lektion9
+grep -E '( |^)[aA][a-zA-Z]( |$)' wiki.txtDEVOPS24/lektion9
+$ grep -E '( |^)[aA][a-zA-Z]( |$)' wiki.tx
+närheten av Göteborg mellan dansk-norska
+och svenska trupper under slutskedet av
+armé under befäl av Hannibal Sehested gått
+svenska trupper under befäl av Lars Kagg
+av
+ av
+av 
+ av 
+DEVOPS24/lektion9
+$ DEVOPS24/lektion9
+$ grep -E '( |^)[aA][a-zA-Z]( |$)' wiki.txt
+grep -E '( |^)[aA][a-zA-Z]( |$)' wiki.txi
+
+
+
+
+
+
+
+
+
+
+närheten av Göteborg mellan dansk-norska
+och svenska trupper under slutskedet av
+armé under befäl av Hannibal Sehested gått
+svenska trupper under befäl av Lars Kagg
+av
+ av
+av 
+ av 
+DEVOPS24/lektion9
+$ grep -Ei '( |^)a[a-z]( |$)' wiki.txtDEVOPS24/lektion9
+i '( |^)a[a-z-zA-Z[a-z]( |$)' wiki.txt
+
+
+
+
+
+
+
+^C
+DEVOPS24/lektion9
+$ DEVOPS24/lektion9
+$ man grep
+GREP(1)                     User Commands                    GREP(1)
+
+NAME
+       grep, egrep, fgrep, rgrep - print lines that match patterns
+
+SYNOPSIS
+       grep [OPTION...] PATTERNS [FILE...]
+       grep [OPTION...] -e PATTERNS ... [FILE...]
+       grep [OPTION...] -f PATTERN_FILE ... [FILE...]
+
+DESCRIPTION
+       grep  searches for PATTERNS in each FILE.  PATTERNS is one or
+       more patterns  separated  by  newline  characters,  and  grep
+       prints  each line that matches a pattern.  Typically PATTERNS
+       should be quoted when grep is used in a shell command.
+
+       A FILE of “-” stands for  standard  input.   If  no  FILE  is
+       given,  recursive searches examine the working directory, and
+       nonrecursive searches read standard input.q to quit)
+
+       Debian also includes the variant programs  egrep,  fgrep  and
+       rgrep.   These programs are the same as grep -E, grep -F, and
+       grep -r,  respectively.   These   variants   are   deprecated
+       upstream, but Debian provides for backward compatibility. For
+       portability reasons, it is recommended to avoid  the  variant
+       programs, and use grep with the related option instead.
+
+OPTIONS
+   Generic Program Information
+       --help Output a usage message and exit.
+
+       -V, --version
+              Output the version number of grep and exit.
+
+   Pattern Syntax
+       -E, --extended-regexp
+              Interpret  PATTERNS  as  extended  regular expressions
+              (EREs, see below).
+
+       -F, --fixed-strings
+              Interpret  PATTERNS  as  fixed  strings,  not  regular
+              expressions.
+
+       -G, --basic-regexp
+              Interpret PATTERNS as basic regular expressions (BREs,
+              see below).  This is the default.
+
+       -P, --perl-regexp
+              Interpret   PATTERNS   as   Perl-compatible    regular
+              expressions (PCREs).  This option is experimental when
+              combined with the -z (--null-data) option, and grep -P
+              may warn of unimplemented features.
+
+   Matching Control
+       -e PATTERNS, --regexp=PATTERNS for help or q to quit)
+              Use  PATTERNS as the patterns.  If this option is used
+              multiple times or is combined  with  the  -f  (--file)
+              option,  search  for  all patterns given.  This option
+              can be used to protect a pattern beginning with “-”.
+ ESESCOBpage grep(1) line 42 (press h for help or q to quit)
+       -f FILE, --file=FILE3 (press h for help or q to quit)
+              Obtain patterns from FILE,  one  per  line.   If  this
+              option  is used multiple times or is combined with the
+              -e (--regexp) option, search for all  patterns  given.
+              The  empty  file contains zero patterns, and therefore
+              matches nothing.press h for help or q to quit)
+ ESESCOBpage grep(1) line 49 (press h for help or q to quit)
+       -i, --ignore-casee 50 (press h for help or q to quit)
+              Ignore case distinctions in patterns and  input  data,
+              so that characters that differ only in case match each
+              other. line 53 (press h for help or q to quit)
+ ESESCOBpage grep(1) line 54 (press h for help or q to quit)
+       --no-ignore-casene 55 (press h for help or q to quit)
+              Do not ignore case distinctions in patterns and  input
+              data.  This is the default.  This option is useful for
+              passing to shell  scripts  that  already  use  -i,  to
+              cancel  its  effects  because the two options override
+              each other. 60 (press h for help or q to quit)
+ ESESCOBpage grep(1) line 61 (press h for help or q to quit)
+       -v, --invert-match 62 (press h for help or q to quit)
+              Invert the sense of matching, to  select  non-matching
+              lines. line 64 (press h for help or q to quit)
+ ESESCOBpage grep(1) line 65 (press h for help or q to quit)
+       -w, --word-regexpe 66 (press h for help or q to quit)
+              Select  only  those lines containing matches that form
+              whole words.  The test is that the matching  substring
+              must  either  be  at  the  beginning  of  the line, or
+              preceded  by   a   non-word   constituent   character.
+              Similarly, it must be either at the end of the line or
+              followed by a non-word constituent  character.   Word-
+              constituent  characters  are  letters, digits, and the
+              underscore.  This option has no effect if -x  is  also
+              specified.e 75 (press h for help or q to quit)
+ ESESCOBpage grep(1) line 76 (press h for help or q to quit)
+       -x, --line-regexpe 77 (press h for help or q to quit)
+              Select only those matches that exactly match the whole
+              line.  For a regular expression pattern, this is  like
+              parenthesizing  the  pattern  and  then surrounding it
+              with ^ and $.1 (press h for help or q to quit)
+ ESESCOBpage grep(1) line 82 (press h for help or q to quit)
+   General Output Control 83 (press h for help or q to quit)
+       -c, --count1) line 84 (press h for help or q to quit)
+              Suppress normal  output;  instead  print  a  count  of
+              matching  lines  for  each  input  file.  With the -v,
+              --invert-match option (see above), count  non-matching
+              lines. line 88 (press h for help or q to quit)
+ ESESCOBpage grep(1) line 89 (press h for help or q to quit)
+       --color[=WHEN], --colour[=WHEN]for help or q to quit)
+              Surround  the  matched  (non-empty)  strings, matching
+              lines, context lines, file names, line  numbers,  byte
+              offsets,  and  separators  (for  fields  and groups of
+              context lines) with escape sequences to  display  them
+              in  color  on the terminal.  The colors are defined by
+              the environment variable GREP_COLORS.  WHEN is  never,
+              always, or auto.press h for help or q to quit)
+ ESESCOBpage grep(1) line 98 (press h for help or q to quit)
+       -L, --files-without-matchess h for help or q to quit)
+              Suppress normal output; instead print the name of each
+              input file from which no output  would  normally  have
+              been printed.02 (press h for help or q to quit)
+ ESESCOBpage grep(1) line 103 (press h for help or q to quit)
+       -l, --files-with-matchespress h for help or q to quit)
+              Suppress normal output; instead print the name of each
+              input file from which output would normally have  been
+              printed.   Scanning  each  input file stops upon first
+              match. line 108 (press h for help or q to quit)
+ ESESCOBpage grep(1) line 109 (press h for help or q to quit)
+       -m NUM, --max-count=NUM(press h for help or q to quit)
+              Stop reading a file after NUM matching lines.  If  NUM
+              is  zero, grep stops right away without reading input.
+              A NUM of -1 is treated as infinity and grep  does  not
+              stop;  this  is the default.  If the input is standard
+              input from a regular file, and NUM matching lines  are
+              output,  grep  ensures  that  the  standard  input  is
+              positioned to just after the last matching line before
+              exiting,   regardless  of  the  presence  of  trailing
+              context lines.  This  enables  a  calling  process  to
+              resume  a  search.  When grep stops after NUM matching
+              lines, it outputs any trailing  context  lines.   When
+              the  -c  or --count option is also used, grep does not
+              output a count greater  than  NUM.   When  the  -v  or
+              --invert-match  option  is also used, grep stops after
+              outputting NUM non-matching lines.or q to quit)
+ ESESCOBpage grep(1) line 126 (press h for help or q to quit)
+       -o, --only-matching127 (press h for help or q to quit)
+              Print only the matched (non-empty) parts of a matching
+              line, with each such part on a separate output line.
+ ESESCOBpage grep(1) line 130 (press h for help or q to quit)
+       -q, --quiet, --silent1 (press h for help or q to quit)
+              Quiet; do not write anything to standard output.  Exit
+              immediately with zero status if any  match  is  found,
+              even  if  an  error  was detected.  Also see the -s or
+              --no-messages option.s h for help or q to quit)
+ ESESCOBpage grep(1) line 136 (press h for help or q to quit)
+       -s, --no-messagese 137 (press h for help or q to quit)
+              Suppress   error   messages   about   nonexistent   or
+              unreadable files.press h for help or q to quit)
+>DEVOPS24/lektion91) line 140 (press h for help or q to quit)
+grep -Ei '( |^)a[a-z]( |$)' wiki.txo
+
+
+
+
+
+
+
+
+
+
+
+ av 
+ av
+ av 
+ av 
+av
+ av
+av 
+ av 
+DEVOPS24/lektion9
+$ DEVOPS24/lektion9
+$ grep -Eio '( |^)a[a-z]( |$)' wiki.txt
+ av 
+ av
+ av 
+ av 
+av
+ av
+av 
+ av 
+DEVOPS24/lektion9
+$ grep -Eio '( |^)a[a-z]( |$)' wiki.txt | soertDEVOPS24/lektion9
+$ grep -Eio '( |^)a[a-z]( |$)' wiki.txt | sort
+ av
+ av
+ av 
+ av 
+ av 
+ av 
+av
+av 
+DEVOPS24/lektion9
+$ grep -Eio '( |^)a[a-z]( |$)' wiki.txt | sort | uniqDEVOPS24/lektion9
+$ grep -Eio '( |^)a[a-z]( |$)' wiki.txt | sort | uniq
+ av
+ av 
+av
+av 
+DEVOPS24/lektion9
+$ grep -Eio '( |^)a[a-z]( |$)' wiki.txt | sort | uniq -cDEVOPS24/lektion9
+$ grep -Eio '( |^)a[a-z]( |$)' wiki.txt | sort | uniq -c
+      2  av
+      4  av 
+      1 av
+      1 av 
+DEVOPS24/lektion9
+gDEVOPS24/lektion9a[a-z]( |$)' wiki.txt | sort | uniq -c | sed 's/ /_' 
+$ grep -Eio '( |^)a[a-z]( |$)' wiki.txt | sort | uniq -c | sed 's/ /_/g'
+______2__av
+______4__av_
+______1_av
+______1_av_
+DEVOPS24/lektion9
+$ DEVOPS24/lektion9
+$ ^C
+DEVOPS24/lektion9
+$ 
+exit
+
+Script done on 2025-04-30 10:44:12+02:00 [COMMAND_EXIT_CODE="130"]

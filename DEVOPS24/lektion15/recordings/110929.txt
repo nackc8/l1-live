@@ -1,0 +1,194 @@
+Script started on 2025-05-13 11:09:29+02:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="81" LINES="23"]
+[?2004h[94mDEVOPS24/lektion15
+(B[m$ ssh ubse
+[?2004lWelcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-59-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue May 13 09:09:32 AM UTC 2025
+
+  System load:  0.05               Processes:               116
+  Usage of /:   18.8% of 38.04GB   Users logged in:         0
+  Memory usage: 3%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+173 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Tue May 13 08:27:04 2025 from 10.0.2.2
+[?2004h]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ sod[K[Kudo -r[Ki[H[2J]0;user@ubse: ~[01;32muser@ubse[00m:[01;34m~[00m$ sudo -i
+[?2004l[sudo] password for user: 
+[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# ls
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# lsblk[H[2J]0;root@ubse: ~root@ubse:~# lsblk
+[?2004lNAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part 
+sr0     11:0    1 1024M  0 rom  
+[?2004h]0;root@ubse: ~root@ubse:~# umount[K[K[K[K[K[Klsblk[Kmount | grep sda[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kblk[Kmount /minnyapartition/ /s[Kdev/sdb1
+[?2004lmount: /dev/sdb1: /minnyapartition is not a block device.
+       dmesg(1) may have more information after failed mount system call.
+[?2004h]0;root@ubse: ~root@ubse:~# mount /minnyapartition/ /dev/sdb1[1P/dev/sdb1[1Pdev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1P/dev/sdb1[1Pdev/sdb1[C[C[C[C[C[C[C[C[C /minnyapartition/
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# lsblk
+[?2004lNAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part /minnyapartition
+sr0     11:0    1 1024M  0 rom  
+[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# mount
+[?2004lsysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+udev on /dev type devtmpfs (rw,nosuid,relatime,size=2915196k,nr_inodes=728799,mode=755,inode64)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,noexec,relatime,size=590656k,mode=755,inode64)
+efivarfs on /sys/firmware/efi/efivars type efivarfs (rw,nosuid,nodev,noexec,relatime)
+/dev/sda2 on / type ext4 (rw,relatime)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,inode64)
+tmpfs on /run/lock type tmpfs (rw,nosuid,nodev,noexec,relatime,size=5120k,inode64)
+cgroup2 on /sys/fs/cgroup type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot)
+pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime)
+bpf on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime,mode=700)
+systemd-1 on /proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=32,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=4364)
+hugetlbfs on /dev/hugepages type hugetlbfs (rw,nosuid,nodev,relatime,pagesize=2M)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+debugfs on /sys/kernel/debug type debugfs (rw,nosuid,nodev,noexec,relatime)
+tracefs on /sys/kernel/tracing type tracefs (rw,nosuid,nodev,noexec,relatime)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,nosuid,nodev,noexec,relatime)
+configfs on /sys/kernel/config type configfs (rw,nosuid,nodev,noexec,relatime)
+/dev/sda1 on /boot/efi type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,size=590652k,nr_inodes=147663,mode=700,uid=1000,gid=1000,inode64)
+/dev/sdb1 on /minnyapartition type ext4 (rw,relatime)
+[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# mountlsblk
+[?2004lNAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part /minnyapartition
+sr0     11:0    1 1024M  0 rom  
+[?2004h]0;root@ubse: ~root@ubse:~# lsblkmountlsblk[Kumount[K[K[K[K[K[Knano /etc/fstab [C[C[C[C[C[C[H[2J]0;root@ubse: ~root@ubse:~# nano /etc/fstab 
+[?2004l[?2004h[?1049h[22;0;0t[1;23r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[21;34H(B[0;7m[ Reading... ](B[m[21;33H(B[0;7m[ Read 12 lines ](B[m[H(B[0;7m  GNU nano 7.2                        /etc/fstab                                 [1;80H(B[m[22d(B[0;7m^G(B[m Help[14G(B[0;7m^O(B[m Write Out (B[0;7m^W(B[m Where Is  (B[0;7m^K(B[m Cut[53G(B[0;7m^T(B[m Execute   (B[0;7m^C(B[m Location[23d(B[0;7m^X(B[m Exit[14G(B[0;7m^R(B[m Read File (B[0;7m^\(B[m Replace   (B[0;7m^U(B[m Paste     (B[0;7m^J(B[m Justify   (B[0;7m^/(B[m Go To Line[2d[36m# /etc/fstab: static file system information.[3d#[4d# Use 'blkid' to print the universally unique identifier for a[5d# device; this may be used with UUID= as a more robust way to name devices[6d# that works even if disks are added and removed. See fstab(5).[7d#[8d# <file system> <mount point>   <type>  <options>       <dump>  <pass>[9d# / was on /dev/sda2 during curtin installation[10d[39m(B[m/dev/disk/by-uuid/5a3d085e-b6e7-424e-9279-f4bf82c53f89 / ext4 defaults 0 1[11d[36m# /boot/efi was on /dev/sda1 during curtin installation[12d[39m(B[m/dev/disk/by-uuid/53ED-83D5 /boot/efi vfat defaults 0 1[13d/swap.img[38;5;208m       [39m(B[mnone[38;5;208m    [39m(B[mswap[38;5;208m    [39m(B[msw[38;5;208m      [39m(B[m0[38;5;208m       [39m(B[m0[2d[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h/[?25l[?12l[?25h[?25l[?12l[?25h/[?25l[?12l[?25hd[?25l[?12l[?25he[?25l[?12l[?25hv[?25l[?12l[?25h/[?25l[?12l[?25hd[?25l[?12l[?25hi[?25l[?12l[?25hs[?25l[21d[K[?12l[?25h[10;10H[?25l[?12l[?25h/[?25l[?12l[?25hb[?25l[?12l[?25hy[?25l[?12l[?25h-[?25l[?12l[?25hu[?25l[?12l[?25hu[?25l[?12l[?25hi[?25l[?12l[?25hd[?25l[?12l[?25h/[?25l[?12l[?25h5[?25l[?12l[?25ha[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25hb[?25l[?12l[?25hy[?25l[?12l[?25h-[?25l[?12l[?25hu[?25l[?12l[?25hu[?25l[?12l[?25hi[?25l[?12l[?25hd[?25l[?12l[?25h/[?25l[?12l[?25h5[?25l[?12l[?25ha[?25l[?12l[?25h3[?25l[?12l[?25hd[?25l[?12l[?25h0[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25hi[?25l[?12l[?25hd[?25l[?12l[?25h/[?25l[?12l[?25h5[?25l[?12l[?25ha[?25l[?12l[?25h3[?25l[?12l[?25hd[?25l[?12l[?25h0[?25l[?12l[?25h8[?25l[?12l[?25h5[?25l[?12l[?25he[?25l[?12l[?25h-[?25l[?12l[?25hb[?25l[?12l[?25h6[?25l[?12l[?25he[?25l[?12l[?25h7[?25l[?12l[?25h-[?25l[?12l[?25h4[?25l[?12l[?25h2[?25l[?12l[?25h4[?25l[?12l[?25he[?25l[?12l[?25h-[?25l[?12l[?25h9[?25l[?12l[?25h2[?25l[?12l[?25h7[?25l[?12l[?25h9[?25l[?12l[?25h-[?25l[?12l[?25hf[?25l[?12l[?25h4[?25l[?12l[?25hb[?25l[?12l[?25hf[?25l[?12l[?25h8[?25l[?12l[?25h2[?25l[?12l[?25hc[?25l[?12l[?25h5[?25l[?12l[?25h3[?25l[?12l[?25hf[?25l[?12l[?25h8[?25l[?12l[?25h9[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h5[?25l[?12l[?25ha[?25l[?12l[?25h3[?25l[?12l[?25hd[?25l[?12l[?25h0[?25l[?12l[?25h8[?25l[?12l[?25h5[?25l[?12l[?25he[?25l[?12l[?25h-[?25l[?12l[?25hb[?25l[?12l[?25h6[?25l[?12l[?25he[?25l[?12l[?25h7[?25l[?12l[?25h-[?25l[?12l[?25h4[?25l[?12l[?25h2[?25l[?12l[?25h4[?25l[?12l[?25he[?25l[?12l[?25h-[?25l[?12l[?25h9[?25l[?12l[?25h2[?25l[?12l[?25h7[?25l[?12l[?25h9[?25l[?12l[?25h-[?25l[?12l[?25hf[?25l[?12l[?25h4[?25l[?12l[?25hb[?25l[?12l[?25hf[?25l[?12l[?25h8[?25l[?12l[?25h2[?25l[?12l[?25hc[?25l[?12l[?25h5[?25l[?12l[?25h3[?25l[?12l[?25hf[?25l[?12l[?25h8[?25l[?12l[?25h9[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[9;48H[?25l[?12l[?25h[10d[?25l[?12l[?25h/[?25l[?12l[?25hd[?25l[?12l[?25he[?25l[?12l[?25hv[?25l[?12l[?25h/[?25l[?12l[?25hd[?25l[?12l[?25hi[?25l[?12l[?25hs[?25l[?12l[?25hk[?25l[?12l[?25h/[?25l[?12l[?25hb[?25l[?12l[?25hy[?25l[?12l[?25h-[?25l[?12l[?25hu[?25l[?12l[?25hu[?25l[?12l[?25hi[?25l[?12l[?25hd[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25hy[?25l[?12l[?25h-[?25l[?12l[?25hu[?25l[?12l[?25hu[?25l[?12l[?25hi[?25l[?12l[?25hd[?25l[?12l[?25h/[?25l[?12l[?25h5[?25l[?12l[?25ha[?25l[?12l[?25h3[?25l[?12l[?25hd[?25l[?12l[?25h0[?25l[?12l[?25h8[?25l[?12l[?25h5[?25l[?12l[?25he[?25l[?12l[?25h-[?25l[?12l[?25hb[?25l[?12l[?25h6[?25l[?12l[?25he[?25l[?12l[?25h7[?25l[?12l[?25h-[?25l[?12l[?25h4[?25l[?12l[?25h2[?25l[?12l[?25h4[?25l[?12l[?25he[?25l[?12l[?25h-[?25l[?12l[?25h9[?25l[?12l[?25h2[?25l[?12l[?25h7[?25l[?12l[?25h9[?25l[?12l[?25h-[?25l[?12l[?25hf[?25l[?12l[?25h4[?25l[?12l[?25hb[?25l[?12l[?25hf[?25l[?12l[?25h8[?25l[?12l[?25h2[?25l[?12l[?25hc[?25l[?12l[?25h5[?25l[?12l[?25h3[?25l[?12l[?25hf[?25l[?12l[?25h8[?25l[?12l[?25h9[?25l[?12l[?25h [?25l[?12l[?25h/[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25hd[?25l[?12l[?25hi[?25l[?12l[?25hs[?25l[?12l[?25hk[?25l[?12l[?25h/[?25l[?12l[?25hb[?25l[?12l[?25hy[?25l[?12l[?25h-[?25l[?12l[?25hu[?25l[?12l[?25hu[?25l[?12l[?25hi[?25l[?12l[?25hd[?25l[?12l[?25h/[?25l[?12l[?25h5[?25l[?12l[?25ha[?25l[?12l[?25h3[?25l[?12l[?25hd[?25l[?12l[?25h0[?25l[?12l[?25h8[?25l[?12l[?25h5[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25hv[?25l[?12l[?25h/[?25l[?12l[?25hd[?25l[?12l[?25hi[?25l[?12l[?25hs[?25l[?12l[?25hk[?25l[?12l[?25h/[?25l[?12l[?25hb[?25l[?12l[?25hy[?25l[?12l[?25h-[?25l[?12l[?25hu[?25l[?12l[?25hu[?25l[?12l[?25hi[?25l[?12l[?25hd[?25l[?12l[?25h/[?25l[?12l[?25h5[?25l[?12l[?25ha[?25l[?12l[?25h3[?25l[?12l[?25hd[?25l[?12l[?25h0[?25l[?12l[?25h8[?25l[?12l[?25h5[?25l[?12l[?25he[?25l[?12l[?25h-[?25l[?12l[?25hb[?25l[?12l[?25h6[?25l[?12l[?25he[?25l[?12l[?25h7[?25l[?12l[?25h-[?25l[?12l[?25h4[?25l[?12l[?25h2[?25l[?12l[?25h4[?25l[?12l[?25he[?25l[?12l[?25h-[?25l[?12l[?25h9[?25l[?12l[?25h2[?25l[?12l[?25h7[?25l[?12l[?25h9[?25l[?12l[?25h-[?25l[?12l[?25hf[?25l[?12l[?25h4[?25l[?12l[?25hb[?25l[?12l[?25hf[?25l[?12l[?25h8[?25l[?12l[?25h2[?25l[?12l[?25hc[?25l[?12l[?25h5[?25l[?12l[?25h3[?25l[?12l[?25hf[?25l[?12l[?25h8[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25hf[?25l[?12l[?25h8[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h/[?25l[?12l[?25h5[?25l[?12l[?25ha[?25l[?12l[?25h3[?25l[?12l[?25hd[?25l[?12l[?25h0[?25l[?12l[?25h8[?25l[?12l[?25h5[?25l[?12l[?25he[?25l[?12l[?25h-[?25l[?12l[?25hb[?25l[?12l[?25h6[?25l[?12l[?25he[?25l[?12l[?25h7[?25l[?12l[?25h-[?25l[?12l[?25h4[?25l[?12l[?25h2[?25l[?12l[?25h4[?25l[?12l[?25he[?25l[?12l[?25h-[?25l[?12l[?25h9[?25l[?12l[?25h2[?25l[?12l[?25h7[?25l[?12l[?25h9[?25l[?12l[?25h-[?25l[?12l[?25hf[?25l[?12l[?25h4[?25l[?12l[?25hb[?25l[?12l[?25hf[?25l[?12l[?25h8[?25l[?12l[?25h2[?25l[?12l[?25hc[?25l[?12l[?25h5[?25l[?12l[?25h3[?25l[?12l[?25hf[?25l[?12l[?25h8[?25l[?12l[?25h[9;48H[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h/[?25l[?12l[?25hd[?25l[?12l[?25he[?25l[?12l[?25hv[?25l[?12l[?25h/[?25l[?12l[?25hd[?25l[?12l[?25hi[?25l[?12l[?25hs[?25l[?12l[?25hk[?25l[?12l[?25h/[?25l[?12l[?25hb[?25l[?12l[?25hy[?25l[?12l[?25h-[?25l[?12l[?25hu[?25l[?12l[?25hu[?25l[?12l[?25hi[?25l[?12l[?25hd[?25l[?12l[?25h/[?25l[?12l[?25h5[?25l[?12l[?25h3[?25l[?12l[?25hE[?25l[?12l[?25hD[?25l[?12l[?25h-[?25l[?12l[?25h8[?25l[?12l[?25h3[?25l[?12l[?25hD[?25l[?12l[?25h5[?25l[?12l[?25h [?25l[?12l[?25h/[?25l[?12l[?25hb[?25l[?12l[?25ho[?25l[?12l[?25ho[?25l[?12l[?25ht[?25l[?12l[?25h/[?25l[?12l[?25he[?25l[?12l[?25hf[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[C[?25l[?12l[?25h[8d[?25l[?12l[?25h[C[?25l[?12l[?25h[9d[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[10d[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25he[?25l[?12l[?25hv[?25l[?12l[?25h/[?25l[?12l[?25hd[?25l[?12l[?25hi[?25l[?12l[?25hs[?25l[?12l[?25hk[?25l[?12l[?25h/[?25l[?12l[?25hb[?25l[?12l[?25hy[?25l[?12l[?25h-[?25l[?12l[?25hu[?25l[?12l[?25hu[?25l[?12l[?25hi[?25l[?12l[?25hd[?25l[?12l[?25h/[?25l[?12l[?25h5[?25l[?12l[?25ha[?25l[?12l[?25h3[?25l[?12l[?25hd[?25l[?12l[?25h0[?25l[?12l[?25h8[?25l[?12l[?25h5[?25l[?12l[?25he[?25l[?12l[?25h-[?25l[?12l[?25hb[?25l[?12l[?25h6[?25l[?12l[?25he[?25l[?12l[?25h7[?25l[?12l[?25h-[?25l[?12l[?25h4[?25l[?12l[?25h2[?25l[?12l[?25h4[?25l[?12l[?25he[?25l[?12l[?25h-[?25l[?12l[?25h9[?25l[?12l[?25h2[?25l[?12l[?25h7[?25l[?12l[?25h9[?25l[?12l[?25h-[?25l[?12l[?25hf[?25l[?12l[?25h4[?25l[?12l[?25hb[?25l[?12l[?25hf[?25l[?12l[?25h8[?25l[?12l[?25h2[?25l[?12l[?25hc[?25l[?12l[?25h5[?25l[?12l[?25h3[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[1;50H(B[0;7m*[80G(B[m[?12l[?25h[14d/[?25l[?12l[?25hd[?25l[?12l[?25he[?25l[?12l[?25hv[?25l[?12l[?25h/[?25l[?12l[?25hs[?25l[?12l[?25hd[?25l[?12l[?25hb[?25l[?12l[?25h1[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[?25l[?12l[?25h/[?25l[?12l[?25hm[?25l[?12l[?25hi[?25l[?12l[?25hn[?25l[?12l[?25hf[?25l[?12l[?25hi[?25l[?12l[?25hn[?25l[?12l[?25ha[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25hn[?25l[?12l[?25hy[?25l[?12l[?25ha[?25l[?12l[?25hp[?25l[?12l[?25ha[?25l[?12l[?25hr[?25l[?12l[?25ht[?25l[?12l[?25hi[?25l[?12l[?25ht[?25l[?12l[?25hi[?25l[?12l[?25ho[?25l[?12l[?25hn[?25l[?12l[?25h [?25l[?12l[?25he[?25l[?12l[?25hx[?25l[?12l[?25ht[?25l[?12l[?25h4[?25l[?12l[?25h [?25l[?12l[?25hd[?25l[?12l[?25he[?25l[?12l[?25hf[?25l[?12l[?25ha[?25l[?12l[?25hu[?25l[?12l[?25hl[?25l[?12l[?25ht[?25l[?12l[?25hs[?25l[?12l[?25h [?25l[?12l[?25h0[?25l[?12l[?25h [?25l[?12l[?25h2[?25l[15d[?12l[?25h[?25l[?12l[?25h[A[?25l[?12l[?25h[15d[?25l[21d(B[0;7mSave modified buffer?                                                            [22;1H Y(B[m Yes[K[23d(B[0;7m N(B[m No  [14G   (B[0;7m^C(B[m Cancel[K[21;23H[?12l[?25h[?25l[22d(B[0;7m^G(B[m Help[22;21H(B[0;7mM-D(B[m DOS Format[41G(B[0;7mM-A(B[m Append[22;61H(B[0;7mM-B(B[m Backup File[23d(B[0;7m^C(B[m Cancel[17G    (B[0;7mM-M(B[m Mac Format[41G(B[0;7mM-P(B[m Prepend[23;61H(B[0;7m^T(B[m Browse[21d(B[0;7mFile Name to Write: /etc/fstab(B[m[?12l[?25h[?25l  [1K (B[0;7m[ Writing... ](B[m[K[1;50H(B[0;7m [80G(B[m[21;32H(B[0;7m[ Wrote 14 lines ](B[m[J[23d[?12l[?25h[23;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;root@ubse: ~root@ubse:~# lsblk
+[?2004lNAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part /minnyapartition
+sr0     11:0    1 1024M  0 rom  
+[?2004h]0;root@ubse: ~root@ubse:~# grep /etc/fstab [C[1@ [1@m[1@i[1@n[1@n[1@y[1@a
+[?2004l/dev/sdb1       /[01;31m[Kminnya[m[Kpartition ext4 defaults 0 2
+[?2004h]0;root@ubse: ~root@ubse:~# umount /,oim[K[K[K[Kminnyapartition 
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# umount /minnyapartition [C[C[C[C[C[C[C[C[C[C[C[C[C[1Pgrep minnya /etc/fstab[C[C[C[C[C[C[C[C[C[C[C[C[C[Clsblk[K
+[?2004lNAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part 
+sr0     11:0    1 1024M  0 rom  
+[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# (reverse-i-search)`': [K[25@m': umount /[7mm[27minnyapartition[1@o': u[7mmo[27munt /m[1@u': u[7mmou[27m[1@n': u[7mmoun[27m[1@t': u[7mmount[27m[7mmount[27m[K[C[C[C[C[C /dev/sdb1 /minnyapartition/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14P]0;root@ubse: ~root@ubse:~# mount[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C  # gi[K[Ktidigare ^C[?2004l[?2004h[?2004l
+[?2004h]0;root@ubse: ~root@ubse:~# (reverse-i-search)`': [K[24@g': [7mg[27mrep minnya /etc/fstab[1@r': [7mgr[27m[1@e': [7mgre[27m[1@p': [7mgrep[27m[13P]0;root@ubse: ~root@ubse:~# grep
+[?2004l/dev/sdb1       /[01;31m[Kminnya[m[Kpartition ext4 defaults 0 2
+[?2004h]0;root@ubse: ~root@ubse:~# mount [7m/minnyapartition[27m/minnyapartition
+[?2004lmount: (hint) your fstab has been modified, but systemd still uses
+       the old version; use 'systemctl daemon-reload' to reload.
+[?2004h]0;root@ubse: ~root@ubse:~# systemctl de[Kaemon-reload 
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# systemctl daemon-reload [C[C[C[C[C[C[C[C[C[C[C[C[C[2Pmount /minnyapartition
+[?2004lmount: /minnyapartition: /dev/sdb1 already mounted on /minnyapartition.
+       dmesg(1) may have more information after failed mount system call.
+[?2004h]0;root@ubse: ~root@ubse:~# lsblk
+[?2004lNAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part /minnyapartition
+sr0     11:0    1 1024M  0 rom  
+[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# ls ./[K[K/minnyapartition/
+[?2004lhejsan  [0m[01;34mlost+found[0m
+[?2004h]0;root@ubse: ~root@ubse:~# (reverse-i-search)`': [Km': ls /[7mm[27minnyapartition/o': [7mmo[27munt /minnyapartition[1@u': [7mmou[27m[1@n': [7mmoun[27m[1@t': [7mmount[27mu[7mmount[27m /minnyapartition [14P]0;root@ubse: ~root@ubse:~# umount[C[C[C[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K ^C[?2004l[?2004h[?2004l
+[?2004h]0;root@ubse: ~root@ubse:~# umount /d[Kminnyapartition 
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# lsblk
+[?2004lNAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part 
+sr0     11:0    1 1024M  0 rom  
+[?2004h]0;root@ubse: ~root@ubse:~# mount[K[K[K[K[K[H[2J]0;root@ubse: ~root@ubse:~# f[Kgrep -a'-a[C[C'='-a'[1P'-a'-'-a'-'-a' '-a'[1@m[1@a[1@n[1@ [1@m[1@o[1@u[1@n[1@t[1@ [1@|[1@ 
+[?2004ltroff:<standard input>:46: warning [p 1, 3.2i]: cannot break line
+       mount [01;31m[K-a[m[K [-fFnrsvw] [-t fstype] [-O optlist]
+       exception is -[01;31m[K-a[m[Kll, in this case already mounted filesystems are
+       ignored (see -[01;31m[K-a[m[Kll below for more details).
+          mount [01;31m[K-a[m[K [-t type] [-O optlist]
+       [01;31m[K-a[m[K, -[01;31m[K-a[m[Kll
+           -[01;31m[K-a[m[Kll. This means that all duplicated fstab entries will be
+           filesystems before mount [01;31m[K-a[m[K is executed, or keep /proc and /sys at
+           The option -[01;31m[K-a[m[Kll is possible to use for remount operation too. In
+           Note that it is a bad practice to use mount [01;31m[K-a[m[K for fstab checking.
+           (Used in conjunction with [01;31m[K-a[m[K.) Fork off a new incarnation of mount
+           Limit the set of filesystems to which the [01;31m[K-a[m[K option applies. In
+           without [01;31m[K-a[m[K. For example, the command
+           mount [01;31m[K-a[m[K -O no_netdev
+           mount [01;31m[K-a[m[K -t ext2 -O  _netdev
+           This behavior is the default for -[01;31m[K-a[m[Kll; otherwise, it depends on
+           mount -[01;31m[K-a[m[Kll --target-prefix /chroot -o X-mount.mkdir
+           The prefix no can be meaningful with the [01;31m[K-a[m[K option. For example,
+           mount [01;31m[K-a[m[K -t nomsdos,smbfs
+           Can be mounted with the [01;31m[K-a[m[K option.
+           Can only be mounted explicitly (i.e., the [01;31m[K-a[m[K option will not cause
+           mount allows the use of -[01;31m[K-a[m[Kll to remount all already mounted
+           mount -[01;31m[K-a[m[Kll -o remount,ro -t vfat
+           X[01;31m[K-a[m[Kppname.option.
+           Enable bulk-read. VFS read[01;31m[K-a[m[Khead is disabled because it slows down
+           The command mount [01;31m[K-a[m[K returns 0 (all succeeded), 32 (all failed), or
+[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# mount -[K[K[K[K[K[K[Ks[Klsblk
+[?2004lNAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part 
+sr0     11:0    1 1024M  0 rom  
+[?2004h]0;root@ubse: ~root@ubse:~# mount /a[K[K-a
+[?2004l[?2004h]0;root@ubse: ~root@ubse:~# mount -a[3Plsblk
+[?2004lNAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sdb      8:16   0   25G  0 disk 
+└─sdb1   8:17   0  100M  0 part /minnyapartition
+sr0     11:0    1 1024M  0 rom  
+[?2004h]0;root@ubse: ~root@ubse:~# [H[2J]0;root@ubse: ~root@ubse:~# reboot
+[?2004l
+Broadcast message from root@ubse on pts/1 (Tue 2025-05-13 09:23:32 UTC):
+
+The system will reboot now!
+
+[?2004h]0;root@ubse: ~root@ubse:~# Connection to localhost closed by remote host.
+Connection to localhost closed.
+[?2004h[94mDEVOPS24/lektion15
+(B[m$ [?2004l
+exit
+
+Script done on 2025-05-13 11:23:38+02:00 [COMMAND_EXIT_CODE="255"]

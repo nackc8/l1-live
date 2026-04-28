@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style type="text/css">
+pre {
+  font-family:Courier New;
+  font-size:10pt;
+}
+
+.af_line {
+  color: gray;
+  text-decoration: none;
+}
+
+</style>
+<title>125907.txt</title>
+</head>
+<body>
+<pre>Script started on 2025-04-15 12:59:14+02:00 [TERM=&quot;xterm-256color&quot; TTY=&quot;/dev/pts/2&quot; COLUMNS=&quot;138&quot; LINES=&quot;16&quot;]
+<span style="color:#5c5cff;">DEVOPS24/lektion1
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion1
+$ mkdir ln
+<span style="color:#5c5cff;">DEVOPS24/lektion1
+</span>$ cd ln/
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion1/ln
+</span>$ ls
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ touch fil
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+<span style="color:#5c5cff;">:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ stat fil 
+  File: fil
+  Size: 8         	Blocks: 8          IO Block: 4096   regular file
+Device: 253,1	Inode: 95297612    Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1000/    kent)   Gid: ( 1000/    kent)
+Access: 2025-04-15 13:00:01.548910037 +0200
+Modify: 2025-04-15 13:00:01.516911459 +0200
+Change: 2025-04-15 13:00:01.516911459 +0200
+ Birth: 2025-04-15 12:59:47.677536656 +0200
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion1/ln
+</span>$ ls
+fil
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ ln cfil hardlink
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ stat fil
+  File: fil
+  Size: 8         	Blocks: 8          IO Block: 4096   regular file
+Device: 253,1	Inode: 95297612    Links: 2
+Access: (0644/-rw-r--r--)  Uid: ( 1000/    kent)   Gid: ( 1000/    kent)
+Access: 2025-04-15 13:00:01.548910037 +0200
+Modify: 2025-04-15 13:00:01.516911459 +0200
+Change: 2025-04-15 13:01:03.926340083 +0200
+ Birth: 2025-04-15 12:59:47.677536656 +0200
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion1/ln
+</span>$ ls
+fil  hardlink
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ rm fil 
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+lsstat film fil 
+stat: cannot statx &apos;fil&apos;: No such file or directory
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ stat fih
+ hardlink 
+  File: hardlink
+  Size: 8         	Blocks: 8          IO Block: 4096   regular file
+Device: 253,1	Inode: 95297612    Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1000/    kent)   Gid: ( 1000/    kent)
+Access: 2025-04-15 13:00:01.548910037 +0200
+Modify: 2025-04-15 13:00:01.516911459 +0200
+Change: 2025-04-15 13:01:29.721388263 +0200
+ Birth: 2025-04-15 12:59:47.677536656 +0200
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion1/ln
+</span>$ ls
+hardlink
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ rm hardlink 
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion1/ln
+<span style="color:#5c5cff;">">DEVOPS24/lektion1/ln
+</span>$ ls
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ nano movilegood.txt
+<span style="color:#5c5cff;">f;">DEVOPS24/lektion1/ln lines ]                          Y Yes                        good.txt                                     
+</span>$ ln -s good.txt bad.txt
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ ls +-i
+95297615 bad.txt  95297616 good.txt
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ rls -l
+total 4
+lrwxrwxrwx 1 kent kent  8 Apr 15 13:03 bad.txt -&gt; good.txt
+-rw-r--r-- 1 kent kent 14 Apr 15 13:03 good.txt
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ rm good.txt 
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+ls -ln>$ rm good.txt 
+total 0
+lrwxrwxrwx 1 kent kent 8 Apr 15 13:03 bad.txt -&gt; good.txt
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ cat bad.txt 
+cat: bad.txt: No such file or directory
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ cat bad.txt 
+Tillbaka!
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ ls
+bad.txt  good.txt
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ cart bad.txtt bad.txt 
+Tillbaka!
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ rm good.txt 
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ ls +-Ã¶l
+total 0
+lrwxrwxrwx 1 kent kent 8 Apr 15 13:03 bad.txt -&gt; good.txt
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ cat bad.txt
+cat: bad.txt: No such file or directory
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ ls
+bad.txt
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ nano bad.txt 
+<span style="color:#5c5cff;">f;">DEVOPS24/lektion1/lnline ]                            Y Yes        
+</span>$ ls
+bad.txt  good.txt
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ ls +-l
+total 4
+lrwxrwxrwx 1 kent kent 8 Apr 15 13:03 bad.txt -&gt; good.txt
+-rw-r--r-- 1 kent kent 4 Apr 15 13:07 good.txt
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion1/ln
+</span>$ ls /
+bin   home	      lib64	  opt		   run	   swapfile  var
+boot  initrd.img      lost+found  persistent-data  sbin    sys	     vmlinuz
+dev   initrd.img.old  media	  proc		   shared  tmp	     vmlinuz.old
+etc   lib	      mnt	  root		   srv	   usr
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion1/ln
+</span>$ ls Â~/
+ Android		 Desktop     Music	   shared_desktop
+ AndroidStudioProjects	 Documents   Pictures	   Templates
+ bin			 Downloads   Public	   Videos
+ bokforing		 Dropbox     Screenshots  &apos;VirtualBox VMs&apos;
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ ls ~ ~- ~A ~
+ .android		 .flutter		      .profile.bak
+ Android		 .gitconfig		      .pub-cache
+ AndroidStudioProjects	 .gitconfig_github_c8	      Public
+ .andstudio		 .gitconfig_github_nackc8     .python_history
+ .ansible		 .gitconfig_github_personal   .redhat
+ .backups		 .gnome			      .rest-client
+ .bash_history		 .gnupg			      Screenshots
+ .bash_logout		 .gradle		      .selected_editor
+ .bashrc		 .grsync		      shared_desktop
+ .bashrc.d		 .gtkrc-2.0		      .shellcheckrc
+ .bin			 .guestfish		      .ssh
+ bin			 .ICEauthority		      .sshubse
+ bokforing		 .java			      .sudo_as_admin_successful
+ .cache			 .lemminx		      .swt
+ .clasprc.json		 .lesshst		      Templates
+ .config		 .local			      .unison
+ .dartServer		 .m2			      .vagrant
+ .dart-tool		 .mozilla		      Videos
+ Desktop		 Music			      .viminfo
+ .docker		 .node_repl_history	     &apos;VirtualBox VMs&apos;
+ Documents		 .npm			      .vscode
+ .dotnet		 .nvm			      .vscode-server
+ Downloads		 .openjfx		      .w3m
+ .dropbox		 .packages		      .wget-hsts
+ Dropbox		 .pandoc		      .wine
+ .elinks		 Pictures		      .xinputrc
+ .face			 .pki			      .zoom
+ .face.icon		 .profile
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion1/ln
+</span>$ ls -a
+.  ..  bad.txt	good.txt
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ ls -i
+95297611 .  95297585 ..  95297615 bad.txt  95297618 good.txt
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ stat /home/
+
+
+
+
+
+
+
+pwd
+/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion1/ln
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ stat /shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion1/ln<span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion1/ln
+<span style="color:#000000;background-color:#000000;">  File: /shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion1/ln
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 253,1	Inode: 95297611    Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/    kent)   Gid: ( 1000/    kent)
+Access: 2025-04-15 13:07:11.997457229 +0200
+Modify: 2025-04-15 13:07:10.753473605 +0200
+Change: 2025-04-15 13:07:10.753473605 +0200
+ Birth: 2025-04-15 12:59:41.605817590 +0200
+<span style="color:#5c5cff;background-color:#000000;">0000;">DEVOPS24/lektion1/ln
+pwdls -aistat /shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion1/ln
+95297611 .  95297585 ..  95297615 bad.txt  95297618 good.txt
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+stat /shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion1/l
+  File: /shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion1
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 253,1	Inode: 95297585    Links: 4
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/    kent)   Gid: ( 1000/    kent)
+Access: 2025-04-15 12:59:42.389781085 +0200
+Modify: 2025-04-15 12:59:41.605817590 +0200
+Change: 2025-04-15 12:59:41.605817590 +0200
+ Birth: 2025-04-15 12:59:14.563119599 +0200
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion1/ln
+</span>$ pwd
+/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion1/ln
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ cd .
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ cd .
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+pwdpan>$ cd .
+/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion1/ln
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ c
+bash: c: command not found
+<span style="color:#5c5cff;">DEVOPS24/lektion1/ln
+</span>$ cd ..
+<span style="color:#5c5cff;">DEVOPS24/lektion1
+</span>$ pwd
+/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion1
+<span style="color:#5c5cff;">DEVOPS24/lektion1
+<span style="color:#5c5cff;">5c5cff;">DEVOPS24/lektion1
+</span>$ tocuuch .doldis
+<span style="color:#5c5cff;">DEVOPS24/lektion1
+</span>$ ls
+ln  recordings
+<span style="color:#5c5cff;">DEVOPS24/lektion1
+</span>$ ls -a
+.  ..  .doldis	ln  recordings
+<span style="color:#5c5cff;">DEVOPS24/lektion1
+</span>$ ls -A
+.doldis  ln  recordings
+<span style="color:#5c5cff;">DEVOPS24/lektion1
+</span>$ 
+exit
+
+Script done on 2025-04-15 13:19:48+02:00 [COMMAND_EXIT_CODE=&quot;0&quot;]
+</pre>
+</body>
+</html>
+<!--HTML generated by ansifilter 2.18, http://www.andre-simon.de/-->

@@ -1,0 +1,219 @@
+Script started on 2025-04-17 09:47:38+02:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="81" LINES="20"]
+DEVOPS24/lektion3
+$ DEVOPS24/lektion3
+$ man man
+MAN(1)                        Manual pager utils                        MAN(1)
+
+NAME
+       man - an interface to the system reference manuals
+
+SYNOPSIS
+       man [man options] [[section] page ...] ...
+       man -k [apropos options] regexp ...
+       man -K [man options] [section] term ...
+       man -f [whatis options] page ...
+       man -l [man options] file ...
+       man -w|-W [man options] page ...
+
+DESCRIPTION
+       man  is  the system's manual pager.  Each page argument given to man is
+       normally the name of a program, utility or function.  The  manual  page
+       associated with each of these arguments is then found and displayed.  A
+       section, if provided, will direct man to look only in that  section  of
+       the  manual.   The  default action is to search in all of the available
+       sections following a pre-defined order (see DEFAULTS), and to show only
+       the first page found, even if page exists in several sections.
+ ESESCOBpage man(1) line 3 (press h for help or q to quit)
+       The table below shows the section numbers of the manual followed by the
+       types of pages they contain. for help or q to quit)
+ ESESCOBpage man(1) line 6 (press h for help or q to quit)
+       1   Executable programs or shell commandsq to quit)
+       2   System calls (functions provided by the kernel)
+       3   Library calls (functions within program libraries)
+       4   Special files (usually found in /dev) q to quit)
+       5   File formats and conventions, e.g. /etc/passwdt)
+       6   Games(1) line 12 (press h for help or q to quit)
+       7   Miscellaneous (including  macro  packages  and  conventions),  e.g.
+           man(7), groff(7), man-pages(7)help or q to quit)
+       8   System administration commands (usually only for root)
+       9   Kernel routines [Non standard]help or q to quit)
+ ESESCOBpage man(1) line 17 (press h for help or q to quit)
+       A manual page consists of several sections. to quit)
+ ESESCOBpage man(1) line 19 (press h for help or q to quit)
+       Conventional  section  names include NAME, SYNOPSIS, CONFIGURATION, DE‐
+       SCRIPTION, OPTIONS,  EXIT STATUS,  RETURN VALUE,  ERRORS,  ENVIRONMENT,
+       FILES,  VERSIONS,  CONFORMING TO,  NOTES,  BUGS,  EXAMPLE, AUTHORS, and
+       SEE ALSO.(1) line 23 (press h for help or q to quit)
+ ESESCOBpage man(1) line 24 (press h for help or q to quit)
+       The following conventions apply to the SYNOPSIS section and can be used
+MESESCOApage man(1) line 26 (press h for help or q to quit)
+M       types of pages they contain. for help or q to quit)
+M       The table below shows the section numbers of the manual followed by the
+MESESCOApage man(1) line 23 (press h for help or q to quit)
+M       the first page found, even if page exists in several sections.
+>DEVOPS24/lektion3) line 21 (press h for help or q to quit)
+$ man 5 /etc/passwd
+/etc/passwd
+root:x:0:0:root:/root:/bin/bash                 daemon:x:1:1:dae‐
+mon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin  www‐data:x:33:33:www‐
+data:/var/www:/usr/sbin/nologin  backup:x:34:34:backup:/var/back‐
+ups:/usr/sbin/nologin    list:x:38:38:Mailing     List     Manag‐
+er:/var/list:/usr/sbin/nologin          irc:x:39:39:ircd:/run/ir‐
+cd:/usr/sbin/nologin                   _apt:x:42:65534::/nonexis‐
+tent:/usr/sbin/nologin      nobody:x:65534:65534:nobody:/nonexis‐
+tent:/usr/sbin/nologin systemd‐network:x:998:998:systemd  Network
+Management:/:/usr/sbin/nologin     tss:x:100:107:TPM     software
+stack,,,:/var/lib/tpm:/bin/false  systemd‐timesync:x:997:997:sys‐
+temd     Time     Synchronization:/:/usr/sbin/nologin    message‐
+bus:x:101:108::/nonexistent:/usr/sbin/nologin           avahi‐au‐
+toipd:x:102:111:Avahi     autoip     daemon,,,:/var/lib/avahi‐au‐
+toipd:/usr/sbin/nologin        usbmux:x:103:46:usbmux        dae‐
+mon,,,:/var/lib/usbmux:/usr/sbin/nologin dnsmasq:x:104:65534:dns‐
+masq,,,:/var/lib/misc:/usr/sbin/nologin     avahi:x:105:113:Avahi
+mDNS   daemon,,,:/run/avahi‐daemon:/usr/sbin/nologin  speech‐dis‐
+patcher:x:106:29:Speech       Dispatcher,,,:/run/speech‐dispatch‐
+er:/bin/false      fwupd‐refresh:x:107:116:fwupd‐refresh      us‐
+er,,,:/run/systemd:/usr/sbin/nologin for help or q to quit)
+saned:x:108:118::/var/lib/saned:/usr/sbin/nologin            geo‐
+clue:x:109:119::/var/lib/geoclue:/usr/sbin/nologin          polk‐
+itd:x:996:996:polkit:/nonexistent:/usr/sbin/nologin          rtk‐
+it:x:110:120:RealtimeKit,,,:/proc:/usr/sbin/nologin          col‐
+ord:x:111:121:colord  colour  management  daemon,,,:/var/lib/col‐
+ord:/usr/sbin/nologin                          gnome‐initial‐set‐
+up:x:112:65534::/run/gnome‐initial‐setup/:/bin/false      Debian‐
+gdm:x:113:122:Gnome   Display    Manager:/var/lib/gdm3:/bin/false
+kent:x:1000:1000:Kent             Larsson,,,:/home/kent:/bin/bash
+_rpc:x:114:65534::/run/rpcbind:/usr/sbin/nologin       Debian‐ex‐
+im:x:115:125::/var/spool/exim4:/usr/sbin/nologin q to quit)
+uuidd:x:116:126::/run/uuidd:/usr/sbin/nologin or q to quit)
+statd:x:117:65534::/var/lib/nfs:/usr/sbin/nologin     libvirt‐qe‐
+mu:x:64055:104:Libvirt Qemu,,,:/var/lib/libvirt:/usr/sbin/nologin
+lightdm:x:118:128:Light      Display      Manager:/var/lib/light‐
+dm:/bin/false sshd:x:119:65534::/run/sshd:/usr/sbin/nologin
+ ESESCOBpage passwd line 28 (press h for help or q to quit)
+Mpatcher:x:106:29:Speech       Dispatcher,,,:/run/speech‐dispatch‐
+MmDNS   daemon,,,:/run/avahi‐daemon:/usr/sbin/nologin  speech‐dis‐
+Mmasq,,,:/var/lib/misc:/usr/sbin/nologin     avahi:x:105:113:Avahi
+Mmon,,,:/var/lib/usbmux:/usr/sbin/nologin dnsmasq:x:104:65534:dns‐
+Mtoipd:/usr/sbin/nologin        usbmux:x:103:46:usbmux        dae‐
+Mtoipd:x:102:111:Avahi     autoip     daemon,,,:/var/lib/avahi‐au‐
+Mbus:x:101:108::/nonexistent:/usr/sbin/nologin           avahi‐au‐
+Mtemd     Time     Synchronization:/:/usr/sbin/nologin    message‐
+Mstack,,,:/var/lib/tpm:/bin/false  systemd‐timesync:x:997:997:sys‐
+MManagement:/:/usr/sbin/nologin     tss:x:100:107:TPM     software
+Mtent:/usr/sbin/nologin systemd‐network:x:998:998:systemd  Network
+Mtent:/usr/sbin/nologin      nobody:x:65534:65534:nobody:/nonexis‐
+Mcd:/usr/sbin/nologin                   _apt:x:42:65534::/nonexis‐
+Mer:/var/list:/usr/sbin/nologin          irc:x:39:39:ircd:/run/ir‐
+Mups:/usr/sbin/nologin    list:x:38:38:Mailing     List     Manag‐
+Mdata:/var/www:/usr/sbin/nologin  backup:x:34:34:backup:/var/back‐
+Mproxy:x:13:13:proxy:/bin:/usr/sbin/nologin  www‐data:x:33:33:www‐
+Muucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologino quit)
+Mnews:x:9:9:news:/var/spool/news:/usr/sbin/nologin to quit)
+Mmail:x:8:8:mail:/var/mail:/usr/sbin/nologinp or q to quit)
+Mlp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologinor q to quit)
+Mman:x:6:12:man:/var/cache/man:/usr/sbin/nologinq to quit)
+Mgames:x:5:60:games:/usr/games:/usr/sbin/nologinq to quit)
+Msync:x:4:65534:sync:/bin:/bin/sync for help or q to quit)
+Msys:x:3:3:sys:/dev:/usr/sbin/nologinor help or q to quit)
+Mbin:x:2:2:bin:/bin:/usr/sbin/nologinor help or q to quit)
+Mmon:/usr/sbin:/usr/sbin/nologins h for help or q to quit)
+Mroot:x:0:0:root:/root:/bin/bash                 daemon:x:1:1:dae‐
+ ESESCOApage passwd line 1 (press h for help or q to quit)
+ ESESCOApage passwd line 1 (press h for help or q to quit)
+stack,,,:/var/lib/tpm:/bin/false  systemd‐timesync:x:997:997:sys‐
+temd     Time     Synchronization:/:/usr/sbin/nologin    message‐
+bus:x:101:108::/nonexistent:/usr/sbin/nologin           avahi‐au‐
+toipd:x:102:111:Avahi     autoip     daemon,,,:/var/lib/avahi‐au‐
+toipd:/usr/sbin/nologin        usbmux:x:103:46:usbmux        dae‐
+mon,,,:/var/lib/usbmux:/usr/sbin/nologin dnsmasq:x:104:65534:dns‐
+masq,,,:/var/lib/misc:/usr/sbin/nologin     avahi:x:105:113:Avahi
+mDNS   daemon,,,:/run/avahi‐daemon:/usr/sbin/nologin  speech‐dis‐
+patcher:x:106:29:Speech       Dispatcher,,,:/run/speech‐dispatch‐
+er:/bin/false      fwupd‐refresh:x:107:116:fwupd‐refresh      us‐
+er,,,:/run/systemd:/usr/sbin/nologin for help or q to quit)
+saned:x:108:118::/var/lib/saned:/usr/sbin/nologin            geo‐
+clue:x:109:119::/var/lib/geoclue:/usr/sbin/nologin          polk‐
+itd:x:996:996:polkit:/nonexistent:/usr/sbin/nologin          rtk‐
+it:x:110:120:RealtimeKit,,,:/proc:/usr/sbin/nologin          col‐
+ord:x:111:121:colord  colour  management  daemon,,,:/var/lib/col‐
+ord:/usr/sbin/nologin                          gnome‐initial‐set‐
+up:x:112:65534::/run/gnome‐initial‐setup/:/bin/false      Debian‐
+gdm:x:113:122:Gnome   Display    Manager:/var/lib/gdm3:/bin/false
+kent:x:1000:1000:Kent             Larsson,,,:/home/kent:/bin/bash
+_rpc:x:114:65534::/run/rpcbind:/usr/sbin/nologin       Debian‐ex‐
+im:x:115:125::/var/spool/exim4:/usr/sbin/nologin q to quit)
+uuidd:x:116:126::/run/uuidd:/usr/sbin/nologin or q to quit)
+statd:x:117:65534::/var/lib/nfs:/usr/sbin/nologin     libvirt‐qe‐
+mu:x:64055:104:Libvirt Qemu,,,:/var/lib/libvirt:/usr/sbin/nologin
+lightdm:x:118:128:Light      Display      Manager:/var/lib/light‐
+dm:/bin/false sshd:x:119:65534::/run/sshd:/usr/sbin/nologin
+ ESESCOBpage passwd line 28 (press h for help or q to quit)
+ ESESCOBpage passwd line 29 (press h for help or q to quit)
+ ESESCOBpage passwd line 29/47 (END) (press h for help or q to quit)
+Mpatcher:x:106:29:Speech       Dispatcher,,,:/run/speech‐dispatch‐
+>DEVOPS24/lektion3d line 28/47 100% (press h for help or q to quit)
+$ man 5 /etc/passwssh_ssh/sshd
+_config
+=
+#  This is the sshd server system‐wide configuration file.  See #
+sshd_config(5) for more information.           #  This  sshd  was
+compiled with PATH=/usr/local/bin:/usr/bin:/bin:/usr/games
+
+#  The  strategy  used  for  options  in  the default sshd_config
+shipped with # OpenSSH is to specify options with  their  default
+value  where  #  possible, but leave them commented.  Uncommented
+options override the # default value.
+
+Include /etc/ssh/sshd_config.d/*.conf
+
+#Port 22 #AddressFamily any #ListenAddress 0.0.0.0 #ListenAddress
+::
+
+ #HostKey            /etc/ssh/ssh_host_rsa_key           #HostKey
+/etc/ssh/ssh_host_ecdsa_key                              #HostKey
+/etc/ssh/ssh_host_ed25519_key
+
+# Ciphers and keying #RekeyLimit default nonehelp or q to quit)
+ ESESCOBpage sshd_config line 2 (press h for help or q to quit)
+# Logging #SyslogFacility AUTH #LogLevel INFOhelp or q to quit)
+ ESESCOBpage sshd_config line 4 (press h for help or q to quit)
+# Authentication:_config line 5 (press h for help or q to quit)
+ ESESCOBpage sshd_config line 6 (press h for help or q to quit)
+#LoginGraceTime  2m  #PermitRootLogin  prohibit‐password #Strict‐
+Modes yes #MaxAuthTries 6 #MaxSessions 10for help or q to quit)
+ ESESCOBpage sshd_config line 9 (press h for help or q to quit)
+#PubkeyAuthentication yesline 10 (press h for help or q to quit)
+ ESESCOBpage sshd_config line 11 (press h for help or q to quit)
+# Expect .ssh/authorized_keys2 to be disregarded  by  default  in
+future.  #AuthorizedKeysFile     .ssh/authorized_keys .ssh/autho‐
+rized_keys2e sshd_config line 14 (press h for help or q to quit)
+ ESESCOBpage sshd_config line 15 (press h for help or q to quit)
+#AuthorizedPrincipalsFile none16 (press h for help or q to quit)
+ ESESCOBpage sshd_config line 17 (press h for help or q to quit)
+#AuthorizedKeysCommand none #AuthorizedKeysCommandUser nobodyit)
+ ESESCOBpage sshd_config line 19 (press h for help or q to quit)
+#  For  this  to  work  you  will  also   need   host   keys   in
+/etc/ssh/ssh_known_hosts  #HostbasedAuthentication no # Change to
+yes if you don’t trust ~/.ssh/known_hosts for #  HostbasedAuthen‐
+tication   #IgnoreUserKnownHosts  no  #  Don’t  read  the  user’s
+~/.rhosts and ~/.shosts files #IgnoreRhosts yeselp or q to quit)
+ ESESCOBpage sshd_config line 25 (press h for help or q to quit)
+# To disable tunneled clear text passwords, change  to  no  here!
+#PasswordAuthentication yes #PermitEmptyPasswords nor q to quit)
+ ESESCOBpage sshd_config line 28 (press h for help or q to quit)
+>DEVOPS24/lektion3config line 29 (press h for help or q to quit)
+$ 
+exit
+
+Script done on 2025-04-17 10:55:50+02:00 [COMMAND_EXIT_CODE="0"]

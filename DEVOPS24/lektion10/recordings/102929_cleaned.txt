@@ -1,0 +1,3088 @@
+Script started on 2025-05-05 10:29:35+02:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="74" LINES="13"]
+DEVOPS24/lektion10
+$ DEVOPS24/lektion10
+$ vbmox
+ox
+manage *
+
+Oracle VM VirtualBox Command Line Management Interface Version 7.0.26
+Copyright (C) 2005-2025 Oracle and/or its affiliates
+
+Usage - Oracle VM VirtualBox command-line interface:
+
+  VBoxManage [-V | --version] [--dump-build-type] [-q | --nologo]
+      [--settingspw=password] [--settingspwfile=pw-file] [@response-file]
+      [[help] subcommand]
+
+
+  VBoxManage list [--long] [--sorted] [bridgedifs | cloudnets |
+      cloudprofiles | cloudproviders | cpu-profiles | dhcpservers | dvds
+      | extpacks | floppies | groups | hddbackends | hdds | hostcpuids |
+      hostdrives | hostdvds | hostfloppies | hostinfo | hostonlyifs |
+      hostonlynets | intnets | natnets | ostypes | runningvms |
+      screenshotformats | systemproperties | usbfilters | usbhost | vms |
+      webcams]
+
+
+  VBoxManage showvminfo <uuid | vmname> [--details] [--machinereadable]
+      [--password-id] [--password]
+
+  VBoxManage showvminfo <uuid | vmname> <--log=index> [--password-id id]
+      [--password file|-]
+
+
+  VBoxManage registervm <filename> --password file
+
+
+  VBoxManage unregistervm <uuid | vmname> [--delete] [--delete-all]
+
+
+  VBoxManage createvm <--name=name> [--basefolder=basefolder] [--default]
+      [--groups=group-ID,...] [--ostype=ostype] [--register]
+      [--uuid=uuid] [--cipher cipher] [--password-id password-id]
+      [--password file]
+
+
+  VBoxManage modifyvm <uuid | vmname> [--name=name] [--groups= 
+      group [,group...] ] [--description=description] [--os-type=OS-type]
+      [--icon-file=filename] [--memory=size-in-MB] [--page-fusion= on |
+      off ] [--vram=size-in-MB] [--acpi= on | off ] [--ioapic= on | off ]
+      [--hardware-uuid=UUID] [--cpus=CPU-count] [--cpu-hotplug= on | off
+      ] [--plug-cpu=CPU-ID] [--unplug-cpu=CPU-ID]
+      [--cpu-execution-cap=number] [--pae= on | off ] [--long-mode= on |
+      off ] [--ibpb-on-vm-exit= on | off ] [--ibpb-on-vm-entry= on | off
+      ] [--spec-ctrl= on | off ] [--l1d-flush-on-sched= on | off ]
+      [--l1d-flush-on-vm-entry= on | off ] [--mds-clear-on-sched= on |
+      off ] [--mds-clear-on-vm-entry= on | off ] [--cpu-profile= host |
+      Intel 8086 | Intel 80286 | Intel 80386 ] [--hpet= on | off ]
+      [--hwvirtex= on | off ] [--triple-fault-reset= on | off ] [--apic=
+      on | off ] [--x2apic= on | off ] [--paravirt-provider= none |
+      default | legacy | minimal | hyperv | kvm ] [--paravirt-debug= 
+      key=value [,key=value...] ] [--nested-paging= on | off ]
+      [--large-pages= on | off ] [--vtx-vpid= on | off ] [--vtx-ux= on |
+      off ] [--nested-hw-virt= on | off ] [--virt-vmsave-vmload= on | off
+      ] [--accelerate-3d= on | off ] [--accelerate-2d-video= on | off ]
+      [--chipset= ich9 | piix3 ] [--iommu= none | automatic | amd | intel
+      ] [--tpm-type= none | 1.2 | 2.0 | host | swtpm ] [--tpm-location=
+      location ] [--bios-logo-fade-in= on | off ] [--bios-logo-fade-out=
+      on | off ] [--bios-logo-display-time=msec]
+      [--bios-logo-image-path=pathname] [--bios-boot-menu= disabled |
+      menuonly | messageandmenu ] [--bios-apic= disabled | apic | x2apic
+      ] [--bios-system-time-offset=msec] [--bios-pxe-debug= on | off ]
+      [--system-uuid-le= on | off ] [--bootX= none | floppy | dvd | disk
+      | net ] [--rtc-use-utc= on | off ] [--graphicscontroller= none |
+      vboxvga | vmsvga | vboxsvga ] [--snapshot-folder= default |
+      pathname ] [--firmware= bios | efi | efi32 | efi64 ]
+      [--guest-memory-balloon=size-in-MB] [--default-frontend= default |
+      name ] [--vm-process-priority= default | flat | low | normal | high
+      ]
+
+  VBoxManage modifyvm <uuid | vmname> [--nicN= none | null | nat |
+      bridged | intnet | hostonly | hostonlynet | generic | natnetwork |
+      cloud ] [--nic-typeN= Am79C970A | Am79C973 | 82540EM | 82543GC |
+      82545EM | virtio ] [--cable-connectedN= on | off ] [--nic-traceN=
+      on | off ] [--nic-trace-fileN=filename] [--nic-propertyN=name= 
+      [value] ] [--nic-speedN=kbps] [--nic-boot-prioN=priority]
+      [--nic-promiscN= deny | allow-vms | allow-all ]
+      [--nic-bandwidth-groupN= none | name ] [--bridge-adapterN= none |
+      device-name ] [--cloud-networkN=network-name]
+      [--host-only-adapterN= none | device-name ]
+      [--host-only-netN=network-name] [--intnetN=network-name]
+      [--nat-networkN=network-name] [--nic-generic-drvN=driver-name]
+      [--mac-addressN= auto | MAC-address ]
+
+  VBoxManage modifyvm <uuid | vmname> [--nat-netN= network | default ]
+      [--nat-pfN= [rule-name],tcp |
+      udp,[host-IP],hostport,[guest-IP],guestport ]
+      [--nat-pfN=delete=rule-name] [--nat-tftp-prefixN=prefix]
+      [--nat-tftp-fileN=filename] [--nat-tftp-serverN=IP-address]
+      [--nat-bind-ipN=IP-address] [--nat-dns-pass-domainN= on | off ]
+      [--nat-dns-proxyN= on | off ] [--nat-dns-host-resolverN= on | off ]
+      [--nat-localhostreachableN= on | off ]
+      [--nat-settingsN=[mtu],[socksnd],[sockrcv],[tcpsnd],[tcprcv]]
+      [--nat-alias-modeN= default | [log],[proxyonly],[sameports] ]
+
+  VBoxManage modifyvm <uuid | vmname> [--mouse= ps2 | usb | usbtablet |
+      usbmultitouch | usbmtscreenpluspad ] [--keyboard= ps2 | usb ]
+      [--uartN= off | IO-baseIRQ ] [--uart-modeN= disconnected |
+      server pipe | client pipe | tcpserver port |
+      tcpclient hostname:port | file filename | device-name ]
+      [--uart-typeN= 16450 | 16550A | 16750 ] [--lpt-modeN=device-name]
+      [--lptN= off | IO-baseIRQ ] [--audio-controller= ac97 | hda | sb16
+      ] [--audio-codec= stac9700 | ad1980 | stac9221 | sb16 ]
+      [--audio-driver= none | default | null | dsound | was | oss | alsa
+      | pulse | coreaudio ] [--audio-enabled= on | off ] [--audio-in= on
+      | off ] [--audio-out= on | off ] [--clipboard-mode= disabled |
+      hosttoguest | guesttohost | bidirectional ] [--drag-and-drop=
+      disabled | hosttoguest | guesttohost | bidirectional ]
+      [--monitor-count=number] [--usb-ehci= on | off ] [--usb-ohci= on |
+      off ] [--usb-xhci= on | off ] [--usb-rename=old-namenew-name]
+
+  VBoxManage modifyvm <uuid | vmname> [--recording= on | off ]
+      [--recording-screens= all | none | screen-ID[,screen-ID...] ]
+      [--recording-file=filename] [--recording-max-size=MB]
+      [--recording-max-time=msec] [--recording-opts= 
+      key=value[,key=value...] ] [--recording-video-fps=fps]
+      [--recording-video-rate=rate] [--recording-video-res=widthheight]
+
+  VBoxManage modifyvm <uuid | vmname> [--vrde= on | off ]
+      [--vrde-property=property-name=  [property-value] ]
+      [--vrde-extpack= default | name ] [--vrde-port=port]
+      [--vrde-address=hostip] [--vrde-auth-type= null | external | guest
+      ] [--vrde-auth-library= default | name ] [--vrde-multi-con= on |
+      off ] [--vrde-reuse-con= on | off ] [--vrde-video-channel= on | off
+      ] [--vrde-video-channel-quality=percent]
+
+  VBoxManage modifyvm <uuid | vmname> [--teleporter= on | off ]
+      [--teleporter-port=port] [--teleporter-address= address | empty ]
+      [--teleporter-password=password] [--teleporter-password-file=
+      filename | stdin ] [--cpuid-portability-level=level]
+      [--cpuid-set=leaf [:subleaf] eax ebx ecx edx]
+      [--cpuid-remove=leaf [:subleaf] ] [--cpuid-remove-all]
+
+  VBoxManage modifyvm <uuid | vmname> [--tracing-enabled= on | off ]
+      [--tracing-config=string] [--tracing-allow-vm-access= on | off ]
+
+  VBoxManage modifyvm <uuid | vmname> [--usb-card-reader= on | off ]
+
+  VBoxManage modifyvm <uuid | vmname> [--autostart-enabled= on | off ]
+      [--autostart-delay=seconds]
+
+  VBoxManage modifyvm <uuid | vmname> [--guest-debug-provider= none |
+      native | gdb | kd ] [--guest-debug-io-provider= none | tcp | udp |
+      ipc ] [--guest-debug-address= IP-Address | path ]
+      [--guest-debug-port=port]
+
+  VBoxManage modifyvm <uuid | vmname> [--pci-attach=host-PCI-address
+      [@guest-PCI-bus-address] ] [--pci-detach=host-PCI-address]
+
+  VBoxManage modifyvm <uuid | vmname> [--testing-enabled= on | off ]
+      [--testing-mmio= on | off ] [--testing-cfg-dwordidx=value]
+
+
+  VBoxManage snapshot <uuid|vmname>
+
+  VBoxManage snapshot <uuid|vmname> take <snapshot-name>
+      [--description=description] [--live]
+      [--uniquename Number,Timestamp,Space,Force]
+
+  VBoxManage snapshot <uuid|vmname> delete <snapshot-name>
+
+  VBoxManage snapshot <uuid|vmname> restore <snapshot-name>
+
+  VBoxManage snapshot <uuid|vmname> restorecurrent
+
+  VBoxManage snapshot <uuid|vmname> edit <snapshot-name | --current>
+      [--description=description] [--name=new-name]
+
+  VBoxManage snapshot <uuid|vmname> list [--details | --machinereadable]
+
+  VBoxManage snapshot <uuid|vmname> showvminfo <snapshot-name>
+
+
+  VBoxManage clonevm <vmname|uuid> [--basefolder=basefolder]
+      [--groups=group,...] [--mode=machine | --mode=machinechildren |
+      --mode=all] [--name=name] [--options=option,...] [--register]
+      [--snapshot=snapshot-name] [--uuid=uuid]
+
+
+  VBoxManage movevm <uuid | vmname> [--type=basic] [--folder=folder-name]
+
+
+  VBoxManage encryptvm <uuid | vmname> setencryption --old-password file
+      --cipher cipher-identifier --new-password file
+      --new-password-id password-identifier --force
+
+  VBoxManage encryptvm <uuid | vmname> checkpassword <file>
+
+  VBoxManage encryptvm <uuid | vmname> addpassword --password file
+      --password-id password-identifier
+
+  VBoxManage encryptvm <uuid | vmname> removepassword
+      <password-identifier>
+
+
+  VBoxManage startvm <uuid | vmname...> [--putenv=name[=value]] [--type=
+      [gui | headless | sdl | separate] ] --password file
+      --password-id password identifier
+
+
+  VBoxManage controlvm <uuid | vmname> pause
+
+  VBoxManage controlvm <uuid | vmname> resume
+
+  VBoxManage controlvm <uuid | vmname> reset
+
+  VBoxManage controlvm <uuid | vmname> poweroff
+
+  VBoxManage controlvm <uuid | vmname> savestate
+
+  VBoxManage controlvm <uuid | vmname> acpipowerbutton
+
+  VBoxManage controlvm <uuid | vmname> acpisleepbutton
+
+  VBoxManage controlvm <uuid | vmname> reboot
+
+  VBoxManage controlvm <uuid | vmname> shutdown [--force]
+
+  VBoxManage controlvm <uuid | vmname> keyboardputscancode <hex> [hex...]
+
+  VBoxManage controlvm <uuid | vmname> keyboardputstring <string>
+      [string...]
+
+  VBoxManage controlvm <uuid | vmname> keyboardputfile <filename>
+
+  VBoxManage controlvm <uuid | vmname> setlinkstateN <on | off>
+
+  VBoxManage controlvm <uuid | vmname> nicN <null | nat | bridged |
+      intnet | hostonly | generic | natnetwork> [device-name]
+
+  VBoxManage controlvm <uuid | vmname> nictraceN <on | off>
+
+  VBoxManage controlvm <uuid | vmname> nictracefileN <filename>
+
+  VBoxManage controlvm <uuid | vmname> nicpropertyN
+      <prop-name=prop-value>
+
+  VBoxManage controlvm <uuid | vmname> nicpromiscN <deny | allow-vms |
+      allow-all>
+
+  VBoxManage controlvm <uuid | vmname> natpfN <[rulename] ,tcp | udp,
+      host-IP, hostport, guest-IP, guestport>
+
+  VBoxManage controlvm <uuid | vmname> natpfN delete <rulename>
+
+  VBoxManage controlvm <uuid | vmname> guestmemoryballoon <balloon-size>
+
+  VBoxManage controlvm <uuid | vmname> usbattach <uuid | address>
+      [--capturefile=filename]
+
+  VBoxManage controlvm <uuid | vmname> usbdetach <uuid | address>
+
+  VBoxManage controlvm <uuid | vmname> audioin <on | off>
+
+  VBoxManage controlvm <uuid | vmname> audioout <on | off>
+
+  VBoxManage controlvm <uuid | vmname> clipboard mode <disabled |
+      hosttoguest | guesttohost | bidirectional>
+
+  VBoxManage controlvm <uuid | vmname> clipboard filetransfers <on | off>
+
+  VBoxManage controlvm <uuid | vmname> draganddrop <disabled |
+      hosttoguest | guesttohost | bidirectional>
+
+  VBoxManage controlvm <uuid | vmname> vrde <on | off>
+
+  VBoxManage controlvm <uuid | vmname> vrdeport <port>
+
+  VBoxManage controlvm <uuid | vmname> vrdeproperty
+      <prop-name=prop-value>
+
+  VBoxManage controlvm <uuid | vmname> vrdevideochannelquality
+      <percentage>
+
+  VBoxManage controlvm <uuid | vmname> setvideomodehint <xres> <yres>
+      <bpp> [[display]  [enabled:yes | no | x-origin y-origin] ]
+
+  VBoxManage controlvm <uuid | vmname> setscreenlayout <display> <on |
+      primary x-origin y-origin x-resolution y-resolution bpp | off>
+
+  VBoxManage controlvm <uuid | vmname> screenshotpng <filename> [display]
+
+  VBoxManage controlvm <uuid | vmname> recording <on | off>
+
+  VBoxManage controlvm <uuid | vmname> recording screens <all | none |
+      screen-ID[,screen-ID...]>
+
+  VBoxManage controlvm <uuid | vmname> recording filename <filename>
+
+  VBoxManage controlvm <uuid | vmname> recording videores <widthxheight>
+
+  VBoxManage controlvm <uuid | vmname> recording videorate <rate>
+
+  VBoxManage controlvm <uuid | vmname> recording videofps <fps>
+
+  VBoxManage controlvm <uuid | vmname> recording maxtime <sec>
+
+  VBoxManage controlvm <uuid | vmname> recording maxfilesize <MB>
+
+  VBoxManage controlvm <uuid | vmname> setcredentials <username>
+      --passwordfile= <filename | password>  <domain-name>
+      --allowlocallogon= <yes | no>
+
+  VBoxManage controlvm <uuid | vmname> teleport <--host=host-name>
+      <--port=port-name> [--maxdowntime=msec] [--passwordfile=filename |
+      --password=password]
+
+  VBoxManage controlvm <uuid | vmname> plugcpu <ID>
+
+  VBoxManage controlvm <uuid | vmname> unplugcpu <ID>
+
+  VBoxManage controlvm <uuid | vmname> cpuexecutioncap <num>
+
+  VBoxManage controlvm <uuid | vmname> vm-process-priority <default |
+      flat | low | normal | high>
+
+  VBoxManage controlvm <uuid | vmname> webcam attach [pathname [settings]
+      ]
+
+  VBoxManage controlvm <uuid | vmname> webcam detach [pathname]
+
+  VBoxManage controlvm <uuid | vmname> webcam list
+
+  VBoxManage controlvm <uuid | vmname> addencpassword <ID> <password-file
+      | -> [--removeonsuspend= yes | no ]
+
+  VBoxManage controlvm <uuid | vmname> removeencpassword <ID>
+
+  VBoxManage controlvm <uuid | vmname> removeallencpasswords
+
+  VBoxManage controlvm <uuid | vmname> changeuartmodeN disconnected |
+      server pipe-name | client pipe-name | tcpserver port |
+      tcpclient hostname:port | file filename | device-name
+
+  VBoxManage controlvm <uuid | vmname> autostart-enabledN on | off
+
+  VBoxManage controlvm <uuid | vmname> autostart-delayseconds
+
+
+  VBoxManage import <ovfname | ovaname> [--dry-run] [--options=
+      keepallmacs | keepnatmacs | importtovdi ] [--vsys=n]
+      [--ostype=ostype] [--vmname=name] [--settingsfile=file]
+      [--basefolder=folder] [--group=group] [--memory=MB] [--cpus=n]
+      [--description=text] [--eula= show | accept ] [--unit=n] [--ignore]
+      [--scsitype= BusLogic | LsiLogic ] [--disk=path]
+      [--controller=index] [--port=n]
+
+  VBoxManage import OCI:// --cloud [--ostype=ostype] [--vmname=name]
+      [--basefolder=folder] [--memory=MB] [--cpus=n] [--description=text]
+      <--cloudprofile=profile> <--cloudinstanceid=id>
+      [--cloudbucket=bucket]
+
+
+  VBoxManage export <machines> <--output=name> [--legacy09 | --ovf09 |
+      --ovf10 | --ovf20] [--manifest] [--options= manifest | iso | nomacs
+      | nomacsbutnat... ] [--vsys=virtual-system-number]
+      [--description=description-info] [--eula=license-text]
+      [--eulafile=filename] [--product=product-name]
+      [--producturl=product-URL] [--vendor=vendor-name]
+      [--vendorurl=vendor-URL] [--version=version-info] [--vmname=vmname]
+
+  VBoxManage export <machine> <--output=cloud-service-provider> [--opc10]
+      [--vmname=vmname] [--cloud=virtual-system-number]
+      [--cloudprofile=cloud-profile-name] [--cloudshape=cloud-shape-name]
+      [--clouddomain=cloud-domain] [--clouddisksize=disk-size-in-GB]
+      [--cloudbucket=bucket-name] [--cloudocivcn=OCI-VCN-ID]
+      [--cloudocisubnet=OCI-subnet-ID] [--cloudkeepobject= true | false ]
+      [--cloudlaunchinstance= true | false ] [--cloudlaunchmode= EMULATED
+      | PARAVIRTUALIZED ] [--cloudpublicip= true | false ]
+
+
+  VBoxManage mediumio <--disk=uuid|filename | --dvd=uuid|filename |
+      --floppy=uuid|filename> [--password-file=-|filename] formatfat
+      [--quick]
+
+  VBoxManage mediumio <--disk=uuid|filename | --dvd=uuid|filename |
+      --floppy=uuid|filename> [--password-file=-|filename] cat [--hex]
+      [--offset=byte-offset] [--size=bytes] [--output=-|filename]
+
+  VBoxManage mediumio <--disk=uuid|filename | --dvd=uuid|filename |
+      --floppy=uuid|filename> [--password-file=-|filename] stream
+      [--format=image-format] [--variant=image-variant]
+      [--output=-|filename]
+
+
+  VBoxManage sharedfolder add <uuid | vmname> <--name=name>
+      <--hostpath=hostpath> [--readonly] [--transient] [--automount]
+      [--auto-mount-point=path]
+
+  VBoxManage sharedfolder remove <uuid | vmname> <--name=name>
+      [--transient]
+
+
+  VBoxManage dhcpserver add <--network=netname | --interface=ifname>
+      <--server-ip=address> <--netmask=mask> <--lower-ip=address>
+      <--upper-ip=address> <--enable | --disable>
+       [--global | --set-opt=dhcp-opt-no value... |
+           --set-opt-hex=dhcp-opt-no hexstring... |
+           --force-opt=dhcp-opt-no... | --supress-opt=dhcp-opt-no... |
+           --min-lease-time=seconds | --default-lease-time=seconds |
+           --max-lease-time=seconds...]
+       [--group=name | --set-opt=dhcp-opt-no value... |
+           --set-opt-hex=dhcp-opt-no hexstring... |
+           --force-opt=dhcp-opt-no... | --supress-opt=dhcp-opt-no... |
+           --incl-mac=address... | --excl-mac=address... |
+           --incl-mac-wild=pattern... | --excl-mac-wild=pattern... |
+           --incl-vendor=string... | --excl-vendor=string... |
+           --incl-vendor-wild=pattern... | --excl-vendor-wild=pattern...
+           | --incl-user=string... | --excl-user=string... |
+           --incl-user-wild=pattern... | --excl-user-wild=pattern... |
+           --min-lease-time=seconds | --default-lease-time=seconds |
+           --max-lease-time=seconds...]
+       [--vm=name|uuid | --nic=1-N | --set-opt=dhcp-opt-no value... |
+           --set-opt-hex=dhcp-opt-no hexstring... |
+           --force-opt=dhcp-opt-no... | --supress-opt=dhcp-opt-no... |
+           --min-lease-time=seconds | --default-lease-time=seconds |
+           --max-lease-time=seconds | --fixed-address=address...]
+       [--mac-address=address | --set-opt=dhcp-opt-no value... |
+           --set-opt-hex=dhcp-opt-no hexstring... |
+           --force-opt=dhcp-opt-no... | --supress-opt=dhcp-opt-no... |
+           --min-lease-time=seconds | --default-lease-time=seconds |
+           --max-lease-time=seconds | --fixed-address=address...]
+
+  VBoxManage dhcpserver modify <--network=netname | --interface=ifname>
+      [--server-ip=address] [--lower-ip=address] [--upper-ip=address]
+      [--netmask=mask] [--enable | --disable]
+       [--global | --del-opt=dhcp-opt-no... | --set-opt=dhcp-opt-no
+           value... | --set-opt-hex=dhcp-opt-no hexstring... |
+           --force-opt=dhcp-opt-no... | --unforce-opt=dhcp-opt-no... |
+           --supress-opt=dhcp-opt-no... | --unsupress-opt=dhcp-opt-no...
+           | --min-lease-time=seconds | --default-lease-time=seconds |
+           --max-lease-time=seconds | --remove-config...]
+       [--group=name | --set-opt=dhcp-opt-no value... |
+           --set-opt-hex=dhcp-opt-no hexstring... |
+           --force-opt=dhcp-opt-no... | --unforce-opt=dhcp-opt-no... |
+           --supress-opt=dhcp-opt-no... | --unsupress-opt=dhcp-opt-no...
+           | --del-mac=address... | --incl-mac=address... |
+           --excl-mac=address... | --del-mac-wild=pattern... |
+           --incl-mac-wild=pattern... | --excl-mac-wild=pattern... |
+           --del-vendor=string... | --incl-vendor=string... |
+           --excl-vendor=string... | --del-vendor-wild=pattern... |
+           --incl-vendor-wild=pattern... | --excl-vendor-wild=pattern...
+           | --del-user=string... | --incl-user=string... |
+           --excl-user=string... | --del-user-wild=pattern... |
+           --incl-user-wild=pattern... | --excl-user-wild=pattern... |
+           --zap-conditions | --min-lease-time=seconds |
+           --default-lease-time=seconds | --max-lease-time=seconds |
+           --remove-config...]
+       [--vm=name|uuid | --nic=1-N | --del-opt=dhcp-opt-no... |
+           --set-opt=dhcp-opt-no value... | --set-opt-hex=dhcp-opt-no
+           hexstring... | --force-opt=dhcp-opt-no... |
+           --unforce-opt=dhcp-opt-no... | --supress-opt=dhcp-opt-no... |
+           --unsupress-opt=dhcp-opt-no... | --min-lease-time=seconds |
+           --default-lease-time=seconds | --max-lease-time=seconds |
+           --fixed-address=address | --remove-config...]
+       [--mac-address=address | --del-opt=dhcp-opt-no... |
+           --set-opt=dhcp-opt-no value... | --set-opt-hex=dhcp-opt-no
+           hexstring... | --force-opt=dhcp-opt-no... |
+           --unforce-opt=dhcp-opt-no... | --supress-opt=dhcp-opt-no... |
+           --unsupress-opt=dhcp-opt-no... | --min-lease-time=seconds |
+           --default-lease-time=seconds | --max-lease-time=seconds |
+           --fixed-address=address | --remove-config...]
+
+  VBoxManage dhcpserver remove <--network=netname | --interface=ifname>
+
+  VBoxManage dhcpserver start <--network=netname | --interface=ifname>
+
+  VBoxManage dhcpserver restart <--network=netname | --interface=ifname>
+
+  VBoxManage dhcpserver stop <--network=netname | --interface=ifname>
+
+  VBoxManage dhcpserver findlease <--network=netname |
+      --interface=ifname> <--mac-address=mac>
+
+
+  VBoxManage debugvm <uuid|vmname> dumpvmcore [--filename=name]
+
+  VBoxManage debugvm <uuid|vmname> info <item> [args...]
+
+  VBoxManage debugvm <uuid|vmname> injectnmi
+
+  VBoxManage debugvm <uuid|vmname> log [--release | --debug]
+      [group-settings...]
+
+  VBoxManage debugvm <uuid|vmname> logdest [--release | --debug]
+      [destinations...]
+
+  VBoxManage debugvm <uuid|vmname> logflags [--release | --debug]
+      [flags...]
+
+  VBoxManage debugvm <uuid|vmname> osdetect
+
+  VBoxManage debugvm <uuid|vmname> osinfo
+
+  VBoxManage debugvm <uuid|vmname> osdmesg [--lines=lines]
+
+  VBoxManage debugvm <uuid|vmname> getregisters [--cpu=id]
+      [reg-set.reg-name...]
+
+  VBoxManage debugvm <uuid|vmname> setregisters [--cpu=id]
+      [reg-set.reg-name=value...]
+
+  VBoxManage debugvm <uuid|vmname> show [--human-readable | --sh-export |
+      --sh-eval | --cmd-set] [settings-item...]
+
+  VBoxManage debugvm <uuid|vmname> stack [--cpu=id]
+
+  VBoxManage debugvm <uuid|vmname> statistics [--reset] [--descriptions]
+      [--pattern=pattern]
+
+  VBoxManage debugvm <uuid|vmname> guestsample [--filename=filename]
+      [--sample-interval-us=interval] [--sample-time-us=time]
+
+
+  VBoxManage extpack install [--replace] [--accept-license=sha256]
+      <tarball>
+
+  VBoxManage extpack uninstall [--force] <name>
+
+  VBoxManage extpack cleanup
+
+
+  VBoxManage unattended detect <--iso=install-iso> [--machine-readable]
+
+  VBoxManage unattended install <uuid|vmname> <--iso=install-iso>
+      [--user=login] [--password=password] [--password-file=file]
+      [--full-user-name=name] [--key=product-key] [--install-additions]
+      [--no-install-additions] [--additions-iso=add-iso] [--install-txs]
+      [--no-install-txs] [--validation-kit-iso=testing-iso]
+      [--locale=ll_CC] [--country=CC] [--time-zone=tz] [--hostname=fqdn]
+      [--package-selection-adjustment=keyword] [--dry-run]
+      [--auxiliary-base-path=path] [--image-index=number]
+      [--script-template=file] [--post-install-template=file]
+      [--post-install-command=command]
+      [--extra-install-kernel-parameters=params] [--language=lang]
+      [--start-vm=session-type]
+
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       list instances [--state=string] [--compartment-id=string]
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       list images <--compartment-id=string> [--state=string]
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       list vnicattachments <--compartment-id=string> [--filter=string]
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       instance create <--domain-name=name> <--image-id=id |
+           --boot-volume-id=id> <--display-name=name> <--shape=type>
+           <--subnet=id> [--boot-disk-size=size in GB]
+           [--publicip=true/false] [--privateip=IP address]
+           [--public-ssh-key=key string...]
+           [--launch-mode=NATIVE/EMULATED/PARAVIRTUALIZED]
+           [--cloud-init-script-path=path to a script]
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       instance info <--id=unique id>
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       instance terminate <--id=unique id>
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       instance start <--id=unique id>
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       instance pause <--id=unique id>
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       instance reset <--id=unique id>
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       image create <--display-name=name> [--bucket-name=name]
+           [--object-name=name] [--instance-id=unique id]
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       image info <--id=unique id>
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       image delete <--id=unique id>
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       image import <--id=unique id> [--bucket-name=name]
+           [--object-name=name]
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       image export <--id=unique id> <--display-name=name>
+           [--bucket-name=name] [--object-name=name]
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       network setup [--gateway-os-name=string]
+           [--gateway-os-version=string] [--gateway-shape=string]
+           [--tunnel-network-name=string] [--tunnel-network-range=string]
+           [--proxy=string] [--compartment-id=string]
+
+  VBoxManage cloud <--provider=name> <--profile=name>
+       network create <--name=string> <--network-id=string> [--enable |
+           --disable]
+
+  VBoxManage cloud network update <--name=string> [--network-id=string]
+      [--enable | --disable]
+
+  VBoxManage cloud network delete <--name=string>
+
+  VBoxManage cloud network info <--name=string>
+
+
+  VBoxManage cloudprofile <--provider=name> <--profile=name> add
+      [--clouduser=unique id] [--fingerprint=MD5 string] [--keyfile=path]
+      [--passphrase=string] [--tenancy=unique id] [--compartment=unique
+      id] [--region=string]
+
+  VBoxManage cloudprofile <--provider=name> <--profile=name> update
+      [--clouduser=unique id] [--fingerprint=MD5 string] [--keyfile=path]
+      [--passphrase=string] [--tenancy=unique id] [--compartment=unique
+      id] [--region=string]
+
+  VBoxManage cloudprofile <--provider=name> <--profile=name> delete
+
+  VBoxManage cloudprofile <--provider=name> <--profile=name> show
+
+
+  VBoxManage signova <ova> <--certificate=file> <--private-key=file>
+      [--private-key-password-file=password-file |
+      --private-key-password=password] [--digest-type=type] [--pkcs7 |
+      --no-pkcs7] [--intermediate-cert=file] [--force] [--verbose]
+      [--quiet] [--dry-run]
+
+
+  VBoxManage modifynvram <uuid|vmname> inituefivarstore
+
+  VBoxManage modifynvram <uuid|vmname> enrollmssignatures
+
+  VBoxManage modifynvram <uuid|vmname> enrollorclpk
+
+  VBoxManage modifynvram <uuid|vmname> enrollpk [--platform-key=filename]
+      [--owner-uuid=uuid]
+
+  VBoxManage modifynvram <uuid|vmname> enrollmok [--mok=filename]
+      [--owner-uuid=uuid]
+
+  VBoxManage modifynvram <uuid|vmname> listvars
+
+  VBoxManage modifynvram <uuid|vmname> queryvar [--name=name]
+      [--filename=filename]
+
+  VBoxManage modifynvram <uuid|vmname> deletevar [--name=name]
+      [--owner-uuid=uuid]
+
+  VBoxManage modifynvram <uuid|vmname> changevar [--name=name]
+      [--filename=filename]
+
+
+  VBoxManage hostonlynet add <--name=netname> [--id=netid]
+      <--netmask=mask> <--lower-ip=address> <--upper-ip=address>
+      [--enable | --disable]
+
+  VBoxManage hostonlynet modify <--name=netname | --id=netid>
+      [--lower-ip=address] [--upper-ip=address] [--netmask=mask]
+      [--enable | --disable]
+
+  VBoxManage hostonlynet remove <--name=netname | --id=netid>
+
+
+  VBoxManage updatecheck perform [--machine-readable]
+
+  VBoxManage updatecheck list [--machine-readable]
+
+  VBoxManage updatecheck modify [--disable | --enable] [--channel=stable
+      | withbetas | all] [--frequency=days]
+
+
+  VBoxManage discardstate <uuid | vmname>
+
+
+  VBoxManage adoptstate <uuid | vmname> <state-filename>
+
+
+  VBoxManage closemedium [disk | dvd | floppy] <uuid | filename>
+      [--delete]
+
+
+  VBoxManage storageattach <uuid | vmname> <--storagectl=name>
+      [--bandwidthgroup= name | none ] [--comment=text] [--device=number]
+      [--discard= on | off ] [--encodedlun=lun] [--forceunmount]
+      [--hotpluggable= on | off ] [--initiator=initiator] [--intnet]
+      [--lun=lun] [--medium= none | emptydrive | additions | uuid |
+      filename | host:drive | iscsi ] [--mtype= normal | writethrough |
+      immutable | shareable | readonly | multiattach ] [--nonrotational=
+      on | off ] [--passthrough= on | off ] [--passwordfile=file]
+      [--password=password] [--port=number] [--server= name | ip ]
+      [--setparentuuid=uuid] [--setuuid=uuid] [--target=target]
+      [--tempeject= on | off ] [--tport=port] [--type= dvddrive | fdd |
+      hdd ] [--username=username]
+
+
+  VBoxManage storagectl <uuid | vmname> <--name=controller-name> [--add=
+      floppy | ide | pcie | sas | sata | scsi | usb ] [--controller=
+      BusLogic | I82078 | ICH6 | IntelAhci | LSILogic | LSILogicSAS |
+      NVMe | PIIX3 | PIIX4 | USB | VirtIO ] [--bootable= on | off ]
+      [--hostiocache= on | off ] [--portcount=count] [--remove]
+      [--rename=new-controller-name]
+
+
+  VBoxManage bandwidthctl <uuid | vmname> add <bandwidth-group-name>
+      <--limit=bandwidth-limit[k|m|g|K|M|G]> <--type=disk|network>
+
+  VBoxManage bandwidthctl <uuid | vmname> list [--machinereadable]
+
+  VBoxManage bandwidthctl <uuid | vmname> remove <bandwidth-group-name>
+
+  VBoxManage bandwidthctl <uuid | vmname> set <bandwidth-group-name>
+      <--limit=bandwidth-limit[k|m|g|K|M|G]>
+
+
+  VBoxManage showmediuminfo [disk | dvd | floppy] <uuid | filename>
+
+
+  VBoxManage createmedium [disk | dvd | floppy] <--filename=filename>
+      [--size=megabytes | --sizebyte=bytes] [--diffparent= UUID |
+      filename ] [--format= VDI | VMDK | VHD ]
+      [--variant Standard,Fixed,Split2G,Stream,ESX,Formatted,RawDisk]
+      --property name=value...
+      --property-file name=/path/to/file/with/value...
+
+
+  VBoxManage modifymedium [disk | dvd | floppy] <uuid | filename>
+      [--autoreset=on | off] [--compact] [--description=description]
+      [--move=pathname] [--property=name=[value]]
+      [--resize=megabytes | --resizebyte=bytes] [--setlocation=pathname]
+      [--type=normal | writethrough | immutable | shareable | readonly | multiattach]
+
+
+  VBoxManage clonemedium <uuid | source-medium> <uuid | target-medium>
+      [disk | dvd | floppy] [--existing] [--format= VDI | VMDK | VHD |
+      RAW | other ] [--variant=Standard,Fixed,Split2G,Stream,ESX]
+
+
+  VBoxManage mediumproperty [disk | dvd | floppy] set <uuid | filename>
+      <property-name> <property-value>
+
+  VBoxManage mediumproperty [disk | dvd | floppy] get <uuid | filename>
+      <property-name>
+
+  VBoxManage mediumproperty [disk | dvd | floppy] delete <uuid |
+      filename> <property-name>
+
+
+  VBoxManage encryptmedium <uuid | filename> [--cipher=cipher-ID]
+      [--newpassword=password] [--newpasswordid=password-ID]
+      [--oldpassword=password]
+
+
+  VBoxManage checkmediumpwd <uuid | filename> <password-file>
+
+
+  VBoxManage convertfromraw <inputfile> <outputfile> [--format= VDI |
+      VMDK | VHD ] [--uuid=uuid]
+      [--variant=Standard,Fixed,Split2G,Stream,ESX]
+
+  VBoxManage convertfromraw stdin <outputfile> <bytes> [--format= VDI |
+      VMDK | VHD ] [--uuid=uuid]
+      [--variant=Standard,Fixed,Split2G,Stream,ESX]
+
+
+  VBoxManage setextradata <global | uuid | vmname> <keyword> [value]
+
+
+  VBoxManage getextradata <global | uuid | vmname> keyword | enumerate
+
+
+  VBoxManage setproperty <property-name> <property-value>
+
+
+  VBoxManage usbfilter add <index,0-N> <--target= <uuid | vmname |
+      global> > <--name=string> <--action=ignore | hold>
+      [--active=yes | no] [--vendorid=XXXX] [--productid=XXXX]
+      [--revision=IIFF] [--manufacturer=string] [--product=string]
+      [--port=hex] [--remote=yes | no] [--serialnumber=string]
+      [--maskedinterfaces=XXXXXXXX]
+
+  VBoxManage usbfilter modify <index,0-N> <--target= <uuid | vmname |
+      global> > [--name=string] [--action=ignore | hold]
+      [--active=yes | no] [--vendorid=XXXX | ""] [--productid=XXXX | ""]
+      [--revision=IIFF | ""] [--manufacturer=string | ""]
+      [--product=string | ""] [--port=hex] [--remote=yes | no]
+      [--serialnumber=string | ""] [--maskedinterfaces=XXXXXXXX]
+
+  VBoxManage usbfilter remove <index,0-N> <--target= <uuid | vmname |
+      global> >
+
+
+  VBoxManage guestproperty get <uuid | vmname> <property-name>
+      [--verbose]
+
+  VBoxManage guestproperty enumerate <uuid | vmname> [--no-timestamp]
+      [--no-flags] [--relative] [--old-format] [patterns...]
+
+  VBoxManage guestproperty set <uuid | vmname> <property-name>
+      [property-value [--flags=flags] ]
+
+  VBoxManage guestproperty unset <uuid | vmname> <property-name>
+
+  VBoxManage guestproperty wait <uuid | vmname> <patterns>
+      [--timeout=msec] [--fail-on-timeout]
+
+
+  VBoxManage guestcontrol <uuid | vmname> run [--arg0=argument 0]
+      [--domain=domainname] [--dos2unix] [--exe=filename]
+      [--ignore-orphaned-processes] [--no-wait-stderr | --wait-stderr]
+      [--no-wait-stdout | --wait-stdout] [--passwordfile=password-file |
+      --password=password] [--profile] [--putenv=var-name=[value]]
+      [--quiet] [--timeout=msec] [--unix2dos] [--unquoted-args]
+      [--username=username] [--verbose] <-- [argument...] >
+
+  VBoxManage guestcontrol <uuid | vmname> start [--arg0=argument 0]
+      [--domain=domainname] [--exe=filename]
+      [--ignore-orphaned-processes] [--passwordfile=password-file |
+      --password=password] [--profile] [--putenv=var-name=[value]]
+      [--quiet] [--timeout=msec] [--unquoted-args] [--username=username]
+      [--verbose] <-- [argument...] >
+
+  VBoxManage guestcontrol <uuid | vmname> copyfrom [--dereference]
+      [--domain=domainname] [--passwordfile=password-file |
+      --password=password] [--quiet] [--no-replace] [--recursive]
+      [--target-directory=host-destination-dir] [--update]
+      [--username=username] [--verbose] <guest-source0>
+      guest-source1 [...] <host-destination>
+
+  VBoxManage guestcontrol <uuid | vmname> copyto [--dereference]
+      [--domain=domainname] [--passwordfile=password-file |
+      --password=password] [--quiet] [--no-replace] [--recursive]
+      [--target-directory=guest-destination-dir] [--update]
+      [--username=username] [--verbose] <host-source0> host-source1 [...]
+
+  VBoxManage guestcontrol <uuid | vmname> mkdir [--domain=domainname]
+      [--mode=mode] [--parents] [--passwordfile=password-file |
+      --password=password] [--quiet] [--username=username] [--verbose]
+      <guest-directory...>
+
+  VBoxManage guestcontrol <uuid | vmname> rmdir [--domain=domainname]
+      [--passwordfile=password-file | --password=password] [--quiet]
+      [--recursive] [--username=username] [--verbose]
+      <guest-directory...>
+
+  VBoxManage guestcontrol <uuid | vmname> rm [--domain=domainname]
+      [--force] [--passwordfile=password-file | --password=password]
+      [--quiet] [--username=username] [--verbose] <guest-directory...>
+
+  VBoxManage guestcontrol <uuid | vmname> mv [--domain=domainname]
+      [--passwordfile=password-file | --password=password] [--quiet]
+      [--username=username] [--verbose] <source...>
+      <destination-directory>
+
+  VBoxManage guestcontrol <uuid | vmname> mktemp [--directory]
+      [--domain=domainname] [--mode=mode] [--passwordfile=password-file |
+      --password=password] [--quiet] [--secure] [--tmpdir=directory-name]
+      [--username=username] [--verbose] <template-name>
+
+  VBoxManage guestcontrol <uuid | vmname> stat [--domain=domainname]
+      [--passwordfile=password-file | --password=password] [--quiet]
+      [--username=username] [--verbose] <filename>
+
+  VBoxManage guestcontrol <uuid | vmname> list <all | files | processes |
+      sessions> [--quiet] [--verbose]
+
+  VBoxManage guestcontrol <uuid | vmname> closeprocess [--session-id=ID |
+      --session-name=name-or-pattern] [--quiet] [--verbose] <PID...>
+
+  VBoxManage guestcontrol <uuid | vmname> closesession [--all |
+      --session-id=ID | --session-name=name-or-pattern] [--quiet]
+      [--verbose]
+
+  VBoxManage guestcontrol <uuid | vmname> updatega [--quiet] [--verbose]
+      [--source=guest-additions.ISO] [--wait-start] [--  [argument...] ]
+
+  VBoxManage guestcontrol <uuid | vmname> watch [--quiet] [--verbose]
+
+
+  VBoxManage metrics collect [--detach] [--list] [--period=seconds]
+      [--samples=count] [* | host | vmname metric-list]
+
+  VBoxManage metrics disable [--list] [* | host | vmname metric-list]
+
+  VBoxManage metrics enable [--list] [* | host | vmname metric-list]
+
+  VBoxManage metrics list [* | host | vmname metric-list]
+
+  VBoxManage metrics query [* | host | vmname metric-list]
+
+  VBoxManage metrics setup [--list] [--period seconds] [--samples count]
+      [* | host | vmname metric-list]
+
+
+  VBoxManage natnetwork add [--disable | --enable] <--netname=name>
+      <--network=network> [--dhcp=on|off] [--ipv6=on|off]
+      [--loopback-4=rule] [--loopback-6=rule] [--port-forward-4=rule]
+      [--port-forward-6=rule]
+
+  VBoxManage natnetwork list [filter-pattern]
+
+  VBoxManage natnetwork modify [--dhcp=on|off] [--disable | --enable]
+      <--netname=name> <--network=network> [--ipv6=on|off]
+      [--loopback-4=rule] [--loopback-6=rule] [--port-forward-4=rule]
+      [--port-forward-6=rule]
+
+  VBoxManage natnetwork remove <--netname=name>
+
+  VBoxManage natnetwork start <--netname=name>
+
+  VBoxManage natnetwork stop <--netname=name>
+
+
+  VBoxManage hostonlyif ipconfig <ifname> [--dhcp | --ip=IPv4-address
+      --netmask=IPv4-netmask | --ipv6=IPv6-address
+      --netmasklengthv6=length]
+
+  VBoxManage hostonlyif create
+
+  VBoxManage hostonlyif remove <ifname>
+
+
+  VBoxManage usbdevsource add <source-name> <--backend=backend>
+      <--address=address>
+
+  VBoxManage usbdevsource remove <source-name>
+DEVOPS24/lektion10
+$ vboxmanage DEVOPS24/lektion10
+$ vboxmanage | less
+Oracle VM VirtualBox Command Line Management Interface Version 7.0.26
+Copyright (C) 2005-2025 Oracle and/or its affiliates
+
+Usage - Oracle VM VirtualBox command-line interface:
+
+  VBoxManage [-V | --version] [--dump-build-type] [-q | --nologo]
+      [--settingspw=password] [--settingspwfile=pw-file] [@response-file]
+      [[help] subcommand]
+
+
+  VBoxManage list [--long] [--sorted] [bridgedifs | cloudnets |
+      cloudprofiles | cloudproviders | cpu-profiles | dhcpservers | dvds
+      | extpacks | floppies | groups | hddbackends | hdds | hostcpuids |
+      hostdrives | hostdvds | hostfloppies | hostinfo | hostonlyifs |
+      hostonlynets | intnets | natnets | ostypes | runningvms |
+      screenshotformats | systemproperties | usbfilters | usbhost | vms |
+      webcams]
+
+
+  VBoxManage showvminfo <uuid | vmname> [--details] [--machinereadable]
+      [--password-id] [--password]
+>DEVOPS24/lektion10
+$ DEVOPS24/lektion10
+$ vnonoboxmanage list vms
+"ubde" {940856f8-879f-4055-a944-ce279bfe9569}
+"ubse" {7b46b49c-1adb-4fc7-be19-4e1acf52e5af}
+DEVOPS24/lektion10
+$ less ~/.cssh/config 
+Host ubse
+        HostName localhost
+        User user
+        Port 12022
+
+Host ubde1
+        HostName localhost
+        User user
+        Port 11022
+
+Host localhost 127.0.0.1
+        HostName localhost
+        StrictHostKeyChecking no
+        UserKnownHostsFile /dev/null
+
+Host kdwl
+        HostName kdwl
+        Port 2332
+
+>DEVOPS24/lektion10fig
+$ DEVOPS24/lektion10
+$ ssh ubse
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 08:31:52 AM UTC 2025
+
+  System load:  0.0                Processes:               119
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 3%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+173 updates can be applied immediately.
+4 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon Apr 28 16:25:40 2025 from 10.0.2.2
+0;user@ubse: ~
+user@ubse:~$ 0;user@ubse: ~
+user@ubse:~$ ssexit
+logout
+Connection to localhost closed.
+DEVOPS24/lektion10
+$ DEVOPS24/lektion10
+$ ssh 2
+man ssh
+SSH(1)                 BSD General Commands Manual                SSH(1)
+
+NAME
+     ssh — OpenSSH remote login client
+
+SYNOPSIS
+     ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface]
+         [-b bind_address] [-c cipher_spec] [-D [bind_address:]port]
+         [-E log_file] [-e escape_char] [-F configfile] [-I pkcs11]
+         [-i identity_file] [-J destination] [-L address]
+         [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option]
+         [-p port] [-Q query_option] [-R address] [-S ctl_path]
+         [-W host:port] [-w local_tun[:remote_tun]] destination
+         [command [argument ...]]
+
+DESCRIPTION
+     ssh (SSH client) is a program for logging into a remote machine and
+     for executing commands on a remote machine.  It is intended to pro‐
+     vide secure encrypted communications between two untrusted hosts
+     over an insecure network.  X11 connections, arbitrary TCP ports and
+     UNIX-domain sockets can also be forwarded over the secure channel.
+
+     ssh connects and logs into the specified destination, which may be
+     specified as either [user@]hostname or a URI of the form
+     ssh://[user@]hostname[:port].  The user must prove their identity
+     to the remote machine using one of several methods (see below).
+
+     If a command is specified, it will be executed on the remote host
+     instead of a login shell.  A complete command line may be specified
+     as command, or it may have additional arguments.  If supplied, the
+     arguments will be appended to the command, separated by spaces, be‐
+     fore it is sent to the server to be executed.
+
+     The options are as follows:
+
+     -4      Forces ssh to use IPv4 addresses only.
+
+     -6      Forces ssh to use IPv6 addresses only.
+ Manual page ssh(1) line 20 (press h for help or q to quit)
+     -A      Enables forwarding of connections from an authentication
+             agent such as ssh-agent(1).  This can also be specified on
+             a per-host basis in a configuration file.
+
+             Agent forwarding should be enabled with caution.  Users
+             with the ability to bypass file permissions on the remote
+             host (for the agent's UNIX-domain socket) can access the
+             local agent through the forwarded connection.  An attacker
+             cannot obtain key material from the agent, however they can
+             perform operations on the keys that enable them to authen‐
+             ticate using the identities loaded into the agent.  A safer
+             alternative may be to use a jump host (see -J).
+
+     -a      Disables forwarding of the authentication agent connection.
+
+     -B bind_interface
+             Bind to the address of bind_interface before attempting to
+             connect to the destination host.  This is only useful on
+             systems with more than one address. q to quit)
+
+     -b bind_address
+             Use bind_address on the local machine as the source address
+             of the connection.  Only useful on systems with more than
+             one address.
+
+     -C      Requests compression of all data (including stdin, stdout,
+             stderr, and data for forwarded X11, TCP and UNIX-domain
+             connections).  The compression algorithm is the same used
+             by gzip(1).  Compression is desirable on modem lines and
+             other slow connections, but will only slow down things on
+             fast networks.  The default value can be set on a host-by-
+             host basis in the configuration files; see the Compression
+             option in ssh_config(5).
+
+     -c cipher_spec
+             Selects the cipher specification for encrypting the ses‐
+             sion.  cipher_spec is a comma-separated list of ciphers
+             listed in order of preference.  See the Ciphers keyword in
+             ssh_config(5) for more information.
+
+     -D [bind_address:]port
+             Specifies a local “dynamic” application-level port forward‐
+             ing.  This works by allocating a socket to listen to port
+             on the local side, optionally bound to the specified
+             bind_address.  Whenever a connection is made to this port,
+             the connection is forwarded over the secure channel, and
+             the application protocol is then used to determine where to
+             connect to from the remote machine.  Currently the SOCKS4
+             and SOCKS5 protocols are supported, and ssh will act as a
+             SOCKS server.  Only root can forward privileged ports.  Dy‐
+             namic port forwardings can also be specified in the config‐
+             uration file.
+
+             IPv6 addresses can be specified by enclosing the address in
+             square brackets.  Only the superuser can forward privileged
+             ports.  By default, the local port is bound in accordance
+             with the GatewayPorts setting.  However, an explicit
+             bind_address may be used to bind the connection to a spe‐
+             cific address.  The bind_address of “localhost” indicates
+             that the listening port be bound for local use only, while
+             an empty address or ‘*’ indicates that the port should be
+             available from all interfaces.
+
+     -E log_file
+             Append debug logs to log_file instead of standard error.
+
+     -e escape_char
+             Sets the escape character for sessions with a pty (default:
+             ‘~’).  The escape character is only recognized at the be‐
+             ginning of a line.  The escape character followed by a dot
+             (‘.’) closes the connection; followed by control-Z suspends
+             the connection; and followed by itself sends the escape
+             character once.  Setting the character to “none” disables
+             any escapes and makes the session fully transparent.
+
+     -F configfile) line 96 (press h for help or q to quit)
+             Specifies an alternative per-user configuration file.  If a
+             configuration file is given on the command line, the sys‐
+             tem-wide configuration file (/etc/ssh/ssh_config) will be
+             ignored.  The default for the per-user configuration file
+             is ~/.ssh/config.  If set to “none”, no configuration files
+             will be read.
+
+     -f      Requests ssh to go to background just before command execu‐
+             tion.  This is useful if ssh is going to ask for passwords
+             or passphrases, but the user wants it in the background.
+             This implies -n.  The recommended way to start X11 programs
+             at a remote site is with something like ssh -f host xterm.
+
+             If the ExitOnForwardFailure configuration option is set to
+             “yes”, then a client started with -f will wait for all re‐
+             mote port forwards to be successfully established before
+             placing itself in the background.  Refer to the description
+             of ForkAfterAuthentication in ssh_config(5) for details.
+ Manual page ssh(1) line 115 (press h for help or q to quit)
+     -G      Causes ssh to print its configuration after evaluating Host
+             and Match blocks and exit.
+
+     -g      Allows remote hosts to connect to local forwarded ports.
+             If used on a multiplexed connection, then this option must
+             be specified on the master process.
+
+     -I pkcs11
+             Specify the PKCS#11 shared library ssh should use to commu‐
+             nicate with a PKCS#11 token providing keys for user authen‐
+             tication.
+
+     -i identity_file
+             Selects a file from which the identity (private key) for
+             public key authentication is read.  You can also specify a
+             public key file to use the corresponding private key that
+             is loaded in ssh-agent(1) when the private key file is not
+             present locally.  The default is ~/.ssh/id_rsa,
+             ~/.ssh/id_ecdsa, ~/.ssh/id_ecdsa_sk, ~/.ssh/id_ed25519,
+             ~/.ssh/id_ed25519_sk and ~/.ssh/id_dsa.  Identity files may
+             also be specified on a per-host basis in the configuration
+             file.  It is possible to have multiple -i options (and mul‐
+             tiple identities specified in configuration files).  If no
+             certificates have been explicitly specified by the
+             CertificateFile directive, ssh will also try to load cer‐
+             tificate information from the filename obtained by append‐
+             ing -cert.pub to identity filenames.
+
+     -J destination
+             Connect to the target host by first making a ssh connection
+             to the jump host described by destination and then estab‐
+             lishing a TCP forwarding to the ultimate destination from
+             there.  Multiple jump hops may be specified separated by
+             comma characters.  This is a shortcut to specify a
+             ProxyJump configuration directive.  Note that configuration
+             directives supplied on the command-line generally apply to
+             the destination host and not any specified jump hosts.  Use
+             ~/.ssh/config to specify configuration for jump hosts.
+
+     -K      Enables GSSAPI-based authentication and forwarding (delega‐
+             tion) of GSSAPI credentials to the server.
+
+     -k      Disables forwarding (delegation) of GSSAPI credentials to
+             the server.
+
+     -L [bind_address:]port:host:hostport
+     -L [bind_address:]port:remote_socket
+     -L local_socket:host:hostport
+     -L local_socket:remote_socket
+             Specifies that connections to the given TCP port or Unix
+             socket on the local (client) host are to be forwarded to
+             the given host and port, or Unix socket, on the remote
+             side.  This works by allocating a socket to listen to ei‐
+             ther a TCP port on the local side, optionally bound to the
+             specified bind_address, or to a Unix socket.  Whenever a
+             connection is made to the local port or socket, the connec‐
+             tion is forwarded over the secure channel, and a connection
+             is made to either host port hostport, or the Unix socket
+             remote_socket, from the remote machine.
+
+             Port forwardings can also be specified in the configuration
+             file.  Only the superuser can forward privileged ports.
+             IPv6 addresses can be specified by enclosing the address in
+             square brackets.
+
+             By default, the local port is bound in accordance with the
+             GatewayPorts setting.  However, an explicit bind_address
+             may be used to bind the connection to a specific address.
+             The bind_address of “localhost” indicates that the listen‐
+             ing port be bound for local use only, while an empty ad‐
+             dress or ‘*’ indicates that the port should be available
+             from all interfaces.
+
+     -l login_name
+             Specifies the user to log in as on the remote machine.
+             This also may be specified on a per-host basis in the con‐
+             figuration file.
+
+     -M      Places the ssh client into “master” mode for connection
+             sharing.  Multiple -M options places ssh into “master” mode
+             but with confirmation required using ssh-askpass(1) before
+             each operation that changes the multiplexing state (e.g.
+             opening a new session).  Refer to the description of
+             ControlMaster in ssh_config(5) for details.
+
+     -m mac_spec
+             A comma-separated list of MAC (message authentication code)
+             algorithms, specified in order of preference.  See the MACs
+             keyword in ssh_config(5) for more information.
+
+     -N      Do not execute a remote command.  This is useful for just
+             forwarding ports.  Refer to the description of SessionType
+             in ssh_config(5) for details.
+
+     -n      Redirects stdin from /dev/null (actually, prevents reading
+             from stdin).  This must be used when ssh is run in the
+             background.  A common trick is to use this to run X11 pro‐
+             grams on a remote machine.  For example, ssh -n
+             shadows.cs.hut.fi emacs & will start an emacs on shad‐
+             ows.cs.hut.fi, and the X11 connection will be automatically
+             forwarded over an encrypted channel.  The ssh program will
+             be put in the background.  (This does not work if ssh needs
+             to ask for a password or passphrase; see also the -f op‐
+             tion.)  Refer to the description of StdinNull in
+             ssh_config(5) for details.
+
+     -O ctl_cmd
+             Control an active connection multiplexing master process.
+             When the -O option is specified, the ctl_cmd argument is
+             interpreted and passed to the master process.  Valid com‐
+             mands are: “check” (check that the master process is run‐
+             ning), “forward” (request forwardings without command exe‐
+             cution), “cancel” (cancel forwardings), “exit” (request the
+             master to exit), and “stop” (request the master to stop ac‐
+             cepting further multiplexing requests).
+
+     -o option
+             Can be used to give options in the format used in the con‐
+             figuration file.  This is useful for specifying options for
+             which there is no separate command-line flag.  For full de‐
+             tails of the options listed below, and their possible val‐
+             ues, see ssh_config(5).
+
+                   AddKeysToAgent
+                   AddressFamily
+                   BatchMode
+                   BindAddress
+                   CanonicalDomains
+                   CanonicalizeFallbackLocal
+                   CanonicalizeHostname
+                   CanonicalizeMaxDots
+                   CanonicalizePermittedCNAMEs
+                   CASignatureAlgorithmsr help or q to quit)
+                   CertificateFile
+                   CheckHostIP
+                   Ciphers
+                   ClearAllForwardings
+                   Compression
+                   ConnectionAttempts
+                   ConnectTimeout
+                   ControlMaster
+                   ControlPath
+                   ControlPersist
+                   DynamicForward
+                   EnableEscapeCommandline
+                   EscapeChar
+                   ExitOnForwardFailure
+                   FingerprintHash
+                   ForkAfterAuthentication
+                   ForwardAgent
+                   ForwardX11
+                   ForwardX11Timeouth for help or q to quit)
+                   ForwardX11Trusted
+                   GatewayPorts
+                   GlobalKnownHostsFile
+                   GSSAPIAuthentication
+                   GSSAPIKeyExchange
+                   GSSAPIClientIdentity
+                   GSSAPIDelegateCredentials
+                   GSSAPIKexAlgorithms
+                   GSSAPIRenewalForcesRekey
+                   GSSAPIServerIdentity
+                   GSSAPITrustDns
+                   HashKnownHosts
+                   Host
+                   HostbasedAcceptedAlgorithms
+                   HostbasedAuthentication
+                   HostKeyAlgorithms
+                   HostKeyAlias
+                   Hostname
+                   IdentitiesOnlyss h for help or q to quit)
+                   IdentityAgent
+                   IdentityFile
+                   IPQoS
+                   KbdInteractiveAuthentication
+                   KbdInteractiveDevices
+                   KexAlgorithms
+                   KnownHostsCommand
+                   LocalCommand
+                   LocalForward
+                   LogLevel
+                   MACs
+                   Match
+                   NoHostAuthenticationForLocalhost
+                   NumberOfPasswordPrompts
+                   PasswordAuthentication
+                   PermitLocalCommand
+                   PermitRemoteOpen
+                   PKCS11Provider
+                   Porte 305 (press h for help or q to quit)
+                   PreferredAuthentications
+                   ProxyCommand
+                   ProxyJump
+                   ProxyUseFdpass
+                   PubkeyAcceptedAlgorithms
+                   PubkeyAuthentication
+                   RekeyLimit
+                   RemoteCommand
+                   RemoteForward
+                   RequestTTY
+                   RequiredRSASize
+                   SendEnv
+                   ServerAliveInterval
+                   ServerAliveCountMax
+                   SessionType
+                   SetEnv
+                   StdinNull
+                   StreamLocalBindMask
+                   StreamLocalBindUnlinkr help or q to quit)
+                   StrictHostKeyChecking
+                   TCPKeepAlive
+                   Tunnel
+                   TunnelDevice
+                   UpdateHostKeys
+                   User
+                   UserKnownHostsFile
+                   VerifyHostKeyDNS
+                   VisualHostKey
+                   XAuthLocation
+
+     -p port
+             Port to connect to on the remote host.  This can be speci‐
+             fied on a per-host basis in the configuration file.
+
+     -Q query_option
+             Queries for the algorithms supported by one of the follow‐
+             ing features: cipher (supported symmetric ciphers),
+             cipher-auth (supported symmetric ciphers that support au‐
+             thenticated encryption), help (supported query terms for
+             use with the -Q flag), mac (supported message integrity
+             codes), kex (key exchange algorithms), kex-gss (GSSAPI key
+             exchange algorithms), key (key types), key-cert (certifi‐
+             cate key types), key-plain (non-certificate key types),
+>DEVOPS24/lektion10 line 349 (press h for help or q to quit)
+$ ssh -p 120022
+ useadmiuninstratokenuser@oclocalhost
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Warning: Permanently added '[localhost]:12022' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 09:01:24 AM UTC 2025
+
+  System load:  0.0                Processes:               115
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 4%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+173 updates can be applied immediately.
+4 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon May  5 08:31:53 2025 from 10.0.2.2
+0;user@ubse: ~
+user@ubse:~$ exit
+logout
+Connection to localhost closed.
+DEVOPS24/lektion10
+$ DEVOPS24/lektion10
+$ ssh -p 12022 user@localhost
+Warning: Permanently added '[localhost]:12022' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 09:16:56 AM UTC 2025
+
+  System load:  0.0                Processes:               113
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 3%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+173 updates can be applied immediately.
+4 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon May  5 09:01:24 2025 from 10.0.2.2
+0;user@ubse: ~
+user@ubse:~$ 0;user@ubse: ~
+user@ubse:~$ exi
+
+0;user@ubse: ~
+user@ubse:~$ 
+0;user@ubse: ~
+user@ubse:~$ 
+0;user@ubse: ~
+user@ubse:~$ ei
+
+^C
+0;user@ubse: ~
+user@ubse:~$ ^C
+0;user@ubse: ~
+user@ubse:~$ ^C
+0;user@ubse: ~
+user@ubse:~$ 
+logout
+Connection to localhost closed.
+DEVOPS24/lektion10
+$ ssh -p 12022 user@localhost
+Warning: Permanently added '[localhost]:12022' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 09:19:00 AM UTC 2025
+
+  System load:  0.07               Processes:               114
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 4%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+173 updates can be applied immediately.
+4 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon May  5 09:16:56 2025 from 10.0.2.2
+0;user@ubse: ~
+user@ubse:~$ 0;user@ubse: ~
+user@ubse:~$ 0;user@ubse: ~
+user@ubse:~$ ls
+ greeting  'hej hopp'   kat
+0;user@ubse: ~
+user@ubse:~$ 0;user@ubse: ~
+user@ubse:~$ ls
+ greeting  'hej hopp'   kat
+0;user@ubse: ~
+user@ubse:~$ lsd  - 
+ls: cannot access '-': No such file or directory
+0;user@ubse: ~
+user@ubse:~$ ls -A0;user@ubse: ~
+user@ubse:~$ ls -A
+ .bash_history   .cache      kat        .profile
+ .bash_logout    greeting    .lesshst   .ssh
+ .bashrc        'hej hopp'   .local     .sudo_as_admin_successful
+0;user@ubse: ~
+user@ubse:~$ cd .ssh/
+0;user@ubse: ~/.ssh
+user@ubse:~/.ssh$ 0;user@ubse: ~/.ssh
+user@ubse:~/.ssh$ ls
+authorized_keys
+0;user@ubse: ~/.ssh
+user@ubse:~/.ssh$ ls -a
+.  ..  authorized_keys
+0;user@ubse: ~/.ssh
+user@ubse:~/.ssh$ 
+logout
+Connection to localhost closed.
+DEVOPS24/lektion10
+$ ls .ssh
+ls: cannot access '.ssh': No such file or directory
+DEVOPS24/lektion10
+$ DEVOPS24/lektion10
+$ ls ~/.ssh/DEVOPS24/lektion10
+$ ls ~/.ssh/
+config				id_ed25519_ubse
+id_ed25519			id_ed25519_ubse.pub
+id_ed25519_github_personal	known_hosts
+id_ed25519_github_personal.pub	known_hosts.old
+id_ed25519.pub
+DEVOPS24/lektion10
+$ DEVOPS24/lektion10
+$ ssh-key
+genman 
+SSH-KEYGEN(1)          BSD General Commands Manual         SSH-KEYGEN(1)
+
+NAME
+     ssh-keygen — OpenSSH authentication key utility
+
+SYNOPSIS
+     ssh-keygen [-q] [-a rounds] [-b bits] [-C comment]
+                [-f output_keyfile] [-m format] [-N new_passphrase]
+                [-O option]
+                [-t dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa]
+                [-w provider] [-Z cipher]
+     ssh-keygen -p [-a rounds] [-f keyfile] [-m format]
+                [-N new_passphrase] [-P old_passphrase] [-Z cipher]
+     ssh-keygen -i [-f input_keyfile] [-m key_format]
+     ssh-keygen -e [-f input_keyfile] [-m key_format]
+     ssh-keygen -y [-f input_keyfile]
+     ssh-keygen -c [-a rounds] [-C comment] [-f keyfile] [-P passphrase]
+     ssh-keygen -l [-v] [-E fingerprint_hash] [-f input_keyfile])
+     ssh-keygen -B [-f input_keyfile]ess h for help or q to quit)
+     ssh-keygen -D pkcs11) line 4 (press h for help or q to quit)
+     ssh-keygen -F hostname [-lv] [-f known_hosts_file]q to quit)
+     ssh-keygen -H [-f known_hosts_file] h for help or q to quit)
+     ssh-keygen -K [-a rounds] [-w provider]or help or q to quit)
+     ssh-keygen -R hostname [-f known_hosts_file]lp or q to quit)
+     ssh-keygen -r hostname [-g] [-f input_keyfile] or q to quit)
+     ssh-keygen -M generate [-O option] output_filep or q to quit)
+     ssh-keygen -M screen [-f input_file] [-O option] output_file)
+M                [-w provider] [-Z cipher]h for help or q to quit)
+M                [-t dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa]
+M                [-O option]ine 10 (press h for help or q to quit)
+                [-O option]line 9 (press h for help or q to quit)
+                [-t dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa]
+                [-w provider] [-Z cipher]
+     ssh-keygen -p [-a rounds] [-f keyfile] [-m format]
+                [-N new_passphrase] [-P old_passphrase] [-Z cipher]
+     ssh-keygen -i [-f input_keyfile] [-m key_format]
+     ssh-keygen -e [-f input_keyfile] [-m key_format]
+     ssh-keygen -y [-f input_keyfile]
+     ssh-keygen -c [-a rounds] [-C comment] [-f keyfile] [-P passphrase]
+     ssh-keygen -l [-v] [-E fingerprint_hash] [-f input_keyfile]
+     ssh-keygen -B [-f input_keyfile]
+     ssh-keygen -D pkcs11
+     ssh-keygen -F hostname [-lv] [-f known_hosts_file]
+     ssh-keygen -H [-f known_hosts_file]
+     ssh-keygen -K [-a rounds] [-w provider]
+     ssh-keygen -R hostname [-f known_hosts_file]
+                [-O option]
+                [-t dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa]
+                [-w provider] [-Z cipher]
+     ssh-keygen -p [-a rounds] [-f keyfile] [-m format]
+                [-N new_passphrase] [-P old_passphrase] [-Z cipher]
+     ssh-keygen -i [-f input_keyfile] [-m key_format]
+     ssh-keygen -e [-f input_keyfile] [-m key_format]
+     ssh-keygen -y [-f input_keyfile]
+     ssh-keygen -c [-a rounds] [-C comment] [-f keyfile] [-P passphrase]
+     ssh-keygen -l [-v] [-E fingerprint_hash] [-f input_keyfile]
+     ssh-keygen -B [-f input_keyfile]
+     ssh-keygen -D pkcs11
+     ssh-keygen -F hostname [-lv] [-f known_hosts_file]
+     ssh-keygen -H [-f known_hosts_file]
+     ssh-keygen -K [-a rounds] [-w provider]
+     ssh-keygen -R hostname [-f known_hosts_file]
+     ssh-keygen -r hostname [-g] [-f input_keyfile]
+...skipping...sh-keygen(1) line 10 (press h for help or q to quit)
+     The type of key to be generated is specified with the -t option.
+     If invoked without any arguments, ssh-keygen will generate an RSA
+     key.
+
+     ssh-keygen is also used to generate groups for use in Diffie-Hell‐
+     man group exchange (DH-GEX).  See the MODULI GENERATION section for
+     details.
+
+     Finally, ssh-keygen can be used to generate and update Key Revoca‐
+     tion Lists, and to test whether given keys have been revoked by
+     one.  See the KEY REVOCATION LISTS section for details.
+
+     Normally each user wishing to use SSH with public key authentica‐
+     tion runs this once to create the authentication key in
+     ~/.ssh/id_dsa, ~/.ssh/id_ecdsa, ~/.ssh/id_ecdsa_sk,
+     ~/.ssh/id_ed25519, ~/.ssh/id_ed25519_sk or ~/.ssh/id_rsa.  Addi‐
+...skipping...sh-keygen(1) line 52 (press h for help or q to quit)
+             verify-time=timestamp
+                     Specifies a time to use when validating signatures
+                     instead of the current time.  The time may be spec‐
+                     ified as a date or time in the YYYYMMDD[Z] or in
+                     YYYYMMDDHHMM[SS][Z] formats.  Dates and times will
+                     be interpreted in the current system time zone un‐
+                     less suffixed with a Z character, which causes them
+                     to be interpreted in the UTC time zone.
+
+             The -O option may be specified multiple times.
+
+     -P passphrase
+             Provides the (old) passphrase.
+
+     -p      Requests changing the passphrase of a private key file in‐
+             stead of creating a new private key.  The program will
+...skipping...sh-keygen(1) line 290 (press h for help or q to quit)
+     -t dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa
+             Specifies the type of key to create.  The possible values
+             are “dsa”, “ecdsa”, “ecdsa-sk”, “ed25519”, “ed25519-sk”, or
+             “rsa”.
+
+             This flag may also be used to specify the desired signature
+             type when signing certificates using an RSA CA key.  The
+             available RSA signature variants are “ssh-rsa” (SHA1 signa‐
+             tures, not recommended), “rsa-sha2-256”, and “rsa-sha2-512”
+             (the default).
+
+     -U      When used in combination with -s or -Y sign, this option
+             indicates that a CA key resides in a ssh-agent(1).  See the
+             CERTIFICATES section for more information.
+
+     -u      Update a KRL.  When specified with -k, keys listed via the
+>DEVOPS24/lektion10ygen(1) line 333 (press h for help or q to quit)
+ssh-key-keygen n 
+gen -t 
+
+recordings/     ssh-nyckel.txt  
+DEVOPS24/lektion10
+$ ssh-keygen -t ed25519
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/kent/.ssh/id_ed25519): i/home/kent/.ssh/id_ed25519_test
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/kent/.ssh/id_ed25519_test
+Your public key has been saved in /home/kent/.ssh/id_ed25519_test.pub
+The key fingerprint is:
+SHA256:ouNRtf1qXix0JbD7Ir0KDeosRONfdoVAsrJmbX0JrGw kent@klad
+The key's randomart image is:
++--[ED25519 256]--+
+|    ...   .      |
+|     +.    o     |
+|  . . o.... . .  |
+|  o= o o.+.. o   |
+| o+.E = S.+ .    |
+| ooo +o=.o =     |
+| . .=o..o + =    |
+|  .+.o . ..*     |
+|   .+   .++      |
++----[SHA256]-----+
+DEVOPS24/lektion10
+$ DEVOPS24/lektion10
+$ mv ½~/.ssh/
+
+config                          id_ed25519_test.pub
+id_ed25519                      id_ed25519_ubse
+id_ed25519_github_personal      id_ed25519_ubse.pub
+id_ed25519_github_personal.pub  known_hosts
+id_ed25519.pub                  known_hosts.old
+id_ed25519_test                 
+DEVOPS24/lektion10
+$ mv ~/.ssh/id
+_ed25519_t
+est* .
+DEVOPS24/lektion10
+$ DEVOPS24/lektion10
+$ ls
+id_ed25519_test  id_ed25519_test.pub  recordings  ssh-nyckel.txt
+DEVOPS24/lektion10
+$ ssh --g
+ke
+ygen -t 
+
+id_ed25519_test      recordings/          
+id_ed25519_test.pub  ssh-nyckel.md        
+DEVOPS24/lektion10
+$ ssh-keygen -t
+
+
+
+
+
+
+
+
+
+
+
+DEVOPS24/lektion10
+$ ssh ubse
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 10:28:48 AM UTC 2025
+
+  System load:  0.0                Processes:               111
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 4%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+169 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon May  5 09:19:00 2025 from 10.0.2.2
+0;user@ubse: ~
+user@ubse:~$ 0;user@ubse: ~
+user@ubse:~$ ls
+ greeting  'hej hopp'   kat
+0;user@ubse: ~
+user@ubse:~$ rm .ssh/authorized_keys 
+
+0;user@ubse: ~
+user@ubse:~$ exit
+logout
+Connection to localhost closed.
+DEVOPS24/lektion10
+$ DEVOPS24/lektion10
+ssh-gekeygen -t ed25519
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/kent/.ssh/id_ed25519): id_ed25519_ubse
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in id_ed25519_ubse
+Your public key has been saved in id_ed25519_ubse.pub
+The key fingerprint is:
+SHA256:gT4NeF7B9juzABUzJquqP0G58YgvvVeHoaU/Xitg7rI kent@klad
+The key's randomart image is:
++--[ED25519 256]--+
+|      ..*.       |
+|     . =++       |
+|   .. =oo.       |
+|  +  =++ ..      |
+| o =.+++S  .     |
+|. +.* o.o +      |
+| o.+ + ... +     |
+|..= o +. ..      |
+|.oEB...o.        |
++----[SHA256]-----+
+DEVOPS24/lektion10
+$ DEVOPS24/lektion10
+$ ls ~/.ssh/DEVOPS24/lektion10
+$ ls ~/.ssh/
+config			    id_ed25519_github_personal.pub  id_ed25519_ubse.pub
+id_ed25519		    id_ed25519.pub		    known_hosts
+id_ed25519_github_personal  id_ed25519_ubse		    known_hosts.old
+DEVOPS24/lektion10
+$ $(which ssh-copy-id
+
+
+
+
+
+
+cpode 
+DEVOPS24/lektion10
+$ DEVOPS24/lektion10
+$ ssh-cco
+opy-id
+
+
+
+
+man
+What manual page do you want?
+For example, try 'man man'.
+DEVOPS24/lektion10
+$ man ssh-co
+opypy-idDEVOPS24/lektion10
+$ man ssh-copy-id
+SSH-COPY-ID(1)            BSD General Commands Manual           SSH-COPY-ID(1)
+
+NAME
+     ssh-copy-id — use locally available keys to authorise logins on a remote
+     machine
+
+SYNOPSIS
+     ssh-copy-id [-f] [-n] [-s] [-i [identity_file]] [-p port] [-o ssh_option]
+                 [user@]hostname
+     ssh-copy-id -h | -?
+
+DESCRIPTION
+ Manual page ssh-copy-id(1) line 1 (press h for help or q to quit)...skipping...
+SSH-COPY-ID(1)            BSD General Commands Manual           SSH-COPY-ID(1)
+
+NAME
+     ssh-copy-id — use locally available keys to authorise logins on a remote
+     machine
+
+SYNOPSIS
+     ssh-copy-id [-f] [-n] [-s] [-i [identity_file]] [-p port] [-o ssh_option]
+                 [user@]hostname
+     ssh-copy-id -h | -?
+
+DESCRIPTION
+     ssh-copy-id is a script that uses ssh(1) to log into a remote machine
+ Manual page ssh-copy-id(1) line 1 (press h for help or q to quit)...skipping...
+SSH-COPY-ID(1)            BSD General Commands Manual           SSH-COPY-ID(1)
+
+NAME
+     ssh-copy-id — use locally available keys to authorise logins on a remote
+     machine
+
+SYNOPSIS
+     ssh-copy-id [-f] [-n] [-s] [-i [identity_file]] [-p port] [-o ssh_option]
+                 [user@]hostname
+     ssh-copy-id -h | -?
+
+DESCRIPTION
+     ssh-copy-id is a script that uses ssh(1) to log into a remote machine
+     (presumably using a login password, so password authentication should be
+ Manual page ssh-copy-id(1) line 1 (press h for help or q to quit)...skipping...
+SSH-COPY-ID(1)            BSD General Commands Manual           SSH-COPY-ID(1)
+
+NAME
+     ssh-copy-id — use locally available keys to authorise logins on a remote
+     machine
+
+SYNOPSIS
+     ssh-copy-id [-f] [-n] [-s] [-i [identity_file]] [-p port] [-o ssh_option]
+                 [user@]hostname
+     ssh-copy-id -h | -?
+
+DESCRIPTION
+     ssh-copy-id is a script that uses ssh(1) to log into a remote machine
+     (presumably using a login password, so password authentication should be
+     enabled, unless you've done some clever use of multiple identities).  It
+>DEVOPS24/lektion10py-id(1) line 1 (press h for help or q to quit)
+$ ls ~/.ssh/
+config			    id_ed25519_github_personal.pub  id_ed25519_ubse.pub
+id_ed25519		    id_ed25519.pub		    known_hosts
+id_ed25519_github_personal  id_ed25519_ubse		    known_hosts.old
+DEVOPS24/lektion10
+$ DEVOPS24/lektion10
+$ ssh-copy-id -i ~/.ssh/
+
+config                          id_ed25519_ubse
+id_ed25519                      id_ed25519_ubse.pub
+id_ed25519_github_personal      known_hosts
+id_ed25519_github_personal.pub  known_hosts.old
+id_ed25519.pub                  
+DEVOPS24/lektion10
+$ ssh-copy-id -i ~/.ssh/id_ed
+25519_u
+bseDEVOPS24/lektion10
+$ ssh-copy-id -i ~/.ssh/id_ed25519_ubs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-p12022
+
+
+
+
+
+
+ user@localhost
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/kent/.ssh/id_ed25519_ubse.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+Warning: Permanently added '[localhost]:12022' (ED25519) to the list of known hosts.
+user@localhost's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh -p '12022' 'user@localhost'"
+and check to make sure that only the key(s) you wanted were added.
+
+DEVOPS24/lektion10
+$ DEVOPS24/lektion10
+$ ssh ubse
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 11:00:20 AM UTC 2025
+
+  System load:  0.0                Processes:               111
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 4%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+169 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon May  5 10:28:48 2025 from 10.0.2.2
+0;user@ubse: ~
+user@ubse:~$ 0;user@ubse: ~
+user@ubse:~$ cd .ssh
+0;user@ubse: ~/.ssh
+user@ubse:~/.ssh$ 0;user@ubse: ~/.ssh
+user@ubse:~/.ssh$ ls +-l
+total 4
+-rw------- 1 user user 91 May  5 10:34 authorized_keys
+0;user@ubse: ~/.ssh
+user@ubse:~/.ssh$ less authorized_keys 
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDdAQR3Eey3TFkvv4EMy9x58E3Di92La3Is5RatqpSMt kent@klad
+>0;user@ubse: ~/.ssh)
+user@ubse:~/.ssh$ less authorized_keys
+nano
+>0;user@ubse: ~/.sshaC1lZDI1NTE5AAAAIDdAQR3Eey3TFkvv4EMy9x58E3Di92La3Is5RatqpSM><atqpSMt kent@klad             
+user@ubse:~/.ssh$ less authorized_keys 
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDdAQR3Eey3TFkvv4EMy9x58E3Di92La3Is5RatqpSMt kent@klad
+>0;user@ubse: ~/.ssh)
+0;user@ubse: ~/.ssh
+0;user@ubse: ~/.ssh
+0;user@ubse: ~/.ssh
+user@ubse:~/.ssh$ nano authorized_keys 
+>0;user@ubse: ~/.sshaC1lZDI1NTE5AAAAIDdAQR3Eey3TFkvv4EMy9x58E3Di92La3Is5RatqpSM>s                              
+user@ubse:~/.ssh$ 0;user@ubse: ~/.ssh
+user@ubse:~/.ssh$ exit
+logout
+Connection to localhost closed.
+DEVOPS24/lektion10
+$ DEVOPS24/lektion10
+$ code ~/.ssh/kn
+own_hosts
+DEVOPS24/lektion10
+$ DEVOPS24/lektion10
+$ cp ~/.ssh/config ./cofnfig_exempel
+DEVOPS24/lektion10
+$ DEVOPS24/lektion10
+$ ssh ubse
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 11:18:19 AM UTC 2025
+
+  System load:  0.0                Processes:               111
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 4%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+169 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon May  5 11:00:21 2025 from 10.0.2.2
+0;user@ubse: ~
+user@ubse:~$ 0;user@ubse: ~
+user@ubse:~$ 
+logout
+Connection to localhost closed.
+DEVOPS24/lektion10
+$ ssh ubseDEVOPS24/lektion10
+$ ssh ubs-i shuhuhp 12022 username@hoslocalhost^C
+DEVOPS24/lektion10
+$ DEVOPS24/lektion10
+$ ssh suubse
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 11:18:19 AM UTC 2025
+
+  System load:  0.0                Processes:               111
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 4%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+169 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon May  5 11:18:19 2025 from 10.0.2.2
+0;user@ubse: ~
+user@ubse:~$ 0;user@ubse: ~
+user@ubse:~$ 
+sudo /etc/ssh/sshd_config.dc/etc/ssh/sshd_confip/etc/ssh/sshd_confi /etc/ssh/sshd_confi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{,.bak
+
+v /etc/ssh/sshd_config{,.bak}
+
+
+
+
+
+
+
+
+0;user@ubse: ~
+user@ubse:~$ sudo cp -v /etc/ssh/sshd_config{,.bak}
+[sudo] password for user: 
+'/etc/ssh/sshd_config' -> '/etc/ssh/sshd_config.bak'
+0;user@ubse: ~
+user@ubse:~$ sudo naneoedit
+
+
+
+
+
+
+
+
+
+
+
+
+
+/etc/ssh/ssh
+d
+_config
+>104fault value.leave them commented.  Uncommented options override thesbin:/us># The strategy used for options in the default sshd_config shipped with
+^X Exit^R Read File ^\ Replace   ^U Paste     ^J Justify   ^/ Go To Linebin:/us># The strategy used for options in the default sshd_config shipped with
+
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+Include /etc/ssh/sshd_config.d
+
+#HostKey /etc/ssh/ssh_host_rsa_key
+#HostKey /etc/ssh/ssh_host_ecdsa_key
+#HostKey /etc/ssh/ssh_host_ed25519_key
+
+# Ciphers and keying
+#RekeyLimit default none
+
+# Logging
+#SyslogFacility AUTH
+#LogLevel INFO
+
+# Authentication:
+
+#LoginGraceTime 2m
+#PermitRootLogin prohibit-password
+#StrictModes yes
+#MaxAuthTries 6
+#MaxSessions 10
+
+#PubkeyAuthentication yes
+normitRootLogin prohibit-password
+# Expect .ssh/authorized_keys2 to be disregarded by default in future.
+#AuthorizedKeysFile     .ssh/authorized_keys .ssh/authorized_keys2
+
+#AuthorizedPrincipalsFile none
+
+#AuthorizedKeysCommand none
+#AuthorizedKeysCommandUser nobody
+
+# For this to work you will also need host keys in /etc/ssh/ssh_known_hosts
+#HostbasedAuthentication no
+# Change to yes if you don't trust ~/.ssh/known_hosts for
+# HostbasedAuthentication
+#IgnoreUserKnownHosts no
+# Don't read the user's ~/.rhosts and ~/.shosts files
+#IgnoreRhosts yes
+
+# To disable tunneled clear text passwords, change to no here!
+#PasswordAuthentication yes
+#PermitEmptyPasswords no
+
+# Change to yes to enable challenge-response passwords (beware issues with
+# some PAM modules and threads)
+swordAuthentication no yeson no
+
+# Kerberos options
+#KerberosAuthentication no
+#KerberosOrLocalPasswd yes
+#KerberosTicketCleanup yes
+#KerberosGetAFSToken no
+PasswordAuthentication nonoation noand ~/.shosts files no here!
+# Kerberos options
+#KerberosAuthentication no
+#KerberosOrLocalPasswd yes
+#KerberosTicketCleanup yes
+#KerberosGetAFSToken no
+
+# GSSAPI options
+#GSSAPIAuthentication no
+#GSSAPICleanupCredentials yes
+#GSSAPIStrictAcceptorCheck yes
+#GSSAPIKeyExchange no
+
+# Set this to 'yes' to enable PAM authentication, account processing,
+# and session processing. If this is enabled, PAM authentication will
+# be allowed through the KbdInteractiveAuthentication and
+# PasswordAuthentication.  Depending on your PAM configuration,
+# PAM authentication via KbdInteractiveAuthentication may bypass
+# the setting of "PermitRootLogin prohibit-password".
+# If you just want the PAM account and session checks to run without
+# PAM authentication, then enable this but set PasswordAuthentication
+# and KbdInteractiveAuthentication to 'no'.
+UsePAM yes
+
+#AllowAgentForwarding yes
+#AllowTcpForwarding yes
+#GatewayPorts no
+X11Forwarding yes
+#X11DisplayOffset 10
+#X11UseLocalhost yes
+#PermitTTY yes
+PrintMotd no
+M#KerberosAuthentication noyessPAM authentication, account processing,
+MM#PermitEmptyPasswords no challenge-response passwords (beware issues with
+# GSSAPI options
+#GSSAPIAuthentication no
+#GSSAPICleanupCredentials yes
+#GSSAPIStrictAcceptorCheck yes
+#GSSAPIKeyExchange no
+
+# Set this to 'yes' to enable PAM authentication, account processing,
+# and session processing. If this is enabled, PAM authentication will
+# be allowed through the KbdInteractiveAuthentication and
+# PasswordAuthentication.  Depending on your PAM configuration,
+# PAM authentication via KbdInteractiveAuthentication may bypass
+# the setting of "PermitRootLogin prohibit-password".
+# If you just want the PAM account and session checks to run without
+MM#AuthorizedKeysCommandUser nobodyeed host keys in /etc/ssh/ssh_known_hosts
+#PermitEmptyPasswords no
+
+# Change to yes to enable challenge-response passwords (beware issues with
+# some PAM modules and threads)
+KbdInteractiveAuthentication no
+
+# Kerberos options
+#KerberosAuthentication no
+#KerberosOrLocalPasswd yes
+#KerberosTicketCleanup yes
+#KerberosGetAFSToken no
+
+# GSSAPI options
+#GSSAPIAuthentication no
+#GSSAPICleanupCredentials yes
+#GSSAPIStrictAcceptorCheck yes
+#GSSAPIKeyExchange no
+
+# Set this to 'yes' to enable PAM authentication, account processing,
+# and session processing. If this is enabled, PAM authentication will
+# be allowed through the KbdInteractiveAuthentication and
+# PasswordAuthentication.  Depending on your PAM configuration,
+# PAM authentication via KbdInteractiveAuthentication may bypass
+# the setting of "PermitRootLogin prohibit-password".
+# If you just want the PAM account and session checks to run without
+# PAM authentication, then enable this but set PasswordAuthentication
+# and KbdInteractiveAuthentication to 'no'.
+UsePAM yes
+
+#AllowAgentForwarding yes
+#AllowTcpForwarding yes
+#GatewayPorts no
+X11Forwarding yes
+#X11DisplayOffset 10
+#X11UseLocalhost yes
+#PermitTTY yes
+PrintMotd no
+#PrintLastLog yes
+X11Forwarding nos
+#PermitUserEnvironment no
+#Compression delayed
+#ClientAliveInterval 0
+#ClientAliveCountMax 3
+#UseDNS no
+#PidFile /run/sshd.pid
+#MaxStartups 10:30:100
+#PermitTunnel no
+#ChrootDirectory none
+#VersionAddendum none
+
+# no default banner path
+#Banner none
+
+# Allow client to pass locale environment variables
+AcceptEnv LANG LC_*
+
+# override default of no subsystems
+Subsystem       sftp    /usr/lib/openssh/sftp-server
+
+# Example of overriding settings on a per-user basis
+#Match User anoncvs
+#       X11Forwarding no
+#       AllowTcpForwarding no
+#       PermitTTY no
+#       ForceCommand cvs server
+>0;user@ubse: ~ite: /var/tmp/sshd_config.2OJhc9dx [ Writing... ] [ Wrote 122 lines ]es
+user@ubse:~$ ss
+sudpoo systemctl reload ssh
+0;user@ubse: ~
+user@ubse:~$ exit
+logout
+Connection to localhost closed.
+DEVOPS24/lektion10
+$ DEVOPS24/lektion10
+$ ssh ubse
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 11:30:06 AM UTC 2025
+
+  System load:  0.02               Processes:               117
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 4%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+169 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon May  5 11:19:00 2025 from 10.0.2.2
+0;user@ubse: ~
+user@ubse:~$ 0;user@ubse: ~
+user@ubse:~$ ls /etc/ssh/sshd_
+config.d/
+50-cloud-init.conf
+0;user@ubse: ~
+user@ubse:~$ 
+logout
+Connection to localhost closed.
+DEVOPS24/lektion10
+$ ssh ubs
+
+
+
+
+
+
+
+DEVOPS24/lektion10
+$ mab n ssh
+SSH(1)                    BSD General Commands Manual                   SSH(1)
+
+NAME
+     ssh — OpenSSH remote login client
+
+SYNOPSIS
+     ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface] [-b bind_address]
+         [-c cipher_spec] [-D [bind_address:]port] [-E log_file]
+         [-e escape_char] [-F configfile] [-I pkcs11] [-i identity_file]
+         [-J destination] [-L address] [-l login_name] [-m mac_spec]
+         [-O ctl_cmd] [-o option] [-p port] [-Q query_option] [-R address]
+         [-S ctl_path] [-W host:port] [-w local_tun[:remote_tun]] destination
+         [command [argument ...]]
+
+DESCRIPTION
+     ssh (SSH client) is a program for logging into a remote machine and for
+     executing commands on a remote machine.  It is intended to provide secure
+     encrypted communications between two untrusted hosts over an insecure
+     network.  X11 connections, arbitrary TCP ports and UNIX-domain sockets
+     can also be forwarded over the secure channel.
+
+     ssh connects and logs into the specified destination, which may be speci‐
+     fied as either [user@]hostname or a URI of the form
+     ssh://[user@]hostname[:port].  The user must prove their identity to the
+     remote machine using one of several methods (see below).
+
+     If a command is specified, it will be executed on the remote host instead
+     of a login shell.  A complete command line may be specified as command,
+     or it may have additional arguments.  If supplied, the arguments will be
+     appended to the command, separated by spaces, before it is sent to the
+     server to be executed. (press h for help or q to quit)
+
+     The options are as follows:
+
+     -4      Forces ssh to use IPv4 addresses only.
+
+     -6      Forces ssh to use IPv6 addresses only.
+
+     -A      Enables forwarding of connections from an authentication agent
+             such as ssh-agent(1).  This can also be specified on a per-host
+             basis in a configuration file.
+
+             Agent forwarding should be enabled with caution.  Users with the
+             ability to bypass file permissions on the remote host (for the
+             agent's UNIX-domain socket) can access the local agent through
+             the forwarded connection.  An attacker cannot obtain key material
+             from the agent, however they can perform operations on the keys
+             that enable them to authenticate using the identities loaded into
+             the agent.  A safer alternative may be to use a jump host (see
+             -J).
+
+     -a      Disables forwarding of the authentication agent connection.
+
+     -B bind_interface
+             Bind to the address of bind_interface before attempting to con‐
+             nect to the destination host.  This is only useful on systems
+             with more than one address.
+
+     -b bind_address
+             Use bind_address on the local machine as the source address of
+             the connection.  Only useful on systems with more than one ad‐
+             dress.
+
+     -C      Requests compression of all data (including stdin, stdout,
+             stderr, and data for forwarded X11, TCP and UNIX-domain connec‐
+             tions).  The compression algorithm is the same used by gzip(1).
+             Compression is desirable on modem lines and other slow connec‐
+             tions, but will only slow down things on fast networks.  The de‐
+             fault value can be set on a host-by-host basis in the configura‐
+             tion files; see the Compression option in ssh_config(5).
+
+     -c cipher_spec
+             Selects the cipher specification for encrypting the session.
+             cipher_spec is a comma-separated list of ciphers listed in order
+             of preference.  See the Ciphers keyword in ssh_config(5) for more
+             information.61 (press h for help or q to quit)
+
+     -D [bind_address:]port
+             Specifies a local “dynamic” application-level port forwarding.
+             This works by allocating a socket to listen to port on the local
+             side, optionally bound to the specified bind_address.  Whenever a
+             connection is made to this port, the connection is forwarded over
+             the secure channel, and the application protocol is then used to
+             determine where to connect to from the remote machine.  Currently
+             the SOCKS4 and SOCKS5 protocols are supported, and ssh will act
+             as a SOCKS server.  Only root can forward privileged ports.  Dy‐
+             namic port forwardings can also be specified in the configuration
+             file.
+
+             IPv6 addresses can be specified by enclosing the address in
+             square brackets.  Only the superuser can forward privileged
+             ports.  By default, the local port is bound in accordance with
+             the GatewayPorts setting.  However, an explicit bind_address may
+             be used to bind the connection to a specific address.  The
+             bind_address of “localhost” indicates that the listening port be
+             bound for local use only, while an empty address or ‘*’ indicates
+             that the port should be available from all interfaces.
+
+     -E log_file
+             Append debug logs to log_file instead of standard error.
+
+     -e escape_char
+             Sets the escape character for sessions with a pty (default: ‘~’).
+             The escape character is only recognized at the beginning of a
+             line.  The escape character followed by a dot (‘.’) closes the
+             connection; followed by control-Z suspends the connection; and
+             followed by itself sends the escape character once.  Setting the
+             character to “none” disables any escapes and makes the session
+             fully transparent.
+
+     -F configfile
+             Specifies an alternative per-user configuration file.  If a con‐
+             figuration file is given on the command line, the system-wide
+             configuration file (/etc/ssh/ssh_config) will be ignored.  The
+             default for the per-user configuration file is ~/.ssh/config.  If
+             set to “none”, no configuration files will be read.
+
+     -f      Requests ssh to go to background just before command execution.
+             This is useful if ssh is going to ask for passwords or
+             passphrases, but the user wants it in the background.  This im‐
+             plies -n.  The recommended way to start X11 programs at a remote
+             site is with something like ssh -f host xterm.
+
+             If the ExitOnForwardFailure configuration option is set to “yes”,
+             then a client started with -f will wait for all remote port for‐
+             wards to be successfully established before placing itself in the
+             background.  Refer to the description of ForkAfterAuthentication
+             in ssh_config(5) for details.
+
+     -G      Causes ssh to print its configuration after evaluating Host and
+             Match blocks and exit.
+
+     -g      Allows remote hosts to connect to local forwarded ports.  If used
+             on a multiplexed connection, then this option must be specified
+             on the master process.
+ Manual page ssh(1) line 121 (press h for help or q to quit)
+     -I pkcs11
+             Specify the PKCS#11 shared library ssh should use to communicate
+             with a PKCS#11 token providing keys for user authentication.
+
+     -i identity_file
+             Selects a file from which the identity (private key) for public
+             key authentication is read.  You can also specify a public key
+             file to use the corresponding private key that is loaded in
+             ssh-agent(1) when the private key file is not present locally.
+             The default is ~/.ssh/id_rsa, ~/.ssh/id_ecdsa,
+             ~/.ssh/id_ecdsa_sk, ~/.ssh/id_ed25519, ~/.ssh/id_ed25519_sk and
+             ~/.ssh/id_dsa.  Identity files may also be specified on a per-
+             host basis in the configuration file.  It is possible to have
+             multiple -i options (and multiple identities specified in config‐
+             uration files).  If no certificates have been explicitly speci‐
+             fied by the CertificateFile directive, ssh will also try to load
+             certificate information from the filename obtained by appending
+             -cert.pub to identity filenames.
+
+     -J destination
+             Connect to the target host by first making a ssh connection to
+             the jump host described by destination and then establishing a
+             TCP forwarding to the ultimate destination from there.  Multiple
+             jump hops may be specified separated by comma characters.  This
+             is a shortcut to specify a ProxyJump configuration directive.
+             Note that configuration directives supplied on the command-line
+             generally apply to the destination host and not any specified
+             jump hosts.  Use ~/.ssh/config to specify configuration for jump
+             hosts.
+ Manual page ssh(1) line 151 (press h for help or q to quit)
+     -K      Enables GSSAPI-based authentication and forwarding (delegation)
+             of GSSAPI credentials to the server.
+
+     -k      Disables forwarding (delegation) of GSSAPI credentials to the
+             server.
+
+     -L [bind_address:]port:host:hostport
+     -L [bind_address:]port:remote_socket
+     -L local_socket:host:hostport
+     -L local_socket:remote_socket
+             Specifies that connections to the given TCP port or Unix socket
+             on the local (client) host are to be forwarded to the given host
+             and port, or Unix socket, on the remote side.  This works by al‐
+             locating a socket to listen to either a TCP port on the local
+             side, optionally bound to the specified bind_address, or to a
+             Unix socket.  Whenever a connection is made to the local port or
+             socket, the connection is forwarded over the secure channel, and
+             a connection is made to either host port hostport, or the Unix
+             socket remote_socket, from the remote machine.
+
+             Port forwardings can also be specified in the configuration file.
+             Only the superuser can forward privileged ports.  IPv6 addresses
+             can be specified by enclosing the address in square brackets.
+
+             By default, the local port is bound in accordance with the
+             GatewayPorts setting.  However, an explicit bind_address may be
+             used to bind the connection to a specific address.  The
+             bind_address of “localhost” indicates that the listening port be
+             bound for local use only, while an empty address or ‘*’ indicates
+             that the port should be available from all interfaces.
+
+     -l login_name
+             Specifies the user to log in as on the remote machine.  This also
+             may be specified on a per-host basis in the configuration file.
+
+     -M      Places the ssh client into “master” mode for connection sharing.
+             Multiple -M options places ssh into “master” mode but with con‐
+             firmation required using ssh-askpass(1) before each operation
+             that changes the multiplexing state (e.g. opening a new session).
+             Refer to the description of ControlMaster in ssh_config(5) for
+             details.
+
+     -m mac_spec
+             A comma-separated list of MAC (message authentication code) algo‐
+             rithms, specified in order of preference.  See the MACs keyword
+             in ssh_config(5) for more information.
+
+     -N      Do not execute a remote command.  This is useful for just for‐
+             warding ports.  Refer to the description of SessionType in
+             ssh_config(5) for details.
+
+     -n      Redirects stdin from /dev/null (actually, prevents reading from
+             stdin).  This must be used when ssh is run in the background.  A
+             common trick is to use this to run X11 programs on a remote ma‐
+             chine.  For example, ssh -n shadows.cs.hut.fi emacs & will start
+             an emacs on shadows.cs.hut.fi, and the X11 connection will be au‐
+             tomatically forwarded over an encrypted channel.  The ssh program
+             will be put in the background.  (This does not work if ssh needs
+             to ask for a password or passphrase; see also the -f option.)
+             Refer to the description of StdinNull in ssh_config(5) for de‐
+             tails.
+
+     -O ctl_cmd
+             Control an active connection multiplexing master process.  When
+             the -O option is specified, the ctl_cmd argument is interpreted
+             and passed to the master process.  Valid commands are: “check”
+             (check that the master process is running), “forward” (request
+             forwardings without command execution), “cancel” (cancel forward‐
+             ings), “exit” (request the master to exit), and “stop” (request
+             the master to stop accepting further multiplexing requests).
+
+     -o option
+             Can be used to give options in the format used in the configura‐
+             tion file.  This is useful for specifying options for which there
+             is no separate command-line flag.  For full details of the op‐
+             tions listed below, and their possible values, see ssh_config(5).
+ ESESCOBpage ssh(1) line 228 (press h for help or q to quit)
+                   AddKeysToAgentss h for help or q to quit)
+                   AddressFamilyess h for help or q to quit)
+                   BatchMode (press h for help or q to quit)
+                   BindAddresspress h for help or q to quit)
+                   CanonicalDomains h for help or q to quit)
+                   CanonicalizeFallbackLocallp or q to quit)
+                   CanonicalizeHostnameor help or q to quit)
+                   CanonicalizeMaxDotsfor help or q to quit)
+                   CanonicalizePermittedCNAMEs or q to quit)
+                   CASignatureAlgorithmsr help or q to quit)
+                   CertificateFiles h for help or q to quit)
+M             Can be used to give options in the format used in the configura‐
+M     -o optionh(1) line 239 (press h for help or q to quit)
+MESESCOApage ssh(1) line 238 (press h for help or q to quit)
+                   CanonicalizePermittedCNAMEs or q to quit)
+                   CASignatureAlgorithmsr help or q to quit)
+                   CertificateFiles h for help or q to quit)
+                   CheckHostIPpress h for help or q to quit)
+                   Ciphers41 (press h for help or q to quit)
+                   ClearAllForwardingsfor help or q to quit)
+                   Compressionpress h for help or q to quit)
+                   ConnectionAttempts for help or q to quit)
+                   ConnectTimeoutss h for help or q to quit)
+                   ControlMasteress h for help or q to quit)
+                   ControlPathpress h for help or q to quit)
+                   ControlPersistss h for help or q to quit)
+                   DynamicForwardss h for help or q to quit)
+                   EnableEscapeCommandlinehelp or q to quit)
+                   EscapeChar(press h for help or q to quit)
+                   ExitOnForwardFailureor help or q to quit)
+                   FingerprintHashs h for help or q to quit)
+                   ForkAfterAuthenticationhelp or q to quit)
+                   ForwardAgentress h for help or q to quit)
+                   ForwardX11(press h for help or q to quit)
+                   ForwardX11Timeouth for help or q to quit)
+                   ForwardX11Trustedh for help or q to quit)
+                   GatewayPortsress h for help or q to quit)
+                   GlobalKnownHostsFileor help or q to quit)
+                   GSSAPIAuthenticationor help or q to quit)
+                   GSSAPIKeyExchangeh for help or q to quit)
+                   GSSAPIClientIdentityor help or q to quit)
+                   GSSAPIDelegateCredentialslp or q to quit)
+                   GSSAPIKexAlgorithmsfor help or q to quit)
+                   GSSAPIRenewalForcesRekeyelp or q to quit)
+                   GSSAPIServerIdentityor help or q to quit)
+                   GSSAPITrustDnsss h for help or q to quit)
+                   HashKnownHostsss h for help or q to quit)
+                   Hoste 270 (press h for help or q to quit)
+                   HostbasedAcceptedAlgorithms or q to quit)
+                   HostbasedAuthenticationhelp or q to quit)
+                   HostKeyAlgorithmsh for help or q to quit)
+                   HostKeyAliasress h for help or q to quit)
+                   Hostname5 (press h for help or q to quit)
+                   IdentitiesOnlyss h for help or q to quit)
+                   IdentityAgentess h for help or q to quit)
+                   IdentityFileress h for help or q to quit)
+                   IPQoS 279 (press h for help or q to quit)
+                   KbdInteractiveAuthenticationor q to quit)
+                   KbdInteractiveDevicesr help or q to quit)
+                   KexAlgorithmsess h for help or q to quit)
+                   KnownHostsCommandh for help or q to quit)
+                   LocalCommandress h for help or q to quit)
+                   LocalForwardress h for help or q to quit)
+                   LogLevel6 (press h for help or q to quit)
+                   MACse 287 (press h for help or q to quit)
+                   Match 288 (press h for help or q to quit)
+                   NoHostAuthenticationForLocalhost to quit)
+                   NumberOfPasswordPromptshelp or q to quit)
+                   PasswordAuthentication help or q to quit)
+                   PermitLocalCommand for help or q to quit)
+                   PermitRemoteOpen h for help or q to quit)
+                   PKCS11Providerss h for help or q to quit)
+                   Porte 295 (press h for help or q to quit)
+                   PreferredAuthenticationselp or q to quit)
+                   ProxyCommandress h for help or q to quit)
+                   ProxyJump (press h for help or q to quit)
+                   ProxyUseFdpassss h for help or q to quit)
+                   PubkeyAcceptedAlgorithmselp or q to quit)
+                   PubkeyAuthenticationor help or q to quit)
+                   RekeyLimit(press h for help or q to quit)
+                   RemoteCommandess h for help or q to quit)
+                   RemoteForwardess h for help or q to quit)
+                   RequestTTY(press h for help or q to quit)
+                   RequiredRSASizes h for help or q to quit)
+                   SendEnv07 (press h for help or q to quit)
+                   ServerAliveIntervalfor help or q to quit)
+                   ServerAliveCountMaxfor help or q to quit)
+                   SessionTypepress h for help or q to quit)
+                   SetEnv311 (press h for help or q to quit)
+                   StdinNull (press h for help or q to quit)
+                   StreamLocalBindMaskfor help or q to quit)
+                   StreamLocalBindUnlinkr help or q to quit)
+                   StrictHostKeyCheckingr help or q to quit)
+                   TCPKeepAliveress h for help or q to quit)
+                   Tunnel317 (press h for help or q to quit)
+                   TunnelDeviceress h for help or q to quit)
+                   UpdateHostKeysss h for help or q to quit)
+>DEVOPS24/lektion10 line 320 (press h for help or q to quit)
+$ ssh ubse
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 11:32:11 AM UTC 2025
+
+  System load:  0.0                Processes:               116
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 4%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+169 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon May  5 11:30:06 2025 from 10.0.2.2
+0;user@ubse: ~
+user@ubse:~$ 0;user@ubse: ~
+user@ubse:~$ diff /etc/ssh/
+
+moduli                    sshd_config.d/            ssh_host_rsa_key
+ssh_config                ssh_host_ecdsa_key        ssh_host_rsa_key.pub
+ssh_config.d/             ssh_host_ecdsa_key.pub    ssh_import_id
+sshd_config               ssh_host_ed25519_key      
+sshd_config.bak           ssh_host_ed25519_key.pub  
+0;user@ubse: ~
+user@ubse:~$ diff /etc/ssh/sshd
+_config0;user@ubse: ~
+user@ubse:~$ diff /etc/ssh/sshd_config
+
+sshd_config      sshd_config.bak  sshd_config.d/   
+0;user@ubse: ~
+user@ubse:~$ diff /etc/ssh/sshd_config{,.bak0;user@ubse: ~
+user@ubse:~$ diff /etc/ssh/sshd_config{,.bak
+33c33
+< PermitRootLogin no
+---
+> #PermitRootLogin prohibit-password
+57c57
+< PasswordAuthentication no
+---
+> #PasswordAuthentication yes
+90c90
+< X11Forwarding no
+---
+> X11Forwarding yes
+0;user@ubse: ~
+user@ubse:~$ diff /etc/ssh/sshd_config{,.bak.bak,0;user@ubse: ~
+user@ubse:~$ diff /etc/ssh/sshd_config{.bak,
+33c33
+< #PermitRootLogin prohibit-password
+---
+> PermitRootLogin no
+57c57
+< #PasswordAuthentication yes
+---
+> PasswordAuthentication no
+90c90
+< X11Forwarding yes
+---
+> X11Forwarding no
+0;user@ubse: ~
+user@ubse:~$ 
+0;user@ubse: ~
+user@ubse:~$ diff /etc/ssh/sshd_config{.bak,} | xsel
+Command 'xsel' not found, but can be installed with:
+sudo apt install xsel
+0;user@ubse: ~
+0;user@ubse: ~
+0;user@ubse: ~
+0;user@ubse: ~
+0;user@ubse: ~
+0;user@ubse: ~
+0;user@ubse: ~
+user@ubse:~$ 0;user@ubse: ~
+user@ubse:~$ EXI
+exit
+logout
+Connection to localhost closed.
+DEVOPS24/lektion10
+$ DEVOPS24/lektion10
+$ shsh lubse@localhost cat /etc/ssh/sshd_config
+Warning: Permanently added 'localhost' (ED25519) to the list of known hosts.
+ubse@localhost's password: 
+Permission denied, please try again.
+ubse@localhost's password: 
+Permission denied, please try again.
+ubse@localhost's password: 
+
+DEVOPS24/lektion10
+$ ^C
+DEVOPS24/lektion10
+$ u
+ssh ubs
+
+
+
+
+
+DEVOPS24/lektion10
+$ ssh ubse@localhost cat /etc/ssh/sshd_confi
+
+# This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+# This sshd was compiled with PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+
+# The strategy used for options in the default sshd_config shipped with
+# OpenSSH is to specify options with their default value where
+# possible, but leave them commented.  Uncommented options override the
+# default value.
+
+Include /etc/ssh/sshd_config.d/*.conf
+
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+
+#HostKey /etc/ssh/ssh_host_rsa_key
+#HostKey /etc/ssh/ssh_host_ecdsa_key
+#HostKey /etc/ssh/ssh_host_ed25519_key
+
+# Ciphers and keying
+#RekeyLimit default none
+
+# Logging
+#SyslogFacility AUTH
+#LogLevel INFO
+
+# Authentication:
+
+#LoginGraceTime 2m
+PermitRootLogin no
+#StrictModes yes
+#MaxAuthTries 6
+#MaxSessions 10
+
+#PubkeyAuthentication yes
+
+# Expect .ssh/authorized_keys2 to be disregarded by default in future.
+#AuthorizedKeysFile	.ssh/authorized_keys .ssh/authorized_keys2
+
+#AuthorizedPrincipalsFile none
+
+#AuthorizedKeysCommand none
+#AuthorizedKeysCommandUser nobody
+
+# For this to work you will also need host keys in /etc/ssh/ssh_known_hosts
+#HostbasedAuthentication no
+# Change to yes if you don't trust ~/.ssh/known_hosts for
+# HostbasedAuthentication
+#IgnoreUserKnownHosts no
+# Don't read the user's ~/.rhosts and ~/.shosts files
+#IgnoreRhosts yes
+
+# To disable tunneled clear text passwords, change to no here!
+PasswordAuthentication no
+#PermitEmptyPasswords no
+
+# Change to yes to enable challenge-response passwords (beware issues with
+# some PAM modules and threads)
+KbdInteractiveAuthentication no
+
+# Kerberos options
+#KerberosAuthentication no
+#KerberosOrLocalPasswd yes
+#KerberosTicketCleanup yes
+#KerberosGetAFSToken no
+
+# GSSAPI options
+#GSSAPIAuthentication no
+#GSSAPICleanupCredentials yes
+#GSSAPIStrictAcceptorCheck yes
+#GSSAPIKeyExchange no
+
+# Set this to 'yes' to enable PAM authentication, account processing,
+# and session processing. If this is enabled, PAM authentication will
+# be allowed through the KbdInteractiveAuthentication and
+# PasswordAuthentication.  Depending on your PAM configuration,
+# PAM authentication via KbdInteractiveAuthentication may bypass
+# the setting of "PermitRootLogin prohibit-password".
+# If you just want the PAM account and session checks to run without
+# PAM authentication, then enable this but set PasswordAuthentication
+# and KbdInteractiveAuthentication to 'no'.
+UsePAM yes
+
+#AllowAgentForwarding yes
+#AllowTcpForwarding yes
+#GatewayPorts no
+X11Forwarding no
+#X11DisplayOffset 10
+#X11UseLocalhost yes
+#PermitTTY yes
+PrintMotd no
+#PrintLastLog yes
+#TCPKeepAlive yes
+#PermitUserEnvironment no
+#Compression delayed
+#ClientAliveInterval 0
+#ClientAliveCountMax 3
+#UseDNS no
+#PidFile /run/sshd.pid
+#MaxStartups 10:30:100
+#PermitTunnel no
+#ChrootDirectory none
+#VersionAddendum none
+
+# no default banner path
+#Banner none
+
+# Allow client to pass locale environment variables
+AcceptEnv LANG LC_*
+
+# override default of no subsystems
+Subsystem	sftp	/usr/lib/openssh/sftp-server
+
+# Example of overriding settings on a per-user basis
+#Match User anoncvs
+#	X11Forwarding no
+#	AllowTcpForwarding no
+#	PermitTTY no
+#	ForceCommand cvs server
+DEVOPS24/lektion10
+$ 
+DEVOPS24/lektion10
+$ ssh ubse cat /etc/ssh/sshd_confiapt 
+
+
+
+
+nano srv.sh
+>DEVOPS24/lektion10 srv.sh [ Writing... ] [ Wrote 5 lines ]                      Y Yes        
+$ c
+ssh ubse cat /etc/ssh/sshd_confi < srv.sh 
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 11:40:19 AM UTC 2025
+
+  System load:  0.0                Processes:               114
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 4%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+169 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0    1G  0 part /boot/efi
+└─sda2   8:2    0 38.9G  0 part /
+sr0     11:0    1 1024M  0 rom  
+Hej
+DEVOPS24/lektion10
+$ ssh ubse < srv.sh ^C
+DEVOPS24/lektion10
+$ DEVOPS24/lektion10
+$ seq 1 1000 >langfil
+DEVOPS24/lektion10
+$ scp langfil ubs
+e
+
+
+langfil                                       100% 3893    12.5MB/s   00:00    
+DEVOPS24/lektion10
+$ ssh ubse ls
+greeting
+hej hopp
+kat
+langfil
+DEVOPS24/lektion10
+$ ssjh ubs
+e
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon May  5 11:41:44 AM UTC 2025
+
+  System load:  0.0                Processes:               114
+  Usage of /:   18.4% of 38.04GB   Users logged in:         0
+  Memory usage: 4%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+169 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon May  5 11:32:11 2025 from 10.0.2.2
+0;user@ubse: ~
+user@ubse:~$ 0;user@ubse: ~
+user@ubse:~$ nano
+
+echo {a..z}{a..z} > bokstaver
+0;user@ubse: ~
+user@ubse:~$ less bokstaver 
+ ESESCOA ad ae af ag ah ai aj ak al am an ao ap aq ar as at au av aw ax ay az ba bb bc bd be bf bg bh bi bj bk bl bm bn bo bp bq br bs bt bu bv bw bx by bz ca cb cc cd ce cf cg ch ci cj ck cl cm cn co cp cq cr cs ct cu cv cw cx cy cz da db dc dd de df dg dh di dj dk dl dm dn do dp dq dr ds dt du dv dw dx dy dz ea eb ec ed ee ef eg eh ei ej ek el em en eo ep eq er es et eu ev ew ex ey ez fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp fq fr fs ft fu fv fw fx fy fz ga gb gc gd ge gf gg gh gi gj gk gl gm gn go gp gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf hg hh hi hj hk hl hm hn ho hp hq hr hs ht hu hv hw hx hy hz ia ib ic id ie if ig ih ii ij ik il im in io ip iq ir is it iu iv iw ix iy iz ja jb jc jd je jf jg jh ji jj jk jl jm jn jo jp jq jr js jt ju jv jw jx jy jz ka kb kc kd ke kf kg kh ki kj kk kl km kn ko kp kq kr ks kt ku kv kw kx ky kz la lb lc ld le lf lg lh li lj lk ll lm ln lo lp lq lr ls lt lu lv lw lx ly lz ma mb mc md me mf mg mh mi mj mk ml mm mn mo mp mq mr ms mt mu mv mw mx my mz na nb nc nd ne nf ng nh ni nj nk nl nm nn no np nq nr ns nt nu nv nw nx ny nz oa ob oc od oe of og oh oi obokstaver
+ zr zs zt zu zv zw zx zy zzyz za zb zc zd ze zf zg zh zi zj zk zl zm zn zo zp zq:
+ ESESCOB
+ ESESCOB
+>0;user@ubse: ~
+user@ubse:~$ exit
+logout
+Connection to localhost closed.
+DEVOPS24/lektion10
+$ scp ubse:bokstaver .
+bokstaver                                     100% 2028     2.6MB/s   00:00    
+DEVOPS24/lektion10
+$ less bokstaver DEVOPS24/lektion10
+$ less bokstaver 
+>DEVOPS24/lektion10g ah ai aj ak al am an ao ap aq ar as at au av aw ax ay az ba bb bc bd be bf bg bh bi bj bk bl bm bn bo bp bq br bs bt bu bv bw bx by bz ca cb cc cd ce cf cg ch ci cj ck cl cm cn co cp cq cr cs ct cu cv cw cx cy cz da db dc dd de df dg dh di dj dk dl dm dn do dp dq dr ds dt du dv dw dx dy dz ea eb ec ed ee ef eg eh ei ej ek el em en eo ep eq er es et eu ev ew ex ey ez fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp fq fr fs ft fu fv fw fx fy fz ga gb gc gd ge gf gg gh gi gj gk gl gm gn go gp gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf hg hh hi hj hk hl hm hn ho hp hq hr hs ht hu hv hw hx hy hz ia ib ic id ie if ig ih ii ij ik il im in io ip iq ir is it iu iv iw ix iy iz ja jb jc jd je jf jg jh ji jj jk jl jm jn jo jp jq jr js jt ju jv jw jx jy jz ka kb kc kd ke kf kg kh ki kj kk kl km kn ko kp kq kr ks kt ku kv kw kx ky kz la lb lc ld le lf lg lh li lj lk ll lm ln lo lp lq lr ls lt lu lv lw lx ly lz ma mb mc md me mf mg mh mi mj mk ml mm mn mo mp mq mr ms mt mu mv mw mx my mz na nb nc nd ne nf ng nh ni nj nk nl nm nn no np nq nr ns nt nu nv nw nx ny nz oa ob oc od oe of og oh oi obokstaver
+sh ubse l^Ckstaver .
+DEVOPS24/lektion10
+$ 
+exit
+
+Script done on 2025-05-05 13:45:17+02:00 [COMMAND_EXIT_CODE="130"]

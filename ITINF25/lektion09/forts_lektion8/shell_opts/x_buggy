@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -x # Ger info, som hjälper oss förstå vad som blev fel nedan
+
+nummer=$1
+
+summa=0
+# Bugg! Vi vill ha med numret som anges, men vi har ett för lite
+for ((raknare = 1; raknare < $nummer; raknare = raknare + 1)); do
+	echo "$raknare" # eftersom arith operationer döljer variabelvärden
+	summa=$((summa + raknare))
+done
+
+echo "Summa: $summa"

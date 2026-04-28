@@ -1,0 +1,19 @@
+Host localhost 127.0.0.1
+	HostName localhost
+	StrictHostKeyChecking no
+	UserKnownHostsFile /dev/null
+
+Host ubse
+	HostName localhost
+	Port 2222
+
+Host ubse2
+	HostName localhost
+	User kent
+	Port 10022
+	IdentityFile /home/kent/.ssh/id_ed25519_ubse2
+
+Host *.farm 192.168.*.*
+	UserKnownHostsFile ~/.ssh/known_hosts_private
+	HashKnownHosts no
+	ForwardAgent yes

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style type="text/css">
+pre {
+  font-family:Courier New;
+  font-size:10pt;
+}
+
+.af_line {
+  color: gray;
+  text-decoration: none;
+}
+
+</style>
+<title>Source file</title>
+</head>
+<body>
+<pre>/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS25/lektion1
+<span style="font-weight:bold;color:#00ffff;">cowgirl</span>  greeting  <span style="font-weight:bold;color:#5c5cff;">katalog</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion1
+</span>$ ls -l
+total 12
+lrwxrwxrwx 1 kent kent    8 14 apr 14.22 <span style="font-weight:bold;color:#00ffff;">cowgirl</span> -&gt; greeting
+-rw-r--r-- 1 kent kent    5 14 apr 14.26 greeting
+drwxr-xr-x 2 kent kent 4096 14 apr 14.28 <span style="font-weight:bold;color:#5c5cff;">katalog</span>
+drwxr-xr-x 2 kent kent 4096 14 apr 14.42 <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ mkdir sranch
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ mv cowgirl ranch/
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ 
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ ls
+greeting  <span style="font-weight:bold;color:#5c5cff;">katalog</span>  <span style="font-weight:bold;color:#5c5cff;">ranch</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1
+</span>$ cd ranch/
+<span style="color:#5c5cff;">DEVOPS25/lektion1/ranch
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion1/ranch
+</span>$ ls
+<span style="font-weight:bold;color:#00ffff;">cowgirl</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1/ranch
+</span>$ cat cowgirl 
+cat: cowgirl: No such file or directory
+<span style="color:#5c5cff;">DEVOPS25/lektion1/ranch
+</span>$ ls -l
+total 0
+lrwxrwxrwx 1 kent kent 8 14 apr 14.22 <span style="font-weight:bold;color:#00ffff;">cowgirl</span> -&gt; greeting
+<span style="color:#5c5cff;">DEVOPS25/lektion1/ranch
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion1/ranch
+</span>$ lman ls
+LS(1)                             User Commands                            LS(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       ls - list directory contents
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">ls</span> [<span style="text-decoration:underline;">OPTION</span>]... [<span style="text-decoration:underline;">FILE</span>]...
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       List  information  about  the  FILEs  (the current directory by default).
+       Sort entries alphabetically if none of <span style="font-weight:bold;color:#7f7f7f;">-cftuvSUX</span> nor <span style="font-weight:bold;color:#7f7f7f;">--sort</span> is specified.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-a</span>, <span style="font-weight:bold;color:#7f7f7f;">--all</span>
+<span style="color:#000000;background-color:#000000;">              do not ignore entries starting with .</span>/span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ls(1) line 3 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-A</span>, <span style="font-weight:bold;color:#7f7f7f;">--almost-all</span>
+<span style="color:#000000;background-color:#000000;">              do not list implied . and ..</span>to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ls(1) line 6 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--author</span>d-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              with </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-l</span>, print the author of each file
+<span style="color:#000000;background-color:#000000;"></span>Bpage ls(1) line 9 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-b</span>, <span style="font-weight:bold;color:#7f7f7f;">--escape</span>
+<span style="color:#000000;background-color:#000000;">              print C-style escapes for nongraphic characters</span>an style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ls(1) line 12 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--block-size</span>=<span style="text-decoration:underline;">SIZE</span>
+<span style="color:#000000;background-color:#000000;">              with  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-l</span>,  scale  sizes  by  SIZE  when   printing   them;   e.g.,
+<span style="color:#000000;background-color:#000000;">              &apos;--block-size=M&apos;; see SIZE format below</span> style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ls(1) line 16 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-B</span>, <span style="font-weight:bold;color:#7f7f7f;">--ignore-backups</span>
+<span style="color:#000000;background-color:#000000;">              do not list implied entries ending with ~</span>an><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ls(1) line 19 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-c</span>     with  <span style="font-weight:bold;color:#7f7f7f;">-lt</span>:  sort by, and show, ctime (time of last modification of
+<span style="color:#000000;background-color:#000000;">              file status information); with </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-l</span>: show ctime and  sort  by  name;
+<span style="color:#000000;background-color:#000000;">              otherwise: sort by ctime, newest first</span>/span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ls(1) line 23 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-C</span>     list entries by columns
+<span style="color:#000000;background-color:#000000;"></span>Bpage ls(1) line 25 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--color</span>[=<span style="text-decoration:underline;">WHEN</span>]
+<span style="color:#000000;background-color:#000000;">              color the output WHEN; more info below</span>/span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ls(1) line 28 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-d</span>, <span style="font-weight:bold;color:#7f7f7f;">--directory</span>
+<span style="color:#000000;background-color:#000000;">              list directories themselves, not their contents</span>an style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ls(1) line 31 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-D</span>, <span style="font-weight:bold;color:#7f7f7f;">--dired</span>
+<span style="color:#000000;background-color:#000000;">              generate output designed for Emacs&apos; dired mode</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ls(1) line 34 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-f</span>     list all entries in directory order
+<span style="color:#000000;background-color:#000000;"></span>Bpage ls(1) line 36 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-F</span>, <span style="font-weight:bold;color:#7f7f7f;">--classify</span>[=<span style="text-decoration:underline;">WHEN</span>]
+<span style="color:#000000;background-color:#000000;">              append indicator (one of */=&gt;&#64;|) to entries WHEN</span>="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ls(1) line 39 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--file-type</span>color:#000000;">
+<span style="color:#000000;background-color:#000000;">              likewise, except do not append &apos;*&apos;</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ls(1) line 42 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--format</span>=<span style="text-decoration:underline;">WORD</span>
+<span style="color:#000000;background-color:#000000;">              across  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-x</span>,  commas  <span style="font-weight:bold;color:#7f7f7f;">-m</span>, horizontal <span style="font-weight:bold;color:#7f7f7f;">-x</span>, long <span style="font-weight:bold;color:#7f7f7f;">-l</span>, single-column <span style="font-weight:bold;color:#7f7f7f;">-1</span>,
+<span style="color:#000000;background-color:#000000;">              verbose </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-l</span>, vertical <span style="font-weight:bold;color:#7f7f7f;">-C</span>
+<span style="color:#000000;background-color:#000000;"></span>Bpage ls(1) line 46 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--full-time</span>color:#000000;">
+<span style="color:#000000;background-color:#000000;">              like </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-l</span> <span style="font-weight:bold;color:#7f7f7f;">--time-style</span>=<span style="text-decoration:underline;">full-iso</span>
+<span style="color:#000000;background-color:#000000;"></span>Bpage ls(1) line 49 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-g</span>     like <span style="font-weight:bold;color:#7f7f7f;">-l</span>, but do not list owner
+<span style="color:#000000;background-color:#000000;"></span>Bpage ls(1) line 51 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--group-directories-first</span>">
+<span style="color:#000000;background-color:#000000;">              group directories before files; can be augmented with a </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--sort</span> op‐
+<span style="color:#000000;background-color:#000000;">              tion, but any use of </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--sort</span>=<span style="text-decoration:underline;">none</span> (<span style="font-weight:bold;color:#7f7f7f;">-U</span>) disables grouping
+<span style="color:#000000;background-color:#000000;"></span>Bpage ls(1) line 55 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-G</span>, <span style="font-weight:bold;color:#7f7f7f;">--no-group</span>
+<span style="color:#000000;background-color:#000000;">              in a long listing, don&apos;t print group names</span>an style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ls(1) line 58 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-h</span>, <span style="font-weight:bold;color:#7f7f7f;">--human-readable</span>
+<span style="color:#000000;background-color:#000000;">              with </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-l</span> and <span style="font-weight:bold;color:#7f7f7f;">-s</span>, print sizes like 1K 234M 2G etc.
+<span style="color:#000000;background-color:#000000;"></span>Bpage ls(1) line 61 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--si</span>   likewise, but use powers of 1000 not 1024
+<span style="color:#000000;background-color:#000000;"></span>Bpage ls(1) line 63 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-H</span>, <span style="font-weight:bold;color:#7f7f7f;">--dereference-command-line</span>
+<span style="color:#000000;background-color:#000000;">              follow symbolic links listed on the command line</span>n style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ls(1) line 66 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--dereference-command-line-symlink-to-dir</span>
+<span style="color:#000000;background-color:#000000;">              follow each command line symbolic link that points to a directory</span>00000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ls(1) line 69 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--hide</span>=<span style="text-decoration:underline;">PATTERN</span>
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS25/lektion1/ranch000;background-color:#000000;">
+<span style="color:#5c5cff;">olor:#5c5cff;">DEVOPS25/lektion1/ranch
+</span>$ man ln
+LN(1)                             User Commands                            LN(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       ln - make links between files
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">ln</span> [<span style="text-decoration:underline;">OPTION</span>]... [<span style="text-decoration:underline;">-T</span>] <span style="text-decoration:underline;">TARGET</span> <span style="text-decoration:underline;">LINK_NAME</span>
+       <span style="font-weight:bold;color:#7f7f7f;">ln</span> [<span style="text-decoration:underline;">OPTION</span>]... <span style="text-decoration:underline;">TARGET</span>
+       <span style="font-weight:bold;color:#7f7f7f;">ln</span> [<span style="text-decoration:underline;">OPTION</span>]... <span style="text-decoration:underline;">TARGET</span>... <span style="text-decoration:underline;">DIRECTORY</span>
+       <span style="font-weight:bold;color:#7f7f7f;">ln</span> [<span style="text-decoration:underline;">OPTION</span>]... <span style="text-decoration:underline;">-t</span> <span style="text-decoration:underline;">DIRECTORY</span> <span style="text-decoration:underline;">TARGET</span>...
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       In the 1st form, create a link to TARGET with the name LINK_NAME.  In the
+       2nd form, create a link to TARGET in the current directory.  In  the  3rd
+<span style="color:#000000;background-color:#000000;">       and  4th  forms,  create  links to each TARGET in DIRECTORY.  Create hard</span>000;background-color:#000000;">
+       links by default, symbolic links with <span style="font-weight:bold;color:#7f7f7f;">--symbolic</span>.  By default, each  des‐
+       tination (name of new link) should not already exist.  When creating hard
+       links, each TARGET must exist.  Symbolic links can hold  arbitrary  text;
+       if later resolved, a relative link is interpreted in relation to its par‐
+       ent directory.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       <span style="font-weight:bold;color:#7f7f7f;">--backup</span>[=<span style="text-decoration:underline;">CONTROL</span>]
+              make a backup of each existing destination file
+
+       <span style="font-weight:bold;color:#7f7f7f;">-b</span>     like <span style="font-weight:bold;color:#7f7f7f;">--backup</span> but does not accept an argument
+
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-d</span>, <span style="font-weight:bold;color:#7f7f7f;">-F</span>, <span style="font-weight:bold;color:#7f7f7f;">--directory</span>
+<span style="color:#000000;background-color:#000000;">              allow the superuser to attempt to  hard  link  directories  (note:</span>0000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              will  probably fail due to system restrictions, even for the supe‐</span>00;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              ruser)</span>(press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ln(1) line 19 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-f</span>, <span style="font-weight:bold;color:#7f7f7f;">--force</span>
+<span style="color:#000000;background-color:#000000;">              remove existing destination files</span>uit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ln(1) line 22 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-i</span>, <span style="font-weight:bold;color:#7f7f7f;">--interactive</span>
+<span style="color:#000000;background-color:#000000;">              prompt whether to remove destinations</span></span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ln(1) line 25 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-L</span>, <span style="font-weight:bold;color:#7f7f7f;">--logical</span>
+<span style="color:#000000;background-color:#000000;">              dereference TARGETs that are symbolic links</span>><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ln(1) line 28 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-n</span>, <span style="font-weight:bold;color:#7f7f7f;">--no-dereference</span>
+<span style="color:#000000;background-color:#000000;">              treat LINK_NAME as a normal file if it is a symbolic link to a di‐</span>00;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              rectory</span>press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ln(1) line 32 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-P</span>, <span style="font-weight:bold;color:#7f7f7f;">--physical</span>
+<span style="color:#000000;background-color:#000000;">              make hard links directly to symbolic links</span>n><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ln(1) line 35 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-r</span>, <span style="font-weight:bold;color:#7f7f7f;">--relative</span>
+<span style="color:#000000;background-color:#000000;">              with </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-s</span>, create links relative to link location
+<span style="color:#000000;background-color:#000000;"></span>Bpage ln(1) line 38 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-s</span>, <span style="font-weight:bold;color:#7f7f7f;">--symbolic</span>
+<span style="color:#000000;background-color:#000000;">              make symbolic links instead of hard links</span>an><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ln(1) line 41 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-S</span>, <span style="font-weight:bold;color:#7f7f7f;">--suffix</span>=<span style="text-decoration:underline;">SUFFIX</span>
+<span style="color:#000000;background-color:#000000;">              override the usual backup suffix</span>quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ln(1) line 44 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-t</span>, <span style="font-weight:bold;color:#7f7f7f;">--target-directory</span>=<span style="text-decoration:underline;">DIRECTORY</span>
+<span style="color:#000000;background-color:#000000;">              specify the DIRECTORY in which to create the links</span>style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ln(1) line 47 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-T</span>, <span style="font-weight:bold;color:#7f7f7f;">--no-target-directory</span>
+<span style="color:#000000;background-color:#000000;">              treat LINK_NAME as a normal file always</span>span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ln(1) line 50 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-v</span>, <span style="font-weight:bold;color:#7f7f7f;">--verbose</span>
+<span style="color:#000000;background-color:#000000;">              print name of each linked file</span>o quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ln(1) line 53 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--help</span> display this help and exit
+<span style="color:#000000;background-color:#000000;"></span>Bpage ln(1) line 55 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--version</span>d-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              output version information and exit</span>t)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage ln(1) line 58 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       The  backup suffix is &apos;~&apos;, unless set with </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--suffix</span> or SIMPLE_BACKUP_SUF‐
+<span style="color:#000000;background-color:#000000;">       FIX.  The version control method may be selected via the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--backup</span>  option
+<span style="color:#000000;background-color:#000000;"></span> page ln(1) line 61 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       <span style="font-weight:bold;color:#7f7f7f;">-T</span>, <span style="font-weight:bold;color:#7f7f7f;">--no-target-directory</span>
+              treat LINK_NAME as a normal file always
+
+       <span style="font-weight:bold;color:#7f7f7f;">-v</span>, <span style="font-weight:bold;color:#7f7f7f;">--verbose</span>
+              print name of each linked file
+
+       <span style="font-weight:bold;color:#7f7f7f;">--help</span> display this help and exit
+
+       <span style="font-weight:bold;color:#7f7f7f;">--version</span>
+              output version information and exit
+
+       The  backup suffix is &apos;~&apos;, unless set with <span style="font-weight:bold;color:#7f7f7f;">--suffix</span> or SIMPLE_BACKUP_SUF‐
+       FIX.  The version control method may be selected via the <span style="font-weight:bold;color:#7f7f7f;">--backup</span>  option
+
+       <span style="font-weight:bold;color:#7f7f7f;">-T</span>, <span style="font-weight:bold;color:#7f7f7f;">--no-target-directory</span>
+              treat LINK_NAME as a normal file always
+
+       <span style="font-weight:bold;color:#7f7f7f;">-v</span>, <span style="font-weight:bold;color:#7f7f7f;">--verbose</span>
+              print name of each linked file
+
+       <span style="font-weight:bold;color:#7f7f7f;">--help</span> display this help and exit
+
+       <span style="font-weight:bold;color:#7f7f7f;">--version</span>
+              output version information and exit
+
+       The  backup suffix is &apos;~&apos;, unless set with <span style="font-weight:bold;color:#7f7f7f;">--suffix</span> or SIMPLE_BACKUP_SUF‐
+       FIX.  The version control method may be selected via the <span style="font-weight:bold;color:#7f7f7f;">--backup</span>  option
+<span style="color:#000000;background-color:#000000;">       or  through  the VERSION_CONTROL environment variable.  Here are the val‐</span>12 69% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       ues:</span> line 62/112 71% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS25/lektion1/ranchlor:#000000;background-color:#000000;">
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion1/ranch
+</span>$ ls
+<span style="font-weight:bold;color:#00ffff;">cowgirl</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1/ranch
+</span>$ ls -l
+total 0
+lrwxrwxrwx 1 kent kent 8 14 apr 14.22 <span style="font-weight:bold;color:#00ffff;">cowgirl</span> -&gt; greeting
+<span style="color:#5c5cff;">DEVOPS25/lektion1/ranch
+</span>$ ls
+<span style="font-weight:bold;color:#00ffff;">cowgirl</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1/ranch
+</span>$ ls ..
+greeting  <span style="font-weight:bold;color:#5c5cff;">katalog</span>  <span style="font-weight:bold;color:#5c5cff;">ranch</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1/ranch
+</span>$ ln -s ../cogreeting
+
+
+
+
+
+<span style="color:#5c5cff;">DEVOPS25/lektion1/ranch
+</span>$ man ln
+LN(1)                             User Commands                            LN(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       ln - make links between files
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">ln</span> [<span style="text-decoration:underline;">OPTION</span>]... [<span style="text-decoration:underline;">-T</span>] <span style="text-decoration:underline;">TARGET</span> <span style="text-decoration:underline;">LINK_NAME</span>
+       <span style="font-weight:bold;color:#7f7f7f;">ln</span> [<span style="text-decoration:underline;">OPTION</span>]... <span style="text-decoration:underline;">TARGET</span>
+       <span style="font-weight:bold;color:#7f7f7f;">ln</span> [<span style="text-decoration:underline;">OPTION</span>]... <span style="text-decoration:underline;">TARGET</span>... <span style="text-decoration:underline;">DIRECTORY</span>
+       <span style="font-weight:bold;color:#7f7f7f;">ln</span> [<span style="text-decoration:underline;">OPTION</span>]... <span style="text-decoration:underline;">-t</span> <span style="text-decoration:underline;">DIRECTORY</span> <span style="text-decoration:underline;">TARGET</span>...
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       In the 1st form, create a link to TARGET with the name LINK_NAME.  In the
+       2nd form, create a link to TARGET in the current directory.  In  the  3rd
+<span style="color:#000000;background-color:#000000;">LN(1)                             User Commands                            LN(1)</span>000;background-color:#000000;">
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       ln - make links between files
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">ln</span> [<span style="text-decoration:underline;">OPTION</span>]... [<span style="text-decoration:underline;">-T</span>] <span style="text-decoration:underline;">TARGET</span> <span style="text-decoration:underline;">LINK_NAME</span>
+       <span style="font-weight:bold;color:#7f7f7f;">ln</span> [<span style="text-decoration:underline;">OPTION</span>]... <span style="text-decoration:underline;">TARGET</span>
+       <span style="font-weight:bold;color:#7f7f7f;">ln</span> [<span style="text-decoration:underline;">OPTION</span>]... <span style="text-decoration:underline;">TARGET</span>... <span style="text-decoration:underline;">DIRECTORY</span>
+       <span style="font-weight:bold;color:#7f7f7f;">ln</span> [<span style="text-decoration:underline;">OPTION</span>]... <span style="text-decoration:underline;">-t</span> <span style="text-decoration:underline;">DIRECTORY</span> <span style="text-decoration:underline;">TARGET</span>...
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       In the 1st form, create a link to TARGET with the name LINK_NAME.  In the
+       2nd form, create a link to TARGET in the current directory.  In  the  3rd
+LN(1)                             User Commands                            LN(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       ln - make links between files
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">ln</span> [<span style="text-decoration:underline;">OPTION</span>]... [<span style="text-decoration:underline;">-T</span>] <span style="text-decoration:underline;">TARGET</span> <span style="text-decoration:underline;">LINK_NAME</span>
+       <span style="font-weight:bold;color:#7f7f7f;">ln</span> [<span style="text-decoration:underline;">OPTION</span>]... <span style="text-decoration:underline;">TARGET</span>
+       <span style="font-weight:bold;color:#7f7f7f;">ln</span> [<span style="text-decoration:underline;">OPTION</span>]... <span style="text-decoration:underline;">TARGET</span>... <span style="text-decoration:underline;">DIRECTORY</span>
+       <span style="font-weight:bold;color:#7f7f7f;">ln</span> [<span style="text-decoration:underline;">OPTION</span>]... <span style="text-decoration:underline;">-t</span> <span style="text-decoration:underline;">DIRECTORY</span> <span style="text-decoration:underline;">TARGET</span>...
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       In the 1st form, create a link to TARGET with the name LINK_NAME.  In the
+       2nd form, create a link to TARGET in the current directory.  In  the  3rd
+...skipping...
+       links by default, symbolic links with <span style="font-weight:bold;color:#7f7f7f;">-</span><span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-s</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;">ymbolic</span>.  By default, each  des‐
+       tination (name of new link) should not already exist.  When creating hard
+       links, each TARGET must exist.  Symbolic links can hold  arbitrary  text;
+       if later resolved, a relative link is interpreted in relation to its par‐
+       ent directory.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       <span style="font-weight:bold;color:#7f7f7f;">--backup</span>[=<span style="text-decoration:underline;">CONTROL</span>]
+              make a backup of each existing destination file
+
+       <span style="font-weight:bold;color:#7f7f7f;">-b</span>     like <span style="font-weight:bold;color:#7f7f7f;">--backup</span> but does not accept an argument
+
+       <span style="font-weight:bold;color:#7f7f7f;">-d</span>, <span style="font-weight:bold;color:#7f7f7f;">-F</span>, <span style="font-weight:bold;color:#7f7f7f;">--directory</span>
+<span style="color:#000000;background-color:#000000;">...skipping...n(1) line 16/112 31% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+              with </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-s</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span>, create links relative to link location
+
+       <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-s</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span>, <span style="font-weight:bold;color:#7f7f7f;">-</span><span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-s</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;">ymbolic</span>
+              make symbolic links instead of hard links
+
+       <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-S</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span>, <span style="font-weight:bold;color:#7f7f7f;">-</span><span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-s</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;">uffix</span>=<span style="text-decoration:underline;">SUFFIX</span>
+              override the usual backup suffix
+
+       <span style="font-weight:bold;color:#7f7f7f;">-t</span>, <span style="font-weight:bold;color:#7f7f7f;">--target-directory</span>=<span style="text-decoration:underline;">DIRECTORY</span>
+              specify the DIRECTORY in which to create the links
+
+       <span style="font-weight:bold;color:#7f7f7f;">-T</span>, <span style="font-weight:bold;color:#7f7f7f;">--no-target-directory</span>
+              treat LINK_NAME as a normal file always
+
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS25/lektion1/ranchlor:#000000;background-color:#000000;">
+</span>$ 
+<span style="color:#5c5cff;">DEVOPS25/lektion1/ranch
+</span>$ ls
+<span style="font-weight:bold;color:#00ffff;">cowgirl</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion1/ranch
+</span>$ ls -l
+total 0
+lrwxrwxrwx 1 kent kent 8 14 apr 14.22 <span style="font-weight:bold;color:#00ffff;">cowgirl</span> -&gt; greeting
+<span style="color:#5c5cff;">DEVOPS25/lektion1/ranch
+<span style="color:#5c5cff;">tyle="color:#5c5cff;">DEVOPS25/lektion1/ranch
+</span>$ stat cowgirl 
+  File: cowgirl -&gt; greeting
+  Size: 8         	Blocks: 0          IO Block: 4096   symbolic link
+Device: 253,1	Inode: 93724784    Links: 1
+Access: (0777/lrwxrwxrwx)  Uid: ( 1000/    kent)   Gid: ( 1000/    kent)
+Access: 2026-04-14 14:43:32.370454222 +0200
+Modify: 2026-04-14 14:22:27.170335560 +0200
+Change: 2026-04-14 14:43:31.966446282 +0200
+ Birth: 2026-04-14 14:22:27.170335560 +0200
+<span style="color:#5c5cff;">DEVOPS25/lektion1/ranch
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion1/ranch
+</span>$ cd /home/kent/
+<span style="color:#5c5cff;">~ </span>$ ls
+<span style="font-weight:bold;color:#00ffff;">Desktop</span>    <span style="font-weight:bold;color:#00ffff;">Dropbox</span>   <span style="font-weight:bold;color:#5c5cff;">Postman</span>      <span style="font-weight:bold;color:#5c5cff;">Templates</span>  <span style="font-weight:bold;color:#5c5cff;">bin</span>        <span style="font-weight:bold;color:#00ffff;">playground</span>
+<span style="font-weight:bold;color:#00ffff;">Documents</span>  <span style="font-weight:bold;color:#00ffff;">Music</span>     <span style="font-weight:bold;color:#5c5cff;">Public</span>       <span style="font-weight:bold;color:#5c5cff;">TorKopia</span>   <span style="font-weight:bold;color:#00ffff;">bokforing</span>
+<span style="font-weight:bold;color:#00ffff;">Downloads</span>  <span style="font-weight:bold;color:#00ffff;">Pictures</span>  <span style="font-weight:bold;color:#00ffff;">Screenshots</span>  <span style="font-weight:bold;color:#00ffff;">Videos</span>     <span style="font-weight:bold;color:#00ffff;">nackc8</span>
+<span style="color:#5c5cff;">~ </span>$ ls -l<span style="color:#5c5cff;">~ </span>$ ls -
+
+
+total 20
+lrwxrwxrwx  1 kent kent   20 11 okt  2024 <span style="font-weight:bold;color:#00ffff;">Desktop</span> -&gt; /shared/kent/Desktop
+lrwxrwxrwx  1 kent kent   22 11 okt  2024 <span style="font-weight:bold;color:#00ffff;">Documents</span> -&gt; /shared/kent/Documents
+lrwxrwxrwx  1 kent kent   22 11 okt  2024 <span style="font-weight:bold;color:#00ffff;">Downloads</span> -&gt; /shared/kent/Downloads
+lrwxrwxrwx  1 kent kent   20 11 okt  2024 <span style="font-weight:bold;color:#00ffff;">Dropbox</span> -&gt; /shared/kent/Dropbox
+lrwxrwxrwx  1 kent kent   18 11 okt  2024 <span style="font-weight:bold;color:#00ffff;">Music</span> -&gt; /shared/kent/Music
+lrwxrwxrwx  1 kent kent   21 11 okt  2024 <span style="font-weight:bold;color:#00ffff;">Pictures</span> -&gt; /shared/kent/Pictures
+drwxr-xr-x  3 kent kent 4096  9 mar 10.27 <span style="font-weight:bold;color:#5c5cff;">Postman</span>
+drwxr-xr-x  2 kent kent 4096 21 mar  2025 <span style="font-weight:bold;color:#5c5cff;">Public</span>
+lrwxrwxrwx  1 kent kent   24 11 okt  2024 <span style="font-weight:bold;color:#00ffff;">Screenshots</span> -&gt; /shared/kent/Screenshots
+drwxr-xr-x  2 kent kent 4096 21 mar  2025 <span style="font-weight:bold;color:#5c5cff;">Templates</span>
+drwxr-xr-x 12 kent kent 4096 14 jan 21.52 <span style="font-weight:bold;color:#5c5cff;">TorKopia</span>
+lrwxrwxrwx  1 kent kent   20  1 jun  2025 <span style="font-weight:bold;color:#00ffff;">Videos</span> -&gt; /shared/kent/Videos/
+drwxr-xr-x  5 kent kent 4096 12 apr 21.08 <span style="font-weight:bold;color:#5c5cff;">bin</span>
+lrwxrwxrwx  1 kent kent   35 11 nov  2024 <span style="font-weight:bold;color:#00ffff;">bokforing</span> -&gt; &apos;Dropbox/tagged/c8 - ab - bokforing/&apos;
+lrwxrwxrwx  1 kent kent   33 30 mar 12.18 <span style="font-weight:bold;color:#00ffff;">nackc8</span> -&gt; Documents/GitHub/nackc8/existing/
+lrwxrwxrwx  1 kent kent   20 12 apr 00.34 <span style="font-weight:bold;color:#00ffff;">playground</span> -&gt; Documents/playground
+<span style="color:#5c5cff;">~ </span>$ <span style="color:#5c5cff;">~ </span>$ ls -a
+<span style="font-weight:bold;color:#5c5cff;">.</span>              <span style="font-weight:bold;color:#5c5cff;">.gnome</span>      <span style="font-weight:bold;color:#5c5cff;">.sdkman</span>                       .node_repl_history
+<span style="font-weight:bold;color:#5c5cff;">..</span>             <span style="font-weight:bold;color:#5c5cff;">.gnupg</span>      <span style="font-weight:bold;color:#5c5cff;">.secretmanagement</span>             <span style="font-weight:bold;color:#5c5cff;">.pub-cache</span>
+.ICEauthority  <span style="font-weight:bold;color:#5c5cff;">.gradle</span>     .shellcheckrc                 .python_history
+<span style="font-weight:bold;color:#5c5cff;">.ansible</span>       <span style="font-weight:bold;color:#5c5cff;">.grsync</span>     <span style="font-weight:bold;color:#5c5cff;">.ssh</span>                          <span style="font-weight:bold;color:#5c5cff;">.rest-client</span>
+<span style="font-weight:bold;color:#5c5cff;">.avidemux6</span>     <span style="font-weight:bold;color:#5c5cff;">.gtasks</span>     <span style="font-weight:bold;color:#5c5cff;">.swt</span>                          .selected_editor
+<span style="font-weight:bold;color:#00ffff;">.backups</span>       .guestfish  <span style="font-weight:bold;color:#5c5cff;">.templateengine</span>               .sudo_as_admin_successful
+.bashrc        <span style="font-weight:bold;color:#5c5cff;">.idea</span>       <span style="font-weight:bold;color:#5c5cff;">.unison</span>                       <span style="font-weight:bold;color:#5c5cff;">.vscode-clean</span>
+<span style="font-weight:bold;color:#5c5cff;">.bashrc.d</span>      <span style="font-weight:bold;color:#5c5cff;">.ipython</span>    <span style="font-weight:bold;color:#5c5cff;">.vagrant</span>                      <span style="font-weight:bold;color:#00ffff;">.vscode-server</span>
+<span style="font-weight:bold;color:#5c5cff;">.bin</span>           <span style="font-weight:bold;color:#5c5cff;">.java</span>       <span style="font-weight:bold;color:#5c5cff;">.var</span>                          <span style="font-weight:bold;color:#5c5cff;">.vscode-temp8603</span>
+<span style="font-weight:bold;color:#00ffff;">.cache</span>         <span style="font-weight:bold;color:#5c5cff;">.jdks</span>       .viminfo                      .wget-hsts
+<span style="font-weight:bold;color:#5c5cff;">.cargo</span>         <span style="font-weight:bold;color:#5c5cff;">.lemminx</span>    <span style="font-weight:bold;color:#5c5cff;">.vnc</span>                          <span style="font-weight:bold;color:#00ffff;">Desktop</span>
+<span style="font-weight:bold;color:#5c5cff;">.certificates</span>  .lesshst    <span style="font-weight:bold;color:#00ffff;">.vscode</span>                       <span style="font-weight:bold;color:#00ffff;">Documents</span>
+.clasprc.json  <span style="font-weight:bold;color:#5c5cff;">.local</span>      <span style="font-weight:bold;color:#5c5cff;">.w3m</span>                          <span style="font-weight:bold;color:#00ffff;">Downloads</span>
+<span style="font-weight:bold;color:#5c5cff;">.claude</span>        <span style="font-weight:bold;color:#5c5cff;">.m2</span>         <span style="font-weight:bold;color:#5c5cff;">.wallaby</span>                      <span style="font-weight:bold;color:#00ffff;">Dropbox</span>
+.claude.json   <span style="font-weight:bold;color:#5c5cff;">.mozilla</span>    .xinputrc                     <span style="font-weight:bold;color:#00ffff;">Music</span>
+<span style="font-weight:bold;color:#5c5cff;">.codex</span>         .nanorc     .zcompdump                    <span style="font-weight:bold;color:#00ffff;">Pictures</span>
+<span style="font-weight:bold;color:#5c5cff;">.config</span>        <span style="font-weight:bold;color:#5c5cff;">.npm</span>        <span style="font-weight:bold;color:#00ffff;">.zoom</span>                         <span style="font-weight:bold;color:#5c5cff;">Postman</span>
+<span style="font-weight:bold;color:#5c5cff;">.copilot</span>       <span style="font-weight:bold;color:#5c5cff;">.nuget</span>      .zshrc                        <span style="font-weight:bold;color:#5c5cff;">Public</span>
+<span style="font-weight:bold;color:#5c5cff;">.dartServer</span>    <span style="font-weight:bold;color:#5c5cff;">.nvm</span>        .bash_history                 <span style="font-weight:bold;color:#00ffff;">Screenshots</span>
+<span style="font-weight:bold;color:#5c5cff;">.docker</span>        <span style="font-weight:bold;color:#5c5cff;">.openjfx</span>    .bash_logout                  <span style="font-weight:bold;color:#5c5cff;">Templates</span>
+<span style="font-weight:bold;color:#5c5cff;">.dotnet</span>        .packages   <span style="font-weight:bold;color:#5c5cff;">.dart-tool</span>                    <span style="font-weight:bold;color:#5c5cff;">TorKopia</span>
+<span style="font-weight:bold;color:#5c5cff;">.dropbox</span>       <span style="font-weight:bold;color:#5c5cff;">.pandoc</span>     <span style="font-weight:bold;color:#5c5cff;">.dropbox-dist</span>                 <span style="font-weight:bold;color:#00ffff;">Videos</span>
+<span style="font-weight:bold;color:#5c5cff;">.eclipse</span>       <span style="font-weight:bold;color:#5c5cff;">.pki</span>        .emulator_console_auth_token  <span style="font-weight:bold;color:#5c5cff;">bin</span>
+<span style="font-weight:bold;color:#5c5cff;">.elinks</span>        <span style="font-weight:bold;color:#5c5cff;">.prefs</span>      .gitconfig_github_c8          <span style="font-weight:bold;color:#00ffff;">bokforing</span>
+<span style="font-weight:bold;color:#5c5cff;">.fltk</span>          .profile    .gitconfig_github_personal    <span style="font-weight:bold;color:#00ffff;">nackc8</span>
+<span style="font-weight:bold;color:#5c5cff;">.gemini</span>        <span style="font-weight:bold;color:#5c5cff;">.quokka</span>     .gtkrc-2.0                    <span style="font-weight:bold;color:#00ffff;">playground</span>
+.gitconfig     <span style="font-weight:bold;color:#5c5cff;">.redhat</span>     <span style="font-weight:bold;color:#5c5cff;">.mypy_cache</span>
+<span style="color:#5c5cff;">~ </span>$ <span style="color:#5c5cff;">~ </span>$ ls
+<span style="font-weight:bold;color:#00ffff;">Desktop</span>    <span style="font-weight:bold;color:#00ffff;">Dropbox</span>   <span style="font-weight:bold;color:#5c5cff;">Postman</span>      <span style="font-weight:bold;color:#5c5cff;">Templates</span>  <span style="font-weight:bold;color:#5c5cff;">bin</span>        <span style="font-weight:bold;color:#00ffff;">playground</span>
+<span style="font-weight:bold;color:#00ffff;">Documents</span>  <span style="font-weight:bold;color:#00ffff;">Music</span>     <span style="font-weight:bold;color:#5c5cff;">Public</span>       <span style="font-weight:bold;color:#5c5cff;">TorKopia</span>   <span style="font-weight:bold;color:#00ffff;">bokforing</span>
+<span style="font-weight:bold;color:#00ffff;">Downloads</span>  <span style="font-weight:bold;color:#00ffff;">Pictures</span>  <span style="font-weight:bold;color:#00ffff;">Screenshots</span>  <span style="font-weight:bold;color:#00ffff;">Videos</span>     <span style="font-weight:bold;color:#00ffff;">nackc8</span>
+<span style="color:#5c5cff;">~ </span>$ ls -a
+<span style="font-weight:bold;color:#5c5cff;">.</span>              <span style="font-weight:bold;color:#5c5cff;">.gnome</span>      <span style="font-weight:bold;color:#5c5cff;">.sdkman</span>                       .node_repl_history
+<span style="font-weight:bold;color:#5c5cff;">..</span>             <span style="font-weight:bold;color:#5c5cff;">.gnupg</span>      <span style="font-weight:bold;color:#5c5cff;">.secretmanagement</span>             <span style="font-weight:bold;color:#5c5cff;">.pub-cache</span>
+.ICEauthority  <span style="font-weight:bold;color:#5c5cff;">.gradle</span>     .shellcheckrc                 .python_history
+<span style="font-weight:bold;color:#5c5cff;">.ansible</span>       <span style="font-weight:bold;color:#5c5cff;">.grsync</span>     <span style="font-weight:bold;color:#5c5cff;">.ssh</span>                          <span style="font-weight:bold;color:#5c5cff;">.rest-client</span>
+<span style="font-weight:bold;color:#5c5cff;">.avidemux6</span>     <span style="font-weight:bold;color:#5c5cff;">.gtasks</span>     <span style="font-weight:bold;color:#5c5cff;">.swt</span>                          .selected_editor
+<span style="font-weight:bold;color:#00ffff;">.backups</span>       .guestfish  <span style="font-weight:bold;color:#5c5cff;">.templateengine</span>               .sudo_as_admin_successful
+.bashrc        <span style="font-weight:bold;color:#5c5cff;">.idea</span>       <span style="font-weight:bold;color:#5c5cff;">.unison</span>                       <span style="font-weight:bold;color:#5c5cff;">.vscode-clean</span>
+<span style="font-weight:bold;color:#5c5cff;">.bashrc.d</span>      <span style="font-weight:bold;color:#5c5cff;">.ipython</span>    <span style="font-weight:bold;color:#5c5cff;">.vagrant</span>                      <span style="font-weight:bold;color:#00ffff;">.vscode-server</span>
+<span style="font-weight:bold;color:#5c5cff;">.bin</span>           <span style="font-weight:bold;color:#5c5cff;">.java</span>       <span style="font-weight:bold;color:#5c5cff;">.var</span>                          <span style="font-weight:bold;color:#5c5cff;">.vscode-temp8603</span>
+<span style="font-weight:bold;color:#00ffff;">.cache</span>         <span style="font-weight:bold;color:#5c5cff;">.jdks</span>       .viminfo                      .wget-hsts
+<span style="font-weight:bold;color:#5c5cff;">.cargo</span>         <span style="font-weight:bold;color:#5c5cff;">.lemminx</span>    <span style="font-weight:bold;color:#5c5cff;">.vnc</span>                          <span style="font-weight:bold;color:#00ffff;">Desktop</span>
+<span style="font-weight:bold;color:#5c5cff;">.certificates</span>  .lesshst    <span style="font-weight:bold;color:#00ffff;">.vscode</span>                       <span style="font-weight:bold;color:#00ffff;">Documents</span>
+.clasprc.json  <span style="font-weight:bold;color:#5c5cff;">.local</span>      <span style="font-weight:bold;color:#5c5cff;">.w3m</span>                          <span style="font-weight:bold;color:#00ffff;">Downloads</span>
+<span style="font-weight:bold;color:#5c5cff;">.claude</span>        <span style="font-weight:bold;color:#5c5cff;">.m2</span>         <span style="font-weight:bold;color:#5c5cff;">.wallaby</span>                      <span style="font-weight:bold;color:#00ffff;">Dropbox</span>
+.claude.json   <span style="font-weight:bold;color:#5c5cff;">.mozilla</span>    .xinputrc                     <span style="font-weight:bold;color:#00ffff;">Music</span>
+<span style="font-weight:bold;color:#5c5cff;">.codex</span>         .nanorc     .zcompdump                    <span style="font-weight:bold;color:#00ffff;">Pictures</span>
+<span style="font-weight:bold;color:#5c5cff;">.config</span>        <span style="font-weight:bold;color:#5c5cff;">.npm</span>        <span style="font-weight:bold;color:#00ffff;">.zoom</span>                         <span style="font-weight:bold;color:#5c5cff;">Postman</span>
+<span style="font-weight:bold;color:#5c5cff;">.copilot</span>       <span style="font-weight:bold;color:#5c5cff;">.nuget</span>      .zshrc                        <span style="font-weight:bold;color:#5c5cff;">Public</span>
+<span style="font-weight:bold;color:#5c5cff;">.dartServer</span>    <span style="font-weight:bold;color:#5c5cff;">.nvm</span>        .bash_history                 <span style="font-weight:bold;color:#00ffff;">Screenshots</span>
+<span style="font-weight:bold;color:#5c5cff;">.docker</span>        <span style="font-weight:bold;color:#5c5cff;">.openjfx</span>    .bash_logout                  <span style="font-weight:bold;color:#5c5cff;">Templates</span>
+<span style="font-weight:bold;color:#5c5cff;">.dotnet</span>        .packages   <span style="font-weight:bold;color:#5c5cff;">.dart-tool</span>                    <span style="font-weight:bold;color:#5c5cff;">TorKopia</span>
+<span style="font-weight:bold;color:#5c5cff;">.dropbox</span>       <span style="font-weight:bold;color:#5c5cff;">.pandoc</span>     <span style="font-weight:bold;color:#5c5cff;">.dropbox-dist</span>                 <span style="font-weight:bold;color:#00ffff;">Videos</span>
+<span style="font-weight:bold;color:#5c5cff;">.eclipse</span>       <span style="font-weight:bold;color:#5c5cff;">.pki</span>        .emulator_console_auth_token  <span style="font-weight:bold;color:#5c5cff;">bin</span>
+<span style="font-weight:bold;color:#5c5cff;">.elinks</span>        <span style="font-weight:bold;color:#5c5cff;">.prefs</span>      .gitconfig_github_c8          <span style="font-weight:bold;color:#00ffff;">bokforing</span>
+<span style="font-weight:bold;color:#5c5cff;">.fltk</span>          .profile    .gitconfig_github_personal    <span style="font-weight:bold;color:#00ffff;">nackc8</span>
+<span style="font-weight:bold;color:#5c5cff;">.gemini</span>        <span style="font-weight:bold;color:#5c5cff;">.quokka</span>     .gtkrc-2.0                    <span style="font-weight:bold;color:#00ffff;">playground</span>
+.gitconfig     <span style="font-weight:bold;color:#5c5cff;">.redhat</span>     <span style="font-weight:bold;color:#5c5cff;">.mypy_cache</span>
+<span style="color:#5c5cff;">~ </span>$ ls -A<span style="color:#5c5cff;">~ </span>$ ls -A
+.ICEauthority  <span style="font-weight:bold;color:#5c5cff;">.lemminx</span>           .bash_history
+<span style="font-weight:bold;color:#5c5cff;">.ansible</span>       .lesshst           .bash_logout
+<span style="font-weight:bold;color:#5c5cff;">.avidemux6</span>     <span style="font-weight:bold;color:#5c5cff;">.local</span>             <span style="font-weight:bold;color:#5c5cff;">.dart-tool</span>
+<span style="font-weight:bold;color:#00ffff;">.backups</span>       <span style="font-weight:bold;color:#5c5cff;">.m2</span>                <span style="font-weight:bold;color:#5c5cff;">.dropbox-dist</span>
+.bashrc        <span style="font-weight:bold;color:#5c5cff;">.mozilla</span>           .emulator_console_auth_token
+<span style="font-weight:bold;color:#5c5cff;">.bashrc.d</span>      .nanorc            .gitconfig_github_c8
+<span style="font-weight:bold;color:#5c5cff;">.bin</span>           <span style="font-weight:bold;color:#5c5cff;">.npm</span>               .gitconfig_github_personal
+<span style="font-weight:bold;color:#00ffff;">.cache</span>         <span style="font-weight:bold;color:#5c5cff;">.nuget</span>             .gtkrc-2.0
+<span style="font-weight:bold;color:#5c5cff;">.cargo</span>         <span style="font-weight:bold;color:#5c5cff;">.nvm</span>               <span style="font-weight:bold;color:#5c5cff;">.mypy_cache</span>
+<span style="font-weight:bold;color:#5c5cff;">.certificates</span>  <span style="font-weight:bold;color:#5c5cff;">.openjfx</span>           .node_repl_history
+.clasprc.json  .packages          <span style="font-weight:bold;color:#5c5cff;">.pub-cache</span>
+<span style="font-weight:bold;color:#5c5cff;">.claude</span>        <span style="font-weight:bold;color:#5c5cff;">.pandoc</span>            .python_history
+.claude.json   <span style="font-weight:bold;color:#5c5cff;">.pki</span>               <span style="font-weight:bold;color:#5c5cff;">.rest-client</span>
+<span style="font-weight:bold;color:#5c5cff;">.codex</span>         <span style="font-weight:bold;color:#5c5cff;">.prefs</span>             .selected_editor
+<span style="font-weight:bold;color:#5c5cff;">.config</span>        .profile           .sudo_as_admin_successful
+<span style="font-weight:bold;color:#5c5cff;">.copilot</span>       <span style="font-weight:bold;color:#5c5cff;">.quokka</span>            <span style="font-weight:bold;color:#5c5cff;">.vscode-clean</span>
+<span style="font-weight:bold;color:#5c5cff;">.dartServer</span>    <span style="font-weight:bold;color:#5c5cff;">.redhat</span>            <span style="font-weight:bold;color:#00ffff;">.vscode-server</span>
+<span style="font-weight:bold;color:#5c5cff;">.docker</span>        <span style="font-weight:bold;color:#5c5cff;">.sdkman</span>            <span style="font-weight:bold;color:#5c5cff;">.vscode-temp8603</span>
+<span style="font-weight:bold;color:#5c5cff;">.dotnet</span>        <span style="font-weight:bold;color:#5c5cff;">.secretmanagement</span>  .wget-hsts
+<span style="font-weight:bold;color:#5c5cff;">.dropbox</span>       .shellcheckrc      <span style="font-weight:bold;color:#00ffff;">Desktop</span>
+<span style="font-weight:bold;color:#5c5cff;">.eclipse</span>       <span style="font-weight:bold;color:#5c5cff;">.ssh</span>               <span style="font-weight:bold;color:#00ffff;">Documents</span>
+<span style="font-weight:bold;color:#5c5cff;">.elinks</span>        <span style="font-weight:bold;color:#5c5cff;">.swt</span>               <span style="font-weight:bold;color:#00ffff;">Downloads</span>
+<span style="font-weight:bold;color:#5c5cff;">.fltk</span>          <span style="font-weight:bold;color:#5c5cff;">.templateengine</span>    <span style="font-weight:bold;color:#00ffff;">Dropbox</span>
+<span style="font-weight:bold;color:#5c5cff;">.gemini</span>        <span style="font-weight:bold;color:#5c5cff;">.unison</span>            <span style="font-weight:bold;color:#00ffff;">Music</span>
+.gitconfig     <span style="font-weight:bold;color:#5c5cff;">.vagrant</span>           <span style="font-weight:bold;color:#00ffff;">Pictures</span>
+<span style="font-weight:bold;color:#5c5cff;">.gnome</span>         <span style="font-weight:bold;color:#5c5cff;">.var</span>               <span style="font-weight:bold;color:#5c5cff;">Postman</span>
+<span style="font-weight:bold;color:#5c5cff;">.gnupg</span>         .viminfo           <span style="font-weight:bold;color:#5c5cff;">Public</span>
+<span style="font-weight:bold;color:#5c5cff;">.gradle</span>        <span style="font-weight:bold;color:#5c5cff;">.vnc</span>               <span style="font-weight:bold;color:#00ffff;">Screenshots</span>
+<span style="font-weight:bold;color:#5c5cff;">.grsync</span>        <span style="font-weight:bold;color:#00ffff;">.vscode</span>            <span style="font-weight:bold;color:#5c5cff;">Templates</span>
+<span style="font-weight:bold;color:#5c5cff;">.gtasks</span>        <span style="font-weight:bold;color:#5c5cff;">.w3m</span>               <span style="font-weight:bold;color:#5c5cff;">TorKopia</span>
+.guestfish     <span style="font-weight:bold;color:#5c5cff;">.wallaby</span>           <span style="font-weight:bold;color:#00ffff;">Videos</span>
+<span style="font-weight:bold;color:#5c5cff;">.idea</span>          .xinputrc          <span style="font-weight:bold;color:#5c5cff;">bin</span>
+<span style="font-weight:bold;color:#5c5cff;">.ipython</span>       .zcompdump         <span style="font-weight:bold;color:#00ffff;">bokforing</span>
+<span style="font-weight:bold;color:#5c5cff;">.java</span>          <span style="font-weight:bold;color:#00ffff;">.zoom</span>              <span style="font-weight:bold;color:#00ffff;">nackc8</span>
+<span style="font-weight:bold;color:#5c5cff;">.jdks</span>          .zshrc             <span style="font-weight:bold;color:#00ffff;">playground</span>
+<span style="color:#5c5cff;">~ </span>$ 
+<span style="color:#5c5cff;">~ </span>$ <span style="color:#5c5cff;">~ </span>$ ls
+<span style="font-weight:bold;color:#00ffff;">Desktop</span>    <span style="font-weight:bold;color:#00ffff;">Dropbox</span>   <span style="font-weight:bold;color:#5c5cff;">Postman</span>      <span style="font-weight:bold;color:#5c5cff;">Templates</span>  <span style="font-weight:bold;color:#5c5cff;">bin</span>        <span style="font-weight:bold;color:#00ffff;">playground</span>
+<span style="font-weight:bold;color:#00ffff;">Documents</span>  <span style="font-weight:bold;color:#00ffff;">Music</span>     <span style="font-weight:bold;color:#5c5cff;">Public</span>       <span style="font-weight:bold;color:#5c5cff;">TorKopia</span>   <span style="font-weight:bold;color:#00ffff;">bokforing</span>
+<span style="font-weight:bold;color:#00ffff;">Downloads</span>  <span style="font-weight:bold;color:#00ffff;">Pictures</span>  <span style="font-weight:bold;color:#00ffff;">Screenshots</span>  <span style="font-weight:bold;color:#00ffff;">Videos</span>     <span style="font-weight:bold;color:#00ffff;">nackc8</span>
+<span style="color:#5c5cff;">~ </span>$ cd /etc/ssh/
+sshd_config.d/
+<span style="color:#5c5cff;">/etc/ssh/sshd_config.d
+</span>$ ls
+<span style="color:#5c5cff;">/etc/ssh/sshd_config.d
+</span>$ cd
+<span style="color:#5c5cff;">~ </span>$ lpwd
+/home/kent
+<span style="color:#5c5cff;">~ </span>$ ls ~<span style="color:#5c5cff;">~ </span>$ ls ~
+<span style="font-weight:bold;color:#00ffff;">Desktop</span>    <span style="font-weight:bold;color:#00ffff;">Dropbox</span>   <span style="font-weight:bold;color:#5c5cff;">Postman</span>      <span style="font-weight:bold;color:#5c5cff;">Templates</span>  <span style="font-weight:bold;color:#5c5cff;">bin</span>        <span style="font-weight:bold;color:#00ffff;">playground</span>
+<span style="font-weight:bold;color:#00ffff;">Documents</span>  <span style="font-weight:bold;color:#00ffff;">Music</span>     <span style="font-weight:bold;color:#5c5cff;">Public</span>       <span style="font-weight:bold;color:#5c5cff;">TorKopia</span>   <span style="font-weight:bold;color:#00ffff;">bokforing</span>
+<span style="font-weight:bold;color:#00ffff;">Downloads</span>  <span style="font-weight:bold;color:#00ffff;">Pictures</span>  <span style="font-weight:bold;color:#00ffff;">Screenshots</span>  <span style="font-weight:bold;color:#00ffff;">Videos</span>     <span style="font-weight:bold;color:#00ffff;">nackc8</span>
+<span style="color:#5c5cff;">~ </span>$ ls
+<span style="font-weight:bold;color:#00ffff;">Desktop</span>    <span style="font-weight:bold;color:#00ffff;">Dropbox</span>   <span style="font-weight:bold;color:#5c5cff;">Postman</span>      <span style="font-weight:bold;color:#5c5cff;">Templates</span>  <span style="font-weight:bold;color:#5c5cff;">bin</span>        <span style="font-weight:bold;color:#00ffff;">playground</span>
+<span style="font-weight:bold;color:#00ffff;">Documents</span>  <span style="font-weight:bold;color:#00ffff;">Music</span>     <span style="font-weight:bold;color:#5c5cff;">Public</span>       <span style="font-weight:bold;color:#5c5cff;">TorKopia</span>   <span style="font-weight:bold;color:#00ffff;">bokforing</span>
+<span style="font-weight:bold;color:#00ffff;">Downloads</span>  <span style="font-weight:bold;color:#00ffff;">Pictures</span>  <span style="font-weight:bold;color:#00ffff;">Screenshots</span>  <span style="font-weight:bold;color:#00ffff;">Videos</span>     <span style="font-weight:bold;color:#00ffff;">nackc8</span>
+<span style="color:#5c5cff;">~ </span>$ pwd
+/home/kent
+<span style="color:#5c5cff;">~ </span>$ cd TorKopia/
+<span style="color:#5c5cff;">~/TorKopia </span>$ <span style="color:#5c5cff;">~/TorKopia </span>$ ls
+<span style="font-weight:bold;color:#5c5cff;">2018</span>  <span style="font-weight:bold;color:#5c5cff;">2020</span>  <span style="font-weight:bold;color:#5c5cff;">2022</span>  <span style="font-weight:bold;color:#5c5cff;">2024-apr-jun</span>  <span style="font-weight:bold;color:#5c5cff;">2024-jul-sep</span>
+<span style="font-weight:bold;color:#5c5cff;">2019</span>  <span style="font-weight:bold;color:#5c5cff;">2021</span>  <span style="font-weight:bold;color:#5c5cff;">2023</span>  <span style="font-weight:bold;color:#5c5cff;">2024-jan-mar</span>  <span style="font-weight:bold;color:#5c5cff;">2024-okt-dec</span>
+<span style="color:#5c5cff;">~/TorKopia </span>$ cd ~/Documents
+<span style="color:#5c5cff;">~/Documents </span>$ pwd
+/home/kent/Documents
+<span style="color:#5c5cff;">~/Documents </span>$ cd -
+/home/kent/TorKopia
+<span style="color:#5c5cff;">~/TorKopia </span>$ cd -
+/home/kent/Documents
+<span style="color:#5c5cff;">~/Documents </span>$ cd -
+/home/kent/TorKopia
+<span style="color:#5c5cff;">~/TorKopia </span>$ cd -
+/home/kent/Documents
+<span style="color:#5c5cff;">~/Documents </span>$ <span style="color:#5c5cff;">~/Documents </span>$ ls
+<span style="font-weight:bold;color:#00ffff;">GitHub</span>  <span style="font-weight:bold;color:#5c5cff;">nackademin</span>  <span style="font-weight:bold;color:#5c5cff;">notes</span>  <span style="font-weight:bold;color:#5c5cff;">playground</span>  <span style="font-weight:bold;color:#5c5cff;">playground-hooks</span>
+<span style="color:#5c5cff;">~/Documents </span>$ 
+exit
+exit
+</pre>
+</body>
+</html>
+<!--HTML generated by ansifilter 2.18, http://www.andre-simon.de/-->

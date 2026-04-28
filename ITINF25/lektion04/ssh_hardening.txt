@@ -1,0 +1,17 @@
+Nedan:
+< Efter härdning
+> Innan
+
+kent@ubsembr:/etc/ssh$ diff sshd_config sshd_config.bak
+42c42
+< PermitRootLogin no
+---
+> #PermitRootLogin prohibit-password
+66c66
+< PasswordAuthentication no
+---
+> #PasswordAuthentication yes
+99c99
+< X11Forwarding no
+---
+> X11Forwarding yes

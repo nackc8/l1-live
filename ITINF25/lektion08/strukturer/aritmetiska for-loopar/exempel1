@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# FOR LOOPAR
+
+# Loopar över alla argument. Exempel: skript aaa bbb ccxc så blir a=aaa, a=bbb, a=ccc
+for a; do
+	echo "$a"
+done
+
+# Loopar över alla ord efter in, tills ;
+for a in {a,u,o,å}{b,c,d,e}; do
+	echo "$a"
+done
+
+for ((expr1; expr2; expr3)); do
+	list
+done
+
+# Exempel:
+
+for ((skostorlek = 50; skostorlek > 10; skostorlek = skostorlek - 1)); do echo Skostorlek $skostorlek; done

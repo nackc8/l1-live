@@ -1,0 +1,37 @@
+
+~ (tidle)
+    Betyder hemkatalogen
+.
+    Samma katalog som du står i
+    UNDANTAG: OSet har gjort en hård länk!
+..
+    En katalog upp, närmare root
+    UNDANTAG: OSet har gjort en hård länk!
+sökväg
+    absolut: Börjar med /
+    relativ: inte absolut
+
+inode
+    Datastruktur som representerar allt i en fil UTOM dess data
+    Den har en pekare till dess "datablock"
+
+hård länk
+    Skapas med ln malfilen lankfilen
+    En fil som pekar på samma inode
+    Alla hårda länkar är jämlika
+    Alla enskilda filer är en slags ensamma hårda länkar (Links: 1)
+    Begränsning: Det går inte att göra en hård länk till en katalog
+    Begränsning: Det går inte att länka till en annan "device"/filsystem.
+
+kataloger och antal hårda länkar
+    En ny katalog har 2 länkar: En från den katalog där katalogen finns och en
+    från . inne i katalogen.
+    En katalog som har en underkatalog: Har en extra länk, eftersom .. i
+    underkatalogen pekar på katalogen också.
+
+mjuk länk
+    Skapas med ln -s malfilen lankfilen
+    En egen inode (ej samma)
+    Är en fil som innehåller en sökväg
+    Sökvägen måste inte finnas (kallas ibland för en bruten symlänk)
+    Inga begränsningar, kan peka på vilken sökväg som helst

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style type="text/css">
+pre {
+  font-family:Courier New;
+  font-size:10pt;
+}
+
+.af_line {
+  color: gray;
+  text-decoration: none;
+}
+
+</style>
+<title>101821.txt</title>
+</head>
+<body>
+<pre>Script started on 2025-10-06 10:18:21+02:00 [TERM=&quot;xterm-256color&quot; TTY=&quot;/dev/pts/4&quot; COLUMNS=&quot;102&quot; LINES=&quot;14&quot;]
+<span style="color:#5c5cff;">ITINF25/lektion11
+<span style="color:#5c5cff;">">ITINF25/lektion11
+</span>$ man babash
+BASH(1)                               General Commands Manual                               BASH(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       bash - GNU Bourne-Again SHell
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">bash</span> [options] [command_string | file]
+
+<span style="font-weight:bold;color:#7f7f7f;">COPYRIGHT</span>
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash</span>  is  an <span style="font-weight:bold;color:#7f7f7f;">sh</span>-compatible command language interpreter that executes commands read from the
+       standard input or from a file.  <span style="font-weight:bold;color:#7f7f7f;">Bash</span> also incorporates useful features from the <span style="text-decoration:underline;">Korn</span>  and  <span style="text-decoration:underline;">C</span>
+       shells (<span style="font-weight:bold;color:#7f7f7f;">ksh</span> and <span style="font-weight:bold;color:#7f7f7f;">csh</span>).
+
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">ITINF25/lektion11or:#000000;background-color:#000000;">
+</span>$ man basgrep
+GREP(1)                                    User Commands                                    GREP(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       grep, egrep, fgrep, rgrep - print lines that match patterns
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">grep</span> [<span style="text-decoration:underline;">OPTION</span>...] <span style="text-decoration:underline;">PATTERNS</span> [<span style="text-decoration:underline;">FILE</span>...]
+       <span style="font-weight:bold;color:#7f7f7f;">grep</span> [<span style="text-decoration:underline;">OPTION</span>...] <span style="font-weight:bold;color:#7f7f7f;">-e</span> <span style="text-decoration:underline;">PATTERNS</span> ... [<span style="text-decoration:underline;">FILE</span>...]
+       <span style="font-weight:bold;color:#7f7f7f;">grep</span> [<span style="text-decoration:underline;">OPTION</span>...] <span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">PATTERN_FILE</span> ... [<span style="text-decoration:underline;">FILE</span>...]
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">grep</span>  searches  for  <span style="text-decoration:underline;">PATTERNS</span>  in  each <span style="text-decoration:underline;">FILE</span>.  <span style="text-decoration:underline;">PATTERNS</span> is one or more patterns separated by
+       newline characters, and <span style="font-weight:bold;color:#7f7f7f;">grep</span> prints each line that matches a  pattern.   Typically  <span style="text-decoration:underline;">PATTERNS</span>
+       should be quoted when <span style="font-weight:bold;color:#7f7f7f;">grep</span> is used in a shell command.
+
+       A  <span style="text-decoration:underline;">FILE</span>  of  “<span style="font-weight:bold;color:#7f7f7f;">-</span>” stands for standard input.  If no <span style="text-decoration:underline;">FILE</span> is given, recursive searches examine
+<span style="color:#000000;background-color:#000000;">       the working directory, and nonrecursive searches read standard input.</span>r:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 2 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       Debian also includes the variant programs </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">egrep</span>, <span style="font-weight:bold;color:#7f7f7f;">fgrep</span> and <span style="font-weight:bold;color:#7f7f7f;">rgrep</span>.  These  programs  are  the
+<span style="color:#000000;background-color:#000000;">       same  as  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">grep</span> <span style="font-weight:bold;color:#7f7f7f;">-E</span>,  <span style="font-weight:bold;color:#7f7f7f;">grep</span> <span style="font-weight:bold;color:#7f7f7f;">-F</span>,  and  <span style="font-weight:bold;color:#7f7f7f;">grep</span> <span style="font-weight:bold;color:#7f7f7f;">-r</span>,  respectively.   These  variants  are deprecated
+<span style="color:#000000;background-color:#000000;">       upstream, but Debian provides for backward compatibility. For  portability  reasons,  it  is</span>lor:#000000;">
+<span style="color:#000000;background-color:#000000;">       recommended to avoid the variant programs, and use </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">grep</span> with the related option instead.
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 7 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">OPTIONS</span>;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">   </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Generic</span> <span style="font-weight:bold;color:#7f7f7f;">Program</span> <span style="font-weight:bold;color:#7f7f7f;">Information</span>
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--help</span> Output a usage message and exit.
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 11 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-V</span>, <span style="font-weight:bold;color:#7f7f7f;">--version</span>
+<span style="color:#000000;background-color:#000000;">              Output the version number of </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">grep</span> and exit.
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 14 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">   </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Pattern</span> <span style="font-weight:bold;color:#7f7f7f;">Syntax</span>
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-E</span>, <span style="font-weight:bold;color:#7f7f7f;">--extended-regexp</span>
+<span style="color:#000000;background-color:#000000;">              Interpret </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">PATTERNS</span><span style="color:#000000;background-color:#000000;"> as extended regular expressions (EREs, see below).</span>
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 18 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-F</span>, <span style="font-weight:bold;color:#7f7f7f;">--fixed-strings</span>
+<span style="color:#000000;background-color:#000000;">              Interpret </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">PATTERNS</span><span style="color:#000000;background-color:#000000;"> as fixed strings, not regular expressions.</span>
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 21 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-G</span>, <span style="font-weight:bold;color:#7f7f7f;">--basic-regexp</span>
+<span style="color:#000000;background-color:#000000;">              Interpret  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">PATTERNS</span><span style="color:#000000;background-color:#000000;">  as  basic  regular  expressions  (BREs, see below).  This is the</span>
+<span style="color:#000000;background-color:#000000;">              default.</span>(press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 25 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-P</span>, <span style="font-weight:bold;color:#7f7f7f;">--perl-regexp</span>
+<span style="color:#000000;background-color:#000000;">              Interpret </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">PATTERNS</span><span style="color:#000000;background-color:#000000;"> as Perl-compatible regular expressions (PCREs).   This  option  is</span>
+<span style="color:#000000;background-color:#000000;">              experimental  when combined with the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-z</span> (<span style="font-weight:bold;color:#7f7f7f;">--null-data</span>) option, and <span style="font-weight:bold;color:#7f7f7f;">grep</span> <span style="font-weight:bold;color:#7f7f7f;">-P</span> may warn of
+<span style="color:#000000;background-color:#000000;">              unimplemented features.</span>lp or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 30 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">   </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Matching</span> <span style="font-weight:bold;color:#7f7f7f;">Control</span>
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-e</span> <span style="text-decoration:underline;">PATTERNS</span>, <span style="font-weight:bold;color:#7f7f7f;">--regexp=</span><span style="text-decoration:underline;">PATTERNS</span>
+<span style="color:#000000;background-color:#000000;">              Use </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">PATTERNS</span><span style="color:#000000;background-color:#000000;"> as the patterns.  If this option is used multiple times or  is  combined</span>
+<span style="color:#000000;background-color:#000000;">              with  the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-f</span> (<span style="font-weight:bold;color:#7f7f7f;">--file</span>) option, search for all patterns given.  This option can be used
+<span style="color:#000000;background-color:#000000;">              to protect a pattern beginning with “-”.</span>n><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 36 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-f</span> <span style="text-decoration:underline;">FILE</span>, <span style="font-weight:bold;color:#7f7f7f;">--file=</span><span style="text-decoration:underline;">FILE</span>
+<span style="color:#000000;background-color:#000000;">              Obtain patterns from </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">FILE</span><span style="color:#000000;background-color:#000000;">, one per line.  If this option is used multiple times or is</span>
+<span style="color:#000000;background-color:#000000;">              combined  with  the  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-e</span>  (<span style="font-weight:bold;color:#7f7f7f;">--regexp</span>) option, search for all patterns given.  The empty
+<span style="color:#000000;background-color:#000000;">              file contains zero patterns, and therefore matches nothing.</span>color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 41 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-i</span>, <span style="font-weight:bold;color:#7f7f7f;">--ignore-case</span>
+<span style="color:#000000;background-color:#000000;">              Ignore case distinctions in patterns and input data, so that characters  that  differ</span>olor:#000000;">
+<span style="color:#000000;background-color:#000000;">              only in case match each other.</span> to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 45 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--no-ignore-case</span>or:#000000;">
+<span style="color:#000000;background-color:#000000;">              Do  not  ignore  case  distinctions in patterns and input data.  This is the default.</span>olor:#000000;">
+<span style="color:#000000;background-color:#000000;">              This option is useful for passing to shell scripts that already use </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-i</span>, to cancel its
+<span style="color:#000000;background-color:#000000;">              effects because the two options override each other.</span>style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 50 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-v</span>, <span style="font-weight:bold;color:#7f7f7f;">--invert-match</span>
+<span style="color:#000000;background-color:#000000;">              Invert the sense of matching, to select non-matching lines.</span>color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 53 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-w</span>, <span style="font-weight:bold;color:#7f7f7f;">--word-regexp</span>
+<span style="color:#000000;background-color:#000000;">              Select  only  those lines containing matches that form whole words.  The test is that</span>olor:#000000;">
+<span style="color:#000000;background-color:#000000;">              the matching substring must either be at the beginning of the line, or preceded by  a</span>olor:#000000;">
+<span style="color:#000000;background-color:#000000;">              non-word  constituent character.  Similarly, it must be either at the end of the line</span>olor:#000000;">
+<span style="color:#000000;background-color:#000000;">              or followed by a non-word constituent  character.   Word-constituent  characters  are</span>olor:#000000;">
+<span style="color:#000000;background-color:#000000;">              letters,  digits,  and  the  underscore.   This  option  has  no effect if </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-x</span> is also
+<span style="color:#000000;background-color:#000000;">              specified.</span>ress h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 61 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-x</span>, <span style="font-weight:bold;color:#7f7f7f;">--line-regexp</span>
+<span style="color:#000000;background-color:#000000;">              Select only those  matches  that  exactly  match  the  whole  line.   For  a  regular</span>olor:#000000;">
+<span style="color:#000000;background-color:#000000;">              expression  pattern,  this is like parenthesizing the pattern and then surrounding it</span>olor:#000000;">
+<span style="color:#000000;background-color:#000000;">              with </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">^</span> and <span style="font-weight:bold;color:#7f7f7f;">$</span>.
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 66 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">   </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">General</span> <span style="font-weight:bold;color:#7f7f7f;">Output</span> <span style="font-weight:bold;color:#7f7f7f;">Control</span>
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-c</span>, <span style="font-weight:bold;color:#7f7f7f;">--count</span>
+<span style="color:#000000;background-color:#000000;">              Suppress normal output; instead print a count of matching lines for each input  file.</span>olor:#000000;">
+<span style="color:#000000;background-color:#000000;">              With the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-v</span>, <span style="font-weight:bold;color:#7f7f7f;">--invert-match</span> option (see above), count non-matching lines.
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 71 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--color</span>[<span style="font-weight:bold;color:#7f7f7f;">=</span><span style="text-decoration:underline;">WHEN</span>], <span style="font-weight:bold;color:#7f7f7f;">--colour</span>[<span style="font-weight:bold;color:#7f7f7f;">=</span><span style="text-decoration:underline;">WHEN</span>]
+<span style="color:#000000;background-color:#000000;">              Surround  the matched (non-empty) strings, matching lines, context lines, file names,</span>olor:#000000;">
+<span style="color:#000000;background-color:#000000;">              line numbers, byte offsets, and separators (for fields and groups of  context  lines)</span>olor:#000000;">
+<span style="color:#000000;background-color:#000000;">              with  escape  sequences  to  display  them  in color on the terminal.  The colors are</span>olor:#000000;">
+<span style="color:#000000;background-color:#000000;">              defined by the environment variable </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">GREP_COLORS</span>.  <span style="text-decoration:underline;">WHEN</span> is <span style="font-weight:bold;color:#7f7f7f;">never</span>, <span style="font-weight:bold;color:#7f7f7f;">always</span>, or <span style="font-weight:bold;color:#7f7f7f;">auto</span>.
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 77 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-L</span>, <span style="font-weight:bold;color:#7f7f7f;">--files-without-match</span>
+<span style="color:#000000;background-color:#000000;">              Suppress normal output; instead print the name of  each  input  file  from  which  no</span>olor:#000000;">
+<span style="color:#000000;background-color:#000000;">              output would normally have been printed.</span>/span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 81 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-l</span>, <span style="font-weight:bold;color:#7f7f7f;">--files-with-matches</span>
+<span style="color:#000000;background-color:#000000;">              Suppress  normal  output; instead print the name of each input file from which output</span>olor:#000000;">
+<span style="color:#000000;background-color:#000000;">              would normally have been printed.  Scanning each input file stops upon first match.</span>-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 85 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-m</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--max-count=</span><span style="text-decoration:underline;">NUM</span>
+<span style="color:#000000;background-color:#000000;">              Stop reading a file after </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">NUM</span><span style="color:#000000;background-color:#000000;"> matching lines.  If </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">NUM</span><span style="color:#000000;background-color:#000000;"> is zero, </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">grep</span> stops right  away
+<span style="color:#000000;background-color:#000000;">              without  reading  input.   A </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">NUM</span><span style="color:#000000;background-color:#000000;"> of -1 is treated as infinity and </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">grep</span> does not stop;
+<span style="color:#000000;background-color:#000000;">              this is the default.  If the input is standard input from a  regular  file,  and  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">NUM</span><span style="color:#000000;background-color:#000000;"></span>
+<span style="color:#000000;background-color:#000000;">              matching lines are output, </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">grep</span> ensures that the standard input is positioned to just
+<span style="color:#000000;background-color:#000000;">              after the last matching line before exiting, regardless of the presence  of  trailing</span>olor:#000000;">
+<span style="color:#000000;background-color:#000000;">              context  lines.   This enables a calling process to resume a search.  When </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">grep</span> stops
+<span style="color:#000000;background-color:#000000;">              after </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">NUM</span><span style="color:#000000;background-color:#000000;"> matching lines, it outputs any trailing context  lines.   When  the  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-c</span>  or
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--count</span> option is also used, <span style="font-weight:bold;color:#7f7f7f;">grep</span> does not output a count greater than <span style="text-decoration:underline;">NUM</span>.  When the
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-v</span> or <span style="font-weight:bold;color:#7f7f7f;">--invert-match</span> option is also  used,  <span style="font-weight:bold;color:#7f7f7f;">grep</span>  stops  after  outputting  <span style="text-decoration:underline;">NUM</span>  non-
+<span style="color:#000000;background-color:#000000;">              matching lines.</span>h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 97 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-o</span>, <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span>
+<span style="color:#000000;background-color:#000000;">              Print only the matched (non-empty) parts of a matching line, with each such part on a</span>olor:#000000;">
+<span style="color:#000000;background-color:#000000;">              separate output line.</span> help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 101 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-q</span>, <span style="font-weight:bold;color:#7f7f7f;">--quiet</span>, <span style="font-weight:bold;color:#7f7f7f;">--silent</span>
+<span style="color:#000000;background-color:#000000;">              Quiet; do not write anything to standard output.  Exit immediately with  zero  status</span>color:#000000;">
+<span style="color:#000000;background-color:#000000;">              if  any  match  is  found,  even  if  an  error  was  detected.   Also  see the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-s</span> or
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--no-messages</span> option.">
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 106 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-s</span>, <span style="font-weight:bold;color:#7f7f7f;">--no-messages</span>
+<span style="color:#000000;background-color:#000000;">              Suppress error messages about nonexistent or unreadable files.</span>lor:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 109 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">   </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Output</span> <span style="font-weight:bold;color:#7f7f7f;">Line</span> <span style="font-weight:bold;color:#7f7f7f;">Prefix</span> <span style="font-weight:bold;color:#7f7f7f;">Control</span>
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-b</span>, <span style="font-weight:bold;color:#7f7f7f;">--byte-offset</span>
+<span style="color:#000000;background-color:#000000;">              Print the 0-based byte offset within the input file before each line of  output.   If</span>color:#000000;">
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-o</span> (<span style="font-weight:bold;color:#7f7f7f;">--only-matching</span>) is specified, print the offset of the matching part itself.
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 114 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-H</span>, <span style="font-weight:bold;color:#7f7f7f;">--with-filename</span>
+<span style="color:#000000;background-color:#000000;">              Print  the file name for each match.  This is the default when there is more than one</span>color:#000000;">
+<span style="color:#000000;background-color:#000000;">              file to search.  This is a GNU extension.</span>/span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 118 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-h</span>, <span style="font-weight:bold;color:#7f7f7f;">--no-filename</span>
+<span style="color:#000000;background-color:#000000;">              Suppress the prefixing of file names on output.  This is the default  when  there  is</span>color:#000000;">
+<span style="color:#000000;background-color:#000000;">              only one file (or only standard input) to search.</span>pan style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 122 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--label=</span><span style="text-decoration:underline;">LABEL</span>
+<span style="color:#000000;background-color:#000000;">              Display  input  actually  coming from standard input as input coming from file </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">LABEL</span><span style="color:#000000;background-color:#000000;">.</span>
+<span style="color:#000000;background-color:#000000;">              This can be useful for commands that transform a file&apos;s  contents  before  searching,</span>:#000000;">
+<span style="color:#000000;background-color:#000000;">              e.g., </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">gzip</span> <span style="font-weight:bold;color:#7f7f7f;">-cd</span> <span style="font-weight:bold;color:#7f7f7f;">foo.gz</span> <span style="font-weight:bold;color:#7f7f7f;">|</span> <span style="font-weight:bold;color:#7f7f7f;">grep</span> <span style="font-weight:bold;color:#7f7f7f;">--label=foo</span> <span style="font-weight:bold;color:#7f7f7f;">-H</span> <span style="font-weight:bold;color:#7f7f7f;">&apos;some</span> <span style="font-weight:bold;color:#7f7f7f;">pattern&apos;</span>.  See also the <span style="font-weight:bold;color:#7f7f7f;">-H</span> option.
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 127 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-n</span>, <span style="font-weight:bold;color:#7f7f7f;">--line-number</span>
+<span style="color:#000000;background-color:#000000;">              Prefix each line of output with the 1-based line number within its input file.</span>ground-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 130 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-T</span>, <span style="font-weight:bold;color:#7f7f7f;">--initial-tab</span>
+<span style="color:#000000;background-color:#000000;">              Make sure that the first character of actual line content lies on a tab stop, so that</span>color:#000000;">
+<span style="color:#000000;background-color:#000000;">              the alignment of tabs looks normal.  This is useful with options  that  prefix  their</span>color:#000000;">
+<span style="color:#000000;background-color:#000000;">              output  to  the  actual  content: </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-H</span>,<span style="font-weight:bold;color:#7f7f7f;">-n</span>, and <span style="font-weight:bold;color:#7f7f7f;">-b</span>.  In order to improve the probability
+<span style="color:#000000;background-color:#000000;">              that lines from a single file will all start at the same column, this also causes the</span>color:#000000;">
+<span style="color:#000000;background-color:#000000;">              line number and byte offset (if present) to be printed in a minimum size field width.</span>color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 137 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-Z</span>, <span style="font-weight:bold;color:#7f7f7f;">--null</span>
+<span style="color:#000000;background-color:#000000;">              Output  a  zero byte (the ASCII </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">NUL</span> character) instead of the character that normally
+<span style="color:#000000;background-color:#000000;">              follows a file name.  For example, </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">grep</span> <span style="font-weight:bold;color:#7f7f7f;">-lZ</span> outputs a zero byte after each file  name
+<span style="color:#000000;background-color:#000000;">              instead  of the usual newline.  This option makes the output unambiguous, even in the</span>color:#000000;">
+<span style="color:#000000;background-color:#000000;">              presence of file names containing unusual characters like newlines.  This option  can</span>color:#000000;">
+<span style="color:#000000;background-color:#000000;">              be  used  with  commands like </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">find</span> <span style="font-weight:bold;color:#7f7f7f;">-print0</span>, <span style="font-weight:bold;color:#7f7f7f;">perl</span> <span style="font-weight:bold;color:#7f7f7f;">-0</span>, <span style="font-weight:bold;color:#7f7f7f;">sort</span> <span style="font-weight:bold;color:#7f7f7f;">-z</span>, and <span style="font-weight:bold;color:#7f7f7f;">xargs</span> <span style="font-weight:bold;color:#7f7f7f;">-0</span> to process
+<span style="color:#000000;background-color:#000000;">              arbitrary file names, even those that contain newline characters.</span>:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 145 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">   </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Context</span> <span style="font-weight:bold;color:#7f7f7f;">Line</span> <span style="font-weight:bold;color:#7f7f7f;">Control</span>
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-A</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--after-context=</span><span style="text-decoration:underline;">NUM</span>
+<span style="color:#000000;background-color:#000000;">              Print </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">NUM</span><span style="color:#000000;background-color:#000000;"> lines of trailing context after matching lines.  Places a line containing a</span>
+<span style="color:#000000;background-color:#000000;">              group  separator  (</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--</span>)  between  contiguous  groups  of  matches.   With  the  <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--only-matching</span> option, this has no effect and a warning is given.
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 151 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-B</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--before-context=</span><span style="text-decoration:underline;">NUM</span>
+<span style="color:#000000;background-color:#000000;">              Print </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">NUM</span><span style="color:#000000;background-color:#000000;"> lines of leading context before matching lines.  Places a line containing a</span>
+<span style="color:#000000;background-color:#000000;">              group  separator  (</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--</span>)  between  contiguous  groups  of  matches.   With  the  <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or
+<span style="color:#000000;background-color:#000000;">              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--only-matching</span> option, this has no effect and a warning is given.
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 156 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-C</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">-</span><span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--context=</span><span style="text-decoration:underline;">NUM</span>
+<span style="color:#000000;background-color:#000000;">              Print </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">NUM</span><span style="color:#000000;background-color:#000000;"> lines of output context.  Places a line containing a group  separator  (</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--</span>)
+<span style="color:#000000;background-color:#000000;">              between  contiguous  groups  of matches.  With the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-o</span> or <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this
+<span style="color:#000000;background-color:#000000;">              has no effect and a warning is given.</span>it)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 161 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"> Manual page grep(1) line 162 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">   </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Context</span> <span style="font-weight:bold;color:#7f7f7f;">Line</span> <span style="font-weight:bold;color:#7f7f7f;">Control</span>
+       <span style="font-weight:bold;color:#7f7f7f;">-A</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--after-context=</span><span style="text-decoration:underline;">NUM</span>
+              Print <span style="text-decoration:underline;">NUM</span> lines of trailing context after matching lines.  Places a line containing a
+              group  separator  (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.   With  the  <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or
+              <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect and a warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-B</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--before-context=</span><span style="text-decoration:underline;">NUM</span>
+              Print <span style="text-decoration:underline;">NUM</span> lines of leading context before matching lines.  Places a line containing a
+              group  separator  (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.   With  the  <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or
+              <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect and a warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-C</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">-</span><span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--context=</span><span style="text-decoration:underline;">NUM</span>
+              Print <span style="text-decoration:underline;">NUM</span> lines of output context.  Places a line containing a group  separator  (<span style="font-weight:bold;color:#7f7f7f;">--</span>)
+              between  contiguous  groups  of matches.  With the <span style="font-weight:bold;color:#7f7f7f;">-o</span> or <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this
+              has no effect and a warning is given.
+
+<span style="color:#000000;background-color:#000000;"> Manual page grep(1) line 162 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">   </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Context</span> <span style="font-weight:bold;color:#7f7f7f;">Line</span> <span style="font-weight:bold;color:#7f7f7f;">Control</span>
+       <span style="font-weight:bold;color:#7f7f7f;">-A</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--after-context=</span><span style="text-decoration:underline;">NUM</span>
+              Print <span style="text-decoration:underline;">NUM</span> lines of trailing context after matching lines.  Places a line containing a
+              group  separator  (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.   With  the  <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or
+              <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect and a warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-B</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--before-context=</span><span style="text-decoration:underline;">NUM</span>
+              Print <span style="text-decoration:underline;">NUM</span> lines of leading context before matching lines.  Places a line containing a
+              group  separator  (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.   With  the  <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or
+              <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect and a warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-C</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">-</span><span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--context=</span><span style="text-decoration:underline;">NUM</span>
+              Print <span style="text-decoration:underline;">NUM</span> lines of output context.  Places a line containing a group  separator  (<span style="font-weight:bold;color:#7f7f7f;">--</span>)
+              between  contiguous  groups  of matches.  With the <span style="font-weight:bold;color:#7f7f7f;">-o</span> or <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this
+              has no effect and a warning is given.
+
+<span style="color:#000000;background-color:#000000;"> Manual page grep(1) line 162 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">   </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Context</span> <span style="font-weight:bold;color:#7f7f7f;">Line</span> <span style="font-weight:bold;color:#7f7f7f;">Control</span>
+       <span style="font-weight:bold;color:#7f7f7f;">-A</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--after-context=</span><span style="text-decoration:underline;">NUM</span>
+              Print <span style="text-decoration:underline;">NUM</span> lines of trailing context after matching lines.  Places a line containing a
+              group  separator  (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.   With  the  <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or
+              <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect and a warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-B</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--before-context=</span><span style="text-decoration:underline;">NUM</span>
+              Print <span style="text-decoration:underline;">NUM</span> lines of leading context before matching lines.  Places a line containing a
+              group  separator  (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.   With  the  <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or
+              <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect and a warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-C</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">-</span><span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--context=</span><span style="text-decoration:underline;">NUM</span>
+              Print <span style="text-decoration:underline;">NUM</span> lines of output context.  Places a line containing a group  separator  (<span style="font-weight:bold;color:#7f7f7f;">--</span>)
+              between  contiguous  groups  of matches.  With the <span style="font-weight:bold;color:#7f7f7f;">-o</span> or <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this
+              has no effect and a warning is given.
+
+<span style="color:#000000;background-color:#000000;"> Manual page grep(1) line 162 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">   </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Context</span> <span style="font-weight:bold;color:#7f7f7f;">Line</span> <span style="font-weight:bold;color:#7f7f7f;">Control</span>
+       <span style="font-weight:bold;color:#7f7f7f;">-A</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--after-context=</span><span style="text-decoration:underline;">NUM</span>
+              Print <span style="text-decoration:underline;">NUM</span> lines of trailing context after matching lines.  Places a line containing a
+              group  separator  (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.   With  the  <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or
+              <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect and a warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-B</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--before-context=</span><span style="text-decoration:underline;">NUM</span>
+              Print <span style="text-decoration:underline;">NUM</span> lines of leading context before matching lines.  Places a line containing a
+              group  separator  (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.   With  the  <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or
+              <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect and a warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-C</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">-</span><span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--context=</span><span style="text-decoration:underline;">NUM</span>
+              Print <span style="text-decoration:underline;">NUM</span> lines of output context.  Places a line containing a group  separator  (<span style="font-weight:bold;color:#7f7f7f;">--</span>)
+              between  contiguous  groups  of matches.  With the <span style="font-weight:bold;color:#7f7f7f;">-o</span> or <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this
+              has no effect and a warning is given.
+
+<span style="color:#000000;background-color:#000000;"> Manual page grep(1) line 162 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">   </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Context</span> <span style="font-weight:bold;color:#7f7f7f;">Line</span> <span style="font-weight:bold;color:#7f7f7f;">Control</span>
+       <span style="font-weight:bold;color:#7f7f7f;">-A</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--after-context=</span><span style="text-decoration:underline;">NUM</span>
+              Print <span style="text-decoration:underline;">NUM</span> lines of trailing context after matching lines.  Places a line containing a
+              group  separator  (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.   With  the  <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or
+              <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect and a warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-B</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--before-context=</span><span style="text-decoration:underline;">NUM</span>
+              Print <span style="text-decoration:underline;">NUM</span> lines of leading context before matching lines.  Places a line containing a
+              group  separator  (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.   With  the  <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or
+              <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect and a warning is given.
+<span style="color:#000000;background-color:#000000;"> Manual page grep(1) line 162 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">   </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Context</span> <span style="font-weight:bold;color:#7f7f7f;">Line</span> <span style="font-weight:bold;color:#7f7f7f;">Control</span>
+       <span style="font-weight:bold;color:#7f7f7f;">-A</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--after-context=</span><span style="text-decoration:underline;">NUM</span>
+              Print <span style="text-decoration:underline;">NUM</span> lines of trailing context after matching lines.  Places a line containing a
+              group  separator  (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.   With  the  <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or
+              <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect and a warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-B</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--before-context=</span><span style="text-decoration:underline;">NUM</span>
+              Print <span style="text-decoration:underline;">NUM</span> lines of leading context before matching lines.  Places a line containing a
+              group  separator  (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.   With  the  <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or
+              <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect and a warning is given.
+<span style="color:#000000;background-color:#000000;"> Manual page grep(1) line 162 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">   </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Context</span> <span style="font-weight:bold;color:#7f7f7f;">Line</span> <span style="font-weight:bold;color:#7f7f7f;">Control</span>
+       <span style="font-weight:bold;color:#7f7f7f;">-A</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--after-context=</span><span style="text-decoration:underline;">NUM</span>
+              Print <span style="text-decoration:underline;">NUM</span> lines of trailing context after matching lines.  Places a line containing a
+              group  separator  (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.   With  the  <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or
+              <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect and a warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-B</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--before-context=</span><span style="text-decoration:underline;">NUM</span>
+              Print <span style="text-decoration:underline;">NUM</span> lines of leading context before matching lines.  Places a line containing a
+              group  separator  (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.   With  the  <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or
+              <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect and a warning is give<span style="color:#000000;background-color:#000000;"> Manual page grep(1) line 162 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">   </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Context</span> <span style="font-weight:bold;color:#7f7f7f;">Line</span> <span style="font-weight:bold;color:#7f7f7f;">Control</span>
+       <span style="font-weight:bold;color:#7f7f7f;">-A</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--after-context=</span><span style="text-decoration:underline;">NUM</span>
+              Print <span style="text-decoration:underline;">NUM</span> lines of trailing context after matching lines.  Places a line containing a
+              group  separator  (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.   With  the  <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or
+              <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect and a warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-B</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--before-context=</span><span style="text-decoration:underline;">NUM</span>
+              Print <span style="text-decoration:underline;">NUM</span> lines of leading context before matching lines.  Places a line containing a
+              group  separator  (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.   With  the  <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or
+<span style="color:#000000;background-color:#000000;"> Manual page grep(1) line 162 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">   </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Context</span> <span style="font-weight:bold;color:#7f7f7f;">Line</span> <span style="font-weight:bold;color:#7f7f7f;">Control</span>
+       <span style="font-weight:bold;color:#7f7f7f;">-A</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--after-context=</span><span style="text-decoration:underline;">NUM</span>
+              Print <span style="text-decoration:underline;">NUM</span> lines of trailing context after matching lines.  Places a line containing a
+              group  separator  (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.   With  the  <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or
+              <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect and a warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-B</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--before-context=</span><span style="text-decoration:underline;">NUM</span>
+              Print <span style="text-decoration:underline;">NUM</span> lines of leading context before matching lines.  Places a line containing a
+              group  separator  (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches<span style="color:#000000;background-color:#000000;"> Manual page grep(1) line 162 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">   </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Context</span> <span style="font-weight:bold;color:#7f7f7f;">Line</span> <span style="font-weight:bold;color:#7f7f7f;">Control</span>
+       <span style="font-weight:bold;color:#7f7f7f;">-A</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--after-context=</span><span style="text-decoration:underline;">NUM</span>
+              Print <span style="text-decoration:underline;">NUM</span> lines of trailing context after matching lines.  Places a line containing a
+              group  separator  (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.   With  the  <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or
+              <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect and a warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-B</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--before-context=</span><span style="text-decoration:underline;">NUM</span>
+              Print <span style="text-decoration:underline;">NUM</span> lines of leading context before matching lines.  Places a line containing a
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">ITINF25/lektion11olor:#000000;background-color:#000000;">
+</span>$ 
+<span style="color:#5c5cff;">ITINF25/lektion11
+man basgrepn grebash
+$ man grep
+GREP(1)                         User Commands                         GREP(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       grep, egrep, fgrep, rgrep - print lines that match patterns
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">grep</span> [<span style="text-decoration:underline;">OPTION</span>...] <span style="text-decoration:underline;">PATTERNS</span> [<span style="text-decoration:underline;">FILE</span>...]
+       <span style="font-weight:bold;color:#7f7f7f;">grep</span> [<span style="text-decoration:underline;">OPTION</span>...] <span style="font-weight:bold;color:#7f7f7f;">-e</span> <span style="text-decoration:underline;">PATTERNS</span> ... [<span style="text-decoration:underline;">FILE</span>...]
+       <span style="font-weight:bold;color:#7f7f7f;">grep</span> [<span style="text-decoration:underline;">OPTION</span>...] <span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">PATTERN_FILE</span> ... [<span style="text-decoration:underline;">FILE</span>...]
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">grep</span>  searches  for  <span style="text-decoration:underline;">PATTERNS</span>  in  each <span style="text-decoration:underline;">FILE</span>.  <span style="text-decoration:underline;">PATTERNS</span> is one or more
+<span style="color:#000000;background-color:#000000;">GREP(1)                         User Commands                         GREP(1)</span>:#000000;background-color:#000000;">
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       grep, egrep, fgrep, rgrep - print lines that match patterns
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">grep</span> [<span style="text-decoration:underline;">OPTION</span>...] <span style="text-decoration:underline;">PATTERNS</span> [<span style="text-decoration:underline;">FILE</span>...]
+       <span style="font-weight:bold;color:#7f7f7f;">grep</span> [<span style="text-decoration:underline;">OPTION</span>...] <span style="font-weight:bold;color:#7f7f7f;">-e</span> <span style="text-decoration:underline;">PATTERNS</span> ... [<span style="text-decoration:underline;">FILE</span>...]
+       <span style="font-weight:bold;color:#7f7f7f;">grep</span> [<span style="text-decoration:underline;">OPTION</span>...] <span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">PATTERN_FILE</span> ... [<span style="text-decoration:underline;">FILE</span>...]
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">grep</span>  searches  for  <span style="text-decoration:underline;">PATTERNS</span>  in  each <span style="text-decoration:underline;">FILE</span>.  <span style="text-decoration:underline;">PATTERNS</span> is one or more
+GREP(1)                         User Commands                         GREP(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       grep, egrep, fgrep, rgrep - print lines that match patterns
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">grep</span> [<span style="text-decoration:underline;">OPTION</span>...] <span style="text-decoration:underline;">PATTERNS</span> [<span style="text-decoration:underline;">FILE</span>...]
+       <span style="font-weight:bold;color:#7f7f7f;">grep</span> [<span style="text-decoration:underline;">OPTION</span>...] <span style="font-weight:bold;color:#7f7f7f;">-e</span> <span style="text-decoration:underline;">PATTERNS</span> ... [<span style="text-decoration:underline;">FILE</span>...]
+       <span style="font-weight:bold;color:#7f7f7f;">grep</span> [<span style="text-decoration:underline;">OPTION</span>...] <span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">PATTERN_FILE</span> ... [<span style="text-decoration:underline;">FILE</span>...]
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">grep</span>  searches  for  <span style="text-decoration:underline;">PATTERNS</span>  in  each <span style="text-decoration:underline;">FILE</span>.  <span style="text-decoration:underline;">PATTERNS</span> is one or more
+...skipping...
+       <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-C</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">-</span><span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--context=</span><span style="text-decoration:underline;">NUM</span>
+              Print  <span style="text-decoration:underline;">NUM</span> lines of output context.  Places a line containing a
+              group separator (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.
+              With the <span style="font-weight:bold;color:#7f7f7f;">-o</span> or <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect and a
+              warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;">--group-separator=</span><span style="text-decoration:underline;">SEP</span>
+              When <span style="font-weight:bold;color:#7f7f7f;">-A</span>, <span style="font-weight:bold;color:#7f7f7f;">-B</span>, or <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-C</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> are in use, print <span style="text-decoration:underline;">SEP</span> instead of <span style="font-weight:bold;color:#7f7f7f;">--</span>  between
+              groups of lines.
+
+       <span style="font-weight:bold;color:#7f7f7f;">--no-group-separator</span>
+              When <span style="font-weight:bold;color:#7f7f7f;">-A</span>, <span style="font-weight:bold;color:#7f7f7f;">-B</span>, or <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-C</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> are in use, do not print a separator between
+<span style="color:#000000;background-color:#000000;">M</span>page grep(1) line 202 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M              option, this has no effect and a warning is given.</span>n style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M              contiguous groups of matches.  With the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-o</span>  or  <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span>
+<span style="color:#000000;background-color:#000000;">M              Places  a  line  containing  a  group  separator  (</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--</span>)  between
+<span style="color:#000000;background-color:#000000;">M              Print </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">NUM</span><span style="color:#000000;background-color:#000000;"> lines  of  leading  context  before  matching  lines.</span>
+<span style="color:#000000;background-color:#000000;">M       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-B</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--before-context=</span><span style="text-decoration:underline;">NUM</span>
+<span style="color:#000000;background-color:#000000;">M</span>page grep(1) line 196 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M              option, this has no effect and a warning is given.</span>n style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M              contiguous  groups  of matches.  With the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-o</span> or <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span>
+<span style="color:#000000;background-color:#000000;">M              Places  a  line  containing  a  group  separator  (</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--</span>)  between
+<span style="color:#000000;background-color:#000000;">M              Print  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">NUM</span><span style="color:#000000;background-color:#000000;">  lines  of  trailing  context  after matching lines.</span>
+<span style="color:#000000;background-color:#000000;">M       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-A</span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--after-context=</span><span style="text-decoration:underline;">NUM</span>
+<span style="color:#000000;background-color:#000000;">M   </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Context</span> <span style="font-weight:bold;color:#7f7f7f;">Line</span> <span style="font-weight:bold;color:#7f7f7f;">Control</span>
+<span style="color:#000000;background-color:#000000;">M</span>page grep(1) line 189 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">              option, this has no effect and a warning is given.</span>an style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 189 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-C</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">-</span><span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--context=</span><span style="text-decoration:underline;">NUM</span>
+<span style="color:#000000;background-color:#000000;">              Print  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">NUM</span><span style="color:#000000;background-color:#000000;"> lines of output context.  Places a line containing a</span>
+<span style="color:#000000;background-color:#000000;">              group separator (</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--</span>)  between  contiguous  groups  of  matches.
+<span style="color:#000000;background-color:#000000;">              With the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-o</span> or <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect and a
+<span style="color:#000000;background-color:#000000;">              warning is given.</span> for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"></span>Bpage grep(1) line 195 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--group-separator=</span><span style="text-decoration:underline;">SEP</span>
+<span style="color:#000000;background-color:#000000;">              When </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-A</span>, <span style="font-weight:bold;color:#7f7f7f;">-B</span>, or <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-C</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> are in use, print <span style="text-decoration:underline;">SEP</span> instead of <span style="font-weight:bold;color:#7f7f7f;">--</span>  between
+<span style="color:#000000;background-color:#000000;"> Manual page grep(1) line 198 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">              Places  a  line  containing  a  group  separator  (</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--</span>)  between
+              contiguous groups of matches.  With the <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or  <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span>
+              option, this has no effect and a warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-C</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">-</span><span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--context=</span><span style="text-decoration:underline;">NUM</span>
+              Print  <span style="text-decoration:underline;">NUM</span> lines of output context.  Places a line containing a
+              group separator (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.
+              With the <span style="font-weight:bold;color:#7f7f7f;">-o</span> or <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect and a
+              warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;">--group-separator=</span><span style="text-decoration:underline;">SEP</span>
+              When <span style="font-weight:bold;color:#7f7f7f;">-A</span>, <span style="font-weight:bold;color:#7f7f7f;">-B</span>, or <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-C</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> are in use, print <span style="text-decoration:underline;">SEP</span> instead of <span style="font-weight:bold;color:#7f7f7f;">--</span>  between
+<span style="color:#000000;background-color:#000000;"> Manual page grep(1) line 198 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">              Places  a  line  containing  a  group  separator  (</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--</span>)  between
+              contiguous groups of matches.  With the <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or  <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span>
+              option, this has no effect and a warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-C</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">-</span><span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--context=</span><span style="text-decoration:underline;">NUM</span>
+              Print  <span style="text-decoration:underline;">NUM</span> lines of output context.  Places a line containing a
+              group separator (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.
+              With the <span style="font-weight:bold;color:#7f7f7f;">-o</span> or <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect and a
+              warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;">--group-separator=</span><span style="text-decoration:underline;">SEP</span>
+              When <span style="font-weight:bold;color:#7f7f7f;">-A</span>, <span style="font-weight:bold;color:#7f7f7f;">-B</span>, or <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-C</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> are in use, print <span style="text-decoration:underline;">SEP</span> instead of <span style="font-weight:bold;color:#7f7f7f;">--</span>  between
+<span style="color:#000000;background-color:#000000;"> Manual page grep(1) line 198 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">              Places  a  line  containing  a  group  separator  (</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--</span>)  between
+              contiguous groups of matches.  With the <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or  <span style="font-weight:bold;color:#7f7f7f;">--only-matchin</span><span style="font-weight:bold;color:#7f7f7f;">g</span>
+              option, this has no effect and a warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-C</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">-</span><span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--context=</span><span style="text-decoration:underline;">NUM</span>
+              Print  <span style="text-decoration:underline;">NUM</span> lines of output context.  Places a line containing a
+              group separator (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.
+              With the <span style="font-weight:bold;color:#7f7f7f;">-o</span> or <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect and <span style="color:#000000;background-color:#000000;"> Manual page grep(1) line 198 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">              Places  a  line  containing  a  group  separator  (</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--</span>)  between
+              contiguous groups of matches.  With the <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or  <span style="font-weight:bold;color:#7f7f7f;">--only-matchi</span><span style="font-weight:bold;color:#7f7f7f;">ng</span>
+              option, this has no effect and a warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-C</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">-</span><span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--context=</span><span style="text-decoration:underline;">NUM</span>
+              Print  <span style="text-decoration:underline;">NUM</span> lines of output context.  Places a line containing a
+              group separator (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.
+              With the <span style="font-weight:bold;color:#7f7f7f;">-o</span> or <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect and<span style="color:#000000;background-color:#000000;"> Manual page grep(1) line 198 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">              Places  a  line  containing  a  group  separator  (</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--</span>)  between
+              contiguous groups of matches.  With the <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or  <span style="font-weight:bold;color:#7f7f7f;">--only-match</span><span style="font-weight:bold;color:#7f7f7f;">ing</span>
+              option, this has no effect and a warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-C</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">-</span><span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--context=</span><span style="text-decoration:underline;">NUM</span>
+              Print  <span style="text-decoration:underline;">NUM</span> lines of output context.  Places a line containing a
+              group separator (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.
+              With the <span style="font-weight:bold;color:#7f7f7f;">-o</span> or <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect an<span style="color:#000000;background-color:#000000;"> Manual page grep(1) line 198 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">              Places  a  line  containing  a  group  separator  (</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--</span>)  between
+              contiguous groups of matches.  With the <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or  <span style="font-weight:bold;color:#7f7f7f;">--only-matc</span><span style="font-weight:bold;color:#7f7f7f;">hing</span>
+              option, this has no effect and a warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-C</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">-</span><span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--context=</span><span style="text-decoration:underline;">NUM</span>
+              Print  <span style="text-decoration:underline;">NUM</span> lines of output context.  Places a line containing a
+              group separator (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.
+              With the <span style="font-weight:bold;color:#7f7f7f;">-o</span> or <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect a<span style="color:#000000;background-color:#000000;"> Manual page grep(1) line 198 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">              Places  a  line  containing  a  group  separator  (</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--</span>)  between
+              contiguous groups of matches.  With the <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or  <span style="font-weight:bold;color:#7f7f7f;">--only-mat</span><span style="font-weight:bold;color:#7f7f7f;">ching</span>
+              option, this has no effect and a warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-C</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">-</span><span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--context=</span><span style="text-decoration:underline;">NUM</span>
+              Print  <span style="text-decoration:underline;">NUM</span> lines of output context.  Places a line containing a
+              group separator (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.
+              With the <span style="font-weight:bold;color:#7f7f7f;">-o</span> or <span style="font-weight:bold;color:#7f7f7f;">--only-matching</span> option, this has no effect <span style="color:#000000;background-color:#000000;"> Manual page grep(1) line 198 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">              Places  a  line  containing  a  group  separator  (</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--</span>)  between
+              contiguous groups of matches.  With the <span style="font-weight:bold;color:#7f7f7f;">-o</span>  or  <span style="font-weight:bold;color:#7f7f7f;">--only-ma</span><span style="font-weight:bold;color:#7f7f7f;">tching</span>
+              option, this has no effect and a warning is given.
+
+       <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-C</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> <span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">-</span><span style="text-decoration:underline;">NUM</span>, <span style="font-weight:bold;color:#7f7f7f;">--context=</span><span style="text-decoration:underline;">NUM</span>
+              Print  <span style="text-decoration:underline;">NUM</span> lines of output context.  Places a line containing a
+              group separator (<span style="font-weight:bold;color:#7f7f7f;">--</span>)  between  contiguous  groups  of  matches.
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">ITINF25/lektion11atching</span> option, this has no effect<span style="color:#000000;background-color:#000000;"> Manual page grep(1) line 198 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+</span>$ 
+exit
+
+Script done on 2025-10-06 11:42:03+02:00 [COMMAND_EXIT_CODE=&quot;0&quot;]
+</pre>
+</body>
+</html>
+<!--HTML generated by ansifilter 2.18, http://www.andre-simon.de/-->

@@ -1,0 +1,187 @@
+Script started on 2025-05-05 15:02:21+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="85" LINES="15"]
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ git pull
+[?2004lAlready up to date.
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ gh -[Kshow[K[K[K[Kview[K[K[K[Krepo voew [K[K[K[Kiew --web
+[?2004l]11;?\[6n]11;?\[6nOpening https://github.com/nackc8/l1-live in your browser.
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ [169640:169668:0505/150236.930692:ERROR:browser_theme_pack.cc(1568)] Could not load theme image prs_id=5 scale_factor_enum=1 file=/home/kent/.config/google-chrome/Profile 4/Extensions/ahifcnpnjgbadkjdhagpfjfkmlapfoel/5.2.0_0/images/material_refresh_grey.png (read error)
+[169640:169640:0505/150237.028935:ERROR:theme_service.cc(907)] Could not load theme.
+[169640:169706:0505/150237.123318:ERROR:nss_util.cc(344)] After loading Root Certs, loaded==false: NSS error code: -8018
+Created TensorFlow Lite XNNPACK delegate for CPU.
+Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#-1 is a dynamic-sized tensor).
+[169640:169673:0505/150239.157973:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+[169640:169673:0505/150307.408509:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+[169640:169673:0505/150358.128716:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+[169640:169673:0505/150535.688731:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+[169640:169673:0505/150837.059300:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+[169640:169640:0505/150849.269900:ERROR:atom_cache.cc(231)] Add chromium/x-internal-source-rfh-token to kAtomsToCache
+
+[?2004l[?2004h[94mDEVOPS24/lektion10
+(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ git checkout [7m250416[27m250416
+[?2004lSwitched to branch '250416'
+Your branch is up to date with 'origin/250416'.
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ git p[Kfetch origin-m[K[K´-[K[K/main
+[?2004lfatal: 'origin/main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ git fetch origin/main[K[K[K[K [K[K main[H[2J[94mDEVOPS24/lektion10
+(B[m$ git fetch origin main
+[?2004lFrom github.com:nackc8/l1-live
+ * branch            main       -> FETCH_HEAD
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ git checkout [7m250416[27m250416
+[?2004lAlready on '250416'
+Your branch is up to date with 'origin/250416'.
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ git[K[K[Kgit rebase origin/main
+[?2004lRebasing (1/11)warning: Cannot merge binary files: DEVOPS24/lektion2/recordings/132106.txt (HEAD vs. dbacc89 (autocommit complete 1321 (31)))
+Auto-merging DEVOPS24/lektion2/recordings/132106.txt
+CONFLICT (add/add): Merge conflict in DEVOPS24/lektion2/recordings/132106.txt
+Auto-merging DEVOPS24/lektion2/recordings/132106_timing.txt
+error: could not apply dbacc89... autocommit complete 1321 (31)
+[33mhint: Resolve all conflicts manually, mark them as resolved with[m
+[33mhint: "git add/rm <conflicted_files>", then run "git rebase --continue".[m
+[33mhint: You can instead skip this commit: run "git rebase --skip".[m
+[33mhint: To abort and get back to the state before "git rebase", run "git rebase --abort".[m
+Could not apply dbacc89... autocommit complete 1321 (31)
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ [H[2J[94mDEVOPS24/lektion10
+(B[m$ cd
+[?2004l[?2004h[94m~ (B[m$ [H[2J[94m~ (B[m$ ls
+[?2004l Android		 Desktop     Music      Screenshots	'VirtualBox VMs'
+ AndroidStudioProjects	 Documents   Pictures   shared_desktop	 wineapps
+ bin			 Downloads   Public     Templates
+ bokforing		 Dropbox     QC         Videos
+[?2004h[94m~ (B[m$ cd [K -
+[?2004l/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS24/lektion10
+[?2004h[94mDEVOPS24/lektion10
+(B[m$ cd ..
+[?2004l[?2004h[94mDEVOPS24 (B[m$ cd ..
+[?2004l[?2004h[94m(B[m$ [H[2J[94m(B[m$ ls
+[?2004lbin  date  DEVOPS24  README.md
+[?2004h[94m(B[m$ ./bin/
+daystart  educator  reset     student   
+[94m(B[m$ ./bin/educator [1@l[1@e[1@s[1@s[1@ 
+[?2004l[?1049h[22;0;0t[?1h=#!/bin/bash
+
+set -euo pipefail
+
+cd "$(dirname "${BASH_SOURCE[0]}")"
+root="$(git rev-parse --show-toplevel)"
+source "$root/.shared/repo.bash"
+
+mode=present
+for param in "$@"; do
+        case "$param" in
+        --edit)
+                mode=edit
+                ;;
+[7m./bin/educator[27m[K[K        *)
+                msg_error "Unknown parameter: $param ($*)"
+                exit 1
+                ;;
+        esac
+done
+
+if [[ $mode == present ]]; then
+        msg <<-EOM
+                Utbildarläget skriver över filer och inställningar som då går förlora de.
+                Det gör det även svårare att hänga med "live" eftersom det blir möjli gt att
+                ändra filer, vilka kan orsaka konflikter när du hämtar uppdateringar.
+:[K[K        EOM
+
+        answer=$(
+                ask --default n "Är du säker på att du vill slå på utbildarläget? (j/ N)" yYjJ nN
+        )
+
+        if [[ "$answer" == 'n' ]]; then
+                exit 1
+        fi
+fi
+
+sleep 1
+timestamp="$(date +%s)"
+:[K[K
+save=$(mktemp -d -t "educator-save-$timestamp-XXX")
+mv -v "$root/."{vscode,shellcheckrc,gitignore} "$save" 2>/dev/null || true
+
+killall autocommit || true
+
+if [[ $mode == present ]]; then
+        reset_vscode_profile_educator_present
+else
+        reset_vscode_profile_educator_edit
+fi
+[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KAA[K[HMfi
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM        fi
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM                exit 1
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM        if [[ "$answer" == 'n' ]]; then
+[15;1H[K:[K[K [KESCESC[KOO[KBB[K        reset_vscode_profile_educator_present
+:[K[K [KESCESC[KOO[KBB[Kelse
+:[K[K [KESCESC[KOO[KBB[K        reset_vscode_profile_educator_edit
+:[K[K [KESCESC[KOO[KBB[Kfi
+[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KAA[K[HMfi
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM        fi
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM                exit 1
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM        if [[ "$answer" == 'n' ]]; then
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM        )
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HMN)" yYjJ nN
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM                ask --default n "Är du säker på att du vill slå på utbildarläget? (j/[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM        answer=$(
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM        EOM
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM                ändra filer, vilka kan orsaka konflikter när du hämtar uppdateringar.
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HMgt att
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM                Det gör det även svårare att hänga med "live" eftersom det blir möjli[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HMde.
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM                Utbildarläget skriver över filer och inställningar som då går förlora[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM        msg <<-EOM
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HMif [[ $mode == present ]]; then
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HMdone
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM        esac
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM                ;;
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM                exit 1
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM                msg_error "Unknown parameter: $param ($*)"
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM        *)
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM                ;;
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM                mode=edit
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM        --edit)
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM        case "$param" in
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HMfor param in "$@"; do
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HMmode=present
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HMsource "$root/.shared/repo.bash"
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HMroot="$(git rev-parse --show-toplevel)"
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HMcd "$(dirname "${BASH_SOURCE[0]}")"
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HMset -euo pipefail
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[HM#!/bin/bash
+[15;1H[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KBB[K        *)
+:[K[K [KESCESC[KOO[KBB[K                msg_error "Unknown parameter: $param ($*)"
+:[K[K [KESCESC[KOO[KBB[K                exit 1
+:[K[K [KESCESC[KOO[KBB[K                ;;
+:[K[K [KESCESC[KOO[KBB[K        esac
+:[K[K [KESCESC[KOO[KBB[Kdone
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K[?1l>[?1049l[23;0;0t[?2004h[94m(B[m$ less ./bin/educator [C[C[Cs[Kess ./bin/educator [1P[1P[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C--edit
+[?2004lcreated directory '/tmp/educator-save-1746450660-fUx/.vscode'
+copied '/shared/kent/Documents/nackademin/linux1/l1-live/.vscode/extensions.json' -> '/tmp/educator-save-1746450660-fUx/.vscode/extensions.json'
+copied '/shared/kent/Documents/nackademin/linux1/l1-live/.vscode/tasks.json' -> '/tmp/educator-save-1746450660-fUx/.vscode/tasks.json'
+copied '/shared/kent/Documents/nackademin/linux1/l1-live/.vscode/settings.json' -> '/tmp/educator-save-1746450660-fUx/.vscode/settings.json'
+removed '/shared/kent/Documents/nackademin/linux1/l1-live/.vscode/extensions.json'
+removed '/shared/kent/Documents/nackademin/linux1/l1-live/.vscode/settings.json'
+removed '/shared/kent/Documents/nackademin/linux1/l1-live/.vscode/tasks.json'
+removed directory '/shared/kent/Documents/nackademin/linux1/l1-live/.vscode'
+copied '/shared/kent/Documents/nackademin/linux1/l1-live/.shellcheckrc' -> '/tmp/educator-save-1746450660-fUx/.shellcheckrc'
+removed '/shared/kent/Documents/nackademin/linux1/l1-live/.shellcheckrc'
+copied '/shared/kent/Documents/nackademin/linux1/l1-live/.gitignore' -> '/tmp/educator-save-1746450660-fUx/.gitignore'
+removed '/shared/kent/Documents/nackademin/linux1/l1-live/.gitignore'
+autocommit: no process found
+ln (hard) '/shared/kent/Documents

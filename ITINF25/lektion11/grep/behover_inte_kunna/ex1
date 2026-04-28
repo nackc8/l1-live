@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Angränsande / Context
+
+# grep för alla rader med short options, optioner med ett tecken, så inte --version men -v
+# man ls | grep -E -A 1 -- '^ +-[a-zA-Z]'
+
+# -A n visar n rader efter träffen
+# man ls | grep -E -A 2 -- '^ +-[a-zA-Z]'
+
+# -B n visar n rader före träffen
+# man ls | grep -E -B 3 -- '^ +-[a-zA-Z]'
+
+# -C n visar n rader före och efter träffen
+man ls | grep -E -C 3 -- '^ +-[a-zA-Z]'

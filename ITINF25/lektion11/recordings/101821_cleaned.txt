@@ -1,0 +1,466 @@
+Script started on 2025-10-06 10:18:21+02:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="102" LINES="14"]
+ITINF25/lektion11
+$ ITINF25/lektion11
+$ man babash
+BASH(1)                               General Commands Manual                               BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash is Copyright (C) 1989-2022 by the Free Software Foundation, Inc.
+
+DESCRIPTION
+       Bash  is  an sh-compatible command language interpreter that executes commands read from the
+       standard input or from a file.  Bash also incorporates useful features from the Korn  and  C
+       shells (ksh and csh).
+
+>ITINF25/lektion111) line 1 (press h for help or q to quit)
+$ man basgrep
+GREP(1)                                    User Commands                                    GREP(1)
+
+NAME
+       grep, egrep, fgrep, rgrep - print lines that match patterns
+
+SYNOPSIS
+       grep [OPTION...] PATTERNS [FILE...]
+       grep [OPTION...] -e PATTERNS ... [FILE...]
+       grep [OPTION...] -f PATTERN_FILE ... [FILE...]
+
+DESCRIPTION
+       grep  searches  for  PATTERNS  in  each FILE.  PATTERNS is one or more patterns separated by
+       newline characters, and grep prints each line that matches a  pattern.   Typically  PATTERNS
+       should be quoted when grep is used in a shell command.
+
+       A  FILE  of  “-” stands for standard input.  If no FILE is given, recursive searches examine
+       the working directory, and nonrecursive searches read standard input.
+ ESESCOBpage grep(1) line 2 (press h for help or q to quit)
+       Debian also includes the variant programs egrep, fgrep and rgrep.  These  programs  are  the
+       same  as  grep -E,  grep -F,  and  grep -r,  respectively.   These  variants  are deprecated
+       upstream, but Debian provides for backward compatibility. For  portability  reasons,  it  is
+       recommended to avoid the variant programs, and use grep with the related option instead.
+ ESESCOBpage grep(1) line 7 (press h for help or q to quit)
+OPTIONSBpage grep(1) line 8 (press h for help or q to quit)
+   Generic Program Informationress h for help or q to quit)
+       --help Output a usage message and exit. or q to quit)
+ ESESCOBpage grep(1) line 11 (press h for help or q to quit)
+       -V, --version line 12 (press h for help or q to quit)
+              Output the version number of grep and exit.it)
+ ESESCOBpage grep(1) line 14 (press h for help or q to quit)
+   Pattern Syntax(1) line 15 (press h for help or q to quit)
+       -E, --extended-regexp (press h for help or q to quit)
+              Interpret PATTERNS as extended regular expressions (EREs, see below).
+ ESESCOBpage grep(1) line 18 (press h for help or q to quit)
+       -F, --fixed-strings19 (press h for help or q to quit)
+              Interpret PATTERNS as fixed strings, not regular expressions.
+ ESESCOBpage grep(1) line 21 (press h for help or q to quit)
+       -G, --basic-regexp 22 (press h for help or q to quit)
+              Interpret  PATTERNS  as  basic  regular  expressions  (BREs, see below).  This is the
+              default.ine 24 (press h for help or q to quit)
+ ESESCOBpage grep(1) line 25 (press h for help or q to quit)
+       -P, --perl-regexpe 26 (press h for help or q to quit)
+              Interpret PATTERNS as Perl-compatible regular expressions (PCREs).   This  option  is
+              experimental  when combined with the -z (--null-data) option, and grep -P may warn of
+              unimplemented features. for help or q to quit)
+ ESESCOBpage grep(1) line 30 (press h for help or q to quit)
+   Matching Control) line 31 (press h for help or q to quit)
+       -e PATTERNS, --regexp=PATTERNS for help or q to quit)
+              Use PATTERNS as the patterns.  If this option is used multiple times or  is  combined
+              with  the -f (--file) option, search for all patterns given.  This option can be used
+              to protect a pattern beginning with “-”.t)
+ ESESCOBpage grep(1) line 36 (press h for help or q to quit)
+       -f FILE, --file=FILE7 (press h for help or q to quit)
+              Obtain patterns from FILE, one per line.  If this option is used multiple times or is
+              combined  with  the  -e  (--regexp) option, search for all patterns given.  The empty
+              file contains zero patterns, and therefore matches nothing.
+ ESESCOBpage grep(1) line 41 (press h for help or q to quit)
+       -i, --ignore-casee 42 (press h for help or q to quit)
+              Ignore case distinctions in patterns and input data, so that characters  that  differ
+              only in case match each other.lp or q to quit)
+ ESESCOBpage grep(1) line 45 (press h for help or q to quit)
+       --no-ignore-casene 46 (press h for help or q to quit)
+              Do  not  ignore  case  distinctions in patterns and input data.  This is the default.
+              This option is useful for passing to shell scripts that already use -i, to cancel its
+              effects because the two options override each other.
+ ESESCOBpage grep(1) line 50 (press h for help or q to quit)
+       -v, --invert-match 51 (press h for help or q to quit)
+              Invert the sense of matching, to select non-matching lines.
+ ESESCOBpage grep(1) line 53 (press h for help or q to quit)
+       -w, --word-regexpe 54 (press h for help or q to quit)
+              Select  only  those lines containing matches that form whole words.  The test is that
+              the matching substring must either be at the beginning of the line, or preceded by  a
+              non-word  constituent character.  Similarly, it must be either at the end of the line
+              or followed by a non-word constituent  character.   Word-constituent  characters  are
+              letters,  digits,  and  the  underscore.   This  option  has  no effect if -x is also
+              specified.e 60 (press h for help or q to quit)
+ ESESCOBpage grep(1) line 61 (press h for help or q to quit)
+       -x, --line-regexpe 62 (press h for help or q to quit)
+              Select only those  matches  that  exactly  match  the  whole  line.   For  a  regular
+              expression  pattern,  this is like parenthesizing the pattern and then surrounding it
+              with ^ and $.5 (press h for help or q to quit)
+ ESESCOBpage grep(1) line 66 (press h for help or q to quit)
+   General Output Control 67 (press h for help or q to quit)
+       -c, --count1) line 68 (press h for help or q to quit)
+              Suppress normal output; instead print a count of matching lines for each input  file.
+              With the -v, --invert-match option (see above), count non-matching lines.
+ ESESCOBpage grep(1) line 71 (press h for help or q to quit)
+       --color[=WHEN], --colour[=WHEN]for help or q to quit)
+              Surround  the matched (non-empty) strings, matching lines, context lines, file names,
+              line numbers, byte offsets, and separators (for fields and groups of  context  lines)
+              with  escape  sequences  to  display  them  in color on the terminal.  The colors are
+              defined by the environment variable GREP_COLORS.  WHEN is never, always, or auto.
+ ESESCOBpage grep(1) line 77 (press h for help or q to quit)
+       -L, --files-without-matchess h for help or q to quit)
+              Suppress normal output; instead print the name of  each  input  file  from  which  no
+              output would normally have been printed. quit)
+ ESESCOBpage grep(1) line 81 (press h for help or q to quit)
+       -l, --files-with-matchesress h for help or q to quit)
+              Suppress  normal  output; instead print the name of each input file from which output
+              would normally have been printed.  Scanning each input file stops upon first match.
+ ESESCOBpage grep(1) line 85 (press h for help or q to quit)
+       -m NUM, --max-count=NUMpress h for help or q to quit)
+              Stop reading a file after NUM matching lines.  If NUM is zero, grep stops right  away
+              without  reading  input.   A NUM of -1 is treated as infinity and grep does not stop;
+              this is the default.  If the input is standard input from a  regular  file,  and  NUM
+              matching lines are output, grep ensures that the standard input is positioned to just
+              after the last matching line before exiting, regardless of the presence  of  trailing
+              context  lines.   This enables a calling process to resume a search.  When grep stops
+              after NUM matching lines, it outputs any trailing context  lines.   When  the  -c  or
+              --count option is also used, grep does not output a count greater than NUM.  When the
+              -v or --invert-match option is also  used,  grep  stops  after  outputting  NUM  non-
+              matching lines.(press h for help or q to quit)
+ ESESCOBpage grep(1) line 97 (press h for help or q to quit)
+       -o, --only-matching98 (press h for help or q to quit)
+              Print only the matched (non-empty) parts of a matching line, with each such part on a
+              separate output line.s h for help or q to quit)
+ ESESCOBpage grep(1) line 101 (press h for help or q to quit)
+       -q, --quiet, --silent2 (press h for help or q to quit)
+              Quiet; do not write anything to standard output.  Exit immediately with  zero  status
+              if  any  match  is  found,  even  if  an  error  was  detected.   Also  see the -s or
+              --no-messages option.s h for help or q to quit)
+ ESESCOBpage grep(1) line 106 (press h for help or q to quit)
+       -s, --no-messagese 107 (press h for help or q to quit)
+              Suppress error messages about nonexistent or unreadable files.
+ ESESCOBpage grep(1) line 109 (press h for help or q to quit)
+   Output Line Prefix Control (press h for help or q to quit)
+       -b, --byte-offsete 111 (press h for help or q to quit)
+              Print the 0-based byte offset within the input file before each line of  output.   If
+              -o (--only-matching) is specified, print the offset of the matching part itself.
+ ESESCOBpage grep(1) line 114 (press h for help or q to quit)
+       -H, --with-filename115 (press h for help or q to quit)
+              Print  the file name for each match.  This is the default when there is more than one
+              file to search.  This is a GNU extension. quit)
+ ESESCOBpage grep(1) line 118 (press h for help or q to quit)
+       -h, --no-filenamee 119 (press h for help or q to quit)
+              Suppress the prefixing of file names on output.  This is the default  when  there  is
+              only one file (or only standard input) to search.
+ ESESCOBpage grep(1) line 122 (press h for help or q to quit)
+       --label=LABEL line 123 (press h for help or q to quit)
+              Display  input  actually  coming from standard input as input coming from file LABEL.
+              This can be useful for commands that transform a file's  contents  before  searching,
+              e.g., gzip -cd foo.gz | grep --label=foo -H 'some pattern'.  See also the -H option.
+ ESESCOBpage grep(1) line 127 (press h for help or q to quit)
+       -n, --line-numbere 128 (press h for help or q to quit)
+              Prefix each line of output with the 1-based line number within its input file.
+ ESESCOBpage grep(1) line 130 (press h for help or q to quit)
+       -T, --initial-tabe 131 (press h for help or q to quit)
+              Make sure that the first character of actual line content lies on a tab stop, so that
+              the alignment of tabs looks normal.  This is useful with options  that  prefix  their
+              output  to  the  actual  content: -H,-n, and -b.  In order to improve the probability
+              that lines from a single file will all start at the same column, this also causes the
+              line number and byte offset (if present) to be printed in a minimum size field width.
+ ESESCOBpage grep(1) line 137 (press h for help or q to quit)
+       -Z, --null(1) line 138 (press h for help or q to quit)
+              Output  a  zero byte (the ASCII NUL character) instead of the character that normally
+              follows a file name.  For example, grep -lZ outputs a zero byte after each file  name
+              instead  of the usual newline.  This option makes the output unambiguous, even in the
+              presence of file names containing unusual characters like newlines.  This option  can
+              be  used  with  commands like find -print0, perl -0, sort -z, and xargs -0 to process
+              arbitrary file names, even those that contain newline characters.
+ ESESCOBpage grep(1) line 145 (press h for help or q to quit)
+   Context Line Controlne 146 (press h for help or q to quit)
+       -A NUM, --after-context=NUMss h for help or q to quit)
+              Print NUM lines of trailing context after matching lines.  Places a line containing a
+              group  separator  (--)  between  contiguous  groups  of  matches.   With  the  -o  or
+              --only-matching option, this has no effect and a warning is given.
+ ESESCOBpage grep(1) line 151 (press h for help or q to quit)
+       -B NUM, --before-context=NUMs h for help or q to quit)
+              Print NUM lines of leading context before matching lines.  Places a line containing a
+              group  separator  (--)  between  contiguous  groups  of  matches.   With  the  -o  or
+              --only-matching option, this has no effect and a warning is given.
+ ESESCOBpage grep(1) line 156 (press h for help or q to quit)
+       -C NUM, -NUM, --context=NUMss h for help or q to quit)
+              Print NUM lines of output context.  Places a line containing a group  separator  (--)
+              between  contiguous  groups  of matches.  With the -o or --only-matching option, this
+              has no effect and a warning is given.q to quit)
+ ESESCOBpage grep(1) line 161 (press h for help or q to quit)
+ Manual page grep(1) line 162 (press h for help or q to quit)   Context Line Control
+       -A NUM, --after-context=NUM
+              Print NUM lines of trailing context after matching lines.  Places a line containing a
+              group  separator  (--)  between  contiguous  groups  of  matches.   With  the  -o  or
+              --only-matching option, this has no effect and a warning is given.
+
+       -B NUM, --before-context=NUM
+              Print NUM lines of leading context before matching lines.  Places a line containing a
+              group  separator  (--)  between  contiguous  groups  of  matches.   With  the  -o  or
+              --only-matching option, this has no effect and a warning is given.
+
+       -C NUM, -NUM, --context=NUM
+              Print NUM lines of output context.  Places a line containing a group  separator  (--)
+              between  contiguous  groups  of matches.  With the -o or --only-matching option, this
+              has no effect and a warning is given.
+
+ Manual page grep(1) line 162 (press h for help or q to quit)   Context Line Control
+       -A NUM, --after-context=NUM
+              Print NUM lines of trailing context after matching lines.  Places a line containing a
+              group  separator  (--)  between  contiguous  groups  of  matches.   With  the  -o  or
+              --only-matching option, this has no effect and a warning is given.
+
+       -B NUM, --before-context=NUM
+              Print NUM lines of leading context before matching lines.  Places a line containing a
+              group  separator  (--)  between  contiguous  groups  of  matches.   With  the  -o  or
+              --only-matching option, this has no effect and a warning is given.
+
+       -C NUM, -NUM, --context=NUM
+              Print NUM lines of output context.  Places a line containing a group  separator  (--)
+              between  contiguous  groups  of matches.  With the -o or --only-matching option, this
+              has no effect and a warning is given.
+
+ Manual page grep(1) line 162 (press h for help or q to quit)   Context Line Control
+       -A NUM, --after-context=NUM
+              Print NUM lines of trailing context after matching lines.  Places a line containing a
+              group  separator  (--)  between  contiguous  groups  of  matches.   With  the  -o  or
+              --only-matching option, this has no effect and a warning is given.
+
+       -B NUM, --before-context=NUM
+              Print NUM lines of leading context before matching lines.  Places a line containing a
+              group  separator  (--)  between  contiguous  groups  of  matches.   With  the  -o  or
+              --only-matching option, this has no effect and a warning is given.
+
+       -C NUM, -NUM, --context=NUM
+              Print NUM lines of output context.  Places a line containing a group  separator  (--)
+              between  contiguous  groups  of matches.  With the -o or --only-matching option, this
+              has no effect and a warning is given.
+
+ Manual page grep(1) line 162 (press h for help or q to quit)   Context Line Control
+       -A NUM, --after-context=NUM
+              Print NUM lines of trailing context after matching lines.  Places a line containing a
+              group  separator  (--)  between  contiguous  groups  of  matches.   With  the  -o  or
+              --only-matching option, this has no effect and a warning is given.
+
+       -B NUM, --before-context=NUM
+              Print NUM lines of leading context before matching lines.  Places a line containing a
+              group  separator  (--)  between  contiguous  groups  of  matches.   With  the  -o  or
+              --only-matching option, this has no effect and a warning is given.
+
+       -C NUM, -NUM, --context=NUM
+              Print NUM lines of output context.  Places a line containing a group  separator  (--)
+              between  contiguous  groups  of matches.  With the -o or --only-matching option, this
+              has no effect and a warning is given.
+
+ Manual page grep(1) line 162 (press h for help or q to quit)   Context Line Control
+       -A NUM, --after-context=NUM
+              Print NUM lines of trailing context after matching lines.  Places a line containing a
+              group  separator  (--)  between  contiguous  groups  of  matches.   With  the  -o  or
+              --only-matching option, this has no effect and a warning is given.
+
+       -B NUM, --before-context=NUM
+              Print NUM lines of leading context before matching lines.  Places a line containing a
+              group  separator  (--)  between  contiguous  groups  of  matches.   With  the  -o  or
+              --only-matching option, this has no effect and a warning is given.
+ Manual page grep(1) line 162 (press h for help or q to quit)   Context Line Control
+       -A NUM, --after-context=NUM
+              Print NUM lines of trailing context after matching lines.  Places a line containing a
+              group  separator  (--)  between  contiguous  groups  of  matches.   With  the  -o  or
+              --only-matching option, this has no effect and a warning is given.
+
+       -B NUM, --before-context=NUM
+              Print NUM lines of leading context before matching lines.  Places a line containing a
+              group  separator  (--)  between  contiguous  groups  of  matches.   With  the  -o  or
+              --only-matching option, this has no effect and a warning is given.
+ Manual page grep(1) line 162 (press h for help or q to quit)   Context Line Control
+       -A NUM, --after-context=NUM
+              Print NUM lines of trailing context after matching lines.  Places a line containing a
+              group  separator  (--)  between  contiguous  groups  of  matches.   With  the  -o  or
+              --only-matching option, this has no effect and a warning is given.
+
+       -B NUM, --before-context=NUM
+              Print NUM lines of leading context before matching lines.  Places a line containing a
+              group  separator  (--)  between  contiguous  groups  of  matches.   With  the  -o  or
+              --only-matching option, this has no effect and a warning is give Manual page grep(1) line 162 (press h for help or q to quit)   Context Line Control
+       -A NUM, --after-context=NUM
+              Print NUM lines of trailing context after matching lines.  Places a line containing a
+              group  separator  (--)  between  contiguous  groups  of  matches.   With  the  -o  or
+              --only-matching option, this has no effect and a warning is given.
+
+       -B NUM, --before-context=NUM
+              Print NUM lines of leading context before matching lines.  Places a line containing a
+              group  separator  (--)  between  contiguous  groups  of  matches.   With  the  -o  or
+ Manual page grep(1) line 162 (press h for help or q to quit)   Context Line Control
+       -A NUM, --after-context=NUM
+              Print NUM lines of trailing context after matching lines.  Places a line containing a
+              group  separator  (--)  between  contiguous  groups  of  matches.   With  the  -o  or
+              --only-matching option, this has no effect and a warning is given.
+
+       -B NUM, --before-context=NUM
+              Print NUM lines of leading context before matching lines.  Places a line containing a
+              group  separator  (--)  between  contiguous  groups  of  matches Manual page grep(1) line 162 (press h for help or q to quit)   Context Line Control
+       -A NUM, --after-context=NUM
+              Print NUM lines of trailing context after matching lines.  Places a line containing a
+              group  separator  (--)  between  contiguous  groups  of  matches.   With  the  -o  or
+              --only-matching option, this has no effect and a warning is given.
+
+       -B NUM, --before-context=NUM
+              Print NUM lines of leading context before matching lines.  Places a line containing a
+>ITINF25/lektion111) line 162 (press h for help or q to quit)
+$ 
+ITINF25/lektion11
+man basgrepsh
+$ man grep
+GREP(1)                         User Commands                         GREP(1)
+
+NAME
+       grep, egrep, fgrep, rgrep - print lines that match patterns
+
+SYNOPSIS
+       grep [OPTION...] PATTERNS [FILE...]
+       grep [OPTION...] -e PATTERNS ... [FILE...]
+       grep [OPTION...] -f PATTERN_FILE ... [FILE...]
+
+DESCRIPTION
+       grep  searches  for  PATTERNS  in  each FILE.  PATTERNS is one or more
+GREP(1)                         User Commands                         GREP(1)
+
+NAME
+       grep, egrep, fgrep, rgrep - print lines that match patterns
+
+SYNOPSIS
+       grep [OPTION...] PATTERNS [FILE...]
+       grep [OPTION...] -e PATTERNS ... [FILE...]
+       grep [OPTION...] -f PATTERN_FILE ... [FILE...]
+
+DESCRIPTION
+       grep  searches  for  PATTERNS  in  each FILE.  PATTERNS is one or more
+GREP(1)                         User Commands                         GREP(1)
+
+NAME
+       grep, egrep, fgrep, rgrep - print lines that match patterns
+
+SYNOPSIS
+       grep [OPTION...] PATTERNS [FILE...]
+       grep [OPTION...] -e PATTERNS ... [FILE...]
+       grep [OPTION...] -f PATTERN_FILE ... [FILE...]
+
+DESCRIPTION
+       grep  searches  for  PATTERNS  in  each FILE.  PATTERNS is one or more
+...skipping...
+       -C NUM, -NUM, --context=NUM
+              Print  NUM lines of output context.  Places a line containing a
+              group separator (--)  between  contiguous  groups  of  matches.
+              With the -o or --only-matching option, this has no effect and a
+              warning is given.
+
+       --group-separator=SEP
+              When -A, -B, or -C are in use, print SEP instead of --  between
+              groups of lines.
+
+       --no-group-separator
+              When -A, -B, or -C are in use, do not print a separator between
+MESESCOApage grep(1) line 202 (press h for help or q to quit)
+M              option, this has no effect and a warning is given.
+M              contiguous groups of matches.  With the -o  or  --only-matching
+M              Places  a  line  containing  a  group  separator  (--)  between
+M              Print NUM lines  of  leading  context  before  matching  lines.
+M       -B NUM, --before-context=NUM h for help or q to quit)
+MESESCOApage grep(1) line 196 (press h for help or q to quit)
+M              option, this has no effect and a warning is given.
+M              contiguous  groups  of matches.  With the -o or --only-matching
+M              Places  a  line  containing  a  group  separator  (--)  between
+M              Print  NUM  lines  of  trailing  context  after matching lines.
+M       -A NUM, --after-context=NUMs h for help or q to quit)
+M   Context Line Controle 190 (press h for help or q to quit)
+MESESCOApage grep(1) line 189 (press h for help or q to quit)
+              option, this has no effect and a warning is given.
+ ESESCOBpage grep(1) line 189 (press h for help or q to quit)
+       -C NUM, -NUM, --context=NUMss h for help or q to quit)
+              Print  NUM lines of output context.  Places a line containing a
+              group separator (--)  between  contiguous  groups  of  matches.
+              With the -o or --only-matching option, this has no effect and a
+              warning is given.press h for help or q to quit)
+ ESESCOBpage grep(1) line 195 (press h for help or q to quit)
+       --group-separator=SEP6 (press h for help or q to quit)
+              When -A, -B, or -C are in use, print SEP instead of --  between
+ Manual page grep(1) line 198 (press h for help or q to quit)              Places  a  line  containing  a  group  separator  (--)  between
+              contiguous groups of matches.  With the -o  or  --only-matching
+              option, this has no effect and a warning is given.
+
+       -C NUM, -NUM, --context=NUM
+              Print  NUM lines of output context.  Places a line containing a
+              group separator (--)  between  contiguous  groups  of  matches.
+              With the -o or --only-matching option, this has no effect and a
+              warning is given.
+
+       --group-separator=SEP
+              When -A, -B, or -C are in use, print SEP instead of --  between
+ Manual page grep(1) line 198 (press h for help or q to quit)              Places  a  line  containing  a  group  separator  (--)  between
+              contiguous groups of matches.  With the -o  or  --only-matching
+              option, this has no effect and a warning is given.
+
+       -C NUM, -NUM, --context=NUM
+              Print  NUM lines of output context.  Places a line containing a
+              group separator (--)  between  contiguous  groups  of  matches.
+              With the -o or --only-matching option, this has no effect and a
+              warning is given.
+
+       --group-separator=SEP
+              When -A, -B, or -C are in use, print SEP instead of --  between
+ Manual page grep(1) line 198 (press h for help or q to quit)              Places  a  line  containing  a  group  separator  (--)  between
+              contiguous groups of matches.  With the -o  or  --only-matching
+              option, this has no effect and a warning is given.
+
+       -C NUM, -NUM, --context=NUM
+              Print  NUM lines of output context.  Places a line containing a
+              group separator (--)  between  contiguous  groups  of  matches.
+              With the -o or --only-matching option, this has no effect and  Manual page grep(1) line 198 (press h for help or q to quit)              Places  a  line  containing  a  group  separator  (--)  between
+              contiguous groups of matches.  With the -o  or  --only-matching
+              option, this has no effect and a warning is given.
+
+       -C NUM, -NUM, --context=NUM
+              Print  NUM lines of output context.  Places a line containing a
+              group separator (--)  between  contiguous  groups  of  matches.
+              With the -o or --only-matching option, this has no effect and Manual page grep(1) line 198 (press h for help or q to quit)              Places  a  line  containing  a  group  separator  (--)  between
+              contiguous groups of matches.  With the -o  or  --only-matching
+              option, this has no effect and a warning is given.
+
+       -C NUM, -NUM, --context=NUM
+              Print  NUM lines of output context.  Places a line containing a
+              group separator (--)  between  contiguous  groups  of  matches.
+              With the -o or --only-matching option, this has no effect an Manual page grep(1) line 198 (press h for help or q to quit)              Places  a  line  containing  a  group  separator  (--)  between
+              contiguous groups of matches.  With the -o  or  --only-matching
+              option, this has no effect and a warning is given.
+
+       -C NUM, -NUM, --context=NUM
+              Print  NUM lines of output context.  Places a line containing a
+              group separator (--)  between  contiguous  groups  of  matches.
+              With the -o or --only-matching option, this has no effect a Manual page grep(1) line 198 (press h for help or q to quit)              Places  a  line  containing  a  group  separator  (--)  between
+              contiguous groups of matches.  With the -o  or  --only-matching
+              option, this has no effect and a warning is given.
+
+       -C NUM, -NUM, --context=NUM
+              Print  NUM lines of output context.  Places a line containing a
+              group separator (--)  between  contiguous  groups  of  matches.
+              With the -o or --only-matching option, this has no effect  Manual page grep(1) line 198 (press h for help or q to quit)              Places  a  line  containing  a  group  separator  (--)  between
+              contiguous groups of matches.  With the -o  or  --only-matching
+              option, this has no effect and a warning is given.
+
+       -C NUM, -NUM, --context=NUM
+              Print  NUM lines of output context.  Places a line containing a
+              group separator (--)  between  contiguous  groups  of  matches.
+>ITINF25/lektion11 the -o or --only-matching option, this has no effect Manual page grep(1) line 198 (press h for help or q to quit)
+$ 
+exit
+
+Script done on 2025-10-06 11:42:03+02:00 [COMMAND_EXIT_CODE="0"]

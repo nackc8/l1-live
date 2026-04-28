@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style type="text/css">
+pre {
+  font-family:Courier New;
+  font-size:10pt;
+}
+
+.af_line {
+  color: gray;
+  text-decoration: none;
+}
+
+</style>
+<title>Source file</title>
+</head>
+<body>
+<pre>/shared/kent/Documents/nackademin/linux1/l1-live/DEVOPS25/lektion5
+<span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion5
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion5
+$ ssh -p 10022 kent&#64;ipellernamlocalhost
+Warning: Permanently added &apos;[localhost]:10022&apos; (ED25519) to the list of known hosts.
+kent&#64;localhost&apos;s password: 
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-110-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue Apr 21 08:56:38 AM UTC 2026
+
+  System load:  0.0                Processes:               112
+  Usage of /:   19.0% of 24.44GB   Users logged in:         1
+  Memory usage: 12%                IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+163 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+0;kent&#64;ubse2: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse2</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 0;kent&#64;ubse2: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse2</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ exi
+
+
+
+
+
+
+exit
+logout
+Connection to localhost closed.
+<span style="color:#5c5cff;">DEVOPS25/lektion5
+</span>$ ssh-ke
+ygen rs-t ed25519  ^C
+<span style="color:#5c5cff;">DEVOPS25/lektion5
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion5
+</span>$ man ssgh-keygen 
+SSH-KEYGEN(1)             BSD General Commands Manual             SSH-KEYGEN(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> — OpenSSH authentication key utility
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> [<span style="font-weight:bold;color:#7f7f7f;">-q</span>] [<span style="font-weight:bold;color:#7f7f7f;">-a</span> <span style="text-decoration:underline;">rounds</span>] [<span style="font-weight:bold;color:#7f7f7f;">-b</span> <span style="text-decoration:underline;">bits</span>] [<span style="font-weight:bold;color:#7f7f7f;">-C</span> <span style="text-decoration:underline;">comment</span>] [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">output_keyfile</span>]
+                [<span style="font-weight:bold;color:#7f7f7f;">-m</span> <span style="text-decoration:underline;">format</span>] [<span style="font-weight:bold;color:#7f7f7f;">-N</span> <span style="text-decoration:underline;">new_passphrase</span>] [<span style="font-weight:bold;color:#7f7f7f;">-O</span> <span style="text-decoration:underline;">option</span>]
+                [<span style="font-weight:bold;color:#7f7f7f;">-t</span> <span style="font-weight:bold;color:#7f7f7f;">dsa</span> | <span style="font-weight:bold;color:#7f7f7f;">ecdsa</span> | <span style="font-weight:bold;color:#7f7f7f;">ecdsa-sk</span> | <span style="font-weight:bold;color:#7f7f7f;">ed25519</span> | <span style="font-weight:bold;color:#7f7f7f;">ed25519-sk</span> | <span style="font-weight:bold;color:#7f7f7f;">rsa</span>]
+                [<span style="font-weight:bold;color:#7f7f7f;">-w</span> <span style="text-decoration:underline;">provider</span>] [<span style="font-weight:bold;color:#7f7f7f;">-Z</span> <span style="text-decoration:underline;">cipher</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-p</span> [<span style="font-weight:bold;color:#7f7f7f;">-a</span> <span style="text-decoration:underline;">rounds</span>] [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">keyfile</span>] [<span style="font-weight:bold;color:#7f7f7f;">-m</span> <span style="text-decoration:underline;">format</span>] [<span style="font-weight:bold;color:#7f7f7f;">-N</span> <span style="text-decoration:underline;">new_passphrase</span>]
+                [<span style="font-weight:bold;color:#7f7f7f;">-P</span> <span style="text-decoration:underline;">old_passphrase</span>] [<span style="font-weight:bold;color:#7f7f7f;">-Z</span> <span style="text-decoration:underline;">cipher</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-i</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_keyfile</span>] [<span style="font-weight:bold;color:#7f7f7f;">-m</span> <span style="text-decoration:underline;">key_format</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-e</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_keyfile</span>] [<span style="font-weight:bold;color:#7f7f7f;">-m</span> <span style="text-decoration:underline;">key_format</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-y</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_keyfile</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-c</span> [<span style="font-weight:bold;color:#7f7f7f;">-a</span> <span style="text-decoration:underline;">rounds</span>] [<span style="font-weight:bold;color:#7f7f7f;">-C</span> <span style="text-decoration:underline;">comment</span>] [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">keyfile</span>] [<span style="font-weight:bold;color:#7f7f7f;">-P</span> <span style="text-decoration:underline;">passphrase</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-l</span> [<span style="font-weight:bold;color:#7f7f7f;">-v</span>] [<span style="font-weight:bold;color:#7f7f7f;">-E</span> <span style="text-decoration:underline;">fingerprint_hash</span>] [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_keyfile</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-B</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_keyfile</span>]
+<span style="color:#000000;background-color:#000000;">     </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-D</span> <span style="text-decoration:underline;">pkcs11</span>
+<span style="color:#000000;background-color:#000000;">     </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-F</span> <span style="text-decoration:underline;">hostname</span> [<span style="font-weight:bold;color:#7f7f7f;">-lv</span>] [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">known_hosts_file</span>]
+<span style="color:#000000;background-color:#000000;">     </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-H</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">known_hosts_file</span>]
+<span style="color:#000000;background-color:#000000;">     </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-K</span> [<span style="font-weight:bold;color:#7f7f7f;">-a</span> <span style="text-decoration:underline;">rounds</span>] [<span style="font-weight:bold;color:#7f7f7f;">-w</span> <span style="text-decoration:underline;">provider</span>]
+<span style="color:#000000;background-color:#000000;">     </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-R</span> <span style="text-decoration:underline;">hostname</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">known_hosts_file</span>]
+<span style="color:#000000;background-color:#000000;">     </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-r</span> <span style="text-decoration:underline;">hostname</span> [<span style="font-weight:bold;color:#7f7f7f;">-g</span>] [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_keyfile</span>]
+<span style="color:#000000;background-color:#000000;">     </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-M</span> <span style="font-weight:bold;color:#7f7f7f;">generate</span> [<span style="font-weight:bold;color:#7f7f7f;">-O</span> <span style="text-decoration:underline;">option</span>] <span style="text-decoration:underline;">output_file</span>
+<span style="color:#000000;background-color:#000000;">     </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-M</span> <span style="font-weight:bold;color:#7f7f7f;">screen</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_file</span>] [<span style="font-weight:bold;color:#7f7f7f;">-O</span> <span style="text-decoration:underline;">option</span>] <span style="text-decoration:underline;">output_file</span>
+<span style="color:#000000;background-color:#000000;">M                [</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-m</span> <span style="text-decoration:underline;">format</span>] [<span style="font-weight:bold;color:#7f7f7f;">-N</span> <span style="text-decoration:underline;">new_passphrase</span>] [<span style="font-weight:bold;color:#7f7f7f;">-O</span> <span style="text-decoration:underline;">option</span>]
+<span style="color:#000000;background-color:#000000;">M     </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ssh-keygen</span> [<span style="font-weight:bold;color:#7f7f7f;">-q</span>] [<span style="font-weight:bold;color:#7f7f7f;">-a</span> <span style="text-decoration:underline;">rounds</span>] [<span style="font-weight:bold;color:#7f7f7f;">-b</span> <span style="text-decoration:underline;">bits</span>] [<span style="font-weight:bold;color:#7f7f7f;">-C</span> <span style="text-decoration:underline;">comment</span>] [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">output_keyfile</span>]
+<span style="color:#000000;background-color:#000000;">M</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">SYNOPSIS</span>0000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M</span>page ssh-keygen(1) line 6 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M     </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ssh-keygen</span> — OpenSSH authentication key utility
+<span style="color:#000000;background-color:#000000;">     </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ssh-keygen</span> — OpenSSH authentication key utility
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> [<span style="font-weight:bold;color:#7f7f7f;">-q</span>] [<span style="font-weight:bold;color:#7f7f7f;">-a</span> <span style="text-decoration:underline;">rounds</span>] [<span style="font-weight:bold;color:#7f7f7f;">-b</span> <span style="text-decoration:underline;">bits</span>] [<span style="font-weight:bold;color:#7f7f7f;">-C</span> <span style="text-decoration:underline;">comment</span>] [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">output_keyfile</span>]
+                [<span style="font-weight:bold;color:#7f7f7f;">-m</span> <span style="text-decoration:underline;">format</span>] [<span style="font-weight:bold;color:#7f7f7f;">-N</span> <span style="text-decoration:underline;">new_passphrase</span>] [<span style="font-weight:bold;color:#7f7f7f;">-O</span> <span style="text-decoration:underline;">option</span>]
+                [<span style="font-weight:bold;color:#7f7f7f;">-t</span> <span style="font-weight:bold;color:#7f7f7f;">dsa</span> | <span style="font-weight:bold;color:#7f7f7f;">ecdsa</span> | <span style="font-weight:bold;color:#7f7f7f;">ecdsa-sk</span> | <span style="font-weight:bold;color:#7f7f7f;">ed25519</span> | <span style="font-weight:bold;color:#7f7f7f;">ed25519-sk</span> | <span style="font-weight:bold;color:#7f7f7f;">rsa</span>]
+                [<span style="font-weight:bold;color:#7f7f7f;">-w</span> <span style="text-decoration:underline;">provider</span>] [<span style="font-weight:bold;color:#7f7f7f;">-Z</span> <span style="text-decoration:underline;">cipher</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-p</span> [<span style="font-weight:bold;color:#7f7f7f;">-a</span> <span style="text-decoration:underline;">rounds</span>] [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">keyfile</span>] [<span style="font-weight:bold;color:#7f7f7f;">-m</span> <span style="text-decoration:underline;">format</span>] [<span style="font-weight:bold;color:#7f7f7f;">-N</span> <span style="text-decoration:underline;">new_passphrase</span>]
+                [<span style="font-weight:bold;color:#7f7f7f;">-P</span> <span style="text-decoration:underline;">old_passphrase</span>] [<span style="font-weight:bold;color:#7f7f7f;">-Z</span> <span style="text-decoration:underline;">cipher</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-i</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_keyfile</span>] [<span style="font-weight:bold;color:#7f7f7f;">-m</span> <span style="text-decoration:underline;">key_format</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-e</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_keyfile</span>] [<span style="font-weight:bold;color:#7f7f7f;">-m</span> <span style="text-decoration:underline;">key_format</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-y</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_keyfile</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-c</span> [<span style="font-weight:bold;color:#7f7f7f;">-a</span> <span style="text-decoration:underline;">rounds</span>] [<span style="font-weight:bold;color:#7f7f7f;">-C</span> <span style="text-decoration:underline;">comment</span>] [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">keyfile</span>] [<span style="font-weight:bold;color:#7f7f7f;">-P</span> <span style="text-decoration:underline;">passphrase</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-l</span> [<span style="font-weight:bold;color:#7f7f7f;">-v</span>] [<span style="font-weight:bold;color:#7f7f7f;">-E</span> <span style="text-decoration:underline;">fingerprint_hash</span>] [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_keyfile</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-B</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_keyfile</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-D</span> <span style="text-decoration:underline;">pkcs11</span>
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-F</span> <span style="text-decoration:underline;">hostname</span> [<span style="font-weight:bold;color:#7f7f7f;">-lv</span>] [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">known_hosts_file</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-H</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">known_hosts_file</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> — OpenSSH authentication key utility
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> [<span style="font-weight:bold;color:#7f7f7f;">-q</span>] [<span style="font-weight:bold;color:#7f7f7f;">-a</span> <span style="text-decoration:underline;">rounds</span>] [<span style="font-weight:bold;color:#7f7f7f;">-b</span> <span style="text-decoration:underline;">bits</span>] [<span style="font-weight:bold;color:#7f7f7f;">-C</span> <span style="text-decoration:underline;">comment</span>] [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">output_keyfile</span>]
+                [<span style="font-weight:bold;color:#7f7f7f;">-m</span> <span style="text-decoration:underline;">format</span>] [<span style="font-weight:bold;color:#7f7f7f;">-N</span> <span style="text-decoration:underline;">new_passphrase</span>] [<span style="font-weight:bold;color:#7f7f7f;">-O</span> <span style="text-decoration:underline;">option</span>]
+                [<span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-t</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> <span style="font-weight:bold;color:#7f7f7f;">dsa</span> | <span style="font-weight:bold;color:#7f7f7f;">ecdsa</span> | <span style="font-weight:bold;color:#7f7f7f;">ecdsa-sk</span> | <span style="font-weight:bold;color:#7f7f7f;">ed25519</span> | <span style="font-weight:bold;color:#7f7f7f;">ed25519-sk</span> | <span style="font-weight:bold;color:#7f7f7f;">rsa</span>]
+                [<span style="font-weight:bold;color:#7f7f7f;">-w</span> <span style="text-decoration:underline;">provider</span>] [<span style="font-weight:bold;color:#7f7f7f;">-Z</span> <span style="text-decoration:underline;">cipher</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-p</span> [<span style="font-weight:bold;color:#7f7f7f;">-a</span> <span style="text-decoration:underline;">rounds</span>] [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">keyfile</span>] [<span style="font-weight:bold;color:#7f7f7f;">-m</span> <span style="text-decoration:underline;">format</span>] [<span style="font-weight:bold;color:#7f7f7f;">-N</span> <span style="text-decoration:underline;">new_passphrase</span>]
+                [<span style="font-weight:bold;color:#7f7f7f;">-P</span> <span style="text-decoration:underline;">old_passphrase</span>] [<span style="font-weight:bold;color:#7f7f7f;">-Z</span> <span style="text-decoration:underline;">cipher</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-i</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_keyfile</span>] [<span style="font-weight:bold;color:#7f7f7f;">-m</span> <span style="text-decoration:underline;">key_format</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-e</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_keyfile</span>] [<span style="font-weight:bold;color:#7f7f7f;">-m</span> <span style="text-decoration:underline;">key_format</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-y</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_keyfile</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-c</span> [<span style="font-weight:bold;color:#7f7f7f;">-a</span> <span style="text-decoration:underline;">rounds</span>] [<span style="font-weight:bold;color:#7f7f7f;">-C</span> <span style="text-decoration:underline;">comment</span>] [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">keyfile</span>] [<span style="font-weight:bold;color:#7f7f7f;">-P</span> <span style="text-decoration:underline;">passphrase</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-l</span> [<span style="font-weight:bold;color:#7f7f7f;">-v</span>] [<span style="font-weight:bold;color:#7f7f7f;">-E</span> <span style="text-decoration:underline;">fingerprint_hash</span>] [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_keyfile</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-B</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_keyfile</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-D</span> <span style="text-decoration:underline;">pkcs11</span>
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-F</span> <span style="text-decoration:underline;">hostname</span> [<span style="font-weight:bold;color:#7f7f7f;">-lv</span>] [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">known_hosts_file</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-H</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">known_hosts_file</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-K</span> [<span style="font-weight:bold;color:#7f7f7f;">-a</span> <span style="text-decoration:underline;">rounds</span>] [<span style="font-weight:bold;color:#7f7f7f;">-w</span> <span style="text-decoration:underline;">provider</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-R</span> <span style="text-decoration:underline;">hostname</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">known_hosts_file</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-r</span> <span style="text-decoration:underline;">hostname</span> [<span style="font-weight:bold;color:#7f7f7f;">-g</span>] [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_keyfile</span>]
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-M</span> <span style="font-weight:bold;color:#7f7f7f;">generate</span> [<span style="font-weight:bold;color:#7f7f7f;">-O</span> <span style="text-decoration:underline;">option</span>] <span style="text-decoration:underline;">output_file</span>
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> <span style="font-weight:bold;color:#7f7f7f;">-M</span> <span style="font-weight:bold;color:#7f7f7f;">screen</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span> <span style="text-decoration:underline;">input_file</span>] [<span style="font-weight:bold;color:#7f7f7f;">-O</span> <span style="text-decoration:underline;">option</span>] <span style="text-decoration:underline;">output_file</span>
+<span style="color:#000000;background-color:#000000;">...skipping...sh-keygen(1) line 9 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+     The type of key to be generated is specified with the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-t</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> option.  If in‐
+     voked without any arguments, <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> will generate an RSA key.
+
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> is also used to generate groups for use in Diffie-Hellman group
+     exchange (DH-GEX).  See the <span style="text-decoration:underline;">MODULI</span> <span style="text-decoration:underline;">GENERATION</span> section for details.
+
+     Finally, <span style="font-weight:bold;color:#7f7f7f;">ssh-keygen</span> can be used to generate and update Key Revocation
+     Lists, and to test whether given keys have been revoked by one.  See the
+     <span style="text-decoration:underline;">KEY</span> <span style="text-decoration:underline;">REVOCATION</span> <span style="text-decoration:underline;">LISTS</span> section for details.
+
+     Normally each user wishing to use SSH with public key authentication runs
+     this once to create the authentication key in <span style="text-decoration:underline;">~/.ssh/id_dsa</span>,
+     <span style="text-decoration:underline;">~/.ssh/id_ecdsa</span>, <span style="text-decoration:underline;">~/.ssh/id_ecdsa_sk</span>, <span style="text-decoration:underline;">~/.ssh/id_ed25519</span>,
+     <span style="text-decoration:underline;">~/.ssh/id_ed25519_sk</span> or <span style="text-decoration:underline;">~/.ssh/id_rsa</span>.  Additionally, the system adminis‐
+     trator may use this to generate host keys.
+
+     Normally this program generates the key and asks for a file in which to
+     store the private key.  The public key is stored in a file with the same
+<span style="color:#000000;background-color:#000000;">...skipping...sh-keygen(1) line 47 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+             </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">verify</span><span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-t</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;">ime</span>=<span style="text-decoration:underline;">timestamp</span>
+                     Specifies a time to use when validating signatures instead
+                     of the current time.  The time may be specified as a date
+                     or time in the YYYYMMDD[Z] or in YYYYMMDDHHMM[SS][Z] for‐
+                     mats.  Dates and times will be interpreted in the current
+                     system time zone unless suffixed with a Z character, which
+                     causes them to be interpreted in the UTC time zone.
+
+             The <span style="font-weight:bold;color:#7f7f7f;">-O</span> option may be specified multiple times.
+
+     <span style="font-weight:bold;color:#7f7f7f;">-P</span> <span style="text-decoration:underline;">passphrase</span>
+             Provides the (old) passphrase.
+
+     <span style="font-weight:bold;color:#7f7f7f;">-p</span>      Requests changing the passphrase of a private key file instead of
+             creating a new private key.  The program will prompt for the file
+             containing the private key, for the old passphrase, and twice for
+             the new passphrase.
+
+<span style="color:#000000;background-color:#000000;">...skipping...sh-keygen(1) line 265 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+     </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-t</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> <span style="font-weight:bold;color:#7f7f7f;">dsa</span> | <span style="font-weight:bold;color:#7f7f7f;">ecdsa</span> | <span style="font-weight:bold;color:#7f7f7f;">ecdsa-sk</span> | <span style="font-weight:bold;color:#7f7f7f;">ed25519</span> | <span style="font-weight:bold;color:#7f7f7f;">ed25519-sk</span> | <span style="font-weight:bold;color:#7f7f7f;">rsa</span>
+             Specifies the type of key to create.  The possible values are
+             “dsa”, “ecdsa”, “ecdsa-sk”, “ed25519”, “ed25519-sk”, or “rsa”.
+
+             This flag may also be used to specify the desired signature type
+             when signing certificates using an RSA CA key.  The available RSA
+             signature variants are “ssh-rsa” (SHA1 signatures, not recom‐
+             mended), “rsa-sha2-256”, and “rsa-sha2-512” (the default).
+
+     <span style="font-weight:bold;color:#7f7f7f;">-U</span>      When used in combination with <span style="font-weight:bold;color:#7f7f7f;">-s</span> or <span style="font-weight:bold;color:#7f7f7f;">-Y</span> <span style="font-weight:bold;color:#7f7f7f;">sign</span>, this option indicates
+             that a CA key resides in a ssh-agent(1).  See the <span style="text-decoration:underline;">CERTIFICATES</span>
+             section for more information.
+
+     <span style="font-weight:bold;color:#7f7f7f;">-u</span>      Update a KRL.  When specified with <span style="font-weight:bold;color:#7f7f7f;">-k</span>, keys listed via the command
+             line are added to the existing KRL rather than a new KRL being
+             created.
+
+     <span style="font-weight:bold;color:#7f7f7f;">-V</span> <span style="text-decoration:underline;">validity_interval</span>
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS25/lektion5yle="color:#000000;background-color:#000000;">
+</span>$ ssh-ke
+ygen -t ed2551
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/kent/.ssh/id_rsa): ^C
+<span style="color:#5c5cff;">DEVOPS25/lektion5
+<span style="color:#5c5cff;">9<span style="color:#5c5cff;">DEVOPS25/lektion5
+</span>$ ssh-keygen -t ed25519
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/kent/.ssh/id_ed25519): ^C
+<span style="color:#5c5cff;">DEVOPS25/lektion5
+</span>$ ls /home/ken/home/kent~/.ssh
+config                      id_ed25519_github_personal.pub  known_hosts.old
+id_ed25519                  id_ed25519_ubsembr              known_hosts_private
+id_ed25519.pub              id_ed25519_ubsembr.pub
+id_ed25519_github_personal  known_hosts
+<span style="color:#5c5cff;">DEVOPS25/lektion5
+</span>$ rm ~/.ssh/id
+_ed25519_ubs
+embr ~/.ssh/id
+_ed25519_ub
+sembr.pub 
+<span style="color:#5c5cff;">DEVOPS25/lektion5
+ls ~/.sshrm ~/.ssh/id_ed25519_ubsembr ~/.ssh/id_ed25519_ubsembr.pub 
+config          id_ed25519_github_personal      known_hosts.old
+id_ed25519      id_ed25519_github_personal.pub  known_hosts_private
+id_ed25519.pub  known_hosts
+<span style="color:#5c5cff;">DEVOPS25/lektion5
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion5
+ssh-keygen -t ed25519ubsembr ~/.ssh/id_ed25519_ubsembr.pub 
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/kent/.ssh/id_ed25519): jisji/home/kent/.ssh/id25519_ubse2^[[D^[[D^[[D^[[_ed256519
+/home/kent/.ssh/id_ed25519 already exists.
+Overwrite (y/n)? n
+<span style="color:#5c5cff;">DEVOPS25/lektion5
+</span>$ ssh-keygen -t ed25519
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/kent/.ssh/id_ed25519): /home/kent/.ssh/id_ed25519_ubse2
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/kent/.ssh/id_ed25519_ubse2
+Your public key has been saved in /home/kent/.ssh/id_ed25519_ubse2.pub
+The key fingerprint is:
+SHA256:h6RQhzazqML98LbclsEvyXR8gYs6xdlW0a8M4nedSFs kent&#64;klad
+The key&apos;s randomart image is:
++--[ED25519 256]--+
+|      ...   .    |
+|     .=.   . .   |
+|    .o +. . . .  |
+|    ...o + + . E |
+|. ..  + S = = * .|
+|...o   O O o * o |
+| .  + = B o .    |
+|    .*.* .       |
+|    .o+..        |
++----[SHA256]-----+
+<span style="color:#5c5cff;">DEVOPS25/lektion5
+$ mkdir punkt_ssh
+<span style="color:#5c5cff;">DEVOPS25/lektion5
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion5
+</span>$ ls
+<span style="font-weight:bold;color:#5c5cff;">punkt_ssh</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion5
+</span>$ cp ~/.ssh/ed
+id
+_ed25519
+
+id_ed25519                      id_ed25519.pub
+id_ed25519_github_personal      id_ed25519_ubse2
+id_ed25519_github_personal.pub  id_ed25519_ubse2.pub
+<span style="color:#5c5cff;">DEVOPS25/lektion5
+</span>$ cp ~/.ssh/id_ed25519_us
+bs
+e2 ~/.ssh/id
+_ed25519_us
+bs
+e2.pub punkt_ssh-v
+&apos;/home/kent/.ssh/id_ed25519_ubse2&apos; -&gt; &apos;punkt_ssh/id_ed25519_ubse2&apos;
+&apos;/home/kent/.ssh/id_ed25519_ubse2.pub&apos; -&gt; &apos;punkt_ssh/id_ed25519_ubse2.pub&apos;
+<span style="color:#5c5cff;">DEVOPS25/lektion5
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion5
+</span>$ ls
+<span style="font-weight:bold;color:#5c5cff;">punkt_ssh</span>  <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion5
+</span>$ cd punkt_ssh/
+<span style="color:#5c5cff;">DEVOPS25/lektion5/punkt_ssh
+<span style="color:#5c5cff;">5c5cff;">DEVOPS25/lektion5/punkt_ssh
+</span>$ ls
+id_ed25519_ubse2  id_ed25519_ubse2.pub
+<span style="color:#5c5cff;">DEVOPS25/lektion5/punkt_ssh
+</span>$ less id
+_ed25519_ubse2
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABB7xBF25D
+TAMwQI52WgA8gXAAAAEAAAAAEAAAAzAAAAC3NzaC1lZDI1NTE5AAAAIFAJnsVHPzhAl1Z0
+r/MeStM82Fp09j25n0aAvsp/3HbaAAAAkM1c6Oeb8ycEW+7xbsITMiWqsXqy0EIZMOgF1K
+t2eEgcr/cRWNsda/GBJvoKt5BDH/cJpJS71VTzswP0gv1UnwaGFvjsq4cvPmHYi4QLvpKf
+YvmklQrs8euRyTETPIiJfqJIJUAvzN8IehfZx+mSgEuHvG8Zbm+dvHaiharUt2DEttVRjj
+bNlesDTPXMMk33Bw==
+-----END OPENSSH PRIVATE KEY-----
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS25/lektion5/punkt_ssh
+</span>$ less id_ed25519_ubse2.pub 
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFAJnsVHPzhAl1Z0r/MeStM82Fp09j25n0aAvsp/3Hba kent&#64;klad
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS25/lektion5/punkt_ssh
+</span>$ which ssh-copy-id 
+/usr/bin/ssh-copy-id
+<span style="color:#5c5cff;">DEVOPS25/lektion5/punkt_ssh
+</span>$ code <span style="color:#000000;background-color:#000000;">/usr/bin/ssh-copy-id</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">/usr/bin/ssh-copy-id
+<span style="color:#5c5cff;background-color:#000000;"></span><span style="color:#5c5cff;background-color:#000000;">DEVOPS25/lektion5/punkt_ssh
+<span style="color:#5c5cff;">">DEVOPS25/lektion5/punkt_ssh
+</span>$ ls
+id_ed25519_ubse2  id_ed25519_ubse2.pub
+<span style="color:#5c5cff;">DEVOPS25/lektion5/punkt_ssh
+</span>$ ssh-copy-idman 
+SSH-COPY-ID(1)              BSD General Commands Manual             SSH-COPY-ID(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-copy-id</span> — use locally available keys to authorise logins on a remote ma‐
+     chine
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-copy-id</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span>] [<span style="font-weight:bold;color:#7f7f7f;">-n</span>] [<span style="font-weight:bold;color:#7f7f7f;">-s</span>] [<span style="font-weight:bold;color:#7f7f7f;">-i</span> [<span style="text-decoration:underline;">identity_file</span>]] [<span style="font-weight:bold;color:#7f7f7f;">-p</span> <span style="text-decoration:underline;">port</span>] [<span style="font-weight:bold;color:#7f7f7f;">-o</span> <span style="text-decoration:underline;">ssh_option</span>]
+                 [<span style="text-decoration:underline;">user</span>&#64;]<span style="text-decoration:underline;">hostname</span>
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-copy-id</span> <span style="font-weight:bold;color:#7f7f7f;">-h</span> | <span style="font-weight:bold;color:#7f7f7f;">-</span>?
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-copy-id</span> is a script that uses ssh(1) to log into a remote machine (pre‐
+     sumably using a login password, so password authentication should be enabled,
+     unless you&apos;ve done some clever use of multiple identities).  It assembles a
+     list of one or more fingerprints (as described below) and tries to log in
+     with each key, to see if any of them are already installed (of course, if you
+<span style="color:#000000;background-color:#000000;">     are not using ssh-agent(1) this may result in you being repeatedly prompted</span>olor:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">MSSH-COPY-ID(1)              BSD General Commands Manual             SSH-COPY-ID(1)</span>r:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;"> ESESCOApage ssh-copy-id(1) line 1 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">SSH-COPY-ID(1)              BSD General Commands Manual             SSH-COPY-ID(1)</span>line 1 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-copy-id</span> — use locally available keys to authorise logins on a remote ma‐
+     chine
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-copy-id</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span>] [<span style="font-weight:bold;color:#7f7f7f;">-n</span>] [<span style="font-weight:bold;color:#7f7f7f;">-s</span>] [<span style="font-weight:bold;color:#7f7f7f;">-i</span> [<span style="text-decoration:underline;">identity_file</span>]] [<span style="font-weight:bold;color:#7f7f7f;">-p</span> <span style="text-decoration:underline;">port</span>] [<span style="font-weight:bold;color:#7f7f7f;">-o</span> <span style="text-decoration:underline;">ssh_option</span>]
+                 [<span style="text-decoration:underline;">user</span>&#64;]<span style="text-decoration:underline;">hostname</span>
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-copy-id</span> <span style="font-weight:bold;color:#7f7f7f;">-h</span> | <span style="font-weight:bold;color:#7f7f7f;">-</span>?
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-copy-id</span> is a script that uses ssh(1) to log into a remote machine (pre‐
+     sumably using a login password, so password authentication should be enabled,
+     unless you&apos;ve done some clever use of multiple identities).  It assembles a
+     list of one or more fingerprints (as described below) and tries to log in
+     with each key, to see if any of them are already installed (of course, if you
+SSH-COPY<span style="color:#000000;background-color:#000000;">-I</span><span style="color:#000000;background-color:#000000;">D(1)              BSD General Commands Manual             SSH-COPY</span><span style="color:#000000;background-color:#000000;">-I</span><span style="color:#000000;background-color:#000000;">D(1)</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-copy</span><span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-i</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;">d</span> — use locally available keys to authorise logins on a remote ma‐
+     chine
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-copy</span><span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-i</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;">d</span> [<span style="font-weight:bold;color:#7f7f7f;">-f</span>] [<span style="font-weight:bold;color:#7f7f7f;">-n</span>] [<span style="font-weight:bold;color:#7f7f7f;">-s</span>] [<span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-i</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> [<span style="text-decoration:underline;">identity_file</span>]] [<span style="font-weight:bold;color:#7f7f7f;">-p</span> <span style="text-decoration:underline;">port</span>] [<span style="font-weight:bold;color:#7f7f7f;">-o</span> <span style="text-decoration:underline;">ssh_option</span>]
+                 [<span style="text-decoration:underline;">user</span>&#64;]<span style="text-decoration:underline;">hostname</span>
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-copy</span><span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-i</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;">d</span> <span style="font-weight:bold;color:#7f7f7f;">-h</span> | <span style="font-weight:bold;color:#7f7f7f;">-</span>?
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+     <span style="font-weight:bold;color:#7f7f7f;">ssh-copy</span><span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-i</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;">d</span> is a script that uses ssh(1) to log into a remote machine (pre‐
+     sumably using a login password, so password authentication should be enabled,
+     unless you&apos;ve done some clever use of multiple identities).  It assembles a
+     list of one or more fingerprints (as described below) and tries to log in
+     with each key, to see if any of them are already installed (of course, if you
+<span style="color:#000000;background-color:#000000;">     are not using ssh-agent(1) this may result in you being repeatedly prompted</span>olor:#000000;background-color:#000000;">
+     for pass-phrases).  It then assembles a list of those that failed to log in,
+     and using ssh, enables logins with those keys on the remote server.  By de‐
+<span style="color:#000000;background-color:#000000;">     fault it adds the keys by appending them to the remote user&apos;s</span>an><span style="color:#000000;background-color:#000000;">
+     <span style="text-decoration:underline;">~/.ssh/authorized_keys</span> (creating the file, and directory, if necessary).  It
+     is also capable of detecting if the remote system is a NetScreen, and using
+     its ‘set ssh pka-dsa key ...’ command instead.
+<span style="color:#000000;background-color:#000000;"></span> page ssh-copy-id(1) line 8/115 23% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+     The options are as follows:
+<span style="color:#000000;background-color:#000000;"></span> page ssh-copy-id(1) line 10/115 23% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+     <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-i</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> <span style="text-decoration:underline;">identity_file</span>
+             Use only the key(s) contained in <span style="text-decoration:underline;">identity_file</span> (rather than looking
+<span style="color:#000000;background-color:#000000;">             for identities via ssh-add(1) or in the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">default_ID_file</span>).  If the
+             filename does not end in <span style="text-decoration:underline;">.pub</span> this is added.  If the filename is
+             omitted, the <span style="font-weight:bold;color:#7f7f7f;">default_ID_file</span> is used.
+
+             Note that this can be used to ensure that the keys copied have the
+             comment one prefers and/or extra options applied, by ensuring that
+             the key file has these set as preferred before the copy is attempted.
+
+     <span style="font-weight:bold;color:#7f7f7f;">-f</span>      Forced mode: doesn&apos;t check if the keys are present on the remote
+             server.  This means that it does not need the private key.  Of
+             course, this can result in more than one copy of the key being in‐
+             stalled on the remote system.
+
+     <span style="font-weight:bold;color:#7f7f7f;">-n</span>      do a dry-run.  Instead of installing keys on the remote system simply
+             prints the key(s) that would have been installed.
+<span style="color:#000000;background-color:#000000;">...skipping...sh-copy-id(1) line 28/115 40% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+     Default behaviour without </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-i</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span>, is to check if ‘ssh-add -L’ provides any out‐
+     put, and if so those keys are used.  Note that this results in the comment on
+     the key being the filename that was given to ssh-add(1) when the key was
+     loaded into your ssh-agent(1) rather than the comment contained in that file,
+     which is a bit of a shame.  Otherwise, if ssh-add(1) provides no keys con‐
+     tents of the <span style="font-weight:bold;color:#7f7f7f;">default_ID_file</span> will be used.
+
+     The <span style="font-weight:bold;color:#7f7f7f;">default_ID_file</span> is the most recent file that matches: <span style="text-decoration:underline;">~/.ssh/id*.pub</span>,
+     (excluding those that match <span style="text-decoration:underline;">~/.ssh/*-cert.pub</span>) so if you create a key that is
+     not the one you want <span style="font-weight:bold;color:#7f7f7f;">ssh-copy</span><span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-i</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;">d</span> to use, just use touch(1) on your preferred
+     key&apos;s <span style="text-decoration:underline;">.pub</span> file to reinstate it as the most recent.
+
+<span style="font-weight:bold;color:#7f7f7f;">EXAMPLES</span>
+     If you have already installed keys from one system on a lot of remote hosts,
+     and you then create a new key, on a new client machine, say, it can be diffi‐
+     cult to keep track of which systems on which you&apos;ve installed the new key.
+     One way of dealing with this is to load both the new key and old key(s) into
+<span style="color:#000000;background-color:#000000;">     your ssh-agent(1).  Load the new key first, without the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-c</span> option, then load
+     one or more old keys into the agent, possibly by ssh<span style="color:#000000;background-color:#000000;">-i</span><span style="color:#000000;background-color:#000000;">ng to the client ma‐</span>
+     chine that has that old key, using the <span style="font-weight:bold;color:#7f7f7f;">-A</span> option to allow agent forwarding:
+
+           user&#64;newclient$ ssh-add
+           user&#64;newclient$ ssh -A old.client
+           user&#64;oldl$ ssh-add -c
+           ... prompt for pass-phrase ...
+           user&#64;old$ logoff
+<span style="color:#000000;background-color:#000000;">           user&#64;newclient$ ssh someserver</span> for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+
+     now, if the new key is installed on the server, you&apos;ll be allowed in un‐
+     prompted, whereas if you only have the old key(s) enabled, you&apos;ll be asked
+     for confirmation, which is your cue to log back out and run
+
+           user&#64;newclient$ ssh-copy<span style="color:#000000;background-color:#000000;">-i</span><span style="color:#000000;background-color:#000000;">d </span><span style="color:#000000;background-color:#000000;">-i</span><span style="color:#000000;background-color:#000000;"> someserver</span>
+
+     The reason you might want to specify the <span style="color:#000000;background-color:#000000;">-i</span><span style="color:#000000;background-color:#000000;"> option in this case is to ensure</span>
+<span style="color:#000000;background-color:#000000;">     that the comment on the installed key is the one from the </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">.pub</span><span style="color:#000000;background-color:#000000;"> file, rather</span>
+     than just the filename that was loaded into your agent.  It also ensures that
+     only the id you intended is installed, rather than all the keys that you have
+     in your ssh-agent(1).  Of course, you can specify another id, or use the con‐
+     tents of the ssh-agent(1) as you prefer.
+
+     Having mentioned ssh-add(1)&apos;s <span style="font-weight:bold;color:#7f7f7f;">-c</span> option, you might consider using this when‐
+     ever using agent forwarding to avoid your key being hijacked, but it is much
+     better to instead use ssh(1)&apos;s <span style="text-decoration:underline;">ProxyCommand</span> and <span style="font-weight:bold;color:#7f7f7f;">-W</span> option, to bounce through
+     remote servers while always doing direct end-to-end authentication. This way
+     the middle hop(s) don&apos;t get access to your ssh-agent(1).  A web search for
+     ‘ssh proxycommand nc’ should prove enlightening (N.B. the modern approach is
+     to use the <span style="font-weight:bold;color:#7f7f7f;">-W</span> option, rather than nc(1)).
+
+<span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">SEE</span> <span style="font-weight:bold;color:#7f7f7f;">ALSO</span>
+     ssh(1), ssh-agent(1), sshd(8)
+<span style="color:#000000;background-color:#000000;">M</span>span style="color:#000000;background-color:#000000;">Pattern not found  (press RETURN)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M           user&#64;newclient$ ssh-copy</span><span style="color:#000000;background-color:#000000;">-i</span><span style="color:#000000;background-color:#000000;">d </span><span style="color:#000000;background-color:#000000;">-i</span><span style="color:#000000;background-color:#000000;"> someserver</span>
+<span style="color:#000000;background-color:#000000;">M</span>page ssh-copy-id(1) line 95/115 98% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M     for confirmation, which is your cue to log back out and run</span>it)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M     prompted, whereas if you only have the old key(s) enabled, you&apos;ll be asked</span>e="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M     now, if the new key is installed on the server, you&apos;ll be allowed in un‐</span>e="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M</span>page ssh-copy-id(1) line 91/115 95% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M           user&#64;newclient$ ssh someserver</span>for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M           user&#64;old$ logoff</span> 92% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M           ... prompt for pass-phrase ...</span>s h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M           user&#64;oldl$ ssh-add -c</span>(press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M           user&#64;newclient$ ssh -A old.client</span> help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M           user&#64;newclient$ ssh-add</span>ress h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M</span>page ssh-copy-id(1) line 84/115 88% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M     chine that has that old key, using the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-A</span> option to allow agent forwarding:
+<span style="color:#000000;background-color:#000000;">M     one or more old keys into the agent, possibly by ssh</span><span style="color:#000000;background-color:#000000;">-i</span><span style="color:#000000;background-color:#000000;">ng to the client ma‐</span>
+<span style="color:#000000;background-color:#000000;">M     your ssh-agent(1).  Load the new key first, without the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-c</span> option, then load
+<span style="color:#000000;background-color:#000000;">M     One way of dealing with this is to load both the new key and old key(s) into</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M     cult to keep track of which systems on which you&apos;ve installed the new key.</span>e="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M     and you then create a new key, on a new client machine, say, it can be diffi‐</span>e="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M     If you have already installed keys from one system on a lot of remote hosts,</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">EXAMPLES</span>"color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M</span>page ssh-copy-id(1) line 75/115 80% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M     key&apos;s </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">.pub</span><span style="color:#000000;background-color:#000000;"> file to reinstate it as the most recent.</span>
+<span style="color:#000000;background-color:#000000;">M     not the one you want </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ssh-copy</span><span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-i</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;">d</span> to use, just use touch(1) on your preferred
+<span style="color:#000000;background-color:#000000;">M     (excluding those that match </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">~/.ssh/*-cert.pub</span><span style="color:#000000;background-color:#000000;">) so if you create a key that is</span>
+<span style="color:#000000;background-color:#000000;">M     The </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">default_ID_file</span> is the most recent file that matches: <span style="text-decoration:underline;">~/.ssh/id*.pub</span>,
+<span style="color:#000000;background-color:#000000;">M</span>page ssh-copy-id(1) line 70/115 77% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M     tents of the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">default_ID_file</span> will be used.;">
+<span style="color:#000000;background-color:#000000;">M     which is a bit of a shame.  Otherwise, if ssh-add(1) provides no keys con‐</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M     loaded into your ssh-agent(1) rather than the comment contained in that file,</span>yle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M     the key being the filename that was given to ssh-add(1) when the key was</span>an style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M     put, and if so those keys are used.  Note that this results in the comment on</span>yle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M     Default behaviour without </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-i</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span>, is to check if ‘ssh-add -L’ provides any out‐
+<span style="color:#000000;background-color:#000000;">M</span>page ssh-copy-id(1) line 63/115 72% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M             ssh_config(5).</span>/115 70% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M             better to use (per-host) settings in ssh(1)&apos;s configuration file:</span>le="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M             Rather than specifying these as command line options, it is often</span>n style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M</span>page ssh-copy-id(1) line 59/115 67% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M             respectively.</span>8/115 66% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M             their argument, to allow one to set the port or other ssh(1) options,</span>yle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M             These two options are simply passed through untouched, along with</span>n style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M     </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-p</span> <span style="text-decoration:underline;">port</span>, <span style="font-weight:bold;color:#7f7f7f;">-o</span> <span style="text-decoration:underline;">ssh_option</span>
+<span style="color:#000000;background-color:#000000;">M</span>page ssh-copy-id(1) line 54/115 62% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M     </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-h</span>, <span style="font-weight:bold;color:#7f7f7f;">-</span>?  Print Usage summary
+<span style="color:#000000;background-color:#000000;">M</span>page ssh-copy-id(1) line 52/115 60% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M             tions on commands which can be used on the remote side.</span>/span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M             uploaded with sftp.  This option is useful if the server has restric‐</span>e="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M             </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">~/.ssh/authorized_keys</span><span style="color:#000000;background-color:#000000;"> file will be downloaded, modified locally and</span>
+<span style="color:#000000;background-color:#000000;">M             mands on the remote side.  With this option the user&apos;s</span>n><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M     </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-s</span>      SFTP mode: usually the public keys are installed by executing com‐
+<span style="color:#000000;background-color:#000000;">M</span>page ssh-copy-id(1) line 46/115 53% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M             prints the key(s) that would have been installed.</span>quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M     </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-n</span>      do a dry-run.  Instead of installing keys on the remote system simply
+<span style="color:#000000;background-color:#000000;">M</span>page ssh-copy-id(1) line 43/115 51% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M             stalled on the remote system.</span> h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M             course, this can result in more than one copy of the key being in‐</span>tyle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M             server.  This means that it does not need the private key.  Of</span>span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M     </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-f</span>      Forced mode: doesn&apos;t check if the keys are present on the remote
+<span style="color:#000000;background-color:#000000;">M</span>page ssh-copy-id(1) line 38/115 48% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M             the key file has these set as preferred before the copy is attempted.</span>yle="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M             comment one prefers and/or extra options applied, by ensuring that</span> style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M             Note that this can be used to ensure that the keys copied have the</span> style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M</span>page ssh-copy-id(1) line 34/115 46% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M             omitted, the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">default_ID_file</span> is used.
+<span style="color:#000000;background-color:#000000;">M             filename does not end in </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">.pub</span><span style="color:#000000;background-color:#000000;"> this is added.  If the filename is</span>
+<span style="color:#000000;background-color:#000000;">M             for identities via ssh-add(1) or in the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">default_ID_file</span>).  If the
+<span style="color:#000000;background-color:#000000;">M             Use only the key(s) contained in </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">identity_file</span><span style="color:#000000;background-color:#000000;"> (rather than looking</span>
+<span style="color:#000000;background-color:#000000;">M     </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-i</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span> <span style="text-decoration:underline;">identity_file</span>
+<span style="color:#000000;background-color:#000000;">M</span>page ssh-copy-id(1) line 28/115 40% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M     The options are as follows:</span>39% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M</span>page ssh-copy-id(1) line 26/115 37% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M     its ‘set ssh pka-dsa key ...’ command instead.</span>r q to quit)</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M     is also capable of detecting if the remote system is a NetScreen, and using</span>style="color:#000000;background-color:#000000;">
+<span style="color:#000000;background-color:#000000;">M     </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">~/.ssh/authorized_keys</span><span style="color:#000000;background-color:#000000;"> (creating the file, and directory, if necessary).  It</span>
+<span style="color:#5c5cff;background-color:#000000;">&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS25/lektion5/punkt_sshe="color:#000000;background-color:#000000;">
+</span>$ ls ~/.ssh/
+config                      id_ed25519_github_personal.pub  known_hosts.old
+id_ed25519                  id_ed25519_ubse2                known_hosts_private
+id_ed25519.pub              id_ed25519_ubse2.pub
+id_ed25519_github_personal  known_hosts
+<span style="color:#5c5cff;">DEVOPS25/lektion5/punkt_ssh
+</span>$ ssh-copy-id -i <span style="color:#000000;background-color:#000000;">id_ed25519_ubse2</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#5c5cff;background-color:#000000;">span><span style="color:#5c5cff;background-color:#000000;">DEVOPS25/lektion5/punkt_ssh
+</span>$ ssh-copy-id -i id_ed25519_ubse2 -p 10022 kent&#64;localhost
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: &quot;id_ed25519_ubse2.pub&quot;
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+Warning: Permanently added &apos;[localhost]:10022&apos; (ED25519) to the list of known hosts.
+kent&#64;localhost&apos;s password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   &quot;ssh -p &apos;10022&apos; &apos;kent&#64;localhost&apos;&quot;
+and check to make sure that only the key(s) you wanted were added.
+
+<span style="color:#5c5cff;">DEVOPS25/lektion5/punkt_ssh
+</span>$ <span style="color:#000000;background-color:#000000;">ssh -p &apos;10022&apos; &apos;kent&#64;localhost&apos;</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#5c5cff;background-color:#000000;">ssh -p &apos;10022&apos; &apos;kent&#64;localhost&apos;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS25/lektion5/punkt_ssh
+</span>$ ssh -p &apos;10022&apos; &apos;kent&#64;localhost
+
+
+
+
+
+
+
+
+
+
+
+kent&#64;localhos kent&#64;localhos
+
+
+
+Warning: Permanently added &apos;[localhost]:10022&apos; (ED25519) to the list of known hosts.
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-110-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue Apr 21 09:24:58 AM UTC 2026
+
+  System load:  0.04               Processes:               116
+  Usage of /:   19.0% of 24.44GB   Users logged in:         1
+  Memory usage: 10%                IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+163 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Tue Apr 21 08:56:38 2026 from 10.0.2.2
+0;kent&#64;ubse2: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse2</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 0;kent&#64;ubse2: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse2</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls ~/.ssh/
+authorized_keys
+0;kent&#64;ubse2: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse2</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ exit
+logout
+Connection to localhost closed.
+<span style="color:#5c5cff;">DEVOPS25/lektion5/punkt_ssh
+<span style="color:#5c5cff;">e="color:#5c5cff;">DEVOPS25/lektion5/punkt_ssh
+</span>$ ls ~/.ssh/
+config                      id_ed25519_github_personal.pub  known_hosts.old
+id_ed25519                  id_ed25519_ubse2                known_hosts_private
+id_ed25519.pub              id_ed25519_ubse2.pub
+id_ed25519_github_personal  known_hosts
+<span style="color:#5c5cff;">DEVOPS25/lektion5/punkt_ssh
+</span>$ exit
+exit
+</pre>
+</body>
+</html>
+<!--HTML generated by ansifilter 2.18, http://www.andre-simon.de/-->

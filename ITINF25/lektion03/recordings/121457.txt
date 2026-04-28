@@ -1,0 +1,414 @@
+Script started on 2025-09-18 12:14:57+02:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="61" LINES="10"]
+[?2004h[94mITINF25/lektion3
+(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [K(B[m$ [H[2J[94mITINF25/lektion3
+(B[m$ ssh ubse
+[?2004lWelcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-79-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Thu Sep 18 10:33:46 AM UTC 2025
+
+  System load:  0.0                Processes:               115
+  Usage of /:   33.5% of 15.62GB   Users logged in:         0
+  Memory usage: 7%                 IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+170 updates can be applied immediately.
+1 of these updates is a standard security update.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+1 updates could not be installed automatically. For more details,
+see /var/log/unattended-upgrades/unattended-upgrades.log
+
+Last login: Thu Sep 18 10:09:11 2025 from 10.0.2.2
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ adduser kiwi
+[?2004lfatal: Only root may add a user or group to the system.
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo !!
+[?2004lsudo adduser kiwi
+[sudo] password for kent: 
+info: Adding user `kiwi' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `kiwi' (1003) ...
+info: Adding new user `kiwi' (1003) with group `kiwi (1003)' ...
+info: Creating home directory `/home/kiwi' ...
+info: Copying files from `/etc/skel' ...
+New password: 
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for kiwi
+Enter the new value, or press ENTER for the default
+	Full Name []: 
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] 
+info: Adding new user `kiwi' to supplemental / extra groups `users' ...
+info: Adding user `kiwi' to group `users' ...
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo adduser kiwi[K[K[K[Kan[K[Kpina[K[Kneapple
+[?2004linfo: Adding user `pineapple' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `pineapple' (1004) ...
+info: Adding new user `pineapple' (1004) with group `pineapple (1004)' ...
+info: Creating home directory `/home/pineapple' ...
+info: Copying files from `/etc/skel' ...
+New password: 
+Retype new password: 
+Sorry, passwords do not match.
+passwd: Authentication token manipulation error
+passwd: password unchanged
+Try again? [y/N] y
+New password: 
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for pineapple
+Enter the new value, or press ENTER for the default
+	Full Name []: 
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] 
+info: Adding new user `pineapple' to supplemental / extra groups `users' ...
+info: Adding user `pineapple' to group `users' ...
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ addfr[K[Kgroup fruit_[Ksalad
+[?2004lfatal: Only root may add a user or group to the system.
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo !!
+[?2004lsudo addgroup fruitsalad
+info: Selecting GID from range 1000 to 59999 ...
+info: Adding group `fruitsalad' (GID 1005) ...
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo usr[Kermod --append --groups [C[Cfruit_salad [K[K[K[K[K[K[Ksalad ki wi
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo usermod --append --groups fruitsalad kiwi[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kpi neapple
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudi[Ko -u kiwi id
+[?2004luid=1003(kiwi) gid=1003(kiwi) groups=1003(kiwi),100(users),1005(fruitsalad)
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo -u kiwi id[C[1P id[1P id[1P id[1P idp idi idn ida idp idp idl ide id[1P id[1P id[1P id[1P id[1P ide ida idp idp idl ide id
+[?2004luid=1004(pineapple) gid=1004(pineapple) groups=1004(pineapple),100(users),1005(fruitsalad)
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l
+[?2004ltotal 0
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [K]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [K]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [K]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [K]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [K]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [K]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [K]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [K]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [K]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [K]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [K]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [K]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [K]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [K]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [K]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls +l[K[K-l
+[?2004ltotal 0
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ mkidr[K[K[Kdir execute-inte-read[1Pread_read[1Pinte_read_inte_read[C[C[C[C[C[C[C[C[C[H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ mkdir execute_inte_read
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l
+[?2004ltotal 4
+drwxrwxr-x 2 kent kent 4096 Sep 18 10:40 [0m[01;34mexecute_inte_read[0m
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo chown kiwi execute_inte_read/
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l
+[?2004ltotal 4
+drwxrwxr-x 2 kiwi kent 4096 Sep 18 10:40 [0m[01;34mexecute_inte_read[0m
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ mkdir hel_kiwi
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l[H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l
+[?2004ltotal 8
+drwxrwxr-x 2 kiwi kent 4096 Sep 18 10:40 [0m[01;34mexecute_inte_read[0m
+drwxrwxr-x 2 kent kent 4096 Sep 18 10:42 [01;34mhel_kiwi[0m
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo chown kent [K:[K[K[K[K[K[K kiwi:kwifi[K[K[K[Kiwi hel_kiwi/
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l[H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l
+[?2004ltotal 8
+drwxrwxr-x 2 kiwi kent 4096 Sep 18 10:40 [0m[01;34mexecute_inte_read[0m
+drwxrwxr-x 2 kiwi kiwi 4096 Sep 18 10:42 [01;34mhel_kiwi[0m
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ mkdir grupp_kiwi
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l[H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l
+[?2004ltotal 12
+drwxrwxr-x 2 kiwi kent 4096 Sep 18 10:40 [0m[01;34mexecute_inte_read[0m
+drwxrwxr-x 2 kent kent 4096 Sep 18 10:43 [01;34mgrupp_kiwi[0m
+drwxrwxr-x 2 kiwi kiwi 4096 Sep 18 10:42 [01;34mhel_kiwi[0m
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo chown :kiwi grupp_kiwi/
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l
+[?2004ltotal 12
+drwxrwxr-x 2 kiwi kent 4096 Sep 18 10:40 [0m[01;34mexecute_inte_read[0m
+drwxrwxr-x 2 kent kiwi 4096 Sep 18 10:43 [01;34mgrupp_kiwi[0m
+drwxrwxr-x 2 kiwi kiwi 4096 Sep 18 10:42 [01;34mhel_kiwi[0m
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ m[Kmkdir kiwi_parent_kent_children
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l
+[?2004ltotal 16
+drwxrwxr-x 2 kiwi kent 4096 Sep 18 10:40 [0m[01;34mexecute_inte_read[0m
+drwxrwxr-x 2 kent kiwi 4096 Sep 18 10:43 [01;34mgrupp_kiwi[0m
+drwxrwxr-x 2 kiwi kiwi 4096 Sep 18 10:42 [01;34mhel_kiwi[0m
+drwxrwxr-x 2 kent kent 4096 Sep 18 10:45 [01;34mkiwi_parent_kent_children[0m
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo chmod kwi[K[Kiwi kiwi_parent_kent_children/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -l[K[K[K[K[K[Ktouch kiwi_parent_kent_children/finfil1
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ touch kiwi_parent_kent_children/finfil1[K2
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ touch kiwi_parent_kent_children/finfil2[K3
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ chomd kiwi 
+.bash_history              hel_kiwi/
+.bash_logout               kiwi_parent_kent_children/
+.bashrc                    .profile
+.cache/                    .ssh/
+execute_inte_read/         .sudo_as_admin_successful
+grupp_kiwi/                
+]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ chomd kiwi kiwi_parent_kent_children/
+[?2004lCommand 'chomd' not found, did you mean:
+  command 'chmod' from deb coreutils (9.4-2ubuntu2)
+Try: sudo apt install <deb name>
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ chomd kiwi kiwi_parent_kent_children/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[C[1@o[H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ chmod kiwi kiwi_parent_kent_children/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lchmod: invalid mode: ‘kiwi’
+Try 'chmod --help' for more information.
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ chmod kiwi kiwi_parent_kent_children/[1P[1P[1P[1@o[1@w[1@n[H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ chown kiwi kiwi_parent_kent_children/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lchown: changing ownership of 'kiwi_parent_kent_children/': Operation not permitted
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo !!
+[?2004lsudo chown kiwi kiwi_parent_kent_children/
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -ld kiwi_parent_kent_children/[H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -ld kiwi_parent_kent_children/
+[?2004ldrwxrwxr-x 2 kiwi kent 4096 Sep 18 10:45 [0m[01;34mkiwi_parent_kent_children/[0m
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l kiwi_parent_kent_children/
+[?2004ltotal 0
+-rw-rw-r-- 1 kent kent 0 Sep 18 10:45 finfil1
+-rw-rw-r-- 1 kent kent 0 Sep 18 10:45 finfil2
+-rw-rw-r-- 1 kent kent 0 Sep 18 10:45 finfil3
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo cp kiwi_parent_kent_children/ kiwi_all[H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo cp kiwi_parent_kent_children/ kiwi_all[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lcp: -r not specified; omitting directory 'kiwi_parent_kent_children/'
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo cp kiwi_parent_kent_children/ kiwi_all[C-kiwi_parent_kent_children/ kiwi_all [A]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[Crkiwi_parent_kent_children/ kiwi_all[A]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C kiwi_parent_kent_children/ kiwi_all[A]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo cp -r kiwi_parent_kent_children/ kiwi_all[A]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C
+
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l
+[?2004ltotal 20
+drwxrwxr-x 2 kiwi kent 4096 Sep 18 10:40 [0m[01;34mexecute_inte_read[0m
+drwxrwxr-x 2 kent kiwi 4096 Sep 18 10:43 [01;34mgrupp_kiwi[0m
+drwxrwxr-x 2 kiwi kiwi 4096 Sep 18 10:42 [01;34mhel_kiwi[0m
+drwxr-xr-x 2 root root 4096 Sep 18 10:48 [01;34mkiwi_all[0m
+drwxrwxr-x 2 kiwi kent 4096 Sep 18 10:45 [01;34mkiwi_parent_kent_children[0m
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls kiwi_all/[H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls kiwi_all/
+[?2004lfinfil1  finfil2  finfil3
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls kiwi_all/[C[C[C kiwi_all/- kiwi_all/l kiwi_all/
+[?2004ltotal 0
+-rw-r--r-- 1 root root 0 Sep 18 10:48 finfil1
+-rw-r--r-- 1 root root 0 Sep 18 10:48 finfil2
+-rw-r--r-- 1 root root 0 Sep 18 10:48 finfil3
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l
+[?2004ltotal 20
+drwxrwxr-x 2 kiwi kent 4096 Sep 18 10:40 [0m[01;34mexecute_inte_read[0m
+drwxrwxr-x 2 kent kiwi 4096 Sep 18 10:43 [01;34mgrupp_kiwi[0m
+drwxrwxr-x 2 kiwi kiwi 4096 Sep 18 10:42 [01;34mhel_kiwi[0m
+drwxr-xr-x 2 root root 4096 Sep 18 10:48 [01;34mkiwi_all[0m
+drwxrwxr-x 2 kiwi kent 4096 Sep 18 10:45 [01;34mkiwi_parent_kent_children[0m
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ vh[K[Kchown -=[KR hel[K[K[Kkent [K[K[K[K[K[K[C[C -Rk -Ri -Rw -Ri -Rd -R[1P -R: -Rf -Rr -Ru -Ri -Rt -Rs -Ra -Rl -Ra -Rd -R[C[C[C kiwi_all/[H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ chown kiwi:fruitsalad -R kiwi_all/
+[?2004lchown: changing ownership of 'kiwi_all/finfil1': Operation not permitted
+chown: changing ownership of 'kiwi_all/finfil3': Operation not permitted
+chown: changing ownership of 'kiwi_all/finfil2': Operation not permitted
+chown: changing ownership of 'kiwi_all/': Operation not permitted
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ chown kiwi:fruitsalad -R kiwi_all/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@s[1@u[1@d[1@o[1@ [H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo chown kiwi:fruitsalad -R kiwi_all/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l kiwi_all/
+[?2004ltotal 0
+-rw-r--r-- 1 kiwi fruitsalad 0 Sep 18 10:48 finfil1
+-rw-r--r-- 1 kiwi fruitsalad 0 Sep 18 10:48 finfil2
+-rw-r--r-- 1 kiwi fruitsalad 0 Sep 18 10:48 finfil3
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l kiwi_all/[Cd kiwi_all/[C[C[C[C[C[C[C[C[C[C
+[?2004ldrwxr-xr-x 2 kiwi fruitsalad 4096 Sep 18 10:48 [0m[01;34mkiwi_all/[0m
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo -i [K[K[K[K[K[K green
+[?2004lPassword: 
+su: Authentication failure
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ su green[K[K[K[K[Kpije[K[Kneapple
+[?2004lPassword: 
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ [H[2J]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ ls
+[?2004lls: cannot open directory '.': Permission denied
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ cd w[Kkiwi_all
+[?2004lbash: cd: kiwi_all: Permission denied
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ exit
+[?2004lexit
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l [Kd .
+[?2004ldrwxr-x--- 9 kent kent 4096 Sep 18 10:48 [0m[01;34m.[0m
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ pwd
+[?2004l/home/kent
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo chown kent:pineapple .
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo chown kent:pineapple .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpwd[Kls -ld .[H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -ld .
+[?2004ldrwxr-x--- 9 kent pineapple 4096 Sep 18 10:48 [0m[01;34m.[0m
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -ld .[19@sudo chown kent:pineapple[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpwd[Kls -ld .[5Ppwdsudo chown kent:pineapple .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -ld .[K[Ksu pineapple
+[?2004lPassword: 
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ ls[H[2J]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ ls
+[?2004l[0m[01;34mexecute_inte_read[0m  [01;34mhel_kiwi[0m  [01;34mkiwi_parent_kent_children[0m
+[01;34mgrupp_kiwi[0m         [01;34mkiwi_all[0m
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ ls -l[H[2J]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ ls -l
+[?2004ltotal 20
+drwxrwxr-x 2 kiwi kent       4096 Sep 18 10:40 [0m[01;34mexecute_inte_read[0m
+drwxrwxr-x 2 kent kiwi       4096 Sep 18 10:43 [01;34mgrupp_kiwi[0m
+drwxrwxr-x 2 kiwi kiwi       4096 Sep 18 10:42 [01;34mhel_kiwi[0m
+drwxr-xr-x 2 kiwi fruitsalad 4096 Sep 18 10:48 [01;34mkiwi_all[0m
+drwxrwxr-x 2 kiwi kent       4096 Sep 18 10:45 [01;34mkiwi_parent_kent_children[0m
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ nano nyfil
+[?2004l[?2004h[?1049h[22;0;0t[1;14r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[12;15H(B[0;1m[37m[41m[ Directory '.' is not writable ][39;49m(B[m[H(B[0;7m  GNU nano 7.2                nyfil                          [1;60H(B[m[13d(B[0;7m^G(B[m Help     (B[0;7m^O(B[m Write Out(B[0;7m^W(B[m Where Is (B[0;7m^K(B[m Cut[49G(B[0;7m^T(B[m Execute[14d(B[0;7m^X(B[m Exit     (B[0;7m^R(B[m Read File(B[0;7m^\(B[m Replace  (B[0;7m^U(B[m Paste    (B[0;7m^J(B[m Justify[2d[?12l[?25h[?25l[12d[J[14d[?12l[?25h[14;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ touch tomfil
+[?2004ltouch: cannot touch 'tomfil': Permission denied
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ cd [K[K[Kls -ld .[H[2J]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ ls -ld .
+[?2004ldrwxr-x--- 9 kent pineapple 4096 Sep 18 10:48 [0m[01;34m.[0m
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ ls -ld kiwi_all/
+[?2004ldrwxr-xr-x 2 kiwi fruitsalad 4096 Sep 18 10:48 [0m[01;34mkiwi_all/[0m
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ cd fr[K[Kkiwi_all/
+[?2004l[?2004h]0;pineapple@ubseuefi: /home/kent/kiwi_all[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent/kiwi_all[00m$ cd ..
+[?2004l[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ ls
+[?2004l[0m[01;34mexecute_inte_read[0m  [01;34mhel_kiwi[0m  [01;34mkiwi_parent_kent_children[0m
+[01;34mgrupp_kiwi[0m         [01;34mkiwi_all[0m
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ cd hel_kiwi/
+[?2004l[?2004h]0;pineapple@ubseuefi: /home/kent/hel_kiwi[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent/hel_kiwi[00m$ ls
+[?2004l[?2004h]0;pineapple@ubseuefi: /home/kent/hel_kiwi[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent/hel_kiwi[00m$ cd ..
+[?2004l[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ ls -ld hel_kiwi/[H[2J]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ ls -ld hel_kiwi/
+[?2004ldrwxrwxr-x 2 kiwi kiwi 4096 Sep 18 10:42 [0m[01;34mhel_kiwi/[0m
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ ls -l
+[?2004ltotal 20
+drwxrwxr-x 2 kiwi kent       4096 Sep 18 10:40 [0m[01;34mexecute_inte_read[0m
+drwxrwxr-x 2 kent kiwi       4096 Sep 18 10:43 [01;34mgrupp_kiwi[0m
+drwxrwxr-x 2 kiwi kiwi       4096 Sep 18 10:42 [01;34mhel_kiwi[0m
+drwxr-xr-x 2 kiwi fruitsalad 4096 Sep 18 10:48 [01;34mkiwi_all[0m
+drwxrwxr-x 2 kiwi kent       4096 Sep 18 10:45 [01;34mkiwi_parent_kent_children[0m
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ [H[2J]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ exit
+[?2004lexit
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l
+[?2004ltotal 20
+drwxrwxr-x 2 kiwi kent       4096 Sep 18 10:40 [0m[01;34mexecute_inte_read[0m
+drwxrwxr-x 2 kent kiwi       4096 Sep 18 10:43 [01;34mgrupp_kiwi[0m
+drwxrwxr-x 2 kiwi kiwi       4096 Sep 18 10:42 [01;34mhel_kiwi[0m
+drwxr-xr-x 2 kiwi fruitsalad 4096 Sep 18 10:48 [01;34mkiwi_all[0m
+drwxrwxr-x 2 kiwi kent       4096 Sep 18 10:45 [01;34mkiwi_parent_kent_children[0m
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ mkdir f[Kgodsallad
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l godsallad/d godsallad/[H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -ld godsallad/
+[?2004ldrwxrwxr-x 2 kent kent 4096 Sep 18 10:57 [0m[01;34mgodsallad/[0m
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo chmor[Kd -R --reference=kiwi_all/
+[?2004lchmod: missing operand
+Try 'chmod --help' for more information.
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo chmod -R --reference=kiwi_all/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1@o[1@w[1@n[H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo chown -R --reference=kiwi_all/
+[?2004lchown: missing operand
+Try 'chown --help' for more information.
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo chown -R --reference=kiwi_all/[C[1@ [C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C godsallad/
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l[H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l
+[?2004ltotal 24
+drwxrwxr-x 2 kiwi kent       4096 Sep 18 10:40 [0m[01;34mexecute_inte_read[0m
+drwxrwxr-x 2 kiwi fruitsalad 4096 Sep 18 10:57 [01;34mgodsallad[0m
+drwxrwxr-x 2 kent kiwi       4096 Sep 18 10:43 [01;34mgrupp_kiwi[0m
+drwxrwxr-x 2 kiwi kiwi       4096 Sep 18 10:42 [01;34mhel_kiwi[0m
+drwxr-xr-x 2 kiwi fruitsalad 4096 Sep 18 10:48 [01;34mkiwi_all[0m
+drwxrwxr-x 2 kiwi kent       4096 Sep 18 10:45 [01;34mkiwi_parent_kent_children[0m
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ su pineapple
+[?2004lPassword: 
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ cd godsallad/
+[?2004l[?2004h]0;pineapple@ubseuefi: /home/kent/godsallad[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent/godsallad[00m$ [H[2J]0;pineapple@ubseuefi: /home/kent/godsallad[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent/godsallad[00m$ ls
+[?2004l[?2004h]0;pineapple@ubseuefi: /home/kent/godsallad[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent/godsallad[00m$ touch smask
+[?2004l[?2004h]0;pineapple@ubseuefi: /home/kent/godsallad[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent/godsallad[00m$ ei[Kxit
+[?2004lexit
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l
+[?2004ltotal 24
+drwxrwxr-x 2 kiwi kent       4096 Sep 18 10:40 [0m[01;34mexecute_inte_read[0m
+drwxrwxr-x 2 kiwi fruitsalad 4096 Sep 18 10:58 [01;34mgodsallad[0m
+drwxrwxr-x 2 kent kiwi       4096 Sep 18 10:43 [01;34mgrupp_kiwi[0m
+drwxrwxr-x 2 kiwi kiwi       4096 Sep 18 10:42 [01;34mhel_kiwi[0m
+drwxr-xr-x 2 kiwi fruitsalad 4096 Sep 18 10:48 [01;34mkiwi_all[0m
+drwxrwxr-x 2 kiwi kent       4096 Sep 18 10:45 [01;34mkiwi_parent_kent_children[0m
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ touch filfil1
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l
+[?2004ltotal 24
+drwxrwxr-x 2 kiwi kent       4096 Sep 18 10:40 [0m[01;34mexecute_inte_read[0m
+-rw-rw-r-- 1 kent kent          0 Sep 18 11:02 filfil1
+drwxrwxr-x 2 kiwi fruitsalad 4096 Sep 18 10:58 [01;34mgodsallad[0m
+drwxrwxr-x 2 kent kiwi       4096 Sep 18 10:43 [01;34mgrupp_kiwi[0m
+drwxrwxr-x 2 kiwi kiwi       4096 Sep 18 10:42 [01;34mhel_kiwi[0m
+drwxr-xr-x 2 kiwi fruitsalad 4096 Sep 18 10:48 [01;34mkiwi_all[0m
+drwxrwxr-x 2 kiwi kent       4096 Sep 18 10:45 [01;34mkiwi_parent_kent_children[0m
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo chmod[K[K[Kown kiwi filfil1 
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l
+[?2004ltotal 24
+drwxrwxr-x 2 kiwi kent       4096 Sep 18 10:40 [0m[01;34mexecute_inte_read[0m
+-rw-rw-r-- 1 kiwi kent          0 Sep 18 11:02 filfil1
+drwxrwxr-x 2 kiwi fruitsalad 4096 Sep 18 10:58 [01;34mgodsallad[0m
+drwxrwxr-x 2 kent kiwi       4096 Sep 18 10:43 [01;34mgrupp_kiwi[0m
+drwxrwxr-x 2 kiwi kiwi       4096 Sep 18 10:42 [01;34mhel_kiwi[0m
+drwxr-xr-x 2 kiwi fruitsalad 4096 Sep 18 10:48 [01;34mkiwi_all[0m
+drwxrwxr-x 2 kiwi kent       4096 Sep 18 10:45 [01;34mkiwi_parent_kent_children[0m
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo chmod o= filfil1 
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -ld [K[K filfil1 
+[?2004l-rw-rw---- 1 kiwi kent 0 Sep 18 11:02 filfil1
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ suo[K pimne[K[K[Kneapple
+[?2004lPassword: 
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ [H[2J]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ ls
+[?2004l[0m[01;34mexecute_inte_read[0m  [01;34mgrupp_kiwi[0m  [01;34mkiwi_parent_kent_children[0m
+filfil1            [01;34mhel_kiwi[0m
+[01;34mgodsallad[0m          [01;34mkiwi_all[0m
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ cd [K[K[Kls -l
+[?2004ltotal 24
+drwxrwxr-x 2 kiwi kent       4096 Sep 18 10:40 [0m[01;34mexecute_inte_read[0m
+-rw-rw---- 1 kiwi kent          0 Sep 18 11:02 filfil1
+drwxrwxr-x 2 kiwi fruitsalad 4096 Sep 18 10:58 [01;34mgodsallad[0m
+drwxrwxr-x 2 kent kiwi       4096 Sep 18 10:43 [01;34mgrupp_kiwi[0m
+drwxrwxr-x 2 kiwi kiwi       4096 Sep 18 10:42 [01;34mhel_kiwi[0m
+drwxr-xr-x 2 kiwi fruitsalad 4096 Sep 18 10:48 [01;34mkiwi_all[0m
+drwxrwxr-x 2 kiwi kent       4096 Sep 18 10:45 [01;34mkiwi_parent_kent_children[0m
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ [H[2J]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ ls
+[?2004l[0m[01;34mexecute_inte_read[0m  [01;34mgrupp_kiwi[0m  [01;34mkiwi_parent_kent_children[0m
+filfil1            [01;34mhel_kiwi[0m
+[01;34mgodsallad[0m          [01;34mkiwi_all[0m
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ nano filfil1 
+[?2004l[?2004h[?1049h[22;0;0t[1;14r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[12;15H(B[0;1m[37m[41m[ Directory '.' is not writable ][39;49m(B[m[12;9H(B[0;1m[37m[41m[ Error reading filfil1: Permission denied ][39;49m(B[m[H(B[0;7m  GNU nano 7.2              New Buffer                       [1;60H(B[m[13d(B[0;7m^G(B[m Help     (B[0;7m^O(B[m Write Out(B[0;7m^W(B[m Where Is (B[0;7m^K(B[m Cut[49G(B[0;7m^T(B[m Execute[14d(B[0;7m^X(B[m Exit     (B[0;7m^R(B[m Read File(B[0;7m^\(B[m Replace  (B[0;7m^U(B[m Paste    (B[0;7m^J(B[m Justify[2d[?12l[?25h[?25l[12d[J[14d[?12l[?25h[14;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ nano filfil1 [C[C[C[C[C[C[1P[1P[1P[1P[1@c[1@a[1@t
+[?2004lcat: filfil1: Permission denied
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ cat filfil1 [1P[1P[1P[1@l[1@e[1@s[1@s
+[?2004lfilfil1: Permission denied
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ less filfil1 [C[1P[1P[1P[1P[1@m[1@o[1@r[1@e
+[?2004lmore: cannot open filfil1: Permission denied
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ [H[2J]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ ls -l
+[?2004ltotal 24
+drwxrwxr-x 2 kiwi kent       4096 Sep 18 10:40 [0m[01;34mexecute_inte_read[0m
+-rw-rw---- 1 kiwi kent          0 Sep 18 11:02 filfil1
+drwxrwxr-x 2 kiwi fruitsalad 4096 Sep 18 10:58 [01;34mgodsallad[0m
+drwxrwxr-x 2 kent kiwi       4096 Sep 18 10:43 [01;34mgrupp_kiwi[0m
+drwxrwxr-x 2 kiwi kiwi       4096 Sep 18 10:42 [01;34mhel_kiwi[0m
+drwxr-xr-x 2 kiwi fruitsalad 4096 Sep 18 10:48 [01;34mkiwi_all[0m
+drwxrwxr-x 2 kiwi kent       4096 Sep 18 10:45 [01;34mkiwi_parent_kent_children[0m
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ echo hejsan
+[?2004lhejsan
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ [H[2J]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ [K]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ [K]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ [K]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ [K]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ [K]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ ls
+[?2004l[0m[01;34mexecute_inte_read[0m  [01;34mgrupp_kiwi[0m  [01;34mkiwi_parent_kent_children[0m
+filfil1            [01;34mhel_kiwi[0m
+[01;34mgodsallad[0m          [01;34mkiwi_all[0m
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ mkdir [K[K[K[K[K[Kls -l ed[Kxecute_inte_read/[C[C[C[C[Cd execute_inte_read/[H[2J]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ ls -ld execute_inte_read/
+[?2004ldrwxrwxr-x 2 kiwi kent 4096 Sep 18 10:40 [0m[01;34mexecute_inte_read/[0m
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ sudo chmod o=e[Kx
+[?2004l[sudo] password for pineapple: 
+sudo: a password is required
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ sudo chmod o=x[C[C[C[C[C[1P[1P[1P[1P[1P[1@e^C[?2004l[?2004h[?2004l
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ eix[K[Kxit
+[?2004lexit
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo chmod o=x execute_inte_read/[H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo chmod o=x execute_inte_read/
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ LS -[K[K[K[Kls-[K[K[K[K]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo chmod o=x execute_inte_read/[C djdj[K[K[K[K[K[C[C[C[1@u[1@=[1@r[1@,[1P[1P[1P[1P^C[?2004l[?2004h[?2004l
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ ls -l [Kd execute_inte_read/
+[?2004ldrwxrwx--x 2 kiwi kent 4096 Sep 18 10:40 [0m[01;34mexecute_inte_read/[0m
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ touch execute_inte_read/finfinfinfil
+[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ [H[2J]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ su pineapple
+[?2004lPassword: 
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ [H[2J]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ ls
+[?2004l[0m[01;34mexecute_inte_read[0m  [01;34mgrupp_kiwi[0m  [01;34mkiwi_parent_kent_children[0m
+filfil1            [01;34mhel_kiwi[0m
+[01;34mgodsallad[0m          [01;34mkiwi_all[0m
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ cd execute_inte_read/
+[?2004l[?2004h]0;pineapple@ubseuefi: /home/kent/execute_inte_read[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent/execute_inte_read[00m$ [H[2J]0;pineapple@ubseuefi: /home/kent/execute_inte_read[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent/execute_inte_read[00m$ ls
+[?2004lls: cannot open directory '.': Permission denied
+[?2004h]0;pineapple@ubseuefi: /home/kent/execute_inte_read[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent/execute_inte_read[00m$ [7mfinfinfinfil[27m [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfinfinfinfil [A]0;pineapple@ubseuefi: /home/kent/execute_inte_read[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent/execute_inte_read[00m$ [C[C[C[C[C[C[C[C[C[C[Ccfinfinfinfil[A]0;pineapple@ubseuefi: /home/kent/execute_inte_read[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent/execute_inte_read[00m$ [Cafinfinfinfil[A]0;pineapple@ubseuefi: /home/kent/execute_inte_read[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent/execute_inte_read[00m$ [C[Ctfinfinfinfil[A]0;pineapple@ubseuefi: /home/kent/execute_inte_read[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent/execute_inte_read[00m$ [C[C[C finfinfinfil[A]0;pineapple@ubseuefi: /home/kent/execute_inte_read[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent/execute_inte_read[00m$ [C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C
+[?2004l[?2004h]0;pineapple@ubseuefi: /home/kent/execute_inte_read[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent/execute_inte_read[00m$ cat finfinfinfil[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C
+[?2004l[?2004h]0;pineapple@ubseuefi: /home/kent/execute_inte_read[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent/execute_inte_read[00m$ sudo [K[K[K[K[Kexit
+[?2004lexit
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo nano execute_inte_read/finfinfinfil 
+[?2004l[?2004h[?1049h[22;0;0t[1;10r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[8;24H(B[0;7m[ Reading... ](B[m[8;23H(B[0;7m[ Read 0 lines ](B[m[H(B[0;7m  GNU nano 7.2    execute_inte_read/finfinfinfil             [1;60H(B[m[9d(B[0;7m^G(B[m Help     (B[0;7m^O(B[m Write Out(B[0;7m^W(B[m Where Is (B[0;7m^K(B[m Cut[49G(B[0;7m^T(B[m Execute[10d(B[0;7m^X(B[m Exit     (B[0;7m^R(B[m Read File(B[0;7m^\(B[m Replace  (B[0;7m^U(B[m Paste    (B[0;7m^J(B[m Justify[2d[?12l[?25h[?25l[1;50H(B[0;7m*[60G(B[m[?12l[?25h[2dr[?25l[?12l[?25ha[?25l[?12l[?25hd[?25l[?12l[?25h [?25l[?12l[?25he[?25l[?12l[?25ht[?25l[?12l[?25ht[?25l[3d[?12l[?25h[?25l[?12l[?25ht[?25l[?12l[?25hv[?25l[?12l[?25ha[?25l[4d[?12l[?25h[?25l[?12l[?25ht[?25l[?12l[?25hr[?25l[?12l[?25he[?25l[8d(B[0;7mSave modified buffer?                                        [9;1H Y(B[m Yes[K[10d(B[0;7m N(B[m No           (B[0;7m^C(B[m Cancel[K[8;23H[?12l[?25h[?25l[9d(B[0;7m^G(B[m Help[9;16H(B[0;7mM-D(B[m DOS Format (B[0;7mM-A(B[m Append     (B[0;7mM-B(B[m Backup File[10d(B[0;7m^C(B[m Cancel[16G(B[0;7mM-M(B[m Mac Format (B[0;7mM-P(B[m Prepend    (B[0;7m^T(B[m Browse[8d(B[0;7mFile Name to Write: execute_inte_read/finfinfinfil(B[m[?12l[?25h[?25l[8;23H[1K (B[0;7m[ Writing... ](B[m[K[1;50H(B[0;7m [60G(B[m[8;23H(B[0;7m[ Wrote 3 lines ](B[m[J[10d[?12l[?25h[10;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ sudo nano execute_inte_read/finfinfinfil [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C pineapple[K
+[?2004lPassword: 
+[?2004h]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ [H[2J]0;pineapple@ubseuefi: /home/kent[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent[00m$ cd execute_inte_read/
+[?2004l[?2004h]0;pineapple@ubseuefi: /home/kent/execute_inte_read[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent/execute_inte_read[00m$ ls-[K -l
+[?2004lls: cannot open directory '.': Permission denied
+[?2004h]0;pineapple@ubseuefi: /home/kent/execute_inte_read[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent/execute_inte_read[00m$ cat finfinfi nfil
+[?2004lrad ett
+tva
+tre
+[?2004h]0;pineapple@ubseuefi: /home/kent/execute_inte_read[01;32mpineapple@ubseuefi[00m:[01;34m/home/kent/execute_inte_read[00m$ [?2004l
+exit
+[?2004h]0;kent@ubseuefi: ~[01;32mkent@ubseuefi[00m:[01;34m~[00m$ exit
+[?2004llogout
+Connection to localhost closed.
+[?2004h[94mITINF25/lektion3
+(B[m$ exit
+[?2004lexit
+
+Script done on 2025-09-18 13:11:00+02:00 [COMMAND_EXIT_CODE="0"]
