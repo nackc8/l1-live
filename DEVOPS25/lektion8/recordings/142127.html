@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style type="text/css">
+pre {
+  font-family:Courier New;
+  font-size:10pt;
+}
+
+.af_line {
+  color: gray;
+  text-decoration: none;
+}
+
+</style>
+<title>Source file</title>
+</head>
+<body>
+<pre>/home/kent/Documents/l1-live/DEVOPS25/lektion8
+ <span style="font-weight:bold;color:#00ff00;">aritloop_for</span>    &apos;fin med mellanslag&apos;   <span style="font-weight:bold;color:#00ff00;">len_importer</span>    <span style="font-weight:bold;color:#00ff00;">trapex1</span>
+ <span style="font-weight:bold;color:#00ff00;">aritloop_while</span>   <span style="font-weight:bold;color:#5c5cff;">fulfiler</span>              <span style="font-weight:bold;color:#00ff00;">len_import.sh</span>   viktigt.txt
+ barnfunc         <span style="font-weight:bold;color:#5c5cff;">import_relprob</span>        <span style="font-weight:bold;color:#00ff00;">opte</span>            viktigt.txt.bak
+ <span style="font-weight:bold;color:#5c5cff;">bash-recap</span>       <span style="font-weight:bold;color:#00ff00;">len</span>                   <span style="font-weight:bold;color:#00ff00;">optx</span>
+ <span style="font-weight:bold;color:#00ff00;">brace_exp</span>        <span style="font-weight:bold;color:#00ff00;">len_func</span>              <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ <span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ ps
+    PID TTY          TIME CMD
+ 131167 pts/5    00:00:00 sh
+ 131168 pts/5    00:00:00 bash
+ 131395 pts/5    00:00:00 ps
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ <span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ ls -f
+ viktigt.txt	   len	      &apos;fin med mellanslag&apos;   len_importer
+ aritloop_for	   barnfunc    opte		     import_relprob
+ recordings	   ..	       len_func		     .
+ viktigt.txt.bak   fulfiler    optx		     trapex1
+ aritloop_while    brace_exp   bash-recap	     len_import.sh
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ ls -ps -ef<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ ps -ef
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 09:09 ?        00:00:02 /sbin/init
+root           2       0  0 09:09 ?        00:00:00 [kthreadd]
+root           3       2  0 09:09 ?        00:00:00 [pool_workqueue_release]
+root           4       2  0 09:09 ?        00:00:00 [kworker/R-kvfree_rcu_re
+root           5       2  0 09:09 ?        00:00:00 [kworker/R-rcu_gp]
+root           6       2  0 09:09 ?        00:00:00 [kworker/R-sync_wq]
+root           7       2  0 09:09 ?        00:00:00 [kworker/R-slub_flushwq]
+root           8       2  0 09:09 ?        00:00:00 [kworker/R-netns]
+root          10       2  0 09:09 ?        00:00:00 [kworker/0:0H-events_hig
+root          13       2  0 09:09 ?        00:00:00 [kworker/R-mm_percpu_wq]
+root          14       2  0 09:09 ?        00:00:00 [rcu_tasks_kthread]
+root          15       2  0 09:09 ?        00:00:00 [rcu_tasks_rude_kthread]
+root          16       2  0 09:09 ?        00:00:00 [rcu_tasks_trace_kthread
+root          17       2  0 09:09 ?        00:00:00 [ksoftirqd/0]
+root          18       2  0 09:09 ?        00:00:40 [rcu_preempt]
+root          19       2  0 09:09 ?        00:00:00 [rcu_exp_par_gp_kthread_
+root          20       2  0 09:09 ?        00:00:00 [rcu_exp_gp_kthread_work
+root          21       2  0 09:09 ?        00:00:00 [migration/0]
+root          22       2  0 09:09 ?        00:00:00 [idle_inject/0]
+root          23       2  0 09:09 ?        00:00:00 [cpuhp/0]
+root          24       2  0 09:09 ?        00:00:00 [cpuhp/2]
+root          25       2  0 09:09 ?        00:00:00 [idle_inject/2]
+root          26       2  0 09:09 ?        00:00:00 [migration/2]
+root          27       2  0 09:09 ?        00:00:00 [ksoftirqd/2]
+root          29       2  0 09:09 ?        00:00:00 [kworker/2:0H-events_hig
+root          30       2  0 09:09 ?        00:00:00 [cpuhp/4]
+root          31       2  0 09:09 ?        00:00:00 [idle_inject/4]
+root          32       2  0 09:09 ?        00:00:00 [migration/4]
+root          33       2  0 09:09 ?        00:00:00 [ksoftirqd/4]
+root          35       2  0 09:09 ?        00:00:00 [kworker/4:0H-events_hig
+root          36       2  0 09:09 ?        00:00:00 [cpuhp/6]
+root          37       2  0 09:09 ?        00:00:00 [idle_inject/6]
+root          38       2  0 09:09 ?        00:00:00 [migration/6]
+root          39       2  0 09:09 ?        00:00:00 [ksoftirqd/6]
+root          41       2  0 09:09 ?        00:00:00 [kworker/6:0H-events_hig
+root          42       2  0 09:09 ?        00:00:00 [cpuhp/8]
+root          43       2  0 09:09 ?        00:00:00 [idle_inject/8]
+root          44       2  0 09:09 ?        00:00:06 [migration/8]
+root          45       2  0 09:09 ?        00:00:00 [ksoftirqd/8]
+root          47       2  0 09:09 ?        00:00:00 [kworker/8:0H-events_hig
+root          48       2  0 09:09 ?        00:00:00 [cpuhp/9]
+root          49       2  0 09:09 ?        00:00:00 [idle_inject/9]
+root          50       2  0 09:09 ?        00:00:04 [migration/9]
+root          51       2  0 09:09 ?        00:00:00 [ksoftirqd/9]
+root          53       2  0 09:09 ?        00:00:00 [kworker/9:0H-events_hig
+root          54       2  0 09:09 ?        00:00:00 [cpuhp/10]
+root          55       2  0 09:09 ?        00:00:00 [idle_inject/10]
+root          56       2  0 09:09 ?        00:00:03 [migration/10]
+root          57       2  0 09:09 ?        00:00:00 [ksoftirqd/10]
+root          59       2  0 09:09 ?        00:00:00 [kworker/10:0H-events_hi
+root          60       2  0 09:09 ?        00:00:00 [cpuhp/11]
+root          61       2  0 09:09 ?        00:00:00 [idle_inject/11]
+root          62       2  0 09:09 ?        00:00:02 [migration/11]
+root          63       2  0 09:09 ?        00:00:00 [ksoftirqd/11]
+root          65       2  0 09:09 ?        00:00:03 [kworker/11:0H-events_hi
+root          66       2  0 09:09 ?        00:00:00 [cpuhp/1]
+root          67       2  0 09:09 ?        00:00:00 [idle_inject/1]
+root          68       2  0 09:09 ?        00:00:00 [migration/1]
+root          69       2  0 09:09 ?        00:00:01 [ksoftirqd/1]
+root          71       2  0 09:09 ?        00:00:00 [kworker/1:0H-events_hig
+root          72       2  0 09:09 ?        00:00:00 [cpuhp/3]
+root          73       2  0 09:09 ?        00:00:00 [idle_inject/3]
+root          74       2  0 09:09 ?        00:00:00 [migration/3]
+root          75       2  0 09:09 ?        00:00:00 [ksoftirqd/3]
+root          77       2  0 09:09 ?        00:00:00 [kworker/3:0H-events_hig
+root          78       2  0 09:09 ?        00:00:00 [cpuhp/5]
+root          79       2  0 09:09 ?        00:00:00 [idle_inject/5]
+root          80       2  0 09:09 ?        00:00:00 [migration/5]
+root          81       2  0 09:09 ?        00:00:00 [ksoftirqd/5]
+root          83       2  0 09:09 ?        00:00:00 [kworker/5:0H-events_hig
+root          84       2  0 09:09 ?        00:00:00 [cpuhp/7]
+root          85       2  0 09:09 ?        00:00:00 [idle_inject/7]
+root          86       2  0 09:09 ?        00:00:00 [migration/7]
+root          87       2  0 09:09 ?        00:00:00 [ksoftirqd/7]
+root          89       2  0 09:09 ?        00:00:00 [kworker/7:0H-events_hig
+root          98       2  0 09:09 ?        00:00:00 [kdevtmpfs]
+root          99       2  0 09:09 ?        00:00:00 [kworker/R-inet_frag_wq]
+root         100       2  0 09:09 ?        00:00:00 [kauditd]
+root         101       2  0 09:09 ?        00:00:00 [khungtaskd]
+root         102       2  0 09:09 ?        00:00:00 [oom_reaper]
+root         103       2  0 09:09 ?        00:00:00 [kworker/R-writeback]
+root         104       2  0 09:09 ?        00:00:01 [kcompactd0]
+root         105       2  0 09:09 ?        00:00:00 [ksmd]
+root         106       2  0 09:09 ?        00:00:01 [khugepaged]
+root         107       2  0 09:09 ?        00:00:00 [kworker/R-kintegrityd]
+root         108       2  0 09:09 ?        00:00:00 [kworker/R-kblockd]
+root         109       2  0 09:09 ?        00:00:00 [kworker/R-blkcg_punt_bi
+root         110       2  0 09:09 ?        00:00:00 [irq/9-acpi]
+root         116       2  0 09:09 ?        00:00:00 [kworker/R-tpm_dev_wq]
+root         117       2  0 09:09 ?        00:00:00 [kworker/R-edac-poller]
+root         118       2  0 09:09 ?        00:00:00 [kworker/R-devfreq_wq]
+root         122       2  0 09:09 ?        00:00:00 [kworker/R-quota_events_
+root         124       2  0 09:09 ?        00:00:06 [kworker/9:1H-events_hig
+root         125       2  0 09:09 ?        00:00:00 [kswapd0]
+root         132       2  0 09:09 ?        00:00:00 [kworker/R-kthrotld]
+root         136       2  0 09:09 ?        00:00:00 [irq/124-pciehp]
+root         137       2  0 09:09 ?        00:00:00 [irq/125-pciehp]
+root         138       2  0 09:09 ?        00:00:00 [kworker/R-acpi_thermal_
+root         139       2  0 09:09 ?        00:00:00 [hwrng]
+root         141       2  0 09:09 ?        00:00:00 [kworker/R-hfi-updates]
+root         142       2  0 09:09 ?        00:00:00 [kworker/R-mld]
+root         143       2  0 09:09 ?        00:00:00 [kworker/R-ipv6_addrconf
+root         144       2  0 09:09 ?        00:00:04 [kworker/10:1H-events_hi
+root         149       2  0 09:09 ?        00:00:00 [kworker/R-kstrp]
+root         204       2  0 09:09 ?        00:00:01 [kworker/0:1H-events_hig
+root         255       2  0 09:09 ?        00:00:01 [kworker/6:1H-events_hig
+root         261       2  0 09:09 ?        00:00:02 [kworker/8:1H-events_hig
+root         263       2  0 09:09 ?        00:00:00 [kworker/7:1H-events_hig
+root         265       2  0 09:09 ?        00:00:00 [kworker/11:1H]
+root         266       2  0 09:09 ?        00:00:00 [kworker/1:1H-events_hig
+root         267       2  0 09:09 ?        00:00:00 [kworker/5:1H-kblockd]
+root         271       2  0 09:09 ?        00:00:01 [kworker/4:1H-events_hig
+root         274       2  0 09:09 ?        00:00:01 [kworker/2:1H-events_hig
+root         299       2  0 09:09 ?        00:00:00 [kworker/3:1H-events_hig
+root         301       2  0 09:09 ?        00:00:00 [kworker/R-cryptd]
+root         302       2  0 09:09 ?        00:00:00 [kworker/R-nvme-wq]
+root         303       2  0 09:09 ?        00:00:00 [kworker/R-nvme-reset-wq
+root         304       2  0 09:09 ?        00:00:00 [kworker/R-nvme-delete-w
+root         305       2  0 09:09 ?        00:00:00 [kworker/R-nvme-auth-wq]
+root         307       2  0 09:09 ?        00:00:00 [watchdogd]
+root         366       2  0 09:09 ?        00:00:00 [irq/187-ELAN050B:00]
+root         396       2  0 09:09 ?        00:00:00 [kworker/R-ttm]
+root         397       2  0 09:09 ?        00:00:00 [card0-crtc0]
+root         398       2  0 09:09 ?        00:00:00 [card0-crtc1]
+root         399       2  0 09:09 ?        00:00:00 [card0-crtc2]
+root         400       2  0 09:09 ?        00:00:00 [card0-crtc3]
+root         595       2  0 09:09 ?        00:00:00 [kworker/R-kdmflush/254:
+root         596       2  0 09:09 ?        00:00:00 [kworker/R-kcryptd_io-25
+root         597       2  0 09:09 ?        00:00:00 [kworker/R-kcryptd-254:0
+root         598       2  0 09:09 ?        00:00:01 [dmcrypt_write/254:0]
+root         630       2  0 09:09 ?        00:00:01 [jbd2/dm-0-8]
+root         631       2  0 09:09 ?        00:00:00 [kworker/R-ext4-rsv-conv
+root         696       1  0 09:09 ?        00:00:00 /usr/lib/systemd/systemd
+systemd+     716       1  0 09:09 ?        00:00:00 /usr/lib/systemd/systemd
+root         743       1  0 09:09 ?        00:00:00 /usr/lib/systemd/systemd
+root         755       2  0 09:09 ?        00:00:00 [psimon]
+root         829       2  0 09:09 ?        00:00:00 [kworker/R-cfg80211]
+root         850       2  0 09:09 ?        00:00:00 [irq/16-processor_therma
+root         855       2  0 09:09 ?        00:00:13 [irq/190-iwlwifi:default
+root         856       2  0 09:09 ?        00:00:01 [irq/191-iwlwifi:queue_1
+root         858       2  0 09:09 ?        00:00:01 [irq/192-iwlwifi:queue_2
+root         859       2  0 09:09 ?        00:00:01 [irq/193-iwlwifi:queue_3
+root         860       2  0 09:09 ?        00:00:01 [irq/194-iwlwifi:queue_4
+root         862       2  0 09:09 ?        00:00:01 [irq/195-iwlwifi:queue_5
+root         863       2  0 09:09 ?        00:00:02 [irq/196-iwlwifi:queue_6
+root         865       2  0 09:09 ?        00:00:01 [irq/197-iwlwifi:queue_7
+root         866       2  0 09:09 ?        00:00:02 [irq/198-iwlwifi:queue_8
+root         868       2  0 09:09 ?        00:00:01 [irq/199-iwlwifi:queue_9
+root         869       2  0 09:09 ?        00:00:01 [irq/200-iwlwifi:queue_1
+root         870       2  0 09:09 ?        00:00:01 [irq/201-iwlwifi:queue_1
+root         872       2  0 09:09 ?        00:00:01 [irq/202-iwlwifi:queue_1
+root         873       2  0 09:09 ?        00:00:00 [irq/203-iwlwifi:excepti
+root         907       2  0 09:09 ?        00:00:00 [irq/204-AudioDSP]
+root         933       2  0 09:09 ?        00:00:00 [jbd2/nvme0n1p5-8]
+root         934       2  0 09:09 ?        00:00:00 [kworker/R-ext4-rsv-conv
+root        1073       1  0 09:09 ?        00:00:00 /usr/libexec/accounts-da
+avahi       1075       1  0 09:09 ?        00:00:22 avahi-daemon: running [s
+root        1076       1  0 09:09 ?        00:00:00 /usr/libexec/bluetooth/b
+message+    1078       1  0 09:09 ?        00:00:06 /usr/bin/dbus-daemon --s
+root        1085       1  0 09:09 ?        00:00:00 /usr/libexec/low-memory-
+polkitd     1088       1  0 09:09 ?        00:00:00 /usr/lib/polkit-1/polkit
+root        1090       1  0 09:09 ?        00:00:00 /usr/libexec/switcheroo-
+root        1093       1  0 09:09 ?        00:00:00 /usr/lib/systemd/systemd
+root        1094       1  0 09:09 ?        00:00:00 /usr/lib/systemd/systemd
+root        1096       1  0 09:09 ?        00:00:00 /usr/libexec/udisks2/udi
+root        1098       1  0 09:09 ?        00:00:00 /usr/sbin/virtlockd
+root        1099       1  0 09:09 ?        00:00:00 /usr/sbin/virtlogd
+avahi       1113    1075  0 09:09 ?        00:00:00 avahi-daemon: chroot hel
+root        1161       2  0 09:09 ?        00:00:00 [psimon]
+root        1162       1  0 09:09 ?        00:00:15 /usr/sbin/NetworkManager
+root        1164       1  0 09:09 ?        00:00:01 /usr/sbin/wpa_supplicant
+root        1213       1  0 09:09 ?        00:00:00 /usr/sbin/ModemManager
+root        1214       1  0 09:09 ?        00:00:00 /usr/libexec/boltd
+root        1238       1  0 09:09 ?        00:00:00 /usr/sbin/cupsd -l
+root        1262       2  0 09:09 ?        00:00:00 [krfcommd]
+root        1280       1  0 09:09 ?        00:00:00 /usr/sbin/cups-browsed
+root        1282       1  0 09:09 ?        00:00:00 /usr/sbin/cron -f
+root        1283       1  0 09:09 ?        00:00:00 /usr/sbin/libvirtd --tim
+root        1311       1  0 09:09 ?        00:00:00 /usr/sbin/gdm3
+root        1371       2  0 09:09 ?        00:00:00 [psimon]
+nobody      1418       1  0 09:09 ?        00:00:00 /usr/sbin/dnsmasq --conf
+root        1419    1418  0 09:09 ?        00:00:00 /usr/sbin/dnsmasq --conf
+rtkit       1454       1  0 09:09 ?        00:00:00 /usr/libexec/rtkit-daemo
+colord      1560       1  0 09:09 ?        00:00:00 /usr/libexec/colord
+root        1609       1  0 09:09 ?        00:00:01 /usr/libexec/upowerd
+root        1990       1  0 09:09 ?        00:00:00 /usr/libexec/power-profi
+root        1999    1311  0 09:10 ?        00:00:00 gdm-session-worker [pam/
+kent        2008       1  0 09:10 ?        00:00:00 /usr/lib/systemd/systemd
+kent        2010    2008  0 09:10 ?        00:00:00 (sd-pam)
+kent        2031    2008  0 09:10 ?        00:00:01 /usr/bin/dbus-daemon --s
+kent        2032    2008  0 09:10 ?        00:00:00 /usr/bin/pipewire
+kent        2033    2008  0 09:10 ?        00:00:00 /usr/bin/pipewire -c fil
+kent        2035    2008  0 09:10 ?        00:00:00 /usr/bin/wireplumber
+kent        2036    2008  0 09:10 ?        00:00:00 /usr/bin/pipewire-pulse
+kent        2037    2008  0 09:10 ?        00:02:35 /home/kent/.dropbox-dist
+kent        2038    2008  0 09:10 ?        00:00:00 /usr/bin/gnome-keyring-d
+kent        2039    2008  0 09:10 ?        00:00:00 /usr/bin/mpris-proxy
+kent        2079    1999  0 09:10 tty2     00:00:00 /usr/libexec/gdm-wayland
+kent        2093    2079  0 09:10 tty2     00:00:00 /usr/libexec/gnome-sessi
+kent        2143    2008  0 09:10 ?        00:00:00 /usr/libexec/gcr-ssh-age
+kent        2144    2008  0 09:10 ?        00:00:00 /usr/libexec/gnome-sessi
+kent        2145    2008  0 09:10 ?        00:00:00 /usr/bin/ssh-agent -D
+kent        2158    2008  0 09:10 ?        00:00:00 /usr/libexec/gvfsd
+kent        2164    2008  0 09:10 ?        00:00:00 /usr/libexec/gvfsd-fuse 
+kent        2166    2008  0 09:10 ?        00:00:00 /usr/libexec/gnome-sessi
+kent        2198    2008 11 09:10 ?        00:34:22 /usr/bin/gnome-shell
+kent        2201    2166  0 09:10 ?        00:00:00 /usr/libexec/at-spi-bus-
+kent        2212    2201  0 09:10 ?        00:00:04 /usr/bin/dbus-daemon --c
+kent        2249    2008  0 09:10 ?        00:00:00 /usr/libexec/at-spi2-reg
+kent        2267    2008  0 09:10 ?        00:00:00 /usr/libexec/xdg-permiss
+kent        2269    2008  0 09:10 ?        00:00:00 /usr/libexec/gnome-shell
+kent        2279    2008  0 09:10 ?        00:00:00 /usr/libexec/dconf-servi
+kent        2280    2008  0 09:10 ?        00:00:00 /usr/libexec/evolution-s
+kent        2294    2008  0 09:10 ?        00:00:00 /usr/bin/gjs -m /usr/sha
+kent        2297    2008  0 09:10 ?        00:00:56 /usr/bin/ibus-daemon --p
+kent        2298    2008  0 09:10 ?        00:00:00 /usr/libexec/gsd-a11y-se
+kent        2300    2008  0 09:10 ?        00:00:00 /usr/libexec/gsd-color
+kent        2301    2008  0 09:10 ?        00:00:00 /usr/libexec/gsd-datetim
+kent        2305    2008  0 09:10 ?        00:00:00 /usr/libexec/gsd-houseke
+kent        2306    2008  0 09:10 ?        00:00:00 /usr/libexec/gsd-keyboar
+kent        2308    2008  0 09:10 ?        00:00:00 /usr/libexec/gsd-media-k
+kent        2317    2008  0 09:10 ?        00:00:00 /usr/libexec/gsd-power
+kent        2320    2008  0 09:10 ?        00:00:00 /usr/libexec/gsd-print-n
+kent        2325    2166  0 09:10 ?        00:00:00 /usr/libexec/gsd-disk-ut
+kent        2328    2008  0 09:10 ?        00:00:00 /usr/libexec/gsd-rfkill
+kent        2332    2166  0 09:10 ?        00:00:00 /usr/libexec/evolution-d
+kent        2342    2008  0 09:10 ?        00:00:00 /usr/libexec/gsd-screens
+kent        2346    2166  0 09:10 ?        00:00:21 /usr/bin/gnome-software 
+kent        2348    2008  0 09:10 ?        00:00:03 /usr/libexec/gsd-sharing
+kent        2353    2008  0 09:10 ?        00:00:00 /usr/libexec/gsd-smartca
+kent        2373    2008  0 09:10 ?        00:00:00 /usr/libexec/gsd-sound
+kent        2374    2008  0 09:10 ?        00:00:00 /usr/libexec/gsd-usb-pro
+kent        2375    2008  0 09:10 ?        00:00:00 /usr/libexec/gsd-wacom
+kent        2443    2297  0 09:10 ?        00:00:00 /usr/libexec/ibus-dconf
+kent        2446    2297  0 09:10 ?        00:00:08 /usr/libexec/ibus-extens
+kent        2449    2008  0 09:10 ?        00:00:00 /usr/libexec/ibus-portal
+kent        2467    2008  0 09:10 ?        00:00:00 /usr/libexec/gsd-printer
+kent        2479    2008  0 09:10 ?        00:00:00 /usr/bin/gjs -m /usr/sha
+kent        2491    2008  0 09:10 ?        00:00:00 /usr/libexec/gvfs-udisks
+kent        2520    2008  0 09:10 ?        00:00:00 /usr/libexec/gvfs-gphoto
+kent        2525    2008  0 09:10 ?        00:00:00 /usr/libexec/gvfs-mtp-vo
+kent        2530    2008  0 09:10 ?        00:00:01 /usr/libexec/gvfs-afc-vo
+kent        2543    2008  0 09:10 ?        00:00:00 /usr/libexec/gvfs-goa-vo
+kent        2549    2008  0 09:10 ?        00:00:00 /usr/libexec/goa-daemon
+kent        2557    2008  0 09:10 ?        00:00:00 /usr/libexec/goa-identit
+kent        2560    2008  0 09:10 ?        00:00:00 /usr/libexec/evolution-c
+kent        2567    2198  0 09:10 ?        00:00:01 /usr/bin/Xwayland :0 -ro
+kent        2587    2008  0 09:10 ?        00:00:00 /usr/libexec/evolution-a
+kent        2588    2297  0 09:10 ?        00:00:20 /usr/libexec/ibus-engine
+kent        2639    2008  0 09:10 ?        00:00:00 /usr/libexec/xdg-desktop
+kent        2647    2008  0 09:10 ?        00:00:00 /usr/libexec/localsearch
+kent        2654    2008  0 09:10 ?        00:00:00 /usr/libexec/xdg-documen
+root        2660    2654  0 09:10 ?        00:00:00 fusermount3 -o rw,nosuid
+kent        2664    2008  0 09:10 ?        00:00:00 /usr/libexec/xdg-desktop
+kent        2682    2008  0 09:10 ?        00:00:00 /usr/libexec/gsd-xsettin
+kent        2701    2198  0 09:10 ?        00:00:01 /usr/libexec/mutter-x11-
+kent        2722    2008  0 09:10 ?        00:00:00 /usr/libexec/xdg-desktop
+kent        2727    2008  0 09:10 ?        00:00:00 /usr/libexec/ibus-x11
+kent        2783    2008  0 09:10 ?        00:00:00 /usr/libexec/gvfsd-metad
+kent        2865    2198  0 09:10 ?        00:01:57 /opt/google/chrome/chrom
+kent        2870    2865  0 09:10 ?        00:00:00 cat
+kent        2871    2865  0 09:10 ?        00:00:00 cat
+kent        2873    2008  0 09:10 ?        00:00:00 /opt/google/chrome/chrom
+kent        2875    2008  0 09:10 ?        00:00:00 /opt/google/chrome/chrom
+kent        2881    2865  0 09:10 ?        00:00:00 /opt/google/chrome/chrom
+kent        2882    2865  0 09:10 ?        00:00:00 /opt/google/chrome/chrom
+kent        2884    2882  0 09:10 ?        00:00:00 /opt/google/chrome/chrom
+kent        2920    2881  0 09:10 ?        00:00:49 /opt/google/chrome/chrom
+kent        2926    2865  0 09:10 ?        00:00:24 /opt/google/chrome/chrom
+kent        2946    2884  0 09:10 ?        00:00:01 /opt/google/chrome/chrom
+kent        3020    2884  0 09:10 ?        00:00:27 /opt/google/chrome/chrom
+kent        3057    2884  0 09:10 ?        00:00:00 /opt/google/chrome/chrom
+kent        3058    2884  0 09:10 ?        00:00:00 /opt/google/chrome/chrom
+kent        3096    2884  0 09:10 ?        00:00:04 /opt/google/chrome/chrom
+kent        3110    2865  0 09:10 ?        00:00:00 /usr/bin/python3 /usr/bi
+kent        3112    2865  0 09:10 ?        00:00:00 /usr/bin/python3 /usr/bi
+kent        3401    2865  0 09:10 ?        00:00:01 /opt/google/chrome/chrom
+kent        3439    2884  0 09:10 ?        00:00:07 /opt/google/chrome/chrom
+kent        3495    2647  0 09:10 ?        00:00:01 /usr/libexec/localsearch
+kent        3540    2884  0 09:10 ?        00:02:43 /opt/google/chrome/chrom
+kent        3676    2884  0 09:10 ?        00:00:01 /opt/google/chrome/chrom
+kent        3781    2008  0 09:11 ?        00:00:00 /usr/bin/gnome-calendar 
+kent        3833    2158  0 09:11 ?        00:00:00 /usr/libexec/gvfsd-trash
+kent        4332    2008  3 09:11 ?        00:12:02 /usr/share/code/code .
+kent        4335    4332  0 09:11 ?        00:00:00 /usr/share/code/code --t
+kent        4336    4332  0 09:11 ?        00:00:00 /usr/share/code/code --t
+kent        4338    4336  0 09:11 ?        00:00:00 /usr/share/code/code --t
+kent        4355    2008  0 09:11 ?        00:00:00 /usr/share/code/chrome_c
+kent        4372    4335  7 09:11 ?        00:24:31 /usr/share/code/code --t
+kent        4381    4332  0 09:11 ?        00:00:06 /proc/self/exe --type=ut
+kent        4417    4338 15 09:11 ?        00:47:01 /usr/share/code/code --t
+kent        4434    4332  0 09:11 ?        00:00:11 /proc/self/exe --type=ut
+kent        4435    4332  0 09:11 ?        00:00:37 /proc/self/exe --type=ut
+kent        4463    4332  0 09:11 ?        00:01:53 /proc/self/exe --type=ut
+kent        4499    4332  0 09:11 ?        00:02:34 /proc/self/exe --type=ut
+kent        4571    2038  0 09:11 ?        00:00:02 /usr/bin/ssh-agent -D -a
+kent        4601    4499  0 09:11 pts/1    00:00:04 bash .profiles/educator/
+libvirt+    6460       1  2 09:14 ?        00:06:41 /usr/bin/qemu-system-x86
+root        6477       2  0 09:14 ?        00:00:00 [kvm-pit/6460]
+root       22944       1  0 09:42 ?        00:00:02 /usr/libexec/fwupd/fwupd
+root       42807       2  0 10:32 ?        00:00:00 [kworker/10:1-events]
+root       87018       2  0 12:10 ?        00:00:00 [kworker/5:0-mm_percpu_w
+root       87366       2  0 12:11 ?        00:00:00 [kworker/8:1-events]
+root       87405       2  0 12:48 ?        00:00:00 [irq/158-mei_me]
+root       89578       2  0 12:53 ?        00:00:00 [kworker/6:2-mm_percpu_w
+kent       91968    2884  0 13:01 ?        00:00:00 /opt/google/chrome/chrom
+root       93197       2  0 13:05 ?        00:00:00 [kworker/5:2-events]
+root       93387       2  0 13:06 ?        00:00:08 [kworker/9:1-i915-unorde
+root       95534       2  0 13:10 ?        00:00:00 [kworker/7:2-mm_percpu_w
+root       95586       2  0 13:11 ?        00:00:06 [kworker/u48:0-kcryptd-2
+root      100184       2  0 13:20 ?        00:00:00 [kworker/2:1-events]
+root      100665       2  0 13:22 ?        00:00:06 [kworker/u48:9-i915]
+root      105505       2  0 13:32 ?        00:00:00 [kworker/0:0-mm_percpu_w
+root      106136       2  0 13:33 ?        00:00:15 [kworker/u49:0-i915_flip
+root      107917       2  0 13:36 ?        00:00:00 [kworker/2:2-events]
+root      110818       2  0 13:41 ?        00:00:05 [kworker/u48:2-kcryptd-2
+root      113338       2  0 13:47 ?        00:00:00 [kworker/3:1]
+root      113803       2  0 13:48 ?        00:00:00 [kworker/7:0-events]
+root      114504       2  0 13:50 ?        00:00:00 [kworker/10:2-events]
+root      115463       2  0 13:52 ?        00:00:00 [kworker/0:2-events]
+root      115582       2  0 13:52 ?        00:00:03 [kworker/u48:6-kcryptd-2
+root      115583       2  0 13:52 ?        00:00:02 [kworker/u48:8-events_un
+root      115584       2  0 13:52 ?        00:00:02 [kworker/u48:10-kcryptd-
+root      116066       2  0 13:54 ?        00:00:00 [kworker/8:0-mm_percpu_w
+kent      116472    4499  0 13:55 pts/0    00:00:00 /usr/bin/bash --rcfile .
+kent      116639  116472  0 13:55 pts/0    00:00:00 /usr/bin/python3 /usr/bi
+kent      116640  116639  0 13:55 pts/0    00:00:00 /usr/bin/python3 /usr/bi
+kent      116641  116639  0 13:55 pts/0    00:00:00 /usr/bin/python3 /usr/bi
+kent      116642  116639  0 13:55 pts/2    00:00:00 sh -c bash --noprofile -
+kent      116643  116642  0 13:55 pts/2    00:00:00 bash --noprofile --rcfil
+root      119499       2  0 14:00 ?        00:00:00 [kworker/1:1-events]
+root      120310       2  0 14:02 ?        00:00:00 [kworker/6:1-events]
+root      121071       2  0 14:03 ?        00:00:00 [kworker/9:2-i915-unorde
+root      121081       2  0 14:03 ?        00:00:05 [kworker/u49:3-i915_flip
+root      121222       2  0 14:04 ?        00:00:00 [kworker/4:2-mm_percpu_w
+root      121948       2  0 14:05 ?        00:00:00 [kworker/3:0-mm_percpu_w
+root      121988       2  0 14:05 ?        00:00:00 [kworker/1:2-events]
+root      122058       2  0 14:05 ?        00:00:00 [kworker/11:2-events]
+root      124712       2  0 14:10 ?        00:00:01 [kworker/u48:5-kcryptd-2
+root      124948       2  0 14:10 ?        00:00:00 [kworker/u48:7-kcryptd-2
+root      125236       2  0 14:11 ?        00:00:00 [kworker/11:1-events]
+root      125329       2  0 14:11 ?        00:00:00 [kworker/9:0-i915-unorde
+root      126311       2  0 14:12 ?        00:00:00 [kworker/11:3-mm_percpu_
+root      127379       2  0 14:14 ?        00:00:00 [kworker/4:0-events]
+root      128409       2  0 14:16 ?        00:00:00 [kworker/u48:1-kcryptd-2
+kent      129559    2884  0 14:18 ?        00:00:00 /opt/google/chrome/chrom
+root      129650       2  0 14:18 ?        00:00:00 [kworker/9:3-i915-unorde
+root      130056       2  0 14:19 ?        00:00:00 [kworker/u49:1-rb_alloca
+root      130214       2  0 14:19 ?        00:00:00 [kworker/u49:2-rb_alloca
+kent      130905  116643  0 14:21 pts/2    00:00:00 /bin/bash ./trapex1
+kent      130997    4499  0 14:21 pts/3    00:00:00 /usr/bin/bash --rcfile .
+kent      131164  130997  1 14:21 pts/3    00:00:00 /usr/bin/python3 /usr/bi
+kent      131165  131164  0 14:21 pts/3    00:00:00 /usr/bin/python3 /usr/bi
+kent      131166  131164  0 14:21 pts/3    00:00:00 /usr/bin/python3 /usr/bi
+kent      131167  131164  0 14:21 pts/5    00:00:00 sh -c bash --noprofile -
+kent      131168  131167  0 14:21 pts/5    00:00:00 bash --noprofile --rcfil
+kent      131455    4601  0 14:21 pts/1    00:00:00 sleep 5
+kent      131519  131168 99 14:21 pts/5    00:00:00 ps -ef
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+ps -ef | grep trapex1
+kent      130905  116643  0 14:21 pts/2    00:00:00 /bin/bash ./trapex1
+kent      131723  131168  0 14:22 pts/5    00:00:00 grep trapex1
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ 
+kill -SIGTERM <span style="color:#000000;background-color:#000000;">130905</span><span style="color:#000000;background-color:#000000;">
+130905
+</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS25/lektion8
+</span>$ 
+exit
+</pre>
+</body>
+</html>
+<!--HTML generated by ansifilter 2.21, http://andre-simon.de/-->

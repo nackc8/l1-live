@@ -1,0 +1,1522 @@
+/home/kent/Documents/l1-live/DEVOPS25/lektion8
+ aritloop_for     brace_exp             len_func        viktigt.txt
+ aritloop_while  'fin med mellanslag'   len_importer    viktigt.txt.bak
+ barnfunc         import_relprob        len_import.sh
+ bash-recap       len                   recordings
+DEVOPS25/lektion8
+$ DEVOPS25/lektion8
+$ bash
+ baer
+rnfunc 
+Hej hopp
+ETT: Hej hopp TVA: 
+DEVOPS25/lektion8
+$ bash barnfunc 
+HejXhopp
+ETT: Hej TVA: hopp
+DEVOPS25/lektion8
+$ bash barnfunc DEVOPS25/lektion8
+$ bash barnfunc 
+HejXhopp
+ETT: Hej TVA: hopp
+IFS i barnet: X
+IFS i föräldern:  	
+
+DEVOPS25/lektion8
+$ DEVOPS25/lektion8
+$ man bash
+BASH(1)                   General Commands Manual                   BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash  is  Copyright  (C)  1989-2022 by the Free Software Foundation,
+       Inc.
+
+DESCRIPTION
+       Bash is an sh-compatible command language interpreter that  executes
+       commands read from the standard input or from a file.  Bash also in‐
+       corporates useful features from the Korn and C shells (ksh and csh).
+
+       Bash  is intended to be a conformant implementation of the Shell and
+       Utilities portion of the IEEE  POSIX  specification  (IEEE  Standard
+BASH(1)                   General Commands Manual                   BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash  is  Copyright  (C)  1989-2022 by the Free Software Foundation,
+       Inc.
+
+DESCRIPTION
+       Bash is an sh-compatible command language interpreter that  executes
+       commands read from the standard input or from a file.  Bash also in‐
+       corporates useful features from the Korn and C shells (ksh and csh).
+
+       Bash  is intended to be a conformant implementation of the Shell and
+       Utilities portion of the IEEE  POSIX  specification  (IEEE  Standard
+BASH(1)                   General Commands Manual                   BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash  is  Copyright  (C)  1989-2022 by the Free Software Foundation,
+       Inc.
+
+DESCRIPTION
+       Bash is an sh-compatible command language interpreter that  executes
+       commands read from the standard input or from a file.  Bash also in‐
+       corporates useful features from the Korn and C shells (ksh and csh).
+
+       Bash  is intended to be a conformant implementation of the Shell and
+       Utilities portion of the IEEE  POSIX  specification  (IEEE  Standard
+...skipping...
+       [-+]O [shopt_option]
+                 shopt_option  is  one of the shell options accepted by the
+                 shopt builtin (see  SHELL  BUILTIN  COMMANDS  below).   If
+                 shopt_option is present, -O sets the value of that option;
+                 +O  unsets it.  If shopt_option is not supplied, the names
+                 and values of the shell  options  accepted  by  shopt  are
+                 printed  on the standard output.  If the invocation option
+                 is +O, the output is displayed in a  format  that  may  be
+                 reused as input.
+       --        A  --  signals the end of options and disables further op‐
+                 tion processing.  Any arguments after the --  are  treated
+                 as  filenames  and arguments.  An argument of - is equiva‐
+                 lent to --.
+
+       Bash also interprets a number of multi-character options.  These op‐
+       tions must appear on the command line  before  the  single-character
+       options to be recognized.
+
+       --debugger
+M                 commands will be executed.lp or q to quit)
+       --debugger(1) line 51 (press h for help or q to quit)
+              Arrange  for  the  debugger profile to be executed before the
+              shell starts.  Turns on extended debugging mode (see the  de‐
+              scription of the extdebug option to the shopt builtin below).
+       --dump-po-stringse 55 (press h for help or q to quit)
+              Equivalent  to  -D,  but  the output is in the GNU gettext po
+              (portable object) file format.lp or q to quit)
+       --dump-stringsline 58 (press h for help or q to quit)
+              Equivalent to -D.ress h for help or q to quit)
+       --help Display a usage message on standard output and exit  success‐
+              fully. line 61 (press h for help or q to quit)
+       --init-file file
+       --rcfile file
+              Execute  commands  from  file instead of the system wide ini‐
+              tialization file /etc/bash.bashrc and the  standard  personal
+              initialization  file  ~/.bashrc  if  the shell is interactive
+              (see INVOCATION below).
+
+       --login
+              Equivalent to -l.
+
+       --noediting
+...skipping...ash(1) line 73 (press h for help or q to quit)
+       environment, the SHELLOPTS, BASHOPTS, CDPATH, and  GLOBIGNORE  vari‐
+       ables,  if  they appear in the environment, are ignored, and the ef‐
+       fective user id is set to the real user id.  If  the  -p  option  is
+       supplied  at  invocation,  the startup behavior is the same, but the
+       effective user id is not reset.
+
+DEFINITIONS
+       The following definitions are used throughout the rest of this docu‐
+       ment.
+       blank  A space or tab.
+       word   A sequence of characters considered as a single unit  by  the
+              shell.  Also known as a token.
+       name   A  word consisting only of alphanumeric characters and under‐
+              scores, and beginning with an alphabetic character or an  un‐
+              derscore.  Also referred to as an identifier.
+       metacharacter
+              A character that, when unquoted, separates words.  One of the
+              following:
+              |  & ; ( ) < > space tab newline
+...skipping...ash(1) line 216 (press h for help or q to quit)
+       environment.  If the lastpipe option  is  enabled  using  the  shopt
+       builtin  (see the description of shopt below), the last element of a
+       pipeline may be run by the shell process when job control is not ac‐
+       tive.
+
+   Lists
+       A list is a sequence of one or more pipelines separated  by  one  of
+       the  operators  ;, &, &&, or ||, and optionally terminated by one of
+       ;, &, or <newline>.
+
+       Of these list operators, && and || have equal  precedence,  followed
+       by ; and &, which have equal precedence.
+
+       A sequence of one or more newlines may appear in a list instead of a
+       semicolon to delimit commands.
+
+       If a command is terminated by the control operator &, the shell exe‐
+       cutes  the  command in the background in a subshell.  The shell does
+       not wait for the command to finish, and  the  return  status  is  0.
+       These  are referred to as asynchronous commands.  Commands separated
+...skipping...ash(1) line 306 (press h for help or q to quit)
+       teractive_comments option to the shopt builtin is enabled (see SHELL
+       BUILTIN COMMANDS below), a word beginning with #  causes  that  word
+       and  all remaining characters on that line to be ignored.  An inter‐
+       active shell without the interactive_comments  option  enabled  does
+       not  allow  comments.   The interactive_comments option is on by de‐
+       fault in interactive shells.
+
+QUOTING
+       Quoting is used to remove the special meaning of certain  characters
+       or  words  to  the  shell.   Quoting  can be used to disable special
+       treatment for special characters, to prevent reserved words from be‐
+       ing recognized as such, and to prevent parameter expansion.
+
+       Each of the metacharacters listed above under DEFINITIONS  has  spe‐
+       cial  meaning  to the shell and must be quoted if it is to represent
+       itself.
+
+       When the command history expansion facilities are  being  used  (see
+       HISTORY  EXPANSION  below), the history expansion character, usually
+...skipping...ash(1) line 615 (press h for help or q to quit)
+       shopt builtin, translated strings are single-quoted instead of  dou‐
+       ble-quoted.   See the description of shopt below under SHELLBUILTIN‐
+       COMMANDS.
+
+PARAMETERS
+       A parameter is an entity that stores values.  It can be  a  name,  a
+       number,  or one of the special characters listed below under Special
+       Parameters.  A variable is a parameter denoted by a name.   A  vari‐
+       able  has  a  value and zero or more attributes.  Attributes are as‐
+       signed using the declare builtin command (see declare below in SHELL
+       BUILTIN COMMANDS).
+
+       A parameter is set if it has been assigned a value.  The null string
+       is a valid value.  Once a variable is set, it may be unset  only  by
+       using the unset builtin command (see SHELL BUILTIN COMMANDS below).
+
+       A variable may be assigned to by a statement of the form
+
+              name=[value]
+/Manual page bash(1) line 708 (press h for help or q to quit)
+...skipping...ash(1) line 709 (press h for help or q to quit)
+       BASHOPTS
+              A colon-separated list of enabled shell options.   Each  word
+              in  the  list  is  a  valid argument for the -s option to the
+              shopt builtin command (see  SHELL  BUILTIN  COMMANDS  below).
+              The options appearing in BASHOPTS are those reported as on by
+              shopt.   If  this  variable  is  in the environment when bash
+              starts up, each shell option in the list will be enabled  be‐
+              fore reading any startup files.  This variable is read-only.
+       BASHPID
+              Expands  to the process ID of the current bash process.  This
+              differs from $$ under certain  circumstances,  such  as  sub‐
+              shells  that  do  not require bash to be re-initialized.  As‐
+              signments to BASHPID have no effect.  If BASHPID is unset, it
+              loses its special properties, even if it is subsequently  re‐
+              set.
+       BASH_ALIASES
+              An associative array variable whose members correspond to the
+              internal  list of aliases as maintained by the alias builtin.
+              Elements added to this array appear in the alias  list;  how‐
+              ever,  unsetting  array  elements  currently  does  not cause
+              aliases to be removed from the alias list.   If  BASH_ALIASES
+              is unset, it loses its special properties, even if it is sub‐
+              sequently reset.(press h for help or q to quit)
+       BASH_ARGCh(1) line 861 (press h for help or q to quit)
+...skipping...ash(1) line 862 (press h for help or q to quit)
+              scription of the extdebug option to the shopt builtin below).
+              Setting extdebug after the shell has  started  to  execute  a
+              script,  or  referencing  this  variable when extdebug is not
+              set, may result in inconsistent values.
+       BASH_ARGV
+              An array variable containing all of  the  parameters  in  the
+              current  bash  execution  call stack.  The final parameter of
+              the last subroutine call is at the  top  of  the  stack;  the
+              first parameter of the initial call is at the bottom.  When a
+              subroutine  is  executed,  the parameters supplied are pushed
+              onto BASH_ARGV.  The shell sets BASH_ARGV only  when  in  ex‐
+              tended  debugging  mode  (see the description of the extdebug
+              option to the shopt builtin below).  Setting  extdebug  after
+              the  shell  has  started  to execute a script, or referencing
+              this variable when extdebug is not set, may result in  incon‐
+              sistent values.
+       BASH_ARGV0
+              When  referenced,  this  variable  expands to the name of the
+              shell or shell script (identical to $0; see  the  description
+              of  special  parameter  0  above).   Assignment to BASH_ARGV0
+              causes the value assigned to also  be  assigned  to  $0.   If
+              BASH_ARGV0 is unset, it loses its special properties, even if
+              it is subsequently reset.
+       BASH_CMDS
+              An associative array variable whose members correspond to the
+              internal  hash  table  of  commands as maintained by the hash
+              builtin.  Elements added to this array appear in the hash ta‐
+              ble; however, unsetting array  elements  currently  does  not
+              cause  command  names  to be removed from the hash table.  If
+              BASH_CMDS is unset, it loses its special properties, even  if
+              it is subsequently reset.
+...skipping...ash(1) line 900 (press h for help or q to quit)
+              compat42  shopt option and set the compatibility level to 42.
+              The current version is also a valid value.
+       BASH_ENV
+              If this parameter is set  when  bash  is  executing  a  shell
+              script,  its  value  is  interpreted as a filename containing
+              commands to initialize the shell, as in ~/.bashrc.  The value
+              of BASH_ENV is subjected to parameter expansion, command sub‐
+              stitution, and arithmetic expansion before being  interpreted
+              as  a filename.  PATH is not used to search for the resultant
+              filename.
+       BASH_XTRACEFD
+              If set to an integer corresponding to a valid  file  descrip‐
+              tor,  bash  will write the trace output generated when set -x
+              is enabled to that file descriptor.  The file  descriptor  is
+              closed  when  BASH_XTRACEFD is unset or assigned a new value.
+              Unsetting BASH_XTRACEFD or  assigning  it  the  empty  string
+              causes  the  trace  output  to be sent to the standard error.
+              Note that setting BASH_XTRACEFD to 2 (the standard error file
+              descriptor) and then unsetting it will result in the standard
+...skipping...ash(1) line 1173 (press h for help or q to quit)
+              shopt,  any  unquoted  instances  of & in string are replaced
+              with the matching portion of pattern.
+
+              Quoting any part of string inhibits replacement in the expan‐
+              sion of the quoted  portion,  including  replacement  strings
+              stored  in  shell  variables.   Backslash  will  escape  & in
+              string; the backslash is removed in order to permit a literal
+              & in the replacement string.  Backslash can also be  used  to
+              escape  a backslash; \\ results in a literal backslash in the
+              replacement.  Users should take care  if  string  is  double-
+              quoted  to  avoid unwanted interactions between the backslash
+              and  double-quoting,  since  backslash  has  special  meaning
+              within  double  quotes.   Pattern  substitution  performs the
+              check for unquoted & after expanding string;  shell  program‐
+              mers  should quote any occurrences of & they want to be taken
+              literally in the replacement and ensure any  instances  of  &
+              they want to be replaced are unquoted.
+
+              If the nocasematch shell option is enabled, the match is per‐
+...skipping...ash(1) line 1938 (press h for help or q to quit)
+       tern  Matching.   See  the  description  of  shopt below under SHELL
+       BUILTIN COMMANDS for a  description  of  the  nocaseglob,  nullglob,
+       globskipdots, failglob, and dotglob shell options.
+
+       The  GLOBIGNORE  shell  variable  may be used to restrict the set of
+       file names matching a pattern.  If GLOBIGNORE is set, each  matching
+       file name that also matches one of the patterns in GLOBIGNORE is re‐
+       moved  from  the  list of matches.  If the nocaseglob option is set,
+       the matching against the patterns in GLOBIGNORE is performed without
+       regard to case.  The filenames ``.''  and ``..''  are always ignored
+       when GLOBIGNORE is set and not null.  However, setting GLOBIGNORE to
+       a non-null value has the effect of enabling the  dotglob  shell  op‐
+       tion, so all other filenames beginning with a ``.''  will match.  To
+       get  the  old behavior of ignoring filenames beginning with a ``.'',
+       make ``.*''  one of the patterns in GLOBIGNORE.  The dotglob  option
+       is  disabled  when GLOBIGNORE is unset.  The pattern matching honors
+       the setting of the extglob shell option.
+
+       Pattern Matching
+...skipping...ash(1) line 2158 (press h for help or q to quit)
+       If  the extglob shell option is enabled using the shopt builtin, the
+       shell recognizes several extended pattern  matching  operators.   In
+       the  following  description, a pattern-list is a list of one or more
+       patterns separated by a |.  Composite patterns may be  formed  using
+       one or more of the following sub-patterns:
+
+              ?(pattern-list)
+                     Matches zero or one occurrence of the given patterns
+              *(pattern-list)
+                     Matches zero or more occurrences of the given patterns
+              +(pattern-list)
+                     Matches one or more occurrences of the given patterns
+              @(pattern-list)
+                     Matches one of the given patterns
+              !(pattern-list)
+                     Matches anything except one of the given patterns
+
+       Theextglob  option  changes  the  behavior  of the parser, since the
+       parentheses are normally treated as operators with  syntactic  mean‐
+...skipping...ash(1) line 2231 (press h for help or q to quit)
+       the expand_aliases shell option is set using shopt (see the descrip‐
+       tion of shopt under SHELL BUILTIN COMMANDS below).
+
+       The rules concerning the definition and use of aliases are  somewhat
+       confusing.   Bash  always reads at least one complete line of input,
+       and all lines that make up a compound command, before executing  any
+       of  the  commands on that line or the compound command.  Aliases are
+       expanded when a command is read, not when it  is  executed.   There‐
+       fore, an alias definition appearing on the same line as another com‐
+       mand does not take effect until the next line of input is read.  The
+       commands  following  the  alias  definition on that line are not af‐
+       fected by the new alias.  This behavior is also an issue when  func‐
+       tions are executed.  Aliases are expanded when a function definition
+       is read, not when the function is executed, because a function defi‐
+       nition  is itself a command.  As a consequence, aliases defined in a
+       function are not available until after that  function  is  executed.
+       To  be safe, always put alias definitions on a separate line, and do
+       not use alias in compound commands.
+
+       For almost every purpose, aliases are superseded by shell functions.
+...skipping...ash(1) line 2544 (press h for help or q to quit)
+       •      options enabled by shopt
+
+       •      shell aliases defined with alias
+
+       •      various  process IDs, including those of background jobs, the
+              value of $$, and the value of PPID
+
+       When a simple command other than a builtin or shell function  is  to
+       be  executed, it is invoked in a separate execution environment that
+       consists of the following.  Unless otherwise noted, the  values  are
+       inherited from the shell.
+
+       •      the  shell's open files, plus any modifications and additions
+              specified by redirections to the command
+
+       •      the current working directory
+
+       •      the file creation mode mask
+
+       •      options enabled by shoptfor help or q to quit)
+
+       •      shell aliases defined with alias
+
+       •      various  process IDs, including those of background jobs, the
+              value of $$, and the value of PPID
+
+       When a simple command other than a builtin or shell function  is  to
+       be  executed, it is invoked in a separate execution environment that
+       consists of the following.  Unless otherwise noted, the  values  are
+       inherited from the shell.
+
+       •      the  shell's open files, plus any modifications and additions
+              specified by redirections to the command
+
+       •      the current working directory
+
+       •      the file creation mode mask
+
+       •      options enabled by shopt
+
+       •      shell aliases defined with alias
+
+       •      various  process IDs, including those of background jobs, the
+              value of $$, and the value of PPID
+
+       When a simple command other than a builtin or shell function  is  to
+       be  executed, it is invoked in a separate execution environment that
+       consists of the following.  Unless otherwise noted, the  values  are
+       inherited from the shell.
+
+       •      the  shell's open files, plus any modifications and additions
+              specified by redirections to the command
+
+       •      the current working directory
+
+       •      the file creation mode mask
+
+...skipping...
+       •      parsing the value of SHELLOPTS from the shell environment  at
+              startup
+
+       •      redirecting  output using the >, >|, <>, >&, &>, and >> redi‐
+              rection operators
+
+       •      using the exec builtin command to replace the shell with  an‐
+              other command
+
+       •      adding  or  deleting  builtin commands with the -f and -d op‐
+              tions to the enable builtin command
+
+       •      using the enable builtin command  to  enable  disabled  shell
+              builtins
+
+       •      specifying the -p option to the command builtin command
+
+       •      turning  off  restricted  mode  with  set  +r or shopt -u re‐
+              stricted_shell.
+>DEVOPS25/lektion8 (press RETURN)08 99% (press h for help or q to quit)
+$ man bash
+BASH(1)                   General Commands Manual                   BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash  is  Copyright  (C)  1989-2022 by the Free Software Foundation,
+       Inc.
+
+DESCRIPTION
+       Bash is an sh-compatible command language interpreter that  executes
+       commands read from the standard input or from a file.  Bash also in‐
+       corporates useful features from the Korn and C shells (ksh and csh).
+
+       Bash  is intended to be a conformant implementation of the Shell and
+       Utilities portion of the IEEE  POSIX  specification  (IEEE  Standard
+BASH(1)                   General Commands Manual                   BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash  is  Copyright  (C)  1989-2022 by the Free Software Foundation,
+       Inc.
+
+DESCRIPTION
+       Bash is an sh-compatible command language interpreter that  executes
+       commands read from the standard input or from a file.  Bash also in‐
+       corporates useful features from the Korn and C shells (ksh and csh).
+
+       Bash  is intended to be a conformant implementation of the Shell and
+       Utilities portion of the IEEE  POSIX  specification  (IEEE  Standard
+BASH(1)                   General Commands Manual                   BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash  is  Copyright  (C)  1989-2022 by the Free Software Foundation,
+       Inc.
+
+DESCRIPTION
+       Bash is an sh-compatible command language interpreter that  executes
+       commands read from the standard input or from a file.  Bash also in‐
+       corporates useful features from the Korn and C shells (ksh and csh).
+
+       Bash  is intended to be a conformant implementation of the Shell and
+       Utilities portion of the IEEE  POSIX  specification  (IEEE  Standard
+...skipping...
+       tion  of  the  set builtin command, including -o, can be used as op‐
+       tions when the shell is invoked.  In addition, bash  interprets  the
+       following options when it is invoked:
+
+       -c        If  the  -c option is present, then commands are read from
+                 the first non-option argument  command_string.   If  there
+                 are arguments after the command_string, the first argument
+                 is assigned to $0 and any remaining arguments are assigned
+                 to  the  positional parameters.  The assignment to $0 sets
+                 the name of the shell, which is used in warning and  error
+                 messages.
+       -i        If the -i option is present, the shell is interactive.
+       -l        Make  bash  act as if it had been invoked as a login shell
+                 (see INVOCATION below).
+       -r        If the -r option is present, the shell becomes  restricted
+                 (see RESTRICTED SHELL below).
+       -s        If the -s option is present, or if no arguments remain af‐
+                 ter  option  processing,  then  commands are read from the
+                 standard input.  This option allows the positional parame‐
+                 ters to be set when invoking an interactive shell or  when
+                 reading input through a pipe.
+       -v        Print shell input lines as they are read.
+       -x        Print commands and their arguments as they are executed.
+       -D        A  list  of  all  double-quoted  strings  preceded by $ is
+...skipping...ash(1) line 29 (press h for help or q to quit)
+                 shopt_option is present, -O sets the value of that option;
+                 +O  unsets it.  If shopt_option is not supplied, the names
+                 and values of the shell  options  accepted  by  shopt  are
+                 printed  on the standard output.  If the invocation option
+                 is +O, the output is displayed in a  format  that  may  be
+                 reused as input.
+       --        A  --  signals the end of options and disables further op‐
+                 tion processing.  Any arguments after the --  are  treated
+                 as  filenames  and arguments.  An argument of - is equiva‐
+                 lent to --.
+
+       Bash also interprets a number of multi-character options.  These op‐
+       tions must appear on the command line  before  the  single-character
+       options to be recognized.
+
+       --debugger
+              Arrange  for  the  debugger profile to be executed before the
+              shell starts.  Turns on extended debugging mode (see the  de‐
+              scription of the extdebug option to the shopt builtin below).
+...skipping...ash(1) line 55 (press h for help or q to quit)
+       An  interactive  shell  is  one started without non-option arguments
+       (unless -s is specified) and without the -c option,  whose  standard
+       input  and  error  are both connected to terminals (as determined by
+       isatty(3)), or one started with the -i option.  PS1 is  set  and  $-
+       includes  i  if  bash  is  interactive, allowing a shell script or a
+       startup file to test this state.
+
+       The following paragraphs describe  how  bash  executes  its  startup
+       files.   If  any of the files exist but cannot be read, bash reports
+       an error.  Tildes are expanded in filenames as described below under
+       Tilde Expansion in the EXPANSION section.
+
+       When bash is invoked as an interactive login shell, or as a  non-in‐
+       teractive shell with the --login option, it first reads and executes
+       commands  from  the  file  /etc/profile, if that file exists.  After
+       reading that file, it looks for ~/.bash_profile, ~/.bash_login,  and
+       ~/.profile,  in that order, and reads and executes commands from the
+       first one that exists and is readable.  The --noprofile  option  may
+       be used when the shell is started to inhibit this behavior.
+...skipping...ash(1) line 140 (press h for help or q to quit)
+              fore reading any startup files.  This variable is read-only.
+       BASHPID
+              Expands  to the process ID of the current bash process.  This
+              differs from $$ under certain  circumstances,  such  as  sub‐
+              shells  that  do  not require bash to be re-initialized.  As‐
+              signments to BASHPID have no effect.  If BASHPID is unset, it
+              loses its special properties, even if it is subsequently  re‐
+              set.
+       BASH_ALIASES
+              An associative array variable whose members correspond to the
+              internal  list of aliases as maintained by the alias builtin.
+              Elements added to this array appear in the alias  list;  how‐
+              ever,  unsetting  array  elements  currently  does  not cause
+              aliases to be removed from the alias list.   If  BASH_ALIASES
+              is unset, it loses its special properties, even if it is sub‐
+              sequently reset.
+       BASH_ARGC
+              An  array  variable whose values are the number of parameters
+              in each frame of the current bash execution call stack.   The
+...skipping...ash(1) line 864 (press h for help or q to quit)
+              in  the list is a valid argument for the -o option to the set
+              builtin command (see SHELL BUILTIN COMMANDS below).  The  op‐
+              tions  appearing in SHELLOPTS are those reported as on by set
+              -o.  If this variable is in the environment when bash  starts
+              up,  each  shell  option  in  the list will be enabled before
+              reading any startup files.  This variable is read-only.
+       SHLVL  Incremented by one each time an instance of bash is started.
+       SRANDOM
+              This variable expands to a 32-bit pseudo-random  number  each
+              time  it  is  referenced.  The random number generator is not
+              linear on systems that support /dev/urandom or arc4random, so
+              each returned number has no relationship to the numbers  pre‐
+              ceding  it.  The random number generator cannot be seeded, so
+              assignments to this variable have no effect.  If  SRANDOM  is
+              unset,  it loses its special properties, even if it is subse‐
+              quently reset.
+       UID    Expands to the user ID of the current  user,  initialized  at
+              shell startup.  This variable is readonly.
+
+       The  following variables are used by the shell.  In some cases, bash
+       assigns a default value to a variable; these cases are noted below.
+
+       BASH_COMPAT1) line 1140 (press h for help or q to quit)
+              The value is used to set  the  shell's  compatibility  level.
+...skipping...ash(1) line 1142 (press h for help or q to quit)
+              if  the  command  set  -o  posix had been executed.  When the
+              shell enters posix mode, it sets this variable if it was  not
+              already set.
+       PROMPT_COMMAND
+              If  this  variable is set, and is an array, the value of each
+              set element is executed as a command prior  to  issuing  each
+              primary  prompt.   If  this is set but not an array variable,
+              its value is used as a command to execute instead.
+       PROMPT_DIRTRIM
+              If set to a number greater than zero, the value  is  used  as
+              the  number  of  trailing directory components to retain when
+              expanding the \w and \W prompt string escapes (see  PROMPTING
+              below).  Characters removed are replaced with an ellipsis.
+       PS0    The value of this parameter is expanded (see PROMPTING below)
+              and  displayed  by interactive shells after reading a command
+              and before the command is executed.
+       PS1    The value of this parameter is expanded (see PROMPTING below)
+              and used as the primary prompt string.  The default value  is
+              ``\s-\v\$ ''.
+...skipping...ash(1) line 1408 (press h for help or q to quit)
+       clare  builtin  below) or the -o functrace shell option has been en‐
+       abled with the set builtin (in which case all functions inherit  the
+       DEBUG  and  RETURN  traps), and the ERR trap is not inherited unless
+       the -o errtrace shell option has been enabled.
+
+       Variables local to the function  may  be  declared  with  the  local
+       builtin  command (local variables).  Ordinarily, variables and their
+       values are shared between the function and its caller.  If  a  vari‐
+       able  is  declared local, the variable's visible scope is restricted
+       to that function  and  its  children  (including  the  functions  it
+       calls).
+
+       In the following description, the current scope is a currently- exe‐
+       cuting  function.  Previous scopes consist of that function's caller
+       and so on, back to the "global" scope, where the shell is  not  exe‐
+       cuting  any  shell  function.  Consequently, a local variable at the
+       current scope is a variable declared  using  the  local  or  declare
+       builtins in the function that is currently executing.
+
+       Local  variables  "shadow"  variables with the same name declared at
+       previous scopes.  For instance, a local variable declared in a func‐
+       tion hides a global variable of the same name:  references  and  as‐
+...skipping...ash(1) line 2585 (press h for help or q to quit)
+       -O file
+              True if file exists and is owned by the effective user id.
+       -S file
+              True if file exists and is a socket.
+       file1 -ef file2
+              True  if  file1  and file2 refer to the same device and inode
+              numbers.
+       file1 -nt file2
+              True if file1 is newer (according to modification date)  than
+              file2, or if file1 exists and file2 does not.
+       file1 -ot file2
+              True  if  file1  is  older than file2, or if file2 exists and
+              file1 does not.
+       -o optname
+              True if the shell option optname is enabled.  See the list of
+              options under the description of the -o  option  to  the  set
+              builtin below.
+       -v varname
+              True  if the shell variable varname is set (has been assigned
+              a value).ne 2786 (press h for help or q to quit)
+       -R varname
+              True if the shell variable varname is set and is a name  ref‐
+              erence.
+       -z string
+              True if the length of string is zero.
+       string
+       -n string
+              True if the length of string is non-zero.
+
+       string1 == string2 2796 (press h for help or q to quit)
+       string1 = string2
+              True  if  the  strings  are equal.  = should be used with the
+              test command for POSIX conformance.  When used  with  the  [[
+              command,  this  performs  pattern matching as described above
+...skipping...ash(1) line 2801 (press h for help or q to quit)
+       able.  Line editing can be enabled at any time using the -o emacs or
+       -o vi options to the set builtin (see SHELL BUILTIN COMMANDS below).
+       To turn off line editing after the shell  is  running,  use  the  +o
+       emacs or +o vi options to the set builtin.
+
+   Readline Notation
+       In  this  section,  the  Emacs-style notation is used to denote key‐
+       strokes.  Control keys are denoted by C-key, e.g.,  C-n  means  Con‐
+       trol-N.   Similarly,  meta  keys  are denoted by M-key, so M-x means
+       Meta-X.  (On keyboards without a meta key, M-x means  ESC  x,  i.e.,
+       press  the  Escape key then the x key.  This makes ESC the meta pre‐
+       fix.  The combination M-C-x means ESC-Control-x, or press the Escape
+       key then hold the Control key while pressing the x key.)
+
+       Readline commands may be given numeric arguments, which normally act
+       as a repeat count.  Sometimes, however, it is the sign of the  argu‐
+       ment  that is significant.  Passing a negative argument to a command
+       that acts in the forward direction  (e.g.,  kill-line)  causes  that
+       command  to  act  in  a backward direction.  Commands whose behavior
+>DEVOPS25/lektion81) line 3284 (press h for help or q to quit)
+$ man bash
+BASH(1)                   General Commands Manual                   BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash  is  Copyright  (C)  1989-2022 by the Free Software Foundation,
+       Inc.
+
+DESCRIPTION
+       Bash is an sh-compatible command language interpreter that  executes
+       commands read from the standard input or from a file.  Bash also in‐
+       corporates useful features from the Korn and C shells (ksh and csh).
+
+       Bash  is intended to be a conformant implementation of the Shell and
+       Utilities portion of the IEEE  POSIX  specification  (IEEE  Standard
+BASH(1)                   General Commands Manual                   BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash  is  Copyright  (C)  1989-2022 by the Free Software Foundation,
+       Inc.
+
+DESCRIPTION
+       Bash is an sh-compatible command language interpreter that  executes
+       commands read from the standard input or from a file.  Bash also in‐
+       corporates useful features from the Korn and C shells (ksh and csh).
+
+       Bash  is intended to be a conformant implementation of the Shell and
+       Utilities portion of the IEEE  POSIX  specification  (IEEE  Standard
+BASH(1)                   General Commands Manual                   BASH(1)
+
+NAME
+       bash - GNU Bourne-Again SHell
+
+SYNOPSIS
+       bash [options] [command_string | file]
+
+COPYRIGHT
+       Bash  is  Copyright  (C)  1989-2022 by the Free Software Foundation,
+       Inc.
+
+DESCRIPTION
+       Bash is an sh-compatible command language interpreter that  executes
+       commands read from the standard input or from a file.  Bash also in‐
+       corporates useful features from the Korn and C shells (ksh and csh).
+
+       Bash  is intended to be a conformant implementation of the Shell and
+       Utilities portion of the IEEE  POSIX  specification  (IEEE  Standard
+...skipping...
+       mand,  unless  the  pipefail  option is enabled.  If pipefail is en‐
+       abled, the pipeline's return status is the value of the last (right‐
+       most) command to exit with a non-zero status, or zero  if  all  com‐
+       mands  exit  successfully.   If  the  reserved  word  !   precedes a
+       pipeline, the exit status of that pipeline is the  logical  negation
+       of the exit status as described above.  The shell waits for all com‐
+       mands in the pipeline to terminate before returning a value.
+
+       If  the  time reserved word precedes a pipeline, the elapsed as well
+       as user and system time consumed by its execution are reported  when
+       the pipeline terminates.  The -p option changes the output format to
+       that  specified  by POSIX.  When the shell is in posix mode, it does
+       not recognize time as a reserved word if the next token begins  with
+       a  `-'.   The TIMEFORMAT variable may be set to a format string that
+       specifies how the timing information should be  displayed;  see  the
+       description of TIMEFORMAT under Shell Variables below.
+
+       When  the shell is in posix mode, time may be followed by a newline.
+       In this case, the shell displays the total user and system time con‐
+...skipping...ash(1) line 280 (press h for help or q to quit)
+                      pipefail
+                              If set, the return value of a pipeline is the
+                              value of the last (rightmost) command to exit
+                              with a non-zero status, or zero if  all  com‐
+                              mands  in  the  pipeline  exit  successfully.
+                              This option is disabled by default.
+                      posix   Change the behavior of bash where the default
+                              operation differs from the POSIX standard  to
+                              match  the  standard  (posix  mode).  See SEE
+                              ALSO below for a reference to a document that
+                              details how posix mode affects bash's  behav‐
+                              ior.
+                      privileged
+                              Same as -p.
+                      verbose Same as -v.
+                      vi      Use  a  vi-style  command line editing inter‐
+                              face.  This also affects the  editing  inter‐
+                              face used for read -e.
+                      xtrace  Same as -x.
+M                              Same as -P.r help or q to quit)
+M                      physical(press h for help or q to quit)
+M                      onecmd  Same as -t.r help or q to quit)
+M                      nounset Same as -u.r help or q to quit)
+M                      notify  Same as -b.r help or q to quit)
+M                      nolog   Currently ignored.or q to quit)
+M                      noglob  Same as -f.r help or q to quit)
+M                      noexec  Same as -n.r help or q to quit)
+M                              Same as -C.r help or q to quit)
+M                      noclobberpress h for help or q to quit)
+M                      monitor Same as -m.r help or q to quit)
+M                      keyword Same as -k.r help or q to quit)
+M                              Variables above). or q to quit)
+M                              NOREEOF=10''  had  been  executed  (see Shell
+M                              The effect is as if the shell  command  ``IG‐
+M                      ignoreeofpress h for help or q to quit)
+M                              in interactive shells. to quit)
+M                              under  HISTORY.  This option is on by default
+M                      history Enable command history,  as  described  above
+M                              Same as -H.r help or q to quit)
+M                      histexpandress h for help or q to quit)
+M                      hashall Same as -h.r help or q to quit)
+M                              Same as -T.r help or q to quit)
+M                      functracepress h for help or q to quit)
+M                              Same as -E.r help or q to quit)
+M                      errtrace(press h for help or q to quit)
+M                      errexit Same as -e.r help or q to quit)
+M                              read -e. for help or q to quit)
+M                              also  affects  the editing interface used for
+M                              started with the  --noediting  option.   This
+M                              shell  is  interactive,  unless  the shell is
+M                              terface.  This is enabled by default when the
+M                      emacs   Use an emacs-style command line  editing  in‐
+M                              Same as -B.r help or q to quit)
+M                      braceexpandess h for help or q to quit)
+M                              Same as -a.r help or q to quit)
+M                      allexportpress h for help or q to quit)
+M                      The option-name can be one of the following:
+M              -o option-name9 (press h for help or q to quit)
+M                      is ignored by interactive shells. quit)
+M                      used to check a shell script for syntax errors.  This
+M              -n      Read  commands  but do not execute them.  This may be
+M                      containing its exit status.r q to quit)
+M                      background job completes, the  shell  prints  a  line
+M                      processes  run  in  a separate process group.  When a
+                      errtrace (press h for help or q to quit)
+                              Same as -E.or help or q to quit)
+                      functrace(press h for help or q to quit)
+                              Same as -T.or help or q to quit)
+                      hashall Same as -h.or help or q to quit)
+                      histexpandpress h for help or q to quit)
+                              Same as -H.or help or q to quit)
+                      history Enable command history,  as  described  above
+                              under  HISTORY.  This option is on by default
+                              in interactive shells.q to quit)
+                      ignoreeof(press h for help or q to quit)
+                              The effect is as if the shell  command  ``IG‐
+                              NOREEOF=10''  had  been  executed  (see Shell
+                              Variables above).p or q to quit)
+                      keyword Same as -k.or help or q to quit)
+                      monitor Same as -m.or help or q to quit)
+                      noclobber(press h for help or q to quit)
+                              Same as -C.or help or q to quit)
+                      noexec  Same as -n.or help or q to quit)
+                      noglob  Same as -f.or help or q to quit)
+M                      errtrace(press h for help or q to quit)
+                      noglob  Same as -f.or help or q to quit)
+                      nolog   Currently ignored. or q to quit)
+                      notify  Same as -b.or help or q to quit)
+                      nounset Same as -u.or help or q to quit)
+                      onecmd  Same as -t.or help or q to quit)
+                      physical (press h for help or q to quit)
+                              Same as -P.or help or q to quit)
+                      pipefail (press h for help or q to quit)
+                              If set, the return value of a pipeline is the
+                              value of the last (rightmost) command to exit
+                              with a non-zero status, or zero if  all  com‐
+                              mands  in  the  pipeline  exit  successfully.
+                              This option is disabled by default.
+                      posix   Change the behavior of bash where the default
+                              operation differs from the POSIX standard  to
+M                      keyword Same as -k.r help or q to quit)
+M                              Variables above). or q to quit)
+                      posix   Change the behavior of bash where the default
+                              operation differs from the POSIX standard  to
+                              match  the  standard  (posix  mode).  See SEE
+                              ALSO below for a reference to a document that
+                              details how posix mode affects bash's  behav‐
+                              ior.ess h for help or q to quit)
+                      privilegedpress h for help or q to quit)
+                              Same as -p.or help or q to quit)
+                      verbose Same as -v.or help or q to quit)
+                      vi      Use  a  vi-style  command line editing inter‐
+                              face.  This also affects the  editing  inter‐
+                              face used for read -e.q to quit)
+                      xtrace  Same as -x.or help or q to quit)
+                      If  -o is supplied with no option-name, the values of
+                      the current options are printed.  If +o  is  supplied
+                      with  no  option-name,  a  series  of set commands to
+                      recreate the current option settings is displayed  on
+                      the standard output.r help or q to quit)
+              -p      Turn  on privileged mode.  In this mode, the $ENV and
+                      $BASH_ENV files are not  processed,  shell  functions
+                      are not inherited from the environment, and the SHEL‐
+                      LOPTS, BASHOPTS, CDPATH, and GLOBIGNORE variables, if
+                      they  appear in the environment, are ignored.  If the
+                      shell is started with the effective user  (group)  id
+                      not equal to the real user (group) id, and the -p op‐
+                      tion is not supplied, these actions are taken and the
+                      effective user id is set to the real user id.  If the
+                      -p  option is supplied at startup, the effective user
+                      id is not reset.  Turning this option off causes  the
+                      effective  user  and  group ids to be set to the real
+                      user and group ids.or help or q to quit)
+              -r      Enable restricted shell mode.  This option cannot  be
+                      unset once it has been set.or q to quit)
+              -t      Exit after reading and executing one command.
+              -u      Treat  unset  variables and parameters other than the
+                      special parameters "@" and "*",  or  array  variables
+                      subscripted  with  "@"  or "*", as an error when per‐
+                      forming parameter expansion.   If  expansion  is  at‐
+                      tempted  on an unset variable or parameter, the shell
+                      prints an error message, and, if not interactive, ex‐
+                      its with a non-zero status.or q to quit)
+              -v      Print shell input lines as they are read.
+              -x      After expanding each  simple  command,  for  command,
+                      case  command, select command, or arithmetic for com‐
+                      mand, display the expanded value of PS4, followed  by
+                      the  command and its expanded arguments or associated
+                      word list.press h for help or q to quit)
+              -B      The shell performs brace expansion (see Brace  Expan‐
+                      sion above).  This is on by default.uit)
+              -C      If set, bash does not overwrite an existing file with
+                      the >, >&, and <> redirection operators.  This may be
+                      overridden  when  creating  output files by using the
+                      redirection operator >| instead of >.it)
+              -E      If set, any trap on ERR is inherited by  shell  func‐
+                      tions,  command  substitutions, and commands executed
+>DEVOPS25/lektion81) line 5929 (press h for help or q to quit)
+$ DEVOPS25/lektion8
+$ bash -x brace_exp 
++ touch viktigt.txt
++ cp viktigt.txt viktigt.txt.bak
++ cp viktigt.txt viktigt.txt.bak
+DEVOPS25/lektion8
+$ DEVOPS25/lektion8
+$ ls
+ aritloop_for	  brace_exp	        len_func        recordings
+ aritloop_while  'fin med mellanslag'   len_importer    viktigt.txt
+ barnfunc	  import_relprob        len_import.sh   viktigt.txt.bak
+ bash-recap	  len		        optx
+DEVOPS25/lektion8
+$ DEVOPS25/lektion8
+$ bash p[
+optx 
++ for fil in b*
++ echo 'b-fil: '
+b-fil: 
++ for fil in b*
++ echo 'b-fil: '
+b-fil: 
++ for fil in b*
++ echo 'b-fil: '
+b-fil: 
+DEVOPS25/lektion8
+$ bash optx DEVOPS25/lektion8
+$ bash optx 
++ for fil in b*
++ echo 'b-fil: barnfunc'
+b-fil: barnfunc
++ for fil in b*
++ echo 'b-fil: bash-recap'
+b-fil: bash-recap
++ for fil in b*
++ echo 'b-fil: brace_exp'
+b-fil: brace_exp
+DEVOPS25/lektion8
+$ chmod +x optx 
+DEVOPS25/lektion8
+$ DEVOPS25/lektion8
+$ ./optx 
++ for fil in b*
++ echo 'b-fil: barnfunc'
+b-fil: barnfunc
++ for fil in b*
++ echo 'b-fil: bash-recap'
+b-fil: bash-recap
++ for fil in b*
++ echo 'b-fil: brace_exp'
+b-fil: brace_exp
+DEVOPS25/lektion8
+$ DEVOPS25/lektion8
+$ ls
+ aritloop_for	  brace_exp	        len_func        optx
+ aritloop_while  'fin med mellanslag'   len_importer    recordings
+ barnfunc	  import_relprob        len_import.sh   viktigt.txt
+ bash-recap	  len		        opte	        viktigt.txt.bak
+DEVOPS25/lektion8
+$ mkdir fulfiler
+DEVOPS25/lektion8
+$ touch {1.100}-skrot.tx {1.100}-skrot.txf {1.100}-skrot.txu {1.100}-skrot.txlfiler/ {1.100}-skrot.tx{1.100}-skrot.tx
+
+
+
+
+
+
+
+
+DEVOPS25/lektion8
+$ ls fulfiler/DEVOPS25/lektion8
+$ ls fulfiler/
+{1.100}-skrot.txt
+DEVOPS25/lektion8
+touch fulfiler/{1.100}-skrot.tx,100}-skrot.tx100}-skrot.tx00}-skrot.tx.00}-skrot.tx
+DEVOPS25/lektion8
+$ touch fulfiler/{1..00}-skrot.tx100}-skrot.tx
+DEVOPS25/lektion8
+ls fulfiler/DEVOPS25/lektion8ot.tx00}-skrot.txt
+$ ls fulfiler/
+00-skrot.txt	   26-skrot.txt  45-skrot.txt  64-skrot.txt  83-skrot.txt
+01-skrot.txt	   27-skrot.txt  46-skrot.txt  65-skrot.txt  84-skrot.txt
+100-skrot.txt	   28-skrot.txt  47-skrot.txt  66-skrot.txt  85-skrot.txt
+10-skrot.txt	   29-skrot.txt  48-skrot.txt  67-skrot.txt  86-skrot.txt
+{1.100}-skrot.txt  2-skrot.txt	 49-skrot.txt  68-skrot.txt  87-skrot.txt
+11-skrot.txt	   30-skrot.txt  4-skrot.txt   69-skrot.txt  88-skrot.txt
+12-skrot.txt	   31-skrot.txt  50-skrot.txt  6-skrot.txt   89-skrot.txt
+13-skrot.txt	   32-skrot.txt  51-skrot.txt  70-skrot.txt  8-skrot.txt
+14-skrot.txt	   33-skrot.txt  52-skrot.txt  71-skrot.txt  90-skrot.txt
+15-skrot.txt	   34-skrot.txt  53-skrot.txt  72-skrot.txt  91-skrot.txt
+16-skrot.txt	   35-skrot.txt  54-skrot.txt  73-skrot.txt  92-skrot.txt
+17-skrot.txt	   36-skrot.txt  55-skrot.txt  74-skrot.txt  93-skrot.txt
+18-skrot.txt	   37-skrot.txt  56-skrot.txt  75-skrot.txt  94-skrot.txt
+19-skrot.txt	   38-skrot.txt  57-skrot.txt  76-skrot.txt  95-skrot.txt
+1-skrot.txt	   39-skrot.txt  58-skrot.txt  77-skrot.txt  96-skrot.txt
+20-skrot.txt	   3-skrot.txt	 59-skrot.txt  78-skrot.txt  97-skrot.txt
+21-skrot.txt	   40-skrot.txt  5-skrot.txt   79-skrot.txt  98-skrot.txt
+22-skrot.txt	   41-skrot.txt  60-skrot.txt  7-skrot.txt   99-skrot.txt
+23-skrot.txt	   42-skrot.txt  61-skrot.txt  80-skrot.txt  9-skrot.txt
+24-skrot.txt	   43-skrot.txt  62-skrot.txt  81-skrot.txt
+25-skrot.txt	   44-skrot.txt  63-skrot.txt  82-skrot.txt
+DEVOPS25/lektion8
+$ ./o
+ptx fulfilere fulfiler/DEVOPS25/lektion8
+$ ./opte fulfiler/
+DEVOPS25/lektion8
+$ ls fulfiler/
+DEVOPS25/lektion8
+$ touchc': touch': touch ./opte fulfilero': touch fulfiler/{1..100}-skrot.txt
+DEVOPS25/lektion8
+$ cd fulfiler/
+DEVOPS25/lektion8/fulfiler
+$ DEVOPS25/lektion8/fulfiler
+$ mkdir fulfulfiler
+DEVOPS25/lektion8/fulfiler
+$ t /{1..100}-skrot.tx /{1..100}-skrot.tx /{1..100}-skrot.tx /{1..100}-skrot.tx /{1..100}-skrot.tx /{1..100}-skrot.txf /{1..100}-skrot.txulfiler/ /{1..100}-skrot.tx/{1..100}-skrot.tx{1..100}-skrot.tx0}-skrot.tx
+DEVOPS25/lektion8/fulfiler
+$ DEVOPS25/lektion8/fulfiler
+$ ls fulfulfiler/
+
+1000-skrot.txt	280-skrot.txt  460-skrot.txt  640-skrot.txt  820-skrot.txt
+100-skrot.txt	281-skrot.txt  461-skrot.txt  641-skrot.txt  821-skrot.txt
+101-skrot.txt	282-skrot.txt  462-skrot.txt  642-skrot.txt  822-skrot.txt
+102-skrot.txt	283-skrot.txt  463-skrot.txt  643-skrot.txt  823-skrot.txt
+103-skrot.txt	284-skrot.txt  464-skrot.txt  644-skrot.txt  824-skrot.txt
+104-skrot.txt	285-skrot.txt  465-skrot.txt  645-skrot.txt  825-skrot.txt
+105-skrot.txt	286-skrot.txt  466-skrot.txt  646-skrot.txt  826-skrot.txt
+106-skrot.txt	287-skrot.txt  467-skrot.txt  647-skrot.txt  827-skrot.txt
+107-skrot.txt	288-skrot.txt  468-skrot.txt  648-skrot.txt  828-skrot.txt
+108-skrot.txt	289-skrot.txt  469-skrot.txt  649-skrot.txt  829-skrot.txt
+109-skrot.txt	28-skrot.txt   46-skrot.txt   64-skrot.txt   82-skrot.txt
+10-skrot.txt	290-skrot.txt  470-skrot.txt  650-skrot.txt  830-skrot.txt
+110-skrot.txt	291-skrot.txt  471-skrot.txt  651-skrot.txt  831-skrot.txt
+111-skrot.txt	292-skrot.txt  472-skrot.txt  652-skrot.txt  832-skrot.txt
+112-skrot.txt	293-skrot.txt  473-skrot.txt  653-skrot.txt  833-skrot.txt
+113-skrot.txt	294-skrot.txt  474-skrot.txt  654-skrot.txt  834-skrot.txt
+114-skrot.txt	295-skrot.txt  475-skrot.txt  655-skrot.txt  835-skrot.txt
+115-skrot.txt	296-skrot.txt  476-skrot.txt  656-skrot.txt  836-skrot.txt
+116-skrot.txt	297-skrot.txt  477-skrot.txt  657-skrot.txt  837-skrot.txt
+117-skrot.txt	298-skrot.txt  478-skrot.txt  658-skrot.txt  838-skrot.txt
+118-skrot.txt	299-skrot.txt  479-skrot.txt  659-skrot.txt  839-skrot.txt
+119-skrot.txt	29-skrot.txt   47-skrot.txt   65-skrot.txt   83-skrot.txt
+11-skrot.txt	2-skrot.txt    480-skrot.txt  660-skrot.txt  840-skrot.txt
+120-skrot.txt	300-skrot.txt  481-skrot.txt  661-skrot.txt  841-skrot.txt
+121-skrot.txt	301-skrot.txt  482-skrot.txt  662-skrot.txt  842-skrot.txt
+122-skrot.txt	302-skrot.txt  483-skrot.txt  663-skrot.txt  843-skrot.txt
+123-skrot.txt	303-skrot.txt  484-skrot.txt  664-skrot.txt  844-skrot.txt
+124-skrot.txt	304-skrot.txt  485-skrot.txt  665-skrot.txt  845-skrot.txt
+125-skrot.txt	305-skrot.txt  486-skrot.txt  666-skrot.txt  846-skrot.txt
+126-skrot.txt	306-skrot.txt  487-skrot.txt  667-skrot.txt  847-skrot.txt
+127-skrot.txt	307-skrot.txt  488-skrot.txt  668-skrot.txt  848-skrot.txt
+128-skrot.txt	308-skrot.txt  489-skrot.txt  669-skrot.txt  849-skrot.txt
+129-skrot.txt	309-skrot.txt  48-skrot.txt   66-skrot.txt   84-skrot.txt
+12-skrot.txt	30-skrot.txt   490-skrot.txt  670-skrot.txt  850-skrot.txt
+130-skrot.txt	310-skrot.txt  491-skrot.txt  671-skrot.txt  851-skrot.txt
+131-skrot.txt	311-skrot.txt  492-skrot.txt  672-skrot.txt  852-skrot.txt
+132-skrot.txt	312-skrot.txt  493-skrot.txt  673-skrot.txt  853-skrot.txt
+133-skrot.txt	313-skrot.txt  494-skrot.txt  674-skrot.txt  854-skrot.txt
+134-skrot.txt	314-skrot.txt  495-skrot.txt  675-skrot.txt  855-skrot.txt
+135-skrot.txt	315-skrot.txt  496-skrot.txt  676-skrot.txt  856-skrot.txt
+136-skrot.txt	316-skrot.txt  497-skrot.txt  677-skrot.txt  857-skrot.txt
+137-skrot.txt	317-skrot.txt  498-skrot.txt  678-skrot.txt  858-skrot.txt
+138-skrot.txt	318-skrot.txt  499-skrot.txt  679-skrot.txt  859-skrot.txt
+139-skrot.txt	319-skrot.txt  49-skrot.txt   67-skrot.txt   85-skrot.txt
+13-skrot.txt	31-skrot.txt   4-skrot.txt    680-skrot.txt  860-skrot.txt
+140-skrot.txt	320-skrot.txt  500-skrot.txt  681-skrot.txt  861-skrot.txt
+141-skrot.txt	321-skrot.txt  501-skrot.txt  682-skrot.txt  862-skrot.txt
+142-skrot.txt	322-skrot.txt  502-skrot.txt  683-skrot.txt  863-skrot.txt
+143-skrot.txt	323-skrot.txt  503-skrot.txt  684-skrot.txt  864-skrot.txt
+144-skrot.txt	324-skrot.txt  504-skrot.txt  685-skrot.txt  865-skrot.txt
+145-skrot.txt	325-skrot.txt  505-skrot.txt  686-skrot.txt  866-skrot.txt
+146-skrot.txt	326-skrot.txt  506-skrot.txt  687-skrot.txt  867-skrot.txt
+147-skrot.txt	327-skrot.txt  507-skrot.txt  688-skrot.txt  868-skrot.txt
+148-skrot.txt	328-skrot.txt  508-skrot.txt  689-skrot.txt  869-skrot.txt
+149-skrot.txt	329-skrot.txt  509-skrot.txt  68-skrot.txt   86-skrot.txt
+14-skrot.txt	32-skrot.txt   50-skrot.txt   690-skrot.txt  870-skrot.txt
+150-skrot.txt	330-skrot.txt  510-skrot.txt  691-skrot.txt  871-skrot.txt
+151-skrot.txt	331-skrot.txt  511-skrot.txt  692-skrot.txt  872-skrot.txt
+152-skrot.txt	332-skrot.txt  512-skrot.txt  693-skrot.txt  873-skrot.txt
+153-skrot.txt	333-skrot.txt  513-skrot.txt  694-skrot.txt  874-skrot.txt
+154-skrot.txt	334-skrot.txt  514-skrot.txt  695-skrot.txt  875-skrot.txt
+155-skrot.txt	335-skrot.txt  515-skrot.txt  696-skrot.txt  876-skrot.txt
+156-skrot.txt	336-skrot.txt  516-skrot.txt  697-skrot.txt  877-skrot.txt
+157-skrot.txt	337-skrot.txt  517-skrot.txt  698-skrot.txt  878-skrot.txt
+158-skrot.txt	338-skrot.txt  518-skrot.txt  699-skrot.txt  879-skrot.txt
+159-skrot.txt	339-skrot.txt  519-skrot.txt  69-skrot.txt   87-skrot.txt
+15-skrot.txt	33-skrot.txt   51-skrot.txt   6-skrot.txt    880-skrot.txt
+160-skrot.txt	340-skrot.txt  520-skrot.txt  700-skrot.txt  881-skrot.txt
+161-skrot.txt	341-skrot.txt  521-skrot.txt  701-skrot.txt  882-skrot.txt
+162-skrot.txt	342-skrot.txt  522-skrot.txt  702-skrot.txt  883-skrot.txt
+163-skrot.txt	343-skrot.txt  523-skrot.txt  703-skrot.txt  884-skrot.txt
+164-skrot.txt	344-skrot.txt  524-skrot.txt  704-skrot.txt  885-skrot.txt
+165-skrot.txt	345-skrot.txt  525-skrot.txt  705-skrot.txt  886-skrot.txt
+166-skrot.txt	346-skrot.txt  526-skrot.txt  706-skrot.txt  887-skrot.txt
+167-skrot.txt	347-skrot.txt  527-skrot.txt  707-skrot.txt  888-skrot.txt
+168-skrot.txt	348-skrot.txt  528-skrot.txt  708-skrot.txt  889-skrot.txt
+169-skrot.txt	349-skrot.txt  529-skrot.txt  709-skrot.txt  88-skrot.txt
+16-skrot.txt	34-skrot.txt   52-skrot.txt   70-skrot.txt   890-skrot.txt
+170-skrot.txt	350-skrot.txt  530-skrot.txt  710-skrot.txt  891-skrot.txt
+171-skrot.txt	351-skrot.txt  531-skrot.txt  711-skrot.txt  892-skrot.txt
+172-skrot.txt	352-skrot.txt  532-skrot.txt  712-skrot.txt  893-skrot.txt
+173-skrot.txt	353-skrot.txt  533-skrot.txt  713-skrot.txt  894-skrot.txt
+174-skrot.txt	354-skrot.txt  534-skrot.txt  714-skrot.txt  895-skrot.txt
+175-skrot.txt	355-skrot.txt  535-skrot.txt  715-skrot.txt  896-skrot.txt
+176-skrot.txt	356-skrot.txt  536-skrot.txt  716-skrot.txt  897-skrot.txt
+177-skrot.txt	357-skrot.txt  537-skrot.txt  717-skrot.txt  898-skrot.txt
+178-skrot.txt	358-skrot.txt  538-skrot.txt  718-skrot.txt  899-skrot.txt
+179-skrot.txt	359-skrot.txt  539-skrot.txt  719-skrot.txt  89-skrot.txt
+17-skrot.txt	35-skrot.txt   53-skrot.txt   71-skrot.txt   8-skrot.txt
+180-skrot.txt	360-skrot.txt  540-skrot.txt  720-skrot.txt  900-skrot.txt
+181-skrot.txt	361-skrot.txt  541-skrot.txt  721-skrot.txt  901-skrot.txt
+182-skrot.txt	362-skrot.txt  542-skrot.txt  722-skrot.txt  902-skrot.txt
+183-skrot.txt	363-skrot.txt  543-skrot.txt  723-skrot.txt  903-skrot.txt
+184-skrot.txt	364-skrot.txt  544-skrot.txt  724-skrot.txt  904-skrot.txt
+185-skrot.txt	365-skrot.txt  545-skrot.txt  725-skrot.txt  905-skrot.txt
+186-skrot.txt	366-skrot.txt  546-skrot.txt  726-skrot.txt  906-skrot.txt
+187-skrot.txt	367-skrot.txt  547-skrot.txt  727-skrot.txt  907-skrot.txt
+188-skrot.txt	368-skrot.txt  548-skrot.txt  728-skrot.txt  908-skrot.txt
+189-skrot.txt	369-skrot.txt  549-skrot.txt  729-skrot.txt  909-skrot.txt
+18-skrot.txt	36-skrot.txt   54-skrot.txt   72-skrot.txt   90-skrot.txt
+190-skrot.txt	370-skrot.txt  550-skrot.txt  730-skrot.txt  910-skrot.txt
+191-skrot.txt	371-skrot.txt  551-skrot.txt  731-skrot.txt  911-skrot.txt
+192-skrot.txt	372-skrot.txt  552-skrot.txt  732-skrot.txt  912-skrot.txt
+193-skrot.txt	373-skrot.txt  553-skrot.txt  733-skrot.txt  913-skrot.txt
+194-skrot.txt	374-skrot.txt  554-skrot.txt  734-skrot.txt  914-skrot.txt
+195-skrot.txt	375-skrot.txt  555-skrot.txt  735-skrot.txt  915-skrot.txt
+196-skrot.txt	376-skrot.txt  556-skrot.txt  736-skrot.txt  916-skrot.txt
+197-skrot.txt	377-skrot.txt  557-skrot.txt  737-skrot.txt  917-skrot.txt
+198-skrot.txt	378-skrot.txt  558-skrot.txt  738-skrot.txt  918-skrot.txt
+199-skrot.txt	379-skrot.txt  559-skrot.txt  739-skrot.txt  919-skrot.txt
+19-skrot.txt	37-skrot.txt   55-skrot.txt   73-skrot.txt   91-skrot.txt
+1-skrot.txt	380-skrot.txt  560-skrot.txt  740-skrot.txt  920-skrot.txt
+200-skrot.txt	381-skrot.txt  561-skrot.txt  741-skrot.txt  921-skrot.txt
+201-skrot.txt	382-skrot.txt  562-skrot.txt  742-skrot.txt  922-skrot.txt
+202-skrot.txt	383-skrot.txt  563-skrot.txt  743-skrot.txt  923-skrot.txt
+203-skrot.txt	384-skrot.txt  564-skrot.txt  744-skrot.txt  924-skrot.txt
+204-skrot.txt	385-skrot.txt  565-skrot.txt  745-skrot.txt  925-skrot.txt
+205-skrot.txt	386-skrot.txt  566-skrot.txt  746-skrot.txt  926-skrot.txt
+206-skrot.txt	387-skrot.txt  567-skrot.txt  747-skrot.txt  927-skrot.txt
+207-skrot.txt	388-skrot.txt  568-skrot.txt  748-skrot.txt  928-skrot.txt
+208-skrot.txt	389-skrot.txt  569-skrot.txt  749-skrot.txt  929-skrot.txt
+209-skrot.txt	38-skrot.txt   56-skrot.txt   74-skrot.txt   92-skrot.txt
+20-skrot.txt	390-skrot.txt  570-skrot.txt  750-skrot.txt  930-skrot.txt
+210-skrot.txt	391-skrot.txt  571-skrot.txt  751-skrot.txt  931-skrot.txt
+211-skrot.txt	392-skrot.txt  572-skrot.txt  752-skrot.txt  932-skrot.txt
+212-skrot.txt	393-skrot.txt  573-skrot.txt  753-skrot.txt  933-skrot.txt
+213-skrot.txt	394-skrot.txt  574-skrot.txt  754-skrot.txt  934-skrot.txt
+214-skrot.txt	395-skrot.txt  575-skrot.txt  755-skrot.txt  935-skrot.txt
+215-skrot.txt	396-skrot.txt  576-skrot.txt  756-skrot.txt  936-skrot.txt
+216-skrot.txt	397-skrot.txt  577-skrot.txt  757-skrot.txt  937-skrot.txt
+217-skrot.txt	398-skrot.txt  578-skrot.txt  758-skrot.txt  938-skrot.txt
+218-skrot.txt	399-skrot.txt  579-skrot.txt  759-skrot.txt  939-skrot.txt
+219-skrot.txt	39-skrot.txt   57-skrot.txt   75-skrot.txt   93-skrot.txt
+21-skrot.txt	3-skrot.txt    580-skrot.txt  760-skrot.txt  940-skrot.txt
+220-skrot.txt	400-skrot.txt  581-skrot.txt  761-skrot.txt  941-skrot.txt
+221-skrot.txt	401-skrot.txt  582-skrot.txt  762-skrot.txt  942-skrot.txt
+222-skrot.txt	402-skrot.txt  583-skrot.txt  763-skrot.txt  943-skrot.txt
+223-skrot.txt	403-skrot.txt  584-skrot.txt  764-skrot.txt  944-skrot.txt
+224-skrot.txt	404-skrot.txt  585-skrot.txt  765-skrot.txt  945-skrot.txt
+225-skrot.txt	405-skrot.txt  586-skrot.txt  766-skrot.txt  946-skrot.txt
+226-skrot.txt	406-skrot.txt  587-skrot.txt  767-skrot.txt  947-skrot.txt
+227-skrot.txt	407-skrot.txt  588-skrot.txt  768-skrot.txt  948-skrot.txt
+228-skrot.txt	408-skrot.txt  589-skrot.txt  769-skrot.txt  949-skrot.txt
+229-skrot.txt	409-skrot.txt  58-skrot.txt   76-skrot.txt   94-skrot.txt
+22-skrot.txt	40-skrot.txt   590-skrot.txt  770-skrot.txt  950-skrot.txt
+230-skrot.txt	410-skrot.txt  591-skrot.txt  771-skrot.txt  951-skrot.txt
+231-skrot.txt	411-skrot.txt  592-skrot.txt  772-skrot.txt  952-skrot.txt
+232-skrot.txt	412-skrot.txt  593-skrot.txt  773-skrot.txt  953-skrot.txt
+233-skrot.txt	413-skrot.txt  594-skrot.txt  774-skrot.txt  954-skrot.txt
+234-skrot.txt	414-skrot.txt  595-skrot.txt  775-skrot.txt  955-skrot.txt
+235-skrot.txt	415-skrot.txt  596-skrot.txt  776-skrot.txt  956-skrot.txt
+236-skrot.txt	416-skrot.txt  597-skrot.txt  777-skrot.txt  957-skrot.txt
+237-skrot.txt	417-skrot.txt  598-skrot.txt  778-skrot.txt  958-skrot.txt
+238-skrot.txt	418-skrot.txt  599-skrot.txt  779-skrot.txt  959-skrot.txt
+239-skrot.txt	419-skrot.txt  59-skrot.txt   77-skrot.txt   95-skrot.txt
+23-skrot.txt	41-skrot.txt   5-skrot.txt    780-skrot.txt  960-skrot.txt
+240-skrot.txt	420-skrot.txt  600-skrot.txt  781-skrot.txt  961-skrot.txt
+241-skrot.txt	421-skrot.txt  601-skrot.txt  782-skrot.txt  962-skrot.txt
+242-skrot.txt	422-skrot.txt  602-skrot.txt  783-skrot.txt  963-skrot.txt
+243-skrot.txt	423-skrot.txt  603-skrot.txt  784-skrot.txt  964-skrot.txt
+244-skrot.txt	424-skrot.txt  604-skrot.txt  785-skrot.txt  965-skrot.txt
+245-skrot.txt	425-skrot.txt  605-skrot.txt  786-skrot.txt  966-skrot.txt
+246-skrot.txt	426-skrot.txt  606-skrot.txt  787-skrot.txt  967-skrot.txt
+247-skrot.txt	427-skrot.txt  607-skrot.txt  788-skrot.txt  968-skrot.txt
+248-skrot.txt	428-skrot.txt  608-skrot.txt  789-skrot.txt  969-skrot.txt
+249-skrot.txt	429-skrot.txt  609-skrot.txt  78-skrot.txt   96-skrot.txt
+24-skrot.txt	42-skrot.txt   60-skrot.txt   790-skrot.txt  970-skrot.txt
+250-skrot.txt	430-skrot.txt  610-skrot.txt  791-skrot.txt  971-skrot.txt
+251-skrot.txt	431-skrot.txt  611-skrot.txt  792-skrot.txt  972-skrot.txt
+252-skrot.txt	432-skrot.txt  612-skrot.txt  793-skrot.txt  973-skrot.txt
+253-skrot.txt	433-skrot.txt  613-skrot.txt  794-skrot.txt  974-skrot.txt
+254-skrot.txt	434-skrot.txt  614-skrot.txt  795-skrot.txt  975-skrot.txt
+255-skrot.txt	435-skrot.txt  615-skrot.txt  796-skrot.txt  976-skrot.txt
+256-skrot.txt	436-skrot.txt  616-skrot.txt  797-skrot.txt  977-skrot.txt
+257-skrot.txt	437-skrot.txt  617-skrot.txt  798-skrot.txt  978-skrot.txt
+258-skrot.txt	438-skrot.txt  618-skrot.txt  799-skrot.txt  979-skrot.txt
+259-skrot.txt	439-skrot.txt  619-skrot.txt  79-skrot.txt   97-skrot.txt
+25-skrot.txt	43-skrot.txt   61-skrot.txt   7-skrot.txt    980-skrot.txt
+260-skrot.txt	440-skrot.txt  620-skrot.txt  800-skrot.txt  981-skrot.txt
+261-skrot.txt	441-skrot.txt  621-skrot.txt  801-skrot.txt  982-skrot.txt
+262-skrot.txt	442-skrot.txt  622-skrot.txt  802-skrot.txt  983-skrot.txt
+263-skrot.txt	443-skrot.txt  623-skrot.txt  803-skrot.txt  984-skrot.txt
+264-skrot.txt	444-skrot.txt  624-skrot.txt  804-skrot.txt  985-skrot.txt
+265-skrot.txt	445-skrot.txt  625-skrot.txt  805-skrot.txt  986-skrot.txt
+266-skrot.txt	446-skrot.txt  626-skrot.txt  806-skrot.txt  987-skrot.txt
+267-skrot.txt	447-skrot.txt  627-skrot.txt  807-skrot.txt  988-skrot.txt
+268-skrot.txt	448-skrot.txt  628-skrot.txt  808-skrot.txt  989-skrot.txt
+269-skrot.txt	449-skrot.txt  629-skrot.txt  809-skrot.txt  98-skrot.txt
+26-skrot.txt	44-skrot.txt   62-skrot.txt   80-skrot.txt   990-skrot.txt
+270-skrot.txt	450-skrot.txt  630-skrot.txt  810-skrot.txt  991-skrot.txt
+271-skrot.txt	451-skrot.txt  631-skrot.txt  811-skrot.txt  992-skrot.txt
+272-skrot.txt	452-skrot.txt  632-skrot.txt  812-skrot.txt  993-skrot.txt
+273-skrot.txt	453-skrot.txt  633-skrot.txt  813-skrot.txt  994-skrot.txt
+274-skrot.txt	454-skrot.txt  634-skrot.txt  814-skrot.txt  995-skrot.txt
+275-skrot.txt	455-skrot.txt  635-skrot.txt  815-skrot.txt  996-skrot.txt
+276-skrot.txt	456-skrot.txt  636-skrot.txt  816-skrot.txt  997-skrot.txt
+277-skrot.txt	457-skrot.txt  637-skrot.txt  817-skrot.txt  998-skrot.txt
+278-skrot.txt	458-skrot.txt  638-skrot.txt  818-skrot.txt  999-skrot.txt
+279-skrot.txt	459-skrot.txt  639-skrot.txt  819-skrot.txt  99-skrot.txt
+27-skrot.txt	45-skrot.txt   63-skrot.txt   81-skrot.txt   9-skrot.txt
+DEVOPS25/lektion8/fulfiler
+$ DEVOPS25/lektion8/fulfiler
+$ ./o
+pt
+e
+ fulfilr
+bash: ./opte: No such file or directory
+DEVOPS25/lektion8/fulfiler
+$ ls
+100-skrot.txt  29-skrot.txt  48-skrot.txt  67-skrot.txt  86-skrot.txt
+10-skrot.txt   2-skrot.txt   49-skrot.txt  68-skrot.txt  87-skrot.txt
+11-skrot.txt   30-skrot.txt  4-skrot.txt   69-skrot.txt  88-skrot.txt
+12-skrot.txt   31-skrot.txt  50-skrot.txt  6-skrot.txt	 89-skrot.txt
+13-skrot.txt   32-skrot.txt  51-skrot.txt  70-skrot.txt  8-skrot.txt
+14-skrot.txt   33-skrot.txt  52-skrot.txt  71-skrot.txt  90-skrot.txt
+15-skrot.txt   34-skrot.txt  53-skrot.txt  72-skrot.txt  91-skrot.txt
+16-skrot.txt   35-skrot.txt  54-skrot.txt  73-skrot.txt  92-skrot.txt
+17-skrot.txt   36-skrot.txt  55-skrot.txt  74-skrot.txt  93-skrot.txt
+18-skrot.txt   37-skrot.txt  56-skrot.txt  75-skrot.txt  94-skrot.txt
+19-skrot.txt   38-skrot.txt  57-skrot.txt  76-skrot.txt  95-skrot.txt
+1-skrot.txt    39-skrot.txt  58-skrot.txt  77-skrot.txt  96-skrot.txt
+20-skrot.txt   3-skrot.txt   59-skrot.txt  78-skrot.txt  97-skrot.txt
+21-skrot.txt   40-skrot.txt  5-skrot.txt   79-skrot.txt  98-skrot.txt
+22-skrot.txt   41-skrot.txt  60-skrot.txt  7-skrot.txt	 99-skrot.txt
+23-skrot.txt   42-skrot.txt  61-skrot.txt  80-skrot.txt  9-skrot.txt
+24-skrot.txt   43-skrot.txt  62-skrot.txt  81-skrot.txt  fulfulfiler
+25-skrot.txt   44-skrot.txt  63-skrot.txt  82-skrot.txt
+26-skrot.txt   45-skrot.txt  64-skrot.txt  83-skrot.txt
+27-skrot.txt   46-skrot.txt  65-skrot.txt  84-skrot.txt
+28-skrot.txt   47-skrot.txt  66-skrot.txt  85-skrot.txt
+DEVOPS25/lektion8/fulfiler
+$ DEVOPS25/lektion8/fulfiler
+$ ls
+100-skrot.txt  29-skrot.txt  48-skrot.txt  67-skrot.txt  86-skrot.txt
+10-skrot.txt   2-skrot.txt   49-skrot.txt  68-skrot.txt  87-skrot.txt
+11-skrot.txt   30-skrot.txt  4-skrot.txt   69-skrot.txt  88-skrot.txt
+12-skrot.txt   31-skrot.txt  50-skrot.txt  6-skrot.txt	 89-skrot.txt
+13-skrot.txt   32-skrot.txt  51-skrot.txt  70-skrot.txt  8-skrot.txt
+14-skrot.txt   33-skrot.txt  52-skrot.txt  71-skrot.txt  90-skrot.txt
+15-skrot.txt   34-skrot.txt  53-skrot.txt  72-skrot.txt  91-skrot.txt
+16-skrot.txt   35-skrot.txt  54-skrot.txt  73-skrot.txt  92-skrot.txt
+17-skrot.txt   36-skrot.txt  55-skrot.txt  74-skrot.txt  93-skrot.txt
+18-skrot.txt   37-skrot.txt  56-skrot.txt  75-skrot.txt  94-skrot.txt
+19-skrot.txt   38-skrot.txt  57-skrot.txt  76-skrot.txt  95-skrot.txt
+1-skrot.txt    39-skrot.txt  58-skrot.txt  77-skrot.txt  96-skrot.txt
+20-skrot.txt   3-skrot.txt   59-skrot.txt  78-skrot.txt  97-skrot.txt
+21-skrot.txt   40-skrot.txt  5-skrot.txt   79-skrot.txt  98-skrot.txt
+22-skrot.txt   41-skrot.txt  60-skrot.txt  7-skrot.txt	 99-skrot.txt
+23-skrot.txt   42-skrot.txt  61-skrot.txt  80-skrot.txt  9-skrot.txt
+24-skrot.txt   43-skrot.txt  62-skrot.txt  81-skrot.txt  fulfulfiler
+25-skrot.txt   44-skrot.txt  63-skrot.txt  82-skrot.txt
+26-skrot.txt   45-skrot.txt  64-skrot.txt  83-skrot.txt
+27-skrot.txt   46-skrot.txt  65-skrot.txt  84-skrot.txt
+28-skrot.txt   47-skrot.txt  66-skrot.txt  85-skrot.txt
+DEVOPS25/lektion8/fulfiler
+$ ./opte fulfilbash -x DEVOPS25/lektion8/fulfiler
+$ bash -x ./opte fulfil
+bash: ./opte: No such file or directory
+DEVOPS25/lektion8/fulfiler
+$ ls
+100-skrot.txt  29-skrot.txt  48-skrot.txt  67-skrot.txt  86-skrot.txt
+10-skrot.txt   2-skrot.txt   49-skrot.txt  68-skrot.txt  87-skrot.txt
+11-skrot.txt   30-skrot.txt  4-skrot.txt   69-skrot.txt  88-skrot.txt
+12-skrot.txt   31-skrot.txt  50-skrot.txt  6-skrot.txt	 89-skrot.txt
+13-skrot.txt   32-skrot.txt  51-skrot.txt  70-skrot.txt  8-skrot.txt
+14-skrot.txt   33-skrot.txt  52-skrot.txt  71-skrot.txt  90-skrot.txt
+15-skrot.txt   34-skrot.txt  53-skrot.txt  72-skrot.txt  91-skrot.txt
+16-skrot.txt   35-skrot.txt  54-skrot.txt  73-skrot.txt  92-skrot.txt
+17-skrot.txt   36-skrot.txt  55-skrot.txt  74-skrot.txt  93-skrot.txt
+18-skrot.txt   37-skrot.txt  56-skrot.txt  75-skrot.txt  94-skrot.txt
+19-skrot.txt   38-skrot.txt  57-skrot.txt  76-skrot.txt  95-skrot.txt
+1-skrot.txt    39-skrot.txt  58-skrot.txt  77-skrot.txt  96-skrot.txt
+20-skrot.txt   3-skrot.txt   59-skrot.txt  78-skrot.txt  97-skrot.txt
+21-skrot.txt   40-skrot.txt  5-skrot.txt   79-skrot.txt  98-skrot.txt
+22-skrot.txt   41-skrot.txt  60-skrot.txt  7-skrot.txt	 99-skrot.txt
+23-skrot.txt   42-skrot.txt  61-skrot.txt  80-skrot.txt  9-skrot.txt
+24-skrot.txt   43-skrot.txt  62-skrot.txt  81-skrot.txt  fulfulfiler
+25-skrot.txt   44-skrot.txt  63-skrot.txt  82-skrot.txt
+26-skrot.txt   45-skrot.txt  64-skrot.txt  83-skrot.txt
+27-skrot.txt   46-skrot.txt  65-skrot.txt  84-skrot.txt
+28-skrot.txt   47-skrot.txt  66-skrot.txt  85-skrot.txt
+DEVOPS25/lektion8/fulfiler
+DEVOPS25/lektion8/fulfiler
+$ ./opte fulfil
+
+
+
+
+
+
+
+
+../opte: line 7: cd: fulfilr: No such file or directory
+rm: cannot remove 'fulfulfiler': Is a directory
+DEVOPS25/lektion8/fulfiler
+$ ls
+fulfulfiler
+DEVOPS25/lektion8/fulfiler
+$ DEVOPS25/lektion8/fulfiler
+$ cp op
+t
+ optx
+
+
+
+cp bra
+
+cd ..
+DEVOPS25/lektion8
+$ cp brace_exp trapex
+DEVOPS25/lektion8
+$ code trapex 
+DEVOPS25/lektion8
+$ DEVOPS25/lektion8
+$ man kill
+KILL(1)                        User Commands                        KILL(1)
+
+NAME
+       kill - send a signal to a process
+
+SYNOPSIS
+       kill [options] <pid> [...]
+
+DESCRIPTION
+       The default signal for kill is TERM.  Use -l or -L to list available
+       signals.   Particularly useful signals include HUP, INT, KILL, STOP,
+       CONT, and 0.  Alternate signals may be specified in three ways:  -9,
+       -SIGKILL  or -KILL.  Negative PID values may be used to choose whole
+       process groups; see the PGID column in ps command output.  A PID  of
+       -1  is  special;  it indicates all processes except the kill process
+       itself and init.
+
+OPTIONS
+       <pid> [...]
+              Send signal to every <pid> listed.
+
+       -<signal>
+       -s <signal>
+       --signal <signal>
+              Specify the signal to be sent.  The signal can  be  specified
+              by  using  name  or  number.   The behavior of signals is ex‐
+              plained in signal(7) manual page.
+
+       -q, --queue value
+              Use sigqueue(3) rather than kill(2) and the value argument is
+              used to specify an integer to be sent with the signal. If the
+              receiving process has installed a handler for this signal us‐
+              ing the SA_SIGINFO flag to sigaction(2), then it  can  obtain
+              this data via the si_value field of the siginfo_t structure.
+
+       -l, --list [signal]
+              List  signal names.  This option has optional argument, which
+              will convert signal number  to  signal  name,  or  other  way
+              round.
+
+       -L, --table
+              List signal names in a nice table.
+
+       NOTES  Your  shell  (command  line  interpreter) may have a built-in
+              kill command.  You may need to run the command described here
+              as /bin/kill to solve the conflict.
+
+       If you use negative PID values, you will need to specify a signal as
+       well so that kill knows if the option is for the PID or  the  signal
+       number.  For  example, issuing the command with the single option -9
+       it is not clear if you mean signal 9 (SIGKILL) or process group 9.
+
+EXAMPLES
+       kill -9 -1
+              Kill all processes you can kill.
+
+       kill -l 11
+              Translate number 11 into a signal name.
+
+       kill -L
+              List the available signal choices in a nice table.
+
+       kill 123 543 2341 3453
+              Send the default signal, SIGTERM, to all those processes.
+
+       kill -SIGTERM -123
+              Send the signal SIGTERM to process group 123. The signal name
+              or number is required if specifying  process  groups  with  a
+              negative PID.
+
+SEE ALSO
+       kill(2),   killall(1),   nice(1),  pkill(1),  renice(1),  signal(7),
+       sigqueue(3), skill(1) (press h for help or q to quit)
+
+STANDARDS
+       This command meets appropriate standards. The -L flag is  Linux-spe‐
+       cific.
+
+AUTHOR
+       8;;albert@users.sf.net\Albert Cahalan8;;\ wrote kill in 1999 to replace a bsdutils one that was8;;\
+       not  standards  compliant.   The util-linux one might also work cor‐
+       rectly.
+
+REPORTING BUGS
+       Please send bug reports to 8;;procps@freelists.org\procps@freelists.org8;;\8;;\
+
+procps-ng                        2023-01-16                         KILL(1)
+ Manual page kill(1) line 76/87 (END) (press h for help or q to quit)
+MSTANDARDSge kill(1) line 76/87 (END) (press h for help or q to quit)
+MESESCOApage kill(1) line 75/87 98% (press h for help or q to quit)
+M       sigqueue(3), skill(1)87 98% (press h for help or q to quit)
+M       kill(2),   killall(1),   nice(1),  pkill(1),  renice(1),  signal(7),
+MSEE ALSOage kill(1) line 72/87 95% (press h for help or q to quit)
+MESESCOApage kill(1) line 71/87 95% (press h for help or q to quit)
+M              negative PID./87 94% (press h for help or q to quit)
+M              or number is required if specifying  process  groups  with  a
+M              Send the signal SIGTERM to process group 123. The signal name
+M       kill -SIGTERM -12367/87 89% (press h for help or q to quit)
+MESESCOApage kill(1) line 66/87 89% (press h for help or q to quit)
+M              Send the default signal, SIGTERM, to all those processes.
+M       kill 123 543 2341 34537 86% (press h for help or q to quit)
+MESESCOApage kill(1) line 63/87 86% (press h for help or q to quit)
+M              List the available signal choices in a nice table.t)
+M       kill -Lll(1) line 61/87 85% (press h for help or q to quit)
+MESESCOApage kill(1) line 60/87 81% (press h for help or q to quit)
+>DEVOPS25/lektion81) line 59/87 81% (press h for help or q to quit)
+$ .-t/trapex DEVOPS25/lektion8
+$ ./trapex 
+Skriv någe: ^CNej du
+^CNej du
+^CNej du
+^CNej du
+^CNej du
+^CNej du
+^CNej du
+DEVOPS25/lektion8
+$ ./trapex DEVOPS25/lektion8
+$ ./trapex 
+bash: ./trapex: No such file or directory
+DEVOPS25/lektion8
+$ ./trapex1
+Skriv någe: hu^CNej du
+DEVOPS25/lektion8
+$ echo $?
+100
+DEVOPS25/lektion8
+$ DEVOPS25/lektion8
+$ .-t/trapex1 
+Skriv någe: Nej du
+DEVOPS25/lektion8
+$ exi
+
+
+
+
+exit
