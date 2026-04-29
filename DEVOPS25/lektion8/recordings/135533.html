@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style type="text/css">
+pre {
+  font-family:Courier New;
+  font-size:10pt;
+}
+
+.af_line {
+  color: gray;
+  text-decoration: none;
+}
+
+</style>
+<title>Source file</title>
+</head>
+<body>
+<pre>/home/kent/Documents/l1-live/DEVOPS25/lektion8
+ <span style="font-weight:bold;color:#00ff00;">aritloop_for</span>     <span style="font-weight:bold;color:#00ff00;">brace_exp</span>             <span style="font-weight:bold;color:#00ff00;">len_func</span>        viktigt.txt
+ <span style="font-weight:bold;color:#00ff00;">aritloop_while</span>  &apos;fin med mellanslag&apos;   <span style="font-weight:bold;color:#00ff00;">len_importer</span>    viktigt.txt.bak
+ barnfunc         <span style="font-weight:bold;color:#5c5cff;">import_relprob</span>        <span style="font-weight:bold;color:#00ff00;">len_import.sh</span>
+ <span style="font-weight:bold;color:#5c5cff;">bash-recap</span>       <span style="font-weight:bold;color:#00ff00;">len</span>                   <span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ <span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ bash
+ baer
+rnfunc 
+Hej hopp
+ETT: Hej hopp TVA: 
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ bash barnfunc 
+HejXhopp
+ETT: Hej TVA: hopp
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ bash barnfunc <span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ bash barnfunc 
+HejXhopp
+ETT: Hej TVA: hopp
+IFS i barnet: X
+IFS i föräldern:  	
+
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+$ <span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ man bash
+<span style="text-decoration:underline;">BASH</span>(1)                   General Commands Manual                   <span style="text-decoration:underline;">BASH</span>(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       bash - GNU Bourne-Again SHell
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">[options] [command_string | file]</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">COPYRIGHT</span>
+       Bash  is  Copyright  (C)  1989-2022 by the Free Software Foundation,
+       Inc.
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">is an </span><span style="font-weight:bold;color:#7f7f7f;">sh</span><span style="color:#7f7f7f;">-compatible command language interpreter that  executes</span>
+       commands read from the standard input or from a file.  <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">also in‐</span>
+       corporates useful features from the <span style="text-decoration:underline;">Korn</span> and <span style="text-decoration:underline;">C</span> shells (<span style="font-weight:bold;color:#7f7f7f;">ksh </span><span style="color:#7f7f7f;">and </span><span style="font-weight:bold;color:#7f7f7f;">csh</span><span style="color:#7f7f7f;">).</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">Bash  </span><span style="color:#7f7f7f;">is intended to be a conformant implementation of the Shell and</span>
+       Utilities portion of the IEEE  POSIX  specification  (IEEE  Standard
+</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">BASH</span><span style="color:#000000;background-color:#000000;">(1)                   General Commands Manual                   </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">BASH</span><span style="color:#000000;background-color:#000000;">(1)</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       bash - GNU Bourne-Again SHell
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">[options] [command_string | file]</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">COPYRIGHT</span>
+       Bash  is  Copyright  (C)  1989-2022 by the Free Software Foundation,
+       Inc.
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">is an </span><span style="font-weight:bold;color:#7f7f7f;">sh</span><span style="color:#7f7f7f;">-compatible command language interpreter that  executes</span>
+       commands read from the standard input or from a file.  <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">also in‐</span>
+       corporates useful features from the <span style="text-decoration:underline;">Korn</span> and <span style="text-decoration:underline;">C</span> shells (<span style="font-weight:bold;color:#7f7f7f;">ksh </span><span style="color:#7f7f7f;">and </span><span style="font-weight:bold;color:#7f7f7f;">csh</span><span style="color:#7f7f7f;">).</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">Bash  </span><span style="color:#7f7f7f;">is intended to be a conformant implementation of the Shell and</span>
+       Utilities portion of the IEEE  POSIX  specification  (IEEE  Standard
+<span style="text-decoration:underline;">BASH</span>(1)                   General Commands Manual                   <span style="text-decoration:underline;">BASH</span>(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       bash - GNU Bourne-Again SHell
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">[options] [command_string | file]</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">COPYRIGHT</span>
+       Bash  is  Copyright  (C)  1989-2022 by the Free Software Foundation,
+       Inc.
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">is an </span><span style="font-weight:bold;color:#7f7f7f;">sh</span><span style="color:#7f7f7f;">-compatible command language interpreter that  executes</span>
+       commands read from the standard input or from a file.  <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">also in‐</span>
+       corporates useful features from the <span style="text-decoration:underline;">Korn</span> and <span style="text-decoration:underline;">C</span> shells (<span style="font-weight:bold;color:#7f7f7f;">ksh </span><span style="color:#7f7f7f;">and </span><span style="font-weight:bold;color:#7f7f7f;">csh</span><span style="color:#7f7f7f;">).</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">Bash  </span><span style="color:#7f7f7f;">is intended to be a conformant implementation of the Shell and</span>
+       Utilities portion of the IEEE  POSIX  specification  (IEEE  Standard
+...skipping...
+       <span style="font-weight:bold;color:#7f7f7f;">[-+]O [</span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#000000;background-color:#7f7f7f;">shopt</span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">_option</span><span style="color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">]</span>
+                 <span style="text-decoration:underline;"></span><span style="text-decoration:underline;color:#000000;background-color:#000000;">shopt</span><span style="text-decoration:underline;color:#000000;background-color:#000000;"></span><span style="text-decoration:underline;color:#000000;background-color:#000000;">_option</span><span style="color:#000000;background-color:#000000;">  is  one of the shell options accepted by the</span>
+                 <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">shopt</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> </span><span style="color:#7f7f7f;background-color:#000000;">builtin (see  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">SHELL  BUILTIN  COMMANDS  </span><span style="color:#7f7f7f;background-color:#000000;">below).   If</span>
+                 <span style="text-decoration:underline;"></span><span style="text-decoration:underline;color:#000000;background-color:#000000;">shopt</span><span style="text-decoration:underline;color:#000000;background-color:#000000;"></span><span style="text-decoration:underline;color:#000000;background-color:#000000;">_option</span><span style="color:#000000;background-color:#000000;"> is present, </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-O </span><span style="color:#7f7f7f;background-color:#000000;">sets the value of that option;</span>
+                 <span style="font-weight:bold;color:#7f7f7f;">+O  </span><span style="color:#7f7f7f;">unsets it.  If </span><span style="text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#000000;background-color:#7f7f7f;">shopt</span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">_option</span><span style="color:#7f7f7f;background-color:#000000;"> is not supplied, the names</span>
+                 and values of the shell  options  accepted  by  <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">shopt</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">  </span><span style="color:#7f7f7f;background-color:#000000;">are</span>
+                 printed  on the standard output.  If the invocation option
+                 is <span style="font-weight:bold;color:#7f7f7f;">+O</span><span style="color:#7f7f7f;">, the output is displayed in a  format  that  may  be</span>
+                 reused as input.
+       <span style="font-weight:bold;color:#7f7f7f;">--        </span><span style="color:#7f7f7f;">A  </span><span style="font-weight:bold;color:#7f7f7f;">--  </span><span style="color:#7f7f7f;">signals the end of options and disables further op‐</span>
+                 tion processing.  Any arguments after the <span style="font-weight:bold;color:#7f7f7f;">--  </span><span style="color:#7f7f7f;">are  treated</span>
+                 as  filenames  and arguments.  An argument of <span style="font-weight:bold;color:#7f7f7f;">- </span><span style="color:#7f7f7f;">is equiva‐</span>
+                 lent to <span style="font-weight:bold;color:#7f7f7f;">--</span><span style="color:#7f7f7f;">.</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">also interprets a number of multi-character options.  These op‐</span>
+       tions must appear on the command line  before  the  single-character
+       options to be recognized.
+
+       <span style="font-weight:bold;color:#7f7f7f;">--debugger</span>
+M                 commands will be executed.</span>;"> Manual page bash(1) line 52 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--debugger</span>r q to quit)</span><span style="color:#000000;background-color:#000000;">
+              Arrange  for  the  debugger profile to be executed before the</span> (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+              shell starts.  Turns on extended debugging mode (see the  de‐</span>press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+              scription of the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">extdebug </span><span style="color:#7f7f7f;background-color:#000000;">option to the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">shopt</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> </span><span style="color:#7f7f7f;background-color:#000000;">builtin below).</span>
+       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--dump-po-strings</span>quit)</span><span style="color:#000000;background-color:#000000;">
+              Equivalent  to  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-D</span><span style="color:#7f7f7f;background-color:#000000;">,  but  the output is in the GNU </span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">gettext</span><span style="color:#7f7f7f;background-color:#000000;"> </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">po</span>
+              (portable object) file format.</span>;"> Manual page bash(1) line 57 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--dump-strings</span>to quit)</span><span style="color:#000000;background-color:#000000;">
+              Equivalent to </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-D</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--help </span><span style="color:#7f7f7f;background-color:#000000;">Display a usage message on standard output and exit  success‐</span>
+              fully.</span>background-color:#000000;"> Manual page bash(1) line 61 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       <span style="font-weight:bold;color:#7f7f7f;">--init-file </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">file</span>
+       <span style="font-weight:bold;color:#7f7f7f;">--rcfile </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">file</span>
+              Execute  commands  from  <span style="text-decoration:underline;">file</span> instead of the system wide ini‐
+              tialization file <span style="text-decoration:underline;">/etc/bash.bashrc</span> and the  standard  personal
+              initialization  file  <span style="text-decoration:underline;">~/.bashrc</span>  if  the shell is interactive
+              (see <span style="font-weight:bold;color:#7f7f7f;">INVOCATION </span><span style="color:#7f7f7f;">below).</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">--login</span>
+              Equivalent to <span style="font-weight:bold;color:#7f7f7f;">-l</span><span style="color:#7f7f7f;">.</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">--noediting</span>
+...skipping...olor:#000000;background-color:#000000;"> Manual page bash(1) line 73 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       environment, the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">SHELLOPTS</span><span style="color:#7f7f7f;background-color:#000000;">, </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">BA</span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">SHOPT</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">S</span><span style="color:#7f7f7f;background-color:#000000;">, </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">CDPATH</span><span style="color:#7f7f7f;background-color:#000000;">, and  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">GLOBIGNORE  </span><span style="color:#7f7f7f;background-color:#000000;">vari‐</span>
+       ables,  if  they appear in the environment, are ignored, and the ef‐
+       fective user id is set to the real user id.  If  the  <span style="font-weight:bold;color:#7f7f7f;">-p  </span><span style="color:#7f7f7f;">option  is</span>
+       supplied  at  invocation,  the startup behavior is the same, but the
+       effective user id is not reset.
+
+<span style="font-weight:bold;color:#7f7f7f;">DEFINITIONS</span>
+       The following definitions are used throughout the rest of this docu‐
+       ment.
+       <span style="font-weight:bold;color:#7f7f7f;">blank  </span><span style="color:#7f7f7f;">A space or tab.</span>
+       <span style="font-weight:bold;color:#7f7f7f;">word   </span><span style="color:#7f7f7f;">A sequence of characters considered as a single unit  by  the</span>
+              shell.  Also known as a <span style="font-weight:bold;color:#7f7f7f;">token</span><span style="color:#7f7f7f;">.</span>
+       <span style="font-weight:bold;color:#7f7f7f;">name   </span><span style="color:#7f7f7f;">A  </span><span style="text-decoration:underline;color:#7f7f7f;">word</span><span style="color:#7f7f7f;"> consisting only of alphanumeric characters and under‐</span>
+              scores, and beginning with an alphabetic character or an  un‐
+              derscore.  Also referred to as an <span style="font-weight:bold;color:#7f7f7f;">identifier</span><span style="color:#7f7f7f;">.</span>
+       <span style="font-weight:bold;color:#7f7f7f;">metacharacter</span>
+              A character that, when unquoted, separates words.  One of the
+              following:
+              <span style="font-weight:bold;color:#7f7f7f;">|  &amp; ; ( ) &lt; &gt; space tab newline</span>
+...skipping...olor:#000000;background-color:#000000;"> Manual page bash(1) line 216 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       environment.  If the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">lastpipe </span><span style="color:#7f7f7f;background-color:#000000;">option  is  enabled  using  the  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">shopt</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span>
+       builtin  (see the description of <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">shopt</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> </span><span style="color:#7f7f7f;background-color:#000000;">below), the last element of a</span>
+       pipeline may be run by the shell process when job control is not ac‐
+       tive.
+
+   <span style="font-weight:bold;color:#7f7f7f;">Lists</span>
+       A <span style="text-decoration:underline;">list</span> is a sequence of one or more pipelines separated  by  one  of
+       the  operators  <span style="font-weight:bold;color:#7f7f7f;">;</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">&amp;</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">&amp;&amp;</span><span style="color:#7f7f7f;">, or </span><span style="font-weight:bold;color:#7f7f7f;">||</span><span style="color:#7f7f7f;">, and optionally terminated by one of</span>
+       <span style="font-weight:bold;color:#7f7f7f;">;</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">&amp;</span><span style="color:#7f7f7f;">, or </span><span style="font-weight:bold;color:#7f7f7f;">&lt;newline&gt;</span><span style="color:#7f7f7f;">.</span>
+
+       Of these list operators, <span style="font-weight:bold;color:#7f7f7f;">&amp;&amp; </span><span style="color:#7f7f7f;">and </span><span style="font-weight:bold;color:#7f7f7f;">|| </span><span style="color:#7f7f7f;">have equal  precedence,  followed</span>
+       by <span style="font-weight:bold;color:#7f7f7f;">; </span><span style="color:#7f7f7f;">and </span><span style="font-weight:bold;color:#7f7f7f;">&amp;</span><span style="color:#7f7f7f;">, which have equal precedence.</span>
+
+       A sequence of one or more newlines may appear in a <span style="text-decoration:underline;">list</span> instead of a
+       semicolon to delimit commands.
+
+       If a command is terminated by the control operator <span style="font-weight:bold;color:#7f7f7f;">&amp;</span><span style="color:#7f7f7f;">, the shell exe‐</span>
+       cutes  the  command in the <span style="text-decoration:underline;">background</span> in a subshell.  The shell does
+       not wait for the command to finish, and  the  return  status  is  0.
+       These  are referred to as </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">asynchronous</span><span style="color:#000000;background-color:#000000;"> commands.  Commands separated</span>
+...skipping...olor:#000000;background-color:#000000;"> Manual page bash(1) line 306 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">teractive_comments </span><span style="color:#7f7f7f;background-color:#000000;">option to the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">shopt</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> </span><span style="color:#7f7f7f;background-color:#000000;">builtin is enabled (see </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">SHELL</span>
+       <span style="font-weight:bold;color:#7f7f7f;">BUILTIN COMMANDS </span><span style="color:#7f7f7f;">below), a word beginning with </span><span style="font-weight:bold;color:#7f7f7f;">#  </span><span style="color:#7f7f7f;">causes  that  word</span>
+       and  all remaining characters on that line to be ignored.  An inter‐
+       active shell without the <span style="font-weight:bold;color:#7f7f7f;">interactive_comments  </span><span style="color:#7f7f7f;">option  enabled  does</span>
+       not  allow  comments.   The <span style="font-weight:bold;color:#7f7f7f;">interactive_comments </span><span style="color:#7f7f7f;">option is on by de‐</span>
+       fault in interactive shells.
+
+<span style="font-weight:bold;color:#7f7f7f;">QUOTING</span>
+       <span style="text-decoration:underline;">Quoting</span> is used to remove the special meaning of certain  characters
+       or  words  to  the  shell.   Quoting  can be used to disable special
+       treatment for special characters, to prevent reserved words from be‐
+       ing recognized as such, and to prevent parameter expansion.
+
+       Each of the <span style="text-decoration:underline;">metacharacters</span> listed above under <span style="font-weight:bold;color:#7f7f7f;">DEFINITIONS  </span><span style="color:#7f7f7f;">has  spe‐</span>
+       cial  meaning  to the shell and must be quoted if it is to represent
+       itself.
+
+       When the command history expansion facilities are  being  used  (see
+       <span style="font-weight:bold;color:#7f7f7f;">HISTORY  EXPANSION  </span><span style="color:#7f7f7f;">below), the </span><span style="text-decoration:underline;color:#7f7f7f;">history</span><span style="color:#7f7f7f;"> </span><span style="text-decoration:underline;color:#7f7f7f;">expansion</span><span style="color:#7f7f7f;"> character, usually</span>
+...skipping...olor:#000000;background-color:#000000;"> Manual page bash(1) line 615 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">shopt</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> </span><span style="color:#7f7f7f;background-color:#000000;">builtin, translated strings are single-quoted instead of  dou‐</span>
+       ble-quoted.   See the description of <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">shopt</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> </span><span style="color:#7f7f7f;background-color:#000000;">below under </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">SHELL</span><span style="color:#7f7f7f;background-color:#000000;">BUILTIN‐</span>
+       <span style="font-weight:bold;color:#7f7f7f;">COMMANDS</span><span style="color:#7f7f7f;">.</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">PARAMETERS</span>
+       A <span style="text-decoration:underline;">parameter</span> is an entity that stores values.  It can be  a  <span style="text-decoration:underline;">name</span>,  a
+       number,  or one of the special characters listed below under <span style="font-weight:bold;color:#7f7f7f;">Special</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Parameters</span><span style="color:#7f7f7f;">.  A </span><span style="text-decoration:underline;color:#7f7f7f;">variable</span><span style="color:#7f7f7f;"> is a parameter denoted by a </span><span style="text-decoration:underline;color:#7f7f7f;">name</span><span style="color:#7f7f7f;">.   A  vari‐</span>
+       able  has  a  <span style="text-decoration:underline;">value</span> and zero or more <span style="text-decoration:underline;">attributes</span>.  Attributes are as‐
+       signed using the <span style="font-weight:bold;color:#7f7f7f;">declare </span><span style="color:#7f7f7f;">builtin command (see </span><span style="font-weight:bold;color:#7f7f7f;">declare </span><span style="color:#7f7f7f;">below in </span><span style="font-weight:bold;color:#7f7f7f;">SHELL</span>
+       <span style="font-weight:bold;color:#7f7f7f;">BUILTIN COMMANDS</span><span style="color:#7f7f7f;">).</span>
+
+       A parameter is set if it has been assigned a value.  The null string
+       is a valid value.  Once a variable is set, it may be unset  only  by
+       using the <span style="font-weight:bold;color:#7f7f7f;">unset </span><span style="color:#7f7f7f;">builtin command (see </span><span style="font-weight:bold;color:#7f7f7f;">SHELL BUILTIN COMMANDS </span><span style="color:#7f7f7f;">below).</span>
+
+       A <span style="text-decoration:underline;">variable</span> may be assigned to by a statement of the form
+
+              <span style="text-decoration:underline;">name</span>=[<span style="text-decoration:underline;">value</span>]
+</span>tyle="color:#000000;background-color:#000000;"> Manual page bash(1) line 708 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+...skipping...olor:#000000;background-color:#000000;"> Manual page bash(1) line 709 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">BA</span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">SHOPT</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">S</span>
+              A colon-separated list of enabled shell options.   Each  word
+              in  the  list  is  a  valid argument for the <span style="font-weight:bold;color:#7f7f7f;">-s </span><span style="color:#7f7f7f;">option to the</span>
+              <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">shopt</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> </span><span style="color:#7f7f7f;background-color:#000000;">builtin command (see  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">SHELL  BUILTIN  COMMANDS  </span><span style="color:#7f7f7f;background-color:#000000;">below).</span>
+              The options appearing in <span style="font-weight:bold;color:#7f7f7f;">BA</span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">SHOPT</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">S </span><span style="color:#7f7f7f;background-color:#000000;">are those reported as </span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">on</span><span style="color:#7f7f7f;background-color:#000000;"> by</span>
+              <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">shopt</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="color:#7f7f7f;background-color:#000000;">.   If  this  variable  is  in the environment when </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">bash</span>
+              starts up, each shell option in the list will be enabled  be‐
+              fore reading any startup files.  This variable is read-only.
+       <span style="font-weight:bold;color:#7f7f7f;">BASHPID</span>
+              Expands  to the process ID of the current <span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">process.  This</span>
+              differs from <span style="font-weight:bold;color:#7f7f7f;">$$ </span><span style="color:#7f7f7f;">under certain  circumstances,  such  as  sub‐</span>
+              shells  that  do  not require <span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">to be re-initialized.  As‐</span>
+              signments to <span style="font-weight:bold;color:#7f7f7f;">BASHPID </span><span style="color:#7f7f7f;">have no effect.  If </span><span style="font-weight:bold;color:#7f7f7f;">BASHPID </span><span style="color:#7f7f7f;">is unset, it</span>
+              loses its special properties, even if it is subsequently  re‐
+              set.
+       <span style="font-weight:bold;color:#7f7f7f;">BASH_ALIASES</span>
+              An associative array variable whose members correspond to the
+              internal  list of aliases as maintained by the <span style="font-weight:bold;color:#7f7f7f;">alias </span><span style="color:#7f7f7f;">builtin.</span>
+              Elements added to this array appear in the alias  list;  how‐
+              ever,  unsetting  array  elements  currently  does  not cause</span>7 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+              aliases to be removed from the alias list.   If  <span style="font-weight:bold;color:#7f7f7f;">BASH_ALIASES</span>
+              is unset, it loses its special properties, even if it is sub‐
+              sequently reset.</span>-color:#000000;"> Manual page bash(1) line 860 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">BASH_ARGC</span> or q to quit)</span><span style="color:#000000;background-color:#000000;">
+...skipping...olor:#000000;background-color:#000000;"> Manual page bash(1) line 862 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+              scription of the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">extdebug </span><span style="color:#7f7f7f;background-color:#000000;">option to the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">shopt</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> </span><span style="color:#7f7f7f;background-color:#000000;">builtin below).</span>
+              Setting <span style="font-weight:bold;color:#7f7f7f;">extdebug </span><span style="color:#7f7f7f;">after the shell has  started  to  execute  a</span>
+              script,  or  referencing  this  variable when <span style="font-weight:bold;color:#7f7f7f;">extdebug </span><span style="color:#7f7f7f;">is not</span>
+              set, may result in inconsistent values.
+       <span style="font-weight:bold;color:#7f7f7f;">BASH_ARGV</span>
+              An array variable containing all of  the  parameters  in  the
+              current  <span style="font-weight:bold;color:#7f7f7f;">bash  </span><span style="color:#7f7f7f;">execution  call stack.  The final parameter of</span>
+              the last subroutine call is at the  top  of  the  stack;  the
+              first parameter of the initial call is at the bottom.  When a
+              subroutine  is  executed,  the parameters supplied are pushed
+              onto <span style="font-weight:bold;color:#7f7f7f;">BASH_ARGV</span><span style="color:#7f7f7f;">.  The shell sets </span><span style="font-weight:bold;color:#7f7f7f;">BASH_ARGV </span><span style="color:#7f7f7f;">only  when  in  ex‐</span>
+              tended  debugging  mode  (see the description of the <span style="font-weight:bold;color:#7f7f7f;">extdebug</span>
+              option to the <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">shopt</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> </span><span style="color:#7f7f7f;background-color:#000000;">builtin below).  Setting  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">extdebug  </span><span style="color:#7f7f7f;background-color:#000000;">after</span>
+              the  shell  has  started  to execute a script, or referencing
+              this variable when <span style="font-weight:bold;color:#7f7f7f;">extdebug </span><span style="color:#7f7f7f;">is not set, may result in  incon‐</span>
+              sistent values.
+       <span style="font-weight:bold;color:#7f7f7f;">BASH_ARGV0</span>
+              When  referenced,  this  variable  expands to the name of the
+              shell or shell script (identical to <span style="font-weight:bold;color:#7f7f7f;">$0</span><span style="color:#7f7f7f;">; see  the  description</span>
+              of  special  parameter  0  above).   Assignment to </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">BASH_ARGV0</span>color:#000000;">
+              causes the value assigned to also  be  assigned  to  <span style="font-weight:bold;color:#7f7f7f;">$0</span><span style="color:#7f7f7f;">.   If</span>
+              <span style="font-weight:bold;color:#7f7f7f;">BASH_ARGV0 </span><span style="color:#7f7f7f;">is unset, it loses its special properties, even if</span>
+              it is subsequently reset.
+       <span style="font-weight:bold;color:#7f7f7f;">BASH_CMDS</span>
+              An associative array variable whose members correspond to the
+              internal  hash  table  of  commands as maintained by the <span style="font-weight:bold;color:#7f7f7f;">hash</span>
+              builtin.  Elements added to this array appear in the hash ta‐
+              ble; however, unsetting array  elements  currently  does  not
+              cause  command  names  to be removed from the hash table.  If
+              <span style="font-weight:bold;color:#7f7f7f;">BASH_CMDS </span><span style="color:#7f7f7f;">is unset, it loses its special properties, even  if</span>
+              it is subsequently reset.
+...skipping...olor:#000000;background-color:#000000;"> Manual page bash(1) line 900 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">compat42  </span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">shopt</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> </span><span style="color:#7f7f7f;background-color:#000000;">option and set the compatibility level to 42.</span>
+              The current version is also a valid value.
+       <span style="font-weight:bold;color:#7f7f7f;">BASH_ENV</span>
+              If this parameter is set  when  <span style="font-weight:bold;color:#7f7f7f;">bash  </span><span style="color:#7f7f7f;">is  executing  a  shell</span>
+              script,  its  value  is  interpreted as a filename containing
+              commands to initialize the shell, as in <span style="text-decoration:underline;">~/.bashrc</span>.  The value
+              of <span style="font-weight:bold;color:#7f7f7f;">BASH_ENV </span><span style="color:#7f7f7f;">is subjected to parameter expansion, command sub‐</span>
+              stitution, and arithmetic expansion before being  interpreted
+              as  a filename.  <span style="font-weight:bold;color:#7f7f7f;">PATH </span><span style="color:#7f7f7f;">is not used to search for the resultant</span>
+              filename.
+       <span style="font-weight:bold;color:#7f7f7f;">BASH_XTRACEFD</span>
+              If set to an integer corresponding to a valid  file  descrip‐
+              tor,  <span style="font-weight:bold;color:#7f7f7f;">bash  </span><span style="color:#7f7f7f;">will write the trace output generated when </span><span style="text-decoration:underline;color:#7f7f7f;">set</span><span style="color:#7f7f7f;"> </span><span style="text-decoration:underline;color:#7f7f7f;">-x</span>
+              is enabled to that file descriptor.  The file  descriptor  is
+              closed  when  <span style="font-weight:bold;color:#7f7f7f;">BASH_XTRACEFD </span><span style="color:#7f7f7f;">is unset or assigned a new value.</span>
+              Unsetting <span style="font-weight:bold;color:#7f7f7f;">BASH_XTRACEFD </span><span style="color:#7f7f7f;">or  assigning  it  the  empty  string</span>
+              causes  the  trace  output  to be sent to the standard error.
+              Note that setting <span style="font-weight:bold;color:#7f7f7f;">BASH_XTRACEFD </span><span style="color:#7f7f7f;">to 2 (the standard error file</span>
+              descriptor) and then unsetting it will result in the standard
+...skipping...olor:#000000;background-color:#000000;"> Manual page bash(1) line 1173 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">shopt</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="color:#7f7f7f;background-color:#000000;">,  any  unquoted  instances  of </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&amp; </span><span style="color:#7f7f7f;background-color:#000000;">in </span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">string</span><span style="color:#7f7f7f;background-color:#000000;"> are replaced</span>
+              with the matching portion of <span style="text-decoration:underline;">pattern</span>.
+
+              Quoting any part of <span style="text-decoration:underline;">string</span> inhibits replacement in the expan‐
+              sion of the quoted  portion,  including  replacement  strings
+              stored  in  shell  variables.   Backslash  will  escape  <span style="font-weight:bold;color:#7f7f7f;">&amp; </span><span style="color:#7f7f7f;">in</span>
+              <span style="text-decoration:underline;">string</span>; the backslash is removed in order to permit a literal
+              <span style="font-weight:bold;color:#7f7f7f;">&amp; </span><span style="color:#7f7f7f;">in the replacement string.  Backslash can also be  used  to</span>
+              escape  a backslash; <span style="font-weight:bold;color:#7f7f7f;">\\ </span><span style="color:#7f7f7f;">results in a literal backslash in the</span>
+              replacement.  Users should take care  if  <span style="text-decoration:underline;">string</span>  is  double-
+              quoted  to  avoid unwanted interactions between the backslash
+              and  double-quoting,  since  backslash  has  special  meaning
+              within  double  quotes.   Pattern  substitution  performs the
+              check for unquoted <span style="font-weight:bold;color:#7f7f7f;">&amp; </span><span style="color:#7f7f7f;">after expanding </span><span style="text-decoration:underline;color:#7f7f7f;">string</span><span style="color:#7f7f7f;">;  shell  program‐</span>
+              mers  should quote any occurrences of <span style="font-weight:bold;color:#7f7f7f;">&amp; </span><span style="color:#7f7f7f;">they want to be taken</span>
+              literally in the replacement and ensure any  instances  of  <span style="font-weight:bold;color:#7f7f7f;">&amp;</span>
+              they want to be replaced are unquoted.
+
+              If the <span style="font-weight:bold;color:#7f7f7f;">nocasematch </span><span style="color:#7f7f7f;">shell option is enabled, the match is per‐</span>
+...skipping...olor:#000000;background-color:#000000;"> Manual page bash(1) line 1938 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tern  Matching</span><span style="color:#7f7f7f;background-color:#000000;">.   See  the  description  of  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">shopt</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> </span><span style="color:#7f7f7f;background-color:#000000;">below under </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">SHELL</span>
+       <span style="font-weight:bold;color:#7f7f7f;">BUILTIN COMMANDS </span><span style="color:#7f7f7f;">for a  description  of  the  </span><span style="font-weight:bold;color:#7f7f7f;">nocaseglob</span><span style="color:#7f7f7f;">,  </span><span style="font-weight:bold;color:#7f7f7f;">nullglob</span><span style="color:#7f7f7f;">,</span>
+       <span style="font-weight:bold;color:#7f7f7f;">globskipdots</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">failglob</span><span style="color:#7f7f7f;">, and </span><span style="font-weight:bold;color:#7f7f7f;">dotglob </span><span style="color:#7f7f7f;">shell options.</span>
+
+       The  <span style="font-weight:bold;color:#7f7f7f;">GLOBIGNORE  </span><span style="color:#7f7f7f;">shell  variable  may be used to restrict the set of</span>
+       file names matching a <span style="text-decoration:underline;">pattern</span>.  If <span style="font-weight:bold;color:#7f7f7f;">GLOBIGNORE </span><span style="color:#7f7f7f;">is set, each  matching</span>
+       file name that also matches one of the patterns in <span style="font-weight:bold;color:#7f7f7f;">GLOBIGNORE </span><span style="color:#7f7f7f;">is re‐</span>
+       moved  from  the  list of matches.  If the <span style="font-weight:bold;color:#7f7f7f;">nocaseglob </span><span style="color:#7f7f7f;">option is set,</span>
+       the matching against the patterns in <span style="font-weight:bold;color:#7f7f7f;">GLOBIGNORE </span><span style="color:#7f7f7f;">is performed without</span>
+       regard to case.  The filenames <span style="font-weight:bold;color:#7f7f7f;">``.&apos;&apos;  </span><span style="color:#7f7f7f;">and </span><span style="font-weight:bold;color:#7f7f7f;">``..&apos;&apos;  </span><span style="color:#7f7f7f;">are always ignored</span>
+       when <span style="font-weight:bold;color:#7f7f7f;">GLOBIGNORE </span><span style="color:#7f7f7f;">is set and not null.  However, setting </span><span style="font-weight:bold;color:#7f7f7f;">GLOBIGNORE </span><span style="color:#7f7f7f;">to</span>
+       a non-null value has the effect of enabling the  <span style="font-weight:bold;color:#7f7f7f;">dotglob  </span><span style="color:#7f7f7f;">shell  op‐</span>
+       tion, so all other filenames beginning with a <span style="font-weight:bold;color:#7f7f7f;">``.&apos;&apos;  </span><span style="color:#7f7f7f;">will match.  To</span>
+       get  the  old behavior of ignoring filenames beginning with a <span style="font-weight:bold;color:#7f7f7f;">``.&apos;&apos;</span><span style="color:#7f7f7f;">,</span>
+       make <span style="font-weight:bold;color:#7f7f7f;">``.*&apos;&apos;  </span><span style="color:#7f7f7f;">one of the patterns in </span><span style="font-weight:bold;color:#7f7f7f;">GLOBIGNORE</span><span style="color:#7f7f7f;">.  The </span><span style="font-weight:bold;color:#7f7f7f;">dotglob  </span><span style="color:#7f7f7f;">option</span>
+       is  disabled  when <span style="font-weight:bold;color:#7f7f7f;">GLOBIGNORE </span><span style="color:#7f7f7f;">is unset.  The pattern matching honors</span>
+       the setting of the <span style="font-weight:bold;color:#7f7f7f;">extglob </span><span style="color:#7f7f7f;">shell option.</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">Pattern Matching</span>
+...skipping...olor:#000000;background-color:#000000;"> Manual page bash(1) line 2158 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       If  the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">extglob </span><span style="color:#7f7f7f;background-color:#000000;">shell option is enabled using the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">shopt</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> </span><span style="color:#7f7f7f;background-color:#000000;">builtin, the</span>
+       shell recognizes several extended pattern  matching  operators.   In
+       the  following  description, a <span style="text-decoration:underline;">pattern-list</span> is a list of one or more
+       patterns separated by a <span style="font-weight:bold;color:#7f7f7f;">|</span><span style="color:#7f7f7f;">.  Composite patterns may be  formed  using</span>
+       one or more of the following sub-patterns:
+
+              <span style="font-weight:bold;color:#7f7f7f;">?(</span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">pattern-list</span><span style="color:#7f7f7f;"></span><span style="font-weight:bold;color:#7f7f7f;">)</span>
+                     Matches zero or one occurrence of the given patterns
+              <span style="font-weight:bold;color:#7f7f7f;">*(</span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">pattern-list</span><span style="color:#7f7f7f;"></span><span style="font-weight:bold;color:#7f7f7f;">)</span>
+                     Matches zero or more occurrences of the given patterns
+              <span style="font-weight:bold;color:#7f7f7f;">+(</span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">pattern-list</span><span style="color:#7f7f7f;"></span><span style="font-weight:bold;color:#7f7f7f;">)</span>
+                     Matches one or more occurrences of the given patterns
+              <span style="font-weight:bold;color:#7f7f7f;">&#64;(</span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">pattern-list</span><span style="color:#7f7f7f;"></span><span style="font-weight:bold;color:#7f7f7f;">)</span>
+                     Matches one of the given patterns
+              <span style="font-weight:bold;color:#7f7f7f;">!(</span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">pattern-list</span><span style="color:#7f7f7f;"></span><span style="font-weight:bold;color:#7f7f7f;">)</span>
+                     Matches anything except one of the given patterns
+
+       The<span style="font-weight:bold;color:#7f7f7f;">extglob  </span><span style="color:#7f7f7f;">option  changes  the  behavior  of the parser, since the</span>
+       parentheses are normally treated as operators with  syntactic  mean‐
+...skipping...olor:#000000;background-color:#000000;"> Manual page bash(1) line 2231 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">expand_aliases </span><span style="color:#7f7f7f;background-color:#000000;">shell option is set using </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">shopt</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> </span><span style="color:#7f7f7f;background-color:#000000;">(see the descrip‐</span>
+       tion of <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">shopt</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> </span><span style="color:#7f7f7f;background-color:#000000;">under </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">SHELL BUILTIN COMMANDS </span><span style="color:#7f7f7f;background-color:#000000;">below).</span>
+
+       The rules concerning the definition and use of aliases are  somewhat
+       confusing.   <span style="font-weight:bold;color:#7f7f7f;">Bash  </span><span style="color:#7f7f7f;">always reads at least one complete line of input,</span>
+       and all lines that make up a compound command, before executing  any
+       of  the  commands on that line or the compound command.  Aliases are
+       expanded when a command is read, not when it  is  executed.   There‐
+       fore, an alias definition appearing on the same line as another com‐
+       mand does not take effect until the next line of input is read.  The
+       commands  following  the  alias  definition on that line are not af‐
+       fected by the new alias.  This behavior is also an issue when  func‐
+       tions are executed.  Aliases are expanded when a function definition
+       is read, not when the function is executed, because a function defi‐
+       nition  is itself a command.  As a consequence, aliases defined in a
+       function are not available until after that  function  is  executed.
+       To  be safe, always put alias definitions on a separate line, and do
+       not use <span style="font-weight:bold;color:#7f7f7f;">alias </span><span style="color:#7f7f7f;">in compound commands.</span>
+
+       For almost every purpose, aliases are superseded by shell functions.</span>43 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+...skipping...olor:#000000;background-color:#000000;"> Manual page bash(1) line 2544 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       •      options enabled by </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">shopt</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span>
+
+       •      shell aliases defined with <span style="font-weight:bold;color:#7f7f7f;">alias</span>
+
+       •      various  process IDs, including those of background jobs, the
+              value of <span style="font-weight:bold;color:#7f7f7f;">$$</span><span style="color:#7f7f7f;">, and the value of </span><span style="font-weight:bold;color:#7f7f7f;">PPID</span>
+
+       When a simple command other than a builtin or shell function  is  to
+       be  executed, it is invoked in a separate execution environment that
+       consists of the following.  Unless otherwise noted, the  values  are
+       inherited from the shell.
+
+       •      the  shell&apos;s open files, plus any modifications and additions
+              specified by redirections to the command
+
+       •      the current working directory
+
+       •      the file creation mode mask
+
+       •      options enabled by </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">shopt</span>pan style="color:#000000;background-color:#000000;">
+
+       •      shell aliases defined with <span style="font-weight:bold;color:#7f7f7f;">alias</span>
+
+       •      various  process IDs, including those of background jobs, the
+              value of <span style="font-weight:bold;color:#7f7f7f;">$$</span><span style="color:#7f7f7f;">, and the value of </span><span style="font-weight:bold;color:#7f7f7f;">PPID</span>
+
+       When a simple command other than a builtin or shell function  is  to
+       be  executed, it is invoked in a separate execution environment that
+       consists of the following.  Unless otherwise noted, the  values  are
+       inherited from the shell.
+
+       •      the  shell&apos;s open files, plus any modifications and additions
+              specified by redirections to the command
+
+       •      the current working directory
+
+       •      the file creation mode mask
+
+       •      options enabled by <span style="font-weight:bold;color:#7f7f7f;">shopt</span>
+
+       •      shell aliases defined with <span style="font-weight:bold;color:#7f7f7f;">alias</span>
+
+       •      various  process IDs, including those of background jobs, the
+              value of <span style="font-weight:bold;color:#7f7f7f;">$$</span><span style="color:#7f7f7f;">, and the value of </span><span style="font-weight:bold;color:#7f7f7f;">PPID</span>
+
+       When a simple command other than a builtin or shell function  is  to
+       be  executed, it is invoked in a separate execution environment that
+       consists of the following.  Unless otherwise noted, the  values  are
+       inherited from the shell.
+
+       •      the  shell&apos;s open files, plus any modifications and additions
+              specified by redirections to the command
+
+       •      the current working directory
+
+       •      the file creation mode mask
+
+...skipping...
+       •      parsing the value of <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">SHELLOPT</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">S </span><span style="color:#7f7f7f;background-color:#000000;">from the shell environment  at</span>
+              startup
+
+       •      redirecting  output using the &gt;, &gt;|, &lt;&gt;, &gt;&amp;, &amp;&gt;, and &gt;&gt; redi‐
+              rection operators
+
+       •      using the <span style="font-weight:bold;color:#7f7f7f;">exec </span><span style="color:#7f7f7f;">builtin command to replace the shell with  an‐</span>
+              other command
+
+       •      adding  or  deleting  builtin commands with the <span style="font-weight:bold;color:#7f7f7f;">-f </span><span style="color:#7f7f7f;">and </span><span style="font-weight:bold;color:#7f7f7f;">-d </span><span style="color:#7f7f7f;">op‐</span>
+              tions to the <span style="font-weight:bold;color:#7f7f7f;">enable </span><span style="color:#7f7f7f;">builtin command</span>
+
+       •      using the <span style="font-weight:bold;color:#7f7f7f;">enable </span><span style="color:#7f7f7f;">builtin command  to  enable  disabled  shell</span>
+              builtins
+
+       •      specifying the <span style="font-weight:bold;color:#7f7f7f;">-p </span><span style="color:#7f7f7f;">option to the </span><span style="font-weight:bold;color:#7f7f7f;">command </span><span style="color:#7f7f7f;">builtin command</span>
+
+       •      turning  off  restricted  mode  with  <span style="font-weight:bold;color:#7f7f7f;">set  +r </span><span style="color:#7f7f7f;">or </span><span style="font-weight:bold;color:#7f7f7f;">shopt -u re‐</span>
+              <span style="font-weight:bold;color:#7f7f7f;">stricted_shell</span><span style="color:#7f7f7f;">.</span>
+&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS25/lektion8ress RETURN)</span><span style="color:#000000;background-color:#000000;">000;background-color:#000000;">
+</span>$ man bash
+<span style="text-decoration:underline;">BASH</span>(1)                   General Commands Manual                   <span style="text-decoration:underline;">BASH</span>(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       bash - GNU Bourne-Again SHell
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">[options] [command_string | file]</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">COPYRIGHT</span>
+       Bash  is  Copyright  (C)  1989-2022 by the Free Software Foundation,
+       Inc.
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">is an </span><span style="font-weight:bold;color:#7f7f7f;">sh</span><span style="color:#7f7f7f;">-compatible command language interpreter that  executes</span>
+       commands read from the standard input or from a file.  <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">also in‐</span>
+       corporates useful features from the <span style="text-decoration:underline;">Korn</span> and <span style="text-decoration:underline;">C</span> shells (<span style="font-weight:bold;color:#7f7f7f;">ksh </span><span style="color:#7f7f7f;">and </span><span style="font-weight:bold;color:#7f7f7f;">csh</span><span style="color:#7f7f7f;">).</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">Bash  </span><span style="color:#7f7f7f;">is intended to be a conformant implementation of the Shell and</span>
+       Utilities portion of the IEEE  POSIX  specification  (IEEE  Standard
+</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">BASH</span><span style="color:#000000;background-color:#000000;">(1)                   General Commands Manual                   </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">BASH</span><span style="color:#000000;background-color:#000000;">(1)</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       bash - GNU Bourne-Again SHell
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">[options] [command_string | file]</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">COPYRIGHT</span>
+       Bash  is  Copyright  (C)  1989-2022 by the Free Software Foundation,
+       Inc.
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">is an </span><span style="font-weight:bold;color:#7f7f7f;">sh</span><span style="color:#7f7f7f;">-compatible command language interpreter that  executes</span>
+       commands read from the standard input or from a file.  <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">also in‐</span>
+       corporates useful features from the <span style="text-decoration:underline;">Korn</span> and <span style="text-decoration:underline;">C</span> shells (<span style="font-weight:bold;color:#7f7f7f;">ksh </span><span style="color:#7f7f7f;">and </span><span style="font-weight:bold;color:#7f7f7f;">csh</span><span style="color:#7f7f7f;">).</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">Bash  </span><span style="color:#7f7f7f;">is intended to be a conformant implementation of the Shell and</span>
+       Utilities portion of the IEEE  POSIX  specification  (IEEE  Standard
+<span style="text-decoration:underline;">BASH</span>(1)                   General Commands Manual                   <span style="text-decoration:underline;">BASH</span>(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       bash - GNU Bourne-Again SHell
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">[options] [command_string | file]</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">COPYRIGHT</span>
+       Bash  is  Copyright  (C)  1989-2022 by the Free Software Foundation,
+       Inc.
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">is an </span><span style="font-weight:bold;color:#7f7f7f;">sh</span><span style="color:#7f7f7f;">-compatible command language interpreter that  executes</span>
+       commands read from the standard input or from a file.  <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">also in‐</span>
+       corporates useful features from the <span style="text-decoration:underline;">Korn</span> and <span style="text-decoration:underline;">C</span> shells (<span style="font-weight:bold;color:#7f7f7f;">ksh </span><span style="color:#7f7f7f;">and </span><span style="font-weight:bold;color:#7f7f7f;">csh</span><span style="color:#7f7f7f;">).</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">Bash  </span><span style="color:#7f7f7f;">is intended to be a conformant implementation of the Shell and</span>
+       Utilities portion of the IEEE  POSIX  specification  (IEEE  Standard
+...skipping...
+       tion  of  the  <span style="font-weight:bold;color:#7f7f7f;">set </span><span style="color:#7f7f7f;">builtin command, including </span><span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-o</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="color:#7f7f7f;background-color:#000000;">, can be used as op‐</span>
+       tions when the shell is invoked.  In addition, <span style="font-weight:bold;color:#7f7f7f;">bash  </span><span style="color:#7f7f7f;">interprets  the</span>
+       following options when it is invoked:
+
+       <span style="font-weight:bold;color:#7f7f7f;">-c        </span><span style="color:#7f7f7f;">If  the  </span><span style="font-weight:bold;color:#7f7f7f;">-c </span><span style="color:#7f7f7f;">option is present, then commands are read from</span>
+                 the first non<span style="color:#000000;background-color:#000000;">-o</span><span style="color:#000000;background-color:#000000;">ption argument  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">command_string</span><span style="color:#000000;background-color:#000000;">.   If  there</span>
+                 are arguments after the <span style="text-decoration:underline;">command_string</span>, the first argument
+                 is assigned to <span style="font-weight:bold;color:#7f7f7f;">$0 </span><span style="color:#7f7f7f;">and any remaining arguments are assigned</span>
+                 to  the  positional parameters.  The assignment to <span style="font-weight:bold;color:#7f7f7f;">$0 </span><span style="color:#7f7f7f;">sets</span>
+                 the name of the shell, which is used in warning and  error
+                 messages.
+       <span style="font-weight:bold;color:#7f7f7f;">-i        </span><span style="color:#7f7f7f;">If the </span><span style="font-weight:bold;color:#7f7f7f;">-i </span><span style="color:#7f7f7f;">option is present, the shell is </span><span style="text-decoration:underline;color:#7f7f7f;">interactive</span><span style="color:#7f7f7f;">.</span>
+       <span style="font-weight:bold;color:#7f7f7f;">-l        </span><span style="color:#7f7f7f;">Make  </span><span style="font-weight:bold;color:#7f7f7f;">bash  </span><span style="color:#7f7f7f;">act as if it had been invoked as a login shell</span>
+                 (see <span style="font-weight:bold;color:#7f7f7f;">INVOCATION </span><span style="color:#7f7f7f;">below).</span>
+       <span style="font-weight:bold;color:#7f7f7f;">-r        </span><span style="color:#7f7f7f;">If the </span><span style="font-weight:bold;color:#7f7f7f;">-r </span><span style="color:#7f7f7f;">option is present, the shell becomes  </span><span style="text-decoration:underline;color:#7f7f7f;">restricted</span>
+                 (see <span style="font-weight:bold;color:#7f7f7f;">RESTRICTED SHELL </span><span style="color:#7f7f7f;">below).</span>
+       <span style="font-weight:bold;color:#7f7f7f;">-s        </span><span style="color:#7f7f7f;">If the </span><span style="font-weight:bold;color:#7f7f7f;">-s </span><span style="color:#7f7f7f;">option is present, or if no arguments remain af‐</span>
+                 ter  option  processing,  then  commands are read from the
+                 standard input.  This option allows the positional parame‐
+                 ters to be set when invoking an interactive shell or  when</span> (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                 reading input through a pipe.
+       <span style="font-weight:bold;color:#7f7f7f;">-v        </span><span style="color:#7f7f7f;">Print shell input lines as they are read.</span>
+       <span style="font-weight:bold;color:#7f7f7f;">-x        </span><span style="color:#7f7f7f;">Print commands and their arguments as they are executed.</span>
+       <span style="font-weight:bold;color:#7f7f7f;">-D        </span><span style="color:#7f7f7f;">A  list  of  all  double-quoted  strings  preceded by </span><span style="font-weight:bold;color:#7f7f7f;">$ </span><span style="color:#7f7f7f;">is</span>
+...skipping...olor:#000000;background-color:#000000;"> Manual page bash(1) line 29 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                 </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">shopt_option</span><span style="color:#000000;background-color:#000000;"> is present, </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-O</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> </span><span style="color:#7f7f7f;background-color:#000000;">sets the value of that option;</span>
+                 <span style="font-weight:bold;color:#7f7f7f;">+O  </span><span style="color:#7f7f7f;">unsets it.  If </span><span style="text-decoration:underline;color:#7f7f7f;">shopt_option</span><span style="color:#7f7f7f;"> is not supplied, the names</span>
+                 and values of the shell  options  accepted  by  <span style="font-weight:bold;color:#7f7f7f;">shopt  </span><span style="color:#7f7f7f;">are</span>
+                 printed  on the standard output.  If the invocation option
+                 is <span style="font-weight:bold;color:#7f7f7f;">+O</span><span style="color:#7f7f7f;">, the output is displayed in a  format  that  may  be</span>
+                 reused as input.
+       <span style="font-weight:bold;color:#7f7f7f;">--        </span><span style="color:#7f7f7f;">A  </span><span style="font-weight:bold;color:#7f7f7f;">--  </span><span style="color:#7f7f7f;">signals the end of options and disables further op‐</span>
+                 tion processing.  Any arguments after the <span style="font-weight:bold;color:#7f7f7f;">--  </span><span style="color:#7f7f7f;">are  treated</span>
+                 as  filenames  and arguments.  An argument of <span style="font-weight:bold;color:#7f7f7f;">- </span><span style="color:#7f7f7f;">is equiva‐</span>
+                 lent to <span style="font-weight:bold;color:#7f7f7f;">--</span><span style="color:#7f7f7f;">.</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">also interprets a number of multi-character options.  These op‐</span>
+       tions must appear on the command line  before  the  single-character
+       options to be recognized.
+
+       <span style="font-weight:bold;color:#7f7f7f;">--debugger</span>
+              Arrange  for  the  debugger profile to be executed before the
+              shell starts.  Turns on extended debugging mode (see the  de‐
+              scription of the <span style="font-weight:bold;color:#7f7f7f;">extdebug </span><span style="color:#7f7f7f;">option to the </span><span style="font-weight:bold;color:#7f7f7f;">shopt </span><span style="color:#7f7f7f;">builtin below).</span>
+...skipping...olor:#000000;background-color:#000000;"> Manual page bash(1) line 55 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       An  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">interactive</span><span style="color:#000000;background-color:#000000;">  shell  is  one started without non</span><span style="color:#000000;background-color:#000000;">-o</span><span style="color:#000000;background-color:#000000;"></span><span style="text-decoration:underline;color:#000000;background-color:#000000;"></span><span style="color:#000000;background-color:#000000;">ption arguments</span>
+       (unless <span style="font-weight:bold;color:#7f7f7f;">-s </span><span style="color:#7f7f7f;">is specified) and without the </span><span style="font-weight:bold;color:#7f7f7f;">-c </span><span style="color:#7f7f7f;">option,  whose  standard</span>
+       input  and  error  are both connected to terminals (as determined by
+       <span style="text-decoration:underline;">isatty</span>(3)), or one started with the <span style="font-weight:bold;color:#7f7f7f;">-i </span><span style="color:#7f7f7f;">option.  </span><span style="font-weight:bold;color:#7f7f7f;">PS1 </span><span style="color:#7f7f7f;">is  set  and  </span><span style="font-weight:bold;color:#7f7f7f;">$-</span>
+       includes  <span style="font-weight:bold;color:#7f7f7f;">i  </span><span style="color:#7f7f7f;">if  </span><span style="font-weight:bold;color:#7f7f7f;">bash  </span><span style="color:#7f7f7f;">is  interactive, allowing a shell script or a</span>
+       startup file to test this state.
+
+       The following paragraphs describe  how  <span style="font-weight:bold;color:#7f7f7f;">bash  </span><span style="color:#7f7f7f;">executes  its  startup</span>
+       files.   If  any of the files exist but cannot be read, <span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">reports</span>
+       an error.  Tildes are expanded in filenames as described below under
+       <span style="font-weight:bold;color:#7f7f7f;">Tilde Expansion </span><span style="color:#7f7f7f;">in the </span><span style="font-weight:bold;color:#7f7f7f;">EXPANSION </span><span style="color:#7f7f7f;">section.</span>
+
+       When <span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">is invoked as an interactive login shell, or as a  non-in‐</span>
+       teractive shell with the <span style="font-weight:bold;color:#7f7f7f;">--login </span><span style="color:#7f7f7f;">option, it first reads and executes</span>
+       commands  from  the  file  <span style="text-decoration:underline;">/etc/profile</span>, if that file exists.  After
+       reading that file, it looks for <span style="text-decoration:underline;">~/.bash_profile</span>, <span style="text-decoration:underline;">~/.bash_login</span>,  and
+       <span style="text-decoration:underline;">~/.profile</span>,  in that order, and reads and executes commands from the
+       first one that exists and is readable.  The <span style="font-weight:bold;color:#7f7f7f;">--noprofile  </span><span style="color:#7f7f7f;">option  may</span>
+       be used when the shell is started to inhibit this behavior.
+...skipping...olor:#000000;background-color:#000000;"> Manual page bash(1) line 140 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+              fore reading any startup files.  This variable is read</span><span style="color:#000000;background-color:#000000;">-o</span><span style="color:#000000;background-color:#000000;">nly.</span>
+       <span style="font-weight:bold;color:#7f7f7f;">BASHPID</span>
+              Expands  to the process ID of the current <span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">process.  This</span>
+              differs from <span style="font-weight:bold;color:#7f7f7f;">$$ </span><span style="color:#7f7f7f;">under certain  circumstances,  such  as  sub‐</span>
+              shells  that  do  not require <span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">to be re-initialized.  As‐</span>
+              signments to <span style="font-weight:bold;color:#7f7f7f;">BASHPID </span><span style="color:#7f7f7f;">have no effect.  If </span><span style="font-weight:bold;color:#7f7f7f;">BASHPID </span><span style="color:#7f7f7f;">is unset, it</span>
+              loses its special properties, even if it is subsequently  re‐
+              set.
+       <span style="font-weight:bold;color:#7f7f7f;">BASH_ALIASES</span>
+              An associative array variable whose members correspond to the
+              internal  list of aliases as maintained by the <span style="font-weight:bold;color:#7f7f7f;">alias </span><span style="color:#7f7f7f;">builtin.</span>
+              Elements added to this array appear in the alias  list;  how‐
+              ever,  unsetting  array  elements  currently  does  not cause
+              aliases to be removed from the alias list.   If  <span style="font-weight:bold;color:#7f7f7f;">BASH_ALIASES</span>
+              is unset, it loses its special properties, even if it is sub‐
+              sequently reset.
+       <span style="font-weight:bold;color:#7f7f7f;">BASH_ARGC</span>
+              An  array  variable whose values are the number of parameters
+              in each frame of the current <span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">execution call stack.   The</span>
+...skipping...olor:#000000;background-color:#000000;"> Manual page bash(1) line 864 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+              in  the list is a valid argument for the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-o</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> </span><span style="color:#7f7f7f;background-color:#000000;">option to the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">set</span>
+              builtin command (see <span style="font-weight:bold;color:#7f7f7f;">SHELL BUILTIN COMMANDS </span><span style="color:#7f7f7f;">below).  The  op‐</span>
+              tions  appearing in <span style="font-weight:bold;color:#7f7f7f;">SHELLOPTS </span><span style="color:#7f7f7f;">are those reported as </span><span style="text-decoration:underline;color:#7f7f7f;">on</span><span style="color:#7f7f7f;"> by </span><span style="font-weight:bold;color:#7f7f7f;">set</span>
+              <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-o</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="color:#7f7f7f;background-color:#000000;">.  If this variable is in the environment when </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">bash  </span><span style="color:#7f7f7f;background-color:#000000;">starts</span>
+              up,  each  shell  option  in  the list will be enabled before
+              reading any startup files.  This variable is read<span style="color:#000000;background-color:#000000;">-o</span><span style="color:#000000;background-color:#000000;">nly.</span>
+       <span style="font-weight:bold;color:#7f7f7f;">SHLVL  </span><span style="color:#7f7f7f;">Incremented by one each time an instance of </span><span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">is started.</span>
+       <span style="font-weight:bold;color:#7f7f7f;">SRANDOM</span>
+              This variable expands to a 32-bit pseudo-random  number  each
+              time  it  is  referenced.  The random number generator is not
+              linear on systems that support /dev/urandom or <span style="text-decoration:underline;">arc4random</span>, so
+              each returned number has no relationship to the numbers  pre‐
+              ceding  it.  The random number generator cannot be seeded, so
+              assignments to this variable have no effect.  If  <span style="font-weight:bold;color:#7f7f7f;">SRANDOM  </span><span style="color:#7f7f7f;">is</span>
+              unset,  it loses its special properties, even if it is subse‐
+              quently reset.
+       <span style="font-weight:bold;color:#7f7f7f;">UID    </span><span style="color:#7f7f7f;">Expands to the user ID of the current  user,  initialized  at</span>
+              shell startup.  This variable is readonly.
+
+       The  following variables are used by the shell.  In some cases, </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">bash</span>-color:#000000;">
+       assigns a default value to a variable; these cases are noted below.
+
+       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">BASH_COMPAT</span>or q to quit)</span><span style="color:#000000;background-color:#000000;">
+              The value is used to set  the  shell&apos;s  compatibility  level.
+...skipping...olor:#000000;background-color:#000000;"> Manual page bash(1) line 1142 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+              if  the  command  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">set</span><span style="color:#000000;background-color:#000000;">  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;"></span><span style="text-decoration:underline;color:#000000;background-color:#000000;">-o</span><span style="text-decoration:underline;color:#000000;background-color:#000000;"></span><span style="text-decoration:underline;color:#000000;background-color:#000000;"></span><span style="color:#000000;background-color:#000000;"></span><span style="text-decoration:underline;color:#000000;background-color:#000000;"></span><span style="color:#000000;background-color:#000000;">  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">posix</span><span style="color:#000000;background-color:#000000;"> had been executed.  When the</span>
+              shell enters <span style="text-decoration:underline;">posix</span> <span style="text-decoration:underline;">mode</span>, it sets this variable if it was  not
+              already set.
+       <span style="font-weight:bold;color:#7f7f7f;">PROMPT_COMMAND</span>
+              If  this  variable is set, and is an array, the value of each
+              set element is executed as a command prior  to  issuing  each
+              primary  prompt.   If  this is set but not an array variable,
+              its value is used as a command to execute instead.
+       <span style="font-weight:bold;color:#7f7f7f;">PROMPT_DIRTRIM</span>
+              If set to a number greater than zero, the value  is  used  as
+              the  number  of  trailing directory components to retain when
+              expanding the <span style="font-weight:bold;color:#7f7f7f;">\w </span><span style="color:#7f7f7f;">and </span><span style="font-weight:bold;color:#7f7f7f;">\W </span><span style="color:#7f7f7f;">prompt string escapes (see  </span><span style="font-weight:bold;color:#7f7f7f;">PROMPTING</span>
+              below).  Characters removed are replaced with an ellipsis.
+       <span style="font-weight:bold;color:#7f7f7f;">PS0    </span><span style="color:#7f7f7f;">The value of this parameter is expanded (see </span><span style="font-weight:bold;color:#7f7f7f;">PROMPTING </span><span style="color:#7f7f7f;">below)</span>
+              and  displayed  by interactive shells after reading a command
+              and before the command is executed.
+       <span style="font-weight:bold;color:#7f7f7f;">PS1    </span><span style="color:#7f7f7f;">The value of this parameter is expanded (see </span><span style="font-weight:bold;color:#7f7f7f;">PROMPTING </span><span style="color:#7f7f7f;">below)</span>
+              and used as the primary prompt string.  The default value  is
+              ``<span style="font-weight:bold;color:#7f7f7f;">\s-\v\$ </span><span style="color:#7f7f7f;">&apos;&apos;.</span>
+...skipping...olor:#000000;background-color:#000000;"> Manual page bash(1) line 1408 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">clare  </span><span style="color:#7f7f7f;background-color:#000000;">builtin  below) or the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-o</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> functrace </span><span style="color:#7f7f7f;background-color:#000000;">shell option has been en‐</span>
+       abled with the <span style="font-weight:bold;color:#7f7f7f;">set </span><span style="color:#7f7f7f;">builtin (in which case all functions inherit  the</span>
+       <span style="font-weight:bold;color:#7f7f7f;">DEBUG  </span><span style="color:#7f7f7f;">and  </span><span style="font-weight:bold;color:#7f7f7f;">RETURN  </span><span style="color:#7f7f7f;">traps), and the </span><span style="font-weight:bold;color:#7f7f7f;">ERR </span><span style="color:#7f7f7f;">trap is not inherited unless</span>
+       the <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-o</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> errtrace </span><span style="color:#7f7f7f;background-color:#000000;">shell option has been enabled.</span>
+
+       Variables local to the function  may  be  declared  with  the  <span style="font-weight:bold;color:#7f7f7f;">local</span>
+       builtin  command (<span style="text-decoration:underline;">local</span> <span style="text-decoration:underline;">variables</span>).  Ordinarily, variables and their
+       values are shared between the function and its caller.  If  a  vari‐
+       able  is  declared <span style="font-weight:bold;color:#7f7f7f;">local</span><span style="color:#7f7f7f;">, the variable&apos;s visible scope is restricted</span>
+       to that function  and  its  children  (including  the  functions  it
+       calls).
+
+       In the following description, the <span style="text-decoration:underline;">current</span> <span style="text-decoration:underline;">scope</span> is a currently- exe‐
+       cuting  function.  Previous scopes consist of that function&apos;s caller
+       and so on, back to the &quot;global&quot; scope, where the shell is  not  exe‐
+       cuting  any  shell  function.  Consequently, a local variable at the
+       current scope is a variable declared  using  the  <span style="font-weight:bold;color:#7f7f7f;">local  </span><span style="color:#7f7f7f;">or  </span><span style="font-weight:bold;color:#7f7f7f;">declare</span>
+       builtins in the function that is currently executing.
+
+       Local  variables  &quot;shadow&quot;  variables with the same name declared at</span>h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       previous scopes.  For instance, a local variable declared in a func‐
+       tion hides a global variable of the same name:  references  and  as‐
+...skipping...olor:#000000;background-color:#000000;"> Manual page bash(1) line 2585 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-O</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">file</span>
+              True if <span style="text-decoration:underline;">file</span> exists and is owned by the effective user id.
+       <span style="font-weight:bold;color:#7f7f7f;">-S </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">file</span>
+              True if <span style="text-decoration:underline;">file</span> exists and is a socket.
+       <span style="text-decoration:underline;">file1</span> <span style="font-weight:bold;color:#7f7f7f;">-ef </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">file2</span>
+              True  if  <span style="text-decoration:underline;">file1</span>  and <span style="text-decoration:underline;">file2</span> refer to the same device and inode
+              numbers.
+       <span style="text-decoration:underline;">file1</span> -<span style="font-weight:bold;color:#7f7f7f;">nt </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">file2</span>
+              True if <span style="text-decoration:underline;">file1</span> is newer (according to modification date)  than
+              <span style="text-decoration:underline;">file2</span>, or if <span style="text-decoration:underline;">file1</span> exists and <span style="text-decoration:underline;">file2</span> does not.
+       <span style="text-decoration:underline;">file1</span> <span style="color:#000000;background-color:#000000;">-</span><span style="color:#000000;background-color:#000000;"></span><span style="text-decoration:underline;color:#000000;background-color:#000000;"></span><span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">o</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">t </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">file2</span>
+              True  if  <span style="text-decoration:underline;">file1</span>  is  older than <span style="text-decoration:underline;">file2</span>, or if <span style="text-decoration:underline;">file2</span> exists and
+              <span style="text-decoration:underline;">file1</span> does not.
+       <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-o</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">optname</span>
+              True if the shell option <span style="text-decoration:underline;">optname</span> is enabled.  See the list of
+              options under the description of the <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-o</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">  </span><span style="color:#7f7f7f;background-color:#000000;">option  to  the  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">set</span>
+              builtin below.
+       <span style="font-weight:bold;color:#7f7f7f;">-v </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">varname</span>
+              True  if the shell variable <span style="text-decoration:underline;">varname</span> is set (has been assigned
+              a value).</span>kground-color:#000000;"> Manual page bash(1) line 2786 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       <span style="font-weight:bold;color:#7f7f7f;">-R </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">varname</span>
+              True if the shell variable <span style="text-decoration:underline;">varname</span> is set and is a name  ref‐
+              erence.
+       <span style="font-weight:bold;color:#7f7f7f;">-z </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">string</span>
+              True if the length of <span style="text-decoration:underline;">string</span> is zero.
+       <span style="text-decoration:underline;">string</span>
+       <span style="font-weight:bold;color:#7f7f7f;">-n </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">string</span>
+              True if the length of <span style="text-decoration:underline;">string</span> is non-zero.
+
+       </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">string1</span><span style="color:#000000;background-color:#000000;"> </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">== </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">string2</span>
+       <span style="text-decoration:underline;">string1</span> <span style="font-weight:bold;color:#7f7f7f;">= </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">string2</span>
+              True  if  the  strings  are equal.  <span style="font-weight:bold;color:#7f7f7f;">= </span><span style="color:#7f7f7f;">should be used with the</span>
+              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">test </span><span style="color:#7f7f7f;background-color:#000000;">command for POSIX conformance.  When used  with  the  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">[[</span>
+              command,  this  performs  pattern matching as described above
+...skipping...olor:#000000;background-color:#000000;"> Manual page bash(1) line 2801 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       able.  Line editing can be enabled at any time using the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-o</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> emacs </span><span style="color:#7f7f7f;background-color:#000000;">or</span>
+       <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">-o</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> vi </span><span style="color:#7f7f7f;background-color:#000000;">options to the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">set </span><span style="color:#7f7f7f;background-color:#000000;">builtin (see </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">SHELL BUILTIN COMMANDS </span><span style="color:#7f7f7f;background-color:#000000;">below).</span>
+       To turn off line editing after the shell  is  running,  use  the  <span style="font-weight:bold;color:#7f7f7f;">+o</span>
+       <span style="font-weight:bold;color:#7f7f7f;">emacs </span><span style="color:#7f7f7f;">or </span><span style="font-weight:bold;color:#7f7f7f;">+o vi </span><span style="color:#7f7f7f;">options to the </span><span style="font-weight:bold;color:#7f7f7f;">set </span><span style="color:#7f7f7f;">builtin.</span>
+
+   <span style="font-weight:bold;color:#7f7f7f;">Readline Notation</span>
+       In  this  section,  the  Emacs-style notation is used to denote key‐
+       strokes.  Control keys are denoted by C-<span style="text-decoration:underline;">key</span>, e.g.,  C-n  means  Con‐
+       trol-N.   Similarly,  <span style="text-decoration:underline;">meta</span>  keys  are denoted by M-<span style="text-decoration:underline;">key</span>, so M-x means
+       Meta-X.  (On keyboards without a <span style="text-decoration:underline;">meta</span> key, M-<span style="text-decoration:underline;">x</span> means  ESC  <span style="text-decoration:underline;">x</span>,  i.e.,
+       press  the  Escape key then the <span style="text-decoration:underline;">x</span> key.  This makes ESC the <span style="text-decoration:underline;">meta</span> <span style="text-decoration:underline;">pre‐</span>
+       <span style="text-decoration:underline;">fix</span>.  The combination M-C-<span style="text-decoration:underline;">x</span> means ESC-Control-<span style="text-decoration:underline;">x</span>, or press the Escape
+       key then hold the Control key while pressing the <span style="text-decoration:underline;">x</span> key.)
+
+       Readline commands may be given numeric <span style="text-decoration:underline;">arguments</span>, which normally act
+       as a repeat count.  Sometimes, however, it is the sign of the  argu‐
+       ment  that is significant.  Passing a negative argument to a command
+       that acts in the forward direction  (e.g.,  <span style="font-weight:bold;color:#7f7f7f;">kill-line</span><span style="color:#7f7f7f;">)  causes  that</span>
+       command  to  act  in  a backward direction.  Commands whose behavior
+&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS25/lektion884 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+</span>$ man bash
+<span style="text-decoration:underline;">BASH</span>(1)                   General Commands Manual                   <span style="text-decoration:underline;">BASH</span>(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       bash - GNU Bourne-Again SHell
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">[options] [command_string | file]</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">COPYRIGHT</span>
+       Bash  is  Copyright  (C)  1989-2022 by the Free Software Foundation,
+       Inc.
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">is an </span><span style="font-weight:bold;color:#7f7f7f;">sh</span><span style="color:#7f7f7f;">-compatible command language interpreter that  executes</span>
+       commands read from the standard input or from a file.  <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">also in‐</span>
+       corporates useful features from the <span style="text-decoration:underline;">Korn</span> and <span style="text-decoration:underline;">C</span> shells (<span style="font-weight:bold;color:#7f7f7f;">ksh </span><span style="color:#7f7f7f;">and </span><span style="font-weight:bold;color:#7f7f7f;">csh</span><span style="color:#7f7f7f;">).</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">Bash  </span><span style="color:#7f7f7f;">is intended to be a conformant implementation of the Shell and</span>
+       Utilities portion of the IEEE  POSIX  specification  (IEEE  Standard
+</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">BASH</span><span style="color:#000000;background-color:#000000;">(1)                   General Commands Manual                   </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">BASH</span><span style="color:#000000;background-color:#000000;">(1)</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       bash - GNU Bourne-Again SHell
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">[options] [command_string | file]</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">COPYRIGHT</span>
+       Bash  is  Copyright  (C)  1989-2022 by the Free Software Foundation,
+       Inc.
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">is an </span><span style="font-weight:bold;color:#7f7f7f;">sh</span><span style="color:#7f7f7f;">-compatible command language interpreter that  executes</span>
+       commands read from the standard input or from a file.  <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">also in‐</span>
+       corporates useful features from the <span style="text-decoration:underline;">Korn</span> and <span style="text-decoration:underline;">C</span> shells (<span style="font-weight:bold;color:#7f7f7f;">ksh </span><span style="color:#7f7f7f;">and </span><span style="font-weight:bold;color:#7f7f7f;">csh</span><span style="color:#7f7f7f;">).</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">Bash  </span><span style="color:#7f7f7f;">is intended to be a conformant implementation of the Shell and</span>
+       Utilities portion of the IEEE  POSIX  specification  (IEEE  Standard
+<span style="text-decoration:underline;">BASH</span>(1)                   General Commands Manual                   <span style="text-decoration:underline;">BASH</span>(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       bash - GNU Bourne-Again SHell
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">[options] [command_string | file]</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">COPYRIGHT</span>
+       Bash  is  Copyright  (C)  1989-2022 by the Free Software Foundation,
+       Inc.
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">is an </span><span style="font-weight:bold;color:#7f7f7f;">sh</span><span style="color:#7f7f7f;">-compatible command language interpreter that  executes</span>
+       commands read from the standard input or from a file.  <span style="font-weight:bold;color:#7f7f7f;">Bash </span><span style="color:#7f7f7f;">also in‐</span>
+       corporates useful features from the <span style="text-decoration:underline;">Korn</span> and <span style="text-decoration:underline;">C</span> shells (<span style="font-weight:bold;color:#7f7f7f;">ksh </span><span style="color:#7f7f7f;">and </span><span style="font-weight:bold;color:#7f7f7f;">csh</span><span style="color:#7f7f7f;">).</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">Bash  </span><span style="color:#7f7f7f;">is intended to be a conformant implementation of the Shell and</span>
+       Utilities portion of the IEEE  POSIX  specification  (IEEE  Standard
+...skipping...
+       mand,  unless  the  <span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">pipefail</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">  </span><span style="color:#7f7f7f;background-color:#000000;">option is enabled.  If </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">pipefail</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"> </span><span style="color:#7f7f7f;background-color:#000000;">is en‐</span>
+       abled, the pipeline&apos;s return status is the value of the last (right‐
+       most) command to exit with a non-zero status, or zero  if  all  com‐
+       mands  exit  successfully.   If  the  reserved  word  <span style="font-weight:bold;color:#7f7f7f;">!   </span><span style="color:#7f7f7f;">precedes a</span>
+       pipeline, the exit status of that pipeline is the  logical  negation
+       of the exit status as described above.  The shell waits for all com‐
+       mands in the pipeline to terminate before returning a value.
+
+       If  the  <span style="font-weight:bold;color:#7f7f7f;">time </span><span style="color:#7f7f7f;">reserved word precedes a pipeline, the elapsed as well</span>
+       as user and system time consumed by its execution are reported  when
+       the pipeline terminates.  The <span style="font-weight:bold;color:#7f7f7f;">-p </span><span style="color:#7f7f7f;">option changes the output format to</span>
+       that  specified  by POSIX.  When the shell is in <span style="text-decoration:underline;">posix</span> <span style="text-decoration:underline;">mode</span>, it does
+       not recognize <span style="font-weight:bold;color:#7f7f7f;">time </span><span style="color:#7f7f7f;">as a reserved word if the next token begins  with</span>
+       a  `-&apos;.   The <span style="font-weight:bold;color:#7f7f7f;">TIMEFORMAT </span><span style="color:#7f7f7f;">variable may be set to a format string that</span>
+       specifies how the timing information should be  displayed;  see  the
+       description of <span style="font-weight:bold;color:#7f7f7f;">TIMEFORMAT </span><span style="color:#7f7f7f;">under </span><span style="font-weight:bold;color:#7f7f7f;">Shell Variables </span><span style="color:#7f7f7f;">below.</span>
+
+       When  the shell is in <span style="text-decoration:underline;">posix</span> <span style="text-decoration:underline;">mode</span>, <span style="font-weight:bold;color:#7f7f7f;">time </span><span style="color:#7f7f7f;">may be followed by a newline.</span>
+       In this case, the shell displays the total user and system time con‐
+...skipping...olor:#000000;background-color:#000000;"> Manual page bash(1) line 280 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">pipefail</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span>
+                              If set, the return value of a pipeline is the
+                              value of the last (rightmost) command to exit
+                              with a non-zero status, or zero if  all  com‐
+                              mands  in  the  pipeline  exit  successfully.
+                              This option is disabled by default.
+                      <span style="font-weight:bold;color:#7f7f7f;">posix   </span><span style="color:#7f7f7f;">Change the behavior of </span><span style="font-weight:bold;color:#7f7f7f;">bash </span><span style="color:#7f7f7f;">where the default</span>
+                              operation differs from the POSIX standard  to
+                              match  the  standard  (<span style="text-decoration:underline;">posix</span>  <span style="text-decoration:underline;">mode</span>).  See <span style="font-weight:bold;color:#7f7f7f;">SEE</span>
+                              <span style="font-weight:bold;color:#7f7f7f;">ALSO </span><span style="color:#7f7f7f;">below for a reference to a document that</span>
+                              details how posix mode affects bash&apos;s  behav‐
+                              ior.
+                      <span style="font-weight:bold;color:#7f7f7f;">privileged</span>
+                              Same as <span style="font-weight:bold;color:#7f7f7f;">-p</span><span style="color:#7f7f7f;">.</span>
+                      <span style="font-weight:bold;color:#7f7f7f;">verbose </span><span style="color:#7f7f7f;">Same as </span><span style="font-weight:bold;color:#7f7f7f;">-v</span><span style="color:#7f7f7f;">.</span>
+                      <span style="font-weight:bold;color:#7f7f7f;">vi      </span><span style="color:#7f7f7f;">Use  a  vi-style  command line editing inter‐</span>
+                              face.  This also affects the  editing  inter‐
+                              face used for <span style="font-weight:bold;color:#7f7f7f;">read -e</span><span style="color:#7f7f7f;">.</span>
+                      <span style="font-weight:bold;color:#7f7f7f;">xtrace  </span><span style="color:#7f7f7f;">Same as </span><span style="font-weight:bold;color:#7f7f7f;">-x</span><span style="color:#7f7f7f;">.</span>
+M                              Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-P</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+M                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">physical</span></span><span style="color:#000000;background-color:#000000;">
+M                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">onecmd  </span><span style="color:#7f7f7f;background-color:#000000;">Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-t</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+M                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">nounset </span><span style="color:#7f7f7f;background-color:#000000;">Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-u</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+M                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">notify  </span><span style="color:#7f7f7f;background-color:#000000;">Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-b</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+M                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">nolog   </span><span style="color:#7f7f7f;background-color:#000000;">Currently ignored.</span>
+M                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">noglob  </span><span style="color:#7f7f7f;background-color:#000000;">Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-f</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+M                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">noexec  </span><span style="color:#7f7f7f;background-color:#000000;">Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-n</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+M                              Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-C</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+M                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">noclobber</span>/span><span style="color:#000000;background-color:#000000;">
+M                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">monitor </span><span style="color:#7f7f7f;background-color:#000000;">Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-m</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+M                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">keyword </span><span style="color:#7f7f7f;background-color:#000000;">Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-k</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+M                              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Variables </span><span style="color:#7f7f7f;background-color:#000000;">above).</span>
+M                              NOREEOF=10&apos;&apos;  had  been  executed  (see </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Shell</span>000;">
+M                              The effect is as if the shell  command  ``IG‐</span>(press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ignoreeof</span>/span><span style="color:#000000;background-color:#000000;">
+M                              in interactive shells.</span>l page bash(1) line 5871 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M                              under  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">HISTORY</span><span style="color:#7f7f7f;background-color:#000000;">.  This option is on by default</span>
+M                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">history </span><span style="color:#7f7f7f;background-color:#000000;">Enable command history,  as  described  above</span>
+M                              Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-H</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+M                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">histexpand</span>span><span style="color:#000000;background-color:#000000;">
+M                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">hashall </span><span style="color:#7f7f7f;background-color:#000000;">Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-h</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+M                              Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-T</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+M                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">functrace</span>/span><span style="color:#000000;background-color:#000000;">
+M                              Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-E</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+M                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">errtrace</span></span><span style="color:#000000;background-color:#000000;">
+M                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">errexit </span><span style="color:#7f7f7f;background-color:#000000;">Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-e</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+M                              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">read -e</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+M                              also  affects  the editing interface used for</span>9 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M                              started with the  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">--noediting  </span><span style="color:#7f7f7f;background-color:#000000;">option.   This</span>
+M                              shell  is  interactive,  unless  the shell is</span>7 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M                              terface.  This is enabled by default when the</span>6 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">emacs   </span><span style="color:#7f7f7f;background-color:#000000;">Use an emacs-style command line  editing  in‐</span>
+M                              Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-B</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+M                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">braceexpand</span>pan><span style="color:#000000;background-color:#000000;">
+M                              Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-a</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+M                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">allexport</span>/span><span style="color:#000000;background-color:#000000;">
+M                      The </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">option-name</span><span style="color:#000000;background-color:#000000;"> can be one of the following:</span>
+M              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-o </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">option-name</span>
+M                      is ignored by interactive shells.</span>age bash(1) line 5848 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M                      used to check a shell script for syntax errors.  This</span>7 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-n      </span><span style="color:#7f7f7f;background-color:#000000;">Read  commands  but do not execute them.  This may be</span>
+M                      containing its exit status.</span>nual page bash(1) line 5845 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M                      background job completes, the  shell  prints  a  line</span>4 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M                      processes  run  in  a separate process group.  When a</span>3 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">errtrace</span>)</span><span style="color:#000000;background-color:#000000;">
+                              Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-E</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">functrace</span></span><span style="color:#000000;background-color:#000000;">
+                              Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-T</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">hashall </span><span style="color:#7f7f7f;background-color:#000000;">Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-h</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">histexpand</span>/span><span style="color:#000000;background-color:#000000;">
+                              Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-H</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">history </span><span style="color:#7f7f7f;background-color:#000000;">Enable command history,  as  described  above</span>
+                              under  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">HISTORY</span><span style="color:#7f7f7f;background-color:#000000;">.  This option is on by default</span>
+                              in interactive shells.</span>al page bash(1) line 5851 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ignoreeof</span></span><span style="color:#000000;background-color:#000000;">
+                              The effect is as if the shell  command  ``IG‐</span> (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                              NOREEOF=10&apos;&apos;  had  been  executed  (see </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Shell</span>0000;">
+                              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Variables </span><span style="color:#7f7f7f;background-color:#000000;">above).</span>
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">keyword </span><span style="color:#7f7f7f;background-color:#000000;">Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-k</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">monitor </span><span style="color:#7f7f7f;background-color:#000000;">Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-m</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">noclobber</span></span><span style="color:#000000;background-color:#000000;">
+                              Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-C</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">noexec  </span><span style="color:#7f7f7f;background-color:#000000;">Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-n</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">noglob  </span><span style="color:#7f7f7f;background-color:#000000;">Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-f</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+M                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">errtrace</span></span><span style="color:#000000;background-color:#000000;">
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">noglob  </span><span style="color:#7f7f7f;background-color:#000000;">Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-f</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">nolog   </span><span style="color:#7f7f7f;background-color:#000000;">Currently ignored.</span>
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">notify  </span><span style="color:#7f7f7f;background-color:#000000;">Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-b</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">nounset </span><span style="color:#7f7f7f;background-color:#000000;">Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-u</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">onecmd  </span><span style="color:#7f7f7f;background-color:#000000;">Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-t</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">physical</span>)</span><span style="color:#000000;background-color:#000000;">
+                              Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-P</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#000000;background-color:#7f7f7f;">pipefail</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span>
+                              If set, the return value of a pipeline is the</span>69 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                              value of the last (rightmost) command to exit</span>70 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                              with a non-zero status, or zero if  all  com‐</span> (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                              mands  in  the  pipeline  exit  successfully.</span>72 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                              This option is disabled by default.</span>1) line 5873 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">posix   </span><span style="color:#7f7f7f;background-color:#000000;">Change the behavior of </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">bash </span><span style="color:#7f7f7f;background-color:#000000;">where the default</span>
+                              operation differs from the POSIX standard  to</span>75 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">keyword </span><span style="color:#7f7f7f;background-color:#000000;">Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-k</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+M                              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Variables </span><span style="color:#7f7f7f;background-color:#000000;">above).</span>
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">posix   </span><span style="color:#7f7f7f;background-color:#000000;">Change the behavior of </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">bash </span><span style="color:#7f7f7f;background-color:#000000;">where the default</span>
+                              operation differs from the POSIX standard  to</span>75 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                              match  the  standard  (</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">posix</span><span style="color:#000000;background-color:#000000;">  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">mode</span><span style="color:#000000;background-color:#000000;">).  See </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">SEE</span>
+                              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ALSO </span><span style="color:#7f7f7f;background-color:#000000;">below for a reference to a document that</span>
+                              details how posix mode affects bash&apos;s  behav‐</span>ss h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                              ior.</span>or:#000000;"> Manual page bash(1) line 5879 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">privileged</span>/span><span style="color:#000000;background-color:#000000;">
+                              Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-p</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">verbose </span><span style="color:#7f7f7f;background-color:#000000;">Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-v</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vi      </span><span style="color:#7f7f7f;background-color:#000000;">Use  a  vi-style  command line editing inter‐</span>
+                              face.  This also affects the  editing  inter‐</span> (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                              face used for </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">read -e</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">xtrace  </span><span style="color:#7f7f7f;background-color:#000000;">Same as </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-x</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+                      If  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-o </span><span style="color:#7f7f7f;background-color:#000000;">is supplied with no </span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">option-name</span><span style="color:#7f7f7f;background-color:#000000;">, the values of</span>
+                      the current options are printed.  If </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">+o  </span><span style="color:#7f7f7f;background-color:#000000;">is  supplied</span>
+                      with  no  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">option-name</span><span style="color:#000000;background-color:#000000;">,  a  series  of </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">set </span><span style="color:#7f7f7f;background-color:#000000;">commands to</span>
+                      recreate the current option settings is displayed  on</span>90 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                      the standard output.</span>00;"> Manual page bash(1) line 5891 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-p      </span><span style="color:#7f7f7f;background-color:#000000;">Turn  on </span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">privileged</span><span style="color:#7f7f7f;background-color:#000000;"> mode.  In this mode, the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">$ENV </span><span style="color:#7f7f7f;background-color:#000000;">and</span>
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">$BASH_ENV </span><span style="color:#7f7f7f;background-color:#000000;">files are not  processed,  shell  functions</span>
+                      are not inherited from the environment, and the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">SHEL‐</span>olor:#000000;">
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">LOPTS</span><span style="color:#7f7f7f;background-color:#000000;">, </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">BASHOPTS</span><span style="color:#7f7f7f;background-color:#000000;">, </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">CDPATH</span><span style="color:#7f7f7f;background-color:#000000;">, and </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">GLOBIGNORE </span><span style="color:#7f7f7f;background-color:#000000;">variables, if</span>
+                      they  appear in the environment, are ignored.  If the</span>96 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                      shell is started with the effective user  (group)  id</span>97 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                      not equal to the real user (group) id, and the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-p </span><span style="color:#7f7f7f;background-color:#000000;">op‐</span>
+                      tion is not supplied, these actions are taken and the</span>99 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                      effective user id is set to the real user id.  If the</span>00 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-p  </span><span style="color:#7f7f7f;background-color:#000000;">option is supplied at startup, the effective user</span>
+                      id is not reset.  Turning this option off causes  the</span>02 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                      effective  user  and  group ids to be set to the real</span>03 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                      user and group ids.</span>000;"> Manual page bash(1) line 5904 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-r      </span><span style="color:#7f7f7f;background-color:#000000;">Enable restricted shell mode.  This option cannot  be</span>
+                      unset once it has been set.</span>anual page bash(1) line 5906 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-t      </span><span style="color:#7f7f7f;background-color:#000000;">Exit after reading and executing one command.</span>
+              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-u      </span><span style="color:#7f7f7f;background-color:#000000;">Treat  unset  variables and parameters other than the</span>
+                      special parameters &quot;&#64;&quot; and &quot;*&quot;,  or  array  variables</span>q to quit)</span><span style="color:#000000;background-color:#000000;">
+                      subscripted  with  &quot;&#64;&quot;  or &quot;*&quot;, as an error when per‐</span>to quit)</span><span style="color:#000000;background-color:#000000;">
+                      forming parameter expansion.   If  expansion  is  at‐</span> (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                      tempted  on an unset variable or parameter, the shell</span>12 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                      prints an error message, and, if not interactive, ex‐</span> (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                      its with a non-zero status.</span>anual page bash(1) line 5914 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-v      </span><span style="color:#7f7f7f;background-color:#000000;">Print shell input lines as they are read.</span>
+              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-x      </span><span style="color:#7f7f7f;background-color:#000000;">After expanding each  </span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">simple</span><span style="color:#7f7f7f;background-color:#000000;">  </span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">command</span><span style="color:#7f7f7f;background-color:#000000;">,  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">for  </span><span style="color:#7f7f7f;background-color:#000000;">command,</span>
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">case  </span><span style="color:#7f7f7f;background-color:#000000;">command, </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">select </span><span style="color:#7f7f7f;background-color:#000000;">command, or arithmetic </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">for </span><span style="color:#7f7f7f;background-color:#000000;">com‐</span>
+                      mand, display the expanded value of </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">PS4</span><span style="color:#7f7f7f;background-color:#000000;">, followed  by</span>
+                      the  command and its expanded arguments or associated</span>19 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                      word list.</span>olor:#000000;"> Manual page bash(1) line 5920 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-B      </span><span style="color:#7f7f7f;background-color:#000000;">The shell performs brace expansion (see </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">Brace  Expan‐</span>
+                      </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">sion </span><span style="color:#7f7f7f;background-color:#000000;">above).  This is on by default.</span>
+              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-C      </span><span style="color:#7f7f7f;background-color:#000000;">If set, </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">bash </span><span style="color:#7f7f7f;background-color:#000000;">does not overwrite an existing file with</span>
+                      the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&gt;</span><span style="color:#7f7f7f;background-color:#000000;">, </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&gt;&amp;</span><span style="color:#7f7f7f;background-color:#000000;">, and </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&lt;&gt; </span><span style="color:#7f7f7f;background-color:#000000;">redirection operators.  This may be</span>
+                      overridden  when  creating  output files by using the</span>25 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+                      redirection operator </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&gt;| </span><span style="color:#7f7f7f;background-color:#000000;">instead of </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">&gt;</span><span style="color:#7f7f7f;background-color:#000000;">.</span>
+              </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-E      </span><span style="color:#7f7f7f;background-color:#000000;">If set, any trap on </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ERR </span><span style="color:#7f7f7f;background-color:#000000;">is inherited by  shell  func‐</span>
+                      tions,  command  substitutions, and commands executed</span>28 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS25/lektion829 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+$ <span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ bash -x brace_exp 
++ touch viktigt.txt
++ cp viktigt.txt viktigt.txt.bak
++ cp viktigt.txt viktigt.txt.bak
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ <span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ ls
+ aritloop_for	  brace_exp	        len_func        recordings
+ aritloop_while  &apos;fin med mellanslag&apos;   len_importer    viktigt.txt
+ barnfunc	  import_relprob        len_import.sh   viktigt.txt.bak
+ bash-recap	  len		        optx
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ <span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ bash p[
+optx 
++ for fil in b*
++ echo &apos;b-fil: &apos;
+b-fil: 
++ for fil in b*
++ echo &apos;b-fil: &apos;
+b-fil: 
++ for fil in b*
++ echo &apos;b-fil: &apos;
+b-fil: 
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+$ bash optx <span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ bash optx 
++ for fil in b*
++ echo &apos;b-fil: barnfunc&apos;
+b-fil: barnfunc
++ for fil in b*
++ echo &apos;b-fil: bash-recap&apos;
+b-fil: bash-recap
++ for fil in b*
++ echo &apos;b-fil: brace_exp&apos;
+b-fil: brace_exp
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ chmod +x optx 
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ <span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ ./optx 
++ for fil in b*
++ echo &apos;b-fil: barnfunc&apos;
+b-fil: barnfunc
++ for fil in b*
++ echo &apos;b-fil: bash-recap&apos;
+b-fil: bash-recap
++ for fil in b*
++ echo &apos;b-fil: brace_exp&apos;
+b-fil: brace_exp
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+$ <span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ ls
+ aritloop_for	  brace_exp	        len_func        optx
+ aritloop_while  &apos;fin med mellanslag&apos;   len_importer    recordings
+ barnfunc	  import_relprob        len_import.sh   viktigt.txt
+ bash-recap	  len		        opte	        viktigt.txt.bak
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ mkdir fulfiler
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ touch {1.100}-skrot.tx {1.100}-skrot.txf {1.100}-skrot.txu {1.100}-skrot.txlfiler/ {1.100}-skrot.tx{1.100}-skrot.tx
+
+
+
+
+
+
+
+
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ ls fulfiler/<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ ls fulfiler/
+{1.100}-skrot.txt
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+touch fulfiler/{1.100}-skrot.tx,100}-skrot.tx100}-skrot.tx00}-skrot.tx.00}-skrot.tx
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ touch fulfiler/{1..00}-skrot.tx100}-skrot.tx
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+ls fulfiler/<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ ls fulfiler/
+00-skrot.txt	   26-skrot.txt  45-skrot.txt  64-skrot.txt  83-skrot.txt
+01-skrot.txt	   27-skrot.txt  46-skrot.txt  65-skrot.txt  84-skrot.txt
+100-skrot.txt	   28-skrot.txt  47-skrot.txt  66-skrot.txt  85-skrot.txt
+10-skrot.txt	   29-skrot.txt  48-skrot.txt  67-skrot.txt  86-skrot.txt
+{1.100}-skrot.txt  2-skrot.txt	 49-skrot.txt  68-skrot.txt  87-skrot.txt
+11-skrot.txt	   30-skrot.txt  4-skrot.txt   69-skrot.txt  88-skrot.txt
+12-skrot.txt	   31-skrot.txt  50-skrot.txt  6-skrot.txt   89-skrot.txt
+13-skrot.txt	   32-skrot.txt  51-skrot.txt  70-skrot.txt  8-skrot.txt
+14-skrot.txt	   33-skrot.txt  52-skrot.txt  71-skrot.txt  90-skrot.txt
+15-skrot.txt	   34-skrot.txt  53-skrot.txt  72-skrot.txt  91-skrot.txt
+16-skrot.txt	   35-skrot.txt  54-skrot.txt  73-skrot.txt  92-skrot.txt
+17-skrot.txt	   36-skrot.txt  55-skrot.txt  74-skrot.txt  93-skrot.txt
+18-skrot.txt	   37-skrot.txt  56-skrot.txt  75-skrot.txt  94-skrot.txt
+19-skrot.txt	   38-skrot.txt  57-skrot.txt  76-skrot.txt  95-skrot.txt
+1-skrot.txt	   39-skrot.txt  58-skrot.txt  77-skrot.txt  96-skrot.txt
+20-skrot.txt	   3-skrot.txt	 59-skrot.txt  78-skrot.txt  97-skrot.txt
+21-skrot.txt	   40-skrot.txt  5-skrot.txt   79-skrot.txt  98-skrot.txt
+22-skrot.txt	   41-skrot.txt  60-skrot.txt  7-skrot.txt   99-skrot.txt
+23-skrot.txt	   42-skrot.txt  61-skrot.txt  80-skrot.txt  9-skrot.txt
+24-skrot.txt	   43-skrot.txt  62-skrot.txt  81-skrot.txt
+25-skrot.txt	   44-skrot.txt  63-skrot.txt  82-skrot.txt
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ ./o
+ptx fulfilere fulfiler/<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ ./opte fulfiler/
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ ls fulfiler/
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ touchn><span style="color:#000000;background-color:#000000;">tou</span><span style="color:#000000;background-color:#000000;">c&apos;: </span><span style="color:#000000;background-color:#000000;">touc</span><span style="color:#000000;background-color:#000000;">h&apos;: </span><span style="color:#000000;background-color:#000000;">touch</span><span style="color:#000000;background-color:#000000;">
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ cd fulfiler/
+<span style="color:#5c5cff;">DEVOPS25/lektion8/fulfiler
+</span>$ <span style="color:#5c5cff;">DEVOPS25/lektion8/fulfiler
+</span>$ mkdir fulfulfiler
+<span style="color:#5c5cff;">DEVOPS25/lektion8/fulfiler
+</span>$ t /{1..100}-skrot.tx /{1..100}-skrot.tx /{1..100}-skrot.tx /{1..100}-skrot.tx /{1..100}-skrot.tx /{1..100}-skrot.txf /{1..100}-skrot.txulfiler/ /{1..100}-skrot.tx/{1..100}-skrot.tx{1..100}-skrot.tx0}-skrot.tx
+<span style="color:#5c5cff;">DEVOPS25/lektion8/fulfiler
+</span>$ <span style="color:#5c5cff;">DEVOPS25/lektion8/fulfiler
+</span>$ ls fulfulfiler/
+
+1000-skrot.txt	280-skrot.txt  460-skrot.txt  640-skrot.txt  820-skrot.txt
+100-skrot.txt	281-skrot.txt  461-skrot.txt  641-skrot.txt  821-skrot.txt
+101-skrot.txt	282-skrot.txt  462-skrot.txt  642-skrot.txt  822-skrot.txt
+102-skrot.txt	283-skrot.txt  463-skrot.txt  643-skrot.txt  823-skrot.txt
+103-skrot.txt	284-skrot.txt  464-skrot.txt  644-skrot.txt  824-skrot.txt
+104-skrot.txt	285-skrot.txt  465-skrot.txt  645-skrot.txt  825-skrot.txt
+105-skrot.txt	286-skrot.txt  466-skrot.txt  646-skrot.txt  826-skrot.txt
+106-skrot.txt	287-skrot.txt  467-skrot.txt  647-skrot.txt  827-skrot.txt
+107-skrot.txt	288-skrot.txt  468-skrot.txt  648-skrot.txt  828-skrot.txt
+108-skrot.txt	289-skrot.txt  469-skrot.txt  649-skrot.txt  829-skrot.txt
+109-skrot.txt	28-skrot.txt   46-skrot.txt   64-skrot.txt   82-skrot.txt
+10-skrot.txt	290-skrot.txt  470-skrot.txt  650-skrot.txt  830-skrot.txt
+110-skrot.txt	291-skrot.txt  471-skrot.txt  651-skrot.txt  831-skrot.txt
+111-skrot.txt	292-skrot.txt  472-skrot.txt  652-skrot.txt  832-skrot.txt
+112-skrot.txt	293-skrot.txt  473-skrot.txt  653-skrot.txt  833-skrot.txt
+113-skrot.txt	294-skrot.txt  474-skrot.txt  654-skrot.txt  834-skrot.txt
+114-skrot.txt	295-skrot.txt  475-skrot.txt  655-skrot.txt  835-skrot.txt
+115-skrot.txt	296-skrot.txt  476-skrot.txt  656-skrot.txt  836-skrot.txt
+116-skrot.txt	297-skrot.txt  477-skrot.txt  657-skrot.txt  837-skrot.txt
+117-skrot.txt	298-skrot.txt  478-skrot.txt  658-skrot.txt  838-skrot.txt
+118-skrot.txt	299-skrot.txt  479-skrot.txt  659-skrot.txt  839-skrot.txt
+119-skrot.txt	29-skrot.txt   47-skrot.txt   65-skrot.txt   83-skrot.txt
+11-skrot.txt	2-skrot.txt    480-skrot.txt  660-skrot.txt  840-skrot.txt
+120-skrot.txt	300-skrot.txt  481-skrot.txt  661-skrot.txt  841-skrot.txt
+121-skrot.txt	301-skrot.txt  482-skrot.txt  662-skrot.txt  842-skrot.txt
+122-skrot.txt	302-skrot.txt  483-skrot.txt  663-skrot.txt  843-skrot.txt
+123-skrot.txt	303-skrot.txt  484-skrot.txt  664-skrot.txt  844-skrot.txt
+124-skrot.txt	304-skrot.txt  485-skrot.txt  665-skrot.txt  845-skrot.txt
+125-skrot.txt	305-skrot.txt  486-skrot.txt  666-skrot.txt  846-skrot.txt
+126-skrot.txt	306-skrot.txt  487-skrot.txt  667-skrot.txt  847-skrot.txt
+127-skrot.txt	307-skrot.txt  488-skrot.txt  668-skrot.txt  848-skrot.txt
+128-skrot.txt	308-skrot.txt  489-skrot.txt  669-skrot.txt  849-skrot.txt
+129-skrot.txt	309-skrot.txt  48-skrot.txt   66-skrot.txt   84-skrot.txt
+12-skrot.txt	30-skrot.txt   490-skrot.txt  670-skrot.txt  850-skrot.txt
+130-skrot.txt	310-skrot.txt  491-skrot.txt  671-skrot.txt  851-skrot.txt
+131-skrot.txt	311-skrot.txt  492-skrot.txt  672-skrot.txt  852-skrot.txt
+132-skrot.txt	312-skrot.txt  493-skrot.txt  673-skrot.txt  853-skrot.txt
+133-skrot.txt	313-skrot.txt  494-skrot.txt  674-skrot.txt  854-skrot.txt
+134-skrot.txt	314-skrot.txt  495-skrot.txt  675-skrot.txt  855-skrot.txt
+135-skrot.txt	315-skrot.txt  496-skrot.txt  676-skrot.txt  856-skrot.txt
+136-skrot.txt	316-skrot.txt  497-skrot.txt  677-skrot.txt  857-skrot.txt
+137-skrot.txt	317-skrot.txt  498-skrot.txt  678-skrot.txt  858-skrot.txt
+138-skrot.txt	318-skrot.txt  499-skrot.txt  679-skrot.txt  859-skrot.txt
+139-skrot.txt	319-skrot.txt  49-skrot.txt   67-skrot.txt   85-skrot.txt
+13-skrot.txt	31-skrot.txt   4-skrot.txt    680-skrot.txt  860-skrot.txt
+140-skrot.txt	320-skrot.txt  500-skrot.txt  681-skrot.txt  861-skrot.txt
+141-skrot.txt	321-skrot.txt  501-skrot.txt  682-skrot.txt  862-skrot.txt
+142-skrot.txt	322-skrot.txt  502-skrot.txt  683-skrot.txt  863-skrot.txt
+143-skrot.txt	323-skrot.txt  503-skrot.txt  684-skrot.txt  864-skrot.txt
+144-skrot.txt	324-skrot.txt  504-skrot.txt  685-skrot.txt  865-skrot.txt
+145-skrot.txt	325-skrot.txt  505-skrot.txt  686-skrot.txt  866-skrot.txt
+146-skrot.txt	326-skrot.txt  506-skrot.txt  687-skrot.txt  867-skrot.txt
+147-skrot.txt	327-skrot.txt  507-skrot.txt  688-skrot.txt  868-skrot.txt
+148-skrot.txt	328-skrot.txt  508-skrot.txt  689-skrot.txt  869-skrot.txt
+149-skrot.txt	329-skrot.txt  509-skrot.txt  68-skrot.txt   86-skrot.txt
+14-skrot.txt	32-skrot.txt   50-skrot.txt   690-skrot.txt  870-skrot.txt
+150-skrot.txt	330-skrot.txt  510-skrot.txt  691-skrot.txt  871-skrot.txt
+151-skrot.txt	331-skrot.txt  511-skrot.txt  692-skrot.txt  872-skrot.txt
+152-skrot.txt	332-skrot.txt  512-skrot.txt  693-skrot.txt  873-skrot.txt
+153-skrot.txt	333-skrot.txt  513-skrot.txt  694-skrot.txt  874-skrot.txt
+154-skrot.txt	334-skrot.txt  514-skrot.txt  695-skrot.txt  875-skrot.txt
+155-skrot.txt	335-skrot.txt  515-skrot.txt  696-skrot.txt  876-skrot.txt
+156-skrot.txt	336-skrot.txt  516-skrot.txt  697-skrot.txt  877-skrot.txt
+157-skrot.txt	337-skrot.txt  517-skrot.txt  698-skrot.txt  878-skrot.txt
+158-skrot.txt	338-skrot.txt  518-skrot.txt  699-skrot.txt  879-skrot.txt
+159-skrot.txt	339-skrot.txt  519-skrot.txt  69-skrot.txt   87-skrot.txt
+15-skrot.txt	33-skrot.txt   51-skrot.txt   6-skrot.txt    880-skrot.txt
+160-skrot.txt	340-skrot.txt  520-skrot.txt  700-skrot.txt  881-skrot.txt
+161-skrot.txt	341-skrot.txt  521-skrot.txt  701-skrot.txt  882-skrot.txt
+162-skrot.txt	342-skrot.txt  522-skrot.txt  702-skrot.txt  883-skrot.txt
+163-skrot.txt	343-skrot.txt  523-skrot.txt  703-skrot.txt  884-skrot.txt
+164-skrot.txt	344-skrot.txt  524-skrot.txt  704-skrot.txt  885-skrot.txt
+165-skrot.txt	345-skrot.txt  525-skrot.txt  705-skrot.txt  886-skrot.txt
+166-skrot.txt	346-skrot.txt  526-skrot.txt  706-skrot.txt  887-skrot.txt
+167-skrot.txt	347-skrot.txt  527-skrot.txt  707-skrot.txt  888-skrot.txt
+168-skrot.txt	348-skrot.txt  528-skrot.txt  708-skrot.txt  889-skrot.txt
+169-skrot.txt	349-skrot.txt  529-skrot.txt  709-skrot.txt  88-skrot.txt
+16-skrot.txt	34-skrot.txt   52-skrot.txt   70-skrot.txt   890-skrot.txt
+170-skrot.txt	350-skrot.txt  530-skrot.txt  710-skrot.txt  891-skrot.txt
+171-skrot.txt	351-skrot.txt  531-skrot.txt  711-skrot.txt  892-skrot.txt
+172-skrot.txt	352-skrot.txt  532-skrot.txt  712-skrot.txt  893-skrot.txt
+173-skrot.txt	353-skrot.txt  533-skrot.txt  713-skrot.txt  894-skrot.txt
+174-skrot.txt	354-skrot.txt  534-skrot.txt  714-skrot.txt  895-skrot.txt
+175-skrot.txt	355-skrot.txt  535-skrot.txt  715-skrot.txt  896-skrot.txt
+176-skrot.txt	356-skrot.txt  536-skrot.txt  716-skrot.txt  897-skrot.txt
+177-skrot.txt	357-skrot.txt  537-skrot.txt  717-skrot.txt  898-skrot.txt
+178-skrot.txt	358-skrot.txt  538-skrot.txt  718-skrot.txt  899-skrot.txt
+179-skrot.txt	359-skrot.txt  539-skrot.txt  719-skrot.txt  89-skrot.txt
+17-skrot.txt	35-skrot.txt   53-skrot.txt   71-skrot.txt   8-skrot.txt
+180-skrot.txt	360-skrot.txt  540-skrot.txt  720-skrot.txt  900-skrot.txt
+181-skrot.txt	361-skrot.txt  541-skrot.txt  721-skrot.txt  901-skrot.txt
+182-skrot.txt	362-skrot.txt  542-skrot.txt  722-skrot.txt  902-skrot.txt
+183-skrot.txt	363-skrot.txt  543-skrot.txt  723-skrot.txt  903-skrot.txt
+184-skrot.txt	364-skrot.txt  544-skrot.txt  724-skrot.txt  904-skrot.txt
+185-skrot.txt	365-skrot.txt  545-skrot.txt  725-skrot.txt  905-skrot.txt
+186-skrot.txt	366-skrot.txt  546-skrot.txt  726-skrot.txt  906-skrot.txt
+187-skrot.txt	367-skrot.txt  547-skrot.txt  727-skrot.txt  907-skrot.txt
+188-skrot.txt	368-skrot.txt  548-skrot.txt  728-skrot.txt  908-skrot.txt
+189-skrot.txt	369-skrot.txt  549-skrot.txt  729-skrot.txt  909-skrot.txt
+18-skrot.txt	36-skrot.txt   54-skrot.txt   72-skrot.txt   90-skrot.txt
+190-skrot.txt	370-skrot.txt  550-skrot.txt  730-skrot.txt  910-skrot.txt
+191-skrot.txt	371-skrot.txt  551-skrot.txt  731-skrot.txt  911-skrot.txt
+192-skrot.txt	372-skrot.txt  552-skrot.txt  732-skrot.txt  912-skrot.txt
+193-skrot.txt	373-skrot.txt  553-skrot.txt  733-skrot.txt  913-skrot.txt
+194-skrot.txt	374-skrot.txt  554-skrot.txt  734-skrot.txt  914-skrot.txt
+195-skrot.txt	375-skrot.txt  555-skrot.txt  735-skrot.txt  915-skrot.txt
+196-skrot.txt	376-skrot.txt  556-skrot.txt  736-skrot.txt  916-skrot.txt
+197-skrot.txt	377-skrot.txt  557-skrot.txt  737-skrot.txt  917-skrot.txt
+198-skrot.txt	378-skrot.txt  558-skrot.txt  738-skrot.txt  918-skrot.txt
+199-skrot.txt	379-skrot.txt  559-skrot.txt  739-skrot.txt  919-skrot.txt
+19-skrot.txt	37-skrot.txt   55-skrot.txt   73-skrot.txt   91-skrot.txt
+1-skrot.txt	380-skrot.txt  560-skrot.txt  740-skrot.txt  920-skrot.txt
+200-skrot.txt	381-skrot.txt  561-skrot.txt  741-skrot.txt  921-skrot.txt
+201-skrot.txt	382-skrot.txt  562-skrot.txt  742-skrot.txt  922-skrot.txt
+202-skrot.txt	383-skrot.txt  563-skrot.txt  743-skrot.txt  923-skrot.txt
+203-skrot.txt	384-skrot.txt  564-skrot.txt  744-skrot.txt  924-skrot.txt
+204-skrot.txt	385-skrot.txt  565-skrot.txt  745-skrot.txt  925-skrot.txt
+205-skrot.txt	386-skrot.txt  566-skrot.txt  746-skrot.txt  926-skrot.txt
+206-skrot.txt	387-skrot.txt  567-skrot.txt  747-skrot.txt  927-skrot.txt
+207-skrot.txt	388-skrot.txt  568-skrot.txt  748-skrot.txt  928-skrot.txt
+208-skrot.txt	389-skrot.txt  569-skrot.txt  749-skrot.txt  929-skrot.txt
+209-skrot.txt	38-skrot.txt   56-skrot.txt   74-skrot.txt   92-skrot.txt
+20-skrot.txt	390-skrot.txt  570-skrot.txt  750-skrot.txt  930-skrot.txt
+210-skrot.txt	391-skrot.txt  571-skrot.txt  751-skrot.txt  931-skrot.txt
+211-skrot.txt	392-skrot.txt  572-skrot.txt  752-skrot.txt  932-skrot.txt
+212-skrot.txt	393-skrot.txt  573-skrot.txt  753-skrot.txt  933-skrot.txt
+213-skrot.txt	394-skrot.txt  574-skrot.txt  754-skrot.txt  934-skrot.txt
+214-skrot.txt	395-skrot.txt  575-skrot.txt  755-skrot.txt  935-skrot.txt
+215-skrot.txt	396-skrot.txt  576-skrot.txt  756-skrot.txt  936-skrot.txt
+216-skrot.txt	397-skrot.txt  577-skrot.txt  757-skrot.txt  937-skrot.txt
+217-skrot.txt	398-skrot.txt  578-skrot.txt  758-skrot.txt  938-skrot.txt
+218-skrot.txt	399-skrot.txt  579-skrot.txt  759-skrot.txt  939-skrot.txt
+219-skrot.txt	39-skrot.txt   57-skrot.txt   75-skrot.txt   93-skrot.txt
+21-skrot.txt	3-skrot.txt    580-skrot.txt  760-skrot.txt  940-skrot.txt
+220-skrot.txt	400-skrot.txt  581-skrot.txt  761-skrot.txt  941-skrot.txt
+221-skrot.txt	401-skrot.txt  582-skrot.txt  762-skrot.txt  942-skrot.txt
+222-skrot.txt	402-skrot.txt  583-skrot.txt  763-skrot.txt  943-skrot.txt
+223-skrot.txt	403-skrot.txt  584-skrot.txt  764-skrot.txt  944-skrot.txt
+224-skrot.txt	404-skrot.txt  585-skrot.txt  765-skrot.txt  945-skrot.txt
+225-skrot.txt	405-skrot.txt  586-skrot.txt  766-skrot.txt  946-skrot.txt
+226-skrot.txt	406-skrot.txt  587-skrot.txt  767-skrot.txt  947-skrot.txt
+227-skrot.txt	407-skrot.txt  588-skrot.txt  768-skrot.txt  948-skrot.txt
+228-skrot.txt	408-skrot.txt  589-skrot.txt  769-skrot.txt  949-skrot.txt
+229-skrot.txt	409-skrot.txt  58-skrot.txt   76-skrot.txt   94-skrot.txt
+22-skrot.txt	40-skrot.txt   590-skrot.txt  770-skrot.txt  950-skrot.txt
+230-skrot.txt	410-skrot.txt  591-skrot.txt  771-skrot.txt  951-skrot.txt
+231-skrot.txt	411-skrot.txt  592-skrot.txt  772-skrot.txt  952-skrot.txt
+232-skrot.txt	412-skrot.txt  593-skrot.txt  773-skrot.txt  953-skrot.txt
+233-skrot.txt	413-skrot.txt  594-skrot.txt  774-skrot.txt  954-skrot.txt
+234-skrot.txt	414-skrot.txt  595-skrot.txt  775-skrot.txt  955-skrot.txt
+235-skrot.txt	415-skrot.txt  596-skrot.txt  776-skrot.txt  956-skrot.txt
+236-skrot.txt	416-skrot.txt  597-skrot.txt  777-skrot.txt  957-skrot.txt
+237-skrot.txt	417-skrot.txt  598-skrot.txt  778-skrot.txt  958-skrot.txt
+238-skrot.txt	418-skrot.txt  599-skrot.txt  779-skrot.txt  959-skrot.txt
+239-skrot.txt	419-skrot.txt  59-skrot.txt   77-skrot.txt   95-skrot.txt
+23-skrot.txt	41-skrot.txt   5-skrot.txt    780-skrot.txt  960-skrot.txt
+240-skrot.txt	420-skrot.txt  600-skrot.txt  781-skrot.txt  961-skrot.txt
+241-skrot.txt	421-skrot.txt  601-skrot.txt  782-skrot.txt  962-skrot.txt
+242-skrot.txt	422-skrot.txt  602-skrot.txt  783-skrot.txt  963-skrot.txt
+243-skrot.txt	423-skrot.txt  603-skrot.txt  784-skrot.txt  964-skrot.txt
+244-skrot.txt	424-skrot.txt  604-skrot.txt  785-skrot.txt  965-skrot.txt
+245-skrot.txt	425-skrot.txt  605-skrot.txt  786-skrot.txt  966-skrot.txt
+246-skrot.txt	426-skrot.txt  606-skrot.txt  787-skrot.txt  967-skrot.txt
+247-skrot.txt	427-skrot.txt  607-skrot.txt  788-skrot.txt  968-skrot.txt
+248-skrot.txt	428-skrot.txt  608-skrot.txt  789-skrot.txt  969-skrot.txt
+249-skrot.txt	429-skrot.txt  609-skrot.txt  78-skrot.txt   96-skrot.txt
+24-skrot.txt	42-skrot.txt   60-skrot.txt   790-skrot.txt  970-skrot.txt
+250-skrot.txt	430-skrot.txt  610-skrot.txt  791-skrot.txt  971-skrot.txt
+251-skrot.txt	431-skrot.txt  611-skrot.txt  792-skrot.txt  972-skrot.txt
+252-skrot.txt	432-skrot.txt  612-skrot.txt  793-skrot.txt  973-skrot.txt
+253-skrot.txt	433-skrot.txt  613-skrot.txt  794-skrot.txt  974-skrot.txt
+254-skrot.txt	434-skrot.txt  614-skrot.txt  795-skrot.txt  975-skrot.txt
+255-skrot.txt	435-skrot.txt  615-skrot.txt  796-skrot.txt  976-skrot.txt
+256-skrot.txt	436-skrot.txt  616-skrot.txt  797-skrot.txt  977-skrot.txt
+257-skrot.txt	437-skrot.txt  617-skrot.txt  798-skrot.txt  978-skrot.txt
+258-skrot.txt	438-skrot.txt  618-skrot.txt  799-skrot.txt  979-skrot.txt
+259-skrot.txt	439-skrot.txt  619-skrot.txt  79-skrot.txt   97-skrot.txt
+25-skrot.txt	43-skrot.txt   61-skrot.txt   7-skrot.txt    980-skrot.txt
+260-skrot.txt	440-skrot.txt  620-skrot.txt  800-skrot.txt  981-skrot.txt
+261-skrot.txt	441-skrot.txt  621-skrot.txt  801-skrot.txt  982-skrot.txt
+262-skrot.txt	442-skrot.txt  622-skrot.txt  802-skrot.txt  983-skrot.txt
+263-skrot.txt	443-skrot.txt  623-skrot.txt  803-skrot.txt  984-skrot.txt
+264-skrot.txt	444-skrot.txt  624-skrot.txt  804-skrot.txt  985-skrot.txt
+265-skrot.txt	445-skrot.txt  625-skrot.txt  805-skrot.txt  986-skrot.txt
+266-skrot.txt	446-skrot.txt  626-skrot.txt  806-skrot.txt  987-skrot.txt
+267-skrot.txt	447-skrot.txt  627-skrot.txt  807-skrot.txt  988-skrot.txt
+268-skrot.txt	448-skrot.txt  628-skrot.txt  808-skrot.txt  989-skrot.txt
+269-skrot.txt	449-skrot.txt  629-skrot.txt  809-skrot.txt  98-skrot.txt
+26-skrot.txt	44-skrot.txt   62-skrot.txt   80-skrot.txt   990-skrot.txt
+270-skrot.txt	450-skrot.txt  630-skrot.txt  810-skrot.txt  991-skrot.txt
+271-skrot.txt	451-skrot.txt  631-skrot.txt  811-skrot.txt  992-skrot.txt
+272-skrot.txt	452-skrot.txt  632-skrot.txt  812-skrot.txt  993-skrot.txt
+273-skrot.txt	453-skrot.txt  633-skrot.txt  813-skrot.txt  994-skrot.txt
+274-skrot.txt	454-skrot.txt  634-skrot.txt  814-skrot.txt  995-skrot.txt
+275-skrot.txt	455-skrot.txt  635-skrot.txt  815-skrot.txt  996-skrot.txt
+276-skrot.txt	456-skrot.txt  636-skrot.txt  816-skrot.txt  997-skrot.txt
+277-skrot.txt	457-skrot.txt  637-skrot.txt  817-skrot.txt  998-skrot.txt
+278-skrot.txt	458-skrot.txt  638-skrot.txt  818-skrot.txt  999-skrot.txt
+279-skrot.txt	459-skrot.txt  639-skrot.txt  819-skrot.txt  99-skrot.txt
+27-skrot.txt	45-skrot.txt   63-skrot.txt   81-skrot.txt   9-skrot.txt
+<span style="color:#5c5cff;">DEVOPS25/lektion8/fulfiler
+</span>$ <span style="color:#5c5cff;">DEVOPS25/lektion8/fulfiler
+</span>$ ./o
+pt
+e
+ fulfilr
+bash: ./opte: No such file or directory
+<span style="color:#5c5cff;">DEVOPS25/lektion8/fulfiler
+</span>$ ls
+100-skrot.txt  29-skrot.txt  48-skrot.txt  67-skrot.txt  86-skrot.txt
+10-skrot.txt   2-skrot.txt   49-skrot.txt  68-skrot.txt  87-skrot.txt
+11-skrot.txt   30-skrot.txt  4-skrot.txt   69-skrot.txt  88-skrot.txt
+12-skrot.txt   31-skrot.txt  50-skrot.txt  6-skrot.txt	 89-skrot.txt
+13-skrot.txt   32-skrot.txt  51-skrot.txt  70-skrot.txt  8-skrot.txt
+14-skrot.txt   33-skrot.txt  52-skrot.txt  71-skrot.txt  90-skrot.txt
+15-skrot.txt   34-skrot.txt  53-skrot.txt  72-skrot.txt  91-skrot.txt
+16-skrot.txt   35-skrot.txt  54-skrot.txt  73-skrot.txt  92-skrot.txt
+17-skrot.txt   36-skrot.txt  55-skrot.txt  74-skrot.txt  93-skrot.txt
+18-skrot.txt   37-skrot.txt  56-skrot.txt  75-skrot.txt  94-skrot.txt
+19-skrot.txt   38-skrot.txt  57-skrot.txt  76-skrot.txt  95-skrot.txt
+1-skrot.txt    39-skrot.txt  58-skrot.txt  77-skrot.txt  96-skrot.txt
+20-skrot.txt   3-skrot.txt   59-skrot.txt  78-skrot.txt  97-skrot.txt
+21-skrot.txt   40-skrot.txt  5-skrot.txt   79-skrot.txt  98-skrot.txt
+22-skrot.txt   41-skrot.txt  60-skrot.txt  7-skrot.txt	 99-skrot.txt
+23-skrot.txt   42-skrot.txt  61-skrot.txt  80-skrot.txt  9-skrot.txt
+24-skrot.txt   43-skrot.txt  62-skrot.txt  81-skrot.txt  fulfulfiler
+25-skrot.txt   44-skrot.txt  63-skrot.txt  82-skrot.txt
+26-skrot.txt   45-skrot.txt  64-skrot.txt  83-skrot.txt
+27-skrot.txt   46-skrot.txt  65-skrot.txt  84-skrot.txt
+28-skrot.txt   47-skrot.txt  66-skrot.txt  85-skrot.txt
+<span style="color:#5c5cff;">DEVOPS25/lektion8/fulfiler
+</span>$ <span style="color:#5c5cff;">DEVOPS25/lektion8/fulfiler
+</span>$ ls
+100-skrot.txt  29-skrot.txt  48-skrot.txt  67-skrot.txt  86-skrot.txt
+10-skrot.txt   2-skrot.txt   49-skrot.txt  68-skrot.txt  87-skrot.txt
+11-skrot.txt   30-skrot.txt  4-skrot.txt   69-skrot.txt  88-skrot.txt
+12-skrot.txt   31-skrot.txt  50-skrot.txt  6-skrot.txt	 89-skrot.txt
+13-skrot.txt   32-skrot.txt  51-skrot.txt  70-skrot.txt  8-skrot.txt
+14-skrot.txt   33-skrot.txt  52-skrot.txt  71-skrot.txt  90-skrot.txt
+15-skrot.txt   34-skrot.txt  53-skrot.txt  72-skrot.txt  91-skrot.txt
+16-skrot.txt   35-skrot.txt  54-skrot.txt  73-skrot.txt  92-skrot.txt
+17-skrot.txt   36-skrot.txt  55-skrot.txt  74-skrot.txt  93-skrot.txt
+18-skrot.txt   37-skrot.txt  56-skrot.txt  75-skrot.txt  94-skrot.txt
+19-skrot.txt   38-skrot.txt  57-skrot.txt  76-skrot.txt  95-skrot.txt
+1-skrot.txt    39-skrot.txt  58-skrot.txt  77-skrot.txt  96-skrot.txt
+20-skrot.txt   3-skrot.txt   59-skrot.txt  78-skrot.txt  97-skrot.txt
+21-skrot.txt   40-skrot.txt  5-skrot.txt   79-skrot.txt  98-skrot.txt
+22-skrot.txt   41-skrot.txt  60-skrot.txt  7-skrot.txt	 99-skrot.txt
+23-skrot.txt   42-skrot.txt  61-skrot.txt  80-skrot.txt  9-skrot.txt
+24-skrot.txt   43-skrot.txt  62-skrot.txt  81-skrot.txt  fulfulfiler
+25-skrot.txt   44-skrot.txt  63-skrot.txt  82-skrot.txt
+26-skrot.txt   45-skrot.txt  64-skrot.txt  83-skrot.txt
+27-skrot.txt   46-skrot.txt  65-skrot.txt  84-skrot.txt
+28-skrot.txt   47-skrot.txt  66-skrot.txt  85-skrot.txt
+<span style="color:#5c5cff;">DEVOPS25/lektion8/fulfiler
+</span>$ ./opte fulfilbash -x <span style="color:#5c5cff;">DEVOPS25/lektion8/fulfiler
+</span>$ bash -x ./opte fulfil
+bash: ./opte: No such file or directory
+<span style="color:#5c5cff;">DEVOPS25/lektion8/fulfiler
+</span>$ ls
+100-skrot.txt  29-skrot.txt  48-skrot.txt  67-skrot.txt  86-skrot.txt
+10-skrot.txt   2-skrot.txt   49-skrot.txt  68-skrot.txt  87-skrot.txt
+11-skrot.txt   30-skrot.txt  4-skrot.txt   69-skrot.txt  88-skrot.txt
+12-skrot.txt   31-skrot.txt  50-skrot.txt  6-skrot.txt	 89-skrot.txt
+13-skrot.txt   32-skrot.txt  51-skrot.txt  70-skrot.txt  8-skrot.txt
+14-skrot.txt   33-skrot.txt  52-skrot.txt  71-skrot.txt  90-skrot.txt
+15-skrot.txt   34-skrot.txt  53-skrot.txt  72-skrot.txt  91-skrot.txt
+16-skrot.txt   35-skrot.txt  54-skrot.txt  73-skrot.txt  92-skrot.txt
+17-skrot.txt   36-skrot.txt  55-skrot.txt  74-skrot.txt  93-skrot.txt
+18-skrot.txt   37-skrot.txt  56-skrot.txt  75-skrot.txt  94-skrot.txt
+19-skrot.txt   38-skrot.txt  57-skrot.txt  76-skrot.txt  95-skrot.txt
+1-skrot.txt    39-skrot.txt  58-skrot.txt  77-skrot.txt  96-skrot.txt
+20-skrot.txt   3-skrot.txt   59-skrot.txt  78-skrot.txt  97-skrot.txt
+21-skrot.txt   40-skrot.txt  5-skrot.txt   79-skrot.txt  98-skrot.txt
+22-skrot.txt   41-skrot.txt  60-skrot.txt  7-skrot.txt	 99-skrot.txt
+23-skrot.txt   42-skrot.txt  61-skrot.txt  80-skrot.txt  9-skrot.txt
+24-skrot.txt   43-skrot.txt  62-skrot.txt  81-skrot.txt  fulfulfiler
+25-skrot.txt   44-skrot.txt  63-skrot.txt  82-skrot.txt
+26-skrot.txt   45-skrot.txt  64-skrot.txt  83-skrot.txt
+27-skrot.txt   46-skrot.txt  65-skrot.txt  84-skrot.txt
+28-skrot.txt   47-skrot.txt  66-skrot.txt  85-skrot.txt
+<span style="color:#5c5cff;">DEVOPS25/lektion8/fulfiler
+<span style="color:#5c5cff;">DEVOPS25/lektion8/fulfiler
+</span>$ ./opte fulfil
+
+
+
+
+
+
+
+
+../opte: line 7: cd: fulfilr: No such file or directory
+rm: cannot remove &apos;fulfulfiler&apos;: Is a directory
+<span style="color:#5c5cff;">DEVOPS25/lektion8/fulfiler
+</span>$ ls
+fulfulfiler
+<span style="color:#5c5cff;">DEVOPS25/lektion8/fulfiler
+</span>$ <span style="color:#5c5cff;">DEVOPS25/lektion8/fulfiler
+</span>$ cp op
+t
+ optx
+
+
+
+cp bra
+
+cd ..
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ cp brace_exp trapex
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ code trapex 
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ <span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ man kill
+<span style="text-decoration:underline;">KILL</span>(1)                        User Commands                        <span style="text-decoration:underline;">KILL</span>(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       kill - send a signal to a process
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">kill </span><span style="color:#7f7f7f;">[options] &lt;pid&gt; [...]</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       The default signal for kill is TERM.  Use <span style="font-weight:bold;color:#7f7f7f;">-l </span><span style="color:#7f7f7f;">or </span><span style="font-weight:bold;color:#7f7f7f;">-L </span><span style="color:#7f7f7f;">to list available</span>
+       signals.   Particularly useful signals include HUP, INT, KILL, STOP,
+       CONT, and 0.  Alternate signals may be specified in three ways:  <span style="font-weight:bold;color:#7f7f7f;">-9</span><span style="color:#7f7f7f;">,</span>
+       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-SIGKILL  </span><span style="color:#7f7f7f;background-color:#000000;">or </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-KILL</span><span style="color:#7f7f7f;background-color:#000000;">.  Negative PID values may be used to choose whole</span>
+       process groups; see the PGID column in ps command output.  A PID  of
+       <span style="font-weight:bold;color:#7f7f7f;">-1  </span><span style="color:#7f7f7f;">is  special;  it indicates all processes except the kill process</span>
+       itself and init.
+
+<span style="font-weight:bold;color:#7f7f7f;">OPTIONS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">&lt;pid&gt; [...]</span>
+              Send signal to every &lt;pid&gt; listed.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-&lt;signal&gt;</span>
+       <span style="font-weight:bold;color:#7f7f7f;">-s &lt;signal&gt;</span>
+       <span style="font-weight:bold;color:#7f7f7f;">--signal &lt;signal&gt;</span>
+              Specify the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">signal </span><span style="color:#7f7f7f;background-color:#000000;">to be sent.  The signal can  be  specified</span>
+              by  using  name  or  number.   The behavior of signals is ex‐
+              plained in <span style="font-weight:bold;color:#7f7f7f;">signal</span><span style="color:#7f7f7f;">(7) manual page.</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">-q</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">--queue </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">value</span>
+              Use <span style="font-weight:bold;color:#7f7f7f;">sigqueue</span><span style="color:#7f7f7f;">(3) rather than </span><span style="font-weight:bold;color:#7f7f7f;">kill</span><span style="color:#7f7f7f;">(2) and the value argument is</span>
+              used to specify an integer to be sent with the signal. If the
+              receiving process has installed a handler for this signal us‐
+              ing the SA_SIGINFO flag to <span style="font-weight:bold;color:#7f7f7f;">sigaction</span><span style="color:#7f7f7f;">(2), then it  can  obtain</span>
+              this data via the si_value field of the siginfo_t structure.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-l</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">--list </span><span style="color:#7f7f7f;">[</span><span style="text-decoration:underline;color:#7f7f7f;">signal</span><span style="color:#7f7f7f;">]</span>
+              List  signal names.  This option has optional argument, which</span> (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+              will convert signal number  to  signal  name,  or  other  way
+              round.
+
+       <span style="font-weight:bold;color:#7f7f7f;">-L</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">--table</span>
+              List signal names in a nice table.
+
+       <span style="font-weight:bold;color:#7f7f7f;">NOTES  </span><span style="color:#7f7f7f;">Your  shell  (command  line  interpreter) may have a built-in</span>
+              kill command.  You may need to run the command described here
+              as /bin/kill to solve the conflict.
+
+       If you use negative PID values, you will need to specify a signal as
+       well so that </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">kill </span><span style="color:#7f7f7f;background-color:#000000;">knows if the option is for the PID or  the  signal</span>
+       number.  For  example, issuing the command with the single option <span style="font-weight:bold;color:#7f7f7f;">-9</span>
+       it is not clear if you mean signal 9 (SIGKILL) or process group 9.
+
+<span style="font-weight:bold;color:#7f7f7f;">EXAMPLES</span>
+       <span style="font-weight:bold;color:#7f7f7f;">kill -9 -1</span>
+              Kill all processes you can kill.
+
+       <span style="font-weight:bold;color:#7f7f7f;">kill -l 11</span>
+              Translate number 11 into a signal name.
+
+       <span style="font-weight:bold;color:#7f7f7f;">kill -L</span>
+              List the available signal choices in a nice table.</span>(1) line 49 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+
+       <span style="font-weight:bold;color:#7f7f7f;">kill 123 543 2341 3453</span>
+              Send the default signal, SIGTERM, to all those processes.
+
+       <span style="font-weight:bold;color:#7f7f7f;">kill -SIGTERM -123</span>
+              Send the signal SIGTERM to process group 123. The signal name
+              or number is required if specifying  process  groups  with  a
+              negative PID.
+
+<span style="font-weight:bold;color:#7f7f7f;">SEE ALSO</span>
+       <span style="font-weight:bold;color:#7f7f7f;">kill</span><span style="color:#7f7f7f;">(2),   </span><span style="font-weight:bold;color:#7f7f7f;">killall</span><span style="color:#7f7f7f;">(1),   </span><span style="font-weight:bold;color:#7f7f7f;">nice</span><span style="color:#7f7f7f;">(1),  </span><span style="font-weight:bold;color:#7f7f7f;">pkill</span><span style="color:#7f7f7f;">(1),  </span><span style="font-weight:bold;color:#7f7f7f;">renice</span><span style="color:#7f7f7f;">(1),  </span><span style="font-weight:bold;color:#7f7f7f;">signal</span><span style="color:#7f7f7f;">(7),</span>
+       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">sigqueue</span><span style="color:#7f7f7f;background-color:#000000;">(3), </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">skill</span><span style="color:#7f7f7f;background-color:#000000;">(1)</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">STANDARDS</span>
+       This command meets appropriate standards. The <span style="font-weight:bold;color:#7f7f7f;">-L </span><span style="color:#7f7f7f;">flag is  Linux-spe‐</span>
+       cific.
+
+<span style="font-weight:bold;color:#7f7f7f;">AUTHOR</span>
+       8;;albert&#64;users.sf.net\Albert Cahalan8;;\ wrote kill in 1999 to replace a bsdutils one that was8;;\
+       not  standards  compliant.   The util-linux one might also work cor‐
+       rectly.
+
+<span style="font-weight:bold;color:#7f7f7f;">REPORTING BUGS</span>
+       Please send bug reports to 8;;procps&#64;freelists.org\procps&#64;freelists.org8;;\</span>8;;\or q to quit)</span><span style="color:#000000;background-color:#000000;">
+
+procps-ng                        2023-01-16                         <span style="text-decoration:underline;">KILL</span>(1)
+<span style="color:#000000;background-color:#000000;"> Manual page kill(1) line 76/87 (END) (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">STANDARDS</span>ND) (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M</span>yle="color:#000000;background-color:#000000;"> Manual page kill(1) line 75/87 98% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">sigqueue</span><span style="color:#7f7f7f;background-color:#000000;">(3), </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">skill</span><span style="color:#7f7f7f;background-color:#000000;">(1)</span>
+M       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">kill</span><span style="color:#7f7f7f;background-color:#000000;">(2),   </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">killall</span><span style="color:#7f7f7f;background-color:#000000;">(1),   </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">nice</span><span style="color:#7f7f7f;background-color:#000000;">(1),  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">pkill</span><span style="color:#7f7f7f;background-color:#000000;">(1),  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">renice</span><span style="color:#7f7f7f;background-color:#000000;">(1),  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">signal</span><span style="color:#7f7f7f;background-color:#000000;">(7),</span>
+M</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">SEE ALSO</span>ss h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M</span>yle="color:#000000;background-color:#000000;"> Manual page kill(1) line 71/87 95% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M              negative PID.</span>nd-color:#000000;"> Manual page kill(1) line 70/87 94% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M              or number is required if specifying  process  groups  with  a</span>87 92% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M              Send the signal SIGTERM to process group 123. The signal name</span>87 89% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">kill -SIGTERM -123</span>q to quit)</span><span style="color:#000000;background-color:#000000;">
+M</span>yle="color:#000000;background-color:#000000;"> Manual page kill(1) line 66/87 89% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M              Send the default signal, SIGTERM, to all those processes.</span> 65/87 89% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">kill 123 543 2341 3453</span> quit)</span><span style="color:#000000;background-color:#000000;">
+M</span>yle="color:#000000;background-color:#000000;"> Manual page kill(1) line 63/87 86% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M              List the available signal choices in a nice table.</span>1) line 62/87 86% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">kill -L</span>or help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M</span>yle="color:#000000;background-color:#000000;"> Manual page kill(1) line 60/87 81% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+&gt;</span><span style="color:#5c5cff;background-color:#000000;">DEVOPS25/lektion8/87 81% (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+</span>$ .-t/trapex <span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ ./trapex 
+Skriv någe: ^CNej du
+^CNej du
+^CNej du
+^CNej du
+^CNej du
+^CNej du
+^CNej du
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ ./trapex <span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ ./trapex 
+bash: ./trapex: No such file or directory
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ ./trapex1
+Skriv någe: hu^CNej du
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ echo $?
+100
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ <span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ .-t/trapex1 
+Skriv någe: Nej du
+<span style="color:#5c5cff;">DEVOPS25/lektion8
+</span>$ exi
+
+
+
+
+exit
+</pre>
+</body>
+</html>
+<!--HTML generated by ansifilter 2.21, http://andre-simon.de/-->

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+touch viktigt.txt # som jag vill göra backup på till viktigt.txt.bak
+cp viktigt.txt{,.bak}
+cp viktigt.txt viktigt.txt.bak
+#              ^ förbrukar .bak
+#  ^ förbrukat tomt innan komma i {,.bak}
+
+# $ echo hej_{,a,b,c,,}  - tom sträng blir endast prefixet
+# hej_ hej_a hej_b hej_c hej_ hej_
+
+# $ echo hej_{a..c}san
+# hej_asan hej_bsan hej_csan

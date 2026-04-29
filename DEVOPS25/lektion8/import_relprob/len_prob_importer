@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Ofta copy paste av denna in i skript
+SCRIPT_DIR=$(cd $(dirname $0) && pwd)
+
+source "$SCRIPT_DIR/len_prob_import.sh"
+
+echo "RELPROBFIXED på 'import' i Bash"
+echo -n "Skriv ditt namn: "
+read -r NAME
+
+echo "Hi $NAME"
+echo "Your name has $(len "$NAME") letters"

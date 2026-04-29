@@ -1,0 +1,72 @@
+/home/kent/Documents/l1-live/DEVOPS25/lektion8
+ aritloop_for    'fin med mellanslag'   len_importer    trapex1
+ aritloop_while   fulfiler              len_import.sh   viktigt.txt
+ barnfunc         import_relprob        opte            viktigt.txt.bak
+ bash-recap       len                   optx
+ brace_exp        len_func              recordings
+DEVOPS25/lektion8
+$ DEVOPS25/lektion8
+$ man xarg
+No manual entry for xarg
+DEVOPS25/lektion8
+$ xar
+man xargsDEVOPS25/lektion8
+$ man xargs
+XARGS(1)                  General Commands Manual                  XARGS(1)
+
+NAME
+       xargs - build and execute command lines from standard input
+
+SYNOPSIS
+       xargs [options] [command [initial-arguments]]
+
+DESCRIPTION
+       This  manual  page  documents the GNU version of xargs.  xargs reads
+       items from the standard input, delimited by  blanks  (which  can  be
+       protected  with double or single quotes or a backslash) or newlines,
+       and executes the command (default is echo) one or  more  times  with
+       any  initial-arguments  followed  by items read from standard input.
+       Blank lines on the standard input are ignored.o quit)
+ ESESCOBpage xargs(1) line 4 (press h for help or q to quit)
+       The command line for command is built up until it reaches a  system-
+       defined  limit  (unless the -n and -L options are used).  The speci‐
+       fied command will be invoked as many times as necessary  to  use  up
+       the list of input items.  In general, there will be many fewer invo‐
+       cations  of  command  than there were items in the input.  This will
+       normally have significant performance benefits.  Some  commands  can
+       usefully be executed in parallel too; see the -P option.
+ ESESCOBpage xargs(1) line 12 (press h for help or q to quit)
+       Because Unix filenames can contain blanks and newlines, this default
+       behaviour  is  often problematic; filenames containing blanks and/or
+       newlines are incorrectly processed by xargs.  In these situations it
+       is better to use the -0 option, which prevents such problems.   When
+       using  this  option  you  will need to ensure that the program which
+       produces the input for xargs also uses a null character as a separa‐
+       tor.  If that program is GNU find for example,  the  -print0  option
+       does this for you.e 20 (press h for help or q to quit)
+ ESESCOBpage xargs(1) line 21 (press h for help or q to quit)
+>DEVOPS25/lektion8(1) line 22 (press h for help or q to quit)
+$ DEVOPS25/lektion8
+$ echo '-'e' 'rad 1n\n rad två 
+rad 1
+rad två
+DEVOPS25/lektion8
+$ echo -e 'rad 1\nrad två' | xargs ls
+ls: cannot access 'rad': No such file or directory
+ls: cannot access '1': No such file or directory
+ls: cannot access 'rad': No such file or directory
+ls: cannot access 'två': No such file or directory
+DEVOPS25/lektion8
+$ echo -e 'rad 1\nrad två' | xargs lDEVOPS25/lektion8
+$ echo -e 'rad\nrad' | xargs l
+ls: cannot access 'rad': No such file or directory
+ls: cannot access 'rad': No such file or directory
+DEVOPS25/lektion8
+$ echo -e 'rad\nrad' | xargs letttvå
+ls: cannot access 'ett': No such file or directory
+ls: cannot access 'två': No such file or directory
+DEVOPS25/lektion8
+$ echo -e 'ett\ntvå' | xargs lzi^C
+DEVOPS25/lektion8
+$ 
+exit
