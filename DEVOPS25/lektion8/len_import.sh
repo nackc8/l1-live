@@ -1,5 +1,3 @@
-#!/bin/bash
-
 len() {
     # Argumenten fås med $1, $2, $3, ...
     # Antal argument fås med $#
