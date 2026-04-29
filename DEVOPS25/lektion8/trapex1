@@ -1,6 +1,6 @@
 #!/bin/bash
 
 # SIGINT = Kommer vid Ctrl + C
-trap "echo Nej du" SIGINT
+trap 'echo Nej du; exit 100' SIGINT
 
 read -p "Skriv någe: "
