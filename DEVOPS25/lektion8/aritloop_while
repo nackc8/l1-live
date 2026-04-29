@@ -1,5 +1,14 @@
 #!/bin/bash
 
-while (( i=10; i < 20; i+=1 )); do
+# FUNKAR INTE:
+# while (( i=10; i < 20; i+=1 )); do
+#     echo "i: $i"
+# done
+
+# ISTÄLLET
+
+i=10
+while $(( i < 20 )); do
     echo "i: $i"
+    $(( i++ ))
 done
