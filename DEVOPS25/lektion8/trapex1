@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # SIGINT = Kommer vid Ctrl + C
-trap 'echo Nej du; exit 100' SIGINT
+# SIGTERM = Kommer när OS vill att du stänger ned
+trap 'echo Nej du; exit 100' SIGINT SIGTERM
 
 read -p "Skriv någe: "
