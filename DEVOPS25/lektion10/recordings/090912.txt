@@ -1,0 +1,3502 @@
+/home/kent/Documents/l1-live/DEVOPS25/lektion10
+recordings
+DEVOPS25/lektion10
+$ chmod _x+x overkurs/ex1 
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ ./ex
+
+bash: ./ex: No such file or directory
+DEVOPS25/lektion10
+$ ./ex1
+bash: ./ex1: No such file or directory
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ ls
+overkurs  recat  recordings
+DEVOPS25/lektion10
+$ cp overkurs/ex1 re
+cat/
+DEVOPS25/lektion10
+$ cp overkurs/ex1 .
+DEVOPS25/lektion10
+$ mv re
+cat/ rec
+atp
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ man grep
+GREP(1)                        User Commands                        GREP(1)
+
+NAME
+       grep, egrep, fgrep, rgrep - print lines that match patterns
+
+SYNOPSIS
+       grep [OPTION...] PATTERNS [FILE...]
+       grep [OPTION...] -e PATTERNS ... [FILE...]
+       grep [OPTION...] -f PATTERN_FILE ... [FILE...]
+
+DESCRIPTION
+       grep  searches  for  PATTERNS in each FILE.  PATTERNS is one or more
+       patterns separated by newline characters, and grep prints each  line
+       that  matches  a  pattern.  Typically PATTERNS should be quoted when
+       grep is used in a shell command.
+
+>DEVOPS25/lektion10) line 1 (press h for help or q to quit)
+$ grep bu
+tofu
+bulle
+bulle
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ echo -e '\nr\no\nf\n\n\n\nt\no\nf\nu\nbullet
+
+
+
+
+
+
+
+ | grep bu
+bulle
+DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle' | grep bhead -n 1
+tofu
+DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle' | head -n tail
+bulle
+DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle' | tail -n tail -n 1 | huhuhDEVOPS25/lektion10
+$ echo -e 'tofu\nbulle' | tail -n 1
+bulle
+DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle' | tail -n 1 | grep bu
+bulle
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ echo -e 'tofofu\nbulle' | f': echo -e 'tofu': echo -e 'tofugrep b
+
+
+
+
+
+
+
+
+
+$ echo -e 'tofu\nbulle\nbanan\ngurka\spenat' | grep '[k][a\]\
+
+gurka\spenat
+DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\spenat' | grep '[k][a]n
+
+
+
+
+
+
+
+DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep '[k][a]'
+gurka
+DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep '[k][a]u][a]][a]DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep '[k][a]aaka
+[ka\aa]a
+[a][a]k[a]gurka
+gurka
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep 'gurka[gurka\urkaurka]urka[ka]a
+
+
+gurka
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep '[g]ur[k]aakal]urka
+
+
+
+
+
+
+urkaurkaurkaurka[urka]urkak]urkaurkakurka[kurka]urka
+urkakurkaurkagurka
+
+DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep 'gurka'
+gurka
+DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep 'gurkaDEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep 'ka
+
+gurka
+DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep 'kaala
+
+DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep 'lae
+bulle
+DEVOPS25/lektion10
+$ 
+DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep 'leka[ka]ka||le
+
+DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep 'ka|le'DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep 'ka|le\|le
+
+bulle
+gurka
+DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep 'ka\|le|leDEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep 'ka|le
+DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep 'ka|le-'ka|leE'ka|le 'ka|le
+
+
+
+
+
+
+
+DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep -E 'ka|le'
+bulle
+gurka
+DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep -E 'ka|le
+DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep -E 'ka|le\|le
+
+
+
+
+
+
+
+
+
+DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep -E 'ka\|leke|leDEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\nspenatke|le' | grep -E 'ka\|le
+
+
+
+
+
+
+
+
+a
+
+
+
+spenatka|le
+DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\nspenatka|le' | grep -E 'ka\|le\n
+ka|le
+DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\nspenat\nka|le' | grep -E 'ka\|leDEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\nbanan\ngurka\nspenatka|le' | grep -E 'ka\|le
+spenatka|le
+DEVOPS25/lektion10
+$ abanan\ngurka\nspenatka|le' | grep -E 'ka\|le'rbanan\ngurka\nspenatka|le' | grep -E 'ka\|le' banan\ngurka\nspenatka|le' | grep -E 'ka\|le'
+
+
+
+
+
+
+
+
+' 
+anDEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\njag alskar banan\ngurka\nspenatka|le' | grep -E 'banan
+jag alskar banan
+DEVOPS25/lektion10
+$ echo -e 'tofu\nbulle\njag alskar banan\ngurka\nspenatka|le' | grep -E 'banan'jbulle\njag alskar banan\ngurka\nspenatka|le' | grep -E 'banan'abulle\njag alskar banan\ngurka\nspenatka|le' | grep -E 'banan'gbulle\njag alskar banan\ngurka\nspenatka|le' | grep -E 'banan' bulle\njag alskar banan\ngurka\nspenatka|le' | grep -E 'banan'abulle\njag alskar banan\ngurka\nspenatka|le' | grep -E 'banan'lbulle\njag alskar banan\ngurka\nspenatka|le' | grep -E 'banan'sbulle\njag alskar banan\ngurka\nspenatka|le' | grep -E 'banan'kbulle\njag alskar banan\ngurka\nspenatka|le' | grep -abulle\njag alskar banan\ngurka\nspenatka|le' | grep rbulle\njag alskar banan\ngurka\nspenatka|le' | grep bulle\njag alskar banan\ngurka\nspenatka|le' | grejgurka\nspenatka|le' | gragurka\nspenatka|le' | ggurka\nspenatka|le' |  gurka\nspenatka|le' |hgurka\nspenatka|le' agurka\nspenatka|le'tgurka\nspenatka|leagurka\nspenatka|lrgurka\nspenatka| gurka\nspenatkaDEVOPS25/lektion10
+$ echo -e 'tofu\njag alskar bulle\njag alskar banan\njag hatar gurka\nspenatka|le' | grep -E 'banan'
+
+jag alskar banan
+DEVOPS25/lektion10
+$ echo -e 'tofu\njag alskar bulle\njag alskar banan\njag hatar gurka\nspenatka|le' | grep -E 'banan*|gurkaDEVOPS25/lektion10
+$ echo -e 'tofu\njag alskar bulle\njag alskar banan\njag hatar gurka\nspenatka|le' | grep -E 'banan|gurka
+jag alskar banan
+jag hatar gurka
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ echo -e 'tofu\njag alskar bulle\njag alskar banan\njag hatar gurka\nspenatka|le' | grep -E 'banan|gurka'
+history
+ 1256  Apr 30 - Thu - 14:09     rm foo 
+ 1257  Apr 30 - Thu - 22:51     rm dirty-
+ 1258  Apr 30 - Thu - 22:51     vim
+ 1259  May 01 - Fri - 02:09     kitty
+ 1260  Apr 29 - Wed - 21:48     tail -f /tmp/ktd
+ 1261  Apr 30 - Thu - 12:44     git init
+ 1262  Apr 30 - Thu - 12:44     git add .
+ 1263  Apr 30 - Thu - 12:44     git commit
+ 1264  May 01 - Fri - 02:12     ls /home
+ 1265  May 01 - Fri - 02:12     ls -a /home
+ 1266  May 01 - Fri - 02:12     which gconfig
+ 1267  May 01 - Fri - 02:12     declare -f gconfig-
+ 1268  May 01 - Fri - 02:12     declare -f gconfig
+ 1269  May 01 - Fri - 02:12     alias
+ 1270  May 01 - Fri - 02:27     ls crypt/
+ 1271  May 01 - Fri - 02:32     cd crypt/
+ 1272  May 01 - Fri - 02:32     cd .chezmoidata/
+ 1273  May 01 - Fri - 02:32     cat *
+ 1274  May 01 - Fri - 02:34     chezmoi sync
+ 1275  May 01 - Fri - 02:34     cd .local/bin/
+ 1276  May 01 - Fri - 02:34     cat chezmoi 
+ 1277  May 01 - Fri - 02:34     reset
+ 1278  May 01 - Fri - 02:35     touch chezmoi-foo
+ 1279  May 01 - Fri - 02:35     nano chezmoi-foo 
+ 1280  May 01 - Fri - 02:35     chmod +x chezmoi-foo 
+ 1281  May 01 - Fri - 02:35     chezmoi foo
+ 1282  May 01 - Fri - 02:27     chezmoi cd
+ 1283  May 01 - Fri - 10:23     sleep 5
+ 1284  May 01 - Fri - 10:22     sleep 3
+ 1285  May 01 - Fri - 10:24     sleep 5
+ 1286  May 01 - Fri - 10:29     sleep 5
+ 1287  May 01 - Fri - 10:29     exit
+ 1288  May 01 - Fri - 10:29     exit
+ 1289  May 01 - Fri - 11:06     sleep 5
+ 1290  May 01 - Fri - 11:07     sleep 5
+ 1291  May 01 - Fri - 12:11     sleep 5
+ 1292  May 01 - Fri - 12:13     sleep 5
+ 1293  May 01 - Fri - 10:29     exit
+ 1294  May 01 - Fri - 10:29     exit
+ 1295  May 01 - Fri - 12:14     sleep 5
+ 1296  May 01 - Fri - 12:14     sleep 2.1
+ 1297  May 01 - Fri - 12:16     sleep 3
+ 1298  May 01 - Fri - 12:16     time sleep 3
+ 1299  May 01 - Fri - 12:16     time sleep 3
+ 1300  May 01 - Fri - 12:31     sleep 5
+ 1301  May 01 - Fri - 12:32     sleep 2
+ 1302  May 01 - Fri - 12:33     echo $PS1
+ 1303  May 01 - Fri - 12:33     echo -e "$PS1"
+ 1304  May 01 - Fri - 12:57     sleep 5
+ 1305  May 01 - Fri - 12:57     # Test 1
+ 1306  May 01 - Fri - 12:57     # Test 1
+ 1307  May 01 - Fri - 12:58     sleep
+ 1308  May 01 - Fri - 12:59     sleep 3
+ 1309  May 01 - Fri - 13:03     sleep 5
+ 1310  May 01 - Fri - 13:03     sleep 5
+ 1311  May 01 - Fri - 13:05     sleep 3
+ 1312  May 01 - Fri - 13:08     (sleep 6; echo donnne) &
+ 1313  May 01 - Fri - 13:08     sleep 3 && echo output
+ 1314  May 01 - Fri - 18:42     sleep 3
+ 1315  May 01 - Fri - 18:42     echo Hello
+ 1316  May 01 - Fri - 18:42     ls /etc
+ 1317  May 01 - Fri - 18:43     ls -R /etc
+ 1318  May 01 - Fri - 18:43     find /
+ 1319  May 01 - Fri - 18:42     ls /etc
+ 1320  May 01 - Fri - 18:43     ls -R /etc
+ 1321  May 01 - Fri - 18:47     for x in {1..200}; do ls /etc; done
+ 1322  May 01 - Fri - 18:47     find /etc
+ 1323  May 01 - Fri - 18:47     find /
+ 1324  May 01 - Fri - 18:47     sleep 3
+ 1325  May 01 - Fri - 18:47     sleep 3 && ls
+ 1326  May 01 - Fri - 21:37     sleep 3
+ 1327  May 01 - Fri - 21:37     for x in {1..100000}; do ls; done
+ 1328  May 01 - Fri - 02:35     chmod +x chezmoi-foo 
+ 1329  May 01 - Fri - 02:35     chezmoi foo
+ 1330  May 01 - Fri - 02:27     chezmoi cd
+ 1331  May 01 - Fri - 04:01     less dot_bashrc.d/00_nnn.bash 
+ 1332  May 01 - Fri - 04:01     chezmoi add .bashrc
+ 1333  May 01 - Fri - 04:02     git status
+ 1334  May 01 - Fri - 04:02     chezmoi managed
+ 1335  May 01 - Fri - 04:02     cd .claude/
+ 1336  May 01 - Fri - 04:02     less CLAUDE.md 
+ 1337  May 01 - Fri - 04:02     chezmoi edit CLAUDE.md 
+ 1338  May 01 - Fri - 04:02     claude
+ 1339  May 01 - Fri - 04:07     cd ..
+ 1340  May 01 - Fri - 04:08     less .shellcheckrc 
+ 1341  May 01 - Fri - 04:08     chezmoi add .shellcheckrc 
+ 1342  May 01 - Fri - 04:08     less .claude.json 
+ 1343  May 01 - Fri - 04:08     ls .bin/
+ 1344  May 01 - Fri - 04:08     ls -a
+ 1345  May 01 - Fri - 04:09     chezmoi-sync
+ 1346  May 01 - Fri - 04:09     ls .local/bin/
+ 1347  May 01 - Fri - 10:21     cd .config/
+ 1348  May 01 - Fri - 10:21     cd kitty/
+ 1349  May 01 - Fri - 10:21     claude --reusme
+ 1350  May 01 - Fri - 10:21     claude --resume
+ 1351  Apr 29 - Wed - 20:01     cd Documents/
+ 1352  Apr 29 - Wed - 20:01     cd gorg/
+ 1353  Apr 29 - Wed - 20:31     nano foo
+ 1354  Apr 29 - Wed - 21:33     cd .config/kitty/
+ 1355  Apr 29 - Wed - 21:33     code .
+ 1356  Apr 29 - Wed - 21:38     claude 
+ 1357  May 01 - Fri - 02:10     gconfig-snapshot 
+ 1358  May 01 - Fri - 02:11     cd .config/chezmoi/
+ 1359  May 01 - Fri - 02:11     cat key.txt 
+ 1360  May 01 - Fri - 02:11     claude
+ 1361  May 01 - Fri - 03:46     cd ..
+ 1362  May 01 - Fri - 03:46     cd -
+ 1363  May 01 - Fri - 03:46     cd chezmoi/
+ 1364  May 01 - Fri - 03:46     claude -c
+ 1365  May 01 - Fri - 03:56     chezmoi addlist --help
+ 1366  May 01 - Fri - 03:58     cat dirty-plan.txt 
+ 1367  May 01 - Fri - 03:58     rm dirty-plan.txt 
+ 1368  May 01 - Fri - 03:58     ls .bashrc.d/
+ 1369  May 01 - Fri - 03:58     chezmoi addlist edit
+ 1370  May 01 - Fri - 04:00     chezmoi addlist
+ 1371  May 01 - Fri - 04:00     chezmoi addlist silence
+ 1372  May 01 - Fri - 04:00     chezmoi cd 
+ 1373  Apr 30 - Thu - 12:44     git add .
+ 1374  Apr 30 - Thu - 12:44     git commit
+ 1375  May 01 - Fri - 02:12     ls /home
+ 1376  May 01 - Fri - 02:12     ls -a /home
+ 1377  May 01 - Fri - 02:12     which gconfig
+ 1378  May 01 - Fri - 02:12     declare -f gconfig-
+ 1379  May 01 - Fri - 02:12     declare -f gconfig
+ 1380  May 01 - Fri - 02:12     alias
+ 1381  May 01 - Fri - 02:27     ls crypt/
+ 1382  May 01 - Fri - 02:32     cd crypt/
+ 1383  May 01 - Fri - 02:32     cd .chezmoidata/
+ 1384  May 01 - Fri - 02:32     cat *
+ 1385  May 01 - Fri - 02:34     chezmoi sync
+ 1386  May 01 - Fri - 02:34     cd .local/bin/
+ 1387  May 01 - Fri - 02:34     cat chezmoi 
+ 1388  May 01 - Fri - 02:34     reset
+ 1389  May 01 - Fri - 02:35     touch chezmoi-foo
+ 1390  May 01 - Fri - 02:35     nano chezmoi-foo 
+ 1391  May 01 - Fri - 02:35     chmod +x chezmoi-foo 
+ 1392  May 01 - Fri - 02:35     chezmoi foo
+ 1393  May 01 - Fri - 02:27     chezmoi cd
+ 1394  May 01 - Fri - 10:28     cd .config/kitty/
+ 1395  May 01 - Fri - 10:29     rm /tmp/ktd ; kitty
+ 1396  May 01 - Fri - 10:34     tree
+ 1397  May 01 - Fri - 10:34     tree --gitignore
+ 1398  May 01 - Fri - 10:34     man tree
+ 1399  May 01 - Fri - 10:35     tree -I 'cache'
+ 1400  May 01 - Fri - 10:35     tree -I '*cache*'
+ 1401  May 01 - Fri - 10:35     ls -1
+ 1402  May 01 - Fri - 10:36     nano x
+ 1403  May 01 - Fri - 17:45     sudo apt install gnumeric
+ 1404  May 01 - Fri - 21:37     kitty
+ 1405  May 01 - Fri - 17:45     sudo apt install gnumeric
+ 1406  May 01 - Fri - 21:37     kitty
+ 1407  May 02 - Sat - 09:29     cd Documents/GitHubNack/
+ 1408  May 02 - Sat - 09:30     cd existing/
+ 1409  May 02 - Sat - 09:30     cd ..
+ 1410  May 02 - Sat - 09:30     du -hs existing/
+ 1411  May 02 - Sat - 09:30     man du
+ 1412  May 02 - Sat - 09:30     du -hbs existing/
+ 1413  May 02 - Sat - 09:40     mv oldkitty/ .config/kitty/.oldkitty
+ 1414  May 02 - Sat - 09:40     rm pos
+ 1415  May 02 - Sat - 09:40     rm psst 
+ 1416  May 02 - Sat - 09:40     gconfig-snapshot 
+ 1417  May 02 - Sat - 09:49     l
+ 1418  May 02 - Sat - 09:49     gedit
+ 1419  May 02 - Sat - 09:52     nano x
+ 1420  May 02 - Sat - 10:04     rm x
+ 1421  May 02 - Sat - 10:04     exit
+ 1422  May 02 - Sat - 12:45     cd .config/Ki
+ 1423  May 02 - Sat - 12:45     cd .config/
+ 1424  May 02 - Sat - 12:45     claude
+ 1425  May 02 - Sat - 13:05     echo hello-from-autokitty
+ 1426  May 02 - Sat - 13:13     sudo apt install cage grim
+ 1427  May 02 - Sat - 13:13     sudo apt remove scrot
+ 1428  May 02 - Sat - 13:13     sudo apt autoremove
+ 1429  May 02 - Sat - 13:15     echo hello-from-cage
+ 1430  May 02 - Sat - 13:23     sleep 1 && echo hi-from-alpha
+ 1431  May 02 - Sat - 13:23     sleep 1 && echo hi-from-gamma
+ 1432  May 02 - Sat - 13:30     echo log-test
+ 1433  May 02 - Sat - 13:31     echo headless-works
+ 1434  May 02 - Sat - 12:53     echo $XDG_CURRENT_DESKTOP
+ 1435  May 02 - Sat - 12:57     sudo apt install scrot
+ 1436  May 02 - Sat - 13:04     sudo apt install xdotool
+ 1437  May 02 - Sat - 12:45     cd .config/
+ 1438  May 02 - Sat - 12:46     cd -
+ 1439  May 02 - Sat - 12:46     cd ~/.config/kitty/
+ 1440  May 02 - Sat - 12:46     claude
+ 1441  May 02 - Sat - 12:54     claude --dangerously-skip-permissions --resume
+ 1442  May 02 - Sat - 17:13     read -rs PW && printf '%s' "$PW" | gnome-keyring-daemon --unlock; unset PW
+ 1443  May 02 - Sat - 17:13     exit
+ 1444  May 01 - Fri - 10:35     ls -1
+ 1445  May 01 - Fri - 10:36     nano x
+ 1446  May 01 - Fri - 17:45     sudo apt install gnumeric
+ 1447  May 01 - Fri - 21:37     kitty
+ 1448  May 02 - Sat - 09:27     cd Documents/
+ 1449  May 02 - Sat - 09:28     cd gorg/
+ 1450  May 02 - Sat - 09:29     gorg sync
+ 1451  May 02 - Sat - 09:29     gorg 
+ 1452  May 02 - Sat - 09:29     gorg local --help
+ 1453  May 02 - Sat - 09:29     gorg local sync
+ 1454  May 02 - Sat - 09:31     gh-sync-organization 
+ 1455  May 02 - Sat - 09:37     rm -rf Documents/GitHubNack/existing/nackc8/
+ 1456  May 02 - Sat - 09:37     gorg --help
+ 1457  May 02 - Sat - 09:37     gorg local sync --help
+ 1458  May 02 - Sat - 09:37     gorg local sync --debug
+ 1459  May 02 - Sat - 10:50     gorg --debug local sync
+ 1460  May 02 - Sat - 10:50     cd Documents/gorg/
+ 1461  May 02 - Sat - 10:50     claude
+ 1462  May 02 - Sat - 12:19     claude --dangerously-skip-permissions --resume
+ 1463  May 02 - Sat - 10:04     rm x
+ 1464  May 02 - Sat - 10:04     exit
+ 1465  May 02 - Sat - 10:05     nano idag
+ 1466  May 02 - Sat - 10:51     cd Documents/
+ 1467  May 02 - Sat - 10:51     mkdir
+ 1468  May 02 - Sat - 10:51     mkdir torsrum
+ 1469  May 02 - Sat - 10:51     cd torsrum/
+ 1470  May 02 - Sat - 10:51     mv ~/idag .
+ 1471  May 02 - Sat - 10:51     claude .
+ 1472  May 02 - Sat - 12:20     cat rum.md 
+ 1473  May 02 - Sat - 12:22     nano rum.md 
+ 1474  May 02 - Sat - 13:55     glow
+ 1475  May 02 - Sat - 14:49     claude -c
+ 1476  May 02 - Sat - 17:08     claude
+ 1477  May 02 - Sat - 12:53     echo $XDG_CURRENT_DESKTOP
+ 1478  May 02 - Sat - 12:57     sudo apt install scrot
+ 1479  May 02 - Sat - 13:04     sudo apt install xdotool
+ 1480  May 02 - Sat - 12:45     cd .config/
+ 1481  May 02 - Sat - 12:46     cd -
+ 1482  May 02 - Sat - 12:46     cd ~/.config/kitty/
+ 1483  May 02 - Sat - 12:46     claude
+ 1484  May 02 - Sat - 12:54     claude --dangerously-skip-permissions --resume
+ 1485  May 02 - Sat - 17:13     read -rs PW && printf '%s' "$PW" | gnome-keyring-daemon --unlock; unset PW
+ 1486  May 02 - Sat - 17:13     exit
+ 1487  May 02 - Sat - 17:15     ssh-add -l
+ 1488  May 02 - Sat - 17:17     read -rs PW && printf '%s' "$PW" | XDG_RUNTIME_DIR=/run/user/1000 gnome-keyring-daemon --unlock 2>&1;
+ 1489  May 02 - Sat - 17:20     killall chrome_crashpad_handler 
+ 1490  May 02 - Sat - 17:20     killall gnome-keyring-d ssh-agent
+ 1491  May 02 - Sat - 17:21     killall gnome-keyring-d
+ 1492  May 02 - Sat - 17:21     kill 41793 42128
+ 1493  May 02 - Sat - 17:21     ps
+ 1494  May 02 - Sat - 17:24     killall chrome
+ 1495  May 02 - Sat - 17:24     killall chrome
+ 1496  May 02 - Sat - 17:28     busctl --user get-property org.freedesktop.secrets /org/freedesktop/secrets/collection/login org.freedesktop.Secret.Collection Locked
+ 1497  May 02 - Sat - 17:32     cd Documents/
+ 1498  May 02 - Sat - 17:32     cd GitHubNack/
+ 1499  May 02 - Sat - 17:32     claude -c
+ 1500  May 02 - Sat - 17:32     cd ..
+ 1501  May 02 - Sat - 17:32     cd gorg/
+ 1502  May 02 - Sat - 18:09     claude --dangerously-skip-permissions -c
+ 1503  May 02 - Sat - 17:27     claude -c
+ 1504  May 02 - Sat - 18:24     qalc
+ 1505  May 02 - Sat - 18:38     cd Documents/
+ 1506  May 02 - Sat - 18:38     mkdir snapmaker
+ 1507  May 02 - Sat - 18:38     cd snapmaker/
+ 1508  May 02 - Sat - 18:38     claude
+ 1509  May 02 - Sat - 17:24     killall chrome
+ 1510  May 02 - Sat - 17:35     cd Documents/torsrum/
+ 1511  May 02 - Sat - 17:35     claude --dangerously-skip-permissions -c
+ 1512  May 02 - Sat - 18:19     cd Documents/gorg/
+ 1513  May 02 - Sat - 19:26     claude -c
+ 1514  May 02 - Sat - 18:38     claude
+ 1515  May 02 - Sat - 20:02     gconfig-snapshot 
+ 1516  May 02 - Sat - 20:38     cd Documents/
+ 1517  May 02 - Sat - 20:44     vim obsidians.txt
+ 1518  May 02 - Sat - 20:44     vim obsidians.txt
+ 1519  May 02 - Sat - 22:24     vim
+ 1520  May 02 - Sat - 22:26     sudo apt install gedit
+ 1521  May 03 - Sun - 00:04     mv .backup/shared-kent/Documents/notes/ Documents/
+ 1522  May 03 - Sun - 00:06     cd Documents/notes/
+ 1523  May 03 - Sun - 00:06     claude
+ 1524  May 03 - Sun - 00:31     claude --dangerously-skip-permissions -c
+ 1525  May 03 - Sun - 00:59     ls ~/.config/fontconfig/conf.d/*.conf
+ 1526  May 03 - Sun - 01:00     chezmoi-addlist --help
+ 1527  May 03 - Sun - 01:00     nano .config/addlist/list 
+ 1528  May 03 - Sun - 01:01     ls .local/share/fonts/
+ 1529  May 03 - Sun - 01:04     git status
+ 1530  May 03 - Sun - 01:04     exit
+ 1531  May 03 - Sun - 01:05     git status
+ 1532  May 03 - Sun - 01:05     git status
+ 1533  May 03 - Sun - 01:06     cd ..
+ 1534  May 03 - Sun - 01:06     exit
+ 1535  May 03 - Sun - 00:54     echo -e "\uf015 \ue0b0 \ue0b4 \uf09b"
+ 1536  May 03 - Sun - 01:32     cd Downloads/
+ 1537  May 03 - Sun - 01:32     rm Forsattsblad\ tentamen\ -\ Nackademin\ rev\ 260428*
+ 1538  May 03 - Sun - 01:34     sudo apt install fonts-proggy
+ 1539  May 03 - Sun - 01:43     sudo apt purge fonts-proggy
+ 1540  May 03 - Sun - 02:01     sudo apt install pcf2bdf xfonts-utils
+ 1541  May 03 - Sun - 02:01     install-proggy-font
+ 1542  May 03 - Sun - 02:05     dropbox status
+ 1543  May 03 - Sun - 02:10     gconfig-snapshot 
+ 1544  May 03 - Sun - 01:10     ls .bin/
+ 1545  May 03 - Sun - 01:30     claude --dangerously-skip-permissions -c
+ 1546  May 03 - Sun - 01:31     cd Documents/notes/
+ 1547  May 03 - Sun - 01:31     claude --dangerously-skip-permissions --resume
+ 1548  May 03 - Sun - 00:08     cd Documents/notes/
+ 1549  May 03 - Sun - 00:08     flatpak info --show-permissions md.obsidian.Obsidian.
+ 1550  May 03 - Sun - 00:08     flatpak info --show-permissions md.obsidian.Obsidian
+ 1551  May 03 - Sun - 00:09     flatpak info --show-permissions md.obsidian.Obsidian | wl-copy 
+ 1552  May 03 - Sun - 00:24     sudo chattr +i ~/.local/bin/obsidian
+ 1553  May 03 - Sun - 00:25     gconfig-snapshot 
+ 1554  May 03 - Sun - 00:26     obsidian
+ 1555  May 03 - Sun - 00:31     sudo apt install fonts-hack fonts-ibm-plex ttf-mscorefonts-installer
+ 1556  May 03 - Sun - 00:31     fc-cache -f
+ 1557  May 03 - Sun - 00:59     ls ~/.config/fontconfig/conf.d/*.conf
+ 1558  May 03 - Sun - 01:00     chezmoi-addlist --help
+ 1559  May 03 - Sun - 01:00     nano .config/addlist/list 
+ 1560  May 03 - Sun - 01:01     ls .local/share/fonts/
+ 1561  May 03 - Sun - 01:02     chezmoi-addlist edit
+ 1562  May 03 - Sun - 01:02     chezmoi-addlist
+ 1563  May 03 - Sun - 01:04     chezmoi-crypt 
+ 1564  May 03 - Sun - 01:05     chezmoi-crypt ls
+ 1565  May 03 - Sun - 01:05     chezmoi-crypt ls | less
+ 1566  May 03 - Sun - 01:05     chezmoi
+ 1567  May 03 - Sun - 01:05     chezmoi cd
+ 1568  May 03 - Sun - 00:25     gconfig-snapshot 
+ 1569  May 03 - Sun - 00:26     obsidian
+ 1570  May 03 - Sun - 00:31     sudo apt install fonts-hack fonts-ibm-plex ttf-mscorefonts-installer
+ 1571  May 03 - Sun - 00:31     fc-cache -f
+ 1572  May 03 - Sun - 00:59     ls ~/.config/fontconfig/conf.d/*.conf
+ 1573  May 03 - Sun - 01:00     chezmoi-addlist --help
+ 1574  May 03 - Sun - 01:00     nano .config/addlist/list 
+ 1575  May 03 - Sun - 01:01     ls .local/share/fonts/
+ 1576  May 03 - Sun - 01:02     chezmoi-addlist edit
+ 1577  May 03 - Sun - 01:02     chezmoi-addlist
+ 1578  May 03 - Sun - 01:04     chezmoi-crypt 
+ 1579  May 03 - Sun - 01:05     chezmoi-crypt ls
+ 1580  May 03 - Sun - 01:05     chezmoi-crypt ls | less
+ 1581  May 03 - Sun - 01:05     chezmoi
+ 1582  May 03 - Sun - 01:05     chezmoi cd
+ 1583  May 03 - Sun - 17:15     find .backup/ -iname '*review*'
+ 1584  May 03 - Sun - 17:16     cd .backup/
+ 1585  May 03 - Sun - 17:16     find . -iname '*review*'
+ 1586  May 03 - Sun - 17:16     find . -iname '*review*' | grep -v '\.'
+ 1587  May 03 - Sun - 20:09     cd Documents/bwb/
+ 1588  May 03 - Sun - 20:09     . ~/.bashrc
+ 1589  May 03 - Sun - 20:10     bw login
+ 1590  May 03 - Sun - 20:11     export BW_SESSION="v3D4iE92HcDl6xx18HIoVGY0KqjAHahcXIPcMtZRZfrWmd0gU0h4OuwDdaRIX5sDRNZUlKdtCuQHHYsga08nMQ=="
+ 1591  May 03 - Sun - 20:11     bw list
+ 1592  May 03 - Sun - 20:11     bw list items
+ 1593  May 03 - Sun - 20:13     bw completion bash
+ 1594  May 03 - Sun - 20:13     bw completion
+ 1595  May 03 - Sun - 20:13     bw completion --shell /bin/bash
+ 1596  May 03 - Sun - 20:14     bw completion --help
+ 1597  May 03 - Sun - 20:14     bw completion --shell zsh
+ 1598  May 03 - Sun - 20:14     bw completion --shell bash
+ 1599  May 03 - Sun - 20:14     bw completion --shell sh
+ 1600  May 03 - Sun - 20:14     bw completion --shell shell
+ 1601  May 03 - Sun - 20:15     bw completion --shell posix
+ 1602  May 03 - Sun - 20:15     bw
+ 1603  May 03 - Sun - 20:15     bw export --help
+ 1604  May 03 - Sun - 20:16     bw export hej.csv
+ 1605  May 03 - Sun - 20:16     less ~/hej.csv
+ 1606  May 03 - Sun - 20:16     less /hej.csv
+ 1607  May 03 - Sun - 20:20     bw export --output hej.csv
+ 1608  May 03 - Sun - 20:20     less /home/kent/Documents/bwb/hej.csv
+ 1609  May 03 - Sun - 20:20     bw export --output hej.json
+ 1610  May 03 - Sun - 20:21     bw export --format json --output hej.json
+ 1611  May 03 - Sun - 20:42     python3 obf.py hej.json 
+ 1612  May 03 - Sun - 20:43     /type: 1
+ 1613  May 03 - Sun - 20:43     python3 obf.py hej.json | less
+ 1614  May 03 - Sun - 20:46     python3 obf.py hej.json > hej.json2
+ 1615  May 03 - Sun - 20:46     : > hej.json
+ 1616  May 03 - Sun - 20:47     mv hej.json2 hej.json
+ 1617  May 03 - Sun - 20:47     less hej.json 
+ 1618  May 03 - Sun - 20:47     mv hej.json test_export.json
+ 1619  May 03 - Sun - 20:48     rm hej.csv 
+ 1620  May 03 - Sun - 20:48     mkdir .deletemenow
+ 1621  May 03 - Sun - 20:48     mv obf.py .deletemenow/
+ 1622  May 03 - Sun - 22:05     less test_export.json 
+ 1623  May 03 - Sun - 01:02     chezmoi-addlist
+ 1624  May 03 - Sun - 01:04     chezmoi-crypt 
+ 1625  May 03 - Sun - 01:05     chezmoi-crypt ls
+ 1626  May 03 - Sun - 01:05     chezmoi-crypt ls | less
+ 1627  May 03 - Sun - 01:05     chezmoi
+ 1628  May 03 - Sun - 01:05     chezmoi cd
+ 1629  May 03 - Sun - 12:09     fcd Documents/
+ 1630  May 03 - Sun - 12:09     du -hs gorg/
+ 1631  May 03 - Sun - 12:09     du -hs gorg/*
+ 1632  May 03 - Sun - 12:09     du -hs gorg/.*
+ 1633  May 03 - Sun - 12:09     rm -rf gorg/.oldvenv/
+ 1634  May 03 - Sun - 12:10     tree gorg/src/
+ 1635  May 03 - Sun - 12:10     tree --gitignore gorg/src/
+ 1636  May 03 - Sun - 12:27     ls next 
+ 1637  May 03 - Sun - 12:27     less next 
+ 1638  May 03 - Sun - 12:27     rm next 
+ 1639  May 03 - Sun - 17:00     flatpak install flathub com.bitwarden.desktop
+ 1640  May 03 - Sun - 17:01     nano ~/.bashrc.d/00_bitwarden.bash
+ 1641  May 03 - Sun - 17:01     ls -l ~/.bashrc.d/
+ 1642  May 03 - Sun - 17:01     which gconfig
+ 1643  May 03 - Sun - 17:01     which gconfig-snapshot 
+ 1644  May 03 - Sun - 17:02     cd .local/bin/
+ 1645  May 03 - Sun - 17:02     less check-feedback 
+ 1646  May 03 - Sun - 17:09     cd GitHubNack/existing/
+ 1647  May 03 - Sun - 17:10     check-feedback 'uppgift-1-apache-http-server-.*'
+ 1648  May 03 - Sun - 17:10     check-feedback 'uppgift-1-apache-http-server-.*' nackc8
+ 1649  May 03 - Sun - 17:14     check-feedback --help
+ 1650  May 03 - Sun - 19:39     cd Documents/
+ 1651  May 03 - Sun - 19:39     mkdir bwb
+ 1652  May 03 - Sun - 19:55     cd gorg/
+ 1653  May 03 - Sun - 19:55     cd ..
+ 1654  May 03 - Sun - 19:55     cd bwb/
+ 1655  May 03 - Sun - 19:55     nano SPECIFICATION.md
+ 1656  May 03 - Sun - 19:56     claude
+ 1657  May 03 - Sun - 22:26     less test_export.json 
+ 1658  May 03 - Sun - 22:27     c
+ 1659  May 03 - Sun - 22:27     rm -rf Documents/bwb/
+ 1660  May 02 - Sat - 21:49     cd Documents/gorg/
+ 1661  May 02 - Sat - 21:49     claude --resume ecb678cd-0b7f-4f2f-88d5-cc75865cdd19
+ 1662  May 02 - Sat - 23:12     claude --dangerously-skip-permissions -c
+ 1663  May 03 - Sun - 22:27     gorg sync
+ 1664  May 03 - Sun - 22:27     gorg local sync
+ 1665  May 03 - Sun - 22:30     l
+ 1666  May 03 - Sun - 22:30     claude
+ 1667  May 03 - Sun - 01:05     chezmoi cd
+ 1668  May 03 - Sun - 17:04     bw
+ 1669  May 03 - Sun - 17:04     bw
+ 1670  May 03 - Sun - 22:41     less uppgift-1-apache-http.md 
+ 1671  May 03 - Sun - 22:42     cd Documents/GitHubNack/existing/
+ 1672  May 03 - Sun - 22:42     gh-review --help
+ 1673  May 03 - Sun - 22:43     #gh-review --interpret-only l12-csvusers
+ 1674  May 03 - Sun - 22:43     codex
+ 1675  May 03 - Sun - 22:43     gh-review --agents claude --interpret-only l12-csvusers
+ 1676  May 03 - Sun - 22:44     curl -fsSL https://gh.io/copilot-install | bash
+ 1677  May 03 - Sun - 22:46     copilot
+ 1678  May 03 - Sun - 22:50     sudo apt install nvm
+ 1679  May 03 - Sun - 22:51     claude
+ 1680  May 03 - Sun - 22:57     cd Documents/GitHubNack/
+ 1681  May 03 - Sun - 22:57     cd existing/
+ 1682  May 03 - Sun - 22:58     gh-review --agents claude,copilot --interpret-only l12-csvusers
+ 1683  May 03 - Sun - 22:58     gh-review --agents claude,copilot --interpret-only uppgift-2-anv-ndarhantering-genom-skript-zinkirov/
+ 1684  May 03 - Sun - 23:00     ld
+ 1685  May 03 - Sun - 23:00     cd .config/gh-review/
+ 1686  May 03 - Sun - 23:01     less l12.md 
+ 1687  May 03 - Sun - 23:01     less uppgift-2-anv-ndarhantering-genom.md 
+ 1688  May 02 - Sat - 21:49     claude --resume ecb678cd-0b7f-4f2f-88d5-cc75865cdd19
+ 1689  May 03 - Sun - 22:27     gorg sync
+ 1690  May 03 - Sun - 22:27     gorg local sync
+ 1691  May 03 - Sun - 22:30     l
+ 1692  May 03 - Sun - 01:05     chezmoi cd
+ 1693  May 03 - Sun - 17:04     bw
+ 1694  May 03 - Sun - 22:40     rm -rf Documents/GitHubNack/existing/nackc8/
+ 1695  May 03 - Sun - 23:02     gh-sync-organization 
+ 1696  May 03 - Sun - 23:02     cd Documents/GitHubNack/existing/
+ 1697  May 03 - Sun - 23:02     claude
+ 1698  May 04 - Mon - 07:19     claude -c
+ 1699  May 04 - Mon - 07:20     claude --dangerously-skip-permissions -c
+ 1700  May 04 - Mon - 07:15     gh
+ 1701  May 04 - Mon - 07:15     gh login
+ 1702  May 04 - Mon - 07:15     gh auth login
+ 1703  May 04 - Mon - 09:11     cd Documents/l1-live/
+ 1704  May 04 - Mon - 09:11     code .
+ 1705  May 04 - Mon - 07:20     claude --dangerously-skip-permissions -c
+ 1706  May 04 - Mon - 07:15     gh
+ 1707  May 04 - Mon - 07:15     gh login
+ 1708  May 04 - Mon - 07:15     gh auth login
+ 1709  May 04 - Mon - 09:11     cd Documents/l1-live/
+ 1710  May 04 - Mon - 09:11     code .
+ 1711  May 04 - Mon - 09:12     seq 1 10 >tiofil.txt
+ 1712  May 04 - Mon - 09:12     cat tiofil.txt 
+ 1713  May 04 - Mon - 09:12     cat tiofil.txtoo
+ 1714  May 04 - Mon - 09:13     cat tiofil.txtoo 2>/dev/null
+ 1715  May 04 - Mon - 09:13     seq 100 110 >hundratiofil.txt
+ 1716  May 04 - Mon - 09:13     cat tiofil.txt hundratiofil.txt 
+ 1717  May 04 - Mon - 09:13     man cat
+ 1718  May 04 - Mon - 09:14     echo Hej | cat
+ 1719  May 04 - Mon - 09:15     { echo Hej; echo hopp; } | cat
+ 1720  May 04 - Mon - 09:15     cat hundratiofil.txt | grep '10'
+ 1721  May 04 - Mon - 09:16     head -n 5 hundratiofil.txt 
+ 1722  May 04 - Mon - 09:16     man head
+ 1723  May 04 - Mon - 09:17     tail -n 5 hundratiofil.txt 
+ 1724  May 04 - Mon - 09:17     tail -n 5 hundratiofil.txt  | head -n 1
+ 1725  May 04 - Mon - 09:18     grep '3' hundratiofil.txt
+ 1726  May 04 - Mon - 09:18     grep '10' hundratiofil.txt
+ 1727  May 04 - Mon - 09:18     grep '10' hundratiofil.txt | grep 2
+ 1728  May 04 - Mon - 09:20     grep '10' hundratiofil.txt > x
+ 1729  May 04 - Mon - 09:20     grep 2 < x
+ 1730  May 04 - Mon - 09:20     rm x
+ 1731  May 04 - Mon - 09:24     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n'
+ 1732  May 04 - Mon - 09:25     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | sort
+ 1733  May 04 - Mon - 09:26     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | uniq
+ 1734  May 04 - Mon - 09:26     man sort
+ 1735  May 04 - Mon - 09:27     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | sort -u
+ 1736  May 04 - Mon - 09:27     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | sort | uniq
+ 1737  May 04 - Mon - 09:27     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | sort | uniq -c
+ 1738  May 04 - Mon - 09:28     man uniq
+ 1739  May 04 - Mon - 09:28     man cut
+ 1740  May 04 - Mon - 09:29     cat /etc/passwd
+ 1741  May 04 - Mon - 09:30     cat /etc/passwd | cut -d':' -f1
+ 1742  May 04 - Mon - 09:30     cat /etc/passwd | cut -d':' -f7
+ 1743  May 04 - Mon - 09:30     cat /etc/passwd | cut -d':' -f7 | sort | uniq -c
+ 1744  May 04 - Mon - 09:30     cat /etc/passwd | cut -d':' -f1,7
+ 1745  May 04 - Mon - 09:31     man tr
+ 1746  May 04 - Mon - 09:31     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | tr u o
+ 1747  May 04 - Mon - 09:31     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | tr ut or
+ 1748  May 04 - Mon - 09:32     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | tr ut __
+ 1749  May 04 - Mon - 09:33     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | tr -c -d un
+ 1750  May 04 - Mon - 09:34     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | tr -c -d un$'\n'
+ 1751  May 04 - Mon - 09:34     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | tr -c k o
+ 1752  May 04 - Mon - 13:26     echo skooooo | grep -E 'sko+'
+ 1753  May 04 - Mon - 13:26     echo -e 'skooooo\nskor\nskoter\nskall' | grep -E 'sko+'
+ 1754  May 04 - Mon - 13:27     echo -e 'skooooo\nskor\nskoter\nskall\nsk' | grep -E 'sko+'
+ 1755  May 04 - Mon - 13:27     echo -e 'skooooo\nskor\nskoter\nskall\nsk' | grep -E 'sko?'
+ 1756  May 04 - Mon - 13:28     echo -e 'skooooo\nskor\nskoter\nskall\nsk' | grep -E '^sko?$'
+ 1757  May 04 - Mon - 15:34     gorg local sync
+ 1758  May 04 - Mon - 15:37     cd Documents/gorg/
+ 1759  May 04 - Mon - 15:38     rm Now.md SPECIFICATION.md 
+ 1760  May 04 - Mon - 15:38     which gh-sync-organization 
+ 1761  May 04 - Mon - 15:38     nano PLAN.md
+ 1762  May 04 - Mon - 16:08     exit
+ 1763  May 04 - Mon - 16:55     cd Documents/
+ 1764  May 04 - Mon - 16:56     mv gorg/ gorg-old
+ 1765  May 04 - Mon - 16:56     mkdir gorg
+ 1766  May 04 - Mon - 16:56     ls gorg-old/
+ 1767  May 04 - Mon - 16:57     cd gorg
+ 1768  May 04 - Mon - 09:31     man tr
+ 1769  May 04 - Mon - 09:31     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | tr u o
+ 1770  May 04 - Mon - 09:31     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | tr ut or
+ 1771  May 04 - Mon - 09:32     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | tr ut __
+ 1772  May 04 - Mon - 09:33     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | tr -c -d un
+ 1773  May 04 - Mon - 09:34     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | tr -c -d un$'\n'
+ 1774  May 04 - Mon - 09:34     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | tr -c k o
+ 1775  May 04 - Mon - 13:26     echo skooooo | grep -E 'sko+'
+ 1776  May 04 - Mon - 13:26     echo -e 'skooooo\nskor\nskoter\nskall' | grep -E 'sko+'
+ 1777  May 04 - Mon - 13:27     echo -e 'skooooo\nskor\nskoter\nskall\nsk' | grep -E 'sko+'
+ 1778  May 04 - Mon - 13:27     echo -e 'skooooo\nskor\nskoter\nskall\nsk' | grep -E 'sko?'
+ 1779  May 04 - Mon - 13:28     echo -e 'skooooo\nskor\nskoter\nskall\nsk' | grep -E '^sko?$'
+ 1780  May 04 - Mon - 15:34     gorg local sync
+ 1781  May 04 - Mon - 15:37     cd Documents/gorg/
+ 1782  May 04 - Mon - 15:38     rm Now.md SPECIFICATION.md 
+ 1783  May 04 - Mon - 15:38     which gh-sync-organization 
+ 1784  May 04 - Mon - 15:38     nano PLAN.md
+ 1785  May 04 - Mon - 16:08     exit
+ 1786  May 04 - Mon - 16:56     mv gorg/ gorg-old
+ 1787  May 04 - Mon - 16:56     mkdir gorg
+ 1788  May 04 - Mon - 16:56     ls gorg-old/
+ 1789  May 04 - Mon - 17:06     cd gorg
+ 1790  May 04 - Mon - 17:07     rm -rf ~/.vscode-shared/
+ 1791  May 04 - Mon - 17:08     less ~/.local/bin/copilot 
+ 1792  May 04 - Mon - 17:08     rm -rf ~/.java/
+ 1793  May 04 - Mon - 17:09     rm -rf ~/.filius/
+ 1794  May 04 - Mon - 17:11     sudo apt search pipx
+ 1795  May 04 - Mon - 17:11     sudo apt install pipx
+ 1796  May 04 - Mon - 17:12     pipx install posting
+ 1797  May 04 - Mon - 17:13     pipx install gqt
+ 1798  May 04 - Mon - 17:14     pipx --help
+ 1799  May 04 - Mon - 17:14     pipx list
+ 1800  May 04 - Mon - 17:17     nano ~/.bashrc.d/20_gconfig.bash 
+ 1801  May 04 - Mon - 17:17     which gconfig-snapshot 
+ 1802  May 04 - Mon - 17:18     nano $(which gconfig-snapshot)
+ 1803  May 04 - Mon - 17:18     cd /home/kent/.local/bin/
+ 1804  May 04 - Mon - 17:27     ls -a
+ 1805  May 04 - Mon - 17:27     gconfig-snapshot 
+ 1806  May 04 - Mon - 17:29     gh
+ 1807  May 04 - Mon - 17:38     nano x
+ 1808  May 04 - Mon - 17:40     export GITHUB_TOKEN="$(tr -d '[:space:]' < x)"
+ 1809  May 04 - Mon - 17:41     curl -sS -H "Authorization: bearer $GITHUB_TOKEN" https://api.github.com/user | head
+ 1810  May 04 - Mon - 17:42     mv x github_nackc8_read_token
+ 1811  May 04 - Mon - 17:43     mv github_nackc8_read_token Documents/
+ 1812  May 04 - Mon - 17:59     sudo apt install bat
+ 1813  May 04 - Mon - 17:59     gqt -e https://api.github.com/graphql -H "Authorization: bearer $GITHUB_TOKEN"
+ 1814  May 04 - Mon - 18:03     gqt -e https://api.github.com/graphql -H "Authorization: bearer $GITHUB_TOKEN" -n org-repos
+ 1815  May 04 - Mon - 18:03     gqt -e https://api.github.com/graphql -H "Authorization: bearer $GITHUB_TOKEN" -n org-repos -c
+ 1816  May 04 - Mon - 18:03     gqt -e https://api.github.com/graphql -H "Authorization: bearer $GITHUB_TOKEN" -n org-repos -q
+ 1817  May 04 - Mon - 18:04     gqt -e https://api.github.com/graphql -H "Authorization: bearer $GITHUB_TOKEN" -l
+ 1818  May 04 - Mon - 18:04     cd Documents/
+ 1819  May 04 - Mon - 18:04     nano github_nackc8_read_token 
+ 1820  May 04 - Mon - 18:05     . github_nackc8_read_token 
+ 1821  May 04 - Mon - 18:05     mv github_nackc8_read_token gorg
+ 1822  May 04 - Mon - 18:06     qgt
+ 1823  May 04 - Mon - 18:06     gqt
+ 1824  May 04 - Mon - 18:08     gqt -n org-repos -q
+ 1825  May 04 - Mon - 18:08     gqt -n org-repos -c
+ 1826  May 04 - Mon - 18:08     gqt --help
+ 1827  May 04 - Mon - 18:10     gqt -n yahoo -c
+ 1828  May 04 - Mon - 18:10     gqt -l
+ 1829  May 04 - Mon - 18:13     ls -la ~/.local/share/gqt/ ~/.config/gqt/ ~/.cache/gqt/ 2>/dev/null
+ 1830  May 04 - Mon - 18:14     ls -la ~/.local/share/gqt/database/
+ 1831  May 04 - Mon - 18:14     ls -la ~/.local/share/gqt/database/https%3A%2F%2Fapi.github.com%2Fgraphql/
+ 1832  May 04 - Mon - 18:14     tree ~/.local/share/gqt/database/https%3A%2F%2Fapi.github.com%2Fgraphql/
+ 1833  May 04 - Mon - 18:14     find ~/.local/share/gqt/database/https%3A%2F%2Fapi.github.com%2Fgraphql/
+ 1834  May 04 - Mon - 18:15     cat ~/.local/share/gqt/database/https%3A%2F%2Fapi.github.com%2Fgra
+ 1835  May 04 - Mon - 18:15     cat ~/.local/share/gqt/database/https%3A%2F%2Fapi.github.com%2Fgraphql/
+ 1836  May 04 - Mon - 18:15     cat ~/.local/share/gqt/database/https%3A%2F%2Fapi.github.com%2Fgraphql/query
+ 1837  May 04 - Mon - 18:15     cat ~/.local/share/gqt/database/https%3A%2F%2Fapi.github.com%2Fgraphql/query.json 
+ 1838  May 04 - Mon - 18:16     reset
+ 1839  May 04 - Mon - 18:16     cat ~/.local/share/gqt/database/https%3A%2F%2Fapi.github.com%2Fgraphql/most_recent_query_name.txt 
+ 1840  May 04 - Mon - 18:16     bat ~/.local/share/gqt/database/https%3A%2F%2Fapi.github.com%2Fgraphql/query.json 
+ 1841  May 04 - Mon - 18:16     batcat ~/.local/share/gqt/database/https%3A%2F%2Fapi.github.com%2Fgraphql/query.json 
+ 1842  May 04 - Mon - 18:17     batcat ~/.local/share/gqt/database/https%3A%2F%2Fapi.github.com%2Fgraphql/query_names/yahoo/query.json 
+ 1843  May 04 - Mon - 18:30     mkdir obs
+ 1844  May 04 - Mon - 18:30     cd obs/
+ 1845  May 04 - Mon - 18:31     nano things.txt
+ 1846  May 04 - Mon - 18:32     claude
+ 1847  May 04 - Mon - 20:44     gqt 
+ 1848  May 04 - Mon - 22:15     cd ../pytmpl/
+ 1849  May 04 - Mon - 22:15     cat .git/config 
+ 1850  May 04 - Mon - 22:15     exit
+ 1851  May 04 - Mon - 21:25     cd Documents/
+ 1852  May 04 - Mon - 21:25     cd gorg/
+ 1853  May 04 - Mon - 21:25     cat github-integration.txt 
+ 1854  May 04 - Mon - 20:32     cd Documents/gorg/
+ 1855  May 04 - Mon - 20:32     claude
+ 1856  May 04 - Mon - 23:52     claude -c
+ 1857  May 04 - Mon - 23:53     claude --dangerously-skip-permissions -c
+ 1858  May 04 - Mon - 23:59     curl https://get.volta.sh | bash
+ 1859  May 04 - Mon - 23:59     code /home/kent/.bashrc
+ 1860  May 05 - Tue - 00:00     nano ~/.bashrc.d/00_volta.bash
+ 1861  May 05 - Tue - 00:00     . ~/.bashrc
+ 1862  May 05 - Tue - 00:00     volta
+ 1863  May 05 - Tue - 00:00     volta list
+ 1864  May 04 - Mon - 07:20     claude --dangerously-skip-permissions -c
+ 1865  May 04 - Mon - 07:15     gh login
+ 1866  May 04 - Mon - 09:11     cd Documents/l1-live/
+ 1867  May 04 - Mon - 07:20     claude --dangerously-skip-permissions -c
+ 1868  May 04 - Mon - 07:15     gh login
+ 1869  May 04 - Mon - 09:11     cd Documents/l1-live/
+ 1870  May 04 - Mon - 09:12     seq 1 10 >tiofil.txt
+ 1871  May 04 - Mon - 09:12     cat tiofil.txt 
+ 1872  May 04 - Mon - 09:12     cat tiofil.txtoo
+ 1873  May 04 - Mon - 09:13     cat tiofil.txtoo 2>/dev/null
+ 1874  May 04 - Mon - 09:13     seq 100 110 >hundratiofil.txt
+ 1875  May 04 - Mon - 09:13     cat tiofil.txt hundratiofil.txt 
+ 1876  May 04 - Mon - 09:13     man cat
+ 1877  May 04 - Mon - 09:14     echo Hej | cat
+ 1878  May 04 - Mon - 09:15     { echo Hej; echo hopp; } | cat
+ 1879  May 04 - Mon - 09:15     cat hundratiofil.txt | grep '10'
+ 1880  May 04 - Mon - 09:16     head -n 5 hundratiofil.txt 
+ 1881  May 04 - Mon - 09:16     man head
+ 1882  May 04 - Mon - 09:17     tail -n 5 hundratiofil.txt 
+ 1883  May 04 - Mon - 09:17     tail -n 5 hundratiofil.txt  | head -n 1
+ 1884  May 04 - Mon - 09:18     grep '3' hundratiofil.txt
+ 1885  May 04 - Mon - 09:18     grep '10' hundratiofil.txt
+ 1886  May 04 - Mon - 09:18     grep '10' hundratiofil.txt | grep 2
+ 1887  May 04 - Mon - 09:20     grep '10' hundratiofil.txt > x
+ 1888  May 04 - Mon - 09:20     grep 2 < x
+ 1889  May 04 - Mon - 09:24     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n'
+ 1890  May 04 - Mon - 09:25     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | sort
+ 1891  May 04 - Mon - 09:26     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | uniq
+ 1892  May 04 - Mon - 09:26     man sort
+ 1893  May 04 - Mon - 09:27     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | sort -u
+ 1894  May 04 - Mon - 09:27     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | sort | uniq
+ 1895  May 04 - Mon - 09:27     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | sort | uniq -c
+ 1896  May 04 - Mon - 09:28     man uniq
+ 1897  May 04 - Mon - 09:28     man cut
+ 1898  May 04 - Mon - 09:29     cat /etc/passwd
+ 1899  May 04 - Mon - 09:30     cat /etc/passwd | cut -d':' -f1
+ 1900  May 04 - Mon - 09:30     cat /etc/passwd | cut -d':' -f7
+ 1901  May 04 - Mon - 09:30     cat /etc/passwd | cut -d':' -f7 | sort | uniq -c
+ 1902  May 04 - Mon - 09:30     cat /etc/passwd | cut -d':' -f1,7
+ 1903  May 04 - Mon - 09:31     man tr
+ 1904  May 04 - Mon - 09:31     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | tr u o
+ 1905  May 04 - Mon - 09:31     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | tr ut or
+ 1906  May 04 - Mon - 09:32     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | tr ut __
+ 1907  May 04 - Mon - 09:33     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | tr -c -d un
+ 1908  May 04 - Mon - 09:34     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | tr -c -d un$'\n'
+ 1909  May 04 - Mon - 09:34     echo -e 'hund\nkatt\nhund\nkatt\nkatt\nhund\n' | tr -c k o
+ 1910  May 04 - Mon - 13:26     echo skooooo | grep -E 'sko+'
+ 1911  May 04 - Mon - 13:26     echo -e 'skooooo\nskor\nskoter\nskall' | grep -E 'sko+'
+ 1912  May 04 - Mon - 13:27     echo -e 'skooooo\nskor\nskoter\nskall\nsk' | grep -E 'sko+'
+ 1913  May 04 - Mon - 13:27     echo -e 'skooooo\nskor\nskoter\nskall\nsk' | grep -E 'sko?'
+ 1914  May 04 - Mon - 13:28     echo -e 'skooooo\nskor\nskoter\nskall\nsk' | grep -E '^sko?$'
+ 1915  May 04 - Mon - 15:34     gorg local sync
+ 1916  May 04 - Mon - 15:37     cd Documents/gorg/
+ 1917  May 04 - Mon - 15:38     rm Now.md SPECIFICATION.md 
+ 1918  May 04 - Mon - 15:38     which gh-sync-organization 
+ 1919  May 04 - Mon - 15:38     nano PLAN.md
+ 1920  May 04 - Mon - 16:08     exit
+ 1921  May 04 - Mon - 16:56     mv gorg/ gorg-old
+ 1922  May 04 - Mon - 16:56     ls gorg-old/
+ 1923  May 04 - Mon - 16:57     cd Documents/
+ 1924  May 04 - Mon - 16:57     cd gorg
+ 1925  May 04 - Mon - 18:35     cd obs/
+ 1926  May 04 - Mon - 18:35     cat things.txt 
+ 1927  May 04 - Mon - 18:36     nano things.txt 
+ 1928  May 04 - Mon - 18:36     cp things.txt things.txt.bak
+ 1929  May 04 - Mon - 18:37     cat things.txt
+ 1930  May 04 - Mon - 18:37     nano things.txt
+ 1931  May 04 - Mon - 19:37     rm -rf gorg*
+ 1932  May 04 - Mon - 19:37     less obs
+ 1933  May 04 - Mon - 19:37     less obsidians.txt 
+ 1934  May 04 - Mon - 19:37     cd GitHubNack/
+ 1935  May 04 - Mon - 19:38     gh-sync-organization 
+ 1936  May 04 - Mon - 20:26     claude
+ 1937  May 04 - Mon - 20:26     cd mkdir gorg
+ 1938  May 04 - Mon - 20:26     mkdir gorg
+ 1939  May 04 - Mon - 20:26     rm -rf /home/kent/.claude/projects/-home-kent-Documents-gorg/memory/
+ 1940  May 04 - Mon - 20:32     touch x
+ 1941  May 04 - Mon - 20:33     rm x
+ 1942  May 04 - Mon - 20:38     less README.md 
+ 1943  May 04 - Mon - 20:38     rm README.md 
+ 1944  May 04 - Mon - 20:41     less usage.txt 
+ 1945  May 04 - Mon - 20:47     export BW_SESSION=$(bw unlock --raw)
+ 1946  May 04 - Mon - 20:47     echo $BW_SESSION 
+ 1947  May 04 - Mon - 20:57     kq
+ 1948  May 04 - Mon - 20:57     jq
+ 1949  May 04 - Mon - 20:57     bw get template item | jq --arg t "$(cat)" '.name="github-pat-nackc8" | .login.password=$t' | bw encode | bw create item
+ 1950  May 04 - Mon - 21:00     read -r -p 'Token: ' TOKEN
+ 1951  May 04 - Mon - 21:01     bw get template item | jq --arg t "$TOKEN" '.name="github-pat-nackc8" | .login.password=$t' | bw encode | bw create item
+ 1952  May 04 - Mon - 21:02     gql
+ 1953  May 04 - Mon - 21:12     alias gqt='gqt -e https://api.github.com/graphql -H "Authorization: Bearer $GITHUB_TOKEN"'
+ 1954  May 04 - Mon - 21:26     alias
+ 1955  May 04 - Mon - 21:27     bw get password github-pat-nackc8
+ 1956  May 04 - Mon - 21:28     curl: curl -H "Authorization: Bearer $GITHUB_TOKEN" -X POST -d '{"query":"{ viewer { login } }"}' https://api.github.com/graphql
+ 1957  May 04 - Mon - 21:28     sudo apt install curl
+ 1958  May 04 - Mon - 21:29     curl -H "Authorization: Bearer $GITHUB_TOKEN" -X POST -d '{"query":"{ viewer { login } }"}' https://api.github.com/graphql
+ 1959  May 04 - Mon - 21:29     bqt
+ 1960  May 04 - Mon - 21:29     gtq
+ 1961  May 04 - Mon - 21:29     gqt
+ 1962  May 04 - Mon - 21:30     gqt 
+ 1963  May 04 - Mon - 21:30     qgt --help
+ 1964  May 04 - Mon - 21:30     gqt --help
+ 1965  May 04 - Mon - 21:31     qgt -l
+ 1966  May 04 - Mon - 21:31     gqt -l
+ 1967  May 04 - Mon - 21:31     gqt -q org-repos
+ 1968  May 04 - Mon - 21:41     gqt -q -n org-repos
+ 1969  May 04 - Mon - 21:46     python3 prototype.py 
+ 1970  May 04 - Mon - 21:56     sqlite3
+ 1971  May 04 - Mon - 21:56     sudo apt install sqlite3
+ 1972  May 04 - Mon - 21:58     nano github-integration.txt 
+ 1973  May 04 - Mon - 21:58     nano usage.txt 
+ 1974  May 04 - Mon - 21:59     alias db='sqlite3 gorg.db ".schema --indent"'
+ 1975  May 04 - Mon - 21:59     dv
+ 1976  May 04 - Mon - 21:59     db
+ 1977  May 04 - Mon - 22:00     cat prototype.py 
+ 1978  May 04 - Mon - 22:00     cat usage.txt 
+ 1979  May 04 - Mon - 22:01     cat github-integration.txt 
+ 1980  May 04 - Mon - 22:02     rm prototype.py 
+ 1981  May 04 - Mon - 22:05     ls ../findfreedomains/
+ 1982  May 04 - Mon - 22:05     rm gorg.db 
+ 1983  May 04 - Mon - 22:09     git init
+ 1984  May 04 - Mon - 22:09     copier copy                  
+ 1985  May 04 - Mon - 22:09     cd python-cli-templ/
+ 1986  May 04 - Mon - 22:10     gh
+ 1987  May 04 - Mon - 22:10     gh repo view --web
+ 1988  May 04 - Mon - 22:11     mv python-cli-templ/ pytmpl
+ 1989  May 04 - Mon - 22:11     cd pytmpl/
+ 1990  May 04 - Mon - 22:12     unset GITHUB_TOKEN 
+ 1991  May 04 - Mon - 22:12     gh auth login
+ 1992  May 04 - Mon - 22:12     gh repo create kc8se/pytmpl --public --source=. --remote=pytmpl   
+ 1993  May 04 - Mon - 22:12     cd ..
+ 1994  May 04 - Mon - 22:12     cd gorg/
+ 1995  May 04 - Mon - 22:14     copier copy ~/Documents/pytmpl .
+ 1996  May 04 - Mon - 22:15     bash
+ 1997  May 04 - Mon - 22:15     copier copy git@github.com:kc8se/python-cli-templ.git .
+ 1998  May 04 - Mon - 22:15     pipx install copier
+ 1999  May 04 - Mon - 22:16     pipx install jinja2_time
+ 2000  May 04 - Mon - 22:16     pipx inject copier jinja2-time
+ 2001  May 04 - Mon - 22:21     ln -sf "$(command -v python3)" ~/.local/bin/python
+ 2002  May 04 - Mon - 22:21     copier copy --trust git@github.com:kc8se/python-cli-templ.git .
+ 2003  May 04 - Mon - 22:22     mkdir docs
+ 2004  May 04 - Mon - 22:22     mv usage.txt github-integration.txt docs/
+ 2005  May 04 - Mon - 22:22     git add .
+ 2006  May 04 - Mon - 22:23     git log
+ 2007  May 04 - Mon - 22:23     ls scripts/
+ 2008  May 04 - Mon - 22:31     ls src/
+ 2009  May 04 - Mon - 22:31     ls src/gorg/
+ 2010  May 04 - Mon - 22:37     git statgus
+ 2011  May 04 - Mon - 22:39     make
+ 2012  May 04 - Mon - 22:39     make check
+ 2013  May 04 - Mon - 22:40     poetry install
+ 2014  May 04 - Mon - 22:40     poetry run pytest
+ 2015  May 04 - Mon - 22:42     poetry run gorg hello
+ 2016  May 04 - Mon - 22:42     poetry run gorg
+ 2017  May 04 - Mon - 22:42     poetry run gorg --help
+ 2018  May 04 - Mon - 22:42     poetry run gorg sync
+ 2019  May 04 - Mon - 22:42     poetry run gorg sync hi there
+ 2020  May 04 - Mon - 22:43     git diff src/gorg/cli/main.py
+ 2021  May 04 - Mon - 22:43     git add poetry.lock 
+ 2022  May 04 - Mon - 22:45     poetry run gorg sync -o nackc8
+ 2023  May 04 - Mon - 22:45     gorg sync -o nackc8
+ 2024  May 04 - Mon - 22:51     git diff
+ 2025  May 04 - Mon - 22:52     gorg
+ 2026  May 04 - Mon - 22:52     cat ~/.config/gorg/config.toml 
+ 2027  May 04 - Mon - 22:54     GORG_ORG=Hi gorg sync
+ 2028  May 04 - Mon - 23:05     GITHUB_TOKEN=$(bw get password github-pat-nackc8) gorg sync
+ 2029  May 04 - Mon - 23:05     echo $GITHUB_TOKEN
+ 2030  May 04 - Mon - 23:06     bw
+ 2031  May 04 - Mon - 23:06     bw login
+ 2032  May 04 - Mon - 23:06     $(bw get password github-pat-nackc8
+ 2033  May 04 - Mon - 23:06     echo $(bw get password github-pat-nackc8)
+ 2034  May 04 - Mon - 23:06     export GITHUB_TOKEN=$(bw get password github-pat-nackc8)
+ 2035  May 04 - Mon - 23:11     org sync
+ 2036  May 04 - Mon - 23:12     git status
+ 2037  May 04 - Mon - 23:12     code .
+ 2038  May 04 - Mon - 23:19     gorg sync
+ 2039  May 04 - Mon - 23:57     apt search volta
+ 2040  May 05 - Tue - 00:01     . ~/.bashrc
+ 2041  May 05 - Tue - 00:01     volta install node                                                       
+ 2042  May 05 - Tue - 00:02     markdownlint-cli2 
+ 2043  May 05 - Tue - 11:48     cd Documents/
+ 2044  May 05 - Tue - 11:48     mv obsidians.txt obs
+ 2045  May 05 - Tue - 11:54     claude
+ 2046  May 05 - Tue - 11:54     cd Documents/GitHubNack/existing/
+ 2047  May 05 - Tue - 11:55     ls uppgift-
+ 2048  May 05 - Tue - 11:55     ls uppgift-1-apache-http-server-
+ 2049  May 05 - Tue - 11:55     ls uppgift-1-apache-http-server-*
+ 2050  May 05 - Tue - 11:55     ls -d uppgift-1-apache-http-server-*
+ 2051  May 05 - Tue - 11:55     claude
+ 2052  May 05 - Tue - 14:49     claude -c
+ 2053  May 05 - Tue - 11:48     mv obsidians.txt obs
+ 2054  May 05 - Tue - 12:02     gc
+ 2055  May 05 - Tue - 12:02     volta
+ 2056  May 05 - Tue - 12:03     rm -rf .claude
+ 2057  May 05 - Tue - 12:03     cd ../.kent.config/
+ 2058  May 05 - Tue - 12:03     ls -a
+ 2059  May 05 - Tue - 12:03     cd -
+ 2060  May 05 - Tue - 12:03     cd .local/bin/
+ 2061  May 05 - Tue - 12:03     claude
+ 2062  May 05 - Tue - 12:06     claude -c
+ 2063  May 05 - Tue - 15:08     sudo apt install gpaste gnome-shell-extension-gpaste
+ 2064  May 05 - Tue - 15:09     sudo apt install gpaste-2 gnome-shell-extension-gpaste
+ 2065  May 05 - Tue - 15:16     sudo apt isntall ddcutil
+ 2066  May 05 - Tue - 15:16     sudo apt install ddcutil
+ 2067  May 05 - Tue - 15:16     ddcutil
+ 2068  May 05 - Tue - 15:16     ddcutil --help
+ 2069  May 05 - Tue - 15:17     ddcutil detect
+ 2070  May 05 - Tue - 15:17     sudo apt install libi2c-dev
+ 2071  May 05 - Tue - 14:52     claude
+ 2072  May 05 - Tue - 15:03     gnome-shell-extension-manager
+ 2073  May 05 - Tue - 15:00     gconfig-snapshot 
+ 2074  May 05 - Tue - 15:02     sudo apt install gnome-shell-extension-manager gir1.2-gda-5.0 gir1.2-gsound-1.0
+ 2075  May 05 - Tue - 11:48     mv obsidians.txt obs
+ 2076  May 05 - Tue - 11:54     claude
+ 2077  May 05 - Tue - 12:47     ls +a
+ 2078  May 05 - Tue - 12:47     rm -rf .vscode-shared/ 
+ 2079  May 05 - Tue - 12:47     ls .var/
+ 2080  May 05 - Tue - 12:48     ls .var/app/
+ 2081  May 05 - Tue - 12:48     less .dumped-config/
+ 2082  May 05 - Tue - 12:48     ls -a
+ 2083  May 05 - Tue - 15:32     sudo apt install gmenu
+ 2084  May 05 - Tue - 15:50     ps -p 5752
+ 2085  May 05 - Tue - 15:43     claude
+ 2086  May 05 - Tue - 12:48     less .dumped-config/
+ 2087  May 05 - Tue - 12:48     ls -a
+ 2088  May 05 - Tue - 15:32     sudo apt install gmenu
+ 2089  May 05 - Tue - 15:50     ps -p 5752
+ 2090  May 05 - Tue - 16:16     wl-copy "test123"
+ 2091  May 05 - Tue - 16:18     wl-paste --list-types
+ 2092  May 05 - Tue - 16:18     xdg-open s.png 
+ 2093  May 05 - Tue - 16:18     rm s.png 
+ 2094  May 05 - Tue - 16:21     wl-paste > s.png
+ 2095  May 05 - Tue - 16:25     wl-copy --type image/png < s.png 
+ 2096  May 05 - Tue - 15:38     ls kitty
+ 2097  May 05 - Tue - 15:39     gconfig-snapshot 
+ 2098  May 05 - Tue - 12:47     ls +a
+ 2099  May 05 - Tue - 12:47     rm -rf .vscode-shared/ 
+ 2100  May 05 - Tue - 12:47     ls .var/
+ 2101  May 05 - Tue - 12:48     ls .var/app/
+ 2102  May 05 - Tue - 12:48     less .dumped-config/
+ 2103  May 05 - Tue - 12:48     ls -a
+ 2104  May 05 - Tue - 15:32     sudo apt install gmenu
+ 2105  May 05 - Tue - 15:52     gnome-screenshot
+ 2106  May 05 - Tue - 15:52     gdbus call --session     --dest org.gnome.Shell.Screenshot \                             
+ 2107  May 05 - Tue - 15:53     gdbus call --session --dest org.gnome.Shell.Screenshot --object-path /org/gnome/Shell/Screenshot --method org.gnome.Shell.Screenshot.InteractiveScreenshot
+ 2108  May 05 - Tue - 15:53     sudo apt install gnome-screenshot
+ 2109  May 05 - Tue - 15:54     gnome-screenshot -c -a
+ 2110  May 05 - Tue - 15:55     ps -p 5752 -o pid,user,comm,cmd
+ 2111  May 05 - Tue - 15:56     wl-copy "hello world"
+ 2112  May 05 - Tue - 15:59     sudo apt purge gnome-screenshot
+ 2113  May 05 - Tue - 16:08     wl-paste --type image/png > /tmp/c.png && xdg-open           
+ 2114  May 05 - Tue - 16:08     wl-paste 
+ 2115  May 05 - Tue - 16:08     reset
+ 2116  May 05 - Tue - 16:08     wl-paste --list-types
+ 2117  May 05 - Tue - 16:11     wl-paste --type image/png > /tmp/c.png && xdg-open /tmp/c.png
+ 2118  May 05 - Tue - 16:12     flatpak override --user md.obsidian.Obsidian --env=ELECTRON_OZONE_PLATFORM_HINT=wayland
+ 2119  May 05 - Tue - 16:13     rm /tmp/c.png ; wl-paste --type image/png > /tmp/c.png && xdg-open /tmp/c.png
+ 2120  May 05 - Tue - 16:14     flatpak kill md.obsidian.Obsidian
+ 2121  May 05 - Tue - 16:15     flatpak run md.obsidian.Obsidian --ozone-platform=wayland --enable-features=UseOzonePlatform 2>&1 | head -20   
+ 2122  May 05 - Tue - 16:48     gpaste-client dir
+ 2123  May 05 - Tue - 16:49     gpaste-client
+ 2124  May 05 - Tue - 16:50     sudo apt uninstall
+ 2125  May 05 - Tue - 16:50     dpkg -L gpaste-2 
+ 2126  May 05 - Tue - 16:50     man gpaste-2
+ 2127  May 05 - Tue - 16:50     sudp apt purge gpaste-2
+ 2128  May 05 - Tue - 16:50     sudo apt purge gpaste-2
+ 2129  May 05 - Tue - 16:59     sudo apt install gpaste-2 gnome-shell-extension-gpaste
+ 2130  May 05 - Tue - 17:00     sudo apt remove gnome-shell-extension-gpaste
+ 2131  May 05 - Tue - 17:00     sudo apt remove gpaste-2
+ 2132  May 05 - Tue - 17:03     sudo apt install micro
+ 2133  May 05 - Tue - 17:04     micro
+ 2134  May 05 - Tue - 17:04     code /home/kent/Documents/GitHubNack/existing/reviews.txt
+ 2135  May 05 - Tue - 17:02     cd Documents/
+ 2136  May 05 - Tue - 17:02     cd GitHubNack/existing/
+ 2137  May 05 - Tue - 17:02     claude -c
+ 2138  May 05 - Tue - 17:05     cd Documents/GitHubNack/existing/
+ 2139  May 05 - Tue - 17:05     claude --resume f34373cf-a12f-4bac-9ef7-2647004291d4
+ 2140  May 05 - Tue - 17:14     cd Documents/
+ 2141  May 05 - Tue - 17:14     cd GitHubNack/existing/
+ 2142  May 05 - Tue - 22:40     cd Documents/notes/
+ 2143  May 05 - Tue - 22:40     xdg-open Pasted\ image\ 20260505144025.png 
+ 2144  May 05 - Tue - 22:40     ls -a
+ 2145  May 05 - Tue - 22:40     rm -rf .obsidian
+ 2146  May 05 - Tue - 22:40     ls obsidian.md 
+ 2147  May 05 - Tue - 22:40     ls .obsidian-desktop/
+ 2148  May 05 - Tue - 22:41     ls .obsidian-desktop/app.json 
+ 2149  May 05 - Tue - 22:41     less .obsidian-desktop/app.json 
+ 2150  May 05 - Tue - 22:29     ls uppgift-2-anv-ndarhantering-genom-skript-
+ 2151  May 05 - Tue - 22:56     touch /tmp/fed
+ 2152  May 05 - Tue - 22:56     code /tmp/fed 
+ 2153  May 05 - Tue - 17:03     sudo apt install micro
+ 2154  May 05 - Tue - 17:04     micro
+ 2155  May 05 - Tue - 17:04     code /home/kent/Documents/GitHubNack/existing/reviews.txt
+ 2156  May 05 - Tue - 17:02     claude -c
+ 2157  May 05 - Tue - 17:05     cd Documents/GitHubNack/existing/
+ 2158  May 05 - Tue - 17:05     claude --resume f34373cf-a12f-4bac-9ef7-2647004291d4
+ 2159  May 05 - Tue - 22:34     cd notes/
+ 2160  May 05 - Tue - 22:34     cd inbox/
+ 2161  May 05 - Tue - 22:34     cat 260*
+ 2162  May 05 - Tue - 22:34     wc -l 260*
+ 2163  May 05 - Tue - 22:34     less 260503.md 
+ 2164  May 05 - Tue - 22:37     stat 260503.md
+ 2165  May 05 - Tue - 22:37     cd ..
+ 2166  May 05 - Tue - 23:02     ls _Attachments/
+ 2167  May 05 - Tue - 23:48     cd Documents/
+ 2168  May 05 - Tue - 23:48     cd ls
+ 2169  May 05 - Tue - 23:49     cd GitHubNack/existing/
+ 2170  May 05 - Tue - 23:49     ls -d project-*
+ 2171  May 05 - Tue - 23:49     ls -1
+ 2172  May 05 - Tue - 23:49     echo 'project-.*'
+ 2173  May 05 - Tue - 23:50     echo '(project-|py-docs-i5-|).*'
+ 2174  May 05 - Tue - 23:51     ls | grep vscode
+ 2175  May 05 - Tue - 23:51     sudo apt install fzf
+ 2176  May 05 - Tue - 23:51     echo $(ls | fzf -m)
+ 2177  May 05 - Tue - 23:53     ls -d uppgift-1-apache-http-server- uppgift-2-anv-ndarhantering-genom-skript-
+ 2178  May 05 - Tue - 23:53     echo '(project-|py-docs-i5-|py-vscode-i5-).*'
+ 2179  May 05 - Tue - 23:53     echo '(project-|py-docs-i5-|py-vscode-i5-|uppgift-1-apache-http-server-|uppgift-2-anv-ndarhantering-genom-skript-).*'
+ 2180  May 06 - Wed - 00:08     check-feedback                                                                                                         
+ 2181  May 06 - Wed - 00:09     check-feedback '(project-|py-docs-i5-|py-vscode-i5-|uppgift-1-apache-http-server-|uppgift-2-anv-ndarhantering-genom-skript-).*' nackc8
+ 2182  May 06 - Wed - 00:17     ip addr
+ 2183  May 06 - Wed - 00:18     nmtui
+ 2184  May 06 - Wed - 00:18     ping 8.8.8.8
+ 2185  May 05 - Tue - 22:37     cd Documents/notes/
+ 2186  May 05 - Tue - 22:38     mkdir .scripts
+ 2187  May 05 - Tue - 22:38     cd .scripts/
+ 2188  May 05 - Tue - 22:38     claude 
+ 2189  May 06 - Wed - 00:29     which obsidian
+ 2190  May 05 - Tue - 17:14     cd GitHubNack/existing/
+ 2191  May 05 - Tue - 22:36     claude --resume f34373cf-a12f-4bac-9ef7-2647004291d4
+ 2192  May 06 - Wed - 00:18     ping 8.8.8.8
+ 2193  May 05 - Tue - 22:37     cd Documents/notes/
+ 2194  May 05 - Tue - 22:38     mkdir .scripts
+ 2195  May 05 - Tue - 22:38     cd .scripts/
+ 2196  May 05 - Tue - 22:38     claude 
+ 2197  May 06 - Wed - 00:29     which obsidian
+ 2198  May 05 - Tue - 17:14     cd GitHubNack/existing/
+ 2199  May 05 - Tue - 22:36     claude --resume f34373cf-a12f-4bac-9ef7-2647004291d4
+ 2200  May 06 - Wed - 07:39     cd Documents/
+ 2201  May 06 - Wed - 07:39     cd GitHubNack/
+ 2202  May 06 - Wed - 07:39     cd existing/
+ 2203  May 06 - Wed - 07:40     cd linux-1-devops25-uppgift-2-anvandarhantering-genom-skript-l12-csvusers
+ 2204  May 06 - Wed - 07:40     ls +a
+ 2205  May 06 - Wed - 07:41     head ../linux-1-devops25-uppgift-1-apache-http-server-l11-apache/.gitignore .
+ 2206  May 06 - Wed - 07:41     head ../linux-1-devops25-uppgift-1-apache-http-server-l11-apache/.gitignore 
+ 2207  May 06 - Wed - 07:41     nano .gitignored
+ 2208  May 06 - Wed - 07:42     ls linux-1-devops25-uppgift-1-apache-http-server-l11-apache/.gitignore 
+ 2209  May 06 - Wed - 07:42     nano linux-1-devops25-uppgift-1-apache-http-server-l11-apache/.gitignore 
+ 2210  May 06 - Wed - 07:42     cp linux-1-devops25-uppgift-1-apache-http-server-l11-apache/.gitignore linux-1-devops25-uppgift-2-anvandarhantering-genom-skript-l12-csvusers/
+ 2211  May 06 - Wed - 07:43     ls linux-1-devops25-uppgift-2-anvandarhantering-genom-skript-l12-csvusers/
+ 2212  May 06 - Wed - 07:44     ls linux-1-devops25-uppgift-2-anvandarhantering-genom-skript-l12-csvusers/* >>linux-1-devops25-uppgift-2-anvandarhantering-genom-skript-l12-csvusers/.gitignore 
+ 2213  May 06 - Wed - 07:45     git add .
+ 2214  May 06 - Wed - 07:45     git status
+ 2215  May 06 - Wed - 07:45     cd ..
+ 2216  May 06 - Wed - 07:45     nano linux-1-devops25-uppgift-2-anvandarhantering-genom-skript-l12-csvusers/.gitignore 
+ 2217  May 06 - Wed - 07:45     cd linux-1-devops25-uppgift-2-anvandarhantering-genom-skript-l12-csvusers/
+ 2218  May 06 - Wed - 07:45     ls -a
+ 2219  May 06 - Wed - 07:45     nano .gitignore 
+ 2220  May 06 - Wed - 07:45     git add .gitignore 
+ 2221  May 06 - Wed - 07:46     git add -f .gitignore 
+ 2222  May 06 - Wed - 07:46     claude
+ 2223  May 06 - Wed - 07:46     git push
+ 2224  May 06 - Wed - 08:05     repocare 
+ 2225  May 06 - Wed - 00:29     which obsidian
+ 2226  May 06 - Wed - 01:23     cd Documents/GitHubNack/existing/
+ 2227  May 06 - Wed - 01:23     claude --dangerously-skip-permissions
+ 2228  May 06 - Wed - 09:10     chmod +x overkurs/ex1 
+ 2229  May 06 - Wed - 09:10     ./ex
+ 2230  May 06 - Wed - 09:10     ./ex1
+ 2231  May 06 - Wed - 09:10     cp overkurs/ex1 recat/
+ 2232  May 06 - Wed - 09:10     cp overkurs/ex1 .
+ 2233  May 06 - Wed - 09:10     mv recat/ recap
+ 2234  May 06 - Wed - 09:13     man grep
+ 2235  May 06 - Wed - 09:15     grep bu
+ 2236  May 06 - Wed - 09:17     echo -e 'tofu\nbulle' | grep bu
+ 2237  May 06 - Wed - 09:17     echo -e 'tofu\nbulle' | head -n 1
+ 2238  May 06 - Wed - 09:19     echo -e 'tofu\nbulle' | tail -n 1
+ 2239  May 06 - Wed - 09:19     echo -e 'tofu\nbulle' | tail -n 1 | grep bu
+ 2240  May 06 - Wed - 09:23     echo -e 'tofu\nbulle\nbanan\ngurka\spenat' | grep '[k][a]'
+ 2241  May 06 - Wed - 09:23     echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep '[k][a]'
+ 2242  May 06 - Wed - 09:25     echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep '[g]ur[k]a'
+ 2243  May 06 - Wed - 09:28     echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep 'gurka'
+ 2244  May 06 - Wed - 09:28     echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep 'ka'
+ 2245  May 06 - Wed - 09:28     echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep 'la'
+ 2246  May 06 - Wed - 09:28     echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep 'le'
+ 2247  May 06 - Wed - 09:30     echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep 'ka\|le'
+ 2248  May 06 - Wed - 09:30     echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep 'ka|le'
+ 2249  May 06 - Wed - 09:31     echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep -E 'ka|le'
+ 2250  May 06 - Wed - 09:31     echo -e 'tofu\nbulle\nbanan\ngurka\nspenat' | grep -E 'ka\|le'
+ 2251  May 06 - Wed - 09:32     echo -e 'tofu\nbulle\nbanan\ngurka\nspenat\nka|le' | grep -E 'ka\|le'
+ 2252  May 06 - Wed - 09:32     echo -e 'tofu\nbulle\nbanan\ngurka\nspenatka|le' | grep -E 'ka\|le'
+ 2253  May 06 - Wed - 09:33     echo -e 'tofu\nbulle\njag alskar banan\ngurka\nspenatka|le' | grep -E 'banan'
+ 2254  May 06 - Wed - 09:33     echo -e 'tofu\njag alskar bulle\njag alskar banan\njag hatar gurka\nspenatka|le' | grep -E 'banan'
+ 2255  May 06 - Wed - 09:33     echo -e 'tofu\njag alskar bulle\njag alskar banan\njag hatar gurka\nspenatka|le' | grep -E 'banan|gurka'
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ echo -e 'tofu\njag alskar bulle\njag alskar banan\njag hatar gurka\nspenatka|le' | grep -E 'banan|gurka
+
+
+'' 
+tofu
+jag alskar bulle
+jag alskar banan
+jag hatar gurka
+spent
+DEVOPS25/lektion10
+$ atka|le' | grep -E 'banan|gurka' >ex1 DEVOPS25/lektion10atar gurka\nspent' 
+$ echo -e 'tofu\njag alskar bulle\njag alskar banan\njag hatar gurka\nspenatka|le' | grep -E 'banan|gurka' >ex1tex>ex1tex
+
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ csatat ex
+1text 
+jag alskar banan
+jag hatar gurka
+DEVOPS25/lektion10
+>>ex1texttofu\njag alskar bulle\njag alskar banan\njag hatar gurka\nspenatka|le' | grep -E 'banan|gurka' >>ex1tex >>ex1tex >>ex1tex >>ex1tex >>ex1tex >>ex1tex >>ex1tex >>ex1tex >>ex1tex >>ex1tex >>ex1tex >>ex1tex >>ex1tex >>ex1tex>>ex1tex >>ex1tex >>ex1tex>>ex1tex >>ex1tex >>ex1tex >>ex1tex >>ex1tex>>ex1text
+DEVOPS25/lektion10
+cat ex1text ofu\njag alskar bulle\njag alskar banan\njag hatar gurka\nspenatka|le' >>ex1text
+DEVOPS25/lektion10
+$ cat ex1text 
+jag alskar banan
+jag hatar gurka
+tofu
+jag alskar bulle
+jag alskar banan
+jag hatar gurka
+spenatka|le
+DEVOPS25/lektion10
+$ cat ex1text | grep -E 'gurlDEVOPS25/lektion10
+$ cat ex1text | grep -E 'gurlka
+
+
+jag hatar gurka
+jag hatar gurka
+DEVOPS25/lektion10
+$ cat ex1text | grep -E 'gurka 'gurka- 'gurkaA 'gurka 'gurka2 'gurkaDEVOPS25/lektion10
+$ cat ex1text | grep -E -A 2 'gurka
+jag hatar gurka
+tofu
+jag alskar bulle
+--
+jag hatar gurka
+spenatka|le
+DEVOPS25/lektion10
+$ cat ex1text 
+jag alskar banan
+jag hatar gurka
+tofu
+jag alskar bulle
+jag alskar banan
+jag hatar gurka
+spenatka|le
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ man grep
+GREP(1)                        User Commands                        GREP(1)
+
+NAME
+       grep, egrep, fgrep, rgrep - print lines that match patterns
+
+SYNOPSIS
+       grep [OPTION...] PATTERNS [FILE...]
+       grep [OPTION...] -e PATTERNS ... [FILE...]
+       grep [OPTION...] -f PATTERN_FILE ... [FILE...]
+
+DESCRIPTION
+       grep  searches  for  PATTERNS in each FILE.  PATTERNS is one or more
+       patterns separated by newline characters, and grep prints each  line
+       that  matches  a  pattern.  Typically PATTERNS should be quoted when
+       grep is used in a shell command.
+
+       A FILE of “-” stands for standard  input.   If  no  FILE  is  given,
+       recursive  searches  examine the working directory, and nonrecursive
+       searches read standard input.
+
+       Debian also includes the variant programs egrep,  fgrep  and  rgrep.
+       These  programs  are  the  same  as  grep -E,  grep -F, and grep -r,
+       respectively.  These variants are deprecated  upstream,  but  Debian
+       provides  for backward compatibility. For portability reasons, it is
+       recommended to avoid the variant programs, and  use  grep  with  the
+       related option instead.
+ Manual page grep(1) line 14 (press h for help or q to quit)
+OPTIONS
+   Generic Program Information
+       --help Output a usage message and exit.
+
+       -V, --version
+              Output the version number of grep and exit.
+
+   Pattern Syntax
+       -E, --extended-regexp
+              Interpret PATTERNS as extended regular expressions (EREs, see
+              below).
+
+       -F, --fixed-strings27 (press h for help or q to quit)
+              Interpret PATTERNS as fixed strings, not regular expressions.
+
+       -G, --basic-regexp
+              Interpret  PATTERNS  as  basic regular expressions (BREs, see
+              below).  This is the default.
+
+       -P, --perl-regexp
+              Interpret PATTERNS  as  Perl-compatible  regular  expressions
+              (PCREs).   This option is experimental when combined with the
+              -z  (--null-data)  option,  and   grep   -P   may   warn   of
+              unimplemented features.
+
+       -F, --fixed-strings40 (press h for help or q to quit)
+              Interpret PATTERNS as fixed strings, not regular expressions.
+
+       -G, --basic-regexp
+              Interpret  PATTERNS  as  basic regular expressions (BREs, see
+              below).  This is the default.
+
+       -P, --perl-regexp
+              Interpret PATTERNS  as  Perl-compatible  regular  expressions
+              (PCREs).   This option is experimental when combined with the
+              -z  (--null-data)  option,  and   grep   -P   may   warn   of
+              unimplemented features.
+
+       -F, --fixed-strings
+              Interpret PATTERNS as fixed strings, not regular expressions.
+
+       -G, --basic-regexp
+              Interpret  PATTERNS  as  basic regular expressions (BREs, see
+              below).  This is the default.
+
+       -P, --perl-regexp
+              Interpret PATTERNS  as  Perl-compatible  regular  expressions
+              (PCREs).   This option is experimental when combined with the
+              -z  (--null-data)  option,  and   grep   -P   may   warn   of
+              unimplemented features.
+
+...skipping...
+       syntax: “basic” (BRE), “extended” (ERE) and “perl” (PCRE).   In  GNU
+       grep,  basic  and  extended regular expressions are merely different
+       notations for the same  pattern-matching  functionality.   In  other
+       implementations,  basic  regular  expressions  are  ordinarily  less
+       powerful than extended, though occasionally  it  is  the  other  way
+       around.   The  following  description  applies  to  extended regular
+       expressions;  differences  for   basic   regular   expressions   are
+       summarized  afterwards.   Perl-compatible  regular  expressions have
+       different functionality, and are documented  in  pcre2syntax(3)  and
+       pcre2pattern(3), but work only if PCRE support is enabled.
+
+       The  fundamental  building  blocks  are the regular expressions that
+       match a single character.  Most characters,  including  all  letters
+       and  digits,  are  regular  expressions  that match themselves.  Any
+       meta-character with special meaning may be quoted  by  preceding  it
+       with a backslash.
+
+       The  period  .  matches  any  single  character.   It is unspecified
+       whether it matches an encoding error.
+
+   Character Classes and Bracket Expressions
+       A bracket expression is a list of characters enclosed by  [  and  ].
+       It  matches  any  single  character  in  that  list.   If  the first
+       character of the list is the caret ^ then it matches  any  character
+       not  in  the  list; it is unspecified whether it matches an encoding
+       error.  For example, the regular expression [0123456789] matches any
+       single digit. line 366/667 56% (press h for help or q to quit)
+
+       Within a bracket expression, a  range  expression  consists  of  two
+       characters  separated  by a hyphen.  It matches any single character
+       that sorts between the two characters, inclusive, using the locale's
+       collating sequence and character set.  For example, in the default C
+       locale, [a-d] is equivalent to [abcd].  Many locales sort characters
+       in dictionary order, and in these locales  [a-d]  is  typically  not
+       equivalent  to  [abcd];  it  might  be  equivalent to [aBbCcDd], for
+       example.   To  obtain  the  traditional  interpretation  of  bracket
+       expressions,  you  can  use  the  C  locale  by  setting  the LC_ALL
+       environment variable to the value C.
+
+       Finally, certain named classes of characters are  predefined  within
+       bracket  expressions, as follows.  Their names are self explanatory,
+       and they are [:alnum:], [:alpha:], [:blank:], [:cntrl:],  [:digit:],
+       [:graph:],  [:lower:],  [:print:],  [:punct:], [:space:], [:upper:],
+       and [:xdigit:].  For example, [[:alnum:]] means the character  class
+       of  numbers  and letters in the current locale.  In the C locale and
+       ASCII character set encoding,  this  is  the  same  as  [0-9A-Za-z].
+       (Note  that  the  brackets  in  these  class  names  are part of the
+       symbolic names, and must be included in  addition  to  the  brackets
+       delimiting the bracket expression.)  Most meta-characters lose their
+       special  meaning inside bracket expressions.  To include a literal ]
+       place it first in the list.  Similarly, to include a literal ^ place
+       it anywhere but first.  Finally, to include a  literal  -  place  it
+       last. grep(1) line 392/667 61% (press h for help or q to quit)
+
+   Anchoring
+       The  caret  ^  and  the  dollar  sign  $  are  meta-characters  that
+       respectively match the empty string at the beginning and  end  of  a
+       line.
+
+   The Backslash Character and Special Expressions
+       The  symbols  \<  and  \> respectively match the empty string at the
+       beginning and end of a word.  The symbol \b matches the empty string
+       at the edge of a word, and \B matches the empty string provided it's
+       not at the edge  of  a  word.   The  symbol  \w  is  a  synonym  for
+       [_[:alnum:]] and \W is a synonym for [^_[:alnum:]].
+ Manual page grep(1) line 405/667 63% (press h for help or q to quit)
+   Repetition
+       A  regular  expression  may be followed by one of several repetition
+       operators:
+       ?      The preceding item is optional and matched at most once.
+       *      The preceding item will be matched zero or more times.
+       +      The preceding item will be matched one or more times.
+       {n}    The preceding item is matched exactly n times.
+       {n,}   The preceding item is matched n or more times.
+       {,m}   The preceding item is matched at most m times.  This is a GNU
+              extension.
+       {n,m}  The preceding item is matched at least n times, but not  more
+              than m times.
+ Manual page grep(1) line 418/667 65% (press h for help or q to quit)
+   Concatenation
+       Two  regular  expressions may be concatenated; the resulting regular
+       expression matches any string formed by concatenating two substrings
+       that respectively match the concatenated expressions.
+
+   Alternation
+       Two regular expressions may be joined by the infix operator  |;  the
+       resulting  regular  expression  matches  any  string matching either
+       alternate expression.
+
+   Precedence
+       Repetition takes precedence over concatenation, which in turn  takes
+       precedence  over alternation.  A whole expression may be enclosed in
+       parentheses  to  override  these  precedence  rules   and   form   a
+       subexpression.
+
+   Back-references and Subexpressions
+       The  back-reference  \n,  where  n  is  a  single digit, matches the
+       substring previously matched by the nth parenthesized  subexpression
+       of the regular expression.
+
+   Basic vs Extended Regular Expressions
+       In  basic regular expressions the meta-characters ?, +, {, |, (, and
+       ) lose their special meaning; instead use the  backslashed  versions
+       \?, \+, \{, \|, \(, and \).
+ Manual page grep(1) line 444/667 68% (press h for help or q to quit)
+EXIT STATUS
+       Normally  the  exit status is 0 if a line is selected, 1 if no lines
+       were selected, and 2 if an error occurred.  However, if  the  -q  or
+       --quiet  or --silent is used and a line is selected, the exit status
+       is 0 even if an error occurred.
+
+ENVIRONMENT
+       The behavior of  grep  is  affected  by  the  following  environment
+       variables.
+
+       The  locale  for category LC_foo is specified by examining the three
+       environment variables LC_ALL, LC_foo,  LANG,  in  that  order.   The
+       first  of  these  variables  that  is set specifies the locale.  For
+       example, if LC_ALL is not set, but LC_MESSAGES is set to pt_BR, then
+       the  Brazilian  Portuguese  locale  is  used  for  the   LC_MESSAGES
+       category.   The  C  locale  is  used  if  none  of these environment
+       variables are set, if the locale catalog is  not  installed,  or  if
+       grep  was  not  compiled  with national language support (NLS).  The
+       shell command locale -a lists locales that are currently available.
+
+       GREP_COLORS
+              Controls how the --color option highlights output.  Its value
+              is a colon-separated list of capabilities  that  defaults  to
+              ms=01;31:mc=01;31:sl=:cx=:fn=35:ln=32:bn=32:se=36 with the rv
+              and ne boolean capabilities omitted (i.e., false).  Supported
+              capabilities are as follows.ss h for help or q to quit)
+
+              sl=    SGR substring for whole selected lines (i.e., matching
+                     lines  when  the -v command-line option is omitted, or
+                     non-matching lines when -v is specified).  If  however
+                     the  boolean  rv  capability  and  the -v command-line
+                     option are  both  specified,  it  applies  to  context
+                     matching  lines  instead.  The default is empty (i.e.,
+                     the terminal's default color pair).
+
+              cx=    SGR substring for  whole  context  lines  (i.e.,  non-
+                     matching  lines  when  the  -v  command-line option is
+                     omitted, or matching lines when -v is specified).   If
+                     however  the boolean rv capability and the -v command-
+                     line option are both specified, it applies to selected
+                     non-matching lines  instead.   The  default  is  empty
+                     (i.e., the terminal's default color pair).
+
+              rv     Boolean  value  that  reverses (swaps) the meanings of
+                     the sl= and cx= capabilities when the -v  command-line
+                     option  is specified.  The default is false (i.e., the
+                     capability is omitted).
+
+              mt=01;31
+                     SGR substring  for  matching  non-empty  text  in  any
+                     matching  line  (i.e.,  a  selected  line  when the -v
+                     command-line option is omitted, or a context line when
+                     -v is  specified).   Setting  this  is  equivalent  to
+                     setting  both  ms=  and mc= at once to the same value.
+                     The default is a bold red  text  foreground  over  the
+                     current line background.
+
+              ms=01;31
+                     SGR   substring  for  matching  non-empty  text  in  a
+                     selected  line.   (This  is  only  used  when  the  -v
+                     command-line  option  is  omitted.)  The effect of the
+                     sl= (or cx= if rv) capability remains active when this
+                     kicks in.  The default is a bold red  text  foreground
+                     over the current line background.
+ Manual page grep(1) line 509/667 79% (press h for help or q to quit)
+              mc=01;31
+                     SGR substring for matching non-empty text in a context
+                     line.   (This  is  only  used when the -v command-line
+                     option is specified.)  The effect of the cx=  (or  sl=
+                     if  rv)  capability remains active when this kicks in.
+                     The default is a bold red  text  foreground  over  the
+                     current line background.
+
+              fn=35  SGR  substring  for  file  names prefixing any content
+                     line.  The default is a magenta text  foreground  over
+                     the terminal's default background.
+
+              ln=32  SGR  substring  for line numbers prefixing any content
+                     line.  The default is a green text foreground over the
+                     terminal's default background.
+
+              bn=32  SGR substring for byte offsets prefixing  any  content
+                     line.  The default is a green text foreground over the
+                     terminal's default background.
+
+              se=36  SGR substring for separators that are inserted between
+                     selected line fields (:), between context line fields,
+                     (-), and between groups of adjacent lines when nonzero
+                     context is specified (--).  The default is a cyan text
+                     foreground over the terminal's default background.
+ Manual page grep(1) line 535/667 83% (press h for help or q to quit)
+              ne     Boolean  value  that  prevents  clearing to the end of
+                     line using Erase in Line (EL) to  Right  (\33[K)  each
+                     time  a  colorized  item  ends.   This  is  needed  on
+                     terminals  on  which  EL  is  not  supported.   It  is
+                     otherwise   useful   on   terminals   for   which  the
+                     back_color_erase  (bce)  boolean  terminfo  capability
+                     does  not  apply,  when the chosen highlight colors do
+                     not affect the background, or when EL is too  slow  or
+                     causes  too much flicker.  The default is false (i.e.,
+                     the capability is omitted).
+
+              Note that boolean capabilities have no =... part.   They  are
+              omitted  (i.e.,  false)  by  default  and  become  true  when
+              specified.
+
+              See  the  Select  Graphic  Rendition  (SGR)  section  in  the
+              documentation of the text terminal that is used for permitted
+              values  and  their  meaning  as  character attributes.  These
+              substring values are integers in decimal  representation  and
+              can  be  concatenated  with  semicolons.   grep takes care of
+              assembling  the  result  into   a   complete   SGR   sequence
+              (\33[...m).  Common values to concatenate include 1 for bold,
+              4  for  underline, 5 for blink, 7 for inverse, 39 for default
+              foreground color, 30 to 37 for foreground colors,  90  to  97
+              for  16-color  mode foreground colors, 38;5;0 to 38;5;255 for
+              88-color  and  256-color  modes  foreground  colors,  49  for
+              default background color, 40 to 47 for background colors, 100
+              to  107  for  16-color  mode background colors, and 48;5;0 to
+              48;5;255 for 88-color and 256-color modes background colors.
+
+       LC_ALL, LC_COLLATE, LANG
+              These  variables  specify  the  locale  for  the   LC_COLLATE
+              category,  which  determines  the  collating sequence used to
+              interpret range expressions like [a-z].
+
+       LC_ALL, LC_CTYPE, LANG
+              These variables specify the locale for the LC_CTYPE category,
+              which  determines  the  type  of  characters,   e.g.,   which
+              characters are whitespace.  This category also determines the
+              character  encoding,  that  is,  whether  text  is encoded in
+              UTF-8, ASCII, or some other encoding.   In  the  C  or  POSIX
+              locale, all characters are encoded as a single byte and every
+              byte is a valid character.
+
+       LC_ALL, LC_MESSAGES, LANG
+              These  variables  specify  the  locale  for  the  LC_MESSAGES
+              category, which determines the language that  grep  uses  for
+              messages.    The  default  C  locale  uses  American  English
+              messages.
+
+       POSIXLY_CORRECT
+              If set, grep  behaves  as  POSIX  requires;  otherwise,  grep
+              behaves  more  like  other GNU programs.  POSIX requires that
+              options that follow file names must be treated as file names;
+              by default, such options are permuted to  the  front  of  the
+              operand  list  and  are  treated  as  options.   Also,  POSIX
+              requires that unrecognized options be diagnosed as “illegal”,
+              but since they are not really against the law the default  is
+              to diagnose them as “invalid”.
+
+NOTES
+       This man page is maintained only fitfully; the full documentation is
+       often more up-to-date.
+
+COPYRIGHTage grep(1) line 600/667 93% (press h for help or q to quit)
+       Copyright 1998-2000, 2002, 2005-2023 Free Software Foundation, Inc.
+
+       This is free software; see the source for copying conditions.  There
+       is  NO  warranty;  not  even  for  MERCHANTABILITY  or FITNESS FOR A
+       PARTICULAR PURPOSE.
+
+BUGS
+   Reporting Bugs
+       Email bug reports to the bug-reporting  address  ⟨bug-grep@gnu.org⟩.
+       An  email  archive ⟨https://lists.gnu.org/mailman/listinfo/bug-grep⟩
+       and                  a                  bug                  tracker
+       ⟨https://debbugs.gnu.org/cgi/pkgreport.cgi?package=grep⟩  are avail‐
+       able. grep(1) line 613/667 95% (press h for help or q to quit)
+
+   Known Bugs
+       Large repetition counts in the {n,m} construct may cause grep to use
+       lots of memory.  In addition, certain other obscure regular  expres‐
+       sions  require exponential time and space, and may cause grep to run
+       out of memory.
+
+       Back-references are very slow, and may require exponential time.
+
+EXAMPLE
+       The following example outputs the location and contents of any  line
+       containing  “f”  and ending in “.c”, within all files in the current
+       directory whose names contain “g” and end in “.h”.   The  -n  option
+       outputs  line  numbers, the -- argument treats expansions of “*g*.h”
+       starting with “-” as file names not  options,  and  the  empty  file
+       /dev/null  causes file names to be output even if only one file name
+       happens to be of the form “*g*.h”.
+
+         $ grep -n -- 'f.*\.c$' *g*.h /dev/null
+         argmatch.h:1:/* definitions and prototypes for argmatch.c
+
+       The only line that matches is line 1 of argmatch.h.  Note  that  the
+       regular expression syntax used in the pattern differs from the glob‐
+       bing syntax that the shell uses to match file names.
+
+SEE ALSOpage grep(1) line 639/667 98% (press h for help or q to quit)
+   Regular Manual Pages
+       awk(1),   cmp(1),   diff(1),   find(1),  perl(1),  sed(1),  sort(1),
+       xargs(1), read(2), pcre2(3), pcre2syntax(3),  pcre2pattern(3),  ter‐
+       minfo(5), glob(7), regex(7)
+
+   Full Documentation
+       A  complete  manual  ⟨https://www.gnu.org/software/grep/manual/⟩  is
+       available.  If the info and grep programs are properly installed  at
+       your site, the command
+
+              info grep
+
+       should give you access to the complete manual.elp or q to quit)
+
+GNU grep 3.11                    2019-12-29                         GREP(1)
+ Manual page grep(1) line 655/667 (END) (press h for help or q to quit)
+M       awk(1),   cmp(1),   diff(1),   find(1),  perl(1),  sed(1),  sort(1),
+M   Regular Manual Pagese 654/667 100% (press h for help or q to quit)
+MSEE ALSOage grep(1) line 653/667 100% (press h for help or q to quit)
+MESESCOApage grep(1) line 652/667 100% (press h for help or q to quit)
+M       bing syntax that the shell uses to match file names.q to quit)
+>DEVOPS25/lektion10) line 650/667 100% (press h for help or q to quit)
+$ DEVOPS25/lektion10
+$ info grep
+bash: info: command not found
+DEVOPS25/lektion10
+$ sudo apt install info
+[sudo] password for kent: 
+The following packages were automatically installed and are no longer required:
+  gir1.2-gpaste-2  libgpaste-2  libgpaste-2-common
+Use 'sudo apt autoremove' to remove them.
+
+Installing:
+  info
+
+Installing dependencies:
+  install-info
+
+Summary:
+  Upgrading: 0, Installing: 2, Removing: 0, Not Upgrading: 6
+  Download size: 444 kB
+  Space needed: 676 kB / 915 GB available
+
+Continue? [Y/n] 
+Get:1 http://debian.mirror.su.se/debian trixie/main amd64 install-info amd64 7.1.1-1+b1 [166 kB]
+Get:2 http://debian.mirror.su.se/debian trixie/main amd64 info amd64 7.1.1-1+b1 [278 kB]
+Fetched 444 kB in 1s (611 kB/s)
+
+Selecting previously unselected package install-info.
+(Reading database ... 183425 files and directories currently installed.)
+Preparing to unpack .../install-info_7.1.1-1+b1_amd64.deb ...
+Progress: [  0%] [                                                      ] 87Progress: [ 11%] [█████▉                                                ] 8Unpacking install-info (7.1.1-1+b1) ...
+Progress: [ 22%] [███████████▉                                          ] 8Selecting previously unselected package info.
+Preparing to unpack .../info_7.1.1-1+b1_amd64.deb ...
+Progress: [ 33%] [█████████████████▉                                    ] 8Unpacking info (7.1.1-1+b1) ...
+Progress: [ 44%] [███████████████████████▉                              ] 8Setting up install-info (7.1.1-1+b1) ...
+Progress: [ 56%] [██████████████████████████████                        ] 87Progress: [ 67%] [███████████████████████████████████▉                  ] 8Setting up info (7.1.1-1+b1) ...
+Progress: [ 78%] [██████████████████████████████████████████            ] 8update-alternatives: using /usr/bin/info to provide /usr/bin/infobrowser (infobrowser) in auto mode
+Progress: [ 89%] [███████████████████████████████████████████████▉      ] 8Processing triggers for gnome-menus (3.36.0-3) ...
+Processing triggers for man-db (2.13.1-1) ...
+Processing triggers for mailcap (3.74) ...
+Processing triggers for desktop-file-utils (0.28-1) ...
+
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+info grepinstall infofo
+=Welcome to Info version 7.1.1.  Type H for help, h for tutorial.gzip -d < /usr/share/info/grep.info.gz...Welcome to Info version 7.1.1.  Type H for help, h for tutorial.-----Info: (grep)Top, 32 lines --Top----------------------------------------Next: Introduction,  Up: (dir)grep****�" (U+1E9E, LATIN CAPITAL LETTER SHARP S) even-----Info: (grep)Matching Control, 78 lines --40%---------------------------characters that differ only in case match each other.  Althoughthis is straightforward when letters differ in case only vialowercase-uppercase pairs, the behavior is unspecified in othersituations.  For example, uppercase "S" has an unusual lowercasecounterpart "ſ" (Unicode character U+017F, LATIN SMALL LETTER LONGS) in many locales, and it is unspecified whether this unusualcharacter matches "S" or "s" even though uppercasing it yields "S".Another example: the lowercase German letter "�" (U+1E9E, LATIN CAPITAL LETTER SHARP S) eventhough lowercasing the latter yields the former.-----Info: (grep)Matching Control, 78 lines --42%---------------------------this is straightforward when letters differ in case only vialowercase-uppercase pairs, the behavior is unspecified in othersituations.  For example, uppercase "S" has an unusual lowercasecounterpart "ſ" (Unicode character U+017F, LATIN SMALL LETTER LONGS) in many locales, and it is unspecified whether this unusualcharacter matches "S" or "s" even though uppercasing it yields "S".Another example: the lowercase German letter "�" (U+1E9E, LATIN CAPITAL LETTER SHARP S) eventhough lowercasing the latter yields the former.-----Info: (grep)Matching Control, 78 lines --43%---------------------------lowercase-uppercase pairs, the behavior is unspecified in othersituations.  For example, uppercase "S" has an unusual lowercasecounterpart "ſ" (Unicode character U+017F, LATIN SMALL LETTER LONGS) in many locales, and it is unspecified whether this unusualcharacter matches "S" or "s" even though uppercasing it yields "S".Another example: the lowercase German letter "�" (U+1E9E, LATIN CAPITAL LETTER SHARP S) eventhough lowercasing the latter yields the former.     �" (U+1E9E, LATIN CAPITAL LETTER SHARP S) eventhough lowercasing the latter yields the former.     �" (U+1E9E, LATIN CAPITAL LETTER SHARP S) eventhough lowercasing the latter yields the former.     �" (U+1E9E, LATIN CAPITAL LETTER SHARP S) eventhough lowercasing the latter yields the former.     �" (U+1E9E, LATIN CAPITAL LETTER SHARP S) eventhough lowercasing the latter yields the former.     �" (U+1E9E, LATIN CAPITAL LETTER SHARP S) eventhough lowercasing the latter yields the former.     �" (U+1E9E, LATIN CAPITAL LETTER SHARP S) eventhough lowercasing the latter yields the former.     �" (U+1E9E, LATIN CAPITAL LETTER SHARP S) eventhough lowercasing the latter yields the former.     �" (U+1E9E, LATIN CAPITAL LETTER SHARP S) eventhough lowercasing the latter yields the former.     ‘-y’ is an obsolete synonym that is provided for compatibility.(‘-i’ is specified by POSIX.)‘--no-ignore-case’     Do not ignore case distinctions in patterns and input data.  Thisis the default.  This option is useful for passing to shell scriptsthat already use ‘-i’, in order to cancel its effects because thewo options override each other.-----Info: (grep)Matching Control, 78 lines --57%---------------------------though lowercasing the latter yields the former.     ‘-y’ is an obsolete synonym that is provided for compatibility.(‘-i’ is specified by POSIX.)‘--no-ignore-case’     Do not ignore case distinctions in patterns and input data.  Thisis the default.  This option is useful for passing to shell scriptsthat already use ‘-i’, in order to cancel its effects because thewo options override each other.‘-v’-----Info: (grep)Matching Control, 78 lines --59%---------------------------     ‘-y’ is an obsolete synonym that is provided for compatibility.(‘-i’ is specified by POSIX.)‘--no-ignore-case’     Do not ignore case distinctions in patterns and input data.  Thisis the default.  This option is useful for passing to shell scriptsthat already use ‘-i’, in order to cancel its effects because thewo options override each other.‘-v’-invert-match’-----Info: (grep)Matching Control, 78 lines --60%---------------------------     ‘-y’ is an obsolete synonym that is provided for compatibility.(‘-i’ is specified by POSIX.)‘--no-ignore-case’     Do not ignore case distinctions in patterns and input data.  Thisis the default.  This option is useful for passing to shell scriptsthat already use ‘-i’, in order to cancel its effects because thewo options override each other.‘-v’-invert-match’     Invert the sense of matching, to select non-matching lines.  (‘-v’>>DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ busybo
+
+
+DEVOPS25/lektion10
+$ ls
+ex1  ex1text  overkurs	recap  recordings
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ GREgrep 'botaniskt ex2
+text 
+botaniskt in i 2 huvudgrupper: äkta frukter och
+DEVOPS25/lektion10
+$ grep 'botaniskt' ex2text inDEVOPS25/lektion10
+$ grep 'botaniskt in' ex2text
+botaniskt in i 2 huvudgrupper: äkta frukter och
+DEVOPS25/lektion10
+$ grep 'botaniskt in' ex2text-oDEVOPS25/lektion10
+$ grep -o 'botaniskt in' ex2text
+botaniskt in
+DEVOPS25/lektion10
+$ grep -o 'botaniskt in' ex2text\\DEVOPS25/lektion10
+$ grep -o 'b' ex2text
+b
+b
+b
+b
+b
+b
+b
+b
+b
+DEVOPS25/lektion10
+$ grep -o 'b' ex2textDEVOPS25/lektion10
+$ grep 'b' ex2text
+Frukterna varierar mycket i utseende beroende
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+grönsaker snarare än vad man vardagligt brukar
+botaniskt in i 2 huvudgrupper: äkta frukter och
+De senare består av fler delar av blomman än bara fruktämnet.
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ grep 'b' ex2text 
+
+
+
+
+
+
+
+
+DEVOPS25/lektion10
+$ grep ' b' ex2text
+Frukterna varierar mycket i utseende beroende
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+grönsaker snarare än vad man vardagligt brukar
+De senare består av fler delar av blomman än bara fruktämnet.
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ grep ' b' ex2tex--color=alwaysDEVOPS25/lektion10
+$ grep --color=always ' b' ex2tex
+Frukterna varierar mycket i utseende beroende
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+grönsaker snarare än vad man vardagligt brukar
+De senare består av fler delar av blomman än bara fruktämnet.
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ grep --color=always ' b' ex2texlomma[a-z[åäöA+-ZÅÄÖDEVOPS25/lektion10
+$ grep --color=always ' b[a-zåäöA-ZÅÄÖ]' ex2tex
+Frukterna varierar mycket i utseende beroende
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+grönsaker snarare än vad man vardagligt brukar
+De senare består av fler delar av blomman än bara fruktämnet.
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ grep --color=always ' b[a-zåäöA-ZÅÄÖ]' ex2tex*DEVOPS25/lektion10
+$ grep --color=always ' b[a-zåäöA-ZÅÄÖ]*' ex2tex
+Frukterna varierar mycket i utseende beroende
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+grönsaker snarare än vad man vardagligt brukar
+De senare består av fler delar av blomman än bara fruktämnet.
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ grep --color=always ' b[a-zåäöA-ZÅÄÖ]*' ex2tex-oDEVOPS25/lektion10
+$ grep -o ' b[a-zåäöA-ZÅÄÖ]*' ex2tex
+ beroende
+ bär
+ brukar
+ består
+ blomman
+ bara
+ blombottnen
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ man grep
+GREP(1)                        User Commands                        GREP(1)
+
+NAME
+       grep, egrep, fgrep, rgrep - print lines that match patterns
+
+SYNOPSIS
+       grep [OPTION...] PATTERNS [FILE...]
+       grep [OPTION...] -e PATTERNS ... [FILE...]
+       grep [OPTION...] -f PATTERN_FILE ... [FILE...]
+
+DESCRIPTION
+GREP(1)                        User Commands                        GREP(1)
+
+NAME
+       grep, egrep, fgrep, rgrep - print lines that match patterns
+
+SYNOPSIS
+       grep [OPTION...] PATTERNS [FILE...]
+       grep [OPTION...] -e PATTERNS ... [FILE...]
+       grep [OPTION...] -f PATTERN_FILE ... [FILE...]
+
+DESCRIPTION
+GREP(1)                        User Commands                        GREP(1)
+
+NAME
+       grep, egrep, fgrep, rgrep - print lines that match patterns
+
+SYNOPSIS
+       grep [OPTION...] PATTERNS [FILE...]
+       grep [OPTION...] -e PATTERNS ... [FILE...]
+       grep [OPTION...] -f PATTERN_FILE ... [FILE...]
+
+DESCRIPTION
+...skipping...
+       -o, --only-matching
+              Print  only the matched (non-empty) parts of a matching line,
+              with each such part on a separate output line.
+
+       -q, --quiet, --silent
+              Quiet; do  not  write  anything  to  standard  output.   Exit
+              immediately  with  zero status if any match is found, even if
+              an error was detected.  Also  see  the  -s  or  --no-messages
+              option.
+
+       -s, --no-messages
+>DEVOPS25/lektion10) line 133 (press h for help or q to quit)
+$ DEVOPS25/lektion10
+grep -o ' b[a-zåäöA-ZÅÄÖ]*' ex2text
+ beroende
+ bär
+ brukar
+ består
+ blomman
+ bara
+ blombottnen
+DEVOPS25/lektion10
+$ grep -o ' b[a-zåäöA-ZÅÄÖ]*' ex2textDEVOPS25/lektion10
+$ grep -o ' b[a-zåäöA-ZÅÄÖ]*' ex2texfor bord in 
+
+
+; do echo "$bord Bosse
+> ^C
+DEVOPS25/lektion10
+neDEVOPS25/lektion10o ' b[a-zåäöA-ZÅÄÖ]*' ex2text; do echo "$bord Bosse"; do 
+$ for bord in grep -o ' b[a-zåäöA-ZÅÄÖ]*' ex2text; do echo "$bord Bosse"; done
+grep Bosse
+-o Bosse
+ b[a-zåäöA-ZÅÄÖ]* Bosse
+ex2text Bosse
+DEVOPS25/lektion10
+$ for bord in grep -o ' b[a-zåäöA-ZÅÄÖ]*' ex2text; do echo "$bord Bosse"; doneDEVOPS25/lektion10
+<grep -o ' b[a-zåäöA-ZÅÄÖ]*' ex2text; do echo "$bord Bosse"; donegrep -o ' b[a-zåäöA-ZÅÄÖ]*' ex2text; do echo "$bord Bosse"; done$grep -o ' b[a-zåäöA-ZÅÄÖ]*' ex2text; do echo "$bord Bosse"; done(grep -o ' b[a-zåäöA-ZÅÄÖ]*' ex2text; do echo "$bord Bosse"; done); done; done); do echo "$bord Bosse"; doneDEVOPS25/lektion10
+$ for bord in $(grep -o ' b[a-zåäöA-ZÅÄÖ]*' ex2text); do echo "$bord Bosse"; done
+
+beroende Bosse
+bär Bosse
+brukar Bosse
+består Bosse
+blomman Bosse
+bara Bosse
+blombottnen Bosse
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ for bord in $(grep -o ' b[a-zåäöA-ZÅÄÖ]*' ex2text); do echo "$bord Bosse"; done
+beroende Bosse
+bär Bosse
+brukar Bosse
+består Bosse
+blomman Bosse
+bara Bosse
+blombottnen Bosse
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ cp ex2 ex3
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ code ex3
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ man sed
+SED(1)                         User Commands                         SED(1)
+
+NAME
+       sed - stream editor for filtering and transforming text
+
+SYNOPSIS
+       sed [-V] [--version] [--help] [-n] [--quiet] [--silent]
+           [-l N] [--line-length=N] [-u] [--unbuffered]
+           [-E] [-r] [--regexp-extended]
+           [-e script] [--expression=script]
+           [-f script-file] [--file=script-file]
+           [script-if-no-other-script]r help or q to quit)
+           [file...]line 2 (press h for help or q to quit)
+ ESESCOBpage sed(1) line 3 (press h for help or q to quit)
+DESCRIPTIONe sed(1) line 4 (press h for help or q to quit)
+>DEVOPS25/lektion10 line 5 (press h for help or q to quit)
+$ DEVOPS25/lektion10
+$ cat ex2
+text 
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat och avokado, räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade falska frukter.
+
+De senare består av fler delar av blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+sed exex2text 
+t2t
+-e '
+$ sed -e 's/l/x
+ ex2text 
+sed: -e expression #1, char 5: unterminated `s' command
+DEVOPS25/lektion10
+$ sed -e 's/l/x' ex2text/
+
+
+
+
+
+
+DEVOPS25/lektion10
+$ sed -e 's/l/x/' ex2text
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan tixl exempel ha formen
+av nöt, bär, kapsex eller stenfrukt. Många frukter, såsom
+tomat och avokado, räknas vanxigtvis som
+grönsaker snarare än vad man vardagxigt brukar
+räkna som frukter. Frukter dexas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kaxlade falska frukter.
+
+De senare består av fxer delar av blomman än bara fruktämnet.
+
+Skenfrukter kan tixl exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -e 's/l/x/' ex2textDEVOPS25/lektion10
+$ sed -e 's/l/x/' ex2texg
+
+
+
+
+
+
+
+
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan tixx exempex ha formen
+av nöt, bär, kapsex exxer stenfrukt. Många frukter, såsom
+tomat och avokado, räknas vanxigtvis som
+grönsaker snarare än vad man vardagxigt brukar
+räkna som frukter. Frukter dexas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kaxxade faxska frukter.
+
+De senare består av fxer dexar av bxomman än bara fruktämnet.
+
+Skenfrukter kan tixx exempex innehåxxa även bxombottnen.
+DEVOPS25/lektion10
+$ sed -e 's/l/x/g' ex2tex -
+
+
+
+
+DEVOPS25/lektion10
+$ sed -e 's/ /-/g' ex2text
+Frukterna-varierar-mycket-i-utseende-beroende
+på-växtart.-De-kan-till-exempel-ha-formen
+av-nöt,-bär,-kapsel-eller-stenfrukt.-Många-frukter,-såsom
+tomat-och-avokado,-räknas-vanligtvis-som
+grönsaker-snarare-än-vad-man-vardagligt-brukar
+räkna-som-frukter.-Frukter-delas
+botaniskt-in-i-2-huvudgrupper:-äkta-frukter-och
+skenfrukter,-även-kallade-falska-frukter.
+
+De-senare-består-av-fler-delar-av-blomman-än-bara-fruktämnet.
+
+Skenfrukter-kan-till-exempel-innehålla-även-blombottnen.
+DEVOPS25/lektion10
+$ sed -e 's/ /-/g' ex2tex[^ 
+
+
+
+DEVOPS25/lektion10
+$ sed -e 's/[^ ]/_/g' ex2tex
+
+
+
+
+_________ ________ ______ _ ________ ________
+__ ________ __ ___ ____ _______ __ ______
+__ ____ ____ ______ _____ __________ _____ ________ _____
+_____ ___ ________ ______ __________ ___
+_________ _______ __ ___ ___ __________ ______
+_____ ___ ________ _______ _____
+_________ __ _ _ _____________ ____ _______ ___
+____________ ____ _______ ______ ________
+
+__ ______ ______ __ ____ _____ __ _______ __ ____ ___________
+
+___________ ___ ____ _______ _________ ____ ____________
+DEVOPS25/lektion10
+$ sed -e 's/[^ ]/_/g' ex2tex
+
+
+
+DEVOPS25/lektion10
+$ sed -e 's/[^]/_/g' ex2text^C
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ cat ex2text 
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat och avokado, räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade falska frukter.
+
+De senare består av fler delar av blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ cat ex2text DEVOPS25/lektion10
+sed -e 's/[^ ]/_/g' ex2texnnoDEVOPS25/lektion10
+$ sed -e 's/n/no/g' ex2tex
+Frukternoa varierar mycket i utseenode beroenode
+på växtart. De kano till exempel ha formeno
+av noöt, bär, kapsel eller stenofrukt. Månoga frukter, såsom
+tomat och avokado, räknoas vanoligtvis som
+grönosaker snoarare äno vad mano vardagligt brukar
+räknoa som frukter. Frukter delas
+botanoiskt ino i 2 huvudgrupper: äkta frukter och
+skenofrukter, äveno kallade falska frukter.
+
+De senoare består av fler delar av blommano äno bara fruktämnoet.
+
+Skenofrukter kano till exempel inonoehålla äveno blombottnoeno.
+DEVOPS25/lektion10
+$ sed -e 's/n/no/g' ex2texjDEVOPS25/lektion10
+$ sed -e 's/n/ja/g' ex2tex[^-E
+
+
+
+
+
+
+
+
+
+
+
+
+
+DEVOPS25/lektion10
+$ sed -E -e 's/n[^ ]+/ja/g' ex2text
+Frukterja varierar mycket i utseeja beroeja
+på växtart. De kan till exempel ha formen
+av ja bär, kapsel eller steja Måja frukter, såsom
+tomat och avokado, räkja vaja som
+gröja sja än vad man vardagligt brukar
+räkja som frukter. Frukter delas
+botaja in i 2 huvudgrupper: äkta frukter och
+skeja även kallade falska frukter.
+
+De seja består av fler delar av blomman än bara fruktämja
+
+Skeja kan till exempel ija även blombottja
+DEVOPS25/lektion10
+$ sed -E -e 's/n[^ ]+/ja/g' ex2texanejDEVOPS25/lektion10
+$ sed -E -e 's/a[^ ]+/nej/g' ex2tex
+Frukterna vnej mycket i utseende beroende
+på växtnej De knej till exempel ha formen
+nej nöt, bär, knej eller stenfrukt. Många frukter, såsom
+tomnej och nej räknnej vnej som
+grönsnej snnej än vnej mnej vnej bruknej
+räkna som frukter. Frukter delnej
+botnej in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även knej fnej frukter.
+
+De sennej består nej fler delnej nej blommnej än bnej fruktämnet.
+
+Skenfrukter knej till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -E -e 's/a[^ ]+/nej/g' ex2texXXX DEVOPS25/lektion10
+$ sed -E -e 's/ a[^ ]+/XXX/g' ex2tex
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat ochXXX räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade falska frukter.
+
+De senare bestårXXX fler delarXXX blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -E -e 's/ a[^ ]+/XXX/g' ex2tex DEVOPS25/lektion10
+$ sed -E -e 's/ a[^ ]+/ XXX/g' ex2tex
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat och XXX räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade falska frukter.
+
+De senare består XXX fler delar XXX blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -E -e 's/ a[^ ]+/ XXX/g' ex2texDEVOPS25/lektion10
+$ sed -E -e 's/a[^ ]+/ XXX/g' ex2tex
+Frukterna v XXX mycket i utseende beroende
+på växt XXX De k XXX till exempel ha formen
+ XXX nöt, bär, k XXX eller stenfrukt. Många frukter, såsom
+tom XXX och  XXX räkn XXX v XXX som
+gröns XXX sn XXX än v XXX m XXX v XXX bruk XXX
+räkna som frukter. Frukter del XXX
+bot XXX in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även k XXX f XXX frukter.
+
+De sen XXX består  XXX fler del XXX  XXX blomm XXX än b XXX fruktämnet.
+
+Skenfrukter k XXX till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -E -e 's/a[^ ]+/ XXX/g' ex2texDEVOPS25/lektion10
+$ sed -E -e 's/a[^ ]+/XXX/g' ex2tex
+Frukterna vXXX mycket i utseende beroende
+på växtXXX De kXXX till exempel ha formen
+XXX nöt, bär, kXXX eller stenfrukt. Många frukter, såsom
+tomXXX och XXX räknXXX vXXX som
+grönsXXX snXXX än vXXX mXXX vXXX brukXXX
+räkna som frukter. Frukter delXXX
+botXXX in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kXXX fXXX frukter.
+
+De senXXX består XXX fler delXXX XXX blommXXX än bXXX fruktämnet.
+
+Skenfrukter kXXX till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -E -e 's/a[^ ]+/XXX/g' ex2tex  DEVOPS25/lektion10
+$ sed -E -e 's/ a[^ ]+/ XXX/g' ex2tex
+
+
+
+
+
+
+
+
+
+
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat och XXX räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade falska frukter.
+
+De senare består XXX fler delar XXX blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ cat ex2rtext DEVOPS25/lektion10
+$ cat ex2text 
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat och avokado, räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade falska frukter.
+
+De senare består av fler delar av blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+sed -E -e 's/ a[^ ]+/ XXX/g' ex2texDEVOPS25/lektion10
+$ sed -E -e 's/ a[^ ]+/ XXX/g' ex2tex
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat och XXX räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade falska frukter.
+
+De senare består XXX fler delar XXX blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -E -e 's/ a[^ ]+/ XXX/g' ex2tex^DEVOPS25/lektion10
+$ sed -E -e 's/^a[^ ]+/ XXX/g' ex2tex
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+ XXX nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat och avokado, räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade falska frukter.
+
+De senare består av fler delar av blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -E -e 's/^a[^ ]+/ XXX/g' ex2tex^DEVOPS25/lektion10
+sed -E -e 's/^a[^ ]+/^| XXX/g' ex2tex| 
+
+
+
+
+
+ XXXFrukterna varierar mycket i utseende beroende
+ XXXpå växtart. De kan till exempel ha formen
+ XXXav nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+ XXXtomat och XXX räknas vanligtvis som
+ XXXgrönsaker snarare än vad man vardagligt brukar
+ XXXräkna som frukter. Frukter delas
+ XXXbotaniskt in i 2 huvudgrupper: äkta frukter och
+ XXXskenfrukter, även kallade falska frukter.
+ XXX
+ XXXDe senare består XXX fler delar XXX blomman än bara fruktämnet.
+ XXX
+ XXXSkenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -E -e 's/^| a[^ ]+/ XXX/g' ex2textDEVOPS25/lektion10
+$ sed -E -e 's/^| a[^ ]+/ XXX/g' ex2texa
+
+
+
+
+
+
+
+
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+ XXXv nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat och XXX räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade falska frukter.
+
+De senare består XXX fler delar XXX blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -E -e 's/^a| a[^ ]+/ XXX/g' ex2textDEVOPS25/lektion10
+$ sed -E -e 's/^a| a[^ ]+/ XXX/g' ex2tex+
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+ XXXv nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat och XXX räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade falska frukter.
+
+De senare består XXX fler delar XXX blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -E -e 's/^a+| a[^ ]+/ XXX/g' ex2textDEVOPS25/lektion10
+$ sed -E -e 's/^a+| a[^ ]+/ XXX/g' ex2tex[^ 
+
+
+
+
+
+
+
+
+
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+ XXX nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat och XXX räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade falska frukter.
+
+De senare består XXX fler delar XXX blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -E -e 's/^a[^ ]+| a[^ ]+/ XXX/g' ex2textDEVOPS25/lektion10
+$ sed -E -e 's/^a[^ ]+| a[^ ]+/ XXX/g' ex2tex
+Frukterna XXXvarierar XXXmycket XXXi XXXutseende XXXberoende
+på XXXväxtart. XXXDe XXXkan XXXtill XXXexempel XXXha XXXformen
+ XXX XXXnöt, XXXbär, XXXkapsel XXXeller XXXstenfrukt. XXXMånga XXXfrukter, XXXsåsom
+tomat XXXoch XXXavokado, XXXräknas XXXvanligtvis XXXsom
+grönsaker XXXsnarare XXXän XXXvad XXXman XXXvardagligt XXXbrukar
+räkna XXXsom XXXfrukter. XXXFrukter XXXdelas
+botaniskt XXXin XXXi XXX2 XXXhuvudgrupper: XXXäkta XXXfrukter XXXoch
+skenfrukter, XXXäven XXXkallade XXXfalska XXXfrukter.
+
+De XXXsenare XXXbestår XXXav XXXfler XXXdelar XXXav XXXblomman XXXän XXXbara XXXfruktämnet.
+
+Skenfrukter XXXkan XXXtill XXXexempel XXXinnehålla XXXäven XXXblombottnen.
+DEVOPS25/lektion10
+$ sed -E -e 's/^a[^ ]+| / XXX/g' ex2textDEVOPS25/lektion10
+$ sed -E -e 's/^a[^ ]+| / XXX/g' ex2tex| 
+
+
+
+
+
+
+
+
+
+
+ XXXFrukterna varierar mycket i utseende beroende
+ XXXpå växtart. De kan till exempel ha formen
+ XXXav nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+ XXXtomat och XXX räknas vanligtvis som
+ XXXgrönsaker snarare än vad man vardagligt brukar
+ XXXräkna som frukter. Frukter delas
+ XXXbotaniskt in i 2 huvudgrupper: äkta frukter och
+ XXXskenfrukter, även kallade falska frukter.
+ XXX
+ XXXDe senare består XXX fler delar XXX blomman än bara fruktämnet.
+ XXX
+ XXXSkenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -E -e 's/^| a[^ ]+/ XXX/g' ex2tex(DEVOPS25/lektion10
+$ sed -E -e 's/(^| )a[^ ]+/ XXX/g' ex2tex
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+ XXX nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat och XXX räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade falska frukter.
+
+De senare består XXX fler delar XXX blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -E -e 's/(^| )a[^ ]+/ XXX/g' ex2textDEVOPS25/lektion10
+$ sed -E -e 's/(^| )a[^ ]+/ XXX/g' ex2tex_
+
+
+
+
+
+
+
+
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+_XXX nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat och_XXX räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade falska frukter.
+
+De senare består_XXX fler delar_XXX blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -E -e 's/(^| )a[^ ]+/_XXX/g' ex2textDEVOPS25/lektion10
+$ sed -E -e 's/(^| )a[^ ]+/_XXX/g' ex2tex\1
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+XXX nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat och XXX räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade falska frukter.
+
+De senare består XXX fler delar XXX blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -E -e 's/(^| )a[^ ]+/\1XXX/g' ex2textDEVOPS25/lektion10
+$ sed -E -e 's/(^| )a[^ ]+/\1XXX/g' ex2text
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+XXX nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat och XXX räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade falska frukter.
+
+De senare består XXX fler delar XXX blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ cat ext2
+t
+2text DEVOPS25/lektion10
+$ cat ex2text 
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat och avokado, räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade falska frukter.
+
+De senare består av fler delar av blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ cat ex2text
+ox
+
+code
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+sed -E -e 's/(^| )a[^ ]+/\1XXX/g' ex2tex
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h
+
+
+
+
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel XXX formen
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat, XXX avokado och XXX räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 XXX äkta frukter och
+skenfrukter, även kallade XXX
+
+De senare består av fler delar av blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ cat ex2text 
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat, hartz, avokado och hummus räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade hundfrukter.
+
+De senare består av fler delar av blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+sed -E -e 's/(^| )h[^ ]+/\1XXX/g' ex2texa-zA-^,.:;-DEVOPS25/lektion10
+$ sed -E -e 's/(^| )h[^ ,.:;-]+/\1XXX/g' ex2tex
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel XXX formen
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat, XXX, avokado och XXX räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 XXX: äkta frukter och
+skenfrukter, även kallade XXX.
+
+De senare består av fler delar av blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -E -e 's/(^| )h[^ ,.:;-]+/\1XXX/g' ex2textDEVOPS25/lektion10
+$ sed -E -e 's/(^| )h[^ ,.:;-]+/\1XXX/g' ex2tex
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel XXX formen
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat, XXX, avokado och XXX räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 XXX: äkta frukter och
+skenfrukter, även kallade XXX.
+
+De senare består av fler delar av blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ sed -e '' ex2text 
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat, hartz, avokado och hummus räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade hundfrukter.
+
+De senare består av fler delar av blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ man sed
+SED(1)                         User Commands                         SED(1)
+
+NAME
+       sed - stream editor for filtering and transforming text
+
+SYNOPSIS
+       sed [-V] [--version] [--help] [-n] [--quiet] [--silent]
+           [-l N] [--line-length=N] [-u] [--unbuffered]
+           [-E] [-r] [--regexp-extended]
+           [-e script] [--expression=script]
+           [-f script-file] [--file=script-file]
+           [script-if-no-other-script]
+           [file...]
+
+DESCRIPTION
+       Sed  is  a  stream editor.  A stream editor is used to perform basic
+       text transformations on an input stream (a  file  or  input  from  a
+       pipeline).   While  in  some ways similar to an editor which permits
+       scripted edits (such as ed), sed works by making only one pass  over
+       the  input(s),  and is consequently more efficient.  But it is sed's
+       ability to filter text in  a  pipeline  which  particularly  distin‐
+       guishes it from other types of editors.
+
+       -n, --quiet, --silent
+
+              suppress automatic printing of pattern space
+
+       --debug
+
+              annotate program execution
+ Manual page sed(1) line 16 (press h for help or q to quit)
+       -e script, --expression=script
+
+              add the script to the commands to be executed
+
+       -f script-file, --file=script-file
+
+              add  the  contents  of script-file to the commands to be exe‐
+              cuted
+
+       --follow-symlinks
+
+              follow symlinks when processing in place
+
+       -i[SUFFIX], --in-place[=SUFFIX]
+ Manual page sed(1) line 31 (press h for help or q to quit)
+              edit files in place (makes backup if SUFFIX supplied)
+
+       -l N, --line-length=N
+
+              specify the desired line-wrap length for the `l' command
+
+       --posix
+
+              disable all GNU extensions.
+
+       -E, -r, --regexp-extended
+
+              use extended regular expressions in the script (for portabil‐
+              ity use POSIX -E).
+ Manual page sed(1) line 46 (press h for help or q to quit)
+       -s, --separate
+
+              consider files as separate rather than as a single,  continu‐
+              ous long stream.
+
+       --sandbox
+
+              operate in sandbox mode (disable e/r/w commands).
+
+       -u, --unbuffered
+
+              load  minimal  amounts of data from the input files and flush
+              the output buffers more often
+
+       -z, --null-datane 61 (press h for help or q to quit)
+
+              separate lines by NUL characters
+
+       --help
+              display this help and exit
+
+       --version
+              output version information and exit
+
+       If no -e, --expression, -f, or --file  option  is  given,  then  the
+       first  non-option  argument is taken as the sed script to interpret.
+       All remaining arguments are names of input files; if no input  files
+       are specified, then the standard input is read.
+
+       GNU  sed  home  page:  <https://www.gnu.org/software/sed/>.  General
+       help using GNU software: <https://www.gnu.org/gethelp/>.  E-mail bug
+       reports to: <bug-sed@gnu.org>.
+
+       Packaged by Debian Copyright © 2022 Free Software  Foundation,  Inc.
+       License  GPLv3+:  GNU  GPL  version  3 or later <https://gnu.org/li‐
+       censes/gpl.html>.  This is free software: you are free to change and
+       redistribute it.  There is NO WARRANTY, to the extent  permitted  by
+       law.
+
+COMMAND SYNOPSIS
+       This is just a brief synopsis of sed commands to serve as a reminder
+       to those who already know sed; other documentation (such as the tex‐
+       info document) must be consulted for fuller descriptions.
+
+   Zero-address ``commands''(press h for help or q to quit)
+       : label
+              Label for b and t commands.
+
+       #comment
+              The  comment  extends until the next newline (or the end of a
+              -e script fragment).
+
+       }      The closing bracket of a { } block.
+
+   Zero- or One- address commands
+       =      Print the current line number.
+
+       a \
+
+       text   Append text, which has each embedded newline  preceded  by  a
+              backslash.
+
+       i \
+
+       text   Insert  text,  which  has each embedded newline preceded by a
+              backslash.
+
+       q [exit-code]
+              Immediately quit the sed script without processing  any  more
+              input,  except that if auto-print is not disabled the current
+              pattern space will be printed.  The exit code argument  is  a
+              GNU extension.
+
+       Q [exit-code]
+              Immediately  quit  the sed script without processing any more
+              input.  This is a GNU extension.
+
+       r filename
+              Append text read from filename.
+
+       R filename
+              Append a line read from filename.   Each  invocation  of  the
+              command reads a line from the file.  This is a GNU extension.
+
+   Commands which accept address ranges
+       {      Begin a block of commands (end with a }).
+
+       b label
+              Branch  to  label;  if  label  is  omitted,  branch to end of
+              script.ine 136 (press h for help or q to quit)
+
+       c \
+
+       text   Replace the selected lines with text, which has each embedded
+              newline preceded by a backslash.
+
+       d      Delete pattern space.  Start next cycle.
+
+       D      If pattern space contains no newline, start a normal new  cy‐
+              cle  as  if the d command was issued.  Otherwise, delete text
+              in the pattern space up to the first newline, and restart cy‐
+              cle with the resultant pattern space, without reading  a  new
+              line of input.
+
+       h H    Copy/append pattern space to hold space. quit)
+
+       g G    Copy/append hold space to pattern space.
+
+       l      List out the current line in a ``visually unambiguous'' form.
+
+       l width
+              List out the current line in a ``visually unambiguous'' form,
+              breaking it at width characters.  This is a GNU extension.
+
+       n N    Read/append the next line of input into the pattern space.
+
+       p      Print the current pattern space.
+
+       P      Print up to the first embedded newline of the current pattern
+              space.line 166 (press h for help or q to quit)
+ ESESCOBpage sed(1) line 167 (press h for help or q to quit)
+       s/regexp/replacement/ (press h for help or q to quit)
+              Attempt  to  match regexp against the pattern space.  If suc‐
+>DEVOPS25/lektion10 line 170 (press h for help or q to quit)
+sed -e '' ex2text DEVOPS25/lektion10
+$ sed -e '' ex2textp
+Frukterna varierar mycket i utseende beroende
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+på växtart. De kan till exempel ha formen
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat, hartz, avokado och hummus räknas vanligtvis som
+tomat, hartz, avokado och hummus räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade hundfrukter.
+skenfrukter, även kallade hundfrukter.
+
+
+De senare består av fler delar av blomman än bara fruktämnet.
+De senare består av fler delar av blomman än bara fruktämnet.
+
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -e 'p' ex2textDEVOPS25/lektion10
+$ sed -e '' ex2text
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat, hartz, avokado och hummus räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade hundfrukter.
+
+De senare består av fler delar av blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -e '' ex2textDEVOPS25/lektion10
+$ sed -e '' ex2textn 
+
+
+
+
+
+
+
+
+DEVOPS25/lektion10
+$ sed -n -e '' ex2textp
+
+
+
+
+
+DEVOPS25/lektion10
+$ sed -n -e 'p' ex2text
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat, hartz, avokado och hummus räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade hundfrukter.
+
+De senare består av fler delar av blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ sed -n -e 'p' ex2tex1
+
+
+
+
+
+
+
+Frukterna varierar mycket i utseende beroende
+DEVOPS25/lektion10
+$ sed -n -e '1p' ex2tex,5DEVOPS25/lektion10
+$ sed -n -e '1,5p' ex2tex
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat, hartz, avokado och hummus räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+DEVOPS25/lektion10
+$ head -n 5 ex2text 
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat, hartz, avokado och hummus räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+DEVOPS25/lektion10
+sed -n -e '1,5p' ex2textDEVOPS25/lektion10
+$ sed -n -e '1,5p' ex2tex
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat, hartz, avokado och hummus räknas vanligtvis som
+grönsaker snarare än vad man vardagligt brukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade hundfrukter.
+
+De senare består av fler delar av blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ grep man ex2text 
+grönsaker snarare än vad man vardagligt brukar
+De senare består av fler delar av blomman än bara fruktämnet.
+DEVOPS25/lektion10
+sed -n -e 'p' ex2tex/man
+
+
+
+
+
+
+grönsaker snarare än vad man vardagligt brukar
+De senare består av fler delar av blomman än bara fruktämnet.
+DEVOPS25/lektion10
+$ sed -n -e '/man/p' ex2texs/a/u/g
+
+
+DEVOPS25/lektion10
+$ sed -n -e '/man/s/a/u/g' ex2text
+DEVOPS25/lektion10
+$ sed -n -e '/man/s/a/u/g' ex2tex;p
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat, hartz, avokado och hummus räknas vanligtvis som
+grönsuker snurure än vud mun vurdugligt brukur
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade hundfrukter.
+
+De senure består uv fler delur uv blommun än buru fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -n -e '/man/s/a/u/g;p' ex2texDEVOPS25/lektion10
+$ sed -n -e '/man/s/a/u/g' ex2tex
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ man sed
+SED(1)                         User Commands                         SED(1)
+
+NAME
+       sed - stream editor for filtering and transforming text
+
+SYNOPSIS
+       sed [-V] [--version] [--help] [-n] [--quiet] [--silent]
+           [-l N] [--line-length=N] [-u] [--unbuffered]
+           [-E] [-r] [--regexp-extended]
+           [-e script] [--expression=script]
+           [-f script-file] [--file=script-file]
+           [script-if-no-other-script]
+           [file...]
+
+DESCRIPTION
+       Sed  is  a  stream editor.  A stream editor is used to perform basic
+       text transformations on an input stream (a  file  or  input  from  a
+       pipeline).   While  in  some ways similar to an editor which permits
+       scripted edits (such as ed), sed works by making only one pass  over
+       the  input(s),  and is consequently more efficient.  But it is sed's
+       ability to filter text in  a  pipeline  which  particularly  distin‐
+       guishes it from other types of editors.
+
+       -n, --quiet, --silent
+
+              suppress automatic printing of pattern space
+
+       --debug
+
+              annotate program execution
+ Manual page sed(1) line 16 (press h for help or q to quit)
+       -e script, --expression=script
+
+              add the script to the commands to be executed
+
+       -f script-file, --file=script-file
+
+              add  the  contents  of script-file to the commands to be exe‐
+              cuted
+
+       --follow-symlinks
+
+              follow symlinks when processing in place
+
+       -i[SUFFIX], --in-place[=SUFFIX]
+/rangfe page sed(1) line 31 (press h for help or q to quit)
+       -e script, --expression=script
+
+              add the script to the commands to be executed
+
+       -f script-file, --file=script-file
+
+              add  the  contents  of script-file to the commands to be exe‐
+              cuted
+
+       --follow-symlinks
+
+              follow symlinks when processing in place
+
+       -i[SUFFIX], --in-place[=SUFFIX]
+
+       -e script, --expression=script
+
+              add the script to the commands to be executed
+
+       -f script-file, --file=script-file
+
+              add  the  contents  of script-file to the commands to be exe‐
+              cuted
+
+       --follow-symlinks
+
+              follow symlinks when processing in place
+
+       -i[SUFFIX], --in-place[=SUFFIX]
+...skipping...
+   Commands which accept address ranges
+       {      Begin a block of commands (end with a }).
+
+       b label
+              Branch  to  label;  if  label  is  omitted,  branch to end of
+              script.
+
+       c \
+
+       text   Replace the selected lines with text, which has each embedded
+              newline preceded by a backslash.
+
+       d      Delete pattern space.  Start next cycle.
+
+       D      If pattern space contains no newline, start a normal new  cy‐
+              cle  as  if the d command was issued.  Otherwise, delete text
+              in the pattern space up to the first newline, and restart cy‐
+              cle with the resultant pattern space, without reading  a  new
+              line of input. (press h for help or q to quit)
+ ESESCOBpage sed(1) line 150 (press h for help or q to quit)
+       h H    Copy/append pattern space to hold space. quit)
+ ESESCOBpage sed(1) line 152 (press h for help or q to quit)
+       g G    Copy/append hold space to pattern space. quit)
+ ESESCOBpage sed(1) line 154 (press h for help or q to quit)
+       l      List out the current line in a ``visually unambiguous'' form.
+ ESESCOBpage sed(1) line 156 (press h for help or q to quit)
+       l widthed(1) line 157 (press h for help or q to quit)
+              List out the current line in a ``visually unambiguous'' form,
+              breaking it at width characters.  This is a GNU extension.
+ ESESCOBpage sed(1) line 160 (press h for help or q to quit)
+       n N    Read/append the next line of input into the pattern space.
+ ESESCOBpage sed(1) line 162 (press h for help or q to quit)
+       p      Print the current pattern space. or q to quit)
+ ESESCOBpage sed(1) line 164 (press h for help or q to quit)
+       P      Print up to the first embedded newline of the current pattern
+              space.line 166 (press h for help or q to quit)
+ ESESCOBpage sed(1) line 167 (press h for help or q to quit)
+       s/regexp/replacement/ (press h for help or q to quit)
+              Attempt  to  match regexp against the pattern space.  If suc‐
+              cessful, replace that portion matched with replacement.   The
+              replacement  may  contain the special character & to refer to
+              that portion of the pattern space which matched, and the spe‐
+              cial escapes \1 through \9  to  refer  to  the  corresponding
+              matching sub-expressions in the regexp.o quit)
+ ESESCOBpage sed(1) line 175 (press h for help or q to quit)
+       t labeled(1) line 176 (press h for help or q to quit)
+              If  a  s/// has done a successful substitution since the last
+              input line was read and since the last t or T  command,  then
+              branch  to  label;  if  label  is  omitted,  branch to end of
+              script.ine 180 (press h for help or q to quit)
+ ESESCOBpage sed(1) line 181 (press h for help or q to quit)
+       T labeled(1) line 182 (press h for help or q to quit)
+              If no s/// has done a successful substitution since the  last
+              input  line  was read and since the last t or T command, then
+              branch to label; if  label  is  omitted,  branch  to  end  of
+              script.  This is a GNU extension.or q to quit)
+ ESESCOBpage sed(1) line 187 (press h for help or q to quit)
+       w filename1) line 188 (press h for help or q to quit)
+              Write the current pattern space to filename.t)
+ ESESCOBpage sed(1) line 190 (press h for help or q to quit)
+       W filename1) line 191 (press h for help or q to quit)
+              Write  the  first  line of the current pattern space to file‐
+              name.  This is a GNU extension.p or q to quit)
+ ESESCOBpage sed(1) line 194 (press h for help or q to quit)
+       x      Exchange the contents of the hold and pattern spaces.
+ ESESCOBpage sed(1) line 196 (press h for help or q to quit)
+       y/source/dest/ine 197 (press h for help or q to quit)
+              Transliterate the characters in the pattern space  which  ap‐
+              pear in source to the corresponding character in dest.
+ ESESCOBpage sed(1) line 200 (press h for help or q to quit)
+Addressesage sed(1) line 201 (press h for help or q to quit)
+       Sed  commands can be given with no addresses, in which case the com‐
+       mand will be executed for all input  lines;  with  one  address,  in
+       which  case  the command will only be executed for input lines which
+       match that address; or with two addresses, in which case the command
+       will be executed for all input lines which match the inclusive range
+       of lines starting from the first address and continuing to the  sec‐
+       ond  address.  Three things to note about address ranges: the syntax
+       is addr1,addr2 (i.e., the addresses are separated by a  comma);  the
+       line  which addr1 matched will always be accepted, even if addr2 se‐
+       lects an earlier line; and if addr2 is a  regexp,  it  will  not  be
+       tested against the line that addr1 matched.help or q to quit)
+ ESESCOBpage sed(1) line 213/312 69% (press h for help or q to quit)
+       After  the  address  (or address-range), and before the command, a !
+       may be inserted, which specifies that the command shall only be exe‐
+       cuted if the address (or address-range) does not match. quit)
+ ESESCOBpage sed(1) line 217/312 71% (press h for help or q to quit)
+       The following address types are supported: help or q to quit)
+ ESESCOBpage sed(1) line 219/312 72% (press h for help or q to quit)
+       number Match only the specified line number (which increments  cumu‐
+              latively  across  files, unless the -s option is specified on
+              the command line). 73% (press h for help or q to quit)
+ ESESCOBpage sed(1) line 223/312 73% (press h for help or q to quit)
+       first~step1) line 224/312 73% (press h for help or q to quit)
+              Match every step'th line starting with line first.  For exam‐
+              ple, ``sed -n 1~2p'' will print all the odd-numbered lines in
+              the input stream, and the address 2~5 will match every  fifth
+              line,  starting  with the second.  first can be zero; in this
+              case, sed operates as if it were equal to step.  (This is  an
+              extension.)230/312 77% (press h for help or q to quit)
+ ESESCOBpage sed(1) line 231/312 77% (press h for help or q to quit)
+       $      Match the last line.7% (press h for help or q to quit)
+ ESESCOBpage sed(1) line 233/312 77% (press h for help or q to quit)
+       /regexp/d(1) line 234/312 77% (press h for help or q to quit)
+              Match lines matching the regular expression regexp.  Matching
+              is performed on the current pattern space, which can be modi‐
+              fied with commands such as ``s///''.help or q to quit)
+ ESESCOBpage sed(1) line 238/312 79% (press h for help or q to quit)
+       \cregexpc(1) line 239/312 79% (press h for help or q to quit)
+              Match  lines  matching  the regular expression regexp.  The c
+              may be any character.% (press h for help or q to quit)
+ ESESCOBpage sed(1) line 242/312 80% (press h for help or q to quit)
+       GNU sed also supports some special 2-address forms:q to quit)
+ ESESCOBpage sed(1) line 244/312 81% (press h for help or q to quit)
+       0,addr2ed(1) line 245/312 81% (press h for help or q to quit)
+              Start out in "matched first address" state,  until  addr2  is
+>DEVOPS25/lektion10 line 247/312 82% (press h for help or q to quit)
+sed -n -e '/man/s/a/u/g' ex2texDEVOPS25/lektion10
+$ sed -n -e '/man/' ex2texp
+
+
+
+
+
+
+grönsaker snarare än vad man vardagligt brukar
+De senare består av fler delar av blomman än bara fruktämnet.
+DEVOPS25/lektion10
+$ sed -n -e '/man/p' ex2texs/b/x/
+DEVOPS25/lektion10
+$ sed -n -e '/man/s/b/x/' ex2tex;p
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat, hartz, avokado och hummus räknas vanligtvis som
+grönsaker snarare än vad man vardagligt xrukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade hundfrukter.
+
+De senare xestår av fler delar av blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ sed -n -e '/man/s/b/x/;p' ex2text
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat, hartz, avokado och hummus räknas vanligtvis som
+grönsaker snarare än vad man vardagligt xrukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade hundfrukter.
+
+De senare xestår av fler delar av blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -n -e '/man/s/b/x/;p' ex2tex=;DEVOPS25/lektion10
+$ sed -n -e '/man/s/b/x/;=;p' ex2tex
+1
+Frukterna varierar mycket i utseende beroende
+2
+på växtart. De kan till exempel ha formen
+3
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+4
+tomat, hartz, avokado och hummus räknas vanligtvis som
+5
+grönsaker snarare än vad man vardagligt xrukar
+6
+räkna som frukter. Frukter delas
+7
+botaniskt in i 2 huvudgrupper: äkta frukter och
+8
+skenfrukter, även kallade hundfrukter.
+9
+
+10
+De senare xestår av fler delar av blomman än bara fruktämnet.
+11
+
+12
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -n -e '/man/s/b/x/;=;p' ex2texDEVOPS25/lektion10
+$ sed -n -e '/man/s/b/x/;p' ex2tex
+Frukterna varierar mycket i utseende beroende
+på växtart. De kan till exempel ha formen
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+tomat, hartz, avokado och hummus räknas vanligtvis som
+grönsaker snarare än vad man vardagligt xrukar
+räkna som frukter. Frukter delas
+botaniskt in i 2 huvudgrupper: äkta frukter och
+skenfrukter, även kallade hundfrukter.
+
+De senare xestår av fler delar av blomman än bara fruktämnet.
+
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -n -e '/man/s/b/x/;p' ex2tex=;
+1
+Frukterna varierar mycket i utseende beroende
+2
+på växtart. De kan till exempel ha formen
+3
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+4
+tomat, hartz, avokado och hummus räknas vanligtvis som
+5
+grönsaker snarare än vad man vardagligt xrukar
+6
+räkna som frukter. Frukter delas
+7
+botaniskt in i 2 huvudgrupper: äkta frukter och
+8
+skenfrukter, även kallade hundfrukter.
+9
+
+10
+De senare xestår av fler delar av blomman än bara fruktämnet.
+11
+
+12
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -n -e '/man/s/b/x/;=;p' ex2textDEVOPS25/lektion10
+$ sed -n -e '/man/s/b/x/;=;p' ex2tex{
+1
+Frukterna varierar mycket i utseende beroende
+2
+på växtart. De kan till exempel ha formen
+3
+av nöt, bär, kapsel eller stenfrukt. Många frukter, såsom
+4
+tomat, hartz, avokado och hummus räknas vanligtvis som
+5
+grönsaker snarare än vad man vardagligt xrukar
+6
+räkna som frukter. Frukter delas
+7
+botaniskt in i 2 huvudgrupper: äkta frukter och
+8
+skenfrukter, även kallade hundfrukter.
+9
+
+10
+De senare xestår av fler delar av blomman än bara fruktämnet.
+11
+
+12
+Skenfrukter kan till exempel innehålla även blombottnen.
+DEVOPS25/lektion10
+$ sed -n -e '{/man/s/b/x/;=};p' ex2textDEVOPS25/lektion10
+$ sed -n -e '{/man/s/b/x/;=};p' ex2tex
+
+
+
+
+
+
+
+
+
+
+
+
+a
+cat /etc/passw
+dDEVOPS25/lektion10
+$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:998:998:systemd Network Management:/:/usr/sbin/nologin
+dhcpcd:x:100:65534:DHCP Client Daemon:/usr/lib/dhcpcd:/bin/false
+tss:x:101:103:TPM software stack:/var/lib/tpm:/bin/false
+systemd-timesync:x:991:991:systemd Time Synchronization:/:/usr/sbin/nologin
+messagebus:x:990:990:System Message Bus:/nonexistent:/usr/sbin/nologin
+dnsmasq:x:999:65534:dnsmasq:/var/lib/misc:/usr/sbin/nologin
+avahi:x:102:107:Avahi mDNS daemon:/run/avahi-daemon:/usr/sbin/nologin
+speech-dispatcher:x:103:29:Speech Dispatcher:/run/speech-dispatcher:/bin/false
+usbmux:x:104:46:usbmux daemon:/var/lib/usbmux:/usr/sbin/nologin
+cups-pk-helper:x:105:108:user for cups-pk-helper service:/nonexistent:/usr/sbin/nologin
+fwupd-refresh:x:989:989:Firmware update daemon:/var/lib/fwupd:/usr/sbin/nologin
+geoclue:x:106:110::/var/lib/geoclue:/usr/sbin/nologin
+gnome-remote-desktop:x:988:988:GNOME Remote Desktop:/var/lib/gnome-remote-desktop:/usr/sbin/nologin
+saned:x:107:111::/var/lib/saned:/usr/sbin/nologin
+polkitd:x:987:987:User for polkitd:/:/usr/sbin/nologin
+rtkit:x:108:112:RealtimeKit:/proc:/usr/sbin/nologin
+colord:x:109:113:colord colour management daemon:/var/lib/colord:/usr/sbin/nologin
+Debian-gdm:x:110:114:Gnome Display Manager:/var/lib/gdm3:/bin/false
+kent:x:1000:1000:Kent Larsson,,,:/home/kent:/bin/bash
+_flatpak:x:111:115:Flatpak system-wide installation helper:/nonexistent:/usr/sbin/nologin
+libvirt-qemu:x:64055:993:Libvirt Qemu:/var/lib/libvirt:/usr/sbin/nologin
+DEVOPS25/lektion10
+$ DEVOPS25/lektion10
+$ awk -F;'' '{ } }r }p } } }p }r }i }n }t } }$ }1 }; }
+DEVOPS25/lektion10
+$ awk -F':' '{ print $1; }'
+^C
+DEVOPS25/lektion10
+$ awk -F':' '{ print $1; }:
+
+
+
+
+
+
+
+
+^C
+DEVOPS25/lektion10
+$ awk -F: '{ print $1; }'DEVOPS25/lektion10
+$ awk -F: '{ print $1; }' ex2text/etc/pasw
+sw
+d
+root
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+_apt
+nobody
+systemd-network
+dhcpcd
+tss
+systemd-timesync
+messagebus
+dnsmasq
+avahi
+speech-dispatcher
+usbmux
+cups-pk-helper
+fwupd-refresh
+geoclue
+gnome-remote-desktop
+saned
+polkitd
+rtkit
+colord
+Debian-gdm
+kent
+_flatpak
+libvirt-qemu
+DEVOPS25/lektion10
+$ awk -F: '{ print $1; }' /etc/passwdDEVOPS25/lektion10
+$ awk -F: '{ print $1; }' /etc/passw7
+
+
+
+
+
+/bin/bash
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/bin/sync
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/bin/false
+/bin/false
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/bin/false
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/bin/false
+/bin/bash
+/usr/sbin/nologin
+/usr/sbin/nologin
+DEVOPS25/lektion10
+$ awk -F: '{ print $7; }' /etc/passwdDEVOPS25/lektion10
+$ awk -F: '{ print $7; }' /etc/passw/kent
+
+
+
+
+/bin/bash
+DEVOPS25/lektion10
+awk -F: '/kent/ { print $7; }' /etc/passwBEGIN"staprogframstart { print$1
+
+programstart
+root
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+_apt
+nobody
+systemd-network
+dhcpcd
+tss
+systemd-timesync
+messagebus
+dnsmasq
+avahi
+speech-dispatcher
+usbmux
+cups-pk-helper
+fwupd-refresh
+geoclue
+gnome-remote-desktop
+saned
+polkitd
+rtkit
+colord
+Debian-gdm
+kent
+_flatpak
+libvirt-qemu
+DEVOPS25/lektion10
+$ awk -F: 'BEGIN { print "programstart"; } { print $1 }' /etc/passwdDEVOPS25/lektion10
+$ awk -F: 'BEGIN { print "programstart"; } { print $1 }' /etc/passwd
+exit
