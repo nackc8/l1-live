@@ -4,12 +4,9 @@ MINNE=apple
 
 # Parentes = Ny barnprocess via "fork", kopia av variabler och allt annat
 (
-    cd /etc/ssh
-    ls
     echo Inner eat 1 "$MINNE"
     MINNE=banan
     echo Inner eat 2 "$MINNE"
 )
 
 echo Outer eat "$MINNE"
-ls
