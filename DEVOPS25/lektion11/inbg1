@@ -3,7 +3,9 @@
 MINNE=apple
 
 foo() (
-    echo Eat "$MINNE"
+    echo Inner eat "$MINNE"
 )
 
 foo
+
+echo Outer eat "$MINNE"
