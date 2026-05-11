@@ -1,10 +1,14 @@
 #!/bin/bash
 
 # Parentes = Ny barnprocess via "fork", kopia av variabler och allt annat
-(
-    sleep 5 # Vi fakar att vi laddar ned en iso fil
-    echo ISO DOWNLOAD COMPLETE
-) &
+
+for iso in ubuntu-server.iso archlinux.iso fedora.iso; do
+    (
+        echo "iso: $iso (START)"
+        sleep 5 # Vi fakar att vi laddar ned ison fil
+        echo "iso: $iso (DOWNLOAD COMPLETE)"
+    ) &
+done
 
 read -p "Vad heter du? " NAMN
 echo "Hej $NAMN"
