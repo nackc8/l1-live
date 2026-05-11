@@ -1,8 +1,19 @@
 #!/bin/bash
 
 (
-    
-)
+    for x in sekund{1..60}; do
+        echo "$x"
+        sleep 1
+    done
+) &
+
+(
+    for x in bokstav_{a..z}; do
+        echo "$x"
+        sleep 3
+    done
+) &
+
 
 wait
 echo "All downloads completed"
