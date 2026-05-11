@@ -1,12 +1,20 @@
 Kör inte detta!
 
-Orginal:
-:(){ :|:& };:
-
-
-
-bomb(){ bomb|bomb& };bomb
-
 # Tar alla resurser genom rekursivt anrop där
 # antalet processer dubblas i varje nivå.
+
+Orginalkod:
+
+:(){ :|:& };:
+
+Om vi byter ut : mot bomb ser vi att det är en rekursiv funktionsdefinition.
+
+                      .----- kör funktionen en första gång
+bomb(){ bomb|bomb& };bomb
+          |    |  \____bakgrunden
+        kör1  kör2
+
+Varje anrop till bomb kör igång två anrop till bomb paralellet i bakgrunden.
+
+
 
