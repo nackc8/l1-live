@@ -5,10 +5,10 @@
 for iso in ubuntu-server.iso archlinux.iso fedora.iso; do
     (
         echo "iso: $iso (START)"
-        sleep 5 # Vi fakar att vi laddar ned ison fil
+        sleep $(( RANDOM % 10 )) # Vi fakar att vi laddar ned ison fil
         echo "iso: $iso (DOWNLOAD COMPLETE)"
     ) &
 done
 
-read -p "Vad heter du? " NAMN
-echo "Hej $NAMN"
+read -p "ENTER TO COMPLETE"
+
