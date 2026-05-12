@@ -1,0 +1,1647 @@
+/home/kent/Documents/l1-live/DEVOPS25/lektion12
+recordings
+DEVOPS25/lektion12
+$ ls -aDEVOPS25/lektion12
+$ ls - x
+bash: x: command not found
+DEVOPS25/lektion12
+$ cd
+~ $ ~ $ ls -a
+.	       .cache	      .dotnet	      .mozilla	 .var
+..	       .certificates  Downloads       Music	 Videos
+.bash_history  .claude	      .dropbox	      Pictures	 .vscode
+.bash_logout   .claude.json   Dropbox	      .pki	 .vscode-shared
+.bashrc        .config	      .dropbox-dist   .profile	 .w3m
+.bashrc.d      .copilot       .dumped-config  Public	 .wget-hsts
+.bin	       Desktop	      .gnupg	      .ssh	 .Xresources
+bokforing      Documents      .local	      Templates
+~ $ cd .config/systemd/~ $ cd .config/systemd/
+~/.config/systemd
+$ ls
+user
+~/.config/systemd
+$ cd user/
+~/.config/systemd/user
+$ ~/.config/systemd/user
+$ ls
+default.target.wants  mbsync@kent.timer.d      mbsync@.timer	timers.target.wants
+dropbox.service       mbsync@kentylva.timer.d  obstend.service
+mbsync@c8.timer.d     mbsync@.service	       obstend.timer
+~/.config/systemd/user
+$ less mbsync@.service ~/.config/systemd/user
+$ less mbsync@.service 
+[Unit]
+Description=mbsync sync of %i
+Documentation=man:mbsync(1)
+ConditionPathExists=%h/.config/isyncrc
+
+[Service]
+Type=oneshot
+ExecCondition=/usr/bin/nm-online -q --timeout=30
+ExecStart=%h/.local/share/mail-extra/sync %i
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+ ESESCOBservice (END)
+ ESESCOB
+>~/.config/systemd/user
+$ ls
+default.target.wants  mbsync@kent.timer.d      mbsync@.timer	timers.target.wants
+dropbox.service       mbsync@kentylva.timer.d  obstend.service
+mbsync@c8.timer.d     mbsync@.service	       obstend.timer
+~/.config/systemd/user
+less mbsync@.service ~/.config/systemd/user
+$ less mbsync@.service 
+[Unit]
+Description=mbsync sync of %i
+Documentation=man:mbsync(1)
+ConditionPathExists=%h/.config/isyncrc
+
+[Service]
+Type=oneshot
+ExecCondition=/usr/bin/nm-online -q --timeout=30
+ExecStart=%h/.local/share/mail-extra/sync %i
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+>~/.config/systemd/user
+$ journalctl -u mbsync.servic--user
+-- No entries --
+>~/.config/systemd/user
+$ ~/.config/systemd/user
+$ ls
+default.target.wants  mbsync@kent.timer.d      mbsync@.timer	timers.target.wants
+dropbox.service       mbsync@kentylva.timer.d  obstend.service
+mbsync@c8.timer.d     mbsync@.service	       obstend.timer
+~/.config/systemd/user
+$ less mbsync@.timer 
+[Unit]
+Description=Periodic mbsync of %i
+
+[Timer]
+OnActiveSec=2min
+OnUnitActiveSec=15min
+RandomizedDelaySec=1min
+Unit=mbsync@%i.service
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+>~/.config/systemd/user
+$ ls mbsync@kent.timer.d/~/.config/systemd/user
+$ ls mbsync@kent.timer.d/
+schedule.conf
+~/.config/systemd/user
+$ ls mbsync@kent.timer.d/schedule.confe
+[Timer]
+OnActiveSec=
+OnUnitActiveSec=
+OnCalendar=*:05/15
+>~/.config/systemd/useredule.conf (END)
+$ ~/.config/systemd/user
+$ ls
+default.target.wants  mbsync@kent.timer.d      mbsync@.timer	timers.target.wants
+dropbox.service       mbsync@kentylva.timer.d  obstend.service
+mbsync@c8.timer.d     mbsync@.service	       obstend.timer
+~/.config/systemd/user
+$ less dreopbox.service ~/.config/systemd/user
+$ less dropbox.service 
+[Unit]
+Description=Dropbox
+
+[Service]
+Type=simple
+Environment=DISPLAY=
+Environment=WAYLAND_DISPLAY=
+ExecStart=%h/.dropbox-dist/dropboxd
+Restart=on-failure
+RestartSec=15
+
+CPUQuota=50%
+MemoryHigh=2G
+MemoryMax=3G
+>~/.config/systemd/user
+$ ls
+default.target.wants  mbsync@kent.timer.d      mbsync@.timer	timers.target.wants
+dropbox.service       mbsync@kentylva.timer.d  obstend.service
+mbsync@c8.timer.d     mbsync@.service	       obstend.timer
+~/.config/systemd/user
+$ systemctl stoless obstend.service ~/.config/systemd/user
+$ less obstend.service 
+[Unit]
+Description=Tend the Obsidian vault
+Documentation=file:/home/kent/Documents/notes/.scripts/obstend.py
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /home/kent/Documents/notes/.scripts/obstend.py
+Nice=10
+obstend.service (END)
+(END)
+>~/.config/systemd/user
+$ cd /var/syslib/systemd/
+/var/lib/systemd
+$ /var/lib/systemd
+$ ls
+backlight  deb-systemd-helper-enabled	    linger   random-seed  timesync
+catalog    deb-systemd-user-helper-enabled  network  rfkill
+coredump   ephemeral-trees		    pstore   timers
+/var/lib/systemd
+$ ssh ubse
+Welcome to Ubuntu 24.04.4 LTS (GNU/Linux 6.8.0-111-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue May 12 07:20:35 AM UTC 2026
+
+  System load:  0.0                Processes:               147
+  Usage of /:   43.6% of 11.21GB   Users logged in:         1
+  Memory usage: 6%                 IPv4 address for enp1s0: 192.168.122.155
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Tue May 12 07:07:04 2026 from 192.168.122.1
+0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+kent@ubse:~$ cd /var/lkib/systemd/
+0;kent@ubse: /var/lib/systemd
+kent@ubse:/var/lib/systemd$ 0;kent@ubse: /var/lib/systemd
+kent@ubse:/var/lib/systemd$ ls
+catalog   deb-systemd-helper-enabled       ephemeral-trees  pstore       timers
+coredump  deb-systemd-user-helper-enabled  linger           random-seed  timesync
+0;kent@ubse: /var/lib/systemd
+kent@ubse:/var/lib/systemd$ systemctl status apache2.service 
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/usr/lib/systemd/system/apache2.service[file://ubse/usr/lib/systemd/system/apache2.service]; enabled; preset: enabl>
+     Active: active (running) since Tue 2026-05-12 07:06:48 UTC; 14min ago
+       Docs: https://httpd.apache.org/docs/2.4/[https://httpd.apache.org/docs/2.4/]
+    Process: 913 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/SUCCESS)
+   Main PID: 942 (apache2)
+      Tasks: 55 (limit: 4601)
+     Memory: 7.8M (peak: 8.1M)
+        CPU: 96ms
+     CGroup: /system.slice/apache2.service
+             ├─942 /usr/sbin/apache2 -k start
+             ├─943 /usr/sbin/apache2 -k start
+             └─944 /usr/sbin/apache2 -k start
+
+>0;kent@ubse: /var/lib/systemd
+kent@ubse:/var/lib/systemd$ cd /yusr/lib/s0;kent@ubse: /var/lib/systemd
+kent@ubse:/var/lib/systemd$ ls
+catalog   deb-systemd-helper-enabled       ephemeral-trees  pstore       timers
+coredump  deb-systemd-user-helper-enabled  linger           random-seed  timesync
+0;kent@ubse: /var/lib/systemd
+kent@ubse:/var/lib/systemd$ cd styscd /usr/lib/stysrtemd/
+catalog/                       system-generators/
+journald.conf.d/               system-preset/
+logind.conf.d/                 system-shutdown/
+network/                       system-sleep/
+ntp-units.d/                   user/
+repart/                        user-environment-generators/
+system/                        user-generators/
+system-environment-generators/ user-preset/
+0;kent@ubse: /var/lib/systemd
+kent@ubse:/var/lib/systemd$ cd /usr/lib/systemd/system
+0;kent@ubse: /usr/lib/systemd/system
+kent@ubse:/usr/lib/systemd/system$ 0;kent@ubse: /usr/lib/systemd/system
+kent@ubse:/usr/lib/systemd/system$ ls
+ ModemManager.service
+ apache-htcacheclean.service
+ apache-htcacheclean@.service
+ apache2.service
+ apache2@.service
+ apparmor.service
+ apport-autoreport.path
+ apport-autoreport.service
+ apport-autoreport.timer
+ apport-coredump-hook@.service
+ apport-forward.socket
+ apport-forward@.service
+ apport.service
+ apt-daily-upgrade.service
+ apt-daily-upgrade.timer
+ apt-daily.service
+ apt-daily.timer
+ apt-news.service
+ autovt@.service
+ basic.target
+ blk-availability.service
+ blockdev@.target
+ bluetooth.target
+ bolt.service
+ boot-complete.target
+ cloud-config.service
+ cloud-config.target
+ cloud-final.service
+ cloud-init-hotplugd.service
+ cloud-init-hotplugd.socket
+ cloud-init-local.service
+ cloud-init.service
+ cloud-init.target
+ console-getty.service
+ console-setup.service
+ container-getty@.service
+ cron.service
+ cryptdisks-early.service
+ cryptdisks.service
+ cryptsetup-pre.target
+ cryptsetup.target
+ ctrl-alt-del.target
+ dbus-org.freedesktop.hostname1.service
+ dbus-org.freedesktop.locale1.service
+ dbus-org.freedesktop.login1.service
+ dbus-org.freedesktop.timedate1.service
+ dbus.service
+ dbus.socket
+ debug-shell.service
+ default.target
+ dev-hugepages.mount
+ dev-mqueue.mount
+ dm-event.service
+ dm-event.socket
+ dmesg.service
+ dpkg-db-backup.service
+ dpkg-db-backup.timer
+ e2scrub@.service
+ e2scrub_all.service
+ e2scrub_all.timer
+ e2scrub_fail@.service
+ e2scrub_reap.service
+ emergency.service
+ emergency.target
+ esm-cache.service
+ exit.target
+ factory-reset.target
+ final.target
+ finalrd.service
+ first-boot-complete.target
+ friendly-recovery.service
+ friendly-recovery.target
+ fstrim.service
+ fstrim.timer
+ fwupd-offline-update.service
+ fwupd-refresh.service
+ fwupd-refresh.timer
+ fwupd.service
+ getty-pre.target
+ getty-static.service
+ getty.target
+ getty.target.wants
+ getty@.service
+ gpu-manager.service
+ graphical.target
+ graphical.target.wants
+ grub-common.service
+ grub-initrd-fallback.service
+ halt.target
+ halt.target.wants
+ hibernate.target
+ hwclock.service
+ hybrid-sleep.target
+ initrd-cleanup.service
+ initrd-fs.target
+ initrd-parse-etc.service
+ initrd-root-device.target
+ initrd-root-device.target.wants
+ initrd-root-fs.target
+ initrd-root-fs.target.wants
+ initrd-switch-root.service
+ initrd-switch-root.target
+ initrd-switch-root.target.wants
+ initrd-udevadm-cleanup-db.service
+ initrd-usr-fs.target
+ initrd.target
+ initrd.target.wants
+ integritysetup-pre.target
+ integritysetup.target
+ iscsid.service
+ iscsid.socket
+ kexec.target
+ kexec.target.wants
+ keyboard-setup.service
+ kmod-static-nodes.service
+ kmod.service
+ ldconfig.service
+ local-fs-pre.target
+ local-fs.target
+ logrotate.service
+ logrotate.timer
+ lvm2-lvmpolld.service
+ lvm2-lvmpolld.socket
+ lvm2-monitor.service
+ lxd-agent.service
+ lxd-installer.socket
+ lxd-installer@.service
+ machine.slice
+ man-db.service
+ man-db.timer
+ mdadm-grow-continue@.service
+ mdadm-last-resort@.service
+ mdadm-last-resort@.timer
+ mdcheck_continue.service
+ mdcheck_continue.timer
+ mdcheck_start.service
+ mdcheck_start.timer
+ mdmon@.service
+ mdmonitor-oneshot.service
+ mdmonitor-oneshot.timer
+ mdmonitor.service
+ modprobe@.service
+ motd-news.service
+ motd-news.timer
+ multi-user.target
+ multi-user.target.wants
+ multipath-tools-boot.service
+ multipath-tools.service
+ multipathd.service
+ multipathd.socket
+ network-online.target
+ network-pre.target
+ network.target
+ networkd-dispatcher.service
+ nftables.service
+ nss-lookup.target
+ nss-user-lookup.target
+ open-iscsi.service
+ open-vm-tools.service
+ packagekit-offline-update.service
+ packagekit.service
+ pam_namespace.service
+ paths.target
+ plymouth-halt.service
+ plymouth-kexec.service
+ plymouth-log.service
+ plymouth-poweroff.service
+ plymouth-quit-wait.service
+ plymouth-quit.service
+ plymouth-read-write.service
+ plymouth-reboot.service
+ plymouth-start.service
+ plymouth-switch-root-initramfs.service
+ plymouth-switch-root.service
+ plymouth.service
+ polkit.service
+ pollinate.service
+ poweroff.target
+ poweroff.target.wants
+ printer.target
+ proc-sys-fs-binfmt_misc.automount
+ proc-sys-fs-binfmt_misc.mount
+ procps.service
+ quotaon.service
+ rc-local.service
+ rc-local.service.d
+ reboot.target
+ reboot.target.wants
+ remote-cryptsetup.target
+ remote-fs-pre.target
+ remote-fs.target
+ remote-veritysetup.target
+ rescue-ssh.target
+ rescue.service
+ rescue.target
+ rescue.target.wants
+ rpcbind.target
+ rsync.service
+ rsyslog.service
+ runlevel0.target
+ runlevel1.target
+ runlevel2.target
+ runlevel3.target
+ runlevel4.target
+ runlevel5.target
+ runlevel6.target
+ screen-cleanup.service
+ secureboot-db.service
+ serial-getty@.service
+ setvtrgb.service
+ shutdown.target
+ sigpwr.target
+ sleep.target
+ slices.target
+ smartcard.target
+ snapd.apparmor.service
+ snapd.autoimport.service
+ snapd.core-fixup.service
+ snapd.failure.service
+ snapd.gpio-chardev-setup.target
+ snapd.mounts-pre.target
+ snapd.mounts.target
+ snapd.recovery-chooser-trigger.service
+ snapd.seeded.service
+ snapd.service
+ snapd.snap-repair.service
+ snapd.snap-repair.timer
+ snapd.socket
+ snapd.system-shutdown.service
+ sockets.target
+ sockets.target.wants
+ soft-reboot.target
+ sound.target
+ ssh.service
+ ssh.socket
+ sshd-keygen@.service.d
+ ssl-cert.service
+ storage-target-mode.target
+ sudo.service
+ suspend-then-hibernate.target
+ suspend.target
+ swap.target
+ sys-fs-fuse-connections.mount
+ sys-kernel-config.mount
+ sys-kernel-debug.mount
+ sys-kernel-tracing.mount
+ sysinit.target
+ sysinit.target.wants
+ syslog.socket
+ sysstat-collect.service
+ sysstat-collect.timer
+ sysstat-summary.service
+ sysstat-summary.timer
+ sysstat.service
+'system-systemd\x2dcryptsetup.slice'
+'system-systemd\x2dveritysetup.slice'
+ system-update-cleanup.service
+ system-update-pre.target
+ system-update.target
+ system-update.target.wants
+ systemd-ask-password-console.path
+ systemd-ask-password-console.service
+ systemd-ask-password-plymouth.path
+ systemd-ask-password-plymouth.service
+ systemd-ask-password-wall.path
+ systemd-ask-password-wall.service
+ systemd-backlight@.service
+ systemd-battery-check.service
+ systemd-binfmt.service
+ systemd-boot-check-no-failures.service
+ systemd-bsod.service
+ systemd-confext.service
+ systemd-coredump@.service.d
+ systemd-exit.service
+ systemd-firstboot.service
+ systemd-fsck-root.service
+ systemd-fsck@.service
+ systemd-fsckd.service
+ systemd-fsckd.socket
+ systemd-growfs-root.service
+ systemd-growfs@.service
+ systemd-halt.service
+ systemd-hibernate-resume.service
+ systemd-hibernate.service
+ systemd-hostnamed.service
+ systemd-hwdb-update.service
+ systemd-hybrid-sleep.service
+ systemd-initctl.service
+ systemd-initctl.socket
+ systemd-journal-catalog-update.service
+ systemd-journal-flush.service
+ systemd-journald-audit.socket
+ systemd-journald-dev-log.socket
+ systemd-journald-varlink@.socket
+ systemd-journald.service
+ systemd-journald.service.d
+ systemd-journald.socket
+ systemd-journald@.service
+ systemd-journald@.socket
+ systemd-kexec.service
+ systemd-localed.service
+ systemd-localed.service.d
+ systemd-logind.service
+ systemd-logind.service.d
+ systemd-machine-id-commit.service
+ systemd-modules-load.service
+ systemd-network-generator.service
+ systemd-networkd-wait-online.service
+ systemd-networkd-wait-online@.service
+ systemd-networkd.service
+ systemd-networkd.socket
+ systemd-pcrextend.socket
+ systemd-pcrextend@.service
+ systemd-pcrfs-root.service
+ systemd-pcrfs@.service
+ systemd-pcrlock-file-system.service
+ systemd-pcrlock-firmware-code.service
+ systemd-pcrlock-firmware-config.service
+ systemd-pcrlock-machine-id.service
+ systemd-pcrlock-make-policy.service
+ systemd-pcrlock-secureboot-authority.service
+ systemd-pcrlock-secureboot-policy.service
+ systemd-pcrmachine.service
+ systemd-pcrphase-initrd.service
+ systemd-pcrphase-sysinit.service
+ systemd-pcrphase.service
+ systemd-poweroff.service
+ systemd-pstore.service
+ systemd-quotacheck.service
+ systemd-random-seed.service
+ systemd-reboot.service
+ systemd-remount-fs.service
+ systemd-repart.service
+ systemd-resolved.service
+ systemd-rfkill.service
+ systemd-rfkill.socket
+ systemd-soft-reboot.service
+ systemd-storagetm.service
+ systemd-suspend-then-hibernate.service
+ systemd-suspend.service
+ systemd-sysctl.service
+ systemd-sysext.service
+ systemd-sysext.socket
+ systemd-sysext@.service
+ systemd-sysupdate-reboot.service
+ systemd-sysupdate-reboot.timer
+ systemd-sysupdate.service
+ systemd-sysupdate.timer
+ systemd-sysusers.service
+ systemd-time-wait-sync.service
+ systemd-timedated.service
+ systemd-timesyncd.service
+ systemd-tmpfiles-clean.service
+ systemd-tmpfiles-clean.timer
+ systemd-tmpfiles-setup-dev-early.service
+ systemd-tmpfiles-setup-dev.service
+ systemd-tmpfiles-setup.service
+ systemd-tpm2-setup-early.service
+ systemd-tpm2-setup.service
+ systemd-udev-settle.service
+ systemd-udev-trigger.service
+ systemd-udevd-control.socket
+ systemd-udevd-kernel.socket
+ systemd-udevd.service
+ systemd-udevd.service.d
+ systemd-update-done.service
+ systemd-update-utmp-runlevel.service
+ systemd-update-utmp.service
+ systemd-user-sessions.service
+ systemd-volatile-root.service
+ thermald.service
+ time-set.target
+ time-sync.target
+ timers.target
+ timers.target.wants
+ tpm-udev.path
+ tpm-udev.service
+ ua-reboot-cmds.service
+ ua-timer.service
+ ua-timer.timer
+ ubuntu-advantage.service
+ udev.service
+ udisks2.service
+ ufw.service
+ umount.target
+ unattended-upgrades.service
+ update-notifier-download.service
+ update-notifier-download.timer
+ update-notifier-motd.service
+ update-notifier-motd.timer
+ upower.service
+ usb-gadget.target
+ usb_modeswitch@.service
+ usbmuxd.service
+ user-.slice.d
+ user-runtime-dir@.service
+ user.slice
+ user@.service
+ user@.service.d
+ user@0.service.d
+ uuidd.service
+ uuidd.socket
+ veritysetup-pre.target
+ veritysetup.target
+ vgauth.service
+ x11-common.service
+ xfs_scrub@.service
+ xfs_scrub_all.service
+ xfs_scrub_all.timer
+ xfs_scrub_fail@.service
+0;kent@ubse: /usr/lib/systemd/system
+kent@ubse:/usr/lib/systemd/system$ 0;kent@ubse: /usr/lib/systemd/system
+kent@ubse:/usr/lib/systemd/system$ ls | head
+ModemManager.service
+apache-htcacheclean.service
+apache-htcacheclean@.service
+apache2.service
+apache2@.service
+apparmor.service
+apport-autoreport.path
+apport-autoreport.service
+apport-autoreport.timer
+apport-coredump-hook@.service
+0;kent@ubse: /usr/lib/systemd/system
+kent@ubse:/usr/lib/systemd/system$ apache2.serviceapache2.serviclapache2.serviceapache2.servicsapache2.servicsapache2.servic apache2.servic
+[Unit]
+Description=The Apache HTTP Server
+After=network.target remote-fs.target nss-lookup.target
+Documentation=https://httpd.apache.org/docs/2.4/
+
+[Service]
+Type=forking
+Environment=APACHE_STARTED_BY_SYSTEMD=true
+ExecStart=/usr/sbin/apachectl start
+ExecStop=/usr/sbin/apachectl graceful-stop
+ExecReload=/usr/sbin/apachectl graceful
+KillMode=mixed
+PrivateTmp=true
+Restart=on-abort
+OOMPolicy=continue
+
+[Install]
+WantedBy=multi-user.target
+(END)
+>0;kent@ubse: /usr/lib/systemd/system
+kent@ubse:/usr/lib/systemd/system$ 0;kent@ubse: /usr/lib/systemd/system
+kent@ubse:/usr/lib/systemd/system$ ls
+ ModemManager.service
+ apache-htcacheclean.service
+ apache-htcacheclean@.service
+ apache2.service
+ apache2@.service
+ apparmor.service
+ apport-autoreport.path
+ apport-autoreport.service
+ apport-autoreport.timer
+ apport-coredump-hook@.service
+ apport-forward.socket
+ apport-forward@.service
+ apport.service
+ apt-daily-upgrade.service
+ apt-daily-upgrade.timer
+ apt-daily.service
+ apt-daily.timer
+ apt-news.service
+ autovt@.service
+ basic.target
+ blk-availability.service
+ blockdev@.target
+ bluetooth.target
+ bolt.service
+ boot-complete.target
+ cloud-config.service
+ cloud-config.target
+ cloud-final.service
+ cloud-init-hotplugd.service
+ cloud-init-hotplugd.socket
+ cloud-init-local.service
+ cloud-init.service
+ cloud-init.target
+ console-getty.service
+ console-setup.service
+ container-getty@.service
+ cron.service
+ cryptdisks-early.service
+ cryptdisks.service
+ cryptsetup-pre.target
+ cryptsetup.target
+ ctrl-alt-del.target
+ dbus-org.freedesktop.hostname1.service
+ dbus-org.freedesktop.locale1.service
+ dbus-org.freedesktop.login1.service
+ dbus-org.freedesktop.timedate1.service
+ dbus.service
+ dbus.socket
+ debug-shell.service
+ default.target
+ dev-hugepages.mount
+ dev-mqueue.mount
+ dm-event.service
+ dm-event.socket
+ dmesg.service
+ dpkg-db-backup.service
+ dpkg-db-backup.timer
+ e2scrub@.service
+ e2scrub_all.service
+ e2scrub_all.timer
+ e2scrub_fail@.service
+ e2scrub_reap.service
+ emergency.service
+ emergency.target
+ esm-cache.service
+ exit.target
+ factory-reset.target
+ final.target
+ finalrd.service
+ first-boot-complete.target
+ friendly-recovery.service
+ friendly-recovery.target
+ fstrim.service
+ fstrim.timer
+ fwupd-offline-update.service
+ fwupd-refresh.service
+ fwupd-refresh.timer
+ fwupd.service
+ getty-pre.target
+ getty-static.service
+ getty.target
+ getty.target.wants
+ getty@.service
+ gpu-manager.service
+ graphical.target
+ graphical.target.wants
+ grub-common.service
+ grub-initrd-fallback.service
+ halt.target
+ halt.target.wants
+ hibernate.target
+ hwclock.service
+ hybrid-sleep.target
+ initrd-cleanup.service
+ initrd-fs.target
+ initrd-parse-etc.service
+ initrd-root-device.target
+ initrd-root-device.target.wants
+ initrd-root-fs.target
+ initrd-root-fs.target.wants
+ initrd-switch-root.service
+ initrd-switch-root.target
+ initrd-switch-root.target.wants
+ initrd-udevadm-cleanup-db.service
+ initrd-usr-fs.target
+ initrd.target
+ initrd.target.wants
+ integritysetup-pre.target
+ integritysetup.target
+ iscsid.service
+ iscsid.socket
+ kexec.target
+ kexec.target.wants
+ keyboard-setup.service
+ kmod-static-nodes.service
+ kmod.service
+ ldconfig.service
+ local-fs-pre.target
+ local-fs.target
+ logrotate.service
+ logrotate.timer
+ lvm2-lvmpolld.service
+ lvm2-lvmpolld.socket
+ lvm2-monitor.service
+ lxd-agent.service
+ lxd-installer.socket
+ lxd-installer@.service
+ machine.slice
+ man-db.service
+ man-db.timer
+ mdadm-grow-continue@.service
+ mdadm-last-resort@.service
+ mdadm-last-resort@.timer
+ mdcheck_continue.service
+ mdcheck_continue.timer
+ mdcheck_start.service
+ mdcheck_start.timer
+ mdmon@.service
+ mdmonitor-oneshot.service
+ mdmonitor-oneshot.timer
+ mdmonitor.service
+ modprobe@.service
+ motd-news.service
+ motd-news.timer
+ multi-user.target
+ multi-user.target.wants
+ multipath-tools-boot.service
+ multipath-tools.service
+ multipathd.service
+ multipathd.socket
+ network-online.target
+ network-pre.target
+ network.target
+ networkd-dispatcher.service
+ nftables.service
+ nss-lookup.target
+ nss-user-lookup.target
+ open-iscsi.service
+ open-vm-tools.service
+ packagekit-offline-update.service
+ packagekit.service
+ pam_namespace.service
+ paths.target
+ plymouth-halt.service
+ plymouth-kexec.service
+ plymouth-log.service
+ plymouth-poweroff.service
+ plymouth-quit-wait.service
+ plymouth-quit.service
+ plymouth-read-write.service
+ plymouth-reboot.service
+ plymouth-start.service
+ plymouth-switch-root-initramfs.service
+ plymouth-switch-root.service
+ plymouth.service
+ polkit.service
+ pollinate.service
+ poweroff.target
+ poweroff.target.wants
+ printer.target
+ proc-sys-fs-binfmt_misc.automount
+ proc-sys-fs-binfmt_misc.mount
+ procps.service
+ quotaon.service
+ rc-local.service
+ rc-local.service.d
+ reboot.target
+ reboot.target.wants
+ remote-cryptsetup.target
+ remote-fs-pre.target
+ remote-fs.target
+ remote-veritysetup.target
+ rescue-ssh.target
+ rescue.service
+ rescue.target
+ rescue.target.wants
+ rpcbind.target
+ rsync.service
+ rsyslog.service
+ runlevel0.target
+ runlevel1.target
+ runlevel2.target
+ runlevel3.target
+ runlevel4.target
+ runlevel5.target
+ runlevel6.target
+ screen-cleanup.service
+ secureboot-db.service
+ serial-getty@.service
+ setvtrgb.service
+ shutdown.target
+ sigpwr.target
+ sleep.target
+ slices.target
+ smartcard.target
+ snapd.apparmor.service
+ snapd.autoimport.service
+ snapd.core-fixup.service
+ snapd.failure.service
+ snapd.gpio-chardev-setup.target
+ snapd.mounts-pre.target
+ snapd.mounts.target
+ snapd.recovery-chooser-trigger.service
+ snapd.seeded.service
+ snapd.service
+ snapd.snap-repair.service
+ snapd.snap-repair.timer
+ snapd.socket
+ snapd.system-shutdown.service
+ sockets.target
+ sockets.target.wants
+ soft-reboot.target
+ sound.target
+ ssh.service
+ ssh.socket
+ sshd-keygen@.service.d
+ ssl-cert.service
+ storage-target-mode.target
+ sudo.service
+ suspend-then-hibernate.target
+ suspend.target
+ swap.target
+ sys-fs-fuse-connections.mount
+ sys-kernel-config.mount
+ sys-kernel-debug.mount
+ sys-kernel-tracing.mount
+ sysinit.target
+ sysinit.target.wants
+ syslog.socket
+ sysstat-collect.service
+ sysstat-collect.timer
+ sysstat-summary.service
+ sysstat-summary.timer
+ sysstat.service
+'system-systemd\x2dcryptsetup.slice'
+'system-systemd\x2dveritysetup.slice'
+ system-update-cleanup.service
+ system-update-pre.target
+ system-update.target
+ system-update.target.wants
+ systemd-ask-password-console.path
+ systemd-ask-password-console.service
+ systemd-ask-password-plymouth.path
+ systemd-ask-password-plymouth.service
+ systemd-ask-password-wall.path
+ systemd-ask-password-wall.service
+ systemd-backlight@.service
+ systemd-battery-check.service
+ systemd-binfmt.service
+ systemd-boot-check-no-failures.service
+ systemd-bsod.service
+ systemd-confext.service
+ systemd-coredump@.service.d
+ systemd-exit.service
+ systemd-firstboot.service
+ systemd-fsck-root.service
+ systemd-fsck@.service
+ systemd-fsckd.service
+ systemd-fsckd.socket
+ systemd-growfs-root.service
+ systemd-growfs@.service
+ systemd-halt.service
+ systemd-hibernate-resume.service
+ systemd-hibernate.service
+ systemd-hostnamed.service
+ systemd-hwdb-update.service
+ systemd-hybrid-sleep.service
+ systemd-initctl.service
+ systemd-initctl.socket
+ systemd-journal-catalog-update.service
+ systemd-journal-flush.service
+ systemd-journald-audit.socket
+ systemd-journald-dev-log.socket
+ systemd-journald-varlink@.socket
+ systemd-journald.service
+ systemd-journald.service.d
+ systemd-journald.socket
+ systemd-journald@.service
+ systemd-journald@.socket
+ systemd-kexec.service
+ systemd-localed.service
+ systemd-localed.service.d
+ systemd-logind.service
+ systemd-logind.service.d
+ systemd-machine-id-commit.service
+ systemd-modules-load.service
+ systemd-network-generator.service
+ systemd-networkd-wait-online.service
+ systemd-networkd-wait-online@.service
+ systemd-networkd.service
+ systemd-networkd.socket
+ systemd-pcrextend.socket
+ systemd-pcrextend@.service
+ systemd-pcrfs-root.service
+ systemd-pcrfs@.service
+ systemd-pcrlock-file-system.service
+ systemd-pcrlock-firmware-code.service
+ systemd-pcrlock-firmware-config.service
+ systemd-pcrlock-machine-id.service
+ systemd-pcrlock-make-policy.service
+ systemd-pcrlock-secureboot-authority.service
+ systemd-pcrlock-secureboot-policy.service
+ systemd-pcrmachine.service
+ systemd-pcrphase-initrd.service
+ systemd-pcrphase-sysinit.service
+ systemd-pcrphase.service
+ systemd-poweroff.service
+ systemd-pstore.service
+ systemd-quotacheck.service
+ systemd-random-seed.service
+ systemd-reboot.service
+ systemd-remount-fs.service
+ systemd-repart.service
+ systemd-resolved.service
+ systemd-rfkill.service
+ systemd-rfkill.socket
+ systemd-soft-reboot.service
+ systemd-storagetm.service
+ systemd-suspend-then-hibernate.service
+ systemd-suspend.service
+ systemd-sysctl.service
+ systemd-sysext.service
+ systemd-sysext.socket
+ systemd-sysext@.service
+ systemd-sysupdate-reboot.service
+ systemd-sysupdate-reboot.timer
+ systemd-sysupdate.service
+ systemd-sysupdate.timer
+ systemd-sysusers.service
+ systemd-time-wait-sync.service
+ systemd-timedated.service
+ systemd-timesyncd.service
+ systemd-tmpfiles-clean.service
+ systemd-tmpfiles-clean.timer
+ systemd-tmpfiles-setup-dev-early.service
+ systemd-tmpfiles-setup-dev.service
+ systemd-tmpfiles-setup.service
+ systemd-tpm2-setup-early.service
+ systemd-tpm2-setup.service
+ systemd-udev-settle.service
+ systemd-udev-trigger.service
+ systemd-udevd-control.socket
+ systemd-udevd-kernel.socket
+ systemd-udevd.service
+ systemd-udevd.service.d
+ systemd-update-done.service
+ systemd-update-utmp-runlevel.service
+ systemd-update-utmp.service
+ systemd-user-sessions.service
+ systemd-volatile-root.service
+ thermald.service
+ time-set.target
+ time-sync.target
+ timers.target
+ timers.target.wants
+ tpm-udev.path
+ tpm-udev.service
+ ua-reboot-cmds.service
+ ua-timer.service
+ ua-timer.timer
+ ubuntu-advantage.service
+ udev.service
+ udisks2.service
+ ufw.service
+ umount.target
+ unattended-upgrades.service
+ update-notifier-download.service
+ update-notifier-download.timer
+ update-notifier-motd.service
+ update-notifier-motd.timer
+ upower.service
+ usb-gadget.target
+ usb_modeswitch@.service
+ usbmuxd.service
+ user-.slice.d
+ user-runtime-dir@.service
+ user.slice
+ user@.service
+ user@.service.d
+ user@0.service.d
+ uuidd.service
+ uuidd.socket
+ veritysetup-pre.target
+ veritysetup.target
+ vgauth.service
+ x11-common.service
+ xfs_scrub@.service
+ xfs_scrub_all.service
+ xfs_scrub_all.timer
+ xfs_scrub_fail@.service
+0;kent@ubse: /usr/lib/systemd/system
+kent@ubse:/usr/lib/systemd/system$ ls | grep wants0;kent@ubse: /usr/lib/systemd/system
+kent@ubse:/usr/lib/systemd/system$ ls | grep wants
+getty.target.wants
+graphical.target.wants
+halt.target.wants
+initrd-root-device.target.wants
+initrd-root-fs.target.wants
+initrd-switch-root.target.wants
+initrd.target.wants
+kexec.target.wants
+multi-user.target.wants
+poweroff.target.wants
+reboot.target.wants
+rescue.target.wants
+sockets.target.wants
+sysinit.target.wants
+system-update.target.wants
+timers.target.wants
+0;kent@ubse: /usr/lib/systemd/system
+kent@ubse:/usr/lib/systemd/system$ getty.target.wantsgetty.target.wantlgetty.target.wantsgetty.target.want getty.target.want0;kent@ubse: /usr/lib/systemd/system
+kent@ubse:/usr/lib/systemd/system$ ls getty.target.want
+getty-static.service
+0;kent@ubse: /usr/lib/systemd/system
+kent@ubse:/usr/lib/systemd/system$ ls getty.target.want getty.target.want- getty.target.wantl getty.target.want
+total 0
+lrwxrwxrwx 1 root root 23 Mar 24 13:45 getty-static.service -> ../getty-static.service
+0;kent@ubse: /usr/lib/systemd/system
+kent@ubse:/usr/lib/systemd/system$ less geytty-static.service 
+[Unit]
+Description=getty on tty2-tty6 if dbus and logind are not available
+ConditionPathExists=/dev/tty0
+ConditionPathExists=!/usr/bin/dbus-daemon
+ConditionPathExists=!/usr/bin/dbus-broker
+
+[Service]
+Type=oneshot
+ExecStart=systemctl --no-block start getty@tty2.service getty@tty3.service getty@tty4.service getty@tty5.service getty@tty6.service
+RemainAfterExit=true
+ ESESCOBatic.service (END)
+ ESESCOB
+>0;kent@ubse: /usr/lib/systemd/system
+kent@ubse:/usr/lib/systemd/system$ 0;kent@ubse: /usr/lib/systemd/system
+kent@ubse:/usr/lib/systemd/system$ ls
+ ModemManager.service
+ apache-htcacheclean.service
+ apache-htcacheclean@.service
+ apache2.service
+ apache2@.service
+ apparmor.service
+ apport-autoreport.path
+ apport-autoreport.service
+ apport-autoreport.timer
+ apport-coredump-hook@.service
+ apport-forward.socket
+ apport-forward@.service
+ apport.service
+ apt-daily-upgrade.service
+ apt-daily-upgrade.timer
+ apt-daily.service
+ apt-daily.timer
+ apt-news.service
+ autovt@.service
+ basic.target
+ blk-availability.service
+ blockdev@.target
+ bluetooth.target
+ bolt.service
+ boot-complete.target
+ cloud-config.service
+ cloud-config.target
+ cloud-final.service
+ cloud-init-hotplugd.service
+ cloud-init-hotplugd.socket
+ cloud-init-local.service
+ cloud-init.service
+ cloud-init.target
+ console-getty.service
+ console-setup.service
+ container-getty@.service
+ cron.service
+ cryptdisks-early.service
+ cryptdisks.service
+ cryptsetup-pre.target
+ cryptsetup.target
+ ctrl-alt-del.target
+ dbus-org.freedesktop.hostname1.service
+ dbus-org.freedesktop.locale1.service
+ dbus-org.freedesktop.login1.service
+ dbus-org.freedesktop.timedate1.service
+ dbus.service
+ dbus.socket
+ debug-shell.service
+ default.target
+ dev-hugepages.mount
+ dev-mqueue.mount
+ dm-event.service
+ dm-event.socket
+ dmesg.service
+ dpkg-db-backup.service
+ dpkg-db-backup.timer
+ e2scrub@.service
+ e2scrub_all.service
+ e2scrub_all.timer
+ e2scrub_fail@.service
+ e2scrub_reap.service
+ emergency.service
+ emergency.target
+ esm-cache.service
+ exit.target
+ factory-reset.target
+ final.target
+ finalrd.service
+ first-boot-complete.target
+ friendly-recovery.service
+ friendly-recovery.target
+ fstrim.service
+ fstrim.timer
+ fwupd-offline-update.service
+ fwupd-refresh.service
+ fwupd-refresh.timer
+ fwupd.service
+ getty-pre.target
+ getty-static.service
+ getty.target
+ getty.target.wants
+ getty@.service
+ gpu-manager.service
+ graphical.target
+ graphical.target.wants
+ grub-common.service
+ grub-initrd-fallback.service
+ halt.target
+ halt.target.wants
+ hibernate.target
+ hwclock.service
+ hybrid-sleep.target
+ initrd-cleanup.service
+ initrd-fs.target
+ initrd-parse-etc.service
+ initrd-root-device.target
+ initrd-root-device.target.wants
+ initrd-root-fs.target
+ initrd-root-fs.target.wants
+ initrd-switch-root.service
+ initrd-switch-root.target
+ initrd-switch-root.target.wants
+ initrd-udevadm-cleanup-db.service
+ initrd-usr-fs.target
+ initrd.target
+ initrd.target.wants
+ integritysetup-pre.target
+ integritysetup.target
+ iscsid.service
+ iscsid.socket
+ kexec.target
+ kexec.target.wants
+ keyboard-setup.service
+ kmod-static-nodes.service
+ kmod.service
+ ldconfig.service
+ local-fs-pre.target
+ local-fs.target
+ logrotate.service
+ logrotate.timer
+ lvm2-lvmpolld.service
+ lvm2-lvmpolld.socket
+ lvm2-monitor.service
+ lxd-agent.service
+ lxd-installer.socket
+ lxd-installer@.service
+ machine.slice
+ man-db.service
+ man-db.timer
+ mdadm-grow-continue@.service
+ mdadm-last-resort@.service
+ mdadm-last-resort@.timer
+ mdcheck_continue.service
+ mdcheck_continue.timer
+ mdcheck_start.service
+ mdcheck_start.timer
+ mdmon@.service
+ mdmonitor-oneshot.service
+ mdmonitor-oneshot.timer
+ mdmonitor.service
+ modprobe@.service
+ motd-news.service
+ motd-news.timer
+ multi-user.target
+ multi-user.target.wants
+ multipath-tools-boot.service
+ multipath-tools.service
+ multipathd.service
+ multipathd.socket
+ network-online.target
+ network-pre.target
+ network.target
+ networkd-dispatcher.service
+ nftables.service
+ nss-lookup.target
+ nss-user-lookup.target
+ open-iscsi.service
+ open-vm-tools.service
+ packagekit-offline-update.service
+ packagekit.service
+ pam_namespace.service
+ paths.target
+ plymouth-halt.service
+ plymouth-kexec.service
+ plymouth-log.service
+ plymouth-poweroff.service
+ plymouth-quit-wait.service
+ plymouth-quit.service
+ plymouth-read-write.service
+ plymouth-reboot.service
+ plymouth-start.service
+ plymouth-switch-root-initramfs.service
+ plymouth-switch-root.service
+ plymouth.service
+ polkit.service
+ pollinate.service
+ poweroff.target
+ poweroff.target.wants
+ printer.target
+ proc-sys-fs-binfmt_misc.automount
+ proc-sys-fs-binfmt_misc.mount
+ procps.service
+ quotaon.service
+ rc-local.service
+ rc-local.service.d
+ reboot.target
+ reboot.target.wants
+ remote-cryptsetup.target
+ remote-fs-pre.target
+ remote-fs.target
+ remote-veritysetup.target
+ rescue-ssh.target
+ rescue.service
+ rescue.target
+ rescue.target.wants
+ rpcbind.target
+ rsync.service
+ rsyslog.service
+ runlevel0.target
+ runlevel1.target
+ runlevel2.target
+ runlevel3.target
+ runlevel4.target
+ runlevel5.target
+ runlevel6.target
+ screen-cleanup.service
+ secureboot-db.service
+ serial-getty@.service
+ setvtrgb.service
+ shutdown.target
+ sigpwr.target
+ sleep.target
+ slices.target
+ smartcard.target
+ snapd.apparmor.service
+ snapd.autoimport.service
+ snapd.core-fixup.service
+ snapd.failure.service
+ snapd.gpio-chardev-setup.target
+ snapd.mounts-pre.target
+ snapd.mounts.target
+ snapd.recovery-chooser-trigger.service
+ snapd.seeded.service
+ snapd.service
+ snapd.snap-repair.service
+ snapd.snap-repair.timer
+ snapd.socket
+ snapd.system-shutdown.service
+ sockets.target
+ sockets.target.wants
+ soft-reboot.target
+ sound.target
+ ssh.service
+ ssh.socket
+ sshd-keygen@.service.d
+ ssl-cert.service
+ storage-target-mode.target
+ sudo.service
+ suspend-then-hibernate.target
+ suspend.target
+ swap.target
+ sys-fs-fuse-connections.mount
+ sys-kernel-config.mount
+ sys-kernel-debug.mount
+ sys-kernel-tracing.mount
+ sysinit.target
+ sysinit.target.wants
+ syslog.socket
+ sysstat-collect.service
+ sysstat-collect.timer
+ sysstat-summary.service
+ sysstat-summary.timer
+ sysstat.service
+'system-systemd\x2dcryptsetup.slice'
+'system-systemd\x2dveritysetup.slice'
+ system-update-cleanup.service
+ system-update-pre.target
+ system-update.target
+ system-update.target.wants
+ systemd-ask-password-console.path
+ systemd-ask-password-console.service
+ systemd-ask-password-plymouth.path
+ systemd-ask-password-plymouth.service
+ systemd-ask-password-wall.path
+ systemd-ask-password-wall.service
+ systemd-backlight@.service
+ systemd-battery-check.service
+ systemd-binfmt.service
+ systemd-boot-check-no-failures.service
+ systemd-bsod.service
+ systemd-confext.service
+ systemd-coredump@.service.d
+ systemd-exit.service
+ systemd-firstboot.service
+ systemd-fsck-root.service
+ systemd-fsck@.service
+ systemd-fsckd.service
+ systemd-fsckd.socket
+ systemd-growfs-root.service
+ systemd-growfs@.service
+ systemd-halt.service
+ systemd-hibernate-resume.service
+ systemd-hibernate.service
+ systemd-hostnamed.service
+ systemd-hwdb-update.service
+ systemd-hybrid-sleep.service
+ systemd-initctl.service
+ systemd-initctl.socket
+ systemd-journal-catalog-update.service
+ systemd-journal-flush.service
+ systemd-journald-audit.socket
+ systemd-journald-dev-log.socket
+ systemd-journald-varlink@.socket
+ systemd-journald.service
+ systemd-journald.service.d
+ systemd-journald.socket
+ systemd-journald@.service
+ systemd-journald@.socket
+ systemd-kexec.service
+ systemd-localed.service
+ systemd-localed.service.d
+ systemd-logind.service
+ systemd-logind.service.d
+ systemd-machine-id-commit.service
+ systemd-modules-load.service
+ systemd-network-generator.service
+ systemd-networkd-wait-online.service
+ systemd-networkd-wait-online@.service
+ systemd-networkd.service
+ systemd-networkd.socket
+ systemd-pcrextend.socket
+ systemd-pcrextend@.service
+ systemd-pcrfs-root.service
+ systemd-pcrfs@.service
+ systemd-pcrlock-file-system.service
+ systemd-pcrlock-firmware-code.service
+ systemd-pcrlock-firmware-config.service
+ systemd-pcrlock-machine-id.service
+ systemd-pcrlock-make-policy.service
+ systemd-pcrlock-secureboot-authority.service
+ systemd-pcrlock-secureboot-policy.service
+ systemd-pcrmachine.service
+ systemd-pcrphase-initrd.service
+ systemd-pcrphase-sysinit.service
+ systemd-pcrphase.service
+ systemd-poweroff.service
+ systemd-pstore.service
+ systemd-quotacheck.service
+ systemd-random-seed.service
+ systemd-reboot.service
+ systemd-remount-fs.service
+ systemd-repart.service
+ systemd-resolved.service
+ systemd-rfkill.service
+ systemd-rfkill.socket
+ systemd-soft-reboot.service
+ systemd-storagetm.service
+ systemd-suspend-then-hibernate.service
+ systemd-suspend.service
+ systemd-sysctl.service
+ systemd-sysext.service
+ systemd-sysext.socket
+ systemd-sysext@.service
+ systemd-sysupdate-reboot.service
+ systemd-sysupdate-reboot.timer
+ systemd-sysupdate.service
+ systemd-sysupdate.timer
+ systemd-sysusers.service
+ systemd-time-wait-sync.service
+ systemd-timedated.service
+ systemd-timesyncd.service
+ systemd-tmpfiles-clean.service
+ systemd-tmpfiles-clean.timer
+ systemd-tmpfiles-setup-dev-early.service
+ systemd-tmpfiles-setup-dev.service
+ systemd-tmpfiles-setup.service
+ systemd-tpm2-setup-early.service
+ systemd-tpm2-setup.service
+ systemd-udev-settle.service
+ systemd-udev-trigger.service
+ systemd-udevd-control.socket
+ systemd-udevd-kernel.socket
+ systemd-udevd.service
+ systemd-udevd.service.d
+ systemd-update-done.service
+ systemd-update-utmp-runlevel.service
+ systemd-update-utmp.service
+ systemd-user-sessions.service
+ systemd-volatile-root.service
+ thermald.service
+ time-set.target
+ time-sync.target
+ timers.target
+ timers.target.wants
+ tpm-udev.path
+ tpm-udev.service
+ ua-reboot-cmds.service
+ ua-timer.service
+ ua-timer.timer
+ ubuntu-advantage.service
+ udev.service
+ udisks2.service
+ ufw.service
+ umount.target
+ unattended-upgrades.service
+ update-notifier-download.service
+ update-notifier-download.timer
+ update-notifier-motd.service
+ update-notifier-motd.timer
+ upower.service
+ usb-gadget.target
+ usb_modeswitch@.service
+ usbmuxd.service
+ user-.slice.d
+ user-runtime-dir@.service
+ user.slice
+ user@.service
+ user@.service.d
+ user@0.service.d
+ uuidd.service
+ uuidd.socket
+ veritysetup-pre.target
+ veritysetup.target
+ vgauth.service
+ x11-common.service
+ xfs_scrub@.service
+ xfs_scrub_all.service
+ xfs_scrub_all.timer
+ xfs_scrub_fail@.service
+0;kent@ubse: /usr/lib/systemd/system
+kent@ubse:/usr/lib/systemd/system$ exit
+logout
+Connection to 192.168.122.155 closed.
+/var/lib/systemd
+$ \/var/lib/systemd
+$ lls /dev/
+acpi_thermal_rel  hidraw4	mem	   stdout  tty31  tty58        vcsa1
+autofs		  hpet		mqueue	   tpm0    tty32  tty59        vcsa2
+block		  hugepages	net	   tpmrm0  tty33  tty6	       vcsa3
+btrfs-control	  hwrng		ng0n1	   tty	   tty34  tty60        vcsa4
+bus		  i2c-0		null	   tty0    tty35  tty61        vcsa5
+char		  i2c-1		nvme0	   tty1    tty36  tty62        vcsa6
+console		  i2c-10	nvme0n1    tty10   tty37  tty63        vcsu
+core		  i2c-11	nvme0n1p1  tty11   tty38  tty7	       vcsu1
+cpu		  i2c-12	nvme0n1p2  tty12   tty39  tty8	       vcsu2
+cpu_dma_latency   i2c-13	nvme0n1p3  tty13   tty4   tty9	       vcsu3
+cuse		  i2c-14	nvme0n1p4  tty14   tty40  ttyS0        vcsu4
+disk		  i2c-15	nvme0n1p5  tty15   tty41  ttyS1        vcsu5
+dm-0		  i2c-2		nvme0n1p6  tty16   tty42  ttyS2        vcsu6
+dma_heap	  i2c-3		nvram	   tty17   tty43  ttyS3        vfio
+dri		  i2c-4		port	   tty18   tty44  udmabuf      vga_arbiter
+drm_dp_aux0	  i2c-5		ppp	   tty19   tty45  uhid	       vhci
+drm_dp_aux1	  i2c-6		psaux	   tty2    tty46  uinput       vhost-net
+drm_dp_aux2	  i2c-7		ptmx	   tty20   tty47  urandom      vhost-vsock
+drm_dp_aux3	  i2c-8		ptp0	   tty21   tty48  usb	       video0
+drm_dp_aux4	  i2c-9		pts	   tty22   tty49  userfaultfd  video1
+fb0		  initctl	random	   tty23   tty5   v4l	       watchdog
+fd		  input		rfkill	   tty24   tty50  vcs	       watchdog0
+full		  kmsg		rtc	   tty25   tty51  vcs1	       zero
+fuse		  kvm		rtc0	   tty26   tty52  vcs2
+gpiochip0	  log		shm	   tty27   tty53  vcs3
+hidraw0		  loop-control	snapshot   tty28   tty54  vcs4
+hidraw1		  mapper	snd	   tty29   tty55  vcs5
+hidraw2		  media0	stderr	   tty3    tty56  vcs6
+hidraw3		  mei0		stdin	   tty30   tty57  vcsa
+/var/lib/systemd
+$ ls -l nvme0/var/lib/systemd
+$ ls -l nvme0nvme0
+ls: cannot access 'nvme0': No such file or directory
+/var/lib/systemd
+$ ls -l nvme/nvmednvmeenvmevnvme/nvme
+crw------- 1 root root 244, 0 maj 12 08:19 /dev/nvme0
+/var/lib/systemd
+$ ls /dev//var/lib/systemd
+$ ls /dev/
+acpi_thermal_rel  hidraw4	mem	   stdout  tty31  tty58        vcsa1
+autofs		  hpet		mqueue	   tpm0    tty32  tty59        vcsa2
+block		  hugepages	net	   tpmrm0  tty33  tty6	       vcsa3
+btrfs-control	  hwrng		ng0n1	   tty	   tty34  tty60        vcsa4
+bus		  i2c-0		null	   tty0    tty35  tty61        vcsa5
+char		  i2c-1		nvme0	   tty1    tty36  tty62        vcsa6
+console		  i2c-10	nvme0n1    tty10   tty37  tty63        vcsu
+core		  i2c-11	nvme0n1p1  tty11   tty38  tty7	       vcsu1
+cpu		  i2c-12	nvme0n1p2  tty12   tty39  tty8	       vcsu2
+cpu_dma_latency   i2c-13	nvme0n1p3  tty13   tty4   tty9	       vcsu3
+cuse		  i2c-14	nvme0n1p4  tty14   tty40  ttyS0        vcsu4
+disk		  i2c-15	nvme0n1p5  tty15   tty41  ttyS1        vcsu5
+dm-0		  i2c-2		nvme0n1p6  tty16   tty42  ttyS2        vcsu6
+dma_heap	  i2c-3		nvram	   tty17   tty43  ttyS3        vfio
+dri		  i2c-4		port	   tty18   tty44  udmabuf      vga_arbiter
+drm_dp_aux0	  i2c-5		ppp	   tty19   tty45  uhid	       vhci
+drm_dp_aux1	  i2c-6		psaux	   tty2    tty46  uinput       vhost-net
+drm_dp_aux2	  i2c-7		ptmx	   tty20   tty47  urandom      vhost-vsock
+drm_dp_aux3	  i2c-8		ptp0	   tty21   tty48  usb	       video0
+drm_dp_aux4	  i2c-9		pts	   tty22   tty49  userfaultfd  video1
+fb0		  initctl	random	   tty23   tty5   v4l	       watchdog
+fd		  input		rfkill	   tty24   tty50  vcs	       watchdog0
+full		  kmsg		rtc	   tty25   tty51  vcs1	       zero
+fuse		  kvm		rtc0	   tty26   tty52  vcs2
+gpiochip0	  log		shm	   tty27   tty53  vcs3
+hidraw0		  loop-control	snapshot   tty28   tty54  vcs4
+hidraw1		  mapper	snd	   tty29   tty55  vcs5
+hidraw2		  media0	stderr	   tty3    tty56  vcs6
+hidraw3		  mei0		stdin	   tty30   tty57  vcsa
+/var/lib/systemd
+$ /var/lib/systemd
+$ dhostname
+swift
+/var/lib/systemd
+$ /var/lib/systemd
+$ df 
+Filesystem                   1K-blocks      Used Available Use% Mounted on
+udev                           7952688         0   7952688   0% /dev
+tmpfs                          1607884      2320   1605564   1% /run
+/dev/mapper/nvme0n1p6_crypt 1618370800 617050392 919037964  41% /
+tmpfs                          8039416     73684   7965732   1% /dev/shm
+efivarfs                           268       184        80  70% /sys/firmware/efi/efivars
+tmpfs                             5120         8      5112   1% /run/lock
+tmpfs                          8039420      2836   8036584   1% /tmp
+tmpfs                             1024         0      1024   0% /run/credentials/systemd-journald.service
+tmpfs                             1024         0      1024   0% /run/credentials/systemd-cryptsetup@nvme0n1p6_crypt.service
+/dev/nvme0n1p5                  942764    191240    686296  22% /boot
+/dev/nvme0n1p1                   98304     33175     65129  34% /boot/efi
+tmpfs                          1607880       132   1607748   1% /run/user/1000
+/var/lib/systemd
+$ df /var/lib/systemd
+$ df -h
+Filesystem                   Size  Used Avail Use% Mounted on
+udev                         7,6G     0  7,6G   0% /dev
+tmpfs                        1,6G  2,3M  1,6G   1% /run
+/dev/mapper/nvme0n1p6_crypt  1,6T  589G  877G  41% /
+tmpfs                        7,7G   73M  7,6G   1% /dev/shm
+efivarfs                     268K  184K   80K  70% /sys/firmware/efi/efivars
+tmpfs                        5,0M  8,0K  5,0M   1% /run/lock
+tmpfs                        7,7G  2,8M  7,7G   1% /tmp
+tmpfs                        1,0M     0  1,0M   0% /run/credentials/systemd-journald.service
+tmpfs                        1,0M     0  1,0M   0% /run/credentials/systemd-cryptsetup@nvme0n1p6_crypt.service
+/dev/nvme0n1p5               921M  187M  671M  22% /boot
+/dev/nvme0n1p1                96M   33M   64M  34% /boot/efi
+tmpfs                        1,6G  132K  1,6G   1% /run/user/1000
+/var/lib/systemd
+$ 
+/var/lib/systemd
+$ 
+/var/lib/systemd
+$ /var/lib/systemd
+$ 
+exit
