@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style type="text/css">
+pre {
+  font-family:Courier New;
+  font-size:10pt;
+}
+
+.af_line {
+  color: gray;
+  text-decoration: none;
+}
+
+</style>
+<title>Source file</title>
+</head>
+<body>
+<pre>/home/kent/Documents/l1-live/DEVOPS25/lektion12
+<span style="font-weight:bold;color:#5c5cff;">recordings</span>
+<span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ sudo gdisk
+[sudo] password for kent: 
+sudo: gdisk: command not found
+<span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ sudo apt install gdisk
+Installing:                     
+<span style="color:#00cd00;">  gdisk
+</span>
+Summary:
+  Upgrading: 0, Installing: 1, Removing: 0, Not Upgrading: 39
+  Download size: 230 kB
+  Space needed: 963 kB / 941 GB available
+
+Get:1 http://debian.mirror.su.se/debian trixie/main amd64 gdisk amd64 1.0.10-2 [230 kB]
+Fetched 230 kB in 0s (1 232 kB/s)n><span style="color:#cdcd00;">
+
+Selecting previously unselected package gdisk.
+(Reading database ... 185142 files and directories currently installed.)
+Preparing to unpack .../gdisk_1.0.10-2_amd64.deb ...
+<span style="background-color:#00cd00;"></span><span style="color:#000000;background-color:#00cd00;">Progress: [  0%]</span> [                                                             ] 87<span style="background-color:#00cd00;"></span><span style="color:#000000;background-color:#00cd00;">Progress: [ 20%]</span> [████████████▏                                                ] 8Unpacking gdisk (1.0.10-2) ...
+<span style="background-color:#00cd00;"></span><span style="color:#000000;background-color:#00cd00;">Progress: [ 40%]</span> [████████████████████████▍                                    ] 8Setting up gdisk (1.0.10-2) ...
+<span style="background-color:#00cd00;"></span><span style="color:#000000;background-color:#00cd00;">Progress: [ 60%]</span> [████████████████████████████████████▌                        ] 87<span style="background-color:#00cd00;"></span><span style="color:#000000;background-color:#00cd00;">Progress: [ 80%]</span> [████████████████████████████████████████████████▊            ] 8Processing triggers for man-db (2.13.1-1) ...
+
+<span style="color:#5c5cff;">DEVOPS25/lektion12
+gdisk<span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ sudo gdisk
+GPT fdisk (gdisk) version 1.0.10
+
+Type device filename, or press &lt;Enter&gt; to exit: 
+<span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ ls /dev/<span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ ls /dev/
+acpi_thermal_rel  hidraw4	mem	   stdout  tty31  tty58        vcsa1
+autofs		  hpet		mqueue	   tpm0    tty32  tty59        vcsa2
+block		  hugepages	net	   tpmrm0  tty33  tty6	       vcsa3
+btrfs-control	  hwrng		ng0n1	   tty	   tty34  tty60        vcsa4
+bus		  i2c-0		null	   tty0    tty35  tty61        vcsa5
+char		  i2c-1		nvme0	   tty1    tty36  tty62        vcsa6
+console		  i2c-10	nvme0n1    tty10   tty37  tty63        vcsu
+core		  i2c-11	nvme0n1p1  tty11   tty38  tty7	       vcsu1
+cpu		  i2c-12	nvme0n1p2  tty12   tty39  tty8	       vcsu2
+cpu_dma_latency   i2c-13	nvme0n1p3  tty13   tty4   tty9	       vcsu3
+cuse		  i2c-14	nvme0n1p4  tty14   tty40  ttyS0        vcsu4
+disk		  i2c-15	nvme0n1p5  tty15   tty41  ttyS1        vcsu5
+dm-0		  i2c-2		nvme0n1p6  tty16   tty42  ttyS2        vcsu6
+dma_heap	  i2c-3		nvram	   tty17   tty43  ttyS3        vfio
+dri		  i2c-4		port	   tty18   tty44  udmabuf      vga_arbiter
+drm_dp_aux0	  i2c-5		ppp	   tty19   tty45  uhid	       vhci
+drm_dp_aux1	  i2c-6		psaux	   tty2    tty46  uinput       vhost-net
+drm_dp_aux2	  i2c-7		ptmx	   tty20   tty47  urandom      vhost-vsock
+drm_dp_aux3	  i2c-8		ptp0	   tty21   tty48  usb	       video0
+drm_dp_aux4	  i2c-9		pts	   tty22   tty49  userfaultfd  video1
+fb0		  initctl	random	   tty23   tty5   v4l	       watchdog
+fd		  input		rfkill	   tty24   tty50  vcs	       watchdog0
+full		  kmsg		rtc	   tty25   tty51  vcs1	       zero
+fuse		  kvm		rtc0	   tty26   tty52  vcs2
+gpiochip0	  log		shm	   tty27   tty53  vcs3
+hidraw0		  loop-control	snapshot   tty28   tty54  vcs4
+hidraw1		  mapper	snd	   tty29   tty55  vcs5
+hidraw2		  media0	stderr	   tty3    tty56  vcs6
+hidraw3		  mei0		stdin	   tty30   tty57  vcsa
+<span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ ls /dev/<span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ ls /dev/devnvme0n /dev/nvme0n /dev/nvme0ns /dev/nvme0nu /dev/nvme0nd /dev/nvme0no /dev/nvme0n /dev/nvme0ng /dev/nvme0nd /dev/nvme0ni /dev/nvme0ns /dev/nvme0nk /dev/nvme0n
+GPT fdisk (gdisk) version 1.0.10
+
+Partition table scan:
+  MBR: protective
+  BSD: not present
+  APM: not present
+  GPT: present
+
+Found valid GPT with protective MBR; using GPT.
+
+Command (? for help): p
+Disk /dev/nvme0n1: 3907029168 sectors, 1.8 TiB
+Model: Samsung SSD 970 EVO Plus 2TB            
+Sector size (logical/physical): 512/512 bytes
+Disk identifier (GUID): 3BC0EF45-2EA6-41B7-958A-BEF94B5DBEFF
+Partition table holds up to 128 entries
+Main partition table begins at sector 2 and ends at sector 33
+First usable sector is 34, last usable sector is 3907029134
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 2157 sectors (1.1 MiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048          206847   100.0 MiB   EF00  EFI system partition
+   2          206848          239615   16.0 MiB    0C01  Microsoft reserved ...
+   3          239616       612825087   292.1 GiB   0700  Basic data partition
+   4       612825088       614399999   769.0 MiB   2700  
+   5       614400000       616353791   954.0 MiB   8300  DebBoot
+   6       616353792      3907028991   1.5 TiB     8300  DebCrypt
+
+Command (? for help): 
+
+Command (? for help): 
+
+Command (? for help): exoit
+b	back up GPT data to a file
+c	change a partition&apos;s name
+d	delete a partition
+i	show detailed information on a partition
+l	list known partition types
+n	add a new partition
+o	create a new empty GUID partition table (GPT)
+p	print the partition table
+q	quit without saving changes
+r	recovery and transformation options (experts only)
+s	sort partitions
+t	change a partition&apos;s type code
+v	verify disk
+w	write table to disk and exit
+x	extra functionality (experts only)
+?	print this menu
+
+Command (? for help): exit
+b	back up GPT data to a file
+c	change a partition&apos;s name
+d	delete a partition
+i	show detailed information on a partition
+l	list known partition types
+n	add a new partition
+o	create a new empty GUID partition table (GPT)
+p	print the partition table
+q	quit without saving changes
+r	recovery and transformation options (experts only)
+s	sort partitions
+t	change a partition&apos;s type code
+v	verify disk
+w	write table to disk and exit
+x	extra functionality (experts only)
+?	print this menu
+
+Command (? for help): e
+b	back up GPT data to a file
+c	change a partition&apos;s name
+d	delete a partition
+i	show detailed information on a partition
+l	list known partition types
+n	add a new partition
+o	create a new empty GUID partition table (GPT)
+p	print the partition table
+q	quit without saving changes
+r	recovery and transformation options (experts only)
+s	sort partitions
+t	change a partition&apos;s type code
+v	verify disk
+w	write table to disk and exit
+x	extra functionality (experts only)
+?	print this menu
+
+Command (? for help): q
+<span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ <span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ sudo gdis`&apos;:g&apos;: sudo <span style="color:#00cd00;background-color:#000000;">g</span><span style="color:#000000;background-color:#00cd00;">disk /dev/nvme0nd&apos;: sudo </span><span style="color:#00cd00;background-color:#000000;">gd</span><span style="color:#000000;background-color:#00cd00;">i&apos;: sudo </span><span style="color:#00cd00;background-color:#000000;">gdi</span><span style="color:#000000;background-color:#00cd00;">s&apos;: sudo </span><span style="color:#00cd00;background-color:#000000;">gdis</span><span style="color:#000000;background-color:#00cd00;">k&apos;: sudo </span><span style="color:#00cd00;background-color:#000000;">gdisk</span><span style="color:#000000;background-color:#00cd00;">
+GPT fdisk (gdisk) version 1.0.10
+
+Partition table scan:
+  MBR: protective
+  BSD: not present
+  APM: not present
+  GPT: present
+
+Found valid GPT with protective MBR; using GPT.
+
+Command (? for help): p
+Disk /dev/nvme0n1: 3907029168 sectors, 1.8 TiB
+Model: Samsung SSD 970 EVO Plus 2TB            
+Sector size (logical/physical): 512/512 bytes
+Disk identifier (GUID): 3BC0EF45-2EA6-41B7-958A-BEF94B5DBEFF
+Partition table holds up to 128 entries
+Main partition table begins at sector 2 and ends at sector 33
+First usable sector is 34, last usable sector is 3907029134
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 2157 sectors (1.1 MiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048          206847   100.0 MiB   EF00  EFI system partition
+   2          206848          239615   16.0 MiB    0C01  Microsoft reserved ...
+   3          239616       612825087   292.1 GiB   0700  Basic data partition
+   4       612825088       614399999   769.0 MiB   2700  
+   5       614400000       616353791   954.0 MiB   8300  DebBoot
+   6       616353792      3907028991   1.5 TiB     8300  DebCrypt
+
+Command (? for help): 
+
+Command (? for help): 
+
+Command (? for help): q
+<span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ <span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ sudo gdisk /dev/nvme0n1
+GPT fdisk (gdisk) version 1.0.10
+
+Partition table scan:
+  MBR: protective
+  BSD: not present
+  APM: not present
+  GPT: present
+
+Found valid GPT with protective MBR; using GPT.
+
+Command (? for help): p
+Disk /dev/nvme0n1: 3907029168 sectors, 1.8 TiB
+Model: Samsung SSD 970 EVO Plus 2TB            
+Sector size (logical/physical): 512/512 bytes
+Disk identifier (GUID): 3BC0EF45-2EA6-41B7-958A-BEF94B5DBEFF
+Partition table holds up to 128 entries
+Main partition table begins at sector 2 and ends at sector 33
+First usable sector is 34, last usable sector is 3907029134
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 2157 sectors (1.1 MiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048          206847   100.0 MiB   EF00  EFI system partition
+   2          206848          239615   16.0 MiB    0C01  Microsoft reserved ...
+   3          239616       612825087   292.1 GiB   0700  Basic data partition
+   4       612825088       614399999   769.0 MiB   2700  
+   5       614400000       616353791   954.0 MiB   8300  DebBoot
+   6       616353792      3907028991   1.5 TiB     8300  DebCrypt
+
+Command (? for help): 
+
+Command (? for help): 
+
+Command (? for help): q
+<span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ <span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ lsblk
+NAME                MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINTS
+nvme0n1             259:0    0   1,8T  0 disk  
+├─nvme0n1p1         259:1    0   100M  0 part  /boot/efi
+├─nvme0n1p2         259:2    0    16M  0 part  
+├─nvme0n1p3         259:3    0 292,1G  0 part  
+├─nvme0n1p4         259:4    0   769M  0 part  
+├─nvme0n1p5         259:5    0   954M  0 part  /boot
+└─nvme0n1p6         259:6    0   1,5T  0 part  
+  └─nvme0n1p6_crypt 254:0    0   1,5T  0 crypt /
+<span style="color:#5c5cff;">DEVOPS25/lektion12
+/boot/efils <span style="color:#00cd00;background-color:#000000;">/boot/efi</span><span style="color:#000000;background-color:#00cd00;">
+ls: cannot open directory &apos;/boot/efi&apos;: Permission denied
+</span><span style="color:#5c5cff;background-color:#00cd00;">DEVOPS25/lektion12
+</span>$ sudo !!
+sudo ls /boot/efi
+ EFI  &apos;System Volume Information&apos;
+<span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ sudo ls /boot/efi/EFI
+Boot  debian  Microsoft
+<span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ <span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ ls /boot /boot- /bootl /boot
+total 177325
+-rw-r--r-- 1 root root   283277 mar  8 20:54 config-6.12.74+deb13+1-amd64
+-rw-r--r-- 1 root root   283190 apr 30 13:38 config-6.12.85+deb13-amd64
+drwx------ 4 root root     1024 jan  1  1970 efi
+drwxr-xr-x 5 root root     4096 maj  2 13:13 grub
+-rw-r--r-- 1 root root 78373207 apr 27 17:01 initrd.img-6.12.74+deb13+1-amd64
+-rw-r--r-- 1 root root 78366311 maj  2 09:27 initrd.img-6.12.85+deb13-amd64
+drwx------ 2 root root    16384 apr 26 21:30 lost+found
+-rw-r--r-- 1 root root       83 mar  8 20:54 System.map-6.12.74+deb13+1-amd64
+-rw-r--r-- 1 root root       83 apr 30 13:38 System.map-6.12.85+deb13-amd64
+-rw-r--r-- 1 root root 12113856 mar  8 20:54 vmlinuz-6.12.74+deb13+1-amd64
+-rw-r--r-- 1 root root 12113856 apr 30 13:38 vmlinuz-6.12.85+deb13-amd64
+<span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ ls -l /boot /boot /boot/boot<span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ ls /boot
+config-6.12.74+deb13+1-amd64	  lost+found
+config-6.12.85+deb13-amd64	  System.map-6.12.74+deb13+1-amd64
+efi				  System.map-6.12.85+deb13-amd64
+grub				  vmlinuz-6.12.74+deb13+1-amd64
+initrd.img-6.12.74+deb13+1-amd64  vmlinuz-6.12.85+deb13-amd64
+initrd.img-6.12.85+deb13-amd64
+<span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ <span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ lsblk
+NAME                MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINTS
+nvme0n1             259:0    0   1,8T  0 disk  
+├─nvme0n1p1         259:1    0   100M  0 part  /boot/efi
+├─nvme0n1p2         259:2    0    16M  0 part  
+├─nvme0n1p3         259:3    0 292,1G  0 part  
+├─nvme0n1p4         259:4    0   769M  0 part  
+├─nvme0n1p5         259:5    0   954M  0 part  /boot
+└─nvme0n1p6         259:6    0   1,5T  0 part  
+  └─nvme0n1p6_crypt 254:0    0   1,5T  0 crypt /
+<span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ <span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ df -h
+Filesystem                   Size  Used Avail Use% Mounted on
+udev                         7,6G     0  7,6G   0% /dev
+tmpfs                        1,6G  2,3M  1,6G   1% /run
+/dev/mapper/nvme0n1p6_crypt  1,6T  589G  877G  41% /
+tmpfs                        7,7G   67M  7,7G   1% /dev/shm
+efivarfs                     268K  184K   80K  70% /sys/firmware/efi/efivars
+tmpfs                        5,0M  8,0K  5,0M   1% /run/lock
+tmpfs                        7,7G  2,8M  7,7G   1% /tmp
+tmpfs                        1,0M     0  1,0M   0% /run/credentials/systemd-journald.service
+tmpfs                        1,0M     0  1,0M   0% /run/credentials/systemd-cryptsetup&#64;nvme0n1p6_crypt.service
+/dev/nvme0n1p5               921M  187M  671M  22% /boot
+/dev/nvme0n1p1                96M   33M   64M  34% /boot/efi
+tmpfs                        1,6G  132K  1,6G   1% /run/user/1000
+<span style="color:#5c5cff;">DEVOPS25/lektion12
+$ <span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ sudoarch)`&apos;:s&apos;: l<span style="color:#00cd00;background-color:#000000;">s</span><span style="color:#000000;background-color:#00cd00;">blu&apos;: </span><span style="color:#00cd00;background-color:#000000;">su</span><span style="color:#000000;background-color:#00cd00;">do ls /boot/efi/EFd&apos;: </span><span style="color:#00cd00;background-color:#000000;">sud</span><span style="color:#000000;background-color:#00cd00;">o&apos;: </span><span style="color:#00cd00;background-color:#000000;">sudo</span><span style="color:#000000;background-color:#00cd00;">gdisk /dev/nvme0n
+[sudo] password for kent: 
+GPT fdisk (gdisk) version 1.0.10
+
+Partition table scan:
+  MBR: protective
+  BSD: not present
+  APM: not present
+  GPT: present
+
+Found valid GPT with protective MBR; using GPT.
+
+Command (? for help): p
+Disk /dev/nvme0n1: 3907029168 sectors, 1.8 TiB
+Model: Samsung SSD 970 EVO Plus 2TB            
+Sector size (logical/physical): 512/512 bytes
+Disk identifier (GUID): 3BC0EF45-2EA6-41B7-958A-BEF94B5DBEFF
+Partition table holds up to 128 entries
+Main partition table begins at sector 2 and ends at sector 33
+First usable sector is 34, last usable sector is 3907029134
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 2157 sectors (1.1 MiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048          206847   100.0 MiB   EF00  EFI system partition
+   2          206848          239615   16.0 MiB    0C01  Microsoft reserved ...
+   3          239616       612825087   292.1 GiB   0700  Basic data partition
+   4       612825088       614399999   769.0 MiB   2700  
+   5       614400000       616353791   954.0 MiB   8300  DebBoot
+   6       616353792      3907028991   1.5 TiB     8300  DebCrypt
+
+Command (? for help): 
+
+Command (? for help): q
+<span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ <span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ lsblk
+NAME                MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINTS
+nvme0n1             259:0    0   1,8T  0 disk  
+├─nvme0n1p1         259:1    0   100M  0 part  /boot/efi
+├─nvme0n1p2         259:2    0    16M  0 part  
+├─nvme0n1p3         259:3    0 292,1G  0 part  
+├─nvme0n1p4         259:4    0   769M  0 part  
+├─nvme0n1p5         259:5    0   954M  0 part  /boot
+└─nvme0n1p6         259:6    0   1,5T  0 part  
+  └─nvme0n1p6_crypt 254:0    0   1,5T  0 crypt /
+<span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ <span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ df -h
+Filesystem                   Size  Used Avail Use% Mounted on
+udev                         7,6G     0  7,6G   0% /dev
+tmpfs                        1,6G  2,3M  1,6G   1% /run
+/dev/mapper/nvme0n1p6_crypt  1,6T  589G  877G  41% /
+tmpfs                        7,7G   90M  7,6G   2% /dev/shm
+efivarfs                     268K  184K   80K  70% /sys/firmware/efi/efivars
+tmpfs                        5,0M  8,0K  5,0M   1% /run/lock
+tmpfs                        7,7G  2,8M  7,7G   1% /tmp
+tmpfs                        1,0M     0  1,0M   0% /run/credentials/systemd-journald.service
+tmpfs                        1,0M     0  1,0M   0% /run/credentials/systemd-cryptsetup&#64;nvme0n1p6_crypt.service
+/dev/nvme0n1p5               921M  187M  671M  22% /boot
+/dev/nvme0n1p1                96M   33M   64M  34% /boot/efi
+tmpfs                        1,6G  136K  1,6G   1% /run/user/1000
+<span style="color:#5c5cff;">DEVOPS25/lektion12
+df -h | less-h
+Filesystem                   Size  Used Avail Use% Mounted on
+udev                         7,6G     0  7,6G   0% /dev
+tmpfs                        1,6G  2,3M  1,6G   1% /run
+/dev/mapper/nvme0n1p6_crypt  1,6T  589G  877G  41% /
+tmpfs                        7,7G   90M  7,6G   2% /dev/shm
+efivarfs                     268K  184K   80K  70% /sys/firmware/efi/efivars
+tmpfs                        5,0M  8,0K  5,0M   1% /run/lock
+tmpfs                        7,7G  2,8M  7,7G   1% /tmp
+tmpfs                        1,0M     0  1,0M   0% /run/credentials/systemd-journald.service
+tmpfs                        1,0M     0  1,0M   0% /run/credentials/systemd-cryptsetup&#64;nvme0n1p6_crypt.service
+/dev/nvme0n1p5               921M  187M  671M  22% /boot
+/dev/nvme0n1p1                96M   33M   64M  34% /boot/efi
+tmpfs                        1,6G  136K  1,6G   1% /run/user/1000
+Mtmpfs                        1,6G  2,3M  1,6G   1% /run
+&gt;<span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ <span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ du -hs ~/Dropbox/
+533G	/home/kent/Dropbox/
+<span style="color:#5c5cff;">DEVOPS25/lektion12
+$ df<span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ df
+Filesystem                   1K-blocks      Used Available Use% Mounted on
+udev                           7952688         0   7952688   0% /dev
+tmpfs                          1607884      2328   1605556   1% /run
+/dev/mapper/nvme0n1p6_crypt 1618370800 617064592 919023764  41% /
+tmpfs                          8039416     90456   7948960   2% /dev/shm
+efivarfs                           268       184        80  70% /sys/firmware/efi/efivars
+tmpfs                             5120         8      5112   1% /run/lock
+tmpfs                          8039420      2836   8036584   1% /tmp
+tmpfs                             1024         0      1024   0% /run/credentials/systemd-journald.service
+tmpfs                             1024         0      1024   0% /run/credentials/systemd-cryptsetup&#64;nvme0n1p6_crypt.service
+/dev/nvme0n1p5                  942764    191240    686296  22% /boot
+/dev/nvme0n1p1                   98304     33175     65129  34% /boot/efi
+tmpfs                          1607880       136   1607744   1% /run/user/1000
+<span style="color:#5c5cff;">DEVOPS25/lektion12
+$ xfgdg-open <span style="color:#00cd00;background-color:#000000;">/home/kent/Documents/l1-live/DEVOPS25/lektion12/parts.e</span><span style="color:#000000;background-color:#00cd00;"></span><span style="color:#00cd00;background-color:#000000;">x</span><span style="color:#000000;background-color:#00cd00;"></span><span style="color:#00cd00;background-color:#000000;">calidraw</span><span style="color:#000000;background-color:#00cd00;">/home/kent/Documents/l1-live/DEVOPS25/lektion12/parts.excalidraw
+</span><span style="color:#5c5cff;background-color:#00cd00;">DEVOPS25/lektion12
+$ <span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ ssh ubse 
+Welcome to Ubuntu 24.04.4 LTS (GNU/Linux 6.8.0-111-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue May 12 08:59:00 AM UTC 2026
+
+  System load:  0.0                Processes:               143
+  Usage of /:   43.6% of 11.21GB   Users logged in:         0
+  Memory usage: 5%                 IPv4 address for enp1s0: 192.168.122.155
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Tue May 12 07:20:35 2026 from 192.168.122.1
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 0;kent&#64;ubse: ~
+0;kent&#64;ubse: ~weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 
+0;kent&#64;ubse: ~weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 
+0;kent&#64;ubse: ~weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 
+0;kent&#64;ubse: ~weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ sudo -i
+[sudo] password for kent: 
+0;root&#64;ubse: ~
+root&#64;ubse:~# 0;root&#64;ubse: ~
+root&#64;ubse:~# lsblk 
+NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0                        11:0    1 1024M  0 rom  
+vda                       253:0    0   25G  0 disk 
+├─vda1                    253:1    0    1M  0 part 
+├─vda2                    253:2    0    2G  0 part /boot
+└─vda3                    253:3    0   23G  0 part 
+  └─ubuntu--vg-ubuntu--lv 252:0    0 11.5G  0 lvm  /
+vdb                       253:16   0   20G  0 disk 
+0;root&#64;ubse: ~
+root&#64;ubse:~# gdisk /dev/vdb0;root&#64;ubse: ~
+root&#64;ubse:~# gdisk /dev/vdb
+GPT fdisk (gdisk) version 1.0.10
+
+Partition table scan:
+  MBR: not present
+  BSD: not present
+  APM: not present
+  GPT: not present
+
+Creating new GPT entries in memory.
+
+Command (? for help): ?
+b	back up GPT data to a file
+c	change a partition&apos;s name
+d	delete a partition
+i	show detailed information on a partition
+l	list known partition types
+n	add a new partition
+o	create a new empty GUID partition table (GPT)
+p	print the partition table
+q	quit without saving changes
+r	recovery and transformation options (experts only)
+s	sort partitions
+t	change a partition&apos;s type code
+v	verify disk
+w	write table to disk and exit
+x	extra functionality (experts only)
+?	print this menu
+
+Command (? for help): ^[[o
+This option deletes all partitions and creates a new protective MBR.
+Proceed? (Y/N): y
+
+Command (? for help): p
+Disk /dev/vdb: 41943040 sectors, 20.0 GiB
+Sector size (logical/physical): 512/512 bytes
+Disk identifier (GUID): FAF1B659-39C6-474F-BA4B-A3F0BEC20670
+Partition table holds up to 128 entries
+Main partition table begins at sector 2 and ends at sector 33
+First usable sector is 34, last usable sector is 41943006
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 41942973 sectors (20.0 GiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+
+Command (? for help): ?
+b	back up GPT data to a file
+c	change a partition&apos;s name
+d	delete a partition
+i	show detailed information on a partition
+l	list known partition types
+n	add a new partition
+o	create a new empty GUID partition table (GPT)
+p	print the partition table
+q	quit without saving changes
+r	recovery and transformation options (experts only)
+s	sort partitions
+t	change a partition&apos;s type code
+v	verify disk
+w	write table to disk and exit
+x	extra functionality (experts only)
+?	print this menu
+
+Command (? for help): n
+Partition number (1-128, default 1): 
+First sector (34-41943006, default = 2048) or {+-}size{KMGTP}: 
+Last sector (2048-41943006, default = 41940991) or {+-}size{KMGTP}: +1-10G
+Current type is 8300 (Linux filesystem)
+Hex code or GUID (L to show codes, Enter = 8300): 
+Changed type of partition to &apos;Linux filesystem&apos;
+
+Command (? for help): p
+Disk /dev/vdb: 41943040 sectors, 20.0 GiB
+Sector size (logical/physical): 512/512 bytes
+Disk identifier (GUID): FAF1B659-39C6-474F-BA4B-A3F0BEC20670
+Partition table holds up to 128 entries
+Main partition table begins at sector 2 and ends at sector 33
+First usable sector is 34, last usable sector is 41943006
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 20973534 sectors (10.0 GiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048        20971486   10.0 GiB    8300  Linux filesystem
+
+Command (? for help): p
+Disk /dev/vdb: 41943040 sectors, 20.0 GiB
+Sector size (logical/physical): 512/512 bytes
+Disk identifier (GUID): FAF1B659-39C6-474F-BA4B-A3F0BEC20670
+Partition table holds up to 128 entries
+Main partition table begins at sector 2 and ends at sector 33
+First usable sector is 34, last usable sector is 41943006
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 20973534 sectors (10.0 GiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048        20971486   10.0 GiB    8300  Linux filesystem
+
+Command (? for help): p
+Disk /dev/vdb: 41943040 sectors, 20.0 GiB
+Sector size (logical/physical): 512/512 bytes
+Disk identifier (GUID): FAF1B659-39C6-474F-BA4B-A3F0BEC20670
+Partition table holds up to 128 entries
+Main partition table begins at sector 2 and ends at sector 33
+First usable sector is 34, last usable sector is 41943006
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 20973534 sectors (10.0 GiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048        20971486   10.0 GiB    8300  Linux filesystem
+
+Command (? for help): ?
+b	back up GPT data to a file
+c	change a partition&apos;s name
+d	delete a partition
+i	show detailed information on a partition
+l	list known partition types
+n	add a new partition
+o	create a new empty GUID partition table (GPT)
+p	print the partition table
+q	quit without saving changes
+r	recovery and transformation options (experts only)
+s	sort partitions
+t	change a partition&apos;s type code
+v	verify disk
+w	write table to disk and exit
+x	extra functionality (experts only)
+?	print this menu
+
+Command (? for help): w
+
+Final checks complete. About to write GPT data. THIS WILL OVERWRITE EXISTING
+PARTITIONS!!
+
+Do you want to proceed? (Y/N): y
+OK; writing new GUID partition table (GPT) to /dev/vdb.
+The operation has completed successfully.
+0;root&#64;ubse: ~
+root&#64;ubse:~# lslblk
+NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0                        11:0    1 1024M  0 rom  
+vda                       253:0    0   25G  0 disk 
+├─vda1                    253:1    0    1M  0 part 
+├─vda2                    253:2    0    2G  0 part /boot
+└─vda3                    253:3    0   23G  0 part 
+  └─ubuntu--vg-ubuntu--lv 252:0    0 11.5G  0 lvm  /
+vdb                       253:16   0   20G  0 disk 
+└─vdb1                    253:17   0   10G  0 part 
+0;root&#64;ubse: ~
+root&#64;ubse:~# partprobe 
+0;root&#64;ubse: ~
+root&#64;ubse:~# 0;root&#64;ubse: ~
+root&#64;ubse:~# ls /dev
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">autofs</span>           <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">mem</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty26</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty7</span>         <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">userio</span>
+<span style="font-weight:bold;color:#5c5cff;">block</span>            <span style="color:#000000;background-color:#00cd00;">mqueue</span>    <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty27</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty8</span>         <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vcs</span>
+<span style="font-weight:bold;color:#5c5cff;">bsg</span>              <span style="font-weight:bold;color:#5c5cff;">net</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty28</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty9</span>         <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vcs1</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">btrfs-control</span>    <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">null</span>      <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty29</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS0</span>        <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vcs2</span>
+<span style="font-weight:bold;color:#5c5cff;">bus</span>              <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">nvram</span>     <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty3</span>   <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS1</span>        <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vcs3</span>
+<span style="font-weight:bold;color:#00ffff;">cdrom</span>            <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">port</span>      <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty30</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS10</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vcs4</span>
+<span style="font-weight:bold;color:#5c5cff;">char</span>             <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ppp</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty31</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS11</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vcs5</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">console</span>          <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">psaux</span>     <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty32</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS12</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vcs6</span>
+<span style="font-weight:bold;color:#00ffff;">core</span>             <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ptmx</span>      <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty33</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS13</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vcsa</span>
+<span style="font-weight:bold;color:#5c5cff;">cpu</span>              <span style="font-weight:bold;color:#5c5cff;">pts</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty34</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS14</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vcsa1</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">cpu_dma_latency</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">random</span>    <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty35</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS15</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vcsa2</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">cuse</span>             <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">rfkill</span>    <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty36</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS16</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vcsa3</span>
+<span style="font-weight:bold;color:#5c5cff;">disk</span>             <span style="font-weight:bold;color:#00ffff;">rtc</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty37</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS17</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vcsa4</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">dm-0</span>             <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">rtc0</span>      <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty38</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS18</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vcsa5</span>
+<span style="font-weight:bold;color:#5c5cff;">dma_heap</span>         <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">sg0</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty39</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS19</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vcsa6</span>
+<span style="font-weight:bold;color:#5c5cff;">dri</span>              <span style="color:#000000;background-color:#00cd00;">shm</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty4</span>   <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS2</span>        <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vcsu</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ecryptfs</span>         <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">snapshot</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty40</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS20</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vcsu1</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">fb0</span>              <span style="font-weight:bold;color:#5c5cff;">snd</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty41</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS21</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vcsu2</span>
+<span style="font-weight:bold;color:#00ffff;">fd</span>               <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">sr0</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty42</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS22</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vcsu3</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">full</span>             <span style="font-weight:bold;color:#00ffff;">stderr</span>    <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty43</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS23</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vcsu4</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">fuse</span>             <span style="font-weight:bold;color:#00ffff;">stdin</span>     <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty44</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS24</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vcsu5</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">hidraw0</span>          <span style="font-weight:bold;color:#00ffff;">stdout</span>    <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty45</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS25</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vcsu6</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">hpet</span>             <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty46</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS26</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vda</span>
+<span style="font-weight:bold;color:#5c5cff;">hugepages</span>        <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty0</span>      <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty47</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS27</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vda1</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">hwrng</span>            <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty1</span>      <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty48</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS28</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vda2</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">i2c-0</span>            <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty10</span>     <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty49</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS29</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vda3</span>
+<span style="font-weight:bold;color:#00ffff;">initctl</span>          <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty11</span>     <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty5</span>   <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS3</span>        <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vdb</span>
+<span style="font-weight:bold;color:#5c5cff;">input</span>            <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty12</span>     <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty50</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS30</span>       <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vdb1</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">kmsg</span>             <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty13</span>     <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty51</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS31</span>       <span style="font-weight:bold;color:#5c5cff;">vfio</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">kvm</span>              <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty14</span>     <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty52</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS4</span>        <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vga_arbiter</span>
+<span style="font-weight:bold;color:#00ffff;">log</span>              <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty15</span>     <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty53</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS5</span>        <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vhci</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">loop-control</span>     <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty16</span>     <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty54</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS6</span>        <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vhost-net</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">loop0</span>            <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty17</span>     <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty55</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS7</span>        <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vhost-vsock</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">loop1</span>            <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty18</span>     <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty56</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS8</span>        <span style="font-weight:bold;color:#5c5cff;">virtio-ports</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">loop2</span>            <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty19</span>     <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty57</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyS9</span>        <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vport1p1</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">loop3</span>            <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty2</span>      <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty58</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">ttyprintk</span>    <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">vport1p2</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">loop4</span>            <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty20</span>     <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty59</span>  <span style="font-weight:bold;color:#5c5cff;">ubuntu-vg</span>    <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">zero</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">loop5</span>            <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty21</span>     <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty6</span>   <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">udmabuf</span>      <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">zfs</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">loop6</span>            <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty22</span>     <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty60</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">uhid</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">loop7</span>            <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty23</span>     <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty61</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">uinput</span>
+<span style="font-weight:bold;color:#5c5cff;">mapper</span>           <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty24</span>     <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty62</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">urandom</span>
+<span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">mcelog</span>           <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty25</span>     <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">tty63</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">userfaultfd</span>
+0;root&#64;ubse: ~
+root&#64;ubse:~# 
+echo HELLO &gt;/dev/vd
+
+
+
+
+0;root&#64;ubse: ~
+root&#64;ubse:~# mkfs
+.
+
+mkfs.bfs     mkfs.ext2    mkfs.fat     mkfs.ntfs    
+mkfs.btrfs   mkfs.ext3    mkfs.minix   mkfs.vfat    
+mkfs.cramfs  mkfs.ext4    mkfs.msdos   mkfs.xfs     
+0;root&#64;ubse: ~
+root&#64;ubse:~# mkfs.ex
+t4an 0;root&#64;ubse: ~
+root&#64;ubse:~# man mkfs.ext4
+<span style="text-decoration:underline;">MKE2FS</span>(8)            System Manager&apos;s Manual           <span style="text-decoration:underline;">MKE2FS</span>(8)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       mke2fs - create an ext2/ext3/ext4 file system
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">mke2fs  </span><span style="color:#7f7f7f;">[ </span><span style="font-weight:bold;color:#7f7f7f;">-c </span><span style="color:#7f7f7f;">| </span><span style="font-weight:bold;color:#7f7f7f;">-l </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">filename</span><span style="color:#7f7f7f;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;">-b </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">block-size</span><span style="color:#7f7f7f;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;">-C </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">clus‐</span>
+       <span style="text-decoration:underline;">ter-size</span> ] [ <span style="font-weight:bold;color:#7f7f7f;">-d </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">root-directory</span><span style="color:#7f7f7f;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;">-D </span><span style="color:#7f7f7f;">] [ </span><span style="font-weight:bold;color:#7f7f7f;">-g  </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">blocks-per-</span>
+       <span style="text-decoration:underline;">group</span>  ] [ <span style="font-weight:bold;color:#7f7f7f;">-G </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">number-of-groups</span><span style="color:#7f7f7f;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;">-i </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">bytes-per-inode</span><span style="color:#7f7f7f;"> ] [</span>
+       <span style="font-weight:bold;color:#7f7f7f;">-I </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">inode-size</span><span style="color:#7f7f7f;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;">-j </span><span style="color:#7f7f7f;">] [ </span><span style="font-weight:bold;color:#7f7f7f;">-J </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">journal-options</span><span style="color:#7f7f7f;"> ] [  </span><span style="font-weight:bold;color:#7f7f7f;">-N  </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">num‐</span>
+       <span style="text-decoration:underline;">ber-of-inodes</span>  ] [ <span style="font-weight:bold;color:#7f7f7f;">-n </span><span style="color:#7f7f7f;">] [ </span><span style="font-weight:bold;color:#7f7f7f;">-m </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">reserved-blocks-percentage</span><span style="color:#7f7f7f;"> ]</span>
+       [ <span style="font-weight:bold;color:#7f7f7f;">-o </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">creator-os</span><span style="color:#7f7f7f;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;">-O </span><span style="color:#7f7f7f;">[^]</span><span style="text-decoration:underline;color:#7f7f7f;">feature</span><span style="color:#7f7f7f;">[,...]  ] [ </span><span style="font-weight:bold;color:#7f7f7f;">-q  </span><span style="color:#7f7f7f;">]  [  </span><span style="font-weight:bold;color:#7f7f7f;">-r</span>
+       <span style="text-decoration:underline;">fs-revision-level</span> ] [ <span style="font-weight:bold;color:#7f7f7f;">-E </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">extended-options</span><span style="color:#7f7f7f;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;">-v </span><span style="color:#7f7f7f;">] [ </span><span style="font-weight:bold;color:#7f7f7f;">-F </span><span style="color:#7f7f7f;">]</span>
+       [  <span style="font-weight:bold;color:#7f7f7f;">-L </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">volume-label</span><span style="color:#7f7f7f;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;">-M </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">last-mounted-directory</span><span style="color:#7f7f7f;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;">-S </span><span style="color:#7f7f7f;">]</span>
+       [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-t </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">fs-type</span><span style="color:#7f7f7f;background-color:#000000;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-T </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">usage-type</span><span style="color:#7f7f7f;background-color:#000000;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-U </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">UUID</span><span style="color:#7f7f7f;background-color:#000000;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-V </span><span style="color:#7f7f7f;background-color:#000000;">] [  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-e</span>
+       <span style="text-decoration:underline;">errors-behavior</span> ] [ <span style="font-weight:bold;color:#7f7f7f;">-z </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">undo_file</span><span style="color:#7f7f7f;"> ] </span><span style="text-decoration:underline;color:#7f7f7f;">device</span><span style="color:#7f7f7f;"> [ </span><span style="text-decoration:underline;color:#7f7f7f;">fs-size</span><span style="color:#7f7f7f;"> ]</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">mke2fs -O journal_dev </span><span style="color:#7f7f7f;">[ </span><span style="font-weight:bold;color:#7f7f7f;">-b </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">block-size</span><span style="color:#7f7f7f;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;">-L </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">volume-label</span>
+       ] [ <span style="font-weight:bold;color:#7f7f7f;">-n </span><span style="color:#7f7f7f;">] [ </span><span style="font-weight:bold;color:#7f7f7f;">-q </span><span style="color:#7f7f7f;">] [ </span><span style="font-weight:bold;color:#7f7f7f;">-v </span><span style="color:#7f7f7f;">] </span><span style="text-decoration:underline;color:#7f7f7f;">external-journal</span><span style="color:#7f7f7f;"> [ </span><span style="text-decoration:underline;color:#7f7f7f;">fs-size</span><span style="color:#7f7f7f;"> ]</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       <span style="font-weight:bold;color:#7f7f7f;">mke2fs </span><span style="color:#7f7f7f;">is used to create an ext2, ext3, or ext4 file sys‐</span>
+       tem,  usually  in a disk partition (or file) named by <span style="text-decoration:underline;">de‐</span>
+       <span style="text-decoration:underline;">vice</span>.
+
+       The file system size is specified by <span style="text-decoration:underline;">fs-size</span>.  If <span style="text-decoration:underline;">fs-size</span>
+       does not have a suffix, it is interpreted as power-of-two
+       kilobytes, unless the <span style="font-weight:bold;color:#7f7f7f;">-b </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">blocksize</span><span style="color:#7f7f7f;"> option  is  specified,</span>
+       in  which  case  </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">fs-size</span><span style="color:#000000;background-color:#000000;">  is interpreted as the number of</span>
+       <span style="text-decoration:underline;">blocksize</span> blocks.   If the fs-size is  suffixed  by  &apos;k&apos;,
+       &apos;m&apos;,  &apos;g&apos;, &apos;t&apos; (either upper-case or lower-case), then it
+       is interpreted in power-of-two kilobytes, megabytes,  gi‐
+       gabytes,  terabytes,  etc.  If <span style="text-decoration:underline;">fs-size</span> is omitted, <span style="font-weight:bold;color:#7f7f7f;">mke2fs</span>
+       will create the file system based on the device size.
+
+       If <span style="font-weight:bold;color:#7f7f7f;">mke2fs </span><span style="color:#7f7f7f;">is run as </span><span style="font-weight:bold;color:#7f7f7f;">mkfs.XXX </span><span style="color:#7f7f7f;">(i.e., </span><span style="font-weight:bold;color:#7f7f7f;">mkfs.ext2</span><span style="color:#7f7f7f;">, </span><span style="font-weight:bold;color:#7f7f7f;">mkfs.ext3</span><span style="color:#7f7f7f;">,</span>
+       or <span style="font-weight:bold;color:#7f7f7f;">mkfs.ext4</span><span style="color:#7f7f7f;">) the option </span><span style="font-weight:bold;color:#7f7f7f;">-t </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">XXX</span><span style="color:#7f7f7f;"> is implied; so  </span><span style="font-weight:bold;color:#7f7f7f;">mkfs.ext3</span>
+       will  create  a  file system for use with ext3, <span style="font-weight:bold;color:#7f7f7f;">mkfs.ext4</span>
+       will create a file system for use with ext4, and so on.
+
+       The defaults of the parameters for the newly created file
+       system, if not overridden by the  options  listed  below,
+M       kilobytes, unless the </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-b </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">blocksize</span><span style="color:#7f7f7f;background-color:#000000;"> option  is  specified,</span>
+M       does not have a suffix, it is interpreted as power-of-two</span>xt4(8) line 28 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M       The file system size is specified by </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">fs-size</span><span style="color:#000000;background-color:#000000;">.  If </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">fs-size</span>
+M</span>yle="color:#000000;background-color:#000000;">Manual page mkfs.ext4(8) line 26 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M       </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">vice</span><span style="color:#000000;background-color:#000000;">.</span>:#000000;">
+M       tem,  usually  in a disk partition (or file) named by </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">de‐</span>d-color:#000000;">
+M       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">mke2fs </span><span style="color:#7f7f7f;background-color:#000000;">is used to create an ext2, ext3, or ext4 file sys‐</span>
+M</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">DESCRIPTION</span>or help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M</span>yle="color:#000000;background-color:#000000;">Manual page mkfs.ext4(8) line 21 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M       ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-n </span><span style="color:#7f7f7f;background-color:#000000;">] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-q </span><span style="color:#7f7f7f;background-color:#000000;">] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-v </span><span style="color:#7f7f7f;background-color:#000000;">] </span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">external-journal</span><span style="color:#7f7f7f;background-color:#000000;"> [ </span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">fs-size</span><span style="color:#7f7f7f;background-color:#000000;"> ]</span>
+M       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">mke2fs -O journal_dev </span><span style="color:#7f7f7f;background-color:#000000;">[ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-b </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">block-size</span><span style="color:#7f7f7f;background-color:#000000;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-L </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">volume-label</span>
+M</span>yle="color:#000000;background-color:#000000;">Manual page mkfs.ext4(8) line 18 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M       </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">errors-behavior</span><span style="color:#000000;background-color:#000000;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-z </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">undo_file</span><span style="color:#7f7f7f;background-color:#000000;"> ] </span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">device</span><span style="color:#7f7f7f;background-color:#000000;"> [ </span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">fs-size</span><span style="color:#7f7f7f;background-color:#000000;"> ]</span>
+M       [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-t </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">fs-type</span><span style="color:#7f7f7f;background-color:#000000;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-T </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">usage-type</span><span style="color:#7f7f7f;background-color:#000000;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-U </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">UUID</span><span style="color:#7f7f7f;background-color:#000000;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-V </span><span style="color:#7f7f7f;background-color:#000000;">] [  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-e</span>
+M       [  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-L </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">volume-label</span><span style="color:#7f7f7f;background-color:#000000;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-M </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">last-mounted-directory</span><span style="color:#7f7f7f;background-color:#000000;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-S </span><span style="color:#7f7f7f;background-color:#000000;">]</span>
+M       </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">fs-revision-level</span><span style="color:#000000;background-color:#000000;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-E </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">extended-options</span><span style="color:#7f7f7f;background-color:#000000;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-v </span><span style="color:#7f7f7f;background-color:#000000;">] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-F </span><span style="color:#7f7f7f;background-color:#000000;">]</span>
+M       [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-o </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">creator-os</span><span style="color:#7f7f7f;background-color:#000000;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-O </span><span style="color:#7f7f7f;background-color:#000000;">[^]</span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">feature</span><span style="color:#7f7f7f;background-color:#000000;">[,...]  ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-q  </span><span style="color:#7f7f7f;background-color:#000000;">]  [  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-r</span>
+M       </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">ber-of-inodes</span><span style="color:#000000;background-color:#000000;">  ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-n </span><span style="color:#7f7f7f;background-color:#000000;">] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-m </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">reserved-blocks-percentage</span><span style="color:#7f7f7f;background-color:#000000;"> ]</span>
+M       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-I </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">inode-size</span><span style="color:#7f7f7f;background-color:#000000;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-j </span><span style="color:#7f7f7f;background-color:#000000;">] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-J </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">journal-options</span><span style="color:#7f7f7f;background-color:#000000;"> ] [  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-N  </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">num‐</span>
+M       </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">group</span><span style="color:#000000;background-color:#000000;">  ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-G </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">number-of-groups</span><span style="color:#7f7f7f;background-color:#000000;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-i </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">bytes-per-inode</span><span style="color:#7f7f7f;background-color:#000000;"> ] [</span>
+M       </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">ter-size</span><span style="color:#000000;background-color:#000000;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-d </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">root-directory</span><span style="color:#7f7f7f;background-color:#000000;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-D </span><span style="color:#7f7f7f;background-color:#000000;">] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-g  </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">blocks-per-</span>
+M       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">mke2fs  </span><span style="color:#7f7f7f;background-color:#000000;">[ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-c </span><span style="color:#7f7f7f;background-color:#000000;">| </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-l </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">filename</span><span style="color:#7f7f7f;background-color:#000000;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-b </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">block-size</span><span style="color:#7f7f7f;background-color:#000000;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-C </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">clus‐</span>
+M</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">SYNOPSIS</span>h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M</span>yle="color:#000000;background-color:#000000;"> Manual page mkfs.ext4(8) line 6 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M       mke2fs - create an ext2/ext3/ext4 file system</span>l page mkfs.ext4(8) line 5 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">NAME</span>ess h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M</span>yle="color:#000000;background-color:#000000;"> Manual page mkfs.ext4(8) line 3 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+M</span><span style="text-decoration:underline;color:#000000;background-color:#000000;">MKE2FS</span><span style="color:#000000;background-color:#000000;">(8)            System Manager&apos;s Manual           </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">MKE2FS</span><span style="color:#000000;background-color:#000000;">(8)</span>
+ ESESCOAyle="color:#000000;background-color:#000000;"> Manual page mkfs.ext4(8) line 1 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+ ESESCOAspan style="color:#000000;background-color:#000000;"> Manual page mkfs.ext4(8) line 1 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-t </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">fs-type</span><span style="color:#7f7f7f;background-color:#000000;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-T </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">usage-type</span><span style="color:#7f7f7f;background-color:#000000;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-U </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">UUID</span><span style="color:#7f7f7f;background-color:#000000;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-V </span><span style="color:#7f7f7f;background-color:#000000;">] [  </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-e</span>
+       </span><span style="text-decoration:underline;color:#000000;background-color:#000000;">errors-behavior</span><span style="color:#000000;background-color:#000000;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-z </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">undo_file</span><span style="color:#7f7f7f;background-color:#000000;"> ] </span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">device</span><span style="color:#7f7f7f;background-color:#000000;"> [ </span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">fs-size</span><span style="color:#7f7f7f;background-color:#000000;"> ]</span>
+</span>Byle="color:#000000;background-color:#000000;"> Manual page mkfs.ext4(8) line 3 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">mke2fs -O journal_dev </span><span style="color:#7f7f7f;background-color:#000000;">[ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-b </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">block-size</span><span style="color:#7f7f7f;background-color:#000000;"> ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-L </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#000000;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">volume-label</span>
+       ] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-n </span><span style="color:#7f7f7f;background-color:#000000;">] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-q </span><span style="color:#7f7f7f;background-color:#000000;">] [ </span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">-v </span><span style="color:#7f7f7f;background-color:#000000;">] </span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">external-journal</span><span style="color:#7f7f7f;background-color:#000000;"> [ </span><span style="text-decoration:underline;color:#7f7f7f;background-color:#000000;">fs-size</span><span style="color:#7f7f7f;background-color:#000000;"> ]</span>
+&gt;0;root&#64;ubse: ~0000;background-color:#000000;"> Manual page mkfs.ext4(8) line 6 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+root&#64;ubse:~# mls /dev/vd
+b
+*
+</span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">/dev/vdb</span>  <span style="font-weight:bold;color:#7f7f7f;background-color:#000000;">/dev/vdb1</span>
+0;root&#64;ubse: ~
+root&#64;ubse:~# mkfs.ex
+t4 /dev/db
+/vdb1 
+mke2fs 1.47.0 (5-Feb-2023)
+Discarding device blocks:       0/262117              done                            
+Creating filesystem with 2621179 4k blocks and 655360 inodes
+Filesystem UUID: 92ca4f47-7592-4332-97a5-bc964384cc81
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632
+
+Allocating group tables:  0/8    done                            
+Writing inode tables:  0/8    done                            
+Creating journal (16384 blocks): done
+Writing superblocks and filesystem accounting information:  0/8    done
+
+0;root&#64;ubse: ~
+root&#64;ubse:~# 0;root&#64;ubse: ~
+root&#64;ubse:~# lsblk
+NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0                        11:0    1 1024M  0 rom  
+vda                       253:0    0   25G  0 disk 
+├─vda1                    253:1    0    1M  0 part 
+├─vda2                    253:2    0    2G  0 part /boot
+└─vda3                    253:3    0   23G  0 part 
+  └─ubuntu--vg-ubuntu--lv 252:0    0 11.5G  0 lvm  /
+vdb                       253:16   0   20G  0 disk 
+└─vdb1                    253:17   0   10G  0 part 
+0;root&#64;ubse: ~
+root&#64;ubse:~# 0;root&#64;ubse: ~
+root&#64;ubse:~# ls /
+<span style="font-weight:bold;color:#00ffff;">bin</span>                <span style="font-weight:bold;color:#00ffff;">lib64</span>       <span style="font-weight:bold;color:#5c5cff;">sbin.usr-is-merged</span>
+<span style="font-weight:bold;color:#5c5cff;">bin.usr-is-merged</span>  <span style="font-weight:bold;color:#5c5cff;">lost+found</span>  <span style="font-weight:bold;color:#5c5cff;">snap</span>
+<span style="font-weight:bold;color:#5c5cff;">boot</span>               <span style="font-weight:bold;color:#5c5cff;">media</span>       <span style="font-weight:bold;color:#5c5cff;">srv</span>
+<span style="font-weight:bold;color:#5c5cff;">cdrom</span>              <span style="font-weight:bold;color:#5c5cff;">mnt</span>         swap.img
+<span style="font-weight:bold;color:#5c5cff;">dev</span>                <span style="font-weight:bold;color:#5c5cff;">opt</span>         <span style="font-weight:bold;color:#5c5cff;">sys</span>
+<span style="font-weight:bold;color:#5c5cff;">etc</span>                <span style="font-weight:bold;color:#5c5cff;">proc</span>        <span style="color:#000000;background-color:#00cd00;">tmp</span>
+<span style="font-weight:bold;color:#5c5cff;">home</span>               <span style="font-weight:bold;color:#5c5cff;">root</span>        <span style="font-weight:bold;color:#5c5cff;">usr</span>
+<span style="font-weight:bold;color:#00ffff;">lib</span>                <span style="font-weight:bold;color:#5c5cff;">run</span>         <span style="font-weight:bold;color:#5c5cff;">var</span>
+<span style="font-weight:bold;color:#5c5cff;">lib.usr-is-merged</span>  <span style="font-weight:bold;color:#00ffff;">sbin</span>
+0;root&#64;ubse: ~
+root&#64;ubse:~# mkdir /storage
+0;root&#64;ubse: ~
+root&#64;ubse:~# 0;root&#64;ubse: ~
+root&#64;ubse:~# touch /so
+torage/BORTGLOMDFIL
+0;root&#64;ubse: ~
+root&#64;ubse:~# ls -/storage/
+BORTGLOMDFIL
+0;root&#64;ubse: ~
+root&#64;ubse:~# mount
+man mount0;root&#64;ubse: ~
+root&#64;ubse:~# man mount
+<span style="text-decoration:underline;">MOUNT</span>(8)              System Administration             <span style="text-decoration:underline;">MOUNT</span>(8)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       mount - mount a filesystem
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">mount </span><span style="color:#7f7f7f;">[</span><span style="font-weight:bold;color:#7f7f7f;">-h</span><span style="color:#7f7f7f;">|</span><span style="font-weight:bold;color:#7f7f7f;">-V</span><span style="color:#7f7f7f;">]</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">mount </span><span style="color:#7f7f7f;">[</span><span style="font-weight:bold;color:#7f7f7f;">-l</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">-t </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">fstype</span><span style="color:#7f7f7f;">]</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">mount -a </span><span style="color:#7f7f7f;">[</span><span style="font-weight:bold;color:#7f7f7f;">-fFnrsvw</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">-t </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">fstype</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">-O </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">optlist</span><span style="color:#7f7f7f;">]</span>
+
+       <span style="font-weight:bold;color:#7f7f7f;">mount </span><span style="color:#7f7f7f;">[</span><span style="font-weight:bold;color:#7f7f7f;">-fnrsvw</span><span style="color:#7f7f7f;">] [</span><span style="font-weight:bold;color:#7f7f7f;">-o </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">options</span><span style="color:#7f7f7f;">] </span><span style="text-decoration:underline;color:#7f7f7f;">device</span><span style="color:#7f7f7f;">|</span><span style="text-decoration:underline;color:#7f7f7f;">mountpoint</span>
+
+       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#00cd00;">mount </span><span style="color:#7f7f7f;background-color:#00cd00;">[</span><span style="font-weight:bold;color:#7f7f7f;background-color:#00cd00;">-fnrsvw</span><span style="color:#7f7f7f;background-color:#00cd00;">] [</span><span style="font-weight:bold;color:#7f7f7f;background-color:#00cd00;">-t </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#00cd00;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#00cd00;">fstype</span><span style="color:#7f7f7f;background-color:#00cd00;">] [</span><span style="font-weight:bold;color:#7f7f7f;background-color:#00cd00;">-o </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#00cd00;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#00cd00;">options</span><span style="color:#7f7f7f;background-color:#00cd00;">] </span><span style="text-decoration:underline;color:#7f7f7f;background-color:#00cd00;">device</span>
+       </span><span style="text-decoration:underline;color:#000000;background-color:#00cd00;">mountpoint</span>it)</span><span style="color:#000000;background-color:#00cd00;">
+</span>Byle="color:#00cd00;background-color:#000000;"> Manual page mount(8) line 3 (press h for help or q to quit)</span><span style="color:#000000;background-color:#00cd00;">
+       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#00cd00;">mount --bind</span><span style="color:#7f7f7f;background-color:#00cd00;">|</span><span style="font-weight:bold;color:#7f7f7f;background-color:#00cd00;">--rbind</span><span style="color:#7f7f7f;background-color:#00cd00;">|</span><span style="font-weight:bold;color:#7f7f7f;background-color:#00cd00;">--move </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;background-color:#00cd00;"></span><span style="text-decoration:underline;color:#7f7f7f;background-color:#00cd00;">olddir</span><span style="color:#7f7f7f;background-color:#00cd00;"> </span><span style="text-decoration:underline;color:#7f7f7f;background-color:#00cd00;">newdir</span>
+</span>Byle="color:#00cd00;background-color:#000000;"> Manual page mount(8) line 5 (press h for help or q to quit)</span><span style="color:#000000;background-color:#00cd00;">
+       </span><span style="font-weight:bold;color:#7f7f7f;background-color:#00cd00;">mount</span>elp or q to quit)</span><span style="color:#000000;background-color:#00cd00;">
+&gt;0;root&#64;ubse: ~yle="font-weight:bold;color:#7f7f7f;background-color:#00cd00;">--make-</span><span style="color:#7f7f7f;background-color:#00cd00;">[</span><span style="font-weight:bold;color:#7f7f7f;background-color:#00cd00;">shared</span><span style="color:#7f7f7f;background-color:#00cd00;">|</span><span style="font-weight:bold;color:#7f7f7f;background-color:#00cd00;">slave</span><span style="color:#7f7f7f;background-color:#00cd00;">|</span><span style="font-weight:bold;color:#7f7f7f;background-color:#00cd00;">private</span><span style="color:#7f7f7f;background-color:#00cd00;">|</span><span style="font-weight:bold;color:#7f7f7f;background-color:#00cd00;">unbindable</span><span style="color:#7f7f7f;background-color:#00cd00;">|</span><span style="font-weight:bold;color:#7f7f7f;background-color:#00cd00;">rshared</span><span style="color:#7f7f7f;background-color:#00cd00;">|</span><span style="font-weight:bold;color:#7f7f7f;background-color:#00cd00;">rslave</span><span style="color:#7f7f7f;background-color:#00cd00;">|</span><span style="font-weight:bold;color:#7f7f7f;background-color:#00cd00;">rpri</span><span style="color:#00cd00;background-color:#000000;"> Manual page mount(8) line 8 (press h for help or q to quit)</span><span style="color:#000000;background-color:#00cd00;">
+root&#64;ubse:~# mount /dev/vdb1 /storage/
+0;root&#64;ubse: ~
+root&#64;ubse:~# ls /storage/
+</span><span style="font-weight:bold;color:#5c5cff;">lost+found</span>
+0;root&#64;ubse: ~
+root&#64;ubse:~# 0;root&#64;ubse: ~
+root&#64;ubse:~# ls l lblk
+NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0                        11:0    1 1024M  0 rom  
+vda                       253:0    0   25G  0 disk 
+├─vda1                    253:1    0    1M  0 part 
+├─vda2                    253:2    0    2G  0 part /boot
+└─vda3                    253:3    0   23G  0 part 
+  └─ubuntu--vg-ubuntu--lv 252:0    0 11.5G  0 lvm  /
+vdb                       253:16   0   20G  0 disk 
+└─vdb1                    253:17   0   10G  0 part /storage
+0;root&#64;ubse: ~
+root&#64;ubse:~# 0;root&#64;ubse: ~
+root&#64;ubse:~# sreq 1 100 &gt;/tmpstorage/aaa
+0;root&#64;ubse: ~
+root&#64;ubse:~# seq 1 100 &gt;/storage/aavv
+0;root&#64;ubse: ~
+root&#64;ubse:~# seq 1 100 &gt;/storage/aveee
+0;root&#64;ubse: ~
+root&#64;ubse:~# ls /storage/0;root&#64;ubse: ~
+root&#64;ubse:~# ls /storage/
+aaa  avv  eee  <span style="font-weight:bold;color:#5c5cff;">lost+found</span>
+0;root&#64;ubse: ~
+root&#64;ubse:~# ls /storageseq 1 100 &gt;/storage/ee
+
+
+
+sto0 &gt;/storage/sto0 &gt;/storage/sto0 &gt;/storage/sto0 &gt;/storage/sto0 &gt;/storage/sto
+
+
+
+
+
+
+
+0;root&#64;ubse: ~
+root&#64;ubse:~# du -h /s
+torage/
+16K	/storage/lost+found
+76M	/storage/
+0;root&#64;ubse: ~
+root&#64;ubse:~# du -h /storage
+
+
+ls /storage/
+aaa  avv  eee  <span style="font-weight:bold;color:#5c5cff;">lost+found</span>  stor
+0;root&#64;ubse: ~
+root&#64;ubse:~# ls /storagedu -h
+
+
+
+
+
+
+eee 
+4.0K	/storage/eee
+0;root&#64;ubse: ~
+root&#64;ubse:~# du -h /storage/eee*0;root&#64;ubse: ~
+root&#64;ubse:~# du -h /storage/*
+4.0K	/storage/aaa
+4.0K	/storage/avv
+4.0K	/storage/eee
+16K	/storage/lost+found
+76M	/storage/stor
+0;root&#64;ubse: ~
+root&#64;ubse:~# lsblk0;root&#64;ubse: ~
+root&#64;ubse:~# lsblk
+NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0                        11:0    1 1024M  0 rom  
+vda                       253:0    0   25G  0 disk 
+├─vda1                    253:1    0    1M  0 part 
+├─vda2                    253:2    0    2G  0 part /boot
+└─vda3                    253:3    0   23G  0 part 
+  └─ubuntu--vg-ubuntu--lv 252:0    0 11.5G  0 lvm  /
+vdb                       253:16   0   20G  0 disk 
+└─vdb1                    253:17   0   10G  0 part /storage
+0;root&#64;ubse: ~
+root&#64;ubse:~# 0;root&#64;ubse: ~
+root&#64;ubse:~# mount
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+udev on /dev type devtmpfs (rw,nosuid,relatime,size=1963184k,nr_inodes=490796,mode=755,inode64)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,noexec,relatime,size=400988k,mode=755,inode64)
+/dev/mapper/ubuntu--vg-ubuntu--lv on / type ext4 (rw,relatime)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,inode64)
+tmpfs on /run/lock type tmpfs (rw,nosuid,nodev,noexec,relatime,size=5120k,inode64)
+cgroup2 on /sys/fs/cgroup type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot)
+pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime)
+bpf on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime,mode=700)
+systemd-1 on /proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=32,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=3473)
+hugetlbfs on /dev/hugepages type hugetlbfs (rw,nosuid,nodev,relatime,pagesize=2M)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+debugfs on /sys/kernel/debug type debugfs (rw,nosuid,nodev,noexec,relatime)
+tracefs on /sys/kernel/tracing type tracefs (rw,nosuid,nodev,noexec,relatime)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,nosuid,nodev,noexec,relatime)
+configfs on /sys/kernel/config type configfs (rw,nosuid,nodev,noexec,relatime)
+/dev/vda2 on /boot type ext4 (rw,relatime)
+binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,size=400984k,nr_inodes=100246,mode=700,uid=1000,gid=1000,inode64)
+/dev/vdb1 on /storage type ext4 (rw,relatime)
+0;root&#64;ubse: ~
+root&#64;ubse:~# mount | less
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+udev on /dev type devtmpfs (rw,nosuid,relatime,size=1963184k,nr_inodes=490796,mode=755,inode64)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,noexec,relatime,size=400988k,mode=755,inode64)
+/dev/mapper/ubuntu--vg-ubuntu--lv on / type ext4 (rw,relatime)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,inode64)
+tmpfs on /run/lock type tmpfs (rw,nosuid,nodev,noexec,relatime,size=5120k,inode64)
+ ESESCOA
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+udev on /dev type devtmpfs (rw,nosuid,relatime,size=1963184k,nr_inodes=490796,mode=755,inode64)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,noexec,relatime,size=400988k,mode=755,inode64)
+/dev/mapper/ubuntu--vg-ubuntu--lv on / type ext4 (rw,relatime)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,inode64)
+tmpfs on /run/lock type tmpfs (rw,nosuid,nodev,noexec,relatime,size=5120k,inode64)
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+udev on /dev type devtmpfs (rw,nosuid,relatime,size=1963184k,nr_inodes=490796,mode=755,inode64)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,noexec,relatime,size=400988k,mode=755,inode64)
+/dev/mapper/ubuntu--vg-ubuntu--lv on / type ext4 (rw,relatime)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,inode64)
+tmpfs on /run/lock type tmpfs (rw,nosuid,nodev,noexec,relatime,size=5120k,inode64)
+...skipping...
+/dev/vdb1 on /<span style="color:#00cd00;background-color:#000000;">storage</span><span style="color:#000000;background-color:#00cd00;"> type ext4 (rw,relatime)
+</span><span style="font-weight:bold;color:#7f7f7f;background-color:#00cd00;">~</span>
+<span style="font-weight:bold;color:#7f7f7f;">~</span>
+<span style="font-weight:bold;color:#7f7f7f;">~</span>
+<span style="font-weight:bold;color:#7f7f7f;">~</span>
+<span style="font-weight:bold;color:#7f7f7f;">~</span>
+<span style="font-weight:bold;color:#7f7f7f;">~</span>
+<span style="font-weight:bold;color:#7f7f7f;">~</span>
+<span style="font-weight:bold;color:#7f7f7f;">~</span>
+<span style="font-weight:bold;color:#7f7f7f;">~</span>
+<span style="font-weight:bold;color:#7f7f7f;">~</span>
+<span style="font-weight:bold;color:#7f7f7f;">~</span>
+<span style="font-weight:bold;color:#7f7f7f;">~</span>
+<span style="font-weight:bold;color:#7f7f7f;">~</span>
+&gt;0;root&#64;ubse: ~cd00;background-color:#000000;">(END)</span><span style="color:#000000;background-color:#00cd00;">
+root&#64;ubse:~# 0;root&#64;ubse: ~
+root&#64;ubse:~# umount /storage 
+0;root&#64;ubse: ~
+root&#64;ubse:~# lsblk
+NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0                        11:0    1 1024M  0 rom  
+vda                       253:0    0   25G  0 disk 
+├─vda1                    253:1    0    1M  0 part 
+├─vda2                    253:2    0    2G  0 part /boot
+└─vda3                    253:3    0   23G  0 part 
+  └─ubuntu--vg-ubuntu--lv 252:0    0 11.5G  0 lvm  /
+vdb                       253:16   0   20G  0 disk 
+└─vdb1                    253:17   0   10G  0 part 
+0;root&#64;ubse: ~
+root&#64;ubse:~# 0;root&#64;ubse: ~
+root&#64;ubse:~# ls //storage/
+BORTGLOMDFIL
+0;root&#64;ubse: ~
+root&#64;ubse:~# rm /storage/BORTGLOMDFIL 
+0;root&#64;ubse: ~
+0;root&#64;ubse: ~`&apos;: m&apos;: r</span><span style="color:#00cd00;background-color:#000000;">m</span><span style="color:#000000;background-color:#00cd00;"> /storage/BORTGLOMDFIo&apos;: u</span><span style="color:#00cd00;background-color:#000000;">mo</span><span style="color:#000000;background-color:#00cd00;">unt /storagu&apos;: u</span><span style="color:#00cd00;background-color:#000000;">mou</span><span style="color:#000000;background-color:#00cd00;">n&apos;: u</span><span style="color:#00cd00;background-color:#000000;">moun</span><span style="color:#000000;background-color:#00cd00;">t&apos;: u</span><span style="color:#00cd00;background-color:#000000;">mount</span><span style="color:#000000;background-color:#00cd00;"></span><span style="color:#00cd00;background-color:#000000;">mount</span><span style="color:#000000;background-color:#00cd00;"> | les /dev/vdb1 /storage
+root&#64;ubse:~# moun
+0;root&#64;ubse: ~
+root&#64;ubse:~# ls /storage/
+aaa  avv  eee  </span><span style="font-weight:bold;color:#5c5cff;">lost+found</span>  stor
+0;root&#64;ubse: ~
+0;root&#64;ubse: ~`&apos;: g&apos;: ls /stora<span style="color:#00cd00;background-color:#000000;">g</span><span style="color:#000000;background-color:#00cd00;">ed&apos;: </span><span style="color:#00cd00;background-color:#000000;">gd</span><span style="color:#000000;background-color:#00cd00;">isk /dev/vdi&apos;: </span><span style="color:#00cd00;background-color:#000000;">gdi</span><span style="color:#000000;background-color:#00cd00;">s&apos;: </span><span style="color:#00cd00;background-color:#000000;">gdis</span><span style="color:#000000;background-color:#00cd00;">k&apos;: </span><span style="color:#00cd00;background-color:#000000;">gdisk</span><span style="color:#000000;background-color:#00cd00;">
+root&#64;ubse:~# gdis
+GPT fdisk (gdisk) version 1.0.10
+
+Partition table scan:
+  MBR: protective
+  BSD: not present
+  APM: not present
+  GPT: present
+
+Found valid GPT with protective MBR; using GPT.
+
+Command (? for help): ?
+b	back up GPT data to a file
+c	change a partition&apos;s name
+d	delete a partition
+i	show detailed information on a partition
+l	list known partition types
+n	add a new partition
+o	create a new empty GUID partition table (GPT)
+p	print the partition table
+q	quit without saving changes
+r	recovery and transformation options (experts only)
+s	sort partitions
+t	change a partition&apos;s type code
+v	verify disk
+w	write table to disk and exit
+x	extra functionality (experts only)
+?	print this menu
+
+Command (? for help): d
+Using 1
+
+Command (? for help): exit
+b	back up GPT data to a file
+c	change a partition&apos;s name
+d	delete a partition
+i	show detailed information on a partition
+l	list known partition types
+n	add a new partition
+o	create a new empty GUID partition table (GPT)
+p	print the partition table
+q	quit without saving changes
+r	recovery and transformation options (experts only)
+s	sort partitions
+t	change a partition&apos;s type code
+v	verify disk
+w	write table to disk and exit
+x	extra functionality (experts only)
+?	print this menu
+
+Command (? for help): q
+0;root&#64;ubse: ~
+root&#64;ubse:~# 0;root&#64;ubse: ~
+root&#64;ubse:~# ls
+0;root&#64;ubse: ~
+root&#64;ubse:~# sudpo o reboot
+
+Broadcast message from root&#64;ubse on pts/2 (Tue 2026-05-12 09:20:17 UTC):
+
+The system will reboot now!
+
+
+Broadcast message from root&#64;ubse on pts/2 (Tue 2026-05-12 09:20:17 UTC):
+
+The system will reboot now!
+
+0;root&#64;ubse: ~
+root&#64;ubse:~# Connection to 192.168.122.155 closed by remote host.
+Connection to 192.168.122.155 closed.
+</span><span style="color:#5c5cff;background-color:#00cd00;">DEVOPS25/lektion12
+</span>$ ubsssh ubse<span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ ssh ubse
+Welcome to Ubuntu 24.04.4 LTS (GNU/Linux 6.8.0-111-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue May 12 09:20:30 AM UTC 2026
+
+  System load:  0.0                Processes:               157
+  Usage of /:   43.7% of 11.21GB   Users logged in:         0
+  Memory usage: 5%                 IPv4 address for enp1s0: 192.168.122.155
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Tue May 12 08:59:00 2026 from 192.168.122.1
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ uptime0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ uptime
+ 09:20:34 up 0 min,  1 user,  load average: 0.00, 0.00, 0.00
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ lsblk
+NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0                        11:0    1 1024M  0 rom  
+vda                       253:0    0   25G  0 disk 
+├─vda1                    253:1    0    1M  0 part 
+├─vda2                    253:2    0    2G  0 part /boot
+└─vda3                    253:3    0   23G  0 part 
+  └─ubuntu--vg-ubuntu--lv 252:0    0 11.5G  0 lvm  /
+vdb                       253:16   0   20G  0 disk 
+└─vdb1                    253:17   0   10G  0 part 
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ less /etc/fstab 
+# /etc/fstab: static file system information.
+#
+# Use &apos;blkid&apos; to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# &lt;file system&gt; &lt;mount point&gt;   &lt;type&gt;  &lt;options&gt;       &lt;dump&gt;  &lt;pass&gt;
+# / was on /dev/ubuntu-vg/ubuntu-lv during curtin installation
+/dev/disk/by-id/dm-uuid-LVM-NhOOgVpr2aS6gSt0RFV7cFYnu49B5fFAUI3Qod7sb4sPu1hR9YOngT2J0eWbT70i / ext4 defaults 0 1
+# /boot was on /dev/vda2 during curtin installation
+/dev/disk/by-uuid/1b630543-2642-4997-aa72-861e78b7f9a9 /boot ext4 <span style="color:#00cd00;background-color:#000000;">/etc/fstab</span><span style="color:#000000;background-color:#00cd00;"># /etc/fstab: static file system information.
+#
+# Use &apos;blkid&apos; to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# &lt;file system&gt; &lt;mount point&gt;   &lt;type&gt;  &lt;options&gt;       &lt;dump&gt;  &lt;pass&gt;
+# / was on /dev/ubuntu-vg/ubuntu-lv during curtin installation
+/dev/disk/by-id/dm-uuid-LVM-NhOOgVpr2aS6gSt0RFV7cFYnu49B5fFAUI3Qod7sb4sPu1hR9YOngT2J0eWbT70i / ext4 defaults 0 1
+# /boot was on /dev/vda2 during curtin installation
+/dev/disk/by-uuid/1b630543-2642-4997-aa72-861e78b7f9a9 /boot ext4 defaults 0 1
+/swap.img       none    swap    sw      0       0
+</span><span style="font-weight:bold;color:#7f7f7f;background-color:#00cd00;">~</span>
+ ESESCOByle="color:#00cd00;background-color:#000000;">(END)</span><span style="color:#000000;background-color:#00cd00;">
+&gt;0;kent&#64;ubse: ~lor:#00cd00;background-color:#000000;">(END)</span><span style="color:#000000;background-color:#00cd00;">
+</span><span style="font-weight:bold;color:#00ff00;background-color:#00cd00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ sudo /etc/fstaedit /etc/fstab 
+[sudo] password for kent: 
+8/span>/dev/disk/by-uuid/1b630543-2642-4997-aa72-861e78b7f9a9 /boot ext4 defaults 0 1OngT&gt;<span style="color:#00cdcd;"># /boot was on /dev/vda2 during curtin installation    
+8swap.img<span style="color:#ff8700;">       </span>none<span style="color:#ff8700;">    </span>swap<span style="color:#ff8700;">    </span>sw<span style="color:#ff8700;">      </span>0<span style="color:#ff8700;">       </span>0
+&gt;0;kent&#64;ubse: ~ar/tmp/fstab.yyc55NLm [ Writing... ] [ Wrote 14 lines ]       Y Yes
+failed reverse-i-search)`mou&apos;: sudo apt autoremnt^Clor:#000000;background-color:#000000;">o&apos;: sudo apt autore</span><span style="color:#000000;background-color:#000000;">mo</span><span style="color:#000000;background-color:#000000;">ve
+0;kent&#64;ubse: ~
+</span><span style="font-weight:bold;color:#00ff00;background-color:#000000;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ mount /dev/scvdb1 /storage/
+mount: /storage: must be superuser to use mount.
+       dmesg(1) may have more information after failed mount system call.
+mount: (hint) your fstab has been modified, but systemd still uses
+       the old version; use &apos;systemctl daemon-reload&apos; to reload.
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ sudo -i
+0;root&#64;ubse: ~
+0;root&#64;ubse: ~pan style="color:#000000;background-color:#000000;">mo</span><span style="color:#000000;background-color:#000000;">u&apos;: </span><span style="color:#000000;background-color:#000000;">mou</span><span style="color:#000000;background-color:#000000;">n&apos;: </span><span style="color:#000000;background-color:#000000;">moun</span><span style="color:#000000;background-color:#000000;">t&apos;: </span><span style="color:#000000;background-color:#000000;">mount</span><span style="color:#000000;background-color:#000000;">
+root&#64;ubse:~# moun
+
+
+
+
+
+
+
+ /storage /storage /storage /storage /storage /storage /storage /storage /storage/storage
+
+
+
+
+
+
+
+
+
+
+
+
+mount: (hint) your fstab has been modified, but systemd still uses
+       the old version; use &apos;systemctl daemon-reload&apos; to reload.
+0;root&#64;ubse: ~
+root&#64;ubse:~# </span><span style="color:#000000;background-color:#000000;">systemctl daemon-reload</span><span style="color:#000000;background-color:#000000;">
+systemctl daemon-reload
+0;root&#64;ubse: ~
+mount /storage0;root&#64;ubse: ~n-reload
+root&#64;ubse:~# mount /storage
+mount: /storage: /dev/vdb1 already mounted on /storage.
+       dmesg(1) may have more information after failed mount system call.
+0;root&#64;ubse: ~
+root&#64;ubse:~# ls /storage/
+aaa  avv  eee  </span><span style="font-weight:bold;color:#5c5cff;">lost+found</span>  stor
+0;root&#64;ubse: ~
+root&#64;ubse:~# umount /storage 
+0;root&#64;ubse: ~
+root&#64;ubse:~# ls /storage/
+0;root&#64;ubse: ~
+root&#64;ubse:~# 0;root&#64;ubse: ~
+root&#64;ubse:~# ls lb;llk
+NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0                        11:0    1 1024M  0 rom  
+vda                       253:0    0   25G  0 disk 
+├─vda1                    253:1    0    1M  0 part 
+├─vda2                    253:2    0    2G  0 part /boot
+└─vda3                    253:3    0   23G  0 part 
+  └─ubuntu--vg-ubuntu--lv 252:0    0 11.5G  0 lvm  /
+vdb                       253:16   0   20G  0 disk 
+└─vdb1                    253:17   0   10G  0 part 
+0;root&#64;ubse: ~
+root&#64;ubse:~# sudo revboot
+
+Broadcast message from root&#64;ubse on pts/2 (Tue 2026-05-12 09:26:14 UTC):
+
+The system will reboot now!
+
+
+Broadcast message from root&#64;ubse on pts/2 (Tue 2026-05-12 09:26:14 UTC):
+
+The system will reboot now!
+
+0;root&#64;ubse: ~
+root&#64;ubse:~# Read from remote host 192.168.122.155: Connection reset by peer
+Connection to 192.168.122.155 closed.
+client_loop: send disconnect: Broken pipe
+<span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ <span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ ssh ubse
+Welcome to Ubuntu 24.04.4 LTS (GNU/Linux 6.8.0-111-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue May 12 09:26:19 AM UTC 2026
+
+  System load:  0.0                Processes:               195
+  Usage of /:   43.8% of 11.21GB   Users logged in:         0
+  Memory usage: 6%                 IPv4 address for enp1s0: 192.168.122.155
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Tue May 12 09:20:30 2026 from 192.168.122.1
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ lsblk
+NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0                        11:0    1 1024M  0 rom  
+vda                       253:0    0   25G  0 disk 
+├─vda1                    253:1    0    1M  0 part 
+├─vda2                    253:2    0    2G  0 part /boot
+└─vda3                    253:3    0   23G  0 part 
+  └─ubuntu--vg-ubuntu--lv 252:0    0 11.5G  0 lvm  /
+vdb                       253:16   0   20G  0 disk 
+└─vdb1                    253:17   0   10G  0 part /storage
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls /storage/
+aaa  avv  eee  <span style="font-weight:bold;color:#5c5cff;">lost+found</span>  stor
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ man dd0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ man dd
+<span style="text-decoration:underline;">DD</span>(1)                             User Commands                            <span style="text-decoration:underline;">DD</span>(1)
+
+<span style="font-weight:bold;color:#7f7f7f;">NAME</span>
+       dd - convert and copy a file
+
+<span style="font-weight:bold;color:#7f7f7f;">SYNOPSIS</span>
+       <span style="font-weight:bold;color:#7f7f7f;">dd </span><span style="color:#7f7f7f;">[</span><span style="text-decoration:underline;color:#7f7f7f;">OPERAND</span><span style="color:#7f7f7f;">]...</span>
+       <span style="font-weight:bold;color:#7f7f7f;">dd </span><span style="font-weight:bold;text-decoration:underline;color:#7f7f7f;"></span><span style="text-decoration:underline;color:#7f7f7f;">OPTION</span>
+
+<span style="font-weight:bold;color:#7f7f7f;">DESCRIPTION</span>
+       Copy a file, converting and formatting according to the operands.
+
+       bs=BYTES
+              read  and  write up to BYTES bytes at a time (default: 512); over‐
+&gt;0;kent&#64;ubse: ~0000;background-color:#000000;"> Manual page dd(1) line 1 (press h for help or q to quit)</span><span style="color:#000000;background-color:#000000;">
+</span><span style="font-weight:bold;color:#00ff00;background-color:#000000;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ dd Dr/isos/cubuntu.isoif=of=/dev/sda bs=1M status=progress^C
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ dd if=/dev/randomurandom of=keyfile bs=1M count=1
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.00626707 s, 167 MB/s
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ ls
+keyfile
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ less keyfile 
+&quot;keyfile&quot; may be a binary file.  See it anyway? 
+
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ rm keyfile 
+0;kent&#64;ubse: ~
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 0;kent&#64;ubse: ~
+0;kent&#64;ubse: ~weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 
+0;kent&#64;ubse: ~weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 
+<span style="font-weight:bold;color:#00ff00;">kent&#64;ubse</span>:<span style="font-weight:bold;color:#5c5cff;">~</span>$ 
+logout
+Connection to 192.168.122.155 closed.
+<span style="color:#5c5cff;">DEVOPS25/lektion12
+</span>$ 
+exit
+</pre>
+</body>
+</html>
+<!--HTML generated by ansifilter 2.21, http://andre-simon.de/-->
