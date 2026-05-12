@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Fil: $(basename $0)"
+
+echo -e 'tofu\nbulle\nbanan\ngurka\nspenat\nka|le' | grep -E 'ka\|le'
+2251  May 06 - Wed - 09:32     echo -e 'tofu\nbulle\nba 2251  May 06 - Wed - 09:32     echo -e 'tofu\nbulle\nbanan\ngurka\nspenat\nka|le' | grep -E 'ka\|le'
+2252  May 06 - Wed - 09:32     echo -e 'tofu\nbulle\nbanan\ngurka\nspenatka|le' | grep -E 'ka\|le'
+2253  May 06 - Wed - 09:33     echo -e 'tofu\nbulle\njag alskar banan\ngurka\nspenatka|le' | grep -E 'banan'
+2254  May 06 - Wed - 09:33     echo -e 'tofu\njag alskar bulle\njag alskar banan\njag hatar gurka\nspenatka|le' | grep -E 'banan'
+2255  May 06 - Wed - 09:33     echo -e 'tofu\njag alskar bulle\njag alskar banan\njag hatar gurka\nspenatka|le' | grep -E 'banan|gurka' 2252  May 06 - Wed - 09:32     echo -e 'tofu\nbulle\nbanan\ngurka\nspenatka|le' | grep -E 'ka\|le'
+2253  May 06 - Wed - 09:33     echo -e 'tofu\nbulle\njag alskar banan\ngurka\nspenatka|le' | grep -E 'banan'
+2254  May 06 - Wed - 09:33     echo -e 'tofu\njag alskar bulle\njag alskar banan\njag hatar gurka\nspenatka|le' | grep -E 'banan'
+2255  May 06 - Wed - 09:33     echo -e 'tofu\njag alskar bulle\njag alskar banan\njag hatar gurka\nspenatka|le' | grep -E 'banan|gurka'

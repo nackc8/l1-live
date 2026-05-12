@@ -1,0 +1,20 @@
+#!/bin/bash
+
+(
+    for x in sekund{1..60}; do
+        echo "$x"
+        sleep 1
+    done
+    echo "Nu har det gått minut!"
+) &
+
+(
+    for x in bokstav_{a..z}; do
+        echo "$x"
+        sleep 3
+    done
+) &
+
+
+wait
+echo "Slut"

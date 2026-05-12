@@ -1,0 +1,1429 @@
+/home/kent/Documents/l1-live/DEVOPS25/lektion11
+fork_bomb.txt  inbg2  inbg4
+inbg1          inbg3  recordings
+DEVOPS25/lektion11
+$ DEVOPS25/lektion11
+$ top
+=top - 11:15:37 up  2:13,  1 user,  load averag
+Tasks: 391 total,   1 running, 385 sleeping,  
+%Cpu(s):  8,1 us,  2,7 sy,  0,0 ni, 89,3 id,  
+MiB Mem :  15702,0 total,   1205,6 free,  1033
+MiB Swap:      0,0 total,      0,0 free,      
+
+    PID USER      PR  NI    VIRT    RES 
+   2175 kent      20   0 4669932 282828 
+   7599 kent      20   0   32,9g 169136 
+   7661 kent      20   0 1397,2g 413568 
+   4327 kent      20   0 1448,5g 401004 
+   6448 libvirt+  20   0 5596968   4,1g 
+  35364 root       0 -20       0      0 
+  62470 kent      20   0   10408   5348 top - 11:15:40 up  2:13,  1 user,  load averag
+Tasks: 391 total,   3 running, 383 sleeping,  
+%Cpu(s):  9,5 us,  2,5 sy,  0,0 ni, 87,9 id,  
+MiB Mem :  15702,0 total,   1216,2 free,  1032
+
+
+
+   7661 kent      20   0 1397,2g 410324 
+   4327 kent      20   0 1448,5g 395344 
+   2175 kent      20   0 4670000 282704 
+   7599 kent      20   0   32,9g 169228 
+   7560 kent      20   0 1393,9g 256876 
+   6448 libvirt+  20   0 5596968   4,1g 
+   7750 kent      20   0 1409,6g 162876 top - 11:15:40 up  2:13,  1 user,  load average: 0,38, 0,41, 0,
+Tasks: 391 total,   2 running, 384 sleeping,   2 stopped,   3 z
+%Cpu(s): 12,8 us,  3,5 sy,  0,0 ni, 83,7 id,  0,0 wa,  0,0 hi, 
+MiB Mem :  15702,0 total,   1216,2 free,  10324,0 used,   5465,
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5378,
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM 
+   7661 kent      20   0 1397,2g 411344 113952 R  64,6   2,6 
+   2175 kent      20   0 4670000 282708 128628 S  54,2   1,8 
+   7599 kent      20   0   32,9g 169564 115012 S  31,2   1,1 
+   7560 kent      20   0 1393,9g 256880 172208 S  20,8   1,6 
+   4327 kent      20   0 1448,5g 395344 148696 S   4,2   2,5 
+     50 root      rt   0       0      0      0 S   2,1   0,0 
+    217 root       0 -20       0      0      0 I   2,1   0,0 top - 11:15:42 up  2:13,  1 user,  load average: 0,38, 0,41, 0,5
+Tasks: 388 total,   3 running, 380 sleeping,   2 stopped,   3 zo
+%Cpu(s):  8,5 us,  4,1 sy,  0,1 ni, 87,2 id,  0,1 wa,  0,0 hi,  
+MiB Mem :  15702,0 total,   1216,2 free,  10324,0 used,   5465,2
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5378,0
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM 
+   7661 kent      20   0 1397,2g 412440 114020 R  41,2   2,6 
+   2175 kent      20   0 4670064 282732 128628 R  38,9   1,8 
+   7599 kent      20   0   32,9g 169648 115080 S  23,1   1,1 
+   7560 kent      20   0 1393,9g 256732 172208 S  17,2   1,6 
+   4327 kent      20   0 1448,5g 395344 148696 S   2,7   2,5 
+   6448 libvirt+  20   0 5596968   4,1g  29968 S   2,7  27,0 
+   8089 kent      20   0 1393,7g 124864  77200 S   1,8   0,8 top - 11:15:42 up  2:13,  1 user,  load average: 0,38, 0,41, 0,58
+Tasks: 388 total,   4 running, 379 sleeping,   2 stopped,   3 zom
+%Cpu(s): 29,4 us,  8,8 sy,  0,0 ni, 61,8 id,  0,0 wa,  0,0 hi,  0
+MiB Mem :  15702,0 total,   1216,2 free,  10324,0 used,   5465,2 
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5378,0 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM 
+   7661 kent      20   0 1397,2g 412616 114024 R 200,0   2,6 
+   7599 kent      20   0   32,9g 169652 115084 R 100,0   1,1 
+  62470 kent      20   0   10408   5888   3716 R 100,0   0,0 
+   2175 kent      20   0 4670064 282732 128628 R  50,0   1,8 
+   4069 kent      20   0 1450,3g 147144 106832 S  50,0   0,9 
+   7560 kent      20   0 1393,9g 256744 172208 S  50,0   1,6 
+   7750 kent      20   0 1409,6g 162824  84968 S  50,0   1,0 top - 11:15:42 up  2:13,  1 user,  load average: 0,38, 0,41, 0,58
+Tasks: 388 total,   2 running, 381 sleeping,   2 stopped,   3 zombi
+%Cpu(s): 18,2 us, 13,6 sy,  0,0 ni, 68,2 id,  0,0 wa,  0,0 hi,  0,0
+MiB Mem :  15702,0 total,   1216,2 free,  10324,0 used,   5465,2 bu
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5378,0 av
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM 
+   7599 kent      20   0   32,9g 169656 115088 S 100,0   1,1 
+   7661 kent      20   0 1397,2g 412824 114028 R 100,0   2,6 
+   2175 kent      20   0 4670064 282732 128628 S  66,7   1,8 
+  62470 kent      20   0   10408   5888   3716 R  66,7   0,0 
+   7560 kent      20   0 1393,9g 256752 172208 S  33,3   1,6 
+   8089 kent      20   0 1393,7g 125296  77200 S  33,3   0,8 
+      1 root      20   0   24272  15532  10788 S   0,0   0,1 top - 11:15:43 up  2:13,  1 user,  load average: 0,38, 0,41, 0,58
+Tasks: 388 total,   2 running, 381 sleeping,   2 stopped,   3 zombie
+%Cpu(s): 20,8 us,  5,7 sy,  0,0 ni, 73,6 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1136,5 free,  10403,6 used,   5543,9 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5298,4 ava
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM 
+   7661 kent      20   0 1397,2g 412980 114036 R 100,0   2,6 
+   2175 kent      20   0 4670064 282732 128628 S  60,0   1,8 
+   7599 kent      20   0   32,9g 169668 115096 S  60,0   1,1 
+   7560 kent      20   0 1393,9g 256764 172208 S  20,0   1,6 
+  62470 kent      20   0   10408   5888   3716 R  20,0   0,0 
+      1 root      20   0   24272  15532  10788 S   0,0   0,1 
+      2 root      20   0       0      0      0 S   0,0   0,0 top - 11:15:46 up  2:13,  1 user,  load average: 0,43, 0,42, 0,58
+Tasks: 391 total,   2 running, 384 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  7,5 us,  2,6 sy,  0,0 ni, 89,8 id,  0,0 wa,  0,0 hi,  0,1 
+MiB Mem :  15702,0 total,   1137,2 free,  10402,9 used,   5539,9 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5299,1 ava
+
+USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+kent      20   0 1397,2g 411492 113984 S  47,7   2,6  14:51.92 
+kent      20   0 4670564 282748 128628 R  22,0   1,8  13:56.84 
+kent      20   0   32,9g 169176 115044 S  11,7   1,1   8:12.93 
+kent      20   0 1393,9g 256720 172208 S  10,7   1,6   4:13.98 
+kent      20   0 1392,4g 451688 141280 S   3,7   2,8   2:32.65 
+kent      20   0 1448,5g 394688 148696 S   3,7   2,5   6:05.22 
+libvirt+  20   0 5596968   4,1g  29968 S   2,3  27,0   4:51.71 top - 11:15:46 up  2:13,  1 user,  load average: 0,43, 0,42, 0,58
+Tasks: 388 total,   1 running, 382 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  4,9 us,  3,4 sy,  0,0 ni, 91,5 id,  0,2 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1137,2 free,  10402,9 used,   5539,9 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5299,1 ava
+
+ PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND       
+ 20   0 1397,2g 411744 113984 S  17,0   2,6  14:52.01 code          
+ 20   0 4670052 282748 128628 S  15,1   1,8  13:56.92 gnome-shell   
+ 20   0   32,9g 169184 115044 S  13,2   1,1   8:13.00 code          
+ 20   0 1448,5g 394688 148696 S   5,7   2,5   6:05.25 brave         
+ 20   0 5596968   4,1g  29968 S   3,8  27,0   4:51.73 qemu-system-+ 
+ 20   0 1393,9g 256752 172208 S   3,8   1,6   4:14.00 code          
+ 20   0 1393,7g 124952  77200 S   3,8   0,8   1:07.79 code          top - 11:15:47 up  2:13,  1 user,  load average: 0,43, 0,42, 0,58
+Tasks: 391 total,   2 running, 384 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  5,1 us,  2,5 sy,  0,2 ni, 91,9 id,  0,2 wa,  0,0 hi,  0,3 
+MiB Mem :  15702,0 total,   1137,2 free,  10402,9 used,   5539,9 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5299,1 ava
+
+ NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND           
+  0 1397,2g 411892 113984 S  18,2   2,6  14:52.11 code              
+  0 4670068 282748 128628 R  14,5   1,8  13:57.00 gnome-shell       
+  0   32,9g 169184 115044 S   9,1   1,1   8:13.05 code              
+  0 1393,9g 256776 172208 S   3,6   1,6   4:14.02 code              
+  0 1393,7g 125072  77200 S   3,6   0,8   1:07.81 code              
+  0   10408   5888   3716 R   3,6   0,0   0:00.18 top               
+  0    7436   5568   3932 S   1,8   0,0   0:27.55 avahi-daemon      top - 11:15:50 up  2:13,  1 user,  load average: 0,43, 0,42, 0,58
+
+%Cpu(s):  4,6 us,  2,8 sy,  0,0 ni, 92,6 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1177,8 free,  10362,2 used,   5493,8 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5339,8 ava
+
+
+  0 1397,2g 412108 113988 S  19,3   2,6  14:52.69 code              
+  0 4670052 282776 128628 S  16,3   1,8  13:57.49 gnome-shell       
+  0   32,9g 169180 115048 S  10,3   1,1   8:13.36 code              
+  0 1393,9g 256784 172208 S   6,6   1,6   4:14.22 code              
+  0 1448,5g 397032 148696 S   4,3   2,5   6:05.39 brave             
+  0 5596968   4,1g  29968 S   2,7  27,0   4:51.82 qemu-system-x86   
+  0 1393,7g 124924  77200 S   2,0   0,8   1:07.87 code              top - 11:15:53 up  2:13,  1 user,  load average: 0,40, 0,41, 0,58
+Tasks: 388 total,   1 running, 382 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  6,3 us,  2,6 sy,  0,0 ni, 91,0 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1182,3 free,  10357,8 used,   5487,4 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5344,2 ava
+
+
+  0 1397,2g 412168 114016 S  29,2   2,6  14:53.57 code              
+  0 4670116 282648 128628 S  24,6   1,8  13:58.23 gnome-shell       
+  0   32,9g 169208 115076 S  13,6   1,1   8:13.77 code              
+  0 1393,9g 256888 172208 S   9,6   1,6   4:14.51 code              
+  0 1448,5g 397032 148696 S   3,0   2,5   6:05.48 brave             
+  0 5596968   4,1g  29968 S   2,7  27,0   4:51.90 qemu-system-x86   
+  0 1393,7g 124760  77200 S   1,3   0,8   1:07.91 code              top - 11:15:56 up  2:13,  1 user,  load average: 0,45, 0,42, 0,58
+Tasks: 391 total,   2 running, 384 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  7,9 us,  2,6 sy,  0,0 ni, 89,4 id,  0,1 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1185,4 free,  10354,5 used,   5488,0 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5347,5 ava
+
+
+  0 1397,2g 413904 114036 R  37,4   2,6  14:54.70 code              
+  0 4670180 282648 128628 S  29,8   1,8  13:59.13 gnome-shell       
+  0 1393,9g 256792 172208 S  14,2   1,6   4:14.94 code              
+  0   32,9g 169228 115096 S  13,6   1,1   8:14.18 code              
+  0 1448,5g 397556 148696 S   4,0   2,5   6:05.60 brave             
+  0 1392,4g 451668 141256 S   3,3   2,8   2:32.76 chrome            
+  0 5596968   4,1g  29968 S   2,3  27,0   4:51.97 qemu-system-x86   top - 11:15:59 up  2:13,  1 user,  load average: 0,45, 0,42, 0,58
+Tasks: 388 total,   2 running, 381 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  7,8 us,  2,6 sy,  0,0 ni, 89,6 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1216,0 free,  10323,9 used,   5466,3 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5378,1 ava
+
+
+  0 1397,2g 411924 114040 R  51,8   2,6  14:56.26 code              
+  0 4670116 282648 128628 S  22,6   1,8  13:59.81 gnome-shell       
+  0 1393,9g 256820 172208 S  12,6   1,6   4:15.32 code              
+  0   32,9g 169228 115100 S   9,0   1,1   8:14.45 code              
+  0 1448,5g 395612 148696 S   3,7   2,5   6:05.71 brave             
+  0 5596968   4,1g  29968 S   2,7  27,0   4:52.05 qemu-system-x86   
+  0 1409,6g 162928  84968 S   1,7   1,0   0:49.58 code              top - 11:16:02 up  2:14,  1 user,  load average: 0,41, 0,42, 0,58
+Tasks: 393 total,   1 running, 387 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  4,4 us,  1,8 sy,  0,1 ni, 93,6 id,  0,1 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1207,9 free,  10332,0 used,   5466,3 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5370,0 ava
+
+
+  0 1397,2g 409640 114040 S  19,3   2,5  14:56.84 code              
+  0 4670116 282640 128628 S  15,3   1,8  14:00.27 gnome-shell       
+  0   32,9g 169228 115100 S  10,3   1,1   8:14.76 code              
+  0 1393,9g 256824 172208 S   5,6   1,6   4:15.49 code              
+  0 1448,5g 395656 148696 S   3,0   2,5   6:05.80 brave             
+  0 5596968   4,1g  29968 S   2,7  27,0   4:52.13 qemu-system-x86   
+  0 1393,7g 124848  77200 S   2,3   0,8   1:08.06 code              top - 11:16:05 up  2:14,  1 user,  load average: 0,41, 0,42, 0,58
+Tasks: 394 total,   1 running, 388 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  6,0 us,  2,5 sy,  0,3 ni, 91,1 id,  0,1 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1191,7 free,  10348,1 used,   5478,8 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5353,9 ava
+
+
+  0 1397,2g 409568 114040 S  24,5   2,5  14:57.58 code              
+  0 4670116 282660 128628 S  21,2   1,8  14:00.91 gnome-shell       
+  0 1393,9g 256908 172208 S   9,3   1,6   4:15.77 code              
+  0   32,9g 169224 115100 S   8,9   1,1   8:15.03 code              
+  0 1392,4g 451292 141276 S   6,6   2,8   2:32.98 chrome            
+  0 1448,5g 398064 148696 S   4,3   2,5   6:05.93 brave             
+  0   49,1g 230640 139016 S   2,6   1,4   0:40.10 chrome            top - 11:16:08 up  2:14,  1 user,  load average: 0,38, 0,41, 0,57
+Tasks: 391 total,   1 running, 385 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  5,0 us,  3,2 sy,  1,0 ni, 90,6 id,  0,2 wa,  0,0 hi,  0,1 
+MiB Mem :  15702,0 total,   1199,8 free,  10329,8 used,   5486,8 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5372,2 ava
+
+
+  0 1397,2g 410304 114044 S  24,6   2,6  14:58.32 code              
+  0 4670172 282672 128628 S  17,9   1,8  14:01.45 gnome-shell       
+  0 1393,9g 256988 172208 S   9,3   1,6   4:16.05 code              
+  0   32,9g 169228 115104 S   9,3   1,1   8:15.31 code              
+  0 1448,5g 398064 148696 S   2,7   2,5   6:06.01 brave             
+  0 5596968   4,1g  29968 S   2,3  27,0   4:52.27 qemu-system-x86   
+  0 1393,7g 124948  77200 S   1,0   0,8   1:08.13 code              top - 11:16:11 up  2:14,  1 user,  load average: 0,43, 0,42, 0,57
+
+%Cpu(s):  5,7 us,  2,4 sy,  0,0 ni, 91,8 id,  0,1 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1209,7 free,  10320,3 used,   5473,7 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5381,7 ava
+
+
+  0 1397,2g 410180 114044 S  24,2   2,6  14:59.05 code              
+  0 4670108 282696 128628 S  21,5   1,8  14:02.10 gnome-shell       
+  0   32,9g 169228 115104 S   9,9   1,1   8:15.61 code              
+  0 1393,9g 257100 172208 S   9,3   1,6   4:16.33 code              
+  0 1448,5g 396644 148696 S   4,0   2,5   6:06.13 brave             
+  0 5596968   4,1g  29968 S   2,6  27,0   4:52.35 qemu-system-x86   
+  0 1409,6g 162804  84968 S   1,3   1,0   0:49.70 code              top - 11:16:14 up  2:14,  1 user,  load average: 0,43, 0,42, 0,57
+
+%Cpu(s):  5,0 us,  2,3 sy,  0,0 ni, 92,7 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1210,3 free,  10319,7 used,   5473,7 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5382,3 ava
+
+
+  0 1397,2g 410372 114044 S  22,6   2,6  14:59.73 code              
+  0 4670108 282780 128628 S  17,3   1,8  14:02.62 gnome-shell       
+  0   32,9g 169228 115104 S   9,3   1,1   8:15.89 code              
+  0 1393,9g 256932 172208 S   8,6   1,6   4:16.59 code              
+  0 1448,5g 398208 148696 S   4,0   2,5   6:06.25 brave             
+  0 5596968   4,1g  29968 S   2,3  27,0   4:52.42 qemu-system-x86   
+  0 1409,6g 162864  84968 S   1,3   1,0   0:49.74 code              top - 11:16:17 up  2:14,  1 user,  load average: 1,03, 0,54, 0,61
+Tasks: 394 total,   2 running, 387 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  7,4 us,  2,7 sy,  0,0 ni, 89,9 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1211,7 free,  10318,3 used,   5473,7 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5383,7 ava
+
+
+  0 1397,2g 409980 114044 S  50,0   2,5  15:01.24 code              
+  0 4670108 282780 128628 S  21,9   1,8  14:03.28 gnome-shell       
+  0 1393,9g 257128 172208 S  11,6   1,6   4:16.94 code              
+  0   32,9g 169228 115104 R   8,6   1,1   8:16.15 code              
+  0 1409,6g 162860  84968 S   3,0   1,0   0:49.83 code              
+  0 1448,5g 398208 148696 S   2,6   2,5   6:06.33 brave             
+  0 5596968   4,1g  29968 S   2,6  27,0   4:52.50 qemu-system-x86   top - 11:16:20 up  2:14,  1 user,  load average: 1,03, 0,54, 0,61
+Tasks: 394 total,   1 running, 388 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  3,7 us,  1,6 sy,  0,0 ni, 94,6 id,  0,0 wa,  0,0 hi,  0,1 
+MiB Mem :  15702,0 total,   1210,4 free,  10319,6 used,   5473,8 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5382,4 ava
+
+
+  0 1397,2g 408908 114044 S  16,6   2,5  15:01.74 code              
+  0 4670172 282780 128628 S  13,3   1,8  14:03.68 gnome-shell       
+  0   32,9g 169228 115104 S  10,3   1,1   8:16.46 code              
+  0 1393,9g 256976 172208 S   4,7   1,6   4:17.08 code              
+  0 1448,5g 398464 148696 S   4,0   2,5   6:06.45 brave             
+  0 5596968   4,1g  29968 S   2,7  27,0   4:52.58 qemu-system-x86   
+  0 1409,6g 162952  84968 S   1,3   1,0   0:49.87 code              top - 11:16:23 up  2:14,  1 user,  load average: 1,03, 0,55, 0,62
+Tasks: 391 total,   1 running, 385 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  4,2 us,  1,8 sy,  0,0 ni, 93,9 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1199,1 free,  10330,9 used,   5488,2 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5371,1 ava
+
+
+  0 4670108 282732 128628 S  14,6   1,8  14:04.12 gnome-shell       
+  0 1397,2g 409052 114044 S  12,6   2,5  15:02.12 code              
+  0   32,9g 169228 115104 S  10,6   1,1   8:16.78 code              
+  0 1392,4g 451368 141276 S   7,0   2,8   2:33.20 chrome            
+  0 1448,5g 398464 148696 S   3,3   2,5   6:06.55 brave             
+  0 1393,9g 257024 172208 S   3,3   1,6   4:17.18 code              
+  0 5596968   4,1g  29968 S   2,6  27,0   4:52.66 qemu-system-x86   top - 11:16:25 up  2:14,  1 user,  load average: 0,95, 0,54, 0,61
+Tasks: 394 total,   2 running, 387 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  3,5 us,  1,5 sy,  0,0 ni, 94,9 id,  0,0 wa,  0,0 hi,  0,1 
+MiB Mem :  15702,0 total,   1199,1 free,  10330,9 used,   5488,2 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5371,1 ava
+
+ PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND       
+ 20   0 1397,2g 409600 114048 S  12,6   2,5  15:02.45 code          
+ 20   0 4670108 282740 128628 S  10,7   1,8  14:04.40 gnome-shell   
+ 20   0   32,9g 169232 115108 R  10,3   1,1   8:17.05 code          
+ 20   0 1448,5g 399076 148696 S   4,6   2,5   6:06.67 brave         
+ 20   0 1393,9g 257040 172208 S   3,4   1,6   4:17.27 code          
+ 20   0 5596968   4,1g  29968 S   2,7  27,0   4:52.73 qemu-system-+ 
+ 20   0 1409,6g 163012  84968 S   1,9   1,0   0:49.93 code          top - 11:16:26 up  2:14,  1 user,  load average: 0,95, 0,54, 0,61
+Tasks: 391 total,   1 running, 385 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  5,4 us,  2,1 sy,  0,0 ni, 92,5 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1192,4 free,  10337,6 used,   5486,2 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5364,4 ava
+
+USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+kent      20   0 4670108 282740 128628 S  19,4   1,8  14:04.47 
+kent      20   0 1397,2g 409772 114048 S  16,7   2,5  15:02.51 
+kent      20   0   32,9g 169232 115108 S  11,1   1,1   8:17.09 
+kent      20   0 1393,9g 257056 172208 S   5,6   1,6   4:17.29 
+kent      20   0   10408   5892   3716 R   5,6   0,0   0:00.35 
+kent      20   0   49,1g 230532 138992 S   2,8   1,4   0:40.18 
+kent      20   0   48,8g 371028 231932 S   2,8   2,3   0:45.58 top - 11:16:26 up  2:14,  1 user,  load average: 0,95, 0,54, 0,61
+Tasks: 391 total,   2 running, 384 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  6,4 us,  2,8 sy,  0,0 ni, 90,5 id,  0,3 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1192,4 free,  10337,6 used,   5486,2 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5364,4 ava
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM 
+   7661 kent      20   0 1397,2g 409928 114052 S  23,3   2,5 
+   2175 kent      20   0 4670108 282684 128628 S  16,7   1,8 
+   7599 kent      20   0   32,9g 169236 115112 S  16,7   1,1 
+    249 root       0 -20       0      0      0 I   3,3   0,0 
+    864 root     -51   0       0      0      0 S   3,3   0,0 
+   2578 kent      20   0  169276   7572   6656 S   3,3   0,0 
+   4327 kent      20   0 1448,5g 399076 148696 S   3,3   2,5 top - 11:16:26 up  2:14,  1 user,  load average: 0,95, 0,54, 0,61
+Tasks: 394 total,   1 running, 388 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  5,4 us,  4,3 sy,  0,0 ni, 90,3 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1192,4 free,  10337,6 used,   5486,2 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5364,4 ava
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM 
+   2175 kent      20   0 4670108 282684 128628 S  20,7   1,8 
+   7661 kent      20   0 1397,2g 410156 114056 S  17,2   2,6 
+   7560 kent      20   0 1393,9g 257112 172208 S  10,3   1,6 
+   7599 kent      20   0   32,9g 169248 115116 S  10,3   1,1 
+   8089 kent      20   0 1393,7g 125020  77200 S  10,3   0,8 
+  62470 kent      20   0   10408   5892   3716 R   6,9   0,0 
+   2278 kent      20   0  385600  11160   7120 S   3,4   0,1 top - 11:16:27 up  2:14,  1 user,  load average: 0,95, 0,54, 0,61
+Tasks: 394 total,   1 running, 388 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  5,4 us,  1,3 sy,  0,0 ni, 93,4 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1192,4 free,  10337,6 used,   5486,2 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5364,4 ava
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM 
+   7661 kent      20   0 1397,2g 410320 114056 S  21,2   2,6 
+   2175 kent      20   0 4670108 282684 128628 S  18,2   1,8 
+   7599 kent      20   0   32,9g 169248 115116 S  12,1   1,1 
+   8089 kent      20   0 1393,7g 125464  77200 S   9,1   0,8 
+    270 root       0 -20       0      0      0 I   3,0   0,0 
+   2278 kent      20   0  385600  11160   7120 S   3,0   0,1 
+   3943 kent      20   0   48,8g 371104 231932 S   3,0   2,3 top - 11:16:30 up  2:14,  1 user,  load average: 0,95, 0,54, 0,61
+
+%Cpu(s):  4,4 us,  2,0 sy,  0,0 ni, 93,4 id,  0,1 wa,  0,0 hi,  0,1 
+MiB Mem :  15702,0 total,   1215,3 free,  10314,7 used,   5473,7 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5387,3 ava
+
+
+   7661 kent      20   0 1397,2g 411564 114056 S  17,5   2,6 
+   2175 kent      20   0 4670108 282716 128628 S  13,2   1,8 
+   7599 kent      20   0   32,9g 169240 115116 S  10,6   1,1 
+   7560 kent      20   0 1393,9g 256568 172208 S   8,6   1,6 
+   4327 kent      20   0 1448,5g 395396 148696 S   4,3   2,5 
+   6448 libvirt+  20   0 5596968   4,1g  29968 S   2,6  27,0 
+   8089 kent      20   0 1393,7g 124848  77200 S   1,7   0,8 top - 11:16:33 up  2:14,  1 user,  load average: 1,11, 0,58, 0,63
+Tasks: 391 total,   2 running, 384 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  6,1 us,  2,4 sy,  0,0 ni, 91,4 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1212,5 free,  10317,5 used,   5473,8 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5384,5 ava
+
+
+   7661 kent      20   0 1397,2g 411348 114064 S  35,5   2,6 
+   2175 kent      20   0 4670172 282652 128628 R  27,2   1,8 
+   7560 kent      20   0 1393,9g 256600 172208 S  14,3   1,6 
+   7599 kent      20   0   32,9g 169248 115124 S  10,0   1,1 
+   4327 kent      20   0 1448,5g 395396 148696 S   2,7   2,5 
+   6448 libvirt+  20   0 5596968   4,1g  29968 S   2,3  27,0 
+  35364 root       0 -20       0      0      0 I   2,0   0,0 top - 11:16:34 up  2:14,  1 user,  load average: 1,11, 0,58, 0,63
+Tasks: 391 total,   2 running, 384 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  4,2 us,  1,8 sy,  0,0 ni, 93,9 id,  0,1 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1212,5 free,  10317,5 used,   5473,8 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5384,5 ava
+
+USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+kent      20   0 1397,2g 411988 114064 S  18,1   2,6  15:04.55 
+kent      20   0 4670108 282676 128628 S  14,5   1,8  14:06.06 
+kent      20   0   32,9g 169248 115124 R  10,9   1,1   8:17.98 
+kent      20   0 1393,9g 256264 172208 S   5,8   1,6   4:18.11 
+kent      20   0 1448,5g 397848 148696 S   5,1   2,5   6:06.99 
+libvirt+  20   0 5596968   4,1g  29968 S   2,9  27,0   4:52.95 
+kent      20   0 1409,6g 162936  84968 S   2,9   1,0   0:50.02 top - 11:16:34 up  2:14,  1 user,  load average: 1,11, 0,58, 0,63
+Tasks: 391 total,   2 running, 384 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  5,2 us,  2,8 sy,  0,0 ni, 92,0 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1212,5 free,  10317,5 used,   5473,8 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5384,5 ava
+
+ PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND       
+ 20   0 1397,2g 412164 114068 S  23,8   2,6  15:04.60 code          
+ 20   0 4670108 282676 128628 S  19,0   1,8  14:06.10 gnome-shell   
+ 20   0   32,9g 169252 115128 R  14,3   1,1   8:18.01 code          
+ 20   0 1393,9g 256280 172208 S   4,8   1,6   4:18.12 code          
+ 20   0 1409,6g 162936  84968 S   4,8   1,0   0:50.03 code          
+ 20   0 1393,7g 124816  77200 S   4,8   0,8   1:08.60 code          
+ 20   0   10408   5892   3716 R   4,8   0,0   0:00.44 top           top - 11:16:34 up  2:14,  1 user,  load average: 1,11, 0,58, 0,63
+Tasks: 391 total,   2 running, 384 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  9,4 us,  4,4 sy,  0,0 ni, 86,2 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1212,5 free,  10317,5 used,   5473,8 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5384,5 ava
+
+ NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND           
+  0 4670108 282676 128628 S  35,3   1,8  14:06.16 gnome-shell       
+  0 1397,2g 412332 114068 R  29,4   2,6  15:04.65 code              
+  0   32,9g 169260 115128 S  17,6   1,1   8:18.04 code              
+  0 5596968   4,1g  29968 S  11,8  27,0   4:52.97 qemu-system-x86   
+  0 1393,9g 256296 172208 S  11,8   1,6   4:18.14 code              
+  0  385600  11160   7120 S   5,9   0,1   0:20.45 ibus-daemon       
+  0  169276   7572   6656 S   5,9   0,0   0:07.36 ibus-engine-sim   top - 11:16:35 up  2:14,  1 user,  load average: 1,11, 0,58, 0,63
+Tasks: 391 total,   1 running, 385 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  7,2 us,  1,4 sy,  0,0 ni, 91,4 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1212,5 free,  10317,5 used,   5473,8 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5384,5 ava
+
+   VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND               
+1397,2g 412496 114068 S  27,8   2,6  15:04.70 code                  
+4670108 282676 128628 S  22,2   1,8  14:06.20 gnome-shell           
+  32,9g 169260 115128 S  16,7   1,1   8:18.07 code                  
+  10408   5892   3716 R  11,1   0,0   0:00.47 top                   
+1393,9g 256312 172208 S   5,6   1,6   4:18.15 code                  
+1393,6g 113468  76840 S   5,6   0,7   0:17.16 code                  
+      0      0      0 I   5,6   0,0   0:00.17 kworker/u48:6-events+ top - 11:16:38 up  2:14,  1 user,  load average: 1,10, 0,59, 0,63
+
+%Cpu(s):  5,0 us,  2,1 sy,  0,0 ni, 92,8 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1209,1 free,  10320,9 used,   5473,7 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5381,1 ava
+
+
+1397,2g 412080 114068 S  22,5   2,6  15:05.38 code                  
+4670108 282688 128628 S  17,2   1,8  14:06.72 gnome-shell           
+  32,9g 169248 115128 S   9,6   1,1   8:18.36 code                  
+1393,9g 256192 172208 S   8,6   1,6   4:18.41 code                  
+1393,7g 124532  77200 S   3,6   0,8   1:08.72 code                  
+1448,5g 397900 148696 S   3,3   2,5   6:07.10 brave                 
+5596968   4,1g  29968 S   2,6  27,0   4:53.05 qemu-system-x86       top - 11:16:41 up  2:14,  1 user,  load average: 1,01, 0,58, 0,63
+Tasks: 391 total,   3 running, 383 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  5,4 us,  2,1 sy,  0,0 ni, 92,4 id,  0,0 wa,  0,0 hi,  0,1 
+MiB Mem :  15702,0 total,   1206,5 free,  10323,4 used,   5473,7 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5378,6 ava
+
+
+1397,2g 412644 114068 S  26,6   2,6  15:06.18 code                  
+4670108 282688 128628 S  19,6   1,8  14:07.31 gnome-shell           
+1393,9g 256276 172208 R  10,3   1,6   4:18.72 code                  
+  32,9g 169248 115128 R   9,3   1,1   8:18.64 code                  
+1448,5g 399160 148696 S   4,3   2,5   6:07.23 brave                 
+5596968   4,1g  29968 S   2,3  27,0   4:53.12 qemu-system-x86       
+1409,6g 163356  84968 S   1,7   1,0   0:50.09 code                  top - 11:16:42 up  2:14,  1 user,  load average: 1,01, 0,58, 0,63
+Tasks: 394 total,   2 running, 387 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  4,1 us,  2,4 sy,  0,1 ni, 93,4 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1206,5 free,  10323,4 used,   5473,7 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5378,6 ava
+
+ NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND           
+  0 1397,2g 413112 114072 S  14,3   2,6  15:06.32 code              
+  0 4670172 282688 128628 R  12,2   1,8  14:07.43 gnome-shell       
+  0   32,9g 169252 115132 S  11,2   1,1   8:18.75 code              
+  0 1393,7g 124716  77200 S   4,1   0,8   1:08.80 code              
+  0 1448,5g 399160 148696 S   3,1   2,5   6:07.26 brave             
+  0 5596968   4,1g  29968 S   3,1  27,0   4:53.15 qemu-system-x86   
+  0 1393,9g 256272 172208 S   3,1   1,6   4:18.75 code              top - 11:16:42 up  2:14,  1 user,  load average: 1,01, 0,58, 0,63
+Tasks: 394 total,   2 running, 387 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  6,0 us,  1,3 sy,  0,0 ni, 92,8 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1206,5 free,  10323,4 used,   5473,7 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5378,6 ava
+
+ PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND       
+ 20   0 4670172 282688 128628 R  20,0   1,8  14:07.47 gnome-shell   
+ 20   0 1397,2g 413264 114072 S  20,0   2,6  15:06.36 code          
+ 20   0   32,9g 169252 115132 S  15,0   1,1   8:18.78 code          
+ 20   0 1393,9g 256288 172208 S  10,0   1,6   4:18.77 code          
+ 20   0  385600  11160   7120 S   5,0   0,1   0:20.46 ibus-daemon   
+ 20   0 1409,6g 163356  84968 S   5,0   1,0   0:50.10 code          
+ 20   0   10408   5892   3716 R   5,0   0,0   0:00.52 top           top - 11:16:42 up  2:14,  1 user,  load average: 1,01, 0,58, 0,63
+Tasks: 394 total,   1 running, 388 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  8,5 us,  2,1 sy,  0,0 ni, 89,4 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1206,5 free,  10323,4 used,   5473,7 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5378,6 ava
+
+USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+kent      20   0 4670172 282688 128628 S  31,2   1,8  14:07.52 
+kent      20   0 1397,2g 413376 114072 S  31,2   2,6  15:06.41 
+kent      20   0   32,9g 169252 115132 S  18,8   1,1   8:18.81 
+kent      20   0 1393,9g 256304 172208 S  12,5   1,6   4:18.79 
+root      20   0       0      0      0 S   6,2   0,0   0:00.53 
+kent      20   0 1448,5g 399160 148696 S   6,2   2,5   6:07.27 
+libvirt+  20   0 5596968   4,1g  29968 S   6,2  27,0   4:53.16 top - 11:16:42 up  2:14,  1 user,  load average: 1,01, 0,58, 0,63
+Tasks: 391 total,   1 running, 385 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  6,4 us,  4,3 sy,  0,0 ni, 89,3 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1206,5 free,  10323,4 used,   5473,7 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5378,6 ava
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM 
+   7661 kent      20   0 1397,2g 413516 114072 S  25,0   2,6 
+   2175 kent      20   0 4670172 282688 128628 S  18,8   1,8 
+   7599 kent      20   0   32,9g 169252 115132 S  18,8   1,1 
+   2013 kent      39  19 7701728   1,4g  59256 S   6,2   8,9 
+   7560 kent      20   0 1393,9g 256328 172208 S   6,2   1,6 
+   8089 kent      20   0 1393,7g 124772  77200 S   6,2   0,8 
+  61479 kent      20   0   32704  17272   4792 S   6,2   0,1 top - 11:16:42 up  2:14,  1 user,  load average: 1,01, 0,58, 0,63
+Tasks: 391 total,   1 running, 385 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  6,8 us,  1,9 sy,  0,0 ni, 91,3 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1206,5 free,  10323,4 used,   5473,7 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5378,6 ava
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM 
+   2175 kent      20   0 4670172 282688 128628 S  23,5   1,8 
+   7661 kent      20   0 1397,2g 413668 114076 S  23,5   2,6 
+   7599 kent      20   0   32,9g 169256 115136 S  11,8   1,1 
+  62470 kent      20   0   10408   5904   3716 R  11,8   0,0 
+   1071 avahi     20   0    7436   5568   3932 S   5,9   0,0 
+   2278 kent      20   0  385600  11160   7120 S   5,9   0,1 
+   2798 kent      20   0   48,9g 422072 275368 S   5,9   2,6 top - 11:16:43 up  2:14,  1 user,  load average: 1,01, 0,58, 0,63
+Tasks: 391 total,   3 running, 383 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  6,6 us,  3,5 sy,  0,0 ni, 90,0 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1206,5 free,  10323,4 used,   5473,7 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5378,6 ava
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM 
+   7661 kent      20   0 1397,2g 413836 114076 S  26,3   2,6 
+   2175 kent      20   0 4670172 282688 128628 S  15,8   1,8 
+   7599 kent      20   0   32,9g 169256 115136 S  10,5   1,1 
+  62470 kent      20   0   10408   5904   3716 R  10,5   0,0 
+   1164 root      20   0  337596  23064  18096 S   5,3   0,1 
+   4028 kent      20   0   48,5g 139560 106364 S   5,3   0,9 
+   6448 libvirt+  20   0 5596968   4,1g  29968 S   5,3  27,0 top - 11:16:43 up  2:14,  1 user,  load average: 1,01, 0,58, 0,63
+Tasks: 391 total,   2 running, 384 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  7,9 us,  2,6 sy,  0,0 ni, 89,4 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1206,5 free,  10323,4 used,   5473,7 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5378,6 ava
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM 
+   2175 kent      20   0 4670188 282676 128628 S  52,6   1,8 
+   7599 kent      20   0   32,9g 169268 115140 S  21,1   1,1 
+   7661 kent      20   0 1397,2g 413988 114080 R  21,1   2,6 
+   1074 message+  20   0   11712   8432   4216 S  15,8   0,1 
+   7560 kent      20   0 1393,9g 256376 172208 S  10,5   1,6 
+   1164 root      20   0  337596  23064  18096 S   5,3   0,1 
+   1169 root      20   0   19208  13824  11172 S   5,3   0,1 top - 11:16:43 up  2:14,  1 user,  load average: 1,01, 0,58, 0,63
+Tasks: 391 total,   1 running, 385 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  6,7 us,  2,2 sy,  0,0 ni, 91,1 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1206,5 free,  10323,4 used,   5473,7 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5378,6 ava
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM 
+   2175 kent      20   0 4670188 282676 128628 S  26,3   1,8 
+   7661 kent      20   0 1397,2g 414144 114084 S  26,3   2,6 
+   7599 kent      20   0   32,9g 169272 115144 S  10,5   1,1 
+   2278 kent      20   0  385600  11160   7120 S   5,3   0,1 
+   2578 kent      20   0  169276   7572   6656 S   5,3   0,0 
+   6448 libvirt+  20   0 5596968   4,1g  29968 S   5,3  27,0 
+   7560 kent      20   0 1393,9g 256392 172208 S   5,3   1,6 top - 11:16:43 up  2:14,  1 user,  load average: 1,01, 0,58, 0,63
+Tasks: 391 total,   1 running, 385 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  6,1 us,  2,4 sy,  0,0 ni, 91,5 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1206,5 free,  10323,4 used,   5473,7 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5378,6 ava
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM 
+   7661 kent      20   0 1397,2g 414308 114084 S  27,8   2,6 
+   2175 kent      20   0 4670188 282676 128628 S  22,2   1,8 
+   7599 kent      20   0   32,9g 169272 115144 S  16,7   1,1 
+   4327 kent      20   0 1448,5g 399160 148696 S   5,6   2,5 
+   7560 kent      20   0 1393,9g 256408 172208 S   5,6   1,6 
+  21362 root      20   0       0      0      0 I   5,6   0,0 
+  62470 kent      20   0   10408   5904   3716 R   5,6   0,0 top - 11:16:43 up  2:14,  1 user,  load average: 1,01, 0,58, 0,63
+Tasks: 391 total,   3 running, 383 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  5,9 us,  3,2 sy,  0,0 ni, 90,9 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1206,5 free,  10323,4 used,   5473,7 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5378,6 ava
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM 
+   7661 kent      20   0 1397,2g 414460 114084 S  22,2   2,6 
+   2175 kent      20   0 4670188 282676 128628 S  16,7   1,8 
+   7599 kent      20   0   32,9g 169272 115144 R  11,1   1,1 
+  62470 kent      20   0   10408   5904   3716 R  11,1   0,0 
+   4327 kent      20   0 1448,5g 395008 148696 R   5,6   2,5 
+   6448 libvirt+  20   0 5596968   4,1g  29968 S   5,6  27,0 
+   7560 kent      20   0 1393,9g 256424 172208 S   5,6   1,6 top - 11:16:43 up  2:14,  1 user,  load average: 1,01, 0,58, 0,63
+Tasks: 391 total,   1 running, 385 sleeping,   2 stopped,   3 zombie
+%Cpu(s): 33,5 us,  2,8 sy,  0,0 ni, 63,4 id,  0,0 wa,  0,0 hi,  0,4 
+MiB Mem :  15702,0 total,   1206,5 free,  10323,4 used,   5473,7 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5378,6 ava
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM 
+   4327 kent      20   0 1448,5g 392988 148696 S 336,4   2,4 
+   2175 kent      20   0 4670188 282676 128628 S  27,3   1,8 
+   7661 kent      20   0 1397,2g 415008 114088 S  18,2   2,6 
+   7599 kent      20   0   32,9g 169276 115148 S  13,6   1,1 
+   7560 kent      20   0 1393,9g 256440 172208 S   9,1   1,6 
+   4019 kent      20   0   49,0g 202232 122212 S   4,5   1,3 
+   8089 kent      20   0 1393,7g 124860  77200 S   4,5   0,8 top - 11:16:44 up  2:14,  1 user,  load average: 1,01, 0,58, 0,63
+Tasks: 391 total,   1 running, 385 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  6,9 us,  1,6 sy,  0,0 ni, 91,5 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1210,3 free,  10319,5 used,   5474,4 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5382,5 ava
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM 
+   7661 kent      20   0 1397,2g 415168 114088 S  26,9   2,6 
+   2175 kent      20   0 4670188 282676 128628 S  15,4   1,8 
+   7599 kent      20   0   32,9g 169276 115148 S  15,4   1,1 
+     18 root      20   0       0      0      0 I   3,8   0,0 
+    276 root       0 -20       0      0      0 I   3,8   0,0 
+   2278 kent      20   0  385600  11160   7120 S   3,8   0,1 
+   4327 kent      20   0 1448,5g 392988 148696 S   3,8   2,4 top - 11:16:47 up  2:14,  1 user,  load average: 1,09, 0,60, 0,63
+Tasks: 394 total,   1 running, 388 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  6,7 us,  2,0 sy,  0,0 ni, 91,2 id,  0,1 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1211,1 free,  10318,8 used,   5474,2 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5383,2 ava
+
+
+   7661 kent      20   0 1397,2g 409904 114088 S  46,5   2,5 
+   2175 kent      20   0 4670620 282756 128628 S  19,3   1,8 
+   7560 kent      20   0 1393,9g 256244 172208 S   9,6   1,6 
+   7599 kent      20   0   32,9g 169268 115148 S   9,0   1,1 
+   4327 kent      20   0 1448,5g 392988 148696 S   2,7   2,4 
+   6448 libvirt+  20   0 5596968   4,1g  29968 S   2,3  27,0 
+   8089 kent      20   0 1393,7g 124680  77200 S   2,0   0,8 top - 11:16:50 up  2:14,  1 user,  load average: 1,09, 0,60, 0,63
+
+%Cpu(s):  5,3 us,  1,8 sy,  0,0 ni, 92,9 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1212,2 free,  10317,7 used,   5473,8 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5384,3 ava
+
+
+   7661 kent      20   0 1397,2g 408924 114092 S  27,2   2,5 
+   2175 kent      20   0 4670108 282764 128628 S  19,5   1,8 
+   7599 kent      20   0   32,9g 169280 115152 S  10,9   1,1 
+   7560 kent      20   0 1393,9g 256220 172208 S   9,9   1,6 
+   4327 kent      20   0 1448,5g 395156 148696 S   3,6   2,5 
+   6448 libvirt+  20   0 5596968   4,1g  29968 S   3,0  27,0 
+   7750 kent      20   0 1409,6g 163064  84968 S   1,7   1,0 top - 11:16:53 up  2:14,  1 user,  load average: 1,01, 0,59, 0,63
+Tasks: 391 total,   2 running, 384 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  4,5 us,  1,6 sy,  0,0 ni, 93,7 id,  0,1 wa,  0,0 hi,  0,1 
+MiB Mem :  15702,0 total,   1209,7 free,  10320,1 used,   5474,0 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5381,8 ava
+
+
+   7661 kent      20   0 1397,2g 408652 114096 S  20,9   2,5 
+   2175 kent      20   0 4670172 282648 128628 R  16,9   1,8 
+   7599 kent      20   0   32,9g 169276 115156 S  11,6   1,1 
+   7560 kent      20   0 1393,9g 256316 172208 S   6,6   1,6 
+   4327 kent      20   0 1448,5g 395168 148696 S   3,3   2,5 
+   6448 libvirt+  20   0 5596968   4,1g  29968 S   2,6  27,0 
+   8089 kent      20   0 1393,7g 124336  77200 S   2,0   0,8 top - 11:16:56 up  2:14,  1 user,  load average: 0,93, 0,58, 0,63
+Tasks: 391 total,   1 running, 385 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  4,7 us,  1,7 sy,  0,0 ni, 93,6 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1211,6 free,  10318,3 used,   5474,0 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5383,7 ava
+
+
+   7661 kent      20   0 1397,2g 409252 114100 S  18,9   2,5 
+   2175 kent      20   0 4670108 282648 128628 S  14,6   1,8 
+   7599 kent      20   0   32,9g 169280 115160 S   9,6   1,1 
+   7560 kent      20   0 1393,9g 256184 172208 S   6,0   1,6 
+   4327 kent      20   0 1448,5g 397500 148696 S   4,3   2,5 
+   3303 kent      20   0 1392,4g 450368 141256 S   3,7   2,8 
+   6448 libvirt+  20   0 5596968   4,1g  29968 S   2,7  27,0 top - 11:16:59 up  2:15,  1 user,  load average: 0,93, 0,58, 0,63
+Tasks: 390 total,   1 running, 384 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  3,7 us,  1,7 sy,  0,0 ni, 94,6 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1214,2 free,  10315,6 used,   5473,9 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5386,4 ava
+
+
+   7661 kent      20   0 1397,2g 409360 114100 S  12,6   2,5 
+   2175 kent      20   0 4670108 282648 128628 S  10,9   1,8 
+   7599 kent      20   0   32,9g 169280 115160 S   9,9   1,1 
+   4327 kent      20   0 1448,5g 393376 148696 S   4,6   2,4 
+   7560 kent      20   0 1393,9g 256212 172208 S   3,3   1,6 
+   6448 libvirt+  20   0 5596968   4,1g  29968 S   2,6  27,0 
+   8089 kent      20   0 1393,7g 124384  77200 S   1,3   0,8 top - 11:17:02 up  2:15,  1 user,  load average: 0,85, 0,57, 0,62
+Tasks: 393 total,   1 running, 387 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  3,9 us,  1,9 sy,  0,1 ni, 94,1 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1209,6 free,  10320,2 used,   5473,9 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5381,8 ava
+
+
+   7661 kent      20   0 1397,2g 409868 114100 S  12,6   2,5 
+   2175 kent      20   0 4670052 282684 128628 S  11,6   1,8 
+   7599 kent      20   0   32,9g 169280 115160 S  10,3   1,1 
+   6448 libvirt+  20   0 5596968   4,1g  29968 S   3,3  27,0 
+   7560 kent      20   0 1393,9g 256256 172208 S   3,3   1,6 
+   4327 kent      20   0 1448,5g 393448 148696 S   3,0   2,4 
+   8089 kent      20   0 1393,7g 124588  77200 S   2,3   0,8 top - 11:17:05 up  2:15,  1 user,  load average: 0,85, 0,57, 0,62
+
+%Cpu(s):  6,1 us,  2,2 sy,  0,0 ni, 91,7 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1203,6 free,  10326,2 used,   5474,5 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5375,8 ava
+
+
+   7661 kent      20   0 1397,2g 410684 114104 S  30,9   2,6 
+   2175 kent      20   0 4670692 282680 128628 S  24,3   1,8 
+   7560 kent      20   0 1393,9g 256328 172208 S  11,3   1,6 
+   7599 kent      20   0   32,9g 169284 115164 S  11,3   1,1 
+   4327 kent      20   0 1448,5g 397824 148696 S   4,0   2,5 
+   6448 libvirt+  20   0 5596968   4,1g  29968 S   2,7  27,0 
+  35364 root       0 -20       0      0      0 I   1,7   0,0 top - 11:17:08 up  2:15,  1 user,  load average: 0,78, 0,56, 0,62
+Tasks: 390 total,   1 running, 384 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  4,2 us,  1,8 sy,  0,0 ni, 94,0 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1200,4 free,  10329,4 used,   5473,9 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5372,6 ava
+
+
+   7661 kent      20   0 1397,2g 410632 114108 S  18,9   2,6 
+   2175 kent      20   0 4670116 282680 128628 S  14,6   1,8 
+   7599 kent      20   0   32,9g 169288 115168 S   9,6   1,1 
+   7560 kent      20   0 1393,9g 256360 172208 S   6,0   1,6 
+   4327 kent      20   0 1448,5g 397824 148696 S   2,6   2,5 
+   6448 libvirt+  20   0 5596968   4,1g  29968 S   2,6  27,0 
+   8089 kent      20   0 1393,7g 124616  77200 S   1,3   0,8 top - 11:17:11 up  2:15,  1 user,  load average: 0,80, 0,57, 0,62
+
+%Cpu(s):  4,5 us,  1,7 sy,  0,0 ni, 93,7 id,  0,1 wa,  0,0 hi,  0,1 
+MiB Mem :  15702,0 total,   1206,5 free,  10323,3 used,   5474,0 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5378,7 ava
+
+
+   7661 kent      20   0 1397,2g 411340 114108 S  18,6   2,6 
+   2175 kent      20   0 4670116 282752 128628 S  15,3   1,8 
+
+   7560 kent      20   0 1393,9g 256448 172208 S   6,0   1,6 
+   4327 kent      20   0 1448,5g 396256 148696 S   4,0   2,5 
+   6448 libvirt+  20   0 5596968   4,1g  29968 S   2,7  27,0 
+   7750 kent      20   0 1409,6g 162864  84968 S   1,7   1,0 top - 11:17:14 up  2:15,  1 user,  load average: 0,80, 0,57, 0,62
+Tasks: 390 total,   2 running, 383 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  3,5 us,  1,9 sy,  0,0 ni, 94,6 id,  0,0 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1209,5 free,  10320,3 used,   5474,0 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5381,7 ava
+
+
+   7661 kent      20   0 1397,2g 411340 114108 S  14,2   2,6 
+   2175 kent      20   0 4670116 282552 128628 S  11,9   1,8 
+   7599 kent      20   0   32,9g 169288 115168 S  10,9   1,1 
+   4327 kent      20   0 1448,5g 397996 148696 R   4,3   2,5 
+   7560 kent      20   0 1393,9g 256212 172208 S   3,6   1,6 
+   6448 libvirt+  20   0 5596968   4,1g  29968 S   3,0  27,0 
+   8089 kent      20   0 1393,7g 124340  77200 S   1,3   0,8 top - 11:17:17 up  2:15,  1 user,  load average: 0,74, 0,56, 0,62
+Tasks: 393 total,   1 running, 387 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  4,2 us,  1,9 sy,  0,0 ni, 93,8 id,  0,1 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1207,7 free,  10322,1 used,   5474,1 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5379,9 ava
+
+
+   2175 kent      20   0 4670180 282704 128628 S  13,0   1,8 
+   7661 kent      20   0 1397,2g 411932 114108 S  12,3   2,6 
+   7599 kent      20   0   32,9g 169288 115168 S  10,0   1,1 
+   7560 kent      20   0 1393,9g 256300 172208 S   3,3   1,6 
+   4327 kent      20   0 1448,5g 397996 148696 S   3,0   2,5 
+   6448 libvirt+  20   0 5596968   4,1g  29968 S   2,7  27,0 
+   8089 kent      20   0 1393,7g 124388  77200 S   2,0   0,8 top - 11:17:20 up  2:15,  1 user,  load average: 0,74, 0,56, 0,62
+
+%Cpu(s):  4,0 us,  1,7 sy,  0,0 ni, 94,2 id,  0,1 wa,  0,0 hi,  0,0 
+MiB Mem :  15702,0 total,   1203,7 free,  10326,0 used,   5474,0 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5376,0 ava
+
+
+   7661 kent      20   0 1397,2g 412712 114108 S  12,9   2,6 
+   2175 kent      20   0 4670116 282704 128628 S  11,9   1,8 
+   7599 kent      20   0   32,9g 169288 115168 S  10,3   1,1 
+   4327 kent      20   0 1448,5g 398524 148696 S   4,3   2,5 
+   6448 libvirt+  20   0 5596968   4,1g  29968 S   3,0  27,0 
+   7560 kent      20   0 1393,9g 256256 172208 S   3,0   1,6 
+   7750 kent      20   0 1409,6g 162928  84968 S   1,3   1,0 top - 11:17:23 up  2:15,  1 user,  load average: 0,68, 0,55, 0,62
+Tasks: 390 total,   1 running, 384 sleeping,   2 stopped,   3 zombie
+%Cpu(s):  3,8 us,  2,0 sy,  0,1 ni, 94,1 id,  0,0 wa,  0,0 hi,  0,1 
+MiB Mem :  15702,0 total,   1200,6 free,  10329,2 used,   5474,1 buf
+MiB Swap:      0,0 total,      0,0 free,      0,0 used.   5372,8 ava
+
+
+   7661 kent      20   0 1397,2g 412716 114108 S  12,6   2,6 
+   2175 kent      20   0 4670180 282704 128628 S  11,6   1,8 
+   7599 kent      20   0   32,9g 169288 115168 S  10,6   1,1 
+   4327 kent      20   0 1448,5g 394684 148696 S   3,3   2,5 
+   7560 kent      20   0 1393,9g 256292 172208 S   3,3   1,6 
+   6448 libvirt+  20   0 5596968   4,1g  29968 S   3,0  27,0 
+   8089 kent      20   0 1393,7g 124620  77200 S   1,7   0,8 >
+DEVOPS25/lektion11
+$ DEVOPS25/lektion11
+$ man nice
+NICE(1)                    User Commands                    NICE(1)
+
+NAME
+       nice - run a program with modified scheduling priority
+
+SYNOPSIS
+       nice [OPTION] [COMMAND [ARG]...]
+
+DESCRIPTION
+       Run COMMAND with an adjusted niceness, which affects process
+       scheduling.   With  no  COMMAND, print the current niceness.
+       Niceness values  range  from  -20  (most  favorable  to  the
+       process) to 19 (least favorable to the process).
+ ESESCOBpage nice(1) line 1 (press h for help or q to quit)
+       Mandatory  arguments to long options are mandatory for short
+       options too.) line 3 (press h for help or q to quit)
+ ESESCOBpage nice(1) line 4 (press h for help or q to quit)
+       -n, --adjustment=N 5 (press h for help or q to quit)
+              add integer N to the niceness (default 10)it)
+ ESESCOBpage nice(1) line 7 (press h for help or q to quit)
+       --help display this help and exit help or q to quit)
+ ESESCOBpage nice(1) line 9 (press h for help or q to quit)
+       --versione(1) line 10 (press h for help or q to quit)
+              output version information and exit q to quit)
+ ESESCOBpage nice(1) line 12 (press h for help or q to quit)
+       Your shell may have its own version of nice,  which  usually
+       supersedes the version described here.  Please refer to your
+       shell's  documentation for details about the options it sup‐
+       ports.nice(1) line 16 (press h for help or q to quit)
+>DEVOPS25/lektion11) line 17 (press h for help or q to quit)
+$ man nice
+NICE(1)                    User Commands                    NICE(1)
+
+NAME
+       nice - run a program with modified scheduling priority
+
+SYNOPSIS
+       nice [OPTION] [COMMAND [ARG]...]
+
+DESCRIPTION
+       Run COMMAND with an adjusted niceness, which affects process
+       scheduling.   With  no  COMMAND, print the current niceness.
+       Niceness values  range  from  -20  (most  favorable  to  the
+       process) to 19 (least favorable to the process).
+ ESESCOApage nice(1) line 1 (press h for help or q to quit)
+ ESESCOBpage nice(1) line 1 (press h for help or q to quit)
+       Mandatory  arguments to long options are mandatory for short
+       options too.) line 3 (press h for help or q to quit)
+ ESESCOBpage nice(1) line 4 (press h for help or q to quit)
+       -n, --adjustment=N 5 (press h for help or q to quit)
+              add integer N to the niceness (default 10)it)
+ ESESCOBpage nice(1) line 7 (press h for help or q to quit)
+       --help display this help and exit help or q to quit)
+ ESESCOBpage nice(1) line 9 (press h for help or q to quit)
+       --versione(1) line 10 (press h for help or q to quit)
+              output version information and exit q to quit)
+ ESESCOBpage nice(1) line 12 (press h for help or q to quit)
+       Your shell may have its own version of nice,  which  usually
+M       process) to 19 (least favorable to the process).uit)
+M       Niceness values  range  from  -20  (most  favorable  to  the
+M       scheduling.   With  no  COMMAND, print the current niceness.
+M       Run COMMAND with an adjusted niceness, which affects process
+MDESCRIPTION nice(1) line 10 (press h for help or q to quit)
+MESESCOApage nice(1) line 9 (press h for help or q to quit)
+       --help display this help and exit help or q to quit)
+ ESESCOBpage nice(1) line 9 (press h for help or q to quit)
+       --versione(1) line 10 (press h for help or q to quit)
+              output version information and exit q to quit)
+ ESESCOBpage nice(1) line 12 (press h for help or q to quit)
+       Your shell may have its own version of nice,  which  usually
+>DEVOPS25/lektion11) line 14 (press h for help or q to quit)
+$ man killDEVOPS25/lektion11
+$ man kill
+KILL(1)                    User Commands                    KILL(1)
+
+NAME
+       kill - send a signal to a process
+
+SYNOPSIS
+       kill [options] <pid> [...]
+
+DESCRIPTION
+       The  default  signal for kill is TERM.  Use -l or -L to list
+       available signals.  Particularly useful signals include HUP,
+       INT, KILL, STOP, CONT, and  0.   Alternate  signals  may  be
+       specified  in  three  ways: -9, -SIGKILL or -KILL.  Negative
+       PID values may be used to choose whole process  groups;  see
+       the  PGID  column in ps command output.  A PID of -1 is spe‐
+       cial; it indicates all processes except the kill process it‐
+       self and init.line 4 (press h for help or q to quit)
+ ESESCOBpage kill(1) line 5 (press h for help or q to quit)
+OPTIONSBpage kill(1) line 6 (press h for help or q to quit)
+       <pid> [...]1) line 7 (press h for help or q to quit)
+              Send signal to every <pid> listed. q to quit)
+ ESESCOBpage kill(1) line 9 (press h for help or q to quit)
+       -<signal>l(1) line 10 (press h for help or q to quit)
+       -s <signal>1) line 11 (press h for help or q to quit)
+M       available signals.  Particularly useful signals include HUP,
+M       The  default  signal for kill is TERM.  Use -l or -L to list
+MDESCRIPTION kill(1) line 10 (press h for help or q to quit)
+MESESCOApage kill(1) line 9 (press h for help or q to quit)
+M       kill [options] <pid> [...] h for help or q to quit)
+>DEVOPS25/lektion11) line 7 (press h for help or q to quit)
+$ DEVOPS25/lektion11
+$ sle( echo RUNNINGö; sleep 10; ) &
+[1] 67214
+RUNNING
+DEVOPS25/lektion11
+$ jobs
+[1]+  Running                 ( echo RUNNING; sleep 10 ) &
+DEVOPS25/lektion11
+( echo RUNNING; sleep 10; ) &DEVOPS25/lektion11
+$ ( echo RUNNING; sleep 10; ) whiol tur;ru; do done;
+[2] 67558
+RUNNING
+[1]   Done                    ( echo RUNNING; sleep 10 )
+DEVOPS25/lektion11
+$ 
+DEVOPS25/lektion11
+$ kill %2RUNNING
+kill %2 DEVOPS25/lektion11ING; sleep 10; done; ) &
+$ kill %2 -SIGSTOP
+bash: kill: -SIGSTOP: arguments must be process or job IDs
+[2]+  Terminated              ( while true; do
+    echo RUNNING; sleep 10;
+done )
+DEVOPS25/lektion11
+( while true; do echo RUNNING; sleep 10; done; ) &
+[1] 68137
+RUNNING
+DEVOPS25/lektion11
+kill %2 -SIGSTOP-SIGSTO-SIGSTO-SIGSTO %DEVOPS25/lektion11
+$ kill -SIGSTOP %1
+
+[1]+  Stopped                 ( while true; do
+    echo RUNNING; sleep 10;
+done )
+DEVOPS25/lektion11
+$ jobsDEVOPS25/lektion11
+$ jobs
+[1]+  Stopped                 ( while true; do
+    echo RUNNING; sleep 10;
+done )
+DEVOPS25/lektion11
+$ ps -HDEVOPS25/lektion11
+$ ps -H
+    PID TTY          TIME CMD
+  61480 pts/6    00:00:00 sh
+  61481 pts/6    00:00:00   bash
+  68137 pts/6    00:00:00     bash
+  68139 pts/6    00:00:00       sleep
+  68716 pts/6    00:00:00     ps
+DEVOPS25/lektion11
+$ ps -H -o ^C
+DEVOPS25/lektion11
+(reverse-i-search)`':p': ps -s': psgconfig-snapshotnano claude-web-extension-prompt-att-devops25-linux1.md ^C
+
+DEVOPS25/lektion11
+$ DEVOPS25/lektion11
+failed reverse-i-search)`ps -o': ps -^Cps --': ps -
+DEVOPS25/lektion11
+history | grep ps| tail -n 20
+ 2462  maj 06 - ons - 15:04     ps -ef | grep -C 2 kitty
+ 2495  maj 06 - ons - 15:21     cd linux-1-devops25-uppgift-1-apache-http-server-l11-apache
+ 2517  maj 06 - ons - 17:46     gconfig-snapshot 
+ 2549  maj 06 - ons - 18:54     gconfig-snapshot 
+ 2552  maj 06 - ons - 18:54     gconfig-snapshot 
+ 2663  maj 08 - fre - 07:09     cat claude-web-extension-prompt-att-devops25-linux1.md | wl-copy
+ 2667  maj 08 - fre - 07:31     cat claude-web-extension-prompt-att-devops25-linux1.md 
+ 2668  maj 08 - fre - 07:32     : >claude-web-extension-prompt-att-devops25-linux1.md 
+ 2669  maj 08 - fre - 07:33     nano claude-web-extension-prompt-att-devops25-linux1.md 
+ 2687  maj 08 - fre - 07:32     : >claude-web-extension-prompt-att-devops25-linux1.md 
+ 2688  maj 08 - fre - 07:33     nano claude-web-extension-prompt-att-devops25-linux1.md 
+ 2709  maj 08 - fre - 10:23     gconfig-snapshot 
+ 2752  maj 08 - fre - 12:34     gconfig-snapshot 
+ 2773  maj 08 - fre - 12:34     gconfig-snapshot 
+ 2815  maj 08 - fre - 13:56     gconfig-snapshot 
+ 2916  maj 08 - fre - 14:46     gconfig-snapshot 
+ 2948  maj 08 - fre - 12:34     gconfig-snapshot 
+ 3092  maj 08 - fre - 18:32     gconfig-snapshot 
+ 3240  maj 11 - mån - 11:24     ps -H
+ 3241  maj 11 - mån - 11:24     history | grep ps | tail -n 20
+DEVOPS25/lektion11
+$ DEVOPS25/lektion11
+$ jobs
+[1]+  Stopped                 ( while true; do
+    echo RUNNING; sleep 10;
+done )
+DEVOPS25/lektion11
+$ ps -e
+    PID TTY          TIME CMD
+      2 ?        00:00:00 kthreadd
+      3 ?        00:00:00   pool_workqueue_release
+      4 ?        00:00:00   kworker/R-kvfree_rcu_reclaim
+      5 ?        00:00:00   kworker/R-rcu_gp
+      6 ?        00:00:00   kworker/R-sync_wq
+      7 ?        00:00:00   kworker/R-slub_flushwq
+      8 ?        00:00:00   kworker/R-netns
+     10 ?        00:00:00   kworker/0:0H-events_highpri
+     13 ?        00:00:00   kworker/R-mm_percpu_wq
+     14 ?        00:00:00   rcu_tasks_kthread
+     15 ?        00:00:00   rcu_tasks_rude_kthread
+     16 ?        00:00:00   rcu_tasks_trace_kthread
+     17 ?        00:00:00   ksoftirqd/0
+     18 ?        00:00:17   rcu_preempt
+     19 ?        00:00:00   rcu_exp_par_gp_kthread_worker/0
+     20 ?        00:00:00   rcu_exp_gp_kthread_worker
+     21 ?        00:00:00   migration/0
+     22 ?        00:00:00   idle_inject/0
+     23 ?        00:00:00   cpuhp/0
+     24 ?        00:00:00   cpuhp/2
+     25 ?        00:00:00   idle_inject/2
+     26 ?        00:00:00   migration/2
+     27 ?        00:00:00   ksoftirqd/2
+     29 ?        00:00:00   kworker/2:0H-events_highpri
+     30 ?        00:00:00   cpuhp/4
+     31 ?        00:00:00   idle_inject/4
+     32 ?        00:00:00   migration/4
+     33 ?        00:00:00   ksoftirqd/4
+     35 ?        00:00:00   kworker/4:0H-events_highpri
+     36 ?        00:00:00   cpuhp/6
+     37 ?        00:00:00   idle_inject/6
+     38 ?        00:00:00   migration/6
+     39 ?        00:00:00   ksoftirqd/6
+     41 ?        00:00:00   kworker/6:0H-events_highpri
+     42 ?        00:00:00   cpuhp/8
+     43 ?        00:00:00   idle_inject/8
+     44 ?        00:00:03   migration/8
+     45 ?        00:00:00   ksoftirqd/8
+     47 ?        00:00:00   kworker/8:0H-events_highpri
+     48 ?        00:00:00   cpuhp/9
+     49 ?        00:00:00   idle_inject/9
+     50 ?        00:00:02   migration/9
+     51 ?        00:00:00   ksoftirqd/9
+     53 ?        00:00:00   kworker/9:0H-events_highpri
+     54 ?        00:00:00   cpuhp/10
+     55 ?        00:00:00   idle_inject/10
+     56 ?        00:00:01   migration/10
+     57 ?        00:00:00   ksoftirqd/10
+     59 ?        00:00:00   kworker/10:0H-events_highpri
+     60 ?        00:00:00   cpuhp/11
+     61 ?        00:00:00   idle_inject/11
+     62 ?        00:00:01   migration/11
+     63 ?        00:00:00   ksoftirqd/11
+     65 ?        00:00:00   kworker/11:0H-events_highpri
+     66 ?        00:00:00   cpuhp/1
+     67 ?        00:00:00   idle_inject/1
+     68 ?        00:00:00   migration/1
+     69 ?        00:00:00   ksoftirqd/1
+     71 ?        00:00:00   kworker/1:0H-events_highpri
+     72 ?        00:00:00   cpuhp/3
+     73 ?        00:00:00   idle_inject/3
+     74 ?        00:00:00   migration/3
+     75 ?        00:00:00   ksoftirqd/3
+     77 ?        00:00:00   kworker/3:0H-events_highpri
+     78 ?        00:00:00   cpuhp/5
+     79 ?        00:00:00   idle_inject/5
+     80 ?        00:00:00   migration/5
+     81 ?        00:00:00   ksoftirqd/5
+     83 ?        00:00:00   kworker/5:0H-events_highpri
+     84 ?        00:00:00   cpuhp/7
+     85 ?        00:00:00   idle_inject/7
+     86 ?        00:00:00   migration/7
+     87 ?        00:00:00   ksoftirqd/7
+     89 ?        00:00:00   kworker/7:0H-events_highpri
+     98 ?        00:00:00   kdevtmpfs
+     99 ?        00:00:00   kworker/R-inet_frag_wq
+    100 ?        00:00:00   kauditd
+    101 ?        00:00:00   khungtaskd
+    102 ?        00:00:00   oom_reaper
+    103 ?        00:00:00   kworker/R-writeback
+    104 ?        00:00:02   kcompactd0
+    105 ?        00:00:00   ksmd
+    106 ?        00:00:01   khugepaged
+    107 ?        00:00:00   kworker/R-kintegrityd
+    108 ?        00:00:00   kworker/R-kblockd
+    109 ?        00:00:00   kworker/R-blkcg_punt_bio
+    111 ?        00:00:00   irq/9-acpi
+    115 ?        00:00:00   kworker/R-tpm_dev_wq
+    116 ?        00:00:00   kworker/R-edac-poller
+    120 ?        00:00:00   kworker/R-devfreq_wq
+    121 ?        00:00:00   kworker/R-quota_events_unbound
+    122 ?        00:00:00   kworker/8:1H-events_highpri
+    123 ?        00:00:00   kswapd0
+    126 ?        00:00:02   kworker/4:1-mm_percpu_wq
+    131 ?        00:00:00   kworker/R-kthrotld
+    135 ?        00:00:00   irq/124-pciehp
+    136 ?        00:00:00   irq/125-pciehp
+    137 ?        00:00:00   kworker/R-acpi_thermal_pm
+    138 ?        00:00:00   hwrng
+    140 ?        00:00:00   kworker/R-hfi-updates
+    141 ?        00:00:00   kworker/R-mld
+    142 ?        00:00:00   kworker/R-ipv6_addrconf
+    147 ?        00:00:00   kworker/R-kstrp
+    217 ?        00:00:03   kworker/9:1H-events_highpri
+    249 ?        00:00:00   kworker/0:1H-events_highpri
+    269 ?        00:00:01   kworker/11:1H-events_highpri
+    270 ?        00:00:00   kworker/3:1H-events_highpri
+    271 ?        00:00:00   kworker/6:1H-events_highpri
+    272 ?        00:00:00   kworker/5:1H-events_highpri
+    274 ?        00:00:00   kworker/2:1H-events_highpri
+    276 ?        00:00:00   kworker/1:1H-events_highpri
+    278 ?        00:00:00   kworker/7:1H-events_highpri
+    288 ?        00:00:02   kworker/10:1H-events_highpri
+    300 ?        00:00:00   kworker/4:1H-events_highpri
+    301 ?        00:00:00   kworker/R-cryptd
+    303 ?        00:00:00   kworker/R-nvme-wq
+    304 ?        00:00:00   kworker/R-nvme-reset-wq
+    305 ?        00:00:00   kworker/R-nvme-delete-wq
+    306 ?        00:00:00   kworker/R-nvme-auth-wq
+    351 ?        00:00:00   watchdogd
+    367 ?        00:00:00   irq/171-ELAN050B:00
+    393 ?        00:00:00   kworker/R-ttm
+    394 ?        00:00:00   card0-crtc0
+    395 ?        00:00:00   card0-crtc1
+    396 ?        00:00:00   card0-crtc2
+    397 ?        00:00:00   card0-crtc3
+    590 ?        00:00:00   kworker/R-kdmflush/254:0
+    591 ?        00:00:00   kworker/R-kcryptd_io-254:0-1
+    593 ?        00:00:00   kworker/R-kcryptd-254:0-1
+    594 ?        00:00:02   dmcrypt_write/254:0
+    624 ?        00:00:01   jbd2/dm-0-8
+    625 ?        00:00:00   kworker/R-ext4-rsv-conversion
+    745 ?        00:00:00   psimon
+    818 ?        00:00:00   irq/189-mei_me
+    846 ?        00:00:00   kworker/R-cfg80211
+    861 ?        00:00:09   irq/190-iwlwifi:default_queue
+    862 ?        00:00:01   irq/191-iwlwifi:queue_1
+    863 ?        00:00:01   irq/192-iwlwifi:queue_2
+    864 ?        00:00:01   irq/193-iwlwifi:queue_3
+    865 ?        00:00:01   irq/194-iwlwifi:queue_4
+    866 ?        00:00:01   irq/195-iwlwifi:queue_5
+    867 ?        00:00:02   irq/196-iwlwifi:queue_6
+    868 ?        00:00:02   irq/197-iwlwifi:queue_7
+    869 ?        00:00:02   irq/198-iwlwifi:queue_8
+    870 ?        00:00:02   irq/199-iwlwifi:queue_9
+    871 ?        00:00:00   irq/200-iwlwifi:queue_10
+    872 ?        00:00:01   irq/201-iwlwifi:queue_11
+    880 ?        00:00:01   irq/202-iwlwifi:queue_12
+    881 ?        00:00:00   irq/203-iwlwifi:exception
+    882 ?        00:00:00   irq/16-processor_thermal_device_pci
+    901 ?        00:00:00   irq/204-AudioDSP
+    928 ?        00:00:00   jbd2/nvme0n1p5-8
+    929 ?        00:00:00   kworker/R-ext4-rsv-conversion
+   1159 ?        00:00:00   psimon
+   1258 ?        00:00:00   krfcommd
+   1364 ?        00:00:00   psimon
+   5751 ?        00:00:00   kworker/3:1-mm_percpu_wq
+   6160 ?        00:00:02   kworker/0:0-mm_percpu_wq
+   6462 ?        00:00:04   kvm-pit/6448
+  17941 ?        00:00:01   kworker/2:2-events
+  21362 ?        00:00:06   kworker/u48:1-i915
+  21379 ?        00:00:04   kworker/u48:5-kcryptd-254:0-1
+  33103 ?        00:00:04   kworker/9:2-cgroup_free
+  34068 ?        00:00:04   kworker/u48:3-kcryptd-254:0-1
+  35364 ?        00:00:11   kworker/u49:3-i915_flip
+  38792 ?        00:00:03   kworker/u48:7-kcryptd-254:0-1
+  42940 ?        00:00:02   kworker/u48:10-kcryptd-254:0-1
+  46659 ?        00:00:00   kworker/4:2-kdmflush/254:0
+  51360 ?        00:00:00   kworker/7:1-events
+  54300 ?        00:00:01   kworker/u48:0-kcryptd-254:0-1
+  54302 ?        00:00:01   kworker/u48:2-flush-254:0
+  54383 ?        00:00:00   kworker/5:2-events
+  55073 ?        00:00:05   kworker/u49:1-i915_flip
+  57631 ?        00:00:00   kworker/11:3-events
+  57926 ?        00:00:00   kworker/7:0-mm_percpu_wq
+  58286 ?        00:00:00   kworker/6:0-events
+  58486 ?        00:00:00   kworker/u48:12-kcryptd-254:0-1
+  59224 ?        00:00:00   kworker/8:0-mm_percpu_wq
+  59306 ?        00:00:00   kworker/3:2
+  59309 ?        00:00:00   kworker/5:0-mm_percpu_wq
+  59416 ?        00:00:00   kworker/10:1-events
+  59880 ?        00:00:00   kworker/6:2-mm_percpu_wq
+  60218 ?        00:00:00   kworker/2:1-mm_percpu_wq
+  60637 ?        00:00:00   kworker/1:2-events
+  60886 ?        00:00:00   kworker/11:1-events
+  61945 ?        00:00:00   kworker/u48:6-kvfree_rcu_reclaim
+  62796 ?        00:00:00   kworker/6:3-mm_percpu_wq
+  62926 ?        00:00:00   kworker/u48:8-kcryptd-254:0-1
+  62927 ?        00:00:00   kworker/u48:9-kcryptd-254:0-1
+  64304 ?        00:00:00   kworker/10:0-mm_percpu_wq
+  64305 ?        00:00:00   kworker/11:0-events
+  64306 ?        00:00:00   kworker/1:1-events
+  64410 ?        00:00:00   kworker/9:1-i915-unordered
+  64414 ?        00:00:00   kworker/8:2-cgroup_free
+  64737 ?        00:00:00   kworker/u49:0-rb_allocator
+  64920 ?        00:00:00   kworker/0:1
+  66087 ?        00:00:00   kworker/u49:2
+  66562 ?        00:00:00   kworker/6:1
+  67250 ?        00:00:00   kworker/11:2-mm_percpu_wq
+  68543 ?        00:00:00   kworker/10:2-mm_percpu_wq
+  68648 ?        00:00:00   kworker/1:0-mm_percpu_wq
+  69302 ?        00:00:00   kworker/9:0-i915-unordered
+      1 ?        00:00:06 systemd
+    692 ?        00:00:01   systemd-journal
+    729 ?        00:00:00   systemd-timesyn
+    737 ?        00:00:00   systemd-udevd
+   1070 ?        00:00:00   accounts-daemon
+   1071 ?        00:00:29   avahi-daemon
+   1108 ?        00:00:00     avahi-daemon
+   1072 ?        00:00:00   bluetoothd
+   1074 ?        00:00:07   dbus-daemon
+   1082 ?        00:00:00   low-memory-moni
+   1085 ?        00:00:00   polkitd
+   1086 ?        00:00:00   switcheroo-cont
+   1090 ?        00:00:00   systemd-logind
+   1091 ?        00:00:00   systemd-machine
+   1093 ?        00:00:00   udisksd
+   1094 ?        00:00:00   virtlockd
+   1095 ?        00:00:00   virtlogd
+   1164 ?        00:00:12   NetworkManager
+   1169 ?        00:00:02   wpa_supplicant
+   1208 ?        00:00:00   ModemManager
+   1209 ?        00:00:00   boltd
+   1234 ?        00:00:00   cupsd
+   1275 ?        00:00:00   cups-browsed
+   1277 ?        00:00:00   cron
+   1278 ?        00:00:01   libvirtd
+   1309 ?        00:00:00   gdm3
+   1975 ?        00:00:00     gdm-session-wor
+   2055 tty2     00:00:00       gdm-wayland-ses
+   2067 tty2     00:00:00         gnome-session-b
+   1413 ?        00:00:00   dnsmasq
+   1414 ?        00:00:00     dnsmasq
+   1451 ?        00:00:00   rtkit-daemon
+   1540 ?        00:00:00   colord
+   1586 ?        00:00:01   upowerd
+   1967 ?        00:00:00   power-profiles-
+   1984 ?        00:00:04   systemd
+   1986 ?        00:00:00     (sd-pam)
+   2007 ?        00:00:02     dbus-daemon
+   2008 ?        00:00:00     pipewire
+   2009 ?        00:00:00     pipewire
+   2011 ?        00:00:00     wireplumber
+   2012 ?        00:00:00     pipewire-pulse
+   2013 ?        00:06:26     dropbox
+   2014 ?        00:00:00     gnome-keyring-d
+   8892 ?        00:00:00       ssh-agent
+   2017 ?        00:00:00     mpris-proxy
+   2120 ?        00:00:00     gcr-ssh-agent
+   2121 ?        00:00:00     gnome-session-c
+   2122 ?        00:00:00     ssh-agent
+   2134 ?        00:00:00     gvfsd
+   3795 ?        00:00:00       gvfsd-trash
+   8548 ?        00:00:00       gvfsd-recent
+   8550 ?        00:00:00       gvfsd-network
+   8563 ?        00:00:00       gvfsd-dnssd
+   2140 ?        00:00:00     gvfsd-fuse
+   2143 ?        00:00:00     gnome-session-b
+   2177 ?        00:00:00       at-spi-bus-laun
+   2188 ?        00:00:03         dbus-daemon
+   2302 ?        00:00:00       gsd-disk-utilit
+   2306 ?        00:00:00       evolution-alarm
+   2325 ?        00:00:25       gnome-software
+   2175 ?        00:15:29     gnome-shell
+   2545 ?        00:00:01       Xwayland
+   2683 ?        00:00:01       mutter-x11-fram
+   2798 ?        00:01:27       chrome
+   2803 ?        00:00:00         cat
+   2804 ?        00:00:00         cat
+   2816 ?        00:00:00         chrome
+   2850 ?        00:00:43           chrome
+   2817 ?        00:00:00         chrome
+   2819 ?        00:00:00           chrome
+   2879 ?        00:00:00             chrome
+   2921 ?        00:00:04             chrome
+   2929 ?        00:00:10             chrome
+   2967 ?        00:00:02             chrome
+   2968 ?        00:00:02             chrome
+   3259 ?        00:00:10             chrome
+   3303 ?        00:02:39             chrome
+   3402 ?        00:00:00             chrome
+  27178 ?        00:00:00             chrome
+   2855 ?        00:00:25         chrome
+   3414 ?        00:00:01         chrome
+   3917 ?        00:00:00       bwrap
+   3942 ?        00:00:00         bwrap
+   3943 ?        00:00:47           brave
+   3973 ?        00:00:00             brave
+   4019 ?        00:00:25               brave
+   3975 ?        00:00:00             zypak-sandbox
+   4028 ?        00:00:08             brave
+   4272 ?        00:00:01             brave
+   3966 ?        00:00:00           chrome_crashpad
+   3968 ?        00:00:00           chrome_crashpad
+   3977 ?        00:00:00           cat
+   3978 ?        00:00:00           cat
+   3989 ?        00:00:00           bwrap
+   3990 ?        00:00:00             brave
+   4043 ?        00:00:00               brave
+   4069 ?        00:00:13               brave
+   4327 ?        00:06:30               brave
+   4351 ?        00:00:00               brave
+   4420 ?        00:00:00               brave
+   4459 ?        00:00:00               brave
+  65397 ?        00:00:05       kitty
+  65440 ?        00:00:00         kitten
+  65451 pts/7    00:00:00         bash
+   2225 ?        00:00:00     at-spi2-registr
+   2229 ?        00:00:00     xdg-permission-
+   2249 ?        00:00:00     gnome-shell-cal
+   2257 ?        00:00:00     evolution-sourc
+   2258 ?        00:00:00     dconf-service
+   2266 ?        00:00:00     gjs
+   2278 ?        00:00:22     ibus-daemon
+   2424 ?        00:00:00       ibus-dconf
+   2425 ?        00:00:06       ibus-extension-
+   2578 ?        00:00:08       ibus-engine-sim
+   2288 ?        00:00:00     gsd-a11y-settin
+   2289 ?        00:00:00     gsd-color
+   2290 ?        00:00:00     gsd-datetime
+   2292 ?        00:00:00     gsd-housekeepin
+   2297 ?        00:00:00     gsd-keyboard
+   2308 ?        00:00:00     gsd-media-keys
+   2314 ?        00:00:00     gsd-power
+   2322 ?        00:00:00     gsd-print-notif
+   2324 ?        00:00:00     gsd-rfkill
+   2327 ?        00:00:00     gsd-screensaver
+   2331 ?        00:00:03     gsd-sharing
+   2338 ?        00:00:00     gsd-smartcard
+   2346 ?        00:00:00     gsd-sound
+   2351 ?        00:00:00     gsd-usb-protect
+   2356 ?        00:00:00     gsd-wacom
+   2401 ?        00:00:00     gvfs-udisks2-vo
+   2428 ?        00:00:00     ibus-portal
+   2446 ?        00:00:00     gjs
+   2482 ?        00:00:00     gsd-printer
+   2485 ?        00:00:00     gvfs-gphoto2-vo
+   2503 ?        00:00:00     gvfs-mtp-volume
+   2508 ?        00:00:00     gvfs-afc-volume
+   2521 ?        00:00:00     gvfs-goa-volume
+   2524 ?        00:00:00     goa-daemon
+   2535 ?        00:00:03     goa-identity-se
+   2538 ?        00:00:00     evolution-calen
+   2559 ?        00:00:00     evolution-addre
+   2621 ?        00:00:00     xdg-desktop-por
+   2636 ?        00:00:00     localsearch-3
+   3372 ?        00:00:00       localsearch-ext
+   2637 ?        00:00:00     xdg-document-po
+   2643 ?        00:00:00       fusermount3
+   2647 ?        00:00:00     xdg-desktop-por
+   2660 ?        00:00:00     gsd-xsettings
+   2727 ?        00:00:00     ibus-x11
+   2766 ?        00:00:00     xdg-desktop-por
+   2808 ?        00:00:00     chrome_crashpad
+   2810 ?        00:00:00     chrome_crashpad
+   3631 ?        00:00:00     gvfsd-metadata
+   3749 ?        00:00:00     gnome-calendar
+   3930 ?        00:00:00     flatpak-session
+   3935 ?        00:00:00     p11-kit-server
+   4115 ?        00:00:00       p11-kit-remote
+   3938 ?        00:00:00     bwrap
+   3939 ?        00:00:00       xdg-dbus-proxy
+   3954 ?        00:00:00     flatpak-portal
+   3979 ?        00:00:00       bwrap
+   7560 ?        00:04:42     code
+   7563 ?        00:00:00       code
+   7599 ?        00:09:02         code
+   7564 ?        00:00:00       code
+   7566 ?        00:00:00         code
+   7661 ?        00:16:25           code
+   7608 ?        00:00:02       code
+   7687 ?        00:00:08       code
+   7717 ?        00:00:18       code
+   7750 ?        00:00:53       code
+  56624 ?        00:00:00         code
+   8089 ?        00:01:15       code
+   8854 pts/2    00:00:02         bash
+  69656 pts/2    00:00:00           sleep
+  61274 pts/0    00:00:00         bash
+  61477 pts/0    00:00:00           asciinema
+  61478 pts/0    00:00:00             asciinema
+  61479 pts/0    00:00:00             asciinema
+  61480 pts/6    00:00:00             sh
+  61481 pts/6    00:00:00               bash
+  68137 pts/6    00:00:00                 bash
+  68139 pts/6    00:00:00                   sleep
+  69677 pts/6    00:00:00                 ps
+  69661 ?        00:00:00         sh
+  69662 ?        00:00:00           cpuUsage.sh
+  69666 ?        00:00:00             sleep
+  69671 ?        00:00:00         sh
+  69672 ?        00:00:00           cpuUsage.sh
+   7583 ?        00:00:00     chrome_crashpad
+   9523 ?        00:00:01     asciinema
+   9534 ?        00:00:00       asciinema
+   9535 ?        00:00:00       asciinema
+   9536 pts/5    00:00:00       sh
+   9537 pts/5    00:00:00         bash
+  54486 pts/5    00:00:00           man
+  54494 pts/5    00:00:00             pager
+   6448 ?        00:05:06   qemu-system-x86
+  60337 ?        00:00:00   fwupd
+DEVOPS25/lektion11
+$ ps -eheDEVOPS25/lektion11
+$ ps -he -o statujpstatusistatusdstatus,statuspstatuspstatusistatusdstatus,statuscommand
+error: can not use output modifiers with user-defined output
+
+Usage:
+ ps [options]
+
+ Try 'ps --help <simple|list|output|threads|misc|all>'
+  or 'ps --help <s|l|o|t|m|a>'
+ for additional help text.
+
+For more details see ps(1).
+DEVOPS25/lektion11
+$ ps -jeH -o pid,ppid,status,commanDEVOPS25/lektion11
+$ ps -eH -o pid,ppid,status,comman
+    PID    PPID STATUS COMMAND
+  61480   61477      - sh -c bash --noprofile --rcfile '/home/kent/D
+  61481   61480      -   bash --noprofile --rcfile /home/kent/Docume
+  68137   61481      -     bash --noprofile --rcfile /home/kent/Docu
+  68139   68137      -       sleep 10
+  70604   61481      -     ps -H -o pid,ppid,status,command
+DEVOPS25/lektion11
+$ jobs
+[1]+  Stopped                 ( while true; do
+    echo RUNNING; sleep 10;
+done )
+DEVOPS25/lektion11
+kill %-SIGCONT 6813768137DEVOPS25/lektion11
+$ kill -SIGCONT 68137
+DEVOPS25/lektion11
+$ jobs
+[1]+  Running                 ( while true; do
+    echo RUNNING; sleep 10;
+done ) &
+DEVOPS25/lektion11
+$ 
+DEVOPS25/lektion11
+$ jobs
+[1]+  Running                 ( while true; do
+    echo RUNNING; sleep 10;
+done ) &
+DEVOPS25/lektion11
+$ DEVOPS25/lektion11
+$ 
+exit

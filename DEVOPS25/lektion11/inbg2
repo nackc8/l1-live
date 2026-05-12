@@ -1,0 +1,12 @@
+#!/bin/bash
+
+MINNE=apple
+
+# Parentes = Ny barnprocess via "fork", kopia av variabler och allt annat
+(
+    echo Inner eat 1 "$MINNE"
+    MINNE=banan
+    echo Inner eat 2 "$MINNE"
+)
+
+echo Outer eat "$MINNE"
