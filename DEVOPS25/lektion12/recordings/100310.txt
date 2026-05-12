@@ -1,0 +1,1311 @@
+/home/kent/Documents/l1-live/DEVOPS25/lektion12
+recordings
+DEVOPS25/lektion12
+$ sudo gdisk
+[sudo] password for kent: 
+sudo: gdisk: command not found
+DEVOPS25/lektion12
+$ sudo apt install gdisk
+Installing:                     
+  gdisk
+
+Summary:
+  Upgrading: 0, Installing: 1, Removing: 0, Not Upgrading: 39
+  Download size: 230 kB
+  Space needed: 963 kB / 941 GB available
+
+Get:1 http://debian.mirror.su.se/debian trixie/main amd64 gdisk amd64 1.0.10-2 [230 kB]
+Fetched 230 kB in 0s (1 232 kB/s)
+
+Selecting previously unselected package gdisk.
+(Reading database ... 185142 files and directories currently installed.)
+Preparing to unpack .../gdisk_1.0.10-2_amd64.deb ...
+Progress: [  0%] [                                                             ] 87Progress: [ 20%] [████████████▏                                                ] 8Unpacking gdisk (1.0.10-2) ...
+Progress: [ 40%] [████████████████████████▍                                    ] 8Setting up gdisk (1.0.10-2) ...
+Progress: [ 60%] [████████████████████████████████████▌                        ] 87Progress: [ 80%] [████████████████████████████████████████████████▊            ] 8Processing triggers for man-db (2.13.1-1) ...
+
+DEVOPS25/lektion12
+gdiskDEVOPS25/lektion12k
+$ sudo gdisk
+GPT fdisk (gdisk) version 1.0.10
+
+Type device filename, or press <Enter> to exit: 
+DEVOPS25/lektion12
+$ ls /dev/DEVOPS25/lektion12
+$ ls /dev/
+acpi_thermal_rel  hidraw4	mem	   stdout  tty31  tty58        vcsa1
+autofs		  hpet		mqueue	   tpm0    tty32  tty59        vcsa2
+block		  hugepages	net	   tpmrm0  tty33  tty6	       vcsa3
+btrfs-control	  hwrng		ng0n1	   tty	   tty34  tty60        vcsa4
+bus		  i2c-0		null	   tty0    tty35  tty61        vcsa5
+char		  i2c-1		nvme0	   tty1    tty36  tty62        vcsa6
+console		  i2c-10	nvme0n1    tty10   tty37  tty63        vcsu
+core		  i2c-11	nvme0n1p1  tty11   tty38  tty7	       vcsu1
+cpu		  i2c-12	nvme0n1p2  tty12   tty39  tty8	       vcsu2
+cpu_dma_latency   i2c-13	nvme0n1p3  tty13   tty4   tty9	       vcsu3
+cuse		  i2c-14	nvme0n1p4  tty14   tty40  ttyS0        vcsu4
+disk		  i2c-15	nvme0n1p5  tty15   tty41  ttyS1        vcsu5
+dm-0		  i2c-2		nvme0n1p6  tty16   tty42  ttyS2        vcsu6
+dma_heap	  i2c-3		nvram	   tty17   tty43  ttyS3        vfio
+dri		  i2c-4		port	   tty18   tty44  udmabuf      vga_arbiter
+drm_dp_aux0	  i2c-5		ppp	   tty19   tty45  uhid	       vhci
+drm_dp_aux1	  i2c-6		psaux	   tty2    tty46  uinput       vhost-net
+drm_dp_aux2	  i2c-7		ptmx	   tty20   tty47  urandom      vhost-vsock
+drm_dp_aux3	  i2c-8		ptp0	   tty21   tty48  usb	       video0
+drm_dp_aux4	  i2c-9		pts	   tty22   tty49  userfaultfd  video1
+fb0		  initctl	random	   tty23   tty5   v4l	       watchdog
+fd		  input		rfkill	   tty24   tty50  vcs	       watchdog0
+full		  kmsg		rtc	   tty25   tty51  vcs1	       zero
+fuse		  kvm		rtc0	   tty26   tty52  vcs2
+gpiochip0	  log		shm	   tty27   tty53  vcs3
+hidraw0		  loop-control	snapshot   tty28   tty54  vcs4
+hidraw1		  mapper	snd	   tty29   tty55  vcs5
+hidraw2		  media0	stderr	   tty3    tty56  vcs6
+hidraw3		  mei0		stdin	   tty30   tty57  vcsa
+DEVOPS25/lektion12
+$ ls /dev/DEVOPS25/lektion12
+$ ls /dev/devnvme0n /dev/nvme0n /dev/nvme0ns /dev/nvme0nu /dev/nvme0nd /dev/nvme0no /dev/nvme0n /dev/nvme0ng /dev/nvme0nd /dev/nvme0ni /dev/nvme0ns /dev/nvme0nk /dev/nvme0n
+GPT fdisk (gdisk) version 1.0.10
+
+Partition table scan:
+  MBR: protective
+  BSD: not present
+  APM: not present
+  GPT: present
+
+Found valid GPT with protective MBR; using GPT.
+
+Command (? for help): p
+Disk /dev/nvme0n1: 3907029168 sectors, 1.8 TiB
+Model: Samsung SSD 970 EVO Plus 2TB            
+Sector size (logical/physical): 512/512 bytes
+Disk identifier (GUID): 3BC0EF45-2EA6-41B7-958A-BEF94B5DBEFF
+Partition table holds up to 128 entries
+Main partition table begins at sector 2 and ends at sector 33
+First usable sector is 34, last usable sector is 3907029134
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 2157 sectors (1.1 MiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048          206847   100.0 MiB   EF00  EFI system partition
+   2          206848          239615   16.0 MiB    0C01  Microsoft reserved ...
+   3          239616       612825087   292.1 GiB   0700  Basic data partition
+   4       612825088       614399999   769.0 MiB   2700  
+   5       614400000       616353791   954.0 MiB   8300  DebBoot
+   6       616353792      3907028991   1.5 TiB     8300  DebCrypt
+
+Command (? for help): 
+
+Command (? for help): 
+
+Command (? for help): exoit
+b	back up GPT data to a file
+c	change a partition's name
+d	delete a partition
+i	show detailed information on a partition
+l	list known partition types
+n	add a new partition
+o	create a new empty GUID partition table (GPT)
+p	print the partition table
+q	quit without saving changes
+r	recovery and transformation options (experts only)
+s	sort partitions
+t	change a partition's type code
+v	verify disk
+w	write table to disk and exit
+x	extra functionality (experts only)
+?	print this menu
+
+Command (? for help): exit
+b	back up GPT data to a file
+c	change a partition's name
+d	delete a partition
+i	show detailed information on a partition
+l	list known partition types
+n	add a new partition
+o	create a new empty GUID partition table (GPT)
+p	print the partition table
+q	quit without saving changes
+r	recovery and transformation options (experts only)
+s	sort partitions
+t	change a partition's type code
+v	verify disk
+w	write table to disk and exit
+x	extra functionality (experts only)
+?	print this menu
+
+Command (? for help): e
+b	back up GPT data to a file
+c	change a partition's name
+d	delete a partition
+i	show detailed information on a partition
+l	list known partition types
+n	add a new partition
+o	create a new empty GUID partition table (GPT)
+p	print the partition table
+q	quit without saving changes
+r	recovery and transformation options (experts only)
+s	sort partitions
+t	change a partition's type code
+v	verify disk
+w	write table to disk and exit
+x	extra functionality (experts only)
+?	print this menu
+
+Command (? for help): q
+DEVOPS25/lektion12
+$ DEVOPS25/lektion12
+$ sudo gdissearch)`':g': sudo gdisk /dev/nvme0nd': sudo gdi': sudo gdis': sudo gdisk': sudo gdisk
+GPT fdisk (gdisk) version 1.0.10
+
+Partition table scan:
+  MBR: protective
+  BSD: not present
+  APM: not present
+  GPT: present
+
+Found valid GPT with protective MBR; using GPT.
+
+Command (? for help): p
+Disk /dev/nvme0n1: 3907029168 sectors, 1.8 TiB
+Model: Samsung SSD 970 EVO Plus 2TB            
+Sector size (logical/physical): 512/512 bytes
+Disk identifier (GUID): 3BC0EF45-2EA6-41B7-958A-BEF94B5DBEFF
+Partition table holds up to 128 entries
+Main partition table begins at sector 2 and ends at sector 33
+First usable sector is 34, last usable sector is 3907029134
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 2157 sectors (1.1 MiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048          206847   100.0 MiB   EF00  EFI system partition
+   2          206848          239615   16.0 MiB    0C01  Microsoft reserved ...
+   3          239616       612825087   292.1 GiB   0700  Basic data partition
+   4       612825088       614399999   769.0 MiB   2700  
+   5       614400000       616353791   954.0 MiB   8300  DebBoot
+   6       616353792      3907028991   1.5 TiB     8300  DebCrypt
+
+Command (? for help): 
+
+Command (? for help): 
+
+Command (? for help): q
+DEVOPS25/lektion12
+$ DEVOPS25/lektion12
+$ sudo gdisk /dev/nvme0n1
+GPT fdisk (gdisk) version 1.0.10
+
+Partition table scan:
+  MBR: protective
+  BSD: not present
+  APM: not present
+  GPT: present
+
+Found valid GPT with protective MBR; using GPT.
+
+Command (? for help): p
+Disk /dev/nvme0n1: 3907029168 sectors, 1.8 TiB
+Model: Samsung SSD 970 EVO Plus 2TB            
+Sector size (logical/physical): 512/512 bytes
+Disk identifier (GUID): 3BC0EF45-2EA6-41B7-958A-BEF94B5DBEFF
+Partition table holds up to 128 entries
+Main partition table begins at sector 2 and ends at sector 33
+First usable sector is 34, last usable sector is 3907029134
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 2157 sectors (1.1 MiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048          206847   100.0 MiB   EF00  EFI system partition
+   2          206848          239615   16.0 MiB    0C01  Microsoft reserved ...
+   3          239616       612825087   292.1 GiB   0700  Basic data partition
+   4       612825088       614399999   769.0 MiB   2700  
+   5       614400000       616353791   954.0 MiB   8300  DebBoot
+   6       616353792      3907028991   1.5 TiB     8300  DebCrypt
+
+Command (? for help): 
+
+Command (? for help): 
+
+Command (? for help): q
+DEVOPS25/lektion12
+$ DEVOPS25/lektion12
+$ lsblk
+NAME                MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINTS
+nvme0n1             259:0    0   1,8T  0 disk  
+├─nvme0n1p1         259:1    0   100M  0 part  /boot/efi
+├─nvme0n1p2         259:2    0    16M  0 part  
+├─nvme0n1p3         259:3    0 292,1G  0 part  
+├─nvme0n1p4         259:4    0   769M  0 part  
+├─nvme0n1p5         259:5    0   954M  0 part  /boot
+└─nvme0n1p6         259:6    0   1,5T  0 part  
+  └─nvme0n1p6_crypt 254:0    0   1,5T  0 crypt /
+DEVOPS25/lektion12
+/boot/efit/efi
+ls: cannot open directory '/boot/efi': Permission denied
+DEVOPS25/lektion12
+$ sudo !!
+sudo ls /boot/efi
+ EFI  'System Volume Information'
+DEVOPS25/lektion12
+$ sudo ls /boot/efi/EFI
+Boot  debian  Microsoft
+DEVOPS25/lektion12
+$ DEVOPS25/lektion12
+$ ls /boot /boot- /bootl /boot
+total 177325
+-rw-r--r-- 1 root root   283277 mar  8 20:54 config-6.12.74+deb13+1-amd64
+-rw-r--r-- 1 root root   283190 apr 30 13:38 config-6.12.85+deb13-amd64
+drwx------ 4 root root     1024 jan  1  1970 efi
+drwxr-xr-x 5 root root     4096 maj  2 13:13 grub
+-rw-r--r-- 1 root root 78373207 apr 27 17:01 initrd.img-6.12.74+deb13+1-amd64
+-rw-r--r-- 1 root root 78366311 maj  2 09:27 initrd.img-6.12.85+deb13-amd64
+drwx------ 2 root root    16384 apr 26 21:30 lost+found
+-rw-r--r-- 1 root root       83 mar  8 20:54 System.map-6.12.74+deb13+1-amd64
+-rw-r--r-- 1 root root       83 apr 30 13:38 System.map-6.12.85+deb13-amd64
+-rw-r--r-- 1 root root 12113856 mar  8 20:54 vmlinuz-6.12.74+deb13+1-amd64
+-rw-r--r-- 1 root root 12113856 apr 30 13:38 vmlinuz-6.12.85+deb13-amd64
+DEVOPS25/lektion12
+$ ls -l /boot /boot /boot/bootDEVOPS25/lektion12
+$ ls /boot
+config-6.12.74+deb13+1-amd64	  lost+found
+config-6.12.85+deb13-amd64	  System.map-6.12.74+deb13+1-amd64
+efi				  System.map-6.12.85+deb13-amd64
+grub				  vmlinuz-6.12.74+deb13+1-amd64
+initrd.img-6.12.74+deb13+1-amd64  vmlinuz-6.12.85+deb13-amd64
+initrd.img-6.12.85+deb13-amd64
+DEVOPS25/lektion12
+$ DEVOPS25/lektion12
+$ lsblk
+NAME                MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINTS
+nvme0n1             259:0    0   1,8T  0 disk  
+├─nvme0n1p1         259:1    0   100M  0 part  /boot/efi
+├─nvme0n1p2         259:2    0    16M  0 part  
+├─nvme0n1p3         259:3    0 292,1G  0 part  
+├─nvme0n1p4         259:4    0   769M  0 part  
+├─nvme0n1p5         259:5    0   954M  0 part  /boot
+└─nvme0n1p6         259:6    0   1,5T  0 part  
+  └─nvme0n1p6_crypt 254:0    0   1,5T  0 crypt /
+DEVOPS25/lektion12
+$ DEVOPS25/lektion12
+$ df -h
+Filesystem                   Size  Used Avail Use% Mounted on
+udev                         7,6G     0  7,6G   0% /dev
+tmpfs                        1,6G  2,3M  1,6G   1% /run
+/dev/mapper/nvme0n1p6_crypt  1,6T  589G  877G  41% /
+tmpfs                        7,7G   67M  7,7G   1% /dev/shm
+efivarfs                     268K  184K   80K  70% /sys/firmware/efi/efivars
+tmpfs                        5,0M  8,0K  5,0M   1% /run/lock
+tmpfs                        7,7G  2,8M  7,7G   1% /tmp
+tmpfs                        1,0M     0  1,0M   0% /run/credentials/systemd-journald.service
+tmpfs                        1,0M     0  1,0M   0% /run/credentials/systemd-cryptsetup@nvme0n1p6_crypt.service
+/dev/nvme0n1p5               921M  187M  671M  22% /boot
+/dev/nvme0n1p1                96M   33M   64M  34% /boot/efi
+tmpfs                        1,6G  132K  1,6G   1% /run/user/1000
+DEVOPS25/lektion12
+$ DEVOPS25/lektion12
+$ sudose-i-search)`':s': lsblu': sudo ls /boot/efi/EFd': sudo': sudogdisk /dev/nvme0n
+[sudo] password for kent: 
+GPT fdisk (gdisk) version 1.0.10
+
+Partition table scan:
+  MBR: protective
+  BSD: not present
+  APM: not present
+  GPT: present
+
+Found valid GPT with protective MBR; using GPT.
+
+Command (? for help): p
+Disk /dev/nvme0n1: 3907029168 sectors, 1.8 TiB
+Model: Samsung SSD 970 EVO Plus 2TB            
+Sector size (logical/physical): 512/512 bytes
+Disk identifier (GUID): 3BC0EF45-2EA6-41B7-958A-BEF94B5DBEFF
+Partition table holds up to 128 entries
+Main partition table begins at sector 2 and ends at sector 33
+First usable sector is 34, last usable sector is 3907029134
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 2157 sectors (1.1 MiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048          206847   100.0 MiB   EF00  EFI system partition
+   2          206848          239615   16.0 MiB    0C01  Microsoft reserved ...
+   3          239616       612825087   292.1 GiB   0700  Basic data partition
+   4       612825088       614399999   769.0 MiB   2700  
+   5       614400000       616353791   954.0 MiB   8300  DebBoot
+   6       616353792      3907028991   1.5 TiB     8300  DebCrypt
+
+Command (? for help): 
+
+Command (? for help): q
+DEVOPS25/lektion12
+$ DEVOPS25/lektion12
+$ lsblk
+NAME                MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINTS
+nvme0n1             259:0    0   1,8T  0 disk  
+├─nvme0n1p1         259:1    0   100M  0 part  /boot/efi
+├─nvme0n1p2         259:2    0    16M  0 part  
+├─nvme0n1p3         259:3    0 292,1G  0 part  
+├─nvme0n1p4         259:4    0   769M  0 part  
+├─nvme0n1p5         259:5    0   954M  0 part  /boot
+└─nvme0n1p6         259:6    0   1,5T  0 part  
+  └─nvme0n1p6_crypt 254:0    0   1,5T  0 crypt /
+DEVOPS25/lektion12
+$ DEVOPS25/lektion12
+$ df -h
+Filesystem                   Size  Used Avail Use% Mounted on
+udev                         7,6G     0  7,6G   0% /dev
+tmpfs                        1,6G  2,3M  1,6G   1% /run
+/dev/mapper/nvme0n1p6_crypt  1,6T  589G  877G  41% /
+tmpfs                        7,7G   90M  7,6G   2% /dev/shm
+efivarfs                     268K  184K   80K  70% /sys/firmware/efi/efivars
+tmpfs                        5,0M  8,0K  5,0M   1% /run/lock
+tmpfs                        7,7G  2,8M  7,7G   1% /tmp
+tmpfs                        1,0M     0  1,0M   0% /run/credentials/systemd-journald.service
+tmpfs                        1,0M     0  1,0M   0% /run/credentials/systemd-cryptsetup@nvme0n1p6_crypt.service
+/dev/nvme0n1p5               921M  187M  671M  22% /boot
+/dev/nvme0n1p1                96M   33M   64M  34% /boot/efi
+tmpfs                        1,6G  136K  1,6G   1% /run/user/1000
+DEVOPS25/lektion12
+df -h | less
+Filesystem                   Size  Used Avail Use% Mounted on
+udev                         7,6G     0  7,6G   0% /dev
+tmpfs                        1,6G  2,3M  1,6G   1% /run
+/dev/mapper/nvme0n1p6_crypt  1,6T  589G  877G  41% /
+tmpfs                        7,7G   90M  7,6G   2% /dev/shm
+efivarfs                     268K  184K   80K  70% /sys/firmware/efi/efivars
+tmpfs                        5,0M  8,0K  5,0M   1% /run/lock
+tmpfs                        7,7G  2,8M  7,7G   1% /tmp
+tmpfs                        1,0M     0  1,0M   0% /run/credentials/systemd-journald.service
+tmpfs                        1,0M     0  1,0M   0% /run/credentials/systemd-cryptsetup@nvme0n1p6_crypt.service
+/dev/nvme0n1p5               921M  187M  671M  22% /boot
+/dev/nvme0n1p1                96M   33M   64M  34% /boot/efi
+tmpfs                        1,6G  136K  1,6G   1% /run/user/1000
+Mtmpfs                        1,6G  2,3M  1,6G   1% /run
+>DEVOPS25/lektion12
+$ DEVOPS25/lektion12
+$ du -hs ~/Dropbox/
+533G	/home/kent/Dropbox/
+DEVOPS25/lektion12
+$ dfDEVOPS25/lektion12
+$ df
+Filesystem                   1K-blocks      Used Available Use% Mounted on
+udev                           7952688         0   7952688   0% /dev
+tmpfs                          1607884      2328   1605556   1% /run
+/dev/mapper/nvme0n1p6_crypt 1618370800 617064592 919023764  41% /
+tmpfs                          8039416     90456   7948960   2% /dev/shm
+efivarfs                           268       184        80  70% /sys/firmware/efi/efivars
+tmpfs                             5120         8      5112   1% /run/lock
+tmpfs                          8039420      2836   8036584   1% /tmp
+tmpfs                             1024         0      1024   0% /run/credentials/systemd-journald.service
+tmpfs                             1024         0      1024   0% /run/credentials/systemd-cryptsetup@nvme0n1p6_crypt.service
+/dev/nvme0n1p5                  942764    191240    686296  22% /boot
+/dev/nvme0n1p1                   98304     33175     65129  34% /boot/efi
+tmpfs                          1607880       136   1607744   1% /run/user/1000
+DEVOPS25/lektion12
+$ xfgdg-open /home/kent/Documents/l1-live/DEVOPS25/lektion12/parts.excalidraw/home/kent/Documents/l1-live/DEVOPS25/lektion12/parts.excalidraw
+DEVOPS25/lektion12
+$ DEVOPS25/lektion12
+$ ssh ubse 
+Welcome to Ubuntu 24.04.4 LTS (GNU/Linux 6.8.0-111-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue May 12 08:59:00 AM UTC 2026
+
+  System load:  0.0                Processes:               143
+  Usage of /:   43.6% of 11.21GB   Users logged in:         0
+  Memory usage: 5%                 IPv4 address for enp1s0: 192.168.122.155
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Tue May 12 07:20:35 2026 from 192.168.122.1
+0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+0;kent@ubse: ~
+0;kent@ubse: ~
+0;kent@ubse: ~
+0;kent@ubse: ~
+kent@ubse:~$ sudo -i
+[sudo] password for kent: 
+0;root@ubse: ~
+root@ubse:~# 0;root@ubse: ~
+root@ubse:~# lsblk 
+NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0                        11:0    1 1024M  0 rom  
+vda                       253:0    0   25G  0 disk 
+├─vda1                    253:1    0    1M  0 part 
+├─vda2                    253:2    0    2G  0 part /boot
+└─vda3                    253:3    0   23G  0 part 
+  └─ubuntu--vg-ubuntu--lv 252:0    0 11.5G  0 lvm  /
+vdb                       253:16   0   20G  0 disk 
+0;root@ubse: ~
+root@ubse:~# gdisk /dev/vdb0;root@ubse: ~
+root@ubse:~# gdisk /dev/vdb
+GPT fdisk (gdisk) version 1.0.10
+
+Partition table scan:
+  MBR: not present
+  BSD: not present
+  APM: not present
+  GPT: not present
+
+Creating new GPT entries in memory.
+
+Command (? for help): ?
+b	back up GPT data to a file
+c	change a partition's name
+d	delete a partition
+i	show detailed information on a partition
+l	list known partition types
+n	add a new partition
+o	create a new empty GUID partition table (GPT)
+p	print the partition table
+q	quit without saving changes
+r	recovery and transformation options (experts only)
+s	sort partitions
+t	change a partition's type code
+v	verify disk
+w	write table to disk and exit
+x	extra functionality (experts only)
+?	print this menu
+
+Command (? for help): ^[[o
+This option deletes all partitions and creates a new protective MBR.
+Proceed? (Y/N): y
+
+Command (? for help): p
+Disk /dev/vdb: 41943040 sectors, 20.0 GiB
+Sector size (logical/physical): 512/512 bytes
+Disk identifier (GUID): FAF1B659-39C6-474F-BA4B-A3F0BEC20670
+Partition table holds up to 128 entries
+Main partition table begins at sector 2 and ends at sector 33
+First usable sector is 34, last usable sector is 41943006
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 41942973 sectors (20.0 GiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+
+Command (? for help): ?
+b	back up GPT data to a file
+c	change a partition's name
+d	delete a partition
+i	show detailed information on a partition
+l	list known partition types
+n	add a new partition
+o	create a new empty GUID partition table (GPT)
+p	print the partition table
+q	quit without saving changes
+r	recovery and transformation options (experts only)
+s	sort partitions
+t	change a partition's type code
+v	verify disk
+w	write table to disk and exit
+x	extra functionality (experts only)
+?	print this menu
+
+Command (? for help): n
+Partition number (1-128, default 1): 
+First sector (34-41943006, default = 2048) or {+-}size{KMGTP}: 
+Last sector (2048-41943006, default = 41940991) or {+-}size{KMGTP}: +1-10G
+Current type is 8300 (Linux filesystem)
+Hex code or GUID (L to show codes, Enter = 8300): 
+Changed type of partition to 'Linux filesystem'
+
+Command (? for help): p
+Disk /dev/vdb: 41943040 sectors, 20.0 GiB
+Sector size (logical/physical): 512/512 bytes
+Disk identifier (GUID): FAF1B659-39C6-474F-BA4B-A3F0BEC20670
+Partition table holds up to 128 entries
+Main partition table begins at sector 2 and ends at sector 33
+First usable sector is 34, last usable sector is 41943006
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 20973534 sectors (10.0 GiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048        20971486   10.0 GiB    8300  Linux filesystem
+
+Command (? for help): p
+Disk /dev/vdb: 41943040 sectors, 20.0 GiB
+Sector size (logical/physical): 512/512 bytes
+Disk identifier (GUID): FAF1B659-39C6-474F-BA4B-A3F0BEC20670
+Partition table holds up to 128 entries
+Main partition table begins at sector 2 and ends at sector 33
+First usable sector is 34, last usable sector is 41943006
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 20973534 sectors (10.0 GiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048        20971486   10.0 GiB    8300  Linux filesystem
+
+Command (? for help): p
+Disk /dev/vdb: 41943040 sectors, 20.0 GiB
+Sector size (logical/physical): 512/512 bytes
+Disk identifier (GUID): FAF1B659-39C6-474F-BA4B-A3F0BEC20670
+Partition table holds up to 128 entries
+Main partition table begins at sector 2 and ends at sector 33
+First usable sector is 34, last usable sector is 41943006
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 20973534 sectors (10.0 GiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048        20971486   10.0 GiB    8300  Linux filesystem
+
+Command (? for help): ?
+b	back up GPT data to a file
+c	change a partition's name
+d	delete a partition
+i	show detailed information on a partition
+l	list known partition types
+n	add a new partition
+o	create a new empty GUID partition table (GPT)
+p	print the partition table
+q	quit without saving changes
+r	recovery and transformation options (experts only)
+s	sort partitions
+t	change a partition's type code
+v	verify disk
+w	write table to disk and exit
+x	extra functionality (experts only)
+?	print this menu
+
+Command (? for help): w
+
+Final checks complete. About to write GPT data. THIS WILL OVERWRITE EXISTING
+PARTITIONS!!
+
+Do you want to proceed? (Y/N): y
+OK; writing new GUID partition table (GPT) to /dev/vdb.
+The operation has completed successfully.
+0;root@ubse: ~
+root@ubse:~# lslblk
+NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0                        11:0    1 1024M  0 rom  
+vda                       253:0    0   25G  0 disk 
+├─vda1                    253:1    0    1M  0 part 
+├─vda2                    253:2    0    2G  0 part /boot
+└─vda3                    253:3    0   23G  0 part 
+  └─ubuntu--vg-ubuntu--lv 252:0    0 11.5G  0 lvm  /
+vdb                       253:16   0   20G  0 disk 
+└─vdb1                    253:17   0   10G  0 part 
+0;root@ubse: ~
+root@ubse:~# partprobe 
+0;root@ubse: ~
+root@ubse:~# 0;root@ubse: ~
+root@ubse:~# ls /dev
+autofs           mem       tty26  tty7         userio
+block            mqueue    tty27  tty8         vcs
+bsg              net       tty28  tty9         vcs1
+btrfs-control    null      tty29  ttyS0        vcs2
+bus              nvram     tty3   ttyS1        vcs3
+cdrom            port      tty30  ttyS10       vcs4
+char             ppp       tty31  ttyS11       vcs5
+console          psaux     tty32  ttyS12       vcs6
+core             ptmx      tty33  ttyS13       vcsa
+cpu              pts       tty34  ttyS14       vcsa1
+cpu_dma_latency  random    tty35  ttyS15       vcsa2
+cuse             rfkill    tty36  ttyS16       vcsa3
+disk             rtc       tty37  ttyS17       vcsa4
+dm-0             rtc0      tty38  ttyS18       vcsa5
+dma_heap         sg0       tty39  ttyS19       vcsa6
+dri              shm       tty4   ttyS2        vcsu
+ecryptfs         snapshot  tty40  ttyS20       vcsu1
+fb0              snd       tty41  ttyS21       vcsu2
+fd               sr0       tty42  ttyS22       vcsu3
+full             stderr    tty43  ttyS23       vcsu4
+fuse             stdin     tty44  ttyS24       vcsu5
+hidraw0          stdout    tty45  ttyS25       vcsu6
+hpet             tty       tty46  ttyS26       vda
+hugepages        tty0      tty47  ttyS27       vda1
+hwrng            tty1      tty48  ttyS28       vda2
+i2c-0            tty10     tty49  ttyS29       vda3
+initctl          tty11     tty5   ttyS3        vdb
+input            tty12     tty50  ttyS30       vdb1
+kmsg             tty13     tty51  ttyS31       vfio
+kvm              tty14     tty52  ttyS4        vga_arbiter
+log              tty15     tty53  ttyS5        vhci
+loop-control     tty16     tty54  ttyS6        vhost-net
+loop0            tty17     tty55  ttyS7        vhost-vsock
+loop1            tty18     tty56  ttyS8        virtio-ports
+loop2            tty19     tty57  ttyS9        vport1p1
+loop3            tty2      tty58  ttyprintk    vport1p2
+loop4            tty20     tty59  ubuntu-vg    zero
+loop5            tty21     tty6   udmabuf      zfs
+loop6            tty22     tty60  uhid
+loop7            tty23     tty61  uinput
+mapper           tty24     tty62  urandom
+mcelog           tty25     tty63  userfaultfd
+0;root@ubse: ~
+root@ubse:~# 
+echo HELLO >/dev/vd
+
+
+
+
+0;root@ubse: ~
+root@ubse:~# mkfs
+.
+
+mkfs.bfs     mkfs.ext2    mkfs.fat     mkfs.ntfs    
+mkfs.btrfs   mkfs.ext3    mkfs.minix   mkfs.vfat    
+mkfs.cramfs  mkfs.ext4    mkfs.msdos   mkfs.xfs     
+0;root@ubse: ~
+root@ubse:~# mkfs.ex
+t4an 0;root@ubse: ~
+root@ubse:~# man mkfs.ext4
+MKE2FS(8)            System Manager's Manual           MKE2FS(8)
+
+NAME
+       mke2fs - create an ext2/ext3/ext4 file system
+
+SYNOPSIS
+       mke2fs  [ -c | -l filename ] [ -b block-size ] [ -C clus‐
+       ter-size ] [ -d root-directory ] [ -D ] [ -g  blocks-per-
+       group  ] [ -G number-of-groups ] [ -i bytes-per-inode ] [
+       -I inode-size ] [ -j ] [ -J journal-options ] [  -N  num‐
+       ber-of-inodes  ] [ -n ] [ -m reserved-blocks-percentage ]
+       [ -o creator-os ] [ -O [^]feature[,...]  ] [ -q  ]  [  -r
+       fs-revision-level ] [ -E extended-options ] [ -v ] [ -F ]
+       [  -L volume-label ] [ -M last-mounted-directory ] [ -S ]
+       [ -t fs-type ] [ -T usage-type ] [ -U UUID ] [ -V ] [  -e
+       errors-behavior ] [ -z undo_file ] device [ fs-size ]
+
+       mke2fs -O journal_dev [ -b block-size ] [ -L volume-label
+       ] [ -n ] [ -q ] [ -v ] external-journal [ fs-size ]
+
+DESCRIPTION
+       mke2fs is used to create an ext2, ext3, or ext4 file sys‐
+       tem,  usually  in a disk partition (or file) named by de‐
+       vice.
+
+       The file system size is specified by fs-size.  If fs-size
+       does not have a suffix, it is interpreted as power-of-two
+       kilobytes, unless the -b blocksize option  is  specified,
+       in  which  case  fs-size  is interpreted as the number of
+       blocksize blocks.   If the fs-size is  suffixed  by  'k',
+       'm',  'g', 't' (either upper-case or lower-case), then it
+       is interpreted in power-of-two kilobytes, megabytes,  gi‐
+       gabytes,  terabytes,  etc.  If fs-size is omitted, mke2fs
+       will create the file system based on the device size.
+
+       If mke2fs is run as mkfs.XXX (i.e., mkfs.ext2, mkfs.ext3,
+       or mkfs.ext4) the option -t XXX is implied; so  mkfs.ext3
+       will  create  a  file system for use with ext3, mkfs.ext4
+       will create a file system for use with ext4, and so on.
+
+       The defaults of the parameters for the newly created file
+       system, if not overridden by the  options  listed  below,
+M       kilobytes, unless the -b blocksize option  is  specified,
+M       does not have a suffix, it is interpreted as power-of-two
+M       The file system size is specified by fs-size.  If fs-size
+MESESCOAage mkfs.ext4(8) line 26 (press h for help or q to quit)
+M       vice.kfs.ext4(8) line 25 (press h for help or q to quit)
+M       tem,  usually  in a disk partition (or file) named by de‐
+M       mke2fs is used to create an ext2, ext3, or ext4 file sys‐
+MDESCRIPTIONmkfs.ext4(8) line 22 (press h for help or q to quit)
+MESESCOAage mkfs.ext4(8) line 21 (press h for help or q to quit)
+M       ] [ -n ] [ -q ] [ -v ] external-journal [ fs-size ]quit)
+M       mke2fs -O journal_dev [ -b block-size ] [ -L volume-label
+MESESCOAage mkfs.ext4(8) line 18 (press h for help or q to quit)
+M       errors-behavior ] [ -z undo_file ] device [ fs-size ]it)
+M       [ -t fs-type ] [ -T usage-type ] [ -U UUID ] [ -V ] [  -e
+M       [  -L volume-label ] [ -M last-mounted-directory ] [ -S ]
+M       fs-revision-level ] [ -E extended-options ] [ -v ] [ -F ]
+M       [ -o creator-os ] [ -O [^]feature[,...]  ] [ -q  ]  [  -r
+M       ber-of-inodes  ] [ -n ] [ -m reserved-blocks-percentage ]
+M       -I inode-size ] [ -j ] [ -J journal-options ] [  -N  num‐
+M       group  ] [ -G number-of-groups ] [ -i bytes-per-inode ] [
+M       ter-size ] [ -d root-directory ] [ -D ] [ -g  blocks-per-
+M       mke2fs  [ -c | -l filename ] [ -b block-size ] [ -C clus‐
+MSYNOPSISage mkfs.ext4(8) line 7 (press h for help or q to quit)
+MESESCOApage mkfs.ext4(8) line 6 (press h for help or q to quit)
+M       mke2fs - create an ext2/ext3/ext4 file system q to quit)
+MNAMECOApage mkfs.ext4(8) line 4 (press h for help or q to quit)
+MESESCOApage mkfs.ext4(8) line 3 (press h for help or q to quit)
+MMKE2FS(8)            System Manager's Manual           MKE2FS(8)
+ ESESCOApage mkfs.ext4(8) line 1 (press h for help or q to quit)
+ ESESCOApage mkfs.ext4(8) line 1 (press h for help or q to quit)
+       [ -t fs-type ] [ -T usage-type ] [ -U UUID ] [ -V ] [  -e
+       errors-behavior ] [ -z undo_file ] device [ fs-size ]uit)
+ ESESCOBpage mkfs.ext4(8) line 3 (press h for help or q to quit)
+       mke2fs -O journal_dev [ -b block-size ] [ -L volume-label
+       ] [ -n ] [ -q ] [ -v ] external-journal [ fs-size ] quit)
+>0;root@ubse: ~fs.ext4(8) line 6 (press h for help or q to quit)
+root@ubse:~# mls /dev/vd
+b
+*
+/dev/vdb  /dev/vdb1
+0;root@ubse: ~
+root@ubse:~# mkfs.ex
+t4 /dev/db
+/vdb1 
+mke2fs 1.47.0 (5-Feb-2023)
+Discarding device blocks:       0/262117              done                            
+Creating filesystem with 2621179 4k blocks and 655360 inodes
+Filesystem UUID: 92ca4f47-7592-4332-97a5-bc964384cc81
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632
+
+Allocating group tables:  0/8    done                            
+Writing inode tables:  0/8    done                            
+Creating journal (16384 blocks): done
+Writing superblocks and filesystem accounting information:  0/8    done
+
+0;root@ubse: ~
+root@ubse:~# 0;root@ubse: ~
+root@ubse:~# lsblk
+NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0                        11:0    1 1024M  0 rom  
+vda                       253:0    0   25G  0 disk 
+├─vda1                    253:1    0    1M  0 part 
+├─vda2                    253:2    0    2G  0 part /boot
+└─vda3                    253:3    0   23G  0 part 
+  └─ubuntu--vg-ubuntu--lv 252:0    0 11.5G  0 lvm  /
+vdb                       253:16   0   20G  0 disk 
+└─vdb1                    253:17   0   10G  0 part 
+0;root@ubse: ~
+root@ubse:~# 0;root@ubse: ~
+root@ubse:~# ls /
+bin                lib64       sbin.usr-is-merged
+bin.usr-is-merged  lost+found  snap
+boot               media       srv
+cdrom              mnt         swap.img
+dev                opt         sys
+etc                proc        tmp
+home               root        usr
+lib                run         var
+lib.usr-is-merged  sbin
+0;root@ubse: ~
+root@ubse:~# mkdir /storage
+0;root@ubse: ~
+root@ubse:~# 0;root@ubse: ~
+root@ubse:~# touch /so
+torage/BORTGLOMDFIL
+0;root@ubse: ~
+root@ubse:~# ls -/storage/
+BORTGLOMDFIL
+0;root@ubse: ~
+root@ubse:~# mount
+man mount0;root@ubse: ~
+root@ubse:~# man mount
+MOUNT(8)              System Administration             MOUNT(8)
+
+NAME
+       mount - mount a filesystem
+
+SYNOPSIS
+       mount [-h|-V]
+
+       mount [-l] [-t fstype]
+
+       mount -a [-fFnrsvw] [-t fstype] [-O optlist]
+
+       mount [-fnrsvw] [-o options] device|mountpoint
+
+       mount [-fnrsvw] [-t fstype] [-o options] device quit)
+       mountpointt(8) line 2 (press h for help or q to quit)
+ ESESCOBpage mount(8) line 3 (press h for help or q to quit)
+       mount --bind|--rbind|--move olddir newdirr q to quit)
+ ESESCOBpage mount(8) line 5 (press h for help or q to quit)
+       mount mount(8) line 6 (press h for help or q to quit)
+>0;root@ubse: ~shared|slave|private|unbindable|rshared|rslave|rpri Manual page mount(8) line 8 (press h for help or q to quit)
+root@ubse:~# mount /dev/vdb1 /storage/
+0;root@ubse: ~
+root@ubse:~# ls /storage/
+lost+found
+0;root@ubse: ~
+root@ubse:~# 0;root@ubse: ~
+root@ubse:~# ls l lblk
+NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0                        11:0    1 1024M  0 rom  
+vda                       253:0    0   25G  0 disk 
+├─vda1                    253:1    0    1M  0 part 
+├─vda2                    253:2    0    2G  0 part /boot
+└─vda3                    253:3    0   23G  0 part 
+  └─ubuntu--vg-ubuntu--lv 252:0    0 11.5G  0 lvm  /
+vdb                       253:16   0   20G  0 disk 
+└─vdb1                    253:17   0   10G  0 part /storage
+0;root@ubse: ~
+root@ubse:~# 0;root@ubse: ~
+root@ubse:~# sreq 1 100 >/tmpstorage/aaa
+0;root@ubse: ~
+root@ubse:~# seq 1 100 >/storage/aavv
+0;root@ubse: ~
+root@ubse:~# seq 1 100 >/storage/aveee
+0;root@ubse: ~
+root@ubse:~# ls /storage/0;root@ubse: ~
+root@ubse:~# ls /storage/
+aaa  avv  eee  lost+found
+0;root@ubse: ~
+root@ubse:~# ls /storageseq 1 100 >/storage/ee
+
+
+
+sto0 >/storage/sto0 >/storage/sto0 >/storage/sto0 >/storage/sto0 >/storage/sto
+
+
+
+
+
+
+
+0;root@ubse: ~
+root@ubse:~# du -h /s
+torage/
+16K	/storage/lost+found
+76M	/storage/
+0;root@ubse: ~
+root@ubse:~# du -h /storage
+
+
+ls /storage/
+aaa  avv  eee  lost+found  stor
+0;root@ubse: ~
+root@ubse:~# ls /storagedu -h
+
+
+
+
+
+
+eee 
+4.0K	/storage/eee
+0;root@ubse: ~
+root@ubse:~# du -h /storage/eee*0;root@ubse: ~
+root@ubse:~# du -h /storage/*
+4.0K	/storage/aaa
+4.0K	/storage/avv
+4.0K	/storage/eee
+16K	/storage/lost+found
+76M	/storage/stor
+0;root@ubse: ~
+root@ubse:~# lsblk0;root@ubse: ~
+root@ubse:~# lsblk
+NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0                        11:0    1 1024M  0 rom  
+vda                       253:0    0   25G  0 disk 
+├─vda1                    253:1    0    1M  0 part 
+├─vda2                    253:2    0    2G  0 part /boot
+└─vda3                    253:3    0   23G  0 part 
+  └─ubuntu--vg-ubuntu--lv 252:0    0 11.5G  0 lvm  /
+vdb                       253:16   0   20G  0 disk 
+└─vdb1                    253:17   0   10G  0 part /storage
+0;root@ubse: ~
+root@ubse:~# 0;root@ubse: ~
+root@ubse:~# mount
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+udev on /dev type devtmpfs (rw,nosuid,relatime,size=1963184k,nr_inodes=490796,mode=755,inode64)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,noexec,relatime,size=400988k,mode=755,inode64)
+/dev/mapper/ubuntu--vg-ubuntu--lv on / type ext4 (rw,relatime)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,inode64)
+tmpfs on /run/lock type tmpfs (rw,nosuid,nodev,noexec,relatime,size=5120k,inode64)
+cgroup2 on /sys/fs/cgroup type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot)
+pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime)
+bpf on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime,mode=700)
+systemd-1 on /proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=32,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=3473)
+hugetlbfs on /dev/hugepages type hugetlbfs (rw,nosuid,nodev,relatime,pagesize=2M)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+debugfs on /sys/kernel/debug type debugfs (rw,nosuid,nodev,noexec,relatime)
+tracefs on /sys/kernel/tracing type tracefs (rw,nosuid,nodev,noexec,relatime)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,nosuid,nodev,noexec,relatime)
+configfs on /sys/kernel/config type configfs (rw,nosuid,nodev,noexec,relatime)
+/dev/vda2 on /boot type ext4 (rw,relatime)
+binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,size=400984k,nr_inodes=100246,mode=700,uid=1000,gid=1000,inode64)
+/dev/vdb1 on /storage type ext4 (rw,relatime)
+0;root@ubse: ~
+root@ubse:~# mount | less
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+udev on /dev type devtmpfs (rw,nosuid,relatime,size=1963184k,nr_inodes=490796,mode=755,inode64)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,noexec,relatime,size=400988k,mode=755,inode64)
+/dev/mapper/ubuntu--vg-ubuntu--lv on / type ext4 (rw,relatime)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,inode64)
+tmpfs on /run/lock type tmpfs (rw,nosuid,nodev,noexec,relatime,size=5120k,inode64)
+ ESESCOA
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+udev on /dev type devtmpfs (rw,nosuid,relatime,size=1963184k,nr_inodes=490796,mode=755,inode64)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,noexec,relatime,size=400988k,mode=755,inode64)
+/dev/mapper/ubuntu--vg-ubuntu--lv on / type ext4 (rw,relatime)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,inode64)
+tmpfs on /run/lock type tmpfs (rw,nosuid,nodev,noexec,relatime,size=5120k,inode64)
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+udev on /dev type devtmpfs (rw,nosuid,relatime,size=1963184k,nr_inodes=490796,mode=755,inode64)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,noexec,relatime,size=400988k,mode=755,inode64)
+/dev/mapper/ubuntu--vg-ubuntu--lv on / type ext4 (rw,relatime)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,inode64)
+tmpfs on /run/lock type tmpfs (rw,nosuid,nodev,noexec,relatime,size=5120k,inode64)
+...skipping...
+/dev/vdb1 on /storage type ext4 (rw,relatime)
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+>0;root@ubse: ~
+root@ubse:~# 0;root@ubse: ~
+root@ubse:~# umount /storage 
+0;root@ubse: ~
+root@ubse:~# lsblk
+NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0                        11:0    1 1024M  0 rom  
+vda                       253:0    0   25G  0 disk 
+├─vda1                    253:1    0    1M  0 part 
+├─vda2                    253:2    0    2G  0 part /boot
+└─vda3                    253:3    0   23G  0 part 
+  └─ubuntu--vg-ubuntu--lv 252:0    0 11.5G  0 lvm  /
+vdb                       253:16   0   20G  0 disk 
+└─vdb1                    253:17   0   10G  0 part 
+0;root@ubse: ~
+root@ubse:~# 0;root@ubse: ~
+root@ubse:~# ls //storage/
+BORTGLOMDFIL
+0;root@ubse: ~
+root@ubse:~# rm /storage/BORTGLOMDFIL 
+0;root@ubse: ~
+0;root@ubse: ~rch)`': m': rm /storage/BORTGLOMDFIo': umount /storagu': umoun': umount': umountmount | les /dev/vdb1 /storage
+root@ubse:~# moun
+0;root@ubse: ~
+root@ubse:~# ls /storage/
+aaa  avv  eee  lost+found  stor
+0;root@ubse: ~
+0;root@ubse: ~rch)`': g': ls /storaged': gdisk /dev/vdi': gdis': gdisk': gdisk
+root@ubse:~# gdis
+GPT fdisk (gdisk) version 1.0.10
+
+Partition table scan:
+  MBR: protective
+  BSD: not present
+  APM: not present
+  GPT: present
+
+Found valid GPT with protective MBR; using GPT.
+
+Command (? for help): ?
+b	back up GPT data to a file
+c	change a partition's name
+d	delete a partition
+i	show detailed information on a partition
+l	list known partition types
+n	add a new partition
+o	create a new empty GUID partition table (GPT)
+p	print the partition table
+q	quit without saving changes
+r	recovery and transformation options (experts only)
+s	sort partitions
+t	change a partition's type code
+v	verify disk
+w	write table to disk and exit
+x	extra functionality (experts only)
+?	print this menu
+
+Command (? for help): d
+Using 1
+
+Command (? for help): exit
+b	back up GPT data to a file
+c	change a partition's name
+d	delete a partition
+i	show detailed information on a partition
+l	list known partition types
+n	add a new partition
+o	create a new empty GUID partition table (GPT)
+p	print the partition table
+q	quit without saving changes
+r	recovery and transformation options (experts only)
+s	sort partitions
+t	change a partition's type code
+v	verify disk
+w	write table to disk and exit
+x	extra functionality (experts only)
+?	print this menu
+
+Command (? for help): q
+0;root@ubse: ~
+root@ubse:~# 0;root@ubse: ~
+root@ubse:~# ls
+0;root@ubse: ~
+root@ubse:~# sudpo o reboot
+
+Broadcast message from root@ubse on pts/2 (Tue 2026-05-12 09:20:17 UTC):
+
+The system will reboot now!
+
+
+Broadcast message from root@ubse on pts/2 (Tue 2026-05-12 09:20:17 UTC):
+
+The system will reboot now!
+
+0;root@ubse: ~
+root@ubse:~# Connection to 192.168.122.155 closed by remote host.
+Connection to 192.168.122.155 closed.
+DEVOPS25/lektion12
+$ ubsssh ubseDEVOPS25/lektion12
+$ ssh ubse
+Welcome to Ubuntu 24.04.4 LTS (GNU/Linux 6.8.0-111-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue May 12 09:20:30 AM UTC 2026
+
+  System load:  0.0                Processes:               157
+  Usage of /:   43.7% of 11.21GB   Users logged in:         0
+  Memory usage: 5%                 IPv4 address for enp1s0: 192.168.122.155
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Tue May 12 08:59:00 2026 from 192.168.122.1
+0;kent@ubse: ~
+kent@ubse:~$ uptime0;kent@ubse: ~
+kent@ubse:~$ uptime
+ 09:20:34 up 0 min,  1 user,  load average: 0.00, 0.00, 0.00
+0;kent@ubse: ~
+kent@ubse:~$ lsblk
+NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0                        11:0    1 1024M  0 rom  
+vda                       253:0    0   25G  0 disk 
+├─vda1                    253:1    0    1M  0 part 
+├─vda2                    253:2    0    2G  0 part /boot
+└─vda3                    253:3    0   23G  0 part 
+  └─ubuntu--vg-ubuntu--lv 252:0    0 11.5G  0 lvm  /
+vdb                       253:16   0   20G  0 disk 
+└─vdb1                    253:17   0   10G  0 part 
+0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+kent@ubse:~$ less /etc/fstab 
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/ubuntu-vg/ubuntu-lv during curtin installation
+/dev/disk/by-id/dm-uuid-LVM-NhOOgVpr2aS6gSt0RFV7cFYnu49B5fFAUI3Qod7sb4sPu1hR9YOngT2J0eWbT70i / ext4 defaults 0 1
+# /boot was on /dev/vda2 during curtin installation
+/dev/disk/by-uuid/1b630543-2642-4997-aa72-861e78b7f9a9 /boot ext4 /etc/fstab# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/ubuntu-vg/ubuntu-lv during curtin installation
+/dev/disk/by-id/dm-uuid-LVM-NhOOgVpr2aS6gSt0RFV7cFYnu49B5fFAUI3Qod7sb4sPu1hR9YOngT2J0eWbT70i / ext4 defaults 0 1
+# /boot was on /dev/vda2 during curtin installation
+/dev/disk/by-uuid/1b630543-2642-4997-aa72-861e78b7f9a9 /boot ext4 defaults 0 1
+/swap.img       none    swap    sw      0       0
+~
+ ESESCOB
+>0;kent@ubse: ~
+kent@ubse:~$ sudo /etc/fstaedit /etc/fstab 
+[sudo] password for kent: 
+8dev/disk/by-uuid/1b630543-2642-4997-aa72-861e78b7f9a9 /boot ext4 defaults 0 1OngT># /boot was on /dev/vda2 during curtin installation
+8swap.img       none    swap    sw      0       0
+>0;kent@ubse: ~ite: /var/tmp/fstab.yyc55NLm [ Writing... ] [ Wrote 14 lines ]       Y Yes
+failed reverse-i-search)`mou': sudo apt autoremnt^Cove
+0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+kent@ubse:~$ ls
+0;kent@ubse: ~
+kent@ubse:~$ mount /dev/scvdb1 /storage/
+mount: /storage: must be superuser to use mount.
+       dmesg(1) may have more information after failed mount system call.
+mount: (hint) your fstab has been modified, but systemd still uses
+       the old version; use 'systemctl daemon-reload' to reload.
+0;kent@ubse: ~
+kent@ubse:~$ sudo -i
+0;root@ubse: ~
+0;root@ubse: ~': mount': mountt /dev/vdb1 /storage/
+root@ubse:~# moun
+
+
+
+
+
+
+
+ /storage /storage /storage /storage /storage /storage /storage /storage /storage/storage
+
+
+
+
+
+
+
+
+
+
+
+
+mount: (hint) your fstab has been modified, but systemd still uses
+       the old version; use 'systemctl daemon-reload' to reload.
+0;root@ubse: ~
+root@ubse:~# systemctl daemon-reload
+systemctl daemon-reload
+0;root@ubse: ~
+mount /storage0;root@ubse: ~n-reload
+root@ubse:~# mount /storage
+mount: /storage: /dev/vdb1 already mounted on /storage.
+       dmesg(1) may have more information after failed mount system call.
+0;root@ubse: ~
+root@ubse:~# ls /storage/
+aaa  avv  eee  lost+found  stor
+0;root@ubse: ~
+root@ubse:~# umount /storage 
+0;root@ubse: ~
+root@ubse:~# ls /storage/
+0;root@ubse: ~
+root@ubse:~# 0;root@ubse: ~
+root@ubse:~# ls lb;llk
+NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0                        11:0    1 1024M  0 rom  
+vda                       253:0    0   25G  0 disk 
+├─vda1                    253:1    0    1M  0 part 
+├─vda2                    253:2    0    2G  0 part /boot
+└─vda3                    253:3    0   23G  0 part 
+  └─ubuntu--vg-ubuntu--lv 252:0    0 11.5G  0 lvm  /
+vdb                       253:16   0   20G  0 disk 
+└─vdb1                    253:17   0   10G  0 part 
+0;root@ubse: ~
+root@ubse:~# sudo revboot
+
+Broadcast message from root@ubse on pts/2 (Tue 2026-05-12 09:26:14 UTC):
+
+The system will reboot now!
+
+
+Broadcast message from root@ubse on pts/2 (Tue 2026-05-12 09:26:14 UTC):
+
+The system will reboot now!
+
+0;root@ubse: ~
+root@ubse:~# Read from remote host 192.168.122.155: Connection reset by peer
+Connection to 192.168.122.155 closed.
+client_loop: send disconnect: Broken pipe
+DEVOPS25/lektion12
+$ DEVOPS25/lektion12
+$ ssh ubse
+Welcome to Ubuntu 24.04.4 LTS (GNU/Linux 6.8.0-111-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue May 12 09:26:19 AM UTC 2026
+
+  System load:  0.0                Processes:               195
+  Usage of /:   43.8% of 11.21GB   Users logged in:         0
+  Memory usage: 6%                 IPv4 address for enp1s0: 192.168.122.155
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Tue May 12 09:20:30 2026 from 192.168.122.1
+0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+kent@ubse:~$ lsblk
+NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0                        11:0    1 1024M  0 rom  
+vda                       253:0    0   25G  0 disk 
+├─vda1                    253:1    0    1M  0 part 
+├─vda2                    253:2    0    2G  0 part /boot
+└─vda3                    253:3    0   23G  0 part 
+  └─ubuntu--vg-ubuntu--lv 252:0    0 11.5G  0 lvm  /
+vdb                       253:16   0   20G  0 disk 
+└─vdb1                    253:17   0   10G  0 part /storage
+0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+kent@ubse:~$ ls /storage/
+aaa  avv  eee  lost+found  stor
+0;kent@ubse: ~
+kent@ubse:~$ man dd0;kent@ubse: ~
+kent@ubse:~$ man dd
+DD(1)                             User Commands                            DD(1)
+
+NAME
+       dd - convert and copy a file
+
+SYNOPSIS
+       dd [OPERAND]...
+       dd OPTION
+
+DESCRIPTION
+       Copy a file, converting and formatting according to the operands.
+
+       bs=BYTES
+              read  and  write up to BYTES bytes at a time (default: 512); over‐
+>0;kent@ubse: ~(1) line 1 (press h for help or q to quit)
+kent@ubse:~$ 0;kent@ubse: ~
+kent@ubse:~$ ls
+0;kent@ubse: ~
+kent@ubse:~$ dd Dr/isos/cubuntu.isoif=of=/dev/sda bs=1M status=progress^C
+0;kent@ubse: ~
+kent@ubse:~$ dd if=/dev/randomurandom of=keyfile bs=1M count=1
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.00626707 s, 167 MB/s
+0;kent@ubse: ~
+kent@ubse:~$ ls
+keyfile
+0;kent@ubse: ~
+kent@ubse:~$ less keyfile 
+"keyfile" may be a binary file.  See it anyway? 
+
+0;kent@ubse: ~
+kent@ubse:~$ rm keyfile 
+0;kent@ubse: ~
+kent@ubse:~$ 0;kent@ubse: ~
+0;kent@ubse: ~
+0;kent@ubse: ~
+kent@ubse:~$ 
+logout
+Connection to 192.168.122.155 closed.
+DEVOPS25/lektion12
+$ 
+exit
